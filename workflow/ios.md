@@ -31,6 +31,8 @@ xcrun simctl list devices available
 
 Сохраняй для каждого скриншота: экран, состояние, устройство/OS, локаль, тему, размер текста, данные и ревизию. Проверяй сценарии на основной и компактной поддерживаемой конфигурациях, включая увеличенный текст. Другие устройства/локали/темы проверяй по объявленной поддержке.
 
+App icon проверяй у установленной финальной сборки, а не только внутри asset catalog. Исходные продуктовые снимки для ASO получай после приёмки приложения из той же финальной сборки и связывай с run-id.
+
 Для платёжных, аппаратных и других функций, которые нельзя достоверно проверить в выбранном Simulator, обозначь границу проверки и требование отдельной проверки на устройстве. Не заменяй реальную интеграцию демонстрационной, скрывая это в отчёте.
 
 ## Источники
@@ -38,3 +40,5 @@ xcrun simctl list devices available
 - [Apple: запуск приложения](https://developer.apple.com/documentation/Xcode/running-your-app-on-simulated-or-physical-devices).
 - [Apple: автоматический аудит доступности](https://developer.apple.com/documentation/accessibility/performing-accessibility-audits-for-your-app).
 - [Apple: проверка релизной сборки](https://developer.apple.com/documentation/Xcode/testing-a-release-build).
+- [Apple: app icons](https://developer.apple.com/design/human-interface-guidelines/app-icons).
+- [Apple: screenshot specifications](https://developer.apple.com/help/app-store-connect/reference/app-information/screenshot-specifications).

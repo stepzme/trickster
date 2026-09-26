@@ -1,0 +1,9 @@
+{
+  "name": "trickster-runtime",
+  "private": true,
+  "version": "0.3.0",
+  "type": "module",
+  "dependencies": {
+    "designmd-mcp": "0.2.1"
+  }
+}

@@ -7,3 +7,5 @@ build/
 xcuserdata/
 *.xcuserstate
 .build/
+trickster/.secrets/
+trickster/runtime/node_modules/

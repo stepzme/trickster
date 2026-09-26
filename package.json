@@ -1,0 +1,28 @@
+{
+  "name": "@sgx22/trickster",
+  "version": "0.3.0",
+  "description": "Project-scoped Codex workflow for building and reviewing iOS apps",
+  "type": "module",
+  "bin": {
+    "trickster": "bin/trickster.mjs"
+  },
+  "files": [
+    "bin",
+    "installer",
+    "scripts",
+    "templates",
+    "workflow",
+    "README.md"
+  ],
+  "scripts": {
+    "preinstall": "node ./scripts/reject-global-install.mjs",
+    "test": "node --test",
+    "pack:check": "npm pack --dry-run"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
