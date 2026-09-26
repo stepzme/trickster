@@ -36,7 +36,8 @@ test("installs one project-local Trickster folder and Codex integration", async 
 
   assert.match(await readFile(join(project, "AGENTS.md"), "utf8"), /trickster\/AGENTS\.md/);
   assert.match(await readFile(join(project, ".gitignore"), "utf8"), /trickster\/\.secrets/);
-  assert.equal(await readFile(join(project, "trickster", "VERSION"), "utf8"), "0.4.0\n");
+  assert.equal(await readFile(join(project, "trickster", "VERSION"), "utf8"), "0.5.0\n");
+  assert.equal(await readFile(join(project, "trickster", "HARNESS"), "utf8"), "codex\n");
   assert.equal(
     await readFile(join(project, "trickster", ".secrets", "designmd-api-key"), "utf8"),
     "dk_test_key\n",
@@ -54,12 +55,16 @@ test("installs one project-local Trickster folder and Codex integration", async 
     /Logoinspo/,
   );
   assert.match(
-    await readFile(join(project, "trickster", "workflow", "delegation.md"), "utf8"),
+    await readFile(join(project, "trickster", "workflow", "orchestration.md"), "utf8"),
     /product-researcher/,
   );
   assert.match(
-    await readFile(join(project, "trickster", "agents", "acceptance-reviewer.md"), "utf8"),
+    await readFile(join(project, "trickster", "roles", "acceptance-reviewer.md"), "utf8"),
     /Независимо проверить/,
+  );
+  assert.match(
+    await readFile(join(project, "trickster", "adapters", "codex.md"), "utf8"),
+    /spawn_agent/,
   );
   assert.match(
     await readFile(join(project, "trickster", "templates", "references.md"), "utf8"),
@@ -69,7 +74,7 @@ test("installs one project-local Trickster folder and Codex integration", async 
     JSON.parse(
       await readFile(join(project, "trickster", "runtime", "package.json"), "utf8"),
     ).version,
-    "0.4.0",
+    "0.5.0",
   );
 
   const secretMode = (await stat(join(project, "trickster", ".secrets", "designmd-api-key"))).mode & 0o777;
@@ -148,8 +153,86 @@ test("doctor requires runtime but selects DESIGN.md during the task", async () =
   );
   assert.equal(readyCliResult.status, 0);
   assert.match(readyCliResult.stdout, /verify SCRN before the pilot/);
-  assert.match(readyCliResult.stdout, /collaboration tools for phase subagents/);
+  assert.match(readyCliResult.stdout, /role delegation or the sequential fallback/);
   assert.match(readyCliResult.stdout, /DESIGN\.md is selected and confirmed after SCRN research/);
+});
+
+test("generic harness installs the portable kit without Codex project files", async () => {
+  const project = await createProject();
+  const result = await initializeProject({
+    target: project,
+    harness: "generic",
+    yes: true,
+    skipRuntimeInstall: true,
+    skipScrnLogin: true,
+    providedKey: "dk_test_key",
+    quiet: true,
+  });
+
+  assert.equal(result.harness, "generic");
+  assert.equal(await readFile(join(project, "trickster", "HARNESS"), "utf8"), "generic\n");
+  assert.equal(await readFile(join(project, "AGENTS.md"), "utf8"), "# Existing instructions\n");
+  assert.equal(
+    await readFile(join(project, ".codex", "config.toml"), "utf8").catch(() => ""),
+    "",
+  );
+  assert.match(
+    await readFile(join(project, "trickster", "adapters", "generic.md"), "utf8"),
+    /sequential fallback/,
+  );
+
+  const beforeRuntime = await doctorProject(project, { quiet: true });
+  assert.equal(beforeRuntime.harness, "generic");
+  assert.equal(beforeRuntime.ready, false);
+  assert.equal(beforeRuntime.checks.some(([name]) => name === "Codex CLI"), false);
+  assert.equal(beforeRuntime.checks.some(([name]) => name === "Project Codex config"), false);
+
+  const runtimeEntry = join(
+    project,
+    "trickster",
+    "runtime",
+    "node_modules",
+    "designmd-mcp",
+    "dist",
+  );
+  await mkdir(runtimeEntry, { recursive: true });
+  await writeFile(join(runtimeEntry, "index.js"), "", "utf8");
+  assert.equal((await doctorProject(project, { quiet: true })).ready, true);
+});
+
+test("switching to generic removes only Trickster-owned Codex integration", async () => {
+  const project = await createProject();
+  const baseOptions = {
+    target: project,
+    yes: true,
+    skipRuntimeInstall: true,
+    skipScrnLogin: true,
+    providedKey: "dk_test_key",
+    quiet: true,
+  };
+
+  await initializeProject({ ...baseOptions, harness: "codex" });
+  await writeFile(
+    join(project, ".codex", "config.toml"),
+    `${await readFile(join(project, ".codex", "config.toml"), "utf8")}\nmodel = "keep-me"\n`,
+    "utf8",
+  );
+  await mkdir(join(project, "trickster", "agents"));
+  await writeFile(join(project, "trickster", "agents", "legacy.md"), "legacy", "utf8");
+  await writeFile(join(project, "trickster", "workflow", "delegation.md"), "legacy", "utf8");
+
+  await initializeProject({ ...baseOptions, harness: "generic" });
+
+  assert.equal(await readFile(join(project, "AGENTS.md"), "utf8"), "# Existing instructions\n");
+  assert.equal(await readFile(join(project, ".codex", "config.toml"), "utf8"), 'model = "keep-me"\n');
+  assert.equal(
+    await readFile(join(project, "trickster", "agents", "legacy.md"), "utf8").catch(() => ""),
+    "",
+  );
+  assert.equal(
+    await readFile(join(project, "trickster", "workflow", "delegation.md"), "utf8").catch(() => ""),
+    "",
+  );
 });
 
 test("refuses broad non-project targets", async () => {
@@ -193,4 +276,16 @@ test("prints help as a top-level option", () => {
 
   assert.equal(result.status, 0);
   assert.match(result.stdout, /trickster init/);
+  assert.match(result.stdout, /--harness codex\|generic/);
+});
+
+test("rejects an unsupported harness", () => {
+  const result = spawnSync(
+    process.execPath,
+    [resolve(repositoryRoot, "bin", "trickster.mjs"), "init", "--harness", "unknown"],
+    { encoding: "utf8" },
+  );
+
+  assert.equal(result.status, 1);
+  assert.match(result.stderr, /Unsupported harness/);
 });

@@ -1,6 +1,6 @@
 # Trickster — project-scoped pipeline разработки iOS-приложений
 
-Версия комплекта: 0.4. Trickster устанавливает в существующий проект локальный multi-agent процесс для Codex: исследование продукта, SCRN-референсы, подтверждённый DesignMD, реализация, независимая проверка в Simulator, app icon и ASO screenshots.
+Версия комплекта: 0.5. Trickster устанавливает в существующий проект локальный, независимый от agent harness процесс: исследование продукта, SCRN-референсы, подтверждённый DesignMD, реализация, проверка в Simulator, app icon и ASO screenshots.
 
 ## Установка
 
@@ -10,12 +10,20 @@
 npx @sgx22/trickster@pilot init
 ```
 
+По умолчанию устанавливается Codex adapter. Для другого harness:
+
+```sh
+npx @sgx22/trickster@pilot init --harness generic
+```
+
 Команда запускает пакет временно через npm cache. Глобальная установка запрещена. В проекте создаются:
 
 ```text
 trickster/
 ├── AGENTS.md
-├── agents/
+├── HARNESS
+├── roles/
+├── adapters/
 ├── workflow/
 ├── templates/
 ├── design/
@@ -23,7 +31,9 @@ trickster/
 └── artifacts/
 ```
 
-Installer также добавляет ограниченный указатель в корневой `AGENTS.md`, project-scoped `.codex/config.toml` и правила `.gitignore`. Повторный запуск обновляет процесс, но сохраняет выбранный `trickster/design/DESIGN.md` и пользовательские файлы вне управляемых блоков.
+В режиме `codex` installer также добавляет ограниченный указатель в корневой `AGENTS.md` и project-scoped `.codex/config.toml`. В режиме `generic` эти Codex-файлы не создаются: подключение выполняется по `trickster/adapters/generic.md`. При переключении на generic установщик удаляет только собственные managed-блоки Codex. Оба режима добавляют правила `.gitignore`. Повторный запуск обновляет процесс, удаляет устаревшие управляемые документы, но сохраняет выбранный `trickster/design/DESIGN.md` и артефакты.
+
+`workflow/` и `roles/` не содержат команд конкретного harness. `adapters/` переводит универсальные операции `SPAWN`, `WAIT`, `CONTINUE`, `MESSAGE` и `STOP` в инструменты среды. Если отдельные исполнители недоступны, мастер последовательно выполняет те же role contracts.
 
 ## Подключения
 
@@ -31,7 +41,7 @@ Installer также добавляет ограниченный указате�
 - SCRN MCP обязателен для исследования реальных экранов и сценариев.
 - [Logoinspo App Icons](https://logoinspo.com/icons) используется для референсов app icon.
 - DesignMD key хранится в `trickster/.secrets/designmd-api-key` с правами `0600` и исключается из Git.
-- SCRN использует OAuth Codex; данные авторизации в проект не записываются.
+- SCRN использует OAuth выбранного harness; данные авторизации в проект не записываются.
 
 Во время интерактивного `init` установщик предлагает открыть страницу DesignMD key и принимает ключ скрытым вводом. Для автоматического запуска ключ можно передать через `DESIGNMD_API_KEY`.
 
@@ -41,9 +51,9 @@ Installer также добавляет ограниченный указате�
 npx @sgx22/trickster@pilot doctor
 ```
 
-`doctor` проверяет Codex, project config, DesignMD key и локальный runtime. Выбранный `DESIGN.md` не требуется до старта задачи: design-planner выбирает его внутри процесса, а мастер обязан получить подтверждение пользователя до проектирования UI. Доступность collaboration tools проверяется уже в сессии Codex.
+`doctor` читает `trickster/HARNESS` и проверяет общие файлы, role contracts, adapter, DesignMD key и локальный runtime. Для Codex он дополнительно проверяет CLI и project config. Выбранный `DESIGN.md` не требуется до старта задачи: design-planner выбирает его внутри процесса, а мастер обязан получить подтверждение пользователя до проектирования UI. MCP, показ изображений и делегирование проверяются реальными действиями уже в сессии выбранного harness.
 
-После `init` перезапусти Codex, доверь проект и при необходимости выполни:
+После `init` с Codex перезапусти Codex, доверь проект и при необходимости выполни:
 
 ```sh
 codex mcp login screen_gallery
@@ -66,16 +76,16 @@ codex mcp login screen_gallery
 | 9 | visual-producer | [ASO screenshots](workflow/aso-screenshots.md) | Один комплект из реальных экранов принятой сборки |
 | 10 | master | [Delivery](workflow/delivery.md) | Итоговый отчёт и воспроизведение |
 
-[Master process](workflow/master-prompt.md) связывает этапы, а [delegation.md](workflow/delegation.md) задаёт spawn, handoff и владение файлами. Role contracts находятся в `agents/`. [UX](workflow/ux.md) и [iOS](workflow/ios.md) действуют сквозным образом. Допустимые категории SCRN зафиксированы в [scrn-categories.md](workflow/scrn-categories.md).
+[Master process](workflow/master-prompt.md) связывает этапы, а [orchestration.md](workflow/orchestration.md) задаёт универсальные операции, handoff и владение файлами. Role contracts находятся в `roles/`, а привязка к среде — в `adapters/`. [UX](workflow/ux.md) и [iOS](workflow/ios.md) действуют сквозным образом. Допустимые категории SCRN зафиксированы в [scrn-categories.md](workflow/scrn-categories.md).
 
 ## Основные правила
 
 - SCRN MCP используется в каждом создании или существенном изменении приложения.
-- Если scope не определён, агент восстанавливает baseline по приложениям той же категории, исключая незапрошенные backend и integration-функции.
-- Агент выбирает один DesignMD и ждёт подтверждения до UI-работы.
+- Если scope не определён, product-researcher восстанавливает baseline по приложениям той же категории, исключая незапрошенные backend и integration-функции.
+- Design-planner выбирает один DesignMD, а мастер ждёт подтверждения до UI-работы.
 - На каждом этапе создаётся одно решение, а не набор вариантов.
-- Фазовые агенты получают только необходимые stage documents и артефакты; мастер проверяет их handoff и сохраняет ответственность за итог.
-- Только один агент одновременно владеет общими Xcode-файлами или Simulator.
+- Исполнители ролей получают только необходимые stage documents и артефакты; мастер проверяет их handoff и сохраняет ответственность за итог.
+- Только один исполнитель одновременно владеет общими Xcode-файлами или Simulator.
 - App icon создаётся после экранов приложения и проверяется в финальной сборке; ASO создаётся после её приёмки.
 - Наличие текста инструкции не считается доказательством выполнения этапа.
 

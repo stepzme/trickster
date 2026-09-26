@@ -1,5 +1,5 @@
 import { spawn, spawnSync } from "node:child_process";
-import { chmod, cp, mkdir, readFile, readdir, stat, writeFile } from "node:fs/promises";
+import { chmod, cp, mkdir, readFile, readdir, rm, stat, writeFile } from "node:fs/promises";
 import { existsSync } from "node:fs";
 import { homedir } from "node:os";
 import { dirname, parse, resolve } from "node:path";
@@ -29,8 +29,8 @@ const BLOCKS = {
 
 function usage() {
   return `Usage:
-  trickster init [--target <path>] [--yes] [--skip-runtime-install] [--skip-scrn-login]
-  trickster doctor [--target <path>]
+  trickster init [--target <path>] [--harness codex|generic] [--yes] [--skip-runtime-install] [--skip-scrn-login]
+  trickster doctor [--target <path>] [--harness codex|generic]
 
 Trickster is project-scoped. Run it from the root of an existing project.`;
 }
@@ -43,6 +43,7 @@ function parseArgs(argv) {
       yes: false,
       skipRuntimeInstall: false,
       skipScrnLogin: false,
+      harness: undefined,
     };
   }
   const [command = "help", ...rest] = argv;
@@ -52,6 +53,7 @@ function parseArgs(argv) {
     yes: false,
     skipRuntimeInstall: false,
     skipScrnLogin: false,
+    harness: undefined,
   };
 
   for (let index = 0; index < rest.length; index += 1) {
@@ -67,6 +69,11 @@ function parseArgs(argv) {
       options.skipRuntimeInstall = true;
     } else if (argument === "--skip-scrn-login") {
       options.skipScrnLogin = true;
+    } else if (argument === "--harness") {
+      const value = rest[index + 1];
+      if (!value) throw new Error("--harness requires codex or generic");
+      options.harness = validateHarness(value);
+      index += 1;
     } else if (argument === "--help" || argument === "-h") {
       options.command = "help";
     } else {
@@ -75,6 +82,13 @@ function parseArgs(argv) {
   }
 
   return options;
+}
+
+function validateHarness(value) {
+  if (value !== "codex" && value !== "generic") {
+    throw new Error(`Unsupported harness: ${value}. Expected codex or generic`);
+  }
+  return value;
 }
 
 function tomlString(value) {
@@ -111,6 +125,23 @@ async function replaceManagedBlock(path, block, body) {
 
   await mkdir(dirname(path), { recursive: true });
   await writeFile(path, next, "utf8");
+}
+
+async function removeManagedBlock(path, block) {
+  const existing = await readOrEmpty(path);
+  const startIndex = existing.indexOf(block.start);
+  const endIndex = existing.indexOf(block.end);
+  if (startIndex < 0 || endIndex < startIndex) return;
+
+  const before = existing.slice(0, startIndex).replace(/\n+$/, "");
+  const after = existing.slice(endIndex + block.end.length).replace(/^\n+/, "");
+  const next = [before, after].filter(Boolean).join("\n\n");
+
+  if (next.trim()) {
+    await writeFile(path, `${next.replace(/\n+$/, "")}\n`, "utf8");
+  } else {
+    await rm(path, { force: true });
+  }
 }
 
 async function hasProjectMarker(target) {
@@ -270,10 +301,14 @@ required = false
 default_tools_approval_mode = "auto"`;
 }
 
-async function copyKit(target) {
+async function copyKit(target, harness) {
   const destination = resolve(target, "trickster");
   await mkdir(destination, { recursive: true });
-  await cp(resolve(packageRoot, "agents"), resolve(destination, "agents"), {
+  await cp(resolve(packageRoot, "roles"), resolve(destination, "roles"), {
+    recursive: true,
+    force: true,
+  });
+  await cp(resolve(packageRoot, "adapters"), resolve(destination, "adapters"), {
     recursive: true,
     force: true,
   });
@@ -281,6 +316,8 @@ async function copyKit(target) {
     recursive: true,
     force: true,
   });
+  await rm(resolve(destination, "agents"), { recursive: true, force: true });
+  await rm(resolve(destination, "workflow", "delegation.md"), { force: true });
   await cp(resolve(packageRoot, "templates"), resolve(destination, "templates"), {
     recursive: true,
     force: true,
@@ -298,6 +335,7 @@ async function copyKit(target) {
   await mkdir(resolve(destination, "design"), { recursive: true });
   await mkdir(resolve(destination, "artifacts"), { recursive: true });
   await mkdir(resolve(destination, ".secrets"), { recursive: true, mode: 0o700 });
+  await writeFile(resolve(destination, "HARNESS"), `${harness}\n`, "utf8");
   await writeFile(resolve(destination, "VERSION"), `${VERSION}\n`, "utf8");
 }
 
@@ -319,16 +357,18 @@ export async function initializeProject({
   yes = false,
   skipRuntimeInstall = false,
   skipScrnLogin = false,
+  harness = "codex",
   providedKey,
   quiet = false,
 } = {}) {
   const project = await assertSafeProject(target ?? process.cwd());
-  if (!commandExists("codex")) {
+  const selectedHarness = validateHarness(harness);
+  if (selectedHarness === "codex" && !commandExists("codex")) {
     throw new Error("Codex CLI was not found on PATH");
   }
 
   const key = await resolveDesignmdKey({ yes, providedKey });
-  await copyKit(project);
+  await copyKit(project, selectedHarness);
   const secretPath = resolve(project, "trickster", ".secrets", "designmd-api-key");
 
   if (key) {
@@ -337,18 +377,23 @@ export async function initializeProject({
   }
   const keyStored = await hasNonEmptyFile(secretPath);
 
-  await replaceManagedBlock(resolve(project, "AGENTS.md"), BLOCKS.agents, agentsBlock());
   await replaceManagedBlock(resolve(project, ".gitignore"), BLOCKS.gitignore, gitignoreBlock());
-  await replaceManagedBlock(
-    resolve(project, ".codex", "config.toml"),
-    BLOCKS.codex,
-    codexBlock(project, process.execPath),
-  );
+  if (selectedHarness === "codex") {
+    await replaceManagedBlock(resolve(project, "AGENTS.md"), BLOCKS.agents, agentsBlock());
+    await replaceManagedBlock(
+      resolve(project, ".codex", "config.toml"),
+      BLOCKS.codex,
+      codexBlock(project, process.execPath),
+    );
+  } else {
+    await removeManagedBlock(resolve(project, "AGENTS.md"), BLOCKS.agents);
+    await removeManagedBlock(resolve(project, ".codex", "config.toml"), BLOCKS.codex);
+  }
 
   if (!skipRuntimeInstall) installRuntime(project);
 
   let loginAttempted = false;
-  if (!skipScrnLogin && !yes && process.stdin.isTTY) {
+  if (selectedHarness === "codex" && !skipScrnLogin && !yes && process.stdin.isTTY) {
     const shouldLogin = await askYesNo("Authenticate SCRN for this Codex project now?");
     if (shouldLogin) {
       loginAttempted = true;
@@ -364,6 +409,7 @@ export async function initializeProject({
 
   const result = {
     project,
+    harness: selectedHarness,
     keyStored,
     runtimeInstalled: !skipRuntimeInstall,
     loginAttempted,
@@ -371,45 +417,68 @@ export async function initializeProject({
 
   if (!quiet) {
     console.log(`\nTrickster ${VERSION} installed in ${resolve(project, "trickster")}`);
-    console.log("Codex project configuration: .codex/config.toml");
+    console.log(`Harness: ${selectedHarness}`);
+    if (selectedHarness === "codex") {
+      console.log("Codex project configuration: .codex/config.toml");
+    }
     console.log(`DesignMD key: ${keyStored ? "stored locally" : "missing"}`);
-    console.log("SCRN: configured; OAuth login must succeed before the pilot");
+    console.log(selectedHarness === "codex"
+      ? "SCRN: configured; OAuth login must succeed before the pilot"
+      : "MCP: configure DesignMD and SCRN in the selected harness before the pilot");
     console.log("\nNext:");
     if (!keyStored) console.log("1. Re-run init and enter DESIGNMD_API_KEY.");
-    console.log(`${keyStored ? "1" : "2"}. Restart Codex and trust this project so .codex/config.toml is loaded.`);
-    console.log(`${keyStored ? "2" : "3"}. If needed, run: codex mcp login screen_gallery`);
-    console.log(`${keyStored ? "3" : "4"}. Start the task; the pipeline will research SCRN and ask you to confirm one DESIGN.md before UI work.`);
+    const start = keyStored ? 1 : 2;
+    if (selectedHarness === "codex") {
+      console.log(`${start}. Restart Codex and trust this project so .codex/config.toml is loaded.`);
+      console.log(`${start + 1}. If needed, run: codex mcp login screen_gallery`);
+      console.log(`${start + 2}. Start the task; the pipeline will research SCRN and ask you to confirm one DESIGN.md before UI work.`);
+    } else {
+      console.log(`${start}. Read trickster/adapters/generic.md and connect both MCP servers in your harness.`);
+      console.log(`${start + 1}. Verify DesignMD, an image-returning SCRN query, shell, Xcode, Simulator and image viewing.`);
+      console.log(`${start + 2}. Start the task; unsupported delegation will use the sequential fallback.`);
+    }
   }
 
   return result;
 }
 
-export async function doctorProject(target = process.cwd(), { quiet = false } = {}) {
+export async function doctorProject(target = process.cwd(), { quiet = false, harness } = {}) {
   const project = await assertSafeProject(target);
+  const configuredHarness = (await readOrEmpty(resolve(project, "trickster", "HARNESS"))).trim();
+  const selectedHarness = validateHarness((harness ?? configuredHarness) || "codex");
   const hasDesignmdKey = await hasNonEmptyFile(
     resolve(project, "trickster", ".secrets", "designmd-api-key"),
   );
   const checks = [
-    ["Codex CLI", commandExists("codex")],
     ["Trickster instructions", existsSync(resolve(project, "trickster", "AGENTS.md"))],
-    ["Phase agent contracts", existsSync(resolve(project, "trickster", "agents", "acceptance-reviewer.md"))],
-    ["Project Codex config", existsSync(resolve(project, ".codex", "config.toml"))],
+    ["Role contracts", existsSync(resolve(project, "trickster", "roles", "acceptance-reviewer.md"))],
+    ["Harness adapter", existsSync(resolve(project, "trickster", "adapters", `${selectedHarness}.md`))],
     ["DesignMD key", hasDesignmdKey],
     ["DesignMD runtime", existsSync(resolve(project, "trickster", "runtime", "node_modules", "designmd-mcp", "dist", "index.js"))],
   ];
+  if (selectedHarness === "codex") {
+    checks.unshift(["Project Codex config", existsSync(resolve(project, ".codex", "config.toml"))]);
+    checks.unshift(["Codex CLI", commandExists("codex")]);
+  }
   const ready = checks.every(([, passed]) => passed);
 
   if (!quiet) {
+    console.log(`HARNESS  ${selectedHarness}`);
     for (const [name, passed] of checks) {
       console.log(`${passed ? "PASS" : "MISSING"}  ${name}`);
     }
-    console.log("VERIFY   SCRN OAuth and an image-returning reference query in a fresh Codex session");
-    console.log("VERIFY   Codex collaboration tools for phase subagents in the task session");
+    if (selectedHarness === "codex") {
+      console.log("VERIFY   SCRN OAuth and an image-returning reference query in a fresh Codex session");
+      console.log("VERIFY   Codex role delegation or the sequential fallback in the task session");
+    } else {
+      console.log("VERIFY   The selected harness loads Trickster instructions and both MCP servers");
+      console.log("VERIFY   SCRN image viewing, shell, Xcode, Simulator and role delegation or sequential fallback");
+    }
     console.log("RUNTIME  DESIGN.md is selected and confirmed after SCRN research, not during doctor");
     console.log(`\n${ready ? "Local installation is ready; verify SCRN before the pilot." : "Trickster is not ready for the pilot."}`);
   }
 
-  return { project, checks, ready };
+  return { project, harness: selectedHarness, checks, ready };
 }
 
 export async function runCli(argv) {
@@ -423,7 +492,7 @@ export async function runCli(argv) {
     return;
   }
   if (options.command === "doctor") {
-    const result = await doctorProject(options.target);
+    const result = await doctorProject(options.target, { harness: options.harness });
     if (!result.ready) process.exitCode = 1;
     return;
   }
