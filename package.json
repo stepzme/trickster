@@ -1,12 +1,13 @@
 {
   "name": "@sgx22/trickster",
-  "version": "0.3.0",
-  "description": "Project-scoped Codex workflow for building and reviewing iOS apps",
+  "version": "0.4.0",
+  "description": "Project-scoped multi-agent Codex workflow for building and reviewing iOS apps",
   "type": "module",
   "bin": {
     "trickster": "bin/trickster.mjs"
   },
   "files": [
+    "agents",
     "bin",
     "installer",
     "scripts",

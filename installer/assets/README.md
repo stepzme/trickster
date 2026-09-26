@@ -3,7 +3,9 @@
 Эта папка содержит зафиксированную версию процесса разработки и приёмки iOS-приложения.
 
 - `AGENTS.md` — точка входа для Codex.
+- `agents/` — ограниченные контракты фазовых субагентов.
 - `workflow/master-prompt.md` — порядок отдельных этапов.
+- `workflow/delegation.md` — spawn, handoff, владение файлами и Simulator.
 - `workflow/scrn-categories.md` — допустимые категории SCRN.
 - `workflow/` — scope, референсы, DesignMD, ассеты, реализация, приёмка, app icon, ASO и передача.
 - `templates/` — шаблоны артефактов run-id.

@@ -1,6 +1,6 @@
 # Trickster — project-scoped pipeline разработки iOS-приложений
 
-Версия комплекта: 0.3. Trickster устанавливает в существующий проект локальный процесс для Codex: исследование продукта, SCRN-референсы, подтверждённый DesignMD, реализация, проверка в Simulator, app icon и ASO screenshots.
+Версия комплекта: 0.4. Trickster устанавливает в существующий проект локальный multi-agent процесс для Codex: исследование продукта, SCRN-референсы, подтверждённый DesignMD, реализация, независимая проверка в Simulator, app icon и ASO screenshots.
 
 ## Установка
 
@@ -15,6 +15,7 @@ npx @sgx22/trickster@pilot init
 ```text
 trickster/
 ├── AGENTS.md
+├── agents/
 ├── workflow/
 ├── templates/
 ├── design/
@@ -40,7 +41,7 @@ Installer также добавляет ограниченный указате�
 npx @sgx22/trickster@pilot doctor
 ```
 
-`doctor` проверяет Codex, project config, DesignMD key и локальный runtime. Выбранный `DESIGN.md` не требуется до старта задачи: агент выбирает его внутри процесса и обязан получить подтверждение пользователя до проектирования UI.
+`doctor` проверяет Codex, project config, DesignMD key и локальный runtime. Выбранный `DESIGN.md` не требуется до старта задачи: design-planner выбирает его внутри процесса, а мастер обязан получить подтверждение пользователя до проектирования UI. Доступность collaboration tools проверяется уже в сессии Codex.
 
 После `init` перезапусти Codex, доверь проект и при необходимости выполни:
 
@@ -52,20 +53,20 @@ codex mcp login screen_gallery
 
 ## Этапы процесса
 
-| Этап | Документ | Обязательный результат |
-|---|---|---|
-| 1 | [Scope](workflow/scope.md) | Явный статус и пробелы функционального объёма |
-| 2 | [SCRN research](workflow/scrn-research.md) | Релевантная категория, просмотренные изображения, baseline при необходимости |
-| 3 | [DesignMD](workflow/designmd.md) | Один проверенный дизайн и явное подтверждение пользователя |
-| 4 | [Product contract](workflow/product-contract.md) | Экраны, состояния, сценарии и план проверки |
-| 5 | [Assets](workflow/assets.md) | Asset manifest и проверенные продуктовые изображения либо N/A |
-| 6 | [Implementation](workflow/implementation.md) | Вертикальный сценарий и полный согласованный scope |
-| 7 | [App icon](workflow/app-icon.md) | Одна оригинальная концепция по Logoinspo-референсам |
-| 8 | [Acceptance](workflow/acceptance.md) | Финальная сборка с иконкой, запуск, сценарии и визуальные доказательства |
-| 9 | [ASO screenshots](workflow/aso-screenshots.md) | Один комплект из реальных экранов принятой сборки |
-| 10 | [Delivery](workflow/delivery.md) | Итоговый отчёт и воспроизведение |
+| Этап | Владелец | Документ | Обязательный результат |
+|---|---|---|---|
+| 1 | product-researcher | [Scope](workflow/scope.md) | Явный статус и пробелы функционального объёма |
+| 2 | product-researcher | [SCRN research](workflow/scrn-research.md) | Релевантная категория, просмотренные изображения, baseline при необходимости |
+| 3 | design-planner + master gate | [DesignMD](workflow/designmd.md) | Один проверенный дизайн и явное подтверждение пользователя |
+| 4 | design-planner | [Product contract](workflow/product-contract.md) | Экраны, состояния, сценарии и план проверки |
+| 5 | visual-producer при необходимости | [Assets](workflow/assets.md) | Asset manifest и проверенные изображения либо N/A |
+| 6 | implementation-owner | [Implementation](workflow/implementation.md) | Вертикальный сценарий и полный согласованный scope |
+| 7 | visual-producer | [App icon](workflow/app-icon.md) | Одна оригинальная концепция по Logoinspo-референсам |
+| 8 | acceptance-reviewer + master | [Acceptance](workflow/acceptance.md) | Независимо проверенная финальная сборка |
+| 9 | visual-producer | [ASO screenshots](workflow/aso-screenshots.md) | Один комплект из реальных экранов принятой сборки |
+| 10 | master | [Delivery](workflow/delivery.md) | Итоговый отчёт и воспроизведение |
 
-[Master process](workflow/master-prompt.md) связывает этапы. [UX](workflow/ux.md) и [iOS](workflow/ios.md) действуют сквозным образом. Допустимые категории SCRN зафиксированы в [scrn-categories.md](workflow/scrn-categories.md).
+[Master process](workflow/master-prompt.md) связывает этапы, а [delegation.md](workflow/delegation.md) задаёт spawn, handoff и владение файлами. Role contracts находятся в `agents/`. [UX](workflow/ux.md) и [iOS](workflow/ios.md) действуют сквозным образом. Допустимые категории SCRN зафиксированы в [scrn-categories.md](workflow/scrn-categories.md).
 
 ## Основные правила
 
@@ -73,6 +74,8 @@ codex mcp login screen_gallery
 - Если scope не определён, агент восстанавливает baseline по приложениям той же категории, исключая незапрошенные backend и integration-функции.
 - Агент выбирает один DesignMD и ждёт подтверждения до UI-работы.
 - На каждом этапе создаётся одно решение, а не набор вариантов.
+- Фазовые агенты получают только необходимые stage documents и артефакты; мастер проверяет их handoff и сохраняет ответственность за итог.
+- Только один агент одновременно владеет общими Xcode-файлами или Simulator.
 - App icon создаётся после экранов приложения и проверяется в финальной сборке; ASO создаётся после её приёмки.
 - Наличие текста инструкции не считается доказательством выполнения этапа.
 
@@ -83,6 +86,7 @@ codex mcp login screen_gallery
 ## Документация
 
 - [OpenAI: Model Context Protocol](https://learn.chatgpt.com/docs/extend/mcp).
+- [OpenAI: Multi-agent](https://developers.openai.com/api/docs/guides/agents-api/multi-agent).
 - [Apple: запуск на симуляторе и устройстве](https://developer.apple.com/documentation/Xcode/running-your-app-on-simulated-or-physical-devices).
 - [Apple: app icons](https://developer.apple.com/design/human-interface-guidelines/app-icons).
 - [Apple: screenshot specifications](https://developer.apple.com/help/app-store-connect/reference/app-information/screenshot-specifications).

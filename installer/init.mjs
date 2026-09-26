@@ -273,6 +273,10 @@ default_tools_approval_mode = "auto"`;
 async function copyKit(target) {
   const destination = resolve(target, "trickster");
   await mkdir(destination, { recursive: true });
+  await cp(resolve(packageRoot, "agents"), resolve(destination, "agents"), {
+    recursive: true,
+    force: true,
+  });
   await cp(resolve(packageRoot, "workflow"), resolve(destination, "workflow"), {
     recursive: true,
     force: true,
@@ -388,6 +392,7 @@ export async function doctorProject(target = process.cwd(), { quiet = false } = 
   const checks = [
     ["Codex CLI", commandExists("codex")],
     ["Trickster instructions", existsSync(resolve(project, "trickster", "AGENTS.md"))],
+    ["Phase agent contracts", existsSync(resolve(project, "trickster", "agents", "acceptance-reviewer.md"))],
     ["Project Codex config", existsSync(resolve(project, ".codex", "config.toml"))],
     ["DesignMD key", hasDesignmdKey],
     ["DesignMD runtime", existsSync(resolve(project, "trickster", "runtime", "node_modules", "designmd-mcp", "dist", "index.js"))],
@@ -399,6 +404,7 @@ export async function doctorProject(target = process.cwd(), { quiet = false } = 
       console.log(`${passed ? "PASS" : "MISSING"}  ${name}`);
     }
     console.log("VERIFY   SCRN OAuth and an image-returning reference query in a fresh Codex session");
+    console.log("VERIFY   Codex collaboration tools for phase subagents in the task session");
     console.log("RUNTIME  DESIGN.md is selected and confirmed after SCRN research, not during doctor");
     console.log(`\n${ready ? "Local installation is ready; verify SCRN before the pilot." : "Trickster is not ready for the pilot."}`);
   }

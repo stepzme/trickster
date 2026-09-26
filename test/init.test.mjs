@@ -36,7 +36,7 @@ test("installs one project-local Trickster folder and Codex integration", async 
 
   assert.match(await readFile(join(project, "AGENTS.md"), "utf8"), /trickster\/AGENTS\.md/);
   assert.match(await readFile(join(project, ".gitignore"), "utf8"), /trickster\/\.secrets/);
-  assert.equal(await readFile(join(project, "trickster", "VERSION"), "utf8"), "0.3.0\n");
+  assert.equal(await readFile(join(project, "trickster", "VERSION"), "utf8"), "0.4.0\n");
   assert.equal(
     await readFile(join(project, "trickster", ".secrets", "designmd-api-key"), "utf8"),
     "dk_test_key\n",
@@ -54,6 +54,14 @@ test("installs one project-local Trickster folder and Codex integration", async 
     /Logoinspo/,
   );
   assert.match(
+    await readFile(join(project, "trickster", "workflow", "delegation.md"), "utf8"),
+    /product-researcher/,
+  );
+  assert.match(
+    await readFile(join(project, "trickster", "agents", "acceptance-reviewer.md"), "utf8"),
+    /Независимо проверить/,
+  );
+  assert.match(
     await readFile(join(project, "trickster", "templates", "references.md"), "utf8"),
     /SCRN-исследование/,
   );
@@ -61,7 +69,7 @@ test("installs one project-local Trickster folder and Codex integration", async 
     JSON.parse(
       await readFile(join(project, "trickster", "runtime", "package.json"), "utf8"),
     ).version,
-    "0.3.0",
+    "0.4.0",
   );
 
   const secretMode = (await stat(join(project, "trickster", ".secrets", "designmd-api-key"))).mode & 0o777;
@@ -140,6 +148,7 @@ test("doctor requires runtime but selects DESIGN.md during the task", async () =
   );
   assert.equal(readyCliResult.status, 0);
   assert.match(readyCliResult.stdout, /verify SCRN before the pilot/);
+  assert.match(readyCliResult.stdout, /collaboration tools for phase subagents/);
   assert.match(readyCliResult.stdout, /DESIGN\.md is selected and confirmed after SCRN research/);
 });
 
