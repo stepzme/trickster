@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { spawnSync } from "node:child_process";
-import { mkdtemp, mkdir, readFile, stat, writeFile } from "node:fs/promises";
+import { mkdtemp, mkdir, readFile, writeFile } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { dirname, join, resolve } from "node:path";
 import test from "node:test";
@@ -23,138 +23,123 @@ async function createProject() {
   return project;
 }
 
-test("installs one project-local Trickster folder and Codex integration", async () => {
+test("installs one project-local Trickster folder, style library, and Codex integration", async () => {
   const project = await createProject();
-  await initializeProject({
-    target: project,
-    yes: true,
-    skipRuntimeInstall: true,
-    skipScrnLogin: true,
-    providedKey: "dk_test_key",
-    quiet: true,
-  });
+  await initializeProject({ target: project, yes: true, skipScrnLogin: true, quiet: true });
 
   assert.match(await readFile(join(project, "AGENTS.md"), "utf8"), /trickster\/AGENTS\.md/);
-  assert.match(await readFile(join(project, ".gitignore"), "utf8"), /trickster\/\.secrets/);
-  assert.equal(await readFile(join(project, "trickster", "VERSION"), "utf8"), "0.5.0\n");
+  assert.equal(await readFile(join(project, ".gitignore"), "utf8"), "build/\n");
+  assert.equal(await readFile(join(project, "trickster", "VERSION"), "utf8"), "0.6.0\n");
   assert.equal(await readFile(join(project, "trickster", "HARNESS"), "utf8"), "codex\n");
-  assert.equal(
-    await readFile(join(project, "trickster", ".secrets", "designmd-api-key"), "utf8"),
-    "dk_test_key\n",
-  );
   assert.match(
     await readFile(join(project, "trickster", "workflow", "master-prompt.md"), "utf8"),
-    /Исследование SCRN/,
+    /Выбор пакета стиля/,
   );
   assert.match(
-    await readFile(join(project, "trickster", "workflow", "scrn-categories.md"), "utf8"),
-    /Продуктивность/,
+    await readFile(join(project, "trickster", "workflow", "style-reference.md"), "utf8"),
+    /trickster\/styles/,
   );
   assert.match(
-    await readFile(join(project, "trickster", "workflow", "app-icon.md"), "utf8"),
-    /Logoinspo/,
+    await readFile(join(project, "trickster", "styles", "AGENTS.md"), "utf8"),
+    /Инструкция по сборке базы стилей/,
   );
-  assert.match(
-    await readFile(join(project, "trickster", "workflow", "orchestration.md"), "utf8"),
-    /product-researcher/,
+  const styleSource = JSON.parse(
+    await readFile(
+      join(project, "trickster", "styles", "69c4451a481d517ba935ab0b", "source.json"),
+      "utf8",
+    ),
   );
-  assert.match(
-    await readFile(join(project, "trickster", "roles", "acceptance-reviewer.md"), "utf8"),
-    /Независимо проверить/,
-  );
-  assert.match(
-    await readFile(join(project, "trickster", "adapters", "codex.md"), "utf8"),
-    /spawn_agent/,
-  );
-  assert.match(
-    await readFile(join(project, "trickster", "templates", "references.md"), "utf8"),
-    /SCRN-исследование/,
+  assert.deepEqual(Object.keys(styleSource), ["appId", "url", "category"]);
+  assert.equal(
+    await readFile(join(project, "trickster", "runtime", "designmd-mcp.mjs"), "utf8").catch(() => ""),
+    "",
   );
   assert.equal(
-    JSON.parse(
-      await readFile(join(project, "trickster", "runtime", "package.json"), "utf8"),
-    ).version,
-    "0.5.0",
+    await readFile(join(project, "trickster", ".secrets", "designmd-api-key"), "utf8").catch(() => ""),
+    "",
   );
 
-  const secretMode = (await stat(join(project, "trickster", ".secrets", "designmd-api-key"))).mode & 0o777;
-  assert.equal(secretMode, 0o600);
-
   const codexConfig = await readFile(join(project, ".codex", "config.toml"), "utf8");
-  assert.match(codexConfig, /\[mcp_servers\.designmd\]/);
   assert.match(codexConfig, /\[mcp_servers\.screen_gallery\]/);
-  assert.doesNotMatch(codexConfig, /dk_test_key/);
+  assert.doesNotMatch(codexConfig, /designmd/i);
 });
 
-test("re-running init updates managed blocks without duplicating them", async () => {
+test("re-running init updates managed files and preserves the selected style and artifacts", async () => {
   const project = await createProject();
-  const options = {
-    target: project,
-    yes: true,
-    skipRuntimeInstall: true,
-    skipScrnLogin: true,
-    providedKey: "dk_test_key",
-    quiet: true,
-  };
+  const options = { target: project, yes: true, skipScrnLogin: true, quiet: true };
 
   await initializeProject(options);
-  await writeFile(join(project, "trickster", "design", "DESIGN.md"), "# Keep me\n", "utf8");
-  const secondRun = await initializeProject({ ...options, providedKey: undefined });
+  await writeFile(join(project, "trickster", "design", "source.json"), "{\"appId\":\"keep\"}\n", "utf8");
+  await writeFile(join(project, "trickster", "design", "ui.md"), "# Keep UI\n", "utf8");
+  await writeFile(join(project, "trickster", "design", "ux.md"), "# Keep UX\n", "utf8");
+  await writeFile(join(project, "trickster", "design", "illustrations.md"), "# Keep art\n", "utf8");
+  await mkdir(join(project, "trickster", "artifacts", "run-1"), { recursive: true });
+  await writeFile(join(project, "trickster", "artifacts", "run-1", "review.md"), "# Keep review\n", "utf8");
+
+  await initializeProject(options);
 
   const agents = await readFile(join(project, "AGENTS.md"), "utf8");
   assert.equal(agents.match(/>>> trickster managed instructions/g)?.length, 1);
-  assert.equal(await readFile(join(project, "trickster", "design", "DESIGN.md"), "utf8"), "# Keep me\n");
-  assert.equal(secondRun.keyStored, true);
+  assert.equal(await readFile(join(project, "trickster", "design", "ui.md"), "utf8"), "# Keep UI\n");
+  assert.equal(await readFile(join(project, "trickster", "design", "ux.md"), "utf8"), "# Keep UX\n");
+  assert.equal(
+    await readFile(join(project, "trickster", "design", "illustrations.md"), "utf8"),
+    "# Keep art\n",
+  );
+  assert.equal(
+    await readFile(join(project, "trickster", "artifacts", "run-1", "review.md"), "utf8"),
+    "# Keep review\n",
+  );
 });
 
-test("doctor requires runtime but selects DESIGN.md during the task", async () => {
+test("doctor validates the installed style library while selection stays task-scoped", async () => {
   const project = await createProject();
   await initializeProject({
     target: project,
+    harness: "generic",
     yes: true,
-    skipRuntimeInstall: true,
     skipScrnLogin: true,
-    providedKey: "dk_test_key",
     quiet: true,
   });
 
   const result = await doctorProject(project, { quiet: true });
-  assert.equal(result.ready, false);
-
-  const cliResult = spawnSync(
-    process.execPath,
-    [resolve(repositoryRoot, "bin", "trickster.mjs"), "doctor", "--target", project],
-    { encoding: "utf8" },
-  );
-  assert.equal(cliResult.status, 1);
-  assert.match(cliResult.stdout, /not ready for the pilot/);
-
-  const runtimeEntry = join(
-    project,
-    "trickster",
-    "runtime",
-    "node_modules",
-    "designmd-mcp",
-    "dist",
-  );
-  await mkdir(runtimeEntry, { recursive: true });
-  await writeFile(join(runtimeEntry, "index.js"), "", "utf8");
-  const readyResult = await doctorProject(project, { quiet: true });
-  assert.equal(readyResult.ready, true);
+  assert.equal(result.ready, true);
   assert.equal(
-    await readFile(join(project, "trickster", "design", "DESIGN.md"), "utf8").catch(() => ""),
+    await readFile(join(project, "trickster", "design", "ui.md"), "utf8").catch(() => ""),
     "",
   );
 
-  const readyCliResult = spawnSync(
+  const cliResult = spawnSync(
     process.execPath,
-    [resolve(repositoryRoot, "bin", "trickster.mjs"), "doctor", "--target", project],
+    [resolve(repositoryRoot, "bin", "trickster.mjs"), "doctor", "--target", project, "--harness", "generic"],
     { encoding: "utf8" },
   );
-  assert.equal(readyCliResult.status, 0);
-  assert.match(readyCliResult.stdout, /verify SCRN before the pilot/);
-  assert.match(readyCliResult.stdout, /role delegation or the sequential fallback/);
-  assert.match(readyCliResult.stdout, /DESIGN\.md is selected and confirmed after SCRN research/);
+  assert.equal(cliResult.status, 0);
+  assert.match(cliResult.stdout, /verify SCRN before the pilot/i);
+  assert.match(cliResult.stdout, /local style package is selected and confirmed/i);
+});
+
+test("doctor rejects a style library without a complete real app package", async () => {
+  const project = await createProject();
+  await initializeProject({
+    target: project,
+    harness: "generic",
+    yes: true,
+    skipScrnLogin: true,
+    quiet: true,
+  });
+  await writeFile(
+    join(project, "trickster", "styles", "69c4451a481d517ba935ab0b", "source.json"),
+    "{}\n",
+    "utf8",
+  );
+
+  const result = await doctorProject(project, { quiet: true });
+  assert.equal(result.ready, false);
+  assert.deepEqual(
+    result.checks.find(([name]) => name === "Complete reference style package"),
+    ["Complete reference style package", false],
+  );
 });
 
 test("generic harness installs the portable kit without Codex project files", async () => {
@@ -163,9 +148,7 @@ test("generic harness installs the portable kit without Codex project files", as
     target: project,
     harness: "generic",
     yes: true,
-    skipRuntimeInstall: true,
     skipScrnLogin: true,
-    providedKey: "dk_test_key",
     quiet: true,
   });
 
@@ -180,36 +163,12 @@ test("generic harness installs the portable kit without Codex project files", as
     await readFile(join(project, "trickster", "adapters", "generic.md"), "utf8"),
     /sequential fallback/,
   );
-
-  const beforeRuntime = await doctorProject(project, { quiet: true });
-  assert.equal(beforeRuntime.harness, "generic");
-  assert.equal(beforeRuntime.ready, false);
-  assert.equal(beforeRuntime.checks.some(([name]) => name === "Codex CLI"), false);
-  assert.equal(beforeRuntime.checks.some(([name]) => name === "Project Codex config"), false);
-
-  const runtimeEntry = join(
-    project,
-    "trickster",
-    "runtime",
-    "node_modules",
-    "designmd-mcp",
-    "dist",
-  );
-  await mkdir(runtimeEntry, { recursive: true });
-  await writeFile(join(runtimeEntry, "index.js"), "", "utf8");
   assert.equal((await doctorProject(project, { quiet: true })).ready, true);
 });
 
 test("switching to generic removes only Trickster-owned Codex integration", async () => {
   const project = await createProject();
-  const baseOptions = {
-    target: project,
-    yes: true,
-    skipRuntimeInstall: true,
-    skipScrnLogin: true,
-    providedKey: "dk_test_key",
-    quiet: true,
-  };
+  const baseOptions = { target: project, yes: true, skipScrnLogin: true, quiet: true };
 
   await initializeProject({ ...baseOptions, harness: "codex" });
   await writeFile(
@@ -235,6 +194,33 @@ test("switching to generic removes only Trickster-owned Codex integration", asyn
   );
 });
 
+test("init removes obsolete DesignMD runtime and key without deleting unrelated secrets", async () => {
+  const project = await createProject();
+  await mkdir(join(project, "trickster", "runtime"), { recursive: true });
+  await writeFile(join(project, "trickster", "runtime", "legacy.js"), "legacy", "utf8");
+  await mkdir(join(project, "trickster", ".secrets"), { recursive: true });
+  await writeFile(join(project, "trickster", ".secrets", "designmd-api-key"), "old-key", "utf8");
+  await writeFile(join(project, "trickster", ".secrets", "keep-me"), "keep", "utf8");
+
+  await initializeProject({
+    target: project,
+    harness: "generic",
+    yes: true,
+    skipScrnLogin: true,
+    quiet: true,
+  });
+
+  assert.equal(
+    await readFile(join(project, "trickster", "runtime", "legacy.js"), "utf8").catch(() => ""),
+    "",
+  );
+  assert.equal(
+    await readFile(join(project, "trickster", ".secrets", "designmd-api-key"), "utf8").catch(() => ""),
+    "",
+  );
+  assert.equal(await readFile(join(project, "trickster", ".secrets", "keep-me"), "utf8"), "keep");
+});
+
 test("refuses broad non-project targets", async () => {
   await assert.rejects(() => assertSafeProject(tmpdir()), /existing Git, Xcode/);
 });
@@ -243,28 +229,18 @@ test("rejects global npm installation", () => {
   const result = spawnSync(
     process.execPath,
     [resolve(repositoryRoot, "scripts", "reject-global-install.mjs")],
-    {
-      encoding: "utf8",
-      env: { ...process.env, npm_config_global: "true" },
-    },
+    { encoding: "utf8", env: { ...process.env, npm_config_global: "true" } },
   );
 
   assert.equal(result.status, 1);
   assert.match(result.stderr, /cannot be installed globally/);
   assert.match(result.stderr, /npx @sgx22\/trickster@pilot init/);
-
-  assert.equal(
-    isGlobalPackagePath("/opt/homebrew/lib/node_modules/@sgx22/trickster/bin/trickster.mjs"),
-    true,
-  );
+  assert.equal(isGlobalPackagePath("/opt/homebrew/lib/node_modules/@sgx22/trickster/bin/trickster.mjs"), true);
   assert.equal(
     isGlobalPackagePath("C:\\Users\\stepz\\AppData\\Roaming\\npm\\node_modules\\@sgx22\\trickster\\bin\\trickster.mjs"),
     true,
   );
-  assert.equal(
-    isGlobalPackagePath("/project/node_modules/@sgx22/trickster/bin/trickster.mjs"),
-    false,
-  );
+  assert.equal(isGlobalPackagePath("/project/node_modules/@sgx22/trickster/bin/trickster.mjs"), false);
 });
 
 test("prints help as a top-level option", () => {
@@ -277,6 +253,7 @@ test("prints help as a top-level option", () => {
   assert.equal(result.status, 0);
   assert.match(result.stdout, /trickster init/);
   assert.match(result.stdout, /--harness codex\|generic/);
+  assert.doesNotMatch(result.stdout, /runtime-install/);
 });
 
 test("rejects an unsupported harness", () => {

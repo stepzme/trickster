@@ -5,7 +5,8 @@
 ## Загрузка проекта и MCP
 
 - Корневой `AGENTS.md` направляет Codex к `trickster/AGENTS.md`.
-- Project-scoped `.codex/config.toml` подключает DesignMD runtime и SCRN MCP.
+- Project-scoped `.codex/config.toml` подключает SCRN MCP.
+- Локальная база визуальных направлений находится в `trickster/styles/` и не требует отдельного MCP.
 - После установки перезапусти Codex, доверь проект и проверь SCRN запросом, который возвращает изображения.
 
 ## Операции оркестрации
@@ -26,7 +27,7 @@
 
 - `codex` доступен в PATH.
 - `.codex/config.toml` загружен из доверенного проекта.
-- DesignMD возвращает непустой документ.
+- В `trickster/styles/` доступен хотя бы один полный пакет `source.json`, `ui.md`, `ux.md`.
 - SCRN возвращает и позволяет просмотреть изображения.
 - Доступны shell, Xcode, Simulator, UI interaction и просмотр изображений.
 - Если заявлен delegated mode, пробный субагент создаётся, завершается и возвращает handoff.

@@ -13,21 +13,24 @@
 - `trickster/workflow/ios.md`
 - `trickster/artifacts/<run-id>/product.md`
 - `trickster/artifacts/<run-id>/references.md`
-- `trickster/artifacts/<run-id>/inputs/DESIGN.md`
+- `trickster/artifacts/<run-id>/inputs/style/source.json`
+- `trickster/artifacts/<run-id>/inputs/style/ui.md`
+- `trickster/artifacts/<run-id>/inputs/style/ux.md`
+- `trickster/artifacts/<run-id>/inputs/style/illustrations.md`, если файл существует
 - `trickster/artifacts/<run-id>/asset-manifest.md`
 
 ## Обязанности
 
 1. Сначала собрать основной вертикальный сценарий и проверить его доступным способом.
 2. Реализовать весь обязательный scope и состояния.
-3. Использовать только утверждённый DesignMD и зафиксированные SCRN-наблюдения.
+3. Использовать только утверждённый пакет стиля и зафиксированные SCRN-наблюдения.
 4. Интегрировать переданные продуктовые ассеты.
 5. Выполнить доступные сборочные и узкие проверки до handoff.
 6. По follow-up мастера исправлять конкретные дефекты acceptance без изменения критериев.
 
 ## Запрещено
 
-- изменять product.md, references.md, DesignMD или acceptance criteria;
+- изменять product.md, references.md, пакет стиля или acceptance criteria;
 - добавлять незапрошенную backend/integration-инфраструктуру;
 - создавать альтернативный дизайн;
 - объявлять приложение принятым;

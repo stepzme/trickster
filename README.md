@@ -1,6 +1,6 @@
 # Trickster — project-scoped pipeline разработки iOS-приложений
 
-Версия комплекта: 0.5. Trickster устанавливает в существующий проект локальный, независимый от agent harness процесс: исследование продукта, SCRN-референсы, подтверждённый DesignMD, реализация, проверка в Simulator, app icon и ASO screenshots.
+Версия комплекта: 0.6. Trickster устанавливает в существующий проект локальный, независимый от agent harness процесс: исследование продукта, SCRN-референсы, выбор одного пакета из собственной базы стилей, реализация, проверка в Simulator, app icon и ASO screenshots.
 
 ## Установка
 
@@ -26,34 +26,23 @@ trickster/
 ├── adapters/
 ├── workflow/
 ├── templates/
+├── styles/
 ├── design/
-├── runtime/
 └── artifacts/
 ```
 
-В режиме `codex` installer также добавляет ограниченный указатель в корневой `AGENTS.md` и project-scoped `.codex/config.toml`. В режиме `generic` эти Codex-файлы не создаются: подключение выполняется по `trickster/adapters/generic.md`. При переключении на generic установщик удаляет только собственные managed-блоки Codex. Оба режима добавляют правила `.gitignore`. Повторный запуск обновляет процесс, удаляет устаревшие управляемые документы, но сохраняет выбранный `trickster/design/DESIGN.md` и артефакты.
+`styles/` — поставляемая база пакетов приложений Screen Gallery. `design/` — рабочая копия одного подтверждённого пакета текущего продукта. Повторный `init` обновляет управляемый процесс и базу, но сохраняет рабочий пакет и run artifacts.
 
-`workflow/` и `roles/` не содержат команд конкретного harness. `adapters/` переводит универсальные операции `SPAWN`, `WAIT`, `CONTINUE`, `MESSAGE` и `STOP` в инструменты среды. Если отдельные исполнители недоступны, мастер последовательно выполняет те же role contracts.
+В режиме `codex` installer также добавляет ограниченный указатель в корневой `AGENTS.md` и project-scoped `.codex/config.toml`. В режиме `generic` эти Codex-файлы не создаются: подключение выполняется по `trickster/adapters/generic.md`. При переключении на generic установщик удаляет только собственные managed-блоки Codex.
 
-## Подключения
+## Источники
 
-- DesignMD MCP предоставляет конкретный `DESIGN.md`.
 - SCRN MCP обязателен для исследования реальных экранов и сценариев.
+- Локальная база `trickster/styles/` предоставляет `source.json`, `ui.md`, `ux.md` и опциональный `illustrations.md` для каждого приложения.
 - [Logoinspo App Icons](https://logoinspo.com/icons) используется для референсов app icon.
-- DesignMD key хранится в `trickster/.secrets/designmd-api-key` с правами `0600` и исключается из Git.
 - SCRN использует OAuth выбранного harness; данные авторизации в проект не записываются.
 
-Во время интерактивного `init` установщик предлагает открыть страницу DesignMD key и принимает ключ скрытым вводом. Для автоматического запуска ключ можно передать через `DESIGNMD_API_KEY`.
-
-## Проверка установки
-
-```sh
-npx @sgx22/trickster@pilot doctor
-```
-
-`doctor` читает `trickster/HARNESS` и проверяет общие файлы, role contracts, adapter, DesignMD key и локальный runtime. Для Codex он дополнительно проверяет CLI и project config. Выбранный `DESIGN.md` не требуется до старта задачи: design-planner выбирает его внутри процесса, а мастер обязан получить подтверждение пользователя до проектирования UI. MCP, показ изображений и делегирование проверяются реальными действиями уже в сессии выбранного harness.
-
-После `init` с Codex перезапусти Codex, доверь проект и при необходимости выполни:
+Для Codex при необходимости выполни:
 
 ```sh
 codex mcp login screen_gallery
@@ -61,13 +50,21 @@ codex mcp login screen_gallery
 
 Готовность SCRN доказывается реальным запросом, который возвращает изображения.
 
+## Проверка установки
+
+```sh
+npx @sgx22/trickster@pilot doctor
+```
+
+`doctor` читает `trickster/HARNESS` и проверяет общие файлы, role contracts, adapter и локальную базу стилей. Для Codex он дополнительно проверяет CLI и project config. Рабочий пакет в `trickster/design/` не требуется до старта задачи: `design-planner` выбирает один пакет внутри процесса, а мастер обязан получить подтверждение пользователя до проектирования UI. MCP, показ изображений и делегирование проверяются реальными действиями уже в сессии выбранного harness.
+
 ## Этапы процесса
 
 | Этап | Владелец | Документ | Обязательный результат |
 |---|---|---|---|
 | 1 | product-researcher | [Scope](workflow/scope.md) | Явный статус и пробелы функционального объёма |
 | 2 | product-researcher | [SCRN research](workflow/scrn-research.md) | Релевантная категория, просмотренные изображения, baseline при необходимости |
-| 3 | design-planner + master gate | [DesignMD](workflow/designmd.md) | Один проверенный дизайн и явное подтверждение пользователя |
+| 3 | design-planner + master gate | [Style reference](workflow/style-reference.md) | Один локальный пакет и явное подтверждение пользователя |
 | 4 | design-planner | [Product contract](workflow/product-contract.md) | Экраны, состояния, сценарии и план проверки |
 | 5 | visual-producer при необходимости | [Assets](workflow/assets.md) | Asset manifest и проверенные изображения либо N/A |
 | 6 | implementation-owner | [Implementation](workflow/implementation.md) | Вертикальный сценарий и полный согласованный scope |
@@ -76,22 +73,23 @@ codex mcp login screen_gallery
 | 9 | visual-producer | [ASO screenshots](workflow/aso-screenshots.md) | Один комплект из реальных экранов принятой сборки |
 | 10 | master | [Delivery](workflow/delivery.md) | Итоговый отчёт и воспроизведение |
 
-[Master process](workflow/master-prompt.md) связывает этапы, а [orchestration.md](workflow/orchestration.md) задаёт универсальные операции, handoff и владение файлами. Role contracts находятся в `roles/`, а привязка к среде — в `adapters/`. [UX](workflow/ux.md) и [iOS](workflow/ios.md) действуют сквозным образом. Допустимые категории SCRN зафиксированы в [scrn-categories.md](workflow/scrn-categories.md).
+[Master process](workflow/master-prompt.md) связывает этапы, а [orchestration.md](workflow/orchestration.md) задаёт универсальные операции, handoff и владение файлами. Role contracts находятся в `roles/`, а привязка к среде — в `adapters/`. [UX](workflow/ux.md) и [iOS](workflow/ios.md) действуют сквозным образом.
 
 ## Основные правила
 
 - SCRN MCP используется в каждом создании или существенном изменении приложения.
 - Если scope не определён, product-researcher восстанавливает baseline по приложениям той же категории, исключая незапрошенные backend и integration-функции.
-- Design-planner выбирает один DesignMD, а мастер ждёт подтверждения до UI-работы.
+- Design-planner выбирает один полный пакет из `styles/`, а мастер ждёт подтверждения до UI-работы.
+- `ui.md` задаёт визуальный язык, `ux.md` — характер сценариев; `illustrations.md` применяется только когда существует.
+- Если `illustrations.md` отсутствует, но продукту нужна графика, создаётся один оригинальный стиль, гармонирующий с `ui.md`.
 - На каждом этапе создаётся одно решение, а не набор вариантов.
-- Исполнители ролей получают только необходимые stage documents и артефакты; мастер проверяет их handoff и сохраняет ответственность за итог.
 - Только один исполнитель одновременно владеет общими Xcode-файлами или Simulator.
 - App icon создаётся после экранов приложения и проверяется в финальной сборке; ASO создаётся после её приёмки.
 - Наличие текста инструкции не считается доказательством выполнения этапа.
 
-## Повторный пилот
+## Проверка нового процесса
 
-Первый pilot run подтвердил сборку и полезность прямого DesignMD, но выявил слабую трассируемость MCP-источника, чрезмерно компактный scope и отсутствие Store assets. Повторный пилот должен проверить новые stage gates по [pilot.md](workflow/pilot.md).
+Изолированный end-to-end pilot описан в [workflow/pilot.md](workflow/pilot.md). Он должен отдельно подтвердить установку базы, выбор и confirmation gate пакета, run snapshot, реализацию, независимую приёмку, app icon и ASO.
 
 ## Документация
 

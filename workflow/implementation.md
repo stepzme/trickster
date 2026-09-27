@@ -2,7 +2,7 @@
 
 ## Подготовка
 
-Прочитай product.md, snapshot DesignMD, references.md, asset manifest, `ux.md` и `ios.md`. Проверь доступные возможности harness: отдельные исполнители, Xcode, Simulator, взаимодействие с UI и просмотр изображений. Запиши реальные ограничения.
+Прочитай product.md, `inputs/style/source.json`, `ui.md`, `ux.md`, опциональный `illustrations.md`, references.md, asset manifest, общие `workflow/ux.md` и `ios.md`. Проверь доступные возможности harness: отдельные исполнители, Xcode, Simulator, взаимодействие с UI и просмотр изображений. Запиши реальные ограничения.
 
 ## Владелец реализации
 
