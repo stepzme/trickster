@@ -32,8 +32,8 @@
       <rect x="649" y="645" width="372" height="150" rx="24" fill="#FFFFFF"/>
     </g>
 
-    <path transform="translate(411 202) scale(.45)" fill="#DFFF4F" d="M82 8C84 42 93 51 132 43C104 62 103 72 140 91C101 80 92 88 102 132C81 96 70 94 43 128C61 89 53 80 12 76C53 66 59 54 37 18C68 45 78 41 82 8Z"/>
-    <text x="518" y="205" fill="#DFFF4F" font-size="15" font-weight="760" letter-spacing="2">MASTER</text>
+    <path transform="translate(411 202) scale(.45)" fill="#149E87" d="M82 8C84 42 93 51 132 43C104 62 103 72 140 91C101 80 92 88 102 132C81 96 70 94 43 128C61 89 53 80 12 76C53 66 59 54 37 18C68 45 78 41 82 8Z"/>
+    <text x="518" y="205" fill="#149E87" font-size="15" font-weight="760" letter-spacing="2">MASTER</text>
     <text x="518" y="239" fill="#FAF8F2" font-size="27" font-weight="740">Orchestrates the whole run</text>
     <text x="518" y="268" fill="#B9B5AC" font-size="17">User gates · ownership · handoffs · final decisions</text>
 
