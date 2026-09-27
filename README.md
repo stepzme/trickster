@@ -8,13 +8,13 @@ English · [Русский](https://github.com/stepzme/trickster/blob/main/READM
 
 Turn an app idea into a native iOS product shaped by a curated design library — scoped, designed, built, verified in Simulator, and completed with an original app icon and ASO screenshots.
 
-Trickster orchestrates specialized AI roles inside your repository. It offers up to three relevant styles from its bundled library, requires you to select exactly one, implements the app, and independently checks the result instead of treating generated code as finished work.
+Trickster orchestrates specialized AI roles inside your repository. It reads a small GitHub catalog, downloads documents for up to three relevant styles, requires you to select exactly one, saves that package in the project, and independently checks the implemented result.
 
 ## What you get
 
 - a functional Xcode project and native iOS app;
 - a product scope grounded in your brief and existing project;
-- one confirmed visual language selected from a bundled local library;
+- one confirmed visual language saved locally after selection from the GitHub catalog;
 - custom-styled controls that preserve native iOS behavior and accessibility;
 - build, Simulator, interaction, and visual verification artifacts;
 - one original app icon informed by reviewed Logoinspo references;
@@ -25,7 +25,7 @@ Trickster orchestrates specialized AI roles inside your repository. It offers up
 ![Trickster four-phase pipeline: define the product, confirm one style, build the native app, then independently verify and deliver it](docs/assets/trickster-pipeline.svg)
 
 1. **Define the product.** Establish the requested scope, boundaries, and any decision that genuinely needs user input.
-2. **Compare local styles.** Rank the bundled design packages and show up to three relevant options; if there is no exact match, show the closest alternatives and explain the adaptation.
+2. **Compare relevant styles.** Read the GitHub catalog, choose up to three candidates by metadata, and download documents only for those candidates.
 3. **Select one direction.** Require exactly one package before UI work. Packages cannot be merged or split across screens.
 4. **Create the contract.** Define screens, states, scenarios, assets, and acceptance checks.
 5. **Build the app.** Implement one vertical flow first, visually inspect it, then complete the agreed scope.
@@ -76,22 +76,20 @@ trickster/
 ├── adapters/
 ├── workflow/
 ├── templates/
-├── styles/
 ├── design/
 └── artifacts/
 ```
 
-- `styles/` contains the bundled, reusable design packages.
-- `design/` contains the style package confirmed for the current product.
-- `artifacts/<run-id>/` contains immutable inputs, contracts, evidence, screenshots, and review results.
+- `design/` contains the only style package confirmed for the current product.
+- `artifacts/<run-id>/` contains contracts, evidence, screenshots, and review results.
 - `roles/` and `workflow/` define the factory stages independently of a specific agent harness.
 - `adapters/` map those stages to Codex or another environment.
 
-Re-running `init` updates managed workflow files and the supplied style library while preserving the selected design and run artifacts.
+Re-running `init` updates managed workflow files while preserving the selected design and run artifacts.
 
 ## Design sources
 
-- **The bundled style library** supplies `source.json`, `ui.md`, `ux.md`, and an optional `illustrations.md` for each reference app. It works without external design-catalog access.
+- **The GitHub style catalog** lists the available reference apps. Trickster downloads documents only for the shortlisted packages, then stores the selected `source.json`, `ui.md`, `ux.md`, and optional `illustrations.md` in `trickster/design/`.
 - **Logoinspo App Icons** supplies references for the original app-icon direction.
 
 The style package is not a skin. Native controls may provide behavior, accessibility, focus, and keyboard integration, but their visual appearance must explicitly inherit `ui.md` when the reference defines a distinct language.
@@ -101,20 +99,21 @@ The style package is not a skin. Native controls may provide behavior, accessibi
 | Stage | Owner | Required result |
 |---|---|---|
 | 1. Scope | product-researcher | Explicit scope status and missing decisions |
-| 2. Style selection | design-planner + user gate | Up to three local candidates and exactly one selected package |
+| 2. Style selection | design-planner + user gate | Up to three GitHub candidates and exactly one locally saved package |
 | 3. Product contract | design-planner | Screens, states, scenarios, assets, and verification plan |
 | 4. Product assets | visual-producer when needed | Verified imagery or a justified `N/A` |
 | 5. Implementation | implementation-owner | Vertical flow followed by the complete agreed scope |
 | 6. App icon | visual-producer | One original concept installed in the app |
 | 7. Acceptance | acceptance-reviewer + master | Independently verified final build |
 | 8. ASO screenshots | visual-producer | One set based on real screens from the accepted build |
-| 9. Delivery | master | Reproducible evidence and final status |
+| 9. Finalization | master + user gate | Explicit user confirmation and cleanup of temporary files |
+| 10. Delivery | master | Reproducible evidence and final status |
 
 See [the master process](workflow/master-prompt.md) and [orchestration contract](workflow/orchestration.md) for the exact execution rules.
 
 ## Core guarantees
 
-- The style shortlist contains no more than three complete local packages.
+- The style shortlist contains no more than three packages selected from catalog metadata; only their documents are downloaded.
 - UI implementation stops until the user selects exactly one package.
 - Packages cannot be merged; the selected package is the only design context.
 - Native control behavior is preserved while appearance follows the selected visual language.
@@ -124,7 +123,7 @@ See [the master process](workflow/master-prompt.md) and [orchestration contract]
 
 ## Requirements and boundaries
 
-Trickster requires macOS, Xcode, an appropriate iOS Simulator runtime, Node.js 20 or later, and an agent environment capable of reading the installed instructions and using project tools. The design library is bundled and requires no external design-catalog access.
+Trickster requires macOS, Xcode, an appropriate iOS Simulator runtime, Node.js 20 or later, and an agent environment capable of reading the installed instructions and using project tools. A new style selection requires access to the raw files in the Trickster GitHub repository; an existing project continues to use its locally saved package.
 
 Signing, release archives, physical-device validation, App Store submission, and external production infrastructure are separate release tasks unless explicitly included in the product scope.
 

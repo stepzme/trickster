@@ -6,13 +6,13 @@
 
 Convierte una idea en una aplicación nativa para iOS basada en una biblioteca de diseño seleccionada: define el alcance, diseña, implementa, verifica en Simulator y completa el resultado con un icono original y capturas ASO.
 
-Trickster coordina roles de IA especializados dentro del repositorio. Propone hasta tres estilos relevantes de su biblioteca incluida, exige elegir exactamente uno, implementa la aplicación y comprueba el resultado de forma independiente en lugar de considerar terminado el código generado.
+Trickster coordina roles de IA especializados dentro del repositorio. Lee un catálogo pequeño de GitHub, descarga documentos para un máximo de tres estilos relevantes, exige elegir exactamente uno, guarda ese paquete en el proyecto y comprueba el resultado implementado de forma independiente.
 
 ## Qué obtienes
 
 - un proyecto Xcode funcional y una aplicación iOS nativa;
 - un alcance de producto basado en el brief y el proyecto existente;
-- un lenguaje visual confirmado de la biblioteca local incluida;
+- un lenguaje visual confirmado y guardado localmente tras seleccionarlo en el catálogo de GitHub;
 - controles personalizados que conservan el comportamiento y la accesibilidad nativos de iOS;
 - evidencias de compilación, ejecución, interacción e inspección visual en Simulator;
 - un icono original basado en referencias revisadas de Logoinspo;
@@ -23,7 +23,7 @@ Trickster coordina roles de IA especializados dentro del repositorio. Propone ha
 ```text
 Idea de la aplicación
 → alcance del producto
-→ selección local de estilos
+→ selección desde el catálogo de GitHub
 → elección de un estilo
 → implementación nativa
 → aceptación en Simulator
@@ -31,7 +31,7 @@ Idea de la aplicación
 ```
 
 1. **Definir el producto.** Se establecen el alcance, los límites y las decisiones que realmente requieren la intervención del usuario.
-2. **Comparar estilos locales.** Se ordenan los paquetes incluidos y se muestran hasta tres opciones relevantes. Si no existe una coincidencia exacta, se presentan las alternativas más cercanas y su adaptación.
+2. **Comparar estilos relevantes.** Se lee el catálogo de GitHub, se eligen hasta tres candidatos por sus metadatos y se descargan documentos solo para ellos.
 3. **Elegir una dirección.** Antes de implementar la UI se debe elegir exactamente un paquete. Los paquetes no se pueden combinar ni repartir entre pantallas.
 4. **Crear el contrato.** Se definen pantallas, estados, escenarios, recursos y comprobaciones de aceptación.
 5. **Construir la aplicación.** Primero se implementa y revisa visualmente un flujo vertical; después se completa todo el alcance acordado.
@@ -76,22 +76,20 @@ trickster/
 ├── adapters/
 ├── workflow/
 ├── templates/
-├── styles/
 ├── design/
 └── artifacts/
 ```
 
-- `styles/` contiene los paquetes de diseño reutilizables incluidos.
-- `design/` contiene el paquete de estilo confirmado para el producto actual.
-- `artifacts/<run-id>/` contiene entradas inmutables, contratos, evidencias, capturas y resultados de revisión.
+- `design/` contiene el único paquete de estilo confirmado para el producto actual.
+- `artifacts/<run-id>/` contiene contratos, evidencias, capturas y resultados de revisión.
 - `roles/` y `workflow/` definen las etapas de la fábrica independientemente de un agent harness concreto.
 - `adapters/` conectan esas etapas con Codex u otro entorno.
 
-Volver a ejecutar `init` actualiza los archivos administrados del proceso y la biblioteca de estilos incluida, conservando el diseño seleccionado y los run artifacts.
+Volver a ejecutar `init` actualiza los archivos administrados del proceso, conservando el diseño seleccionado y los run artifacts.
 
 ## Fuentes de diseño
 
-- **La biblioteca de estilos incluida** proporciona `source.json`, `ui.md`, `ux.md` y un `illustrations.md` opcional para cada aplicación de referencia. No necesita acceso a un catálogo de diseño externo.
+- **El catálogo de estilos de GitHub** enumera las aplicaciones de referencia disponibles. Trickster descarga documentos solo para los candidatos y guarda el `source.json`, `ui.md`, `ux.md` y `illustrations.md` opcional elegidos en `trickster/design/`.
 - **Logoinspo App Icons** proporciona referencias para la dirección original del icono.
 
 El paquete de estilo no es una simple skin. Los controles nativos pueden aportar comportamiento, accesibilidad, focus e integración con el teclado, pero su apariencia debe heredar explícitamente `ui.md` cuando la referencia define un lenguaje visual propio.
@@ -101,20 +99,21 @@ El paquete de estilo no es una simple skin. Los controles nativos pueden aportar
 | Etapa | Responsable | Resultado obligatorio |
 |---|---|---|
 | 1. Alcance | product-researcher | Estado explícito del alcance y decisiones pendientes |
-| 2. Selección de estilo | design-planner + aprobación del usuario | Hasta tres candidatos locales y exactamente un paquete elegido |
+| 2. Selección de estilo | design-planner + aprobación del usuario | Hasta tres candidatos de GitHub y un paquete guardado localmente |
 | 3. Contrato del producto | design-planner | Pantallas, estados, escenarios, recursos y plan de verificación |
 | 4. Recursos del producto | visual-producer cuando sea necesario | Imágenes verificadas o un `N/A` justificado |
 | 5. Implementación | implementation-owner | Flujo vertical seguido del alcance completo acordado |
 | 6. Icono | visual-producer | Un concepto original instalado en la aplicación |
 | 7. Aceptación | acceptance-reviewer + master | Compilación final verificada de forma independiente |
 | 8. Capturas ASO | visual-producer | Un conjunto basado en pantallas reales de la compilación aceptada |
-| 9. Entrega | master | Evidencia reproducible y estado final |
+| 9. Finalización | master + aprobación del usuario | Confirmación explícita y limpieza de archivos temporales |
+| 10. Entrega | master | Evidencia reproducible y estado final |
 
 Consulta [el proceso maestro](workflow/master-prompt.md) y [el contrato de orquestación](workflow/orchestration.md) para conocer las reglas exactas de ejecución.
 
 ## Garantías principales
 
-- La selección contiene como máximo tres paquetes locales completos.
+- La selección contiene como máximo tres paquetes elegidos por los metadatos del catálogo; solo se descargan sus documentos.
 - La implementación de la UI se detiene hasta que el usuario elige exactamente un paquete.
 - Los paquetes no se pueden combinar; el elegido es el único contexto de diseño.
 - Se conserva el comportamiento nativo de los controles, mientras que su apariencia sigue el lenguaje visual seleccionado.
@@ -124,7 +123,7 @@ Consulta [el proceso maestro](workflow/master-prompt.md) y [el contrato de orque
 
 ## Requisitos y límites
 
-Trickster requiere macOS, Xcode, un runtime adecuado de iOS Simulator, Node.js 20 o posterior y un entorno de agentes capaz de leer las instrucciones instaladas y utilizar las herramientas del proyecto. La biblioteca de diseño está incluida y no requiere acceso a un catálogo de diseño externo.
+Trickster requiere macOS, Xcode, un runtime adecuado de iOS Simulator, Node.js 20 o posterior y un entorno de agentes capaz de leer las instrucciones instaladas y utilizar las herramientas del proyecto. Una nueva selección de estilo requiere acceso a los archivos raw del repositorio de Trickster en GitHub; un proyecto existente continúa usando su paquete local.
 
 La firma, los release archives, la validación en dispositivos físicos, el envío a App Store y la infraestructura externa de producción son tareas de release separadas, salvo que se incluyan explícitamente en el alcance.
 

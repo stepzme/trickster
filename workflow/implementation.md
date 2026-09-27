@@ -2,7 +2,9 @@
 
 ## Подготовка
 
-Прочитай product.md, `inputs/style/source.json`, `ui.md`, `ux.md`, опциональный `illustrations.md`, asset manifest, общие `workflow/ux.md` и `ios.md`. Проверь доступные возможности harness: отдельные исполнители, Xcode, Simulator, взаимодействие с UI и просмотр изображений. Запиши реальные ограничения.
+Прочитай product.md, `trickster/design/source.json`, `ui.md`, `ux.md`, опциональный `illustrations.md`, asset manifest, общие `workflow/ux.md` и `ios.md`. Проверь доступные возможности harness: отдельные исполнители, Xcode, Simulator, взаимодействие с UI и просмотр изображений. Запиши реальные ограничения.
+
+Направляй DerivedData и другие временные результаты сборки в `/tmp/trickster/<run-id>/build/`, если используемый инструмент позволяет задать путь. В `trickster/artifacts/<run-id>/` сохраняй только доказательства и финальные материалы, а не сборочные кеши.
 
 ## Владелец реализации
 

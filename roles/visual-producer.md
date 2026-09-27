@@ -8,7 +8,7 @@
 
 ## Общие входы
 
-- подтверждённый `trickster/artifacts/<run-id>/inputs/style/`
+- подтверждённый `trickster/design/`
 - `trickster/artifacts/<run-id>/product.md`
 - точные разрешённые пути записи из задания мастера
 

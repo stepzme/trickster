@@ -12,10 +12,10 @@
 - `trickster/workflow/ux.md`
 - `trickster/workflow/ios.md`
 - `trickster/artifacts/<run-id>/product.md`
-- `trickster/artifacts/<run-id>/inputs/style/source.json`
-- `trickster/artifacts/<run-id>/inputs/style/ui.md`
-- `trickster/artifacts/<run-id>/inputs/style/ux.md`
-- `trickster/artifacts/<run-id>/inputs/style/illustrations.md`, если файл существует
+- `trickster/design/source.json`
+- `trickster/design/ui.md`
+- `trickster/design/ux.md`
+- `trickster/design/illustrations.md`, если файл существует
 - `trickster/artifacts/<run-id>/asset-manifest.md`
 
 ## Обязанности
@@ -26,6 +26,7 @@
 4. Интегрировать переданные продуктовые ассеты.
 5. Выполнить доступные сборочные и узкие проверки до handoff.
 6. По follow-up мастера исправлять конкретные дефекты acceptance без изменения критериев.
+7. Направлять DerivedData и другие временные результаты сборки в `/tmp/trickster/<run-id>/build/`, если инструмент позволяет задать путь.
 
 ## Запрещено
 

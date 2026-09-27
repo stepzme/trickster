@@ -23,7 +23,7 @@ async function createProject() {
   return project;
 }
 
-test("installs one project-local Trickster folder, style library, and Codex integration", async () => {
+test("installs one project-local Trickster folder without the remote style library", async () => {
   const project = await createProject();
   await initializeProject({ target: project, yes: true, quiet: true });
 
@@ -37,26 +37,11 @@ test("installs one project-local Trickster folder, style library, and Codex inte
   );
   assert.match(
     await readFile(join(project, "trickster", "workflow", "style-reference.md"), "utf8"),
-    /trickster\/styles/,
+    /raw\.githubusercontent\.com\/stepzme\/trickster\/main\/styles\/catalog\.json/,
   );
   assert.equal(
-    await readFile(join(project, "trickster", "styles", "AGENTS.md"), "utf8").catch(() => ""),
-    "",
-  );
-  const styleSource = JSON.parse(
-    await readFile(
-      join(project, "trickster", "styles", "69c4451a481d517ba935ab0b", "source.json"),
-      "utf8",
-    ),
-  );
-  assert.deepEqual(Object.keys(styleSource), ["appId", "url", "category"]);
-  assert.equal(
-    await readFile(join(project, "trickster", "runtime", "designmd-mcp.mjs"), "utf8").catch(() => ""),
-    "",
-  );
-  assert.equal(
-    await readFile(join(project, "trickster", ".secrets", "designmd-api-key"), "utf8").catch(() => ""),
-    "",
+    await readdir(join(project, "trickster", "styles")).then(() => true, () => false),
+    false,
   );
 
   assert.equal(
@@ -86,6 +71,10 @@ test("re-running init updates managed files and preserves the selected style and
 
   const agents = await readFile(join(project, "AGENTS.md"), "utf8");
   assert.equal(agents.match(/>>> trickster managed instructions/g)?.length, 1);
+  assert.equal(
+    await readFile(join(project, "trickster", "design", "source.json"), "utf8"),
+    '{"appId":"keep"}\n',
+  );
   assert.equal(await readFile(join(project, "trickster", "design", "ui.md"), "utf8"), "# Keep UI\n");
   assert.equal(await readFile(join(project, "trickster", "design", "ux.md"), "utf8"), "# Keep UX\n");
   assert.equal(
@@ -102,7 +91,7 @@ test("re-running init updates managed files and preserves the selected style and
   );
 });
 
-test("doctor validates the installed style library while selection stays task-scoped", async () => {
+test("doctor validates the installed workflow before style selection", async () => {
   const project = await createProject();
   await initializeProject({
     target: project,
@@ -125,35 +114,20 @@ test("doctor validates the installed style library while selection stays task-sc
   );
   assert.equal(cliResult.status, 0);
   assert.match(cliResult.stdout, /local installation is ready to use/i);
-  assert.match(cliResult.stdout, /up to three local candidates/i);
+  assert.match(cliResult.stdout, /loads up to three candidates from GitHub/i);
 });
 
-test("doctor rejects a style library without a complete real app package", async () => {
+test("re-running init does not remove an existing project style library", async () => {
   const project = await createProject();
-  await initializeProject({
-    target: project,
-    harness: "generic",
-    yes: true,
-    quiet: true,
-  });
-  const styleEntries = await readdir(join(project, "trickster", "styles"), {
-    withFileTypes: true,
-  });
-  for (const entry of styleEntries) {
-    if (entry.isDirectory() && !entry.name.startsWith("_")) {
-      await writeFile(
-        join(project, "trickster", "styles", entry.name, "source.json"),
-        "{}\n",
-        "utf8",
-      );
-    }
-  }
+  const packageDirectory = join(project, "trickster", "styles", "custom-package");
+  await mkdir(packageDirectory, { recursive: true });
+  await writeFile(join(packageDirectory, "ui.md"), "# Keep custom package\n", "utf8");
 
-  const result = await doctorProject(project, { quiet: true });
-  assert.equal(result.ready, false);
-  assert.deepEqual(
-    result.checks.find(([name]) => name === "Complete design style package"),
-    ["Complete design style package", false],
+  await initializeProject({ target: project, harness: "generic", yes: true, quiet: true });
+
+  assert.equal(
+    await readFile(join(packageDirectory, "ui.md"), "utf8"),
+    "# Keep custom package\n",
   );
 });
 
@@ -214,32 +188,6 @@ model = "keep-me"
   );
 });
 
-test("init removes obsolete DesignMD runtime and key without deleting unrelated secrets", async () => {
-  const project = await createProject();
-  await mkdir(join(project, "trickster", "runtime"), { recursive: true });
-  await writeFile(join(project, "trickster", "runtime", "legacy.js"), "legacy", "utf8");
-  await mkdir(join(project, "trickster", ".secrets"), { recursive: true });
-  await writeFile(join(project, "trickster", ".secrets", "designmd-api-key"), "old-key", "utf8");
-  await writeFile(join(project, "trickster", ".secrets", "keep-me"), "keep", "utf8");
-
-  await initializeProject({
-    target: project,
-    harness: "generic",
-    yes: true,
-    quiet: true,
-  });
-
-  assert.equal(
-    await readFile(join(project, "trickster", "runtime", "legacy.js"), "utf8").catch(() => ""),
-    "",
-  );
-  assert.equal(
-    await readFile(join(project, "trickster", ".secrets", "designmd-api-key"), "utf8").catch(() => ""),
-    "",
-  );
-  assert.equal(await readFile(join(project, "trickster", ".secrets", "keep-me"), "utf8"), "keep");
-});
-
 test("refuses broad non-project targets", async () => {
   await assert.rejects(() => assertSafeProject(tmpdir()), /existing Git, Xcode/);
 });
@@ -284,4 +232,78 @@ test("rejects an unsupported harness", () => {
 
   assert.equal(result.status, 1);
   assert.match(result.stderr, /Unsupported harness/);
+});
+
+test("npm package excludes the remote style library", async () => {
+  const npmCache = await mkdtemp(join(tmpdir(), "trickster-npm-cache-"));
+  const result = spawnSync("npm", ["pack", "--dry-run", "--json"], {
+    cwd: repositoryRoot,
+    encoding: "utf8",
+    env: { ...process.env, npm_config_cache: npmCache },
+  });
+
+  assert.equal(result.status, 0, result.stderr);
+  const packResult = JSON.parse(result.stdout);
+  const { files } = Array.isArray(packResult)
+    ? packResult[0]
+    : Object.values(packResult)[0];
+  assert.equal(files.some(({ path }) => path.startsWith("styles/")), false);
+  assert.equal(files.some(({ path }) => path === "workflow/style-reference.md"), true);
+});
+
+test("style catalog indexes every repository package with required documents", async () => {
+  const catalog = JSON.parse(
+    await readFile(join(repositoryRoot, "styles", "catalog.json"), "utf8"),
+  );
+  const directories = await readdir(
+    join(repositoryRoot, "styles"),
+    { withFileTypes: true },
+  );
+  const packageIds = directories
+    .filter((entry) => entry.isDirectory() && !entry.name.startsWith("_"))
+    .map((entry) => entry.name)
+    .sort();
+
+  assert.equal(catalog.length, packageIds.length);
+  assert.deepEqual(catalog.map(({ appId }) => appId).sort(), packageIds);
+  assert.equal(new Set(catalog.map(({ appId }) => appId)).size, catalog.length);
+
+  for (const entry of catalog) {
+    assert.deepEqual(Object.keys(entry), ["appId", "name", "url", "category"]);
+    assert.equal(Object.values(entry).every((value) => typeof value === "string" && value.trim()), true);
+    const source = JSON.parse(
+      await readFile(join(repositoryRoot, "styles", entry.appId, "source.json"), "utf8"),
+    );
+    assert.equal(entry.url, source.url);
+    assert.equal(entry.category, source.category);
+    assert.notEqual(
+      await readFile(join(repositoryRoot, "styles", entry.appId, "ui.md"), "utf8"),
+      "",
+    );
+    assert.notEqual(
+      await readFile(join(repositoryRoot, "styles", entry.appId, "ux.md"), "utf8"),
+      "",
+    );
+  }
+});
+
+test("installed role contracts use the selected local package and gate finalization", async () => {
+  const project = await createProject();
+  await initializeProject({ target: project, harness: "generic", yes: true, quiet: true });
+
+  for (const role of ["implementation-owner.md", "acceptance-reviewer.md", "visual-producer.md"]) {
+    const contract = await readFile(join(project, "trickster", "roles", role), "utf8");
+    assert.match(contract, /trickster\/design\//);
+    assert.doesNotMatch(contract, /inputs\/style/);
+  }
+
+  const finalization = await readFile(
+    join(project, "trickster", "workflow", "finalization.md"),
+    "utf8",
+  );
+  assert.match(finalization, /APP ACCEPTED/);
+  assert.match(finalization, /явное подтверждение/);
+  assert.match(finalization, /\/tmp\/trickster\/<run-id>\//);
+  assert.match(finalization, /trickster\/design\//);
+  assert.match(finalization, /ASO exports/);
 });

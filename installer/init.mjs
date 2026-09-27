@@ -91,43 +91,6 @@ async function readOrEmpty(path) {
   }
 }
 
-async function hasCompleteStylePackage(project) {
-  const stylesDirectory = resolve(project, "trickster", "styles");
-  let entries;
-
-  try {
-    entries = await readdir(stylesDirectory, { withFileTypes: true });
-  } catch {
-    return false;
-  }
-
-  for (const entry of entries) {
-    if (!entry.isDirectory() || entry.name.startsWith("_")) continue;
-
-    const packageDirectory = resolve(stylesDirectory, entry.name);
-    try {
-      const source = JSON.parse(
-        await readFile(resolve(packageDirectory, "source.json"), "utf8"),
-      );
-      const sourceKeys = Object.keys(source);
-      const hasExactSourceFields = sourceKeys.length === 3 &&
-        ["appId", "url", "category"].every((key) => sourceKeys.includes(key));
-      const hasValidSourceValues = source.appId === entry.name &&
-        [source.appId, source.url, source.category].every(
-          (value) => typeof value === "string" && value.trim().length > 0,
-        );
-      const hasRequiredGuides = (await readOrEmpty(resolve(packageDirectory, "ui.md"))).trim() &&
-        (await readOrEmpty(resolve(packageDirectory, "ux.md"))).trim();
-
-      if (hasExactSourceFields && hasValidSourceValues && hasRequiredGuides) return true;
-    } catch {
-      // An incomplete package must not hide another valid package in the library.
-    }
-  }
-
-  return false;
-}
-
 async function replaceManagedBlock(path, block, body) {
   const existing = await readOrEmpty(path);
   const replacement = `${block.start}\n${body.trim()}\n${block.end}`;
@@ -215,7 +178,7 @@ function agentsBlock() {
   return `## Trickster iOS pipeline
 
 Before creating or substantially changing the iOS app, read and follow \`trickster/AGENTS.md\`.
-The workflow, bundled style library, selected style package, artifacts, and acceptance evidence are under \`trickster/\`.`;
+The workflow, selected style package, artifacts, and acceptance evidence are under \`trickster/\`.`;
 }
 
 async function copyKit(target, harness) {
@@ -242,13 +205,6 @@ async function copyKit(target, harness) {
     recursive: true,
     force: true,
   });
-  await cp(resolve(packageRoot, "styles"), resolve(destination, "styles"), {
-    recursive: true,
-    force: true,
-  });
-  await rm(resolve(destination, "styles", "AGENTS.md"), { force: true });
-  await rm(resolve(destination, "runtime"), { recursive: true, force: true });
-  await rm(resolve(destination, ".secrets", "designmd-api-key"), { force: true });
   await cp(resolve(packageRoot, "installer", "assets", "AGENTS.md"), resolve(destination, "AGENTS.md"), {
     force: true,
   });
@@ -291,11 +247,11 @@ export async function initializeProject({
   if (!quiet) {
     console.log(`\nTrickster ${VERSION} installed in ${resolve(project, "trickster")}`);
     console.log(`Harness: ${selectedHarness}`);
-    console.log("Style library: installed in trickster/styles");
+    console.log("Style catalog: loaded from GitHub when a new style is selected");
     console.log("\nNext:");
     if (selectedHarness === "codex") {
       console.log("1. Restart Codex if project instructions were already loaded in the current session.");
-      console.log("2. Start the task; the pipeline will show up to three local style packages and require one selection before UI work.");
+      console.log("2. Start the task; the pipeline will load up to three style packages from GitHub and require one selection before UI work.");
     } else {
       console.log("1. Read trickster/adapters/generic.md and map the orchestration operations to your harness.");
       console.log("2. Verify shell, Xcode, Simulator, UI interaction and image viewing.");
@@ -314,8 +270,7 @@ export async function doctorProject(target = process.cwd(), { quiet = false, har
     ["Trickster instructions", existsSync(resolve(project, "trickster", "AGENTS.md"))],
     ["Role contracts", existsSync(resolve(project, "trickster", "roles", "acceptance-reviewer.md"))],
     ["Harness adapter", existsSync(resolve(project, "trickster", "adapters", `${selectedHarness}.md`))],
-    ["Style template", existsSync(resolve(project, "trickster", "styles", "_template", "ui.md"))],
-    ["Complete design style package", await hasCompleteStylePackage(project)],
+    ["Style selection workflow", existsSync(resolve(project, "trickster", "workflow", "style-reference.md"))],
   ];
   if (selectedHarness === "codex") {
     checks.unshift(["Codex CLI", commandExists("codex")]);
@@ -333,7 +288,7 @@ export async function doctorProject(target = process.cwd(), { quiet = false, har
       console.log("VERIFY   The selected harness loads Trickster instructions");
       console.log("VERIFY   Shell, Xcode, Simulator, image viewing and role delegation or sequential fallback");
     }
-    console.log("STYLE    The task shows up to three local candidates and requires exactly one confirmed package");
+    console.log("STYLE    The task loads up to three candidates from GitHub and saves exactly one confirmed package locally");
     console.log(`\n${ready ? "Local installation is ready to use." : "Trickster is not ready."}`);
   }
 

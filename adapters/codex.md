@@ -5,7 +5,7 @@
 ## Загрузка проекта
 
 - Корневой `AGENTS.md` направляет Codex к `trickster/AGENTS.md`.
-- Локальная база визуальных направлений находится в `trickster/styles/` и не требует MCP или внешней авторизации.
+- До выбора Codex загружает raw GitHub-каталог и документы до трёх кандидатов по `trickster/workflow/style-reference.md`; после выбора использует только `trickster/design/`.
 - После установки перезапусти Codex, если инструкции проекта уже были загружены в текущей сессии.
 
 ## Операции оркестрации
@@ -25,6 +25,6 @@
 ## Проверка adapter
 
 - `codex` доступен в PATH.
-- В `trickster/styles/` доступен хотя бы один полный пакет `source.json`, `ui.md`, `ux.md`.
+- Доступен raw GitHub URL каталога либо в проекте уже сохранён полный `trickster/design/`.
 - Доступны shell, Xcode, Simulator, UI interaction и просмотр изображений.
 - Если заявлен delegated mode, пробный субагент создаётся, завершается и возвращает handoff.

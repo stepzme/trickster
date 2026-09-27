@@ -21,7 +21,7 @@ Trickster описывает роли, артефакты и зависимос�
 | Роль | Stable ID | Этапы | Основной результат |
 |---|---|---|---|
 | `product-researcher` | `product_researcher` | 1 | Scope, границы и недостающие продуктовые решения |
-| `design-planner` | `design_planner` | 2–3 и план 4 | Shortlist до трёх пакетов; после выбора одного — snapshot, product contract и asset plan |
+| `design-planner` | `design_planner` | 2–3 и план 4 | Shortlist до трёх пакетов; после выбора одного — локальный пакет, product contract и asset plan |
 | `implementation-owner` | `implementation_owner` | 5 и исправления | Код приложения и отчёт реализации |
 | `visual-producer` | `visual_producer` | 4, 6, 8 | Продуктовые ассеты, одна app icon и один ASO-комплект |
 | `acceptance-reviewer` | `acceptance_reviewer` | 7 | Независимые доказательства, дефекты и draft review |
@@ -58,14 +58,15 @@ Run ID: <run-id>.
 1. Мастер создаёт run-id и выполняет `SPAWN(product_researcher)` для чернового scope в product.md.
 2. После проверки scope выполняет `SPAWN(design_planner)` для shortlist максимум из трёх пакетов.
 3. Мастер показывает shortlist пользователю и требует выбрать ровно один пакет. Запрос на объединение нескольких пакетов отклоняется.
-4. После выбора выполняет `CONTINUE(design_planner)` для snapshot выбранного пакета, product.md и asset manifest.
+4. После выбора выполняет `CONTINUE(design_planner)` для сохранения выбранного пакета в `trickster/design/`, product.md и asset manifest.
 5. Если нужны продуктовые изображения, запускает `visual_producer` только для этой фазы.
 6. Запускает одного `implementation_owner`, который является единственным владельцем app code и общих Xcode-файлов.
 7. После стабилизации экранов запускает или продолжает `visual_producer` для одной app icon с ограниченными путями asset catalog.
 8. После интеграции icon передаёт владение Simulator роли `acceptance_reviewer`. Reviewer не исправляет код.
 9. Дефекты возвращаются через `CONTINUE(implementation_owner)`; после исправления мастер повторяет затронутую проверку.
 10. После ACCEPTED выполняет `CONTINUE(visual_producer)` для одного ASO-комплекта.
-11. Мастер проверяет артефакты и выполняет delivery.
+11. Мастер показывает результат пользователю и получает явное подтверждение.
+12. После подтверждения мастер очищает временные загрузки и сборочные файлы по `finalization.md`, затем выполняет delivery.
 
 ## Параллельность
 
