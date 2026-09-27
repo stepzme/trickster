@@ -1,6 +1,8 @@
 English · [Русский](https://github.com/stepzme/trickster/blob/main/README.ru.md) · [Español](https://github.com/stepzme/trickster/blob/main/README.es.md) · [简体中文](https://github.com/stepzme/trickster/blob/main/README.zh-CN.md)
 
-# Trickster
+<p align="center">
+  <img src="docs/assets/trickster-logo.svg" alt="Trickster — native iOS, orchestrated" width="100%">
+</p>
 
 ### An AI app factory for native iOS.
 
@@ -20,15 +22,7 @@ Trickster orchestrates specialized AI roles inside your repository. It offers up
 
 ## The pipeline
 
-```text
-App idea
-→ product scope
-→ local style shortlist
-→ one style selection
-→ native implementation
-→ Simulator acceptance
-→ app icon and ASO screenshots
-```
+![Trickster pipeline: scope, style selection, product contract, native implementation, independent acceptance, and delivery](docs/assets/trickster-pipeline.svg)
 
 1. **Define the product.** Establish the requested scope, boundaries, and any decision that genuinely needs user input.
 2. **Compare local styles.** Rank the bundled design packages and show up to three relevant options; if there is no exact match, show the closest alternatives and explain the adaptation.
@@ -39,6 +33,12 @@ App idea
 7. **Finish the store package.** Produce an original app icon and, after acceptance, ASO screenshots from the real build.
 
 Trickster uses multiple focused roles when the active agent harness supports delegation and follows the same contracts sequentially when it does not.
+
+## The agent team
+
+![Trickster agent team: one master coordinates five roles with separate responsibilities](docs/assets/trickster-agents.svg)
+
+The **master** owns the run end to end: it speaks with the user, enforces gates, assigns file and Simulator ownership, validates handoffs, and makes the final decision. The five role contracts keep research, design, implementation, visual production, and acceptance focused and independently reviewable. In a harness without delegation, the master executes the same contracts sequentially.
 
 ## Quick start
 
