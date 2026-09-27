@@ -1,0 +1,21 @@
+# Overview
+
+hh job supports onboarding and resume creation, job search and filters, vacancy and employer evaluation, favorites, applications, employer chat, responses, career content, and profile management.
+
+# Navigation
+
+Five bottom destinations anchor Search, Favorites, Responses, Messages, and Profile. Search remains the default home and carries utility cards plus recommended vacancies.
+
+# Core Flows
+
+## Find and evaluate a vacancy
+
+1. Search by role or keyword, apply location, specialization, experience, schedule, and salary filters, scan results, then review vacancy, employer, conditions, and ratings.
+
+## Apply and follow up
+
+1. Choose a resume, answer required questions, submit, monitor response state, and continue through employer chat, invitation, or profile and resume improvement.
+
+# Interaction Patterns
+
+Filters use focused sheets, results maintain a stable fact order, favorites are inline, the blue application action stays persistent, and empty states redirect to the next useful task.

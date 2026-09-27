@@ -1,0 +1,19 @@
+# Overview
+
+Joom uses glossy 3D objects and playful characters for onboarding, rewards, and post-purchase promotions; the catalog itself remains photography-led.
+
+# Visual Style
+
+Rounded, toy-like 3D forms with soft plastic materials, saturated coral, violet, blue, and peach, plus gentle studio shadows. Objects are friendly and slightly exaggerated.
+
+# Composition
+
+Use one oversized object or a loose cluster on white. Reward sheets may crop a wheel or gift character at the panel edge while keeping the action area clear.
+
+# Color
+
+Anchor illustrations in coral-red and magenta, with violet or deep blue secondary surfaces and warm skin-tone highlights.
+
+# Usage
+
+Reserve illustration for onboarding, gamified discounts, gifts, and confirmation states. New art must inherit the UI's coral accent, white space, and rounded 3D material treatment.

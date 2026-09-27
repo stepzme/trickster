@@ -1,0 +1,37 @@
+# Overview
+
+Simple combines personalized planning, health tracking, AI coaching, fasting, workouts, recipes, education, and subscription management.
+
+# Navigation
+
+- Four bottom tabs lead to Home, Coach, Track, and Explore.
+- Profile and settings open from the top-right avatar.
+- Explore groups workouts, recipes, fasting, psychology, and educational content.
+
+# Core Flows
+
+## Track a day
+
+1. Review the daily score and plan.
+2. Log meals, hydration, movement, fasting, or weight.
+3. Check progress and receive personal insights.
+
+## Ask the coach
+
+1. Open Coach and enter a question or scan food.
+2. Review nutrition or behavior guidance.
+3. Continue the conversation or upgrade when the daily allowance is reached.
+
+## Learn and practice
+
+1. Browse Explore by category or recent activity.
+2. Open a workout, recipe, video, or educational card.
+3. Complete the activity and return to tracking.
+
+# Interaction Patterns
+
+- Metric cards pair one goal with one direct action.
+- Violet indicates the next or premium action; green reflects achieved progress.
+- Coach keeps a persistent composer above navigation.
+- Explore uses media shelves and locked-state badges.
+- Profile centralizes health, appearance, notifications, and subscription settings.

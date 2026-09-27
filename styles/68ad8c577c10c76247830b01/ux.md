@@ -1,0 +1,35 @@
+# Overview
+
+Sportmaster combines sports retail with in-store assistance, loyalty, services, activity tools, and account management.
+
+# Navigation
+
+- A floating five-part bottom dock provides Home, Catalog/Search, Services, Cart, and Account.
+- Search and location remain visible near the top of discovery screens.
+- Product and checkout tasks use long single-column detail screens with sticky actions.
+
+# Core Flows
+
+## Find and buy equipment
+
+1. Browse Home or Catalog by audience, sport, brand, or promotion.
+2. Open a product and review media, sizes, availability, delivery, description, reviews, and Q&A.
+3. Add it to Cart, choose address and payment, then place the order.
+
+## Use a service
+
+1. Open the central Services destination.
+2. Choose store, activity, training, nutrition, media, or loyalty tools.
+3. Continue into the selected focused utility.
+
+## Manage the account
+
+1. Open Account and inspect loyalty balance or profile completion.
+2. Choose orders, returns, discounts, comparisons, addresses, subscriptions, or stores.
+
+# Interaction Patterns
+
+- A white floating navigation dock remains legible over dense pages.
+- Blue signals selection and commitment; promotional color stays within content cards.
+- Horizontal rails expose brands and sport categories.
+- Sticky price-and-action bars keep checkout progress visible.

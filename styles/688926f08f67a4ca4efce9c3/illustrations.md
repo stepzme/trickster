@@ -1,0 +1,19 @@
+# Overview
+
+Mamba uses compact flat illustrations to explain profile promotion and paid discovery without competing with member photography.
+
+# Visual Style
+
+The language is bold and simple: chunky arrows, clouds, bells, crowns, and organic brand shapes with minimal detail and playful proportions.
+
+# Composition
+
+Center one symbol in a dark card or place it in a dedicated promotional tile. Leave clear separation from portrait imagery and transactional copy.
+
+# Color
+
+Use coral, orange, pink, cyan, lavender, and white against charcoal or black. Gradients may connect the coral and pink brand hues.
+
+# Usage
+
+Use illustration for boost, verification, premium benefits, and system messaging. Profiles and swipe cards remain photography-led; new artwork must inherit the dark UI and brand gradient.

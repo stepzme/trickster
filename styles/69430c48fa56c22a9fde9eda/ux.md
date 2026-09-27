@@ -1,0 +1,28 @@
+# Overview
+
+My MTS is a modular telecom account hub for balance, tariff usage, services, family numbers, payments, transfers, catalog offers, and support.
+
+# Navigation
+
+Four bottom destinations connect My MTS, Money, Catalog, and Support. The main number selector, notifications, search, and promotional rail sit above balance and tariff modules.
+
+# Core Flows
+
+## Monitor and manage a number
+
+1. Choose the active number or family member.
+2. Review balance, spending, connected services, and remaining tariff allowances.
+3. Top up, change the tariff, add a service, or resolve a limit warning.
+
+## Pay or transfer money
+
+1. Enter Money and choose payments, domestic transfer, international transfer, mobile top-up, or wallet.
+2. Select a saved destination or provide the requested details.
+3. Review amount and funding source, confirm, and show a clear receipt state.
+
+# Interaction Patterns
+
+- Large white modules turn a broad service set into a vertically scannable dashboard.
+- Magenta drives primary account and payment actions; cyan identifies money utilities.
+- Promotional stories remain bounded above operational balance and tariff content.
+- Bottom sheets present short destination lists, payment choices, and confirmations without losing context.

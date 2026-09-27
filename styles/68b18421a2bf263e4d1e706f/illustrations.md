@@ -1,0 +1,19 @@
+# Overview
+
+Tinkoff Journal uses an editorial illustration language to explain finance, work, travel, and everyday decisions.
+
+# Visual Style
+
+Loose black linework, flat geometric characters, playful proportions, and unexpected objects sit on bold mint, blue, yellow, lavender, or black fields.
+
+# Composition
+
+Build a clear poster-like scene with one central metaphor and a few supporting characters or objects. Reserve space for a large headline when used as a course cover.
+
+# Color
+
+Use one dominant flat background with two or three high-contrast accent colors. Black outlines unify the varied subject matter.
+
+# Usage
+
+Use for course covers, lesson heroes, quizzes, explainers, and editorial series. Keep settings, calculators, and long-form text surfaces restrained.
