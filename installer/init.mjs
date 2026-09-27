@@ -338,8 +338,8 @@ export async function initializeProject({
     }
     console.log("Style library: installed in trickster/styles");
     console.log(selectedHarness === "codex"
-      ? "SCRN: configured; OAuth login must succeed before the pilot"
-      : "MCP: configure SCRN in the selected harness before the pilot");
+      ? "SCRN: configured; OAuth login must succeed before using the pipeline"
+      : "MCP: configure SCRN in the selected harness before using the pipeline");
     console.log("\nNext:");
     if (selectedHarness === "codex") {
       console.log("1. Restart Codex and trust this project so .codex/config.toml is loaded.");
@@ -386,7 +386,7 @@ export async function doctorProject(target = process.cwd(), { quiet = false, har
       console.log("VERIFY   SCRN image viewing, shell, Xcode, Simulator and role delegation or sequential fallback");
     }
     console.log("STYLE    A local style package is selected and confirmed after SCRN research, not during doctor");
-    console.log(`\n${ready ? "Local installation is ready; verify SCRN before the pilot." : "Trickster is not ready for the pilot."}`);
+    console.log(`\n${ready ? "Local installation is ready; verify SCRN before using the pipeline." : "Trickster is not ready."}`);
   }
 
   return { project, harness: selectedHarness, checks, ready };

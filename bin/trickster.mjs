@@ -9,7 +9,7 @@ if (isGlobalPackagePath(fileURLToPath(import.meta.url))) {
 
 Remove the global copy and run this from an existing project root instead:
 
-  npx @sgx22/trickster@pilot init`);
+  npx @sgx22/trickster init`);
   process.exit(1);
 }
 

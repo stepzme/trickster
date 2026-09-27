@@ -29,7 +29,7 @@ test("installs one project-local Trickster folder, style library, and Codex inte
 
   assert.match(await readFile(join(project, "AGENTS.md"), "utf8"), /trickster\/AGENTS\.md/);
   assert.equal(await readFile(join(project, ".gitignore"), "utf8"), "build/\n");
-  assert.equal(await readFile(join(project, "trickster", "VERSION"), "utf8"), "0.6.0\n");
+  assert.equal(await readFile(join(project, "trickster", "VERSION"), "utf8"), "0.6.1\n");
   assert.equal(await readFile(join(project, "trickster", "HARNESS"), "utf8"), "codex\n");
   assert.match(
     await readFile(join(project, "trickster", "workflow", "master-prompt.md"), "utf8"),
@@ -115,7 +115,7 @@ test("doctor validates the installed style library while selection stays task-sc
     { encoding: "utf8" },
   );
   assert.equal(cliResult.status, 0);
-  assert.match(cliResult.stdout, /verify SCRN before the pilot/i);
+  assert.match(cliResult.stdout, /verify SCRN before using the pipeline/i);
   assert.match(cliResult.stdout, /local style package is selected and confirmed/i);
 });
 
@@ -234,7 +234,7 @@ test("rejects global npm installation", () => {
 
   assert.equal(result.status, 1);
   assert.match(result.stderr, /cannot be installed globally/);
-  assert.match(result.stderr, /npx @sgx22\/trickster@pilot init/);
+  assert.match(result.stderr, /npx @sgx22\/trickster init/);
   assert.equal(isGlobalPackagePath("/opt/homebrew/lib/node_modules/@sgx22/trickster/bin/trickster.mjs"), true);
   assert.equal(
     isGlobalPackagePath("C:\\Users\\stepz\\AppData\\Roaming\\npm\\node_modules\\@sgx22\\trickster\\bin\\trickster.mjs"),

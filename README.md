@@ -1,19 +1,19 @@
 # Trickster — project-scoped pipeline разработки iOS-приложений
 
-Версия комплекта: 0.6. Trickster устанавливает в существующий проект локальный, независимый от agent harness процесс: исследование продукта, SCRN-референсы, выбор одного пакета из собственной базы стилей, реализация, проверка в Simulator, app icon и ASO screenshots.
+Версия комплекта: 0.6.1. Trickster устанавливает в существующий проект локальный, независимый от agent harness процесс: исследование продукта, SCRN-референсы, выбор одного пакета из собственной базы стилей, реализация, проверка в Simulator, app icon и ASO screenshots.
 
 ## Установка
 
 Запусти из корня существующего Git/Xcode/Swift Package/XcodeGen-проекта:
 
 ```sh
-npx @sgx22/trickster@pilot init
+npx @sgx22/trickster init
 ```
 
 По умолчанию устанавливается Codex adapter. Для другого harness:
 
 ```sh
-npx @sgx22/trickster@pilot init --harness generic
+npx @sgx22/trickster init --harness generic
 ```
 
 Команда запускает пакет временно через npm cache. Глобальная установка запрещена. В проекте создаются:
@@ -53,7 +53,7 @@ codex mcp login screen_gallery
 ## Проверка установки
 
 ```sh
-npx @sgx22/trickster@pilot doctor
+npx @sgx22/trickster doctor
 ```
 
 `doctor` читает `trickster/HARNESS` и проверяет общие файлы, role contracts, adapter и локальную базу стилей. Для Codex он дополнительно проверяет CLI и project config. Рабочий пакет в `trickster/design/` не требуется до старта задачи: `design-planner` выбирает один пакет внутри процесса, а мастер обязан получить подтверждение пользователя до проектирования UI. MCP, показ изображений и делегирование проверяются реальными действиями уже в сессии выбранного harness.
@@ -89,7 +89,7 @@ npx @sgx22/trickster@pilot doctor
 
 ## Проверка нового процесса
 
-Изолированный end-to-end pilot описан в [workflow/pilot.md](workflow/pilot.md). Он должен отдельно подтвердить установку базы, выбор и confirmation gate пакета, run snapshot, реализацию, независимую приёмку, app icon и ASO.
+Изолированная end-to-end проверка описана в [workflow/verification.md](workflow/verification.md). Она должна отдельно подтвердить установку базы, выбор и confirmation gate пакета, run snapshot, реализацию, независимую приёмку, app icon и ASO.
 
 ## Документация
 

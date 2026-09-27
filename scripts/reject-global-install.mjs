@@ -8,7 +8,7 @@ Trickster is project-scoped and cannot be installed globally.
 
 Run this command from the root of an existing project:
 
-  npx @sgx22/trickster@pilot init
+  npx @sgx22/trickster init
 `);
   process.exit(1);
 }
