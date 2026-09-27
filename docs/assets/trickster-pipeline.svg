@@ -1,94 +1,69 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="820" viewBox="0 0 1280 820" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="590" viewBox="0 0 1280 590" role="img" aria-labelledby="title desc">
   <title id="title">Trickster app production pipeline</title>
-  <desc id="desc">A nine-stage pipeline from product scope through style selection, implementation, independent Simulator acceptance, app icon, ASO screenshots, and delivery.</desc>
+  <desc id="desc">Four phases lead from a product idea to a delivered native iOS app: define, choose one style, build, and independently verify.</desc>
   <defs>
-    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-      <path d="M0 0L10 5L0 10Z" fill="#66635E"/>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L10 5L0 10Z" fill="#77736C"/>
     </marker>
     <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
       <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#000000" flood-opacity="0.08"/>
     </filter>
   </defs>
-  <rect width="1280" height="820" rx="36" fill="#F5F2EA"/>
-
-  <text x="64" y="72" fill="#11100F" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="38" font-weight="760" letter-spacing="-1.2">From idea to accepted iOS product</text>
-  <text x="64" y="108" fill="#6D6961" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20">One direction. Explicit gates. Independent proof.</text>
+  <rect width="1280" height="590" rx="36" fill="#F5F2EA"/>
 
   <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
-    <text x="64" y="172" fill="#8A857C" font-size="15" font-weight="700" letter-spacing="2">DEFINE</text>
-    <text x="64" y="384" fill="#8A857C" font-size="15" font-weight="700" letter-spacing="2">BUILD</text>
-    <text x="64" y="596" fill="#8A857C" font-size="15" font-weight="700" letter-spacing="2">PROVE</text>
+    <text x="64" y="74" fill="#11100F" font-size="38" font-weight="760" letter-spacing="-1.2">One controlled path to a native iOS app</text>
+    <text x="64" y="110" fill="#6D6961" font-size="20">The master moves the product through four clear phases.</text>
+
+    <g fill="none" stroke="#77736C" stroke-width="3" stroke-linecap="round" marker-end="url(#arrow)">
+      <path d="M326 292H353"/>
+      <path d="M618 292H645"/>
+      <path d="M910 292H937"/>
+    </g>
 
     <g filter="url(#shadow)">
-      <rect x="64" y="194" width="250" height="142" rx="24" fill="#FFFFFF"/>
-      <rect x="335" y="194" width="250" height="142" rx="24" fill="#FFFFFF"/>
-      <rect x="606" y="194" width="250" height="142" rx="24" fill="#11100F"/>
-      <rect x="877" y="194" width="339" height="142" rx="24" fill="#FFFFFF"/>
-
-      <rect x="64" y="406" width="339" height="142" rx="24" fill="#FFFFFF"/>
-      <rect x="424" y="406" width="339" height="142" rx="24" fill="#FFFFFF"/>
-      <rect x="784" y="406" width="432" height="142" rx="24" fill="#FFFFFF"/>
-
-      <rect x="64" y="618" width="339" height="142" rx="24" fill="#11100F"/>
-      <rect x="424" y="618" width="339" height="142" rx="24" fill="#FFFFFF"/>
-      <rect x="784" y="618" width="432" height="142" rx="24" fill="#DFFF4F"/>
+      <rect x="64" y="176" width="262" height="232" rx="26" fill="#FFFFFF"/>
+      <rect x="356" y="176" width="262" height="232" rx="26" fill="#11100F"/>
+      <rect x="648" y="176" width="262" height="232" rx="26" fill="#FFFFFF"/>
+      <rect x="940" y="176" width="276" height="232" rx="26" fill="#DFFF4F"/>
     </g>
 
-    <g fill="none" stroke="#66635E" stroke-width="3" stroke-linecap="round" marker-end="url(#arrow)">
-      <path d="M314 265H326"/>
-      <path d="M585 265H597"/>
-      <path d="M856 265H868"/>
-      <path d="M1046 336V372H234V397"/>
-      <path d="M403 477H415"/>
-      <path d="M763 477H775"/>
-      <path d="M1000 548V584H234V609"/>
-      <path d="M403 689H415"/>
-      <path d="M763 689H775"/>
+    <g font-size="15" font-weight="760" letter-spacing="1.8">
+      <text x="92" y="218" fill="#8A857C">DEFINE</text>
+      <text x="384" y="218" fill="#DFFF4F">CHOOSE</text>
+      <text x="676" y="218" fill="#8A857C">BUILD</text>
+      <text x="968" y="218" fill="#4D4B45">VERIFY</text>
     </g>
 
-    <g font-weight="760" font-size="16">
-      <circle cx="96" cy="226" r="18" fill="#B79CFF"/><text x="96" y="232" fill="#11100F" text-anchor="middle">1</text>
-      <circle cx="367" cy="226" r="18" fill="#B79CFF"/><text x="367" y="232" fill="#11100F" text-anchor="middle">2</text>
-      <circle cx="638" cy="226" r="18" fill="#DFFF4F"/><text x="638" y="232" fill="#11100F" text-anchor="middle">3</text>
-      <circle cx="909" cy="226" r="18" fill="#B79CFF"/><text x="909" y="232" fill="#11100F" text-anchor="middle">4</text>
-      <circle cx="96" cy="438" r="18" fill="#FFB25B"/><text x="96" y="444" fill="#11100F" text-anchor="middle">5</text>
-      <circle cx="456" cy="438" r="18" fill="#FFB25B"/><text x="456" y="444" fill="#11100F" text-anchor="middle">6</text>
-      <circle cx="816" cy="438" r="18" fill="#FFB25B"/><text x="816" y="444" fill="#11100F" text-anchor="middle">7</text>
-      <circle cx="96" cy="650" r="18" fill="#FF6B4A"/><text x="96" y="656" fill="#11100F" text-anchor="middle">8</text>
-      <circle cx="456" cy="650" r="18" fill="#6FD8C2"/><text x="456" y="656" fill="#11100F" text-anchor="middle">9</text>
-      <path d="M818 637L825 651L840 653L829 664L832 679L818 672L804 679L807 664L796 653L811 651Z" fill="#11100F"/>
+    <g font-size="27" font-weight="750" letter-spacing="-0.5">
+      <text x="92" y="266" fill="#11100F">Shape the product</text>
+      <text x="384" y="266" fill="#FAF8F2">Confirm one style</text>
+      <text x="676" y="266" fill="#11100F">Make the app</text>
+      <text x="968" y="266" fill="#11100F">Prove and deliver</text>
     </g>
 
-    <g fill="#11100F">
-      <text x="88" y="271" font-size="24" font-weight="730">Scope the product</text>
-      <text x="88" y="302" fill="#6D6961" font-size="17">Users, jobs, boundaries</text>
+    <g font-size="18">
+      <text x="92" y="310" fill="#6D6961">Scope and contract</text>
+      <text x="92" y="340" fill="#6D6961">before UI work</text>
 
-      <text x="359" y="271" font-size="24" font-weight="730">Shortlist styles</text>
-      <text x="359" y="302" fill="#6D6961" font-size="17">Up to three local packages</text>
+      <text x="384" y="310" fill="#B9B5AC">One local package</text>
+      <text x="384" y="340" fill="#B9B5AC">selected by the user</text>
 
-      <text x="630" y="271" fill="#FAF8F2" font-size="24" font-weight="730">Choose exactly one</text>
-      <text x="630" y="302" fill="#B9B5AC" font-size="17">Required user gate</text>
+      <text x="676" y="310" fill="#6D6961">Native implementation,</text>
+      <text x="676" y="340" fill="#6D6961">assets and app icon</text>
 
-      <text x="901" y="271" font-size="24" font-weight="730">Lock the contract</text>
-      <text x="901" y="302" fill="#6D6961" font-size="17">Screens, states, checks, assets</text>
+      <text x="968" y="310" fill="#4D4B45">Independent Simulator</text>
+      <text x="968" y="340" fill="#4D4B45">acceptance and ASO</text>
+    </g>
 
-      <text x="88" y="483" font-size="24" font-weight="730">Make product assets</text>
-      <text x="88" y="514" fill="#6D6961" font-size="17">Only what the contract needs</text>
-
-      <text x="448" y="483" font-size="24" font-weight="730">Build the native app</text>
-      <text x="448" y="514" fill="#6D6961" font-size="17">Vertical flow, then full scope</text>
-
-      <text x="808" y="483" font-size="24" font-weight="730">Create one original app icon</text>
-      <text x="808" y="514" fill="#6D6961" font-size="17">After the screens are stable</text>
-
-      <text x="88" y="695" fill="#FAF8F2" font-size="24" font-weight="730">Accept independently</text>
-      <text x="88" y="726" fill="#B9B5AC" font-size="17">Build, run, interact, inspect</text>
-
-      <text x="448" y="695" font-size="24" font-weight="730">Produce ASO screens</text>
-      <text x="448" y="726" fill="#6D6961" font-size="17">Only from the accepted build</text>
-
-      <text x="856" y="682" font-size="29" font-weight="780">Deliver with evidence</text>
-      <text x="856" y="718" fill="#4D4B45" font-size="18">Reproducible status, artifacts, limits</text>
+    <g>
+      <rect x="64" y="466" width="1152" height="68" rx="20" fill="#E9E5DC"/>
+      <circle cx="100" cy="500" r="9" fill="#11100F"/>
+      <text x="124" y="507" fill="#4D4B45" font-size="18" font-weight="650">No UI before style confirmation</text>
+      <circle cx="475" cy="500" r="9" fill="#11100F"/>
+      <text x="499" y="507" fill="#4D4B45" font-size="18" font-weight="650">The builder cannot accept its own work</text>
+      <circle cx="905" cy="500" r="9" fill="#11100F"/>
+      <text x="929" y="507" fill="#4D4B45" font-size="18" font-weight="650">Evidence ships with the result</text>
     </g>
   </g>
 </svg>

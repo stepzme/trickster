@@ -22,7 +22,7 @@ Trickster orchestrates specialized AI roles inside your repository. It offers up
 
 ## The pipeline
 
-![Trickster pipeline: scope, style selection, product contract, native implementation, independent acceptance, and delivery](docs/assets/trickster-pipeline.svg)
+![Trickster four-phase pipeline: define the product, confirm one style, build the native app, then independently verify and deliver it](docs/assets/trickster-pipeline.svg)
 
 1. **Define the product.** Establish the requested scope, boundaries, and any decision that genuinely needs user input.
 2. **Compare local styles.** Rank the bundled design packages and show up to three relevant options; if there is no exact match, show the closest alternatives and explain the adaptation.
