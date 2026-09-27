@@ -4,7 +4,6 @@ import { existsSync } from "node:fs";
 import { homedir } from "node:os";
 import { dirname, parse, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
-import readline from "node:readline/promises";
 
 const packageRoot = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const packageJson = JSON.parse(
@@ -29,7 +28,7 @@ const BLOCKS = {
 
 function usage() {
   return `Usage:
-  trickster init [--target <path>] [--harness codex|generic] [--yes] [--skip-scrn-login]
+  trickster init [--target <path>] [--harness codex|generic] [--yes]
   trickster doctor [--target <path>] [--harness codex|generic]
 
 Trickster is project-scoped. Run it from the root of an existing project.`;
@@ -41,7 +40,6 @@ function parseArgs(argv) {
       command: "help",
       target: process.cwd(),
       yes: false,
-      skipScrnLogin: false,
       harness: undefined,
     };
   }
@@ -50,7 +48,6 @@ function parseArgs(argv) {
     command,
     target: process.cwd(),
     yes: false,
-    skipScrnLogin: false,
     harness: undefined,
   };
 
@@ -63,8 +60,6 @@ function parseArgs(argv) {
       index += 1;
     } else if (argument === "--yes" || argument === "-y") {
       options.yes = true;
-    } else if (argument === "--skip-scrn-login") {
-      options.skipScrnLogin = true;
     } else if (argument === "--harness") {
       const value = rest[index + 1];
       if (!value) throw new Error("--harness requires codex or generic");
@@ -216,35 +211,19 @@ function commandExists(command) {
   }).status === 0;
 }
 
-async function askYesNo(question, defaultValue = true) {
-  if (!process.stdin.isTTY) return defaultValue;
-  const rl = readline.createInterface({ input: process.stdin, output: process.stdout });
-  const suffix = defaultValue ? " [Y/n] " : " [y/N] ";
-  const answer = (await rl.question(`${question}${suffix}`)).trim().toLowerCase();
-  rl.close();
-  if (!answer) return defaultValue;
-  return answer === "y" || answer === "yes";
-}
-
 function agentsBlock() {
   return `## Trickster iOS pipeline
 
 Before creating or substantially changing the iOS app, read and follow \`trickster/AGENTS.md\`.
-The workflow, style library, selected style package, reference research, artifacts, and acceptance evidence are project-local under \`trickster/\`.`;
-}
-
-function codexBlock() {
-  return `[mcp_servers.screen_gallery]
-url = "https://scrn.gallery/mcp"
-auth = "oauth"
-enabled = true
-required = false
-default_tools_approval_mode = "auto"`;
+The workflow, bundled style library, selected style package, artifacts, and acceptance evidence are under \`trickster/\`.`;
 }
 
 async function copyKit(target, harness) {
   const destination = resolve(target, "trickster");
   await mkdir(destination, { recursive: true });
+  for (const managedDirectory of ["roles", "adapters", "workflow", "templates"]) {
+    await rm(resolve(destination, managedDirectory), { recursive: true, force: true });
+  }
   await cp(resolve(packageRoot, "roles"), resolve(destination, "roles"), {
     recursive: true,
     force: true,
@@ -267,6 +246,7 @@ async function copyKit(target, harness) {
     recursive: true,
     force: true,
   });
+  await rm(resolve(destination, "styles", "AGENTS.md"), { force: true });
   await rm(resolve(destination, "runtime"), { recursive: true, force: true });
   await rm(resolve(destination, ".secrets", "designmd-api-key"), { force: true });
   await cp(resolve(packageRoot, "installer", "assets", "AGENTS.md"), resolve(destination, "AGENTS.md"), {
@@ -284,7 +264,6 @@ async function copyKit(target, harness) {
 export async function initializeProject({
   target,
   yes = false,
-  skipScrnLogin = false,
   harness = "codex",
   quiet = false,
 } = {}) {
@@ -297,57 +276,29 @@ export async function initializeProject({
   await copyKit(project, selectedHarness);
 
   await removeManagedBlock(resolve(project, ".gitignore"), BLOCKS.gitignore);
+  await removeManagedBlock(resolve(project, ".codex", "config.toml"), BLOCKS.codex);
   if (selectedHarness === "codex") {
     await replaceManagedBlock(resolve(project, "AGENTS.md"), BLOCKS.agents, agentsBlock());
-    await replaceManagedBlock(
-      resolve(project, ".codex", "config.toml"),
-      BLOCKS.codex,
-      codexBlock(),
-    );
   } else {
     await removeManagedBlock(resolve(project, "AGENTS.md"), BLOCKS.agents);
-    await removeManagedBlock(resolve(project, ".codex", "config.toml"), BLOCKS.codex);
-  }
-
-  let loginAttempted = false;
-  if (selectedHarness === "codex" && !skipScrnLogin && !yes && process.stdin.isTTY) {
-    const shouldLogin = await askYesNo("Authenticate SCRN for this Codex project now?");
-    if (shouldLogin) {
-      loginAttempted = true;
-      const login = spawnSync("codex", ["mcp", "login", "screen_gallery"], {
-        cwd: project,
-        stdio: "inherit",
-      });
-      if (login.status !== 0 && !quiet) {
-        console.warn("SCRN login did not complete. You can retry it later from the project root.");
-      }
-    }
   }
 
   const result = {
     project,
     harness: selectedHarness,
-    loginAttempted,
   };
 
   if (!quiet) {
     console.log(`\nTrickster ${VERSION} installed in ${resolve(project, "trickster")}`);
     console.log(`Harness: ${selectedHarness}`);
-    if (selectedHarness === "codex") {
-      console.log("Codex project configuration: .codex/config.toml");
-    }
     console.log("Style library: installed in trickster/styles");
-    console.log(selectedHarness === "codex"
-      ? "SCRN: configured; OAuth login must succeed before using the pipeline"
-      : "MCP: configure SCRN in the selected harness before using the pipeline");
     console.log("\nNext:");
     if (selectedHarness === "codex") {
-      console.log("1. Restart Codex and trust this project so .codex/config.toml is loaded.");
-      console.log("2. If needed, run: codex mcp login screen_gallery");
-      console.log("3. Start the task; the pipeline will research SCRN and ask you to confirm one local style package before UI work.");
+      console.log("1. Restart Codex if project instructions were already loaded in the current session.");
+      console.log("2. Start the task; the pipeline will show up to three local style packages and require one selection before UI work.");
     } else {
-      console.log("1. Read trickster/adapters/generic.md and connect SCRN in your harness.");
-      console.log("2. Verify an image-returning SCRN query, shell, Xcode, Simulator and image viewing.");
+      console.log("1. Read trickster/adapters/generic.md and map the orchestration operations to your harness.");
+      console.log("2. Verify shell, Xcode, Simulator, UI interaction and image viewing.");
       console.log("3. Start the task; unsupported delegation will use the sequential fallback.");
     }
   }
@@ -363,12 +314,10 @@ export async function doctorProject(target = process.cwd(), { quiet = false, har
     ["Trickster instructions", existsSync(resolve(project, "trickster", "AGENTS.md"))],
     ["Role contracts", existsSync(resolve(project, "trickster", "roles", "acceptance-reviewer.md"))],
     ["Harness adapter", existsSync(resolve(project, "trickster", "adapters", `${selectedHarness}.md`))],
-    ["Style library instructions", existsSync(resolve(project, "trickster", "styles", "AGENTS.md"))],
     ["Style template", existsSync(resolve(project, "trickster", "styles", "_template", "ui.md"))],
-    ["Complete reference style package", await hasCompleteStylePackage(project)],
+    ["Complete design style package", await hasCompleteStylePackage(project)],
   ];
   if (selectedHarness === "codex") {
-    checks.unshift(["Project Codex config", existsSync(resolve(project, ".codex", "config.toml"))]);
     checks.unshift(["Codex CLI", commandExists("codex")]);
   }
   const ready = checks.every(([, passed]) => passed);
@@ -379,14 +328,13 @@ export async function doctorProject(target = process.cwd(), { quiet = false, har
       console.log(`${passed ? "PASS" : "MISSING"}  ${name}`);
     }
     if (selectedHarness === "codex") {
-      console.log("VERIFY   SCRN OAuth and an image-returning reference query in a fresh Codex session");
       console.log("VERIFY   Codex role delegation or the sequential fallback in the task session");
     } else {
-      console.log("VERIFY   The selected harness loads Trickster instructions and SCRN MCP");
-      console.log("VERIFY   SCRN image viewing, shell, Xcode, Simulator and role delegation or sequential fallback");
+      console.log("VERIFY   The selected harness loads Trickster instructions");
+      console.log("VERIFY   Shell, Xcode, Simulator, image viewing and role delegation or sequential fallback");
     }
-    console.log("STYLE    A local style package is selected and confirmed after SCRN research, not during doctor");
-    console.log(`\n${ready ? "Local installation is ready; verify SCRN before using the pipeline." : "Trickster is not ready."}`);
+    console.log("STYLE    The task shows up to three local candidates and requires exactly one confirmed package");
+    console.log(`\n${ready ? "Local installation is ready to use." : "Trickster is not ready."}`);
   }
 
   return { project, harness: selectedHarness, checks, ready };

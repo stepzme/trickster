@@ -12,7 +12,6 @@
 - `trickster/workflow/ux.md`
 - `trickster/workflow/ios.md`
 - `trickster/artifacts/<run-id>/product.md`
-- `trickster/artifacts/<run-id>/references.md`
 - `trickster/artifacts/<run-id>/inputs/style/source.json`
 - `trickster/artifacts/<run-id>/inputs/style/ui.md`
 - `trickster/artifacts/<run-id>/inputs/style/ux.md`
@@ -25,7 +24,7 @@
 2. Собрать, установить и запустить именно эту сборку.
 3. Воспроизвести обязательные сценарии и сохранение данных.
 4. Самостоятельно просмотреть актуальные screenshots на заявленной матрице.
-5. Проверить пакет стиля, SCRN, UX и app icon.
+5. Проверить соответствие выбранным `ui.md`, `ux.md`, применимому `illustrations.md` и app icon.
 6. Для каждого дефекта записать критерий, состояние, наблюдаемое, ожидаемое, серьёзность и доказательство.
 7. Подготовить draft review со статусами PASS/FAIL/UNVERIFIED/N/A.
 

@@ -1,4 +1,4 @@
-# Этап 9. ASO screenshots
+# Этап 8. ASO screenshots
 
 ## Применимость
 

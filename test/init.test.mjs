@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { spawnSync } from "node:child_process";
-import { mkdtemp, mkdir, readFile, writeFile } from "node:fs/promises";
+import { mkdtemp, mkdir, readFile, readdir, writeFile } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { dirname, join, resolve } from "node:path";
 import test from "node:test";
@@ -25,7 +25,7 @@ async function createProject() {
 
 test("installs one project-local Trickster folder, style library, and Codex integration", async () => {
   const project = await createProject();
-  await initializeProject({ target: project, yes: true, skipScrnLogin: true, quiet: true });
+  await initializeProject({ target: project, yes: true, quiet: true });
 
   assert.match(await readFile(join(project, "AGENTS.md"), "utf8"), /trickster\/AGENTS\.md/);
   assert.equal(await readFile(join(project, ".gitignore"), "utf8"), "build/\n");
@@ -39,9 +39,9 @@ test("installs one project-local Trickster folder, style library, and Codex inte
     await readFile(join(project, "trickster", "workflow", "style-reference.md"), "utf8"),
     /trickster\/styles/,
   );
-  assert.match(
-    await readFile(join(project, "trickster", "styles", "AGENTS.md"), "utf8"),
-    /Инструкция по сборке базы стилей/,
+  assert.equal(
+    await readFile(join(project, "trickster", "styles", "AGENTS.md"), "utf8").catch(() => ""),
+    "",
   );
   const styleSource = JSON.parse(
     await readFile(
@@ -59,14 +59,19 @@ test("installs one project-local Trickster folder, style library, and Codex inte
     "",
   );
 
-  const codexConfig = await readFile(join(project, ".codex", "config.toml"), "utf8");
-  assert.match(codexConfig, /\[mcp_servers\.screen_gallery\]/);
-  assert.doesNotMatch(codexConfig, /designmd/i);
+  assert.equal(
+    await readFile(join(project, ".codex", "config.toml"), "utf8").catch(() => ""),
+    "",
+  );
+  assert.equal(
+    await readFile(join(project, "trickster", "templates", "references.md"), "utf8").catch(() => ""),
+    "",
+  );
 });
 
 test("re-running init updates managed files and preserves the selected style and artifacts", async () => {
   const project = await createProject();
-  const options = { target: project, yes: true, skipScrnLogin: true, quiet: true };
+  const options = { target: project, yes: true, quiet: true };
 
   await initializeProject(options);
   await writeFile(join(project, "trickster", "design", "source.json"), "{\"appId\":\"keep\"}\n", "utf8");
@@ -75,6 +80,7 @@ test("re-running init updates managed files and preserves the selected style and
   await writeFile(join(project, "trickster", "design", "illustrations.md"), "# Keep art\n", "utf8");
   await mkdir(join(project, "trickster", "artifacts", "run-1"), { recursive: true });
   await writeFile(join(project, "trickster", "artifacts", "run-1", "review.md"), "# Keep review\n", "utf8");
+  await writeFile(join(project, "trickster", "workflow", "obsolete.md"), "obsolete\n", "utf8");
 
   await initializeProject(options);
 
@@ -90,6 +96,10 @@ test("re-running init updates managed files and preserves the selected style and
     await readFile(join(project, "trickster", "artifacts", "run-1", "review.md"), "utf8"),
     "# Keep review\n",
   );
+  assert.equal(
+    await readFile(join(project, "trickster", "workflow", "obsolete.md"), "utf8").catch(() => ""),
+    "",
+  );
 });
 
 test("doctor validates the installed style library while selection stays task-scoped", async () => {
@@ -98,7 +108,6 @@ test("doctor validates the installed style library while selection stays task-sc
     target: project,
     harness: "generic",
     yes: true,
-    skipScrnLogin: true,
     quiet: true,
   });
 
@@ -115,8 +124,8 @@ test("doctor validates the installed style library while selection stays task-sc
     { encoding: "utf8" },
   );
   assert.equal(cliResult.status, 0);
-  assert.match(cliResult.stdout, /verify SCRN before using the pipeline/i);
-  assert.match(cliResult.stdout, /local style package is selected and confirmed/i);
+  assert.match(cliResult.stdout, /local installation is ready to use/i);
+  assert.match(cliResult.stdout, /up to three local candidates/i);
 });
 
 test("doctor rejects a style library without a complete real app package", async () => {
@@ -125,20 +134,26 @@ test("doctor rejects a style library without a complete real app package", async
     target: project,
     harness: "generic",
     yes: true,
-    skipScrnLogin: true,
     quiet: true,
   });
-  await writeFile(
-    join(project, "trickster", "styles", "69c4451a481d517ba935ab0b", "source.json"),
-    "{}\n",
-    "utf8",
-  );
+  const styleEntries = await readdir(join(project, "trickster", "styles"), {
+    withFileTypes: true,
+  });
+  for (const entry of styleEntries) {
+    if (entry.isDirectory() && !entry.name.startsWith("_")) {
+      await writeFile(
+        join(project, "trickster", "styles", entry.name, "source.json"),
+        "{}\n",
+        "utf8",
+      );
+    }
+  }
 
   const result = await doctorProject(project, { quiet: true });
   assert.equal(result.ready, false);
   assert.deepEqual(
-    result.checks.find(([name]) => name === "Complete reference style package"),
-    ["Complete reference style package", false],
+    result.checks.find(([name]) => name === "Complete design style package"),
+    ["Complete design style package", false],
   );
 });
 
@@ -148,7 +163,6 @@ test("generic harness installs the portable kit without Codex project files", as
     target: project,
     harness: "generic",
     yes: true,
-    skipScrnLogin: true,
     quiet: true,
   });
 
@@ -168,12 +182,18 @@ test("generic harness installs the portable kit without Codex project files", as
 
 test("switching to generic removes only Trickster-owned Codex integration", async () => {
   const project = await createProject();
-  const baseOptions = { target: project, yes: true, skipScrnLogin: true, quiet: true };
+  const baseOptions = { target: project, yes: true, quiet: true };
 
   await initializeProject({ ...baseOptions, harness: "codex" });
+  await mkdir(join(project, ".codex"), { recursive: true });
   await writeFile(
     join(project, ".codex", "config.toml"),
-    `${await readFile(join(project, ".codex", "config.toml"), "utf8")}\nmodel = "keep-me"\n`,
+    `# >>> trickster managed MCP servers >>>
+legacy = true
+# <<< trickster managed MCP servers <<<
+
+model = "keep-me"
+`,
     "utf8",
   );
   await mkdir(join(project, "trickster", "agents"));
@@ -206,7 +226,6 @@ test("init removes obsolete DesignMD runtime and key without deleting unrelated 
     target: project,
     harness: "generic",
     yes: true,
-    skipScrnLogin: true,
     quiet: true,
   });
 

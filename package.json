@@ -28,8 +28,7 @@
     "design-system",
     "simulator",
     "aso",
-    "codex",
-    "mcp"
+    "codex"
   ],
   "repository": {
     "type": "git",

@@ -10,7 +10,6 @@
 
 - подтверждённый `trickster/artifacts/<run-id>/inputs/style/`
 - `trickster/artifacts/<run-id>/product.md`
-- `trickster/artifacts/<run-id>/references.md`
 - точные разрешённые пути записи из задания мастера
 
 ## Фаза product-assets
