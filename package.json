@@ -1,7 +1,7 @@
 {
   "name": "@sgx22/trickster",
   "version": "0.6.2",
-  "description": "Project-scoped, harness-agnostic workflow for building and reviewing iOS apps",
+  "description": "AI app factory for reference-driven native iOS apps, Simulator verification, app icons, and ASO screenshots",
   "type": "module",
   "bin": {
     "trickster": "bin/trickster.mjs"
@@ -15,8 +15,30 @@
     "styles",
     "templates",
     "workflow",
-    "README.md"
+    "README.md",
+    "README.ru.md",
+    "README.es.md",
+    "README.zh-CN.md"
   ],
+  "keywords": [
+    "ios",
+    "native-ios",
+    "ai-agents",
+    "app-factory",
+    "design-system",
+    "simulator",
+    "aso",
+    "codex",
+    "mcp"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stepzme/trickster.git"
+  },
+  "homepage": "https://github.com/stepzme/trickster#readme",
+  "bugs": {
+    "url": "https://github.com/stepzme/trickster/issues"
+  },
   "scripts": {
     "preinstall": "node ./scripts/reject-global-install.mjs",
     "test": "node --test",
