@@ -29,7 +29,7 @@ test("installs one project-local Trickster folder, style library, and Codex inte
 
   assert.match(await readFile(join(project, "AGENTS.md"), "utf8"), /trickster\/AGENTS\.md/);
   assert.equal(await readFile(join(project, ".gitignore"), "utf8"), "build/\n");
-  assert.equal(await readFile(join(project, "trickster", "VERSION"), "utf8"), "0.6.1\n");
+  assert.equal(await readFile(join(project, "trickster", "VERSION"), "utf8"), "0.6.2\n");
   assert.equal(await readFile(join(project, "trickster", "HARNESS"), "utf8"), "codex\n");
   assert.match(
     await readFile(join(project, "trickster", "workflow", "master-prompt.md"), "utf8"),
