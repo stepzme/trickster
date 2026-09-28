@@ -271,7 +271,8 @@ test("prints an English starter brief after init", async () => {
   assert.doesNotMatch(result.stdout, /Style catalog:/);
   assert.match(result.stdout, /Use Trickster to create or substantially change a native iOS app\./);
   assert.match(result.stdout, /Primary task:\nRequired features:\nOut of scope:\nConstraints:/);
-  assert.match(result.stdout, /select one style package before UI work/);
+  assert.match(result.stdout, /A short description is enough\. Trickster will guide the rest\./);
+  assert.doesNotMatch(result.stdout, /product-defining gap|style package before UI work/);
 });
 
 test("rejects an unsupported harness", () => {

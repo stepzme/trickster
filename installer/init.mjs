@@ -272,7 +272,9 @@ export async function initializeProject({
     }
     console.log(`\n${outputStyle.accent("Start a new task in your agent and paste a brief like this:")}\n`);
     console.log(STARTER_BRIEF);
-    console.log(`\n${outputStyle.muted("Keep it short if you prefer. Trickster will clarify one product-defining gap if needed and ask you to select one style package before UI work.")}`);
+    console.log(
+      `\n${outputStyle.muted("A short description is enough. Trickster will guide the rest.")}`,
+    );
   }
 
   return result;
