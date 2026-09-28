@@ -268,6 +268,7 @@ test("prints an English starter brief after init", async () => {
 
   assert.equal(result.status, 0);
   assert.match(result.stdout, /Start a new task in your agent and paste a brief like this:/);
+  assert.doesNotMatch(result.stdout, /Style catalog:/);
   assert.match(result.stdout, /Use Trickster to create or substantially change a native iOS app\./);
   assert.match(result.stdout, /Primary task:\nRequired features:\nOut of scope:\nConstraints:/);
   assert.match(result.stdout, /select one style package before UI work/);

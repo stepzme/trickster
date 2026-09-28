@@ -261,7 +261,6 @@ export async function initializeProject({
       `\n${outputStyle.accent(`✦ trickster ${VERSION}`)} ${outputStyle.strong("installed")} in ${resolve(project, "trickster")}`,
     );
     console.log(`${outputStyle.muted("Harness:")} ${selectedHarness}`);
-    console.log(`${outputStyle.muted("Style catalog:")} loaded from GitHub when a new style is selected`);
     console.log(`\n${outputStyle.accent("Next:")}`);
     if (selectedHarness === "codex") {
       console.log("1. Restart Codex if project instructions were already loaded in the current session.");
@@ -271,7 +270,7 @@ export async function initializeProject({
       console.log("2. Verify shell, Xcode, Simulator, UI interaction and image viewing.");
       console.log("3. Start the task; unsupported delegation will use the sequential fallback.");
     }
-    console.log(`\n${outputStyle.strong("Start a new task in your agent and paste a brief like this:")}\n`);
+    console.log(`\n${outputStyle.accent("Start a new task in your agent and paste a brief like this:")}\n`);
     console.log(STARTER_BRIEF);
     console.log(`\n${outputStyle.muted("Keep it short if you prefer. Trickster will clarify one product-defining gap if needed and ask you to select one style package before UI work.")}`);
   }
