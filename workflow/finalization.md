@@ -1,22 +1,22 @@
-# Этап 9. Финализация
+# Stage 9. Finalization
 
 ## Gate
 
-Не начинай очистку, пока одновременно не выполнены все условия:
+Do not begin cleanup until all of these conditions are met:
 
-1. мастер вынес решение `APP ACCEPTED` по `acceptance.md`;
-2. применимый ASO-этап завершён и проверен;
-3. мастер показал пользователю итог и получил явное подтверждение, что результат принят.
+1. the master issued the `APP ACCEPTED` decision according to `acceptance.md`;
+2. the applicable ASO stage is complete and verified;
+3. the master showed the final result to the user and received explicit confirmation that it is accepted.
 
-Если подтверждения нет, оставь временные данные на месте и сообщи, что финализация ожидает ответа. Если пользователь просит изменения, верни их в соответствующий этап и повтори затронутые проверки и ASO. Не вводи для этого новый статус приложения.
+Without confirmation, leave temporary data in place and report that finalization is awaiting a response. If the user requests changes, return them to the appropriate stage and repeat the affected checks and ASO work. Do not introduce a new app status for this.
 
-## Очистка
+## Cleanup
 
-После подтверждения пользователя:
+After user confirmation:
 
-1. Удали `/tmp/trickster/<run-id>/`, включая документы невыбранных кандидатов, DerivedData, кеши и промежуточные сборочные результаты текущего запуска.
-2. Если временные build artifacts были созданы внутри проекта, удаляй только их точные пути, записанные исполнителями текущего run-id. Не выполняй широкую очистку и не удаляй неизвестные или пользовательские файлы.
-3. Убедись, что сохранены код и Xcode-проект, `trickster/design/`, `product.md`, `review.md`, evidence, финальные screenshots, app icon и ASO exports.
-4. Зафиксируй в `review.md` подтверждение пользователя и точные удалённые временные пути.
+1. Delete `/tmp/trickster/<run-id>/`, including unselected-candidate documents, DerivedData, caches, and intermediate build output from the current run.
+2. If temporary build artifacts were created inside the project, delete only the exact paths recorded by agents for the current run ID. Do not perform broad cleanup or delete unknown or user-owned files.
+3. Ensure that the code and Xcode project, `trickster/design/`, `product.md`, `review.md`, evidence, final screenshots, app icon, and ASO exports are preserved.
+4. Record the user's confirmation and exact deleted temporary paths in `review.md`.
 
-Очистка не должна менять приложение, выбранный пакет или доказательства приёмки.
+Cleanup must not change the app, selected package, or acceptance evidence.

@@ -1,65 +1,65 @@
-# Отчёт приёмки
+# Acceptance report
 
-- Статус приложения: UNVERIFIED
-- Статус app icon: UNVERIFIED / N/A
-- Статус ASO screenshots: UNVERIFIED / N/A
-- Run ID и версия комплекта:
-- Проверенная ревизия кода, включая незакоммиченные изменения:
-- Предложенный shortlist:
-- Пакет стиля: appId, название, URL, категория и путь `trickster/design/`:
-- Подтверждение выбора ровно одного пакета:
-- Явное подтверждение итогового результата пользователем:
-- Очищенные временные пути:
-- Xcode, SDK, схема, конфигурация, время сборки:
-- Симуляторы: модель, iOS, UDID; локаль, тема и размер текста:
-- Версия тестовых данных:
-- Harness, режим (`delegated` / `sequential fallback`) и реально использованные инструменты:
+- App status: UNVERIFIED
+- App-icon status: UNVERIFIED / N/A
+- ASO-screenshot status: UNVERIFIED / N/A
+- Run ID and toolkit version:
+- Verified code revision, including uncommitted changes:
+- Proposed shortlist:
+- Style package: appId, name, URL, category, and `trickster/design/` path:
+- Confirmation that exactly one package was selected:
+- User's explicit confirmation of the final result:
+- Cleaned temporary paths:
+- Xcode, SDK, scheme, configuration, build time:
+- Simulators: model, iOS, UDID; locale, theme, and text size:
+- Test-data version:
+- Harness, mode (`delegated` / `sequential fallback`), and tools actually used:
 
-## Handoff ролей
+## Role handoffs
 
-| Роль | Входы и разрешённые пути | Полученный результат | Проверка мастера |
+| Role | Inputs and allowed paths | Result received | Master's verification |
 |---|---|---|---|
 
-## Матрица проверки приложения
+## App verification matrix
 
-| Критерий | Статус | Что выполнено и наблюдалось | Доказательство / причина N/A |
+| Criterion | Status | What was performed and observed | Evidence / reason for N/A |
 |---|---|---|---|
 
-## Покрытие scope
+## Scope coverage
 
-| Обязательная функция | Экран/состояние | Проверенный сценарий | Статус |
+| Required feature | Screen/state | Verified scenario | Status |
 |---|---|---|---|
 
-## Визуальное ревью
+## Visual review
 
-| Экран/состояние | Скриншот итоговой сборки | Правило выбранного пакета стиля | Наблюдение и решение |
+| Screen/state | Final-build screenshot | Selected style-package rule | Observation and decision |
 |---|---|---|---|
 
-## Продуктовые ассеты
+## Product assets
 
-| Asset | Источник/provenance | Фактическое использование | Проверка |
+| Asset | Source/provenance | Actual use | Verification |
 |---|---|---|---|
 
 ## App icon
 
-- Logoinspo references и фактически просмотренные изображения:
-- Одна реализованная концепция и её связь с продуктом/пакетом стиля:
-- Production asset и проверка в Simulator:
+- Logoinspo references and images actually viewed:
+- One implemented concept and its relationship to the product/style package:
+- Production asset and verification in Simulator:
 
 ## ASO screenshots
 
-| Кадр | Преимущество | Исходный экран финальной сборки | Export и проверка |
+| Frame | Benefit | Source screen from final build | Export and verification |
 |---|---|---|---|
 
-## Дефекты и исправления
+## Defects and fixes
 
-| ID | Критерий | Наблюдение / ожидание | Серьёзность | Исполнитель | Повторная проверка |
+| ID | Criterion | Observation / expectation | Severity | Owner | Retest |
 |---|---|---|---|---|---|
 
-## Воспроизведение
+## Reproduction
 
-Точные команды сборки, установки и запуска; шаги проверки и подготовка данных. Отметить использованные фикстуры и неподключённые реальные сервисы.
+Exact build, installation, and launch commands; verification steps; and data preparation. Identify fixtures used and real services that were not connected.
 
-## Ограничения
+## Limitations
 
-Непроверенные пункты, оставшиеся дефекты, число циклов исправлений, что требуется для продолжения. Отдельно указать, проводилась ли релизная проверка на устройстве и выполнялась ли публикация.
+Unverified items, remaining defects, number of fix cycles, and what is required to continue. State separately whether release verification on a physical device and publication were performed.

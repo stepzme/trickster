@@ -1,48 +1,48 @@
-# Главный процесс Trickster
+# Trickster master process
 
-Ты отвечаешь за один связный результат: работающий iOS-продукт, один подтверждённый визуальный язык, проверенное приложение, одна app icon и один комплект ASO screenshots. Shortlist удалённых пакетов нужен только для выбора направления; после выбора не создавай параллельные дизайн-концепции.
+You are responsible for one coherent result: a working iOS product, one confirmed visual language, a verified app, one app icon, and one ASO screenshot set. The remote-package shortlist exists only to select a direction; do not create parallel design concepts after selection.
 
-## Организация команды
+## Team organization
 
-До начала прочитай [оркестрацию ролей](orchestration.md), `trickster/adapters/contract.md` и adapter, указанный в `trickster/HARNESS`. Используй role contracts из `trickster/roles/`:
+Before starting, read [role orchestration](orchestration.md), `trickster/adapters/contract.md`, and the adapter named in `trickster/HARNESS`. Use the role contracts in `trickster/roles/`:
 
-- `product-researcher` — scope и границы продукта;
-- `design-planner` — shortlist по GitHub-каталогу, затем один локально сохранённый пакет и контракт;
-- `implementation-owner` — единственный владелец кода приложения;
-- `visual-producer` — продуктовые изображения, app icon и ASO отдельными фазами;
-- `acceptance-reviewer` — независимая проверка без исправления кода.
+- `product-researcher` — product scope and boundaries;
+- `design-planner` — a shortlist from the GitHub catalog, then one locally saved package and contract;
+- `implementation-owner` — sole owner of app code;
+- `visual-producer` — product images, app icon, and ASO in separate phases;
+- `acceptance-reviewer` — independent verification without code fixes.
 
-Сам оркестрируй исполнителей через универсальные операции adapter, передавай им точные входы и пути записи, жди завершения и проверяй handoff. Не проси пользователя переносить сообщения. Продолжай существующего исполнителя, когда работа относится к той же роли. Не принимай его самооценку как доказательство.
+Orchestrate agents yourself through the adapter's universal operations: pass exact inputs and write paths, wait for completion, and verify each handoff. Do not ask the user to relay messages. Continue the existing agent when work belongs to the same role. Do not accept its self-assessment as evidence.
 
-Мастер всегда сохраняет за собой общение с пользователем, показ shortlist, выбор ровно одного пакета стиля, изменение контрактов, распределение общих файлов и Simulator, интеграцию, финальную приёмку и delivery. Если отдельные исполнители недоступны, выполни роли последовательно по generic adapter и отметь ограничение.
+The master always retains user communication, presentation of the shortlist, selection of exactly one style package, contract changes, assignment of shared files and Simulator, integration, final acceptance, and delivery. If separate agents are unavailable, execute the roles sequentially through the generic adapter and record the limitation.
 
-## Порядок работы
+## Order of work
 
-Выполняй этапы последовательно. Не переходи через обязательный блокирующий результат.
+Execute stages sequentially. Do not proceed past a required blocking result.
 
-1. [Определение объёма](scope.md) — `product-researcher` разбирает исходное задание, существующий проект и определяет пробелы.
-2. [Выбор пакета стиля](style-reference.md) — `design-planner` загружает GitHub-каталог, выбирает по метаданным до трёх кандидатов и загружает документы только для них; мастер показывает shortlist пользователю и требует выбрать один.
-3. [Контракт продукта](product-contract.md) — после выбора тот же `design-planner` фиксирует scope, экраны, сценарии, дизайн и план приёмки.
-4. [Продуктовые изображения](assets.md) — `visual-producer` создаётся только при реальной потребности; одно решение для каждой потребности.
-5. [Реализация](implementation.md) — `implementation-owner` собирает вертикальный сценарий и полный согласованный объём.
-6. [App icon](app-icon.md) — `visual-producer` исследует Logoinspo и создаёт одну оригинальную концепцию в asset catalog.
-7. [Приёмка приложения](acceptance.md) — `acceptance-reviewer` независимо проверяет финальную сборку; мастер повторно проверяет ключевые доказательства и выносит решение.
-8. [ASO screenshots](aso-screenshots.md) — после ACCEPTED `visual-producer` создаёт один комплект из реальных экранов.
-9. [Финализация](finalization.md) — мастер показывает результат, получает явное подтверждение пользователя и очищает временные загрузки и сборочные файлы.
-10. [Передача результата](delivery.md) — мастер проверяет сохранённые артефакты и выдаёт единый отчёт.
+1. [Scope definition](scope.md) — `product-researcher` analyzes the original request and existing project and identifies gaps.
+2. [Style-package selection](style-reference.md) — `design-planner` loads the GitHub catalog, selects up to three candidates by metadata, and loads documents only for those candidates; the master presents the shortlist and requires the user to select one.
+3. [Product contract](product-contract.md) — after selection, the same `design-planner` records scope, screens, scenarios, design, and acceptance plan.
+4. [Product images](assets.md) — create `visual-producer` only when there is a real need; one solution for each need.
+5. [Implementation](implementation.md) — `implementation-owner` builds a vertical slice and the complete agreed scope.
+6. [App icon](app-icon.md) — `visual-producer` researches Logoinspo and creates one original concept in the asset catalog.
+7. [App acceptance](acceptance.md) — `acceptance-reviewer` independently verifies the final build; the master rechecks key evidence and issues a decision.
+8. [ASO screenshots](aso-screenshots.md) — after ACCEPTED, `visual-producer` creates one set from real screens.
+9. [Finalization](finalization.md) — the master presents the result, gets explicit user confirmation, and cleans temporary downloads and build files.
+10. [Delivery](delivery.md) — the master verifies preserved artifacts and provides a unified report.
 
-Сквозные требования находятся в [UX](ux.md) и [iOS](ios.md). До выбора `design-planner` использует GitHub-каталог; после выбора визуальный и поведенческий дизайн поступает только из `trickster/design/`.
+Cross-cutting requirements are in [UX](ux.md) and [iOS](ios.md). Before selection, `design-planner` uses the GitHub catalog; after selection, visual and behavioral design comes only from `trickster/design/`.
 
-## Обязательные остановки
+## Mandatory stops
 
-- Не начинай проектировать или реализовывать UI до явного выбора пользователем одного пакета стиля.
-- Если пользователь выбирает несколько пакетов, не объединяй их и попроси оставить один.
-- Если точных совпадений нет, предложи ближайшие пакеты из каталога и объясни адаптацию.
-- Если каталог или обязательные документы выбранных кандидатов недоступны, назови конкретную ссылку и останови UI-работу.
-- Не объявляй приложение принятым по одной сборке или скриншоту.
-- Не создавай app icon до завершения экранов приложения; не создавай ASO screenshots до финальной приёмки сборки.
-- Не очищай временные файлы до `APP ACCEPTED`, завершения применимого ASO-этапа и явного подтверждения пользователя.
+- Do not begin UI design or implementation until the user explicitly selects one style package.
+- If the user selects multiple packages, do not combine them; ask the user to keep one.
+- If there is no exact match, offer the nearest packages from the catalog and explain the adaptation.
+- If the catalog or required candidate documents are unavailable, identify the specific link and stop UI work.
+- Do not declare the app accepted based on one build or screenshot.
+- Do not create the app icon before the app screens are complete; do not create ASO screenshots before final build acceptance.
+- Do not clean temporary files before `APP ACCEPTED`, completion of the applicable ASO stage, and explicit user confirmation.
 
-## Один проход — одно решение
+## One pass, one solution
 
-До выбора допустим shortlist максимум из трёх существующих пакетов. После выбора используй пакет целиком: не смешивай его файлы, компоненты или отдельные экраны с другими пакетами. Если проверка обнаружила дефект, исправляй выбранное решение; не маскируй исправление созданием альтернативной концепции.
+Before selection, a shortlist of up to three existing packages is allowed. After selection, use the package as a whole: do not mix its files, components, or individual screens with other packages. If verification finds a defect, fix the selected solution; do not disguise a fix as an alternative concept.

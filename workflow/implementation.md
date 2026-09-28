@@ -1,27 +1,27 @@
-# Этап 5. Реализация
+# Stage 5. Implementation
 
-## Подготовка
+## Preparation
 
-Прочитай product.md, `trickster/design/source.json`, `ui.md`, `ux.md`, опциональный `illustrations.md`, asset manifest, общие `workflow/ux.md` и `ios.md`. Проверь доступные возможности harness: отдельные исполнители, Xcode, Simulator, взаимодействие с UI и просмотр изображений. Запиши реальные ограничения.
+Read `product.md`, `trickster/design/source.json`, `ui.md`, `ux.md`, optional `illustrations.md`, the asset manifest, and the cross-cutting `workflow/ux.md` and `ios.md`. Verify available harness capabilities: separate agents, Xcode, Simulator, UI interaction, and image viewing. Record the actual limitations.
 
-Направляй DerivedData и другие временные результаты сборки в `/tmp/trickster/<run-id>/build/`, если используемый инструмент позволяет задать путь. В `trickster/artifacts/<run-id>/` сохраняй только доказательства и финальные материалы, а не сборочные кеши.
+Direct DerivedData and other temporary build output to `/tmp/trickster/<run-id>/build/` when the tool allows the path to be configured. Store only evidence and final materials in `trickster/artifacts/<run-id>/`, not build caches.
 
-## Владелец реализации
+## Implementation owner
 
-Мастер запускает роль `implementation-owner` по `trickster/roles/implementation-owner.md` и передаёт исполнителю точные входы, допустимые пути приложения и критерии handoff. Этот исполнитель является единственным владельцем app code, зависимостей и общих настроек Xcode на время реализации.
+The master starts the `implementation-owner` role according to `trickster/roles/implementation-owner.md` and gives the agent exact inputs, allowed app paths, and handoff criteria. This agent is the sole owner of app code, dependencies, and shared Xcode configuration during implementation.
 
-Параллельных implementation workers допускай только для независимых модулей или тестов с непересекающимися файлами и уже зафиксированными интерфейсами. Их создаёт и координирует мастер. Только один исполнитель одновременно управляет общим Simulator и сборкой.
+Use parallel implementation workers only for independent modules or tests with non-overlapping files and already fixed interfaces. The master creates and coordinates them. Only one agent at a time controls the shared Simulator and build.
 
-При недоступности делегирования мастер выполняет роль implementation-owner самостоятельно и явно указывает `sequential fallback`.
+If delegation is unavailable, the master performs the implementation-owner role and explicitly records `sequential fallback`.
 
-## Вертикальный сценарий
+## Vertical slice
 
-До реализации всего объёма собери один основной сценарий с реальным контентом в подтверждённом стиле. Запусти его в Simulator и визуально проверь. Отдельно проверь кнопки, поля, карточки и навигацию: стандартный внешний вид SwiftUI, не соответствующий `ui.md`, является визуальным дефектом. Исправь архитектурные и визуальные проблемы, затем расширяй приложение.
+Before implementing the full scope, build one primary scenario with real content in the confirmed style. Run it in Simulator and inspect it visually. Check buttons, fields, cards, and navigation separately: a default SwiftUI appearance that does not match `ui.md` is a visual defect. Fix architectural and visual problems, then expand the app.
 
-Вертикальный сценарий — внутренняя проверка, а не альтернативный дизайн и не отдельный продуктовый вариант.
+The vertical slice is an internal check, not an alternative design or a separate product variant.
 
-## Полная реализация
+## Full implementation
 
-Закончи все обязательные сценарии product.md, состояния, сохранение данных и применимые UX-правила. Не добавляй функции приложения-референса, которых нет в согласованном scope. Не сокращай scope после начала работы без явной причины и записи в контракте.
+Complete every required scenario in `product.md`, all states, data persistence, and applicable UX rules. Do not add features from the reference app that are outside the agreed scope. Do not reduce scope after work begins without an explicit reason recorded in the contract.
 
-Отчёт исполнителя является входом для проверки, а не решением о готовности.
+The agent's report is an input to verification, not a readiness decision.

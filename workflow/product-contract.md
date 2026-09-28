@@ -1,21 +1,21 @@
-# Этап 3. Контракт продукта
+# Stage 3. Product contract
 
-## Цель
+## Goal
 
-До кода связать исходное задание, согласованный scope и выбранный пакет стиля в один проверяемый объём работы.
+Before writing code, combine the original request, agreed scope, and selected style package into one verifiable body of work.
 
-## Содержание product.md
+## Contents of product.md
 
-Используй `trickster/templates/product.md` и зафиксируй пользователя и основную задачу; явно заданные функции; принятые решения по неполному scope; исключённые инфраструктурные функции; границы текущей реализации; предложенный shortlist; выбранный локальный пакет стиля; карту экранов и состояний; обязательные сценарии; потребности в изображениях; применимость app icon и ASO stages; среду и план приёмки.
+Use `trickster/templates/product.md` to record the user and primary task; explicitly requested features; decisions made for incomplete scope; excluded infrastructure features; boundaries of the current implementation; proposed shortlist; selected local style package; map of screens and states; required scenarios; image needs; applicability of the app-icon and ASO stages; environment; and acceptance plan.
 
-Используй `ux.md` выбранного пакета как набор паттернов взаимодействия для согласованного продукта, а не как разрешение копировать функции приложения-референса или расширять scope.
+Use the selected package's `ux.md` as a set of interaction patterns for the agreed product, not as permission to copy features from the reference app or expand scope.
 
-## Критерий полноты scope
+## Scope-completeness criterion
 
-Не оценивай продукт количеством экранов. Для каждой обязательной функции должны быть определены точка входа, действие пользователя, ожидаемый результат, пограничные состояния и способ проверки.
+Do not measure the product by its number of screens. For every required feature, define the entry point, user action, expected result, edge states, and verification method.
 
-Функция без экрана или состояния считается не спроектированной. Экран без связи с обязательной функцией не добавляется ради объёма.
+A feature without a screen or state is not designed. A screen that is not connected to a required feature must not be added merely to increase volume.
 
-## Выход
+## Output
 
-Готовый `trickster/artifacts/<run-id>/product.md`. После начала массовой реализации не расширяй и не сокращай его только ради получения PASS. Материальное изменение пользовательских требований фиксируется как изменение контракта с причиной.
+A completed `trickster/artifacts/<run-id>/product.md`. After broad implementation begins, do not expand or reduce it merely to obtain PASS. Record a material change in user requirements as a contract change with a reason.

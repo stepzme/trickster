@@ -1,16 +1,16 @@
-# Trickster
+# Trickster toolkit
 
-Эта папка содержит зафиксированную версию переносимого процесса разработки и приёмки iOS-приложения.
+This directory contains a pinned version of the portable iOS app development and acceptance process.
 
-- `AGENTS.md` — точка входа для мастера.
-- `HARNESS` — имя активного adapter.
-- `roles/` — ограниченные контракты фазовых ролей.
-- `adapters/` — сопоставление универсальных операций с конкретным harness и последовательный fallback.
-- `workflow/master-prompt.md` — порядок отдельных этапов.
-- `workflow/orchestration.md` — роли, handoff, владение файлами и Simulator.
-- `workflow/` — scope, выбор пакета стиля через GitHub-каталог, ассеты, реализация, приёмка, app icon, ASO, финализация и передача.
-- `templates/` — шаблоны артефактов run-id.
-- `design/` — рабочая копия подтверждённого `source.json`, `ui.md`, `ux.md` и опционального `illustrations.md`.
-- `artifacts/<run-id>/` — контракт, доказательства, финальные скриншоты и отчёт.
+- `AGENTS.md` — entry point for the master.
+- `HARNESS` — name of the active adapter.
+- `roles/` — constrained contracts for phase-specific roles.
+- `adapters/` — mappings from universal operations to a specific harness and the sequential fallback.
+- `workflow/master-prompt.md` — order of individual stages.
+- `workflow/orchestration.md` — roles, handoffs, file ownership, and Simulator ownership.
+- `workflow/` — scope, style-package selection through the GitHub catalog, assets, implementation, acceptance, app icon, ASO, finalization, and delivery.
+- `templates/` — templates for run-ID artifacts.
+- `design/` — working copy of the confirmed `source.json`, `ui.md`, `ux.md`, and optional `illustrations.md`.
+- `artifacts/<run-id>/` — contract, evidence, final screenshots, and report.
 
-Перед проектированием UI мастер загружает GitHub-каталог, выбирает по метаданным до трёх кандидатов и загружает документы только для них. После подтверждения пользователя один пакет сохраняется в `design/` и становится единственным источником для всех ролей. Пакеты нельзя объединять. Для нового приложения app icon создаётся до финальной приёмки сборки, ASO-комплект — после неё, а очистка временных данных — после явного подтверждения итогового результата пользователем.
+Before designing UI, the master loads the GitHub catalog, selects up to three candidates by metadata, and downloads documents only for those candidates. After user confirmation, one package is saved in `design/` and becomes the sole source for every role. Packages must not be combined. For a new app, the app icon is created before final build acceptance, the ASO set is created afterward, and temporary data is cleaned only after the user explicitly confirms the final result.

@@ -1,28 +1,28 @@
-# Контракт adapter
+# Adapter contract
 
-Adapter связывает нейтральный процесс Trickster с конкретным agent harness. Он не меняет роли, этапы, входные данные, критерии приёмки или структуру артефактов.
+An adapter connects the harness-neutral Trickster process to a specific agent harness. It does not change the roles, stages, inputs, acceptance criteria, or artifact structure.
 
-## Обязательные возможности
+## Required capabilities
 
-Adapter должен описать:
+The adapter must describe:
 
-- как мастер загружает `trickster/AGENTS.md` и workflow;
-- как мастер получает доступ к GitHub-каталогу до выбора и к `trickster/design/` после выбора;
-- как выполняются `SPAWN`, `WAIT`, `CONTINUE`, `MESSAGE` и `STOP`;
-- как изолируется контекст роли и ограничиваются пути записи;
-- как исполнитель возвращает handoff;
-- как работать без отдельных исполнителей;
-- как проверить shell, Xcode, Simulator, UI interaction и просмотр изображений.
+- how the master loads `trickster/AGENTS.md` and the workflow;
+- how the master accesses the GitHub catalog before selection and `trickster/design/` after selection;
+- how `SPAWN`, `WAIT`, `CONTINUE`, `MESSAGE`, and `STOP` are performed;
+- how role context is isolated and write paths are restricted;
+- how an agent returns a handoff;
+- how to operate without separate agents;
+- how to verify shell, Xcode, Simulator, UI interaction, and image viewing.
 
-## Инварианты
+## Invariants
 
-- Источник role contract — `trickster/roles/<role>.md`.
-- Обмен между ролями идёт через `trickster/artifacts/<run-id>/` и проверяемый handoff.
-- Пользователь общается только с мастером.
-- Отдельная роль не получает право менять scope, подтверждённый пакет стиля или критерии приёмки.
-- Если harness не умеет создавать исполнителей, мастер последовательно выполняет те же role contracts.
-- Отсутствующая возможность явно отмечается `UNVERIFIED`; adapter не имитирует её наличие.
+- The source of each role contract is `trickster/roles/<role>.md`.
+- Roles exchange information through `trickster/artifacts/<run-id>/` and a verifiable handoff.
+- The user communicates only with the master.
+- An individual role has no authority to change scope, the confirmed style package, or acceptance criteria.
+- If the harness cannot spawn agents, the master executes the same role contracts sequentially.
+- A missing capability is explicitly marked `UNVERIFIED`; the adapter does not pretend it is available.
 
-## Добавление harness
+## Adding a harness
 
-Создай `trickster/adapters/<harness>.md`, реализуй все операции из этого контракта и запиши имя adapter в `trickster/HARNESS`. Специальная логика конкретного harness не должна попадать в `workflow/` или `roles/`.
+Create `trickster/adapters/<harness>.md`, implement every operation in this contract, and write the adapter name to `trickster/HARNESS`. Harness-specific logic must not be added to `workflow/` or `roles/`.

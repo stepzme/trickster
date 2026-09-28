@@ -1,35 +1,35 @@
-# Этап 4. Продуктовые изображения и иллюстрации
+# Stage 4. Product images and illustrations
 
-## Цель
+## Goal
 
-Определить, нужны ли приложению изображения, иллюстрации или собственная графика, и подготовить ровно по одному согласованному результату для каждой реальной потребности.
+Determine whether the app needs images, illustrations, or custom graphics, and prepare exactly one agreed result for each real need.
 
-App icon и ASO screenshots не входят в этот этап; для них используются отдельные документы.
+The app icon and ASO screenshots are not part of this stage; separate documents govern them.
 
-## Решение о необходимости
+## Need assessment
 
-Создай asset manifest по `trickster/templates/asset-manifest.md`, даже если ассеты не нужны. Для каждого экрана укажи назначение графики; можно ли решить задачу типографикой, layout или системным символом; нужен ли пользовательский, лицензированный или сгенерированный материал; размеры, aspect ratio и состояния; доступность, локализацию и лицензию.
+Create an asset manifest from `trickster/templates/asset-manifest.md` even when no assets are required. For each screen, identify the graphic's purpose; whether typography, layout, or a system symbol can solve the need; whether user-supplied, licensed, or generated material is required; dimensions, aspect ratio, and states; accessibility, localization, and licensing.
 
-Не добавляй декоративные изображения без продуктовой роли. Если внешние ассеты не нужны, зафиксируй обоснованное `N/A`.
+Do not add decorative images without a product role. If external assets are unnecessary, record a justified `N/A`.
 
-## Генерация
+## Generation
 
-Если необходима оригинальная графика:
+When original graphics are required:
 
-1. Если выбранный пакет в `trickster/design/` содержит `illustrations.md`, следуй ему. Если файла нет, не трактуй это как запрет: при реальной продуктовой потребности создай один оригинальный иллюстративный язык, гармонирующий с цветами, формами, типографикой и характером `ui.md`.
-2. Подготовь единый prompt: назначение, объект, композиция, стиль, палитра, фон/прозрачность, кадрирование, размер и запрещённые элементы.
-3. Используй доступный инструмент генерации изображений для растровой иллюстрации. Если он недоступен, не выдавай placeholder или случайную графику за финальный ассет.
-4. Создай один production-кандидат, а не серию альтернативных стилей.
-5. Сам визуально просмотри исходный результат до интеграции. Артефакты, дефекты анатомии/текста, плохой crop и несоответствие стилю требуют исправления того же решения.
-6. Сохрани prompt, инструмент, время, исходный файл и условия использования.
-7. Подготовь нужные производные размеры без изменения концепции.
-8. Проверь результат в реальном экране приложения, включая темы и размеры, если применимо.
+1. If the selected package in `trickster/design/` contains `illustrations.md`, follow it. If it does not, do not treat that as a prohibition: when there is a real product need, create one original illustration language that harmonizes with the colors, shapes, typography, and character of `ui.md`.
+2. Prepare one prompt covering purpose, subject, composition, style, palette, background/transparency, framing, dimensions, and prohibited elements.
+3. Use an available image-generation tool for raster illustrations. If none is available, do not present a placeholder or arbitrary graphic as a final asset.
+4. Create one production candidate, not a series of alternative styles.
+5. Visually inspect the source result before integration. Artifacts, anatomy/text defects, poor cropping, or style mismatches require refinement of the same solution.
+6. Record the prompt, tool, time, source file, and terms of use.
+7. Prepare required derivative sizes without changing the concept.
+8. Verify the result on the real app screen, including themes and sizes when applicable.
 
-Исправления качества выполняются внутри выбранного решения. Не выдавай непроверенный или неотображённый ассет за готовый.
+Quality fixes remain within the selected solution. Do not present an unverified or unrendered asset as complete.
 
-## Выход
+## Output
 
 - `trickster/artifacts/<run-id>/asset-manifest.md`;
-- исходники и производные файлы в проекте;
-- скриншоты фактического использования в приложении;
-- provenance и лицензии.
+- source and derivative files in the project;
+- screenshots showing actual in-app use;
+- provenance and licenses.

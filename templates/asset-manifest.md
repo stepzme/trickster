@@ -1,9 +1,9 @@
 # Asset manifest
 
 - Run ID:
-- Общий статус: UNVERIFIED
+- Overall status: UNVERIFIED
 
-| Asset | Экран и роль | Источник/метод | Направление из пакета стиля | Размеры/состояния | Лицензия/provenance | Проверка в приложении |
+| Asset | Screen and role | Source/method | Direction from style package | Sizes/states | License/provenance | In-app verification |
 |---|---|---|---|---|---|---|
 
-Если продуктовые изображения и иллюстрации не нужны, укажи `N/A` и объясни, почему интерфейс решает задачи без них.
+If no product images or illustrations are needed, enter `N/A` and explain why the interface fulfills its purpose without them.

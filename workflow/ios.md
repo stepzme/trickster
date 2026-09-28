@@ -1,10 +1,10 @@
-# Среда сборки и проверки iOS
+# iOS build and verification environment
 
-## Однократная подготовка машины
+## One-time machine setup
 
-Нужны macOS, полная установка Xcode, iOS Simulator runtime и хотя бы один созданный подходящий iPhone Simulator. Для матрицы проверки нужен также компактный поддерживаемый размер. Версии выбираются по конкретному проекту и фиксируются в product.md.
+macOS, a complete Xcode installation, an iOS Simulator runtime, and at least one suitable iPhone Simulator are required. The verification matrix also needs a compact supported size. Select versions for the specific project and record them in `product.md`.
 
-Первичная диагностика:
+Initial diagnostics:
 
 ```sh
 xcode-select -p
@@ -13,32 +13,32 @@ xcrun simctl list runtimes
 xcrun simctl list devices available
 ```
 
-Пустой список устройств ещё не доказывает отсутствие runtime: проверь оба списка. Если runtime отсутствует, установи его через настройки компонентов Xcode. Затем создай нужное устройство в окне Devices and Simulators. Названия разделов могут зависеть от версии Xcode.
+An empty device list does not by itself prove that no runtime is installed: check both lists. If a runtime is missing, install it through Xcode's component settings. Then create the required device in the Devices and Simulators window. Section names may vary by Xcode version.
 
-Ошибка подключения CoreSimulatorService внутри песочницы не доказывает поломку Xcode. При разрешённой политикой среды возможности повтори диагностику с нужным доступом; не удаляй устройства и не сбрасывай пользовательские данные для устранения ошибки.
+A CoreSimulatorService connection error inside a sandbox does not prove that Xcode is broken. When environment policy permits, repeat diagnostics with the necessary access; do not delete devices or reset user data to resolve the error.
 
-## Возможности harness
+## Harness capabilities
 
-Агенту нужны реальные средства: выполнение команд Xcode; установка/запуск через simctl или подходящий коннектор; взаимодействие с нативным UI через доступный инструмент либо XCTest UI tests; получение и просмотр изображений.
+The agent needs real means to run Xcode commands; install and launch through `simctl` or an appropriate connector; interact with native UI through an available tool or XCTest UI tests; and capture and view images.
 
-Обычная браузерная автоматизация не является средством взаимодействия с нативным Simulator. Скриншоты через simctl сами по себе не обеспечивают нажатия и ввод. До пилота проверь эти возможности на реальном запущенном экране. Если инструмента нет, укажи конкретно недоступную проверку.
+Ordinary browser automation cannot interact with native Simulator. Screenshots from `simctl` alone do not provide taps or text input. Before a pilot, test these capabilities on an actual running screen. If a tool is missing, identify the specific unavailable check.
 
-## Для каждого проекта
+## For each project
 
-Обнаружь настоящий `.xcodeproj` или `.xcworkspace`, общую схему и bundle ID. Получи доступные destinations, зафиксируй выбранный UDID. Команду `xcodebuild` составь по проекту, сохраняя код завершения и полный лог; для pipeline с tee используй pipefail.
+Locate the actual `.xcodeproj` or `.xcworkspace`, shared scheme, and bundle ID. Retrieve available destinations and record the selected UDID. Construct the `xcodebuild` command for the project, preserving the exit code and full log; use `pipefail` for pipelines with `tee`.
 
-Сборку, установку, запуск и тестирование проводи последовательно с одним владельцем Simulator. Не используй неоднозначный destination `booted`, если запущено несколько устройств. Артефакты храни в отдельном каталоге run-id. До записи финальных доказательств все исполнители должны закончить изменения кода.
+Perform build, installation, launch, and testing sequentially with one Simulator owner. Do not use the ambiguous `booted` destination when multiple devices are running. Store artifacts in a dedicated run-ID directory. All agents must finish code changes before final evidence is recorded.
 
-Сохраняй для каждого скриншота: экран, состояние, устройство/OS, локаль, тему, размер текста, данные и ревизию. Проверяй сценарии на основной и компактной поддерживаемой конфигурациях, включая увеличенный текст. Другие устройства/локали/темы проверяй по объявленной поддержке.
+For every screenshot, record the screen, state, device/OS, locale, theme, text size, data, and revision. Verify scenarios on the primary and compact supported configurations, including enlarged text. Verify other devices/locales/themes according to declared support.
 
-App icon проверяй у установленной финальной сборки, а не только внутри asset catalog. Исходные продуктовые снимки для ASO получай после приёмки приложения из той же финальной сборки и связывай с run-id.
+Verify the app icon on the installed final build, not only inside the asset catalog. Capture the source product screens for ASO after app acceptance from the same final build and link them to the run ID.
 
-Для платёжных, аппаратных и других функций, которые нельзя достоверно проверить в выбранном Simulator, обозначь границу проверки и требование отдельной проверки на устройстве. Не заменяй реальную интеграцию демонстрационной, скрывая это в отчёте.
+For payments, hardware, and other features that cannot be reliably verified in the selected Simulator, state the verification boundary and the requirement for separate physical-device testing. Do not conceal a demo substitute for a real integration in the report.
 
-## Источники
+## Sources
 
-- [Apple: запуск приложения](https://developer.apple.com/documentation/Xcode/running-your-app-on-simulated-or-physical-devices).
-- [Apple: автоматический аудит доступности](https://developer.apple.com/documentation/accessibility/performing-accessibility-audits-for-your-app).
-- [Apple: проверка релизной сборки](https://developer.apple.com/documentation/Xcode/testing-a-release-build).
-- [Apple: app icons](https://developer.apple.com/design/human-interface-guidelines/app-icons).
-- [Apple: screenshot specifications](https://developer.apple.com/help/app-store-connect/reference/app-information/screenshot-specifications).
+- [Apple: Running your app](https://developer.apple.com/documentation/Xcode/running-your-app-on-simulated-or-physical-devices).
+- [Apple: Performing accessibility audits](https://developer.apple.com/documentation/accessibility/performing-accessibility-audits-for-your-app).
+- [Apple: Testing a release build](https://developer.apple.com/documentation/Xcode/testing-a-release-build).
+- [Apple: App icons](https://developer.apple.com/design/human-interface-guidelines/app-icons).
+- [Apple: Screenshot specifications](https://developer.apple.com/help/app-store-connect/reference/app-information/screenshot-specifications).

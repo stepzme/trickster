@@ -1,40 +1,40 @@
-# Этап 6. App icon
+# Stage 6. App icon
 
-## Применимость
+## Applicability
 
-Для нового приложения этап обязателен. Для изменения существующего приложения он применяется, если пользователь запросил новую иконку или изменение затрагивает бренд. Иначе зафиксируй `N/A` с причиной.
+This stage is required for a new app. For changes to an existing app, it applies when the user requests a new icon or the change affects the brand. Otherwise, record `N/A` with a reason.
 
-## Исследование Logoinspo
+## Logoinspo research
 
-Используй [Logoinspo App Icons](https://logoinspo.com/icons) как обязательный источник референсов. Страница предоставляет каталог app icons с фильтрами по категории, цвету и стилю.
+Use [Logoinspo App Icons](https://logoinspo.com/icons) as the required reference source. The page provides an app-icon catalog with category, color, and style filters.
 
-1. Через доступный парсинг страницы или browser automation найди приложения, близкие по назначению и категории.
-2. Получи и реально просмотри 6–12 релевантных иконок.
-3. Сохрани название и URL каждой иконки.
-4. Зафиксируй метафору, силуэт, цвет, контраст, детализацию, глубину и использование текста.
-5. Отдели общие приёмы категории от узнаваемых элементов конкретного бренда. Не копируй чужую иконку.
+1. Use available page parsing or browser automation to find apps with a comparable purpose and category.
+2. Retrieve and actually inspect 6–12 relevant icons.
+3. Save the name and URL of each icon.
+4. Record the metaphor, silhouette, color, contrast, detail, depth, and use of text.
+5. Separate common category conventions from recognizable elements of a specific brand. Do not copy another app's icon.
 
-Если парсинг или просмотр изображений недоступен, этап остаётся `UNVERIFIED`; названия без изображений не являются исследованием.
+If parsing or image viewing is unavailable, the stage remains `UNVERIFIED`; names without images do not constitute research.
 
-## Одна концепция
+## One concept
 
-На основании назначения продукта, подтверждённого пакета стиля, интерфейса и исследования Logoinspo сформулируй одну концепцию. Не генерируй пользователю сетку вариантов.
+Formulate one concept based on the product's purpose, confirmed style package, interface, and Logoinspo research. Do not generate a grid of alternatives for the user.
 
-Создай один master asset и дорабатывай его до прохождения проверки. Исправление читаемости или экспорта не считается новой концепцией.
+Create one master asset and refine it until it passes verification. Improving readability or export quality does not constitute a new concept.
 
-Для растровой концепции используй доступный инструмент генерации изображений. Prompt должен фиксировать метафору, композицию, палитру `ui.md`, применимый `illustrations.md`, уровень детализации, квадратный формат и отсутствие встроенной системной маски. Визуально просмотри master asset до добавления в проект.
+For a raster concept, use an available image-generation tool. The prompt must specify the metaphor, composition, `ui.md` palette, applicable `illustrations.md`, level of detail, square format, and absence of an embedded system mask. Visually inspect the master asset before adding it to the project.
 
-## Проверка
+## Verification
 
-- соответствие сути продукта и визуальному языку приложения;
-- оригинальность относительно референсов;
-- читаемый силуэт и контраст в малом размере;
-- отсутствие системной маски и скругления внутри исходного квадратного asset;
-- корректная установка в asset catalog;
-- отображение у установленной сборки в Simulator во время следующего этапа приёмки;
-- актуальные технические требования из официальной документации Apple.
+- alignment with the product's purpose and visual language;
+- originality relative to references;
+- legible silhouette and contrast at small sizes;
+- no system mask or rounded corners embedded in the square source asset;
+- correct installation in the asset catalog;
+- appearance for the installed build in Simulator during the next acceptance stage;
+- current technical requirements from official Apple documentation.
 
-## Выход
+## Output
 
 ```text
 trickster/artifacts/<run-id>/app-icon/
@@ -43,4 +43,4 @@ trickster/artifacts/<run-id>/app-icon/
 └── verification.md
 ```
 
-Production-файлы хранятся в asset catalog приложения. `concept.md` описывает одну реализованную концепцию и provenance её создания.
+Production files live in the app's asset catalog. `concept.md` describes the one implemented concept and its creation provenance.

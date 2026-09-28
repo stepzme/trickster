@@ -1,75 +1,75 @@
-# Оркестрация ролей
+# Role orchestration
 
-## Принцип
+## Principle
 
-Trickster описывает роли, артефакты и зависимости независимо от конкретного agent harness. Мастер выбирает адаптер из `trickster/adapters/` и переводит универсальные операции оркестрации в доступные инструменты среды.
+Trickster defines roles, artifacts, and dependencies independently of any specific agent harness. The master selects an adapter from `trickster/adapters/` and maps universal orchestration operations to the tools available in the environment.
 
-Роль — это ограниченный контракт работы. Она может выполняться отдельным исполнителем, worker-процессом или самим мастером последовательно. Результат передаётся через файлы `trickster/artifacts/<run-id>/` и короткий handoff, а не через скрытую историю конкретного harness.
+A role is a constrained work contract. It may be performed by a separate agent, worker process, or sequentially by the master. Results are transferred through files in `trickster/artifacts/<run-id>/` and a short handoff, not through hidden harness-specific history.
 
-## Универсальные операции
+## Universal operations
 
-- `SPAWN(role, task)` — запустить роль с ограниченным контекстом.
-- `WAIT(role)` — дождаться результата и получить handoff.
-- `CONTINUE(role, task)` — продолжить ту же роль для следующей фазы или исправления.
-- `MESSAGE(role, information)` — передать новые входные данные без смены ответственности.
-- `STOP(role)` — остановить вышедшую за scope работу.
+- `SPAWN(role, task)` — start a role with constrained context.
+- `WAIT(role)` — wait for the result and receive a handoff.
+- `CONTINUE(role, task)` — continue the same role for the next phase or a fix.
+- `MESSAGE(role, information)` — provide new input without changing responsibility.
+- `STOP(role)` — stop work that has moved outside scope.
 
-Если harness не поддерживает эти операции, мастер исполняет role contract сам и сохраняет те же выходные файлы.
+If the harness does not support these operations, the master performs the role contract and saves the same output files.
 
-## Роли
+## Roles
 
-| Роль | Stable ID | Этапы | Основной результат |
+| Role | Stable ID | Stages | Primary result |
 |---|---|---|---|
-| `product-researcher` | `product_researcher` | 1 | Scope, границы и недостающие продуктовые решения |
-| `design-planner` | `design_planner` | 2–3 и план 4 | Shortlist до трёх пакетов; после выбора одного — локальный пакет, product contract и asset plan |
-| `implementation-owner` | `implementation_owner` | 5 и исправления | Код приложения и отчёт реализации |
-| `visual-producer` | `visual_producer` | 4, 6, 8 | Продуктовые ассеты, одна app icon и один ASO-комплект |
-| `acceptance-reviewer` | `acceptance_reviewer` | 7 | Независимые доказательства, дефекты и draft review |
+| `product-researcher` | `product_researcher` | 1 | Scope, boundaries, and missing product decisions |
+| `design-planner` | `design_planner` | 2–3 and stage 4 plan | Shortlist of up to three packages; after one is selected, the local package, product contract, and asset plan |
+| `implementation-owner` | `implementation_owner` | 5 and fixes | App code and implementation report |
+| `visual-producer` | `visual_producer` | 4, 6, 8 | Product assets, one app icon, and one ASO set |
+| `acceptance-reviewer` | `acceptance_reviewer` | 7 | Independent evidence, defects, and a draft review |
 
-Мастер выполняет пользовательские вопросы и подтверждения, планирует очередь, назначает владельцев файлов и Simulator, проверяет handoff, интегрирует результат и принимает финальные решения.
+The master handles user questions and confirmations, plans the queue, assigns ownership of files and Simulator, verifies handoffs, integrates the result, and makes final decisions.
 
-## Правила запуска
+## Start rules
 
-1. До работы прочитай адаптер текущего harness. Активный адаптер записан в `trickster/HARNESS`; если файла нет, используй `generic`.
-2. Передай исполнителю точный контракт из `trickster/roles/`, run-id, входные артефакты, разрешённые пути записи, критерии готовности и ограничения инструментов.
-3. Изолируй контекст настолько, насколько позволяет harness. Передавай необходимые факты через prompt и файлы, а не полную историю разговора.
-4. Исполнитель читает только свой role contract, указанные stage documents и входные артефакты.
-5. Запрещай роли менять scope, подтверждённый пакет стиля, критерии приёмки и самостоятельно делегировать работу без разрешения мастера.
-6. После `WAIT` проверь созданные файлы и доказательства. Самооценка исполнителя не является приёмкой.
-7. Используй `CONTINUE` для исправления неполного handoff или продолжения той же роли. Не создавай нового исполнителя только ради обнуления контекста или дефектов.
-8. Если отдельное исполнение роли недоступно, мастер выполняет её сам и отмечает в review.md режим `sequential fallback`.
+1. Read the adapter for the current harness before work begins. The active adapter is named in `trickster/HARNESS`; if that file is missing, use `generic`.
+2. Give the agent the exact contract from `trickster/roles/`, run ID, input artifacts, allowed write paths, completion criteria, and tool limitations.
+3. Isolate context as far as the harness permits. Pass required facts through the prompt and files, not the full conversation history.
+4. The agent reads only its role contract, listed stage documents, and input artifacts.
+5. Prohibit roles from changing scope, the confirmed style package, acceptance criteria, or delegating work without the master's permission.
+6. After `WAIT`, inspect the created files and evidence. The agent's self-assessment is not acceptance.
+7. Use `CONTINUE` to repair an incomplete handoff or continue the same role. Do not create a new agent merely to reset context or defect history.
+8. If separate role execution is unavailable, the master performs it and records `sequential fallback` mode in `review.md`.
 
-## Шаблон задания роли
+## Role-task template
 
 ```text
-Роль: <role id>. Прочитай trickster/roles/<role>.md и перечисленные stage documents.
+Role: <role id>. Read trickster/roles/<role>.md and the listed stage documents.
 Run ID: <run-id>.
-Цель: <один ограниченный результат>.
-Входы: <точные пути>.
-Разрешено записывать: <точные пути или каталоги>.
-Запрещено: <общие файлы, scope, пакет стиля, Simulator и т. п.>.
-Критерии готовности: <проверяемый список>.
-Верни: изменённые файлы, наблюдения, выполненные проверки, ограничения и вопросы мастеру.
-Не общайся с пользователем и не делегируй работу дальше.
+Goal: <one constrained result>.
+Inputs: <exact paths>.
+Allowed writes: <exact paths or directories>.
+Prohibited: <shared files, scope, style package, Simulator, etc.>.
+Completion criteria: <verifiable list>.
+Return: changed files, observations, checks performed, limitations, and questions for the master.
+Do not communicate with the user or delegate work further.
 ```
 
-## Очередность и handoff
+## Sequence and handoff
 
-1. Мастер создаёт run-id и выполняет `SPAWN(product_researcher)` для чернового scope в product.md.
-2. После проверки scope выполняет `SPAWN(design_planner)` для shortlist максимум из трёх пакетов.
-3. Мастер показывает shortlist пользователю и требует выбрать ровно один пакет. Запрос на объединение нескольких пакетов отклоняется.
-4. После выбора выполняет `CONTINUE(design_planner)` для сохранения выбранного пакета в `trickster/design/`, product.md и asset manifest.
-5. Если нужны продуктовые изображения, запускает `visual_producer` только для этой фазы.
-6. Запускает одного `implementation_owner`, который является единственным владельцем app code и общих Xcode-файлов.
-7. После стабилизации экранов запускает или продолжает `visual_producer` для одной app icon с ограниченными путями asset catalog.
-8. После интеграции icon передаёт владение Simulator роли `acceptance_reviewer`. Reviewer не исправляет код.
-9. Дефекты возвращаются через `CONTINUE(implementation_owner)`; после исправления мастер повторяет затронутую проверку.
-10. После ACCEPTED выполняет `CONTINUE(visual_producer)` для одного ASO-комплекта.
-11. Мастер показывает результат пользователю и получает явное подтверждение.
-12. После подтверждения мастер очищает временные загрузки и сборочные файлы по `finalization.md`, затем выполняет delivery.
+1. The master creates a run ID and performs `SPAWN(product_researcher)` for a draft scope in `product.md`.
+2. After verifying the scope, perform `SPAWN(design_planner)` for a shortlist of up to three packages.
+3. The master presents the shortlist and requires the user to select exactly one package. Requests to combine packages are rejected.
+4. After selection, perform `CONTINUE(design_planner)` to save the selected package in `trickster/design/`, complete `product.md`, and create the asset manifest.
+5. If product images are required, start `visual_producer` only for that phase.
+6. Start one `implementation_owner`, who is the sole owner of app code and shared Xcode files.
+7. After screens stabilize, start or continue `visual_producer` for one app icon with restricted asset-catalog paths.
+8. After icon integration, transfer Simulator ownership to `acceptance_reviewer`. The reviewer does not fix code.
+9. Return defects through `CONTINUE(implementation_owner)`; after fixes, the master repeats affected checks.
+10. After ACCEPTED, perform `CONTINUE(visual_producer)` for one ASO set.
+11. The master presents the result to the user and gets explicit confirmation.
+12. After confirmation, the master cleans temporary downloads and build files according to `finalization.md`, then performs delivery.
 
-## Параллельность
+## Parallelism
 
-Параллельно выполняй только задачи с независимыми входами и непересекающимися путями записи. Не допускай одновременную запись двух исполнителей в Xcode project, asset catalog, product.md или review.md. Simulator всегда имеет одного владельца.
+Run in parallel only tasks with independent inputs and non-overlapping write paths. Do not allow two agents to write simultaneously to the Xcode project, asset catalog, `product.md`, or `review.md`. Simulator always has one owner.
 
-Этапы scope, выбора стиля и реализации образуют зависимую цепочку. Главный выигрыш разделения — сфокусированный контекст и независимая проверка. Внутри реализации допускается параллельная работа над независимыми модулями или тестами только после фиксации интерфейсов и путей записи мастером.
+Scope, style selection, and implementation form a dependent chain. The primary benefit of role separation is focused context and independent verification. Within implementation, parallel work on independent modules or tests is allowed only after the master fixes interfaces and write paths.

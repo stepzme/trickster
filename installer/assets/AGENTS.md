@@ -1,14 +1,14 @@
-# Trickster: процесс разработки iOS-приложения
+# Trickster: iOS app development process
 
-При создании или существенном изменении приложения:
+When creating or substantially changing an app:
 
-1. Прочитай `trickster/workflow/master-prompt.md`, `trickster/workflow/orchestration.md`, `trickster/adapters/contract.md` и adapter из `trickster/HARNESS`; последовательно выполни все применимые этапы. `ux.md` и `ios.md` действуют сквозным образом.
-2. Определи scope по задаче, существующему проекту и доступной документации. При неполном или конфликтующем scope задай один вопрос, действительно меняющий границы продукта; не добавляй незапрошенную внешнюю инфраструктуру.
-3. До проектирования UI загрузи каталог из GitHub, выбери по метаданным до трёх подходящих пакетов и загрузи документы только для них. Если точных совпадений нет, предложи ближайшие пакеты и объясни адаптацию.
-4. Пользователь должен выбрать ровно один пакет. Сохрани его в `trickster/design/`; не объединяй файлы, компоненты или экраны разных пакетов и дождись явного подтверждения до проектирования UI.
-5. Выполняй role contracts из `trickster/roles/` через активный adapter. При доступности отдельных исполнителей передавай им ограниченные входы и пути записи; иначе используй последовательный fallback. Всегда проверяй handoff и самостоятельно принимай интегрированный результат.
-6. Для нового приложения после реализации экранов создай одну app icon по просмотренным Logoinspo-референсам, проверь её в финальной сборке, затем после приёмки создай один ASO-комплект из реальных экранов.
-7. После `APP ACCEPTED`, применимого ASO-этапа и явного подтверждения пользователя выполни финальную очистку по `trickster/workflow/finalization.md`.
-8. Недоступные инструменты или проверки помечай `UNVERIFIED`. Не подменяй отсутствующие доказательства предположениями.
+1. Read `trickster/workflow/master-prompt.md`, `trickster/workflow/orchestration.md`, `trickster/adapters/contract.md`, and the adapter named in `trickster/HARNESS`; execute every applicable stage in order. `ux.md` and `ios.md` apply across all stages.
+2. Determine scope from the request, existing project, and available documentation. If scope is incomplete or conflicting, ask one question that materially changes the product boundary; do not add unrequested external infrastructure.
+3. Before designing UI, load the catalog from GitHub, select up to three suitable packages by metadata, and load documents only for them. If there is no exact match, offer the nearest packages and explain the adaptation.
+4. The user must select exactly one package. Save it in `trickster/design/`; do not combine files, components, or screens from different packages, and wait for explicit confirmation before designing UI.
+5. Execute the role contracts in `trickster/roles/` through the active adapter. When separate agents are available, give them constrained inputs and write paths; otherwise, use the sequential fallback. Always verify each handoff and independently accept the integrated result.
+6. For a new app, after implementing the screens, create one app icon based on Logoinspo references you actually viewed, verify it in the final build, then create one ASO set from real screens after acceptance.
+7. After `APP ACCEPTED`, the applicable ASO stage, and explicit user confirmation, perform final cleanup according to `trickster/workflow/finalization.md`.
+8. Mark unavailable tools or checks `UNVERIFIED`. Do not substitute assumptions for missing evidence.
 
-Не изменяй критерии, выбранный пакет стиля или референсы только ради получения PASS.
+Do not change criteria, the selected style package, or references merely to obtain PASS.

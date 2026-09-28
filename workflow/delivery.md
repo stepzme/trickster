@@ -1,17 +1,17 @@
-# Этап 10. Передача результата
+# Stage 10. Delivery
 
-## Итоговые статусы
+## Final statuses
 
-Разделяй статус приложения по `acceptance.md`, статус app icon, статус ASO screenshots и ограничения выпуска на устройство и публикации.
+Report the app status from `acceptance.md`, app-icon status, ASO-screenshot status, and limitations for physical-device release and publication separately.
 
-Принятое приложение не означает автоматически готовый Store package. Готовый Store package не означает, что приложение подписано или опубликовано.
+An accepted app does not automatically mean the Store package is ready. A ready Store package does not mean the app is signed or published.
 
-## Отчёт
+## Report
 
-Создай `trickster/artifacts/<run-id>/review.md` по шаблону. Свяжи доказательства с одной финальной ревизией и средой. Укажи реализацию, проверки, shortlist и выбранный локальный пакет стиля, подтверждение пользователя, выполненную очистку, ассеты, app icon, ASO exports, дефекты, ограничения и шаги воспроизведения.
+Create `trickster/artifacts/<run-id>/review.md` from the template. Tie evidence to one final revision and environment. Record the implementation, checks, shortlist and selected local style package, user confirmation, completed cleanup, assets, app icon, ASO exports, defects, limitations, and reproduction steps.
 
-## Ответ пользователю
+## Response to the user
 
-Кратко сообщи, что работает; итоговые статусы; где находятся проект и отчёт; как воспроизвести проверку; что осталось непроверенным или требует отдельного выпуска.
+Briefly state what works; the final statuses; where the project and report are located; how to reproduce verification; and what remains unverified or requires a separate release task.
 
-Не объявляй приложение опубликованным или готовым к App Store только на основании Simulator и подготовленных изображений.
+Do not declare the app published or App Store-ready based only on Simulator and prepared images.

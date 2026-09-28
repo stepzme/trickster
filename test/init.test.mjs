@@ -33,7 +33,7 @@ test("installs one project-local Trickster folder without the remote style libra
   assert.equal(await readFile(join(project, "trickster", "HARNESS"), "utf8"), "codex\n");
   assert.match(
     await readFile(join(project, "trickster", "workflow", "master-prompt.md"), "utf8"),
-    /Выбор пакета стиля/,
+    /Style-package selection/,
   );
   assert.match(
     await readFile(join(project, "trickster", "workflow", "style-reference.md"), "utf8"),
@@ -249,6 +249,16 @@ test("npm package excludes the remote style library", async () => {
     : Object.values(packResult)[0];
   assert.equal(files.some(({ path }) => path.startsWith("styles/")), false);
   assert.equal(files.some(({ path }) => path === "workflow/style-reference.md"), true);
+
+  const internalDocPrefixes = ["adapters/", "installer/assets/", "roles/", "templates/", "workflow/"];
+  const internalDocs = files
+    .map(({ path }) => path)
+    .filter((path) => path.endsWith(".md"))
+    .filter((path) => internalDocPrefixes.some((prefix) => path.startsWith(prefix)));
+
+  for (const path of internalDocs) {
+    assert.doesNotMatch(await readFile(join(repositoryRoot, path), "utf8"), /[А-Яа-яЁё]/, path);
+  }
 });
 
 test("style catalog indexes every repository package with required documents", async () => {
@@ -302,7 +312,7 @@ test("installed role contracts use the selected local package and gate finalizat
     "utf8",
   );
   assert.match(finalization, /APP ACCEPTED/);
-  assert.match(finalization, /явное подтверждение/);
+  assert.match(finalization, /explicit confirmation/);
   assert.match(finalization, /\/tmp\/trickster\/<run-id>\//);
   assert.match(finalization, /trickster\/design\//);
   assert.match(finalization, /ASO exports/);

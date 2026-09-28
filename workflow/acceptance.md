@@ -1,55 +1,55 @@
-# Этап 7. Приёмка приложения
+# Stage 7. App acceptance
 
-До реализации мастер фиксирует применимость критериев и сценарии в product.md. `acceptance-reviewer` независимо собирает доказательства и draft review, но финальное решение принимает мастер после собственной проверки ключевых сценариев и изображений. Критерии не ослабляются для оправдания готовой реализации. Проверка проводится на финальной версии после завершения всех записей в код.
+Before implementation, the master records the applicability of criteria and the scenarios in `product.md`. The acceptance reviewer independently gathers evidence and prepares a draft review, but the master makes the final decision after personally verifying key scenarios and images. Criteria must not be weakened to justify the finished implementation. Verification is performed on the final version after all code changes are complete.
 
-## Статусы отдельных проверок
+## Individual check statuses
 
-- `PASS` — проверка выполнена, результат соответствует ожиданию, доказательство доступно.
-- `FAIL` — наблюдалось нарушение критерия.
-- `UNVERIFIED` — данных, инструмента или выполнения проверки не хватает.
-- `N/A` — неприменимо, указана проверяемая причина. Обязательные критерии не могут быть N/A.
+- `PASS` — the check was performed, the result meets the expectation, and evidence is available.
+- `FAIL` — a criterion violation was observed.
+- `UNVERIFIED` — required data, tools, or execution are missing.
+- `N/A` — not applicable, with a verifiable reason. Required criteria cannot be N/A.
 
-## Критерии приложения
+## App criteria
 
-| ID | Критерий | Доказательство | Применимость |
+| ID | Criterion | Evidence | Applicability |
 |---|---|---|---|
-| AC-01 | Итоговый код собирается средствами Xcode | Команда, код завершения, полный лог, ревизия | Обязательно |
-| AC-02 | Именно эта сборка устанавливается и запускается в Simulator | Устройство/OS, bundle ID, команды и скриншот запущенного приложения | Обязательно |
-| AC-03 | Все обязательные функции и сценарии product.md реализованы и дают ожидаемый результат | Матрица scope, действия, наблюдаемый результат и данные | Обязательно |
-| AC-04 | Экраны и контролы последовательно выражают подтверждённые `ui.md`, `ux.md` и применимый `illustrations.md`; нативная реализация допустима, но стандартный внешний вид SwiftUI — только когда он соответствует референсу | Актуальные скриншоты, локальный пакет и разбор стилизации кнопок, полей, карточек и навигации | Обязательно |
-| AC-05 | Навигация и взаимодействия последовательно используют применимые правила выбранного `ux.md`; отклонения объяснены продуктовой задачей | Локальный пакет, product.md, воспроизведённые сценарии и наблюдения | Обязательно |
-| AC-06 | Вёрстка и текст сохраняют функции на целевых размерах | Основной и компактный iPhone, увеличенный текст | Обязательно |
-| AC-07 | Выполнены применимые UX-01…UX-12 | Поэкранная матрица правил и фактических наблюдений | Обязательно |
-| AC-08 | Сохранение данных переживает перезапуск | Создание/изменение данных → перезапуск → проверка значений | Если продукт хранит данные |
-| AC-09 | Ошибки и ограничения не ломают обязательный сценарий | Проверенные ошибки сети/ввода/разрешений по контракту | Если применимо |
-| AC-10 | Обещанные локали, темы, ориентации и iPad поддержаны | Проверка объявленной в product.md матрицы | Если объявлены |
-| AC-11 | Источники и доказательства соответствуют конкретному запуску и финальной версии | `trickster/design/source.json`, ревизия, время и manifest артефактов | Обязательно |
+| AC-01 | The final code builds with Xcode tooling | Command, exit code, complete log, revision | Required |
+| AC-02 | That exact build installs and launches in Simulator | Device/OS, bundle ID, commands, and screenshot of the running app | Required |
+| AC-03 | Every required feature and scenario in `product.md` is implemented and produces the expected result | Scope matrix, actions, observed result, and data | Required |
+| AC-04 | Screens and controls consistently express the confirmed `ui.md`, `ux.md`, and applicable `illustrations.md`; native implementation is acceptable, but the default SwiftUI appearance is acceptable only when it matches the reference | Current screenshots, local package, and analysis of button, field, card, and navigation styling | Required |
+| AC-05 | Navigation and interactions consistently use applicable rules from the selected `ux.md`; deviations are justified by the product task | Local package, `product.md`, reproduced scenarios, and observations | Required |
+| AC-06 | Layout and text preserve functionality on target sizes | Primary and compact iPhone, enlarged text | Required |
+| AC-07 | Applicable UX-01 through UX-12 have been performed | Per-screen rule matrix and actual observations | Required |
+| AC-08 | Persisted data survives a restart | Create/change data → restart → verify values | If the product stores data |
+| AC-09 | Errors and constraints do not break a required scenario | Contract-defined network/input/permission errors tested | If applicable |
+| AC-10 | Promised locales, themes, orientations, and iPad support work | Verification of the matrix declared in `product.md` | If declared |
+| AC-11 | Sources and evidence correspond to the specific run and final version | `trickster/design/source.json`, revision, timestamps, and artifact manifest | Required |
 
-Скриншот показывает внешний вид и состояние; он не доказывает сохранение данных или корректность переходов. Для поведения нужны действия и проверка результата. Сгенерированные макеты не заменяют скриншоты из Simulator.
+A screenshot demonstrates appearance and state; it does not prove data persistence or correct transitions. Behavior requires actions and verification of the result. Generated mockups do not replace Simulator screenshots.
 
-## Циклы исправлений
+## Fix cycles
 
-Для каждого дефекта запиши критерий, экран/состояние, наблюдаемое и ожидаемое поведение, серьёзность и артефакт. По умолчанию допускается первоначальная реализация и до трёх циклов исправления. После исправления повторно проверь затронутые сценарии и основной путь.
+For each defect, record the criterion, screen/state, observed and expected behavior, severity, and artifact. By default, the process allows the initial implementation and up to three fix cycles. After a fix, retest affected scenarios and the primary path.
 
-При исчерпании лимита выдай `NEEDS_WORK` с оставшимися проблемами. Не начинай новый run-id только для обнуления лимита.
+When the limit is exhausted, return `NEEDS_WORK` with the remaining issues. Do not start a new run ID merely to reset the limit.
 
-## Решение по приложению
+## App decision
 
-- `ACCEPTED` — все обязательные и применимые AC-01…AC-11 имеют PASS, остальные обоснованно N/A.
-- `NEEDS_WORK` — есть хотя бы один FAIL.
-- `UNVERIFIED` — FAIL не обнаружен, но необходимый пункт не проверен.
+- `ACCEPTED` — all required and applicable AC-01 through AC-11 are PASS; all others are justifiably N/A.
+- `NEEDS_WORK` — at least one item is FAIL.
+- `UNVERIFIED` — no FAIL was found, but a required item was not verified.
 
-Визуальный PASS — суждение проверяющего исполнителя по заданным источникам; он не доказывает рыночную успешность дизайна.
+A visual PASS is the reviewer's judgment against the specified sources; it does not prove the design's market success.
 
 ## Store package
 
-App icon создаётся до этой приёмки и входит в проверяемую сборку. После `ACCEPTED` выполни `aso-screenshots.md`, затем оцени полный Store package.
+The app icon is created before this acceptance stage and is included in the build under review. After `ACCEPTED`, execute `aso-screenshots.md`, then assess the complete Store package.
 
-| ID | Критерий | Применимость |
+| ID | Criterion | Applicability |
 |---|---|---|
-| SP-01 | App icon основана на реально просмотренных Logoinspo-референсах, оригинальна, установлена и проверена в Simulator | Обязательно для нового приложения |
-| SP-02 | Создана одна концепция app icon, без параллельных вариантов | Обязательно для нового приложения |
-| SP-03 | Один ASO-комплект использует реальные экраны принятой сборки и объединяет подтверждённый стиль, UI и app icon | Обязательно для нового приложения |
-| SP-04 | Каждый ASO export соответствует реализованной функции и актуальным техническим требованиям | Обязательно для нового приложения |
+| SP-01 | The app icon is based on Logoinspo references that were actually viewed, is original, is installed, and is verified in Simulator | Required for a new app |
+| SP-02 | One app-icon concept was created, with no parallel alternatives | Required for a new app |
+| SP-03 | One ASO set uses real screens from the accepted build and unifies the confirmed style, UI, and app icon | Required for a new app |
+| SP-04 | Every ASO export corresponds to an implemented feature and current technical requirements | Required for a new app |
 
-Статус Store package оценивай отдельно как `ACCEPTED`, `NEEDS_WORK`, `UNVERIFIED` или `N/A`. Подписывание, релизный архив, реальные устройства и публикация входят в отдельную задачу выпуска.
+Assess the Store package separately as `ACCEPTED`, `NEEDS_WORK`, `UNVERIFIED`, or `N/A`. Signing, a release archive, physical devices, and publication belong to a separate release task.

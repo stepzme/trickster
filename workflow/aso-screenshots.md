@@ -1,34 +1,34 @@
-# Этап 8. ASO screenshots
+# Stage 8. ASO screenshots
 
-## Применимость
+## Applicability
 
-Для нового приложения этап обязателен после приёмки финальной сборки и app icon. Для изменения существующего приложения он выполняется по запросу или когда изменились показываемые функции/визуальный язык.
+This stage is required for a new app after acceptance of the final build and app icon. For changes to an existing app, perform it when requested or when the showcased features or visual language changed.
 
-## Единое направление
+## One direction
 
-Не создавай для ASO отдельную визуальную концепцию и не предлагай несколько комплектов. Стиль является агрегацией:
+Do not create a separate visual concept for ASO or offer multiple sets. The style is an aggregation:
 
 ```text
-подтверждённый пакет стиля
-+ фактический интерфейс приложения
-+ приёмы принятой app icon
-+ реальные продуктовые преимущества
-= один комплект ASO screenshots
+confirmed style package
++ actual app interface
++ visual techniques from the accepted app icon
++ real product benefits
+= one ASO screenshot set
 ```
 
-## Порядок
+## Procedure
 
-1. Выбери главные преимущества только из реализованного и проверенного scope.
-2. Составь одну последовательность кадров: первый передаёт суть продукта, следующие раскрывают отдельные преимущества.
-3. Подготовь воспроизводимые данные и сними реальные экраны финальной сборки в Simulator.
-4. Оформи кадры типографикой, цветом, формами и графическими приёмами `ui.md`, применимого `illustrations.md` и app icon.
-5. Не изменяй интерфейс на скриншоте так, чтобы появлялись отсутствующие функции.
-6. Проверь локализацию, читаемость, обрезку, safe areas и соответствие актуальным требованиям App Store Connect.
-7. Экспортируй один финальный комплект для заявленных устройств и локалей.
+1. Select the primary benefits only from implemented and verified scope.
+2. Create one frame sequence: the first frame communicates the product's essence, and subsequent frames reveal individual benefits.
+3. Prepare reproducible data and capture real screens from the final build in Simulator.
+4. Compose the frames using the typography, color, shapes, and graphic techniques from `ui.md`, applicable `illustrations.md`, and the app icon.
+5. Do not alter the interface in a screenshot to imply features that do not exist.
+6. Verify localization, readability, cropping, safe areas, and conformance with current App Store Connect requirements.
+7. Export one final set for the declared devices and locales.
 
-Сгенерированный макет интерфейса не заменяет снимок реального приложения. Допускается маркетинговая композиция вокруг снимка, но сам продуктовый экран должен происходить из принятой сборки.
+A generated interface mockup does not replace a capture of the real app. A marketing composition may surround the capture, but the product screen itself must come from the accepted build.
 
-## Выход
+## Output
 
 ```text
 trickster/artifacts/<run-id>/aso/
@@ -38,4 +38,4 @@ trickster/artifacts/<run-id>/aso/
 └── verification.md
 ```
 
-`storyboard.md` связывает каждый кадр с преимуществом, реальным сценарием и исходным скриншотом. `verification.md` фиксирует размеры, локаль, устройство и визуальную проверку каждого export.
+`storyboard.md` connects each frame to a benefit, real scenario, and source screenshot. `verification.md` records the dimensions, locale, device, and visual verification of every export.

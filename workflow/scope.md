@@ -1,47 +1,47 @@
-# Этап 1. Определение объёма
+# Stage 1. Scope definition
 
-## Цель
+## Goal
 
-Понять, что именно должно уметь приложение, не вынуждая пользователя заполнять анкету и не сводя неопределённую идею к самому маленькому возможному интерфейсу.
+Understand exactly what the app must do without forcing the user to complete a questionnaire or reducing an uncertain idea to the smallest possible interface.
 
-## Вход
+## Input
 
-- исходное сообщение пользователя;
-- существующий код и документация проекта, если они есть;
-- ограничения среды и явно заданные исключения.
+- the user's original message;
+- existing project code and documentation, if any;
+- environment constraints and explicitly stated exclusions.
 
-## Порядок
+## Procedure
 
-1. Опиши пользователя, его задачу и ожидаемый результат.
-2. Выпиши явно указанную функциональность и ограничения.
-3. Отдели продуктовые решения пользователя от своих предположений.
-4. Определи статус scope:
-   - `DEFINED` — основные пользовательские задачи и границы ясны;
-   - `PARTIAL` — понятна идея, но не определён ожидаемый функциональный baseline;
-   - `CONFLICTING` — требования противоречат друг другу или существующему проекту.
-5. При `PARTIAL` не выбирай произвольно минимальную реализацию. Сформулируй один вопрос, ответ на который определит продуктовый baseline; независимую работу продолжай.
-6. При `CONFLICTING` задай один вопрос, ответ на который действительно разрешает противоречие. Не скрывай конфликт предположением.
+1. Describe the user, their task, and the expected outcome.
+2. List explicitly stated functionality and constraints.
+3. Separate the user's product decisions from your assumptions.
+4. Determine the scope status:
+   - `DEFINED` — primary user tasks and boundaries are clear;
+   - `PARTIAL` — the idea is clear, but the expected functional baseline is not defined;
+   - `CONFLICTING` — requirements contradict each other or the existing project.
+5. For `PARTIAL`, do not choose an arbitrarily minimal implementation. Formulate one question whose answer will determine the product baseline; continue independent work.
+6. For `CONFLICTING`, ask one question whose answer materially resolves the conflict. Do not conceal the conflict behind an assumption.
 
-## Правило расширения scope
+## Scope-expansion rule
 
-Если пользователь не просил внешнюю инфраструктуру, не добавляй автоматически:
+If the user did not request external infrastructure, do not automatically add:
 
-- backend, аккаунты и серверную авторизацию;
-- синхронизацию и collaboration;
-- платежи, подписки и покупки;
-- интеграции со сторонними сервисами;
-- облачный AI или удалённую обработку;
-- push-инфраструктуру и сложные фоновые процессы.
+- a backend, accounts, or server-side authentication;
+- synchronization or collaboration;
+- payments, subscriptions, or purchases;
+- third-party service integrations;
+- cloud AI or remote processing;
+- push infrastructure or complex background processes.
 
-Паттерны выбранного `ux.md` помогают спроектировать уже согласованные функции, но не дают разрешения добавлять новые функции или скрыто расширять архитектуру.
+Patterns from the selected `ux.md` help design already agreed features; they do not authorize new features or hidden architectural expansion.
 
-## Выход
+## Output
 
-Создай черновой раздел `Scope` в `trickster/artifacts/<run-id>/product.md`:
+Create a draft `Scope` section in `trickster/artifacts/<run-id>/product.md` containing:
 
-- статус scope;
-- явная функциональность;
-- недостающие продуктовые решения;
-- ограничения;
-- предположения;
-- потенциальные вопросы пользователю.
+- scope status;
+- explicit functionality;
+- missing product decisions;
+- constraints;
+- assumptions;
+- potential questions for the user.

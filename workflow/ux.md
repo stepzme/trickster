@@ -1,22 +1,22 @@
-# Общие критерии UX
+# Cross-cutting UX criteria
 
-Это сквозные правила для этапов контракта, реализации и приёмки. Для каждого правила определи применимость к сценариям продукта. N/A требует конкретной причины. Приёмка проводится на работающем приложении, а не на макете.
+These rules apply across contract, implementation, and acceptance stages. Determine each rule's applicability to product scenarios. N/A requires a specific reason. Acceptance is performed on a working app, not a mockup.
 
-| ID | Когда применяется | Проверяемое ожидание |
+| ID | Applies when | Verifiable expectation |
 |---|---|---|
-| UX-01 | Все основные экраны | Назначение экрана понятно по содержимому; доступно необходимое следующее действие. Не навязывай одну CTA всем типам экранов. |
-| UX-02 | Переходы и модальные окна | Можно предсказуемо вернуться или закрыть окно; контекст и ввод сохраняются там, где это ожидается. |
-| UX-03 | Действия пользователя | Видно, принято ли действие, выполняется ли оно и чем завершилось. Повторное нажатие не создаёт случайные дубликаты. |
-| UX-04 | Данные и загрузка | Предусмотрены содержимое и пустой результат; загрузка, ошибка и офлайн проверяются там, где зависят от сети. Не добавляй сетевые состояния в полностью локальный продукт. |
-| UX-05 | Формы | Подписи и ошибки понятны; клавиатура подходит данным; ввод и нужные действия доступны при открытой клавиатуре. |
-| UX-06 | Удаление и потеря работы | Последствие понятно; предусмотрены подходящее подтверждение или отмена. |
-| UX-07 | Системные разрешения | Запрос связан с действием пользователя; отказ оставляет понятный рабочий путь. |
-| UX-08 | Все интерактивные экраны | Элементы доступны для нажатия, не перекрываются; учитываются safe area и поддерживаемые размеры экрана. |
-| UX-09 | Текст и управление | Системное увеличение текста сохраняет доступ к функциям; VoiceOver имеет содержательные подписи и логичный порядок; смысл не передаётся только цветом. |
-| UX-10 | Контент | Проверены длинные строки, реальные названия, единицы измерения, изображения и поддерживаемые локали; демо-текст не маскирует проблемы вёрстки. |
-| UX-11 | Анимация | Движение помогает понять изменение, не задерживает обязательное действие; учтён Reduce Motion, если есть значимая анимация. |
-| UX-12 | Сохранение состояния | Основные данные и обещанное сохранение ввода проверены после ухода в фон и перезапуска. |
+| UX-01 | All primary screens | The screen's purpose is clear from its content, and the required next action is available. Do not impose one CTA pattern on every screen type. |
+| UX-02 | Navigation and modal views | The user can predictably go back or close the view; context and input are preserved where expected. |
+| UX-03 | User actions | It is clear whether an action was accepted, is in progress, and how it completed. Repeated taps do not create accidental duplicates. |
+| UX-04 | Data and loading | Content and empty-result states are provided; loading, error, and offline states are tested where behavior depends on the network. Do not add network states to a fully local product. |
+| UX-05 | Forms | Labels and errors are understandable; the keyboard suits the data; input and required actions remain accessible while the keyboard is open. |
+| UX-06 | Deletion and loss of work | The consequence is clear; an appropriate confirmation or undo is available. |
+| UX-07 | System permissions | The request is connected to a user action; denial leaves a clear working path. |
+| UX-08 | All interactive screens | Controls are tappable and unobstructed; safe areas and supported screen sizes are respected. |
+| UX-09 | Text and controls | System text enlargement preserves access to functionality; VoiceOver has meaningful labels and a logical order; meaning is not communicated by color alone. |
+| UX-10 | Content | Long strings, real names, units, images, and supported locales are tested; demo text does not conceal layout problems. |
+| UX-11 | Animation | Motion helps explain a change and does not delay a required action; Reduce Motion is respected when significant animation is present. |
+| UX-12 | State persistence | Primary data and promised input preservation are verified after backgrounding and restarting. |
 
-Конкретные параметры доступности и платформенные ограничения проверяй по актуальным [Apple HIG](https://developer.apple.com/design/human-interface-guidelines) для выбранной платформы. Эти правила — критерии команды, не заявление о сертификации Apple.
+Check specific accessibility parameters and platform constraints against the current [Apple HIG](https://developer.apple.com/design/human-interface-guidelines) for the selected platform. These rules are team criteria, not a claim of Apple certification.
 
-`trickster/design/ui.md` задаёт визуальный язык, `trickster/design/ux.md` — характер навигации и взаимодействия, а этот документ — проверяемое поведение продукта. Паттерны выбранного пакета адаптируются к согласованному scope и не добавляют функции сами по себе.
+`trickster/design/ui.md` defines the visual language, `trickster/design/ux.md` defines the character of navigation and interaction, and this document defines verifiable product behavior. Adapt patterns from the selected package to the agreed scope; they do not add features by themselves.
