@@ -500,6 +500,29 @@ html[lang="es"] .hero h1 {
   padding: clamp(6rem, 11vw, 10rem) var(--side);
 }
 
+.statement,
+.comparison,
+.process,
+.guarantees,
+.closing {
+  box-shadow: 0 0 0 100vmax var(--section-background);
+  clip-path: inset(0 -100vmax);
+}
+
+.statement,
+.comparison,
+.guarantees {
+  --section-background: var(--paper);
+}
+
+.process {
+  --section-background: var(--paper-bright);
+}
+
+.closing {
+  --section-background: var(--teal);
+}
+
 .section-label {
   margin: 0 0 1.5rem;
   color: var(--teal-dark);
