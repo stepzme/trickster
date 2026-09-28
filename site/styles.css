@@ -33,6 +33,16 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+html[lang="zh-CN"] body {
+  font-family: "Noto Sans SC", var(--sans);
+}
+
+b[data-i18n],
+b[data-i18n-html] {
+  color: inherit;
+  font: inherit;
+}
+
 body::selection {
   background: var(--teal);
   color: var(--ink);
@@ -104,6 +114,45 @@ a {
   gap: clamp(1.25rem, 3vw, 2.75rem);
 }
 
+.header-actions {
+  display: flex;
+  gap: clamp(0.8rem, 1.8vw, 1.5rem);
+  align-items: center;
+  justify-self: end;
+}
+
+.language-nav {
+  display: flex;
+  gap: 0.15rem;
+  align-items: center;
+  padding: 0.2rem;
+  border: 1px solid var(--line-dark);
+}
+
+.language-nav a {
+  display: grid;
+  min-width: 1.8rem;
+  min-height: 1.7rem;
+  padding: 0 0.35rem;
+  place-items: center;
+  color: #77736b;
+  font-family: var(--mono);
+  font-size: 0.58rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  transition: color 160ms ease, background 160ms ease;
+}
+
+.language-nav a:hover {
+  color: var(--paper-bright);
+}
+
+.language-nav a[aria-current="page"] {
+  background: var(--teal);
+  color: var(--ink);
+}
+
 .site-nav a,
 .header-link {
   color: #b7b3aa;
@@ -117,10 +166,6 @@ a {
 .site-nav a:hover,
 .header-link:hover {
   color: var(--paper-bright);
-}
-
-.header-link {
-  justify-self: end;
 }
 
 .header-link span {
@@ -193,6 +238,10 @@ a {
   box-shadow: 0 0 0 0.3rem rgba(25, 185, 158, 0.12);
 }
 
+.eyebrow b {
+  min-width: 0;
+}
+
 .hero h1,
 .statement h2,
 .section-heading h2,
@@ -210,6 +259,14 @@ a {
 .statement h2 em {
   color: var(--teal);
   font-style: normal;
+}
+
+html[lang="ru"] .hero h1 {
+  font-size: clamp(3.15rem, 6.2vw, 5.9rem);
+}
+
+html[lang="es"] .hero h1 {
+  font-size: clamp(3.35rem, 6.8vw, 6.4rem);
 }
 
 .hero__lede {
@@ -1036,12 +1093,24 @@ a {
     display: none;
   }
 
+  .header-actions {
+    gap: 0.75rem;
+  }
+
   .hero {
     padding-top: 9rem;
   }
 
   .hero h1 {
     font-size: clamp(3.1rem, 16vw, 5rem);
+  }
+
+  html[lang="ru"] .hero h1 {
+    font-size: clamp(2.35rem, 10.5vw, 3.2rem);
+  }
+
+  html[lang="es"] .hero h1 {
+    font-size: clamp(2.85rem, 13.5vw, 4.4rem);
   }
 
   .inspection__title {
@@ -1119,6 +1188,20 @@ a {
 }
 
 @media (max-width: 480px) {
+  .site-header {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+
+  .header-link {
+    display: none;
+  }
+
+  .language-nav a {
+    min-width: 1.65rem;
+    padding: 0 0.25rem;
+  }
+
   .hero__actions,
   .closing__actions {
     align-items: stretch;
