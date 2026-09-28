@@ -5,7 +5,7 @@ import { homedir } from "node:os";
 import { dirname, parse, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
-import { createTerminalStyle, supportsDecoration } from "./terminal-style.mjs";
+import { createTerminalStyle } from "./terminal-style.mjs";
 
 const packageRoot = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const packageJson = JSON.parse(
@@ -13,15 +13,6 @@ const packageJson = JSON.parse(
 );
 const VERSION = packageJson.version;
 const outputStyle = createTerminalStyle(process.stdout);
-const showDecoration = supportsDecoration(process.stdout);
-
-const TRICKSTER_MARK = [
-  "       /",
-  "   \\  /   /",
-  "----\\/---/",
-  "    /\\",
-  "   /  \\",
-].join("\n");
 
 const BLOCKS = {
   agents: {
@@ -266,13 +257,8 @@ export async function initializeProject({
   };
 
   if (!quiet) {
-    if (showDecoration) {
-      console.log(`\n${outputStyle.accent(TRICKSTER_MARK)}`);
-    } else {
-      console.log();
-    }
     console.log(
-      `${outputStyle.accent(`✦ trickster ${VERSION}`)} ${outputStyle.strong("installed")} in ${resolve(project, "trickster")}`,
+      `\n${outputStyle.accent(`✦ trickster ${VERSION}`)} ${outputStyle.strong("installed")} in ${resolve(project, "trickster")}`,
     );
     console.log(`${outputStyle.muted("Harness:")} ${selectedHarness}`);
     console.log(`${outputStyle.muted("Style catalog:")} loaded from GitHub when a new style is selected`);

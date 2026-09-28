@@ -12,11 +12,7 @@ import {
   initializeProject,
   isGlobalPackagePath,
 } from "../installer/init.mjs";
-import {
-  createTerminalStyle,
-  supportsColor,
-  supportsDecoration,
-} from "../installer/terminal-style.mjs";
+import { createTerminalStyle, supportsColor } from "../installer/terminal-style.mjs";
 
 const repositoryRoot = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 
@@ -24,7 +20,6 @@ test("uses Trickster colors only in supported terminals", () => {
   const terminal = { isTTY: true };
   const styled = createTerminalStyle(terminal, {});
 
-  assert.equal(supportsDecoration(terminal, {}), true);
   assert.equal(supportsColor(terminal, {}), true);
   assert.equal(
     styled.accent("Trickster"),
@@ -45,8 +40,6 @@ test("uses Trickster colors only in supported terminals", () => {
   );
   assert.equal(createTerminalStyle({ isTTY: false }, {}).error("Failed"), "Failed");
   assert.equal(createTerminalStyle(terminal, { CI: "true" }).warning("Verify"), "Verify");
-  assert.equal(supportsDecoration({ isTTY: false }, {}), false);
-  assert.equal(supportsDecoration(terminal, { CI: "true" }), false);
 });
 
 async function createProject() {

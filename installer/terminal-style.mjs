@@ -8,15 +8,11 @@ const ANSI = {
   strong: "\u001B[1m",
 };
 
-export function supportsDecoration(stream, env = process.env) {
-  if (env.CI || env.TERM === "dumb") return false;
-  return Boolean(stream?.isTTY);
-}
-
 export function supportsColor(stream, env = process.env) {
   if (Object.hasOwn(env, "NO_COLOR") || env.FORCE_COLOR === "0") return false;
   if (env.FORCE_COLOR && env.FORCE_COLOR !== "0") return true;
-  return supportsDecoration(stream, env);
+  if (env.CI || env.TERM === "dumb") return false;
+  return Boolean(stream?.isTTY);
 }
 
 export function createTerminalStyle(stream, env = process.env) {
