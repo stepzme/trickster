@@ -26,5 +26,5 @@ If collaboration tools are unavailable, execute the roles sequentially using the
 
 - `codex` is available in `PATH`.
 - The raw GitHub catalog URL is accessible, or a complete `trickster/design/` has already been saved in the project.
-- Shell, Xcode, Simulator, UI interaction, and image viewing are available.
+- Shell, Xcode, Simulator, physical-device access, UI interaction, and image viewing are available, or their exact limitations are recorded for mandatory capability verification.
 - If delegated mode is claimed, a trial subagent is spawned, completes, and returns a handoff.

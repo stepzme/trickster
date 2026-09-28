@@ -1,4 +1,4 @@
-# Stage 6. App icon
+# Stage 7. App icon
 
 ## Applicability
 

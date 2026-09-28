@@ -6,7 +6,7 @@
 
 ### An AI app factory for native iOS.
 
-Turn an app idea into a native iOS product shaped by a curated design library — scoped, designed, built, verified in Simulator, and completed with an original app icon and ASO screenshots.
+Turn an app idea into a native iOS product shaped by a curated design library — scoped, extended with a fixed set of iOS capabilities, designed, built, verified, and completed with an original app icon and ASO screenshots.
 
 Trickster orchestrates specialized AI roles inside your repository. It reads a small GitHub catalog, downloads documents for up to three relevant styles, requires you to select exactly one, saves that package in the project, and independently checks the implemented result.
 
@@ -14,6 +14,7 @@ Trickster orchestrates specialized AI roles inside your repository. It reads a s
 
 - a functional Xcode project and native iOS app;
 - a product scope grounded in your brief and existing project;
+- one product-relevant feature for each of eleven mandatory iOS capabilities;
 - one confirmed visual language saved locally after selection from the GitHub catalog;
 - custom-styled controls that preserve native iOS behavior and accessibility;
 - build, Simulator, interaction, and visual verification artifacts;
@@ -25,12 +26,13 @@ Trickster orchestrates specialized AI roles inside your repository. It reads a s
 ![Trickster four-phase pipeline: define the product, confirm one style, build the native app, then independently verify and deliver it](docs/assets/trickster-pipeline.svg)
 
 1. **Define the product.** Establish the requested scope, boundaries, and any decision that genuinely needs user input.
-2. **Compare relevant styles.** Read the GitHub catalog, choose up to three candidates by metadata, and download documents only for those candidates.
-3. **Select one direction.** Require exactly one package before UI work. Packages cannot be merged or split across screens.
-4. **Create the contract.** Define screens, states, scenarios, assets, and acceptance checks.
-5. **Build the app.** Implement one vertical flow first, visually inspect it, then complete the agreed scope.
-6. **Verify independently.** Build, install, run, interact with, and inspect the final app in Simulator. Missing evidence remains `UNVERIFIED`.
-7. **Finish the store package.** Produce an original app icon and, after acceptance, ASO screenshots from the real build.
+2. **Adapt mandatory iOS capabilities.** Invent one coherent product feature for every capability in the fixed eleven-item list, regardless of the prompt scope.
+3. **Compare relevant styles.** Read the GitHub catalog, choose up to three candidates by metadata, and download documents only for those candidates.
+4. **Select one direction.** Require exactly one package before UI work. Packages cannot be merged or split across screens.
+5. **Create the contract.** Define capability-backed screens, states, scenarios, assets, and acceptance checks.
+6. **Build the app.** Implement one vertical flow first, visually inspect it, then complete the agreed scope and all eleven capability features.
+7. **Verify independently.** Build, install, run, interact with, and inspect the final app in Simulator and on a physical iPhone where required. Missing evidence remains `UNVERIFIED`.
+8. **Finish the store package.** Produce an original app icon and, after acceptance, ASO screenshots from the real build.
 
 Trickster uses multiple focused roles when the active agent harness supports delegation and follows the same contracts sequentially when it does not.
 
@@ -67,7 +69,25 @@ Out of scope:
 Constraints:
 ```
 
-Keep it short if you prefer. Trickster will clarify one product-defining gap if needed and ask you to select one style package before UI work. The installed project instructions activate the pipeline and enforce its design and acceptance gates.
+Keep it short if you prefer. You do not need to list platform capabilities: Trickster automatically adapts the fixed eleven-item set to the product, clarifies one product-defining gap if needed, and asks you to select one style package before UI work. The installed project instructions activate the pipeline and enforce its capability, design, and acceptance gates.
+
+## Mandatory iOS capabilities
+
+Every new app and substantial app change must contain a coherent product feature for each capability in this exact order:
+
+1. Bluetooth
+2. Downloading Photos
+3. Adding Photos
+4. Using the Camera
+5. Face ID
+6. Microphone Access
+7. Speech Recognition Access
+8. Contacts Access
+9. Calendar Access
+10. Location Access
+11. CallKit
+
+The agent cannot omit, merge, rename, reorder, replace, or mark an item `N/A`. A permission-only button, fake device, or fake call does not count: every feature needs a contextual entry point, a useful result, denial or unavailable behavior, and reproducible evidence. System pickers and capabilities without a normal permission prompt remain in the list and must use the correct iOS mechanism.
 
 For another agent harness:
 
@@ -112,21 +132,23 @@ The style package is not a skin. Native controls may provide behavior, accessibi
 | Stage | Owner | Required result |
 |---|---|---|
 | 1. Scope | product-researcher | Explicit scope status and missing decisions |
-| 2. Style selection | design-planner + user gate | Up to three GitHub candidates and exactly one locally saved package |
-| 3. Product contract | design-planner | Screens, states, scenarios, assets, and verification plan |
-| 4. Product assets | visual-producer when needed | Verified imagery or a justified `N/A` |
-| 5. Implementation | implementation-owner | Vertical flow followed by the complete agreed scope |
-| 6. App icon | visual-producer | One original concept installed in the app |
-| 7. Acceptance | acceptance-reviewer + master | Independently verified final build |
-| 8. ASO screenshots | visual-producer | One set based on real screens from the accepted build |
-| 9. Finalization | master + user gate | Explicit user confirmation and cleanup of temporary files |
-| 10. Delivery | master | Reproducible evidence and final status |
+| 2. Mandatory iOS capabilities | product-researcher + master gate | Eleven product-specific features in the fixed canonical matrix |
+| 3. Style selection | design-planner + user gate | Up to three GitHub candidates and exactly one locally saved package |
+| 4. Product contract | design-planner | Screens, states, scenarios, assets, and verification plan |
+| 5. Product assets | visual-producer when needed | Verified imagery or a justified `N/A` |
+| 6. Implementation | implementation-owner | Vertical flow followed by the complete agreed scope and capabilities |
+| 7. App icon | visual-producer | One original concept installed in the app |
+| 8. Acceptance | acceptance-reviewer + master | Independently verified final build and eleven-row capability matrix |
+| 9. ASO screenshots | visual-producer | One set based on real screens from the accepted build |
+| 10. Finalization | master + user gate | Explicit user confirmation and cleanup of temporary files |
+| 11. Delivery | master | Reproducible evidence and final status |
 
 See [the master process](workflow/master-prompt.md) and [orchestration contract](workflow/orchestration.md) for the exact execution rules.
 
 ## Core guarantees
 
 - The style shortlist contains no more than three packages selected from catalog metadata; only their documents are downloaded.
+- All eleven canonical iOS capabilities are contracted and implemented regardless of the prompt scope; none can be `N/A`.
 - UI implementation stops until the user selects exactly one package.
 - Packages cannot be merged; the selected package is the only design context.
 - Native control behavior is preserved while appearance follows the selected visual language.
@@ -136,9 +158,9 @@ See [the master process](workflow/master-prompt.md) and [orchestration contract]
 
 ## Requirements and boundaries
 
-Trickster requires macOS, Xcode, an appropriate iOS Simulator runtime, Node.js 20 or later, and an agent environment capable of reading the installed instructions and using project tools. A new style selection requires access to the raw files in the Trickster GitHub repository; an existing project continues to use its locally saved package.
+Trickster requires macOS, Xcode, an appropriate iOS Simulator runtime, a suitable physical iPhone and peripherals for mandatory hardware-dependent capability verification, Node.js 20 or later, and an agent environment capable of reading the installed instructions and using project tools. A new style selection requires access to the raw files in the Trickster GitHub repository; an existing project continues to use its locally saved package.
 
-Signing, release archives, physical-device validation, App Store submission, and external production infrastructure are separate release tasks unless explicitly included in the product scope.
+Signing for physical-device capability verification is part of acceptance. Release archives, App Store submission, and production deployment remain separate release tasks. Real external services required by a contracted capability must be connected or reported `UNVERIFIED`.
 
 Global installation is intentionally rejected. Use `npx` as a temporary launcher inside the target project.
 
@@ -146,6 +168,7 @@ Global installation is intentionally rejected. Use `npx` as a temporary launcher
 
 - [Master process](workflow/master-prompt.md)
 - [Role orchestration](workflow/orchestration.md)
+- [Mandatory iOS capabilities](workflow/ios-capabilities.md)
 - [Style selection](workflow/style-reference.md)
 - [Implementation](workflow/implementation.md)
 - [Acceptance](workflow/acceptance.md)

@@ -1,4 +1,4 @@
-# Stage 2. Style-package selection
+# Stage 3. Style-package selection
 
 ## Goal
 
@@ -26,7 +26,7 @@ https://raw.githubusercontent.com/stepzme/trickster/main/styles/<appId>/illustra
 
 ## Shortlist
 
-1. Read the user's request, existing project, and draft scope in `product.md`.
+1. Read the user's request, existing project, draft scope, and completed mandatory iOS capability matrix in `product.md`. Stop and return the contract to the master if any canonical row is absent, renamed, merged, or incomplete.
 2. Load `catalog.json` directly from GitHub. Do not save the entire catalog or library in the project.
 3. Select one to three best candidates based on `name`, `category`, and the product task. If there is no exact match, choose up to three nearest candidates and state the compromise in advance.
 4. Download `ui.md`, `ux.md`, and, when present, `illustrations.md` only for the selected candidates into `/tmp/trickster/<run-id>/styles/<appId>/`. Do not download documents for other packages.

@@ -2,7 +2,7 @@
 
 ## One-time machine setup
 
-macOS, a complete Xcode installation, an iOS Simulator runtime, and at least one suitable iPhone Simulator are required. The verification matrix also needs a compact supported size. Select versions for the specific project and record them in `product.md`.
+macOS, a complete Xcode installation, an iOS Simulator runtime, and at least one suitable iPhone Simulator are required. The verification matrix also needs a compact supported size. Because every Trickster app includes the fixed capability set in `ios-capabilities.md`, final acceptance also requires access to a suitable physical iPhone for behavior that Simulator cannot reproduce, including real Bluetooth peripherals and camera input. Select versions and devices for the specific project and record them in `product.md`.
 
 Initial diagnostics:
 
@@ -33,7 +33,7 @@ For every screenshot, record the screen, state, device/OS, locale, theme, text s
 
 Verify the app icon on the installed final build, not only inside the asset catalog. Capture the source product screens for ASO after app acceptance from the same final build and link them to the run ID.
 
-For payments, hardware, and other features that cannot be reliably verified in the selected Simulator, state the verification boundary and the requirement for separate physical-device testing. Do not conceal a demo substitute for a real integration in the report.
+For each mandatory iOS capability, record whether Simulator, a physical device, or a real external service is required. Exercise real Bluetooth, camera, biometric, audio, location, Photos, Contacts, Calendar, Speech, and CallKit behavior where the selected environment permits it. If required hardware or service is unavailable, mark the capability and AC-12 `UNVERIFIED`; do not use `N/A`, conceal the boundary, or substitute a demo for a real integration.
 
 ## Sources
 

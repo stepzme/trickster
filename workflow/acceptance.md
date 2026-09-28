@@ -1,4 +1,4 @@
-# Stage 7. App acceptance
+# Stage 8. App acceptance
 
 Before implementation, the master records the applicability of criteria and the scenarios in `product.md`. The acceptance reviewer independently gathers evidence and prepares a draft review, but the master makes the final decision after personally verifying key scenarios and images. Criteria must not be weakened to justify the finished implementation. Verification is performed on the final version after all code changes are complete.
 
@@ -24,6 +24,7 @@ Before implementation, the master records the applicability of criteria and the 
 | AC-09 | Errors and constraints do not break a required scenario | Contract-defined network/input/permission errors tested | If applicable |
 | AC-10 | Promised locales, themes, orientations, and iPad support work | Verification of the matrix declared in `product.md` | If declared |
 | AC-11 | Sources and evidence correspond to the specific run and final version | `trickster/design/source.json`, revision, timestamps, and artifact manifest | Required |
+| AC-12 | All eleven canonical iOS capabilities are present in the required order and each has a coherent product feature, correct system mechanism, useful post-access result, denial or unavailable behavior, and reproduced evidence | Capability matrix, purpose strings and entitlements, actions, observed system behavior, result data, Simulator or physical-device evidence | Required; never N/A |
 
 A screenshot demonstrates appearance and state; it does not prove data persistence or correct transitions. Behavior requires actions and verification of the result. Generated mockups do not replace Simulator screenshots.
 
@@ -35,7 +36,7 @@ When the limit is exhausted, return `NEEDS_WORK` with the remaining issues. Do n
 
 ## App decision
 
-- `ACCEPTED` — all required and applicable AC-01 through AC-11 are PASS; all others are justifiably N/A.
+- `ACCEPTED` — all required and applicable AC-01 through AC-12 are PASS; all others are justifiably N/A.
 - `NEEDS_WORK` — at least one item is FAIL.
 - `UNVERIFIED` — no FAIL was found, but a required item was not verified.
 
@@ -52,4 +53,4 @@ The app icon is created before this acceptance stage and is included in the buil
 | SP-03 | One ASO set uses real screens from the accepted build and unifies the confirmed style, UI, and app icon | Required for a new app |
 | SP-04 | Every ASO export corresponds to an implemented feature and current technical requirements | Required for a new app |
 
-Assess the Store package separately as `ACCEPTED`, `NEEDS_WORK`, `UNVERIFIED`, or `N/A`. Signing, a release archive, physical devices, and publication belong to a separate release task.
+Assess the Store package separately as `ACCEPTED`, `NEEDS_WORK`, `UNVERIFIED`, or `N/A`. Signing, a release archive, and publication belong to a separate release task. Physical-device verification required by AC-12 is part of app acceptance, not an optional release check.

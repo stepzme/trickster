@@ -1,4 +1,4 @@
-# Stage 4. Product images and illustrations
+# Stage 5. Product images and illustrations
 
 ## Goal
 

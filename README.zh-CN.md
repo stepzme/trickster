@@ -4,7 +4,7 @@
 
 ### 面向原生 iOS 的 AI 应用工厂。
 
-将应用构想转化为基于精选设计库的原生 iOS 应用：确定产品范围、完成设计与实现、通过 Simulator 验证，并交付原创 app icon 和 ASO 截图。
+将应用构想转化为基于精选设计库的原生 iOS 应用：确定产品范围、加入固定的 iOS capability 集合、完成设计与实现、进行验证，并交付原创 app icon 和 ASO 截图。
 
 Trickster 在你的代码仓库中协调多个专业 AI 角色。它会读取一个精简的 GitHub 目录，只下载最多三个相关风格的文档，要求用户只选择一个并将其保存到项目中，随后对实现结果进行独立验收。
 
@@ -12,6 +12,7 @@ Trickster 在你的代码仓库中协调多个专业 AI 角色。它会读取一
 
 - 可运行的 Xcode 项目和原生 iOS 应用；
 - 基于需求说明和现有项目确定的产品范围；
+- 为十一项强制 iOS capability 分别提供一项与产品相关的功能；
 - 从 GitHub 目录中选择并保存在本地的一套视觉语言；
 - 保留 iOS 原生行为和无障碍能力、同时完成定制样式的控件；
 - 构建、Simulator 运行、交互和视觉检查的证据；
@@ -23,6 +24,7 @@ Trickster 在你的代码仓库中协调多个专业 AI 角色。它会读取一
 ```text
 应用构想
 → 产品范围
+→ 强制 iOS capabilities
 → GitHub 风格候选
 → 选择一种风格
 → 原生实现
@@ -31,12 +33,13 @@ Trickster 在你的代码仓库中协调多个专业 AI 角色。它会读取一
 ```
 
 1. **定义产品。** 明确需求范围、边界，以及真正需要用户决定的问题。
-2. **比较相关风格。** 读取 GitHub 目录，根据元数据选择最多三个候选，并且只下载这些候选的文档。
-3. **选择唯一方向。** 在 UI 实现前必须只选择一个设计包；不能合并设计包，也不能为不同页面使用不同设计包。
-4. **建立产品合同。** 固定页面、状态、流程、资源和验收检查。
-5. **构建应用。** 先实现并视觉检查一条纵向核心流程，再完成全部已确认范围。
-6. **独立验证。** 在 Simulator 中构建、安装、运行、操作并检查最终应用。缺失的证据必须标记为 `UNVERIFIED`。
-7. **完成商店素材。** 创建原创 app icon，并在应用验收后从真实构建中制作 ASO 截图。
+2. **适配强制 iOS capabilities。** 无论 prompt 的范围如何，agent 都必须为固定列表中的十一项 capability 分别设计一项连贯的产品功能。
+3. **比较相关风格。** 读取 GitHub 目录，根据元数据选择最多三个候选，并且只下载这些候选的文档。
+4. **选择唯一方向。** 在 UI 实现前必须只选择一个设计包；不能合并设计包，也不能为不同页面使用不同设计包。
+5. **建立产品合同。** 固定页面、状态、capability 流程、资源和验收检查。
+6. **构建应用。** 先实现并视觉检查一条纵向核心流程，再完成全部范围和十一项 capability 功能。
+7. **独立验证。** 在 Simulator 中以及需要时在实体 iPhone 上构建、安装、运行、操作并检查最终应用。缺失的证据必须标记为 `UNVERIFIED`。
+8. **完成商店素材。** 创建原创 app icon，并在应用验收后从真实构建中制作 ASO 截图。
 
 当当前 agent harness 支持委派时，Trickster 会使用多个聚焦角色；不支持时，则按相同合同顺序执行。
 
@@ -67,7 +70,25 @@ npx @sgx22/trickster doctor
 约束：
 ```
 
-描述可以很简短。如有必要，Trickster 会针对一个影响产品边界的缺口向你提问，并在开始 UI 工作前要求你选择一个样式包。安装到项目中的指令会激活流水线，并执行设计确认和验收门槛。
+描述可以很简短。用户无需列出平台 capability：Trickster 会自动适配固定的十一项列表，并在开始 UI 工作前要求你选择一个样式包。
+
+## 强制 iOS capabilities
+
+每个新应用或重大修改都必须按照以下固定顺序包含十一项 capability 的产品功能：
+
+1. Bluetooth
+2. Downloading Photos
+3. Adding Photos
+4. Using the Camera
+5. Face ID
+6. Microphone Access
+7. Speech Recognition Access
+8. Contacts Access
+9. Calendar Access
+10. Location Access
+11. CallKit
+
+Agent 不得省略、合并、重命名、重排、替换或将任何一项标记为 `N/A`。仅显示权限提示的按钮、虚假设备或虚假通话不算实现。
 
 若使用其他 agent harness：
 
@@ -112,21 +133,23 @@ trickster/
 | 阶段 | 负责人 | 必需结果 |
 |---|---|---|
 | 1. 范围 | product-researcher | 明确的范围状态和待解决问题 |
-| 2. 风格选择 | design-planner + 用户确认 | 最多三个 GitHub 候选，并在本地保存一个设计包 |
-| 3. 产品合同 | design-planner | 页面、状态、流程、资源和验证计划 |
-| 4. 产品资源 | visual-producer（需要时） | 已验证的图像或合理的 `N/A` |
-| 5. 实现 | implementation-owner | 纵向核心流程以及完整的约定范围 |
-| 6. App icon | visual-producer | 安装到应用中的一个原创方案 |
-| 7. 验收 | acceptance-reviewer + master | 独立验证的最终构建 |
-| 8. ASO 截图 | visual-producer | 基于已验收构建真实页面的一套截图 |
-| 9. 最终整理 | master + 用户确认 | 明确确认结果并清理临时文件 |
-| 10. 交付 | master | 可复现证据和最终状态 |
+| 2. 强制 iOS capabilities | product-researcher + master gate | 固定矩阵中的十一项产品功能 |
+| 3. 风格选择 | design-planner + 用户确认 | 最多三个 GitHub 候选，并在本地保存一个设计包 |
+| 4. 产品合同 | design-planner | 页面、状态、流程、资源和验证计划 |
+| 5. 产品资源 | visual-producer（需要时） | 已验证的图像或合理的 `N/A` |
+| 6. 实现 | implementation-owner | 纵向核心流程、完整范围和强制 capabilities |
+| 7. App icon | visual-producer | 安装到应用中的一个原创方案 |
+| 8. 验收 | acceptance-reviewer + master | 独立验证的最终构建和 capability 矩阵 |
+| 9. ASO 截图 | visual-producer | 基于已验收构建真实页面的一套截图 |
+| 10. 最终整理 | master + 用户确认 | 明确确认结果并清理临时文件 |
+| 11. 交付 | master | 可复现证据和最终状态 |
 
 完整执行规则请参阅[主流程](workflow/master-prompt.md)和[编排合同](workflow/orchestration.md)。
 
 ## 核心保证
 
 - 风格候选最多包含三个根据目录元数据选出的设计包，并且只下载这些候选的文档。
+- 无论 prompt 范围如何，十一项 canonical iOS capabilities 都必须进入合同和实现，且不能标记为 `N/A`。
 - 在用户只选择一个设计包之前，不开始实现 UI。
 - 设计包不能合并；选中的设计包是唯一的设计上下文。
 - 保留控件的原生行为，同时让外观遵循选定的视觉语言。
@@ -136,9 +159,9 @@ trickster/
 
 ## 要求与边界
 
-Trickster 需要 macOS、Xcode、合适的 iOS Simulator runtime、Node.js 20 或更高版本，以及能够读取已安装指令并使用项目工具的 agent 环境。首次选择风格时需要访问 Trickster GitHub 仓库中的 raw 文件；现有项目会继续使用已保存在本地的设计包。
+Trickster 需要 macOS、Xcode、合适的 iOS Simulator runtime、用于验证硬件相关强制 capability 的实体 iPhone 和外设、Node.js 20 或更高版本，以及能够读取已安装指令并使用项目工具的 agent 环境。
 
-签名、release archive、真机验证、App Store 提交以及外部生产基础设施属于独立发布任务，除非明确包含在产品范围中。
+用于实体设备 capability 验证的签名属于验收的一部分。Release archive、App Store 提交和生产部署仍属于独立任务。所需外部服务必须真实连接，否则标记为 `UNVERIFIED`。
 
 Trickster 会主动拒绝全局安装。请在目标项目内使用 `npx` 作为临时 launcher。
 
@@ -146,6 +169,7 @@ Trickster 会主动拒绝全局安装。请在目标项目内使用 `npx` 作为
 
 - [主流程](workflow/master-prompt.md)
 - [角色编排](workflow/orchestration.md)
+- [强制 iOS capabilities](workflow/ios-capabilities.md)
 - [风格选择](workflow/style-reference.md)
 - [实现](workflow/implementation.md)
 - [验收](workflow/acceptance.md)

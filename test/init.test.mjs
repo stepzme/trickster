@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { spawnSync } from "node:child_process";
-import { mkdtemp, mkdir, readFile, readdir, writeFile } from "node:fs/promises";
+import { mkdtemp, mkdir, readFile, readdir, rm, writeFile } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { dirname, join, resolve } from "node:path";
 import test from "node:test";
@@ -15,6 +15,63 @@ import {
 import { createTerminalStyle, supportsColor } from "../installer/terminal-style.mjs";
 
 const repositoryRoot = resolve(dirname(fileURLToPath(import.meta.url)), "..");
+
+const canonicalCapabilities = [
+  ["bluetooth", "Bluetooth"],
+  ["downloading-photos", "Downloading Photos"],
+  ["adding-photos", "Adding Photos"],
+  ["camera", "Using the Camera"],
+  ["face-id", "Face ID"],
+  ["microphone", "Microphone Access"],
+  ["speech-recognition", "Speech Recognition Access"],
+  ["contacts", "Contacts Access"],
+  ["calendar", "Calendar Access"],
+  ["location", "Location Access"],
+  ["callkit", "CallKit"],
+];
+
+const russianCapabilityNames = [
+  "Bluetooth",
+  "Скачивание фото",
+  "Добавление фото",
+  "Использование камеры",
+  "Face ID",
+  "Доступ к микрофону",
+  "Доступ к распознаванию речи",
+  "Доступ к контактам",
+  "Доступ к календарю",
+  "Доступ к геолокации",
+  "CallKit",
+];
+
+function assertAppearsInOrder(content, values) {
+  let cursor = -1;
+  for (const value of values) {
+    const next = content.indexOf(value, cursor + 1);
+    assert.ok(next > cursor, `Expected ${JSON.stringify(value)} after offset ${cursor}`);
+    cursor = next;
+  }
+}
+
+function extractCapabilityTemplateRows(markdown) {
+  return markdown
+    .split("\n")
+    .filter((line) => line.startsWith("| `"))
+    .map((line) => {
+      const cells = line.split("|").map((cell) => cell.trim());
+      return [cells[1].replaceAll("`", ""), cells[2]];
+    });
+}
+
+function extractCapabilityRegistryRows(markdown) {
+  return markdown
+    .split("\n")
+    .filter((line) => /^\| \d+ \| `/.test(line))
+    .map((line) => {
+      const cells = line.split("|").map((cell) => cell.trim());
+      return [cells[2].replaceAll("`", ""), cells[3]];
+    });
+}
 
 test("uses Trickster colors only in supported terminals", () => {
   const terminal = { isTTY: true };
@@ -65,6 +122,12 @@ test("installs one project-local Trickster folder without the remote style libra
   assert.match(
     await readFile(join(project, "trickster", "workflow", "style-reference.md"), "utf8"),
     /raw\.githubusercontent\.com\/stepzme\/trickster\/main\/styles\/catalog\.json/,
+  );
+  assert.deepEqual(
+    extractCapabilityRegistryRows(
+      await readFile(join(project, "trickster", "workflow", "ios-capabilities.md"), "utf8"),
+    ),
+    canonicalCapabilities,
   );
   assert.equal(
     await readdir(join(project, "trickster", "styles")).then(() => true, () => false),
@@ -141,7 +204,27 @@ test("doctor validates the installed workflow before style selection", async () 
   );
   assert.equal(cliResult.status, 0);
   assert.match(cliResult.stdout, /local installation is ready to use/i);
+  assert.match(cliResult.stdout, /adapts all eleven mandatory iOS capabilities/i);
   assert.match(cliResult.stdout, /loads up to three candidates from GitHub/i);
+});
+
+test("doctor rejects an installation without the mandatory capability workflow", async () => {
+  const project = await createProject();
+  await initializeProject({
+    target: project,
+    harness: "generic",
+    yes: true,
+    quiet: true,
+  });
+
+  await rm(join(project, "trickster", "workflow", "ios-capabilities.md"));
+  const result = await doctorProject(project, { quiet: true });
+
+  assert.equal(result.ready, false);
+  assert.deepEqual(
+    result.checks.find(([name]) => name === "iOS capability workflow"),
+    ["iOS capability workflow", false],
+  );
 });
 
 test("re-running init does not remove an existing project style library", async () => {
@@ -271,8 +354,25 @@ test("prints an English starter brief after init", async () => {
   assert.doesNotMatch(result.stdout, /Style catalog:/);
   assert.match(result.stdout, /Use Trickster to create or substantially change a native iOS app\./);
   assert.match(result.stdout, /Primary task:\nRequired features:\nOut of scope:\nConstraints:/);
-  assert.match(result.stdout, /A short description is enough\. Trickster will guide the rest\./);
+  assert.match(result.stdout, /A short description is enough\. Trickster will add and adapt all eleven mandatory iOS capabilities/);
   assert.doesNotMatch(result.stdout, /product-defining gap|style package before UI work/);
+});
+
+test("keeps the canonical eleven-capability contract identical across workflow and templates", async () => {
+  const registry = await readFile(join(repositoryRoot, "workflow", "ios-capabilities.md"), "utf8");
+  const product = await readFile(join(repositoryRoot, "templates", "product.md"), "utf8");
+  const review = await readFile(join(repositoryRoot, "templates", "review.md"), "utf8");
+  const master = await readFile(join(repositoryRoot, "workflow", "master-prompt.md"), "utf8");
+  const acceptance = await readFile(join(repositoryRoot, "workflow", "acceptance.md"), "utf8");
+  const russianReadme = await readFile(join(repositoryRoot, "README.ru.md"), "utf8");
+
+  assert.deepEqual(extractCapabilityRegistryRows(registry), canonicalCapabilities);
+  assert.deepEqual(extractCapabilityTemplateRows(product), canonicalCapabilities);
+  assert.deepEqual(extractCapabilityTemplateRows(review), canonicalCapabilities);
+  assert.match(master, /Do not begin style selection until all eleven canonical iOS capability rows/);
+  assert.match(acceptance, /\| AC-12 \| All eleven canonical iOS capabilities/);
+  assert.match(acceptance, /Required; never N\/A/);
+  assertAppearsInOrder(russianReadme, russianCapabilityNames);
 });
 
 test("rejects an unsupported harness", () => {
@@ -302,6 +402,7 @@ test("npm package excludes repository-only assets", async () => {
   assert.equal(files.some(({ path }) => path.startsWith("styles/")), false);
   assert.equal(files.some(({ path }) => path.startsWith("site/")), false);
   assert.equal(files.some(({ path }) => path.startsWith(".github/")), false);
+  assert.equal(files.some(({ path }) => path === "workflow/ios-capabilities.md"), true);
   assert.equal(files.some(({ path }) => path === "workflow/style-reference.md"), true);
 
   const internalDocPrefixes = ["adapters/", "installer/assets/", "roles/", "templates/", "workflow/"];

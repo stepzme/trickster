@@ -1,4 +1,4 @@
-# Stage 8. ASO screenshots
+# Stage 9. ASO screenshots
 
 ## Applicability
 

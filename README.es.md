@@ -4,7 +4,7 @@
 
 ### Una fábrica de aplicaciones con IA para iOS nativo.
 
-Convierte una idea en una aplicación nativa para iOS basada en una biblioteca de diseño seleccionada: define el alcance, diseña, implementa, verifica en Simulator y completa el resultado con un icono original y capturas ASO.
+Convierte una idea en una aplicación nativa para iOS basada en una biblioteca de diseño seleccionada: define el alcance, añade un conjunto fijo de capacidades de iOS, diseña, implementa, verifica y completa el resultado con un icono original y capturas ASO.
 
 Trickster coordina roles de IA especializados dentro del repositorio. Lee un catálogo pequeño de GitHub, descarga documentos para un máximo de tres estilos relevantes, exige elegir exactamente uno, guarda ese paquete en el proyecto y comprueba el resultado implementado de forma independiente.
 
@@ -12,6 +12,7 @@ Trickster coordina roles de IA especializados dentro del repositorio. Lee un cat
 
 - un proyecto Xcode funcional y una aplicación iOS nativa;
 - un alcance de producto basado en el brief y el proyecto existente;
+- una función relevante para el producto por cada una de las once capacidades de iOS obligatorias;
 - un lenguaje visual confirmado y guardado localmente tras seleccionarlo en el catálogo de GitHub;
 - controles personalizados que conservan el comportamiento y la accesibilidad nativos de iOS;
 - evidencias de compilación, ejecución, interacción e inspección visual en Simulator;
@@ -23,6 +24,7 @@ Trickster coordina roles de IA especializados dentro del repositorio. Lee un cat
 ```text
 Idea de la aplicación
 → alcance del producto
+→ capacidades de iOS obligatorias
 → selección desde el catálogo de GitHub
 → elección de un estilo
 → implementación nativa
@@ -31,12 +33,13 @@ Idea de la aplicación
 ```
 
 1. **Definir el producto.** Se establecen el alcance, los límites y las decisiones que realmente requieren la intervención del usuario.
-2. **Comparar estilos relevantes.** Se lee el catálogo de GitHub, se eligen hasta tres candidatos por sus metadatos y se descargan documentos solo para ellos.
-3. **Elegir una dirección.** Antes de implementar la UI se debe elegir exactamente un paquete. Los paquetes no se pueden combinar ni repartir entre pantallas.
-4. **Crear el contrato.** Se definen pantallas, estados, escenarios, recursos y comprobaciones de aceptación.
-5. **Construir la aplicación.** Primero se implementa y revisa visualmente un flujo vertical; después se completa todo el alcance acordado.
-6. **Verificar de forma independiente.** La aplicación final se compila, instala, ejecuta e inspecciona en Simulator. La evidencia no disponible permanece `UNVERIFIED`.
-7. **Completar el paquete para la tienda.** Se crea un icono original y, tras la aceptación, capturas ASO obtenidas de la compilación real.
+2. **Adaptar las capacidades de iOS obligatorias.** Sin importar el alcance del prompt, el agente inventa una función coherente para cada elemento de la lista fija de once capacidades.
+3. **Comparar estilos relevantes.** Se lee el catálogo de GitHub, se eligen hasta tres candidatos por sus metadatos y se descargan documentos solo para ellos.
+4. **Elegir una dirección.** Antes de implementar la UI se debe elegir exactamente un paquete. Los paquetes no se pueden combinar ni repartir entre pantallas.
+5. **Crear el contrato.** Se definen pantallas, estados, escenarios de capacidades, recursos y comprobaciones de aceptación.
+6. **Construir la aplicación.** Primero se implementa y revisa visualmente un flujo vertical; después se completan el alcance acordado y las once funciones obligatorias.
+7. **Verificar de forma independiente.** La aplicación final se compila, instala, ejecuta e inspecciona en Simulator y, cuando sea necesario, en un iPhone físico. La evidencia no disponible permanece `UNVERIFIED`.
+8. **Completar el paquete para la tienda.** Se crea un icono original y, tras la aceptación, capturas ASO obtenidas de la compilación real.
 
 Trickster utiliza varios roles especializados cuando el agent harness activo permite delegación y ejecuta los mismos contratos de forma secuencial cuando no la permite.
 
@@ -67,7 +70,25 @@ Fuera de alcance:
 Restricciones:
 ```
 
-Puedes mantenerlo breve. Si hace falta, Trickster aclarará una única cuestión que afecte a los límites del producto y te pedirá elegir un solo paquete de estilo antes de trabajar en la UI. Las instrucciones instaladas en el proyecto activan el pipeline y sus controles obligatorios de diseño y aceptación.
+Puedes mantenerlo breve. No necesitas enumerar las capacidades de la plataforma: Trickster adapta automáticamente el conjunto fijo de once elementos, aclara una única cuestión que afecte a los límites del producto si hace falta y solicita un solo paquete de estilo antes de trabajar en la UI.
+
+## Capacidades de iOS obligatorias
+
+Cada aplicación nueva o modificada sustancialmente debe incluir una función de producto coherente para cada capacidad, en este orden exacto:
+
+1. Bluetooth
+2. Downloading Photos
+3. Adding Photos
+4. Using the Camera
+5. Face ID
+6. Microphone Access
+7. Speech Recognition Access
+8. Contacts Access
+9. Calendar Access
+10. Location Access
+11. CallKit
+
+El agente no puede omitir, combinar, renombrar, reordenar, sustituir ni marcar ningún elemento como `N/A`. Un botón que solo muestra un permiso, un dispositivo falso o una llamada falsa no cuentan como implementación.
 
 Para otro agent harness:
 
@@ -112,21 +133,23 @@ El paquete de estilo no es una simple skin. Los controles nativos pueden aportar
 | Etapa | Responsable | Resultado obligatorio |
 |---|---|---|
 | 1. Alcance | product-researcher | Estado explícito del alcance y decisiones pendientes |
-| 2. Selección de estilo | design-planner + aprobación del usuario | Hasta tres candidatos de GitHub y un paquete guardado localmente |
-| 3. Contrato del producto | design-planner | Pantallas, estados, escenarios, recursos y plan de verificación |
-| 4. Recursos del producto | visual-producer cuando sea necesario | Imágenes verificadas o un `N/A` justificado |
-| 5. Implementación | implementation-owner | Flujo vertical seguido del alcance completo acordado |
-| 6. Icono | visual-producer | Un concepto original instalado en la aplicación |
-| 7. Aceptación | acceptance-reviewer + master | Compilación final verificada de forma independiente |
-| 8. Capturas ASO | visual-producer | Un conjunto basado en pantallas reales de la compilación aceptada |
-| 9. Finalización | master + aprobación del usuario | Confirmación explícita y limpieza de archivos temporales |
-| 10. Entrega | master | Evidencia reproducible y estado final |
+| 2. Capacidades de iOS obligatorias | product-researcher + control del master | Once funciones de producto en la matriz canónica fija |
+| 3. Selección de estilo | design-planner + aprobación del usuario | Hasta tres candidatos de GitHub y un paquete guardado localmente |
+| 4. Contrato del producto | design-planner | Pantallas, estados, escenarios, recursos y plan de verificación |
+| 5. Recursos del producto | visual-producer cuando sea necesario | Imágenes verificadas o un `N/A` justificado |
+| 6. Implementación | implementation-owner | Flujo vertical, alcance completo y capacidades obligatorias |
+| 7. Icono | visual-producer | Un concepto original instalado en la aplicación |
+| 8. Aceptación | acceptance-reviewer + master | Compilación y matriz de capacidades verificadas de forma independiente |
+| 9. Capturas ASO | visual-producer | Un conjunto basado en pantallas reales de la compilación aceptada |
+| 10. Finalización | master + aprobación del usuario | Confirmación explícita y limpieza de archivos temporales |
+| 11. Entrega | master | Evidencia reproducible y estado final |
 
 Consulta [el proceso maestro](workflow/master-prompt.md) y [el contrato de orquestación](workflow/orchestration.md) para conocer las reglas exactas de ejecución.
 
 ## Garantías principales
 
 - La selección contiene como máximo tres paquetes elegidos por los metadatos del catálogo; solo se descargan sus documentos.
+- Las once capacidades canónicas se contratan e implementan sin importar el alcance del prompt; ninguna puede ser `N/A`.
 - La implementación de la UI se detiene hasta que el usuario elige exactamente un paquete.
 - Los paquetes no se pueden combinar; el elegido es el único contexto de diseño.
 - Se conserva el comportamiento nativo de los controles, mientras que su apariencia sigue el lenguaje visual seleccionado.
@@ -136,9 +159,9 @@ Consulta [el proceso maestro](workflow/master-prompt.md) y [el contrato de orque
 
 ## Requisitos y límites
 
-Trickster requiere macOS, Xcode, un runtime adecuado de iOS Simulator, Node.js 20 o posterior y un entorno de agentes capaz de leer las instrucciones instaladas y utilizar las herramientas del proyecto. Una nueva selección de estilo requiere acceso a los archivos raw del repositorio de Trickster en GitHub; un proyecto existente continúa usando su paquete local.
+Trickster requiere macOS, Xcode, un runtime adecuado de iOS Simulator, un iPhone físico y periféricos para verificar las capacidades obligatorias que dependen de hardware, Node.js 20 o posterior y un entorno de agentes capaz de leer las instrucciones instaladas y utilizar las herramientas del proyecto.
 
-La firma, los release archives, la validación en dispositivos físicos, el envío a App Store y la infraestructura externa de producción son tareas de release separadas, salvo que se incluyan explícitamente en el alcance.
+La firma necesaria para verificar capacidades en un dispositivo físico forma parte de la aceptación. Los release archives, el envío a App Store y el despliegue de producción siguen siendo tareas separadas. Un servicio externo requerido debe conectarse o quedar `UNVERIFIED`.
 
 La instalación global se rechaza intencionadamente. Utiliza `npx` como launcher temporal dentro del proyecto de destino.
 
@@ -146,6 +169,7 @@ La instalación global se rechaza intencionadamente. Utiliza `npx` como launcher
 
 - [Proceso maestro](workflow/master-prompt.md)
 - [Orquestación de roles](workflow/orchestration.md)
+- [Capacidades de iOS obligatorias](workflow/ios-capabilities.md)
 - [Selección de estilo](workflow/style-reference.md)
 - [Implementación](workflow/implementation.md)
 - [Aceptación](workflow/acceptance.md)

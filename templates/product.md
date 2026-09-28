@@ -11,6 +11,24 @@
 - Current task boundaries:
 - Master's assumptions and unresolved questions:
 
+## Mandatory iOS capabilities
+
+Keep all eleven rows in this exact order. Do not rename, merge, remove, reorder, or mark a row `N/A`.
+
+| Stable ID | Canonical capability | Product feature | Entry point and action | Useful result | System mechanism, purpose string, entitlement, and dependencies | Denied, restricted, cancelled, or unavailable behavior | Verification environment and method |
+|---|---|---|---|---|---|---|---|
+| `bluetooth` | Bluetooth | | | | | | |
+| `downloading-photos` | Downloading Photos | | | | | | |
+| `adding-photos` | Adding Photos | | | | | | |
+| `camera` | Using the Camera | | | | | | |
+| `face-id` | Face ID | | | | | | |
+| `microphone` | Microphone Access | | | | | | |
+| `speech-recognition` | Speech Recognition Access | | | | | | |
+| `contacts` | Contacts Access | | | | | | |
+| `calendar` | Calendar Access | | | | | | |
+| `location` | Location Access | | | | | | |
+| `callkit` | CallKit | | | | | | |
+
 ## Design package
 
 - Proposed shortlist: appId, URL, category, and reason for fit:
@@ -43,6 +61,7 @@
 - Existing stack or justified choice for a new project:
 - Xcode/SDK, deployment target, scheme, configuration:
 - Primary and compact supported iPhone, iOS version, and UDID:
+- Physical iPhone, iOS version, UDID, connected peripherals, and signing status:
 - Language, theme, text size, and additional supported configurations:
 - Reproducible test data, time/time zone if relevant:
 - External services; what is actually connected and what is excluded:

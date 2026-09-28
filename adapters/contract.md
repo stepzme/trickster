@@ -12,7 +12,7 @@ The adapter must describe:
 - how role context is isolated and write paths are restricted;
 - how an agent returns a handoff;
 - how to operate without separate agents;
-- how to verify shell, Xcode, Simulator, UI interaction, and image viewing.
+- how to verify shell, Xcode, Simulator, physical-device access, UI interaction, and image viewing.
 
 ## Invariants
 

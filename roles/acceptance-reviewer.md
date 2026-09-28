@@ -9,6 +9,7 @@ Independently verify the integrated final build. Do not fix code or accept claim
 ## Read
 
 - `trickster/workflow/acceptance.md`
+- `trickster/workflow/ios-capabilities.md`
 - `trickster/workflow/ux.md`
 - `trickster/workflow/ios.md`
 - `trickster/artifacts/<run-id>/product.md`
@@ -25,9 +26,10 @@ Independently verify the integrated final build. Do not fix code or accept claim
 3. Reproduce the required scenarios and data persistence.
 4. Independently inspect current screenshots for the declared test matrix.
 5. Verify conformance with the selected `ui.md`, `ux.md`, applicable `illustrations.md`, and app icon.
-6. For each defect, record the criterion, state, observed result, expected result, severity, and evidence.
-7. Prepare a draft review using PASS/FAIL/UNVERIFIED/N/A statuses.
-8. Direct DerivedData and other temporary build output to `/tmp/trickster/<run-id>/build/` when the tool allows the path to be configured.
+6. Verify all eleven canonical capabilities in the fixed order: entry point, system access flow, purpose string or entitlement, useful result, denial or unavailable behavior, real dependency, and Simulator or physical-device evidence. None may be `N/A`.
+7. For each defect, record the criterion, state, observed result, expected result, severity, and evidence.
+8. Prepare a draft review using PASS/FAIL/UNVERIFIED/N/A statuses. Use `UNVERIFIED`, not `PASS` or `N/A`, when required hardware or a real service was unavailable.
+9. Direct DerivedData and other temporary build output to `/tmp/trickster/<run-id>/build/` when the tool allows the path to be configured.
 
 ## Allowed writes
 
@@ -40,10 +42,10 @@ Independently verify the integrated final build. Do not fix code or accept claim
 - delegating work further;
 - announcing the final status to the user.
 
-## Simulator
+## Simulator and physical devices
 
-Use Simulator only after the master explicitly transfers ownership. When finished, report the device state and stop any competing processes started by this role.
+Use Simulator or a physical device only after the master explicitly transfers ownership. When finished, report every device state and stop any competing processes started by this role.
 
 ## Handoff to the master
 
-Return the status matrix, defects, commands, evidence, and limitations. The master makes the final decision after independent verification.
+Return the app status matrix, the fixed eleven-row capability status matrix, defects, commands, evidence, and limitations. The master makes the final decision after independent verification.

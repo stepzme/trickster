@@ -20,13 +20,13 @@ If the harness does not support these operations, the master performs the role c
 
 | Role | Stable ID | Stages | Primary result |
 |---|---|---|---|
-| `product-researcher` | `product_researcher` | 1 | Scope, boundaries, and missing product decisions |
-| `design-planner` | `design_planner` | 2–3 and stage 4 plan | Shortlist of up to three packages; after one is selected, the local package, product contract, and asset plan |
-| `implementation-owner` | `implementation_owner` | 5 and fixes | App code and implementation report |
-| `visual-producer` | `visual_producer` | 4, 6, 8 | Product assets, one app icon, and one ASO set |
-| `acceptance-reviewer` | `acceptance_reviewer` | 7 | Independent evidence, defects, and a draft review |
+| `product-researcher` | `product_researcher` | 1–2 | Scope, boundaries, missing product decisions, and the fixed eleven-row capability matrix |
+| `design-planner` | `design_planner` | 3–4 and stage 5 plan | Shortlist of up to three packages; after one is selected, the local package, product contract, and asset plan |
+| `implementation-owner` | `implementation_owner` | 6 and fixes | App code, mandatory capability integrations, and implementation report |
+| `visual-producer` | `visual_producer` | 5, 7, 9 | Product assets, one app icon, and one ASO set |
+| `acceptance-reviewer` | `acceptance_reviewer` | 8 | Independent evidence, capability verification, defects, and a draft review |
 
-The master handles user questions and confirmations, plans the queue, assigns ownership of files and Simulator, verifies handoffs, integrates the result, and makes final decisions.
+The master handles user questions and confirmations, plans the queue, assigns ownership of files, Simulator, and physical devices, verifies handoffs, integrates the result, and makes final decisions.
 
 ## Start rules
 
@@ -55,14 +55,14 @@ Do not communicate with the user or delegate work further.
 
 ## Sequence and handoff
 
-1. The master creates a run ID and performs `SPAWN(product_researcher)` for a draft scope in `product.md`.
-2. After verifying the scope, perform `SPAWN(design_planner)` for a shortlist of up to three packages.
+1. The master creates a run ID and performs `SPAWN(product_researcher)` for a draft scope and all eleven mandatory capability rows in `product.md`.
+2. After verifying the scope and the exact capability count, names, order, features, mechanisms, fallbacks, dependencies, and verification methods, perform `SPAWN(design_planner)` for a shortlist of up to three packages. Do not start style selection while the capability matrix is incomplete.
 3. The master presents the shortlist and requires the user to select exactly one package. Requests to combine packages are rejected.
 4. After selection, perform `CONTINUE(design_planner)` to save the selected package in `trickster/design/`, complete `product.md`, and create the asset manifest.
 5. If product images are required, start `visual_producer` only for that phase.
 6. Start one `implementation_owner`, who is the sole owner of app code and shared Xcode files.
 7. After screens stabilize, start or continue `visual_producer` for one app icon with restricted asset-catalog paths.
-8. After icon integration, transfer Simulator ownership to `acceptance_reviewer`. The reviewer does not fix code.
+8. After icon integration, transfer Simulator and, when available, physical-device ownership to `acceptance_reviewer`. The reviewer does not fix code.
 9. Return defects through `CONTINUE(implementation_owner)`; after fixes, the master repeats affected checks.
 10. After ACCEPTED, perform `CONTINUE(visual_producer)` for one ASO set.
 11. The master presents the result to the user and gets explicit confirmation.
@@ -70,6 +70,6 @@ Do not communicate with the user or delegate work further.
 
 ## Parallelism
 
-Run in parallel only tasks with independent inputs and non-overlapping write paths. Do not allow two agents to write simultaneously to the Xcode project, asset catalog, `product.md`, or `review.md`. Simulator always has one owner.
+Run in parallel only tasks with independent inputs and non-overlapping write paths. Do not allow two agents to write simultaneously to the Xcode project, asset catalog, `product.md`, or `review.md`. Simulator and each physical device always have one owner.
 
-Scope, style selection, and implementation form a dependent chain. The primary benefit of role separation is focused context and independent verification. Within implementation, parallel work on independent modules or tests is allowed only after the master fixes interfaces and write paths.
+Scope, mandatory capability synthesis, style selection, and implementation form a dependent chain. The primary benefit of role separation is focused context and independent verification. Within implementation, parallel work on independent modules or tests is allowed only after the master fixes interfaces and write paths.

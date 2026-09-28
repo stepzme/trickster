@@ -21,10 +21,13 @@ Understand exactly what the app must do without forcing the user to complete a q
    - `CONFLICTING` — requirements contradict each other or the existing project.
 5. For `PARTIAL`, do not choose an arbitrarily minimal implementation. Formulate one question whose answer will determine the product baseline; continue independent work.
 6. For `CONFLICTING`, ask one question whose answer materially resolves the conflict. Do not conceal the conflict behind an assumption.
+7. Read `workflow/ios-capabilities.md` and adapt every canonical capability to the product after the user's scope is understood. The capability features are mandatory even when the original prompt does not mention them.
 
 ## Scope-expansion rule
 
-If the user did not request external infrastructure, do not automatically add:
+If the user did not request external infrastructure, do not automatically add it for ordinary product features. The fixed features required by `ios-capabilities.md` are an explicit Trickster baseline and may introduce the minimum integration dependency needed for a real capability. Record that dependency instead of hiding it or replacing it with a fake implementation.
+
+Outside that fixed baseline, do not automatically add:
 
 - a backend, accounts, or server-side authentication;
 - synchronization or collaboration;
@@ -45,3 +48,5 @@ Create a draft `Scope` section in `trickster/artifacts/<run-id>/product.md` cont
 - constraints;
 - assumptions;
 - potential questions for the user.
+
+Then complete the fixed `Mandatory iOS capabilities` table from `templates/product.md`. The scope output is incomplete until all eleven canonical rows are present in order and contain a product-specific feature, real result, system mechanism, fallback, dependency, and verification method.

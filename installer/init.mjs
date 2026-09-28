@@ -264,16 +264,16 @@ export async function initializeProject({
     console.log(`\n${outputStyle.accent("Next:")}`);
     if (selectedHarness === "codex") {
       console.log("1. Restart Codex if project instructions were already loaded in the current session.");
-      console.log("2. Start the task; the pipeline will load up to three style packages from GitHub and require one selection before UI work.");
+      console.log("2. Start the task; the pipeline will adapt all eleven mandatory iOS capabilities, then load up to three style packages from GitHub and require one selection before UI work.");
     } else {
       console.log("1. Read trickster/adapters/generic.md and map the orchestration operations to your harness.");
-      console.log("2. Verify shell, Xcode, Simulator, UI interaction and image viewing.");
+      console.log("2. Verify shell, Xcode, Simulator, physical-device access, UI interaction and image viewing.");
       console.log("3. Start the task; unsupported delegation will use the sequential fallback.");
     }
     console.log(`\n${outputStyle.accent("Start a new task in your agent and paste a brief like this:")}\n`);
     console.log(STARTER_BRIEF);
     console.log(
-      `\n${outputStyle.muted("A short description is enough. Trickster will guide the rest.")}`,
+      `\n${outputStyle.muted("A short description is enough. Trickster will add and adapt all eleven mandatory iOS capabilities, then guide the remaining gates.")}`,
     );
   }
 
@@ -288,6 +288,7 @@ export async function doctorProject(target = process.cwd(), { quiet = false, har
     ["Trickster instructions", existsSync(resolve(project, "trickster", "AGENTS.md"))],
     ["Role contracts", existsSync(resolve(project, "trickster", "roles", "acceptance-reviewer.md"))],
     ["Harness adapter", existsSync(resolve(project, "trickster", "adapters", `${selectedHarness}.md`))],
+    ["iOS capability workflow", existsSync(resolve(project, "trickster", "workflow", "ios-capabilities.md"))],
     ["Style selection workflow", existsSync(resolve(project, "trickster", "workflow", "style-reference.md"))],
   ];
   if (selectedHarness === "codex") {
@@ -312,9 +313,12 @@ export async function doctorProject(target = process.cwd(), { quiet = false, har
         `${outputStyle.warning("VERIFY")}   The selected harness loads Trickster instructions`,
       );
       console.log(
-        `${outputStyle.warning("VERIFY")}   Shell, Xcode, Simulator, image viewing and role delegation or sequential fallback`,
+        `${outputStyle.warning("VERIFY")}   Shell, Xcode, Simulator, physical-device access, image viewing and role delegation or sequential fallback`,
       );
     }
+    console.log(
+      `${outputStyle.accent("CAPABILITIES")} The task adapts all eleven mandatory iOS capabilities before style selection`,
+    );
     console.log(
       `${outputStyle.accent("STYLE")}    The task loads up to three candidates from GitHub and saves exactly one confirmed package locally`,
     );

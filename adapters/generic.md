@@ -6,7 +6,7 @@ This adapter lets Trickster run in any harness that can read project instruction
 
 1. Configure the harness so the master reads `trickster/AGENTS.md`.
 2. Verify access to the raw GitHub URL in `workflow/style-reference.md`, or confirm that a complete previously selected package exists in `trickster/design/`.
-3. Ensure that shell, Xcode, Simulator, UI interaction, and image viewing are available.
+3. Ensure that shell, Xcode, Simulator, physical-device access, UI interaction, and image viewing are available. Record unavailable physical hardware or services because mandatory capability evidence may remain `UNVERIFIED`.
 
 ## Orchestration operations
 

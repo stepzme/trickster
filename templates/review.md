@@ -12,6 +12,7 @@
 - Cleaned temporary paths:
 - Xcode, SDK, scheme, configuration, build time:
 - Simulators: model, iOS, UDID; locale, theme, and text size:
+- Physical devices: model, iOS, UDID; connected peripherals, signing, and unavailable hardware:
 - Test-data version:
 - Harness, mode (`delegated` / `sequential fallback`), and tools actually used:
 
@@ -29,6 +30,24 @@
 
 | Required feature | Screen/state | Verified scenario | Status |
 |---|---|---|---|
+
+## Mandatory iOS capability verification
+
+Keep all eleven rows in this exact order. None may be `N/A`.
+
+| Stable ID | Canonical capability | Contracted feature and entry point | System access and useful result observed | Denied or unavailable behavior | Environment | Status and evidence |
+|---|---|---|---|---|---|---|
+| `bluetooth` | Bluetooth | | | | | |
+| `downloading-photos` | Downloading Photos | | | | | |
+| `adding-photos` | Adding Photos | | | | | |
+| `camera` | Using the Camera | | | | | |
+| `face-id` | Face ID | | | | | |
+| `microphone` | Microphone Access | | | | | |
+| `speech-recognition` | Speech Recognition Access | | | | | |
+| `contacts` | Contacts Access | | | | | |
+| `calendar` | Calendar Access | | | | | |
+| `location` | Location Access | | | | | |
+| `callkit` | CallKit | | | | | |
 
 ## Visual review
 
@@ -62,4 +81,4 @@ Exact build, installation, and launch commands; verification steps; and data pre
 
 ## Limitations
 
-Unverified items, remaining defects, number of fix cycles, and what is required to continue. State separately whether release verification on a physical device and publication were performed.
+Unverified items, remaining defects, number of fix cycles, and what is required to continue. State separately which mandatory capabilities were verified on a physical device, which remain `UNVERIFIED`, and whether publication was performed.
