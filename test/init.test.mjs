@@ -234,7 +234,7 @@ test("rejects an unsupported harness", () => {
   assert.match(result.stderr, /Unsupported harness/);
 });
 
-test("npm package excludes the remote style library", async () => {
+test("npm package excludes repository-only assets", async () => {
   const npmCache = await mkdtemp(join(tmpdir(), "trickster-npm-cache-"));
   const result = spawnSync("npm", ["pack", "--dry-run", "--json"], {
     cwd: repositoryRoot,
@@ -248,6 +248,8 @@ test("npm package excludes the remote style library", async () => {
     ? packResult[0]
     : Object.values(packResult)[0];
   assert.equal(files.some(({ path }) => path.startsWith("styles/")), false);
+  assert.equal(files.some(({ path }) => path.startsWith("site/")), false);
+  assert.equal(files.some(({ path }) => path.startsWith(".github/")), false);
   assert.equal(files.some(({ path }) => path === "workflow/style-reference.md"), true);
 
   const internalDocPrefixes = ["adapters/", "installer/assets/", "roles/", "templates/", "workflow/"];
