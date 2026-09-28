@@ -54,7 +54,20 @@ Codex es el adapter predeterminado. Comprueba la instalación local:
 npx @sgx22/trickster doctor
 ```
 
-Después, pide al agente que cree o modifique de forma sustancial una aplicación iOS mediante Trickster. Las instrucciones instaladas en el proyecto activan el pipeline y sus controles obligatorios de diseño y aceptación.
+Después, abre una tarea nueva en el agente y pega un brief como este:
+
+```text
+Usa Trickster para crear o modificar de forma sustancial una aplicación iOS nativa.
+
+Idea:
+Usuario:
+Tarea principal:
+Funciones obligatorias:
+Fuera de alcance:
+Restricciones:
+```
+
+Puedes mantenerlo breve. Si hace falta, Trickster aclarará una única cuestión que afecte a los límites del producto y te pedirá elegir un solo paquete de estilo antes de trabajar en la UI. Las instrucciones instaladas en el proyecto activan el pipeline y sus controles obligatorios de diseño y aceptación.
 
 Para otro agent harness:
 

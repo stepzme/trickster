@@ -223,6 +223,29 @@ test("prints help as a top-level option", () => {
   assert.doesNotMatch(result.stdout, /runtime-install/);
 });
 
+test("prints an English starter brief after init", async () => {
+  const project = await createProject();
+  const result = spawnSync(
+    process.execPath,
+    [
+      resolve(repositoryRoot, "bin", "trickster.mjs"),
+      "init",
+      "--target",
+      project,
+      "--harness",
+      "generic",
+      "--yes",
+    ],
+    { encoding: "utf8" },
+  );
+
+  assert.equal(result.status, 0);
+  assert.match(result.stdout, /Start a new task in your agent and paste a brief like this:/);
+  assert.match(result.stdout, /Use Trickster to create or substantially change a native iOS app\./);
+  assert.match(result.stdout, /Primary task:\nRequired features:\nOut of scope:\nConstraints:/);
+  assert.match(result.stdout, /select one style package before UI work/);
+});
+
 test("rejects an unsupported harness", () => {
   const result = spawnSync(
     process.execPath,

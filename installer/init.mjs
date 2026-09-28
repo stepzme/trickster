@@ -34,6 +34,15 @@ function usage() {
 Trickster is project-scoped. Run it from the root of an existing project.`;
 }
 
+const STARTER_BRIEF = `Use Trickster to create or substantially change a native iOS app.
+
+Idea:
+User:
+Primary task:
+Required features:
+Out of scope:
+Constraints:`;
+
 function parseArgs(argv) {
   if (argv[0] === "--help" || argv[0] === "-h") {
     return {
@@ -257,6 +266,9 @@ export async function initializeProject({
       console.log("2. Verify shell, Xcode, Simulator, UI interaction and image viewing.");
       console.log("3. Start the task; unsupported delegation will use the sequential fallback.");
     }
+    console.log("\nStart a new task in your agent and paste a brief like this:\n");
+    console.log(STARTER_BRIEF);
+    console.log("\nKeep it short if you prefer. Trickster will clarify one product-defining gap if needed and ask you to select one style package before UI work.");
   }
 
   return result;

@@ -54,7 +54,20 @@ Codex is the default adapter. Check the local installation:
 npx @sgx22/trickster doctor
 ```
 
-Then ask your agent to create or substantially change an iOS app using Trickster. The installed project instructions activate the pipeline and enforce its design and acceptance gates.
+Then start a new task in your agent and paste a brief like this:
+
+```text
+Use Trickster to create or substantially change a native iOS app.
+
+Idea:
+User:
+Primary task:
+Required features:
+Out of scope:
+Constraints:
+```
+
+Keep it short if you prefer. Trickster will clarify one product-defining gap if needed and ask you to select one style package before UI work. The installed project instructions activate the pipeline and enforce its design and acceptance gates.
 
 For another agent harness:
 

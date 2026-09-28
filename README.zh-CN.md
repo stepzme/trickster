@@ -54,7 +54,20 @@ npx @sgx22/trickster init
 npx @sgx22/trickster doctor
 ```
 
-然后让你的 agent 使用 Trickster 创建或大幅修改 iOS 应用。安装到项目中的指令会激活流水线，并执行设计确认和验收门槛。
+然后在 agent 中新建任务，并粘贴类似下面的 brief：
+
+```text
+使用 Trickster 创建或大幅修改一个原生 iOS 应用。
+
+应用构想：
+目标用户：
+核心任务：
+必需功能：
+不在本次范围内：
+约束：
+```
+
+描述可以很简短。如有必要，Trickster 会针对一个影响产品边界的缺口向你提问，并在开始 UI 工作前要求你选择一个样式包。安装到项目中的指令会激活流水线，并执行设计确认和验收门槛。
 
 若使用其他 agent harness：
 
