@@ -3,9 +3,12 @@
 import { fileURLToPath } from "node:url";
 
 import { isGlobalPackagePath, runCli } from "../installer/init.mjs";
+import { createTerminalStyle } from "../installer/terminal-style.mjs";
+
+const errorStyle = createTerminalStyle(process.stderr);
 
 if (isGlobalPackagePath(fileURLToPath(import.meta.url))) {
-  console.error(`Trickster cannot run from a global npm installation.
+  console.error(`${errorStyle.error("Trickster cannot run from a global npm installation.")}
 
 Remove the global copy and run this from an existing project root instead:
 
@@ -14,6 +17,6 @@ Remove the global copy and run this from an existing project root instead:
 }
 
 runCli(process.argv.slice(2)).catch((error) => {
-  console.error(`Trickster failed: ${error.message}`);
+  console.error(`${errorStyle.error("Trickster failed:")} ${error.message}`);
   process.exitCode = 1;
 });

@@ -12,8 +12,42 @@ import {
   initializeProject,
   isGlobalPackagePath,
 } from "../installer/init.mjs";
+import {
+  createTerminalStyle,
+  supportsColor,
+  supportsDecoration,
+} from "../installer/terminal-style.mjs";
 
 const repositoryRoot = resolve(dirname(fileURLToPath(import.meta.url)), "..");
+
+test("uses Trickster colors only in supported terminals", () => {
+  const terminal = { isTTY: true };
+  const styled = createTerminalStyle(terminal, {});
+
+  assert.equal(supportsDecoration(terminal, {}), true);
+  assert.equal(supportsColor(terminal, {}), true);
+  assert.equal(
+    styled.accent("Trickster"),
+    "\u001B[1;38;2;25;185;158mTrickster\u001B[0m",
+  );
+  assert.equal(
+    styled.error("Failed"),
+    "\u001B[1;38;2;226;69;28mFailed\u001B[0m",
+  );
+  assert.equal(
+    styled.warning("Verify"),
+    "\u001B[1;38;2;217;154;43mVerify\u001B[0m",
+  );
+
+  assert.equal(
+    createTerminalStyle(terminal, { NO_COLOR: "" }).accent("Trickster"),
+    "Trickster",
+  );
+  assert.equal(createTerminalStyle({ isTTY: false }, {}).error("Failed"), "Failed");
+  assert.equal(createTerminalStyle(terminal, { CI: "true" }).warning("Verify"), "Verify");
+  assert.equal(supportsDecoration({ isTTY: false }, {}), false);
+  assert.equal(supportsDecoration(terminal, { CI: "true" }), false);
+});
 
 async function createProject() {
   const project = await mkdtemp(join(tmpdir(), "trickster-test-"));

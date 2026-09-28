@@ -5,11 +5,23 @@ import { homedir } from "node:os";
 import { dirname, parse, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
+import { createTerminalStyle, supportsDecoration } from "./terminal-style.mjs";
+
 const packageRoot = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const packageJson = JSON.parse(
   await readFile(resolve(packageRoot, "package.json"), "utf8"),
 );
 const VERSION = packageJson.version;
+const outputStyle = createTerminalStyle(process.stdout);
+const showDecoration = supportsDecoration(process.stdout);
+
+const TRICKSTER_MARK = [
+  "       /",
+  "   \\  /   /",
+  "----\\/---/",
+  "    /\\",
+  "   /  \\",
+].join("\n");
 
 const BLOCKS = {
   agents: {
@@ -254,10 +266,17 @@ export async function initializeProject({
   };
 
   if (!quiet) {
-    console.log(`\nTrickster ${VERSION} installed in ${resolve(project, "trickster")}`);
-    console.log(`Harness: ${selectedHarness}`);
-    console.log("Style catalog: loaded from GitHub when a new style is selected");
-    console.log("\nNext:");
+    if (showDecoration) {
+      console.log(`\n${outputStyle.accent(TRICKSTER_MARK)}`);
+    } else {
+      console.log();
+    }
+    console.log(
+      `${outputStyle.accent(`✦ trickster ${VERSION}`)} ${outputStyle.strong("installed")} in ${resolve(project, "trickster")}`,
+    );
+    console.log(`${outputStyle.muted("Harness:")} ${selectedHarness}`);
+    console.log(`${outputStyle.muted("Style catalog:")} loaded from GitHub when a new style is selected`);
+    console.log(`\n${outputStyle.accent("Next:")}`);
     if (selectedHarness === "codex") {
       console.log("1. Restart Codex if project instructions were already loaded in the current session.");
       console.log("2. Start the task; the pipeline will load up to three style packages from GitHub and require one selection before UI work.");
@@ -266,9 +285,9 @@ export async function initializeProject({
       console.log("2. Verify shell, Xcode, Simulator, UI interaction and image viewing.");
       console.log("3. Start the task; unsupported delegation will use the sequential fallback.");
     }
-    console.log("\nStart a new task in your agent and paste a brief like this:\n");
+    console.log(`\n${outputStyle.strong("Start a new task in your agent and paste a brief like this:")}\n`);
     console.log(STARTER_BRIEF);
-    console.log("\nKeep it short if you prefer. Trickster will clarify one product-defining gap if needed and ask you to select one style package before UI work.");
+    console.log(`\n${outputStyle.muted("Keep it short if you prefer. Trickster will clarify one product-defining gap if needed and ask you to select one style package before UI work.")}`);
   }
 
   return result;
@@ -290,18 +309,32 @@ export async function doctorProject(target = process.cwd(), { quiet = false, har
   const ready = checks.every(([, passed]) => passed);
 
   if (!quiet) {
-    console.log(`HARNESS  ${selectedHarness}`);
+    console.log(`${outputStyle.muted("HARNESS")}  ${outputStyle.strong(selectedHarness)}`);
     for (const [name, passed] of checks) {
-      console.log(`${passed ? "PASS" : "MISSING"}  ${name}`);
+      const status = passed
+        ? outputStyle.accent("PASS")
+        : outputStyle.error("MISSING");
+      console.log(`${status}  ${name}`);
     }
     if (selectedHarness === "codex") {
-      console.log("VERIFY   Codex role delegation or the sequential fallback in the task session");
+      console.log(
+        `${outputStyle.warning("VERIFY")}   Codex role delegation or the sequential fallback in the task session`,
+      );
     } else {
-      console.log("VERIFY   The selected harness loads Trickster instructions");
-      console.log("VERIFY   Shell, Xcode, Simulator, image viewing and role delegation or sequential fallback");
+      console.log(
+        `${outputStyle.warning("VERIFY")}   The selected harness loads Trickster instructions`,
+      );
+      console.log(
+        `${outputStyle.warning("VERIFY")}   Shell, Xcode, Simulator, image viewing and role delegation or sequential fallback`,
+      );
     }
-    console.log("STYLE    The task loads up to three candidates from GitHub and saves exactly one confirmed package locally");
-    console.log(`\n${ready ? "Local installation is ready to use." : "Trickster is not ready."}`);
+    console.log(
+      `${outputStyle.accent("STYLE")}    The task loads up to three candidates from GitHub and saves exactly one confirmed package locally`,
+    );
+    const conclusion = ready
+      ? outputStyle.accent("Local installation is ready to use.")
+      : outputStyle.error("Trickster is not ready.");
+    console.log(`\n${conclusion}`);
   }
 
   return { project, harness: selectedHarness, checks, ready };
