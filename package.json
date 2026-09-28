@@ -1,6 +1,6 @@
 {
   "name": "@sgx22/trickster",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "AI app factory for reference-driven native iOS apps, Simulator verification, app icons, and ASO screenshots",
   "license": "MIT",
   "type": "module",
