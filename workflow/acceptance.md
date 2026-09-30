@@ -16,6 +16,7 @@ The reviewer independently gathers evidence and prepares a draft review. The mas
 - `DESIGN COMPOSITION APPROVED`, `CORE UI APPROVED`, and applicable `APP ICON APPROVED` are tied to current revisions.
 - Core, Full, and Hardening handoffs are complete.
 - `LOCAL DATA READY` is tied to the release-candidate revision.
+- the launch and optional splash contract is tied to the current design and release-candidate revisions.
 - Approved product assets and icon are present in the build.
 - The code revision and working-copy state are recorded and no role is still changing the app.
 
@@ -37,6 +38,7 @@ The reviewer independently gathers evidence and prepares a draft review. The mas
 | AC-12 | All eleven canonical capabilities match their fixed modes: the first ten have real features, mechanisms, useful results, denial or unavailable handling, and reproduced evidence; CallKit satisfies its honest `INTERFACE_ONLY` boundary | Capability matrix, modes, entitlements, actions, observed behavior, result data, Simulator or physical-device evidence | Required; never N/A |
 | AC-13 | Implementation feedback gates and visual approvals are authentic and current | Core preview, user decisions, icon and asset feedback records | Required |
 | AC-14 | The Release path is local-first and production-real: durable data uses SwiftData, binary payloads use files, local identity needs no account, the primary flow works without a proprietary backend, and runtime mocks or preview stores cannot activate | Release configuration inspection; create, relaunch, force-quit, offline, migration, file consistency, deletion, and failure evidence | Required |
+| AC-15 | The real cold-launch experience follows its contract: the static system launch screen transitions immediately and coherently to the correct first frame, and any app-owned splash has a real purpose with no artificial delay | Clean-install and returning-user captures on declared appearance, orientation, and device configurations; launch settings; timing; final artwork evidence | Required |
 
 A screenshot proves appearance and state, not persistence or transitions. Generated mockups do not replace Simulator or physical-device evidence.
 

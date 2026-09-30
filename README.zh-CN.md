@@ -16,6 +16,7 @@ Trickster 在你的代码仓库中协调多个专业 AI 角色。它会读取包
 - 为十一项强制 iOS capability 分别提供一项与产品相关的功能；
 - 一套统一的设计方向，并记录 UI、UX 与可选插画的来源；
 - 保留 iOS 原生行为和无障碍能力、同时完成定制样式的控件；
+- 系统 launch screen、到第一个真实画面的连贯过渡，以及在确有产品目的时使用的可选 splash；
 - 构建、Simulator 运行、交互和视觉检查的证据；
 - 基于已审阅 Logoinspo 参考设计的一枚原创 app icon；
 - 从已验收构建中逐张确认的一套商店截图。
@@ -27,6 +28,7 @@ Trickster 在你的代码仓库中协调多个专业 AI 角色。它会读取包
 → 产品定义：范围 + 强制 iOS capabilities
 → GitHub 风格候选
 → UI / UX / 插画组合
+→ launch / splash 合同
 → Core 反馈循环
 → Full + LOCAL DATA READY
 → 产品资源与 icon 集成
@@ -37,8 +39,8 @@ Trickster 在你的代码仓库中协调多个专业 AI 角色。它会读取包
 
 1. **定义产品。** 将核心范围、本地数据架构与十一项强制 capability 放在同一阶段设计，并统一为最终范围。
 2. **组合参考。** 比较最多三个应用，分别选择一个 UI 来源、一个 UX 来源和可选的插画来源，再综合并确认一个统一方向。
-3. **建立产品合同。** 固定页面、状态、阶段边界、资源需求、capability 流程和验收检查。
-4. **验证 Core。** 实现主要分区；用户请求时在 Simulator 中展示当前版本的 `PREVIEW`；迭代至 `CORE UI APPROVED`。
+3. **建立产品合同。** 固定页面、launch 与可选 splash 行为、状态、阶段边界、资源需求、capability 流程和验收检查。
+4. **验证 Core。** 实现并展示从真实 cold launch 到首个可交互画面的过程以及主要分区，迭代至 `CORE UI APPROVED`。
 5. **完成 Full。** 实现剩余范围与强制 capability 流程，以 SwiftData、文件或真实系统 API 替换运行时 mock，并达到 `LOCAL DATA READY`。
 6. **制作并集成视觉资源。** App icon 与实现并行；产品资源在达到 `LOCAL DATA READY` 后制作，并且只集成已批准的 icon 和 assets。
 7. **加固最终 UI。** 验证错误、拒绝、不可用、无障碍、持久化、紧凑尺寸、语言环境以及最终资源回归。
@@ -138,8 +140,8 @@ trickster/
 |---|---|---|
 | 1. 产品定义 | product-researcher + master gate | 统一范围与十一项产品 capability |
 | 2. 参考组合 | design-planner + 用户确认 | 本地综合的 UI、UX 与可选插画来源 |
-| 3. 产品合同 | design-planner | 页面、状态、阶段、资源需求和验证计划 |
-| 4. Core | implementation-owner + 用户确认 | 主要分区直至 `CORE UI APPROVED` |
+| 3. 产品合同 | design-planner | 页面、launch/splash、状态、阶段、资源和验证计划 |
+| 4. Core | implementation-owner + 用户确认 | 真实 cold launch 和主要分区直至 `CORE UI APPROVED` |
 | 5. Full | implementation-owner | 剩余范围、capability 流程与 `LOCAL DATA READY` |
 | 6. 产品资源 | visual-producer + implementation-owner | `LOCAL DATA READY` 后批准并与 icon 一起集成的资源 |
 | 7. Hardening | implementation-owner | 最终状态、无障碍与集成资源回归 |
@@ -157,6 +159,7 @@ trickster/
 - 无论 prompt 范围如何，十一项 canonical iOS capabilities 都必须进入合同和实现，且不能标记为 `N/A`。
 - 所有应用均为 local-first：SwiftData 保存持久领域数据，文件保存二进制内容，本地身份无需账户，Release 中不能启用运行时 mock。
 - CallKit 是唯一允许使用 `INTERFACE_ONLY` 的 capability。
+- 每个应用都包含真实系统 launch screen，不得人为延迟，并应与首个画面连贯；app-owned splash 是可选项，且必须有明确产品目的。
 - ASO 可以把可复现的演示数据写入真实 SwiftData 与文件存储，但不能用 mock 替换 production repository。
 - 在用户批准一个统一设计组合之前，不开始实现 UI。
 - UI、UX 与可选插画可来自不同候选应用，但每个关注点只能有一个来源，禁止随意混合组件。
@@ -181,6 +184,7 @@ Trickster 会主动拒绝全局安装。请在目标项目内使用 `npx` 作为
 - [角色编排](workflow/orchestration.md)
 - [强制 iOS capabilities](workflow/ios-capabilities.md)
 - [参考组合](workflow/style-reference.md)
+- [Launch 与 splash experience](workflow/launch-screen.md)
 - [实现](workflow/implementation.md)
 - [Core](workflow/implementation-core.md)
 - [Full](workflow/implementation-full.md)
@@ -192,4 +196,5 @@ Trickster 会主动拒绝全局安装。请在目标项目内使用 `npx` 作为
 
 - [Apple：在 Simulator 中运行应用](https://developer.apple.com/documentation/Xcode/running-your-app-on-simulated-or-physical-devices)
 - [Apple：App icons](https://developer.apple.com/design/human-interface-guidelines/app-icons)
+- [Apple：Launching](https://developer.apple.com/design/human-interface-guidelines/launching)
 - [Apple：截图规格](https://developer.apple.com/help/app-store-connect/reference/app-information/screenshot-specifications)

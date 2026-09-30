@@ -16,6 +16,7 @@ Trickster coordina roles de IA especializados dentro del repositorio. Lee un cat
 - una función relevante para el producto por cada una de las once capacidades de iOS obligatorias;
 - una dirección de diseño coherente con procedencia explícita para UI, UX e ilustraciones opcionales;
 - controles personalizados que conservan el comportamiento y la accesibilidad nativos de iOS;
+- una pantalla de lanzamiento del sistema y una transición coherente al primer cuadro real, más un splash justificado cuando sea necesario;
 - evidencias de compilación, ejecución, interacción e inspección visual en Simulator;
 - un icono original basado en referencias revisadas de Logoinspo;
 - un conjunto de capturas para la tienda, aprobado cuadro por cuadro a partir de la compilación aceptada.
@@ -27,6 +28,7 @@ Idea de la aplicación
 → definición del producto: alcance + capacidades obligatorias
 → selección desde el catálogo de GitHub
 → composición de UI / UX / ilustraciones
+→ contrato de launch / splash
 → Core con feedback
 → Full + LOCAL DATA READY
 → recursos e integración del icono
@@ -37,8 +39,8 @@ Idea de la aplicación
 
 1. **Definir el producto.** El alcance principal, la arquitectura local de datos y las once capacidades obligatorias se diseñan juntos y se concilian en un alcance final.
 2. **Componer referencias.** Se comparan hasta tres aplicaciones y se elige una fuente de UI, una de UX y, opcionalmente, una de ilustraciones; el resultado se sintetiza y aprueba como una única dirección.
-3. **Crear el contrato.** Se definen pantallas, estados, límites de fase, recursos, escenarios y comprobaciones de aceptación.
-4. **Validar Core.** Se implementan las secciones principales, se muestra un `PREVIEW` en Simulator cuando el usuario lo pide y se itera hasta `CORE UI APPROVED`.
+3. **Crear el contrato.** Se definen pantallas, comportamiento de launch y splash opcional, estados, límites de fase, recursos, escenarios y comprobaciones de aceptación.
+4. **Validar Core.** Se implementa y muestra el cold launch real hasta el primer cuadro interactivo junto con las secciones principales, y se itera hasta `CORE UI APPROVED`.
 5. **Completar Full.** Se implementan el resto del alcance y los flujos obligatorios, se sustituyen los mocks de runtime por SwiftData, archivos o APIs reales del sistema y se alcanza `LOCAL DATA READY`.
 6. **Producir e integrar recursos visuales.** El icono se crea en paralelo; después de `LOCAL DATA READY` se producen los recursos y solo se integran los elementos aprobados.
 7. **Robustecer la UI final.** Se verifican errores, rechazo, indisponibilidad, accesibilidad, persistencia, tamaños compactos, locales y regresiones de los recursos finales.
@@ -138,8 +140,8 @@ La composición no es un conjunto de skins intercambiables: cada aspecto tiene u
 |---|---|---|
 | 1. Definición del producto | product-researcher + control del master | Alcance conciliado y once capacidades de producto |
 | 2. Composición de referencias | design-planner + aprobación del usuario | UI, UX e ilustraciones opcionales sintetizadas localmente |
-| 3. Contrato del producto | design-planner | Pantallas, estados, fases, recursos y plan de verificación |
-| 4. Core | implementation-owner + aprobación del usuario | Secciones principales hasta `CORE UI APPROVED` |
+| 3. Contrato del producto | design-planner | Pantallas, launch/splash, estados, fases, recursos y verificación |
+| 4. Core | implementation-owner + aprobación del usuario | Cold launch real y secciones principales hasta `CORE UI APPROVED` |
 | 5. Full | implementation-owner | Resto del alcance, capacidades y `LOCAL DATA READY` |
 | 6. Recursos del producto | visual-producer + implementation-owner | Recursos aprobados después de `LOCAL DATA READY` e integrados con el icono aprobado |
 | 7. Hardening | implementation-owner | Estados finales, accesibilidad y regresiones de recursos integrados |
@@ -157,6 +159,7 @@ Consulta [el proceso maestro](workflow/master-prompt.md) y [el contrato de orque
 - Las once capacidades canónicas se contratan e implementan sin importar el alcance del prompt; ninguna puede ser `N/A`.
 - Todas las aplicaciones son local-first: SwiftData guarda los datos duraderos, los archivos guardan binarios, la identidad local no requiere cuenta y los mocks no pueden activarse en Release.
 - CallKit es la única capacidad que puede usar `INTERFACE_ONLY`.
+- Cada aplicación incluye una pantalla de lanzamiento real, sin demora artificial y coherente con el primer cuadro; un splash de la aplicación es opcional y requiere una finalidad de producto.
 - ASO puede cargar datos de demostración reproducibles en los almacenes reales de SwiftData y archivos, pero no puede sustituir el repositorio de producción por un mock.
 - La implementación de la UI se detiene hasta que el usuario aprueba una composición coherente.
 - UI, UX e ilustraciones pueden proceder de aplicaciones diferentes, pero cada aspecto tiene una sola fuente y no se permite mezclar componentes arbitrariamente.
@@ -181,6 +184,7 @@ La instalación global se rechaza intencionadamente. Utiliza `npx` como launcher
 - [Orquestación de roles](workflow/orchestration.md)
 - [Capacidades de iOS obligatorias](workflow/ios-capabilities.md)
 - [Composición de referencias](workflow/style-reference.md)
+- [Experiencia de launch y splash](workflow/launch-screen.md)
 - [Implementación](workflow/implementation.md)
 - [Core](workflow/implementation-core.md)
 - [Full](workflow/implementation-full.md)
@@ -192,4 +196,5 @@ Documentación externa:
 
 - [Apple: ejecutar una aplicación en Simulator](https://developer.apple.com/documentation/Xcode/running-your-app-on-simulated-or-physical-devices)
 - [Apple: iconos de aplicaciones](https://developer.apple.com/design/human-interface-guidelines/app-icons)
+- [Apple: launching](https://developer.apple.com/design/human-interface-guidelines/launching)
 - [Apple: especificaciones de capturas](https://developer.apple.com/help/app-store-connect/reference/app-information/screenshot-specifications)

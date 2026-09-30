@@ -19,6 +19,8 @@ For every required asset in `asset-manifest.md`:
 7. The master shows every substantial generated asset to the user before integration. Continue the same visual producer until the user approves it; silence is not approval.
 8. Prepare derivative sizes without changing the approved concept.
 
+Launch-screen artwork is allowed only when the same element is fixed on the first real frame. App-owned splash artwork follows the normal approval loop. Neither asset may justify an artificial startup delay.
+
 If generation or image viewing is unavailable, keep the asset `UNVERIFIED`; do not ship a placeholder as final.
 
 ## Integration

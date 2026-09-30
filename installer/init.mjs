@@ -293,6 +293,7 @@ export async function doctorProject(target = process.cwd(), { quiet = false, har
     ["Core implementation workflow", existsSync(resolve(project, "trickster", "workflow", "implementation-core.md"))],
     ["Full implementation workflow", existsSync(resolve(project, "trickster", "workflow", "implementation-full.md"))],
     ["Hardening workflow", existsSync(resolve(project, "trickster", "workflow", "implementation-hardening.md"))],
+    ["Launch-screen workflow", existsSync(resolve(project, "trickster", "workflow", "launch-screen.md"))],
   ];
   if (selectedHarness === "codex") {
     checks.unshift(["Codex CLI", commandExists("codex")]);

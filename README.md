@@ -18,6 +18,7 @@ Trickster orchestrates specialized AI roles inside your repository. It reads an 
 - one product-relevant feature for each of eleven mandatory iOS capabilities;
 - one coherent design direction with explicit UI, UX, and optional illustration provenance;
 - custom-styled controls that preserve native iOS behavior and accessibility;
+- a system launch screen and coherent transition to the first real frame, plus a product-justified splash when needed;
 - build, Simulator, interaction, and visual verification artifacts;
 - one original app icon informed by reviewed Logoinspo references;
 - one feedback-approved store screenshot set made from the accepted build.
@@ -28,8 +29,8 @@ Trickster orchestrates specialized AI roles inside your repository. It reads an 
 
 1. **Define the product.** Establish the core scope, local data architecture, and one coherent product feature for each of the eleven mandatory iOS capabilities, then reconcile them into the final scope.
 2. **Compose references.** Compare up to three catalog apps and choose one UI source, one UX source, and optionally one illustration source. Synthesize them into one coherent direction and approve it.
-3. **Create the contract.** Define screens, states, phase boundaries, asset requirements, capability scenarios, and acceptance checks.
-4. **Validate the Core.** Implement the main sections, show the current build in Simulator on request, and iterate with the user until `CORE UI APPROVED`.
+3. **Create the contract.** Define screens, launch and optional splash behavior, states, phase boundaries, asset requirements, capability scenarios, and acceptance checks.
+4. **Validate the Core.** Implement and show the real cold launch through the first interactive frame together with the main sections, then iterate with the user until `CORE UI APPROVED`.
 5. **Complete Full implementation.** Implement the remaining scope and capabilities, replace runtime mocks with SwiftData, files, or real system APIs, and reach `LOCAL DATA READY`. Simulator previews remain available on request.
 6. **Produce and integrate visuals.** Run app-icon creation in parallel, then produce product assets after Full reaches `LOCAL DATA READY` and integrate only approved visuals.
 7. **Harden the final UI.** Finish failure, denial, unavailable, accessibility, persistence, compact-layout, locale, and final-asset regression states.
@@ -135,8 +136,8 @@ The composition is not a collection of interchangeable skins. Each concern has o
 |---|---|---|
 | 1. Product definition | product-researcher + master gate | Reconciled local-first scope and eleven product-specific capabilities |
 | 2. Reference composition | design-planner + user gate | Approved UI, UX, and optional illustration sources synthesized locally |
-| 3. Product contract | design-planner | Screens, states, phase boundaries, asset requirements, and verification plan |
-| 4. Core implementation | implementation-owner + user gate | Main sections iterated to `CORE UI APPROVED` |
+| 3. Product contract | design-planner | Screens, launch/splash behavior, states, phase boundaries, assets, and verification plan |
+| 4. Core implementation | implementation-owner + user gate | Real cold launch and main sections iterated to `CORE UI APPROVED` |
 | 5. Full implementation | implementation-owner | Remaining scope, capability flows, and `LOCAL DATA READY` |
 | 6. Product assets | visual-producer + implementation-owner | Approved assets generated after `LOCAL DATA READY` and integrated with the approved icon |
 | 7. Hardening | implementation-owner | Final-UI failure, denial, unavailable, accessibility, persistence, and asset-regression states |
@@ -154,6 +155,7 @@ See [the master process](workflow/master-prompt.md) and [orchestration contract]
 - All eleven canonical iOS capabilities are contracted and implemented regardless of the prompt scope; none can be `N/A`.
 - Every app is local-first: SwiftData owns durable domain data, files own binary payloads, local identity needs no account, and Release paths cannot activate runtime mocks.
 - CallKit is the only capability allowed to use the explicit `INTERFACE_ONLY` mode.
+- Every app includes a real system launch screen. It matches the first frame, has no artificial delay, and is verified as a cold-launch transition rather than a static mockup; an app-owned splash is optional and must have a product purpose.
 - ASO may use reproducible demonstration data seeded into the real SwiftData and file stores; it may not replace the production repository with a mock.
 - UI implementation stops until the user approves one coherent design composition.
 - UI, UX, and optional illustration references may come from different shortlisted apps, but each concern has one source and arbitrary component-level mixing is prohibited.
@@ -178,6 +180,7 @@ Global installation is intentionally rejected. Use `npx` as a temporary launcher
 - [Role orchestration](workflow/orchestration.md)
 - [Mandatory iOS capabilities](workflow/ios-capabilities.md)
 - [Reference composition](workflow/style-reference.md)
+- [Launch and splash experience](workflow/launch-screen.md)
 - [Implementation](workflow/implementation.md)
 - [Core implementation](workflow/implementation-core.md)
 - [Full implementation](workflow/implementation-full.md)
@@ -189,4 +192,5 @@ External documentation:
 
 - [Apple: Running your app in Simulator](https://developer.apple.com/documentation/Xcode/running-your-app-on-simulated-or-physical-devices)
 - [Apple: App icons](https://developer.apple.com/design/human-interface-guidelines/app-icons)
+- [Apple: Launching](https://developer.apple.com/design/human-interface-guidelines/launching)
 - [Apple: Screenshot specifications](https://developer.apple.com/help/app-store-connect/reference/app-information/screenshot-specifications)

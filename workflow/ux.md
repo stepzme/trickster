@@ -20,3 +20,5 @@ These rules apply across contract, implementation, and acceptance stages. Determ
 Check specific accessibility parameters and platform constraints against the current [Apple HIG](https://developer.apple.com/design/human-interface-guidelines) for the selected platform. These rules are team criteria, not a claim of Apple certification.
 
 `trickster/design/ui.md` defines the approved visual language, `trickster/design/ux.md` defines the approved navigation and interaction model, optional `trickster/design/illustrations.md` defines the illustration language, and `trickster/design/composition.md` explains how those sources form one coherent direction. This document defines verifiable product behavior. Adapt the approved patterns to the agreed scope; references do not add features by themselves.
+
+The cross-cutting `launch-screen.md` contract governs the static system launch screen, its transition to the first real frame, and any app-owned splash. Do not use a launch or splash screen to hide avoidable delay or replace onboarding.

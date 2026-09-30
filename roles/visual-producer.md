@@ -17,7 +17,7 @@ Read `trickster/workflow/app-icon.md`. This branch may run in parallel with impl
 
 ## Product-assets phase
 
-Begin only after the master reports Full complete and `LOCAL DATA READY`. Read `trickster/workflow/assets.md` and the asset manifest. Create one verified solution for each real need using the latest suitable available image model, record provenance, and return substantial generated assets for user feedback before integration and final Hardening.
+Begin only after the master reports Full complete and `LOCAL DATA READY`. Read `trickster/workflow/assets.md` and the asset manifest. Create one verified solution for each real need, including contracted splash artwork, using the latest suitable available image model, record provenance, and return substantial generated assets for user feedback before integration and final Hardening. Do not invent launch-screen branding that is absent from the first real frame.
 
 ## Store-screenshot phase
 

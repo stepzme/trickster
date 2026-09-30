@@ -61,14 +61,14 @@ Do not communicate with the user or delegate work further.
 2. Verify the final scope, SwiftData/file/local-identity plan, and exact capability count, names, order, modes, features, mechanisms, fallbacks, dependencies, and verification methods.
 3. `SPAWN(design_planner)` for a shortlist of up to three apps and concern-level recommendations.
 4. The master presents UI, UX, and optional illustration choices. The user may reuse one app or choose different shortlisted apps per concern.
-5. After the user's mapping, `CONTINUE(design_planner)` to synthesize `trickster/design/`, record provenance and conflict resolution, finish `product.md`, and prepare asset requirements.
+5. After the user's mapping, `CONTINUE(design_planner)` to synthesize `trickster/design/`, record provenance and conflict resolution, finish `product.md` including launch and optional splash behavior, and prepare asset requirements.
 6. The master verifies the package, shows the composition, and records `DESIGN COMPOSITION APPROVED` with its revision.
-7. `SPAWN(implementation_owner)` for Core. The master verifies the build and screenshots, presents them, and uses `CONTINUE` for feedback until `CORE UI APPROVED`.
+7. `SPAWN(implementation_owner)` for Core. The master verifies the build, clean cold-launch transition, and screenshots, presents them, and uses `CONTINUE` for feedback until `CORE UI APPROVED`.
 8. After design approval, the app-icon branch may `SPAWN(visual_producer)` in parallel with Core and Full. Each generated image is shown by the master and revised through `CONTINUE` until `APP ICON APPROVED`.
 9. `CONTINUE(implementation_owner)` for Full. Verify `LOCAL DATA READY`: Release paths use SwiftData, files, or real system APIs and cannot activate runtime mocks. On a user-requested preview, transfer Simulator ownership, show that revision, record `PREVIEW`, and return feedback to the same owner.
 10. After Full and `LOCAL DATA READY`, `CONTINUE(visual_producer)` for required product assets. Show and revise substantial generated assets before integration.
 11. Integrate only approved assets and the applicable approved icon under one explicit app-code owner.
-12. `CONTINUE(implementation_owner)` for Hardening against the integrated UI and local production store. On a requested preview, show that exact revision as `PREVIEW`. After local-data, migration, file, final-asset, and complete state-matrix checks pass, freeze the release candidate.
+12. `CONTINUE(implementation_owner)` for Hardening against the integrated UI, launch experience, and local production store. On a requested preview, show that exact revision as `PREVIEW`. After cold-launch, splash, local-data, migration, file, final-asset, and complete state-matrix checks pass, freeze the release candidate.
 13. Transfer Simulator and, when available, physical-device ownership to `acceptance_reviewer`. The reviewer does not fix code.
 14. Return defects through `CONTINUE(implementation_owner)` and repeat affected checks without changing criteria.
 15. After `APP ACCEPTED`, `CONTINUE(visual_producer)` for a storyboard. After storyboard approval, create one store frame, return it, show it, revise it, and record `STORE FRAME <n> APPROVED` before requesting the next frame.

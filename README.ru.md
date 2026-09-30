@@ -16,6 +16,7 @@ Trickster оркестрирует специализированные AI-ро�
 - одна связанная с продуктом функция для каждой из одиннадцати обязательных iOS capabilities;
 - одно целостное дизайн-направление с явным provenance для UI, UX и опциональных иллюстраций;
 - стилизованные контролы, сохраняющие нативное поведение и доступность iOS;
+- системный launch screen и согласованный переход к первому реальному экрану, а при необходимости — обоснованный продуктом splash;
 - доказательства сборки, запуска, взаимодействия и визуальной проверки в Simulator;
 - одна оригинальная app icon по просмотренным Logoinspo-референсам;
 - один покадрово согласованный комплект store screenshots из принятой сборки.
@@ -27,6 +28,7 @@ Trickster оркестрирует специализированные AI-ро�
 → product definition: scope + обязательные iOS capabilities
 → shortlist по GitHub-каталогу
 → композиция UI / UX / illustrations
+→ контракт launch / splash experience
 → Core с feedback loop
 → Full + LOCAL DATA READY
 → product assets и icon integration
@@ -37,8 +39,8 @@ Trickster оркестрирует специализированные AI-ро�
 
 1. **Product definition.** Core scope, local data architecture и все одиннадцать обязательных capabilities формируются вместе, после чего сводятся в один финальный scope.
 2. **Композиция референсов.** Из shortlist выбираются один UI-источник, один UX-источник и опционально один illustration-источник. Они синтезируются в единое направление и согласуются с пользователем.
-3. **Контракт продукта.** Фиксируются экраны, состояния, границы фаз, требования к ассетам, capability-сценарии и проверки приёмки.
-4. **Core implementation.** Реализуются основные разделы; по запросу агент запускает Simulator и показывает текущий `PREVIEW`; направление дорабатывается до `CORE UI APPROVED`.
+3. **Контракт продукта.** Фиксируются экраны, launch/splash experience, состояния, границы фаз, требования к ассетам, capability-сценарии и проверки приёмки.
+4. **Core implementation.** Реализуются и показываются реальный cold launch до первого интерактивного кадра и основные разделы; направление дорабатывается до `CORE UI APPROVED`.
 5. **Full implementation.** После согласования Core реализуется остаточный scope и все обязательные capability flows, runtime-моки заменяются SwiftData, файлами или реальными системными API и фиксируется `LOCAL DATA READY`. Preview остаётся доступен по запросу.
 6. **Визуальные материалы.** App icon создаётся параллельно последней доступной image-моделью. После Full создаются product assets; в код внедряются только утверждённые icon и assets.
 7. **Hardening финального UI.** Проверяются ошибки, отказы, недоступность, accessibility, persistence, compact layout, локали и регрессии уже интегрированных ассетов.
@@ -138,8 +140,8 @@ trickster/
 |---|---|---|
 | 1. Product definition | product-researcher + gate мастера | Согласованный local-first scope и одиннадцать продуктовых capabilities |
 | 2. Композиция референсов | design-planner + подтверждение пользователя | UI, UX и опциональные illustrations сведены в одно направление |
-| 3. Контракт продукта | design-planner | Экраны, состояния, фазы, требования к ассетам и план проверки |
-| 4. Core implementation | implementation-owner + подтверждение пользователя | Основные разделы до `CORE UI APPROVED` |
+| 3. Контракт продукта | design-planner | Экраны, launch/splash experience, состояния, фазы, ассеты и план проверки |
+| 4. Core implementation | implementation-owner + подтверждение пользователя | Реальный cold launch и основные разделы до `CORE UI APPROVED` |
 | 5. Full implementation | implementation-owner | Остаточный scope, capability flows и `LOCAL DATA READY` |
 | 6. Product assets | visual-producer + implementation-owner | Ассеты после `LOCAL DATA READY`, согласование и внедрение вместе с утверждённой icon |
 | 7. Hardening | implementation-owner | Ошибки, отказы, недоступность, accessibility, persistence и регрессии финальных ассетов |
@@ -157,6 +159,7 @@ trickster/
 - Все одиннадцать канонических iOS capabilities входят в контракт и реализацию независимо от scope промпта; ни одну нельзя пометить `N/A`.
 - Каждое приложение local-first: SwiftData хранит durable product data, файлы — бинарные данные, локальная идентичность не требует аккаунта, а runtime-моки недоступны в Release.
 - Только CallKit разрешён в явном режиме `INTERFACE_ONLY`.
+- Каждое приложение получает реальный системный launch screen без искусственной задержки, совпадающий с первым кадром; опциональный app-owned splash должен иметь продуктовую причину.
 - Для ASO можно воспроизводимо заполнять реальные SwiftData и файловое хранилище демонстрационными данными, но нельзя заменять production repository моками.
 - UI не реализуется, пока пользователь не согласовал одну целостную композицию дизайна.
 - UI, UX и опциональные illustration-референсы могут происходить из разных shortlisted apps, но у каждого аспекта один источник; произвольное смешивание компонентов запрещено.
@@ -181,6 +184,7 @@ trickster/
 - [Оркестрация ролей](workflow/orchestration.md)
 - [Обязательные iOS capabilities](workflow/ios-capabilities.md)
 - [Композиция референсов](workflow/style-reference.md)
+- [Launch и splash experience](workflow/launch-screen.md)
 - [Реализация](workflow/implementation.md)
 - [Core implementation](workflow/implementation-core.md)
 - [Full implementation](workflow/implementation-full.md)
@@ -192,4 +196,5 @@ trickster/
 
 - [Apple: запуск приложения в Simulator](https://developer.apple.com/documentation/Xcode/running-your-app-on-simulated-or-physical-devices)
 - [Apple: app icons](https://developer.apple.com/design/human-interface-guidelines/app-icons)
+- [Apple: launching](https://developer.apple.com/design/human-interface-guidelines/launching)
 - [Apple: требования к скриншотам](https://developer.apple.com/help/app-store-connect/reference/app-information/screenshot-specifications)

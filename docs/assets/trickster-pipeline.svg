@@ -37,7 +37,7 @@
       <g transform="translate(800 0)">
         <text y="220" fill="#149E87" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14" font-weight="700">03</text>
         <text y="258" fill="#11100F" font-size="24" font-weight="720">Build the native app</text>
-        <text y="289" fill="#6D6961" font-size="16">Core · Full · local data · Hardening</text>
+        <text y="289" fill="#6D6961" font-size="16">Launch · Core · Full · Hardening</text>
       </g>
 
       <g transform="translate(1120 0)">

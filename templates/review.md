@@ -5,13 +5,14 @@
 - App-icon status: UNVERIFIED / N/A
 - Product-asset status: UNVERIFIED / N/A
 - Local data status: UNVERIFIED / LOCAL DATA READY / FAIL
+- Launch experience status: UNVERIFIED / PASS / FAIL
 - Store-screenshot status: UNVERIFIED / N/A
 - Run ID and toolkit version:
 - Verified app revision and working-copy state:
 - Final design revision:
 - Final user confirmation:
 - Cleaned temporary paths:
-- Xcode, SDK, scheme, configuration, and build time:
+- Xcode, SDK, scheme, launch-screen mechanism, configuration, and build time:
 - Simulators: model, OS, UDID, locale, theme, and text size:
 - Physical devices: model, OS, UDID, peripherals, signing, and unavailable hardware:
 - Test-data version:
@@ -53,6 +54,16 @@ Record `PREVIEW` separately from acceptance. Include the final `CORE UI APPROVED
 
 | Criterion | Status | What was performed and observed | Evidence or reason for N/A |
 |---|---|---|---|
+
+## Launch and splash verification
+
+- System launch-screen mechanism and target configuration:
+- Fresh-install first frame:
+- Returning-user restored frame:
+- Cold-launch captures, devices, orientations, and appearances:
+- Transition, timing, cached-image, flash, geometry, and duplicate-element observations:
+- App-owned splash purpose, completion condition, accessibility, and Reduce Motion, or NONE:
+- User-reviewed Core launch revision and final Release revision:
 
 ## Scope coverage
 

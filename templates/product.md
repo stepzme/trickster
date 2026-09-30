@@ -52,6 +52,19 @@ Keep all eleven rows in this exact order. Do not rename, merge, remove, reorder,
 - Offline primary-flow expectation:
 - Intentional bundled sample content, or NONE:
 
+## Launch and splash experience
+
+- First real frame for a fresh install:
+- First real or restored frame for a returning user:
+- System mechanism: `UILaunchScreen` / `LaunchScreen.storyboard`:
+- Static composition shared with the first frame:
+- Light/dark, orientation, primary/compact, and declared iPad behavior:
+- Transition and launch-data readiness:
+- App-owned splash: NONE / REQUIRED, with product purpose and completion condition:
+- Splash localization, accessibility, and Reduce Motion:
+- Launch or splash assets and asset-manifest entries:
+- Core cold-launch review evidence:
+
 ## Reference composition
 
 - Shortlisted apps with appId, name, URL, category, and UI/UX/illustration fit:

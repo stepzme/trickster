@@ -13,6 +13,9 @@ For every applicable product and capability scenario, implement and exercise:
 - permission `notDetermined`, authorized, denied, restricted, and framework-specific states;
 - unavailable hardware, missing peripheral, disconnected service, unsupported device, and missing account states;
 - persistence through backgrounding, force termination, cold launch, and restart;
+- clean-install and returning-user cold launches from the system launch screen to the correct initial or restored frame;
+- light and dark appearance, supported orientations and device sizes without a blank frame, stale launch image, visual flash, geometry jump, duplicate logo, or artificial delay;
+- final artwork, localization, accessibility, and Reduce Motion for any app-owned splash;
 - operation without a proprietary backend and with the network unavailable for the primary flow;
 - SwiftData migration from every supported prior model version;
 - missing, unreadable, orphaned, or partially written files and broken SwiftData file references;

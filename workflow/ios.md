@@ -29,7 +29,7 @@ Locate the actual `.xcodeproj` or `.xcworkspace`, shared scheme, and bundle ID. 
 
 Perform build, installation, launch, and testing sequentially with one Simulator owner. Do not use the ambiguous `booted` destination when multiple devices are running. During Core, Full, and Hardening, run the current build in Simulator and show it when the user requests a `PREVIEW`; record that a preview is provisional and is not acceptance evidence. Store artifacts in a dedicated run-ID directory. All agents must finish code changes before final evidence is recorded.
 
-For every screenshot, record the screen, state, device/OS, locale, theme, text size, data, and revision. Verify scenarios on the primary and compact supported configurations, including enlarged text. Verify other devices/locales/themes according to declared support.
+For every screenshot, record the screen, state, device/OS, locale, theme, text size, data, and revision. For launch verification, capture a clean cold-launch sequence or video from app icon tap through the first interactive frame; a still launch design is insufficient. Verify scenarios on the primary and compact supported configurations, including enlarged text. Verify other devices/locales/themes according to declared support.
 
 Verify the app icon on the installed final build, not only inside the asset catalog. Capture the source product screens for the store screenshot set after app acceptance from the same final build and link them to the run ID.
 

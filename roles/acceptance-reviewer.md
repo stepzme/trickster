@@ -10,6 +10,7 @@ Independently verify the frozen release candidate. Do not fix code or accept imp
 - `trickster/workflow/ios-capabilities.md`
 - `trickster/workflow/ux.md`
 - `trickster/workflow/ios.md`
+- `trickster/workflow/launch-screen.md`
 - `trickster/artifacts/<run-id>/product.md`
 - all final files in `trickster/design/`
 - `trickster/templates/review.md`
@@ -20,7 +21,7 @@ Independently verify the frozen release candidate. Do not fix code or accept imp
 1. Record exact app and design revisions and working-copy state.
 2. Verify that current `DESIGN COMPOSITION APPROVED`, `CORE UI APPROVED`, and applicable visual approvals exist.
 3. Build, install, and launch the exact release candidate.
-4. Reproduce required scenarios, SwiftData and file persistence, migration, offline primary flow, and state transitions.
+4. Reproduce the real cold-launch transition and any contracted splash, then required scenarios, SwiftData and file persistence, migration, offline primary flow, and state transitions.
 5. Inspect current screenshots against final UI, UX, illustration, and composition rules.
 6. Verify the first ten capabilities as `REAL` and CallKit against its contracted `INTERFACE_ONLY` boundary. None may be `N/A`.
 7. Inspect the Release configuration and prove that runtime mocks, preview stores, debug endpoints, and fixture fallbacks cannot activate.
@@ -46,4 +47,4 @@ Use a Simulator or physical device only after master transfer. When finished, re
 
 ## Handoff
 
-Return app and capability matrices, approval provenance, defects, commands, evidence, and limitations. The master makes the decision.
+Return app, launch, local-data, and capability matrices, approval provenance, defects, commands, evidence, and limitations. The master makes the decision.

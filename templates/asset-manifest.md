@@ -10,3 +10,5 @@
 |---|---|---|---|---|---|---|---|
 
 During the product contract, fill requirements only. Generate and integrate assets after Full reaches `LOCAL DATA READY`, then verify the final result during Hardening. If no product images or illustrations are needed, enter `N/A` and explain why typography, layout, or system symbols fulfill the product role.
+
+Identify launch or app-owned splash artwork explicitly. A system launch-screen asset must also be a fixed element of the first real frame; otherwise use a color or minimal structural composition.

@@ -2,7 +2,7 @@
 
 Implementation is one continuous responsibility performed by the same `implementation-owner`, but it is divided into three gated phases:
 
-1. [Core](implementation-core.md) — main-section screens, application shell, and the primary flow, followed by user feedback until `CORE UI APPROVED`.
+1. [Core](implementation-core.md) — system launch screen and real transition, any contracted splash, main-section screens, application shell, and the primary flow, followed by user feedback until `CORE UI APPROVED`.
 2. [Full](implementation-full.md) — the rest of the agreed scope, all eleven mandatory capability features, and the `LOCAL DATA READY` gate.
 3. [Hardening](implementation-hardening.md) — after approved visual integration, local-storage and migration failures, errors, denial, restriction, cancellation, unavailable dependencies, persistence, accessibility, compact layout, final-asset regressions, and declared environment states.
 
@@ -18,6 +18,7 @@ After Full reaches `LOCAL DATA READY`, execute `assets.md`, integrate approved p
 - The implementation owner is the sole writer to app code and shared Xcode files.
 - SwiftData owns durable domain data, files own binary payloads, local identity needs no account, and `UserDefaults` is limited to small preferences.
 - Preview fixtures never become a Release data provider.
+- Follow `launch-screen.md`; never add an artificial launch delay or treat a static mockup as launch evidence.
 - Build and check each phase before handoff.
 - Use native controls where they provide correct behavior and accessibility, while styling presentation according to the final design package.
 - Direct temporary build output to `/tmp/trickster/<run-id>/build/` when supported.

@@ -7,6 +7,7 @@ Report separately:
 - app status;
 - mandatory capability status;
 - `LOCAL DATA READY` status, migration coverage, and Release mock audit;
+- system launch-screen and optional app-owned splash status;
 - Core UI approval and design revision;
 - app-icon status;
 - product-asset status;

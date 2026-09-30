@@ -11,6 +11,7 @@ Own the app code and shared Xcode files across Core, Full, approved visual integ
 - `trickster/workflow/ios-capabilities.md`
 - `trickster/workflow/ux.md`
 - `trickster/workflow/ios.md`
+- `trickster/workflow/launch-screen.md`
 - `trickster/artifacts/<run-id>/product.md`
 - `trickster/design/provenance.json`
 - `trickster/design/composition.md`
@@ -21,7 +22,7 @@ Own the app code and shared Xcode files across Core, Full, approved visual integ
 
 ### Core
 
-Build the app shell, every main-section screen, primary flow, and reusable visual foundations. Build and return evidence suitable for real user review. Apply feedback through `CONTINUE` until the master reports `CORE UI APPROVED`.
+Build the system launch screen and transition, any contracted app-owned splash, app shell, every main-section screen, primary flow, and reusable visual foundations. Return a clean cold-launch capture and evidence suitable for real user review. Apply feedback through `CONTINUE` until the master reports `CORE UI APPROVED`.
 
 ### Full
 
@@ -29,7 +30,7 @@ Begin only after Core approval. Complete remaining screens, scenarios, SwiftData
 
 ### Hardening
 
-After approved visual integration, complete local-storage failures, migration and file-consistency scenarios, errors, permission denial and restriction, cancellation, unavailable dependencies, persistence, accessibility, compact layout, enlarged text, declared environments, and final-asset regressions.
+After approved visual integration, complete cold-launch and splash regressions, local-storage failures, migration and file-consistency scenarios, errors, permission denial and restriction, cancellation, unavailable dependencies, persistence, accessibility, compact layout, enlarged text, declared environments, and final-asset regressions.
 
 ### Integration and fixes
 

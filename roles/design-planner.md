@@ -11,6 +11,7 @@ Research up to three reference apps, support concern-level user selection, synth
 - `trickster/workflow/assets.md` for requirements only
 - `trickster/workflow/ux.md`
 - `trickster/workflow/ios.md`
+- `trickster/workflow/launch-screen.md`
 - `trickster/artifacts/<run-id>/product.md`
 - product and asset-manifest templates
 - catalog and package documents from the URL in `style-reference.md`
@@ -36,7 +37,7 @@ After `CONTINUE` with the user's UI, UX, and optional illustration mapping:
 3. Create `composition.md` with a design revision, contributions, conflicts, resolutions, coherence rules, and platform adaptations.
 4. Synthesize final `ui.md`, `ux.md`, and optional `illustrations.md` rather than leaving contradictory source documents side by side.
 5. Delete a stale `illustrations.md` when no illustration source is selected.
-6. Complete `product.md` with design provenance, phase boundaries, Core review surface, acceptance plan, preview environment, icon applicability, and asset requirements.
+6. Complete `product.md` with design provenance, phase boundaries, launch and optional splash contract, Core review surface, acceptance plan, preview environment, icon applicability, and asset requirements.
 7. Create `asset-manifest.md` as a plan only; do not generate assets.
 
 ## Allowed outputs

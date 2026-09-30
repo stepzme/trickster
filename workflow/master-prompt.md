@@ -22,8 +22,8 @@ Execute dependent stages sequentially. The app-icon branch may run in parallel w
 
 1. [Product definition](scope.md) — `product-researcher` derives the core scope and local data boundary, synthesizes all eleven capabilities using [the capability registry](ios-capabilities.md), and reconciles one final scope before handoff.
 2. [Reference composition](style-reference.md) — `design-planner` loads the catalog, researches no more than three apps, and proposes concern-level candidates. The user may assign one app to UI, one to UX, and an optional one to illustrations. After explicit approval, synthesize one local design package.
-3. [Product contract](product-contract.md) — the same `design-planner` records screens, scenarios, local data architecture, acceptance, asset requirements, environment, the design revision, and the user's `DESIGN COMPOSITION APPROVED` decision.
-4. [Core implementation](implementation-core.md) — `implementation-owner` builds the application shell, all main-section screens, and the primary flow. The master verifies and shows the real result to the user, then continues the same owner until explicit `CORE UI APPROVED`.
+3. [Product contract](product-contract.md) — the same `design-planner` records screens, launch and optional splash experience, scenarios, local data architecture, acceptance, asset requirements, environment, the design revision, and the user's `DESIGN COMPOSITION APPROVED` decision.
+4. [Core implementation](implementation-core.md) — `implementation-owner` builds the system launch screen and transition, any contracted app-owned splash, application shell, all main-section screens, and the primary flow. The master verifies and shows the real cold launch and Core result to the user, then continues the same owner until explicit `CORE UI APPROVED`.
 5. [Full implementation](implementation-full.md) — the same owner implements the remaining agreed scope, all eleven capability features, and the real local production data path through `LOCAL DATA READY` without weakening the approved core direction.
 6. [Product assets and visual integration](assets.md) — after Full reaches `LOCAL DATA READY`, `visual-producer` creates required product imagery from the asset plan. The approved assets and approved icon are integrated under explicit app-code ownership.
 7. [Hardening](implementation-hardening.md) — the same implementation owner completes local-storage, migration, file-consistency, error, denial, restriction, cancellation, unavailable, persistence, accessibility, compact-layout, and declared environment states against the final integrated UI.
@@ -32,7 +32,7 @@ Execute dependent stages sequentially. The app-icon branch may run in parallel w
 10. [Finalization](finalization.md) — after the applicable approvals, the master presents the complete result, receives final user confirmation, and cleans only recorded temporary paths.
 11. [Delivery](delivery.md) — the master verifies preserved artifacts and provides one status report tied to the final revision.
 
-Cross-cutting requirements are in [UX](ux.md), [iOS](ios.md), and [implementation overview](implementation.md).
+Cross-cutting requirements are in [UX](ux.md), [iOS](ios.md), [launch and splash experience](launch-screen.md), and [implementation overview](implementation.md).
 
 ## Parallel app-icon branch
 
@@ -58,6 +58,7 @@ These runs are `PREVIEW`, not `PASS`, acceptance, or proof of physical-device be
 - Do not start reference research until the reconciled product definition contains all eleven complete capability rows.
 - Do not start UI implementation until the user approves the concern-level reference mapping and the synthesized design package as `DESIGN COMPOSITION APPROVED`.
 - Do not start Full implementation until the real Core build has been shown and the user states `CORE UI APPROVED`.
+- Do not treat a static launch design as evidence; Core review must show the real cold-launch transition to the first interactive frame.
 - Do not complete Full or start product assets until `LOCAL DATA READY` proves that Release paths use the contracted local store without runtime mocks.
 - Do not integrate the app icon before `APP ICON APPROVED`.
 - Do not start product-asset production before Full is complete; asset requirements remain part of the earlier contract.
