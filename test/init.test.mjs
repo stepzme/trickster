@@ -113,7 +113,7 @@ test("installs one project-local Trickster folder without the remote style libra
 
   assert.match(await readFile(join(project, "AGENTS.md"), "utf8"), /trickster\/AGENTS\.md/);
   assert.equal(await readFile(join(project, ".gitignore"), "utf8"), "build/\n");
-  assert.equal(await readFile(join(project, "trickster", "VERSION"), "utf8"), "1.0.2\n");
+  assert.equal(await readFile(join(project, "trickster", "VERSION"), "utf8"), "1.0.3\n");
   assert.equal(await readFile(join(project, "trickster", "HARNESS"), "utf8"), "codex\n");
   assert.match(
     await readFile(join(project, "trickster", "workflow", "master-prompt.md"), "utf8"),

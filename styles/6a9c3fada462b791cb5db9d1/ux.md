@@ -1,0 +1,33 @@
+# Overview
+
+Omio combines transport, stays, destination discovery, favorites, bookings, and profile utilities in one comparison-led travel shell.
+
+# Navigation
+
+A five-item bottom bar anchors Search, Explore, Favorites, Bookings, and Profile. Search switches between Travel and Stays; focused selection and booking steps use a navy header with a clear back path.
+
+# Core Flows
+
+## Search and compare travel
+
+1. Set origin, destination, dates, passenger count, and discount card.
+2. Switch between available transport modes and nearby dates.
+3. Sort or filter results, save an option, and open a recommended itinerary.
+
+## Book a journey
+
+1. Review the selected outbound option and passenger details.
+2. Add baggage, seating, insurance, or other visible extras.
+3. Select payment, expand billing or discount sections, review line items, and submit.
+
+## Explore and manage
+
+Explore filters destination cards and exposes a map. Favorites retain saved options; Bookings opens journey, ticket, accommodation, support, change, and cancellation details. Profile manages passenger data, payment, currency, inbox, settings, and support.
+
+# Interaction Patterns
+
+- Travel and Stays share the same stacked search rhythm with an explicit selected tab.
+- Result cards keep operator, time, duration, stops, passenger count, and price together.
+- Nearby dates, mode tabs, filter chips, and sort controls remain above the result list.
+- Favorites use a heart on result cards; maps are opened through a floating bottom action.
+- Booking sections expand progressively while the navy journey summary remains available above them.

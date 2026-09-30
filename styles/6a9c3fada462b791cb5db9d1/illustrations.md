@@ -1,0 +1,19 @@
+# Overview
+
+Omio uses a recognizable pastel travel-collage language across splash, onboarding, home search, promotions, and payment progress.
+
+# Visual Style
+
+Scenes combine soft blue-violet landscapes, coral light, simplified trains, buses, aircraft, ships, stations, and city silhouettes. Objects have lightly dimensional shading and softened edges rather than hard outlines.
+
+# Composition
+
+Build a low horizon of transport and destination objects beneath open atmospheric space. Large interface copy may sit above the horizon; promotional cards isolate one device, badge, or travel object against a pale gradient.
+
+# Color
+
+Use dusty navy and periwinkle for depth, blush and coral for warmth, and pale cyan for highlights. Keep contrast restrained in scenery while reserving saturated coral and navy for interface actions and text.
+
+# Usage
+
+Use this language for onboarding, destination discovery, referral or savings campaigns, and processing states. Keep comparison lists, hotel cards, passenger details, payment choices, prices, and conditions on plain functional surfaces.
