@@ -264,7 +264,7 @@ export async function initializeProject({
     console.log(`\n${outputStyle.accent("Next:")}`);
     if (selectedHarness === "codex") {
       console.log("1. Restart Codex if project instructions were already loaded in the current session.");
-      console.log("2. Start the task; the pipeline will reconcile the product scope with all eleven mandatory iOS capabilities, then compose approved UI, UX, and optional illustration references before feedback-gated implementation.");
+      console.log("2. Start the task; the pipeline will reconcile the local-first product scope with all eleven mandatory iOS capabilities, then compose approved UI, UX, and optional illustration references before feedback-gated implementation.");
     } else {
       console.log("1. Read trickster/adapters/generic.md and map the orchestration operations to your harness.");
       console.log("2. Verify shell, Xcode, Simulator, physical-device access, UI interaction and image viewing.");
@@ -273,7 +273,7 @@ export async function initializeProject({
     console.log(`\n${outputStyle.accent("Start a new task in your agent and paste a brief like this:")}\n`);
     console.log(STARTER_BRIEF);
     console.log(
-      `\n${outputStyle.muted("A short description is enough. Trickster will reconcile all eleven mandatory iOS capabilities, guide design composition, request implementation feedback, and enforce the delivery gates.")}`,
+      `\n${outputStyle.muted("A short description is enough. Trickster will reconcile all eleven mandatory iOS capabilities into a local-first product, guide design composition, request implementation feedback, and enforce the delivery gates.")}`,
     );
   }
 
@@ -320,7 +320,7 @@ export async function doctorProject(target = process.cwd(), { quiet = false, har
       );
     }
     console.log(
-      `${outputStyle.accent("PRODUCT")} The task reconciles core scope with all eleven mandatory iOS capabilities before reference research`,
+      `${outputStyle.accent("PRODUCT")} The task reconciles core scope with all eleven mandatory iOS capabilities inside the local-first boundary before reference research`,
     );
     console.log(
       `${outputStyle.accent("DESIGN")}  The task composes approved UI, UX and optional illustration sources into one coherent local direction`,

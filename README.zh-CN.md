@@ -12,6 +12,7 @@ Trickster 在你的代码仓库中协调多个专业 AI 角色。它会读取包
 
 - 可运行的 Xcode 项目和原生 iOS 应用；
 - 基于需求说明和现有项目确定的产品范围；
+- 使用 SwiftData、文件和自动本地身份、无需自有后端的真实 local-first 生产数据路径；
 - 为十一项强制 iOS capability 分别提供一项与产品相关的功能；
 - 一套统一的设计方向，并记录 UI、UX 与可选插画的来源；
 - 保留 iOS 原生行为和无障碍能力、同时完成定制样式的控件；
@@ -27,19 +28,19 @@ Trickster 在你的代码仓库中协调多个专业 AI 角色。它会读取包
 → GitHub 风格候选
 → UI / UX / 插画组合
 → Core 反馈循环
-→ Full
+→ Full + LOCAL DATA READY
 → 产品资源与 icon 集成
 → 最终 UI Hardening
 → Simulator 验收
 → 商店截图
 ```
 
-1. **定义产品。** 将核心范围与十一项强制 capability 放在同一阶段设计，并统一为最终范围。
+1. **定义产品。** 将核心范围、本地数据架构与十一项强制 capability 放在同一阶段设计，并统一为最终范围。
 2. **组合参考。** 比较最多三个应用，分别选择一个 UI 来源、一个 UX 来源和可选的插画来源，再综合并确认一个统一方向。
 3. **建立产品合同。** 固定页面、状态、阶段边界、资源需求、capability 流程和验收检查。
 4. **验证 Core。** 实现主要分区；用户请求时在 Simulator 中展示当前版本的 `PREVIEW`；迭代至 `CORE UI APPROVED`。
-5. **完成 Full。** 实现剩余范围与所有强制 capability 流程。
-6. **制作并集成视觉资源。** App icon 与实现并行；产品资源在 Full 后制作，并且只集成已批准的 icon 和 assets。
+5. **完成 Full。** 实现剩余范围与强制 capability 流程，以 SwiftData、文件或真实系统 API 替换运行时 mock，并达到 `LOCAL DATA READY`。
+6. **制作并集成视觉资源。** App icon 与实现并行；产品资源在达到 `LOCAL DATA READY` 后制作，并且只集成已批准的 icon 和 assets。
 7. **加固最终 UI。** 验证错误、拒绝、不可用、无障碍、持久化、紧凑尺寸、语言环境以及最终资源回归。
 8. **独立验证。** 在 Simulator 中以及需要时在实体 iPhone 上构建、安装、运行、操作并检查最终应用。缺失的证据必须标记为 `UNVERIFIED`。
 9. **完成商店截图。** 先批准 storyboard，再从已验收构建中逐张生成和确认。
@@ -91,7 +92,7 @@ npx @sgx22/trickster doctor
 10. Location Access
 11. CallKit
 
-Agent 不得省略、合并、重命名、重排、替换或将任何一项标记为 `N/A`。仅显示权限提示的按钮、虚假设备或虚假通话不算实现。
+Agent 不得省略、合并、重命名、重排、替换或将任何一项标记为 `N/A`。前十项必须提供真实行为。只有 CallKit 可以使用诚实的 `INTERFACE_ONLY` 模式，不得虚构通话、参与者、连接状态、signaling 或媒体传输。
 
 若使用其他 agent harness：
 
@@ -139,8 +140,8 @@ trickster/
 | 2. 参考组合 | design-planner + 用户确认 | 本地综合的 UI、UX 与可选插画来源 |
 | 3. 产品合同 | design-planner | 页面、状态、阶段、资源需求和验证计划 |
 | 4. Core | implementation-owner + 用户确认 | 主要分区直至 `CORE UI APPROVED` |
-| 5. Full | implementation-owner | 剩余范围与 capability 流程 |
-| 6. 产品资源 | visual-producer + implementation-owner | Full 后批准并与 icon 一起集成的资源 |
+| 5. Full | implementation-owner | 剩余范围、capability 流程与 `LOCAL DATA READY` |
+| 6. 产品资源 | visual-producer + implementation-owner | `LOCAL DATA READY` 后批准并与 icon 一起集成的资源 |
 | 7. Hardening | implementation-owner | 最终状态、无障碍与集成资源回归 |
 | 并行. App icon | visual-producer + 用户确认 | 集成前批准的原创方案 |
 | 8. 验收 | acceptance-reviewer + master | 独立验证的最终构建和 capability 矩阵 |
@@ -154,6 +155,9 @@ trickster/
 
 - 风格候选最多包含三个根据目录元数据选出的设计包，并且只下载这些候选的文档。
 - 无论 prompt 范围如何，十一项 canonical iOS capabilities 都必须进入合同和实现，且不能标记为 `N/A`。
+- 所有应用均为 local-first：SwiftData 保存持久领域数据，文件保存二进制内容，本地身份无需账户，Release 中不能启用运行时 mock。
+- CallKit 是唯一允许使用 `INTERFACE_ONLY` 的 capability。
+- ASO 可以把可复现的演示数据写入真实 SwiftData 与文件存储，但不能用 mock 替换 production repository。
 - 在用户批准一个统一设计组合之前，不开始实现 UI。
 - UI、UX 与可选插画可来自不同候选应用，但每个关注点只能有一个来源，禁止随意混合组件。
 - 用户批准 Core 前不能开始 Full；每个实现阶段都支持按请求展示 Simulator preview。
@@ -167,7 +171,7 @@ trickster/
 
 Trickster 需要 macOS、Xcode、合适的 iOS Simulator runtime、用于验证硬件相关强制 capability 的实体 iPhone 和外设、Node.js 20 或更高版本，以及能够读取已安装指令并使用项目工具的 agent 环境。
 
-用于实体设备 capability 验证的签名属于验收的一部分。Release archive、App Store 提交和生产部署仍属于独立任务。所需外部服务必须真实连接，否则标记为 `UNVERIFIED`。
+用于在实体设备上验证十项 `REAL` capability 的签名属于验收的一部分。Release archive 与 App Store 提交仍属于独立任务。Trickster 不创建自有 backend、服务器账户、Sign in with Apple、CloudKit 或同步。
 
 Trickster 会主动拒绝全局安装。请在目标项目内使用 `npx` 作为临时 launcher。
 

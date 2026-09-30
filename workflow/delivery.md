@@ -6,6 +6,7 @@ Report separately:
 
 - app status;
 - mandatory capability status;
+- `LOCAL DATA READY` status, migration coverage, and Release mock audit;
 - Core UI approval and design revision;
 - app-icon status;
 - product-asset status;
@@ -17,7 +18,7 @@ An accepted app does not imply approved store screenshots. Approved store screen
 
 ## Report
 
-Create `trickster/artifacts/<run-id>/review.md` from the template and tie it to exact app and design revisions. Record product definition, reference composition, role handoffs, Core feedback, phase previews, Full and Hardening results, capability evidence, icon and asset feedback, acceptance, store-frame approvals, cleanup, defects, limitations, and reproduction steps.
+Create `trickster/artifacts/<run-id>/review.md` from the template and tie it to exact app and design revisions. Record product definition, local data architecture, reference composition, role handoffs, Core feedback, phase previews, Full and Hardening results, migration and Release mock evidence, capability evidence, icon and asset feedback, acceptance, ASO seed and frame approvals, cleanup, defects, limitations, and reproduction steps.
 
 ## Response to the user
 

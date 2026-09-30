@@ -12,6 +12,7 @@ Trickster coordina roles de IA especializados dentro del repositorio. Lee un cat
 
 - un proyecto Xcode funcional y una aplicación iOS nativa;
 - un alcance de producto basado en el brief y el proyecto existente;
+- una ruta de datos local-first real para producción con SwiftData, archivos e identidad local automática, sin backend propio;
 - una función relevante para el producto por cada una de las once capacidades de iOS obligatorias;
 - una dirección de diseño coherente con procedencia explícita para UI, UX e ilustraciones opcionales;
 - controles personalizados que conservan el comportamiento y la accesibilidad nativos de iOS;
@@ -27,19 +28,19 @@ Idea de la aplicación
 → selección desde el catálogo de GitHub
 → composición de UI / UX / ilustraciones
 → Core con feedback
-→ Full
+→ Full + LOCAL DATA READY
 → recursos e integración del icono
 → Hardening de la UI final
 → aceptación en Simulator
 → capturas para la tienda
 ```
 
-1. **Definir el producto.** El alcance principal y las once capacidades obligatorias se diseñan juntos y se concilian en un alcance final.
+1. **Definir el producto.** El alcance principal, la arquitectura local de datos y las once capacidades obligatorias se diseñan juntos y se concilian en un alcance final.
 2. **Componer referencias.** Se comparan hasta tres aplicaciones y se elige una fuente de UI, una de UX y, opcionalmente, una de ilustraciones; el resultado se sintetiza y aprueba como una única dirección.
 3. **Crear el contrato.** Se definen pantallas, estados, límites de fase, recursos, escenarios y comprobaciones de aceptación.
 4. **Validar Core.** Se implementan las secciones principales, se muestra un `PREVIEW` en Simulator cuando el usuario lo pide y se itera hasta `CORE UI APPROVED`.
-5. **Completar Full.** Se implementan el resto del alcance y todos los flujos obligatorios.
-6. **Producir e integrar recursos visuales.** El icono se crea en paralelo; después de Full se producen los recursos y solo se integran los elementos aprobados.
+5. **Completar Full.** Se implementan el resto del alcance y los flujos obligatorios, se sustituyen los mocks de runtime por SwiftData, archivos o APIs reales del sistema y se alcanza `LOCAL DATA READY`.
+6. **Producir e integrar recursos visuales.** El icono se crea en paralelo; después de `LOCAL DATA READY` se producen los recursos y solo se integran los elementos aprobados.
 7. **Robustecer la UI final.** Se verifican errores, rechazo, indisponibilidad, accesibilidad, persistencia, tamaños compactos, locales y regresiones de los recursos finales.
 8. **Verificar de forma independiente.** La aplicación final se compila, instala, ejecuta e inspecciona en Simulator y, cuando sea necesario, en un iPhone físico. La evidencia no disponible permanece `UNVERIFIED`.
 9. **Completar las capturas.** Se aprueba un storyboard y luego cada captura de la compilación aceptada se genera y revisa por separado.
@@ -91,7 +92,7 @@ Cada aplicación nueva o modificada sustancialmente debe incluir una función de
 10. Location Access
 11. CallKit
 
-El agente no puede omitir, combinar, renombrar, reordenar, sustituir ni marcar ningún elemento como `N/A`. Un botón que solo muestra un permiso, un dispositivo falso o una llamada falsa no cuentan como implementación.
+El agente no puede omitir, combinar, renombrar, reordenar, sustituir ni marcar ningún elemento como `N/A`. Las primeras diez capacidades requieren comportamiento real. Solo CallKit puede usar el modo honesto `INTERFACE_ONLY`, sin llamada, participante, conexión, signaling ni transporte multimedia ficticios.
 
 Para otro agent harness:
 
@@ -139,8 +140,8 @@ La composición no es un conjunto de skins intercambiables: cada aspecto tiene u
 | 2. Composición de referencias | design-planner + aprobación del usuario | UI, UX e ilustraciones opcionales sintetizadas localmente |
 | 3. Contrato del producto | design-planner | Pantallas, estados, fases, recursos y plan de verificación |
 | 4. Core | implementation-owner + aprobación del usuario | Secciones principales hasta `CORE UI APPROVED` |
-| 5. Full | implementation-owner | Resto del alcance y flujos de capacidades |
-| 6. Recursos del producto | visual-producer + implementation-owner | Recursos aprobados después de Full e integrados con el icono aprobado |
+| 5. Full | implementation-owner | Resto del alcance, capacidades y `LOCAL DATA READY` |
+| 6. Recursos del producto | visual-producer + implementation-owner | Recursos aprobados después de `LOCAL DATA READY` e integrados con el icono aprobado |
 | 7. Hardening | implementation-owner | Estados finales, accesibilidad y regresiones de recursos integrados |
 | En paralelo. Icono | visual-producer + aprobación del usuario | Concepto aprobado antes de integrarlo |
 | 8. Aceptación | acceptance-reviewer + master | Compilación y matriz de capacidades verificadas de forma independiente |
@@ -154,6 +155,9 @@ Consulta [el proceso maestro](workflow/master-prompt.md) y [el contrato de orque
 
 - La selección contiene como máximo tres paquetes elegidos por los metadatos del catálogo; solo se descargan sus documentos.
 - Las once capacidades canónicas se contratan e implementan sin importar el alcance del prompt; ninguna puede ser `N/A`.
+- Todas las aplicaciones son local-first: SwiftData guarda los datos duraderos, los archivos guardan binarios, la identidad local no requiere cuenta y los mocks no pueden activarse en Release.
+- CallKit es la única capacidad que puede usar `INTERFACE_ONLY`.
+- ASO puede cargar datos de demostración reproducibles en los almacenes reales de SwiftData y archivos, pero no puede sustituir el repositorio de producción por un mock.
 - La implementación de la UI se detiene hasta que el usuario aprueba una composición coherente.
 - UI, UX e ilustraciones pueden proceder de aplicaciones diferentes, pero cada aspecto tiene una sola fuente y no se permite mezclar componentes arbitrariamente.
 - Full no comienza hasta que el usuario aprueba Core; cada fase de implementación admite un preview de Simulator solicitado por el usuario.
@@ -167,7 +171,7 @@ Consulta [el proceso maestro](workflow/master-prompt.md) y [el contrato de orque
 
 Trickster requiere macOS, Xcode, un runtime adecuado de iOS Simulator, un iPhone físico y periféricos para verificar las capacidades obligatorias que dependen de hardware, Node.js 20 o posterior y un entorno de agentes capaz de leer las instrucciones instaladas y utilizar las herramientas del proyecto.
 
-La firma necesaria para verificar capacidades en un dispositivo físico forma parte de la aceptación. Los release archives, el envío a App Store y el despliegue de producción siguen siendo tareas separadas. Un servicio externo requerido debe conectarse o quedar `UNVERIFIED`.
+La firma necesaria para verificar las diez capacidades `REAL` en un dispositivo físico forma parte de la aceptación. Los release archives y el envío a App Store siguen siendo tareas separadas. Trickster no crea backend propio, cuentas de servidor, Sign in with Apple, CloudKit ni sincronización.
 
 La instalación global se rechaza intencionadamente. Utiliza `npx` como launcher temporal dentro del proyecto de destino.
 

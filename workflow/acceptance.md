@@ -15,6 +15,7 @@ The reviewer independently gathers evidence and prepares a draft review. The mas
 
 - `DESIGN COMPOSITION APPROVED`, `CORE UI APPROVED`, and applicable `APP ICON APPROVED` are tied to current revisions.
 - Core, Full, and Hardening handoffs are complete.
+- `LOCAL DATA READY` is tied to the release-candidate revision.
 - Approved product assets and icon are present in the build.
 - The code revision and working-copy state are recorded and no role is still changing the app.
 
@@ -33,10 +34,13 @@ The reviewer independently gathers evidence and prepares a draft review. The mas
 | AC-09 | Errors and constraints do not break a required scenario | Contract-defined error, permission, and retry tests | If applicable |
 | AC-10 | Declared locales, themes, orientations, and iPad support work | Declared environment matrix | If declared |
 | AC-11 | Sources, approvals, and evidence correspond to the exact final revisions | Provenance, design revision, app revision, timestamps, manifests | Required |
-| AC-12 | All eleven canonical capabilities have real features, correct mechanisms, useful results, denial or unavailable handling, and reproduced evidence | Capability matrix, entitlements, actions, observed behavior, result data, Simulator or physical-device evidence | Required; never N/A |
+| AC-12 | All eleven canonical capabilities match their fixed modes: the first ten have real features, mechanisms, useful results, denial or unavailable handling, and reproduced evidence; CallKit satisfies its honest `INTERFACE_ONLY` boundary | Capability matrix, modes, entitlements, actions, observed behavior, result data, Simulator or physical-device evidence | Required; never N/A |
 | AC-13 | Implementation feedback gates and visual approvals are authentic and current | Core preview, user decisions, icon and asset feedback records | Required |
+| AC-14 | The Release path is local-first and production-real: durable data uses SwiftData, binary payloads use files, local identity needs no account, the primary flow works without a proprietary backend, and runtime mocks or preview stores cannot activate | Release configuration inspection; create, relaunch, force-quit, offline, migration, file consistency, deletion, and failure evidence | Required |
 
 A screenshot proves appearance and state, not persistence or transitions. Generated mockups do not replace Simulator or physical-device evidence.
+
+For AC-12, the first ten capabilities require `REAL` behavior. CallKit alone may pass as the contracted `INTERFACE_ONLY` experience when it is useful, truthful, and does not register or report a fake call, fabricated participant, connected state, duration, signaling, or media transport. The absence of a calling service is not `UNVERIFIED` for this one mode.
 
 ## Fix cycles
 
@@ -50,7 +54,7 @@ Do not start a new run ID to reset the limit. When exhausted, return `NEEDS_WORK
 - `NEEDS_WORK` — at least one criterion FAILS.
 - `UNVERIFIED` — no failure was found, but a required criterion lacks evidence.
 
-Physical-device verification required by AC-12 is acceptance work, not an optional release task.
+Physical-device verification required by the ten `REAL` AC-12 rows is acceptance work, not an optional release task. CallKit follows its `INTERFACE_ONLY` evidence contract.
 
 ## Store package boundary
 

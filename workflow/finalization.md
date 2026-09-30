@@ -16,8 +16,8 @@ Without confirmation, leave temporary data in place and report that finalization
 After confirmation:
 
 1. Delete `/tmp/trickster/<run-id>/`, including candidate documents, DerivedData, caches, and intermediate build output.
-2. Delete temporary project artifacts only from exact paths recorded for this run. Never perform broad cleanup or remove unknown or user-owned files.
-3. Preserve code, Xcode project, final `trickster/design/`, product contract, review, evidence, approved icon, approved product assets, accepted-build screenshots, and store exports.
+2. Delete temporary project artifacts only from exact paths recorded for this run. Remove the ASO-seeded app data or dedicated Simulator container recorded for this run without resetting unrelated devices or user data. Never perform broad cleanup or remove unknown or user-owned files.
+3. Preserve code, Xcode project, final `trickster/design/`, product contract, review, evidence, approved icon, approved product assets, ASO seed manifest, accepted-build screenshots, and store exports.
 4. Record final confirmation and exact deleted paths in `review.md`.
 
 Cleanup cannot change the accepted app, design composition, approvals, or evidence.

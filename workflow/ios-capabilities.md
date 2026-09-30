@@ -2,13 +2,13 @@
 
 ## Goal
 
-Define every product with the same fixed set of eleven iOS capabilities. Capability synthesis is part of product definition, not a later expansion of an already final scope. For each capability, invent one product-relevant, user-facing feature, reconcile its screens and dependencies with the core product, implement real behavior, and verify the result. A permission button without a useful result is not a feature.
+Define every product with the same fixed set of eleven iOS capabilities. Capability synthesis is part of product definition, not a later expansion of an already final scope. For each capability, invent one product-relevant, user-facing feature, reconcile its screens and dependencies with the core product, implement real behavior, and verify the result. A permission button without a useful result is not a feature. CallKit is the sole exception to real system execution and follows the explicit `INTERFACE_ONLY` contract below.
 
 This stage applies to every new app and every substantial app change regardless of the scope in the user's prompt. These capabilities are part of the Trickster baseline and are not optional scope expansion.
 
 ## Canonical list
 
-The list, spelling, identifiers, and order below are fixed. Do not omit, merge, rename, reorder, replace, or mark any item `N/A`.
+The list, spelling, identifiers, and order below are fixed. Do not omit, merge, rename, reorder, replace, or mark any item `N/A`. The first ten rows use `REAL`; only CallKit uses `INTERFACE_ONLY` in the standard local-first pipeline.
 
 | Order | Stable ID | Canonical capability |
 |---|---|---|
@@ -26,7 +26,7 @@ The list, spelling, identifiers, and order below are fixed. Do not omit, merge, 
 
 ## Required synthesis
 
-For every row in the canonical list:
+For every `REAL` row in the canonical list:
 
 1. Derive one coherent feature from the product's user, primary task, terminology, and data.
 2. Define a discoverable entry point and the user action that initiates the system access flow.
@@ -36,7 +36,7 @@ For every row in the canonical list:
 6. Preserve the primary product path when optional access is denied. Never repeatedly prompt, manipulate, or force consent.
 7. Define verification on Simulator or a physical device. If the real capability cannot be exercised with the available environment, keep it required and mark its evidence `UNVERIFIED`, never `N/A` or `PASS`.
 
-Keep the features native to the product rather than placing eleven unrelated permission buttons on a generic settings screen. A status screen may supplement the real entry points, but it cannot replace them.
+Keep the features native to the product rather than placing eleven unrelated permission buttons on a generic settings screen. A status screen may supplement the real entry points, but it cannot replace them. Do not weaken another capability to `INTERFACE_ONLY` by analogy with CallKit.
 
 ## Canonical capability guidance
 
@@ -152,20 +152,21 @@ Prefer When In Use authorization and include `NSLocationWhenInUseUsageDescriptio
 
 ### 11. CallKit
 
-Possible product adaptations include:
+Possible interface adaptations include:
 
-- presenting an incoming internet call as a system call;
-- answering a call from the locked screen;
-- controlling a call through the system UI, headset, or car system;
-- integrating incoming and outgoing internet calls with the system call experience.
+- a product-relevant call entry screen;
+- contact, topic, or session preparation before a future call;
+- an unavailable state that clearly explains the local-only boundary;
+- controls and states that can later map to a real call service without claiming that one exists now.
 
-CallKit is a system capability, not a permission prompt. It coordinates a real calling service with iOS but does not provide the media transport, signaling, account system, or incoming-call delivery. Define those dependencies in the contract. A screen that only reports a fake CallKit call is not a completed feature. If a real calling service or physical-device path is unavailable, keep the feature required and report it as `UNVERIFIED`.
+CallKit remains in the canonical matrix but uses `INTERFACE_ONLY` so the local-first pipeline does not require signaling, media transport, accounts, push delivery, or a proprietary calling service. The interface must be useful and coherent with the product, but it must not register or report a fake call, show a fabricated remote participant, display a false connected state or duration, or imply that audio transport exists. Record and verify this honest boundary as `INTERFACE_ONLY`; the absence of a calling service does not make this row `UNVERIFIED`. No other capability may use this exception.
 
 ## Contract gate
 
 During product definition, create all eleven rows in the `Mandatory iOS capabilities` section of `product.md`, then reconcile them with the core scope before reference research. Each row must contain:
 
 - the canonical ID and name;
+- `REAL` mode, except `INTERFACE_ONLY` for CallKit;
 - the invented product feature;
 - its entry point and user action;
 - the useful result after access;

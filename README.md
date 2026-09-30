@@ -14,6 +14,7 @@ Trickster orchestrates specialized AI roles inside your repository. It reads an 
 
 - a functional Xcode project and native iOS app;
 - a product scope grounded in your brief and existing project;
+- a production-real local-first data path using SwiftData, files, and automatic local identity without a proprietary backend;
 - one product-relevant feature for each of eleven mandatory iOS capabilities;
 - one coherent design direction with explicit UI, UX, and optional illustration provenance;
 - custom-styled controls that preserve native iOS behavior and accessibility;
@@ -25,12 +26,12 @@ Trickster orchestrates specialized AI roles inside your repository. It reads an 
 
 ![Trickster pipeline: define the product, compose references, build through feedback gates, then independently verify and deliver](docs/assets/trickster-pipeline.svg)
 
-1. **Define the product.** Establish the core scope and synthesize one coherent product feature for each of the eleven mandatory iOS capabilities, then reconcile them into the final scope.
+1. **Define the product.** Establish the core scope, local data architecture, and one coherent product feature for each of the eleven mandatory iOS capabilities, then reconcile them into the final scope.
 2. **Compose references.** Compare up to three catalog apps and choose one UI source, one UX source, and optionally one illustration source. Synthesize them into one coherent direction and approve it.
 3. **Create the contract.** Define screens, states, phase boundaries, asset requirements, capability scenarios, and acceptance checks.
 4. **Validate the Core.** Implement the main sections, show the current build in Simulator on request, and iterate with the user until `CORE UI APPROVED`.
-5. **Complete Full implementation.** Implement the remaining scope and all mandatory capability flows. Simulator previews remain available on request.
-6. **Produce and integrate visuals.** Run app-icon creation in parallel, then produce product assets after Full and integrate only approved visuals.
+5. **Complete Full implementation.** Implement the remaining scope and capabilities, replace runtime mocks with SwiftData, files, or real system APIs, and reach `LOCAL DATA READY`. Simulator previews remain available on request.
+6. **Produce and integrate visuals.** Run app-icon creation in parallel, then produce product assets after Full reaches `LOCAL DATA READY` and integrate only approved visuals.
 7. **Harden the final UI.** Finish failure, denial, unavailable, accessibility, persistence, compact-layout, locale, and final-asset regression states.
 8. **Verify independently.** Build, install, run, interact with, and inspect the final app in Simulator and on a physical iPhone where required. Missing evidence remains `UNVERIFIED`.
 9. **Finish the store package.** Approve a storyboard, then generate and review store screenshots one frame at a time from the accepted build.
@@ -88,7 +89,7 @@ Every new app and substantial app change must contain a coherent product feature
 10. Location Access
 11. CallKit
 
-The agent cannot omit, merge, rename, reorder, replace, or mark an item `N/A`. A permission-only button, fake device, or fake call does not count: every feature needs a contextual entry point, a useful result, denial or unavailable behavior, and reproducible evidence. System pickers and capabilities without a normal permission prompt remain in the list and must use the correct iOS mechanism.
+The agent cannot omit, merge, rename, reorder, replace, or mark an item `N/A`. The first ten capabilities require real behavior: a permission-only button or fake device does not count. CallKit alone uses an honest `INTERFACE_ONLY` mode without a fabricated call, participant, connected state, signaling, or media transport.
 
 For another agent harness:
 
@@ -132,12 +133,12 @@ The composition is not a collection of interchangeable skins. Each concern has o
 
 | Stage | Owner | Required result |
 |---|---|---|
-| 1. Product definition | product-researcher + master gate | Reconciled scope and eleven product-specific capabilities |
+| 1. Product definition | product-researcher + master gate | Reconciled local-first scope and eleven product-specific capabilities |
 | 2. Reference composition | design-planner + user gate | Approved UI, UX, and optional illustration sources synthesized locally |
 | 3. Product contract | design-planner | Screens, states, phase boundaries, asset requirements, and verification plan |
 | 4. Core implementation | implementation-owner + user gate | Main sections iterated to `CORE UI APPROVED` |
-| 5. Full implementation | implementation-owner | Remaining agreed scope and capability flows |
-| 6. Product assets | visual-producer + implementation-owner | Approved assets generated after Full and integrated with the approved icon |
+| 5. Full implementation | implementation-owner | Remaining scope, capability flows, and `LOCAL DATA READY` |
+| 6. Product assets | visual-producer + implementation-owner | Approved assets generated after `LOCAL DATA READY` and integrated with the approved icon |
 | 7. Hardening | implementation-owner | Final-UI failure, denial, unavailable, accessibility, persistence, and asset-regression states |
 | Parallel. App icon | visual-producer + user gate | Latest-model concept approved before code integration |
 | 8. Acceptance | acceptance-reviewer + master | Independently verified final build and eleven-row capability matrix |
@@ -151,6 +152,9 @@ See [the master process](workflow/master-prompt.md) and [orchestration contract]
 
 - The style shortlist contains no more than three packages selected from catalog metadata; only their documents are downloaded.
 - All eleven canonical iOS capabilities are contracted and implemented regardless of the prompt scope; none can be `N/A`.
+- Every app is local-first: SwiftData owns durable domain data, files own binary payloads, local identity needs no account, and Release paths cannot activate runtime mocks.
+- CallKit is the only capability allowed to use the explicit `INTERFACE_ONLY` mode.
+- ASO may use reproducible demonstration data seeded into the real SwiftData and file stores; it may not replace the production repository with a mock.
 - UI implementation stops until the user approves one coherent design composition.
 - UI, UX, and optional illustration references may come from different shortlisted apps, but each concern has one source and arbitrary component-level mixing is prohibited.
 - Native control behavior is preserved while appearance follows the approved visual language.
@@ -164,7 +168,7 @@ See [the master process](workflow/master-prompt.md) and [orchestration contract]
 
 Trickster requires macOS, Xcode, an appropriate iOS Simulator runtime, a suitable physical iPhone and peripherals for mandatory hardware-dependent capability verification, Node.js 20 or later, and an agent environment capable of reading the installed instructions and using project tools. New reference research requires access to the raw files in the Trickster GitHub repository; an existing project continues to use its locally saved approved composition.
 
-Signing for physical-device capability verification is part of acceptance. Release archives, App Store submission, and production deployment remain separate release tasks. Real external services required by a contracted capability must be connected or reported `UNVERIFIED`.
+Signing for physical-device verification of the ten `REAL` capabilities is part of acceptance. Release archives and App Store submission remain separate release tasks. Trickster does not create a proprietary backend, server accounts, Sign in with Apple, CloudKit, or synchronization; a product that fundamentally requires them is outside the standard local-first boundary.
 
 Global installation is intentionally rejected. Use `npx` as a temporary launcher inside the target project.
 

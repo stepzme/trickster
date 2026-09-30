@@ -33,7 +33,9 @@ For every screenshot, record the screen, state, device/OS, locale, theme, text s
 
 Verify the app icon on the installed final build, not only inside the asset catalog. Capture the source product screens for the store screenshot set after app acceptance from the same final build and link them to the run ID.
 
-For each mandatory iOS capability, record whether Simulator, a physical device, or a real external service is required. Exercise real Bluetooth, camera, biometric, audio, location, Photos, Contacts, Calendar, Speech, and CallKit behavior where the selected environment permits it. If required hardware or service is unavailable, mark the capability and AC-12 `UNVERIFIED`; do not use `N/A`, conceal the boundary, or substitute a demo for a real integration.
+For the first ten mandatory iOS capabilities, record whether Simulator, a physical device, or an Apple system service is required. Exercise real Bluetooth, camera, biometric, audio, location, Photos, Contacts, Calendar, and Speech behavior where the selected environment permits it. If required hardware or system service is unavailable, mark the capability and AC-12 `UNVERIFIED`; do not use `N/A`, conceal the boundary, or substitute a demo for real behavior. Verify CallKit separately against its contracted `INTERFACE_ONLY` boundary; it does not require signaling, media transport, an account, or a calling service and must not claim that they exist.
+
+Build and inspect the Release configuration for the local production path. Durable domain data belongs in SwiftData, binary payloads in files, and small preferences only in `UserDefaults`. Verify that runtime mocks, preview stores, debug endpoints, and fixture fallbacks cannot activate. ASO tooling may seed real local stores outside the user-facing Release build.
 
 ## Sources
 

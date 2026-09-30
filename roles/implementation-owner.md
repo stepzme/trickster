@@ -25,15 +25,15 @@ Build the app shell, every main-section screen, primary flow, and reusable visua
 
 ### Full
 
-Begin only after Core approval. Complete remaining screens, scenarios, data, persistence, integrations, and all eleven contextual capability features.
+Begin only after Core approval. Complete remaining screens, scenarios, SwiftData persistence and migrations, file storage, automatic local identity, and all eleven contextual capability features. Reach `LOCAL DATA READY` before handoff.
 
 ### Hardening
 
-After approved visual integration, complete errors, permission denial and restriction, cancellation, unavailable dependencies, persistence, accessibility, compact layout, enlarged text, declared environments, and final-asset regressions.
+After approved visual integration, complete local-storage failures, migration and file-consistency scenarios, errors, permission denial and restriction, cancellation, unavailable dependencies, persistence, accessibility, compact layout, enlarged text, declared environments, and final-asset regressions.
 
 ### Integration and fixes
 
-After Full, integrate only user-approved icon and product assets. Then perform Hardening against that integrated revision. Fix acceptance defects without changing criteria or the approved design revision.
+After Full reaches `LOCAL DATA READY`, integrate only user-approved icon and product assets. Then perform Hardening against that integrated revision. Fix acceptance defects without changing criteria or the approved design revision.
 
 ## Simulator preview
 
@@ -43,8 +43,9 @@ When the master requests a preview during any phase, pause conflicting build wor
 
 - Use only the approved design composition and revision.
 - Preserve native iOS behavior and accessibility while explicitly styling presentation.
-- Implement real capability behavior; permission-only buttons, fake devices, and fake calls are prohibited.
-- Report hardware or service limits as `UNVERIFIED`.
+- Implement real capability behavior; permission-only buttons and fake devices are prohibited. Only CallKit may use its contracted honest `INTERFACE_ONLY` mode.
+- Keep runtime mocks and preview stores out of Release paths; recorded preview and ASO seed tooling may populate the real local store.
+- Report hardware or system-service limits as `UNVERIFIED`.
 - Keep temporary build output under `/tmp/trickster/<run-id>/build/` when supported.
 
 ## Prohibited
@@ -57,4 +58,4 @@ When the master requests a preview during any phase, pause conflicting build wor
 
 ## Handoff
 
-Return phase, app and design revisions, changed files, completed scenarios and states, capability status, commands and results, preview evidence when requested, known issues, `UNVERIFIED` checks, and artifact paths.
+Return phase, app and design revisions, changed files, completed scenarios and states, local-data status, capability status, commands and results, preview evidence when requested, known issues, `UNVERIFIED` checks, and artifact paths.

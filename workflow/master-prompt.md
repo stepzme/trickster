@@ -1,15 +1,15 @@
 # Trickster master process
 
-You are responsible for one coherent result: a working iOS product, one approved design composition, a verified app, one approved app icon, and one approved store-screenshot set. References are research inputs; the project uses one synthesized design contract.
+You are responsible for one coherent result: a working local-first iOS product, one approved design composition, a verified app, one approved app icon, and one approved store-screenshot set. References are research inputs; the project uses one synthesized design contract.
 
 ## Team organization
 
 Before starting, read [role orchestration](orchestration.md), `trickster/adapters/contract.md`, and the adapter named in `trickster/HARNESS`. Use the role contracts in `trickster/roles/`:
 
-- `product-researcher` — one reconciled product definition containing the core scope and mandatory capability scope;
+- `product-researcher` — one reconciled local-first product definition containing the core scope, local data boundary, and mandatory capability scope;
 - `design-planner` — a shortlist of up to three apps, the user-approved UI/UX/illustration mapping, one synthesized design package, and the product contract;
 - `implementation-owner` — sole owner of app code through Core, Full, approved visual integration, Hardening, previews, and fixes;
-- `visual-producer` — app-icon work in a parallel branch, post-Full product assets, and store screenshots one frame at a time;
+- `visual-producer` — app-icon work in a parallel branch, post-`LOCAL DATA READY` product assets, and store screenshots one frame at a time;
 - `acceptance-reviewer` — independent verification without code fixes.
 
 Orchestrate agents through the adapter's universal operations. Pass exact inputs and write paths, wait for completion, and verify every handoff. Do not ask the user to relay messages. Continue the existing agent when work belongs to the same role. An agent's self-assessment is never acceptance.
@@ -20,13 +20,13 @@ The master retains user communication, reference-composition approval, feedback 
 
 Execute dependent stages sequentially. The app-icon branch may run in parallel where specified.
 
-1. [Product definition](scope.md) — `product-researcher` derives the core scope, synthesizes all eleven capabilities using [the capability registry](ios-capabilities.md), and reconciles one final scope before handoff.
+1. [Product definition](scope.md) — `product-researcher` derives the core scope and local data boundary, synthesizes all eleven capabilities using [the capability registry](ios-capabilities.md), and reconciles one final scope before handoff.
 2. [Reference composition](style-reference.md) — `design-planner` loads the catalog, researches no more than three apps, and proposes concern-level candidates. The user may assign one app to UI, one to UX, and an optional one to illustrations. After explicit approval, synthesize one local design package.
-3. [Product contract](product-contract.md) — the same `design-planner` records screens, scenarios, acceptance, asset requirements, environment, the design revision, and the user's `DESIGN COMPOSITION APPROVED` decision.
+3. [Product contract](product-contract.md) — the same `design-planner` records screens, scenarios, local data architecture, acceptance, asset requirements, environment, the design revision, and the user's `DESIGN COMPOSITION APPROVED` decision.
 4. [Core implementation](implementation-core.md) — `implementation-owner` builds the application shell, all main-section screens, and the primary flow. The master verifies and shows the real result to the user, then continues the same owner until explicit `CORE UI APPROVED`.
-5. [Full implementation](implementation-full.md) — the same owner implements the remaining agreed scope and all eleven capability features without weakening the approved core direction.
-6. [Product assets and visual integration](assets.md) — after Full, `visual-producer` creates required product imagery from the asset plan. The approved assets and approved icon are integrated under explicit app-code ownership.
-7. [Hardening](implementation-hardening.md) — the same implementation owner completes error, denial, restriction, cancellation, unavailable, persistence, accessibility, compact-layout, and declared environment states against the final integrated UI.
+5. [Full implementation](implementation-full.md) — the same owner implements the remaining agreed scope, all eleven capability features, and the real local production data path through `LOCAL DATA READY` without weakening the approved core direction.
+6. [Product assets and visual integration](assets.md) — after Full reaches `LOCAL DATA READY`, `visual-producer` creates required product imagery from the asset plan. The approved assets and approved icon are integrated under explicit app-code ownership.
+7. [Hardening](implementation-hardening.md) — the same implementation owner completes local-storage, migration, file-consistency, error, denial, restriction, cancellation, unavailable, persistence, accessibility, compact-layout, and declared environment states against the final integrated UI.
 8. [App acceptance](acceptance.md) — `acceptance-reviewer` independently verifies the release candidate; the master rechecks key evidence and issues the decision.
 9. [Store screenshots](aso-screenshots.md) — after `APP ACCEPTED`, approve the storyboard, then create, show, and approve one frame at a time from real screens.
 10. [Finalization](finalization.md) — after the applicable approvals, the master presents the complete result, receives final user confirmation, and cleans only recorded temporary paths.
@@ -58,6 +58,7 @@ These runs are `PREVIEW`, not `PASS`, acceptance, or proof of physical-device be
 - Do not start reference research until the reconciled product definition contains all eleven complete capability rows.
 - Do not start UI implementation until the user approves the concern-level reference mapping and the synthesized design package as `DESIGN COMPOSITION APPROVED`.
 - Do not start Full implementation until the real Core build has been shown and the user states `CORE UI APPROVED`.
+- Do not complete Full or start product assets until `LOCAL DATA READY` proves that Release paths use the contracted local store without runtime mocks.
 - Do not integrate the app icon before `APP ICON APPROVED`.
 - Do not start product-asset production before Full is complete; asset requirements remain part of the earlier contract.
 - Do not start final Hardening until required product assets and the applicable approved icon are integrated.

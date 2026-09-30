@@ -8,22 +8,27 @@ Complete the real-world state matrix against the final integrated UI and make th
 
 For every applicable product and capability scenario, implement and exercise:
 
-- loading, empty, error, and offline states where data depends on a network;
+- empty and local-storage error states; network states only where a system or public resource is intentionally used;
 - invalid input, cancellation, retry, repeated actions, and duplicate prevention;
 - permission `notDetermined`, authorized, denied, restricted, and framework-specific states;
 - unavailable hardware, missing peripheral, disconnected service, unsupported device, and missing account states;
-- persistence through backgrounding and restart;
+- persistence through backgrounding, force termination, cold launch, and restart;
+- operation without a proprietary backend and with the network unavailable for the primary flow;
+- SwiftData migration from every supported prior model version;
+- missing, unreadable, orphaned, or partially written files and broken SwiftData file references;
+- cancellation or failure during writes, available-storage failure where reproducible, and cleanup of files related to deleted records;
+- Release configuration without runtime mocks, preview stores, debug endpoints, or fixture fallbacks;
 - compact supported iPhone layout and enlarged text;
 - VoiceOver labels, order, and non-color-only meaning;
 - declared locales, themes, orientations, and other supported environments;
 - Reduce Motion where significant animation exists;
 - approved product assets and the applicable app icon on real screens, including their layout, crop, contrast, accessibility, themes, locales, and compact-size behavior.
 
-Do not add network states to a local-only feature or invent framework states that do not exist. Required real-device or real-service checks that cannot run remain `UNVERIFIED`, never `N/A` or simulated evidence.
+Do not add network states to a local-only feature or invent framework states that do not exist. Required real-device or system-service checks that cannot run remain `UNVERIFIED`, never `N/A` or simulated evidence. The contracted CallKit `INTERFACE_ONLY` mode is verified as an honest interface boundary and does not require a calling service.
 
 ## Handoff
 
-Build and run focused checks. Return the revision, completed state matrix, final-asset regression evidence, commands, known defects, and every `UNVERIFIED` device or service requirement. The master verifies that Hardening is complete before freezing the release candidate.
+Build and run focused checks. Return the revision, local-data and migration evidence, completed state matrix, final-asset regression evidence, commands, known defects, and every `UNVERIFIED` device or system-service requirement. The master verifies that Hardening is complete before freezing the release candidate.
 
 ## Preview on request
 

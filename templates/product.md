@@ -16,19 +16,19 @@
 
 Keep all eleven rows in this exact order. Do not rename, merge, remove, reorder, or mark a row `N/A`.
 
-| Stable ID | Canonical capability | Product feature | Entry point and action | Useful result | System mechanism, purpose string, entitlement, and dependencies | Denied, restricted, cancelled, or unavailable behavior | Verification environment and method |
-|---|---|---|---|---|---|---|---|
-| `bluetooth` | Bluetooth | | | | | | |
-| `downloading-photos` | Downloading Photos | | | | | | |
-| `adding-photos` | Adding Photos | | | | | | |
-| `camera` | Using the Camera | | | | | | |
-| `face-id` | Face ID | | | | | | |
-| `microphone` | Microphone Access | | | | | | |
-| `speech-recognition` | Speech Recognition Access | | | | | | |
-| `contacts` | Contacts Access | | | | | | |
-| `calendar` | Calendar Access | | | | | | |
-| `location` | Location Access | | | | | | |
-| `callkit` | CallKit | | | | | | |
+| Stable ID | Canonical capability | Mode: REAL / INTERFACE_ONLY | Product feature | Entry point and action | Useful result | System mechanism, purpose string, entitlement, and dependencies | Denied, restricted, cancelled, or unavailable behavior | Verification environment and method |
+|---|---|---|---|---|---|---|---|---|
+| `bluetooth` | Bluetooth | REAL | | | | | | |
+| `downloading-photos` | Downloading Photos | REAL | | | | | | |
+| `adding-photos` | Adding Photos | REAL | | | | | | |
+| `camera` | Using the Camera | REAL | | | | | | |
+| `face-id` | Face ID | REAL | | | | | | |
+| `microphone` | Microphone Access | REAL | | | | | | |
+| `speech-recognition` | Speech Recognition Access | REAL | | | | | | |
+| `contacts` | Contacts Access | REAL | | | | | | |
+| `calendar` | Calendar Access | REAL | | | | | | |
+| `location` | Location Access | REAL | | | | | | |
+| `callkit` | CallKit | INTERFACE_ONLY | | | | | | |
 
 ## Final reconciled scope
 
@@ -37,6 +37,20 @@ Keep all eleven rows in this exact order. Do not rename, merge, remove, reorder,
 - Excluded external infrastructure:
 - Master's unresolved material question:
 - Reconciliation confirmation that the matrix and final scope agree:
+
+## Local data architecture
+
+- Local data status: PLANNED / LOCAL DATA READY / FAIL:
+- Automatic local identity and reset or reinstall semantics:
+- SwiftData model version and migration strategy:
+- `UserDefaults` preferences only:
+
+| Data | Production storage | Relationships and file references | Lifecycle and deletion | Migration | Failure behavior | Preview or ASO fixture |
+|---|---|---|---|---|---|---|
+
+- Release provider and mock-exclusion method:
+- Offline primary-flow expectation:
+- Intentional bundled sample content, or NONE:
 
 ## Reference composition
 
@@ -80,6 +94,7 @@ Keep all eleven rows in this exact order. Do not rename, merge, remove, reorder,
 - App-icon status: PENDING / APP ICON APPROVED / INTEGRATED / N/A:
 - Store screenshots: REQUIRED / N/A and reason:
 - Store storyboard and per-frame approval requirements:
+- ASO seed/import requirements for real SwiftData and file stores:
 
 ## Environment and resources
 
@@ -89,7 +104,7 @@ Keep all eleven rows in this exact order. Do not rename, merge, remove, reorder,
 - Physical iPhone, iOS version, UDID, peripherals, and signing status:
 - Language, theme, text size, and other supported configurations:
 - Reproducible data, time, and time zone:
-- External services connected and excluded:
+- System services used and proprietary backend services excluded:
 - Images, icons, fonts, availability, and terms:
 - Tools for Simulator interaction and image viewing:
 - Delegation mode, app-code owner, Simulator owner, and physical-device owner:

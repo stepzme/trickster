@@ -17,14 +17,14 @@ Read `trickster/workflow/app-icon.md`. This branch may run in parallel with impl
 
 ## Product-assets phase
 
-Begin only after the master reports Full complete. Read `trickster/workflow/assets.md` and the asset manifest. Create one verified solution for each real need using the latest suitable available image model, record provenance, and return substantial generated assets for user feedback before integration and final Hardening.
+Begin only after the master reports Full complete and `LOCAL DATA READY`. Read `trickster/workflow/assets.md` and the asset manifest. Create one verified solution for each real need using the latest suitable available image model, record provenance, and return substantial generated assets for user feedback before integration and final Hardening.
 
 ## Store-screenshot phase
 
 Begin only after `APP ACCEPTED`. Read `trickster/workflow/aso-screenshots.md`.
 
 1. Return a storyboard and wait for `STORE STORYBOARD APPROVED`.
-2. Create only the requested next frame from a real accepted-build capture.
+2. Prepare the recorded ASO seed in the real SwiftData and file stores, then create only the requested next frame from a real accepted-revision capture.
 3. Return it for master verification and user feedback.
 4. Refine that frame until the master reports `STORE FRAME <n> APPROVED`.
 5. Only then create the next frame.

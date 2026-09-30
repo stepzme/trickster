@@ -2,7 +2,7 @@
 
 ## Gate and planning boundary
 
-Asset requirements are recorded during the product contract, but production images and illustrations are created only after Full implementation is complete. At that point the real screens and integration points are known, while final Hardening can still validate the integrated result.
+Asset requirements are recorded during the product contract, but production images and illustrations are created only after Full implementation reaches `LOCAL DATA READY`. At that point the real screens, data paths, and integration points are known, while final Hardening can still validate the integrated result.
 
 The app icon and store screenshots follow their own workflows.
 
