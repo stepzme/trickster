@@ -1,6 +1,6 @@
 # Stage 8. App acceptance
 
-Acceptance applies to one frozen release candidate after Hardening, approved icon integration, and required product-asset integration. Phase previews and role self-assessments are inputs, never acceptance.
+Acceptance applies to one frozen release candidate after approved icon and product-asset integration followed by final Hardening. Phase previews and role self-assessments are inputs, never acceptance.
 
 The reviewer independently gathers evidence and prepares a draft review. The master makes the final decision after reproducing key scenarios and inspecting current images. Criteria cannot be weakened to justify the implementation.
 

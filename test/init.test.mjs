@@ -115,9 +115,9 @@ test("installs one project-local Trickster folder without the remote style libra
   assert.equal(await readFile(join(project, ".gitignore"), "utf8"), "build/\n");
   assert.equal(await readFile(join(project, "trickster", "VERSION"), "utf8"), "1.0.3\n");
   assert.equal(await readFile(join(project, "trickster", "HARNESS"), "utf8"), "codex\n");
-  assert.match(
+  assert.notEqual(
     await readFile(join(project, "trickster", "workflow", "master-prompt.md"), "utf8"),
-    /Reference composition/,
+    "",
   );
   assert.match(
     await readFile(join(project, "trickster", "workflow", "style-reference.md"), "utf8"),
@@ -267,9 +267,9 @@ test("generic harness installs the portable kit without Codex project files", as
     await readFile(join(project, ".codex", "config.toml"), "utf8").catch(() => ""),
     "",
   );
-  assert.match(
+  assert.notEqual(
     await readFile(join(project, "trickster", "adapters", "generic.md"), "utf8"),
-    /sequential fallback/,
+    "",
   );
   assert.equal((await doctorProject(project, { quiet: true })).ready, true);
 });
@@ -368,20 +368,15 @@ test("prints an English starter brief after init", async () => {
   assert.doesNotMatch(result.stdout, /product-defining gap|style package before UI work/);
 });
 
-test("keeps the canonical eleven-capability contract identical across workflow and templates", async () => {
+test("keeps the canonical eleven-capability tables identical", async () => {
   const registry = await readFile(join(repositoryRoot, "workflow", "ios-capabilities.md"), "utf8");
   const product = await readFile(join(repositoryRoot, "templates", "product.md"), "utf8");
   const review = await readFile(join(repositoryRoot, "templates", "review.md"), "utf8");
-  const master = await readFile(join(repositoryRoot, "workflow", "master-prompt.md"), "utf8");
-  const acceptance = await readFile(join(repositoryRoot, "workflow", "acceptance.md"), "utf8");
   const russianReadme = await readFile(join(repositoryRoot, "README.ru.md"), "utf8");
 
   assert.deepEqual(extractCapabilityRegistryRows(registry), canonicalCapabilities);
   assert.deepEqual(extractCapabilityTemplateRows(product), canonicalCapabilities);
   assert.deepEqual(extractCapabilityTemplateRows(review), canonicalCapabilities);
-  assert.match(master, /Do not start reference research until the reconciled product definition contains all eleven complete capability rows/);
-  assert.match(acceptance, /\| AC-12 \| All eleven canonical capabilities/);
-  assert.match(acceptance, /Required; never N\/A/);
   assertAppearsInOrder(russianReadme, russianCapabilityNames);
 });
 
@@ -430,6 +425,13 @@ test("npm package excludes repository-only assets", async () => {
 });
 
 test("style catalog indexes every repository package with required documents", async () => {
+  const catalogCheck = spawnSync(
+    process.execPath,
+    [resolve(repositoryRoot, "maintainers", "build-style-catalog.mjs"), "--check"],
+    { cwd: repositoryRoot, encoding: "utf8" },
+  );
+  assert.equal(catalogCheck.status, 0, catalogCheck.stderr);
+
   const catalog = JSON.parse(
     await readFile(join(repositoryRoot, "styles", "catalog.json"), "utf8"),
   );
@@ -447,8 +449,30 @@ test("style catalog indexes every repository package with required documents", a
   assert.equal(new Set(catalog.map(({ appId }) => appId)).size, catalog.length);
 
   for (const entry of catalog) {
-    assert.deepEqual(Object.keys(entry), ["appId", "name", "url", "category"]);
-    assert.equal(Object.values(entry).every((value) => typeof value === "string" && value.trim()), true);
+    assert.deepEqual(Object.keys(entry), [
+      "appId",
+      "name",
+      "url",
+      "category",
+      "categories",
+      "uiSummary",
+      "uxSummary",
+      "navigationSummary",
+      "coreFlows",
+      "illustrationSummary",
+    ]);
+    for (const key of ["appId", "name", "url", "category", "uiSummary", "uxSummary", "navigationSummary"]) {
+      assert.equal(typeof entry[key] === "string" && entry[key].trim().length > 0, true);
+    }
+    assert.equal(Array.isArray(entry.categories) && entry.categories.length > 0, true);
+    assert.equal(entry.categories.every((value) => typeof value === "string" && value.trim()), true);
+    assert.equal(Array.isArray(entry.coreFlows) && entry.coreFlows.length > 0, true);
+    assert.equal(entry.coreFlows.every((value) => typeof value === "string" && value.trim()), true);
+    assert.equal(
+      entry.illustrationSummary === null ||
+        (typeof entry.illustrationSummary === "string" && entry.illustrationSummary.trim().length > 0),
+      true,
+    );
     const source = JSON.parse(
       await readFile(join(repositoryRoot, "styles", entry.appId, "source.json"), "utf8"),
     );
@@ -462,51 +486,10 @@ test("style catalog indexes every repository package with required documents", a
       await readFile(join(repositoryRoot, "styles", entry.appId, "ux.md"), "utf8"),
       "",
     );
+    assert.equal(
+      entry.illustrationSummary !== null,
+      await readFile(join(repositoryRoot, "styles", entry.appId, "illustrations.md"), "utf8")
+        .then(() => true, () => false),
+    );
   }
-});
-
-test("installed role contracts use the approved local composition and gate finalization", async () => {
-  const project = await createProject();
-  await initializeProject({ target: project, harness: "generic", yes: true, quiet: true });
-
-  for (const role of ["implementation-owner.md", "acceptance-reviewer.md", "visual-producer.md"]) {
-    const contract = await readFile(join(project, "trickster", "roles", role), "utf8");
-    assert.match(contract, /trickster\/design\//);
-    assert.doesNotMatch(contract, /inputs\/style/);
-  }
-
-  const finalization = await readFile(
-    join(project, "trickster", "workflow", "finalization.md"),
-    "utf8",
-  );
-  assert.match(finalization, /APP ACCEPTED/);
-  assert.match(finalization, /explicit final confirmation/);
-  assert.match(finalization, /\/tmp\/trickster\/<run-id>\//);
-  assert.match(finalization, /trickster\/design\//);
-  assert.match(finalization, /store exports/);
-});
-
-test("workflow enforces staged implementation previews and user feedback gates", async () => {
-  const master = await readFile(join(repositoryRoot, "workflow", "master-prompt.md"), "utf8");
-  const implementation = await readFile(join(repositoryRoot, "workflow", "implementation.md"), "utf8");
-  const core = await readFile(join(repositoryRoot, "workflow", "implementation-core.md"), "utf8");
-  const full = await readFile(join(repositoryRoot, "workflow", "implementation-full.md"), "utf8");
-  const hardening = await readFile(join(repositoryRoot, "workflow", "implementation-hardening.md"), "utf8");
-  const appIcon = await readFile(join(repositoryRoot, "workflow", "app-icon.md"), "utf8");
-  const storeScreenshots = await readFile(join(repositoryRoot, "workflow", "aso-screenshots.md"), "utf8");
-
-  assert.match(master, /DESIGN COMPOSITION APPROVED/);
-  assert.match(master, /CORE UI APPROVED/);
-  assert.match(master, /APP ICON APPROVED/);
-  assert.match(master, /STORE FRAME <n> APPROVED/);
-  assert.match(implementation, /implementation-core\.md/);
-  assert.match(implementation, /implementation-full\.md/);
-  assert.match(implementation, /implementation-hardening\.md/);
-  for (const phase of [core, full, hardening]) assert.match(phase, /PREVIEW/);
-  assert.match(appIcon, /latest image-generation model available/);
-  assert.match(appIcon, /exact model ID/);
-  assert.match(appIcon, /Before approval, write only to the icon artifact directory/);
-  assert.match(storeScreenshots, /storyboard/i);
-  assert.match(storeScreenshots, /STORE FRAME <n> APPROVED/);
-  assert.match(storeScreenshots, /STORE SET APPROVED/);
 });

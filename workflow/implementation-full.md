@@ -15,7 +15,7 @@ Complete the agreed product breadth without reopening the approved core directio
 3. Implement all eleven mandatory capability features as contextual product behavior.
 4. For each capability, preserve the contracted entry action, useful result, least-privileged system mechanism, purpose string or entitlement, real dependency, and primary-path fallback.
 5. Do not substitute permission dashboards, fake peripherals, fake calls, or fabricated external results.
-6. Integrate only already available non-production placeholders needed for layout; product-asset production occurs after Hardening.
+6. Use only non-production placeholders needed to establish layout; product-asset production and integration follow Full and precede final Hardening.
 7. Build and run focused checks before handoff.
 
 This phase implements successful and ordinary product paths. It must not hide known denial or unavailable behavior, but the exhaustive state matrix belongs to Hardening.

@@ -17,7 +17,7 @@ Read `trickster/workflow/app-icon.md`. This branch may run in parallel with impl
 
 ## Product-assets phase
 
-Begin only after the master reports Hardening complete. Read `trickster/workflow/assets.md` and the asset manifest. Create one verified solution for each real need using the latest suitable available image model, record provenance, and return substantial generated assets for user feedback before integration.
+Begin only after the master reports Full complete. Read `trickster/workflow/assets.md` and the asset manifest. Create one verified solution for each real need using the latest suitable available image model, record provenance, and return substantial generated assets for user feedback before integration and final Hardening.
 
 ## Store-screenshot phase
 

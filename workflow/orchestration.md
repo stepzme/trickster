@@ -22,8 +22,8 @@ If the harness does not support these operations, the master performs the same r
 |---|---|---|---|
 | `product-researcher` | `product_researcher` | 1 | Core scope, mandatory capability scope, and one reconciled product definition |
 | `design-planner` | `design_planner` | 2–3 | Up to three researched apps, approved concern mapping, synthesized design package, product contract, and asset requirements |
-| `implementation-owner` | `implementation_owner` | 4–7 and fixes | Core, Full, Hardening, phase previews, app code, capability integrations, and approved visual integration |
-| `visual-producer` | `visual_producer` | parallel icon branch, 7, 9 | User-approved icon, post-implementation assets, and individually approved store frames |
+| `implementation-owner` | `implementation_owner` | 4–7 and fixes | Core, Full, approved visual integration, Hardening, phase previews, app code, and capability integrations |
+| `visual-producer` | `visual_producer` | parallel icon branch, 6, 9 | User-approved icon, post-Full assets, and individually approved store frames |
 | `acceptance-reviewer` | `acceptance_reviewer` | 8 | Independent app and capability evidence, defects, and a draft review |
 
 The master handles user questions and confirmations, plans the queue, assigns ownership of files, Simulator, and physical devices, verifies handoffs, integrates the result, records approval revisions, and makes final decisions.
@@ -64,15 +64,16 @@ Do not communicate with the user or delegate work further.
 5. After the user's mapping, `CONTINUE(design_planner)` to synthesize `trickster/design/`, record provenance and conflict resolution, finish `product.md`, and prepare asset requirements.
 6. The master verifies the package, shows the composition, and records `DESIGN COMPOSITION APPROVED` with its revision.
 7. `SPAWN(implementation_owner)` for Core. The master verifies the build and screenshots, presents them, and uses `CONTINUE` for feedback until `CORE UI APPROVED`.
-8. After design approval, the app-icon branch may `SPAWN(visual_producer)` in parallel. Each generated image is shown by the master and revised through `CONTINUE` until `APP ICON APPROVED`.
-9. `CONTINUE(implementation_owner)` for Full, then again for Hardening. On a user-requested preview in any phase, transfer Simulator ownership, show that revision, record `PREVIEW`, and return feedback to the same owner.
-10. After Hardening, `CONTINUE(visual_producer)` for required product assets. Show and revise substantial generated assets before integration.
-11. Integrate only approved assets and icon under one explicit app-code owner, then freeze the release candidate.
-12. Transfer Simulator and, when available, physical-device ownership to `acceptance_reviewer`. The reviewer does not fix code.
-13. Return defects through `CONTINUE(implementation_owner)` and repeat affected checks without changing criteria.
-14. After `APP ACCEPTED`, `CONTINUE(visual_producer)` for a storyboard. After storyboard approval, create one store frame, return it, show it, revise it, and record `STORE FRAME <n> APPROVED` before requesting the next frame.
-15. After `STORE SET APPROVED`, present the complete result and obtain final confirmation.
-16. Clean recorded temporary paths and deliver.
+8. After design approval, the app-icon branch may `SPAWN(visual_producer)` in parallel with Core and Full. Each generated image is shown by the master and revised through `CONTINUE` until `APP ICON APPROVED`.
+9. `CONTINUE(implementation_owner)` for Full. On a user-requested preview, transfer Simulator ownership, show that revision, record `PREVIEW`, and return feedback to the same owner.
+10. After Full, `CONTINUE(visual_producer)` for required product assets. Show and revise substantial generated assets before integration.
+11. Integrate only approved assets and the applicable approved icon under one explicit app-code owner.
+12. `CONTINUE(implementation_owner)` for Hardening against the integrated UI. On a requested preview, show that exact revision as `PREVIEW`. After final-asset regressions and the complete state matrix pass, freeze the release candidate.
+13. Transfer Simulator and, when available, physical-device ownership to `acceptance_reviewer`. The reviewer does not fix code.
+14. Return defects through `CONTINUE(implementation_owner)` and repeat affected checks without changing criteria.
+15. After `APP ACCEPTED`, `CONTINUE(visual_producer)` for a storyboard. After storyboard approval, create one store frame, return it, show it, revise it, and record `STORE FRAME <n> APPROVED` before requesting the next frame.
+16. After `STORE SET APPROVED`, present the complete result and obtain final confirmation.
+17. Clean recorded temporary paths and deliver.
 
 ## Feedback protocol
 
@@ -94,4 +95,4 @@ Run in parallel only with independent inputs and non-overlapping writes. The imp
 
 Do not allow two roles to write simultaneously to the Xcode project, asset catalog, `product.md`, `review.md`, or `trickster/design/`. Simulator and each physical device always have one owner. A preview pauses conflicting build work.
 
-The product-definition, design-composition, Core-approval, Full, Hardening, integration, and acceptance chain is sequential. The icon research/generation branch is the intentional parallel exception.
+The product-definition, design-composition, Core-approval, Full, visual integration, Hardening, and acceptance chain is sequential. The icon research/generation branch is the intentional parallel exception.

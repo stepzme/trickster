@@ -4,9 +4,11 @@ Implementation is one continuous responsibility performed by the same `implement
 
 1. [Core](implementation-core.md) — main-section screens, application shell, and the primary flow, followed by user feedback until `CORE UI APPROVED`.
 2. [Full](implementation-full.md) — the rest of the agreed scope and all eleven mandatory capability features.
-3. [Hardening](implementation-hardening.md) — errors, denial, restriction, cancellation, unavailable dependencies, persistence, accessibility, compact layout, and declared environment states.
+3. [Hardening](implementation-hardening.md) — after approved visual integration, errors, denial, restriction, cancellation, unavailable dependencies, persistence, accessibility, compact layout, final-asset regressions, and declared environment states.
 
 Do not collapse these phases into one large implementation assignment. Use `CONTINUE` with the same owner so earlier decisions, feedback, and defects remain visible.
+
+After Full, execute `assets.md`, integrate approved product assets and the applicable approved icon, and only then continue the implementation owner into final Hardening.
 
 ## Shared rules
 

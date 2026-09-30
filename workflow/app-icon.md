@@ -4,7 +4,7 @@
 
 This branch is required for a new app. For an existing app, use it when the user requests a new icon or the approved design revision changes the brand; otherwise record `N/A` with a reason.
 
-Start after `DESIGN COMPOSITION APPROVED`. Research and generation may run in parallel with Core, Full, and Hardening because the visual producer writes only to `trickster/artifacts/<run-id>/app-icon/` before approval.
+Start after `DESIGN COMPOSITION APPROVED`. Research and generation may run in parallel with Core and Full because the visual producer writes only to `trickster/artifacts/<run-id>/app-icon/` before approval. Integrate the applicable approved icon before final Hardening.
 
 ## Logoinspo research
 

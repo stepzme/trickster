@@ -28,10 +28,10 @@ https://raw.githubusercontent.com/stepzme/trickster/main/styles/<appId>/illustra
 ## Research phase
 
 1. Verify that the reconciled product definition and all eleven capability rows are complete.
-2. Load the catalog once.
-3. Select up to three apps by metadata using the product category, task, density, interaction needs, imagery, and platform fit.
+2. Load the catalog once. Treat its summaries as selection metadata, not as a substitute for the shortlisted source documents.
+3. Select up to three apps using normalized `categories`, `uiSummary`, `uxSummary`, `navigationSummary`, `coreFlows`, and `illustrationSummary`. Match the product category and tasks first, then the concern-specific UI, UX, navigation, density, imagery, and platform needs.
 4. Download documents only for those apps to `/tmp/trickster/<run-id>/styles/<appId>/`.
-5. Verify app IDs, URLs, non-empty `ui.md` and `ux.md`, and optional illustration evidence.
+5. Verify app IDs, URLs, non-empty `ui.md` and `ux.md`, optional illustration evidence, and consistency with the catalog summaries.
 6. Compare each app separately for:
    - UI: composition, hierarchy, typography, color, controls, density;
    - UX: navigation, task flow, feedback, state transitions, interaction character;

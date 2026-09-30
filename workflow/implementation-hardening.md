@@ -1,8 +1,8 @@
-# Stage 6. Hardening
+# Stage 7. Hardening
 
 ## Goal
 
-Complete the real-world state matrix and make the approved product resilient, accessible, and verifiable before visual assets are finalized.
+Complete the real-world state matrix against the final integrated UI and make the approved product resilient, accessible, and verifiable before acceptance.
 
 ## Required work
 
@@ -16,13 +16,14 @@ For every applicable product and capability scenario, implement and exercise:
 - compact supported iPhone layout and enlarged text;
 - VoiceOver labels, order, and non-color-only meaning;
 - declared locales, themes, orientations, and other supported environments;
-- Reduce Motion where significant animation exists.
+- Reduce Motion where significant animation exists;
+- approved product assets and the applicable app icon on real screens, including their layout, crop, contrast, accessibility, themes, locales, and compact-size behavior.
 
 Do not add network states to a local-only feature or invent framework states that do not exist. Required real-device or real-service checks that cannot run remain `UNVERIFIED`, never `N/A` or simulated evidence.
 
 ## Handoff
 
-Build and run focused checks. Return the revision, completed state matrix, commands, evidence, known defects, and every `UNVERIFIED` device or service requirement. The master verifies that Hardening is complete before starting product-asset production and release-candidate integration.
+Build and run focused checks. Return the revision, completed state matrix, final-asset regression evidence, commands, known defects, and every `UNVERIFIED` device or service requirement. The master verifies that Hardening is complete before freezing the release candidate.
 
 ## Preview on request
 

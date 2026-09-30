@@ -8,7 +8,7 @@
 
 Turn an app idea into a native iOS product shaped by a curated design library — defined together with a fixed set of iOS capabilities, designed, built through feedback-gated phases, verified, and completed with an original app icon and store screenshots.
 
-Trickster orchestrates specialized AI roles inside your repository. It reads a small GitHub catalog, downloads documents for up to three relevant apps, and lets you choose separate UI, UX, and optional illustration references. It synthesizes them into one coherent local design direction and independently checks the implemented result.
+Trickster orchestrates specialized AI roles inside your repository. It reads an enriched GitHub catalog with normalized categories plus UI, UX, navigation, core-flow, and illustration summaries, downloads documents for up to three relevant apps, and lets you choose separate UI, UX, and optional illustration references. It synthesizes them into one coherent local design direction and independently checks the implemented result.
 
 ## What you get
 
@@ -29,10 +29,11 @@ Trickster orchestrates specialized AI roles inside your repository. It reads a s
 2. **Compose references.** Compare up to three catalog apps and choose one UI source, one UX source, and optionally one illustration source. Synthesize them into one coherent direction and approve it.
 3. **Create the contract.** Define screens, states, phase boundaries, asset requirements, capability scenarios, and acceptance checks.
 4. **Validate the Core.** Implement the main sections, show the current build in Simulator on request, and iterate with the user until `CORE UI APPROVED`.
-5. **Complete and harden.** Implement the remaining scope, then finish all failure, denial, unavailable, accessibility, and persistence states. Simulator previews remain available on request.
-6. **Produce visuals.** Run app-icon creation in parallel with implementation, approve it before integration, and produce required product assets after Hardening.
-7. **Verify independently.** Build, install, run, interact with, and inspect the final app in Simulator and on a physical iPhone where required. Missing evidence remains `UNVERIFIED`.
-8. **Finish the store package.** Approve a storyboard, then generate and review store screenshots one frame at a time from the accepted build.
+5. **Complete Full implementation.** Implement the remaining scope and all mandatory capability flows. Simulator previews remain available on request.
+6. **Produce and integrate visuals.** Run app-icon creation in parallel, then produce product assets after Full and integrate only approved visuals.
+7. **Harden the final UI.** Finish failure, denial, unavailable, accessibility, persistence, compact-layout, locale, and final-asset regression states.
+8. **Verify independently.** Build, install, run, interact with, and inspect the final app in Simulator and on a physical iPhone where required. Missing evidence remains `UNVERIFIED`.
+9. **Finish the store package.** Approve a storyboard, then generate and review store screenshots one frame at a time from the accepted build.
 
 Trickster uses multiple focused roles when the active agent harness supports delegation and follows the same contracts sequentially when it does not.
 
@@ -122,7 +123,7 @@ Re-running `init` updates managed workflow files while preserving the selected d
 
 ## Design sources
 
-- **The GitHub style catalog** lists the available reference apps. Trickster downloads documents only for the shortlist, then stores approved `provenance.json`, `composition.md`, `ui.md`, `ux.md`, and optional `illustrations.md` in `trickster/design/`.
+- **The enriched GitHub style catalog** lists the available reference apps with normalized categories and summaries of their UI, UX, navigation, core flows, and illustration language. Trickster downloads documents only for the shortlist, then stores approved `provenance.json`, `composition.md`, `ui.md`, `ux.md`, and optional `illustrations.md` in `trickster/design/`.
 - **Logoinspo App Icons** supplies references for the original app-icon direction.
 
 The composition is not a collection of interchangeable skins. Each concern has one source owner, and the result must read as one product. Native controls may provide behavior, accessibility, focus, and keyboard integration, while their appearance follows the approved `ui.md`.
@@ -136,8 +137,8 @@ The composition is not a collection of interchangeable skins. Each concern has o
 | 3. Product contract | design-planner | Screens, states, phase boundaries, asset requirements, and verification plan |
 | 4. Core implementation | implementation-owner + user gate | Main sections iterated to `CORE UI APPROVED` |
 | 5. Full implementation | implementation-owner | Remaining agreed scope and capability flows |
-| 6. Hardening | implementation-owner | Failure, denial, unavailable, accessibility, and persistence states |
-| 7. Product assets | visual-producer + implementation-owner | Approved assets generated after Hardening and integrated |
+| 6. Product assets | visual-producer + implementation-owner | Approved assets generated after Full and integrated with the approved icon |
+| 7. Hardening | implementation-owner | Final-UI failure, denial, unavailable, accessibility, persistence, and asset-regression states |
 | Parallel. App icon | visual-producer + user gate | Latest-model concept approved before code integration |
 | 8. Acceptance | acceptance-reviewer + master | Independently verified final build and eleven-row capability matrix |
 | 9. Store screenshots | visual-producer + user gates | Approved storyboard and individually approved real-build frames |

@@ -6,7 +6,7 @@
 
 将应用构想转化为基于精选设计库的原生 iOS 应用：同时确定产品范围与固定 iOS capability 集合，通过带反馈门的阶段完成实现，独立验证，并交付原创 app icon 和商店截图。
 
-Trickster 在你的代码仓库中协调多个专业 AI 角色。它会读取一个精简的 GitHub 目录，只下载最多三个相关应用的文档，并允许分别选择 UI、UX 与可选插画参考。随后这些来源会被综合为一个统一的本地设计方向，并对实现结果进行独立验收。
+Trickster 在你的代码仓库中协调多个专业 AI 角色。它会读取包含规范化分类以及 UI、UX、导航、核心流程和插画摘要的丰富 GitHub 目录，只下载最多三个相关应用的文档，并允许分别选择 UI、UX 与可选插画参考。随后这些来源会被综合为一个统一的本地设计方向，并对实现结果进行独立验收。
 
 ## 你将获得
 
@@ -27,7 +27,9 @@ Trickster 在你的代码仓库中协调多个专业 AI 角色。它会读取一
 → GitHub 风格候选
 → UI / UX / 插画组合
 → Core 反馈循环
-→ Full 与 Hardening
+→ Full
+→ 产品资源与 icon 集成
+→ 最终 UI Hardening
 → Simulator 验收
 → 商店截图
 ```
@@ -36,10 +38,11 @@ Trickster 在你的代码仓库中协调多个专业 AI 角色。它会读取一
 2. **组合参考。** 比较最多三个应用，分别选择一个 UI 来源、一个 UX 来源和可选的插画来源，再综合并确认一个统一方向。
 3. **建立产品合同。** 固定页面、状态、阶段边界、资源需求、capability 流程和验收检查。
 4. **验证 Core。** 实现主要分区；用户请求时在 Simulator 中展示当前版本的 `PREVIEW`；迭代至 `CORE UI APPROVED`。
-5. **完成与加固。** 实现剩余范围，再补齐错误、拒绝、不可用、无障碍与持久化状态。每个阶段都可按用户请求展示 preview。
-6. **制作视觉资源。** App icon 与实现并行，使用最新可用图像模型生成并在批准后集成；产品资源在 Hardening 后制作。
-7. **独立验证。** 在 Simulator 中以及需要时在实体 iPhone 上构建、安装、运行、操作并检查最终应用。缺失的证据必须标记为 `UNVERIFIED`。
-8. **完成商店截图。** 先批准 storyboard，再从已验收构建中逐张生成和确认。
+5. **完成 Full。** 实现剩余范围与所有强制 capability 流程。
+6. **制作并集成视觉资源。** App icon 与实现并行；产品资源在 Full 后制作，并且只集成已批准的 icon 和 assets。
+7. **加固最终 UI。** 验证错误、拒绝、不可用、无障碍、持久化、紧凑尺寸、语言环境以及最终资源回归。
+8. **独立验证。** 在 Simulator 中以及需要时在实体 iPhone 上构建、安装、运行、操作并检查最终应用。缺失的证据必须标记为 `UNVERIFIED`。
+9. **完成商店截图。** 先批准 storyboard，再从已验收构建中逐张生成和确认。
 
 当当前 agent harness 支持委派时，Trickster 会使用多个聚焦角色；不支持时，则按相同合同顺序执行。
 
@@ -137,8 +140,8 @@ trickster/
 | 3. 产品合同 | design-planner | 页面、状态、阶段、资源需求和验证计划 |
 | 4. Core | implementation-owner + 用户确认 | 主要分区直至 `CORE UI APPROVED` |
 | 5. Full | implementation-owner | 剩余范围与 capability 流程 |
-| 6. Hardening | implementation-owner | 错误、拒绝、不可用、无障碍与持久化状态 |
-| 7. 产品资源 | visual-producer + implementation-owner | Hardening 后批准并集成的资源 |
+| 6. 产品资源 | visual-producer + implementation-owner | Full 后批准并与 icon 一起集成的资源 |
+| 7. Hardening | implementation-owner | 最终状态、无障碍与集成资源回归 |
 | 并行. App icon | visual-producer + 用户确认 | 集成前批准的原创方案 |
 | 8. 验收 | acceptance-reviewer + master | 独立验证的最终构建和 capability 矩阵 |
 | 9. 商店截图 | visual-producer + 用户确认 | 已批准 storyboard 与逐张确认的真实构建截图 |

@@ -6,7 +6,7 @@
 
 Convierte una idea en una aplicación nativa para iOS basada en una biblioteca de diseño seleccionada: concilia el alcance con un conjunto fijo de capacidades de iOS, implementa mediante fases con feedback, verifica y completa el resultado con un icono original y capturas para la tienda.
 
-Trickster coordina roles de IA especializados dentro del repositorio. Lee un catálogo pequeño de GitHub, descarga documentos para un máximo de tres aplicaciones relevantes y permite elegir referencias separadas para UI, UX e ilustraciones opcionales. Después las sintetiza en una única dirección coherente y comprueba la implementación de forma independiente.
+Trickster coordina roles de IA especializados dentro del repositorio. Lee un catálogo enriquecido de GitHub con categorías normalizadas y resúmenes de UI, UX, navegación, flujos e ilustraciones, descarga documentos para un máximo de tres aplicaciones relevantes y permite elegir referencias separadas por aspecto. Después las sintetiza en una única dirección coherente y comprueba la implementación de forma independiente.
 
 ## Qué obtienes
 
@@ -27,7 +27,9 @@ Idea de la aplicación
 → selección desde el catálogo de GitHub
 → composición de UI / UX / ilustraciones
 → Core con feedback
-→ Full y Hardening
+→ Full
+→ recursos e integración del icono
+→ Hardening de la UI final
 → aceptación en Simulator
 → capturas para la tienda
 ```
@@ -36,10 +38,11 @@ Idea de la aplicación
 2. **Componer referencias.** Se comparan hasta tres aplicaciones y se elige una fuente de UI, una de UX y, opcionalmente, una de ilustraciones; el resultado se sintetiza y aprueba como una única dirección.
 3. **Crear el contrato.** Se definen pantallas, estados, límites de fase, recursos, escenarios y comprobaciones de aceptación.
 4. **Validar Core.** Se implementan las secciones principales, se muestra un `PREVIEW` en Simulator cuando el usuario lo pide y se itera hasta `CORE UI APPROVED`.
-5. **Completar y robustecer.** Se implementa el resto del alcance y después todos los estados de error, rechazo, indisponibilidad, accesibilidad y persistencia.
-6. **Producir recursos visuales.** El icono se crea en paralelo con el modelo de imagen más reciente disponible y solo se integra tras la aprobación; los recursos de producto se producen después de Hardening.
-7. **Verificar de forma independiente.** La aplicación final se compila, instala, ejecuta e inspecciona en Simulator y, cuando sea necesario, en un iPhone físico. La evidencia no disponible permanece `UNVERIFIED`.
-8. **Completar las capturas.** Se aprueba un storyboard y luego cada captura de la compilación aceptada se genera y revisa por separado.
+5. **Completar Full.** Se implementan el resto del alcance y todos los flujos obligatorios.
+6. **Producir e integrar recursos visuales.** El icono se crea en paralelo; después de Full se producen los recursos y solo se integran los elementos aprobados.
+7. **Robustecer la UI final.** Se verifican errores, rechazo, indisponibilidad, accesibilidad, persistencia, tamaños compactos, locales y regresiones de los recursos finales.
+8. **Verificar de forma independiente.** La aplicación final se compila, instala, ejecuta e inspecciona en Simulator y, cuando sea necesario, en un iPhone físico. La evidencia no disponible permanece `UNVERIFIED`.
+9. **Completar las capturas.** Se aprueba un storyboard y luego cada captura de la compilación aceptada se genera y revisa por separado.
 
 Trickster utiliza varios roles especializados cuando el agent harness activo permite delegación y ejecuta los mismos contratos de forma secuencial cuando no la permite.
 
@@ -137,8 +140,8 @@ La composición no es un conjunto de skins intercambiables: cada aspecto tiene u
 | 3. Contrato del producto | design-planner | Pantallas, estados, fases, recursos y plan de verificación |
 | 4. Core | implementation-owner + aprobación del usuario | Secciones principales hasta `CORE UI APPROVED` |
 | 5. Full | implementation-owner | Resto del alcance y flujos de capacidades |
-| 6. Hardening | implementation-owner | Errores, rechazos, indisponibilidad, accesibilidad y persistencia |
-| 7. Recursos del producto | visual-producer + implementation-owner | Recursos aprobados después de Hardening e integrados |
+| 6. Recursos del producto | visual-producer + implementation-owner | Recursos aprobados después de Full e integrados con el icono aprobado |
+| 7. Hardening | implementation-owner | Estados finales, accesibilidad y regresiones de recursos integrados |
 | En paralelo. Icono | visual-producer + aprobación del usuario | Concepto aprobado antes de integrarlo |
 | 8. Aceptación | acceptance-reviewer + master | Compilación y matriz de capacidades verificadas de forma independiente |
 | 9. Capturas para la tienda | visual-producer + aprobaciones | Storyboard y cuadros reales aprobados individualmente |

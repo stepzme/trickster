@@ -1,8 +1,8 @@
-# Stage 7. Product assets and visual integration
+# Stage 6. Product assets and visual integration
 
 ## Gate and planning boundary
 
-Asset requirements are recorded during the product contract, but production images and illustrations are created only after implementation Hardening is complete. This keeps dimensions and integration points predictable without committing to visuals before the real interface stabilizes.
+Asset requirements are recorded during the product contract, but production images and illustrations are created only after Full implementation is complete. At that point the real screens and integration points are known, while final Hardening can still validate the integrated result.
 
 The app icon and store screenshots follow their own workflows.
 
@@ -25,7 +25,7 @@ If generation or image viewing is unavailable, keep the asset `UNVERIFIED`; do n
 
 The visual producer writes source and derivative artifacts only to the paths granted by the master. The implementation owner integrates approved product assets and the approved app icon, unless the master explicitly transfers an exact non-overlapping asset-catalog path.
 
-After integration, build the app and verify every asset on the real screen, target sizes, themes, and locales where applicable. Record the final app revision and design revision.
+After integration, build the app and verify every asset on the real screen. Record the app and design revisions, then hand the integrated build to Hardening. Hardening must exercise target sizes, enlarged text, accessibility, themes, locales, and affected error or empty states with the final assets in place.
 
 ## Output
 
@@ -33,4 +33,4 @@ After integration, build the app and verify every asset on the real screen, targ
 - source and derivative files with provenance;
 - user approval records for substantial generated assets;
 - screenshots of actual in-app use;
-- the release-candidate revision ready for independent acceptance.
+- the integrated revision ready for final Hardening.

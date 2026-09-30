@@ -8,8 +8,8 @@ Before starting, read [role orchestration](orchestration.md), `trickster/adapter
 
 - `product-researcher` — one reconciled product definition containing the core scope and mandatory capability scope;
 - `design-planner` — a shortlist of up to three apps, the user-approved UI/UX/illustration mapping, one synthesized design package, and the product contract;
-- `implementation-owner` — sole owner of app code through Core, Full, Hardening, previews, fixes, and approved visual integration;
-- `visual-producer` — app-icon work in a parallel branch, post-implementation product assets, and store screenshots one frame at a time;
+- `implementation-owner` — sole owner of app code through Core, Full, approved visual integration, Hardening, previews, and fixes;
+- `visual-producer` — app-icon work in a parallel branch, post-Full product assets, and store screenshots one frame at a time;
 - `acceptance-reviewer` — independent verification without code fixes.
 
 Orchestrate agents through the adapter's universal operations. Pass exact inputs and write paths, wait for completion, and verify every handoff. Do not ask the user to relay messages. Continue the existing agent when work belongs to the same role. An agent's self-assessment is never acceptance.
@@ -25,8 +25,8 @@ Execute dependent stages sequentially. The app-icon branch may run in parallel w
 3. [Product contract](product-contract.md) — the same `design-planner` records screens, scenarios, acceptance, asset requirements, environment, the design revision, and the user's `DESIGN COMPOSITION APPROVED` decision.
 4. [Core implementation](implementation-core.md) — `implementation-owner` builds the application shell, all main-section screens, and the primary flow. The master verifies and shows the real result to the user, then continues the same owner until explicit `CORE UI APPROVED`.
 5. [Full implementation](implementation-full.md) — the same owner implements the remaining agreed scope and all eleven capability features without weakening the approved core direction.
-6. [Hardening](implementation-hardening.md) — the same owner completes error, denial, restriction, cancellation, unavailable, persistence, accessibility, compact-layout, and declared environment states.
-7. [Product assets and visual integration](assets.md) — after Hardening, `visual-producer` creates required product imagery from the asset plan. The approved assets and approved icon are then integrated under explicit app-code ownership.
+6. [Product assets and visual integration](assets.md) — after Full, `visual-producer` creates required product imagery from the asset plan. The approved assets and approved icon are integrated under explicit app-code ownership.
+7. [Hardening](implementation-hardening.md) — the same implementation owner completes error, denial, restriction, cancellation, unavailable, persistence, accessibility, compact-layout, and declared environment states against the final integrated UI.
 8. [App acceptance](acceptance.md) — `acceptance-reviewer` independently verifies the release candidate; the master rechecks key evidence and issues the decision.
 9. [Store screenshots](aso-screenshots.md) — after `APP ACCEPTED`, approve the storyboard, then create, show, and approve one frame at a time from real screens.
 10. [Finalization](finalization.md) — after the applicable approvals, the master presents the complete result, receives final user confirmation, and cleans only recorded temporary paths.
@@ -36,7 +36,7 @@ Cross-cutting requirements are in [UX](ux.md), [iOS](ios.md), and [implementatio
 
 ## Parallel app-icon branch
 
-After `DESIGN COMPOSITION APPROVED`, start or continue `visual-producer` for [app-icon work](app-icon.md) while implementation proceeds. The producer writes only to `trickster/artifacts/<run-id>/app-icon/` until approval. It must use the latest image-generation model available in the active environment and record the exact model ID, date, prompt, and provenance.
+After `DESIGN COMPOSITION APPROVED`, start or continue `visual-producer` for [app-icon work](app-icon.md) while Core and Full proceed. The producer writes only to `trickster/artifacts/<run-id>/app-icon/` until approval. It must use the latest image-generation model available in the active environment and record the exact model ID, date, prompt, and provenance.
 
 The master shows the generated image to the user. Continue the same concept until explicit `APP ICON APPROVED`; do not integrate an unapproved image. Integration is performed by `implementation-owner` or after an explicit transfer of the exact asset-catalog path. If the approved design composition changes, invalidate icon approval and re-evaluate the same concept against the new design revision.
 
@@ -59,7 +59,8 @@ These runs are `PREVIEW`, not `PASS`, acceptance, or proof of physical-device be
 - Do not start UI implementation until the user approves the concern-level reference mapping and the synthesized design package as `DESIGN COMPOSITION APPROVED`.
 - Do not start Full implementation until the real Core build has been shown and the user states `CORE UI APPROVED`.
 - Do not integrate the app icon before `APP ICON APPROVED`.
-- Do not start product-asset production before Hardening is complete; asset requirements remain part of the earlier contract.
+- Do not start product-asset production before Full is complete; asset requirements remain part of the earlier contract.
+- Do not start final Hardening until required product assets and the applicable approved icon are integrated.
 - Do not declare the app accepted from a preview, one build, or screenshots alone.
 - Do not start store screenshots before `APP ACCEPTED`.
 - Do not generate the next store frame until the current frame is explicitly recorded as `STORE FRAME <n> APPROVED`.

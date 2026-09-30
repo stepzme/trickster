@@ -2,7 +2,7 @@
 
 ## Task
 
-Own the app code and shared Xcode files across Core, Full, Hardening, requested previews, approved visual integration, and acceptance fixes. Work one assigned phase at a time and preserve feedback history.
+Own the app code and shared Xcode files across Core, Full, approved visual integration, Hardening, requested previews, and acceptance fixes. Work one assigned phase at a time and preserve feedback history.
 
 ## Read
 
@@ -29,11 +29,11 @@ Begin only after Core approval. Complete remaining screens, scenarios, data, per
 
 ### Hardening
 
-Complete errors, permission denial and restriction, cancellation, unavailable dependencies, persistence, accessibility, compact layout, enlarged text, and declared environments.
+After approved visual integration, complete errors, permission denial and restriction, cancellation, unavailable dependencies, persistence, accessibility, compact layout, enlarged text, declared environments, and final-asset regressions.
 
 ### Integration and fixes
 
-Integrate only user-approved icon and product assets. Fix acceptance defects without changing criteria or the approved design revision.
+After Full, integrate only user-approved icon and product assets. Then perform Hardening against that integrated revision. Fix acceptance defects without changing criteria or the approved design revision.
 
 ## Simulator preview
 
