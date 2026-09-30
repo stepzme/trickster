@@ -7,7 +7,7 @@ An adapter connects the harness-neutral Trickster process to a specific agent ha
 The adapter must describe:
 
 - how the master loads `trickster/AGENTS.md` and the workflow;
-- how the master accesses the GitHub catalog before selection and `trickster/design/` after selection;
+- how the master accesses the GitHub catalog during reference research and `trickster/design/` after the approved concern-level composition is saved;
 - how `SPAWN`, `WAIT`, `CONTINUE`, `MESSAGE`, and `STOP` are performed;
 - how role context is isolated and write paths are restricted;
 - how an agent returns a handoff;
@@ -19,7 +19,8 @@ The adapter must describe:
 - The source of each role contract is `trickster/roles/<role>.md`.
 - Roles exchange information through `trickster/artifacts/<run-id>/` and a verifiable handoff.
 - The user communicates only with the master.
-- An individual role has no authority to change scope, the confirmed style package, or acceptance criteria.
+- An individual role has no authority to change the reconciled scope, the approved design composition, feedback approvals, or acceptance criteria.
+- Product-definition, design-composition, Core UI, app-icon, and per-frame store-screenshot confirmations remain with the master and the user.
 - If the harness cannot spawn agents, the master executes the same role contracts sequentially.
 - A missing capability is explicitly marked `UNVERIFIED`; the adapter does not pretend it is available.
 

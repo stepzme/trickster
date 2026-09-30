@@ -117,7 +117,7 @@ test("installs one project-local Trickster folder without the remote style libra
   assert.equal(await readFile(join(project, "trickster", "HARNESS"), "utf8"), "codex\n");
   assert.match(
     await readFile(join(project, "trickster", "workflow", "master-prompt.md"), "utf8"),
-    /Style-package selection/,
+    /Reference composition/,
   );
   assert.match(
     await readFile(join(project, "trickster", "workflow", "style-reference.md"), "utf8"),
@@ -144,11 +144,13 @@ test("installs one project-local Trickster folder without the remote style libra
   );
 });
 
-test("re-running init updates managed files and preserves the selected style and artifacts", async () => {
+test("re-running init updates managed files and preserves the approved design composition and artifacts", async () => {
   const project = await createProject();
   const options = { target: project, yes: true, quiet: true };
 
   await initializeProject(options);
+  await writeFile(join(project, "trickster", "design", "provenance.json"), "{\"ui\":\"keep\",\"ux\":\"keep\"}\n", "utf8");
+  await writeFile(join(project, "trickster", "design", "composition.md"), "# Keep composition\n", "utf8");
   await writeFile(join(project, "trickster", "design", "source.json"), "{\"appId\":\"keep\"}\n", "utf8");
   await writeFile(join(project, "trickster", "design", "ui.md"), "# Keep UI\n", "utf8");
   await writeFile(join(project, "trickster", "design", "ux.md"), "# Keep UX\n", "utf8");
@@ -161,6 +163,14 @@ test("re-running init updates managed files and preserves the selected style and
 
   const agents = await readFile(join(project, "AGENTS.md"), "utf8");
   assert.equal(agents.match(/>>> trickster managed instructions/g)?.length, 1);
+  assert.equal(
+    await readFile(join(project, "trickster", "design", "provenance.json"), "utf8"),
+    '{"ui":"keep","ux":"keep"}\n',
+  );
+  assert.equal(
+    await readFile(join(project, "trickster", "design", "composition.md"), "utf8"),
+    "# Keep composition\n",
+  );
   assert.equal(
     await readFile(join(project, "trickster", "design", "source.json"), "utf8"),
     '{"appId":"keep"}\n',
@@ -181,7 +191,7 @@ test("re-running init updates managed files and preserves the selected style and
   );
 });
 
-test("doctor validates the installed workflow before style selection", async () => {
+test("doctor validates the installed feedback-gated workflow before reference composition", async () => {
   const project = await createProject();
   await initializeProject({
     target: project,
@@ -204,8 +214,8 @@ test("doctor validates the installed workflow before style selection", async () 
   );
   assert.equal(cliResult.status, 0);
   assert.match(cliResult.stdout, /local installation is ready to use/i);
-  assert.match(cliResult.stdout, /adapts all eleven mandatory iOS capabilities/i);
-  assert.match(cliResult.stdout, /loads up to three candidates from GitHub/i);
+  assert.match(cliResult.stdout, /reconciles core scope with all eleven mandatory iOS capabilities/i);
+  assert.match(cliResult.stdout, /composes approved UI, UX and optional illustration sources/i);
 });
 
 test("doctor rejects an installation without the mandatory capability workflow", async () => {
@@ -354,7 +364,7 @@ test("prints an English starter brief after init", async () => {
   assert.doesNotMatch(result.stdout, /Style catalog:/);
   assert.match(result.stdout, /Use Trickster to create or substantially change a native iOS app\./);
   assert.match(result.stdout, /Primary task:\nRequired features:\nOut of scope:\nConstraints:/);
-  assert.match(result.stdout, /A short description is enough\. Trickster will add and adapt all eleven mandatory iOS capabilities/);
+  assert.match(result.stdout, /A short description is enough\. Trickster will reconcile all eleven mandatory iOS capabilities/);
   assert.doesNotMatch(result.stdout, /product-defining gap|style package before UI work/);
 });
 
@@ -369,8 +379,8 @@ test("keeps the canonical eleven-capability contract identical across workflow a
   assert.deepEqual(extractCapabilityRegistryRows(registry), canonicalCapabilities);
   assert.deepEqual(extractCapabilityTemplateRows(product), canonicalCapabilities);
   assert.deepEqual(extractCapabilityTemplateRows(review), canonicalCapabilities);
-  assert.match(master, /Do not begin style selection until all eleven canonical iOS capability rows/);
-  assert.match(acceptance, /\| AC-12 \| All eleven canonical iOS capabilities/);
+  assert.match(master, /Do not start reference research until the reconciled product definition contains all eleven complete capability rows/);
+  assert.match(acceptance, /\| AC-12 \| All eleven canonical capabilities/);
   assert.match(acceptance, /Required; never N\/A/);
   assertAppearsInOrder(russianReadme, russianCapabilityNames);
 });
@@ -404,6 +414,9 @@ test("npm package excludes repository-only assets", async () => {
   assert.equal(files.some(({ path }) => path.startsWith(".github/")), false);
   assert.equal(files.some(({ path }) => path === "workflow/ios-capabilities.md"), true);
   assert.equal(files.some(({ path }) => path === "workflow/style-reference.md"), true);
+  assert.equal(files.some(({ path }) => path === "workflow/implementation-core.md"), true);
+  assert.equal(files.some(({ path }) => path === "workflow/implementation-full.md"), true);
+  assert.equal(files.some(({ path }) => path === "workflow/implementation-hardening.md"), true);
 
   const internalDocPrefixes = ["adapters/", "installer/assets/", "roles/", "templates/", "workflow/"];
   const internalDocs = files
@@ -452,7 +465,7 @@ test("style catalog indexes every repository package with required documents", a
   }
 });
 
-test("installed role contracts use the selected local package and gate finalization", async () => {
+test("installed role contracts use the approved local composition and gate finalization", async () => {
   const project = await createProject();
   await initializeProject({ target: project, harness: "generic", yes: true, quiet: true });
 
@@ -467,8 +480,33 @@ test("installed role contracts use the selected local package and gate finalizat
     "utf8",
   );
   assert.match(finalization, /APP ACCEPTED/);
-  assert.match(finalization, /explicit confirmation/);
+  assert.match(finalization, /explicit final confirmation/);
   assert.match(finalization, /\/tmp\/trickster\/<run-id>\//);
   assert.match(finalization, /trickster\/design\//);
-  assert.match(finalization, /ASO exports/);
+  assert.match(finalization, /store exports/);
+});
+
+test("workflow enforces staged implementation previews and user feedback gates", async () => {
+  const master = await readFile(join(repositoryRoot, "workflow", "master-prompt.md"), "utf8");
+  const implementation = await readFile(join(repositoryRoot, "workflow", "implementation.md"), "utf8");
+  const core = await readFile(join(repositoryRoot, "workflow", "implementation-core.md"), "utf8");
+  const full = await readFile(join(repositoryRoot, "workflow", "implementation-full.md"), "utf8");
+  const hardening = await readFile(join(repositoryRoot, "workflow", "implementation-hardening.md"), "utf8");
+  const appIcon = await readFile(join(repositoryRoot, "workflow", "app-icon.md"), "utf8");
+  const storeScreenshots = await readFile(join(repositoryRoot, "workflow", "aso-screenshots.md"), "utf8");
+
+  assert.match(master, /DESIGN COMPOSITION APPROVED/);
+  assert.match(master, /CORE UI APPROVED/);
+  assert.match(master, /APP ICON APPROVED/);
+  assert.match(master, /STORE FRAME <n> APPROVED/);
+  assert.match(implementation, /implementation-core\.md/);
+  assert.match(implementation, /implementation-full\.md/);
+  assert.match(implementation, /implementation-hardening\.md/);
+  for (const phase of [core, full, hardening]) assert.match(phase, /PREVIEW/);
+  assert.match(appIcon, /latest image-generation model available/);
+  assert.match(appIcon, /exact model ID/);
+  assert.match(appIcon, /Before approval, write only to the icon artifact directory/);
+  assert.match(storeScreenshots, /storyboard/i);
+  assert.match(storeScreenshots, /STORE FRAME <n> APPROVED/);
+  assert.match(storeScreenshots, /STORE SET APPROVED/);
 });

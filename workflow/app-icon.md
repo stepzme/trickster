@@ -1,38 +1,49 @@
-# Stage 7. App icon
+# Parallel branch. App icon
 
-## Applicability
+## Applicability and timing
 
-This stage is required for a new app. For changes to an existing app, it applies when the user requests a new icon or the change affects the brand. Otherwise, record `N/A` with a reason.
+This branch is required for a new app. For an existing app, use it when the user requests a new icon or the approved design revision changes the brand; otherwise record `N/A` with a reason.
+
+Start after `DESIGN COMPOSITION APPROVED`. Research and generation may run in parallel with Core, Full, and Hardening because the visual producer writes only to `trickster/artifacts/<run-id>/app-icon/` before approval.
 
 ## Logoinspo research
 
-Use [Logoinspo App Icons](https://logoinspo.com/icons) as the required reference source. The page provides an app-icon catalog with category, color, and style filters.
+Use [Logoinspo App Icons](https://logoinspo.com/icons) as the required source.
 
-1. Use available page parsing or browser automation to find apps with a comparable purpose and category.
-2. Retrieve and actually inspect 6–12 relevant icons.
-3. Save the name and URL of each icon.
-4. Record the metaphor, silhouette, color, contrast, detail, depth, and use of text.
-5. Separate common category conventions from recognizable elements of a specific brand. Do not copy another app's icon.
+1. Find 6–12 icons with comparable purpose or category.
+2. Actually inspect their images and record name and URL.
+3. Analyze metaphor, silhouette, palette, contrast, detail, depth, and text.
+4. Separate shared category conventions from recognizable brand elements. Do not copy another icon.
 
-If parsing or image viewing is unavailable, the stage remains `UNVERIFIED`; names without images do not constitute research.
+If images cannot be viewed, the branch remains `UNVERIFIED`; names or text metadata are insufficient.
 
-## One concept
+## Generation model
 
-Formulate one concept based on the product's purpose, confirmed style package, interface, and Logoinspo research. Do not generate a grid of alternatives for the user.
+Use the latest image-generation model available in the active environment at execution time. Do not hard-code a model family in the project instructions and do not silently fall back to an older model. Record the exact model ID, date, prompt, parameters, source image when applicable, and tool in provenance.
 
-Create one master asset and refine it until it passes verification. Improving readability or export quality does not constitute a new concept.
+## One concept and feedback loop
 
-For a raster concept, use an available image-generation tool. The prompt must specify the metaphor, composition, `ui.md` palette, applicable `illustrations.md`, level of detail, square format, and absence of an embedded system mask. Visually inspect the master asset before adding it to the project.
+Create one concept based on the product, approved design composition, and Logoinspo research. Do not generate a grid of unrelated alternatives.
 
-## Verification
+1. Generate one square master without an embedded system mask.
+2. Visually inspect the actual output for composition, artifacts, text, originality, small-size silhouette, and alignment with the current design revision.
+3. The master shows the image to the user before Xcode integration.
+4. If the user gives feedback, continue the same visual producer and refine or regenerate the same concept.
+5. Repeat until the user explicitly states `APP ICON APPROVED`.
 
-- alignment with the product's purpose and visual language;
-- originality relative to references;
-- legible silhouette and contrast at small sizes;
-- no system mask or rounded corners embedded in the square source asset;
-- correct installation in the asset catalog;
-- appearance for the installed build in Simulator during the next acceptance stage;
-- current technical requirements from official Apple documentation.
+If the design revision changes, invalidate approval and re-evaluate the concept. Do not integrate an icon approved against an obsolete revision.
+
+## Integration and verification
+
+Before approval, write only to the icon artifact directory. After approval, the implementation owner integrates production files, or the master explicitly transfers the exact app-icon asset path.
+
+Verify:
+
+- originality and fit with the product and final design revision;
+- legibility and contrast at small sizes;
+- no baked-in mask or rounded corners;
+- correct asset-catalog installation;
+- appearance in the installed release-candidate build.
 
 ## Output
 
@@ -40,7 +51,9 @@ For a raster concept, use an available image-generation tool. The prompt must sp
 trickster/artifacts/<run-id>/app-icon/
 ├── references.md
 ├── concept.md
+├── provenance.md
+├── feedback.md
 └── verification.md
 ```
 
-Production files live in the app's asset catalog. `concept.md` describes the one implemented concept and its creation provenance.
+`feedback.md` records every shown revision, user response, and the final `APP ICON APPROVED` decision.

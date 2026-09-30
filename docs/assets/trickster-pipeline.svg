@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1280" height="500" viewBox="0 0 1280 500" role="img" aria-labelledby="title desc">
   <title id="title">Trickster app production pipeline</title>
-  <desc id="desc">A clean four-stage timeline: define the product, confirm one style, build the native app, then independently verify and deliver it.</desc>
+  <desc id="desc">A clean four-stage timeline: define the product, compose references, build the native app through feedback gates, then independently verify and deliver it.</desc>
   <rect width="1280" height="500" rx="36" fill="#F5F2EA"/>
 
   <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
@@ -10,7 +10,7 @@
       <text x="34" y="20" fill="#6D6961" font-size="12" font-weight="700" letter-spacing="1.6">PROCESS</text>
     </g>
     <text x="640" y="128" fill="#11100F" font-size="40" font-weight="760" letter-spacing="-1.4" text-anchor="middle">From idea to accepted iOS app</text>
-    <text x="640" y="163" fill="#6D6961" font-size="18" text-anchor="middle">One direction, four controlled phases.</text>
+    <text x="640" y="163" fill="#6D6961" font-size="18" text-anchor="middle">One coherent direction, feedback at every critical gate.</text>
 
     <line x1="112" y1="358" x2="1168" y2="358" stroke="#C9C5BC" stroke-width="2"/>
 
@@ -25,19 +25,19 @@
       <g transform="translate(160 0)">
         <text y="220" fill="#149E87" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14" font-weight="700">01</text>
         <text y="258" fill="#11100F" font-size="24" font-weight="720">Shape the product</text>
-        <text y="289" fill="#6D6961" font-size="16">Scope and contract</text>
+        <text y="289" fill="#6D6961" font-size="16">Scope and capabilities</text>
       </g>
 
       <g transform="translate(480 0)">
         <text y="220" fill="#149E87" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14" font-weight="700">02</text>
-        <text y="258" fill="#11100F" font-size="24" font-weight="720">Confirm one style</text>
-        <text y="289" fill="#6D6961" font-size="16">One package, selected by you</text>
+        <text y="258" fill="#11100F" font-size="24" font-weight="720">Compose references</text>
+        <text y="289" fill="#6D6961" font-size="16">UI · UX · optional illustration</text>
       </g>
 
       <g transform="translate(800 0)">
         <text y="220" fill="#149E87" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14" font-weight="700">03</text>
         <text y="258" fill="#11100F" font-size="24" font-weight="720">Build the native app</text>
-        <text y="289" fill="#6D6961" font-size="16">Implementation, assets, app icon</text>
+        <text y="289" fill="#6D6961" font-size="16">Core feedback · Full · Hardening</text>
       </g>
 
       <g transform="translate(1120 0)">

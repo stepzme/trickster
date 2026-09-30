@@ -1,52 +1,58 @@
-# Stage 1. Scope definition
+# Stage 1. Product definition
 
 ## Goal
 
-Understand exactly what the app must do without forcing the user to complete a questionnaire or reducing an uncertain idea to the smallest possible interface.
+Produce one reconciled definition of the app. Scope is not complete before mandatory capability synthesis: capability features can add entry points, screens, real dependencies, purpose strings, device requirements, and verification work.
+
+The product researcher performs this as one continuous role phase and returns one handoff, not a scope handoff followed by a disconnected capability handoff.
 
 ## Input
 
-- the user's original message;
-- existing project code and documentation, if any;
-- environment constraints and explicitly stated exclusions.
+- the user's original request;
+- existing code and product documentation;
+- environment constraints and explicit exclusions;
+- [the canonical capability registry](ios-capabilities.md);
+- `trickster/templates/product.md`.
 
 ## Procedure
 
-1. Describe the user, their task, and the expected outcome.
-2. List explicitly stated functionality and constraints.
-3. Separate the user's product decisions from your assumptions.
-4. Determine the scope status:
-   - `DEFINED` — primary user tasks and boundaries are clear;
-   - `PARTIAL` — the idea is clear, but the expected functional baseline is not defined;
-   - `CONFLICTING` — requirements contradict each other or the existing project.
-5. For `PARTIAL`, do not choose an arbitrarily minimal implementation. Formulate one question whose answer will determine the product baseline; continue independent work.
-6. For `CONFLICTING`, ask one question whose answer materially resolves the conflict. Do not conceal the conflict behind an assumption.
-7. Read `workflow/ios-capabilities.md` and adapt every canonical capability to the product after the user's scope is understood. The capability features are mandatory even when the original prompt does not mention them.
+1. Define the user, primary task, and expected outcome.
+2. Record explicitly requested features, constraints, and exclusions as the `Core product scope`.
+3. Separate user decisions from assumptions. Do not reduce an uncertain idea to an arbitrary minimal shell.
+4. Synthesize all eleven capability features in their canonical order. For each, define its entry action, useful result, system mechanism, fallback, dependency, and verification environment.
+5. Reconcile the core and capability scopes. Add the necessary screens, states, dependencies, and device or service requirements to the `Final reconciled scope`.
+6. Determine the final scope status:
+   - `DEFINED` — primary tasks, capability integrations, and boundaries are clear;
+   - `PARTIAL` — the product is understandable, but one decision materially changes the final baseline;
+   - `CONFLICTING` — the request, existing product, or required capability set contains a material contradiction.
+7. For `PARTIAL` or `CONFLICTING`, formulate one question whose answer changes the final boundary. Continue all independent work and send the question through the master.
+
+Do not assign the final scope status before capability synthesis. If a capability forces a new dependency or product surface, record it explicitly rather than silently expanding an earlier scope.
 
 ## Scope-expansion rule
 
-If the user did not request external infrastructure, do not automatically add it for ordinary product features. The fixed features required by `ios-capabilities.md` are an explicit Trickster baseline and may introduce the minimum integration dependency needed for a real capability. Record that dependency instead of hiding it or replacing it with a fake implementation.
-
-Outside that fixed baseline, do not automatically add:
+The canonical capability set is an explicit Trickster baseline and may introduce the minimum real dependency needed for its contracted feature. Outside that baseline, do not automatically add:
 
 - a backend, accounts, or server-side authentication;
 - synchronization or collaboration;
 - payments, subscriptions, or purchases;
-- third-party service integrations;
+- third-party integrations;
 - cloud AI or remote processing;
-- push infrastructure or complex background processes.
+- push infrastructure or complex background processing.
 
-Patterns from the selected `ux.md` help design already agreed features; they do not authorize new features or hidden architectural expansion.
+Reference patterns may shape agreed features; they never authorize new product scope.
 
 ## Output
 
-Create a draft `Scope` section in `trickster/artifacts/<run-id>/product.md` containing:
+Complete these sections in `trickster/artifacts/<run-id>/product.md`:
 
-- scope status;
-- explicit functionality;
-- missing product decisions;
-- constraints;
-- assumptions;
-- potential questions for the user.
+- user, task, and expected outcome;
+- core product scope;
+- mandatory capability scope with all eleven rows;
+- final reconciled scope;
+- final scope status;
+- excluded infrastructure and deferred work;
+- assumptions and one material question when required;
+- external dependencies and verification boundaries.
 
-Then complete the fixed `Mandatory iOS capabilities` table from `templates/product.md`. The scope output is incomplete until all eleven canonical rows are present in order and contain a product-specific feature, real result, system mechanism, fallback, dependency, and verification method.
+The stage is incomplete until the matrix and final reconciliation agree with each other. The master verifies the entire definition once before reference research begins.

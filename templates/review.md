@@ -1,29 +1,56 @@
-# Acceptance report
+# Acceptance and delivery report
 
 - App status: UNVERIFIED
+- Mandatory capability status: UNVERIFIED
 - App-icon status: UNVERIFIED / N/A
-- ASO-screenshot status: UNVERIFIED / N/A
+- Product-asset status: UNVERIFIED / N/A
+- Store-screenshot status: UNVERIFIED / N/A
 - Run ID and toolkit version:
-- Verified code revision, including uncommitted changes:
-- Proposed shortlist:
-- Style package: appId, name, URL, category, and `trickster/design/` path:
-- Confirmation that exactly one package was selected:
-- User's explicit confirmation of the final result:
+- Verified app revision and working-copy state:
+- Final design revision:
+- Final user confirmation:
 - Cleaned temporary paths:
-- Xcode, SDK, scheme, configuration, build time:
-- Simulators: model, iOS, UDID; locale, theme, and text size:
-- Physical devices: model, iOS, UDID; connected peripherals, signing, and unavailable hardware:
+- Xcode, SDK, scheme, configuration, and build time:
+- Simulators: model, OS, UDID, locale, theme, and text size:
+- Physical devices: model, OS, UDID, peripherals, signing, and unavailable hardware:
 - Test-data version:
-- Harness, mode (`delegated` / `sequential fallback`), and tools actually used:
+- Harness, delegated or sequential-fallback mode, and actual tools:
+
+## Product definition
+
+- Core product scope:
+- Capability-added scope:
+- Final reconciled scope and status:
+- Material question and resolution:
+
+## Reference composition
+
+| Concern | App ID | Name and URL | Contribution |
+|---|---|---|---|
+| UI | | | |
+| UX | | | |
+| Illustrations | | | |
+
+- Provenance path:
+- Composition path:
+- Conflict resolutions:
+- DESIGN COMPOSITION APPROVED revision and time:
 
 ## Role handoffs
 
-| Role | Inputs and allowed paths | Result received | Master's verification |
+| Role and phase | Inputs and allowed paths | Result received | Master's verification |
 |---|---|---|---|
+
+## Implementation feedback and previews
+
+| Phase | App revision | Design revision | Simulator/device | Result shown | User feedback or approval | Status |
+|---|---|---|---|---|---|---|
+
+Record `PREVIEW` separately from acceptance. Include the final `CORE UI APPROVED` decision.
 
 ## App verification matrix
 
-| Criterion | Status | What was performed and observed | Evidence / reason for N/A |
+| Criterion | Status | What was performed and observed | Evidence or reason for N/A |
 |---|---|---|---|
 
 ## Scope coverage
@@ -51,34 +78,41 @@ Keep all eleven rows in this exact order. None may be `N/A`.
 
 ## Visual review
 
-| Screen/state | Final-build screenshot | Selected style-package rule | Observation and decision |
+| Screen/state | Final-build screenshot | Final design rule | Observation and decision |
 |---|---|---|---|
 
 ## Product assets
 
-| Asset | Source/provenance | Actual use | Verification |
-|---|---|---|---|
+| Asset | Source and exact model ID | User approval | Actual use | In-app verification |
+|---|---|---|---|---|
 
 ## App icon
 
-- Logoinspo references and images actually viewed:
-- One implemented concept and its relationship to the product/style package:
-- Production asset and verification in Simulator:
+- Logoinspo references actually viewed:
+- Design revision:
+- Exact generation model, prompt, and provenance:
+- Feedback iterations:
+- APP ICON APPROVED revision and time:
+- Production integration and installed-build verification:
 
-## ASO screenshots
+## Store screenshots
 
-| Frame | Benefit | Source screen from final build | Export and verification |
-|---|---|---|---|
+- STORE STORYBOARD APPROVED revision and time:
+
+| Frame | Benefit | Accepted-build source | Feedback iterations | STORE FRAME approval | Export verification |
+|---|---|---|---|---|---|
+
+- STORE SET APPROVED revision and time:
 
 ## Defects and fixes
 
-| ID | Criterion | Observation / expectation | Severity | Owner | Retest |
+| ID | Criterion | Observation and expectation | Severity | Owner | Retest |
 |---|---|---|---|---|---|
 
 ## Reproduction
 
-Exact build, installation, and launch commands; verification steps; and data preparation. Identify fixtures used and real services that were not connected.
+Exact build, installation, launch, verification, data-preparation, and real-service steps. Identify fixtures and services that were not connected.
 
 ## Limitations
 
-Unverified items, remaining defects, number of fix cycles, and what is required to continue. State separately which mandatory capabilities were verified on a physical device, which remain `UNVERIFIED`, and whether publication was performed.
+Unverified items, remaining defects, feedback and fix-cycle counts, physical-device coverage, and separate signing, archive, submission, and publication status.

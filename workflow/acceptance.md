@@ -1,56 +1,57 @@
 # Stage 8. App acceptance
 
-Before implementation, the master records the applicability of criteria and the scenarios in `product.md`. The acceptance reviewer independently gathers evidence and prepares a draft review, but the master makes the final decision after personally verifying key scenarios and images. Criteria must not be weakened to justify the finished implementation. Verification is performed on the final version after all code changes are complete.
+Acceptance applies to one frozen release candidate after Hardening, approved icon integration, and required product-asset integration. Phase previews and role self-assessments are inputs, never acceptance.
 
-## Individual check statuses
+The reviewer independently gathers evidence and prepares a draft review. The master makes the final decision after reproducing key scenarios and inspecting current images. Criteria cannot be weakened to justify the implementation.
 
-- `PASS` — the check was performed, the result meets the expectation, and evidence is available.
+## Individual statuses
+
+- `PASS` — performed, meets the expectation, and has evidence.
 - `FAIL` — a criterion violation was observed.
-- `UNVERIFIED` — required data, tools, or execution are missing.
-- `N/A` — not applicable, with a verifiable reason. Required criteria cannot be N/A.
+- `UNVERIFIED` — required data, hardware, service, tool, or execution is missing.
+- `N/A` — not applicable with a verifiable reason; required criteria cannot be N/A.
+
+## Preconditions
+
+- `DESIGN COMPOSITION APPROVED`, `CORE UI APPROVED`, and applicable `APP ICON APPROVED` are tied to current revisions.
+- Core, Full, and Hardening handoffs are complete.
+- Approved product assets and icon are present in the build.
+- The code revision and working-copy state are recorded and no role is still changing the app.
 
 ## App criteria
 
 | ID | Criterion | Evidence | Applicability |
 |---|---|---|---|
-| AC-01 | The final code builds with Xcode tooling | Command, exit code, complete log, revision | Required |
-| AC-02 | That exact build installs and launches in Simulator | Device/OS, bundle ID, commands, and screenshot of the running app | Required |
-| AC-03 | Every required feature and scenario in `product.md` is implemented and produces the expected result | Scope matrix, actions, observed result, and data | Required |
-| AC-04 | Screens and controls consistently express the confirmed `ui.md`, `ux.md`, and applicable `illustrations.md`; native implementation is acceptable, but the default SwiftUI appearance is acceptable only when it matches the reference | Current screenshots, local package, and analysis of button, field, card, and navigation styling | Required |
-| AC-05 | Navigation and interactions consistently use applicable rules from the selected `ux.md`; deviations are justified by the product task | Local package, `product.md`, reproduced scenarios, and observations | Required |
-| AC-06 | Layout and text preserve functionality on target sizes | Primary and compact iPhone, enlarged text | Required |
-| AC-07 | Applicable UX-01 through UX-12 have been performed | Per-screen rule matrix and actual observations | Required |
-| AC-08 | Persisted data survives a restart | Create/change data → restart → verify values | If the product stores data |
-| AC-09 | Errors and constraints do not break a required scenario | Contract-defined network/input/permission errors tested | If applicable |
-| AC-10 | Promised locales, themes, orientations, and iPad support work | Verification of the matrix declared in `product.md` | If declared |
-| AC-11 | Sources and evidence correspond to the specific run and final version | `trickster/design/source.json`, revision, timestamps, and artifact manifest | Required |
-| AC-12 | All eleven canonical iOS capabilities are present in the required order and each has a coherent product feature, correct system mechanism, useful post-access result, denial or unavailable behavior, and reproduced evidence | Capability matrix, purpose strings and entitlements, actions, observed system behavior, result data, Simulator or physical-device evidence | Required; never N/A |
+| AC-01 | Final code builds with Xcode tooling | Command, exit code, complete log, revision | Required |
+| AC-02 | That exact build installs and launches in Simulator | Device/OS, bundle ID, commands, running screenshot | Required |
+| AC-03 | Every required feature and scenario produces the expected result | Scope matrix, actions, observed result, data | Required |
+| AC-04 | Screens consistently express final `ui.md`, `ux.md`, applicable `illustrations.md`, and `composition.md` | Current screenshots and rule-by-rule observations | Required |
+| AC-05 | Navigation and interaction follow the approved UX source and recorded composition resolutions | Reproduced scenarios and observations | Required |
+| AC-06 | Layout and text preserve function on primary and compact target sizes | Current screenshots and interaction evidence | Required |
+| AC-07 | Applicable UX-01 through UX-12 were performed | Per-rule matrix and observations | Required |
+| AC-08 | Persisted data survives restart | Create or change data, restart, verify | If the product stores data |
+| AC-09 | Errors and constraints do not break a required scenario | Contract-defined error, permission, and retry tests | If applicable |
+| AC-10 | Declared locales, themes, orientations, and iPad support work | Declared environment matrix | If declared |
+| AC-11 | Sources, approvals, and evidence correspond to the exact final revisions | Provenance, design revision, app revision, timestamps, manifests | Required |
+| AC-12 | All eleven canonical capabilities have real features, correct mechanisms, useful results, denial or unavailable handling, and reproduced evidence | Capability matrix, entitlements, actions, observed behavior, result data, Simulator or physical-device evidence | Required; never N/A |
+| AC-13 | Implementation feedback gates and visual approvals are authentic and current | Core preview, user decisions, icon and asset feedback records | Required |
 
-A screenshot demonstrates appearance and state; it does not prove data persistence or correct transitions. Behavior requires actions and verification of the result. Generated mockups do not replace Simulator screenshots.
+A screenshot proves appearance and state, not persistence or transitions. Generated mockups do not replace Simulator or physical-device evidence.
 
 ## Fix cycles
 
-For each defect, record the criterion, screen/state, observed and expected behavior, severity, and artifact. By default, the process allows the initial implementation and up to three fix cycles. After a fix, retest affected scenarios and the primary path.
+For every defect, record criterion, screen or state, observed result, expected result, severity, and evidence. By default allow the initial implementation and up to three acceptance fix cycles. Return defects through `CONTINUE(implementation_owner)` and retest affected scenarios and the primary path.
 
-When the limit is exhausted, return `NEEDS_WORK` with the remaining issues. Do not start a new run ID merely to reset the limit.
+Do not start a new run ID to reset the limit. When exhausted, return `NEEDS_WORK`.
 
-## App decision
+## Decision
 
-- `ACCEPTED` — all required and applicable AC-01 through AC-12 are PASS; all others are justifiably N/A.
-- `NEEDS_WORK` — at least one item is FAIL.
-- `UNVERIFIED` — no FAIL was found, but a required item was not verified.
+- `ACCEPTED` — all required and applicable criteria PASS; other criteria are justifiably N/A.
+- `NEEDS_WORK` — at least one criterion FAILS.
+- `UNVERIFIED` — no failure was found, but a required criterion lacks evidence.
 
-A visual PASS is the reviewer's judgment against the specified sources; it does not prove the design's market success.
+Physical-device verification required by AC-12 is acceptance work, not an optional release task.
 
-## Store package
+## Store package boundary
 
-The app icon is created before this acceptance stage and is included in the build under review. After `ACCEPTED`, execute `aso-screenshots.md`, then assess the complete Store package.
-
-| ID | Criterion | Applicability |
-|---|---|---|
-| SP-01 | The app icon is based on Logoinspo references that were actually viewed, is original, is installed, and is verified in Simulator | Required for a new app |
-| SP-02 | One app-icon concept was created, with no parallel alternatives | Required for a new app |
-| SP-03 | One ASO set uses real screens from the accepted build and unifies the confirmed style, UI, and app icon | Required for a new app |
-| SP-04 | Every ASO export corresponds to an implemented feature and current technical requirements | Required for a new app |
-
-Assess the Store package separately as `ACCEPTED`, `NEEDS_WORK`, `UNVERIFIED`, or `N/A`. Signing, a release archive, and publication belong to a separate release task. Physical-device verification required by AC-12 is part of app acceptance, not an optional release check.
+The accepted build includes the approved app icon. After `APP ACCEPTED`, execute `aso-screenshots.md` with storyboard and per-frame feedback gates. Store screenshots, signing, release archives, App Store submission, and publication have separate statuses; app acceptance does not imply any of them.

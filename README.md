@@ -6,33 +6,33 @@
 
 ### An AI app factory for native iOS.
 
-Turn an app idea into a native iOS product shaped by a curated design library — scoped, extended with a fixed set of iOS capabilities, designed, built, verified, and completed with an original app icon and ASO screenshots.
+Turn an app idea into a native iOS product shaped by a curated design library — defined together with a fixed set of iOS capabilities, designed, built through feedback-gated phases, verified, and completed with an original app icon and store screenshots.
 
-Trickster orchestrates specialized AI roles inside your repository. It reads a small GitHub catalog, downloads documents for up to three relevant styles, requires you to select exactly one, saves that package in the project, and independently checks the implemented result.
+Trickster orchestrates specialized AI roles inside your repository. It reads a small GitHub catalog, downloads documents for up to three relevant apps, and lets you choose separate UI, UX, and optional illustration references. It synthesizes them into one coherent local design direction and independently checks the implemented result.
 
 ## What you get
 
 - a functional Xcode project and native iOS app;
 - a product scope grounded in your brief and existing project;
 - one product-relevant feature for each of eleven mandatory iOS capabilities;
-- one confirmed visual language saved locally after selection from the GitHub catalog;
+- one coherent design direction with explicit UI, UX, and optional illustration provenance;
 - custom-styled controls that preserve native iOS behavior and accessibility;
 - build, Simulator, interaction, and visual verification artifacts;
 - one original app icon informed by reviewed Logoinspo references;
-- one ASO screenshot set made from the accepted build.
+- one feedback-approved store screenshot set made from the accepted build.
 
 ## The pipeline
 
-![Trickster four-phase pipeline: define the product, confirm one style, build the native app, then independently verify and deliver it](docs/assets/trickster-pipeline.svg)
+![Trickster pipeline: define the product, compose references, build through feedback gates, then independently verify and deliver](docs/assets/trickster-pipeline.svg)
 
-1. **Define the product.** Establish the requested scope, boundaries, and any decision that genuinely needs user input.
-2. **Adapt mandatory iOS capabilities.** Invent one coherent product feature for every capability in the fixed eleven-item list, regardless of the prompt scope.
-3. **Compare relevant styles.** Read the GitHub catalog, choose up to three candidates by metadata, and download documents only for those candidates.
-4. **Select one direction.** Require exactly one package before UI work. Packages cannot be merged or split across screens.
-5. **Create the contract.** Define capability-backed screens, states, scenarios, assets, and acceptance checks.
-6. **Build the app.** Implement one vertical flow first, visually inspect it, then complete the agreed scope and all eleven capability features.
+1. **Define the product.** Establish the core scope and synthesize one coherent product feature for each of the eleven mandatory iOS capabilities, then reconcile them into the final scope.
+2. **Compose references.** Compare up to three catalog apps and choose one UI source, one UX source, and optionally one illustration source. Synthesize them into one coherent direction and approve it.
+3. **Create the contract.** Define screens, states, phase boundaries, asset requirements, capability scenarios, and acceptance checks.
+4. **Validate the Core.** Implement the main sections, show the current build in Simulator on request, and iterate with the user until `CORE UI APPROVED`.
+5. **Complete and harden.** Implement the remaining scope, then finish all failure, denial, unavailable, accessibility, and persistence states. Simulator previews remain available on request.
+6. **Produce visuals.** Run app-icon creation in parallel with implementation, approve it before integration, and produce required product assets after Hardening.
 7. **Verify independently.** Build, install, run, interact with, and inspect the final app in Simulator and on a physical iPhone where required. Missing evidence remains `UNVERIFIED`.
-8. **Finish the store package.** Produce an original app icon and, after acceptance, ASO screenshots from the real build.
+8. **Finish the store package.** Approve a storyboard, then generate and review store screenshots one frame at a time from the accepted build.
 
 Trickster uses multiple focused roles when the active agent harness supports delegation and follows the same contracts sequentially when it does not.
 
@@ -69,7 +69,7 @@ Out of scope:
 Constraints:
 ```
 
-Keep it short if you prefer. You do not need to list platform capabilities: Trickster automatically adapts the fixed eleven-item set to the product, clarifies one product-defining gap if needed, and asks you to select one style package before UI work. The installed project instructions activate the pipeline and enforce its capability, design, and acceptance gates.
+Keep it short if you prefer. You do not need to list platform capabilities: Trickster reconciles the fixed eleven-item set with the core scope, clarifies one product-defining gap if needed, and guides you through concern-level reference composition before UI work. The installed project instructions activate the pipeline and enforce its capability, design, feedback, and acceptance gates.
 
 ## Mandatory iOS capabilities
 
@@ -113,7 +113,7 @@ trickster/
 └── artifacts/
 ```
 
-- `design/` contains the only style package confirmed for the current product.
+- `design/` contains the approved coherent design composition and its source provenance.
 - `artifacts/<run-id>/` contains contracts, evidence, screenshots, and review results.
 - `roles/` and `workflow/` define the factory stages independently of a specific agent harness.
 - `adapters/` map those stages to Codex or another environment.
@@ -122,24 +122,25 @@ Re-running `init` updates managed workflow files while preserving the selected d
 
 ## Design sources
 
-- **The GitHub style catalog** lists the available reference apps. Trickster downloads documents only for the shortlisted packages, then stores the selected `source.json`, `ui.md`, `ux.md`, and optional `illustrations.md` in `trickster/design/`.
+- **The GitHub style catalog** lists the available reference apps. Trickster downloads documents only for the shortlist, then stores approved `provenance.json`, `composition.md`, `ui.md`, `ux.md`, and optional `illustrations.md` in `trickster/design/`.
 - **Logoinspo App Icons** supplies references for the original app-icon direction.
 
-The style package is not a skin. Native controls may provide behavior, accessibility, focus, and keyboard integration, but their visual appearance must explicitly inherit `ui.md` when the reference defines a distinct language.
+The composition is not a collection of interchangeable skins. Each concern has one source owner, and the result must read as one product. Native controls may provide behavior, accessibility, focus, and keyboard integration, while their appearance follows the approved `ui.md`.
 
 ## Detailed stages
 
 | Stage | Owner | Required result |
 |---|---|---|
-| 1. Scope | product-researcher | Explicit scope status and missing decisions |
-| 2. Mandatory iOS capabilities | product-researcher + master gate | Eleven product-specific features in the fixed canonical matrix |
-| 3. Style selection | design-planner + user gate | Up to three GitHub candidates and exactly one locally saved package |
-| 4. Product contract | design-planner | Screens, states, scenarios, assets, and verification plan |
-| 5. Product assets | visual-producer when needed | Verified imagery or a justified `N/A` |
-| 6. Implementation | implementation-owner | Vertical flow followed by the complete agreed scope and capabilities |
-| 7. App icon | visual-producer | One original concept installed in the app |
+| 1. Product definition | product-researcher + master gate | Reconciled scope and eleven product-specific capabilities |
+| 2. Reference composition | design-planner + user gate | Approved UI, UX, and optional illustration sources synthesized locally |
+| 3. Product contract | design-planner | Screens, states, phase boundaries, asset requirements, and verification plan |
+| 4. Core implementation | implementation-owner + user gate | Main sections iterated to `CORE UI APPROVED` |
+| 5. Full implementation | implementation-owner | Remaining agreed scope and capability flows |
+| 6. Hardening | implementation-owner | Failure, denial, unavailable, accessibility, and persistence states |
+| 7. Product assets | visual-producer + implementation-owner | Approved assets generated after Hardening and integrated |
+| Parallel. App icon | visual-producer + user gate | Latest-model concept approved before code integration |
 | 8. Acceptance | acceptance-reviewer + master | Independently verified final build and eleven-row capability matrix |
-| 9. ASO screenshots | visual-producer | One set based on real screens from the accepted build |
+| 9. Store screenshots | visual-producer + user gates | Approved storyboard and individually approved real-build frames |
 | 10. Finalization | master + user gate | Explicit user confirmation and cleanup of temporary files |
 | 11. Delivery | master | Reproducible evidence and final status |
 
@@ -149,16 +150,18 @@ See [the master process](workflow/master-prompt.md) and [orchestration contract]
 
 - The style shortlist contains no more than three packages selected from catalog metadata; only their documents are downloaded.
 - All eleven canonical iOS capabilities are contracted and implemented regardless of the prompt scope; none can be `N/A`.
-- UI implementation stops until the user selects exactly one package.
-- Packages cannot be merged; the selected package is the only design context.
-- Native control behavior is preserved while appearance follows the selected visual language.
+- UI implementation stops until the user approves one coherent design composition.
+- UI, UX, and optional illustration references may come from different shortlisted apps, but each concern has one source and arbitrary component-level mixing is prohibited.
+- Native control behavior is preserved while appearance follows the approved visual language.
+- Full implementation stops until the user approves the Core direction; every implementation phase supports a user-requested Simulator preview.
+- App-icon and store-screenshot production are feedback-gated before integration or continuation.
 - An implementation agent cannot accept its own work.
 - Build success alone is not acceptance.
 - Unavailable tools or evidence are reported as `UNVERIFIED`, never invented.
 
 ## Requirements and boundaries
 
-Trickster requires macOS, Xcode, an appropriate iOS Simulator runtime, a suitable physical iPhone and peripherals for mandatory hardware-dependent capability verification, Node.js 20 or later, and an agent environment capable of reading the installed instructions and using project tools. A new style selection requires access to the raw files in the Trickster GitHub repository; an existing project continues to use its locally saved package.
+Trickster requires macOS, Xcode, an appropriate iOS Simulator runtime, a suitable physical iPhone and peripherals for mandatory hardware-dependent capability verification, Node.js 20 or later, and an agent environment capable of reading the installed instructions and using project tools. New reference research requires access to the raw files in the Trickster GitHub repository; an existing project continues to use its locally saved approved composition.
 
 Signing for physical-device capability verification is part of acceptance. Release archives, App Store submission, and production deployment remain separate release tasks. Real external services required by a contracted capability must be connected or reported `UNVERIFIED`.
 
@@ -169,8 +172,11 @@ Global installation is intentionally rejected. Use `npx` as a temporary launcher
 - [Master process](workflow/master-prompt.md)
 - [Role orchestration](workflow/orchestration.md)
 - [Mandatory iOS capabilities](workflow/ios-capabilities.md)
-- [Style selection](workflow/style-reference.md)
+- [Reference composition](workflow/style-reference.md)
 - [Implementation](workflow/implementation.md)
+- [Core implementation](workflow/implementation-core.md)
+- [Full implementation](workflow/implementation-full.md)
+- [Hardening](workflow/implementation-hardening.md)
 - [Acceptance](workflow/acceptance.md)
 - [End-to-end verification](workflow/verification.md)
 

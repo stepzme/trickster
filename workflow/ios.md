@@ -27,11 +27,11 @@ Ordinary browser automation cannot interact with native Simulator. Screenshots f
 
 Locate the actual `.xcodeproj` or `.xcworkspace`, shared scheme, and bundle ID. Retrieve available destinations and record the selected UDID. Construct the `xcodebuild` command for the project, preserving the exit code and full log; use `pipefail` for pipelines with `tee`.
 
-Perform build, installation, launch, and testing sequentially with one Simulator owner. Do not use the ambiguous `booted` destination when multiple devices are running. Store artifacts in a dedicated run-ID directory. All agents must finish code changes before final evidence is recorded.
+Perform build, installation, launch, and testing sequentially with one Simulator owner. Do not use the ambiguous `booted` destination when multiple devices are running. During Core, Full, and Hardening, run the current build in Simulator and show it when the user requests a `PREVIEW`; record that a preview is provisional and is not acceptance evidence. Store artifacts in a dedicated run-ID directory. All agents must finish code changes before final evidence is recorded.
 
 For every screenshot, record the screen, state, device/OS, locale, theme, text size, data, and revision. Verify scenarios on the primary and compact supported configurations, including enlarged text. Verify other devices/locales/themes according to declared support.
 
-Verify the app icon on the installed final build, not only inside the asset catalog. Capture the source product screens for ASO after app acceptance from the same final build and link them to the run ID.
+Verify the app icon on the installed final build, not only inside the asset catalog. Capture the source product screens for the store screenshot set after app acceptance from the same final build and link them to the run ID.
 
 For each mandatory iOS capability, record whether Simulator, a physical device, or a real external service is required. Exercise real Bluetooth, camera, biometric, audio, location, Photos, Contacts, Calendar, Speech, and CallKit behavior where the selected environment permits it. If required hardware or service is unavailable, mark the capability and AC-12 `UNVERIFIED`; do not use `N/A`, conceal the boundary, or substitute a demo for a real integration.
 

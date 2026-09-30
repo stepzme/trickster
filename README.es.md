@@ -4,42 +4,42 @@
 
 ### Una fábrica de aplicaciones con IA para iOS nativo.
 
-Convierte una idea en una aplicación nativa para iOS basada en una biblioteca de diseño seleccionada: define el alcance, añade un conjunto fijo de capacidades de iOS, diseña, implementa, verifica y completa el resultado con un icono original y capturas ASO.
+Convierte una idea en una aplicación nativa para iOS basada en una biblioteca de diseño seleccionada: concilia el alcance con un conjunto fijo de capacidades de iOS, implementa mediante fases con feedback, verifica y completa el resultado con un icono original y capturas para la tienda.
 
-Trickster coordina roles de IA especializados dentro del repositorio. Lee un catálogo pequeño de GitHub, descarga documentos para un máximo de tres estilos relevantes, exige elegir exactamente uno, guarda ese paquete en el proyecto y comprueba el resultado implementado de forma independiente.
+Trickster coordina roles de IA especializados dentro del repositorio. Lee un catálogo pequeño de GitHub, descarga documentos para un máximo de tres aplicaciones relevantes y permite elegir referencias separadas para UI, UX e ilustraciones opcionales. Después las sintetiza en una única dirección coherente y comprueba la implementación de forma independiente.
 
 ## Qué obtienes
 
 - un proyecto Xcode funcional y una aplicación iOS nativa;
 - un alcance de producto basado en el brief y el proyecto existente;
 - una función relevante para el producto por cada una de las once capacidades de iOS obligatorias;
-- un lenguaje visual confirmado y guardado localmente tras seleccionarlo en el catálogo de GitHub;
+- una dirección de diseño coherente con procedencia explícita para UI, UX e ilustraciones opcionales;
 - controles personalizados que conservan el comportamiento y la accesibilidad nativos de iOS;
 - evidencias de compilación, ejecución, interacción e inspección visual en Simulator;
 - un icono original basado en referencias revisadas de Logoinspo;
-- un conjunto de capturas ASO creado a partir de la compilación aceptada.
+- un conjunto de capturas para la tienda, aprobado cuadro por cuadro a partir de la compilación aceptada.
 
 ## El pipeline
 
 ```text
 Idea de la aplicación
-→ alcance del producto
-→ capacidades de iOS obligatorias
+→ definición del producto: alcance + capacidades obligatorias
 → selección desde el catálogo de GitHub
-→ elección de un estilo
-→ implementación nativa
+→ composición de UI / UX / ilustraciones
+→ Core con feedback
+→ Full y Hardening
 → aceptación en Simulator
-→ icono y capturas ASO
+→ capturas para la tienda
 ```
 
-1. **Definir el producto.** Se establecen el alcance, los límites y las decisiones que realmente requieren la intervención del usuario.
-2. **Adaptar las capacidades de iOS obligatorias.** Sin importar el alcance del prompt, el agente inventa una función coherente para cada elemento de la lista fija de once capacidades.
-3. **Comparar estilos relevantes.** Se lee el catálogo de GitHub, se eligen hasta tres candidatos por sus metadatos y se descargan documentos solo para ellos.
-4. **Elegir una dirección.** Antes de implementar la UI se debe elegir exactamente un paquete. Los paquetes no se pueden combinar ni repartir entre pantallas.
-5. **Crear el contrato.** Se definen pantallas, estados, escenarios de capacidades, recursos y comprobaciones de aceptación.
-6. **Construir la aplicación.** Primero se implementa y revisa visualmente un flujo vertical; después se completan el alcance acordado y las once funciones obligatorias.
+1. **Definir el producto.** El alcance principal y las once capacidades obligatorias se diseñan juntos y se concilian en un alcance final.
+2. **Componer referencias.** Se comparan hasta tres aplicaciones y se elige una fuente de UI, una de UX y, opcionalmente, una de ilustraciones; el resultado se sintetiza y aprueba como una única dirección.
+3. **Crear el contrato.** Se definen pantallas, estados, límites de fase, recursos, escenarios y comprobaciones de aceptación.
+4. **Validar Core.** Se implementan las secciones principales, se muestra un `PREVIEW` en Simulator cuando el usuario lo pide y se itera hasta `CORE UI APPROVED`.
+5. **Completar y robustecer.** Se implementa el resto del alcance y después todos los estados de error, rechazo, indisponibilidad, accesibilidad y persistencia.
+6. **Producir recursos visuales.** El icono se crea en paralelo con el modelo de imagen más reciente disponible y solo se integra tras la aprobación; los recursos de producto se producen después de Hardening.
 7. **Verificar de forma independiente.** La aplicación final se compila, instala, ejecuta e inspecciona en Simulator y, cuando sea necesario, en un iPhone físico. La evidencia no disponible permanece `UNVERIFIED`.
-8. **Completar el paquete para la tienda.** Se crea un icono original y, tras la aceptación, capturas ASO obtenidas de la compilación real.
+8. **Completar las capturas.** Se aprueba un storyboard y luego cada captura de la compilación aceptada se genera y revisa por separado.
 
 Trickster utiliza varios roles especializados cuando el agent harness activo permite delegación y ejecuta los mismos contratos de forma secuencial cuando no la permite.
 
@@ -70,7 +70,7 @@ Fuera de alcance:
 Restricciones:
 ```
 
-Puedes mantenerlo breve. No necesitas enumerar las capacidades de la plataforma: Trickster adapta automáticamente el conjunto fijo de once elementos, aclara una única cuestión que afecte a los límites del producto si hace falta y solicita un solo paquete de estilo antes de trabajar en la UI.
+Puedes mantenerlo breve. No necesitas enumerar las capacidades de la plataforma: Trickster concilia el conjunto fijo de once elementos con el alcance principal, aclara una cuestión que cambie los límites del producto si hace falta y guía la composición de referencias antes de trabajar en la UI.
 
 ## Capacidades de iOS obligatorias
 
@@ -114,7 +114,7 @@ trickster/
 └── artifacts/
 ```
 
-- `design/` contiene el único paquete de estilo confirmado para el producto actual.
+- `design/` contiene la composición de diseño coherente aprobada y la procedencia de sus fuentes.
 - `artifacts/<run-id>/` contiene contratos, evidencias, capturas y resultados de revisión.
 - `roles/` y `workflow/` definen las etapas de la fábrica independientemente de un agent harness concreto.
 - `adapters/` conectan esas etapas con Codex u otro entorno.
@@ -123,24 +123,25 @@ Volver a ejecutar `init` actualiza los archivos administrados del proceso, conse
 
 ## Fuentes de diseño
 
-- **El catálogo de estilos de GitHub** enumera las aplicaciones de referencia disponibles. Trickster descarga documentos solo para los candidatos y guarda el `source.json`, `ui.md`, `ux.md` y `illustrations.md` opcional elegidos en `trickster/design/`.
+- **El catálogo de estilos de GitHub** enumera las aplicaciones de referencia disponibles. Trickster descarga documentos solo para los candidatos y guarda `provenance.json`, `composition.md`, `ui.md`, `ux.md` y `illustrations.md` opcional en `trickster/design/`.
 - **Logoinspo App Icons** proporciona referencias para la dirección original del icono.
 
-El paquete de estilo no es una simple skin. Los controles nativos pueden aportar comportamiento, accesibilidad, focus e integración con el teclado, pero su apariencia debe heredar explícitamente `ui.md` cuando la referencia define un lenguaje visual propio.
+La composición no es un conjunto de skins intercambiables: cada aspecto tiene una fuente y el resultado debe sentirse como un único producto. Los controles nativos aportan comportamiento, accesibilidad, focus e integración con el teclado, mientras que su apariencia sigue el `ui.md` aprobado.
 
 ## Etapas detalladas
 
 | Etapa | Responsable | Resultado obligatorio |
 |---|---|---|
-| 1. Alcance | product-researcher | Estado explícito del alcance y decisiones pendientes |
-| 2. Capacidades de iOS obligatorias | product-researcher + control del master | Once funciones de producto en la matriz canónica fija |
-| 3. Selección de estilo | design-planner + aprobación del usuario | Hasta tres candidatos de GitHub y un paquete guardado localmente |
-| 4. Contrato del producto | design-planner | Pantallas, estados, escenarios, recursos y plan de verificación |
-| 5. Recursos del producto | visual-producer cuando sea necesario | Imágenes verificadas o un `N/A` justificado |
-| 6. Implementación | implementation-owner | Flujo vertical, alcance completo y capacidades obligatorias |
-| 7. Icono | visual-producer | Un concepto original instalado en la aplicación |
+| 1. Definición del producto | product-researcher + control del master | Alcance conciliado y once capacidades de producto |
+| 2. Composición de referencias | design-planner + aprobación del usuario | UI, UX e ilustraciones opcionales sintetizadas localmente |
+| 3. Contrato del producto | design-planner | Pantallas, estados, fases, recursos y plan de verificación |
+| 4. Core | implementation-owner + aprobación del usuario | Secciones principales hasta `CORE UI APPROVED` |
+| 5. Full | implementation-owner | Resto del alcance y flujos de capacidades |
+| 6. Hardening | implementation-owner | Errores, rechazos, indisponibilidad, accesibilidad y persistencia |
+| 7. Recursos del producto | visual-producer + implementation-owner | Recursos aprobados después de Hardening e integrados |
+| En paralelo. Icono | visual-producer + aprobación del usuario | Concepto aprobado antes de integrarlo |
 | 8. Aceptación | acceptance-reviewer + master | Compilación y matriz de capacidades verificadas de forma independiente |
-| 9. Capturas ASO | visual-producer | Un conjunto basado en pantallas reales de la compilación aceptada |
+| 9. Capturas para la tienda | visual-producer + aprobaciones | Storyboard y cuadros reales aprobados individualmente |
 | 10. Finalización | master + aprobación del usuario | Confirmación explícita y limpieza de archivos temporales |
 | 11. Entrega | master | Evidencia reproducible y estado final |
 
@@ -150,8 +151,10 @@ Consulta [el proceso maestro](workflow/master-prompt.md) y [el contrato de orque
 
 - La selección contiene como máximo tres paquetes elegidos por los metadatos del catálogo; solo se descargan sus documentos.
 - Las once capacidades canónicas se contratan e implementan sin importar el alcance del prompt; ninguna puede ser `N/A`.
-- La implementación de la UI se detiene hasta que el usuario elige exactamente un paquete.
-- Los paquetes no se pueden combinar; el elegido es el único contexto de diseño.
+- La implementación de la UI se detiene hasta que el usuario aprueba una composición coherente.
+- UI, UX e ilustraciones pueden proceder de aplicaciones diferentes, pero cada aspecto tiene una sola fuente y no se permite mezclar componentes arbitrariamente.
+- Full no comienza hasta que el usuario aprueba Core; cada fase de implementación admite un preview de Simulator solicitado por el usuario.
+- El icono y cada captura para la tienda tienen un feedback loop antes de integrarse o continuar.
 - Se conserva el comportamiento nativo de los controles, mientras que su apariencia sigue el lenguaje visual seleccionado.
 - El agente de implementación no puede aceptar su propio trabajo.
 - Una compilación correcta no equivale por sí sola a aceptación.
@@ -170,8 +173,11 @@ La instalación global se rechaza intencionadamente. Utiliza `npx` como launcher
 - [Proceso maestro](workflow/master-prompt.md)
 - [Orquestación de roles](workflow/orchestration.md)
 - [Capacidades de iOS obligatorias](workflow/ios-capabilities.md)
-- [Selección de estilo](workflow/style-reference.md)
+- [Composición de referencias](workflow/style-reference.md)
 - [Implementación](workflow/implementation.md)
+- [Core](workflow/implementation-core.md)
+- [Full](workflow/implementation-full.md)
+- [Hardening](workflow/implementation-hardening.md)
 - [Aceptación](workflow/acceptance.md)
 - [Verificación end-to-end](workflow/verification.md)
 

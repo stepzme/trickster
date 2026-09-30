@@ -1,41 +1,58 @@
-# Stage 9. ASO screenshots
+# Stage 9. Store screenshots
 
 ## Applicability
 
-This stage is required for a new app after acceptance of the final build and app icon. For changes to an existing app, perform it when requested or when the showcased features or visual language changed.
+This stage is required for a new app after acceptance of the release candidate and approved app icon. For an existing app, perform it when requested or when showcased features or visual language changed.
 
-## One direction
+The user-facing result is a store-screenshot set, not a claim that broader App Store Optimization or publication is complete.
 
-Do not create a separate visual concept for ASO or offer multiple sets. The style is an aggregation:
+## Source contract
+
+Every frame must link:
 
 ```text
-confirmed style package
-+ actual app interface
-+ visual techniques from the accepted app icon
-+ real product benefits
-= one ASO screenshot set
+implemented and verified benefit
+→ accepted app scenario
+→ real screenshot from the accepted build
+→ marketing composition
+→ explicit user approval
 ```
 
-## Procedure
+Do not fabricate features, alter the product UI inside a capture, or replace a real capture with a generated mockup.
 
-1. Select the primary benefits only from implemented and verified scope.
-2. Create one frame sequence: the first frame communicates the product's essence, and subsequent frames reveal individual benefits.
-3. Prepare reproducible data and capture real screens from the final build in Simulator.
-4. Compose the frames using the typography, color, shapes, and graphic techniques from `ui.md`, applicable `illustrations.md`, and the app icon.
-5. Do not alter the interface in a screenshot to imply features that do not exist.
-6. Verify localization, readability, cropping, safe areas, and conformance with current App Store Connect requirements.
-7. Export one final set for the declared devices and locales.
+## Storyboard gate
 
-A generated interface mockup does not replace a capture of the real app. A marketing composition may surround the capture, but the product screen itself must come from the accepted build.
+1. Select benefits only from accepted scope.
+2. Propose one ordered storyboard: first frame communicates the product essence; later frames present individual benefits.
+3. Record copy, locale, device, source scenario, and intended real screen for each frame.
+4. The master shows the storyboard and waits for explicit `STORE STORYBOARD APPROVED`.
+
+Do not render frames before storyboard approval.
+
+## Per-frame feedback loop
+
+Process frames strictly one at a time:
+
+1. Prepare reproducible data and capture the real source screen from the accepted build.
+2. Compose one frame using final `ui.md`, optional `illustrations.md`, and approved icon techniques.
+3. Verify copy, localization, readability, crop, safe areas, technical size, source revision, and truthful benefit.
+4. The master shows the actual export to the user.
+5. If feedback is given, continue the same visual producer and refine that frame.
+6. Record explicit `STORE FRAME <n> APPROVED` before starting frame `<n+1>`.
+
+The first approved frame becomes the visual template for the set. Later frames may vary composition to serve their content but must preserve the approved system.
+
+After all frames are approved, inspect them together for sequence, consistency, duplicated claims, locale, and technical requirements. Obtain explicit `STORE SET APPROVED`.
 
 ## Output
 
 ```text
 trickster/artifacts/<run-id>/aso/
 ├── storyboard.md
+├── feedback.md
 ├── sources/
 ├── exports/
 └── verification.md
 ```
 
-`storyboard.md` connects each frame to a benefit, real scenario, and source screenshot. `verification.md` records the dimensions, locale, device, and visual verification of every export.
+`feedback.md` records storyboard approval, each shown frame revision, user feedback, every frame approval, and final set approval.

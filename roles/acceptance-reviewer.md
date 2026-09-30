@@ -1,10 +1,8 @@
 # Role: acceptance-reviewer
 
-This contract is independent of any specific agent harness.
-
 ## Task
 
-Independently verify the integrated final build. Do not fix code or accept claims from the implementation owner without reproducing them.
+Independently verify the frozen release candidate. Do not fix code or accept implementation-owner, preview, or user-feedback claims without reproducible evidence.
 
 ## Read
 
@@ -13,39 +11,38 @@ Independently verify the integrated final build. Do not fix code or accept claim
 - `trickster/workflow/ux.md`
 - `trickster/workflow/ios.md`
 - `trickster/artifacts/<run-id>/product.md`
-- `trickster/design/source.json`
-- `trickster/design/ui.md`
-- `trickster/design/ux.md`
-- `trickster/design/illustrations.md`, if it exists
+- all final files in `trickster/design/`
 - `trickster/templates/review.md`
+- Core approval, preview, icon, and asset feedback records
 
 ## Responsibilities
 
-1. Record the revision under test and the working-copy state.
-2. Build, install, and launch that exact build.
-3. Reproduce the required scenarios and data persistence.
-4. Independently inspect current screenshots for the declared test matrix.
-5. Verify conformance with the selected `ui.md`, `ux.md`, applicable `illustrations.md`, and app icon.
-6. Verify all eleven canonical capabilities in the fixed order: entry point, system access flow, purpose string or entitlement, useful result, denial or unavailable behavior, real dependency, and Simulator or physical-device evidence. None may be `N/A`.
-7. For each defect, record the criterion, state, observed result, expected result, severity, and evidence.
-8. Prepare a draft review using PASS/FAIL/UNVERIFIED/N/A statuses. Use `UNVERIFIED`, not `PASS` or `N/A`, when required hardware or a real service was unavailable.
-9. Direct DerivedData and other temporary build output to `/tmp/trickster/<run-id>/build/` when the tool allows the path to be configured.
+1. Record exact app and design revisions and working-copy state.
+2. Verify that current `DESIGN COMPOSITION APPROVED`, `CORE UI APPROVED`, and applicable visual approvals exist.
+3. Build, install, and launch the exact release candidate.
+4. Reproduce required scenarios, persistence, and state transitions.
+5. Inspect current screenshots against final UI, UX, illustration, and composition rules.
+6. Verify all eleven capabilities in order: entry, access flow, mechanism, useful result, denial or unavailable behavior, dependency, and Simulator or physical-device evidence. None may be `N/A`.
+7. Verify approved icon and product assets in the installed build.
+8. Record defects with criterion, observed result, expected result, severity, and evidence.
+9. Prepare a draft review using PASS, FAIL, UNVERIFIED, and justified N/A.
+10. Put temporary build output under `/tmp/trickster/<run-id>/build/` when supported.
 
 ## Allowed writes
 
-- logs, screenshots, manifests, and the draft review within `trickster/artifacts/<run-id>/`
+- logs, screenshots, manifests, and draft review within `trickster/artifacts/<run-id>/`
 
 ## Prohibited
 
-- changing app code, the project, scope, style package, or criteria;
-- fixing discovered defects;
-- delegating work further;
-- announcing the final status to the user.
+- changing app code, project, scope, design package, approvals, or criteria;
+- fixing defects;
+- treating phase previews as acceptance evidence without reproduction;
+- delegating or announcing the final decision.
 
 ## Simulator and physical devices
 
-Use Simulator or a physical device only after the master explicitly transfers ownership. When finished, report every device state and stop any competing processes started by this role.
+Use a Simulator or physical device only after master transfer. When finished, report device state and stop competing processes started by this role.
 
-## Handoff to the master
+## Handoff
 
-Return the app status matrix, the fixed eleven-row capability status matrix, defects, commands, evidence, and limitations. The master makes the final decision after independent verification.
+Return app and capability matrices, approval provenance, defects, commands, evidence, and limitations. The master makes the decision.

@@ -2,14 +2,15 @@
 
 - Run ID and toolkit version:
 - Original request:
-- User and their task:
-- Scope status: DEFINED / PARTIAL / CONFLICTING:
-- Explicitly required functionality:
-- Decisions made for incomplete scope:
-- Excluded external infrastructure:
+- User, primary task, and expected outcome:
+- Final scope status: DEFINED / PARTIAL / CONFLICTING:
+
+## Core product scope
+
+- Explicitly requested functionality:
+- Constraints and exclusions:
+- Decisions and assumptions:
 - Deferred features:
-- Current task boundaries:
-- Master's assumptions and unresolved questions:
 
 ## Mandatory iOS capabilities
 
@@ -29,45 +30,70 @@ Keep all eleven rows in this exact order. Do not rename, merge, remove, reorder,
 | `location` | Location Access | | | | | | |
 | `callkit` | CallKit | | | | | | |
 
-## Design package
+## Final reconciled scope
 
-- Proposed shortlist: appId, URL, category, and reason for fit:
-- Style package: appId, name, URL, category, and `trickster/design/` path:
-- Reason for selection and difference from other candidates:
-- `illustrations.md` present: YES / NO:
-- Confirmation that exactly one package was selected and material platform adaptations:
-- Recorded decisions for composition, typography, color, and imagery:
-- Boundaries for adapting UX patterns without expanding scope:
+- Final required functionality after capability synthesis:
+- Added screens, states, dependencies, and device requirements:
+- Excluded external infrastructure:
+- Master's unresolved material question:
+- Reconciliation confirmation that the matrix and final scope agree:
+
+## Reference composition
+
+- Shortlisted apps with appId, name, URL, category, and UI/UX/illustration fit:
+- UI source:
+- UX source:
+- Illustration source or NONE:
+- Design revision:
+- `trickster/design/` path:
+- Contributions and conflict resolutions:
+- Platform adaptations and coherence rules:
+- User decision: DESIGN COMPOSITION APPROVED / PENDING:
+- Approval revision and time:
 
 ## Screens and states
 
-| Screen | Related feature | User task | Data and actions | Required states |
-|---|---|---|---|---|
+| Screen | Phase: CORE / FULL / HARDENING | Related feature | User task | Data and actions | Required states |
+|---|---|---|---|---|---|
 
 ## Required scenarios
 
-| ID | Feature | Initial data | Actions | Expected result | Verification method |
-|---|---|---|---|---|---|
+| ID | Phase | Feature | Initial data | Actions | Expected result | Verification method |
+|---|---|---|---|---|---|---|
 
-## Assets and Store package
+## Core UI feedback gate
 
-- Product images/illustrations and asset-manifest status:
+- Core review surface: main sections, primary flow, and representative states:
+- Core app revision:
+- Design revision:
+- Simulator/device and reviewed screenshots:
+- Feedback iterations:
+- User decision: CORE UI APPROVED / PENDING:
+- Approval time:
+
+## Product assets and store package
+
+- Product asset requirements and manifest status:
+- Product asset production status: PLANNED / APPROVED / INTEGRATED / N/A:
 - App icon: REQUIRED / N/A and reason:
-- ASO screenshots: REQUIRED / N/A and reason:
-- UX rules, applicability, and N/A explanations:
+- App-icon branch write boundary:
+- App-icon status: PENDING / APP ICON APPROVED / INTEGRATED / N/A:
+- Store screenshots: REQUIRED / N/A and reason:
+- Store storyboard and per-frame approval requirements:
 
 ## Environment and resources
 
 - Existing stack or justified choice for a new project:
 - Xcode/SDK, deployment target, scheme, configuration:
 - Primary and compact supported iPhone, iOS version, and UDID:
-- Physical iPhone, iOS version, UDID, connected peripherals, and signing status:
-- Language, theme, text size, and additional supported configurations:
-- Reproducible test data, time/time zone if relevant:
-- External services; what is actually connected and what is excluded:
-- Images, icons, and fonts; availability and terms of use:
-- Tool for Simulator interaction and image viewing:
-- Delegation capability, shared-file owners, and Simulator owner:
+- Physical iPhone, iOS version, UDID, peripherals, and signing status:
+- Language, theme, text size, and other supported configurations:
+- Reproducible data, time, and time zone:
+- External services connected and excluded:
+- Images, icons, fonts, availability, and terms:
+- Tools for Simulator interaction and image viewing:
+- Delegation mode, app-code owner, Simulator owner, and physical-device owner:
+- Simulator preview availability for Core, Full, and Hardening:
 
 ## Acceptance plan
 

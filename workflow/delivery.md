@@ -2,16 +2,23 @@
 
 ## Final statuses
 
-Report the app status from `acceptance.md`, app-icon status, ASO-screenshot status, mandatory iOS capability status, and limitations for release and publication separately.
+Report separately:
 
-An accepted app does not automatically mean the Store package is ready. A ready Store package does not mean the app is signed or published.
+- app status;
+- mandatory capability status;
+- Core UI approval and design revision;
+- app-icon status;
+- product-asset status;
+- store-storyboard, per-frame, and set status;
+- signing, archive, submission, and publication status;
+- remaining limitations.
+
+An accepted app does not imply approved store screenshots. Approved store screenshots do not imply signing or publication.
 
 ## Report
 
-Create `trickster/artifacts/<run-id>/review.md` from the template. Tie evidence to one final revision and environment. Record the implementation, checks, all eleven capability results, shortlist and selected local style package, user confirmation, completed cleanup, assets, app icon, ASO exports, defects, limitations, and reproduction steps.
+Create `trickster/artifacts/<run-id>/review.md` from the template and tie it to exact app and design revisions. Record product definition, reference composition, role handoffs, Core feedback, phase previews, Full and Hardening results, capability evidence, icon and asset feedback, acceptance, store-frame approvals, cleanup, defects, limitations, and reproduction steps.
 
 ## Response to the user
 
-Briefly state what works; the final statuses; where the project and report are located; how to reproduce verification; and what remains unverified or requires a separate release task.
-
-Do not declare the app published or App Store-ready based only on Simulator and prepared images.
+State what works, what was approved, final statuses, project and report locations, reproduction steps, and what remains `UNVERIFIED` or belongs to a separate release task. Do not call a preview accepted or call the app published from local build and store images alone.

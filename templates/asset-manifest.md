@@ -1,9 +1,12 @@
-# Asset manifest
+# Asset requirements and production manifest
 
 - Run ID:
-- Overall status: UNVERIFIED
+- Design revision:
+- Planning status: UNVERIFIED
+- Production gate: HARDENING COMPLETE / BLOCKED
+- Overall production status: NOT STARTED
 
-| Asset | Screen and role | Source/method | Direction from style package | Sizes/states | License/provenance | In-app verification |
-|---|---|---|---|---|---|---|
+| Asset | Product role and screen | Required dimensions and states | Planned source or method | Design direction | License/provenance requirement | User approval | Integration and in-app verification |
+|---|---|---|---|---|---|---|---|
 
-If no product images or illustrations are needed, enter `N/A` and explain why the interface fulfills its purpose without them.
+During the product contract, fill requirements only. Generate assets after Hardening. If no product images or illustrations are needed, enter `N/A` and explain why typography, layout, or system symbols fulfill the product role.

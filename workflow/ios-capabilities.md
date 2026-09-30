@@ -1,8 +1,8 @@
-# Stage 2. Mandatory iOS capabilities
+# Stage 1. Product definition: mandatory iOS capabilities
 
 ## Goal
 
-Extend every product scope with the same fixed set of eleven iOS capabilities. For each capability, invent one product-relevant, user-facing feature, include it in the product contract, implement real behavior, and verify the result. A permission button without a useful result is not a feature.
+Define every product with the same fixed set of eleven iOS capabilities. Capability synthesis is part of product definition, not a later expansion of an already final scope. For each capability, invent one product-relevant, user-facing feature, reconcile its screens and dependencies with the core product, implement real behavior, and verify the result. A permission button without a useful result is not a feature.
 
 This stage applies to every new app and every substantial app change regardless of the scope in the user's prompt. These capabilities are part of the Trickster baseline and are not optional scope expansion.
 
@@ -163,7 +163,7 @@ CallKit is a system capability, not a permission prompt. It coordinates a real c
 
 ## Contract gate
 
-Before style selection, create all eleven rows in the `Mandatory iOS capabilities` section of `product.md`. Each row must contain:
+During product definition, create all eleven rows in the `Mandatory iOS capabilities` section of `product.md`, then reconcile them with the core scope before reference research. Each row must contain:
 
 - the canonical ID and name;
 - the invented product feature;
@@ -173,7 +173,7 @@ Before style selection, create all eleven rows in the `Mandatory iOS capabilitie
 - denial, restriction, cancellation, and unavailable behavior;
 - Simulator or physical-device verification method.
 
-The master verifies the count, order, and completeness. Do not proceed to style selection while any row is absent, renamed, merged, or lacks a product result.
+The master verifies the count, order, completeness, and final scope reconciliation as one gate. Do not proceed to reference research while any row is absent, renamed, merged, lacks a product result, or conflicts with the recorded final scope.
 
 ## Platform sources
 

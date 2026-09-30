@@ -1,35 +1,36 @@
-# Stage 5. Product images and illustrations
+# Stage 7. Product assets and visual integration
 
-## Goal
+## Gate and planning boundary
 
-Determine whether the app needs images, illustrations, or custom graphics, and prepare exactly one agreed result for each real need.
+Asset requirements are recorded during the product contract, but production images and illustrations are created only after implementation Hardening is complete. This keeps dimensions and integration points predictable without committing to visuals before the real interface stabilizes.
 
-The app icon and ASO screenshots are not part of this stage; separate documents govern them.
+The app icon and store screenshots follow their own workflows.
 
-## Need assessment
+## Production
 
-Create an asset manifest from `trickster/templates/asset-manifest.md` even when no assets are required. For each screen, identify the graphic's purpose; whether typography, layout, or a system symbol can solve the need; whether user-supplied, licensed, or generated material is required; dimensions, aspect ratio, and states; accessibility, localization, and licensing.
+For every required asset in `asset-manifest.md`:
 
-Do not add decorative images without a product role. If external assets are unnecessary, record a justified `N/A`.
+1. Reconfirm its product role, screen, dimensions, states, accessibility, localization, licensing, and approved design revision.
+2. Prefer typography, layout, or system symbols when they solve the need without custom imagery.
+3. Follow final `illustrations.md` when present. Otherwise create one original language that harmonizes with final `ui.md` only when the product genuinely needs imagery.
+4. Prepare one prompt covering purpose, subject, composition, palette, framing, dimensions, background or transparency, and prohibited elements.
+5. Use the latest suitable image-generation model available in the active environment. Record exact model ID, date, prompt, parameters, source, and terms of use.
+6. Produce one candidate per need, visually inspect it, and refine the same solution for artifacts, anatomy, text, crop, or style mismatch.
+7. The master shows every substantial generated asset to the user before integration. Continue the same visual producer until the user approves it; silence is not approval.
+8. Prepare derivative sizes without changing the approved concept.
 
-## Generation
+If generation or image viewing is unavailable, keep the asset `UNVERIFIED`; do not ship a placeholder as final.
 
-When original graphics are required:
+## Integration
 
-1. If the selected package in `trickster/design/` contains `illustrations.md`, follow it. If it does not, do not treat that as a prohibition: when there is a real product need, create one original illustration language that harmonizes with the colors, shapes, typography, and character of `ui.md`.
-2. Prepare one prompt covering purpose, subject, composition, style, palette, background/transparency, framing, dimensions, and prohibited elements.
-3. Use an available image-generation tool for raster illustrations. If none is available, do not present a placeholder or arbitrary graphic as a final asset.
-4. Create one production candidate, not a series of alternative styles.
-5. Visually inspect the source result before integration. Artifacts, anatomy/text defects, poor cropping, or style mismatches require refinement of the same solution.
-6. Record the prompt, tool, time, source file, and terms of use.
-7. Prepare required derivative sizes without changing the concept.
-8. Verify the result on the real app screen, including themes and sizes when applicable.
+The visual producer writes source and derivative artifacts only to the paths granted by the master. The implementation owner integrates approved product assets and the approved app icon, unless the master explicitly transfers an exact non-overlapping asset-catalog path.
 
-Quality fixes remain within the selected solution. Do not present an unverified or unrendered asset as complete.
+After integration, build the app and verify every asset on the real screen, target sizes, themes, and locales where applicable. Record the final app revision and design revision.
 
 ## Output
 
-- `trickster/artifacts/<run-id>/asset-manifest.md`;
-- source and derivative files in the project;
-- screenshots showing actual in-app use;
-- provenance and licenses.
+- updated `trickster/artifacts/<run-id>/asset-manifest.md`;
+- source and derivative files with provenance;
+- user approval records for substantial generated assets;
+- screenshots of actual in-app use;
+- the release-candidate revision ready for independent acceptance.

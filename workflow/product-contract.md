@@ -1,23 +1,45 @@
-# Stage 4. Product contract
+# Stage 3. Product contract
 
 ## Goal
 
-Before writing code, combine the original request, agreed scope, and selected style package into one verifiable body of work.
+Turn the reconciled product definition and approved reference composition into an implementation and verification contract. The contract defines asset requirements now, but production assets are created only after Hardening.
 
-## Contents of product.md
+## Inputs
 
-Use `trickster/templates/product.md` to record the user and primary task; explicitly requested features; decisions made for incomplete scope; excluded infrastructure features; boundaries of the current implementation; all eleven mandatory iOS capability features; proposed shortlist; selected local style package; map of screens and states; required scenarios; image needs; applicability of the app-icon and ASO stages; environment; and acceptance plan.
+- `trickster/artifacts/<run-id>/product.md` with final reconciled scope;
+- `trickster/design/provenance.json`;
+- `trickster/design/composition.md`;
+- final `ui.md`, `ux.md`, and optional `illustrations.md`;
+- `trickster/templates/product.md`;
+- `trickster/templates/asset-manifest.md`.
 
-Use the selected package's `ux.md` as a set of interaction patterns for the agreed product, not as permission to copy features from the reference app or expand scope.
+## Procedure
 
-## Scope-completeness criterion
+1. Preserve the core, capability, and final scope sections without silently adding or removing features.
+2. Record the approved design revision, concern mapping, source URLs, coherence rules, and `DESIGN COMPOSITION APPROVED` decision.
+3. Define all main sections, screens, entry points, navigation, data, actions, and states.
+4. Identify the Core implementation surface: application shell, every main-section screen, and one primary end-to-end flow suitable for real user review.
+5. Define Full implementation scenarios for the remaining scope and all eleven capabilities.
+6. Define Hardening scenarios for errors, loading, empty, offline where applicable, permission denial, restriction, cancellation, unavailable hardware or service, persistence, accessibility, compact layout, and declared environments.
+7. Create stable scenario IDs and acceptance evidence requirements before implementation.
+8. Prepare asset requirements: product role, dimensions, states, provenance constraints, and integration locations. Do not generate production assets in this stage.
+9. Record app-icon applicability and the parallel-branch write boundary.
+10. Record which implementation phases may be previewed in Simulator and the tools available to show the current result.
 
-Do not measure the product by its number of screens. For every required feature, define the entry point, user action, expected result, edge states, and verification method.
+## Core approval contract
 
-A feature without a screen or state is not designed. A screen that is not connected to a required feature must not be added merely to increase volume.
+Core implementation does not approve itself. The master must build and inspect it, show the real result to the user, and record either feedback or explicit `CORE UI APPROVED` tied to the design revision and app revision. Full implementation is blocked until that approval.
 
-The `Mandatory iOS capabilities` matrix is a blocking part of the contract. It must retain the exact eleven stable IDs, canonical names, and order from `ios-capabilities.md`. Every row needs a product-specific feature, entry point, useful result, real system mechanism, denial or unavailable behavior, dependencies, and a verification method. These rows cannot be `N/A`.
+## Output gate
 
-## Output
+Before implementation begins, `product.md` and `asset-manifest.md` must answer:
 
-A completed `trickster/artifacts/<run-id>/product.md`. After broad implementation begins, do not expand or reduce it merely to obtain PASS. Record a material change in user requirements as a contract change with a reason.
+- what belongs to Core, Full, and Hardening;
+- how every capability is a contextual feature;
+- what the user will review at the Core gate;
+- which assets are planned but not yet produced;
+- how previews are built and shown;
+- what evidence acceptance requires;
+- which tools, devices, peripherals, data, and real services are available.
+
+The master verifies the contract and retains authority to change it when explicit user feedback changes the approved direction. Any such change creates a new contract or design revision and invalidates affected downstream evidence.

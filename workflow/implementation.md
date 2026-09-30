@@ -1,31 +1,30 @@
-# Stage 6. Implementation
+# Implementation overview
 
-## Preparation
+Implementation is one continuous responsibility performed by the same `implementation-owner`, but it is divided into three gated phases:
 
-Read `product.md`, `workflow/ios-capabilities.md`, `trickster/design/source.json`, `ui.md`, `ux.md`, optional `illustrations.md`, the asset manifest, and the cross-cutting `workflow/ux.md` and `ios.md`. Verify available harness capabilities: separate agents, Xcode, Simulator, physical-device access, UI interaction, and image viewing. Record the actual limitations.
+1. [Core](implementation-core.md) — main-section screens, application shell, and the primary flow, followed by user feedback until `CORE UI APPROVED`.
+2. [Full](implementation-full.md) — the rest of the agreed scope and all eleven mandatory capability features.
+3. [Hardening](implementation-hardening.md) — errors, denial, restriction, cancellation, unavailable dependencies, persistence, accessibility, compact layout, and declared environment states.
 
-Direct DerivedData and other temporary build output to `/tmp/trickster/<run-id>/build/` when the tool allows the path to be configured. Store only evidence and final materials in `trickster/artifacts/<run-id>/`, not build caches.
+Do not collapse these phases into one large implementation assignment. Use `CONTINUE` with the same owner so earlier decisions, feedback, and defects remain visible.
 
-## Implementation owner
+## Shared rules
 
-The master starts the `implementation-owner` role according to `trickster/roles/implementation-owner.md` and gives the agent exact inputs, allowed app paths, and handoff criteria. This agent is the sole owner of app code, dependencies, and shared Xcode configuration during implementation.
+- `product.md` owns scope, phase boundaries, scenarios, and acceptance criteria.
+- `trickster/design/` owns the approved design composition and revision.
+- The implementation owner cannot change either contract.
+- The implementation owner is the sole writer to app code and shared Xcode files.
+- Build and check each phase before handoff.
+- Use native controls where they provide correct behavior and accessibility, while styling presentation according to the final design package.
+- Direct temporary build output to `/tmp/trickster/<run-id>/build/` when supported.
+- A phase preview is never acceptance.
 
-Use parallel implementation workers only for independent modules or tests with non-overlapping files and already fixed interfaces. The master creates and coordinates them. Only one agent at a time controls the shared Simulator and build.
+## User-requested Simulator preview
 
-If delegation is unavailable, the master performs the implementation-owner role and explicitly records `sequential fallback`.
+At any point in Core, Full, or Hardening, the user may ask to see the current app. The master transfers Simulator ownership to one role, pauses conflicting builds, and requests a preview of the exact revision. The owner builds, installs, launches, and captures the requested states. Record phase, revision, device, OS, locale, theme, text size, and data.
 
-## Vertical slice
+Return the result as `PREVIEW`. Do not claim feature completion, physical-device verification, visual acceptance, or `PASS` from the preview. The master shows it to the user and returns feedback to the same owner through `CONTINUE`.
 
-Before implementing the full scope, build one primary scenario with real content in the confirmed style. Run it in Simulator and inspect it visually. Check buttons, fields, cards, and navigation separately: a default SwiftUI appearance that does not match `ui.md` is a visual defect. Fix architectural and visual problems, then expand the app.
+## Design revision invalidation
 
-The vertical slice is an internal check, not an alternative design or a separate product variant.
-
-## Full implementation
-
-Complete every required scenario in `product.md`, all states, data persistence, and applicable UX rules. Do not add features from the reference app that are outside the agreed scope. Do not reduce scope after work begins without an explicit reason recorded in the contract.
-
-Implement every canonical capability row as a real product feature. The access flow must begin from its contracted user action and produce the contracted result. Do not substitute a permission dashboard, fake data, simulated peripheral, fake call, or prompt-only button for working behavior. Use the least-privileged system mechanism and add the required purpose strings, entitlements, capability settings, external-service integration, and platform-availability handling.
-
-Implement the authorization states the selected framework exposes, including first use, success, denial, restriction, cancellation, and unavailable hardware or service. Optional access must not break the primary product path. If required hardware or a real service is unavailable, preserve the implementation and report the exact physical-device or integration check as `UNVERIFIED`.
-
-The agent's report is an input to verification, not a readiness decision.
+If Core feedback changes the reference mapping or final design package, stop downstream work. Record a new design revision and repeat affected Core work. Any icon, asset, acceptance, or store-screenshot approval tied to the prior revision must be re-evaluated.
