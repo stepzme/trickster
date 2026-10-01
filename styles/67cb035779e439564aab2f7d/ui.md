@@ -3,220 +3,165 @@
 version: 1
 platform: iOS
 name: setka-design-analysis
-description: "A black-first professional social network with near-white geometric type, charcoal content cards, electric violet actions, and glossy purple network imagery. The interface is dense and expressive: bold lowercase headings, segmented white chips, dark post surfaces, and a persistent five-tab shell."
-
+description: "A black-first social interface with dense charcoal content, wide rounded display type, white selection states, vivid violet-to-magenta actions, and luminous network imagery used at identity moments."
 colors:
-  primary: "#8E00FF"
-  on-primary: "#FFFFFF"
-  primary-soft: "#281037"
-  ink: "#F6F6F7"
-  ink-muted: "#A6A6AB"
-  ink-subtle: "#74747A"
   canvas: "#000000"
-  surface-1: "#19191A"
-  surface-2: "#242426"
-  surface-3: "#303033"
-  hairline: "#343438"
-  semantic-success: "#35C46A"
-  semantic-warning: "#FFB020"
-  semantic-danger: "#FF4A55"
-  semantic-overlay: "#000000"
-
+  surface-primary: "#1C1C1E"
+  surface-secondary: "#2A2A2C"
+  surface-pressed: "#343437"
+  accent-violet: "#6F00FF"
+  accent-magenta: "#D500FF"
+  accent-blue: "#315CFF"
+  text-primary: "#F7F7F8"
+  text-secondary: "#A1A1A6"
+  text-inverse: "#111111"
+  divider: "#303033"
+  success: "#31C967"
+  destructive: "#E93636"
 typography:
-  display-xl: { fontFamily: Geometric Sans, fontSize: 38, fontWeight: 600, lineHeight: 1.00, letterSpacing: -0.8 }
-  display-lg: { fontFamily: Geometric Sans, fontSize: 30, fontWeight: 600, lineHeight: 1.08, letterSpacing: -0.5 }
-  display-md: { fontFamily: Geometric Sans, fontSize: 25, fontWeight: 600, lineHeight: 1.12, letterSpacing: -0.3 }
-  headline: { fontFamily: Geometric Sans, fontSize: 21, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0 }
-  card-title: { fontFamily: System Sans, fontSize: 16, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: System Sans, fontSize: 17, fontWeight: 500, lineHeight: 1.30, letterSpacing: 0 }
-  body-lg: { fontFamily: System Sans, fontSize: 16, fontWeight: 400, lineHeight: 1.42, letterSpacing: 0 }
-  body: { fontFamily: System Sans, fontSize: 14, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
-  body-sm: { fontFamily: System Sans, fontSize: 12, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
-  caption: { fontFamily: System Sans, fontSize: 10, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
-  button: { fontFamily: Geometric Sans, fontSize: 15, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0 }
-  eyebrow: { fontFamily: System Sans, fontSize: 12, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0.1 }
-  mono: { fontFamily: System Mono, fontSize: 12, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
-
-rounded:
-  xs: 4
-  sm: 8
-  md: 12
-  lg: 16
-  xl: 22
-  xxl: 28
-  pill: 9999
-  full: 9999
-
+  display: {fontFamily: "Wide Rounded Sans", fontSize: 32, fontWeight: 600, lineHeight: 34}
+  title: {fontFamily: "Wide Rounded Sans", fontSize: 24, fontWeight: 600, lineHeight: 28}
+  section: {fontFamily: "Wide Rounded Sans", fontSize: 19, fontWeight: 600, lineHeight: 23}
+  body: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 400, lineHeight: 20}
+  label: {fontFamily: "Wide Rounded Sans", fontSize: 14, fontWeight: 600, lineHeight: 18}
+  metadata: {fontFamily: "SF Pro Text", fontSize: 12, fontWeight: 400, lineHeight: 16}
+  caption: {fontFamily: "SF Pro Text", fontSize: 10, fontWeight: 400, lineHeight: 13}
 spacing:
-  xxs: 4
-  xs: 8
-  sm: 12
-  md: 16
-  lg: 24
-  xl: 32
-  xxl: 48
-  section: 64
-
+  screen-horizontal: 10
+  section-gap: 20
+  card-gap: 8
+  card-padding: 12
+  control-gap: 8
+rounded:
+  control: 10
+  card: 14
+  sheet: 24
+  pill: 999
 components:
-  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.md}", padding: [14, 18]}
-  button-secondary: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.md}", padding: [13, 18]}
-  feed-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 12 }
-  community-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 12 }
-  filter-chip: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.sm}", padding: [8, 12]}
-  filter-chip-selected: { backgroundColor: "{colors.ink}", textColor: "{colors.canvas}", typography: "{typography.body-sm}", rounded: "{rounded.sm}", padding: [8, 12]}
-  composer: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body-lg}", rounded: "{rounded.xs}", padding: 16 }
-  bottom-nav: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", height: 62 }
+  primary-action: {height: 54, treatment: "violet-magenta-gradient", foreground: "#FFFFFF", radius: 10}
+  content-card: {fill: "#1C1C1E", radius: 14, padding: 12}
+  selected-chip: {fill: "#F7F7F8", foreground: "#111111", radius: 8}
+  input: {fill: "#1C1C1E", foreground: "#F7F7F8", radius: 8}
+  bottom-navigation: {height: 62, fill: "#1C1C1E", selected: "#F7F7F8", unselected: "#8C8C91"}
 ---
 
 # Overview
 
-setka is a high-contrast professional network with a pure black canvas, charcoal feeds, wide geometric headings, white selection chips, and electric violet actions. Community content remains dense and media-led, while glossy purple network graphics make onboarding and profile identity distinctive.
-
-**Key Characteristics:**
-- Pure black shell with layered charcoal cards.
-- Broad geometric lowercase headings.
-- Violet gradient reserved for key creation and identity actions.
-- White selected chips provide strong binary contrast.
-- Five-tab navigation persists across feed, communities, creation, chats, and profile.
+Setka is a compact, black-first social interface. Pure black supplies most of the screen area; charcoal cards, inputs, and navigation form a shallow secondary layer. White type and selection fills establish hierarchy, while saturated violet-to-magenta gradients are concentrated in commitment actions and identity moments. Everyday feeds are dense and media-led; onboarding and profile screens create more negative space for luminous network graphics and personal identity.
 
 # Non-negotiable visual invariants
 
-- Sampled screens consistently use pure black shell with layered charcoal cards.
-- The reference consistently shows broad geometric lowercase headings.
-- Sampled screens consistently use violet gradient reserved for key creation and identity actions.
-- The reference consistently shows white selected chips provide strong binary contrast.
-- Five-tab navigation persists across feed, communities, creation, chats, and profile.
+- Pure black is the dominant canvas. Charcoal surfaces group content without turning the product into a gray card stack.
+- A wide, rounded geometric display face distinguishes headings, action labels, and short statements; long posts and metadata use a neutral, readable sans serif.
+- Violet-to-magenta gradient is a scarce high-energy accent for primary actions and identity glow, not a universal interactive tint.
+- Selected filters invert to a near-white fill with dark text; unselected filters remain charcoal with light text.
+- Social content is compact: author, context, copy, media, response actions, and counts read as one continuous card.
+- Persistent navigation is low-contrast and secondary to content. Its item count and destinations must follow the adapted product rather than reproduce the source architecture.
+- Authored network imagery and empty-state drawings occupy deliberate space and must not be replaced by arbitrary system symbols.
 
 # Color and surfaces
 
-### Brand & Accent
+Black covers the shell, large empty regions, and most form backgrounds. Feed cards, community rows, chat bubbles, selection tiles, and app-owned sheets use closely spaced charcoal values. Separation comes from the change between black and charcoal, compact gaps, and occasional hairlines; shadows are not a meaningful layer.
 
-- **Electric Violet** ({colors.primary}) marks creation, key profile action, and brand energy.
-- **Violet Soft** ({colors.primary-soft}) supports subtle identity and selected states.
+Near-white carries primary text, conventional icons, and active navigation. Cool gray carries timestamps, role labels, subscriber counts, hints, and inactive navigation. A white surface is reserved for decisive selection or a high-contrast secondary action, never used as a general card background.
 
-### Surface
-
-- **Canvas** ({colors.canvas}) is the dominant app background.
-- **Surface 1** ({colors.surface-1}) carries posts, community rows, and navigation.
-- **Surface 2** ({colors.surface-2}) carries chips, callouts, and inputs.
-- **Surface 3** ({colors.surface-3}) is reserved for pressed or nested states.
-
-### Text
-
-- **Ink** ({colors.ink}) carries headings and primary content.
-- **Muted** ({colors.ink-muted}) carries metadata and descriptions.
-- **Subtle** ({colors.ink-subtle}) is limited to timestamps and inactive navigation.
-
-### Semantic
-
-Use green, amber, and red only for success, warning, and destructive states. Reaction emoji may introduce color inside content but should not alter the shell.
+The brand accent moves from deep violet through electric purple to magenta. Large gradient actions may span that range horizontally. Smaller selection outlines can use violet or blue-violet. Green appears locally for completion or verified success, red for destructive actions, and blue for familiar platform-owned text selection or send affordances. User avatars, organization marks, emoji, and media are allowed to introduce independent color without recoloring the shell.
 
 # Typography
 
-### Font Family
+Short interface headings use a broad, rounded geometric sans with open counters and an intentionally technological character. Titles are commonly lowercase, but case follows product copy rather than becoming a blanket transformation rule. Tight line spacing makes two- or three-line onboarding statements feel like a single graphic block.
 
-Use a wide geometric sans for screen titles and brand actions, paired with a neutral system sans for posts, comments, and metadata.
+Posts, comments, chat messages, descriptions, and metadata switch to a neutral system sans. Author names and content titles use medium or semibold weight; body copy stays regular; timestamps and counts are materially smaller and muted. Avoid applying the display face to paragraphs or dense lists.
 
-### Hierarchy
-
-| Token | Size | Weight | Use |
-|---|---:|---:|---|
-| `{typography.display-xl}` | 38 points | 600 | Onboarding headline |
-| `{typography.display-lg}` | 30 points | 600 | Profile name or hero title |
-| `{typography.display-md}` | 25 points | 600 | Screen title |
-| `{typography.headline}` | 21 points | 600 | Community or post heading |
-| `{typography.card-title}` | 16 points | 600 | Author and content title |
-| `{typography.body}` | 14 points | 400 | Posts, comments, and descriptions |
-| `{typography.caption}` | 10 points | 400 | Time, role, and counts |
-
-### Principles
-
-- Keep branded headings short and mostly lowercase.
-- Use neutral body type for long professional content.
-- Preserve high contrast without excessive bolding.
-- Let hashtags and links use restrained blue or violet emphasis.
-
-### Note on Font Substitutes
-
-Use a wide geometric face for display and SF Pro or Inter for body. Do not apply the display face to long posts or chat messages.
+Use a metrically similar wide rounded face when the original family is unavailable. Dynamic Type should expand body copy and actions first. Display headlines may step down within a bounded range, but they must retain their distinctive width and weight rather than collapsing into default bold SF Pro.
 
 # Screen composition
 
-### Spacing System
+The standard shell uses narrow horizontal gutters, a compact header, one primary scroll region, and—when the product needs persistent top-level destinations—a fixed bottom navigation region. Dense screens leave roughly 8 points between cards; onboarding, profile identity, and empty states use much larger vertical intervals.
 
-Use a 4 points base, 10 points screen gutters, 8 points between feed cards, and 16–24 points between major profile or onboarding groups.
+## Onboarding and account setup
 
-### Grid & Container
+Introductory screens place a segmented progress indicator near the top, a short centered statement, and either a framed product preview or a network graphic in the middle. The primary action stays isolated near the lower safe area. Data-entry steps replace the central graphic with a small number of full-width fields or paired choice tiles while retaining the black canvas and compact header.
 
-The feed is a single column of full-width cards. Community and search results use stacked rows. Profile mixes a centered hero with a three-column metric strip and one-column career cards.
+## Feed and content detail
 
-### Whitespace Philosophy
+The feed begins with a title and compact utilities, followed by a horizontally scrolling filter row. A dismissible guidance card may precede the first content card. Posts use edge-to-edge card media when available; text-only questions place the prompt in a darker nested panel. Content detail removes competing feed chrome, gives the post the full width, and anchors the active comment input above the navigation or keyboard.
 
-Keep feeds compact and profile headers more spacious. Black canvas between cards is the main separator; do not add redundant outlines everywhere.
+## Search, communities, and messages
 
-Surface hierarchy observed in the source:
+Search uses a compact field followed by a horizontal category selector. Results alternate between two-column relationship tiles, stacked community rows, and content cards. A true empty result gives most of the viewport to a single authored line drawing and one short statement.
 
-Depth comes from charcoal steps, purple glows, full-bleed media, and bottom sheets. Shadows are nearly invisible against black.
+Community browsing uses stacked rounded rows with a leading identity mark and a concise text block. Messages reduce decoration further: a sparse conversation list opens into a full-height thread with compact bubbles and a keyboard-attached composer.
 
-### Decorative Depth
+## Profile and relationship detail
 
-Use violet glow, glossy network nodes, and subtle card contrast. Avoid gray gradients that muddy the black shell.
+Profile identity is centered over a subtle violet glow, with a large circular portrait, prominent name, one or two actions, and a compact row of metrics. Career and activity content then resumes a denser card rhythm. Relationship detail can combine two people in one dark card with a luminous connection path, followed by a plain list of other mutual connections.
+
+## Forms and completion
+
+Creation and profile forms use full-width inputs plus paired choice tiles where options are mutually exclusive. The primary action remains near the lower safe area when the form is short. Completion appears as an app-owned dark sheet over the existing context, with a small green success mark and a limited choice of next actions.
 
 # Navigation appearance
 
-Use the persistent five-tab bar for Feed, Communities, Create, Chats, and Profile. Active state turns white; unread counts use small blue badges.
+The observed top-level navigation is a flat charcoal bottom region with compact outline icons and very small labels. Active items become near-white; inactive items stay gray; unread state uses a small local badge. This is a visual treatment, not a requirement to copy five destinations. Use only the adapted product's true peers, and do not duplicate the same destination as both a persistent item and a pushed page.
+
+Secondary pages use a minimal top row with a back chevron, a centered short title when needed, and an optional trailing action. Search and content utilities may sit in the header without a surrounding toolbar surface. App-owned action menus and confirmations rise from the bottom with large upper corners and a charcoal fill; system permission and rating dialogs remain native.
 
 # Components
 
-### Buttons
+## Primary action
 
-Primary creation actions use violet or violet gradient with white type. Secondary actions use charcoal; selected binary controls invert to white with black text. Native controls must inherit this dark, geometric style.
+A full-width control approximately 54 points high with modest rounding, white wide-display text, and a left-to-right violet-to-magenta gradient. Pressed state darkens the gradient without shrinking the label. Disabled state becomes charcoal with low-contrast gray text.
 
-### Cards & Containers
+## Filter chip
 
-Post cards combine author identity, text, media, reactions, comments, share, and view count. Community cards prioritize avatar, title, subscribers, description, and follow action.
+A compact rounded rectangle sized to its short label. Selected state uses near-white fill with dark text; unselected state uses charcoal fill with light text. The contrast change, not a checkmark, communicates selection.
 
-### Inputs & Forms
+## Social content card
 
-Search fields are charcoal and compact. The composer uses a black writing canvas, visible formatting tools, and a circular send action. Keep keyboard context and draft state clear.
+A charcoal container with author identity at the top, content immediately below, optional full-width media, and a compact response row. Text-only prompts may sit inside a second charcoal level. Counts and metadata remain visually subordinate to the authored content.
+
+## Community or result row
+
+A leading circular mark or avatar, a title and two short metadata lines, then one local action or disclosure. Multiple rows form a list through repeated spacing rather than bright separators.
+
+## Choice tile and input
+
+Inputs use dark fills, subtle or absent borders, and light placeholder text. Choice tiles may share a two-column grid; the selected tile gains a thin blue-violet outline. Keyboard-focused compositions preserve the editor and formatting controls above the system keyboard.
+
+## Bottom sheet
+
+An app-owned charcoal panel with a short centered title, compact explanatory text, and one or two full-width actions. Menus use plain icon-label rows. Destructive actions are red and separated from ordinary destinations.
 
 # Imagery and icons
 
-Use violet glow, glossy network nodes, and subtle card contrast. Avoid gray gradients that muddy the black shell.
+Conventional actions—back, close, search, notifications, disclosure, sharing, attachments, and settings—use quiet line-style interface icons. Keep their stroke weight consistent and do not give every icon a colored backplate.
 
-User media can fill the card width. Brand illustrations use circular nodes, thin connecting lines, and soft purple glow against black.
+Product imagery has separate roles. Onboarding uses framed interface previews and glossy violet relationship nodes connected by thin luminous lines. Profile identity uses a restrained violet glow behind photography. Empty search uses a high-contrast monochrome line drawing. User-generated and publisher media may fill the content width and retain its own palette.
 
-If final imagery is not yet available, any placeholder must preserve the documented scale, placement, crop, and visual weight rather than removing that layer.
+These authored graphics have reserved composition space. Omitting the network field, identity glow, or empty-state drawing would materially change the screen and cannot count as faithful design approval. Follow `illustrations.md` for generation and integration rules.
 
 # States
 
-Invitations and onboarding hints use dismissible charcoal callouts. Empty chat or community states should retain the black canvas and one direct next action.
+Observed states include launch branding, native tracking permission, multi-step onboarding progress, empty and completed inputs, selected and unselected choice tiles, loading feed, selected feed filters, populated posts and questions, empty and populated search, draft-exit confirmation, published content, success completion, empty relationship state, unread chat, keyboard-active chat and composer, selected status, share menu, and destructive profile action.
+
+Loading stays inside the existing black composition. Empty states reduce content instead of introducing a pale placeholder card. Selection uses inversion or a precise outline. Completion uses a local success indicator; failure or destructive choices keep the surrounding context available and do not recolor the whole screen.
 
 # iOS adaptation
 
-### Touch Targets
+Build the shell with explicit black and charcoal surfaces rather than default `List`, `Form`, or `TabView` styling. Respect the top and bottom safe areas while allowing violet glows, media, and onboarding artwork to extend behind content where observed. Keep the persistent navigation clear of the home indicator and ensure the last scroll item remains reachable above it.
 
-Filters, reactions, follow, overflow, composer tools, and navigation items require at least 44 points targets.
+Use native keyboards, text selection, tracking permission, and rating prompts when the operating system owns the interaction. App-owned sheets, selection tiles, chips, and actions must retain the documented dark treatment. Keep interactive targets at least 44 points even when the visible icon or label is compact.
 
-### Collapsing Strategy
-
-Allow filter rows to scroll horizontally. Keep bottom navigation fixed while feed, profile, and chats scroll independently.
-
-### Image Behavior
-
-Use `cover` for post media and circular crop for avatars. Preserve brand illustration glow against black and never place it on a light card.
-
-Apply these rules within current iPhone safe areas and scrolling containers. Keep interactive targets at least 44 points, preserve a logical VoiceOver order, and let Dynamic Type wrap supporting text without flattening the documented hierarchy. Preserve the documented appearance.
+VoiceOver order should follow page title, contextual controls, primary content, actions, then navigation. Combine author identity with its role and time metadata; expose reaction and count controls with explicit labels. Let feed copy and form guidance wrap under Dynamic Type, switch paired tiles to one column when necessary, and preserve the display face only where it remains legible.
 
 # Anti-generic checklist
 
-- Do not lighten the entire interface to gray.
-- Do not use violet on every interactive label.
-- Do not apply the display font to long content.
-- Do not separate every row with bright borders.
-- Do not expose default blue iOS controls.
-- Do not replace the documented hierarchy with a generic stack of identical white cards or `Form` sections.
-- Do not use default blue tint, an unstyled `TabView`, arbitrary SF Symbols, or uniform corner radii when they contradict the recorded tokens and components.
-- Do not omit compositionally important imagery while final assets are pending; preserve its footprint with a faithful placeholder.
-
+- Do not replace the pure-black shell with a generic dark-gray theme.
+- Do not use purple for every link, icon, and selected state; reserve the gradient for emphasis.
+- Do not turn dense posts, community rows, and forms into identical elevated cards.
+- Do not apply the display face to long posts, chats, or metadata.
+- Do not use a white card as the default container; white is a scarce selection and contrast state.
+- Do not copy the source's destination count or professional-network entities when the adapted product has a different architecture.
+- Do not omit authored network or empty-state imagery, and do not replace it with unrelated SF Symbols.
 </design-context>

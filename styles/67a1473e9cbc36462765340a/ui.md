@@ -3,177 +3,103 @@
 version: 1
 platform: iOS
 name: Profi-ru-design-analysis
-description: "A direct service-matching interface built from a white canvas, vivid coral-red commitments, large black question text, pale gray search and input fields, generous vertical space, and one-question-at-a-time sheets."
-colors: {primary: "#F21F4B", on-primary: "#FFFFFF", primary-focus: "#CC153B", ink: "#141518", ink-muted: "#696C72", ink-subtle: "#A0A3A9", ink-tertiary: "#CACCD1", canvas: "#FFFFFF", surface-1: "#F7F7FA", surface-2: "#EEEFF3", surface-3: "#E3E4E9", surface-4: "#D7D9DF", hairline: "#E6E7EB", hairline-strong: "#CDD0D6", hairline-tertiary: "#B6BAC1", inverse-canvas: "#25262A", inverse-surface-1: "#36373C", inverse-surface-2: "#47494F", inverse-ink: "#FFFFFF", brand-secure: "#D9143F", semantic-success: "#31A96E", semantic-overlay: "#16171A"}
+description: "A white service marketplace with vivid red commitments, oversized black questions, pale gray inputs, spacious one-question sheets, black line illustration, and selective portrait photography."
+colors: {primary: "#F21846", on-primary: "#FFFFFF", primary-disabled: "#F08A9E", ink: "#101114", ink-muted: "#797C82", ink-subtle: "#AFB2B8", canvas: "#FFFFFF", surface: "#F6F7FA", surface-strong: "#ECEEF2", border: "#E8E9ED", selected: "#111214", success: "#39B773", overlay: "#161719"}
 typography:
-  display-xl: {fontFamily: SF Pro Display, fontSize: 38, fontWeight: 600, lineHeight: 1.05, letterSpacing: -0.9}
-  display-lg: {fontFamily: SF Pro Display, fontSize: 32, fontWeight: 600, lineHeight: 1.09, letterSpacing: -0.6}
-  display-md: {fontFamily: SF Pro Display, fontSize: 26, fontWeight: 600, lineHeight: 1.13, letterSpacing: -0.4}
-  headline: {fontFamily: SF Pro Display, fontSize: 22, fontWeight: 600, lineHeight: 1.18, letterSpacing: -0.2}
-  card-title: {fontFamily: SF Pro Text, fontSize: 16, fontWeight: 500, lineHeight: 1.25, letterSpacing: 0}
-  subhead: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 500, lineHeight: 1.30, letterSpacing: 0}
-  body-lg: {fontFamily: SF Pro Text, fontSize: 16, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0}
-  body: {fontFamily: SF Pro Text, fontSize: 14, fontWeight: 400, lineHeight: 1.38, letterSpacing: 0}
-  body-sm: {fontFamily: SF Pro Text, fontSize: 12, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0}
-  caption: {fontFamily: SF Pro Text, fontSize: 10, fontWeight: 400, lineHeight: 1.25, letterSpacing: 0}
-  button: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 500, lineHeight: 1.20, letterSpacing: 0}
-  eyebrow: {fontFamily: SF Pro Text, fontSize: 10, fontWeight: 500, lineHeight: 1.20, letterSpacing: 0.1}
-  mono: {fontFamily: SF Mono, fontSize: 11, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0}
-rounded: {xs: 4, sm: 8, md: 12, lg: 18, xl: 24, xxl: 30, pill: 9999, full: 9999}
-spacing: {xxs: 4, xs: 8, sm: 12, md: 16, lg: 20, xl: 24, xxl: 32, section: 48}
+  display: {fontFamily: SF Pro Display, fontSize: 30, fontWeight: 600, lineHeight: 33, letterSpacing: -0.5}
+  question: {fontFamily: SF Pro Display, fontSize: 22, fontWeight: 600, lineHeight: 26, letterSpacing: -0.2}
+  section: {fontFamily: SF Pro Text, fontSize: 18, fontWeight: 600, lineHeight: 23, letterSpacing: 0}
+  card-title: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 500, lineHeight: 19, letterSpacing: 0}
+  body: {fontFamily: SF Pro Text, fontSize: 14, fontWeight: 400, lineHeight: 19, letterSpacing: 0}
+  metadata: {fontFamily: SF Pro Text, fontSize: 12, fontWeight: 400, lineHeight: 16, letterSpacing: 0}
+  button: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 500, lineHeight: 19, letterSpacing: 0}
+spacing: {xxs: 4, xs: 8, sm: 12, md: 16, lg: 20, xl: 24, section: 32}
+rounded: {xs: 4, sm: 8, md: 12, lg: 16, sheet: 22, pill: 9999}
 components:
-  button-primary: {backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.md}", padding: [14, 18]}
-  button-primary-pressed: {backgroundColor: "{colors.primary-focus}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.md}"}
-  button-secondary: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [12, 16]}
-  button-tertiary: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [10, 14]}
-  service-row: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body-lg}", rounded: "{rounded.xs}", padding: 12 0}
-  question-sheet: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.headline}", rounded: "{rounded.xl}", padding: 20}
-  text-input: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: [14, 16]}
-  status-badge: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.pill}", padding: [3, 7]}
-  bottom-nav: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: [8, 10]}
+  primary-action: {backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.md}", minHeight: 48, padding: [12, 18]}
+  answer-row: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", minHeight: 44, padding: [10, 0]}
+  text-input: {backgroundColor: "{colors.surface}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: [14, 16]}
+  task-sheet: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", rounded: "{rounded.sheet}", padding: 20}
+  information-tile: {backgroundColor: "{colors.surface}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 12}
+  sticky-action: {backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.md}", padding: [14, 18]}
 ---
 
 # Overview
 
-Profi.ru is a direct service brief rather than a decorative marketplace. White space, large black questions, pale input surfaces, and a single coral-red commitment guide the user through one decision at a time.
+The observed Profi.ru experience alternates between an airy marketplace home and an intensive task brief. White and near-white surfaces dominate. Black type carries almost all hierarchy, while vivid red is reserved for brand identity and the next meaningful commitment. Large questions, sparse answer lists, pale inputs, and persistent task actions make a long questionnaire feel like a sequence of small decisions.
 
-**Key Characteristics:** white canvas, coral-red CTA, large question text, pale search fields, simple service lists, sheet-based task wizard, fixed Back and Next controls, and relevant native keyboards.
+The transferable language is the one-decision hierarchy, surface economy, restrained accent, and pairing of line art with real portraits. Cleaning, specialists, orders, and proposals are examples from the source rather than mandatory entities for another product.
 
 # Non-negotiable visual invariants
 
-- Sampled screens consistently use white canvas.
-- The reference consistently shows coral-red CTA.
-- Typography consistently uses large question text.
-- The reference consistently shows pale search fields.
-- The reference consistently shows simple service lists.
-- The reference consistently shows sheet-based task wizard.
-- The reference consistently shows fixed Back and Next controls.
-- The reference consistently shows relevant native keyboards.
+- White is the dominant canvas; pale cool gray is reserved for inputs, helper tiles, and inactive controls.
+- Vivid red is concentrated in brand identity and the primary commitment, not spread across passive content.
+- Task questions are large, black, and visually isolated from their answer choices.
+- Focused task steps use a white sheet over a darkened source context with a visible grabber.
+- Answer rows remain flat and spacious; selection controls sit at the trailing edge.
+- The primary progression action remains available while the current question scrolls or the keyboard appears.
+- Marketplace education combines black line illustrations with portrait photography of real specialist categories.
+- Shadows are minimal; separation comes from surface contrast, rounded silhouettes, and whitespace.
 
 # Color and surfaces
 
-### Brand & Accent
+White fills both the general canvas and the active questionnaire sheet. The home uses a faint cool-gray field behind educational tiles and portrait cards, while inputs use a slightly stronger gray fill. Thin borders are rare and low contrast. A charcoal scrim separates a focused task from the source screen; later order screens may use a dark textured or photographed header behind a large white content sheet.
 
-Coral red owns confirmation, Next, and the brand wordmark. It is not used as a surface or decorative highlight.
-
-### Surface
-
-White carries the full task; very pale gray separates search, text inputs, and unchecked option controls; a dark scrim sits behind focused sheets.
-
-### Text
-
-Near-black leads questions and services, medium gray explains requirements, and light gray carries counts or disabled fields.
-
-### Semantic
-
-Red means primary progress, green is reserved for success, and gray communicates neutral selection or availability.
+Red provides the wordmark, full-width commitment controls, publishing progress, and a strong confirmation surface. Disabled red actions shift to a muted rose rather than disappearing. Black is used for headings, chosen controls, and important values. Gray carries hints, counts, explanations, and unavailable answers. Green appears locally for online or published status.
 
 # Typography
 
-### Font Family
+The typography is a neutral iOS sans with strong Cyrillic and unusually prominent questions. Use SF Pro as the implementation substitute. A home message may use a 30-point semibold display treatment; questionnaire prompts use about 22-point semibold; section titles use 18-point semibold; answer labels and buttons sit around 14–15 points; helper text and specialist counts use 12-point regular text.
 
-Use SF Pro Display for large questions and SF Pro Text for service lists, helper copy, counts, and actions.
-
-### Hierarchy
-
-| Token | Size | Weight | Use |
-|---|---:|---:|---|
-| display-lg | 32 points | 600 | Major state |
-| headline | 22 points | 600 | Task question |
-| card-title | 16 points | 500 | Service or option |
-| body | 14 points | 400 | Explanation |
-| caption | 10 points | 400 | Specialist count |
-
-### Principles
-
-- Ask one clear question per screen.
-- Keep answer labels plain and readable.
-- Use red only for the next real commitment.
-
-### Note on Font Substitutes
-
-Use the platform sans with strong Cyrillic and a clear regular-to-semibold hierarchy.
+Text remains direct and functional. Long questions wrap across multiple lines with stable leading. Explanations can expand beneath a selected answer rather than forcing the user into a separate detail view. Dynamic Type should add vertical space and allow the action area to remain reachable; never reduce a long question or answer below readable body size to keep the original viewport count.
 
 # Screen composition
 
-### Spacing System
+The home begins with location and identity, then a large proposition, search, an authored hero scene, and a strong task action. Below it, horizontal portrait cards and a two-column or mixed-width grid explain how the service works. These educational modules use real content and image roles; they are not generic placeholders.
 
-Use a 4 points base, 16–20 points sheet padding, 12–16 points option gaps, and generous vertical space after the question.
+The service catalog is much plainer: search, a section title, and a vertically spaced list with quiet counts. Starting a task opens a large white sheet over a dimmed context. The sheet gives its upper region to one question and the middle to answers or one input. Back and progression controls occupy a persistent lower action area. When the system keyboard appears, the question and focused input remain visible above it.
 
-### Grid & Container
-
-Catalog is a single list; the task brief is a full-width rounded top sheet with one-column choices and fixed bottom actions.
-
-### Whitespace Philosophy
-
-Whitespace reduces cognitive load between sequential questions. Do not fill unused space with promotions or unrelated specialist cards.
-
-Surface hierarchy observed in the source:
-
-| Level | Treatment | Use |
-|---|---|---|
-| 0 | White canvas | Service catalog |
-| 1 | Pale input fill | Search and answer |
-| 2 | White rounded sheet | Task question |
-| 3 | Dark scrim | Focused brief context |
-
-### Decorative Depth
-
-Use only subtle sheet separation and occasional small line-art feedback graphics; the workflow remains primarily typographic.
+The task summary returns to the originating task context and groups answers as pale fields. Publishing can temporarily replace most of the screen with red progress feedback. The resulting order uses a dark contextual header and large white sheets for status and specialists. Preserve these compositional modes only when the adapted product has equivalent phases; do not copy an order dashboard into an unrelated flow.
 
 # Navigation appearance
 
-Use search and service categories to enter the flow; inside the brief, fixed Back and Next actions replace a persistent tab bar.
+The observed core has no visible persistent tab shell. Users enter tasks from search, categories, or the primary task action. Focused task steps are presented as sheets and expose Back and Next as task controls rather than global navigation.
+
+The home keeps identity and location controls quiet. The questionnaire uses a grabber and may expose a compact overflow action in the task context. After publication, a concise status remains associated with the task and drill-down sheets expose relevant records. An adapted product can use persistent destinations if its architecture requires them, but should not add a tab bar merely to imitate a marketplace convention absent from the observed core.
 
 # Components
 
-### Buttons
+The primary action is a wide red rounded rectangle with white medium-weight text. Disabled state uses a muted rose fill. In questionnaires, the next action shares the lower action area with a text-only back action. Publishing uses the same red at a much larger scale to communicate an in-progress commitment.
 
-Primary Next, Confirm, and Tell about the task use solid coral red; Back is plain black text; disabled actions become pale.
+Search and free-text inputs use pale gray fill, no strong border, and generous internal padding. Answer lists use flat rows with a trailing checkbox or radio control. Selected controls become black and may reveal helper copy under the chosen answer. Specialist availability appears as a compact count before the question.
 
-### Cards & Containers
-
-Service categories remain flat list rows; the task brief is one large sheet rather than a stack of cards.
-
-### Inputs & Forms
-
-Inputs use pale gray fills and the keyboard appropriate to phone, number, or free text; native behavior remains intact while styling follows the red, gray, and type system.
+Educational tiles use pale-gray rounded surfaces with short headings and reserved illustration space. Portrait cards use a large photograph, a tinted backdrop, and text over the lower image area. Order summaries use stacked pale fields; specialist records use avatar, name, ratings, status, and a local disclosure or contact action within a large white sheet.
 
 # Imagery and icons
 
-Use only subtle sheet separation and occasional small line-art feedback graphics; the workflow remains primarily typographic.
+The imagery system has two clear roles. Black line drawings explain service concepts and support the home proposition, educational tiles, and feedback prompts. Portrait photography represents actual specialist categories and people, often against soft lavender, mint, blue, or blush backgrounds. A task context may also use a subtle full-width photographic or textural header.
 
-No product photography is required; small monochrome line graphics may sit at the edge of a pale helper panel.
-
-If final imagery is not yet available, any placeholder must preserve the documented scale, placement, crop, and visual weight rather than removing that layer.
+Ordinary controls—back, search, location, calendar, currency, close, disclosure, and selection—remain simple system-style line icons. Do not reinterpret them as product illustrations. Illustration and photography need explicit reserved space; removing either from the home would materially change its visual balance.
 
 # States
 
-Keep the available specialist count and current selection visible; explicit validation appears close to the field.
+Observed states include launch, phone entry disabled and enabled, code entry, populated home, service catalog, search suggestions, unselected and selected answers, contextual answer explanation, free-text and numeric keyboards, map-based address choice, completed task summary, publishing progress, published status, specialist-review progress, populated specialist results, and hidden-order recovery.
+
+Selection updates the current answer locally and may disable conflicting options. Keyboard states preserve the focused field. Counts can update between questions as the task narrows. Publishing uses explicit progress, then replaces it with a confirmed status and continued waiting or results. Hiding an order preserves a clear recovery action instead of making the content disappear without explanation.
 
 # iOS adaptation
 
-### Touch Targets
+Use safe-area-aware custom sheets rather than a default grouped `Form`, because the observed hierarchy depends on a large continuous white surface, isolated question, and persistent action area. Integrate the correct native keyboard for phone, verification, numeric, and free-text input. Keep the focused input visible and restore the question after keyboard dismissal.
 
-Service rows, choices, fields, Back, and Next remain at least 44 points.
-
-### Collapsing Strategy
-
-Preserve question, specialist count, answer, and Next; reduce helper text and secondary feedback prompts first.
-
-### Image Behavior
-
-Keep occasional line art small, monochrome, and secondary; no hero crop should compete with the form.
-
-Apply these rules within current iPhone safe areas and scrolling containers. Keep interactive targets at least 44 points, preserve a logical VoiceOver order, and let Dynamic Type wrap supporting text without flattening the documented hierarchy. Preserve the documented appearance.
+Rows and selection controls need at least 44-point hit areas. VoiceOver should announce specialist count, question, answer label, selection state, and any revealed explanation in that order. Multi-select groups must identify whether more than one answer is allowed. Dynamic Type should expand the sheet and permit scrolling while keeping progression reachable. Maps remain standard interactive map content with an accessible address alternative.
 
 # Anti-generic checklist
 
-- Don't show an entire multi-step form at once.
-- Don't add promotional cards inside the questionnaire.
-- Don't use red for passive labels or background decoration.
-- Do not replace the documented hierarchy with a generic stack of identical white cards or `Form` sections.
-- Do not use default blue tint, an unstyled `TabView`, arbitrary SF Symbols, or uniform corner radii when they contradict the recorded tokens and components.
-- Do not omit compositionally important imagery while final assets are pending; preserve its footprint with a faithful placeholder.
+- Do not display the full questionnaire as one long form; retain one focused decision at a time.
+- Do not use red for every link, icon, badge, or passive heading.
+- Do not replace the home imagery with a grid of arbitrary SF Symbols or generic service icons.
+- Do not turn flat answer rows into individually elevated cards.
+- Do not add promotional filler to the questionnaire's intentionally open space.
+- Do not approve the image-led home while required line art or portrait assets are missing.
 
 </design-context>

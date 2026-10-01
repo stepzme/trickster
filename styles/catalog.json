@@ -7,14 +7,19 @@
     "categories": [
       "Job & Recruitment"
     ],
-    "uiSummary": "A high-density job marketplace with a white canvas, vivid blue application actions, black selection pills, mint opportunity signals, and compact rounded vacancy cards. Clear salary and employer hierarchy supports fast scanning while friendly flat illustrations soften onboarding, empty states, and career guidance.",
-    "uxSummary": "hh job supports onboarding and resume creation, job search and filters, vacancy and employer evaluation, favorites, applications, employer chat, responses, career content, and profile management.",
-    "navigationSummary": "Five primary destinations anchor Search, Favorites, Responses, Messages, and Profile. Search remains the default home and carries utility items plus recommended vacancies.",
+    "uiSummary": "A dense white job-search interface with saturated blue actions, compact bordered content cards, pale blue and mint signals, strong black headings, and selective editorial illustration.",
+    "uxSummary": "hh supports account entry, guided profile and resume setup, vacancy discovery, filtering, saving searches and vacancies, reviewing details, applying with a chosen resume, following application status, messaging an employer, and managing resumes and career resources. The observed behavior favors progressive disclosure: users begin with a broad destination, narrow the content, open one record, then complete a focused action without losing the originating context.",
+    "navigationSummary": "Five persistent destinations provide access to search, saved vacancies, applications, messages, and profile. Detail screens return to the originating list. Profile links to account data, career resources, resumes, and settings. Focused search, filters, specialization, resume choice, and application composition are presented as temporary tasks that dismiss back to the previous context. An application can continue into its related chat. Application and message lists also reopen the corresponding vacancy or conversation. Closing a temporary task cancels that unfinished step; completing it updates the source record and exposes the next relevant action.",
     "coreFlows": [
-      "Find and evaluate a vacancy",
-      "Apply and follow up"
+      "Enter or create an account",
+      "Search and narrow vacancies",
+      "Review and save a vacancy",
+      "Apply and continue to conversation",
+      "Review applications",
+      "Manage a resume",
+      "Browse career resources"
     ],
-    "illustrationSummary": "hh job uses friendly flat character scenes and editorial career imagery for onboarding, product updates, empty states, and guidance."
+    "illustrationSummary": "hh uses authored imagery selectively for empty states and career editorial content. It is not a continuous decorative layer: vacancy results, applications, resume management, and active conversations remain primarily typographic. The recurring system includes flat editorial people scenes and wider article artwork, supported by occasional portrait or content photography."
   },
   {
     "appId": "67a1473e9cbc36462765340a",
@@ -24,14 +29,17 @@
     "categories": [
       "Job & Recruitment"
     ],
-    "uiSummary": "A direct service-matching interface built from a white canvas, vivid coral-red commitments, large black question text, pale gray search and input fields, generous vertical space, and one-question-at-a-time sheets.",
-    "uxSummary": "Profi.ru moves from phone-based entry to a service catalog and a highly guided task brief that narrows specialist matching one question at a time.",
-    "navigationSummary": "The observed core does not rely on a dense tab shell. Search and category lists lead into a bottom-sheet-like questionnaire with fixed Back and Next actions.",
+    "uiSummary": "A white service marketplace with vivid red commitments, oversized black questions, pale gray inputs, spacious one-question sheets, black line illustration, and selective portrait photography.",
+    "uxSummary": "The observed Profi.ru experience moves from phone verification into service discovery and a guided task brief. The user selects a service, answers one question at a time, reviews the assembled brief, publishes it, waits for matching specialists, and can inspect or restore the resulting order.",
+    "navigationSummary": "After entry, the user can search for a service, choose from the catalog, or start a task from the main action. Selecting a service opens a focused task sequence. Back returns to the previous question without discarding prior answers; Next advances only when the current answer is sufficient. The assembled task can be reviewed and edited before publication. Publishing transitions into order status and specialist results. A hidden order remains recoverable. Temporary keyboards, service selection, and address selection return to the pending task rather than creating unrelated destinations.",
     "coreFlows": [
-      "Find a specialist",
-      "Sign in"
+      "Verify a phone number",
+      "Find a service",
+      "Describe and publish a task",
+      "Review matching specialists",
+      "Hide and restore an order"
     ],
-    "illustrationSummary": null
+    "illustrationSummary": "Profi.ru uses a stable mixed imagery system on its marketplace surfaces: black editorial line drawings explain how the service works, while portrait photography represents specialist categories and real people. The questionnaire itself is intentionally image-light, so imagery should not be propagated into every task step."
   },
   {
     "appId": "67b1080a635baf29ab6c3180",
@@ -41,14 +49,18 @@
     "categories": [
       "Education"
     ],
-    "uiSummary": "A mobile design system defined by acid-green branding, black immersion, full-screen memes, saturated collections, and a screen mascot.",
-    "uxSummary": "memo teaches practical language through meme clips, captions, reactions, themed collections, exploration, and lightweight profile progress.",
-    "navigationSummary": "Three fixed destinations connect Home, Explore, and Profile. The content viewer switches between Clips and Memes while keeping reaction, captions, speed, and sharing in thumb reach.",
+    "uiSummary": "A black-first learning interface built around fluorescent green actions, full-bleed meme media, compact dark controls, and a recurring retro-screen mascot.",
+    "uxSummary": "memo moves from a conversational setup into repeated learning sessions built around short media, vocabulary collections, and exercises. Users can switch content modes, save or react to material, enter a themed collection, complete a short sequence, and return to their previous browsing context. Subscription and feedback requests are separate tasks that can be completed or dismissed.",
+    "navigationSummary": "Three persistent destinations provide access to the media feed, collection discovery, and the user's account area. The feed can switch between clips and memes without leaving the destination. Collections and account-related pages open as drill-down destinations and return to the originating context. A lesson is a focused task with progress and an explicit exit. Subscription selection and feedback are also focused tasks and can be closed without stepping through unrelated screens. System permission prompts hand control to iOS and then return to the pending setup step.",
     "coreFlows": [
-      "Learn from a clip",
-      "Explore a topic"
+      "Complete first-time setup",
+      "Learn from media",
+      "Explore and start a collection",
+      "Complete an exercise sequence",
+      "Start or decline a subscription",
+      "Send product feedback"
     ],
-    "illustrationSummary": "memo uses a friendly 3D screen mascot and deliberately eclectic meme illustration to make language practice playful and memorable."
+    "illustrationSummary": "memo has a persistent branded illustration system centered on a retro-screen mascot. It also uses large, deliberately heterogeneous meme and lesson imagery, but that content media is a separate asset class and does not need to imitate the mascot style."
   },
   {
     "appId": "67bede0a99eaccdc0aed7730",
@@ -58,12 +70,17 @@
     "categories": [
       "Shopping, Listings & Marketplaces"
     ],
-    "uiSummary": "A high-density mobile commerce system built on white surfaces, soft gray search and utility panels, vivid yellow purchase actions, green price emphasis, and image-led product cards. The shell stays neutral while promotional banners and product photography supply color.",
-    "uxSummary": "Yandex Market is a dense commerce app that connects discovery, search, product comparison, checkout, delivery, and account services in one persistent shopping shell.",
-    "navigationSummary": "- A five-item primary navigation keeps Home, Catalog, Cart, Orders, and Profile available. - Search stays of discovery and listing screens. - Product and checkout steps use focused pages and bottom sheets, then return to the shopping context.",
+    "uiSummary": "A dense white commerce interface where pale-gray utilities, product photography, green prices, and saturated yellow commitment actions organize high-volume shopping information.",
+    "uxSummary": "Yandex Market connects discovery, search, product evaluation, checkout, fulfillment, and account services. Browsing actions update the current context immediately; consequential order and payment actions proceed through review and confirmation. Search queries, filters, product position, and order context are retained when the user returns from a focused task.",
+    "navigationSummary": "Five persistent destinations provide access to the source app's top-level shopping areas. Search can begin from browsing and remains available through results. Product, seller, review, order, and account details open as drill-down destinations and return to their originating context. Checkout is a focused task that can be closed before commitment. Order-specific actions open from the current order and return to that order. System keyboard, payment, and notification interactions hand control to iOS where appropriate, then resume the pending app task.",
     "coreFlows": [
-      "Find and buy a product",
-      "Manage shopping"
+      "Start the app and reach discovery",
+      "Search and narrow results",
+      "Evaluate a product",
+      "Create an order",
+      "Track and receive an order",
+      "Manage profile and benefits",
+      "Leave and manage a review"
     ],
     "illustrationSummary": null
   },
@@ -75,15 +92,19 @@
     "categories": [
       "Social Networking"
     ],
-    "uiSummary": "A black-first professional social network with near-white geometric type, charcoal content cards, electric violet actions, and glossy purple network imagery. The interface is dense and expressive: bold lowercase headings, segmented white chips, dark post surfaces, and a persistent five-tab shell.",
-    "uxSummary": "setka connects professional feeds, questions, channels, communities, chats, career identity, and network relationships in a persistent five-tab social shell.",
-    "navigationSummary": "- Navigation switches among Feed, Communities, Create, Chats, and Profile. - Feed filters separate recommendations, colleagues, questions, posts, and subscriptions. - Search spans posts, people, networks, and communities.",
+    "uiSummary": "A black-first social interface with dense charcoal content, wide rounded display type, white selection states, vivid violet-to-magenta actions, and luminous network imagery used at identity moments.",
+    "uxSummary": "Setka moves from identity setup into recurring discovery, publishing, conversation, and relationship management. The observed interaction model keeps top-level destinations persistent, opens content and profile tasks as drill-downs, and preserves the current context when a user dismisses a prompt, abandons a draft, or returns from a detail screen.",
+    "navigationSummary": "The observed top-level destinations are Feed, Communities, Create, Chats, and Profile. They are peers; pushed content, search, channel, relationship, and settings pages return to the destination that opened them. The adapted product should use this peer-versus-drill-down model without copying destinations that do not exist in its own scope. Feed categories switch the active content set without leaving Feed. Search can narrow results by all results, posts, people, networks, or communities. Profile branches into status, relationships, subscriptions, settings, editing, and sharing. Self-contained creation choices and confirmations can be dismissed back to the initiating context.",
     "coreFlows": [
       "Join and personalize",
-      "Read and participate",
-      "Create and connect"
+      "Browse and respond to content",
+      "Create a post or question",
+      "Search across the network",
+      "Join or create a community channel",
+      "Continue a direct conversation",
+      "Manage profile and relationships"
     ],
-    "illustrationSummary": "setka uses glossy violet network illustrations during onboarding and identity moments. Human silhouettes, planets, and circular nodes communicate career connections against a pure black field."
+    "illustrationSummary": "Setka has a sustained illustration language for professional relationships and for a small number of empty states. The main authored motif is a network of portrait silhouettes held inside glossy violet nodes and joined by fine luminous lines on black. A secondary monochrome line-drawing style appears when search has no results. Product screenshots and user media are separate asset classes and should not be restyled as illustration."
   },
   {
     "appId": "67d0c021ee2807d4017476b7",
@@ -93,11 +114,16 @@
     "categories": [
       "Weather"
     ],
-    "uiSummary": "A data-rich weather interface that combines atmospheric full-screen gradients, translucent rounded cards, map layers, compact hourly charts, and precise utility sheets. Contextual color changes with conditions while white data panels protect readability.",
-    "uxSummary": "Yandex Weather gives a fast answer first, then lets users expand into time, location, risk, and map detail without losing context.",
-    "navigationSummary": "City search changes location; condition items and map shortcuts open focused detail screens with timelines and layer controls.",
+    "uiSummary": "A weather interface built from a map-led header, a deep condition-responsive blue field, oversized forecast typography, translucent data modules, compact hourly cells, and white analytical sheets.",
+    "uxSummary": "Yandex Weather answers the immediate question in the home context, then lets users move into longer forecasts, specialized risk information, or a time-based map. Place, selected condition, and time remain the organizing context. Reporting the observed weather is a short contribution flow that can acknowledge the report, ask for a correction, or unlock a reward.",
+    "navigationSummary": "The main forecast is the root context. Location search changes the active place without creating a separate permanent destination. Forecast rows, condition metrics, pollen information, and map actions open focused detail pages or dismissible reports, then return to the same place context. Longer forecasts use back navigation. Specialized reports can be closed to the forecast that opened them. Map exploration keeps layer and time selection within the map task. System permission prompts return to the pending launch or forecast context after the user responds.",
     "coreFlows": [
-      "Check a condition in detail"
+      "Complete first launch",
+      "Review current and extended forecast",
+      "Inspect a specialized risk report",
+      "Explore weather on a map",
+      "Confirm or correct observed weather",
+      "Claim and use a reporting reward"
     ],
     "illustrationSummary": null
   },
