@@ -132,7 +132,7 @@ Primary iPhone screens keep the documented content grouping and vertical rhythm 
 
 Keep five bottom destinations fixed on discovery. Results and booking use a simple back header with the small navy brand capsule centered above.
 
-This section governs appearance only; destinations and transitions are defined in `ux.md`.
+This section governs appearance only; product behavior and information architecture come from the approved Research and Planning artifacts.
 
 # Components
 

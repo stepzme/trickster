@@ -112,7 +112,7 @@ Primary iPhone screens keep the documented content grouping and vertical rhythm 
 
 Home, Medical record, and More remain in the bottom bar; patient and policy switching lives in the blue header.
 
-This section governs appearance only; destinations and transitions are defined in `ux.md`.
+This section governs appearance only; product behavior and information architecture come from the approved Research and Planning artifacts.
 
 # Components
 

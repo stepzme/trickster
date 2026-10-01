@@ -119,7 +119,7 @@ Primary iPhone screens keep the documented content grouping and vertical rhythm 
 
 Home, Catalog, At Home, Cart, and Profile form the bottom bar. Selected state turns green; cart shows a count badge.
 
-This section governs appearance only; destinations and transitions are defined in `ux.md`.
+This section governs appearance only; product behavior and information architecture come from the approved Research and Planning artifacts.
 
 # Components
 

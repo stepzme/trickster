@@ -118,7 +118,7 @@ Primary iPhone screens keep the documented content grouping and vertical rhythm 
 
 Bottom navigation anchors discovery and order history. Restaurant and checkout screens use back navigation with sticky category or summary areas.
 
-This section governs appearance only; destinations and transitions are defined in `ux.md`.
+This section governs appearance only; product behavior and information architecture come from the approved Research and Planning artifacts.
 
 # Components
 

@@ -121,7 +121,7 @@ Primary iPhone screens keep the documented content grouping and vertical rhythm 
 
 Home, Account, Basket, and Menu form the bottom bar. Rufus has a separate assistant action. Search and location persist above commerce content.
 
-This section governs appearance only; destinations and transitions are defined in `ux.md`.
+This section governs appearance only; product behavior and information architecture come from the approved Research and Planning artifacts.
 
 # Components
 

@@ -254,7 +254,7 @@ Primary iPhone screens keep the documented content grouping and vertical rhythm 
 
 Today, Vitals, and My Health sit in a frosted bottom pill. A separate circular plus action opens logging. The top bar provides side menu, centered Oura mark, share, and ring/device status.
 
-This section governs appearance only; destinations and transitions are defined in `ux.md`.
+This section governs appearance only; product behavior and information architecture come from the approved Research and Planning artifacts.
 
 # Components
 

@@ -144,7 +144,7 @@ Primary iPhone screens keep the documented content grouping and vertical rhythm 
 
 Use a floating menu button over the map. Contextual back, close, and recenter controls are circular and remain separated from the main sheet.
 
-This section governs appearance only; destinations and transitions are defined in `ux.md`.
+This section governs appearance only; product behavior and information architecture come from the approved Research and Planning artifacts.
 
 # Components
 

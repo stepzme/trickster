@@ -100,7 +100,7 @@ Primary iPhone screens keep the documented content grouping and vertical rhythm 
 
 Use a five-item dark bottom bar with white active icon and muted inactive items; keep search, trends, and profile visible above discovery.
 
-This section governs appearance only; destinations and transitions are defined in `ux.md`.
+This section governs appearance only; product behavior and information architecture come from the approved Research and Planning artifacts.
 
 # Components
 

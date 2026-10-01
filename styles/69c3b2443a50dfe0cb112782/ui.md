@@ -137,7 +137,7 @@ Primary iPhone screens keep the documented content grouping and vertical rhythm 
 
 Keep Home, QR, Messages, and Services fixed. Active state uses red; inactive icons and labels stay light gray.
 
-This section governs appearance only; destinations and transitions are defined in `ux.md`.
+This section governs appearance only; product behavior and information architecture come from the approved Research and Planning artifacts.
 
 # Components
 

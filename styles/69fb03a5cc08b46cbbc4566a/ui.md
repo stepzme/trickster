@@ -254,7 +254,7 @@ Primary iPhone screens keep the documented content grouping and vertical rhythm 
 
 Feed, Save, Pay, Invest, and Credit persist at the bottom with small icons and labels. Selected tabs turn purple; inactive tabs remain gray. Detail screens use a simple back control and centered title.
 
-This section governs appearance only; destinations and transitions are defined in `ux.md`.
+This section governs appearance only; product behavior and information architecture come from the approved Research and Planning artifacts.
 
 # Components
 

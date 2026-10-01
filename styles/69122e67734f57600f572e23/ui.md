@@ -246,7 +246,7 @@ Primary iPhone screens keep the documented content grouping and vertical rhythm 
 
 Five bottom tabs use dark active icons, pale inactive icons, and a white base. Profile, notifications, and search stay in compact top controls; back navigation uses plain chevrons.
 
-This section governs appearance only; destinations and transitions are defined in `ux.md`.
+This section governs appearance only; product behavior and information architecture come from the approved Research and Planning artifacts.
 
 # Components
 

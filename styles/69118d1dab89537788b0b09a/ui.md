@@ -90,7 +90,7 @@ Primary iPhone screens keep the documented content grouping and vertical rhythm 
 
 Use a minimal top bar with menu, conversation title or Gemini label, and avatar. Conversation history lives behind the menu rather than a persistent bottom bar.
 
-This section governs appearance only; destinations and transitions are defined in `ux.md`.
+This section governs appearance only; product behavior and information architecture come from the approved Research and Planning artifacts.
 
 # Components
 

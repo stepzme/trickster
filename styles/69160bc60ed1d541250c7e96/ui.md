@@ -105,7 +105,7 @@ Primary iPhone screens keep the documented content grouping and vertical rhythm 
 
 Use a left side menu for Profile and services, while Home exposes search and map shortcuts. Deep forecast tools use local back, layers, and time controls.
 
-This section governs appearance only; destinations and transitions are defined in `ux.md`.
+This section governs appearance only; product behavior and information architecture come from the approved Research and Planning artifacts.
 
 # Components
 

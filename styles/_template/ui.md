@@ -62,7 +62,7 @@ Include the main screen archetypes actually visible in the reference. For each a
 
 # Navigation appearance
 
-Describe only visual properties of tab bars, navigation bars, sheets, back controls, and selected states. Interaction and information architecture belong in `ux.md`.
+Describe only visual properties of tab bars, navigation bars, sheets, back controls, and selected states. Product behavior and information architecture come from the approved Research and Planning artifacts.
 
 # Components
 

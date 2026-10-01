@@ -120,7 +120,7 @@ Primary iPhone screens keep the documented content grouping and vertical rhythm 
 
 The map uses hamburger, promo, tools, and location controls. A slide-out menu holds history, payment, support, insurance, promo codes, FAQ, business, and account.
 
-This section governs appearance only; destinations and transitions are defined in `ux.md`.
+This section governs appearance only; product behavior and information architecture come from the approved Research and Planning artifacts.
 
 # Components
 

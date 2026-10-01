@@ -30,9 +30,9 @@ If an approved upstream artifact changes materially, repeat only the affected ap
 
 ## Design rule
 
-The selected `ui.md`, `ux.md`, and optional `illustrations.md` remain source documents. Do not synthesize a new generalized project `ui.md`, `composition.md`, or provenance narrative. Copy the approved source documents unchanged into `trickster/design/` and record source IDs in the Design stage artifact.
+The selected `ui.md` and optional `illustrations.md` remain source documents. Do not synthesize a new generalized project `ui.md`, `composition.md`, or provenance narrative. Copy the approved source documents unchanged into `trickster/design/` and record source IDs in the Design stage artifact.
 
-`ui.md` controls appearance. `ux.md` controls navigation, interaction, and state transitions; visual wording in a UX source has no authority. `illustrations.md` controls imagery. Product behavior comes from the approved Research and Planning artifacts.
+`ui.md` controls appearance and `illustrations.md` controls imagery. Product behavior, navigation, interaction, and state transitions come from the approved Research and Planning artifacts plus the shared `workflow/ux.md` and `workflow/ios.md` criteria. Never copy the reference product's information architecture merely because it appears in screenshots.
 
 The running MVP is the design proof. Text descriptions, mockups, evidence frames, successful compilation, and screenshots of a different revision cannot replace it.
 

@@ -64,13 +64,6 @@ function illustrationOverview(markdown, appId) {
   return summary;
 }
 
-function coreFlows(markdown, appId) {
-  const body = rawSection(markdown, "Core Flows", appId);
-  const flows = [...body.matchAll(/^##\s+(.+)$/gm)].map((match) => compact(match[1]));
-  if (flows.length === 0) throw new Error(`${appId}: Core Flows has no named flows`);
-  return flows;
-}
-
 function normalizeCategories(category, appId) {
   const normalized = canonicalCategories.filter((candidate) =>
     category.toLocaleLowerCase("en-US").includes(candidate.toLocaleLowerCase("en-US")),
@@ -97,7 +90,6 @@ async function buildCatalog() {
     const packageRoot = resolve(stylesRoot, appId);
     const source = JSON.parse(await readFile(resolve(packageRoot, "source.json"), "utf8"));
     const ui = await readFile(resolve(packageRoot, "ui.md"), "utf8");
-    const ux = await readFile(resolve(packageRoot, "ux.md"), "utf8");
     const illustrationsPath = resolve(packageRoot, "illustrations.md");
     const illustrationSummary = existsSync(illustrationsPath)
       ? illustrationOverview(await readFile(illustrationsPath, "utf8"), appId)
@@ -121,9 +113,6 @@ async function buildCatalog() {
       category: source.category,
       categories: normalizeCategories(source.category, appId),
       uiSummary,
-      uxSummary: section(ux, "Overview", appId),
-      navigationSummary: section(ux, "Navigation", appId),
-      coreFlows: coreFlows(ux, appId),
       illustrationSummary,
     });
   }

@@ -209,6 +209,17 @@ test("style catalog indexes every repository package", async () => {
     .sort();
   assert.equal(catalog.length, packageIds.length);
   assert.deepEqual(catalog.map(({ appId }) => appId).sort(), packageIds);
+  for (const entry of catalog) {
+    assert.deepEqual(Object.keys(entry), [
+      "appId",
+      "name",
+      "url",
+      "category",
+      "categories",
+      "uiSummary",
+      "illustrationSummary",
+    ]);
+  }
 });
 
 test("style packages follow the current iOS document structure", () => {

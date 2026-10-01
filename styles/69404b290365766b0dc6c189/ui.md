@@ -101,7 +101,7 @@ Primary iPhone screens keep the documented content grouping and vertical rhythm 
 
 Use five persistent bottom destinations. Active navigation is black; the red logo or small badge may remain visible without replacing active state.
 
-This section governs appearance only; destinations and transitions are defined in `ux.md`.
+This section governs appearance only; product behavior and information architecture come from the approved Research and Planning artifacts.
 
 # Components
 

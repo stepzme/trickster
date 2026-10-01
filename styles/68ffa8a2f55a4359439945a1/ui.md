@@ -102,7 +102,7 @@ Primary iPhone screens keep the documented content grouping and vertical rhythm 
 
 Five bottom destinations persist across Home, Promotions, Order, Teremki, and Help. Red marks the active section.
 
-This section governs appearance only; destinations and transitions are defined in `ux.md`.
+This section governs appearance only; product behavior and information architecture come from the approved Research and Planning artifacts.
 
 # Components
 

@@ -3,176 +3,124 @@
 version: 1
 platform: iOS
 name: Okko-design-analysis
-description: "A cinematic black streaming system built from oversized key art, vivid posters, heavy white headings, quiet outline navigation, and violet gradient subscription actions."
-colors: {primary: "#7A18F5", on-primary: "#FFFFFF", primary-focus: "#5D0EC6", ink: "#F7F7F8", ink-muted: "#ABABB0", ink-subtle: "#74747A", ink-tertiary: "#4F5056", canvas: "#000000", surface-1: "#171719", surface-2: "#252529", surface-3: "#333338", surface-4: "#414147", hairline: "#29292D", hairline-strong: "#414147", hairline-tertiary: "#57575E", inverse-canvas: "#FFFFFF", inverse-surface-1: "#F1F1F3", inverse-surface-2: "#E3E3E6", inverse-ink: "#121316", brand-secure: "#26C46A", semantic-success: "#2BC66F", semantic-overlay: "#000000"}
+description: "A black-first streaming interface structured by cinematic key art, portrait poster rails, heavy white editorial headings, compact charcoal controls, and a violet subscription gradient."
+colors:
+  canvas: "#000000"
+  surface-primary: "#171719"
+  surface-secondary: "#252529"
+  surface-selected: "#F4F4F5"
+  text-primary: "#FFFFFF"
+  text-secondary: "#B3B1B7"
+  text-tertiary: "#747179"
+  text-on-light: "#151417"
+  accent-violet: "#7627FF"
+  accent-purple: "#4A08C8"
+  rating: "#26B66A"
+  live: "#E82A64"
+  divider: "#29272D"
 typography:
-  display-xl: {fontFamily: SF Pro Display, fontSize: 36, fontWeight: 700, lineHeight: 1.06, letterSpacing: -0.8}
-  display-lg: {fontFamily: SF Pro Display, fontSize: 30, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.5}
-  display-md: {fontFamily: SF Pro Display, fontSize: 24, fontWeight: 700, lineHeight: 1.14, letterSpacing: -0.3}
-  headline: {fontFamily: SF Pro Display, fontSize: 21, fontWeight: 700, lineHeight: 1.20, letterSpacing: -0.2}
-  card-title: {fontFamily: SF Pro Text, fontSize: 16, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0}
-  subhead: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 600, lineHeight: 1.30, letterSpacing: 0}
-  body-lg: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0}
-  body: {fontFamily: SF Pro Text, fontSize: 13, fontWeight: 400, lineHeight: 1.36, letterSpacing: 0}
-  body-sm: {fontFamily: SF Pro Text, fontSize: 11, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0}
-  caption: {fontFamily: SF Pro Text, fontSize: 10, fontWeight: 400, lineHeight: 1.25, letterSpacing: 0}
-  button: {fontFamily: SF Pro Text, fontSize: 14, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0}
-  eyebrow: {fontFamily: SF Pro Text, fontSize: 10, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0.2}
-  mono: {fontFamily: SF Mono, fontSize: 11, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0}
-rounded: {xs: 4, sm: 8, md: 12, lg: 16, xl: 22, xxl: 28, pill: 9999, full: 9999}
-spacing: {xxs: 4, xs: 8, sm: 12, md: 16, lg: 20, xl: 24, xxl: 32, section: 40}
+  page-title: {fontFamily: "SF Pro Display", fontSize: 34, fontWeight: 700, lineHeight: 40, letterSpacing: -0.6}
+  hero-title: {fontFamily: "SF Pro Display", fontSize: 28, fontWeight: 800, lineHeight: 31, letterSpacing: -0.5}
+  section-title: {fontFamily: "SF Pro Display", fontSize: 22, fontWeight: 700, lineHeight: 27, letterSpacing: -0.2}
+  card-title: {fontFamily: "SF Pro Text", fontSize: 16, fontWeight: 600, lineHeight: 20, letterSpacing: 0}
+  body: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 400, lineHeight: 20, letterSpacing: 0}
+  label: {fontFamily: "SF Pro Text", fontSize: 14, fontWeight: 500, lineHeight: 18, letterSpacing: 0}
+  metadata: {fontFamily: "SF Pro Text", fontSize: 12, fontWeight: 400, lineHeight: 16, letterSpacing: 0}
+  caption: {fontFamily: "SF Pro Text", fontSize: 10, fontWeight: 400, lineHeight: 13, letterSpacing: 0}
+  button: {fontFamily: "SF Pro Text", fontSize: 14, fontWeight: 500, lineHeight: 18, letterSpacing: 0}
+spacing:
+  grid: 4
+  compact: 8
+  control: 12
+  screen-horizontal: 12
+  section: 20
+  major: 28
+rounded:
+  badge: 4
+  control: 6
+  card: 10
+  hero: 12
+  utility: 999
+  sheet: 24
 components:
-  button-primary: {backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [14, 18]}
-  button-primary-pressed: {backgroundColor: "{colors.primary-focus}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}"}
-  button-secondary: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [12, 16]}
-  button-tertiary: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [10, 14]}
-  content-card: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 14}
-  feature-card: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 16}
-  text-input: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: [12, 14]}
-  status-badge: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.pill}", padding: [3, 7]}
-  bottom-nav: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink-subtle}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: [8, 10]}
+  subscription-action: {height: 48, fill: "violet-gradient", foreground: "#FFFFFF", radius: 6}
+  secondary-action: {height: 44, fill: "#252529", foreground: "#FFFFFF", radius: 6}
+  utility-action: {size: 48, fill: "#252529", foreground: "#FFFFFF", radius: 999}
+  search-field: {height: 36, fill: "#F4F4F5", foreground: "#151417", radius: 7}
+  bottom-navigation: {height: 58, fill: "#000000", selected: "#FFFFFF", unselected: "#8D8991"}
 ---
 
 # Overview
 
-Okko lets film, series, channels, and sport artwork dominate a pure black interface while white editorial type and violet subscription actions maintain a clear viewing hierarchy.
-
-**Key Characteristics:** pure black canvas, oversized key art, poster rails, heavy white headings, violet purchase gradient, dark utility circles, and live sports cards.
+Okko is a black media environment in which artwork is content structure rather than decoration. The home feed alternates a large featured title, compact category shortcuts, poster rails, subscription promotion, editorial collections, and sports modules. White type supplies the hierarchy; charcoal controls stay subordinate; violet is concentrated on subscription and account-conversion actions.
 
 # Non-negotiable visual invariants
 
-- Sampled screens consistently use pure black canvas.
-- Imagery consistently uses oversized key art.
-- The reference consistently shows poster rails.
-- The reference consistently shows heavy white headings.
-- Sampled screens consistently use violet purchase gradient.
-- The reference consistently shows dark utility circles.
-- The reference consistently shows live sports cards.
+- The canvas and persistent navigation are pure black, with charcoal used only for controls and grouped content.
+- Featured titles use large cinematic artwork with metadata or actions attached directly to the image-led region.
+- Browsing relies on dense horizontal rails of portrait posters and wide editorial cards rather than repeated text-only rows.
+- Page and section headings are heavy, white, left aligned, and substantially larger than supporting metadata.
+- Subscription commitment uses a saturated violet gradient; ordinary utilities remain charcoal or outline-only.
+- Content detail preserves artwork through the first viewport and continues into cast, collections, description, and related titles.
+- Channels use a compact schedule list, while sport uses event cards with time, teams, state, and reminder action.
 
 # Color and surfaces
 
-### Brand & Accent
+Black is the continuous canvas behind content, status area, and bottom navigation. Charcoal fills category shortcuts, filters, secondary actions, schedule cards, and circular utilities. Selected light segments invert to a near-white fill with dark text. Borders and dividers are rare and low contrast.
 
-Violet identifies subscription and major commerce actions; title artwork supplies nearly all other color.
-
-### Surface
-
-Use black for the canvas, deep charcoal for filters and schedules, and transparent overlays on key art.
-
-### Text
-
-White leads titles and section headings; gray supports genre, duration, season, age, and schedule status.
-
-### Semantic
-
-Green indicates rating or availability, red marks live state, and violet remains commercial rather than semantic.
+The violet gradient runs from deeper purple to electric violet and is reserved for subscription, account creation, or comparable conversion. Green ratings and pink-red live badges remain local to content status. Poster and hero art provide nearly all other color; do not tint neutral navigation to match individual artwork.
 
 # Typography
 
-### Font Family
+Use SF Pro Display for page, hero, and section headings and SF Pro Text for metadata, controls, and schedules. Headings use bold or extra-bold weight and compact leading. Supporting text is regular and gray; prices and subscription terms stay white but smaller than the title. Labels under bottom-navigation icons are extremely small and must remain secondary.
 
-Use SF Pro Display for content and editorial headings and SF Pro Text for controls, content, and metadata.
-
-### Hierarchy
-
-| Token | Size | Weight | Use |
-|---|---:|---:|---|
-| display-lg | 30 points | 700 | Hero or state |
-| headline | 21 points | 700 | Section title |
-| card-title | 16 points | 600 | Primary item |
-| body | 13 points | 400 | Detail |
-| caption | 10 points | 400 | Metadata |
-
-### Principles
-
-- Lead with the title, live event, or playback decision.
-- Keep repeated metadata aligned and visually quieter.
-- Reserve high contrast and weight for real decisions.
-
-### Note on Font Substitutes
-
-Use a heavy neutral system sans; preserve compact poster metadata and large Cyrillic headings.
+The working scale is 34/40 points for major page titles, 28/31 for hero title treatment, 22/27 for section headings, 16/20 for card titles, 15/20 for body, 14/18 for controls, 12/16 for metadata, and 10/13 for captions. Preserve this steep contrast instead of making all content rows the same size.
 
 # Screen composition
 
-### Spacing System
+Use 12-point outer insets and 8–12-point gaps inside controls and rails. The home feed may place a featured card nearly edge-to-edge, followed by a single horizontally scrolling shortcut row and successive media rails. Category, collection, and sports modules show the next card partially to signal horizontal continuation.
 
-Use a 4 points base, 8–12 points internal gaps, and 16 points horizontal screen gutters.
-
-### Grid & Container
-
-Home and Sport use horizontal poster rails; Catalog uses a two-column category grid and vertical genre list.
-
-### Whitespace Philosophy
-
-Let hero art breathe, but keep poster rails and event schedules visually dense.
-
-Surface hierarchy observed in the source:
-
-| Level | Treatment | Use |
-|---|---|---|
-| 0 | Base canvas | Primary context |
-| 1 | Grouped surface | Cards and sections |
-| 2 | Sticky or floating action | Commitment |
-| 3 | Sheet over scrim | Focused choice |
-
-### Decorative Depth
-
-Use full-bleed art, gradients for text protection, and dark raised utility circles rather than card shadows.
+Catalog starts with a large title and compact light search field, then a two-column grid of dark category tiles whose poster stacks extend from the lower portion. Channels switch to a dense vertical schedule list with station mark, current program, remaining time, and save action. Sport begins with a wide editorial hero, then sport filters and chronological event cards. Detail uses full-width vertical key art with a dark fade into title, metadata, price, and the subscription action; supporting sections continue below on black.
 
 # Navigation appearance
 
-Use five outline destinations on black, with solid white icon and label for the active destination.
+The five-item bottom navigation remains black and uses thin outline icons with small labels. The selected destination becomes solid white; inactive items remain gray. Top-level pages place the account action at the upper right. Details use a small circular close action over artwork. Full-screen playback removes browsing navigation and exposes controls only when requested.
 
 # Components
 
-### Buttons
+Featured cards use rounded artwork with content metadata integrated at the lower edge. Poster rails keep a consistent portrait ratio and minimal text outside the image. Category shortcuts are short charcoal rectangles with a leading symbol and label. Catalog category tiles use a dark fill, title at the top, and layered poster crops below.
 
-Major subscription or purchase actions use a full-width violet gradient; media utilities use dark circular controls.
-
-### Cards & Containers
-
-Posters carry title imagery; match and schedule cards align time, teams, state, and reminder without excess decoration.
-
-### Inputs & Forms
-
-Search uses a high-contrast light field on black, styled to the system rather than default platform chrome.
+The primary subscription control is a full-width violet gradient with white centered text. Secondary actions are charcoal rectangles. Detail utilities are dark circles for trailer, save, rate, share, download, and related actions, with short labels below. Search is an intentionally light field on black. Segmented controls use a white selected segment and dark unselected segments. Channel rows and sport event cards keep actions at the trailing edge.
 
 # Imagery and icons
 
-Use full-bleed art, gradients for text protection, and dark raised utility circles rather than card shadows.
+Use supplied title art, portrait posters, wide editorial artwork, person photography, channel marks, team marks, and collection banners in their assigned roles. Hero art may extend to screen edges and needs a black gradient only where title or metadata crosses it. Preserve faces and title treatments when cropping. Posters stay portrait; editorial and sports modules stay wide; cast portraits are circular.
 
-Posters remain portrait, sport banners stay wide, and full detail art may crop edge-to-edge.
+Interface icons are quiet white or gray outlines for account, navigation, search, save, close, reminder, share, and playback utilities. Branded channel, team, title, and collection marks are image assets, not substitute symbols. The isolated device artwork in an account prompt is a contextual graphic, not evidence of a reusable illustration system.
 
-If final imagery is not yet available, any placeholder must preserve the documented scale, placement, crop, and visual weight rather than removing that layer.
+## Visual Style
+
+When an adapted product genuinely needs reference-defining key art, posters, channel marks, team marks, or editorial media, generate the required raster asset with an image-generation tool and add the result to the Xcode asset catalog. Do not construct that media in SwiftUI, do not replace it with a symbol, and do not pause for approval before integrating the generated asset into the running build. If final media is unavailable, preserve its intended ratio, crop, focal point, and color mass with a temporary raster asset.
 
 # States
 
-Keep live, upcoming, rating, age, price, subscription, and season status adjacent to content art.
+Selected tabs and destinations turn white; inactive controls recede to gray. Search supports idle, entered query, results, and filtered results while preserving the query. Save and favorite actions toggle in place. Content can expose rating, age, duration, season count, price, included-in-subscription, live, upcoming, completed, downloaded, saved, purchased, and history states adjacent to the affected title or event.
+
+Subscription and account prompts lead to focused conversion without changing the rest of the feed. Loading preserves poster and hero slots. Empty library states explain the missing content and keep the relevant account or discovery action available. Playback, authentication, deletion, logout, and child-protection tasks require explicit completion or cancellation feedback.
 
 # iOS adaptation
 
-### Touch Targets
+Use custom scroll containers and media cells; default `List`, `Form`, `TabView`, and button styling must be fully restyled if used for behavior. Allow hero media and black backgrounds to extend edge-to-edge while keeping controls within safe areas. Reserve bottom space for persistent navigation and place sticky subscription actions above it without obscuring the last section.
 
-Primary actions, navigation, cards, and contextual controls remain at least 44 points.
-
-### Collapsing Strategy
-
-Preserve hero, title, and watch or subscribe action; reduce secondary metadata and rail previews first.
-
-### Image Behavior
-
-Maintain poster and banner ratios, protect faces, and use dark gradients only where typography needs contrast.
-
-Apply these rules within current iPhone safe areas and scrolling containers. Keep interactive targets at least 44 points, preserve a logical VoiceOver order, and let Dynamic Type wrap supporting text without flattening the documented hierarchy. Preserve the documented appearance.
+Each visible compact icon must retain at least a 44-point hit area. Dynamic Type may expand schedule rows, event cards, and metadata, but should not squeeze posters into inconsistent ratios. At accessibility sizes, move trailing actions to a second row and allow rails to retain their media width. VoiceOver should group title, metadata, availability, and primary action before secondary utilities; live and scheduled states must be announced as state, not color alone.
 
 # Anti-generic checklist
 
-- Don't place unrelated gradients behind every list or poster rail.
-- Don't hide status, constraints, or secondary conditions.
-- Don't add heavy shadows around every container.
-- Do not replace the documented hierarchy with a generic stack of identical white cards or `Form` sections.
-- Do not use default blue tint, an unstyled `TabView`, arbitrary SF Symbols, or uniform corner radii when they contradict the recorded tokens and components.
-- Do not invent decorative imagery or symbol treatments that are absent from the reference.
+- Do not replace poster rails and key art with identical charcoal text cards.
+- Do not spread the violet gradient across navigation, filters, and ordinary utilities.
+- Do not place white cards or light grouped backgrounds behind the browsing feed.
+- Do not use one media ratio for portrait posters, wide editorial cards, sport events, and cast portraits.
+- Do not invent decorative symbols where a title, channel, team, or collection asset is required.
+- Do not use default blue tint, a stock `TabView`, or elevated shadow cards against the black canvas.
 
 </design-context>

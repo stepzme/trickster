@@ -80,7 +80,7 @@ Primary iPhone screens keep the documented content grouping and vertical rhythm 
 
 Orders, Money, Chats, and Profile remain in the bottom bar; active navigation takes priority during a trip.
 
-This section governs appearance only; destinations and transitions are defined in `ux.md`.
+This section governs appearance only; product behavior and information architecture come from the approved Research and Planning artifacts.
 
 # Components
 

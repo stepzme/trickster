@@ -13,7 +13,7 @@ Then independently:
 - build, install, and launch the final app;
 - exercise the primary flows and each completed Full Scope block;
 - compare the live screens with the approved UI source and approved MVP;
-- verify navigation and interaction against the UX source;
+- verify navigation and interaction against the approved Research and Planning artifacts and the shared workflow criteria;
 - verify every capability decision recorded in the approved Research;
 - verify denial, unavailable, and retry behavior that the app claims to support;
 - inspect launch behavior, accessibility, supported compact size, persistence promised by the product, and the installed app icon;

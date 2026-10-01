@@ -252,7 +252,7 @@ Primary iPhone screens keep the documented content grouping and vertical rhythm 
 
 Home, Catalog, Loyalty, Basket, and Profile sit inside a charcoal floating bar. The selected tab rises on a light rounded tile. Counts appear on Basket without changing tab width.
 
-This section governs appearance only; destinations and transitions are defined in `ux.md`.
+This section governs appearance only; product behavior and information architecture come from the approved Research and Planning artifacts.
 
 # Components
 

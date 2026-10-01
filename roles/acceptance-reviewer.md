@@ -8,7 +8,7 @@ Independently verify the completed app and leave a concrete final review. Do not
 
 - approved Research, Planning, and Design artifacts;
 - recorded approval for every Dev block;
-- selected `ui.md`, `ux.md`, and optional `illustrations.md`;
+- selected `ui.md` and optional `illustrations.md`;
 - current app code and final revision;
 - `workflow/publish.md`, `workflow/ios.md`, `workflow/ux.md`, and `workflow/launch-screen.md`.
 

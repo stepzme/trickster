@@ -248,7 +248,7 @@ Primary iPhone screens keep the documented content grouping and vertical rhythm 
 
 Four bottom tabs use a white base, dark selected icons, and muted inactive states. Search remains prominent in domain headers, while profile and contextual actions occupy compact circular controls.
 
-This section governs appearance only; destinations and transitions are defined in `ux.md`.
+This section governs appearance only; product behavior and information architecture come from the approved Research and Planning artifacts.
 
 # Components
 

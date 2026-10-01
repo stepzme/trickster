@@ -118,7 +118,7 @@ Primary iPhone screens keep the documented content grouping and vertical rhythm 
 
 Plus and profile sit quietly at the top; habit, calendar, journey, achievements, skins, and recaps remain shallow destinations.
 
-This section governs appearance only; destinations and transitions are defined in `ux.md`.
+This section governs appearance only; product behavior and information architecture come from the approved Research and Planning artifacts.
 
 # Components
 

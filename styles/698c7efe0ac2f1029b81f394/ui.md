@@ -113,7 +113,7 @@ Primary iPhone screens keep the documented content grouping and vertical rhythm 
 
 The five product tabs stay stable; profile holds support, settings, personal data, accounting, eSIM, and lifestyle benefits.
 
-This section governs appearance only; destinations and transitions are defined in `ux.md`.
+This section governs appearance only; product behavior and information architecture come from the approved Research and Planning artifacts.
 
 # Components
 

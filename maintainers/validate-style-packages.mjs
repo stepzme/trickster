@@ -1,3 +1,4 @@
+import { existsSync } from "node:fs";
 import { readFile, readdir } from "node:fs/promises";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -17,13 +18,6 @@ const UI_HEADINGS = [
   "States",
   "iOS adaptation",
   "Anti-generic checklist",
-];
-
-const UX_HEADINGS = [
-  "Overview",
-  "Navigation",
-  "Core Flows",
-  "Interaction Patterns",
 ];
 
 const ILLUSTRATION_HEADINGS = [
@@ -122,22 +116,6 @@ function validateUi(appId, markdown, errors) {
   }
 }
 
-function validateUx(appId, markdown, errors) {
-  assertEqualHeadings(appId, "ux.md", topLevelHeadings(markdown), UX_HEADINGS, errors);
-  assertNonEmptySections(appId, "ux.md", markdown, UX_HEADINGS, errors);
-  const coreFlows = section(markdown, "Core Flows");
-  const flows = coreFlows.split(/^## /m).slice(1);
-  if (flows.length < 1) {
-    errors.push(`${appId}/ux.md: Core Flows must contain at least one observed flow`);
-  }
-  for (const flow of flows) {
-    const [heading, ...body] = flow.split("\n");
-    if (!body.join("\n").match(/^1\. /m)) {
-      errors.push(`${appId}/ux.md: flow ${heading.trim()} must contain numbered steps on separate lines`);
-    }
-  }
-}
-
 function validateIllustrations(appId, markdown, errors) {
   assertEqualHeadings(
     appId,
@@ -160,9 +138,10 @@ export async function validateStylePackages() {
   for (const appId of appIds) {
     const packageRoot = resolve(stylesRoot, appId);
     const ui = await readFile(resolve(packageRoot, "ui.md"), "utf8");
-    const ux = await readFile(resolve(packageRoot, "ux.md"), "utf8");
     validateUi(appId, ui, errors);
-    validateUx(appId, ux, errors);
+    if (existsSync(resolve(packageRoot, "ux.md"))) {
+      errors.push(`${appId}/ux.md: per-app UX documents are not part of style packages`);
+    }
 
     try {
       const illustrations = await readFile(resolve(packageRoot, "illustrations.md"), "utf8");

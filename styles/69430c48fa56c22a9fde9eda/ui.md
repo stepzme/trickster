@@ -92,7 +92,7 @@ Primary iPhone screens keep the documented content grouping and vertical rhythm 
 
 Use four bottom destinations with magenta for the active item and soft gray for inactive icons and labels.
 
-This section governs appearance only; destinations and transitions are defined in `ux.md`.
+This section governs appearance only; product behavior and information architecture come from the approved Research and Planning artifacts.
 
 # Components
 

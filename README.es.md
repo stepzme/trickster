@@ -8,7 +8,7 @@ npx @sgx22/trickster init
 
 El proceso tiene cinco etapas: Research, Planning, Design, Dev y Publish. El master coordina Product Researcher, Designer, Implementation Owner y Acceptance Reviewer.
 
-Designer selecciona hasta tres aplicaciones reales y propone una fuente `ui.md`, una `ux.md` y una fuente opcional `illustrations.md`. Los documentos aprobados se copian sin sintetizar otro sistema visual. La prueba del diseño es la aplicación ejecutándose, no un informe textual ni una compilación correcta.
+Designer selecciona hasta tres aplicaciones reales y propone una fuente `ui.md` y una fuente opcional `illustrations.md`. La navegación y la interacción proceden de Research, Planning y los criterios compartidos del flujo, no de la aplicación de referencia. Los documentos aprobados se copian sin sintetizar otro sistema visual. La prueba del diseño es la aplicación ejecutándose, no un informe textual ni una compilación correcta.
 
 Todas las aplicaciones conservan once capacidades en este orden: Bluetooth, Downloading Photos, Adding Photos, Using the Camera, Face ID, Microphone Access, Speech Recognition Access, Contacts Access, Calendar Access, Location Access y CallKit. Las solicitudes del sistema son reales. Solo se pueden simular periféricos/datos Bluetooth, procesamiento del micrófono y salida de reconocimiento de voz. CallKit es la única excepción porque no tiene un permiso del usuario.
 

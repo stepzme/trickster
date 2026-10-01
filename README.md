@@ -29,10 +29,9 @@ The master coordinates these four specialist roles and is the only participant t
 Trickster's repository contains a catalog built from real iOS products. Designer shortlists up to three apps and recommends:
 
 - one `ui.md` source for appearance;
-- one `ux.md` source for navigation and interaction;
 - an optional `illustrations.md` source for imagery.
 
-The approved files are copied unchanged into the project. Trickster does not synthesize a generalized project `ui.md`, composition report, or provenance narrative. The actual running MVP is the design evidence. A build that compiles but visually falls back to generic cards, default controls, or missing imagery is not ready for design approval.
+The approved files are copied unchanged into the project. Product navigation and interaction come from the approved Research and Planning artifacts plus shared workflow criteria, not from the reference app. Trickster does not synthesize a generalized project `ui.md`, composition report, or provenance narrative. The actual running MVP is the design evidence. A build that compiles but visually falls back to generic cards, default controls, or missing imagery is not ready for design approval.
 
 ## Mandatory capabilities
 

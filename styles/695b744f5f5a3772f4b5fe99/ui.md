@@ -92,7 +92,7 @@ Primary iPhone screens keep the documented content grouping and vertical rhythm 
 
 Use four bottom destinations in a white rounded bar; the active icon may use the Moby gradient while labels remain crisp.
 
-This section governs appearance only; destinations and transitions are defined in `ux.md`.
+This section governs appearance only; product behavior and information architecture come from the approved Research and Planning artifacts.
 
 # Components
 

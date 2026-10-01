@@ -113,7 +113,7 @@ Primary iPhone screens keep the documented content grouping and vertical rhythm 
 
 Keep Schedule, Grades, Tasks, School, and Accounts fixed; active state is dark with a filled icon.
 
-This section governs appearance only; destinations and transitions are defined in `ux.md`.
+This section governs appearance only; product behavior and information architecture come from the approved Research and Planning artifacts.
 
 # Components
 

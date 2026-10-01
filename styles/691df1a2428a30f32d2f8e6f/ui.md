@@ -289,7 +289,7 @@ Primary iPhone screens keep the documented content grouping and vertical rhythm 
 
 Use the persistent four-item rounded bottom bar. The active destination is white and visually solid; inactive icons and labels remain gray.
 
-This section governs appearance only; destinations and transitions are defined in `ux.md`.
+This section governs appearance only; product behavior and information architecture come from the approved Research and Planning artifacts.
 
 # Components
 

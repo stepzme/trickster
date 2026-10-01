@@ -250,7 +250,7 @@ Primary iPhone screens keep the documented content grouping and vertical rhythm 
 
 Traveler mode uses Explore, Wishlists, Trips, Messages, Profile. Hosting uses Today, Calendar, Listings, Messages, Menu. Selected icons and labels turn coral; the two modes switch explicitly.
 
-This section governs appearance only; destinations and transitions are defined in `ux.md`.
+This section governs appearance only; product behavior and information architecture come from the approved Research and Planning artifacts.
 
 # Components
 

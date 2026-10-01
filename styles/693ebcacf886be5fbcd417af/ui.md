@@ -91,7 +91,7 @@ Primary iPhone screens keep the documented content grouping and vertical rhythm 
 
 Keep Home, In Store, Delivery, Market, and Cosmetics fixed with red active state.
 
-This section governs appearance only; destinations and transitions are defined in `ux.md`.
+This section governs appearance only; product behavior and information architecture come from the approved Research and Planning artifacts.
 
 # Components
 
