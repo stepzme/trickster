@@ -6,7 +6,7 @@
     <meta name="theme-color" content="#11100f" />
     <meta
       name="description"
-      content="Trickster is an open-source AI app factory for reference-driven native iOS apps, Simulator verification, app icons, and store screenshots."
+      content="Trickster is a five-stage workflow that proves native iOS product design in a running Simulator build before full development."
     />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Trickster — Native iOS, orchestrated" />
@@ -176,10 +176,10 @@
         <article class="comparison__side comparison__side--active reveal" data-delay="1">
           <p class="section-label" data-i18n="tricksterRunLabel">A TRICKSTER RUN</p>
           <ol>
-            <li><span>01</span><b data-i18n="tricksterRun1">Define scope and acceptance</b></li>
-            <li><span>02</span><b data-i18n="tricksterRun2">You confirm one reference package</b></li>
-            <li><span>03</span><b data-i18n="tricksterRun3">Build a native vertical flow first</b></li>
-            <li><span>04</span><b data-i18n="tricksterRun4">Run, interact, inspect, and accept</b></li>
+            <li><span>01</span><b data-i18n="tricksterRun1">Approve the complete product</b></li>
+            <li><span>02</span><b data-i18n="tricksterRun2">Approve the MVP and delivery blocks</b></li>
+            <li><span>03</span><b data-i18n="tricksterRun3">Approve the running design</b></li>
+            <li><span>04</span><b data-i18n="tricksterRun4">Build and approve each full-scope block</b></li>
           </ol>
           <p class="comparison__result"><i></i><b data-i18n="tricksterRunResult">Result: a reviewable product.</b></p>
         </article>
@@ -188,48 +188,58 @@
       <section class="process section-pad" id="process" aria-labelledby="process-title">
         <div class="section-heading reveal">
           <p class="section-label" data-i18n="processLabel">THE CONTROLLED PIPELINE</p>
-          <h2 id="process-title" data-i18n-html="processTitle">Four phases.<br />No invisible leaps.</h2>
-          <p data-i18n-html="processBody">Each phase leaves a concrete artifact and a clear decision behind. If evidence is unavailable, the result stays <code>UNVERIFIED</code>.</p>
+          <h2 id="process-title" data-i18n-html="processTitle">Five stages.<br />No invisible leaps.</h2>
+          <p data-i18n-html="processBody">Each stage ends with an approved artifact or a working app revision. A successful compile never substitutes for design approval.</p>
         </div>
 
         <div class="timeline">
           <article class="timeline__step reveal">
             <div class="timeline__rail"><span>01</span><i></i></div>
             <div class="timeline__body">
-              <p class="timeline__meta" data-i18n="step1Meta">SCOPE / CONTRACT</p>
-              <h3 data-i18n="step1Title">Shape the product</h3>
-              <p data-i18n="step1Body">Turn the brief, repository, and available documentation into explicit boundaries and acceptance checks.</p>
-              <strong data-i18n="step1Output">Output → Product contract</strong>
+              <p class="timeline__meta" data-i18n="step1Meta">RESEARCH</p>
+              <h3 data-i18n="step1Title">Define the complete product</h3>
+              <p data-i18n="step1Body">Describe the whole product and the contextual use of all eleven iOS capabilities.</p>
+              <strong data-i18n="step1Output">Output → Approved product description</strong>
             </div>
           </article>
 
           <article class="timeline__step reveal">
             <div class="timeline__rail"><span>02</span><i></i></div>
             <div class="timeline__body">
-              <p class="timeline__meta" data-i18n="step2Meta">USER GATE</p>
-              <h3 data-i18n="step2Title">Confirm one style</h3>
-              <p data-i18n="step2Body">Shortlist up to three relevant packages from the curated catalog. You choose exactly one before UI work begins.</p>
-              <strong data-i18n="step2Output">Output → Local design source</strong>
+              <p class="timeline__meta" data-i18n="step2Meta">PLANNING</p>
+              <h3 data-i18n="step2Title">Choose the first review surface</h3>
+              <p data-i18n="step2Body">Split the approved product into a focused design MVP and ordered Full Scope blocks.</p>
+              <strong data-i18n="step2Output">Output → Approved implementation plan</strong>
             </div>
           </article>
 
           <article class="timeline__step reveal">
             <div class="timeline__rail"><span>03</span><i></i></div>
             <div class="timeline__body">
-              <p class="timeline__meta" data-i18n="step3Meta">NATIVE IMPLEMENTATION</p>
-              <h3 data-i18n="step3Title">Build the app</h3>
-              <p data-i18n="step3Body">Prove one end-to-end flow, inspect it, then complete the agreed scope with native behavior and accessibility intact.</p>
-              <strong data-i18n="step3Output">Output → Xcode project + app icon</strong>
+              <p class="timeline__meta" data-i18n="step3Meta">DESIGN</p>
+              <h3 data-i18n="step3Title">Prove the design in code</h3>
+              <p data-i18n="step3Body">Approve source references, then let the Designer implement and run the MVP in Simulator.</p>
+              <strong data-i18n="step3Output">Output → Approved running MVP</strong>
             </div>
           </article>
 
           <article class="timeline__step reveal">
             <div class="timeline__rail"><span>04</span><i></i></div>
             <div class="timeline__body">
-              <p class="timeline__meta" data-i18n="step4Meta">INDEPENDENT ACCEPTANCE</p>
-              <h3 data-i18n="step4Title">Verify and deliver</h3>
-              <p data-i18n="step4Body">Build, install, run, interact, and visually inspect in Simulator. Only then create store screenshots from real screens.</p>
-              <strong data-i18n="step4Output">Output → Evidence + accepted build</strong>
+              <p class="timeline__meta" data-i18n="step4Meta">DEV</p>
+              <h3 data-i18n="step4Title">Expand without redesigning</h3>
+              <p data-i18n="step4Body">Implement one Full Scope block at a time and approve its running result before continuing.</p>
+              <strong data-i18n="step4Output">Output → Approved complete scope</strong>
+            </div>
+          </article>
+
+          <article class="timeline__step reveal">
+            <div class="timeline__rail"><span>05</span><i></i></div>
+            <div class="timeline__body">
+              <p class="timeline__meta" data-i18n="step5Meta">PUBLISH</p>
+              <h3 data-i18n="step5Title">Verify and finish</h3>
+              <p data-i18n="step5Body">Independently verify approvals, the final app, capabilities, visuals, and real store screens.</p>
+              <strong data-i18n="step5Output">Output → Reviewed app + final assets</strong>
             </div>
           </article>
         </div>
@@ -238,7 +248,7 @@
       <section class="team section-pad" aria-labelledby="team-title">
         <div class="team__intro reveal">
           <p class="section-label" data-i18n="teamLabel">FOCUSED ROLES</p>
-          <h2 id="team-title" data-i18n-html="teamTitle">One master.<br />Five clear responsibilities.</h2>
+          <h2 id="team-title" data-i18n-html="teamTitle">One master.<br />Four specialist roles.</h2>
           <p data-i18n="teamBody">
             When the agent harness supports delegation, focused roles work in parallel. When
             it does not, the same contracts run sequentially—without changing the standard.
@@ -253,10 +263,9 @@
             <span data-i18n="master">MASTER</span>
           </div>
           <div class="orbit__role orbit__role--1"><span>01</span><b data-i18n-html="role1">Product<br />researcher</b></div>
-          <div class="orbit__role orbit__role--2"><span>02</span><b data-i18n-html="role2">Design<br />planner</b></div>
+          <div class="orbit__role orbit__role--2"><span>02</span><b data-i18n-html="role2">Designer</b></div>
           <div class="orbit__role orbit__role--3"><span>03</span><b data-i18n-html="role3">Implementation<br />owner</b></div>
-          <div class="orbit__role orbit__role--4"><span>04</span><b data-i18n-html="role4">Visual<br />producer</b></div>
-          <div class="orbit__role orbit__role--5"><span>05</span><b data-i18n-html="role5">Acceptance<br />reviewer</b></div>
+          <div class="orbit__role orbit__role--4"><span>04</span><b data-i18n-html="role4">Acceptance<br />reviewer</b></div>
         </div>
       </section>
 
@@ -285,8 +294,8 @@
           </article>
           <article class="guarantee reveal">
             <span>04</span>
-            <h3 data-i18n="guarantee4Title">Unknown stays unknown.</h3>
-            <p data-i18n-html="guarantee4Body">Unavailable tools or missing evidence are labeled <code>UNVERIFIED</code>, never rounded up to success.</p>
+            <h3 data-i18n="guarantee4Title">Missing checks stay explicit.</h3>
+            <p data-i18n-html="guarantee4Body">If a device, service, or tool is unavailable, the review states exactly what was not checked.</p>
           </article>
         </div>
       </section>

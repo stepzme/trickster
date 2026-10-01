@@ -814,10 +814,9 @@ html[lang="es"] .hero h1 {
 }
 
 .orbit__role--1 { top: 8%; left: 50%; transform: translateX(-50%); }
-.orbit__role--2 { top: 34%; right: -1%; }
-.orbit__role--3 { right: 12%; bottom: 9%; }
-.orbit__role--4 { bottom: 9%; left: 12%; }
-.orbit__role--5 { top: 34%; left: -1%; }
+.orbit__role--2 { top: 43%; right: -1%; }
+.orbit__role--3 { left: 50%; bottom: 4%; transform: translateX(-50%); }
+.orbit__role--4 { top: 43%; left: -1%; }
 
 .guarantees {
   background: var(--paper);
@@ -1197,7 +1196,7 @@ html[lang="es"] .hero h1 {
   }
 
   .orbit__role--2 { right: -4%; }
-  .orbit__role--5 { left: -4%; }
+  .orbit__role--4 { left: -4%; }
 
   .site-footer {
     grid-template-columns: 1fr auto;

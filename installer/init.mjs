@@ -190,7 +190,7 @@ function agentsBlock() {
   return `## Trickster iOS pipeline
 
 Before creating or substantially changing the iOS app, read and follow \`trickster/AGENTS.md\`.
-The workflow, approved design composition, artifacts, and acceptance evidence are under \`trickster/\`.`;
+The five-stage workflow, approved design sources, product artifacts, and final review are under \`trickster/\`.`;
 }
 
 async function copyKit(target, harness) {
@@ -217,12 +217,6 @@ async function copyKit(target, harness) {
     recursive: true,
     force: true,
   });
-  await mkdir(resolve(destination, "scripts"), { recursive: true });
-  for (const script of ["validate-run-artifacts.mjs", "analyze-token-usage.mjs"]) {
-    await cp(resolve(packageRoot, "scripts", script), resolve(destination, "scripts", script), {
-      force: true,
-    });
-  }
   await cp(resolve(packageRoot, "installer", "assets", "AGENTS.md"), resolve(destination, "AGENTS.md"), {
     force: true,
   });
@@ -270,7 +264,7 @@ export async function initializeProject({
     console.log(`\n${outputStyle.accent("Next:")}`);
     if (selectedHarness === "codex") {
       console.log("1. Restart Codex if project instructions were already loaded in the current session.");
-      console.log("2. Start the task; the pipeline will reconcile the local-first product scope with all eleven mandatory iOS capabilities, then compose approved UI, UX, and optional illustration references before feedback-gated implementation.");
+      console.log("2. Start the task; Trickster will define the complete product, plan the work, prove the design in Simulator, then build and review it in approved blocks.");
     } else {
       console.log("1. Read trickster/adapters/generic.md and map the orchestration operations to your harness.");
       console.log("2. Verify shell, Xcode, Simulator, physical-device access, UI interaction and image viewing.");
@@ -279,7 +273,7 @@ export async function initializeProject({
     console.log(`\n${outputStyle.accent("Start a new task in your agent and paste a brief like this:")}\n`);
     console.log(STARTER_BRIEF);
     console.log(
-      `\n${outputStyle.muted("A short description is enough. Trickster will reconcile all eleven mandatory iOS capabilities into a local-first product, guide design composition, request implementation feedback, and enforce the delivery gates.")}`,
+      `\n${outputStyle.muted("A short description is enough. Trickster will include all eleven mandatory iOS capabilities and ask for explicit approval at each product, design, and development boundary.")}`,
     );
   }
 
@@ -292,16 +286,15 @@ export async function doctorProject(target = process.cwd(), { quiet = false, har
   const selectedHarness = validateHarness((harness ?? configuredHarness) || "codex");
   const checks = [
     ["Trickster instructions", existsSync(resolve(project, "trickster", "AGENTS.md"))],
-    ["Role contracts", existsSync(resolve(project, "trickster", "roles", "acceptance-reviewer.md"))],
+    ["Role contracts", existsSync(resolve(project, "trickster", "roles", "designer.md")) && existsSync(resolve(project, "trickster", "roles", "acceptance-reviewer.md"))],
     ["Harness adapter", existsSync(resolve(project, "trickster", "adapters", `${selectedHarness}.md`))],
     ["iOS capability workflow", existsSync(resolve(project, "trickster", "workflow", "ios-capabilities.md"))],
-    ["Reference composition workflow", existsSync(resolve(project, "trickster", "workflow", "style-reference.md"))],
-    ["Core implementation workflow", existsSync(resolve(project, "trickster", "workflow", "implementation-core.md"))],
-    ["Full implementation workflow", existsSync(resolve(project, "trickster", "workflow", "implementation-full.md"))],
-    ["Hardening workflow", existsSync(resolve(project, "trickster", "workflow", "implementation-hardening.md"))],
+    ["Research workflow", existsSync(resolve(project, "trickster", "workflow", "research.md"))],
+    ["Planning workflow", existsSync(resolve(project, "trickster", "workflow", "planning.md"))],
+    ["Design workflow", existsSync(resolve(project, "trickster", "workflow", "design.md"))],
+    ["Dev workflow", existsSync(resolve(project, "trickster", "workflow", "dev.md"))],
+    ["Publish workflow", existsSync(resolve(project, "trickster", "workflow", "publish.md"))],
     ["Launch-screen workflow", existsSync(resolve(project, "trickster", "workflow", "launch-screen.md"))],
-    ["Run artifact validator", existsSync(resolve(project, "trickster", "scripts", "validate-run-artifacts.mjs"))],
-    ["Token usage analyzer", existsSync(resolve(project, "trickster", "scripts", "analyze-token-usage.mjs"))],
   ];
   if (selectedHarness === "codex") {
     checks.unshift(["Codex CLI", commandExists("codex")]);
@@ -329,10 +322,10 @@ export async function doctorProject(target = process.cwd(), { quiet = false, har
       );
     }
     console.log(
-      `${outputStyle.accent("PRODUCT")} The task reconciles core scope with all eleven mandatory iOS capabilities inside the local-first boundary before reference research`,
+      `${outputStyle.accent("PRODUCT")} Research defines the complete product and all eleven mandatory iOS capabilities before Planning or Design`,
     );
     console.log(
-      `${outputStyle.accent("DESIGN")}  The task composes approved UI, UX and optional illustration sources into one coherent local direction`,
+      `${outputStyle.accent("DESIGN")}  The Designer proves the approved source direction in a running Simulator MVP before Dev begins`,
     );
     const conclusion = ready
       ? outputStyle.accent("Local installation is ready to use.")

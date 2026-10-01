@@ -1,6 +1,6 @@
 # Cross-cutting UX criteria
 
-These rules apply across contract, implementation, and acceptance stages. Determine each rule's applicability to product scenarios. N/A requires a specific reason. Acceptance is performed on a working app, not a mockup.
+These rules apply across Research, Planning, Design, Dev, and Publish. Apply each rule only where the product needs it and explain omissions plainly. Final review is performed on a working app, not a mockup.
 
 | ID | Applies when | Verifiable expectation |
 |---|---|---|
@@ -10,15 +10,15 @@ These rules apply across contract, implementation, and acceptance stages. Determ
 | UX-04 | Data and loading | Content and empty-result states are provided; local storage errors are recoverable; loading, error, and offline states are tested where a system or public resource depends on the network. Do not add server assumptions to the local primary path. |
 | UX-05 | Forms | Labels and errors are understandable; the keyboard suits the data; input and required actions remain accessible while the keyboard is open. |
 | UX-06 | Deletion and loss of work | The consequence is clear; an appropriate confirmation or undo is available. |
-| UX-07 | Mandatory system access and capabilities | Each access request follows a user action that needs it, explains the immediate value, and produces a real result after success. Denial, restriction, cancellation, and unavailable hardware or service leave a clear working path. Do not request all access at launch, repeatedly prompt, or present a generic permission button as the feature. |
+| UX-07 | Mandatory system access and capabilities | Each real system request follows a contextual user action and explains its immediate value. Denial, restriction, cancellation, and unavailable hardware or service leave a clear path. Post-access behavior follows `ios-capabilities.md`, including its explicit mock allowances. |
 | UX-08 | All interactive screens | Controls are tappable and unobstructed; safe areas and supported screen sizes are respected. |
 | UX-09 | Text and controls | System text enlargement preserves access to functionality; VoiceOver has meaningful labels and a logical order; meaning is not communicated by color alone. |
 | UX-10 | Content | Long strings, real names, units, images, and supported locales are tested; demo text does not conceal layout problems. |
 | UX-11 | Animation | Motion helps explain a change and does not delay a required action; Reduce Motion is respected when significant animation is present. |
-| UX-12 | State persistence | SwiftData records, file-backed payloads, and promised input preservation are verified after backgrounding, force termination, and restarting. Broken file references fail safely. |
+| UX-12 | State persistence | Data the product promises to retain survives backgrounding, force termination, and restarting. Broken file references fail safely. |
 
 Check specific accessibility parameters and platform constraints against the current [Apple HIG](https://developer.apple.com/design/human-interface-guidelines) for the selected platform. These rules are team criteria, not a claim of Apple certification.
 
-`trickster/design/ui.md` defines the approved visual language, `trickster/design/ux.md` defines the approved navigation and interaction model, optional `trickster/design/illustrations.md` defines the illustration language, and `trickster/design/composition.md` explains how those sources form one coherent direction. This document defines verifiable product behavior. Adapt the approved patterns to the agreed scope; references do not add features by themselves.
+`trickster/design/ui.md` defines the approved visual language, `trickster/design/ux.md` defines navigation and interaction, and optional `trickster/design/illustrations.md` defines imagery. These are unchanged source documents, not a synthesized project design system. Visual wording in `ux.md` has no authority. Product behavior comes from the approved Research and Planning artifacts.
 
 The cross-cutting `launch-screen.md` contract governs the static system launch screen, its transition to the first real frame, and any app-owned splash. Do not use a launch or splash screen to hide avoidable delay or replace onboarding.

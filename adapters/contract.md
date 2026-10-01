@@ -1,32 +1,15 @@
 # Adapter contract
 
-An adapter connects the harness-neutral Trickster process to a specific agent harness. It does not change the roles, stages, inputs, acceptance criteria, or artifact structure.
+An adapter maps Trickster's roles to an agent harness. It does not change the five stages, role ownership, approval dependencies, or capability rules.
 
-## Required capabilities
+The adapter describes how the master:
 
-The adapter must describe:
+- starts, waits for, continues, messages, and stops a role;
+- gives a role only its stage, approved input artifacts, and allowed write paths;
+- operates sequentially when separate agents are unavailable;
+- runs shell and Xcode commands, controls Simulator, and views current screenshots;
+- accesses the GitHub design catalog during Design.
 
-- how the master loads `trickster/AGENTS.md` and the workflow;
-- how the master accesses the GitHub catalog during reference research and `trickster/design/` after the approved concern-level composition is saved;
-- how `SPAWN`, `WAIT`, `CONTINUE`, `MESSAGE`, and `STOP` are performed;
-- how role context is isolated and write paths are restricted;
-- how an agent returns a handoff;
-- how execution sessions rotate at phase gates while stable role ownership is preserved in run state;
-- how session IDs are recorded for usage accounting when the harness exposes them;
-- how to operate without separate agents;
-- how to verify shell, Xcode, Simulator, physical-device access, UI interaction, and image viewing.
+The user communicates only with the master. Roles exchange durable information through the Research, Planning, Design, and Review artifacts plus the app itself. Do not require run-state files, token accounting, session rotation, or secondary handoff schemas.
 
-## Invariants
-
-- The source of each role contract is `trickster/roles/<role>.md`.
-- Roles exchange information through `trickster/artifacts/<run-id>/` and a verifiable handoff.
-- Role continuity comes from contracts, revisions, run state, and verified handoffs; phase transitions do not require conversation-history inheritance.
-- The user communicates only with the master.
-- An individual role has no authority to change the reconciled scope, the approved design composition, feedback approvals, or acceptance criteria.
-- Product-definition, design-composition, Core UI, app-icon, and per-frame store-screenshot confirmations remain with the master and the user.
-- If the harness cannot spawn agents, the master executes the same role contracts sequentially.
-- A missing capability is explicitly marked `UNVERIFIED`; the adapter does not pretend it is available.
-
-## Adding a harness
-
-Create `trickster/adapters/<harness>.md`, implement every operation in this contract, and write the adapter name to `trickster/HARNESS`. Harness-specific logic must not be added to `workflow/` or `roles/`.
+Only one role owns app code and Simulator at a time. Designer transfers both to the Implementation Owner after design approval. Acceptance Reviewer never writes app code.

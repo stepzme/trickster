@@ -1,14 +1,14 @@
-# Stage 1. Product definition: mandatory iOS capabilities
+# Mandatory iOS capabilities
 
-## Goal
+## Purpose
 
-Define every product with the same fixed set of eleven iOS capabilities. Capability synthesis is part of product definition, not a later expansion of an already final scope. For each capability, invent one product-relevant, user-facing feature, reconcile its screens and dependencies with the core product, implement real behavior, and verify the result. A permission button without a useful result is not a feature. CallKit is the sole exception to real system execution and follows the explicit `INTERFACE_ONLY` contract below.
+Every Trickster product includes the same eleven capabilities. The important invariant is that the app invokes the real Apple system access request or authentication challenge from a product-relevant user action. Do not replace that system interaction with a custom dialog.
 
-This stage applies to every new app and every substantial app change regardless of the scope in the user's prompt. These capabilities are part of the Trickster baseline and are not optional scope expansion.
+Use the smallest honest product behavior described below. A complete production subsystem is not required merely to justify a permission.
 
 ## Canonical list
 
-The list, spelling, identifiers, and order below are fixed. Do not omit, merge, rename, reorder, replace, or mark any item `N/A`. The first ten rows use `REAL`; only CallKit uses `INTERFACE_ONLY` in the standard local-first pipeline.
+Keep these IDs, names, and order exactly. Do not omit, merge, rename, reorder, replace, or mark an item not applicable.
 
 | Order | Stable ID | Canonical capability |
 |---|---|---|
@@ -24,167 +24,76 @@ The list, spelling, identifiers, and order below are fixed. Do not omit, merge, 
 | 10 | `location` | Location Access |
 | 11 | `callkit` | CallKit |
 
-## Required synthesis
+## Shared rules
 
-For every `REAL` row in the canonical list:
+For each row Research defines a contextual feature, entry action, Apple framework, required purpose string or entitlement, success behavior, denial behavior, and verification environment.
 
-1. Derive one coherent feature from the product's user, primary task, terminology, and data.
-2. Define a discoverable entry point and the user action that initiates the system access flow.
-3. Define the useful result produced after access succeeds. Merely displaying a system prompt, status, or diagnostic screen is insufficient.
-4. Select the least-privileged Apple framework, access level, purpose string, entitlement, and external dependency that can support the feature.
-5. Define the `notDetermined`, `authorized`, `denied`, `restricted`, and hardware-or-service-unavailable states that the framework actually exposes.
-6. Preserve the primary product path when optional access is denied. Never repeatedly prompt, manipulate, or force consent.
-7. Define verification on Simulator or a physical device. If the real capability cannot be exercised with the available environment, keep it required and mark its evidence `UNVERIFIED`, never `N/A` or `PASS`.
+- Ask only after the user starts the relevant action, never as an unexplained launch-time batch.
+- Handle an already determined status without pretending that a prompt appeared again.
+- Keep the rest of the product usable after denial where the product can reasonably do so.
+- Verify prompts from a fresh install, reset permission state, or another controlled state because iOS normally shows them only once.
+- A custom permission screen may explain value before the request, but it does not count as the request.
+- Simulator limitations do not justify fake evidence. Record what could not be exercised and verify it later on an appropriate device.
 
-Keep the features native to the product rather than placing eleven unrelated permission buttons on a generic settings screen. A status screen may supplement the real entry points, but it cannot replace them. Do not weaken another capability to `INTERFACE_ONLY` by analogy with CallKit.
-
-## Canonical capability guidance
+## Required behavior
 
 ### 1. Bluetooth
 
-Possible product adaptations include:
-
-- connecting an external device such as headphones, a sensor, a terminal, or a lock;
-- receiving live data from a wearable device;
-- sending settings or commands to a nearby device;
-- finding and displaying compatible nearby devices.
-
-Use Core Bluetooth for a real scan, connection, data exchange, or command flow. Include `NSBluetoothAlwaysUsageDescription`. Describe the expected peripheral or protocol in the contract. A fabricated device result is not acceptance evidence; use a physical device or record `UNVERIFIED`.
+Use Core Bluetooth to trigger the real Bluetooth access flow from a relevant action. Discovery results, peripherals, connection, and exchanged data may be mocked. Do not claim that a mock peripheral is physically connected.
 
 ### 2. Downloading Photos
 
-Possible product adaptations include:
-
-- saving an image from the app to the photo library;
-- downloading an original photo for offline viewing;
-- saving a generated card, diagram, or processed result;
-- downloading multiple selected images to the device.
-
-The required feature must produce an actual image and save or download it. When saving only to Photos, prefer add-only Photo Library access and `NSPhotoLibraryAddUsageDescription`. If the feature saves to Files instead, record the system document flow and explain why no Photo Library prompt exists.
+Obtain a real image and actually save it to the user's photo library. Use the appropriate Photo Library authorization and purpose string. The saved image may come from a public download, generated product output, or bundled product content when that is honest for the feature; the file and save operation are real.
 
 ### 3. Adding Photos
 
-Possible product adaptations include:
-
-- choosing an image from the photo library for an avatar or cover;
-- attaching multiple photos to a record or form;
-- adding a photo as proof of a completed action;
-- loading an image for recognition, editing, or analysis.
-
-Prefer the system Photos picker when access only to user-selected assets is sufficient. The picker grants access to the selected items and normally does not display broad Photo Library authorization. Request broader PhotoKit access only when the product feature truly needs to browse or manage the library. Record the correct mechanism rather than manufacturing an unnecessary permission prompt.
+Request the required Photo Library access, let the user select a real photo from the device, and actually use that selected image in the product flow. Do not replace the chosen asset with a fixture. If a picker alone would avoid broad access, Research must still preserve the pipeline's explicit system-access requirement and explain the chosen authorization path.
 
 ### 4. Using the Camera
 
-Possible product adaptations include:
-
-- capturing a photo or video inside the app;
-- scanning a QR code or barcode;
-- recognizing a document with automatic boundary detection;
-- providing augmented reality or object recognition from the camera feed.
-
-Use a real capture or scanning flow and include `NSCameraUsageDescription`. Request access when the user enters that flow, not at launch. Verify unavailable-camera and denied states. Real camera behavior requires a suitable physical device when Simulator cannot provide the required input.
+Request real camera authorization, capture a real photo, and use the captured image in the product flow. The Simulator is not evidence for physical camera capture when it cannot supply the required input.
 
 ### 5. Face ID
 
-Possible product adaptations include:
-
-- signing in without a password;
-- confirming a payment or other sensitive operation;
-- opening a protected area with personal data;
-- confirming a security-settings change.
-
-Use Local Authentication and include `NSFaceIDUsageDescription`. Define what is protected, when authentication occurs, and the allowed fallback for devices without enrolled Face ID. Do not claim the app reads or stores biometric data.
+Use Local Authentication for a real device-owner authentication challenge. Protect or confirm a real in-app action. Do not mock success, biometric state, or fallback behavior.
 
 ### 6. Microphone Access
 
-Possible product adaptations include:
-
-- recording a voice message;
-- making an audio or video call;
-- recording an audio note or comment;
-- measuring sound level, tone, or another audio characteristic.
-
-Use a real audio capture or measurement flow and include `NSMicrophoneUsageDescription`. Request access only after the user starts the microphone-dependent action. Provide clear recording state, stop and cancellation behavior, and a denied path.
+Request real microphone access and start and stop real audio capture or measurement. Product-specific processing of the captured audio may be mocked. Clearly distinguish recorded input from a mocked analysis or response.
 
 ### 7. Speech Recognition Access
 
-Possible product adaptations include:
-
-- converting a voice note to text;
-- searching the app by voice;
-- filling a form or message through dictation;
-- executing voice commands inside the app.
-
-When the feature uses `SFSpeechRecognizer`, include `NSSpeechRecognitionUsageDescription` and request Speech authorization at first use. Capture of live speech normally also requires Microphone Access as its own canonical capability. Preserve the transcript or command result so recognition has product value beyond displaying the prompt.
+Request real Speech authorization. The transcript or interpreted command may be mocked; label the product result honestly and do not present it as verified recognition output. Live audio input also follows the separate Microphone capability.
 
 ### 8. Contacts Access
 
-Possible product adaptations include:
-
-- finding registered users among contacts;
-- quickly inviting people to the app;
-- choosing a recipient without manually entering a phone number or email;
-- filling contact details in a form.
-
-Use Contacts or ContactsUI and include `NSContactsUsageDescription` when broad, limited, read, or write access is requested. Prefer a system contact picker or limited access when the feature only needs user-selected people. Define what contact fields are used and ensure denial does not prevent manual entry where manual entry is viable.
+Request real Contacts access and read or select a real contact for use in the product flow. Do not substitute fixture contacts for the accepted result. Limit fields and access level to what the feature uses.
 
 ### 9. Calendar Access
 
-Possible product adaptations include:
-
-- adding an event or reminder to the system calendar;
-- checking availability before an appointment or booking;
-- displaying calendar events inside the app;
-- changing or cancelling an event previously created by the app.
-
-Choose the minimum EventKit path. On supported iOS versions, use system event-editing UI without broad access when possible, write-only access for direct event creation, and full access only for features that read existing events. Record the applicable usage key, including `NSCalendarsWriteOnlyAccessUsageDescription` or `NSCalendarsFullAccessUsageDescription`. Do not describe a system editor with no authorization prompt as full Calendar permission.
+Request real EventKit access and actually create, read, or update the event required by the product feature. Use the narrowest supported access level and do not replace the calendar operation with a local-only confirmation.
 
 ### 10. Location Access
 
-Possible product adaptations include:
-
-- determining the user's current position;
-- finding nearby places, services, or people;
-- building a route or providing navigation;
-- filling an address or attaching a place to an action.
-
-Prefer When In Use authorization and include `NSLocationWhenInUseUsageDescription`. Request Always authorization only when continuous background behavior is essential to the invented feature and explicitly justified. Provide a manual location or address path when the product can reasonably work without location access.
+Request real Core Location access and obtain a real location for the product flow. A simulated location may be used for development layout checks, but final capability verification must identify it as simulated and must not present it as device location evidence.
 
 ### 11. CallKit
 
-Possible interface adaptations include:
+CallKit has no user permission prompt. This is the sole exception to the access-request rule. Provide a product-relevant, honest CallKit-facing or call-preparation experience without claiming an established call, remote participant, signaling, media transport, or connected duration. No proprietary calling backend is required.
 
-- a product-relevant call entry screen;
-- contact, topic, or session preparation before a future call;
-- an unavailable state that clearly explains the local-only boundary;
-- controls and states that can later map to a real call service without claiming that one exists now.
+## Acceptance
 
-CallKit remains in the canonical matrix but uses `INTERFACE_ONLY` so the local-first pipeline does not require signaling, media transport, accounts, push delivery, or a proprietary calling service. The interface must be useful and coherent with the product, but it must not register or report a fake call, show a fabricated remote participant, display a false connected state or duration, or imply that audio transport exists. Record and verify this honest boundary as `INTERFACE_ONLY`; the absence of a calling service does not make this row `UNVERIFIED`. No other capability may use this exception.
+The reviewer checks the real framework call, purpose strings and entitlements, the first-use system UI when the framework provides one, allowed and denied paths, and the required result above. Bluetooth peripheral behavior, microphone processing, and speech output may be mocked; the other required results may not. CallKit is checked against its explicit no-permission exception.
 
-## Contract gate
+## Apple sources
 
-During product definition, create all eleven rows in the `Mandatory iOS capabilities` section of `product.md`, then reconcile them with the core scope before reference research. Each row must contain:
-
-- the canonical ID and name;
-- `REAL` mode, except `INTERFACE_ONLY` for CallKit;
-- the invented product feature;
-- its entry point and user action;
-- the useful result after access;
-- framework, access level, purpose string, entitlement, and external dependency;
-- denial, restriction, cancellation, and unavailable behavior;
-- Simulator or physical-device verification method.
-
-The master verifies the count, order, completeness, and final scope reconciliation as one gate. Do not proceed to reference research while any row is absent, renamed, merged, lacks a product result, or conflicts with the recorded final scope.
-
-## Platform sources
-
-- [Apple: User Privacy and Data Use](https://developer.apple.com/app-store/user-privacy-and-data-use/)
-- [Apple: Core Bluetooth](https://developer.apple.com/documentation/corebluetooth)
-- [Apple: Delivering an Enhanced Privacy Experience in Your Photos App](https://developer.apple.com/documentation/photokit/delivering-an-enhanced-privacy-experience-in-your-photos-app)
-- [Apple: Requesting Authorization to Capture and Save Media](https://developer.apple.com/documentation/avfoundation/requesting-authorization-to-capture-and-save-media)
-- [Apple: Local Authentication](https://developer.apple.com/documentation/localauthentication)
-- [Apple: Asking Permission to Use Speech Recognition](https://developer.apple.com/documentation/speech/asking-permission-to-use-speech-recognition)
-- [Apple: Contacts](https://developer.apple.com/documentation/contacts)
-- [Apple: Accessing the Event Store](https://developer.apple.com/documentation/eventkit/accessing-the-event-store)
-- [Apple: Requesting Authorization to Use Location Services](https://developer.apple.com/documentation/corelocation/requesting-authorization-to-use-location-services)
-- [Apple: CallKit](https://developer.apple.com/documentation/callkit)
+- [User Privacy and Data Use](https://developer.apple.com/app-store/user-privacy-and-data-use/)
+- [Core Bluetooth](https://developer.apple.com/documentation/corebluetooth)
+- [PhotoKit](https://developer.apple.com/documentation/photokit)
+- [AVFoundation capture authorization](https://developer.apple.com/documentation/avfoundation/requesting-authorization-to-capture-and-save-media)
+- [Local Authentication](https://developer.apple.com/documentation/localauthentication)
+- [Speech](https://developer.apple.com/documentation/speech)
+- [Contacts](https://developer.apple.com/documentation/contacts)
+- [EventKit](https://developer.apple.com/documentation/eventkit)
+- [Core Location authorization](https://developer.apple.com/documentation/corelocation/requesting-authorization-to-use-location-services)
+- [CallKit](https://developer.apple.com/documentation/callkit)

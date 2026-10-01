@@ -1,82 +1,41 @@
-# Trickster master process
+# Trickster process
 
-You are responsible for one coherent result: a working local-first iOS product, one approved design composition, a verified app, one approved app icon, and one approved store-screenshot set. References are research inputs; the project uses one synthesized design contract.
+Trickster builds one native iOS app through five stages. The master speaks with the user, starts the roles, checks their work, records explicit approvals, and never treats a role's claim as user approval.
 
-## Team organization
+## Participants
 
-Before starting, read [role orchestration](orchestration.md), `trickster/adapters/contract.md`, and the adapter named in `trickster/HARNESS`. Use the role contracts in `trickster/roles/`:
+- `master` — owns the conversation, stage order, approvals, and final integration;
+- `product-researcher` — owns Research and Planning;
+- `designer` — owns reference selection, the design implementation, imagery, the app icon, and store screenshots;
+- `implementation-owner` — expands the approved design build to the complete planned product;
+- `acceptance-reviewer` — independently checks the final app and cleans recorded development output.
 
-- `product-researcher` — one reconciled local-first product definition containing the core scope, local data boundary, and mandatory capability scope;
-- `design-planner` — a shortlist of up to three apps, the user-approved UI/UX/illustration mapping, one synthesized design package, and the product contract;
-- `implementation-owner` — sole owner of app code through Core, Full, approved visual integration, Hardening, previews, and fixes;
-- `visual-producer` — app-icon work in a parallel branch, post-`LOCAL DATA READY` product assets, and store screenshots one frame at a time;
-- `acceptance-reviewer` — independent verification without code fixes.
+If separate agents are unavailable, the master performs the same roles sequentially. Do not create substitute roles or additional approval layers.
 
-Orchestrate agents through the adapter's universal operations. Pass exact inputs and write paths, wait for completion, and verify every handoff. Do not ask the user to relay messages. Keep the same logical role ownership across dependent work, but rotate execution sessions at phase gates according to `orchestration.md`. An agent's self-assessment is never acceptance.
+## Stages
 
-The master retains user communication, reference-composition approval, feedback gates, contract changes, shared-file ownership, Simulator and physical-device ownership, integration, final acceptance, and delivery. If separate agents are unavailable, execute the same role contracts sequentially and record the limitation.
+1. [Research](research.md) — describe the complete product, including all eleven iOS capabilities, and obtain explicit user approval.
+2. [Planning](planning.md) — split the approved product into a design MVP and ordered Full Scope blocks; obtain explicit user approval. Planning may run in parallel with reference research after Research is approved.
+3. [Design](design.md) — select references, obtain explicit approval of that selection, then let the same Designer implement the MVP in Xcode and show the running app in Simulator until the user explicitly approves the design.
+4. [Dev](dev.md) — the Implementation Owner starts from the approved MVP build and implements Full Scope one large block at a time. Show and explicitly approve every block before continuing.
+5. [Publish](publish.md) — the Acceptance Reviewer verifies the approvals, final build, scenarios, and capability contract; the master presents the result and only then removes recorded temporary output.
 
-## Order of work
+Research approval is required before Planning or Design. Design may research references while Planning runs, but MVP implementation waits for the approved plan. Dev waits for the approved running design.
 
-Execute dependent stages sequentially. The app-icon branch may run in parallel where specified.
+## Approval rule
 
-1. [Product definition](scope.md) — `product-researcher` derives the core scope and local data boundary, synthesizes all eleven capabilities using [the capability registry](ios-capabilities.md), and reconciles one final scope before handoff.
-2. [Reference composition](style-reference.md) — `design-planner` loads the catalog, researches no more than three apps, and proposes concern-level candidates. The user may assign one app to UI, one to UX, and an optional one to illustrations. After explicit approval, synthesize one local design package.
-3. [Product contract](product-contract.md) — a fresh `design-planner` synthesis session uses the verified research handoff to record screens, launch and optional splash experience, scenarios, local data architecture, acceptance, asset requirements, environment, the design revision, and the user's `DESIGN COMPOSITION APPROVED` decision.
-4. [Core implementation](implementation-core.md) — a phase-scoped `implementation-owner` builds the system launch screen and transition, any contracted app-owned splash, application shell, all main-section screens, and the primary flow. The master verifies and shows the real cold launch and Core result to the user, then continues the current Core session until explicit `CORE UI APPROVED`.
-5. [Full implementation](implementation-full.md) — a fresh `implementation-owner` execution session uses the verified Core handoff to implement the remaining agreed scope, all eleven capability features, and the real local production data path through `LOCAL DATA READY` without weakening the approved core direction.
-6. [Product assets and visual integration](assets.md) — after Full reaches `LOCAL DATA READY`, a fresh `visual-producer` session creates required product imagery from the asset plan. A fresh phase-scoped `implementation-owner` assignment integrates the approved assets and approved icon and hands the verified revision to Hardening.
-7. [Hardening](implementation-hardening.md) — a fresh `implementation-owner` execution session uses the verified Full and visual-integration handoffs to complete local-storage, migration, file-consistency, error, denial, restriction, cancellation, unavailable, persistence, accessibility, compact-layout, and declared environment states against the final integrated UI.
-8. [App acceptance](acceptance.md) — `acceptance-reviewer` independently verifies the release candidate; the master rechecks key evidence and issues the decision.
-9. [Store screenshots](aso-screenshots.md) — after `APP ACCEPTED`, approve the storyboard, then create, show, and approve one frame at a time from real screens.
-10. [Finalization](finalization.md) — after the applicable approvals, the master presents the complete result, receives final user confirmation, and cleans only recorded temporary paths.
-11. [Delivery](delivery.md) — the master verifies preserved artifacts and provides one status report tied to the final revision.
+Approval is a clear affirmative user response tied to the artifact or running revision being shown. No exact phrase is required. Record the user's actual response, the artifact path or app revision, and the date. Silence, a role handoff, a successful build, or the master's interpretation is not approval.
 
-Cross-cutting requirements are in [UX](ux.md), [iOS](ios.md), [launch and splash experience](launch-screen.md), and [implementation overview](implementation.md).
+If an approved upstream artifact changes materially, repeat only the affected approval and downstream work.
 
-## Parallel app-icon branch
+## Design rule
 
-After `DESIGN COMPOSITION APPROVED`, start a phase-scoped `visual-producer` for [app-icon work](app-icon.md) while Core and Full proceed. The producer writes only to `trickster/artifacts/<run-id>/app-icon/` until approval. It must use the latest image-generation model available in the active environment and record the exact model ID, date, prompt, and provenance.
+The selected `ui.md`, `ux.md`, and optional `illustrations.md` remain source documents. Do not synthesize a new generalized project `ui.md`, `composition.md`, or provenance narrative. Copy the approved source documents unchanged into `trickster/design/` and record source IDs in the Design stage artifact.
 
-The master shows the generated image to the user. Continue the same concept until explicit `APP ICON APPROVED`; do not integrate an unapproved image. Integration is performed by `implementation-owner` or after an explicit transfer of the exact asset-catalog path. If the approved design composition changes, invalidate icon approval and re-evaluate the same concept against the new design revision.
+`ui.md` controls appearance. `ux.md` controls navigation, interaction, and state transitions; visual wording in a UX source has no authority. `illustrations.md` controls imagery. Product behavior comes from the approved Research and Planning artifacts.
 
-## Simulator previews during implementation
+The running MVP is the design proof. Text descriptions, mockups, evidence frames, successful compilation, and screenshots of a different revision cannot replace it.
 
-At the user's request during Core, Full, or Hardening:
+## Capability rule
 
-1. pause conflicting build or Simulator work;
-2. assign one Simulator owner;
-3. build, install, and launch the exact current revision;
-4. show current screenshots or the available live result;
-5. record the phase, revision, device, state, and feedback;
-6. return changes through `CONTINUE` to the current phase-scoped `implementation-owner` session.
-
-These runs are `PREVIEW`, not `PASS`, acceptance, or proof of physical-device behavior.
-
-## Mandatory stops and invalidation
-
-- Do not start reference research until the reconciled product definition contains all eleven complete capability rows.
-- Do not start UI implementation until the user approves the concern-level reference mapping and the synthesized design package as `DESIGN COMPOSITION APPROVED`.
-- Do not start Full implementation until the real Core build has been shown and the user states `CORE UI APPROVED`.
-- Do not treat a static launch design as evidence; Core review must show the real cold-launch transition to the first interactive frame.
-- Do not complete Full or start product assets until `LOCAL DATA READY` proves that Release paths use the contracted local store without runtime mocks.
-- Do not integrate the app icon before `APP ICON APPROVED`.
-- Do not start product-asset production before Full is complete; asset requirements remain part of the earlier contract.
-- Do not start final Hardening until required product assets and the applicable approved icon are integrated.
-- Do not declare the app accepted from a preview, one build, or screenshots alone.
-- Do not start store screenshots before `APP ACCEPTED`.
-- Do not generate the next store frame until the current frame is explicitly recorded as `STORE FRAME <n> APPROVED`.
-- Do not clean temporary files before app acceptance, store-set approval when applicable, and explicit final confirmation.
-
-An upstream design-revision change invalidates dependent Core UI, icon, asset, acceptance, and store-screenshot approvals. Record the invalidation and repeat only the affected stages.
-
-## One coherent result
-
-Reference composition is concern-based, not component-based. Use at most one selected source for UI, one for UX, and one optional source for illustrations. The same source may fill multiple concerns. Do not take individual controls or screens from additional apps after approval. Resolve conflicts in this order:
-
-1. `product.md` controls functionality and required states;
-2. final `ui.md` controls visual presentation;
-3. final `ux.md` controls navigation and interaction character;
-4. final `illustrations.md` controls imagery without overriding UI legibility or product behavior.
-
-If verification finds a defect, refine the approved result rather than hiding the fix behind an unapproved alternative.
+Keep the exact eleven-item order in [ios-capabilities.md](ios-capabilities.md). The system access request or authentication challenge must be real. Use the smallest real product behavior required by the capability contract; only Bluetooth peripherals, microphone processing, and speech output may be mocked as defined there. CallKit has no permission prompt and follows its explicit exception.

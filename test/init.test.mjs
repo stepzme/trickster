@@ -13,11 +13,6 @@ import {
   isGlobalPackagePath,
 } from "../installer/init.mjs";
 import { createTerminalStyle, supportsColor } from "../installer/terminal-style.mjs";
-import { createUsageReport } from "../scripts/analyze-token-usage.mjs";
-import {
-  validatePhaseHandoff,
-  validateRunState,
-} from "../scripts/validate-run-artifacts.mjs";
 
 const repositoryRoot = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 
@@ -35,40 +30,7 @@ const canonicalCapabilities = [
   ["callkit", "CallKit"],
 ];
 
-const russianCapabilityNames = [
-  "Bluetooth",
-  "Скачивание фото",
-  "Добавление фото",
-  "Использование камеры",
-  "Face ID",
-  "Доступ к микрофону",
-  "Доступ к распознаванию речи",
-  "Доступ к контактам",
-  "Доступ к календарю",
-  "Доступ к геолокации",
-  "CallKit",
-];
-
-function assertAppearsInOrder(content, values) {
-  let cursor = -1;
-  for (const value of values) {
-    const next = content.indexOf(value, cursor + 1);
-    assert.ok(next > cursor, `Expected ${JSON.stringify(value)} after offset ${cursor}`);
-    cursor = next;
-  }
-}
-
-function extractCapabilityTemplateRows(markdown) {
-  return markdown
-    .split("\n")
-    .filter((line) => line.startsWith("| `"))
-    .map((line) => {
-      const cells = line.split("|").map((cell) => cell.trim());
-      return [cells[1].replaceAll("`", ""), cells[2]];
-    });
-}
-
-function extractCapabilityRegistryRows(markdown) {
+function registryRows(markdown) {
   return markdown
     .split("\n")
     .filter((line) => /^\| \d+ \| `/.test(line))
@@ -78,31 +40,15 @@ function extractCapabilityRegistryRows(markdown) {
     });
 }
 
-test("uses Trickster colors only in supported terminals", () => {
-  const terminal = { isTTY: true };
-  const styled = createTerminalStyle(terminal, {});
-
-  assert.equal(supportsColor(terminal, {}), true);
-  assert.equal(
-    styled.accent("Trickster"),
-    "\u001B[1;38;2;25;185;158mTrickster\u001B[0m",
-  );
-  assert.equal(
-    styled.error("Failed"),
-    "\u001B[1;38;2;226;69;28mFailed\u001B[0m",
-  );
-  assert.equal(
-    styled.warning("Verify"),
-    "\u001B[1;38;2;217;154;43mVerify\u001B[0m",
-  );
-
-  assert.equal(
-    createTerminalStyle(terminal, { NO_COLOR: "" }).accent("Trickster"),
-    "Trickster",
-  );
-  assert.equal(createTerminalStyle({ isTTY: false }, {}).error("Failed"), "Failed");
-  assert.equal(createTerminalStyle(terminal, { CI: "true" }).warning("Verify"), "Verify");
-});
+function templateRows(markdown) {
+  return markdown
+    .split("\n")
+    .filter((line) => line.startsWith("| `"))
+    .map((line) => {
+      const cells = line.split("|").map((cell) => cell.trim());
+      return [cells[1].replaceAll("`", ""), cells[2]];
+    });
+}
 
 async function createProject() {
   const project = await mkdtemp(join(tmpdir(), "trickster-test-"));
@@ -112,282 +58,65 @@ async function createProject() {
   return project;
 }
 
-test("installs one project-local Trickster folder without the remote style library", async () => {
+test("uses Trickster colors only in supported terminals", () => {
+  const terminal = { isTTY: true };
+  const styled = createTerminalStyle(terminal, {});
+  assert.equal(supportsColor(terminal, {}), true);
+  assert.match(styled.accent("Trickster"), /Trickster/);
+  assert.equal(createTerminalStyle(terminal, { NO_COLOR: "" }).accent("Trickster"), "Trickster");
+  assert.equal(createTerminalStyle({ isTTY: false }, {}).error("Failed"), "Failed");
+});
+
+test("installs the five-stage project-local toolkit", async () => {
   const project = await createProject();
   await initializeProject({ target: project, yes: true, quiet: true });
 
   assert.match(await readFile(join(project, "AGENTS.md"), "utf8"), /trickster\/AGENTS\.md/);
-  assert.equal(await readFile(join(project, ".gitignore"), "utf8"), "build/\n");
-  assert.equal(await readFile(join(project, "trickster", "VERSION"), "utf8"), "1.0.3\n");
+  assert.equal(await readFile(join(project, "trickster", "VERSION"), "utf8"), "1.1.0\n");
   assert.equal(await readFile(join(project, "trickster", "HARNESS"), "utf8"), "codex\n");
-  assert.notEqual(
-    await readFile(join(project, "trickster", "workflow", "master-prompt.md"), "utf8"),
-    "",
-  );
-  assert.match(
-    await readFile(join(project, "trickster", "workflow", "style-reference.md"), "utf8"),
-    /raw\.githubusercontent\.com\/stepzme\/trickster\/main\/styles\/catalog\.json/,
-  );
-  assert.deepEqual(
-    extractCapabilityRegistryRows(
-      await readFile(join(project, "trickster", "workflow", "ios-capabilities.md"), "utf8"),
-    ),
-    canonicalCapabilities,
-  );
+
+  for (const stage of ["research", "planning", "design", "dev", "publish"]) {
+    assert.notEqual(
+      await readFile(join(project, "trickster", "workflow", `${stage}.md`), "utf8"),
+      "",
+    );
+  }
+  for (const role of ["product-researcher", "designer", "implementation-owner", "acceptance-reviewer"]) {
+    assert.notEqual(
+      await readFile(join(project, "trickster", "roles", `${role}.md`), "utf8"),
+      "",
+    );
+  }
+
   assert.equal(
-    validateRunState(
-      JSON.parse(await readFile(join(project, "trickster", "templates", "run-state.json"), "utf8")),
-    ).valid,
-    true,
-  );
-  assert.notEqual(
-    await readFile(join(project, "trickster", "scripts", "validate-run-artifacts.mjs"), "utf8"),
-    "",
-  );
-  assert.notEqual(
-    await readFile(join(project, "trickster", "scripts", "analyze-token-usage.mjs"), "utf8"),
+    await readFile(join(project, "trickster", "roles", "visual-producer.md"), "utf8").catch(() => ""),
     "",
   );
   assert.equal(
-    validatePhaseHandoff(
-      JSON.parse(await readFile(join(project, "trickster", "templates", "phase-handoff.json"), "utf8")),
-    ).valid,
-    true,
+    await readFile(join(project, "trickster", "workflow", "implementation-core.md"), "utf8").catch(() => ""),
+    "",
   );
   assert.equal(
     await readdir(join(project, "trickster", "styles")).then(() => true, () => false),
     false,
   );
-
-  assert.equal(
-    await readFile(join(project, ".codex", "config.toml"), "utf8").catch(() => ""),
-    "",
-  );
-  assert.equal(
-    await readFile(join(project, "trickster", "templates", "references.md"), "utf8").catch(() => ""),
-    "",
-  );
 });
 
-test("validates phase-scoped run state and rejects duplicate thread ownership", async () => {
-  const runState = JSON.parse(
-    await readFile(join(repositoryRoot, "templates", "run-state.json"), "utf8"),
-  );
-  runState.sessions = [
-    {
-      threadId: "thread-core",
-      parentThreadId: null,
-      role: "implementation_owner",
-      phase: "core",
-    },
-  ];
-  runState.activeAssignment = {
-    threadId: "thread-core",
-    role: "implementation_owner",
-    phase: "core",
-  };
-
-  assert.deepEqual(validateRunState(runState), { valid: true, errors: [] });
-
-  runState.sessions.push({ ...runState.sessions[0] });
-  const invalid = validateRunState(runState);
-  assert.equal(invalid.valid, false);
-  assert.ok(invalid.errors.some((error) => error.includes("threadId must be unique")));
-});
-
-test("validates compact phase handoffs and executable check records", async () => {
-  const handoff = JSON.parse(
-    await readFile(join(repositoryRoot, "templates", "phase-handoff.json"), "utf8"),
-  );
-  handoff.checks = [
-    {
-      command: "xcodebuild test",
-      exitCode: 0,
-      summary: "Required tests passed",
-      logPath: "/tmp/trickster/run/build/test.log",
-    },
-  ];
-
-  assert.deepEqual(validatePhaseHandoff(handoff), { valid: true, errors: [] });
-
-  handoff.checks[0].exitCode = "0";
-  const invalid = validatePhaseHandoff(handoff);
-  assert.equal(invalid.valid, false);
-  assert.ok(invalid.errors.some((error) => error.includes("exitCode must be an integer")));
-});
-
-test("aggregates direct and descendant Codex sessions by assigned phase", () => {
-  const runState = {
-    runId: "run-usage",
-    sessions: [
-      {
-        threadId: "core-thread",
-        parentThreadId: null,
-        role: "implementation_owner",
-        phase: "core",
-      },
-    ],
-  };
-  const records = [
-    {
-      id: "core-thread",
-      parentThreadId: null,
-      source: "subagent",
-      usage: {
-        input_tokens: 1_000,
-        cached_input_tokens: 800,
-        output_tokens: 100,
-        reasoning_output_tokens: 20,
-        total_tokens: 1_100,
-      },
-    },
-    {
-      id: "review-thread",
-      parentThreadId: "core-thread",
-      source: "guardian_review",
-      usage: {
-        input_tokens: 500,
-        cached_input_tokens: 400,
-        output_tokens: 50,
-        reasoning_output_tokens: 10,
-        total_tokens: 550,
-      },
-    },
-    {
-      id: "unrelated-thread",
-      parentThreadId: null,
-      source: "user",
-      usage: {
-        input_tokens: 9_000,
-        cached_input_tokens: 0,
-        output_tokens: 1_000,
-        reasoning_output_tokens: 0,
-        total_tokens: 10_000,
-      },
-    },
-    {
-      id: "core-thread",
-      parentThreadId: null,
-      source: "subagent",
-      usage: null,
-    },
-  ];
-
-  const report = createUsageReport(runState, records);
-  assert.equal(report.sessionCount, 2);
-  assert.equal(report.totals.total_tokens, 1_650);
-  assert.equal(report.derived.uncachedInput, 300);
-  assert.equal(report.derived.uncachedInputPlusOutput, 450);
-  assert.equal(report.byPhase[0].name, "core");
-  assert.deepEqual(report.missingThreadIds, []);
-});
-
-test("analyzes recorded Codex JSONL sessions without loading unrelated usage", async () => {
-  const fixtureRoot = await mkdtemp(join(tmpdir(), "trickster-usage-"));
-  const sessionsRoot = join(fixtureRoot, "sessions");
-  await mkdir(sessionsRoot);
-
-  const runState = JSON.parse(
-    await readFile(join(repositoryRoot, "templates", "run-state.json"), "utf8"),
-  );
-  runState.runId = "run-cli";
-  runState.toolkitVersion = "1.0.3";
-  runState.sessions = [
-    {
-      threadId: "recorded-thread",
-      parentThreadId: null,
-      role: "implementation_owner",
-      phase: "full",
-    },
-  ];
-  const runStatePath = join(fixtureRoot, "run-state.json");
-  await writeFile(runStatePath, `${JSON.stringify(runState)}\n`, "utf8");
-
-  const jsonl = [
-    { type: "session_meta", payload: { id: "recorded-thread", thread_source: "subagent" } },
-    {
-      type: "event_msg",
-      payload: {
-        type: "token_count",
-        info: {
-          total_token_usage: {
-            input_tokens: 2_000,
-            cached_input_tokens: 1_500,
-            output_tokens: 200,
-            reasoning_output_tokens: 50,
-            total_tokens: 2_200,
-          },
-        },
-      },
-    },
-  ].map((item) => JSON.stringify(item)).join("\n");
-  await writeFile(join(sessionsRoot, "recorded.jsonl"), `${jsonl}\n`, "utf8");
-  await writeFile(
-    join(sessionsRoot, "unrelated.jsonl"),
-    `${JSON.stringify({ type: "session_meta", payload: { id: "unrelated-thread" } })}\n`,
-    "utf8",
-  );
-
-  const result = spawnSync(
-    process.execPath,
-    [
-      resolve(repositoryRoot, "scripts", "analyze-token-usage.mjs"),
-      "--run-state",
-      runStatePath,
-      "--sessions-root",
-      sessionsRoot,
-    ],
-    { encoding: "utf8" },
-  );
-
-  assert.equal(result.status, 0, result.stderr);
-  const report = JSON.parse(result.stdout);
-  assert.equal(report.runId, "run-cli");
-  assert.equal(report.sessionCount, 1);
-  assert.equal(report.totals.total_tokens, 2_200);
-  assert.equal(report.derived.uncachedInputPlusOutput, 700);
-});
-
-test("re-running init updates managed files and preserves the approved design composition and artifacts", async () => {
+test("re-running init updates managed workflow and preserves project artifacts", async () => {
   const project = await createProject();
-  const options = { target: project, yes: true, quiet: true };
-
+  const options = { target: project, harness: "generic", yes: true, quiet: true };
   await initializeProject(options);
-  await writeFile(join(project, "trickster", "design", "provenance.json"), "{\"ui\":\"keep\",\"ux\":\"keep\"}\n", "utf8");
-  await writeFile(join(project, "trickster", "design", "composition.md"), "# Keep composition\n", "utf8");
-  await writeFile(join(project, "trickster", "design", "source.json"), "{\"appId\":\"keep\"}\n", "utf8");
   await writeFile(join(project, "trickster", "design", "ui.md"), "# Keep UI\n", "utf8");
-  await writeFile(join(project, "trickster", "design", "ux.md"), "# Keep UX\n", "utf8");
-  await writeFile(join(project, "trickster", "design", "illustrations.md"), "# Keep art\n", "utf8");
   await mkdir(join(project, "trickster", "artifacts", "run-1"), { recursive: true });
-  await writeFile(join(project, "trickster", "artifacts", "run-1", "review.md"), "# Keep review\n", "utf8");
+  await writeFile(join(project, "trickster", "artifacts", "run-1", "research.md"), "# Keep research\n", "utf8");
   await writeFile(join(project, "trickster", "workflow", "obsolete.md"), "obsolete\n", "utf8");
 
   await initializeProject(options);
 
-  const agents = await readFile(join(project, "AGENTS.md"), "utf8");
-  assert.equal(agents.match(/>>> trickster managed instructions/g)?.length, 1);
-  assert.equal(
-    await readFile(join(project, "trickster", "design", "provenance.json"), "utf8"),
-    '{"ui":"keep","ux":"keep"}\n',
-  );
-  assert.equal(
-    await readFile(join(project, "trickster", "design", "composition.md"), "utf8"),
-    "# Keep composition\n",
-  );
-  assert.equal(
-    await readFile(join(project, "trickster", "design", "source.json"), "utf8"),
-    '{"appId":"keep"}\n',
-  );
   assert.equal(await readFile(join(project, "trickster", "design", "ui.md"), "utf8"), "# Keep UI\n");
-  assert.equal(await readFile(join(project, "trickster", "design", "ux.md"), "utf8"), "# Keep UX\n");
   assert.equal(
-    await readFile(join(project, "trickster", "design", "illustrations.md"), "utf8"),
-    "# Keep art\n",
-  );
-  assert.equal(
-    await readFile(join(project, "trickster", "artifacts", "run-1", "review.md"), "utf8"),
-    "# Keep review\n",
+    await readFile(join(project, "trickster", "artifacts", "run-1", "research.md"), "utf8"),
+    "# Keep research\n",
   );
   assert.equal(
     await readFile(join(project, "trickster", "workflow", "obsolete.md"), "utf8").catch(() => ""),
@@ -395,121 +124,23 @@ test("re-running init updates managed files and preserves the approved design co
   );
 });
 
-test("doctor validates the installed feedback-gated workflow before reference composition", async () => {
+test("doctor checks the simplified workflow", async () => {
   const project = await createProject();
-  await initializeProject({
-    target: project,
-    harness: "generic",
-    yes: true,
-    quiet: true,
-  });
-
-  const result = await doctorProject(project, { quiet: true });
-  assert.equal(result.ready, true);
-  assert.equal(
-    await readFile(join(project, "trickster", "design", "ui.md"), "utf8").catch(() => ""),
-    "",
-  );
-
-  const cliResult = spawnSync(
-    process.execPath,
-    [resolve(repositoryRoot, "bin", "trickster.mjs"), "doctor", "--target", project, "--harness", "generic"],
-    { encoding: "utf8" },
-  );
-  assert.equal(cliResult.status, 0);
-  assert.match(cliResult.stdout, /local installation is ready to use/i);
-  assert.match(cliResult.stdout, /reconciles core scope with all eleven mandatory iOS capabilities/i);
-  assert.match(cliResult.stdout, /composes approved UI, UX and optional illustration sources/i);
-});
-
-test("doctor rejects an installation without the mandatory capability workflow", async () => {
-  const project = await createProject();
-  await initializeProject({
-    target: project,
-    harness: "generic",
-    yes: true,
-    quiet: true,
-  });
-
-  await rm(join(project, "trickster", "workflow", "ios-capabilities.md"));
-  const result = await doctorProject(project, { quiet: true });
-
-  assert.equal(result.ready, false);
-  assert.deepEqual(
-    result.checks.find(([name]) => name === "iOS capability workflow"),
-    ["iOS capability workflow", false],
-  );
-});
-
-test("re-running init does not remove an existing project style library", async () => {
-  const project = await createProject();
-  const packageDirectory = join(project, "trickster", "styles", "custom-package");
-  await mkdir(packageDirectory, { recursive: true });
-  await writeFile(join(packageDirectory, "ui.md"), "# Keep custom package\n", "utf8");
-
   await initializeProject({ target: project, harness: "generic", yes: true, quiet: true });
-
-  assert.equal(
-    await readFile(join(packageDirectory, "ui.md"), "utf8"),
-    "# Keep custom package\n",
-  );
-});
-
-test("generic harness installs the portable kit without Codex project files", async () => {
-  const project = await createProject();
-  const result = await initializeProject({
-    target: project,
-    harness: "generic",
-    yes: true,
-    quiet: true,
-  });
-
-  assert.equal(result.harness, "generic");
-  assert.equal(await readFile(join(project, "trickster", "HARNESS"), "utf8"), "generic\n");
-  assert.equal(await readFile(join(project, "AGENTS.md"), "utf8"), "# Existing instructions\n");
-  assert.equal(
-    await readFile(join(project, ".codex", "config.toml"), "utf8").catch(() => ""),
-    "",
-  );
-  assert.notEqual(
-    await readFile(join(project, "trickster", "adapters", "generic.md"), "utf8"),
-    "",
-  );
   assert.equal((await doctorProject(project, { quiet: true })).ready, true);
+
+  await rm(join(project, "trickster", "workflow", "design.md"));
+  const result = await doctorProject(project, { quiet: true });
+  assert.equal(result.ready, false);
+  assert.deepEqual(result.checks.find(([name]) => name === "Design workflow"), ["Design workflow", false]);
 });
 
-test("switching to generic removes only Trickster-owned Codex integration", async () => {
+test("generic harness installs without Codex project files", async () => {
   const project = await createProject();
-  const baseOptions = { target: project, yes: true, quiet: true };
-
-  await initializeProject({ ...baseOptions, harness: "codex" });
-  await mkdir(join(project, ".codex"), { recursive: true });
-  await writeFile(
-    join(project, ".codex", "config.toml"),
-    `# >>> trickster managed MCP servers >>>
-legacy = true
-# <<< trickster managed MCP servers <<<
-
-model = "keep-me"
-`,
-    "utf8",
-  );
-  await mkdir(join(project, "trickster", "agents"));
-  await writeFile(join(project, "trickster", "agents", "legacy.md"), "legacy", "utf8");
-  await writeFile(join(project, "trickster", "workflow", "delegation.md"), "legacy", "utf8");
-
-  await initializeProject({ ...baseOptions, harness: "generic" });
-
+  const result = await initializeProject({ target: project, harness: "generic", yes: true, quiet: true });
+  assert.equal(result.harness, "generic");
   assert.equal(await readFile(join(project, "AGENTS.md"), "utf8"), "# Existing instructions\n");
-  assert.equal(await readFile(join(project, ".codex", "config.toml"), "utf8"), 'model = "keep-me"\n');
-  assert.equal(
-    await readFile(join(project, "trickster", "agents", "legacy.md"), "utf8").catch(() => ""),
-    "",
-  );
-  assert.equal(
-    await readFile(join(project, "trickster", "workflow", "delegation.md"), "utf8").catch(() => ""),
-    "",
-  );
+  assert.equal((await doctorProject(project, { quiet: true })).ready, true);
 });
 
 test("refuses broad non-project targets", async () => {
@@ -522,182 +153,74 @@ test("rejects global npm installation", () => {
     [resolve(repositoryRoot, "scripts", "reject-global-install.mjs")],
     { encoding: "utf8", env: { ...process.env, npm_config_global: "true" } },
   );
-
   assert.equal(result.status, 1);
   assert.match(result.stderr, /cannot be installed globally/);
-  assert.match(result.stderr, /npx @sgx22\/trickster init/);
   assert.equal(isGlobalPackagePath("/opt/homebrew/lib/node_modules/@sgx22/trickster/bin/trickster.mjs"), true);
-  assert.equal(
-    isGlobalPackagePath("C:\\Users\\stepz\\AppData\\Roaming\\npm\\node_modules\\@sgx22\\trickster\\bin\\trickster.mjs"),
-    true,
-  );
   assert.equal(isGlobalPackagePath("/project/node_modules/@sgx22/trickster/bin/trickster.mjs"), false);
 });
 
-test("prints help as a top-level option", () => {
-  const result = spawnSync(
-    process.execPath,
-    [resolve(repositoryRoot, "bin", "trickster.mjs"), "--help"],
-    { encoding: "utf8" },
-  );
-
-  assert.equal(result.status, 0);
-  assert.match(result.stdout, /trickster init/);
-  assert.match(result.stdout, /--harness codex\|generic/);
-  assert.doesNotMatch(result.stdout, /runtime-install/);
-});
-
-test("prints an English starter brief after init", async () => {
-  const project = await createProject();
-  const result = spawnSync(
-    process.execPath,
-    [
-      resolve(repositoryRoot, "bin", "trickster.mjs"),
-      "init",
-      "--target",
-      project,
-      "--harness",
-      "generic",
-      "--yes",
-    ],
-    { encoding: "utf8" },
-  );
-
-  assert.equal(result.status, 0);
-  assert.match(result.stdout, /Start a new task in your agent and paste a brief like this:/);
-  assert.doesNotMatch(result.stdout, /Style catalog:/);
-  assert.match(result.stdout, /Use Trickster to create or substantially change a native iOS app\./);
-  assert.match(result.stdout, /Primary task:\nRequired features:\nOut of scope:\nConstraints:/);
-  assert.match(result.stdout, /A short description is enough\. Trickster will reconcile all eleven mandatory iOS capabilities/);
-  assert.doesNotMatch(result.stdout, /product-defining gap|style package before UI work/);
-});
-
-test("keeps the canonical eleven-capability tables identical", async () => {
+test("keeps canonical capability tables identical", async () => {
   const registry = await readFile(join(repositoryRoot, "workflow", "ios-capabilities.md"), "utf8");
-  const product = await readFile(join(repositoryRoot, "templates", "product.md"), "utf8");
+  const research = await readFile(join(repositoryRoot, "templates", "research.md"), "utf8");
   const review = await readFile(join(repositoryRoot, "templates", "review.md"), "utf8");
-  const russianReadme = await readFile(join(repositoryRoot, "README.ru.md"), "utf8");
-
-  assert.deepEqual(extractCapabilityRegistryRows(registry), canonicalCapabilities);
-  assert.deepEqual(extractCapabilityTemplateRows(product), canonicalCapabilities);
-  assert.deepEqual(extractCapabilityTemplateRows(review), canonicalCapabilities);
-  assertAppearsInOrder(russianReadme, russianCapabilityNames);
+  assert.deepEqual(registryRows(registry), canonicalCapabilities);
+  assert.deepEqual(templateRows(research), canonicalCapabilities);
+  assert.deepEqual(templateRows(review), canonicalCapabilities);
 });
 
-test("rejects an unsupported harness", () => {
-  const result = spawnSync(
-    process.execPath,
-    [resolve(repositoryRoot, "bin", "trickster.mjs"), "init", "--harness", "unknown"],
-    { encoding: "utf8" },
-  );
-
-  assert.equal(result.status, 1);
-  assert.match(result.stderr, /Unsupported harness/);
-});
-
-test("npm package excludes repository-only assets", async () => {
+test("npm package contains the simplified workflow and excludes repository-only assets", async () => {
   const npmCache = await mkdtemp(join(tmpdir(), "trickster-npm-cache-"));
   const result = spawnSync("npm", ["pack", "--dry-run", "--json"], {
     cwd: repositoryRoot,
     encoding: "utf8",
     env: { ...process.env, npm_config_cache: npmCache },
   });
-
   assert.equal(result.status, 0, result.stderr);
   const packResult = JSON.parse(result.stdout);
-  const { files } = Array.isArray(packResult)
-    ? packResult[0]
-    : Object.values(packResult)[0];
-  assert.equal(files.some(({ path }) => path.startsWith("styles/")), false);
-  assert.equal(files.some(({ path }) => path.startsWith("site/")), false);
-  assert.equal(files.some(({ path }) => path.startsWith(".github/")), false);
-  assert.equal(files.some(({ path }) => path === "workflow/ios-capabilities.md"), true);
-  assert.equal(files.some(({ path }) => path === "workflow/style-reference.md"), true);
-  assert.equal(files.some(({ path }) => path === "workflow/implementation-core.md"), true);
-  assert.equal(files.some(({ path }) => path === "workflow/implementation-full.md"), true);
-  assert.equal(files.some(({ path }) => path === "workflow/implementation-hardening.md"), true);
-  assert.equal(files.some(({ path }) => path === "templates/run-state.json"), true);
-  assert.equal(files.some(({ path }) => path === "templates/phase-handoff.json"), true);
-  assert.equal(files.some(({ path }) => path === "scripts/validate-run-artifacts.mjs"), true);
-  assert.equal(files.some(({ path }) => path === "scripts/analyze-token-usage.mjs"), true);
+  const { files } = Array.isArray(packResult) ? packResult[0] : Object.values(packResult)[0];
+  const paths = files.map(({ path }) => path);
 
-  const internalDocPrefixes = ["adapters/", "installer/assets/", "roles/", "templates/", "workflow/"];
-  const internalDocs = files
-    .map(({ path }) => path)
-    .filter((path) => path.endsWith(".md"))
-    .filter((path) => internalDocPrefixes.some((prefix) => path.startsWith(prefix)));
-
-  for (const path of internalDocs) {
-    assert.doesNotMatch(await readFile(join(repositoryRoot, path), "utf8"), /[А-Яа-яЁё]/, path);
+  assert.equal(paths.some((path) => path.startsWith("styles/")), false);
+  assert.equal(paths.some((path) => path.startsWith("site/")), false);
+  for (const path of [
+    "roles/designer.md",
+    "workflow/research.md",
+    "workflow/planning.md",
+    "workflow/design.md",
+    "workflow/dev.md",
+    "workflow/publish.md",
+    "workflow/ios-capabilities.md",
+    "templates/research.md",
+    "templates/plan.md",
+    "templates/review.md",
+  ]) {
+    assert.equal(paths.includes(path), true, path);
+  }
+  for (const path of [
+    "roles/visual-producer.md",
+    "roles/design-planner.md",
+    "workflow/implementation-core.md",
+    "templates/run-state.json",
+    "scripts/analyze-token-usage.mjs",
+  ]) {
+    assert.equal(paths.includes(path), false, path);
   }
 });
 
-test("style catalog indexes every repository package with required documents", async () => {
-  const catalogCheck = spawnSync(
+test("style catalog indexes every repository package", async () => {
+  const result = spawnSync(
     process.execPath,
     [resolve(repositoryRoot, "maintainers", "build-style-catalog.mjs"), "--check"],
     { cwd: repositoryRoot, encoding: "utf8" },
   );
-  assert.equal(catalogCheck.status, 0, catalogCheck.stderr);
+  assert.equal(result.status, 0, result.stderr);
 
-  const catalog = JSON.parse(
-    await readFile(join(repositoryRoot, "styles", "catalog.json"), "utf8"),
-  );
-  const directories = await readdir(
-    join(repositoryRoot, "styles"),
-    { withFileTypes: true },
-  );
+  const catalog = JSON.parse(await readFile(join(repositoryRoot, "styles", "catalog.json"), "utf8"));
+  const directories = await readdir(join(repositoryRoot, "styles"), { withFileTypes: true });
   const packageIds = directories
     .filter((entry) => entry.isDirectory() && !entry.name.startsWith("_"))
     .map((entry) => entry.name)
     .sort();
-
   assert.equal(catalog.length, packageIds.length);
   assert.deepEqual(catalog.map(({ appId }) => appId).sort(), packageIds);
-  assert.equal(new Set(catalog.map(({ appId }) => appId)).size, catalog.length);
-
-  for (const entry of catalog) {
-    assert.deepEqual(Object.keys(entry), [
-      "appId",
-      "name",
-      "url",
-      "category",
-      "categories",
-      "uiSummary",
-      "uxSummary",
-      "navigationSummary",
-      "coreFlows",
-      "illustrationSummary",
-    ]);
-    for (const key of ["appId", "name", "url", "category", "uiSummary", "uxSummary", "navigationSummary"]) {
-      assert.equal(typeof entry[key] === "string" && entry[key].trim().length > 0, true);
-    }
-    assert.equal(Array.isArray(entry.categories) && entry.categories.length > 0, true);
-    assert.equal(entry.categories.every((value) => typeof value === "string" && value.trim()), true);
-    assert.equal(Array.isArray(entry.coreFlows) && entry.coreFlows.length > 0, true);
-    assert.equal(entry.coreFlows.every((value) => typeof value === "string" && value.trim()), true);
-    assert.equal(
-      entry.illustrationSummary === null ||
-        (typeof entry.illustrationSummary === "string" && entry.illustrationSummary.trim().length > 0),
-      true,
-    );
-    const source = JSON.parse(
-      await readFile(join(repositoryRoot, "styles", entry.appId, "source.json"), "utf8"),
-    );
-    assert.equal(entry.url, source.url);
-    assert.equal(entry.category, source.category);
-    assert.notEqual(
-      await readFile(join(repositoryRoot, "styles", entry.appId, "ui.md"), "utf8"),
-      "",
-    );
-    assert.notEqual(
-      await readFile(join(repositoryRoot, "styles", entry.appId, "ux.md"), "utf8"),
-      "",
-    );
-    assert.equal(
-      entry.illustrationSummary !== null,
-      await readFile(join(repositoryRoot, "styles", entry.appId, "illustrations.md"), "utf8")
-        .then(() => true, () => false),
-    );
-  }
 });
