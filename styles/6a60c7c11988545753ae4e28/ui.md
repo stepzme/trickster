@@ -1,125 +1,202 @@
 <design-context>
 ---
-version: 1
-platform: iOS
+version: alpha
 name: GO-Club-design-analysis
-description: "A vivid full-screen iOS habit environment built from electric cobalt fields, oversized white type, translucent blue layers, floating pill navigation, and large lemon illustrated cards that carry essential visual weight."
-colors:
-  canvas: "#3626FF"
-  surface-primary: "#FFFFFF"
-  surface-secondary: "#3C78F4"
-  accent-primary: "#FFFF00"
-  accent-secondary: "#B8F25B"
-  text-primary: "#FFFFFF"
-  text-on-light: "#0A0B0D"
-  divider: "#8C86FF"
-  decorative-orange: "#FF6B45"
+description: "A vivid habit and fitness dashboard built from electric cobalt gradients, translucent blue layers, oversized black metrics, white pill controls, and sharp lemon-to-mint progress accents. Large graphic cards turn steps, water, plans, and countdowns into bold daily rituals."
+colors: {primary: "#2457F5", on-primary: "#FFFFFF", primary-hover: "#3B6AF7", primary-focus: "#1744D5", ink: "#0A0B0D", ink-muted: "#4F5662", ink-subtle: "#7C8592", ink-tertiary: "#AFB7C1", canvas: "#1748E8", surface-1: "#FFFFFF", surface-2: "#BCD9FF", surface-3: "#83B4FF", surface-4: "#578CFA", hairline: "#D8E6FF", hairline-strong: "#A6C6FF", hairline-tertiary: "#76A2F5", inverse-canvas: "#081A68", inverse-surface-1: "#12359B", inverse-surface-2: "#2457C7", inverse-ink: "#FFFFFF", brand-secure: "#2457F5", semantic-success: "#B8F25B", semantic-overlay: "#07133C"}
 typography:
-  hero: {fontFamily: "SF Pro Display", fontSize: 52, fontWeight: 700, lineHeight: 54}
-  title: {fontFamily: "SF Pro Display", fontSize: 30, fontWeight: 700, lineHeight: 34}
-  section: {fontFamily: "SF Pro Text", fontSize: 22, fontWeight: 600, lineHeight: 27}
-  body: {fontFamily: "SF Pro Text", fontSize: 17, fontWeight: 400, lineHeight: 22}
-  label: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 600, lineHeight: 20}
-  caption: {fontFamily: "SF Pro Text", fontSize: 12, fontWeight: 500, lineHeight: 16}
-spacing:
-  screen-horizontal: 20
-  section-gap: 32
-  card-padding: 20
-  control-gap: 12
-rounded:
-  control: 18
-  card: 28
-  sheet: 32
-  pill: 999
+  display-xl: {fontFamily: SF Pro Display, fontSize: 52px, fontWeight: 700, lineHeight: 0.98, letterSpacing: -1.8px}
+  display-lg: {fontFamily: SF Pro Display, fontSize: 40px, fontWeight: 700, lineHeight: 1.02, letterSpacing: -1.1px}
+  display-md: {fontFamily: SF Pro Display, fontSize: 30px, fontWeight: 700, lineHeight: 1.08, letterSpacing: -0.6px}
+  headline: {fontFamily: SF Pro Display, fontSize: 24px, fontWeight: 700, lineHeight: 1.15, letterSpacing: -0.3px}
+  card-title: {fontFamily: SF Pro Text, fontSize: 17px, fontWeight: 600, lineHeight: 1.22, letterSpacing: 0}
+  subhead: {fontFamily: SF Pro Text, fontSize: 15px, fontWeight: 600, lineHeight: 1.30, letterSpacing: 0}
+  body-lg: {fontFamily: SF Pro Text, fontSize: 16px, fontWeight: 400, lineHeight: 1.38, letterSpacing: 0}
+  body: {fontFamily: SF Pro Text, fontSize: 14px, fontWeight: 400, lineHeight: 1.36, letterSpacing: 0}
+  body-sm: {fontFamily: SF Pro Text, fontSize: 12px, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0}
+  caption: {fontFamily: SF Pro Text, fontSize: 10px, fontWeight: 500, lineHeight: 1.25, letterSpacing: 0}
+  button: {fontFamily: SF Pro Text, fontSize: 15px, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0}
+  eyebrow: {fontFamily: SF Pro Text, fontSize: 11px, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0.1px}
+  mono: {fontFamily: SF Mono, fontSize: 11px, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0}
+rounded: {xs: 4px, sm: 10px, md: 14px, lg: 20px, xl: 26px, xxl: 34px, pill: 9999px, full: 9999px}
+spacing: {xxs: 4px, xs: 8px, sm: 12px, md: 16px, lg: 20px, xl: 24px, xxl: 32px, section: 40px}
 components:
-  primary-action: {fill: "#FFFFFF", text: "#0A0B0D", shape: pill}
-  progress-accent: {fill: "#FFFF00", text: "#0A0B0D", shape: pill}
-  primary-card: {fill: "#FFFFFF", text: "#0A0B0D", radius: 28}
-  navigation: {fill: "translucent pale blue", selected: "lighter nested pill", shape: floating-pill}
+  button-primary: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: 14px 20px}
+  button-secondary: {backgroundColor: "{colors.surface-3}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: 12px 18px}
+  metric-card: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xl}", padding: 20px}
+  progress-card: {backgroundColor: "#D9F35C", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xl}", padding: 20px}
+  segmented-control: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.pill}", padding: 5px}
+  status-badge: {backgroundColor: "#B8F25B", textColor: "{colors.ink}", typography: "{typography.caption}", rounded: "{rounded.pill}", padding: 4px 8px}
+  bottom-nav: {backgroundColor: "{colors.surface-3}", textColor: "{colors.inverse-ink}", typography: "{typography.caption}", rounded: "{rounded.pill}", padding: 8px 10px}
 ---
+## Overview
 
-# Overview
+GO Club turns daily health routines into bold visual dashboards. Electric blue fills the viewport, white cards carry oversized metrics, and lemon-to-mint accents make progress feel immediate.
 
-GO Club is not a neutral dashboard with blue accents. Cobalt fills the entire app environment, white type and controls sit directly on it, and large yellow or pale-blue cards create the main rhythm. Oversized metrics, graphic progress objects, and a floating translucent navigation pill make the interface feel athletic, playful, and theatrical.
+**Key Characteristics:** cobalt gradients, translucent blue layers, giant black numerals, white pill controls, lemon progress cards, simple graphic objects, compact bottom navigation, and one dominant habit per screen.
 
-# Non-negotiable visual invariants
+## Colors
 
-- Cobalt or violet-blue occupies nearly the full viewport; it is not limited to a header.
-- The upper portion of a primary screen contains one dominant message, countdown, or metric in oversized white type.
-- Supporting controls use blue translucency, while decisive controls use high-contrast white or yellow fills.
-- Yellow-to-mint progress areas are large visual masses, not thin standard progress bars.
-- Promotional or contextual cards reserve roughly one third of their area for bold custom illustration.
-- Cards use very large radii and generous internal spacing, but the screen does not become a stack of interchangeable white cards.
-- Bottom navigation floats above content as a translucent pill with a nested selected state.
-- Each screen has one visual protagonist; secondary metadata remains compact.
+### Brand & Accent
 
-# Color and surfaces
+Electric blue is the environment. White defines decisive controls and metric cards; lemon and mint mark progress, completion, and energetic program content.
 
-Electric cobalt is the environment. Slight violet or deeper-blue shifts may create depth, but the app should still read as one saturated field. White carries major copy, primary actions, and the clearest metric surfaces. Lemon yellow is a major product surface for progress and promotional cards; mint signals completion or momentum. Orange and black belong mainly to illustration details.
+### Surface
 
-Default light-gray iOS canvas, system grouped backgrounds, default blue tint, and multiple unrelated accent colors visibly break this language.
+Blue moves from deep gradient canvas to translucent cyan panels. White is reserved for the clearest data and primary action surfaces.
 
-# Typography
+### Text
 
-Primary metrics and countdown values use SF Pro Display with extreme scale contrast, tight line height, and bold weight. Screen titles and greetings remain large enough to read as composition, not navigation chrome. Units, timestamps, and tab labels are compact SF Pro Text. Use tabular numerals for countdowns and metrics.
+Black appears on white or lemon cards, while white text sits on blue. Muted blue-gray supports labels without weakening the major number.
 
-With Dynamic Type, preserve the metric's dominance and allow labels to wrap or move below it. Do not uniformly scale every text style until all hierarchy disappears.
+### Semantic
 
-# Screen composition
+Lemon-mint means progress or positive momentum. White means actionable clarity; darker blue indicates depth, history, or inactive context.
 
-Primary screens begin inside the colored safe-area field rather than below a white navigation bar. The top third is reserved for the current message, countdown, or metric. The middle holds one progress/control surface and compact supporting data. Large contextual or illustrated cards follow in the scroll. The floating navigation pill overlaps the lower content region while respecting the home indicator.
+## Typography
 
-Habit-dashboard archetype: one dominant number, a short label or goal, a graphic progress treatment, and one direct action.
+### Font Family
 
-Plan archetype: a prominent target or countdown, compact attributes, one large progress surface, and an illustrated contextual card.
+Use SF Pro Display for oversized metrics and countdowns and SF Pro Text for goals, units, labels, and controls.
 
-Permission or setup archetype: retain the saturated environment and direct hierarchy; do not fall back to `Form` rows or a generic white onboarding sheet.
+### Hierarchy
 
-# Navigation appearance
+| Token | Size | Weight | Use |
+|---|---:|---:|---|
+| display-xl | 52px | 700 | Primary metric |
+| display-lg | 40px | 700 | Countdown or progress |
+| headline | 24px | 700 | Habit title |
+| body | 14px | 400 | Goal and context |
+| caption | 10px | 500 | Unit and nav label |
 
-Bottom navigation is a wide translucent pale-blue capsule floating above the bottom safe area. Destinations use bold simple icons; the selected destination receives a brighter nested capsule rather than only a tint change. Navigation must not render as the default opaque `TabView` bar.
+### Principles
 
-Sheets and detail screens keep the blue environment or use a deliberate high-contrast card; they do not automatically switch to grouped gray backgrounds.
+- Give each screen one unmistakable metric.
+- Pair giant numbers with compact labels and units.
+- Use contrast and scale before adding explanatory copy.
 
-# Components
+### Note on Font Substitutes
 
-Primary action: wide white pill, black semibold label, generous vertical padding, no thin outline.
+Use a clean geometric platform sans with tabular numerals and a strong bold cut.
 
-Progress action: thick yellow or yellow-to-mint pill or block that reads as a major surface.
+## Layout
 
-Metric card: one oversized number, compact unit, short goal, and a minimal chart or progress cue. Avoid filling it with unrelated rows.
+### Spacing System
 
-Segmented control: pale or translucent blue capsule with a high-contrast selected fill. Do not use the default system segmented appearance unchanged.
+Use a 4px base, 12–16px internal gaps, 20px card padding, and large vertical breathing room around the primary metric.
 
-Countdown tile: saturated blue tile with a fine lighter edge, very large white digits, compact uppercase unit, and generous radius.
+### Grid & Container
 
-# Imagery and icons
+Screens use a full blue field with one or two large rounded cards. Supporting controls sit in pill groups near the bottom safe area.
 
-Use custom graphic objects or loose orange-and-black line scenes, not arbitrary SF Symbols as the main artwork. Illustration may occupy 25–45% of a large contextual card and should visually balance the headline. Temporary art must preserve the final asset's scale, crop, palette, and negative space; omitting the artwork is not an acceptable placeholder.
+### Whitespace Philosophy
 
-Functional symbols may use SF Symbols when their weight and enclosure are customized to match the bold graphic system.
+Keep each habit sparse and theatrical. The background is active color, so avoid filling it with secondary modules.
 
-# States
+## Elevation & Depth
 
-Selected navigation and controls become brighter and more solid. Completed progress uses lemon or mint with an unmistakable filled mass. Empty and permission states retain the blue environment and use illustration or a bold object to avoid becoming generic settings screens. Modal states keep the same radius, type contrast, and saturated palette.
+| Level | Treatment | Use |
+|---|---|---|
+| 0 | Blue gradient field | Habit environment |
+| 1 | Translucent blue panel | Chart and navigation |
+| 2 | White metric card | Primary data |
+| 3 | Lemon graphic card | Progress or program |
 
-# iOS adaptation
+### Decorative Depth
 
-Draw the cobalt background through all safe areas. Place scroll content above a reserved bottom inset for the floating navigation pill. Use native navigation, sheets, buttons, and accessibility semantics, but style their visible surfaces explicitly. Maintain 44-point targets and logical VoiceOver order. On compact iPhones, reduce horizontal padding and illustration crop before collapsing the primary hierarchy. Support Dynamic Type without shrinking the main metric into ordinary body content.
+Use smooth gradients, translucent bars, simple dimensional objects, line-art weather scenes, and soft edge glow rather than conventional shadow.
 
-# Anti-generic checklist
+## Shapes
 
-- No light-gray app canvas with a blue header.
-- No universal stack of white rounded cards.
-- No default `Form` for primary product screens.
-- No unstyled `TabView` bar.
-- No thin standard `ProgressView` where the reference uses a large yellow mass.
-- No arbitrary SF Symbol standing in for a large illustration.
-- No omission of illustration cards because final assets are unfinished.
-- No default iOS blue used as the only sign of selection.
+### Border Radius Scale
 
-# Known gaps
+| Token | Value | Use |
+|---|---:|---|
+| rounded-sm | 10px | Small chart bar |
+| rounded-md | 14px | Counter and control |
+| rounded-lg | 20px | Supporting card |
+| rounded-xl | 26px | Metric and plan card |
+| rounded-full | full | Button, segment, navigation |
 
-Dark appearance, landscape, iPad, long-term history, and every permission-denial state were not sampled. Adapt them by preserving the invariants above rather than inventing a second neutral theme.
+### Photography & Illustration Geometry
+
+Avoid photography. Use isolated graphic objects and compact line-art scenes inside generous rounded cards, leaving clear space for a metric or goal.
+
+## Components
+
+### Buttons
+
+Primary completion actions are white pills with black text. Secondary controls use translucent blue or pale blue with strong selected contrast.
+
+### Pricing Tabs
+
+Time ranges, targets, and plan modes use pill segments. Selection should be obvious through a white or high-contrast fill, not a thin system tint.
+
+### Cards & Containers
+
+Metric cards feature one giant number, a short label, and a chart or progress support. Plan cards combine countdown, weather or program art, and progress.
+
+### Inputs & Forms
+
+Water and goal inputs use large steppers, toggles, and pill controls. Native controls must inherit the blue palette, rounded geometry, type scale, and spacing.
+
+### Status & Build Page
+
+Keep current value, goal, unit, progress, streak, schedule, and completion visible near the main control.
+
+### Navigation
+
+Use a soft translucent pill bar with few destinations. The active item is clearer and brighter without reverting to generic iOS blue.
+
+### Footer
+
+No footer; the habit action or pill navigation closes the safe area.
+
+## Do's and Don'ts
+
+### Do
+
+- Give one metric visual dominance.
+- Preserve cobalt, white, and lemon-mint roles.
+- Style every native control to belong to the graphic system.
+
+### Don't
+
+- Don't add dense white settings lists to primary habit screens.
+- Don't use many unrelated accent colors.
+- Don't shrink the main number to fit secondary content.
+
+## Responsive Behavior
+
+### Breakpoints
+
+| Name | Width | Key Changes |
+|---|---:|---|
+| Compact | 320–374px | Scale metric and card padding |
+| Standard | 375–430px | Default dashboard |
+| Wide | 431px+ | Expand card gutters and art |
+
+### Touch Targets
+
+Steppers, segments, toggles, completion actions, cards, and navigation remain at least 44px.
+
+### Collapsing Strategy
+
+Preserve metric, unit, goal, progress, main control, and completion; collapse history and decorative program detail first.
+
+### Image Behavior
+
+Scale graphic objects proportionally, preserve generous negative space, and keep charts readable without cropping.
+
+## Iteration Guide
+
+Tune Steps first, then Water, Plan, goals, history, reminders, and profile customization.
+
+## Known Gaps
+
+- Reminder setup and long-term history were not fully sampled.
+- Only portrait phone layouts were represented.
 
 </design-context>
+
+Use the design system above for all UI you generate.

@@ -4461,15 +4461,14 @@
     "categories": [
       "Lifestyle"
     ],
-    "uiSummary": "A vivid full-screen iOS habit environment built from electric cobalt fields, oversized white type, translucent blue layers, floating pill navigation, and large lemon illustrated cards that carry essential visual weight.",
-    "uxSummary": "GO Club turns steps, water, plans, goals, and daily completion into focused routines with lightweight history and customization.",
-    "navigationSummary": "The app has a small set of persistent habit destinations. Each destination returns the user to the current value and its main action. Deeper history and goal settings are entered from the relevant habit and return to the same context.",
+    "uiSummary": "A vivid habit and fitness dashboard built from electric cobalt gradients, translucent blue layers, oversized black metrics, white pill controls, and sharp lemon-to-mint progress accents. Large graphic cards turn steps, water, plans, and countdowns into bold daily rituals.",
+    "uxSummary": "GO Club turns steps, water, plans, goals, and daily completion into focused habit dashboards with lightweight history and customization.",
+    "navigationSummary": "A compact pill navigation switches between the few primary habit areas. Each destination keeps one current metric and its main control in the foreground.",
     "coreFlows": [
       "Review movement",
-      "Log water",
-      "Follow a plan"
+      "Log water and follow a plan"
     ],
-    "illustrationSummary": "GO Club uses bold graphic objects and compact line-art scenes as essential visual counterweights to metrics, plans, onboarding, weather, and milestones."
+    "illustrationSummary": "GO Club uses bold graphic objects and compact line-art scenes as motivational companions to metrics and plans."
   },
   {
     "appId": "6a614de01988545753b1e8a8",
@@ -4626,8 +4625,8 @@
       "Productivity"
     ],
     "uiSummary": "An optimistic digital-wellbeing interface that pairs a white utility layer with immersive blue-sky photography, airy blue gradients, oversized rounded sheets, black pill actions, and a friendly app-shaped mascot. Data, blocking controls, and system permissions remain clear while the visual language feels restorative rather than punitive.",
-    "uxSummary": "Jomo turns screen-time reduction into a guided routine: establish a goal, configure blocking, review usage, and reuse rules.",
-    "navigationSummary": "Persistent destinations cover Home, Rules, Squads, and Profile. The blocking action remains available across the main destinations. Rule creation and system-selection tasks open as focused modal flows and return to the originating context.",
+    "uxSummary": "Jomo turns screen-time reduction into a guided routine: set a goal, configure app blocking, then review daily usage and reusable rules.",
+    "navigationSummary": "Four bottom destinations cover Home, Rules, Squads, and Profile. The main Start blocking action is repeated above the tab bar where it stays prominent.",
     "coreFlows": [
       "Set up a goal",
       "Start blocking",
