@@ -121,6 +121,7 @@ Keep all eleven rows in this exact order. Do not rename, merge, remove, reorder,
 - Images, icons, fonts, availability, and terms:
 - Tools for Simulator interaction and image viewing:
 - Delegation mode, app-code owner, Simulator owner, and physical-device owner:
+- Run-state path and phase-scoped session policy:
 - Simulator preview availability for Core, Full, and Hardening:
 
 ## Acceptance plan

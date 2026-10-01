@@ -16,7 +16,7 @@ For every required asset in `asset-manifest.md`:
 4. Prepare one prompt covering purpose, subject, composition, palette, framing, dimensions, background or transparency, and prohibited elements.
 5. Use the latest suitable image-generation model available in the active environment. Record exact model ID, date, prompt, parameters, source, and terms of use.
 6. Produce one candidate per need, visually inspect it, and refine the same solution for artifacts, anatomy, text, crop, or style mismatch.
-7. The master shows every substantial generated asset to the user before integration. Continue the same visual producer until the user approves it; silence is not approval.
+7. The master shows every substantial generated asset to the user before integration. Continue the current product-assets session until the user approves it; silence is not approval.
 8. Prepare derivative sizes without changing the approved concept.
 
 Launch-screen artwork is allowed only when the same element is fixed on the first real frame. App-owned splash artwork follows the normal approval loop. Neither asset may justify an artificial startup delay.
@@ -36,3 +36,4 @@ After integration, build the app and verify every asset on the real screen. Reco
 - user approval records for substantial generated assets;
 - screenshots of actual in-app use;
 - the integrated revision ready for final Hardening.
+- validated product-assets and visual-integration handoffs.

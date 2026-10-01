@@ -14,6 +14,7 @@ Produce one reconciled local-first product definition. Scope, local data archite
 ## Allowed writes
 
 - product-definition sections in `trickster/artifacts/<run-id>/product.md`
+- `trickster/artifacts/<run-id>/handoffs/product-definition.json`
 
 ## Responsibilities
 
@@ -36,4 +37,4 @@ Produce one reconciled local-first product definition. Scope, local data archite
 
 ## Handoff
 
-Return the core scope, local data plan, complete eleven-row matrix and modes, final reconciled scope, status, boundaries, dependencies, one material question when needed, changed files, and `UNVERIFIED` items. The master verifies this single handoff before reference research.
+Write and validate the product-definition handoff. Return its path, the core scope, local data plan, complete eleven-row matrix and modes, final reconciled scope, status, boundaries, dependencies, one material question when needed, changed files, and `UNVERIFIED` items. The master verifies this handoff before reference research and retires the session.

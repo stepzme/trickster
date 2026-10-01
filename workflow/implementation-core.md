@@ -25,10 +25,10 @@ Preview fixtures may accelerate UI review, but they must not become the app arch
 3. Run the relevant focused checks.
 4. Return the revision, launch capture, main-section states, commands, screenshots, the real store or preview fixture used, and limitations.
 5. The master independently verifies the build and presents the real launch and Core result to the user.
-6. If the user gives feedback, `CONTINUE` the same implementation owner. When feedback changes the design mapping, return to design composition and create a new design revision first.
+6. If the user gives feedback, `CONTINUE` the current Core session. When feedback changes the design mapping, return to design composition and create a new design revision first.
 7. Repeat until the user explicitly states `CORE UI APPROVED`.
 
-Record approval with the app revision, design revision, device, reviewed launch transition, and screens. Silence or implementation-owner confidence is not approval. Full implementation is blocked without it.
+Record approval with the app revision, design revision, device, reviewed launch transition, and screens. Validate `handoffs/core.json`, update run state, and retire the Core session. Silence or implementation-owner confidence is not approval. Full implementation is blocked without it.
 
 ## Preview on request
 

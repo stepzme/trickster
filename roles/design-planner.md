@@ -50,6 +50,7 @@ After `CONTINUE` with the user's UI, UX, and optional illustration mapping:
 - optional `trickster/design/illustrations.md`;
 - `trickster/artifacts/<run-id>/product.md`;
 - `trickster/artifacts/<run-id>/asset-manifest.md`.
+- `trickster/artifacts/<run-id>/handoffs/reference-research.json` or `design-synthesis.json`, according to the assigned phase.
 
 ## Prohibited
 
@@ -62,4 +63,4 @@ After `CONTINUE` with the user's UI, UX, and optional illustration mapping:
 
 ## Handoff
 
-Research returns up to three candidates and concern-level recommendations. Synthesis returns the final design package, design revision, contract readiness, asset requirements, changed files, conflicts resolved, and open questions. The master presents the package and records `DESIGN COMPOSITION APPROVED`.
+Research writes and validates `handoffs/reference-research.json`, then returns up to three candidates and concern-level recommendations. The master retires that session after presenting the choices. Synthesis runs in a fresh `design_planner` session from the verified research handoff, writes and validates `handoffs/design-synthesis.json`, and returns the final design package, design revision, contract readiness, asset requirements, changed files, conflicts resolved, and open questions. The master presents the package and records `DESIGN COMPOSITION APPROVED`.

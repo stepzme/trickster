@@ -46,7 +46,7 @@ For AC-12, the first ten capabilities require `REAL` behavior. CallKit alone may
 
 ## Fix cycles
 
-For every defect, record criterion, screen or state, observed result, expected result, severity, and evidence. By default allow the initial implementation and up to three acceptance fix cycles. Return defects through `CONTINUE(implementation_owner)` and retest affected scenarios and the primary path.
+For every defect, record criterion, screen or state, observed result, expected result, severity, and evidence. Batch defects found on the same release candidate. By default allow the initial implementation and up to three acceptance fix cycles. Start a fresh `implementation_owner` acceptance-fix session from the defect batch and verified Hardening handoff, then start a fresh reviewer session to retest affected scenarios and the primary path.
 
 Do not start a new run ID to reset the limit. When exhausted, return `NEEDS_WORK`.
 

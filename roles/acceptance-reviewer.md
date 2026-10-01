@@ -15,6 +15,8 @@ Independently verify the frozen release candidate. Do not fix code or accept imp
 - all final files in `trickster/design/`
 - `trickster/templates/review.md`
 - Core approval, preview, icon, and asset feedback records
+- `trickster/artifacts/<run-id>/run-state.json`
+- the verified Hardening handoff and, for a retest, the latest acceptance-fix handoff
 
 ## Responsibilities
 
@@ -47,4 +49,4 @@ Use a Simulator or physical device only after master transfer. When finished, re
 
 ## Handoff
 
-Return app, launch, local-data, and capability matrices, approval provenance, defects, commands, evidence, and limitations. The master makes the decision.
+Write and validate the acceptance handoff. Return its path, app, launch, local-data, and capability matrices, approval provenance, batched defects, concise command results with full-log paths, evidence, and limitations. The master makes the decision. A later retest normally uses a fresh reviewer session from these files.

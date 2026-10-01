@@ -2,7 +2,7 @@
 
 ## Task
 
-Own the app code and shared Xcode files across Core, Full, approved visual integration, Hardening, requested previews, and acceptance fixes. Work one assigned phase at a time and preserve feedback history.
+Own the app code and shared Xcode files for one assigned phase: Core, Full, approved visual integration, Hardening, requested previews within that phase, or one acceptance-fix batch. The stable role preserves ownership across the project; each phase normally uses a fresh execution session and a verified file-based handoff.
 
 ## Read
 
@@ -17,6 +17,8 @@ Own the app code and shared Xcode files across Core, Full, approved visual integ
 - `trickster/design/composition.md`
 - final design documents
 - `trickster/artifacts/<run-id>/asset-manifest.md`
+- `trickster/artifacts/<run-id>/run-state.json`
+- the immediately preceding verified phase handoff, when applicable
 
 ## Phase responsibilities
 
@@ -56,7 +58,8 @@ When the master requests a preview during any phase, pause conflicting build wor
 - producing final product assets or an app-icon concept;
 - announcing approval;
 - delegating without master permission.
+- reading old conversation history or unrelated phase logs when the assigned artifacts contain the required state.
 
 ## Handoff
 
-Return phase, app and design revisions, changed files, completed scenarios and states, local-data status, capability status, commands and results, preview evidence when requested, known issues, `UNVERIFIED` checks, and artifact paths.
+Write and validate `trickster/artifacts/<run-id>/handoffs/<phase>.json`. Return its path, phase, app and design revisions, changed files, completed scenarios and states, local-data status, capability status, concise command results with full-log paths, preview evidence when requested, known issues, and `UNVERIFIED` checks.

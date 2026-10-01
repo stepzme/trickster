@@ -1,14 +1,14 @@
 # Implementation overview
 
-Implementation is one continuous responsibility performed by the same `implementation-owner`, but it is divided into three gated phases:
+Implementation is one continuous logical responsibility of `implementation-owner`, divided into three gated phases and separate execution sessions:
 
 1. [Core](implementation-core.md) — system launch screen and real transition, any contracted splash, main-section screens, application shell, and the primary flow, followed by user feedback until `CORE UI APPROVED`.
 2. [Full](implementation-full.md) — the rest of the agreed scope, all eleven mandatory capability features, and the `LOCAL DATA READY` gate.
 3. [Hardening](implementation-hardening.md) — after approved visual integration, local-storage and migration failures, errors, denial, restriction, cancellation, unavailable dependencies, persistence, accessibility, compact layout, final-asset regressions, and declared environment states.
 
-Do not collapse these phases into one large implementation assignment. Use `CONTINUE` with the same owner so earlier decisions, feedback, and defects remain visible.
+Do not collapse these phases into one large implementation assignment. Keep one execution session only while its current phase and feedback loop remain open. At each approval gate, validate the phase handoff and start a fresh `implementation-owner` session from the contract, current revisions, and exact artifact paths.
 
-After Full reaches `LOCAL DATA READY`, execute `assets.md`, integrate approved product assets and the applicable approved icon, and only then continue the implementation owner into final Hardening.
+After Full reaches `LOCAL DATA READY`, execute `assets.md`, integrate approved product assets and the applicable approved icon, and only then start the fresh Hardening assignment.
 
 ## Shared rules
 
@@ -28,7 +28,7 @@ After Full reaches `LOCAL DATA READY`, execute `assets.md`, integrate approved p
 
 At any point in Core, Full, or Hardening, the user may ask to see the current app. The master transfers Simulator ownership to one role, pauses conflicting builds, and requests a preview of the exact revision. The owner builds, installs, launches, and captures the requested states. Record phase, revision, device, OS, locale, theme, text size, and data.
 
-Return the result as `PREVIEW`. Do not claim feature completion, physical-device verification, visual acceptance, or `PASS` from the preview. The master shows it to the user and returns feedback to the same owner through `CONTINUE`.
+Return the result as `PREVIEW`. Do not claim feature completion, physical-device verification, visual acceptance, or `PASS` from the preview. The master shows it to the user and returns feedback to the current phase session through `CONTINUE`.
 
 ## Design revision invalidation
 

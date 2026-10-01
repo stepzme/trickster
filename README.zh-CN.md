@@ -116,12 +116,13 @@ trickster/
 ├── adapters/
 ├── workflow/
 ├── templates/
+├── scripts/
 ├── design/
 └── artifacts/
 ```
 
 - `design/` 包含已批准的统一设计组合及其来源记录。
-- `artifacts/<run-id>/` 包含合同、证据、截图和审核结果。
+- `artifacts/<run-id>/` 包含运行状态、阶段 handoff、合同、证据、截图、用量指标和审核结果。
 - `roles/` 与 `workflow/` 定义与具体 agent harness 无关的工厂阶段。
 - `adapters/` 将这些阶段连接到 Codex 或其他环境。
 
@@ -164,6 +165,7 @@ trickster/
 - 在用户批准一个统一设计组合之前，不开始实现 UI。
 - UI、UX 与可选插画可来自不同候选应用，但每个关注点只能有一个来源，禁止随意混合组件。
 - 用户批准 Core 前不能开始 Full；每个实现阶段都支持按请求展示 Simulator preview。
+- 稳定角色在每个阶段使用新的执行会话和经过验证的文件 handoff，而不是在 gate 之间携带完整对话历史。
 - App icon 与每张商店截图都必须经过反馈循环后才能集成或继续。
 - 保留控件的原生行为，同时让外观遵循选定的视觉语言。
 - 实现角色不能自行验收自己的工作。

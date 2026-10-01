@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "runId": "<run-id>",
+  "phase": "product-definition",
+  "role": "product_researcher",
+  "status": "COMPLETE",
+  "appRevision": null,
+  "designRevision": null,
+  "inputPaths": [],
+  "allowedWrites": [],
+  "changedFiles": [],
+  "completedCriteria": [],
+  "checks": [],
+  "openDefects": [],
+  "unverified": [],
+  "evidencePaths": [],
+  "nextPhase": "reference-research"
+}

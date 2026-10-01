@@ -48,7 +48,7 @@ The user may select:
 
 The same app may fill multiple concerns. The user may not select apps outside the researched shortlist without returning to research. Do not mix individual screens, controls, colors, or behaviors from additional apps.
 
-The master records the mapping and sends it back to the same design planner. Silence is not approval.
+The master records the mapping, verifies the reference-research handoff, retires the research session, and starts a fresh design-planner synthesis session from those files. Silence is not approval.
 
 ## Synthesis phase
 
@@ -87,4 +87,4 @@ Delete a previous `illustrations.md` when the approved composition has no illust
 
 The master verifies the source mapping and final package, presents the coherent direction to the user, and records explicit `DESIGN COMPOSITION APPROVED` with the design revision. Implementation cannot start before that decision.
 
-User feedback before approval returns to the same design planner through `CONTINUE`. If the mapping changes after Core work begins, create a new design revision and invalidate dependent Core UI, icon, asset, acceptance, and store-screenshot approvals.
+User feedback before approval returns through `CONTINUE` to the current synthesis session. If the mapping changes after Core work begins, create a new design revision and invalidate dependent Core UI, icon, asset, acceptance, and store-screenshot approvals.

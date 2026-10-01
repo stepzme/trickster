@@ -196,7 +196,7 @@ The workflow, approved design composition, artifacts, and acceptance evidence ar
 async function copyKit(target, harness) {
   const destination = resolve(target, "trickster");
   await mkdir(destination, { recursive: true });
-  for (const managedDirectory of ["roles", "adapters", "workflow", "templates"]) {
+  for (const managedDirectory of ["roles", "adapters", "workflow", "templates", "scripts"]) {
     await rm(resolve(destination, managedDirectory), { recursive: true, force: true });
   }
   await cp(resolve(packageRoot, "roles"), resolve(destination, "roles"), {
@@ -217,6 +217,12 @@ async function copyKit(target, harness) {
     recursive: true,
     force: true,
   });
+  await mkdir(resolve(destination, "scripts"), { recursive: true });
+  for (const script of ["validate-run-artifacts.mjs", "analyze-token-usage.mjs"]) {
+    await cp(resolve(packageRoot, "scripts", script), resolve(destination, "scripts", script), {
+      force: true,
+    });
+  }
   await cp(resolve(packageRoot, "installer", "assets", "AGENTS.md"), resolve(destination, "AGENTS.md"), {
     force: true,
   });
@@ -294,6 +300,8 @@ export async function doctorProject(target = process.cwd(), { quiet = false, har
     ["Full implementation workflow", existsSync(resolve(project, "trickster", "workflow", "implementation-full.md"))],
     ["Hardening workflow", existsSync(resolve(project, "trickster", "workflow", "implementation-hardening.md"))],
     ["Launch-screen workflow", existsSync(resolve(project, "trickster", "workflow", "launch-screen.md"))],
+    ["Run artifact validator", existsSync(resolve(project, "trickster", "scripts", "validate-run-artifacts.mjs"))],
+    ["Token usage analyzer", existsSync(resolve(project, "trickster", "scripts", "analyze-token-usage.mjs"))],
   ];
   if (selectedHarness === "codex") {
     checks.unshift(["Codex CLI", commandExists("codex")]);

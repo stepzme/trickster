@@ -11,6 +11,8 @@ The adapter must describe:
 - how `SPAWN`, `WAIT`, `CONTINUE`, `MESSAGE`, and `STOP` are performed;
 - how role context is isolated and write paths are restricted;
 - how an agent returns a handoff;
+- how execution sessions rotate at phase gates while stable role ownership is preserved in run state;
+- how session IDs are recorded for usage accounting when the harness exposes them;
 - how to operate without separate agents;
 - how to verify shell, Xcode, Simulator, physical-device access, UI interaction, and image viewing.
 
@@ -18,6 +20,7 @@ The adapter must describe:
 
 - The source of each role contract is `trickster/roles/<role>.md`.
 - Roles exchange information through `trickster/artifacts/<run-id>/` and a verifiable handoff.
+- Role continuity comes from contracts, revisions, run state, and verified handoffs; phase transitions do not require conversation-history inheritance.
 - The user communicates only with the master.
 - An individual role has no authority to change the reconciled scope, the approved design composition, feedback approvals, or acceptance criteria.
 - Product-definition, design-composition, Core UI, app-icon, and per-frame store-screenshot confirmations remain with the master and the user.

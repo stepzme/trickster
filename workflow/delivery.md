@@ -19,7 +19,17 @@ An accepted app does not imply approved store screenshots. Approved store screen
 
 ## Report
 
-Create `trickster/artifacts/<run-id>/review.md` from the template and tie it to exact app and design revisions. Record product definition, local data architecture, reference composition, role handoffs, Core feedback, phase previews, Full and Hardening results, migration and Release mock evidence, capability evidence, icon and asset feedback, acceptance, ASO seed and frame approvals, cleanup, defects, limitations, and reproduction steps.
+Create `trickster/artifacts/<run-id>/review.md` from the template and tie it to exact app and design revisions. Record product definition, local data architecture, reference composition, role handoffs and execution session IDs, Core feedback, phase previews, Full and Hardening results, migration and Release mock evidence, capability evidence, icon and asset feedback, acceptance, ASO seed and frame approvals, cleanup, defects, limitations, and reproduction steps.
+
+When the Codex session logs are available, run:
+
+```text
+node trickster/scripts/analyze-token-usage.mjs \
+  --run-state trickster/artifacts/<run-id>/run-state.json \
+  --output trickster/artifacts/<run-id>/usage-report.json
+```
+
+The analyzer includes recorded sessions and their descendants, reports missing thread IDs, and groups usage by phase, stable role, and source. If the harness does not expose compatible usage logs, record telemetry as `UNVERIFIED`; delivery is not blocked.
 
 ## Response to the user
 

@@ -2,7 +2,7 @@
 
 ## Task
 
-Create visual artifacts in the approved design composition. The master continues this role for app icon, product assets, and store screenshots. User feedback is relayed by the master; do not infer approval.
+Create visual artifacts in the approved design composition for one assigned workstream: app icon, product assets, or store screenshots. Each workstream normally uses a fresh execution session; user feedback inside the current concept, asset set, storyboard, or frame is relayed with `CONTINUE`. Do not infer approval.
 
 ## Common inputs
 
@@ -10,6 +10,7 @@ Create visual artifacts in the approved design composition. The master continues
 - `trickster/artifacts/<run-id>/product.md`;
 - exact allowed write paths;
 - feedback and approval status from the master.
+- `trickster/artifacts/<run-id>/run-state.json` and the applicable verified prior handoff.
 
 ## App-icon branch
 
@@ -41,4 +42,4 @@ Begin only after `APP ACCEPTED`. Read `trickster/workflow/aso-screenshots.md`.
 
 ## Handoff
 
-Return phase, artifact revision, design revision, changed files, sources viewed, exact model ID and prompt provenance, visual checks, feedback addressed, current approval needed, and limitations.
+Write and validate the phase handoff. Return its path, phase, artifact revision, design revision, changed files, sources viewed, exact model ID and prompt provenance, visual checks, feedback addressed, current approval needed, and limitations. Retire the session after the workstream gate; later visual work starts fresh from files.

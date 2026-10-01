@@ -28,7 +28,7 @@ Create one concept based on the product, approved design composition, and Logoin
 1. Generate one square master without an embedded system mask.
 2. Visually inspect the actual output for composition, artifacts, text, originality, small-size silhouette, and alignment with the current design revision.
 3. The master shows the image to the user before Xcode integration.
-4. If the user gives feedback, continue the same visual producer and refine or regenerate the same concept.
+4. If the user gives feedback, continue the current app-icon session and refine or regenerate the same concept.
 5. Repeat until the user explicitly states `APP ICON APPROVED`.
 
 If the design revision changes, invalidate approval and re-evaluate the concept. Do not integrate an icon approved against an obsolete revision.
@@ -57,3 +57,4 @@ trickster/artifacts/<run-id>/app-icon/
 ```
 
 `feedback.md` records every shown revision, user response, and the final `APP ICON APPROVED` decision.
+The producer also writes a validated app-icon handoff and retires the session after master verification.

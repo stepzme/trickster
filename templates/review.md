@@ -17,6 +17,7 @@
 - Physical devices: model, OS, UDID, peripherals, signing, and unavailable hardware:
 - Test-data version:
 - Harness, delegated or sequential-fallback mode, and actual tools:
+- Run-state and usage-report paths:
 
 ## Product definition
 
@@ -40,8 +41,8 @@
 
 ## Role handoffs
 
-| Role and phase | Inputs and allowed paths | Result received | Master's verification |
-|---|---|---|---|
+| Role and phase | Execution session ID | Inputs and allowed paths | Handoff received | Master's verification |
+|---|---|---|---|---|
 
 ## Implementation feedback and previews
 

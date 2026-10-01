@@ -27,8 +27,8 @@ Before Full is complete, verify that every production scenario uses SwiftData, f
 
 ## Handoff
 
-Return the revision, changed files, completed scenarios, the status of every capability, `LOCAL DATA READY` evidence, commands and results, remaining Hardening work, and unavailable real-device or system-service checks.
+Write and validate `handoffs/full.json`. Return its path, revision, changed files, completed scenarios, the status of every capability, `LOCAL DATA READY` evidence, concise command results with full-log paths, remaining Hardening work, and unavailable real-device or system-service checks. Retire the Full session after master verification.
 
 ## Preview on request
 
-At the user's request, build, install, launch, and show the current Full revision in Simulator. Record it as `PREVIEW`; feedback returns to the same owner. A preview does not reopen `CORE UI APPROVED` unless the user explicitly changes the design direction.
+At the user's request, build, install, launch, and show the current Full revision in Simulator. Record it as `PREVIEW`; feedback returns to the current Full session. A preview does not reopen `CORE UI APPROVED` unless the user explicitly changes the design direction.

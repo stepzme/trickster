@@ -112,12 +112,13 @@ trickster/
 ├── adapters/
 ├── workflow/
 ├── templates/
+├── scripts/
 ├── design/
 └── artifacts/
 ```
 
 - `design/` contains the approved coherent design composition and its source provenance.
-- `artifacts/<run-id>/` contains contracts, evidence, screenshots, and review results.
+- `artifacts/<run-id>/` contains run state, phase handoffs, contracts, evidence, screenshots, usage metrics, and review results.
 - `roles/` and `workflow/` define the factory stages independently of a specific agent harness.
 - `adapters/` map those stages to Codex or another environment.
 
@@ -161,6 +162,7 @@ See [the master process](workflow/master-prompt.md) and [orchestration contract]
 - UI, UX, and optional illustration references may come from different shortlisted apps, but each concern has one source and arbitrary component-level mixing is prohibited.
 - Native control behavior is preserved while appearance follows the approved visual language.
 - Full implementation stops until the user approves the Core direction; every implementation phase supports a user-requested Simulator preview.
+- Stable roles use fresh phase-scoped execution sessions and validated file handoffs instead of carrying unrestricted conversation history across gates.
 - App-icon and store-screenshot production are feedback-gated before integration or continuation.
 - An implementation agent cannot accept its own work.
 - Build success alone is not acceptance.

@@ -43,7 +43,7 @@ Process frames strictly one at a time:
 2. Compose one frame using final `ui.md`, optional `illustrations.md`, and approved icon techniques.
 3. Verify copy, localization, readability, crop, safe areas, technical size, source revision, and truthful benefit.
 4. The master shows the actual export to the user.
-5. If feedback is given, continue the same visual producer and refine that frame.
+5. If feedback is given, continue the current store-screenshot session and refine that frame.
 6. Record explicit `STORE FRAME <n> APPROVED` before starting frame `<n+1>`.
 
 The first approved frame becomes the visual template for the set. Later frames may vary composition to serve their content but must preserve the approved system.
@@ -63,3 +63,4 @@ trickster/artifacts/<run-id>/aso/
 ```
 
 `feedback.md` records storyboard approval, each shown frame revision, user feedback, every frame approval, and final set approval.
+The producer writes a validated store-screenshot handoff before the session is retired.

@@ -31,7 +31,7 @@ Do not add network states to a local-only feature or invent framework states tha
 
 ## Handoff
 
-Build and run focused checks. Return the revision, local-data and migration evidence, completed state matrix, final-asset regression evidence, commands, known defects, and every `UNVERIFIED` device or system-service requirement. The master verifies that Hardening is complete before freezing the release candidate.
+Build and run focused checks. Write and validate `handoffs/hardening.json`. Return its path, revision, local-data and migration evidence, completed state matrix, final-asset regression evidence, concise command results with full-log paths, known defects, and every `UNVERIFIED` device or system-service requirement. The master verifies that Hardening is complete before freezing the release candidate and retires the session.
 
 ## Preview on request
 

@@ -13,6 +13,11 @@ import {
   isGlobalPackagePath,
 } from "../installer/init.mjs";
 import { createTerminalStyle, supportsColor } from "../installer/terminal-style.mjs";
+import { createUsageReport } from "../scripts/analyze-token-usage.mjs";
+import {
+  validatePhaseHandoff,
+  validateRunState,
+} from "../scripts/validate-run-artifacts.mjs";
 
 const repositoryRoot = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 
@@ -130,6 +135,26 @@ test("installs one project-local Trickster folder without the remote style libra
     canonicalCapabilities,
   );
   assert.equal(
+    validateRunState(
+      JSON.parse(await readFile(join(project, "trickster", "templates", "run-state.json"), "utf8")),
+    ).valid,
+    true,
+  );
+  assert.notEqual(
+    await readFile(join(project, "trickster", "scripts", "validate-run-artifacts.mjs"), "utf8"),
+    "",
+  );
+  assert.notEqual(
+    await readFile(join(project, "trickster", "scripts", "analyze-token-usage.mjs"), "utf8"),
+    "",
+  );
+  assert.equal(
+    validatePhaseHandoff(
+      JSON.parse(await readFile(join(project, "trickster", "templates", "phase-handoff.json"), "utf8")),
+    ).valid,
+    true,
+  );
+  assert.equal(
     await readdir(join(project, "trickster", "styles")).then(() => true, () => false),
     false,
   );
@@ -142,6 +167,185 @@ test("installs one project-local Trickster folder without the remote style libra
     await readFile(join(project, "trickster", "templates", "references.md"), "utf8").catch(() => ""),
     "",
   );
+});
+
+test("validates phase-scoped run state and rejects duplicate thread ownership", async () => {
+  const runState = JSON.parse(
+    await readFile(join(repositoryRoot, "templates", "run-state.json"), "utf8"),
+  );
+  runState.sessions = [
+    {
+      threadId: "thread-core",
+      parentThreadId: null,
+      role: "implementation_owner",
+      phase: "core",
+    },
+  ];
+  runState.activeAssignment = {
+    threadId: "thread-core",
+    role: "implementation_owner",
+    phase: "core",
+  };
+
+  assert.deepEqual(validateRunState(runState), { valid: true, errors: [] });
+
+  runState.sessions.push({ ...runState.sessions[0] });
+  const invalid = validateRunState(runState);
+  assert.equal(invalid.valid, false);
+  assert.ok(invalid.errors.some((error) => error.includes("threadId must be unique")));
+});
+
+test("validates compact phase handoffs and executable check records", async () => {
+  const handoff = JSON.parse(
+    await readFile(join(repositoryRoot, "templates", "phase-handoff.json"), "utf8"),
+  );
+  handoff.checks = [
+    {
+      command: "xcodebuild test",
+      exitCode: 0,
+      summary: "Required tests passed",
+      logPath: "/tmp/trickster/run/build/test.log",
+    },
+  ];
+
+  assert.deepEqual(validatePhaseHandoff(handoff), { valid: true, errors: [] });
+
+  handoff.checks[0].exitCode = "0";
+  const invalid = validatePhaseHandoff(handoff);
+  assert.equal(invalid.valid, false);
+  assert.ok(invalid.errors.some((error) => error.includes("exitCode must be an integer")));
+});
+
+test("aggregates direct and descendant Codex sessions by assigned phase", () => {
+  const runState = {
+    runId: "run-usage",
+    sessions: [
+      {
+        threadId: "core-thread",
+        parentThreadId: null,
+        role: "implementation_owner",
+        phase: "core",
+      },
+    ],
+  };
+  const records = [
+    {
+      id: "core-thread",
+      parentThreadId: null,
+      source: "subagent",
+      usage: {
+        input_tokens: 1_000,
+        cached_input_tokens: 800,
+        output_tokens: 100,
+        reasoning_output_tokens: 20,
+        total_tokens: 1_100,
+      },
+    },
+    {
+      id: "review-thread",
+      parentThreadId: "core-thread",
+      source: "guardian_review",
+      usage: {
+        input_tokens: 500,
+        cached_input_tokens: 400,
+        output_tokens: 50,
+        reasoning_output_tokens: 10,
+        total_tokens: 550,
+      },
+    },
+    {
+      id: "unrelated-thread",
+      parentThreadId: null,
+      source: "user",
+      usage: {
+        input_tokens: 9_000,
+        cached_input_tokens: 0,
+        output_tokens: 1_000,
+        reasoning_output_tokens: 0,
+        total_tokens: 10_000,
+      },
+    },
+    {
+      id: "core-thread",
+      parentThreadId: null,
+      source: "subagent",
+      usage: null,
+    },
+  ];
+
+  const report = createUsageReport(runState, records);
+  assert.equal(report.sessionCount, 2);
+  assert.equal(report.totals.total_tokens, 1_650);
+  assert.equal(report.derived.uncachedInput, 300);
+  assert.equal(report.derived.uncachedInputPlusOutput, 450);
+  assert.equal(report.byPhase[0].name, "core");
+  assert.deepEqual(report.missingThreadIds, []);
+});
+
+test("analyzes recorded Codex JSONL sessions without loading unrelated usage", async () => {
+  const fixtureRoot = await mkdtemp(join(tmpdir(), "trickster-usage-"));
+  const sessionsRoot = join(fixtureRoot, "sessions");
+  await mkdir(sessionsRoot);
+
+  const runState = JSON.parse(
+    await readFile(join(repositoryRoot, "templates", "run-state.json"), "utf8"),
+  );
+  runState.runId = "run-cli";
+  runState.toolkitVersion = "1.0.3";
+  runState.sessions = [
+    {
+      threadId: "recorded-thread",
+      parentThreadId: null,
+      role: "implementation_owner",
+      phase: "full",
+    },
+  ];
+  const runStatePath = join(fixtureRoot, "run-state.json");
+  await writeFile(runStatePath, `${JSON.stringify(runState)}\n`, "utf8");
+
+  const jsonl = [
+    { type: "session_meta", payload: { id: "recorded-thread", thread_source: "subagent" } },
+    {
+      type: "event_msg",
+      payload: {
+        type: "token_count",
+        info: {
+          total_token_usage: {
+            input_tokens: 2_000,
+            cached_input_tokens: 1_500,
+            output_tokens: 200,
+            reasoning_output_tokens: 50,
+            total_tokens: 2_200,
+          },
+        },
+      },
+    },
+  ].map((item) => JSON.stringify(item)).join("\n");
+  await writeFile(join(sessionsRoot, "recorded.jsonl"), `${jsonl}\n`, "utf8");
+  await writeFile(
+    join(sessionsRoot, "unrelated.jsonl"),
+    `${JSON.stringify({ type: "session_meta", payload: { id: "unrelated-thread" } })}\n`,
+    "utf8",
+  );
+
+  const result = spawnSync(
+    process.execPath,
+    [
+      resolve(repositoryRoot, "scripts", "analyze-token-usage.mjs"),
+      "--run-state",
+      runStatePath,
+      "--sessions-root",
+      sessionsRoot,
+    ],
+    { encoding: "utf8" },
+  );
+
+  assert.equal(result.status, 0, result.stderr);
+  const report = JSON.parse(result.stdout);
+  assert.equal(report.runId, "run-cli");
+  assert.equal(report.sessionCount, 1);
+  assert.equal(report.totals.total_tokens, 2_200);
+  assert.equal(report.derived.uncachedInputPlusOutput, 700);
 });
 
 test("re-running init updates managed files and preserves the approved design composition and artifacts", async () => {
@@ -412,6 +616,10 @@ test("npm package excludes repository-only assets", async () => {
   assert.equal(files.some(({ path }) => path === "workflow/implementation-core.md"), true);
   assert.equal(files.some(({ path }) => path === "workflow/implementation-full.md"), true);
   assert.equal(files.some(({ path }) => path === "workflow/implementation-hardening.md"), true);
+  assert.equal(files.some(({ path }) => path === "templates/run-state.json"), true);
+  assert.equal(files.some(({ path }) => path === "templates/phase-handoff.json"), true);
+  assert.equal(files.some(({ path }) => path === "scripts/validate-run-artifacts.mjs"), true);
+  assert.equal(files.some(({ path }) => path === "scripts/analyze-token-usage.mjs"), true);
 
   const internalDocPrefixes = ["adapters/", "installer/assets/", "roles/", "templates/", "workflow/"];
   const internalDocs = files

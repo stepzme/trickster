@@ -25,7 +25,7 @@ Verify that the master and role agents:
 5. let the user map exactly one shortlisted source to UI, one to UX, and optionally one to illustrations;
 6. synthesized those sources into one coherent direction, saved `provenance.json`, `composition.md`, `ui.md`, `ux.md`, and optional `illustrations.md`, and obtained `DESIGN COMPOSITION APPROVED`;
 7. created a product contract with Core, Full, `LOCAL DATA READY`, and Hardening boundaries, a local data matrix, launch and optional splash behavior, and asset requirements;
-8. gave one implementation owner sole ownership of app code across all three phases and showed a revision-labelled Simulator `PREVIEW` whenever the user requested it;
+8. gave the stable implementation-owner role sole ownership of app code, used fresh execution sessions and validated handoffs across Core, Full, Hardening, and fix batches, and showed a revision-labelled Simulator `PREVIEW` whenever the user requested it;
 9. implemented the system launch screen and any contracted app-owned splash during Core, showed a clean cold launch through the first interactive frame, applied requested changes, and obtained `CORE UI APPROVED` before Full;
 10. implemented the complete reconciled scope in Full and proved `LOCAL DATA READY`, including Release exclusion of runtime mocks, preview stores, debug endpoints, and fixture fallbacks;
 11. created the app icon in parallel with implementation using the latest suitable available image-generation model, recorded the exact model ID and provenance, and integrated it only after `APP ICON APPROVED`;
@@ -35,6 +35,7 @@ Verify that the master and role agents:
 15. returned specific defects to the implementation owner and invalidated only dependent evidence and approvals;
 16. after `APP ACCEPTED`, approved the store storyboard, seeded reproducible demonstration data into the real SwiftData and file stores, generated one real-build frame at a time, and obtained `STORE FRAME <n> APPROVED` before continuing;
 17. obtained `STORE SET APPROVED` and explicit final confirmation before cleanup, then reported separate statuses for the app, capabilities, icon, product assets, and store screenshot set.
+18. recorded available execution session IDs in `run-state.json`, validated every phase handoff, and produced `usage-report.json` when compatible Codex logs were available.
 
 ## 4. Negative checks
 

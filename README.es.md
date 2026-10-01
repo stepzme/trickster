@@ -116,12 +116,13 @@ trickster/
 ├── adapters/
 ├── workflow/
 ├── templates/
+├── scripts/
 ├── design/
 └── artifacts/
 ```
 
 - `design/` contiene la composición de diseño coherente aprobada y la procedencia de sus fuentes.
-- `artifacts/<run-id>/` contiene contratos, evidencias, capturas y resultados de revisión.
+- `artifacts/<run-id>/` contiene el estado de ejecución, handoffs por fase, contratos, evidencias, capturas, métricas de uso y resultados de revisión.
 - `roles/` y `workflow/` definen las etapas de la fábrica independientemente de un agent harness concreto.
 - `adapters/` conectan esas etapas con Codex u otro entorno.
 
@@ -164,6 +165,7 @@ Consulta [el proceso maestro](workflow/master-prompt.md) y [el contrato de orque
 - La implementación de la UI se detiene hasta que el usuario aprueba una composición coherente.
 - UI, UX e ilustraciones pueden proceder de aplicaciones diferentes, pero cada aspecto tiene una sola fuente y no se permite mezclar componentes arbitrariamente.
 - Full no comienza hasta que el usuario aprueba Core; cada fase de implementación admite un preview de Simulator solicitado por el usuario.
+- Los roles estables usan sesiones de ejecución nuevas por fase y handoffs de archivos validados en lugar de arrastrar todo el historial entre controles.
 - El icono y cada captura para la tienda tienen un feedback loop antes de integrarse o continuar.
 - Se conserva el comportamiento nativo de los controles, mientras que su apariencia sigue el lenguaje visual seleccionado.
 - El agente de implementación no puede aceptar su propio trabajo.
