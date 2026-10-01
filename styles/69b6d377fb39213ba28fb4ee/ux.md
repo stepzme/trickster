@@ -32,7 +32,3 @@ Telegram supports chats, groups, channels, calls, contacts, stories, media editi
 
 - Chat rows favor speed and unread-state clarity.
 - Native-feeling sheets and menus expose dense contextual actions.
-
-# System Access Timing
-
-No system-access request timing or denial recovery was documented in the reviewed source.

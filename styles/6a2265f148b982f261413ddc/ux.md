@@ -25,7 +25,3 @@ Four primary destinations connect Home, Services, Notifications, and Profile. Ho
 # Interaction Patterns
 
 - Long seller forms expose one grouped decision at a time with visible step progress.
-
-# System Access Timing
-
-No system-access timing or denial-recovery behavior was documented in the reviewed source.

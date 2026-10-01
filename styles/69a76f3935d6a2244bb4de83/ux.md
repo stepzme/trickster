@@ -31,7 +31,3 @@ Home, Payments, BakAi Chat, Services, and History persist . Product tabs switch 
 - Keep currency and fees visible.
 - Make product lifecycle state explicit.
 - Preserve downloadable statements and receipts.
-
-# System Access Timing
-
-No system-access request timing or denial recovery was documented in the reviewed source.

@@ -27,7 +27,3 @@ A four-item dock connects Home, Payments, History, and More. A central QR scanne
 - Magenta identifies the O! ecosystem, QR scan, active navigation, and selected offers.
 - Product and financial lists stay dense but use clear section labels and aligned values.
 - The dock and QR scanner persist across long home and marketplace content.
-
-# System Access Timing
-
-No system-access request timing or denial recovery was documented in the reviewed source.

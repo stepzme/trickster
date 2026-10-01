@@ -21,10 +21,6 @@ Use the palette relationships explicitly described in the visual language and `u
 
 Use characters for onboarding and permission rationale; emoji for lightweight system feedback; collage for destinations and hotel campaigns. Keep ticket rows, filters, passenger forms, and payment cards illustration-free.
 
-# Production Requirements
-
-Exact export formats, aspect ratios, animation behavior, and appearance variants were not documented. Where imagery is compositionally important, temporary placeholders must preserve its documented scale, placement, crop, and visual weight until final art exists.
-
 # Avoid
 
 - Do not use illustration to obscure price or itinerary.

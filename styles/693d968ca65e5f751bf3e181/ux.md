@@ -33,7 +33,3 @@ Home, Account, Basket, and Menu remain in primary navigation; Rufus is a distinc
 - Keep basket editing inline.
 - Distinguish Rufus suggestions from verified product facts.
 - Treat country change as a marketplace-context switch.
-
-# System Access Timing
-
-- Camera or Photos access follows the user choosing the documented capture, scan, or photo action. Denial recovery was not documented.

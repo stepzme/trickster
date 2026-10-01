@@ -18,10 +18,6 @@ Use one dominant flat background with two or three high-contrast accent colors. 
 
 Use for course covers, lesson heroes, quizzes, explainers, and editorial series. Keep settings, calculators, and long-form text surfaces restrained.
 
-# Production Requirements
-
-Preserve the documented placement, crop, negative space, and visual weight in production exports. Before final art exists, placeholders must preserve those same compositional properties.
-
 # Avoid
 
 - Do not replace the observed imagery language with unrelated stock art or arbitrary symbols.

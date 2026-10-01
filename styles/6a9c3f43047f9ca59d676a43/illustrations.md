@@ -18,10 +18,6 @@ Anchor functional illustration in mint and teal, then use cyan, lime, or purple 
 
 Apply this language to service benefits, trust, savings, ticket education, and onboarding. Use real photography for destination emotion; keep booking forms, timetables, conditions, and payment surfaces free of decorative artwork.
 
-# Production Requirements
-
-Exact export formats, aspect ratios, animation behavior, and appearance variants were not documented. Where imagery is compositionally important, temporary placeholders must preserve its documented scale, placement, crop, and visual weight until final art exists.
-
 # Avoid
 
 Do not introduce an unrelated illustration style or substitute decorative symbols for source-supported imagery.

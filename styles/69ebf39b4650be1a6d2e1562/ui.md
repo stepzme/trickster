@@ -127,7 +127,7 @@ Search uses a white rounded field with microphone. Destination forms keep start 
 
 Traffic, weather, route incidents, parking, and friend status use explicit labels plus icons. Selected route is reinforced by green line and action.
 
-Controls retain at least a 44-point interactive area. Pressed and disabled treatments should stay within the documented palette and hierarchy; no unobserved state styling is prescribed.
+Controls retain at least a 44-point interactive area. Pressed and disabled treatments should stay within the documented palette and hierarchy.
 
 # Imagery and icons
 
@@ -154,7 +154,7 @@ Only the states documented above are specified; other states must preserve the s
 - Collapse route alternatives to horizontal paging before hiding metrics. Let sheets expand vertically. Reduce recommendation cards before shrinking map controls.
 - Present the keyboard and system permission UI natively, then return to the same visual context.
 - Preserve semantic reading order in VoiceOver and allow text to grow with Dynamic Type.
-- Do not infer an unobserved dark or light variant; use the appearance documented by the reference.
+- Preserve the documented appearance instead of introducing an unrelated light or dark palette.
 
 # Anti-generic checklist
 

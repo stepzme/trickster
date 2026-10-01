@@ -24,7 +24,3 @@ Five destinations connect Home, Catalog, Cart, Auchan Card, and Profile. Home ke
 # Interaction Patterns
 
 - Cart and checkout actions keep price, weight, and the next commitment visible.
-
-# System Access Timing
-
-No system-access timing or denial-recovery behavior was documented in the reviewed source.

@@ -260,7 +260,7 @@ Keep source and destination in compact top cards, make the amount the largest el
 Use pill filters that expand inline above the transaction list. Summaries use quiet blue and mint bars; transaction detail opens as a white bottom sheet.
 Use a pastel fill, one concise lesson, and a cropped hand-drawn scene. Cards should remain secondary to account balances and transactions.
 
-Controls retain at least a 44-point interactive area. Pressed and disabled treatments should stay within the documented palette and hierarchy; no unobserved state styling is prescribed.
+Controls retain at least a 44-point interactive area. Pressed and disabled treatments should stay within the documented palette and hierarchy.
 
 # Imagery and icons
 
@@ -287,7 +287,7 @@ Only the states documented above are specified; other states must preserve the s
 - Shorten labels before removing the four-column shortcut group. Story cards remain horizontally scrollable; forms stay one column with full-width bottom actions.
 - Present the keyboard and system permission UI natively, then return to the same visual context.
 - Preserve semantic reading order in VoiceOver and allow text to grow with Dynamic Type.
-- Do not infer an unobserved dark or light variant; use the appearance documented by the reference.
+- Preserve the documented appearance instead of introducing an unrelated light or dark palette.
 
 # Anti-generic checklist
 

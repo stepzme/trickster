@@ -113,7 +113,7 @@ Search is a pale rectangular field with photo-search access. Checkout fields use
 
 Order, bonus, gift, discount, and cart states appear close to their affected item, with explicit copy and restrained color.
 
-Controls retain at least a 44-point interactive area. Pressed and disabled treatments should stay within the documented palette and hierarchy; no unobserved state styling is prescribed.
+Controls retain at least a 44-point interactive area. Pressed and disabled treatments should stay within the documented palette and hierarchy.
 
 # Imagery and icons
 
@@ -139,7 +139,7 @@ Only the states documented above are specified; other states must preserve the s
 - Allow promotional rails and filters to scroll horizontally. Keep checkout total and action pinned on long carts.
 - Present the keyboard and system permission UI natively, then return to the same visual context.
 - Preserve semantic reading order in VoiceOver and allow text to grow with Dynamic Type.
-- Do not infer an unobserved dark or light variant; use the appearance documented by the reference.
+- Preserve the documented appearance instead of introducing an unrelated light or dark palette.
 
 # Anti-generic checklist
 

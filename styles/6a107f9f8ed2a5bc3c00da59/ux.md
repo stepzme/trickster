@@ -25,7 +25,3 @@ A five primary destinations links Home, Shop, offers/loyalty, Profile, and Cart.
 
 - Category targets open the corresponding product collections.
 - Checkout keeps the final amount and main action available through checkout.
-
-# System Access Timing
-
-No system-access timing or denial-recovery behavior was documented in the reviewed source.

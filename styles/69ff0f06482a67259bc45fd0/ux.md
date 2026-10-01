@@ -30,7 +30,3 @@ five persistent destinations: Feed, Search, Mini-series, My, and Account. Detail
 
 - Artwork is the main tap target; metadata confirms genre, rating, and duration.
 - Subscription CTAs stay full width and close to the safe area.
-
-# System Access Timing
-
-No system-access request timing or denial recovery was documented in the reviewed source.

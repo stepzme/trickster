@@ -27,7 +27,3 @@ Home selects the vertical. Each vertical uses a focused catalog and its own rele
 - Keep the active address visible.
 - Show service and delivery fees separately.
 - Preserve tracking after payment handoff.
-
-# System Access Timing
-
-No system-access timing or denial-recovery behavior was documented in the reviewed source.

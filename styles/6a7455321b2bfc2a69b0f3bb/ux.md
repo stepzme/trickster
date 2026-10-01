@@ -31,7 +31,3 @@ Four primary destinations cover Home, Rules, Squads, and Profile. The main Start
 # Interaction Patterns
 
 - The main blocking action remains available across long setup flows.
-
-# System Access Timing
-
-No system-access timing or denial-recovery behavior was documented in the reviewed source.

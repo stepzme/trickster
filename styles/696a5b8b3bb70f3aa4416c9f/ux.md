@@ -30,7 +30,3 @@ Home, Medical record, and More stay in primary navigation. Patient and policy co
 - Distinguish official records from user-entered data.
 - Keep no-data states specific.
 - Make access sharing and privacy reversible.
-
-# System Access Timing
-
-No system-access request timing or denial recovery was documented in the reviewed source.

@@ -30,7 +30,3 @@ A five-item primary navigation covers Home, Banking, QR, History, and More. Home
 # Interaction Patterns
 
 - Empty states keep the action of the content.
-
-# System Access Timing
-
-No system-access timing or denial-recovery path was documented in the reviewed source.

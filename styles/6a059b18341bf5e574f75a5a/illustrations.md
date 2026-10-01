@@ -21,10 +21,6 @@ Use the palette relationships explicitly described in the visual language and `u
 
 Use for home services, packaging, shipment confirmation, empty states, and instructional steps. Keep forms, totals, maps, status history, and shopping products functional.
 
-# Production Requirements
-
-Exact export formats, aspect ratios, animation behavior, and appearance variants were not documented. Where imagery is compositionally important, temporary placeholders must preserve its documented scale, placement, crop, and visual weight until final art exists.
-
 # Avoid
 
 - Do not mix retail photography into logistics icons.

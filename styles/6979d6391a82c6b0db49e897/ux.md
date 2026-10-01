@@ -31,7 +31,3 @@ Spotify organizes music, podcasts, search, library management, creation, playbac
 # Interaction Patterns
 
 - The mini-player preserves current media context across destinations.
-
-# System Access Timing
-
-No system-access request timing or denial recovery was documented in the reviewed source.

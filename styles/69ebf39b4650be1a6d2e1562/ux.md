@@ -29,7 +29,3 @@ Search, Trips, Navigator, Friends, and Tips form primary navigation. Map control
 - Keep map state visible beneath sheets.
 - Separate travel modes as choices.
 - Expose privacy choices before enabling friend location sharing.
-
-# System Access Timing
-
-- Location access follows the user choosing the documented current-location or sharing action. Denial recovery was not documented.

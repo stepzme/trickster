@@ -25,10 +25,6 @@ The inspected Whoosh version uses a cinematic industrial sci-fi campaign languag
 - Keep pricing, payment, safety, and support surfaces functional and legible.
 - Create original objects and characters; do not copy the referenced game assets or logos.
 
-# Production Requirements
-
-Exact export formats, aspect ratios, animation behavior, and appearance variants were not documented. Where imagery is compositionally important, temporary placeholders must preserve its documented scale, placement, crop, and visual weight until final art exists.
-
 # Avoid
 
 Do not introduce an unrelated illustration style or substitute decorative symbols for source-supported imagery.

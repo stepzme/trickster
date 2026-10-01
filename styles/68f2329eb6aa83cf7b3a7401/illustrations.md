@@ -29,10 +29,6 @@ Simple mixes a plush purple mascot with friendly flat wellness illustrations. Th
 - Keep Coach and Track cards mostly illustration-free.
 - Create original characters and scenes in the same friendly language.
 
-# Production Requirements
-
-Use only the formats and crops supported by the implemented placement. Where the documented imagery is compositionally important, temporary placeholders must preserve its placement, crop, scale, negative space, and approximate visual weight until final art exists. No unobserved light/dark variants or export ratios are prescribed.
-
 # Avoid
 
 - Do not replace the documented image language with unrelated stock art, arbitrary symbols, or a denser composition.

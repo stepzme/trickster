@@ -262,7 +262,7 @@ Search separates Where, When, and Who into clear steps. Fields have visible bord
 
 Reservation status appears in a labeled pill and accompanying notice. Guest favourite, pending, identity review, confirmed, and cancellation remain readable without relying on color alone.
 
-Controls retain at least a 44-point interactive area. Pressed and disabled treatments should stay within the documented palette and hierarchy; no unobserved state styling is prescribed.
+Controls retain at least a 44-point interactive area. Pressed and disabled treatments should stay within the documented palette and hierarchy.
 
 # Imagery and icons
 
@@ -290,7 +290,7 @@ Only the states documented above are specified; other states must preserve the s
 - Stack search fields when needed; preserve Where, When, Who order. Convert two-card rows to one wider card before shrinking photos below recognition. Fixed reservation bars keep price and action on one row where possible.
 - Present the keyboard and system permission UI natively, then return to the same visual context.
 - Preserve semantic reading order in VoiceOver and allow text to grow with Dynamic Type.
-- Do not infer an unobserved dark or light variant; use the appearance documented by the reference.
+- Preserve the documented appearance instead of introducing an unrelated light or dark palette.
 
 # Anti-generic checklist
 

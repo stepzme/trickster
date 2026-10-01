@@ -132,7 +132,7 @@ Forms use white rounded fields with visible labels. Transfers begin in a sheet t
 
 Show verified identity, card status, Visa+ state, favorites, limits, application state, deposit state, and incoming/outgoing amount explicitly.
 
-Controls retain at least a 44-point interactive area. Pressed and disabled treatments should stay within the documented palette and hierarchy; no unobserved state styling is prescribed.
+Controls retain at least a 44-point interactive area. Pressed and disabled treatments should stay within the documented palette and hierarchy.
 
 # Imagery and icons
 
@@ -160,7 +160,7 @@ Only the states documented above are specified; other states must preserve the s
 - Allow product and frequent-payment carousels to scroll. Keep balances, primary card, and new-product action before campaign widgets.
 - Present the keyboard and system permission UI natively, then return to the same visual context.
 - Preserve semantic reading order in VoiceOver and allow text to grow with Dynamic Type.
-- Do not infer an unobserved dark or light variant; use the appearance documented by the reference.
+- Preserve the documented appearance instead of introducing an unrelated light or dark palette.
 
 # Anti-generic checklist
 

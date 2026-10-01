@@ -18,10 +18,6 @@ Anchor imagery in dark forest green, bright leaf green, and mint. Use yellow for
 
 Use this language for campaign heroes, cashback, referral, subscription, birthday, and jobs. Use literal product packs in the discount catalogue and plain icons for navigation.
 
-# Production Requirements
-
-Exact export formats, aspect ratios, animation behavior, and appearance variants were not documented. Where imagery is compositionally important, temporary placeholders must preserve its documented scale, placement, crop, and visual weight until final art exists.
-
 # Avoid
 
 Do not introduce an unrelated illustration style or substitute decorative symbols for source-supported imagery.

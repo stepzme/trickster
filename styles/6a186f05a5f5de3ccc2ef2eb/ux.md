@@ -26,7 +26,3 @@ A five-item bar connects search/catalog, favorites, Home, profile, and cart. Pro
 
 - Price, discount, rating, and cashback stay adjacent.
 - Bottom sheets isolate services, credit, and delivery decisions.
-
-# System Access Timing
-
-No system-access timing or denial-recovery behavior was documented in the reviewed source.

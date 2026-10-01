@@ -30,7 +30,3 @@ Whoosh is a map-first scooter and bicycle rental service covering vehicle discov
 # Interaction Patterns
 
 - Ride state replaces discovery controls instead of creating a separate dashboard.
-
-# System Access Timing
-
-No system-access timing or denial-recovery behavior was documented in the reviewed source.

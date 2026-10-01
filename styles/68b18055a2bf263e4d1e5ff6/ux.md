@@ -21,7 +21,3 @@ Five primary modes separate Favorites, Photo, Text, Sites, and Dialogue; history
 - Preserve text when switching input methods.
 - Confirm bulk deletion.
 - Expose offline availability before travel use.
-
-# System Access Timing
-
-No system-access timing or denial-recovery path was documented in the reviewed source.

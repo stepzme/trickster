@@ -19,7 +19,3 @@ A four-item primary navigation anchors Home, Catalog, Contact us, and Profile. C
 # Interaction Patterns
 
 No behavior-only interaction pattern could be separated from the reviewed visual observations.
-
-# System Access Timing
-
-No system-access timing or denial-recovery path was documented in the reviewed source.

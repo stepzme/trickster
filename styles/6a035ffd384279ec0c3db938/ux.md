@@ -32,7 +32,3 @@ Four primary destinations cover Events, Places, My Tickets, and Profile. City, l
 
 - Filters use progressive browsing.
 - Seat selection combines a zoomable map with a fixed price summary and next action.
-
-# System Access Timing
-
-No system-access timing or denial-recovery behavior was documented in the reviewed source.

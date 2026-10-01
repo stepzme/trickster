@@ -24,7 +24,6 @@ const UX_HEADINGS = [
   "Navigation",
   "Core Flows",
   "Interaction Patterns",
-  "System Access Timing",
 ];
 
 const ILLUSTRATION_HEADINGS = [
@@ -33,7 +32,6 @@ const ILLUSTRATION_HEADINGS = [
   "Composition",
   "Color and Materials",
   "Variants and States",
-  "Production Requirements",
   "Avoid",
 ];
 
@@ -55,8 +53,17 @@ function assertEqualHeadings(appId, file, actual, expected, errors) {
   }
 }
 
+function assertNonEmptySections(appId, file, markdown, headings, errors) {
+  for (const heading of headings) {
+    if (!section(markdown, heading).trim()) {
+      errors.push(`${appId}/${file}: ${heading} must not be empty`);
+    }
+  }
+}
+
 function validateUi(appId, markdown, errors) {
   assertEqualHeadings(appId, "ui.md", topLevelHeadings(markdown), UI_HEADINGS, errors);
+  assertNonEmptySections(appId, "ui.md", markdown, UI_HEADINGS, errors);
   if (!/^version:\s*1\s*$/m.test(markdown)) {
     errors.push(`${appId}/ui.md: frontmatter must use version 1`);
   }
@@ -117,6 +124,7 @@ function validateUi(appId, markdown, errors) {
 
 function validateUx(appId, markdown, errors) {
   assertEqualHeadings(appId, "ux.md", topLevelHeadings(markdown), UX_HEADINGS, errors);
+  assertNonEmptySections(appId, "ux.md", markdown, UX_HEADINGS, errors);
   const coreFlows = section(markdown, "Core Flows");
   const flows = coreFlows.split(/^## /m).slice(1);
   if (flows.length < 1) {
@@ -138,6 +146,7 @@ function validateIllustrations(appId, markdown, errors) {
     ILLUSTRATION_HEADINGS,
     errors,
   );
+  assertNonEmptySections(appId, "illustrations.md", markdown, ILLUSTRATION_HEADINGS, errors);
 }
 
 export async function validateStylePackages() {

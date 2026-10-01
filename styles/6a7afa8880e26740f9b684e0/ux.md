@@ -31,7 +31,3 @@ Search, Saved, Bookings, and My account are stable. Stays, Flights, Car rental, 
 - Preserve Saved across list, map, and detail.
 - Separate promotional benefits from contractual terms.
 - Confirm destructive reservation changes.
-
-# System Access Timing
-
-No system-access timing or denial-recovery behavior was documented in the reviewed source.

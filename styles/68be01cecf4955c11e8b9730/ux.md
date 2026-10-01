@@ -31,7 +31,3 @@ Weather presents current conditions, hourly and ten-day forecasts, detailed metr
 # Interaction Patterns
 
 No behavior-only interaction pattern could be separated from the reviewed visual observations.
-
-# System Access Timing
-
-No system-access timing or denial-recovery path was documented in the reviewed source.

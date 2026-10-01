@@ -25,10 +25,6 @@ WB Bank uses glossy 3D banking objects and product miniatures to distinguish off
 - Prefer icons and plain typography for transaction forms and receipts.
 - Do not add illustrative spectacle to confirmation or error states.
 
-# Production Requirements
-
-Exact export formats, aspect ratios, animation behavior, and appearance variants were not documented. Where imagery is compositionally important, temporary placeholders must preserve its documented scale, placement, crop, and visual weight until final art exists.
-
 # Avoid
 
 Do not introduce an unrelated illustration style or substitute decorative symbols for source-supported imagery.

@@ -30,7 +30,3 @@ The selected shop and profile remain . A taxonomy moves through the feed; cart a
 - Preserve builder choices when returning to a product.
 - Use character moments after core status is clear.
 - Make ingredients and allergens easy to reach.
-
-# System Access Timing
-
-No system-access request timing or denial recovery was documented in the reviewed source.

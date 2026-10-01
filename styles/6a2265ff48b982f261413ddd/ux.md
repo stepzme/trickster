@@ -33,7 +33,3 @@ Home, Saved, Post, Chat, and Account persist in the primary navigation. Posting 
 - Show average and recommended price without hiding seller price.
 - Make moderation and publication state explicit.
 - Separate listing creation from paid promotion.
-
-# System Access Timing
-
-No system-access timing or denial-recovery behavior was documented in the reviewed source.

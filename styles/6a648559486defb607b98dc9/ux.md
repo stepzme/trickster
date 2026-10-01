@@ -30,7 +30,3 @@ Primary navigation connects primary areas. Product detail and money movement pro
 - Retain recent recipients and payment favorites.
 - Use a dedicated result state for every financial operation.
 - Require confirmation for destructive card actions.
-
-# System Access Timing
-
-No system-access timing or denial-recovery behavior was documented in the reviewed source.

@@ -31,7 +31,3 @@ Tutu is a multimodal travel marketplace covering flights, hotels, trains, buses,
 # Interaction Patterns
 
 - A single structured form adapts across travel products.
-
-# System Access Timing
-
-No system-access request timing or denial recovery was documented in the reviewed source.

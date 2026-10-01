@@ -32,8 +32,3 @@ Translate is a focused language utility for typed, spoken, camera, and face-to-f
 
 - Teal marks translation output, speech actions, and active destinations.
 - Language menus favor familiar checked lists over custom pickers.
-- Screen Gallery exposes 65 image screens but no recorded flow sequences, so exact transition order is unverified.
-
-# System Access Timing
-
-No system-access timing or denial-recovery path was documented in the reviewed source.

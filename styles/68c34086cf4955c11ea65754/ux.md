@@ -26,7 +26,3 @@ There is no navigation hierarchy; every function is available from the primary c
 - Replace AC with C after entry.
 - Fit long results before truncation.
 - Respect locale decimal punctuation.
-
-# System Access Timing
-
-No system-access timing or denial-recovery path was documented in the reviewed source.

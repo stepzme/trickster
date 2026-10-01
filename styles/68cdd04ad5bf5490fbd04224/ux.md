@@ -32,7 +32,3 @@ VK Music combines personalized discovery, adaptive mixes, podcasts, search, list
 
 - The mini-player preserves context across every destination.
 - Social playlists expose taste match before play.
-
-# System Access Timing
-
-No system-access timing or denial-recovery path was documented in the reviewed source.

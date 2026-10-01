@@ -20,10 +20,6 @@ Color and material rules are included in Visual Style; no additional palette rel
 
 Reserve this language for onboarding, education, security reassurance, travel, and celebratory milestones. Product screens and transaction states should remain functional and mostly illustration-free.
 
-# Production Requirements
-
-Use only the formats and crops supported by the implemented placement. Where the documented imagery is compositionally important, temporary placeholders must preserve its placement, crop, scale, negative space, and approximate visual weight until final art exists. No unobserved light/dark variants or export ratios are prescribed.
-
 # Avoid
 
 - Generic vector people or corporate scenes.

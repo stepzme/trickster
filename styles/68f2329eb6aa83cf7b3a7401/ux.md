@@ -32,7 +32,3 @@ Simple combines personalized planning, health tracking, AI coaching, fasting, wo
 
 - Coach keeps the composer available throughout the conversation.
 - Profile centralizes health, appearance, notifications, and subscription settings.
-
-# System Access Timing
-
-- Camera or Photos access follows the user choosing the documented capture, scan, or photo action. Denial recovery was not documented.

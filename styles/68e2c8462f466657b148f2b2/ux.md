@@ -31,7 +31,3 @@ vc.ru is an editorial and social platform for reading feeds, following communiti
 # Interaction Patterns
 
 - Post overflow controls centralize feed tuning and reporting.
-
-# System Access Timing
-
-No system-access timing or denial-recovery path was documented in the reviewed source.

@@ -18,10 +18,6 @@ Anchor illustrations in teal and aqua, supported by lavender and icy blue. Small
 
 Use illustrations for service hubs, health programs, empty guidance, and supportive prompts. Keep pharmacy product imagery photographic and never let decorative objects obscure prices or booking controls.
 
-# Production Requirements
-
-Use only the formats and crops supported by the implemented placement. Where the documented imagery is compositionally important, temporary placeholders must preserve its placement, crop, scale, negative space, and approximate visual weight until final art exists. No unobserved light/dark variants or export ratios are prescribed.
-
 # Avoid
 
 - Do not replace the documented image language with unrelated stock art, arbitrary symbols, or a denser composition.

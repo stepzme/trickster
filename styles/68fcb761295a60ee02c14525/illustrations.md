@@ -18,10 +18,6 @@ Use electric green and deep navy as anchors, with occasional magenta or pink bac
 
 Use illustration for onboarding, travel education, saved-search prompts, and friendly empty states. Keep flight results, forms, and payment screens functional and mostly illustration-free; new art must inherit the UI's navy-green contrast and rounded-sheet geometry.
 
-# Production Requirements
-
-Use only the formats and crops supported by the implemented placement. Where the documented imagery is compositionally important, temporary placeholders must preserve its placement, crop, scale, negative space, and approximate visual weight until final art exists. No unobserved light/dark variants or export ratios are prescribed.
-
 # Avoid
 
 - Do not replace the documented image language with unrelated stock art, arbitrary symbols, or a denser composition.

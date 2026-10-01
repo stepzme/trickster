@@ -133,7 +133,7 @@ Search uses a soft gray field with filter access. Selling is stepwise, with plai
 
 Discount, viewed, reliable seller, verified documents, publication review, paid, delivery, service level, and order state remain close to their object.
 
-Controls retain at least a 44-point interactive area. Pressed and disabled treatments should stay within the documented palette and hierarchy; no unobserved state styling is prescribed.
+Controls retain at least a 44-point interactive area. Pressed and disabled treatments should stay within the documented palette and hierarchy.
 
 # Imagery and icons
 
@@ -161,7 +161,7 @@ Only the states documented above are specified; other states must preserve the s
 - Truncate secondary metadata before price or image. Keep checkout and selling one-column; horizontal categories may scroll.
 - Present the keyboard and system permission UI natively, then return to the same visual context.
 - Preserve semantic reading order in VoiceOver and allow text to grow with Dynamic Type.
-- Do not infer an unobserved dark or light variant; use the appearance documented by the reference.
+- Preserve the documented appearance instead of introducing an unrelated light or dark palette.
 
 # Anti-generic checklist
 

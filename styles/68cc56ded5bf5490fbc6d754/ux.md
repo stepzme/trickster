@@ -31,7 +31,3 @@ VK Calls is a calling utility for creating, scheduling, joining, sharing, and ma
 # Interaction Patterns
 
 - Empty states explain the next action without adding decorative complexity.
-
-# System Access Timing
-
-No system-access timing or denial-recovery path was documented in the reviewed source.

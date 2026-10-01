@@ -24,7 +24,3 @@ primary navigation links Calendar, Affirmations, Practice, Healing, and Learning
 
 - Locked content remains visible with subdued copy and a clear upgrade cue.
 - Segments switch tarot modes and layouts without leaving Practice.
-
-# System Access Timing
-
-No system-access request timing or denial recovery was documented in the reviewed source.

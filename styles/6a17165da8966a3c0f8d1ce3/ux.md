@@ -33,7 +33,3 @@ Home, Discounts, My benefit, Stores, and Profile are the primary destinations. H
 - Explain cashback and discount separately.
 - Gate age-restricted promotions before content.
 - Preserve list/map store selection.
-
-# System Access Timing
-
-No system-access timing or denial-recovery behavior was documented in the reviewed source.

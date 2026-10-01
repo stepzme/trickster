@@ -29,7 +29,3 @@ The primary navigation keeps the drawer, chat title, and new-chat action availab
 - Let users stop generation immediately.
 - Preserve conversation context after drawer navigation.
 - Show attachment and search state explicitly.
-
-# System Access Timing
-
-No system-access timing or denial-recovery path was documented in the reviewed source.

@@ -21,7 +21,3 @@ Category shortcuts start lodging, apartments, flights, trains, and experiences; 
 - Keep search state when returning from detail.
 - Show price and conditions before the remains available action.
 - Confirm cancellation with refund value and reason.
-
-# System Access Timing
-
-No system-access timing or denial-recovery path was documented in the reviewed source.

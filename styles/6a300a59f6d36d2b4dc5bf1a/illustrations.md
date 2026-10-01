@@ -18,10 +18,6 @@ Keep object bodies pale and let blue, violet, pink, yellow, and teal gradients p
 
 Use large scenes for broad benefit statements and miniatures for service categories. Any new illustration should reuse the UI gradient palette and soft rounded materials so it feels native to the product.
 
-# Production Requirements
-
-Exact export formats, aspect ratios, animation behavior, and appearance variants were not documented. Where imagery is compositionally important, temporary placeholders must preserve its documented scale, placement, crop, and visual weight until final art exists.
-
 # Avoid
 
 Do not introduce an unrelated illustration style or substitute decorative symbols for source-supported imagery.

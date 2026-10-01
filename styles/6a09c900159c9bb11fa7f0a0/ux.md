@@ -19,7 +19,3 @@ A five primary destinations anchors Home, Search, Favorites, Cart, and Profile. 
 # Interaction Patterns
 
 Favorites and filters are available during browsing, delivery dates are exposed before selection, and checkout remains available after changes.
-
-# System Access Timing
-
-No system-access timing or denial-recovery behavior was documented in the reviewed source.

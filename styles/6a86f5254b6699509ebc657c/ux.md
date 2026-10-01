@@ -33,7 +33,3 @@ Tolan turns an AI companion into a persistent character living on a small planet
 - Daily activities are presented one at a time in a sequence.
 - Tokens, locked insights, and membership benefits make progression explicit.
 - Privacy-sensitive journal and profile actions use clear confirmation and lock states.
-
-# System Access Timing
-
-No system-access timing or denial-recovery behavior was documented in the reviewed source.

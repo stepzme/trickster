@@ -20,10 +20,6 @@ No imagery-specific palette or material treatment was documented.
 
 Use for onboarding, rewards, empty states, referral, gifting, and lightweight waiting moments. Use food photography—not illustration—for actual menu and restaurant content.
 
-# Production Requirements
-
-Preserve the documented placement, crop, negative space, and visual weight in production exports. Before final art exists, placeholders must preserve those same compositional properties.
-
 # Avoid
 
 - Mixing unrelated mascot styles or realistic human characters.

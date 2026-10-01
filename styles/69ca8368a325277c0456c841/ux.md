@@ -35,7 +35,3 @@ Shop combines merchant discovery, brand following, product browsing, saved colle
 - navigation preserves browsing context across merchant surfaces.
 - Product hearts and following state synchronize discovery and saved areas.
 - Checkout removes merchant atmosphere and exposes transaction details plainly.
-
-# System Access Timing
-
-No system-access request timing or denial recovery was documented in the reviewed source.

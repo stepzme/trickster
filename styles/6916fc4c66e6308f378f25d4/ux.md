@@ -31,7 +31,3 @@ The day timeline is the default screen. A central add action opens creation; edg
 
 - Creation happens in modal sheets with one decision per step.
 - Completed entries remain legible but visually recede.
-
-# System Access Timing
-
-No system-access request timing or denial recovery was documented in the reviewed source.

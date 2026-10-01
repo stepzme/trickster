@@ -32,7 +32,3 @@ Yandex Afisha turns city entertainment into a photo-led discovery and ticketing 
 # Interaction Patterns
 
 - Empty states explain the next action instead of showing an inert list.
-
-# System Access Timing
-
-No system-access timing or denial-recovery path was documented in the reviewed source.

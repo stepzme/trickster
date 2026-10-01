@@ -31,7 +31,3 @@ Home, Stores, Search, Orders, and Account form the persistent base. Restaurant, 
 - Confirm address before payment.
 - Expose every fee before placing the order.
 - Preserve the order timeline when details expand.
-
-# System Access Timing
-
-No system-access request timing or denial recovery was documented in the reviewed source.

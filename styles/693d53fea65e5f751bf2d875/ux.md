@@ -21,7 +21,3 @@ Vacancies, Search, Chats, Favorites, and Profile represent the main work modes; 
 - Keep vacancy and candidate state visible.
 - Preserve list filters and scroll position.
 - Put recovery next to payment or verification failures.
-
-# System Access Timing
-
-No system-access request timing or denial recovery was documented in the reviewed source.

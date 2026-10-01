@@ -29,7 +29,3 @@ Home, Explore, Favorites, Profile, and Cart are the primary destinations. Search
 - Keep current price, previous price, and discount together.
 - Keep promo eligibility visible in listing, favorite, and cart contexts.
 - Use one explicit checkout action.
-
-# System Access Timing
-
-No system-access timing or denial-recovery behavior was documented in the reviewed source.

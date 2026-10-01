@@ -25,7 +25,3 @@ The conversation list leads into a single chat. Compose stays; contact and call 
 # Interaction Patterns
 
 - Effects temporarily take over the screen without changing the conversation model.
-
-# System Access Timing
-
-No system-access timing or denial-recovery path was documented in the reviewed source.

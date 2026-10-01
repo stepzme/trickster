@@ -25,7 +25,3 @@ Two primary destinations switch between Measure and Level. The camera view carri
 # Interaction Patterns
 
 - Contextual line art teaches device movement in place.
-
-# System Access Timing
-
-No system-access timing or denial-recovery path was documented in the reviewed source.

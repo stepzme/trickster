@@ -24,7 +24,3 @@ The live map is the home context. A scanner anchors the bottom center, with menu
 # Interaction Patterns
 
 - The map remains visible beneath sheets so every decision retains spatial context.
-
-# System Access Timing
-
-No system-access timing or denial-recovery path was documented in the reviewed source.

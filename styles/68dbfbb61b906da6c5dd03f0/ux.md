@@ -19,7 +19,3 @@ A five-item primary navigation anchors Home, Catalog, Cart, Promotions, and Prof
 # Interaction Patterns
 
 No behavior-only interaction pattern could be separated from the reviewed visual observations.
-
-# System Access Timing
-
-No system-access timing or denial-recovery path was documented in the reviewed source.

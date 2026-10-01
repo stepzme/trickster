@@ -18,10 +18,6 @@ Anchor characters in cobalt, periwinkle, cream, and soft gray; vary seasonal sce
 
 Use illustration for order acceptance, barista identity, tips, predictions, gifts, onboarding, and seasonal stories. New scenes should retain the same toy-like material and soft lighting so they remain harmonious with `ui.md`.
 
-# Production Requirements
-
-Use only the formats and crops supported by the implemented placement. Where the documented imagery is compositionally important, temporary placeholders must preserve its placement, crop, scale, negative space, and approximate visual weight until final art exists. No unobserved light/dark variants or export ratios are prescribed.
-
 # Avoid
 
 - Do not replace the documented image language with unrelated stock art, arbitrary symbols, or a denser composition.

@@ -35,7 +35,3 @@ SberBank Online organizes everyday balances, cards, transfers, payments, savings
 - Product browsing sections preserve quick comparison without lengthening Home.
 - Filters and transaction history maintain context across products.
 - Receipts become shareable document views after successful operations.
-
-# System Access Timing
-
-No system-access timing or denial-recovery behavior was documented in the reviewed source.

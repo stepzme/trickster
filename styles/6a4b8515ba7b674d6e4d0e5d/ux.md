@@ -19,7 +19,3 @@ Primary navigation connects Home, History, Notifications, and Profile. Once book
 # Interaction Patterns
 
 The current decision lives in one bottom sheet, route state remains visible on the map, fare and payment persist across steps, and trip completion moves into structured illustrated feedback.
-
-# System Access Timing
-
-No system-access timing or denial-recovery behavior was documented in the reviewed source.

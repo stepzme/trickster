@@ -34,7 +34,3 @@ Radio Arzamas is an editorial audio library organized around courses, podcasts, 
 # Interaction Patterns
 
 - Playback is continuous across screens through a persistent mini-player.
-
-# System Access Timing
-
-No system-access timing or denial-recovery path was documented in the reviewed source.

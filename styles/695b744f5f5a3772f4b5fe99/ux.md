@@ -23,7 +23,3 @@ four persistent destinations link Home, Products, Chat, and More. Home leads wit
 # Interaction Patterns
 
 - Settings use plain rows, switches, segments, and immediate status feedback.
-
-# System Access Timing
-
-No system-access request timing or denial recovery was documented in the reviewed source.

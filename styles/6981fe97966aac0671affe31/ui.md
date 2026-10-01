@@ -266,7 +266,7 @@ Onboarding fields sit on near-black rectangular surfaces with small leading icon
 
 States such as Optimal, Thriving, Looking Good, and Making Progress remain textual. Thin arcs, crowns, dots, and range markers reinforce the status without replacing it.
 
-Controls retain at least a 44-point interactive area. Pressed and disabled treatments should stay within the documented palette and hierarchy; no unobserved state styling is prescribed.
+Controls retain at least a 44-point interactive area. Pressed and disabled treatments should stay within the documented palette and hierarchy.
 
 # Imagery and icons
 
@@ -294,7 +294,7 @@ Only the states documented above are specified; other states must preserve the s
 - Stack score and range when horizontal space becomes insufficient. Keep the hero statement centered and reduce type before cropping it. Side-menu rows remain a single scrollable column.
 - Present the keyboard and system permission UI natively, then return to the same visual context.
 - Preserve semantic reading order in VoiceOver and allow text to grow with Dynamic Type.
-- Do not infer an unobserved dark or light variant; use the appearance documented by the reference.
+- Preserve the documented appearance instead of introducing an unrelated light or dark palette.
 
 # Anti-generic checklist
 

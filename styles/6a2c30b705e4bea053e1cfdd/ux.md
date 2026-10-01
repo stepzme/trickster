@@ -26,7 +26,3 @@ Five destinations connect Payments, Mobile, QR, Services, and History. Mobile st
 
 - Preserve task context when users enter detail and return them to the originating flow.
 - Make consequential actions explicit and provide a clear completion or recovery state.
-
-# System Access Timing
-
-No system-access timing or denial-recovery behavior was documented in the reviewed source.

@@ -32,7 +32,3 @@ The service hub opens from a hamburger and support header. Transport uses Main, 
 - Keep payment methods visually distinct.
 - Preserve map context while opening search or route choices.
 - Transport-mode decisions open as focused choices and return to search.
-
-# System Access Timing
-
-No system-access timing or denial-recovery behavior was documented in the reviewed source.

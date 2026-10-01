@@ -25,7 +25,3 @@ Home provides location and account controls, shortcuts, search, departments, and
 
 - The address anchors availability and follows the user across discovery.
 - Browsing sections expose departments and merchants without hiding the store list.
-
-# System Access Timing
-
-No system-access timing or denial-recovery behavior was documented in the reviewed source.

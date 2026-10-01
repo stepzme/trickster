@@ -32,7 +32,3 @@ The primary navigation opens chat history and starts a new chat. The bottom comp
 - Put media parameters beside the generated result.
 - Keep history actions contextual and reversible where possible.
 - Separate Pro upsell from ordinary chat actions.
-
-# System Access Timing
-
-No system-access timing or denial-recovery path was documented in the reviewed source.

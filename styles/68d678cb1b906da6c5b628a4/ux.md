@@ -34,7 +34,3 @@ Yandex Books combines discovery, personal library, reading, listening, notes, an
 - Persistent progress and resume actions connect Library, My books, reader, and player.
 - Bottom sheets hold book actions, filters, and settings.
 - Kids mode is protected by an optional PIN and changes the catalog rather than the core navigation model.
-
-# System Access Timing
-
-No system-access timing or denial-recovery path was documented in the reviewed source.

@@ -18,10 +18,6 @@ Use saturated green, violet, cyan, and blue gradients with white highlights. Kee
 
 Use this language for telecom plans, family, eSIM, onboarding, and service promotion. Keep balances, transactions, receipts, and payment confirmation data-led.
 
-# Production Requirements
-
-Exact export formats, aspect ratios, animation behavior, and appearance variants were not documented. Where imagery is compositionally important, temporary placeholders must preserve its documented scale, placement, crop, and visual weight until final art exists.
-
 # Avoid
 
 Do not introduce an unrelated illustration style or substitute decorative symbols for source-supported imagery.

@@ -29,7 +29,3 @@ The primary navigation keeps Wallet, Location, and Menu for points available. Ho
 - Maintain a persistent cart count and total.
 - Show reward math directly.
 - Confirm payment and pickup completion explicitly.
-
-# System Access Timing
-
-No system-access timing or denial-recovery path was documented in the reviewed source.

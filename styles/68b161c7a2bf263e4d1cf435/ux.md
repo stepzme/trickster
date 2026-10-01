@@ -32,7 +32,3 @@ Tinkoff Investments combines portfolio monitoring, security discovery, charts, o
 
 - Charts are full-width and time-range controls remain near the data.
 - Regulatory and liquidity warnings appear before trading commitment.
-
-# System Access Timing
-
-No system-access timing or denial-recovery path was documented in the reviewed source.

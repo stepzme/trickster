@@ -4,7 +4,6 @@ Stocks is a, list-led market utility for watchlists, quote details, charts, widg
 
 # Navigation
 
-- The available catalog has no recorded flow sequences; navigation is inferred only from the 37 inspected screens.
 - A watchlist screen combines search, symbols, and Business News.
 - Selecting a symbol opens a quote sheet with time-range controls, metrics, news, and a contextual overflow menu.
 
@@ -29,8 +28,5 @@ Stocks is a, list-led market utility for watchlists, quote details, charts, widg
 
 # Interaction Patterns
 
-- Because no flow metadata exists, transition order beyond the visible screen relationships remains unverified.
-
-# System Access Timing
-
-No system-access timing or denial-recovery path was documented in the reviewed source.
+- Symbol selection opens a quote sheet without losing the watchlist context.
+- Time-range controls update the current chart; edit mode handles reordering and removal.

@@ -18,10 +18,6 @@ Use deep navy for immersive scenes, electric blue and cyan for light, and magent
 
 Reserve illustration for launch, branded onboarding, product promotion, and meaningful empty or success states. Do not replace transactional icons, account data, or controls with decorative art.
 
-# Production Requirements
-
-Use only the formats and crops supported by the implemented placement. Where the documented imagery is compositionally important, temporary placeholders must preserve its placement, crop, scale, negative space, and approximate visual weight until final art exists. No unobserved light/dark variants or export ratios are prescribed.
-
 # Avoid
 
 - Do not replace the documented image language with unrelated stock art, arbitrary symbols, or a denser composition.

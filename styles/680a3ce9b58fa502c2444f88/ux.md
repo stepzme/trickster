@@ -25,7 +25,3 @@ Five fixed destinations cover Home, Catalog, Cart, Favorites, and Account. Searc
 # Interaction Patterns
 
 No behavior-only interaction pattern could be separated from the reviewed visual observations.
-
-# System Access Timing
-
-No system-access timing or denial-recovery path was documented in the reviewed source.

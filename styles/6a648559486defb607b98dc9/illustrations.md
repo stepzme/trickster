@@ -21,10 +21,6 @@ Use the palette relationships explicitly described in the visual language and `u
 
 Use for new products, benefits, campaigns, and onboarding. Keep balances, transfers, payment forms, transaction history, and security controls free of decorative art.
 
-# Production Requirements
-
-Exact export formats, aspect ratios, animation behavior, and appearance variants were not documented. Where imagery is compositionally important, temporary placeholders must preserve its documented scale, placement, crop, and visual weight until final art exists.
-
 # Avoid
 
 - Do not place illustration behind amounts or account data.

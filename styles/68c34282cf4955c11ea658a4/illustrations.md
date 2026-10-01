@@ -25,10 +25,6 @@ Wallet uses restrained flat onboarding graphics to explain what can be stored: c
 - Use system icons and real card artwork for operational screens.
 - Do not turn the flat object set into decorative page backgrounds.
 
-# Production Requirements
-
-Preserve the documented placement, crop, negative space, and visual weight in production exports. Before final art exists, placeholders must preserve those same compositional properties.
-
 # Avoid
 
 - Do not replace the observed imagery language with unrelated stock art or arbitrary symbols.

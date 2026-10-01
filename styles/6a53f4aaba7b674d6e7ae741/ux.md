@@ -36,7 +36,3 @@ Samokat supports rapid grocery and goods discovery, search, favorites, repeat or
 - Checkout groups decisions and keeps the payment action available.
 - Tracking preserves access to change, contact, cancel, and item summary.
 - Toasts confirm lightweight state changes without leaving the catalog.
-
-# System Access Timing
-
-No system-access timing or denial-recovery behavior was documented in the reviewed source.

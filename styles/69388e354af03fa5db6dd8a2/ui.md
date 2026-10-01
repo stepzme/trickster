@@ -118,7 +118,7 @@ Search, route settings, save point, and account forms use white or pale filled r
 
 Show live, model, HD, small-craft advisory, saved point, route point, fish selection, tide, trial, and Pro states in direct context.
 
-Controls retain at least a 44-point interactive area. Pressed and disabled treatments should stay within the documented palette and hierarchy; no unobserved state styling is prescribed.
+Controls retain at least a 44-point interactive area. Pressed and disabled treatments should stay within the documented palette and hierarchy.
 
 # Imagery and icons
 
@@ -144,7 +144,7 @@ Only the states documented above are specified; other states must preserve the s
 - Keep location, model, warning, current window, and selected tool visible. Collapse secondary metrics, guides, and settings.
 - Present the keyboard and system permission UI natively, then return to the same visual context.
 - Preserve semantic reading order in VoiceOver and allow text to grow with Dynamic Type.
-- Do not infer an unobserved dark or light variant; use the appearance documented by the reference.
+- Preserve the documented appearance instead of introducing an unrelated light or dark palette.
 
 # Anti-generic checklist
 

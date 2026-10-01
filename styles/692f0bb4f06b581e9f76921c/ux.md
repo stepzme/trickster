@@ -25,7 +25,3 @@ Four primary destinations connect Home, My Account, Special Offers, and More. Ho
 # Interaction Patterns
 
 The sampled flows use direct actions, explicit completion, and return to the current context. No additional repeated interaction behavior was documented.
-
-# System Access Timing
-
-No system-access request timing or denial recovery was documented in the reviewed source.

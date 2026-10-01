@@ -26,7 +26,3 @@ five persistent destinations connect Home, In Store, Delivery, Market, and Cosme
 
 - Sheets explain promo codes and focused fulfillment decisions.
 - totals maintain a clear path through checkout.
-
-# System Access Timing
-
-No system-access request timing or denial recovery was documented in the reviewed source.

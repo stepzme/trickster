@@ -32,7 +32,3 @@ Five bottom tabs remain stable for subscribers; without subscription, Browse may
 - Distinguish Apple Music search from local library search.
 - Keep destructive or account actions in sheets.
 - Preserve playback context while opening menus.
-
-# System Access Timing
-
-No system-access timing or denial-recovery path was documented in the reviewed source.

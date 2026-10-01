@@ -18,10 +18,6 @@ Use white and cool gray as the base, Mycar blue for platforms and accents, with 
 
 Use renders for service categories, document tools, insurance, maintenance, and empty or success states. Continue to use real photography for listings; new illustration should inherit the blue UI and rounded tile geometry.
 
-# Production Requirements
-
-Exact export formats, aspect ratios, animation behavior, and appearance variants were not documented. Where imagery is compositionally important, temporary placeholders must preserve its documented scale, placement, crop, and visual weight until final art exists.
-
 # Avoid
 
 Do not introduce an unrelated illustration style or substitute decorative symbols for source-supported imagery.

@@ -33,7 +33,3 @@ Home, Search, Bag, Saved, and Account persist in the primary navigation. Search 
 - Show reduced and former prices together.
 - Keep Save and Add to Bag reachable on long pages.
 - Explain delivery and return constraints before payment.
-
-# System Access Timing
-
-No system-access timing or denial-recovery behavior was documented in the reviewed source.

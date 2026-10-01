@@ -25,7 +25,3 @@ Five primary destinations connect Home, Catalog, Channels, Sport, and My. Home u
 # Interaction Patterns
 
 - Live badges, age, rating, price, duration, and season count stay close to artwork.
-
-# System Access Timing
-
-No system-access timing or denial-recovery path was documented in the reviewed source.

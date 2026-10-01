@@ -32,7 +32,3 @@ Avtobys, Routes, QR, Notifications, and Menu persist in the current context. The
 - Keep payment modes distinct and recoverable.
 - Preserve the map while route details expand.
 - Keep transaction search and filters close to history.
-
-# System Access Timing
-
-No system-access timing or denial-recovery behavior was documented in the reviewed source.

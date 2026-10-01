@@ -33,7 +33,3 @@ Search, Favorites, Ads, Messages, and Profile persist in primary navigation. Car
 - Show complete order arithmetic before payment.
 - Make ad lifecycle state explicit.
 - Separate platform chat, support, and review paths.
-
-# System Access Timing
-
-No system-access request timing or denial recovery was documented in the reviewed source.

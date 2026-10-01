@@ -27,7 +27,3 @@ Home exposes primary services and recent orders; profile holds identity, payment
 - Keep shipment and shopping orders distinct.
 - Explain required pickup documents.
 - Confirm payment before tracking begins.
-
-# System Access Timing
-
-No system-access timing or denial-recovery behavior was documented in the reviewed source.

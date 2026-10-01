@@ -30,7 +30,3 @@ Calendar and todo surfaces coexist rather than living in separate tabs. A shared
 - Make the pane divider visibly draggable.
 - Preserve completed todos in a collapsible group.
 - Search across both data types from one field.
-
-# System Access Timing
-
-No system-access timing or denial-recovery behavior was documented in the reviewed source.

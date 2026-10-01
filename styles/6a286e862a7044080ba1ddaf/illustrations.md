@@ -21,10 +21,6 @@ Use the palette relationships explicitly described in the visual language and `u
 
 Use for savings, premium upgrades, investment, and new-product campaigns. Keep authentication, balances, transfers, statements, and security illustration-free.
 
-# Production Requirements
-
-Exact export formats, aspect ratios, animation behavior, and appearance variants were not documented. Where imagery is compositionally important, temporary placeholders must preserve its documented scale, placement, crop, and visual weight until final art exists.
-
 # Avoid
 
 - Do not place 3D objects behind financial values.

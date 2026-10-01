@@ -25,10 +25,6 @@ Wibes uses a playful sticker-like illustration family combining lime, violet, pi
 - Keep product photography and real creator video dominant in commerce surfaces.
 - Do not mix unrelated corporate line art into the playful mascot family.
 
-# Production Requirements
-
-Preserve the documented placement, crop, negative space, and visual weight in production exports. Before final art exists, placeholders must preserve those same compositional properties.
-
 # Avoid
 
 - Do not replace the observed imagery language with unrelated stock art or arbitrary symbols.

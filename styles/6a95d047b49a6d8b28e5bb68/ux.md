@@ -31,7 +31,3 @@ WB Chat is a restrained messenger for contacts, private conversations, groups, c
 # Interaction Patterns
 
 - Search and compose stay at the top; active conversation categories use a thin underline.
-
-# System Access Timing
-
-No system-access timing or denial-recovery behavior was documented in the reviewed source.

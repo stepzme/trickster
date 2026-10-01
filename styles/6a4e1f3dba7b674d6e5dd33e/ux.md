@@ -27,7 +27,3 @@ Five destinations connect Catalog, Orders, Favorites, Profile, and Cart. Search,
 - Magenta carries brand, price emphasis, and purchase actions.
 - Quantity changes update the current product and cart totals immediately.
 - Empty states remain typographic with a direct recovery action.
-
-# System Access Timing
-
-No system-access timing or denial-recovery behavior was documented in the reviewed source.

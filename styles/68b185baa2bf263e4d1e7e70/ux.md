@@ -30,8 +30,6 @@ VK Clips is a short-video product for watching personalized feeds, reacting and 
 
 # Interaction Patterns
 
-- Screen Gallery exposes 100 image screens but no recorded flow sequences, so exact transition order is unverified.
-
-# System Access Timing
-
-No system-access timing or denial-recovery path was documented in the reviewed source.
+- Vertical swiping advances the current feed without leaving its context.
+- Creation is staged from capture or import through editing and publishing.
+- Reactions, sharing, audio, and creator actions remain attached to the current clip.

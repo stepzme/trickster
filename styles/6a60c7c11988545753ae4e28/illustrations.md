@@ -18,10 +18,6 @@ Anchor art in cobalt blue, white, lemon, mint, and orange, with black line work 
 
 Use the language for weather, plans, milestones, hydration, onboarding, and empty or celebratory states. Keep core charts and numeric dashboards clean and data-led.
 
-# Production Requirements
-
-Exact export formats, aspect ratios, animation behavior, and appearance variants were not documented. Where imagery is compositionally important, temporary placeholders must preserve its documented scale, placement, crop, and visual weight until final art exists.
-
 # Avoid
 
 Do not introduce an unrelated illustration style or substitute decorative symbols for source-supported imagery.

@@ -31,7 +31,3 @@ Sutochno.ru supports accommodation search, comparison, booking, host chat, reser
 # Interaction Patterns
 
 - Checkout exposes cost and conditions before commitment.
-
-# System Access Timing
-
-No system-access timing or denial-recovery path was documented in the reviewed source.

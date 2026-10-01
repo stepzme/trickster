@@ -19,7 +19,3 @@ Today supports return use, Explore supports discovery, and Profile holds persona
 
 - Show duration before commitment.
 - Preserve progress when a lesson is interrupted.
-
-# System Access Timing
-
-No system-access request timing or denial recovery was documented in the reviewed source.

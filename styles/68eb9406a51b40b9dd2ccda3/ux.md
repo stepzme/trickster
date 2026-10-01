@@ -24,7 +24,3 @@ The home screen is composer-first. A slide-out sidebar contains search, projects
 # Interaction Patterns
 
 - The composer remains the primary anchor on home, chats, and projects.
-
-# System Access Timing
-
-No system-access timing or denial-recovery path was documented in the reviewed source.

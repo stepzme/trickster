@@ -32,7 +32,3 @@ Home, Transfers, Payments, History, and Services persist in the current context.
 - Keep fees, scope, and currency visible.
 - Confirm block, reissue, and closure.
 - Preserve receipts and transaction history.
-
-# System Access Timing
-
-No system-access timing or denial-recovery behavior was documented in the reviewed source.

@@ -35,7 +35,3 @@ Russian Post brings tracking, sending, pickup, office search, queue booking, hel
 - Search, filter pills, and shortcuts reduce the distance to frequent tasks.
 - Tracking and pickup preserve parcel identity while changing the available action.
 - Promotional tiles stay secondary to operational information.
-
-# System Access Timing
-
-No system-access timing or denial-recovery behavior was documented in the reviewed source.

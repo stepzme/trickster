@@ -22,10 +22,6 @@ Use bold flat vector scenes with simplified human forms, cropped body parts, and
 
 No separate state variants were documented beyond the product roles described above.
 
-# Production Requirements
-
-Use only the formats and crops supported by the implemented placement. Where the documented imagery is compositionally important, temporary placeholders must preserve its placement, crop, scale, negative space, and approximate visual weight until final art exists. No unobserved light/dark variants or export ratios are prescribed.
-
 # Avoid
 
 - Keep illustrations direct, diverse, and conversation-oriented.

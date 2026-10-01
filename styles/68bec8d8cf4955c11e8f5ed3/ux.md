@@ -28,7 +28,3 @@ World Clock, Alarm, Stopwatch, and Timer are always available in the primary nav
 - Show empty states without inventing extra calls to action.
 - Preserve live timing state across navigation.
 - Announce active alarms and countdown completion accessibly.
-
-# System Access Timing
-
-No system-access timing or denial-recovery path was documented in the reviewed source.

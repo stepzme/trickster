@@ -25,7 +25,3 @@ The live camera owns the screen. A control panel exposes zoom and a configurable
 # Interaction Patterns
 
 - The control panel expands without replacing the camera context.
-
-# System Access Timing
-
-No system-access timing or denial-recovery path was documented in the reviewed source.

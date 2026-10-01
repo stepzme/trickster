@@ -24,7 +24,3 @@ Five persistent destinations cover Search, Map, Chat, Orders, and Profile. Searc
 # Interaction Patterns
 
 - Search and results keep price comparison close to dates and itinerary duration.
-
-# System Access Timing
-
-No system-access request timing or denial recovery was documented in the reviewed source.

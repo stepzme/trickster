@@ -33,7 +33,3 @@ Wise organizes multi-currency money management around balances, cards, recipient
 
 - Progressive disclosure keeps summaries calm while preserving full financial detail.
 - Review screens repeat amount, currency, source, fee, and timing before commitment.
-
-# System Access Timing
-
-No system-access request timing or denial recovery was documented in the reviewed source.

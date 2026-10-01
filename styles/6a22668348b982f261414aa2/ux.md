@@ -34,7 +34,3 @@ Home, My bank, History, Transfers, and Payments are the primary destinations. Se
 - Keep the five primary destinations stable.
 - Show commission and limits before confirmation.
 - Make receipts saveable, repeatable, and shareable.
-
-# System Access Timing
-
-No system-access timing or denial-recovery behavior was documented in the reviewed source.

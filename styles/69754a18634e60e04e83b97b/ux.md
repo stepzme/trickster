@@ -28,7 +28,3 @@ Home, Catalog, Scanner, and Profile remain persistent. Product, basket, checkout
 - Require age confirmation where necessary.
 - Preserve product favorites.
 - Confirm cart clearing and cancellation.
-
-# System Access Timing
-
-No system-access request timing or denial recovery was documented in the reviewed source.

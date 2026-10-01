@@ -26,7 +26,3 @@ Search, Trips, Favorites, Support, and Menu form the primary navigation. Home le
 
 - Trips use a simple segment for stays and transfers.
 - Empty states immediately pair friendly art with one useful search action.
-
-# System Access Timing
-
-No system-access timing or denial-recovery path was documented in the reviewed source.

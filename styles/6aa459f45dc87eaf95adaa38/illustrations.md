@@ -25,10 +25,6 @@ Wabi uses glossy 3D bubbles and translucent object capsules as its visual signat
 - Keep functional controls simple and let one or two 3D objects provide the emphasis.
 - Do not mix in unrelated flat mascot art or dense decorative scenes.
 
-# Production Requirements
-
-Exact export formats, aspect ratios, animation behavior, and appearance variants were not documented. Where imagery is compositionally important, temporary placeholders must preserve its documented scale, placement, crop, and visual weight until final art exists.
-
 # Avoid
 
 Do not introduce an unrelated illustration style or substitute decorative symbols for source-supported imagery.

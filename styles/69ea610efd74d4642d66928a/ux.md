@@ -18,8 +18,4 @@ A four-item primary navigation anchors Today, Explore, Entries, and Patterns. A 
 
 # Interaction Patterns
 
-The sampled flows use direct actions, explicit completion, and return to the current context. No additional repeated interaction behavior was documented.
-
-# System Access Timing
-
-- Speech Recognition follows the user choosing transcription. Denial recovery was not documented.
+The sampled flows use direct actions, explicit completion, and return to the current context.

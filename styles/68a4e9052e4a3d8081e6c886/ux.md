@@ -36,7 +36,3 @@ Rocketbank turns banking into a conversational, expressive product. Core balance
 
 - Conversational copy appears directly in the interface and in assistant prompts.
 - Custom avatar, voice, and theme controls are treated as first-class product experiences.
-
-# System Access Timing
-
-No system-access timing or denial-recovery path was documented in the reviewed source.

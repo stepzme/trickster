@@ -35,7 +35,3 @@ Primary navigation switches between Home and Pools, while search and add remain 
 
 - Present setup questions sequentially with progress and Skip.
 - Keep reversible organization actions close; isolate destructive actions and trash recovery.
-
-# System Access Timing
-
-No system-access timing or denial-recovery behavior was documented in the reviewed source.

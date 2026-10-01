@@ -18,10 +18,6 @@ Anchor every scene in yellow, white, and graphite. Supporting colors should clar
 
 Use the language for products, insurance, services, cashback, security, and onboarding. Keep account balances, payments, and transaction lists informational.
 
-# Production Requirements
-
-Preserve the documented placement, crop, negative space, and visual weight in production exports. Before final art exists, placeholders must preserve those same compositional properties.
-
 # Avoid
 
 - Do not replace the observed imagery language with unrelated stock art or arbitrary symbols.

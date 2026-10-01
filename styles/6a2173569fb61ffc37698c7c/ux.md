@@ -33,7 +33,3 @@ Five primary destinations separate Home, Maps, Record, Groups, and You. Record i
 
 - Activity metrics expose values and supporting labels.
 - Contextual coach marks point to unfamiliar interactions without blocking the whole screen.
-
-# System Access Timing
-
-No system-access timing or denial-recovery behavior was documented in the reviewed source.

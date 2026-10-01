@@ -29,7 +29,3 @@ My Bank, Payments, History, and More remain in the primary navigation. Card deta
 - Separate card atmosphere from task content.
 - Preserve quick routes without replacing full payment flows.
 - Require explicit review for transfers and applications.
-
-# System Access Timing
-
-No system-access timing or denial-recovery behavior was documented in the reviewed source.

@@ -18,10 +18,6 @@ Use turquoise and mint as the base, with controlled yellow, coral, blue, and ski
 
 Use the language for ride classes, service shortcuts, rating attributes, safety education, and lightweight empty states. Keep active maps and driver facts operational.
 
-# Production Requirements
-
-Exact export formats, aspect ratios, animation behavior, and appearance variants were not documented. Where imagery is compositionally important, temporary placeholders must preserve its documented scale, placement, crop, and visual weight until final art exists.
-
 # Avoid
 
 Do not introduce an unrelated illustration style or substitute decorative symbols for source-supported imagery.

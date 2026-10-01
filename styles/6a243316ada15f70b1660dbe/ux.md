@@ -32,7 +32,3 @@ Stars Coffee centers loyalty, menu discovery, promotions, nearby cafés, purchas
 
 - Turquoise marks loyalty, progress, and primary action.
 - Multi-step gifting shows explicit numbered progress.
-
-# System Access Timing
-
-No system-access timing or denial-recovery behavior was documented in the reviewed source.

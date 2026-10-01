@@ -20,10 +20,6 @@ Let each discipline own one saturated accent while white, silver, and charcoal m
 
 Use for course identities, catalog cards, onboarding, profile benefits, and empty learning states. Do not replace lesson content or instructional diagrams with decorative objects.
 
-# Production Requirements
-
-Exact export formats, aspect ratios, animation behavior, and appearance variants were not documented. Where imagery is compositionally important, temporary placeholders must preserve its documented scale, placement, crop, and visual weight until final art exists.
-
 # Avoid
 
 Do not introduce an unrelated illustration style or substitute decorative symbols for source-supported imagery.

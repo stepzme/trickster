@@ -25,7 +25,3 @@ Four fixed destinations cover Contacts, Calls, Chats, and Settings. Conversation
 # Interaction Patterns
 
 - System sheets and permissions retain simple platform patterns but adopt MAX spacing and actions.
-
-# System Access Timing
-
-No system-access timing or denial-recovery path was documented in the reviewed source.

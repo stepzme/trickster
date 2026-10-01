@@ -33,7 +33,3 @@ VTB is a full-service mobile bank covering accounts, cards, transfers, payments,
 - Monetary values are reviewed before operational controls.
 - Payment categories lead directly into their corresponding entry flows.
 - Important reversibility, fees, and support are shown before or immediately after confirmation.
-
-# System Access Timing
-
-No system-access timing or denial-recovery behavior was documented in the reviewed source.

@@ -19,7 +19,3 @@ Primary navigation switches between the few primary habit areas. Each destinatio
 # Interaction Patterns
 
 Each screen focuses on one metric; users can change range or mode, log quickly, and explicitly complete the daily task.
-
-# System Access Timing
-
-No system-access timing or denial-recovery behavior was documented in the reviewed source.

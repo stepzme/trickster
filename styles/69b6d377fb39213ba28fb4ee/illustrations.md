@@ -18,10 +18,6 @@ Use saturated yellow, blue, coral, and green with white highlights. The characte
 
 Use for empty chats, empty calls, onboarding, gifts, achievements, and supportive explanations. Do not place mascots inside dense chat lists or settings rows.
 
-# Production Requirements
-
-Use only the formats and crops supported by the implemented placement. Where the documented imagery is compositionally important, temporary placeholders must preserve its placement, crop, scale, negative space, and approximate visual weight until final art exists. No unobserved light/dark variants or export ratios are prescribed.
-
 # Avoid
 
 - Do not replace the documented image language with unrelated stock art, arbitrary symbols, or a denser composition.

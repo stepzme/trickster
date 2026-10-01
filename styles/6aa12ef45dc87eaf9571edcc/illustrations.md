@@ -18,10 +18,6 @@ Anchor the mascot in warm yellow-orange. Use saturated pink, cyan, and blue for 
 
 Use the duck for entry, profile, and moments of encouragement; use one-off 3D symbols to clarify onboarding questions or milestones. If new illustrations are required, extend this tactile object family rather than substituting flat vectors or generic photography.
 
-# Production Requirements
-
-Exact export formats, aspect ratios, animation behavior, and appearance variants were not documented. Where imagery is compositionally important, temporary placeholders must preserve its documented scale, placement, crop, and visual weight until final art exists.
-
 # Avoid
 
 Do not introduce an unrelated illustration style or substitute decorative symbols for source-supported imagery.

@@ -18,10 +18,6 @@ Use saturated cyan, green, coral, yellow, and violet against the near-black UI. 
 
 Use this language for service categories, product promotion, rewards, and meaningful empty or success states. New illustrations should inherit the dark UI, red-gold brand cues, and compact tile geometry.
 
-# Production Requirements
-
-Use only the formats and crops supported by the implemented placement. Where the documented imagery is compositionally important, temporary placeholders must preserve its placement, crop, scale, negative space, and approximate visual weight until final art exists. No unobserved light/dark variants or export ratios are prescribed.
-
 # Avoid
 
 - Do not replace the documented image language with unrelated stock art, arbitrary symbols, or a denser composition.

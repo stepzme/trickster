@@ -34,7 +34,3 @@ A dark primary navigation links Home, Catalog, Loyalty, Basket, and Profile. Hom
 - Keep the primary navigation visible through catalog and checkout.
 - Product browsing keeps price and weight information available before adding an item.
 - Separate delivery, pickup, and table contexts before final checkout.
-
-# System Access Timing
-
-No system-access request timing or denial recovery was documented in the reviewed source.

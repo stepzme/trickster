@@ -18,10 +18,6 @@ Base illustrations on Airba blue, cyan, violet, and pale aqua. Warm orange or pi
 
 Use this language for verification education, loan-empty states, repayment guidance, and partner-product introductions. Use merchant photography or logos when the user is choosing a real partner.
 
-# Production Requirements
-
-Exact export formats, aspect ratios, animation behavior, and appearance variants were not documented. Where imagery is compositionally important, temporary placeholders must preserve its documented scale, placement, crop, and visual weight until final art exists.
-
 # Avoid
 
 Do not introduce an unrelated illustration style or substitute decorative symbols for source-supported imagery.

@@ -24,7 +24,3 @@ The map remains the base context. Search and categories live in a primary naviga
 # Interaction Patterns
 
 - Use sheets that preserve visible map context.
-
-# System Access Timing
-
-No system-access timing or denial-recovery path was documented in the reviewed source.

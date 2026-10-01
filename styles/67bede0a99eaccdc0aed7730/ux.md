@@ -26,7 +26,3 @@ Yandex Market is a dense commerce app that connects discovery, search, product c
 # Interaction Patterns
 
 - remains available actions preserve add-to-cart and checkout decisions on long pages.
-
-# System Access Timing
-
-No system-access timing or denial-recovery path was documented in the reviewed source.

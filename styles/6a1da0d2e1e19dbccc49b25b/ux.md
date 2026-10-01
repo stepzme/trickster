@@ -32,7 +32,3 @@ Home, Catalog, Cart, Favorites, and Profile remain in the primary navigation. Se
 - Show rewards and cash prices together.
 - Explain free-delivery and cashback thresholds in cart.
 - Use mascots for recovery and education, not product choice.
-
-# System Access Timing
-
-No system-access timing or denial-recovery behavior was documented in the reviewed source.

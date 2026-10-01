@@ -144,7 +144,7 @@ Search fields are large white rows on navy. Passenger and card fields use thin g
 
 Order status groups waiting and failure messages above the route. Use warm tints, a clear icon, and a direct recovery explanation.
 
-Controls retain at least a 44-point interactive area. Pressed and disabled treatments should stay within the documented palette and hierarchy; no unobserved state styling is prescribed.
+Controls retain at least a 44-point interactive area. Pressed and disabled treatments should stay within the documented palette and hierarchy.
 
 # Imagery and icons
 
@@ -170,7 +170,7 @@ Only the states documented above are specified; other states must preserve the s
 - Keep the journey single-column; allow date, destination, and insurance rails to scroll horizontally rather than shrinking content.
 - Present the keyboard and system permission UI natively, then return to the same visual context.
 - Preserve semantic reading order in VoiceOver and allow text to grow with Dynamic Type.
-- Do not infer an unobserved dark or light variant; use the appearance documented by the reference.
+- Preserve the documented appearance instead of introducing an unrelated light or dark palette.
 
 # Anti-generic checklist
 

@@ -33,7 +33,3 @@ SmartMed brings clinic booking, online care, pharmacy shopping, health services,
 - carousels expose service families without leaving the current page.
 - Teal consistently marks active navigation and primary actions.
 - Lists use chevrons for drill-down; transactional actions stay explicit.
-
-# System Access Timing
-
-No system-access request timing or denial recovery was documented in the reviewed source.

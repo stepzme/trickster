@@ -31,7 +31,3 @@ Five primary destinations separate Home, Catalog, Categories, Cart, and Account.
 
 - Filter chips scroll horizontally.
 - Actions keep quantity and purchase controls reachable.
-
-# System Access Timing
-
-No system-access timing or denial-recovery behavior was documented in the reviewed source.

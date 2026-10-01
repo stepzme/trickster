@@ -21,7 +21,3 @@ Orders, Money, Chats, and Profile form the stable shell; during a trip, navigati
 - Confirm cancellation separately from calling.
 - Explain gross income, fees, and deductions.
 - Preserve the selected earnings period and view.
-
-# System Access Timing
-
-No system-access request timing or denial recovery was documented in the reviewed source.

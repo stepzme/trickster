@@ -31,7 +31,3 @@ Wabi combines a social feed, AI mini-app creation, personal collections, messagi
 # Interaction Patterns
 
 - Conversational creation reduces the initial form to a single prompt and reveals configuration later.
-
-# System Access Timing
-
-No system-access timing or denial-recovery behavior was documented in the reviewed source.

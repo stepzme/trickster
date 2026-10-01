@@ -149,7 +149,7 @@ Use filled pale-gray rows for recipient, amount, and message. Native controls mu
 
 Success centers a green check and operation summary, followed by receipt and save options. Progress uses thin green bars within loan rows.
 
-Controls retain at least a 44-point interactive area. Pressed and disabled treatments should stay within the documented palette and hierarchy; no unobserved state styling is prescribed.
+Controls retain at least a 44-point interactive area. Pressed and disabled treatments should stay within the documented palette and hierarchy.
 
 # Imagery and icons
 
@@ -176,7 +176,7 @@ Only the states documented above are specified; other states must preserve the s
 - Product rails scroll horizontally. Financial forms scroll vertically while the main action remains above the safe area.
 - Present the keyboard and system permission UI natively, then return to the same visual context.
 - Preserve semantic reading order in VoiceOver and allow text to grow with Dynamic Type.
-- Do not infer an unobserved dark or light variant; use the appearance documented by the reference.
+- Preserve the documented appearance instead of introducing an unrelated light or dark palette.
 
 # Anti-generic checklist
 

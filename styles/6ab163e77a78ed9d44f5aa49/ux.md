@@ -31,7 +31,3 @@ Five primary destinations cover Home, TV, Movies, Series, and More. Search and f
 - Browsing sections expose more titles without lengthening local sections.
 - Episode downloads are available directly from the list.
 - Playback controls hide when idle and return on demand.
-
-# System Access Timing
-
-No system-access timing or denial-recovery behavior was documented in the reviewed source.

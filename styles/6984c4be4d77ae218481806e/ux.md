@@ -22,7 +22,3 @@ Home, Catalog, Cart, Stores, and Profile remain available; search and fulfillmen
 - Keep price and availability explicit.
 - Show pickup store or address throughout checkout.
 - Confirm cancellation.
-
-# System Access Timing
-
-No system-access request timing or denial recovery was documented in the reviewed source.

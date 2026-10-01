@@ -31,7 +31,3 @@ A five primary destinations anchors Search, Explore, Favorites, Bookings, and Pr
 - Dates, modes, filters, and sorting remain available while reviewing results.
 - Favorites and maps are available from result items.
 - Booking sections expand progressively while the navy journey summary remains available above them.
-
-# System Access Timing
-
-No system-access timing or denial-recovery behavior was documented in the reviewed source.

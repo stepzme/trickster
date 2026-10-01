@@ -28,7 +28,3 @@ Yandex Practicum is a course companion that keeps active learning, catalog disco
 - Curriculum uses a drill-down list with checks for completed lessons.
 - Search and filter controls float lightly over long catalog lists.
 - Support is a simple conversation inbox; account settings use familiar rows.
-
-# System Access Timing
-
-No system-access timing or denial-recovery behavior was documented in the reviewed source.

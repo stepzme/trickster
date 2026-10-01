@@ -26,7 +26,3 @@ Home, Payments, Benefits, Chats, and More are the primary destinations. Home beg
 
 - Product browsing preserves adjacent context and keeps quick actions available.
 - Transaction rows align merchant, category, description, and signed amount for fast scanning.
-
-# System Access Timing
-
-No system-access timing or denial-recovery behavior was documented in the reviewed source.

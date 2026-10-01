@@ -26,7 +26,3 @@ Home, Catalog, prepared food, Cart, and Profile are the primary destinations. Ad
 
 - Keep delivery time and price persistent near the bottom.
 - Categories keep the catalog navigable as its scope grows.
-
-# System Access Timing
-
-No system-access timing or denial-recovery behavior was documented in the reviewed source.

@@ -18,10 +18,6 @@ Use soft blue, red, yellow, green, and neutral vehicle tones against white or pa
 
 Use illustrations for service selection, delivery types, driver programs, tips, and lightweight education. Use maps, real vehicle facts, and plain controls for active-trip decisions.
 
-# Production Requirements
-
-Preserve the documented placement, crop, negative space, and visual weight in production exports. Before final art exists, placeholders must preserve those same compositional properties.
-
 # Avoid
 
 - Do not replace the observed imagery language with unrelated stock art or arbitrary symbols.

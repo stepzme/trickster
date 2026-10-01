@@ -32,7 +32,3 @@ primary navigation remains visible across primary destinations. Profile opens fr
 - Preserve receipt actions after every transfer.
 - Let users configure home without hiding core accounts.
 - Distinguish bank chat, notifications, and editorial channels.
-
-# System Access Timing
-
-No system-access request timing or denial recovery was documented in the reviewed source.

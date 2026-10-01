@@ -26,7 +26,3 @@ Five persistent destinations cover Home, Catalog, Cart, Favorites, and Profile. 
 
 - Campaigns lead into their corresponding collections and products.
 - Checkout exposes one fulfillment choice before payment and benefits.
-
-# System Access Timing
-
-No system-access request timing or denial recovery was documented in the reviewed source.

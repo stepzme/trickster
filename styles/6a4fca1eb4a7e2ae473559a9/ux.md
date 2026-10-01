@@ -25,7 +25,3 @@ Five primary destinations connect Do, Me, Teams, Tribe, and Hack. Voice input an
 # Interaction Patterns
 
 - Date and task controls stay sparse so a short list never feels like an empty utility.
-
-# System Access Timing
-
-No system-access timing or denial-recovery behavior was documented in the reviewed source.

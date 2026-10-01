@@ -25,7 +25,3 @@ My Bank, History, Payments, Chats, and Apply form the primary navigation. My Ban
 # Interaction Patterns
 
 - Product and insurance catalogs use illustrative objects on simple rows.
-
-# System Access Timing
-
-No system-access timing or denial-recovery path was documented in the reviewed source.

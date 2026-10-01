@@ -25,7 +25,3 @@ Home, Operations, a raised QR scanner, Services, and Menu form primary navigatio
 # Interaction Patterns
 
 - Home is promotional and modular, while My Bank becomes calmer and list-based.
-
-# System Access Timing
-
-No system-access request timing or denial recovery was documented in the reviewed source.

@@ -21,10 +21,6 @@ Use the palette relationships explicitly described in the visual language and `u
 
 Use for onboarding, tariffs, roaming, entertainment, AI, store, cashback, and product stories. Keep balances, usage, history, security, and settings illustration-free.
 
-# Production Requirements
-
-Exact export formats, aspect ratios, animation behavior, and appearance variants were not documented. Where imagery is compositionally important, temporary placeholders must preserve its documented scale, placement, crop, and visual weight until final art exists.
-
 # Avoid
 
 - Do not mix unrelated character and object rendering styles inside one card.

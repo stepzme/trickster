@@ -33,7 +33,3 @@ Nearby, Encounters, Likes, Chat, and Profile persist in the primary navigation. 
 - Preserve an immediate safety exit from chat and profiles.
 - Keep premium benefits concrete and comparable.
 - Use overlays for transient match or boost state without losing context.
-
-# System Access Timing
-
-No system-access timing or denial-recovery path was documented in the reviewed source.

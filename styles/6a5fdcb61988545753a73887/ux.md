@@ -30,7 +30,3 @@ Home recommends the next lesson; Courses exposes the catalog; You contains profi
 - Explain why an answer failed.
 - Make progress visible but secondary.
 - Allow exit without disguising progress loss.
-
-# System Access Timing
-
-No system-access timing or denial-recovery behavior was documented in the reviewed source.

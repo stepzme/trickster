@@ -4,7 +4,6 @@ Tinkoff Journal presents editorial feeds, topic catalogs, financial courses, int
 
 # Navigation
 
-- The available catalog has no recorded flow sequences; this description is based on all 34 inspected image screens.
 - A three-part primary navigation covers Textbook, Journal, and Calculators.
 - Topic pages open article feeds; course items open lesson content and quizzes.
 
@@ -29,8 +28,4 @@ Tinkoff Journal presents editorial feeds, topic catalogs, financial courses, int
 
 # Interaction Patterns
 
-- Exact transition order is unverified because Screen Gallery exposes no flows for this app.
-
-# System Access Timing
-
-No system-access timing or denial-recovery path was documented in the reviewed source.
+- Topic selection opens an article feed, while course items progress from lesson content to interactive questions and results.

@@ -32,7 +32,3 @@ Search, Favorites, Place, Messages, and Logbook persist. The menu sheet exposes 
 - Show result count before applying deep filters.
 - Keep trust and report facts close to contact actions.
 - Separate paid promotion from ordinary listing management.
-
-# System Access Timing
-
-No system-access timing or denial-recovery path was documented in the reviewed source.

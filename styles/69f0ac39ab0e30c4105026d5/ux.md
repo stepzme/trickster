@@ -20,7 +20,3 @@ Home, Operations, Services, Messages, and More stay persistent; account detail a
 - Explain eligibility before requesting data.
 - Use one dominant action per step.
 - Give failures a direct recovery path.
-
-# System Access Timing
-
-No system-access request timing or denial recovery was documented in the reviewed source.

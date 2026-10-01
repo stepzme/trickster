@@ -31,7 +31,3 @@ Twinby combines swipe-based dating with compatibility scores, personality tests,
 # Interaction Patterns
 
 - Sensitive profile changes and verification use explicit steps and confirmations.
-
-# System Access Timing
-
-No system-access request timing or denial recovery was documented in the reviewed source.

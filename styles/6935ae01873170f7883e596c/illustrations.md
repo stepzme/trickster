@@ -18,10 +18,6 @@ Anchor illustrations in coral-red and magenta, with violet or deep blue secondar
 
 Reserve illustration for onboarding, gamified discounts, gifts, and confirmation states. New art must inherit the UI's coral accent, white space, and rounded 3D material treatment.
 
-# Production Requirements
-
-Use only the formats and crops supported by the implemented placement. Where the documented imagery is compositionally important, temporary placeholders must preserve its placement, crop, scale, negative space, and approximate visual weight until final art exists. No unobserved light/dark variants or export ratios are prescribed.
-
 # Avoid
 
 - Do not replace the documented image language with unrelated stock art, arbitrary symbols, or a denser composition.

@@ -17,7 +17,3 @@ Describe destinations, hierarchy, modal presentation, back/close behavior, and h
 # Interaction Patterns
 
 Describe repeated behavioral patterns: progressive disclosure, editing, confirmation, cancellation, feedback, recovery, and whether actions are immediate or staged. Keep visual properties in `ui.md`.
-
-# System Access Timing
-
-Record only observed or clearly implied moments when a flow needs Photos, Camera, biometrics, Microphone, Speech, Contacts, Calendar, Location, Bluetooth, or CallKit. State the user action that precedes access and the denial recovery path. Do not invent a permission request that was not observed.

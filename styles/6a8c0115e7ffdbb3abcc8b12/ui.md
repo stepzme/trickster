@@ -95,7 +95,6 @@ Amie turns calendar and todos into one physical workspace. The black divider is 
 ### Font Family
 
 - **System Sans** — calendar, todos, onboarding, search, and settings.
-- **System Mono** — imported IDs only; not visible in primary UI.
 
 ### Hierarchy
 

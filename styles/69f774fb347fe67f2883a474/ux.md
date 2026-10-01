@@ -33,7 +33,3 @@ The map is the home screen. tools handle radar, filters, zones, and guest mode; 
 - Gate driving and completion on physical checklists.
 - Separate pause from finish.
 - Keep support available during every rental state.
-
-# System Access Timing
-
-- Camera or Photos access follows the user choosing the documented capture, scan, or photo action. Denial recovery was not documented.

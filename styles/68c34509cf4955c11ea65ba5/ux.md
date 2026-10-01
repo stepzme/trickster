@@ -30,7 +30,3 @@ People, Devices, Items, and Me remain in the primary navigation. The map persist
 - Keep sharing reversible.
 - Confirm erase and removal.
 - Preserve selected entity while moving the map.
-
-# System Access Timing
-
-No system-access timing or denial-recovery path was documented in the reviewed source.

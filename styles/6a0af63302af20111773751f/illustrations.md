@@ -18,10 +18,6 @@ Anchor art in brand yellow and warm orange, supported by light blue, green, and 
 
 Use illustration for category entry points, services, and compact promotional banners. Do not replace property photography or analytical content with illustration;
 
-# Production Requirements
-
-Exact export formats, aspect ratios, animation behavior, and appearance variants were not documented. Where imagery is compositionally important, temporary placeholders must preserve its documented scale, placement, crop, and visual weight until final art exists.
-
 # Avoid
 
 Do not introduce an unrelated illustration style or substitute decorative symbols for source-supported imagery.

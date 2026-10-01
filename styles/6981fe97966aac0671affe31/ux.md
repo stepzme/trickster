@@ -38,7 +38,3 @@ Today, Vitals, and My Health remain in primary navigation. A persistent plus but
 - Metric explanations open in context and return to the current dashboard.
 - Put frequent logging behind one persistent plus action.
 - Keep device and account administration in the side menu.
-
-# System Access Timing
-
-No system-access request timing or denial recovery was documented in the reviewed source.

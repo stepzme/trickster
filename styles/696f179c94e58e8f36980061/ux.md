@@ -26,7 +26,3 @@ five persistent destinations cover Home, Catalog, loyalty Card, Cart, and Profil
 
 - Checkout is a guided sequence with progress indicators and persistent Next actions.
 - Empty, success, and campaign states provide contextual explanation.
-
-# System Access Timing
-
-No system-access request timing or denial recovery was documented in the reviewed source.

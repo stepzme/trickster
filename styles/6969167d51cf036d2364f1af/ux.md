@@ -34,7 +34,3 @@ Explore, Wishlists, Trips, Messages, and Profile form the traveler primary navig
 - Keep search criteria visible as a resumable summary.
 - Preserve traveler and host modes as distinct navigation systems.
 - Show booking status in text as well as with badges.
-
-# System Access Timing
-
-No system-access request timing or denial recovery was documented in the reviewed source.

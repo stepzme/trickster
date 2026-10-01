@@ -33,7 +33,3 @@ RZD Passengers centers on searching routes, comparing trains and fares, selectin
 # Interaction Patterns
 
 - Route and ticket context repeats across later steps to prevent errors.
-
-# System Access Timing
-
-No system-access timing or denial-recovery path was documented in the reviewed source.

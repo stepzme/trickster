@@ -18,10 +18,6 @@ Use vivid Otello green with white, charcoal, and small coral or blue accents. Pr
 
 Use this language for booking empty states, Super Price education, search completion, and success. Real property and destination photography remains the primary content language.
 
-# Production Requirements
-
-Use only the formats and crops supported by the implemented placement. Where the documented imagery is compositionally important, temporary placeholders must preserve its placement, crop, scale, negative space, and approximate visual weight until final art exists. No unobserved light/dark variants or export ratios are prescribed.
-
 # Avoid
 
 - Do not replace the documented image language with unrelated stock art, arbitrary symbols, or a denser composition.

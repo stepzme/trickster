@@ -30,10 +30,6 @@ Russian Post uses friendly 3D service objects to explain delivery products and s
 - Keep operational rows and status histories mostly illustration-free.
 - Create original assets in this visual language; do not copy brand characters, logos, or existing scenes.
 
-# Production Requirements
-
-Exact export formats, aspect ratios, animation behavior, and appearance variants were not documented. Where imagery is compositionally important, temporary placeholders must preserve its documented scale, placement, crop, and visual weight until final art exists.
-
 # Avoid
 
 Do not introduce an unrelated illustration style or substitute decorative symbols for source-supported imagery.

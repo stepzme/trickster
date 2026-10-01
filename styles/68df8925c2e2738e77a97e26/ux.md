@@ -30,7 +30,3 @@ A five-item primary navigation covers feed, search, create, notifications, and p
 # Interaction Patterns
 
 - Creation keeps prompt, cameo choices, and submission in one composer.
-
-# System Access Timing
-
-No system-access timing or denial-recovery path was documented in the reviewed source.

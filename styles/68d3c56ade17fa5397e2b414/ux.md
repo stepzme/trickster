@@ -32,7 +32,3 @@ Telcell Wallet combines balance, cards, payments, transport, transfers, rewards,
 
 - Four persistent destinations keep finance domains shallow.
 - Modals explain BON rules without leaving the marketplace.
-
-# System Access Timing
-
-No system-access timing or denial-recovery path was documented in the reviewed source.

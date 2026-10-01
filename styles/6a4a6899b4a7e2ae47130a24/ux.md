@@ -30,7 +30,3 @@ Home, eGov QR, Services, Messages, and Profile remain stable. Search and assista
 - Preserve form progress where permitted.
 - Pair status with resulting documents.
 - Keep legal and privacy detail reachable.
-
-# System Access Timing
-
-No system-access timing or denial-recovery behavior was documented in the reviewed source.

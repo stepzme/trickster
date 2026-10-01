@@ -30,7 +30,3 @@ WB Travel unifies package tours, flights, hotels, experiences, and editorial des
 # Interaction Patterns
 
 - Search preserves a predictable sequence: criteria, results, detail, traveler data, review, payment.
-
-# System Access Timing
-
-No system-access timing or denial-recovery behavior was documented in the reviewed source.

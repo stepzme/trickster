@@ -27,7 +27,3 @@ The visualization owns the screen. controls expose date, current time, location,
 - A deep navy star field and violet haze keep the scene immersive.
 - The moon and dotted path are the primary information graphic.
 - Time and phase update directly as the user moves through the orbit.
-
-# System Access Timing
-
-No system-access timing or denial-recovery behavior was documented in the reviewed source.

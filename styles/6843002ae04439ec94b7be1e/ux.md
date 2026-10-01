@@ -32,7 +32,3 @@ Yandex is a search and assistant super-app spanning text, voice, camera, shoppin
 
 - The universal search bar is the stable anchor across otherwise diverse tools.
 - Assistant suggestions show concrete starting points instead of an empty chat.
-
-# System Access Timing
-
-No system-access timing or denial-recovery path was documented in the reviewed source.

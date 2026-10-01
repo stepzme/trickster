@@ -32,7 +32,3 @@ VK Video is a broad video platform for personalized feeds, long-form playback, c
 
 - Continue Watching preserves progress on each thumbnail.
 - Kids content remains a distinct curated mode without changing the core navigation.
-
-# System Access Timing
-
-No system-access request timing or denial recovery was documented in the reviewed source.

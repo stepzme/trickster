@@ -24,7 +24,3 @@ The map and primary navigation anchor Carsharing, Long-term rental, and Menu. Fo
 - Keep door lock state explicit.
 - Warn before ending outside an allowed zone.
 - Confirm tariff, debt, and payment state.
-
-# System Access Timing
-
-No system-access request timing or denial recovery was documented in the reviewed source.

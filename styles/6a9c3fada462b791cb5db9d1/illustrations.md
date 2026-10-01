@@ -18,10 +18,6 @@ Use dusty navy and periwinkle for depth, blush and coral for warmth, and pale cy
 
 Use this language for onboarding, destination discovery, referral or savings campaigns, and processing states. Keep comparison lists, hotel cards, passenger details, payment choices, prices, and conditions on plain functional surfaces.
 
-# Production Requirements
-
-Exact export formats, aspect ratios, animation behavior, and appearance variants were not documented. Where imagery is compositionally important, temporary placeholders must preserve its documented scale, placement, crop, and visual weight until final art exists.
-
 # Avoid
 
 Do not introduce an unrelated illustration style or substitute decorative symbols for source-supported imagery.

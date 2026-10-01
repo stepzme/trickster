@@ -26,7 +26,3 @@ five persistent destinations connect Mail, Cloud, context-specific productivity,
 
 - Lists remain flat and scan-friendly with lightweight grouping.
 - Empty states pair short guidance with playful branded artwork.
-
-# System Access Timing
-
-No system-access request timing or denial recovery was documented in the reviewed source.

@@ -25,7 +25,3 @@ Three fixed destinations connect Home, Explore, and Profile. The content viewer 
 # Interaction Patterns
 
 - Humor and character expression provide the teaching context.
-
-# System Access Timing
-
-No system-access timing or denial-recovery path was documented in the reviewed source.

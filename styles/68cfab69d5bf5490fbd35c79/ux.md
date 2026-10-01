@@ -25,7 +25,3 @@ Home, Services, a QR scanner, History, and Apps form the primary navigation. Hom
 # Interaction Patterns
 
 - The customizable Home announces configuration without blocking current banking tasks.
-
-# System Access Timing
-
-No system-access timing or denial-recovery path was documented in the reviewed source.

@@ -19,7 +19,3 @@ A five primary destinations anchors Products, Catalog, Ready-made food, Cart, an
 # Interaction Patterns
 
 Product quantity changes happen in place; the next commitment remains available; product-detail presentations focus the current item without losing the shopping context.
-
-# System Access Timing
-
-No system-access timing or denial-recovery behavior was documented in the reviewed source.

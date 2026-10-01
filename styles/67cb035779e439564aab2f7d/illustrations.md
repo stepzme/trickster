@@ -30,10 +30,6 @@ setka uses glossy violet network illustrations during onboarding and identity mo
 - Keep the subject directly related to connections, careers, or communities.
 - Create original characters and node arrangements rather than copying existing assets.
 
-# Production Requirements
-
-Preserve the documented placement, crop, negative space, and visual weight in production exports. Before final art exists, placeholders must preserve those same compositional properties.
-
 # Avoid
 
 - Do not replace the observed imagery language with unrelated stock art or arbitrary symbols.

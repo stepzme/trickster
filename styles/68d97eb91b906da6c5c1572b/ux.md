@@ -23,7 +23,3 @@ A five-item primary navigation stays visible across primary sections. Search and
 # Interaction Patterns
 
 - Show storage state persistently.
-
-# System Access Timing
-
-No system-access timing or denial-recovery path was documented in the reviewed source.

@@ -37,7 +37,3 @@ Five persistent tabs cover Home, Bookings, Warehouses, Payments, and Courses. Pr
 - Use bottom sheets for bounded choices such as time and duration.
 - Pair every amount with its status, period, or calculation context.
 - Preserve persistent tab navigation through dense informational screens.
-
-# System Access Timing
-
-No system-access timing or denial-recovery behavior was documented in the reviewed source.

@@ -32,7 +32,3 @@ t2 combines mobile-account management, tariff controls, security, data exchange,
 
 - Dense modules use bold condensed headings and clear chevrons.
 - Playful 3D objects explain services without replacing prices or terms.
-
-# System Access Timing
-
-No system-access request timing or denial recovery was documented in the reviewed source.

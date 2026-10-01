@@ -31,7 +31,3 @@ Tiimo combines daily planning, routines, prioritized to-dos, timers, focus, mood
 # Interaction Patterns
 
 - Serif display headings make planning feel personal and editorial.
-
-# System Access Timing
-
-No system-access request timing or denial recovery was documented in the reviewed source.

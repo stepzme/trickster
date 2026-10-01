@@ -31,7 +31,3 @@ Vivid is a consumer finance hub combining account pockets, debit cards, timeline
 # Interaction Patterns
 
 - Product creation is progressive and always returns to the pocket overview.
-
-# System Access Timing
-
-No system-access timing or denial-recovery path was documented in the reviewed source.

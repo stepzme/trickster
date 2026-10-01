@@ -31,7 +31,3 @@ Home, My loans, New loan, and Support remain in the primary navigation. Notifica
 - Separate Airba loan products from external partner catalogues.
 - Use one clear action on success and empty states.
 - Preserve active/history tabs inside My loans.
-
-# System Access Timing
-
-No system-access timing or denial-recovery behavior was documented in the reviewed source.

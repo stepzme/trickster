@@ -25,7 +25,3 @@ Primary navigation connects Gift Ideas, My Wishlist, Friends, and Secret Santa. 
 # Interaction Patterns
 
 - Editorial collections lead into individual gift items and their purchase destinations.
-
-# System Access Timing
-
-No system-access request timing or denial recovery was documented in the reviewed source.

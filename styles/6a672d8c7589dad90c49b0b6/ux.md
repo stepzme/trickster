@@ -32,7 +32,3 @@ Suno combines AI song creation, social music discovery, playback, library manage
 
 - Bottom sheets group creation options without leaving the current context.
 - The mini-player expands into playback without interrupting listening.
-
-# System Access Timing
-
-No system-access timing or denial-recovery behavior was documented in the reviewed source.

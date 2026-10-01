@@ -21,10 +21,6 @@ Color and material rules are included in Visual Style; no additional palette rel
 
 Use for promotions, stories, onboarding, loyalty, and branded empty states. Keep products, prices, basket, checkout, payment, and order status photo- or data-led.
 
-# Production Requirements
-
-Use only the formats and crops supported by the implemented placement. Where the documented imagery is compositionally important, temporary placeholders must preserve its placement, crop, scale, negative space, and approximate visual weight until final art exists. No unobserved light/dark variants or export ratios are prescribed.
-
 # Avoid
 
 - Do not replace product cutouts with illustration.

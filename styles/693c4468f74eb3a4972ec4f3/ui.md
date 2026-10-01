@@ -132,7 +132,7 @@ Search supports text and image input. Checkout groups recipient, address, paymen
 
 Sale, Combo, Below Market, free delivery, stock, and order states use explicit labels plus color. Campaign rules remain available from information sheets.
 
-Controls retain at least a 44-point interactive area. Pressed and disabled treatments should stay within the documented palette and hierarchy; no unobserved state styling is prescribed.
+Controls retain at least a 44-point interactive area. Pressed and disabled treatments should stay within the documented palette and hierarchy.
 
 # Imagery and icons
 
@@ -160,7 +160,7 @@ Only the states documented above are specified; other states must preserve the s
 - Reduce discovery grid columns before shrinking product text. Stack checkout choices and keep total action full width.
 - Present the keyboard and system permission UI natively, then return to the same visual context.
 - Preserve semantic reading order in VoiceOver and allow text to grow with Dynamic Type.
-- Do not infer an unobserved dark or light variant; use the appearance documented by the reference.
+- Preserve the documented appearance instead of introducing an unrelated light or dark palette.
 
 # Anti-generic checklist
 

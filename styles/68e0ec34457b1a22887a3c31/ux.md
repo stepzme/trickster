@@ -25,7 +25,3 @@ Five fixed destinations cover Home, Favorites, Post, Messages, and Profile. Home
 # Interaction Patterns
 
 - Posting is a long stepped flow with persistent actions.
-
-# System Access Timing
-
-No system-access timing or denial-recovery path was documented in the reviewed source.

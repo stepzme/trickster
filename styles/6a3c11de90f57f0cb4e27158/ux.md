@@ -19,7 +19,3 @@ The composer remains available throughout a chat. A contextual panel exposes New
 # Interaction Patterns
 
 The composer remains available through long conversations, voice recording remains available, contextual response tools remain secondary, and navigation preserves conversational continuity.
-
-# System Access Timing
-
-No system-access timing or denial-recovery behavior was documented in the reviewed source.

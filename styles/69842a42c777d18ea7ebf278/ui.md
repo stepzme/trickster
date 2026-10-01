@@ -144,7 +144,7 @@ Checkout fields are white, rectangular, and divider-led. Focus and validation mu
 
 Stock, delivery, and promotion states appear as short text close to the decision. Empty states remain typographic and restrained.
 
-Controls retain at least a 44-point interactive area. Pressed and disabled treatments should stay within the documented palette and hierarchy; no unobserved state styling is prescribed.
+Controls retain at least a 44-point interactive area. Pressed and disabled treatments should stay within the documented palette and hierarchy.
 
 # Imagery and icons
 
@@ -170,7 +170,7 @@ Only the states documented above are specified; other states must preserve the s
 - Keep two product columns while names remain readable; stack size, delivery, and checkout decisions in one column.
 - Present the keyboard and system permission UI natively, then return to the same visual context.
 - Preserve semantic reading order in VoiceOver and allow text to grow with Dynamic Type.
-- Do not infer an unobserved dark or light variant; use the appearance documented by the reference.
+- Preserve the documented appearance instead of introducing an unrelated light or dark palette.
 
 # Anti-generic checklist
 

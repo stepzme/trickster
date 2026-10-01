@@ -35,7 +35,3 @@ Feed, Save, Pay, Invest, and Credit remain in primary navigation. Each tab opens
 - Pair values with currency, status, and time context.
 - Keep recommendations dismissible and distinct from account facts.
 - Use inline validation and progress states instead of separate error screens.
-
-# System Access Timing
-
-No system-access request timing or denial recovery was documented in the reviewed source.

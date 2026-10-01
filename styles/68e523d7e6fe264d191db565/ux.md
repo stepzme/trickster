@@ -24,7 +24,3 @@ Five fixed destinations cover Today, Products, New Scan, Insights, and Sunshine 
 # Interaction Patterns
 
 - The smiling assistant opens contextual explanations without replacing the current screen.
-
-# System Access Timing
-
-No system-access timing or denial-recovery path was documented in the reviewed source.

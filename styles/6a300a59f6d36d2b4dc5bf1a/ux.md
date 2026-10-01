@@ -32,7 +32,3 @@ A five primary destinations anchors Account, Shop, the Services launcher, Simply
 - Favorite actions can be customized for repeat tasks.
 - Catalog and support open as bottom sheets without losing home context.
 - Long commercial terms remain collapsible while price and CTA stay easy to find.
-
-# System Access Timing
-
-No system-access timing or denial-recovery behavior was documented in the reviewed source.

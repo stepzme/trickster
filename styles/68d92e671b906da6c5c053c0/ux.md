@@ -32,7 +32,3 @@ VK Messenger combines personal and community chats, contacts, voice and video ca
 
 - Avatars and presence make dense lists scannable.
 - Unread counts and missed calls stay attached to their navigation or list item.
-
-# System Access Timing
-
-No system-access timing or denial-recovery path was documented in the reviewed source.

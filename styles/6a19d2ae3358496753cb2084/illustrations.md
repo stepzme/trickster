@@ -18,10 +18,6 @@ Electric blue anchors the composition, with magenta and violet gradients, white 
 
 Apply this language to seasonal offers, loyalty prompts, and destination campaigns. Functional search, passenger, payment, and order surfaces remain clean and restrained.
 
-# Production Requirements
-
-Exact export formats, aspect ratios, animation behavior, and appearance variants were not documented. Where imagery is compositionally important, temporary placeholders must preserve its documented scale, placement, crop, and visual weight until final art exists.
-
 # Avoid
 
 Do not introduce an unrelated illustration style or substitute decorative symbols for source-supported imagery.

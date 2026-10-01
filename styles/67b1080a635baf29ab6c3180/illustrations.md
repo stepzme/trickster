@@ -18,10 +18,6 @@ Use acid green as the brand anchor with black, white, yellow, electric blue, red
 
 Use the mascot for onboarding, progress, empty states, and encouragement. Use meme art only when it directly carries a phrase or lesson; controls must remain readable over any source style.
 
-# Production Requirements
-
-Preserve the documented placement, crop, negative space, and visual weight in production exports. Before final art exists, placeholders must preserve those same compositional properties.
-
 # Avoid
 
 - Do not replace the observed imagery language with unrelated stock art or arbitrary symbols.

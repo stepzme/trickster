@@ -36,7 +36,3 @@ A persistent four-item primary navigation separates Home, My Courses, Library, a
 # Interaction Patterns
 
 - Player controls, lesson navigation, reactions, and key moments remain attached to the learning context.
-
-# System Access Timing
-
-No system-access request timing or denial recovery was documented in the reviewed source.

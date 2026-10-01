@@ -25,7 +25,3 @@ five persistent destinations connect Home, Card, Pay, Invite, and Explore. Accou
 # Interaction Patterns
 
 - Confirmation and support use simple one-column sheets.
-
-# System Access Timing
-
-No system-access request timing or denial recovery was documented in the reviewed source.

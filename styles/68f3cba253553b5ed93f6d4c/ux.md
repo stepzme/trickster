@@ -29,7 +29,3 @@ Home, Clips, Create, Video, and Channel remain in primary navigation. Search, no
 - Make subscription reversible.
 - Confirm draft loss or save.
 - Keep moderation actions reachable but secondary.
-
-# System Access Timing
-
-No system-access request timing or denial recovery was documented in the reviewed source.

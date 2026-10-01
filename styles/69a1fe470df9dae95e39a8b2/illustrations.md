@@ -18,10 +18,6 @@ Use forest green and mint with restrained peach, coral, yellow, and cream accent
 
 Use illustration for savings education, growth offers, benefits, and empty states; keep transfers and verification purely functional. New art should remain harmonious with `ui.md`.
 
-# Production Requirements
-
-Use only the formats and crops supported by the implemented placement. Where the documented imagery is compositionally important, temporary placeholders must preserve its placement, crop, scale, negative space, and approximate visual weight until final art exists. No unobserved light/dark variants or export ratios are prescribed.
-
 # Avoid
 
 - Do not replace the documented image language with unrelated stock art, arbitrary symbols, or a denser composition.

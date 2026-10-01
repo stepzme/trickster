@@ -33,7 +33,3 @@ Temu is a promotion-heavy marketplace for search, category browsing, product com
 - Urgency labels, crossed prices, countdowns, and badges compress decision cues into products.
 - Checkout preserves cart total and payment.
 -
-
-# System Access Timing
-
-No system-access timing or denial-recovery behavior was documented in the reviewed source.

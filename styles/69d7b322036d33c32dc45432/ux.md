@@ -27,7 +27,3 @@ Yandex Realty is a listing marketplace that balances image-heavy property search
 - Search chips expose high-value filters without opening the full form.
 - Listing details present structured facts in a consistent hierarchy.
 - Favorites separate saved listings from saved searches, while chats keep service and human threads together.
-
-# System Access Timing
-
-No system-access request timing or denial recovery was documented in the reviewed source.

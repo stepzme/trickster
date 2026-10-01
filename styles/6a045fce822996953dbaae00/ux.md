@@ -32,7 +32,3 @@ A four-item navigation anchors Home, Payments, Wallet, and More. Search stays ac
 - Payment screens present the total before supporting details and confirmation.
 - Primary navigation remains available without interrupting the current task.
 - Klarna payment actions remain available inside merchant browsing context.
-
-# System Access Timing
-
-No system-access timing or denial-recovery behavior was documented in the reviewed source.

@@ -18,10 +18,6 @@ Anchor rewards in violet and magenta, maps in sky blue and green, and achievemen
 
 Use illustrations for maps, levels, characters, rewards, and celebration.md`.
 
-# Production Requirements
-
-Exact export formats, aspect ratios, animation behavior, and appearance variants were not documented. Where imagery is compositionally important, temporary placeholders must preserve its documented scale, placement, crop, and visual weight until final art exists.
-
 # Avoid
 
 Do not introduce an unrelated illustration style or substitute decorative symbols for source-supported imagery.

@@ -35,7 +35,3 @@ Simply joins a mobile wallet, card, service payments, transfers, history, bonuse
 - Finance forms stay linear and use native verification patterns.
 - Promotions are visually richer but return into the same wallet context.
 - Profile groups identity, security, other, and support sections.
-
-# System Access Timing
-
-No system-access timing or denial-recovery behavior was documented in the reviewed source.

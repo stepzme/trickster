@@ -33,7 +33,3 @@ Wink is a media hub for films, series, television, music, books, sport, and kids
 - A persistent watch action anchors title pages; secondary save and share actions sit together.
 - Subscription, promo code, and payment steps appear only when access is required.
 - Profile switching distinguishes primary, additional, and kids viewing contexts.
-
-# System Access Timing
-
-No system-access request timing or denial recovery was documented in the reviewed source.

@@ -19,7 +19,3 @@ City search changes location; condition items and map shortcuts open focused det
 
 - Keep current location explicit.
 - Synchronize map, timeline, and selected layer.
-
-# System Access Timing
-
-No system-access timing or denial-recovery path was documented in the reviewed source.

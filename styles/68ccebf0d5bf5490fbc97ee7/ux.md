@@ -27,7 +27,3 @@ The drawer contains New chat, Chats, Artifacts, recents, account, and settings. 
 - Preserve code formatting.
 - Show enabled capabilities before use.
 - Confirm logout and account deletion.
-
-# System Access Timing
-
-No system-access timing or denial-recovery path was documented in the reviewed source.

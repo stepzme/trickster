@@ -92,7 +92,7 @@ Keep account and preference fields calm, lightly filled, and clearly labeled.
 
 Show loading, playing, paused, progress, favorite, and completion without interrupting the calm surface.
 
-Controls retain at least a 44-point interactive area. Pressed and disabled treatments should stay within the documented palette and hierarchy; no unobserved state styling is prescribed.
+Controls retain at least a 44-point interactive area. Pressed and disabled treatments should stay within the documented palette and hierarchy.
 
 # Imagery and icons
 
@@ -118,7 +118,7 @@ Only the states documented above are specified; other states must preserve the s
 - Preserve practice title, duration, playback, progress, and exit; reduce secondary artwork details first.
 - Present the keyboard and system permission UI natively, then return to the same visual context.
 - Preserve semantic reading order in VoiceOver and allow text to grow with Dynamic Type.
-- Do not infer an unobserved dark or light variant; use the appearance documented by the reference.
+- Preserve the documented appearance instead of introducing an unrelated light or dark palette.
 
 # Anti-generic checklist
 

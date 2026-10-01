@@ -26,7 +26,3 @@ five persistent destinations cover Schedule, Grades, Tasks, School, and Accounts
 
 - Schedule hierarchy separates lessons, breaks, homework, and extracurricular events.
 - Errors and payment notices use clear inline banners close to the affected account.
-
-# System Access Timing
-
-No system-access request timing or denial recovery was documented in the reviewed source.

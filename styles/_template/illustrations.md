@@ -18,10 +18,6 @@ Describe the palette relationship to `ui.md`, contrast, gradients, surfaces, out
 
 Describe how the language changes for onboarding, empty, success, progress, error, permission, or promotional states when those variants were observed.
 
-# Production Requirements
-
-Record required aspect ratios, transparent backgrounds, safe crop regions, dark/light variants, and how temporary placeholders must preserve size and visual weight before final art exists.
-
 # Avoid
 
 List image styles, stock treatments, symbol substitutions, crops, or densities that would break the observed language.

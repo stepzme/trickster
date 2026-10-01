@@ -21,7 +21,3 @@ Chats, History, Home, Transfers, and Payments remain stable; product tabs organi
 - Keep source and destination explicit.
 - Review fees and limits before confirmation.
 - Preserve history and receipt access.
-
-# System Access Timing
-
-No system-access timing or denial-recovery behavior was documented in the reviewed source.

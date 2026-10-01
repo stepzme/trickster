@@ -30,10 +30,6 @@ Skyeng combines soft 3D blue characters with bright flat educational scenes. Cha
 - Use photography for real tutors or video lessons.
 - Create original characters and scenes; do not copy branded source assets.
 
-# Production Requirements
-
-Exact export formats, aspect ratios, animation behavior, and appearance variants were not documented. Where imagery is compositionally important, temporary placeholders must preserve its documented scale, placement, crop, and visual weight until final art exists.
-
 # Avoid
 
 Do not introduce an unrelated illustration style or substitute decorative symbols for source-supported imagery.

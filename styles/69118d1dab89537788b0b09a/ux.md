@@ -19,7 +19,3 @@ Contextual controls open conversation history and account context. The composer 
 # Interaction Patterns
 
 Suggestions reduce blank-state friction, the composer expands for multiline input, generation exposes a stop state, answers remain mostly unboxed, and feedback or share actions stay secondary.
-
-# System Access Timing
-
-- Microphone access follows the user choosing the documented voice or recording action. Denial recovery was not documented.

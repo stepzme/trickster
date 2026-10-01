@@ -25,7 +25,3 @@ Search, Super Prices, Favorites, Bookings, and Profile form primary navigation. 
 # Interaction Patterns
 
 - Empty booking states use one friendly object and a direct recovery action.
-
-# System Access Timing
-
-No system-access request timing or denial recovery was documented in the reviewed source.

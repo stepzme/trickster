@@ -31,7 +31,3 @@ Wildberries is a dense marketplace covering personalized discovery, search, prod
 # Interaction Patterns
 
 - Recommendations continue through product, cart, processing, and tracking screens.
-
-# System Access Timing
-
-No system-access timing or denial-recovery path was documented in the reviewed source.

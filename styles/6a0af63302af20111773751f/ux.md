@@ -25,7 +25,3 @@ Five primary destinations cover Home, Favorites, Post, Messages, and Profile. Ca
 
 - Dense listings keep price and essential attributes above supporting metadata.
 - Filters, map access, and contact actions remain reachable during long browsing sessions.
-
-# System Access Timing
-
-No system-access timing or denial-recovery behavior was documented in the reviewed source.

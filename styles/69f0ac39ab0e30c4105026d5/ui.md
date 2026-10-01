@@ -92,7 +92,7 @@ Group labeled banking fields in white cards with explicit editable and disabled 
 
 Show balance, pending amount, reward, eligibility, completion, and failure near the affected object.
 
-Controls retain at least a 44-point interactive area. Pressed and disabled treatments should stay within the documented palette and hierarchy; no unobserved state styling is prescribed.
+Controls retain at least a 44-point interactive area. Pressed and disabled treatments should stay within the documented palette and hierarchy.
 
 # Imagery and icons
 
@@ -118,7 +118,7 @@ Only the states documented above are specified; other states must preserve the s
 - Preserve balance, primary actions, current task, and confirmation; move promotions lower.
 - Present the keyboard and system permission UI natively, then return to the same visual context.
 - Preserve semantic reading order in VoiceOver and allow text to grow with Dynamic Type.
-- Do not infer an unobserved dark or light variant; use the appearance documented by the reference.
+- Preserve the documented appearance instead of introducing an unrelated light or dark palette.
 
 # Anti-generic checklist
 

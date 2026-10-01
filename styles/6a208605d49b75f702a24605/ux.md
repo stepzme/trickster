@@ -26,7 +26,3 @@ Home, Cashback, Orders, Chats, and Profile are the primary destinations. A trave
 
 - Dense results align times, baggage, price, rating, and cashback for comparison.
 - Filters remain available throughout long flight and hotel lists.
-
-# System Access Timing
-
-No system-access timing or denial-recovery behavior was documented in the reviewed source.

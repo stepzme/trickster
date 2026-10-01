@@ -26,7 +26,3 @@ Five destinations connect Promotions, Catalog, Home, Cart, and Profile. Search a
 
 - Product information remains available while browsing.
 - Checkout uses staged decisions with the total and next action available.
-
-# System Access Timing
-
-No system-access timing or denial-recovery behavior was documented in the reviewed source.

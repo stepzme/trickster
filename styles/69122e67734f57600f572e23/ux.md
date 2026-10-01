@@ -35,7 +35,3 @@ Raiffeisen is a task-first banking app that combines accounts, fast transfers, p
 
 - Short tutorial bubbles point to unfamiliar controls without blocking the whole screen.
 - Empty states use a single friendly symbol and one explanatory sentence.
-
-# System Access Timing
-
-No system-access request timing or denial recovery was documented in the reviewed source.

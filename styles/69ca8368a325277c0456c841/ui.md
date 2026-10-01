@@ -150,7 +150,7 @@ Search is the main discovery field. Product options use chips and swatches. Chec
 
 Delivery cards show merchant, state, and small product preview. Order progress and maps stay practical. Loading uses the violet mark without adding an ornamental full-screen state.
 
-Controls retain at least a 44-point interactive area. Pressed and disabled treatments should stay within the documented palette and hierarchy; no unobserved state styling is prescribed.
+Controls retain at least a 44-point interactive area. Pressed and disabled treatments should stay within the documented palette and hierarchy.
 
 # Imagery and icons
 
@@ -176,7 +176,7 @@ Only the states documented above are specified; other states must preserve the s
 - Allow brand and product carousels to scroll horizontally. Keep floating navigation and active cart access visible while browsing.
 - Present the keyboard and system permission UI natively, then return to the same visual context.
 - Preserve semantic reading order in VoiceOver and allow text to grow with Dynamic Type.
-- Do not infer an unobserved dark or light variant; use the appearance documented by the reference.
+- Preserve the documented appearance instead of introducing an unrelated light or dark palette.
 
 # Anti-generic checklist
 

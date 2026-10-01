@@ -18,10 +18,6 @@ Anchor imagery in Alatau blue and yellow. Use green for deposits and success, vi
 
 Use 3D objects for product discovery, service taxonomy, empty states, and confirmations. Use literal card renders and merchant logos when precise financial identity matters.
 
-# Production Requirements
-
-Exact export formats, aspect ratios, animation behavior, and appearance variants were not documented. Where imagery is compositionally important, temporary placeholders must preserve its documented scale, placement, crop, and visual weight until final art exists.
-
 # Avoid
 
 Do not introduce an unrelated illustration style or substitute decorative symbols for source-supported imagery.

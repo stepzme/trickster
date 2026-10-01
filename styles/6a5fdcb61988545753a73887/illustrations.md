@@ -21,10 +21,6 @@ Use the palette relationships explicitly described in the visual language and `u
 
 Use for course identity, lesson questions, explanations, skill paths, and progress. Keep account, payment, support, and legal settings illustration-free.
 
-# Production Requirements
-
-Exact export formats, aspect ratios, animation behavior, and appearance variants were not documented. Where imagery is compositionally important, temporary placeholders must preserve its documented scale, placement, crop, and visual weight until final art exists.
-
 # Avoid
 
 - Every object must support the concept being taught.

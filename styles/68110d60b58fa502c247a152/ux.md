@@ -31,7 +31,3 @@ Vkusno I Tochka combines restaurant loyalty, promotions, menu browsing, mobile o
 # Interaction Patterns
 
 - Loyalty actions are grouped into earn and spend.
-
-# System Access Timing
-
-No system-access timing or denial-recovery path was documented in the reviewed source.

@@ -19,7 +19,3 @@ Five primary destinations anchor Tickets, Stays, Orders, Support, and Profile. M
 # Interaction Patterns
 
 Date and passenger choices use focused sheets. Confirmed orders keep time, route, carriage, and ticket download together for follow-up.
-
-# System Access Timing
-
-No system-access timing or denial-recovery behavior was documented in the reviewed source.

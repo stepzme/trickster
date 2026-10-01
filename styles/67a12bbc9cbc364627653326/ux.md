@@ -19,7 +19,3 @@ Five primary destinations anchor Search, Favorites, Responses, Messages, and Pro
 # Interaction Patterns
 
 No behavior-only interaction pattern could be separated from the reviewed visual observations.
-
-# System Access Timing
-
-No system-access timing or denial-recovery path was documented in the reviewed source.

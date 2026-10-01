@@ -18,10 +18,6 @@ Use violet and pink as the primary light sources, with cyan accents and pale neu
 
 Use 3D scenes for onboarding, subscription benefits, financial education, and promotional cards; use standard UI icons for navigation and dense data. If a new concept has no direct reference, represent it with one simple tactile metaphor in this same material and lighting system.
 
-# Production Requirements
-
-Use only the formats and crops supported by the implemented placement. Where the documented imagery is compositionally important, temporary placeholders must preserve its placement, crop, scale, negative space, and approximate visual weight until final art exists. No unobserved light/dark variants or export ratios are prescribed.
-
 # Avoid
 
 - Do not replace the documented image language with unrelated stock art, arbitrary symbols, or a denser composition.

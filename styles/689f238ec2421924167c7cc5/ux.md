@@ -34,7 +34,3 @@ The map is the home context. controls handle menu, refresh, filters, fuel, zoom,
 - Separate car controls from rental-ending action.
 - Confirm remote commands with progress and completion states.
 - Make identity capture instructions explicit.
-
-# System Access Timing
-
-No system-access timing or denial-recovery path was documented in the reviewed source.

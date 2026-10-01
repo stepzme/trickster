@@ -25,7 +25,3 @@ controls move back, open list, search, and add. Today, Calendars, and Inbox rema
 - Snap events to time accurately.
 - Keep current time visible.
 - Confirm destructive unsubscribe.
-
-# System Access Timing
-
-No system-access timing or denial-recovery path was documented in the reviewed source.

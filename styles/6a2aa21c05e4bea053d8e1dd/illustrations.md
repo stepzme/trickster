@@ -30,10 +30,6 @@ Simply uses glossy 3D promotional objects to represent cards, shopping, travel, 
 - Match each object to the benefit it represents.
 - Create original objects rather than copying existing campaign assets.
 
-# Production Requirements
-
-Exact export formats, aspect ratios, animation behavior, and appearance variants were not documented. Where imagery is compositionally important, temporary placeholders must preserve its documented scale, placement, crop, and visual weight until final art exists.
-
 # Avoid
 
 Do not introduce an unrelated illustration style or substitute decorative symbols for source-supported imagery.

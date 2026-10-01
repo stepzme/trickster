@@ -23,7 +23,3 @@ Four primary destinations connect Listen, Favorites, Search, and Subscription. A
 # Interaction Patterns
 
 - The mini player preserves listening context across navigation.
-
-# System Access Timing
-
-No system-access timing or denial-recovery path was documented in the reviewed source.

@@ -31,7 +31,3 @@ Wibes combines a creator feed, shoppable videos, editorial posts, profiles, prod
 # Interaction Patterns
 
 - The catalog has one onboarding flow; the remaining product behavior was verified from all 56 available image screens.
-
-# System Access Timing
-
-No system-access timing or denial-recovery path was documented in the reviewed source.

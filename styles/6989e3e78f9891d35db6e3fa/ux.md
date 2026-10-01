@@ -19,7 +19,3 @@ The journal or activity overview remains the base layer; selection, logging, cus
 
 - Ask for health or media access only when relevant.
 - Preserve partial input when a picker or permission closes.
-
-# System Access Timing
-
-No system-access request timing or denial recovery was documented in the reviewed source.

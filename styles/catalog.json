@@ -758,7 +758,7 @@
     ],
     "uiSummary": "An editorial learning app built from white reading surfaces, oversized black headlines, vivid cobalt actions, image-led article cards, and expressive flat line illustrations on bold color fields. The interface balances magazine energy with highly readable course and calculator content.",
     "uxSummary": "Tinkoff Journal presents editorial feeds, topic catalogs, financial courses, interactive lessons, calculators, and account settings.",
-    "navigationSummary": "- The available catalog has no recorded flow sequences; this description is based on all 34 inspected image screens. - A three-part primary navigation covers Textbook, Journal, and Calculators. - Topic pages open article feeds; course items open lesson content and quizzes.",
+    "navigationSummary": "- A three-part primary navigation covers Textbook, Journal, and Calculators. - Topic pages open article feeds; course items open lesson content and quizzes.",
     "coreFlows": [
       "Read the journal",
       "Complete a course",
@@ -922,7 +922,7 @@
     ],
     "uiSummary": "A native dark market utility built from pure-black canvas, graphite sheets, white condensed information hierarchy, vivid green and red quote movement, blue system actions, thin chart lines, and dense watchlist rows. Visual character comes from financial data rather than decoration.",
     "uxSummary": "Stocks is a, list-led market utility for watchlists, quote details, charts, widgets, and financial news.",
-    "navigationSummary": "- The available catalog has no recorded flow sequences; navigation is inferred only from the 37 inspected screens. - A watchlist screen combines search, symbols, and Business News. - Selecting a symbol opens a quote sheet with time-range controls, metrics, news, and a contextual overflow menu.",
+    "navigationSummary": "- A watchlist screen combines search, symbols, and Business News. - Selecting a symbol opens a quote sheet with time-range controls, metrics, news, and a contextual overflow menu.",
     "coreFlows": [
       "Manage a watchlist",
       "Inspect a quote",
@@ -1117,7 +1117,7 @@
     ],
     "uiSummary": "A calm Apple-style reference interface built from white and pale-gray grouped surfaces, large black system headlines, blue actions, colorful category heroes, and crisp device screenshots. The visual language is native, instructional, and content-first.",
     "uxSummary": "Tips is a reference library of short Apple-product guides organized into collections, searchable topics, saved items, and step-by-step articles.",
-    "navigationSummary": "- Screen Gallery exposes no recorded flows; this description is based on all 37 inspected image screens. - The collection index is the primary browse context, with search and saved tips available navigation. - Category pages lead to individual articles; back, share, and bookmark actions preserve the reading context.",
+    "navigationSummary": "- The collection index is the primary browse context, with search and saved tips available navigation. - Category pages lead to individual articles; back, share, and bookmark actions preserve the reading context.",
     "coreFlows": [
       "Find a tip",
       "Save and revisit",

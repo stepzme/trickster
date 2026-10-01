@@ -29,7 +29,3 @@ primary navigation moves among path, practice, leagues, social, profile, and mor
 - Explain errors without breaking momentum.
 - Preserve progress across interruptions.
 - Use celebration in proportion to achievement.
-
-# System Access Timing
-
-No system-access request timing or denial recovery was documented in the reviewed source.

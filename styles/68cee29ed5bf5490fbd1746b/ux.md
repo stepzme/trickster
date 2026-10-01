@@ -29,7 +29,3 @@ Home, Catalog, Profile, and Cart remain fixed. Search and barcode scan bridge br
 - Preserve cart state across catalog navigation.
 - Show pickup or delivery context throughout checkout.
 - Confirm payment and cancellation explicitly.
-
-# System Access Timing
-
-No system-access timing or denial-recovery path was documented in the reviewed source.

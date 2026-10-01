@@ -22,7 +22,3 @@ Orders, Chats, Balance, Profile, and Support remain available; list-map, search,
 - Preserve filters across detail navigation.
 - Link chats to the originating order.
 - Confirm complaints and deletion.
-
-# System Access Timing
-
-No system-access request timing or denial recovery was documented in the reviewed source.

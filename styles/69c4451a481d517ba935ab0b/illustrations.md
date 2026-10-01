@@ -18,10 +18,6 @@ Build illustrations from the same yellow, green, blue, and red families used by 
 
 Use character scenes for onboarding and supportive explanations, individual geometric symbols for recorded emotions, and restrained line drawings for exercise categories. Illustration should clarify emotional tone or make an abstract practice tangible; it should not decorate settings, forms, or dense data screens.
 
-# Production Requirements
-
-Use only the formats and crops supported by the implemented placement. Where the documented imagery is compositionally important, temporary placeholders must preserve its placement, crop, scale, negative space, and approximate visual weight until final art exists. No unobserved light/dark variants or export ratios are prescribed.
-
 # Avoid
 
 - Do not replace the documented image language with unrelated stock art, arbitrary symbols, or a denser composition.

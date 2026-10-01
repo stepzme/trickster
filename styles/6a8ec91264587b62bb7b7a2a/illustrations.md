@@ -18,10 +18,6 @@ Anchor in royal and electric blue, then add violet, cyan, green, yellow, and sma
 
 Use illustration for card and credit promotion, cashback selection, onboarding, payment success, and empty product states. Financial controls and history should remain data-first.
 
-# Production Requirements
-
-Exact export formats, aspect ratios, animation behavior, and appearance variants were not documented. Where imagery is compositionally important, temporary placeholders must preserve its documented scale, placement, crop, and visual weight until final art exists.
-
 # Avoid
 
 Do not introduce an unrelated illustration style or substitute decorative symbols for source-supported imagery.

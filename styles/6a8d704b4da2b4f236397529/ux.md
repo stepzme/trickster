@@ -35,7 +35,3 @@ Skyeng combines self-study, teacher products, AI lessons, speaking scenarios, vo
 - Lesson progress stays visible across focused steps.
 - Audio controls pair waveform, transcript, and retry.
 - Discovery uses browsing sections; lessons collapse to one task at a time.
-
-# System Access Timing
-
-No system-access timing or denial-recovery behavior was documented in the reviewed source.

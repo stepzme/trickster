@@ -29,7 +29,3 @@ Home, Catalog, seasonal hub, Promotions, and Profile remain stable; search, scan
 - Preserve the cart while browsing campaigns and categories.
 - Show price changes after packing transparently.
 - Keep cancellation and support reachable from order detail.
-
-# System Access Timing
-
-No system-access timing or denial-recovery behavior was documented in the reviewed source.

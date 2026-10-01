@@ -30,7 +30,3 @@ Address anchors the top of the menu. Stories and category rails provide discover
 - Show minimum order and total continuously.
 - Use clear stages for live order status.
 - Keep food media secondary to task controls during checkout.
-
-# System Access Timing
-
-No system-access timing or denial-recovery path was documented in the reviewed source.

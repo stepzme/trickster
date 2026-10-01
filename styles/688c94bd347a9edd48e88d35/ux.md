@@ -24,7 +24,3 @@ Five fixed destinations cover Home, Search, Reader, My Books, and Profile. Home 
 # Interaction Patterns
 
 No behavior-only interaction pattern could be separated from the reviewed visual observations.
-
-# System Access Timing
-
-No system-access timing or denial-recovery path was documented in the reviewed source.

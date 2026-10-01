@@ -18,10 +18,6 @@ Use saturated green, yellow, orange, purple, cyan, and pink over bright fields. 
 
 Use the language for service discovery, rewards, campaigns, tickets, travel, insurance, and partner products. Keep balances, transactions, and confirmations data-led; new art must inherit the UI's rounded cards and vivid service palette.
 
-# Production Requirements
-
-Use only the formats and crops supported by the implemented placement. Where the documented imagery is compositionally important, temporary placeholders must preserve its placement, crop, scale, negative space, and approximate visual weight until final art exists. No unobserved light/dark variants or export ratios are prescribed.
-
 # Avoid
 
 - Do not replace the documented image language with unrelated stock art, arbitrary symbols, or a denser composition.

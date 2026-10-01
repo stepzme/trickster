@@ -20,10 +20,6 @@ Keep line work black and surfaces white. Add one or two high-energy accents such
 
 Use original illustrations for onboarding, permissions, and route-discovery transitions. Use photography for real places; do not replace factual place imagery with drawings.
 
-# Production Requirements
-
-Preserve the documented placement, crop, negative space, and visual weight in production exports. Before final art exists, placeholders must preserve those same compositional properties.
-
 # Avoid
 
 - Do not replace the observed imagery language with unrelated stock art or arbitrary symbols.

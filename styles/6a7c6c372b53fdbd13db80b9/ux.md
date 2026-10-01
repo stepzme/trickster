@@ -29,7 +29,3 @@ bottom controls switch between Home, Tasks, and Calendar while separate assistan
 - Use previews for recognition, not decoration.
 - Keep empty states concise and actionable.
 - Make offline, sync, sharing, and publishing state explicit.
-
-# System Access Timing
-
-No system-access timing or denial-recovery behavior was documented in the reviewed source.

@@ -21,7 +21,3 @@ Home, Search, Cart, Favorites, and Profile stay in the primary navigation.
 - Show seller and delivery context.
 - Confirm external payment handoff.
 - Keep order history explicit.
-
-# System Access Timing
-
-No system-access timing or denial-recovery behavior was documented in the reviewed source.

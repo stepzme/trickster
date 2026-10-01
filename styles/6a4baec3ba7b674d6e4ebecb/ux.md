@@ -19,7 +19,3 @@ A five primary destinations anchors the main destinations. Home and Catalog keep
 # Interaction Patterns
 
 Promotions and products use browsing sections, quantity changes happen inline, catalog context persists near search, and checkout groups one fulfillment decision per section.
-
-# System Access Timing
-
-No system-access timing or denial-recovery behavior was documented in the reviewed source.

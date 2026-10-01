@@ -30,7 +30,3 @@ The daily habit is home. Contextual controls open creation and profile; profile 
 - Keep missed-day correction explicit.
 - Reveal rewards after completion.
 - Never let personalization block the daily check.
-
-# System Access Timing
-
-No system-access request timing or denial recovery was documented in the reviewed source.

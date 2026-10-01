@@ -31,7 +31,3 @@ Home foregrounds destination entry and service items. The side menu holds accoun
 - Disclose cancellation or price changes before commitment.
 - Separate account settings from active trip actions.
 - Provide a clear recovery path when no vehicle is available.
-
-# System Access Timing
-
-No system-access timing or denial-recovery path was documented in the reviewed source.

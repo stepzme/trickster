@@ -21,7 +21,3 @@ Frequent financial destinations stay in primary navigation; services open from t
 - Signal when navigation context changes.
 - Group long forms into labeled cards.
 - Use empty states to lead directly to creation.
-
-# System Access Timing
-
-No system-access timing or denial-recovery behavior was documented in the reviewed source.

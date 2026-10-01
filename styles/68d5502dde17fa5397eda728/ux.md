@@ -27,7 +27,3 @@ The drawer contains search, ChatGPT, Library, GPTs, projects, recents, and accou
 - Show tool state before submission.
 - Attach sources to supported claims.
 - Confirm destructive history and account actions.
-
-# System Access Timing
-
-No system-access timing or denial-recovery path was documented in the reviewed source.

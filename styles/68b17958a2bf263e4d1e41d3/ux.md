@@ -26,7 +26,3 @@ Yandex Metro is a map-first route planner where the network diagram remains the 
 
 - Route and station details open without discarding the current map context.
 - Dense transport detail is disclosed only after a route or station is selected.
-
-# System Access Timing
-
-No system-access timing or denial-recovery path was documented in the reviewed source.

@@ -32,7 +32,3 @@ Simbank organizes card management, transfers, payments, savings, cashback, rewar
 
 - Stories and checklists introduce features without blocking transactions.
 - Receipts expose follow-up actions after completion.
-
-# System Access Timing
-
-No system-access request timing or denial recovery was documented in the reviewed source.

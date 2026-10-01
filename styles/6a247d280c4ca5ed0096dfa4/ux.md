@@ -33,7 +33,3 @@ Flights, Hotels, Experiences, Favorites, and Profile persist across discovery. S
 - Separate flight fare from seller choice and add-ons.
 - Preserve favorites across flights, hotels, and places.
 - Keep support adjacent to active orders.
-
-# System Access Timing
-
-No system-access timing or denial-recovery behavior was documented in the reviewed source.

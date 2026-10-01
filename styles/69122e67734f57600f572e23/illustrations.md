@@ -24,10 +24,6 @@ Use the yellow brand accent as the anchor, then add one or two soft supporting h
 
 Use illustrations for explanation, reassurance, and lightweight promotion. Do not use them behind transaction rows, numeric forms, account balances, or other data that needs immediate scanning.
 
-# Production Requirements
-
-Use only the formats and crops supported by the implemented placement. Where the documented imagery is compositionally important, temporary placeholders must preserve its placement, crop, scale, negative space, and approximate visual weight until final art exists. No unobserved light/dark variants or export ratios are prescribed.
-
 # Avoid
 
 - Do not replace the documented image language with unrelated stock art, arbitrary symbols, or a denser composition.

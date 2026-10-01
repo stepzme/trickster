@@ -131,7 +131,7 @@ Transfer search, phone, card, and goal fields use pale rounded inputs. Keep amou
 
 Transfer detail exposes recipient, amount, note, receipt, split, repeat, and help. Success may expand into a full-screen personal postcard while retaining close and transaction context.
 
-Controls retain at least a 44-point interactive area. Pressed and disabled treatments should stay within the documented palette and hierarchy; no unobserved state styling is prescribed.
+Controls retain at least a 44-point interactive area. Pressed and disabled treatments should stay within the documented palette and hierarchy.
 
 # Imagery and icons
 
@@ -157,7 +157,7 @@ Only the states documented above are specified; other states must preserve the s
 - Allow story circles and analytics controls to scroll horizontally. Keep the confirmation button pinned in long transfer or savings setup flows.
 - Present the keyboard and system permission UI natively, then return to the same visual context.
 - Preserve semantic reading order in VoiceOver and allow text to grow with Dynamic Type.
-- Do not infer an unobserved dark or light variant; use the appearance documented by the reference.
+- Preserve the documented appearance instead of introducing an unrelated light or dark palette.
 
 # Anti-generic checklist
 

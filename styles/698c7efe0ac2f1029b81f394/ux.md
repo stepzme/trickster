@@ -30,7 +30,3 @@ Home, Cards, Savings, Stocks, and Crypto are persistent. Profile contains person
 - Show source account before amount.
 - Separate investments from spendable money.
 - Preserve scheduled-payment visibility.
-
-# System Access Timing
-
-No system-access request timing or denial recovery was documented in the reviewed source.

@@ -19,7 +19,3 @@ A four-item primary navigation anchors Home, Discover, Orders, and Profile. The 
 # Interaction Patterns
 
 The sampled flows use direct actions, explicit completion, and return to the current context. No additional repeated interaction behavior was documented.
-
-# System Access Timing
-
-No system-access request timing or denial recovery was documented in the reviewed source.

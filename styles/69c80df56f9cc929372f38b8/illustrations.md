@@ -18,10 +18,6 @@ Build from black and deep blue-green, then use mint, cyan, violet, amber, and co
 
 Use this language for focus presets, sleep modes, soundscapes, score loading, and meaningful completion states. Match the black glass UI and keep illustrations out of settings or permission copy unless they clarify the step.
 
-# Production Requirements
-
-Use only the formats and crops supported by the implemented placement. Where the documented imagery is compositionally important, temporary placeholders must preserve its placement, crop, scale, negative space, and approximate visual weight until final art exists. No unobserved light/dark variants or export ratios are prescribed.
-
 # Avoid
 
 - Do not replace the documented image language with unrelated stock art, arbitrary symbols, or a denser composition.

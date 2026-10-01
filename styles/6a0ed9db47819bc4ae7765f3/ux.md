@@ -31,7 +31,3 @@ Five primary destinations cover Listings, Favorites, Post, Messages, and Profile
 
 - Filters use staged screens rather than one overloaded sheet.
 - Contact actions stay fixed near the safe area on long details.
-
-# System Access Timing
-
-No system-access timing or denial-recovery behavior was documented in the reviewed source.

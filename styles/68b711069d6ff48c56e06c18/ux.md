@@ -38,7 +38,3 @@ Safari keeps browsing while tabs, tab groups, bookmarks, reading list, privacy, 
 
 - Sheets preserve the current webpage beneath secondary tasks.
 - Segmented controls switch closely related collections inside one sheet.
-
-# System Access Timing
-
-No system-access timing or denial-recovery path was documented in the reviewed source.

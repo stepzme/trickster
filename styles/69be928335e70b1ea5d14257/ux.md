@@ -33,7 +33,3 @@ The map is the persistent base. A side menu holds profile, history, settings, he
 - Acid-lime marks primary actions and safety emphasis.
 - Offer pricing uses strong numerals with increment controls and a timer.
 - Ride progress keeps driver and safety actions above route details.
-
-# System Access Timing
-
-No system-access request timing or denial recovery was documented in the reviewed source.

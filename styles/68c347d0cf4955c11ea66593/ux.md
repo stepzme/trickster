@@ -29,7 +29,3 @@ Recents, Shared, and Browse remain in the primary navigation. Browse uses locati
 - Preserve aspect ratio in previews.
 - Confirm destructive file actions.
 - Show local versus cloud availability.
-
-# System Access Timing
-
-No system-access timing or denial-recovery path was documented in the reviewed source.

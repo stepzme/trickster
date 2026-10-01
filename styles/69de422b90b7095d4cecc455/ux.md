@@ -28,7 +28,3 @@ Home, Trade, Pay, and Transactions remain available in primary navigation. Searc
 - Require a review before irreversible financial actions.
 - Keep fees, risk, and funding source visible.
 - Keep asset symbols and currency units explicit.
-
-# System Access Timing
-
-No system-access request timing or denial recovery was documented in the reviewed source.

@@ -18,10 +18,6 @@ Anchor art in yellow, red, and orange with small cyan, green, purple, and gray d
 
 Use pixel art for onboarding, identity, loading, and small branded moments. Do not pixelate generated user images, documents, or functional icons; new art must retain crisp integer-grid edges and the dark UI palette.
 
-# Production Requirements
-
-Preserve the documented placement, crop, negative space, and visual weight in production exports. Before final art exists, placeholders must preserve those same compositional properties.
-
 # Avoid
 
 - Do not replace the observed imagery language with unrelated stock art or arbitrary symbols.

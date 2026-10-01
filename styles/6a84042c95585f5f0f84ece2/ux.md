@@ -35,7 +35,3 @@ The five-primary navigation exposes Home, Payments, Transfers, Reports, and Mini
 - Separate finance operations from promotional content.
 - Use progressive browsing only for optional services or campaigns.
 - Confirm destructive wallet actions explicitly.
-
-# System Access Timing
-
-No system-access timing or denial-recovery behavior was documented in the reviewed source.

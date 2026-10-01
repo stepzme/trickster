@@ -36,7 +36,3 @@ Home, Combo, Below Market, Cart, and Profile form primary navigation. Search wit
 - Explain campaign constraints before checkout.
 - Use distinct primary actions for add-to-cart and immediate purchase.
 - Keep totals available through the final action.
-
-# System Access Timing
-
-No system-access request timing or denial recovery was documented in the reviewed source.

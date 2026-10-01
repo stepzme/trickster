@@ -31,7 +31,3 @@ TradingView is a market-monitoring and charting workspace organized around watch
 
 - Dense tables preserve stable alignment and prioritize current price and change.
 - Subscription comparison keeps the selected tier and billing cadence continuously visible.
-
-# System Access Timing
-
-No system-access timing or denial-recovery behavior was documented in the reviewed source.

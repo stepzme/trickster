@@ -24,6 +24,6 @@ Primary navigation connects a global context, Discover, practice or waveform, a 
 
 # Interaction Patterns
 
-# System Access Timing
-
-No system-access timing or denial-recovery behavior was documented in the reviewed source.
+- Modality switching keeps the user inside the Today context.
+- Practice detail presents teacher, duration, and intent before playback begins.
+- Completion returns to streak or life-score progress; saved programs remain resumable from Home or Profile.

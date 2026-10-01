@@ -27,7 +27,3 @@ My addresses, Menu, Crowns, Coupons, and More are persistent. Product, cart, che
 - Confirm address immediately before payment.
 - Show crowns earned after order completion.
 - Separate coupons from crown balance.
-
-# System Access Timing
-
-No system-access request timing or denial recovery was documented in the reviewed source.

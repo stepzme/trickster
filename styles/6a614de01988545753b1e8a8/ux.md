@@ -33,7 +33,3 @@ Primary navigation exposes tab overview, new search, and page or menu controls. 
 - Preserve page context behind menus and search sheets.
 - Use spatial tab previews for recognition.
 - Keep browser settings grouped by scope.
-
-# System Access Timing
-
-No system-access timing or denial-recovery behavior was documented in the reviewed source.

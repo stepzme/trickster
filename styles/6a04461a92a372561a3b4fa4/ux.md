@@ -32,7 +32,3 @@ SOKOLOV combines a jewelry storefront, loyalty program, store discovery, gift se
 - Promotional banners and story circles lead discovery.
 - Bottom sheets expose specifications and secondary details without losing product context.
 - Cart actions keep price and commitment visible.
-
-# System Access Timing
-
-No system-access timing or denial-recovery behavior was documented in the reviewed source.

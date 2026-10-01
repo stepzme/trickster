@@ -20,10 +20,6 @@ Use near-black navy, deep blue, cold white, and very pale blue. Avoid adding ext
 
 Reserve the cosmic illustration language for entry, identity setup, advisories, and empty or waiting states. Feed, editor, drafts, and profile should remain black and media-led.
 
-# Production Requirements
-
-Preserve the documented placement, crop, negative space, and visual weight in production exports. Before final art exists, placeholders must preserve those same compositional properties.
-
 # Avoid
 
 - Do not replace the observed imagery language with unrelated stock art or arbitrary symbols.

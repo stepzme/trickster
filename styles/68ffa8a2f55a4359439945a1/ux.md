@@ -32,7 +32,3 @@ Teremok combines loyalty, coupons, promotions, achievements, restaurant discover
 
 - Loyalty and campaigns use friendly pancake mascots and hand-drawn type.
 - Ordering moves from menu discovery to item configuration and basket review.
-
-# System Access Timing
-
-No system-access request timing or denial recovery was documented in the reviewed source.

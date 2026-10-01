@@ -31,7 +31,3 @@ SUNLIGHT combines jewelry shopping, stores, discounts, trade-in services, loyalt
 # Interaction Patterns
 
 - Catalog browsing preserves the current category while products are compared.
-
-# System Access Timing
-
-- Camera or Photos access follows the user choosing the documented capture, scan, or photo action. Denial recovery was not documented.

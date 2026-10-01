@@ -31,7 +31,3 @@ Five primary destinations cover Home, Payments, QR, History, and Menu. Home prio
 # Interaction Patterns
 
 - Success screens expose receipt, save, and repeat actions before returning home.
-
-# System Access Timing
-
-No system-access timing or denial-recovery behavior was documented in the reviewed source.

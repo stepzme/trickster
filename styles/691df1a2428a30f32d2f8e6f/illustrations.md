@@ -20,10 +20,6 @@ Artwork carries most of the color against a black interface. Pink, violet, mint,
 
 Use original, topic-specific editorial collages for featured courses and collections. Keep utility screens and lesson playback free of decorative art so the learning content remains primary.
 
-# Production Requirements
-
-Use only the formats and crops supported by the implemented placement. Where the documented imagery is compositionally important, temporary placeholders must preserve its placement, crop, scale, negative space, and approximate visual weight until final art exists. No unobserved light/dark variants or export ratios are prescribed.
-
 # Avoid
 
 - Do not replace the documented image language with unrelated stock art, arbitrary symbols, or a denser composition.

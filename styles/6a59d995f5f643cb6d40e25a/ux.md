@@ -19,7 +19,3 @@ Five primary destinations anchor Home, All accounts, Transfers, Payments, and Fo
 # Interaction Patterns
 
 Amounts and sources stay visible through commitment, segmented controls switch method or period, sheets isolate focused decisions, and transaction results preserve receipt and favorite actions.
-
-# System Access Timing
-
-No system-access timing or denial-recovery behavior was documented in the reviewed source.

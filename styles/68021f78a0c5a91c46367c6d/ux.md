@@ -32,7 +32,3 @@ T-Bank combines accounts, payments, transfers, shopping, travel, city services, 
 
 - Promotional 3D objects introduce products without replacing terms.
 - Chat remains a first-class destination for support and transactions.
-
-# System Access Timing
-
-No system-access timing or denial-recovery path was documented in the reviewed source.

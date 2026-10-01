@@ -18,10 +18,6 @@ Use varied but muted orange, blue, mint, violet, gray, and red accents on white 
 
 Use illustrations for payment catalogs, category navigation, onboarding, and education. Keep balances, transfers, card detail, confirmation, and analytics data-led.
 
-# Production Requirements
-
-Exact export formats, aspect ratios, animation behavior, and appearance variants were not documented. Where imagery is compositionally important, temporary placeholders must preserve its documented scale, placement, crop, and visual weight until final art exists.
-
 # Avoid
 
 Do not introduce an unrelated illustration style or substitute decorative symbols for source-supported imagery.

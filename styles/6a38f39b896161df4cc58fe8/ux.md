@@ -35,7 +35,3 @@ Rostic's organizes restaurant selection, menu discovery, product customization, 
 - Products support direct add, while deeper customization opens the product sheet.
 - Quantity controls replace the add action after selection.
 - Promotional content links back into the same catalog rather than creating a separate purchase model.
-
-# System Access Timing
-
-No system-access timing or denial-recovery behavior was documented in the reviewed source.

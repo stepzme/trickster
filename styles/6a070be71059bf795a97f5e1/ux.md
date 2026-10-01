@@ -19,7 +19,3 @@ Five primary destinations anchor Home, Services, assistant, Payments, and Docume
 # Interaction Patterns
 
 Long tasks are divided into named steps, personal data is reviewed before submission, warnings sit beside the affected field, and each screen exposes one clear next action.
-
-# System Access Timing
-
-No system-access timing or denial-recovery behavior was documented in the reviewed source.

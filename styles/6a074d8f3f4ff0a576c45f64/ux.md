@@ -19,7 +19,3 @@ A three-item primary navigation anchors discovery, chats, and profile. Discovery
 # Interaction Patterns
 
 Gestural profile decisions stay visually central, temporary interest badges create urgency, the feed offers only a few strong actions, and torn-paper transitions preserve personality across discovery, chat, and profile.
-
-# System Access Timing
-
-No system-access timing or denial-recovery behavior was documented in the reviewed source.

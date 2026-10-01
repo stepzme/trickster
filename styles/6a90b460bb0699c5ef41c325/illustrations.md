@@ -18,10 +18,6 @@ Lead with Ozon blue and cyan, supported by magenta, violet, coral, and yellow. K
 
 Use photography to show people and workplaces; use 3D scenes for abstract benefits, promotions, safety, course topics, and empty states. New artwork should match this rounded, high-saturation object family and never imitate user-facing system icons.
 
-# Production Requirements
-
-Exact export formats, aspect ratios, animation behavior, and appearance variants were not documented. Where imagery is compositionally important, temporary placeholders must preserve its documented scale, placement, crop, and visual weight until final art exists.
-
 # Avoid
 
 Do not introduce an unrelated illustration style or substitute decorative symbols for source-supported imagery.

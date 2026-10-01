@@ -30,7 +30,3 @@ Home, Catalog, Pets, Cart, Favorites, and Profile remain in a six-item primary n
 - Show delivery context of commerce screens.
 - Separate Pet Services and saved Pets with a persistent mode switch.
 - Keep discounts, bonuses, and final totals explicit.
-
-# System Access Timing
-
-No system-access timing or denial-recovery path was documented in the reviewed source.

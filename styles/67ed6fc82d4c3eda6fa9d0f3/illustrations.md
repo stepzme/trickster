@@ -18,10 +18,6 @@ The hero uses electric blue, violet, black, and light streaks. Expressive symbol
 
 Reserve the dimensional mark for onboarding and brand moments. Use expressive symbols for stickers, reactions, and friendly system states; communication screens should remain content-led.
 
-# Production Requirements
-
-Preserve the documented placement, crop, negative space, and visual weight in production exports. Before final art exists, placeholders must preserve those same compositional properties.
-
 # Avoid
 
 - Do not replace the observed imagery language with unrelated stock art or arbitrary symbols.

@@ -18,10 +18,6 @@ Coral and cyan anchor the family. Violet and blue may distinguish services; high
 
 Use for cards, tickets, subscriptions, partner offers, rewards, and service promotion. Keep payments, QR, banking lists, and profile data informational.
 
-# Production Requirements
-
-Preserve the documented placement, crop, negative space, and visual weight in production exports. Before final art exists, placeholders must preserve those same compositional properties.
-
 # Avoid
 
 - Do not replace the observed imagery language with unrelated stock art or arbitrary symbols.

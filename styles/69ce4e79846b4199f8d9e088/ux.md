@@ -27,7 +27,3 @@ The live scene is primary. A rail changes energy and presence; the vibe tile swi
 - Show timer and selected mode without covering the world.
 - Preserve a quick exit from every session.
 - Explain premium before presenting system purchase confirmation.
-
-# System Access Timing
-
-No system-access request timing or denial recovery was documented in the reviewed source.

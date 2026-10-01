@@ -31,7 +31,3 @@ Home, Services, Store, and Chat form the persistent lower navigation. Account an
 - Separate telecom protection from content upsell.
 - Make number-transfer progress persistent.
 - Preserve support from every setup path.
-
-# System Access Timing
-
-No system-access timing or denial-recovery behavior was documented in the reviewed source.

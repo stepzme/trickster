@@ -26,7 +26,3 @@ Home, Search, Favorites, Messages, and Office form the base. Map, results, listi
 - Make owner or agent contact explicit.
 - Confirm paid publication and deletion.
 - Separate buyer alerts from owner statistics.
-
-# System Access Timing
-
-No system-access request timing or denial recovery was documented in the reviewed source.

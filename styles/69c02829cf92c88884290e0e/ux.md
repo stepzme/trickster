@@ -25,7 +25,3 @@ The home screen centers one composer. A task list provides All, Favorites, and S
 # Interaction Patterns
 
 - Progress remains embedded inside the conversation rather than a separate dashboard.
-
-# System Access Timing
-
-No system-access request timing or denial recovery was documented in the reviewed source.

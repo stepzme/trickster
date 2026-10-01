@@ -27,7 +27,3 @@ A primary navigation keeps Home, Cart, Search, and Scanner close. Home adds loya
 - Search, cart, and scanner remain accessible through primary navigation.
 - Products expose fulfillment availability before checkout.
 - Long project and product flows keep the cart action available.
-
-# System Access Timing
-
-No system-access timing or denial-recovery behavior was documented in the reviewed source.

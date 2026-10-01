@@ -163,7 +163,7 @@ Preserve artwork, title, and playback controls first; reduce editorial copy and 
 
 Keep cover ratios intact, crop artist imagery consistently, and derive player blur from the active art.
 
-Apply these rules within current iPhone safe areas and scrolling containers. Keep interactive targets at least 44 points, preserve a logical VoiceOver order, and let Dynamic Type wrap supporting text without flattening the documented hierarchy. Do not infer an unobserved dark or light appearance.
+Apply these rules within current iPhone safe areas and scrolling containers. Keep interactive targets at least 44 points, preserve a logical VoiceOver order, and let Dynamic Type wrap supporting text without flattening the documented hierarchy. Preserve the documented appearance.
 
 # Anti-generic checklist
 

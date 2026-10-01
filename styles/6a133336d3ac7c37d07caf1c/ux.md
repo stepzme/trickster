@@ -26,7 +26,3 @@ Yandex Music combines an immersive dark listening context with a lighter catalog
 
 - Browsing sections support quick sampling; full lists handle focused browsing.
 - Bottom sheets contain track actions, filters, device output, and subscription controls.
-
-# System Access Timing
-
-No system-access timing or denial-recovery behavior was documented in the reviewed source.

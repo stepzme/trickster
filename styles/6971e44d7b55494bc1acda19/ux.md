@@ -34,7 +34,3 @@ Home, Catalog, At Home, Cart, and Profile remain in primary navigation. Search, 
 - Keep address and delivery timing visible before browsing.
 - Attach discount, rating, bonus, and unit-price context to each product.
 - Use illustrated empty states to direct recovery.
-
-# System Access Timing
-
-- Camera or Photos access follows the user choosing the documented capture, scan, or photo action. Denial recovery was not documented.

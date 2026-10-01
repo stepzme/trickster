@@ -32,7 +32,3 @@ Home, Pay, Invest, Invite, and Chat remain in a primary navigation. Product deta
 - Separate credit from own funds.
 - Keep card security controls explicit.
 - Confirm irreversible product closure.
-
-# System Access Timing
-
-No system-access timing or denial-recovery behavior was documented in the reviewed source.

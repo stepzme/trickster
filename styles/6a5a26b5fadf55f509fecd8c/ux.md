@@ -25,7 +25,3 @@ Home, Pickup, Eats AI, and Cart are the primary destinations. Address entry and 
 
 - Item selection keeps price, weight, and availability available before adding.
 - Present product details and recommendations in bottom sheets.
-
-# System Access Timing
-
-No system-access timing or denial-recovery behavior was documented in the reviewed source.

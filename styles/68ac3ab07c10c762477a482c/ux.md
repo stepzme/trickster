@@ -33,7 +33,3 @@ Finance, Payments, History, and Support persist in the primary navigation. Notif
 - Preserve explicit income and expense labels.
 - Confirm wallet blocking and logout.
 - Keep support reachable as a top-level destination.
-
-# System Access Timing
-
-No system-access timing or denial-recovery path was documented in the reviewed source.

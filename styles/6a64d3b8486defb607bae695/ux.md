@@ -32,7 +32,3 @@ WB Bank embeds a broad bank inside the Wildberries ecosystem: wallet, cards, pay
 
 - Discount level and wallet balance anchor the service before product discovery.
 - Dense service breadth is grouped into short tiles, while consequential operations expand into linear forms.
-
-# System Access Timing
-
-No system-access timing or denial-recovery behavior was documented in the reviewed source.

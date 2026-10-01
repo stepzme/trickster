@@ -25,7 +25,3 @@ A five-item primary navigation connects search, activity, swipes, chats, and pro
 # Interaction Patterns
 
 - Sheets handle filters, authentication methods, sharing, and purchase details.
-
-# System Access Timing
-
-No system-access timing or denial-recovery path was documented in the reviewed source.

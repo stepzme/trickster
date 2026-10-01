@@ -18,10 +18,6 @@ Use OTP lime, lavender, cyan, orange, and white, with charcoal details. Keep bac
 
 Use illustration for product families, insurance categories, onboarding education, transfer guidance, and success states. Controls and financial data should remain conventional and precise.
 
-# Production Requirements
-
-Preserve the documented placement, crop, negative space, and visual weight in production exports. Before final art exists, placeholders must preserve those same compositional properties.
-
 # Avoid
 
 - Do not replace the observed imagery language with unrelated stock art or arbitrary symbols.

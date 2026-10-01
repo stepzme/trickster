@@ -262,7 +262,7 @@ Use a clean off-white modal page with currency chips, grouped funding methods, a
 Show one large card with partial neighbors. Place Show details, Freeze, and Settings below, followed by transactions and an optional black wallet action.
 Use white rounded cards for news, watchlists, events, and analytics. Green and red are reserved for direction; all other content remains neutral.
 
-Controls retain at least a 44-point interactive area. Pressed and disabled treatments should stay within the documented palette and hierarchy; no unobserved state styling is prescribed.
+Controls retain at least a 44-point interactive area. Pressed and disabled treatments should stay within the documented palette and hierarchy.
 
 # Imagery and icons
 
@@ -289,7 +289,7 @@ Only the states documented above are specified; other states must preserve the s
 - Keep widgets full-width and card carousels partially visible. Allow transaction text to wrap before shrinking values, and preserve bottom navigation plus safe-area actions.
 - Present the keyboard and system permission UI natively, then return to the same visual context.
 - Preserve semantic reading order in VoiceOver and allow text to grow with Dynamic Type.
-- Do not infer an unobserved dark or light variant; use the appearance documented by the reference.
+- Preserve the documented appearance instead of introducing an unrelated light or dark palette.
 
 # Anti-generic checklist
 

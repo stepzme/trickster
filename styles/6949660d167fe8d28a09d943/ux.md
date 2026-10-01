@@ -36,7 +36,3 @@ Revolut is a modular financial hub for balances, cards, investing, payments, rew
 - Account context is selected before actions, reducing repeated source-account choices.
 - Sheets handle bounded choices such as funding method, account selection, and more actions.
 - Appearance and plan settings change presentation without changing the navigation model.
-
-# System Access Timing
-
-No system-access request timing or denial recovery was documented in the reviewed source.

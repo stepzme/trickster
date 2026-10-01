@@ -32,7 +32,3 @@ setka connects professional feeds, questions, channels, communities, chats, care
 
 - Composer and chat keep keyboard tools close to the active text.
 - Unread badges stay attached to chat or subscription destinations.
-
-# System Access Timing
-
-No system-access timing or denial-recovery path was documented in the reviewed source.

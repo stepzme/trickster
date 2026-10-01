@@ -21,10 +21,6 @@ Color and material rules are included in Visual Style; no additional palette rel
 
 Use for new cards, deposits, savings jars, loans, appointments, branches, and service discovery. Keep balances, transfers, statements, identity, and security screens illustration-free.
 
-# Production Requirements
-
-Use only the formats and crops supported by the implemented placement. Where the documented imagery is compositionally important, temporary placeholders must preserve its placement, crop, scale, negative space, and approximate visual weight until final art exists. No unobserved light/dark variants or export ratios are prescribed.
-
 # Avoid
 
 - Do not place 3D objects behind financial values.

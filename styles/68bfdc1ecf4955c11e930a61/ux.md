@@ -33,7 +33,3 @@ Wolt supports discovery, ordering, delivery tracking, and repeat purchase across
 - Product configuration uses a focused bottom sheet with an always-available total.
 - Checkout groups editable decisions into readable rows rather than one long form.
 - Wolt+ and rewards appear contextually without displacing the ordering task.
-
-# System Access Timing
-
-No system-access timing or denial-recovery path was documented in the reviewed source.

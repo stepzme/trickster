@@ -31,8 +31,3 @@ Wallet is a system utility for adding payment cards and collecting passes, ticke
 # Interaction Patterns
 
 - Scanning, entry, alerts, and verification return to the current card context.
-- The catalog contains 53 image screens but no flow sequences; navigation and step order are derived only from the available screen progression.
-
-# System Access Timing
-
-No system-access timing or denial-recovery path was documented in the reviewed source.

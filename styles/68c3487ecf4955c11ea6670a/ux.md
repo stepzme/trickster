@@ -4,7 +4,6 @@ Tips is a reference library of short Apple-product guides organized into collect
 
 # Navigation
 
-- Screen Gallery exposes no recorded flows; this description is based on all 37 inspected image screens.
 - The collection index is the primary browse context, with search and saved tips available navigation.
 - Category pages lead to individual articles; back, share, and bookmark actions preserve the reading context.
 
@@ -31,8 +30,3 @@ Tips is a reference library of short Apple-product guides organized into collect
 # Interaction Patterns
 
 - Search narrows the library without changing its information hierarchy.
-- Exact transition order is unverified because Screen Gallery exposes no flow sequences for this app.
-
-# System Access Timing
-
-No system-access timing or denial-recovery path was documented in the reviewed source.

@@ -18,10 +18,6 @@ Anchor scenes in lime, blue, white, and soft purple, with restrained coral or ye
 
 Use the mascot for onboarding, loyalty, category campaigns, empty states, and order confirmation. Extend the same 3D world for new illustrations so they remain harmonious with `ui.md`.
 
-# Production Requirements
-
-Use only the formats and crops supported by the implemented placement. Where the documented imagery is compositionally important, temporary placeholders must preserve its placement, crop, scale, negative space, and approximate visual weight until final art exists. No unobserved light/dark variants or export ratios are prescribed.
-
 # Avoid
 
 - Do not replace the documented image language with unrelated stock art, arbitrary symbols, or a denser composition.

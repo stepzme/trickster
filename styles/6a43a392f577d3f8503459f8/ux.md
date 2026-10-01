@@ -25,7 +25,3 @@ Yandex Pay is a bright financial hub for cards, Split, rewards, payments, shoppi
 # Interaction Patterns
 
 - Confirmation screens reduce the interface to merchant, amount, source, and one decisive action.
-
-# System Access Timing
-
-No system-access timing or denial-recovery behavior was documented in the reviewed source.

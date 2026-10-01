@@ -26,7 +26,3 @@ Menu and add sit . The main list holds active challenges; detail contains progre
 - Keep upcoming start dates visible.
 - Confirm reset and deletion.
 - Preserve progress when paused.
-
-# System Access Timing
-
-No system-access request timing or denial recovery was documented in the reviewed source.

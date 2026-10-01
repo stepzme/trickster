@@ -27,7 +27,3 @@ Home, Restaurants, Mall, Basket, and Profile remain stable. Search and filters n
 - Show packaging and delivery separately.
 - Support reorder from history.
 - Confirm cancellation explicitly.
-
-# System Access Timing
-
-No system-access timing or denial-recovery behavior was documented in the reviewed source.

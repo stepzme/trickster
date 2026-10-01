@@ -167,7 +167,7 @@ Preserve address, active category, current product, cart total, and primary orde
 
 Use cover only for designed full-bleed product scenes; otherwise contain dishes and preserve plate or packaging boundaries.
 
-Apply these rules within current iPhone safe areas and scrolling containers. Keep interactive targets at least 44 points, preserve a logical VoiceOver order, and let Dynamic Type wrap supporting text without flattening the documented hierarchy. Do not infer an unobserved dark or light appearance.
+Apply these rules within current iPhone safe areas and scrolling containers. Keep interactive targets at least 44 points, preserve a logical VoiceOver order, and let Dynamic Type wrap supporting text without flattening the documented hierarchy. Preserve the documented appearance.
 
 # Anti-generic checklist
 

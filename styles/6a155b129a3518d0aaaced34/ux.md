@@ -27,7 +27,3 @@ Five primary destinations cover Home, Favorites, Post, Chats, and Profile. Searc
 - Results maximize inventory visibility while persistent quick actions shorten contact.
 - Magenta marks seller contact, VIP labels, and price emphasis.
 - Long creation flows use tags, form controls, and explicit submit actions.
-
-# System Access Timing
-
-No system-access timing or denial-recovery behavior was documented in the reviewed source.
