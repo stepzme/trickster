@@ -10,7 +10,7 @@ These rules apply across Research, Planning, Design, Dev, and Publish. Apply eac
 | UX-04 | Data and loading | Content and empty-result states are provided; local storage errors are recoverable; loading, error, and offline states are tested where a system or public resource depends on the network. Do not add server assumptions to the local primary path. |
 | UX-05 | Forms | Labels and errors are understandable; the keyboard suits the data; input and required actions remain accessible while the keyboard is open. |
 | UX-06 | Deletion and loss of work | The consequence is clear; an appropriate confirmation or undo is available. |
-| UX-07 | Mandatory system access and capabilities | Each real system request follows a contextual user action and explains its immediate value. Denial, restriction, cancellation, and unavailable hardware or service leave a clear path. Post-access behavior follows `ios-capabilities.md`, including its explicit mock allowances. |
+| UX-07 | Mandatory system access and capabilities | Each real system request follows a contextual user action and explains its immediate value. Denial, restriction, cancellation, and unavailable hardware or service leave a clear path. Post-access behavior follows the approved Research. |
 | UX-08 | All interactive screens | Controls are tappable and unobstructed; safe areas and supported screen sizes are respected. |
 | UX-09 | Text and controls | System text enlargement preserves access to functionality; VoiceOver has meaningful labels and a logical order; meaning is not communicated by color alone. |
 | UX-10 | Content | Long strings, real names, units, images, and supported locales are tested; demo text does not conceal layout problems. |

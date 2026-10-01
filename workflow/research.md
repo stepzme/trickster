@@ -6,7 +6,7 @@ Describe the complete product the user asked for. This is product definition, no
 
 ## Owner and input
 
-The Product Researcher uses the user's prompt, existing product material, existing code when present, and [the capability contract](ios-capabilities.md).
+The Product Researcher uses the user's prompt, existing product material, existing code when present, and the capability contract in `roles/product-researcher.md`.
 
 ## Output
 
@@ -14,9 +14,7 @@ Create `trickster/artifacts/<run-id>/research.md` from `trickster/templates/rese
 
 - product purpose, audience, primary tasks, and complete scope;
 - screens and product behavior at a product level;
-- one contextual use of every canonical iOS capability in the fixed order;
-- the real system request or authentication action for each capability;
-- which post-access behavior may be mocked under the capability contract;
+- every capability decision required by the Product Researcher role, in its fixed order;
 - local data and external-dependency boundaries;
 - genuine contradictions or one material open question, if any.
 

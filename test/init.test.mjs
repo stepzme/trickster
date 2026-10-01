@@ -30,23 +30,13 @@ const canonicalCapabilities = [
   ["callkit", "CallKit"],
 ];
 
-function registryRows(markdown) {
+function capabilityRows(markdown) {
   return markdown
     .split("\n")
     .filter((line) => /^\| \d+ \| `/.test(line))
     .map((line) => {
       const cells = line.split("|").map((cell) => cell.trim());
       return [cells[2].replaceAll("`", ""), cells[3]];
-    });
-}
-
-function templateRows(markdown) {
-  return markdown
-    .split("\n")
-    .filter((line) => line.startsWith("| `"))
-    .map((line) => {
-      const cells = line.split("|").map((cell) => cell.trim());
-      return [cells[1].replaceAll("`", ""), cells[2]];
     });
 }
 
@@ -159,13 +149,9 @@ test("rejects global npm installation", () => {
   assert.equal(isGlobalPackagePath("/project/node_modules/@sgx22/trickster/bin/trickster.mjs"), false);
 });
 
-test("keeps canonical capability tables identical", async () => {
-  const registry = await readFile(join(repositoryRoot, "workflow", "ios-capabilities.md"), "utf8");
-  const research = await readFile(join(repositoryRoot, "templates", "research.md"), "utf8");
-  const review = await readFile(join(repositoryRoot, "templates", "review.md"), "utf8");
-  assert.deepEqual(registryRows(registry), canonicalCapabilities);
-  assert.deepEqual(templateRows(research), canonicalCapabilities);
-  assert.deepEqual(templateRows(review), canonicalCapabilities);
+test("keeps the canonical capability contract in the Product Researcher role", async () => {
+  const researcher = await readFile(join(repositoryRoot, "roles", "product-researcher.md"), "utf8");
+  assert.deepEqual(capabilityRows(researcher), canonicalCapabilities);
 });
 
 test("npm package contains the simplified workflow and excludes repository-only assets", async () => {
@@ -184,12 +170,12 @@ test("npm package contains the simplified workflow and excludes repository-only 
   assert.equal(paths.some((path) => path.startsWith("site/")), false);
   for (const path of [
     "roles/designer.md",
+    "roles/product-researcher.md",
     "workflow/research.md",
     "workflow/planning.md",
     "workflow/design.md",
     "workflow/dev.md",
     "workflow/publish.md",
-    "workflow/ios-capabilities.md",
     "templates/research.md",
     "templates/plan.md",
     "templates/review.md",

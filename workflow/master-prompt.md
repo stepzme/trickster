@@ -38,4 +38,4 @@ The running MVP is the design proof. Text descriptions, mockups, evidence frames
 
 ## Capability rule
 
-Keep the exact eleven-item order in [ios-capabilities.md](ios-capabilities.md). The system access request or authentication challenge must be real. Use the smallest real product behavior required by the capability contract; only Bluetooth peripherals, microphone processing, and speech output may be mocked as defined there. CallKit has no permission prompt and follows its explicit exception.
+The Product Researcher owns the capability contract. Its decisions in the approved Research are authoritative for every downstream role.

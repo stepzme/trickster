@@ -2,7 +2,7 @@
 
 ## One-time machine setup
 
-macOS, a complete Xcode installation, an iOS Simulator runtime, and at least one suitable iPhone Simulator are required. Also verify a compact supported size. Use a physical iPhone for capability behavior the Simulator cannot reproduce, especially camera capture and final device-only checks. Bluetooth peripherals may remain mocked under `ios-capabilities.md`.
+macOS, a complete Xcode installation, an iOS Simulator runtime, and at least one suitable iPhone Simulator are required. Also verify a compact supported size. Use a physical iPhone for capability behavior the Simulator cannot reproduce, especially camera capture and final device-only checks.
 
 Initial diagnostics:
 
@@ -33,9 +33,9 @@ For every screenshot, record the screen, state, device/OS, locale, theme, text s
 
 Verify the app icon on the installed final build, not only inside the asset catalog. Capture the source product screens for the store screenshot set after app acceptance from the same final build and link them to the run ID.
 
-For each mandatory capability, record whether Simulator, a physical device, or an Apple system service is required. Trigger the real system request or authentication challenge. Verify the required result and explicit mock boundary in `ios-capabilities.md`. If a device or service is unavailable, state the missing check plainly; do not substitute a demo and claim it was real. CallKit is checked separately because it has no permission prompt.
+For each capability decision in the approved Research, record whether Simulator, a physical device, or an Apple system service is required. If a device or service is unavailable, state the missing check plainly; do not substitute a demo and claim it was real.
 
-Use the simplest storage that satisfies the approved product. Inspect the final configuration to ensure mock behavior is limited to Bluetooth peripherals/data, microphone processing, speech output, and the explicit CallKit boundary.
+Use the simplest storage that satisfies the approved product. Inspect the final configuration to ensure mock behavior matches the approved Research.
 
 ## Sources
 

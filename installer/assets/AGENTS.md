@@ -11,7 +11,7 @@ When creating or substantially changing an app:
 7. Implementation Owner starts only from the approved MVP and implements Full Scope one large block at a time. Show and explicitly approve every block before continuing.
 8. Designer owns illustrations, images, the app icon, and store screenshots. Create store screenshots only when their real source screens exist.
 9. Acceptance Reviewer checks every approval, the final build, reference fidelity, product flows, and capabilities during Publish. The reviewer does not fix code. Clean only recorded temporary output after final user confirmation.
-10. Read `trickster/workflow/ios-capabilities.md`. The first ten system access requests or authentication challenges are real. Only Bluetooth peripherals/data, microphone processing, and speech output may be mocked. Saving an image, selecting a device photo, using a camera capture, Face ID, Contacts, Calendar, and Location follow the real-result rules. CallKit has no permission prompt and uses its explicit honest exception.
+10. Product Researcher follows the single capability contract in `trickster/roles/product-researcher.md`. Every downstream role follows the capability decisions in the approved Research.
 11. Do not add a proprietary backend, server account, Sign in with Apple, CloudKit, or synchronization unless the user explicitly requires it. Use the simplest suitable local storage for product data.
 12. Describe unavailable checks plainly. Never fabricate a system prompt, visual review, or successful test.
 

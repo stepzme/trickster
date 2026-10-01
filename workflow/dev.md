@@ -27,6 +27,6 @@ Implement the Full Scope blocks in the order recorded in the approved plan. For 
 
 Do not replace distinctive screens with generic native scaffolding. Native controls provide behavior and accessibility, but their presentation must match the approved UI source and MVP.
 
-Follow [ios-capabilities.md](ios-capabilities.md). Real access requests are mandatory; mock only the post-access behavior explicitly permitted there.
+Follow the capability decisions recorded in the approved Research.
 
 The Implementation Owner owns app code after design approval. A visual-direction problem returns to Designer rather than being silently reinterpreted during development.

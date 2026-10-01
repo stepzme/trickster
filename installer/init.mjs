@@ -288,7 +288,7 @@ export async function doctorProject(target = process.cwd(), { quiet = false, har
     ["Trickster instructions", existsSync(resolve(project, "trickster", "AGENTS.md"))],
     ["Role contracts", existsSync(resolve(project, "trickster", "roles", "designer.md")) && existsSync(resolve(project, "trickster", "roles", "acceptance-reviewer.md"))],
     ["Harness adapter", existsSync(resolve(project, "trickster", "adapters", `${selectedHarness}.md`))],
-    ["iOS capability workflow", existsSync(resolve(project, "trickster", "workflow", "ios-capabilities.md"))],
+    ["Researcher capability contract", existsSync(resolve(project, "trickster", "roles", "product-researcher.md"))],
     ["Research workflow", existsSync(resolve(project, "trickster", "workflow", "research.md"))],
     ["Planning workflow", existsSync(resolve(project, "trickster", "workflow", "planning.md"))],
     ["Design workflow", existsSync(resolve(project, "trickster", "workflow", "design.md"))],

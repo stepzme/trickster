@@ -21,19 +21,7 @@
 
 ## Mandatory iOS capabilities
 
-| Stable ID | Canonical capability | Framework action observed | Required result observed | Denial or unavailable path | Evidence | Result: passed / failed / not checked |
-|---|---|---|---|---|---|---|
-| `bluetooth` | Bluetooth | | | | | |
-| `downloading-photos` | Downloading Photos | | | | | |
-| `adding-photos` | Adding Photos | | | | | |
-| `camera` | Using the Camera | | | | | |
-| `face-id` | Face ID | | | | | |
-| `microphone` | Microphone Access | | | | | |
-| `speech-recognition` | Speech Recognition Access | | | | | |
-| `contacts` | Contacts Access | | | | | |
-| `calendar` | Calendar Access | | | | | |
-| `location` | Location Access | | | | | |
-| `callkit` | CallKit | No permission prompt exists | | | | |
+Review every capability decision in the approved Research. Record the framework action, required result, denial or unavailable path, evidence, and result for each one.
 
 ## Defects
 

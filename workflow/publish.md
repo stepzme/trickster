@@ -14,7 +14,7 @@ Then independently:
 - exercise the primary flows and each completed Full Scope block;
 - compare the live screens with the approved UI source and approved MVP;
 - verify navigation and interaction against the UX source;
-- verify all eleven capability rows according to `ios-capabilities.md`;
+- verify every capability decision recorded in the approved Research;
 - verify denial, unavailable, and retry behavior that the app claims to support;
 - inspect launch behavior, accessibility, supported compact size, persistence promised by the product, and the installed app icon;
 - record concrete failures and evidence in `trickster/artifacts/<run-id>/review.md`.
