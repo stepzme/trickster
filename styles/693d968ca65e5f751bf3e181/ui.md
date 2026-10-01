@@ -3,175 +3,101 @@
 version: 1
 platform: iOS
 name: Amazon-shopping-design-analysis
-description: "A dense global marketplace built around a dark green commerce header, white content modules, yellow purchase actions, and highly variable campaign imagery. Search, delivery context, price, availability, and recommendations dominate every screen."
+description: "A commerce-dense white interface anchored by aqua or deep-green search chrome, compact product facts, image-heavy discovery rails, persistent line-icon navigation, and yellow pill-shaped purchase actions."
 colors:
-  primary: "#FFD814"
-  on-primary: "#111111"
-  buy-now: "#FFA41C"
-  brand-green: "#007E59"
-  brand-teal: "#B7F1E8"
-  link: "#2162A1"
-  ink: "#111111"
-  ink-muted: "#565959"
-  ink-subtle: "#8A8D8D"
   canvas: "#FFFFFF"
-  surface-1: "#F3F3F3"
-  surface-2: "#E7E7E7"
-  hairline: "#D5D9D9"
-  semantic-success: "#007600"
-  semantic-danger: "#B12704"
-  semantic-overlay: "#000000"
+  surface-primary: "#F3F3F3"
+  surface-secondary: "#E7E7E7"
+  accent-primary: "#FFD814"
+  accent-secondary: "#007E59"
+  text-primary: "#111111"
+  text-secondary: "#565959"
+  divider: "#D5D9D9"
+  destructive: "#B12704"
 typography:
-  display-xl: { fontFamily: Amazon Ember, fontSize: 40, fontWeight: 700, lineHeight: 1.00, letterSpacing: -0.8 }
-  display-lg: { fontFamily: Amazon Ember, fontSize: 32, fontWeight: 700, lineHeight: 1.05, letterSpacing: -0.5 }
-  display-md: { fontFamily: Amazon Ember, fontSize: 26, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.3 }
-  headline: { fontFamily: Amazon Ember, fontSize: 21, fontWeight: 700, lineHeight: 1.18, letterSpacing: -0.2 }
-  card-title: { fontFamily: Amazon Ember, fontSize: 15, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: Amazon Ember, fontSize: 17, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
-  body-lg: { fontFamily: Amazon Ember, fontSize: 16, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
-  body: { fontFamily: Amazon Ember, fontSize: 14, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
-  body-sm: { fontFamily: Amazon Ember, fontSize: 12, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
-  caption: { fontFamily: Amazon Ember, fontSize: 10, fontWeight: 400, lineHeight: 1.20, letterSpacing: 0 }
-  button: { fontFamily: Amazon Ember, fontSize: 15, fontWeight: 500, lineHeight: 1.20, letterSpacing: 0 }
-  eyebrow: { fontFamily: Amazon Ember, fontSize: 11, fontWeight: 700, lineHeight: 1.20, letterSpacing: 0.2 }
-  mono: { fontFamily: System Mono, fontSize: 12, fontWeight: 500, lineHeight: 1.30, letterSpacing: 0 }
-rounded: { xs: 4, sm: 8, md: 12, lg: 16, xl: 22, xxl: 28, pill: 9999, full: 9999 }
-spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
+  hero: {fontFamily: "Arial", fontSize: 36, fontWeight: 700, lineHeight: 41}
+  title: {fontFamily: "Arial", fontSize: 26, fontWeight: 700, lineHeight: 32}
+  section: {fontFamily: "Arial", fontSize: 20, fontWeight: 700, lineHeight: 25}
+  body: {fontFamily: "Arial", fontSize: 15, fontWeight: 400, lineHeight: 20}
+  label: {fontFamily: "Arial", fontSize: 14, fontWeight: 600, lineHeight: 18}
+  caption: {fontFamily: "Arial", fontSize: 12, fontWeight: 400, lineHeight: 16}
+spacing:
+  screen-horizontal: 12
+  section-gap: 24
+  card-padding: 12
+  control-gap: 8
+rounded:
+  control: 12
+  card: 10
+  sheet: 24
+  pill: 999
 components:
-  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: [13, 18]}
-  button-buy-now: { backgroundColor: "{colors.buy-now}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: [13, 18]}
-  product-card: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xs}", padding: 8 }
-  category-tile: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.sm}", padding: 8 }
-  basket-row: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xs}", padding: 12 }
-  navigation-bar: { backgroundColor: "{colors.brand-green}", textColor: "{colors.on-primary}", typography: "{typography.body}", rounded: "{rounded.xs}", height: 56 }
-  footer: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: [10, 14]}
+  dominant-search-field: {fill: "white", geometry: "wide rounded field inside colored top chrome"}
+  product-tile: {fill: "white", geometry: "dense image-and-facts card"}
+  purchase-action: {fill: "yellow", geometry: "full-width or card-width pill"}
+  campaign-card: {fill: "saturated photo collage", geometry: "wide promotional panel"}
+  bottom-navigation: {fill: "white", geometry: "persistent line-icon bar"}
 ---
 
 # Overview
 
-Amazon Shopping uses stable green search chrome and yellow purchase actions to hold together highly varied seasonal, personalized, and category content. Product facts remain literal and dense.
+Amazon Shopping is a dense retail interface whose visual stability comes from a dominant search field, colored top chrome, literal product imagery, and yellow purchase controls. White feeds hold crowded carousels, product facts, prices, ratings, badges, and delivery metadata. Promotional cards may be highly saturated, but the surrounding interface stays flat and utilitarian.
 
 # Non-negotiable visual invariants
 
-- Navigation or control chrome uses Dark green header with persistent search.
-- Keep search and delivery context visible.
-- Show price, stock, delivery, seller, and returns.
-- Preserve inline basket editing.
-- Label assistant output and uncertainty.
-- Use literal product imagery.
-- Home mixes horizontal campaigns, two-column category tiles, and recommendation rails.
-- Category menu uses three columns.
+- A wide rounded search field is the dominant top control across browsing, product, cart, category, and account surfaces.
+- Top chrome uses pale aqua or deep commerce green while the main content field remains white.
+- Yellow pill-shaped controls identify the primary purchase action and do not become general navigation accents.
+- Product tiles keep image, title, rating, price, delivery, stock, and badges visually close together.
+- The bottom navigation uses simple line icons with restrained teal or aqua selection.
+- Discovery sections use horizontal product rails and large seasonal photo or collage panels.
+- White sheets and dialogs rise over dimmed commerce content with compact rows and chevrons.
 
 # Color and surfaces
 
-- **Amazon Yellow** ({colors.primary}): Add to Basket and checkout.
-- **Orange** ({colors.buy-now}): Buy Now.
-- **Green** ({colors.brand-green}): Header, navigation context, and trust.
-- **Teal** ({colors.brand-teal}): Light header gradients and context bands.
-
-- **Canvas** ({colors.canvas}): Product and account base.
-- **Surface 1** ({colors.surface-1}): Recommendation modules and grouped areas.
-- **Surface 2** ({colors.surface-2}): Disabled and secondary surfaces.
-- **Hairline** ({colors.hairline}): Cards, inputs, and separators.
-
-- **Ink** ({colors.ink}): Price, product facts, headings, and actions.
-- **Ink Muted** ({colors.ink-muted}): Supporting purchase information.
-- **Ink Subtle** ({colors.ink-subtle}): Placeholder and disabled content.
-- **Link** ({colors.link}): Details, support, and disclosure.
-
-- **Success** ({colors.semantic-success}): Stock and delivery confirmation.
-- **Danger** ({colors.semantic-danger}): Scarcity and price emphasis.
-- **Overlay** ({colors.semantic-overlay}): Dialog and media scrim.
+White is the dominant viewport mass. Pale gray bands separate major commerce groups, while card boundaries rely on spacing, hairlines, or slight tonal change rather than heavy shadows. The top region alternates between pale aqua and deep green, always framing the white search field. Yellow is reserved for the principal purchase control; green or teal marks navigation and context; blue may appear as a textual link. Near-black carries price and product facts, gray carries delivery or seller detail, and muted red signals urgency or error. Default iOS blue actions and generic grouped-gray forms would break this palette.
 
 # Typography
 
-- **Amazon Ember** — all commerce, account, assistant, and navigation UI.
-- **System Mono** — order and tracking identifiers only.
-
-- `{typography.display-xl}` — 40 points — 700 — Campaign statement
-- `{typography.display-md}` — 26 points — 700 — Price or subtotal
-- `{typography.headline}` — 21 points — 700 — Module heading
-- `{typography.card-title}` — 15 points — 600 — Product or category title
-- `{typography.body}` — 14 points — 400 — Default details
-- `{typography.caption}` — 10 points — 400 — Navigation and metadata
-- `{typography.button}` — 15 points — 500 — Purchase actions
-
-- Prioritize current price, stock, and delivery date.
-- Keep long product titles readable before truncation.
-- Use bold for module titles and key purchase facts.
-- Keep assistant answers at comfortable reading width.
-
-Use **Arial**, **Inter**, or **Roboto** when Amazon Ember is unavailable.
-
-The hierarchy must remain legible with Dynamic Type: supporting text may wrap before the primary metric, title, or action loses its role.
+Use Arial as an iOS-safe substitute for the observed pragmatic commerce sans. Section headings are medium-large and bold, but most information uses compact body and caption sizes. Prices receive stronger scale or weight; ratings, delivery, stock, seller, and badges remain smaller. Long product titles may wrap for several lines before truncation. Use tabular figures for prices, quantities, and totals. Dynamic Type increases card and row height while keeping price, unit, and purchase action legible before secondary metadata.
 
 # Screen composition
 
-Use a 4 points base. Screen gutters are 8–12 points, product/module gaps 8 points, and basket rows use 12 points padding.
+Discovery archetype: color the top safe-area region aqua or green, place the wide search control directly below it, then stack full-width campaign panels, horizontal product rails, and compact category grids. Use narrow 8–12-point gutters to preserve high density.
 
-Home mixes horizontal campaigns, two-column category tiles, and recommendation rails. Category menu uses three columns. Detail, basket, account, and Rufus are single-column.
+Product archetype: retain compact search chrome, give the product image a large contained region in the upper half, then stack title, rating, price, delivery, stock, variants, and yellow actions in one vertical column. The image should show the full object or packaging.
 
-Use white separation between modules and pale gray bands between major commerce groups. Keep product detail spacious enough for long facts.
-
-Use product photography, collage, and campaign color fields. Keep system chrome mostly flat and literal.
-
-Primary iPhone screens keep the documented content grouping and vertical rhythm inside a scroll container when content exceeds the viewport. Bottom-owned actions or navigation reserve the lower safe area rather than covering content.
+Cart or account archetype: use white single-column rows with dense facts and compact secondary actions. Focused choices appear in white rounded sheets over dimmed content. Long screens scroll vertically and keep bottom navigation or purchase actions clear of the home indicator.
 
 # Navigation appearance
 
-Home, Account, Basket, and Menu form the bottom bar. Rufus has a separate assistant action. Search and location persist above commerce content.
-
-This section governs appearance only; product behavior and information architecture come from the approved Research and Planning artifacts.
+The bottom bar is white and uses evenly spaced line icons with muted labels; the selected state gains teal or aqua emphasis without a large capsule. Top navigation is visually subordinate to the persistent colored search area. Back controls are compact and dark. Modal lists use broad white sheets with rounded upper corners. This section defines appearance only; product routes and information architecture come from the consuming product.
 
 # Components
 
-Use yellow for basket/checkout and orange for Buy Now. Outline buttons cover account, list, and secondary basket actions.
-
-Product cards show image, title, rating, price, delivery, and action. Basket rows add quantity, delete, save, share, and similar-item controls.
-
-Search supports text, voice, and camera. Delivery location acts as context input. Registration and country lists use large full-width rows.
-
-Stock, scarcity, free delivery, Prime, seller, and return status are explicit text. Rufus identifies itself as beta and preserves feedback controls.
-
-Controls retain at least a 44-point interactive area. Pressed and disabled treatments should stay within the documented palette and hierarchy.
+The search field is a wide white rounded rectangle with a dark search symbol, compact placeholder, and optional utility icons. Product tiles use contained photography, small multiline titles, star ratings, bold prices, compact delivery and availability text, and small badges. Yellow purchase buttons use dark semibold labels and pill geometry; pressed states deepen the yellow and disabled states desaturate. Campaign cards combine saturated photography or collage with large display text. White dialog rows use subtle dividers and right chevrons. Quantity and variant controls remain compact but must retain clear selection and 44-point hit areas.
 
 # Imagery and icons
 
-Product images use contain and preserve packaging. Lifestyle campaigns may use cover. Category tiles combine a short label with isolated product groups.
-
-Contain product evidence and category objects. Cover lifestyle campaigns while preserving headline and featured products.
-
-When imagery is part of the documented composition, it cannot be omitted while final assets are pending. A temporary asset must preserve its placement, crop, scale, and approximate visual weight.
+Literal product photography is compositionally essential and cannot be omitted while final assets are pending. Contain product objects and packaging so variant identity remains visible; use cover crops only for lifestyle or seasonal campaign panels. Category imagery consists of recognizable product groups rather than symbolic illustration. Promotional collage styles may vary by campaign. The sampled screens do not establish a stable independent authored illustration language, so do not extrapolate isolated empty-state drawings into a broader system.
 
 # States
 
-Stock, scarcity, free delivery, Prime, seller, and return status are explicit text. Rufus identifies itself as beta and preserves feedback controls.
-
-- **Success** ({colors.semantic-success}): Stock and delivery confirmation.
-- **Danger** ({colors.semantic-danger}): Scarcity and price emphasis.
-- **Overlay** ({colors.semantic-overlay}): Dialog and media scrim.
-
-Only the states documented above are specified; other states must preserve the same canvas, hierarchy, and component language without inventing a new visual system.
+Selected navigation stays teal or aqua; purchase readiness remains yellow. Stock, scarcity, delivery, seller, returns, ratings, and cart quantity appear as explicit compact text or badges near the product. Search results preserve the same dense tiles and top search field. Cart and checkout continue the white surface system with totals and yellow actions. Dialogs and bottom sheets retain white rows over dimmed content. Empty states may use a small drawing, but should not displace the persistent commerce chrome.
 
 # iOS adaptation
 
-- Extend the documented canvas through the iPhone safe areas while keeping readable content within appropriate insets.
-- Use a vertical `ScrollView` for content that does not fit compact heights; keep documented bottom actions and navigation clear of the home indicator.
-- Maintain 44 points for search, location, variant, quantity, account shortcuts, and purchase actions.
-- Reduce category columns before truncating labels. Keep detail and basket single-column; horizontal campaigns may scroll.
-- Present the keyboard and system permission UI natively, then return to the same visual context.
-- Preserve semantic reading order in VoiceOver and allow text to grow with Dynamic Type.
-- Preserve the documented appearance instead of introducing an unrelated light or dark palette.
+Extend colored top chrome and white content through their respective safe areas while keeping the search field below status-bar interference. Reserve the lower safe area for navigation or sticky purchase controls. Use vertical scrolling for detail and cart content and horizontal scrolling for rails; compact category grids may reduce columns when Dynamic Type prevents readable labels. Search, variants, quantities, actions, and tab items require at least 44-point targets. Use native keyboard and permission transitions, then return to the same commerce context. VoiceOver order follows search/context, section heading, product image, product facts, actions, then navigation. No unrelated dark appearance was observed.
 
 # Anti-generic checklist
 
-- Do not use campaign color for transactional forms.
-- Do not hide regional marketplace context.
-- Do not replace product facts with Rufus copy.
-- Do not crop packaging or variant identity.
-- Do not merge Add to Basket and Buy Now.
-- Do not replace the documented canvas and surfaces with a generic grouped background and uniform white cards.
-- Do not use an unstyled `TabView`, default blue tint, or arbitrary SF Symbols when they contradict the reference.
-- Do not collapse every component to one corner radius or remove compositionally important imagery.
+- Do not remove or visually demote the dominant search field.
+- Do not replace yellow purchase actions with default iOS blue.
+- Do not turn dense product evidence into sparse oversized cards.
+- Do not crop product packaging or variant-identifying details.
+- Do not use an unstyled `TabView` with generic blue selection.
+- Do not merge all campaign imagery into one uniform illustration style.
+- Do not hide ratings, price, delivery, stock, or seller facts behind extra navigation.
+- Do not apply saturated campaign color to transactional sheets and forms.
 
 </design-context>

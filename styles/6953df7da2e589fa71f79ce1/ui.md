@@ -3,168 +3,126 @@
 version: 1
 platform: iOS
 name: Drinkit-design-analysis
-description: "An immersive coffee ordering experience led by editorial product photography, warm full-bleed color atmospheres, clean black typography, cobalt-violet actions, horizontal taxonomy, spacious product storytelling, and whimsical 3D barista characters used for order status, predictions, and seasonal moments."
+description: "An image-led coffee-ordering interface with full-bleed product photography, white and icy-blue surfaces, electric cobalt actions, translucent modifier tiles, horizontal category rails, and tall rounded checkout sheets."
 colors:
-  primary: "#4657DF"
-  on-primary: "#FFFFFF"
-  primary-soft: "#E8EAFF"
-  accent: "#27A7E8"
-  ink: "#17181B"
-  ink-muted: "#747982"
-  ink-subtle: "#ADB1B8"
   canvas: "#F7FAFC"
-  surface-1: "#FFFFFF"
-  surface-2: "#EAF7FA"
-  hairline: "#E4E8EC"
-  semantic-success: "#20A96A"
-  semantic-warning: "#F0B323"
-  semantic-danger: "#D94D4D"
-  semantic-overlay: "#000000"
+  surface-primary: "#FFFFFF"
+  surface-secondary: "#EAF4F8"
+  accent-primary: "#4657DF"
+  accent-secondary: "#27A7E8"
+  text-primary: "#17181B"
+  text-secondary: "#747982"
+  divider: "#E4E8EC"
+  destructive: "#D94D4D"
 typography:
-  display-xl: { fontFamily: SF Pro Display, fontSize: 40, fontWeight: 700, lineHeight: 1.05, letterSpacing: -0.8 }
-  display-lg: { fontFamily: SF Pro Display, fontSize: 33, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.5 }
-  display-md: { fontFamily: SF Pro Display, fontSize: 28, fontWeight: 650, lineHeight: 1.15, letterSpacing: -0.3 }
-  headline: { fontFamily: SF Pro Display, fontSize: 23, fontWeight: 650, lineHeight: 1.20, letterSpacing: -0.1 }
-  card-title: { fontFamily: SF Pro Text, fontSize: 18, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: SF Pro Text, fontSize: 16, fontWeight: 500, lineHeight: 1.35, letterSpacing: 0 }
-  body-lg: { fontFamily: SF Pro Text, fontSize: 17, fontWeight: 400, lineHeight: 1.45, letterSpacing: 0 }
-  body: { fontFamily: SF Pro Text, fontSize: 14, fontWeight: 400, lineHeight: 1.45, letterSpacing: 0 }
-  body-sm: { fontFamily: SF Pro Text, fontSize: 12, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
-  caption: { fontFamily: SF Pro Text, fontSize: 10, fontWeight: 500, lineHeight: 1.20, letterSpacing: 0 }
-  button: { fontFamily: SF Pro Text, fontSize: 15, fontWeight: 650, lineHeight: 1.20, letterSpacing: 0 }
-  eyebrow: { fontFamily: SF Pro Text, fontSize: 11, fontWeight: 650, lineHeight: 1.20, letterSpacing: 0.2 }
-  mono: { fontFamily: SF Mono, fontSize: 12, fontWeight: 500, lineHeight: 1.30, letterSpacing: 0 }
-rounded: { xs: 6, sm: 10, md: 14, lg: 18, xl: 24, xxl: 30, pill: 9999, full: 9999 }
-spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
+  hero: {fontFamily: "SF Pro Display", fontSize: 34, fontWeight: 600, lineHeight: 39}
+  title: {fontFamily: "SF Pro Display", fontSize: 28, fontWeight: 600, lineHeight: 34}
+  section: {fontFamily: "SF Pro Text", fontSize: 20, fontWeight: 600, lineHeight: 25}
+  body: {fontFamily: "SF Pro Text", fontSize: 16, fontWeight: 400, lineHeight: 22}
+  label: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 600, lineHeight: 20}
+  caption: {fontFamily: "SF Pro Text", fontSize: 12, fontWeight: 400, lineHeight: 17}
+spacing:
+  screen-horizontal: 16
+  section-gap: 24
+  card-padding: 16
+  control-gap: 12
+rounded:
+  control: 16
+  card: 22
+  sheet: 30
+  pill: 999
 components:
-  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: [14, 20]}
-  product-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 12 }
-  editorial-banner: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.card-title}", rounded: "{rounded.xl}", padding: 16 }
-  order-sheet: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xl}", padding: 16 }
-  input: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: [12, 14]}
-  navigation-bar: { backgroundColor: "transparent", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xs}", height: 52 }
-  footer: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: [8, 12]}
+  primary-action: {background: "#4657DF", foreground: "#FFFFFF", minHeight: 52, cornerRadius: 26}
+  secondary-action: {background: "#FFFFFF", foreground: "#17181B", minHeight: 48, cornerRadius: 16}
+  primary-card: {background: "#FFFFFF", foreground: "#17181B", cornerRadius: 22, padding: 16}
+  navigation: {background: "transparent", selected: "#4657DF", unselected: "#747982"}
 ---
 
 # Overview
 
-Drinkit treats the menu as an editorial feed: large product still lifes, warm atmospheric color, and quiet category text precede transactional detail. Order status shifts into a whimsical 3D character world.
+Drinkit treats ordering as an image-led product experience. Large coffee and food photography occupies the main visual mass, while clean white or icy-blue transaction surfaces and electric cobalt controls keep the interface operational. The recognizable contrast is between editorial full-bleed media in discovery and dense translucent modifier controls over a darkened product image in customization.
 
 # Non-negotiable visual invariants
 
-- The principal image treatment uses Full-bleed editorial product photography.
-- Lead with carefully art-directed product imagery.
-- Keep the active shop visible.
-- Use character art for emotional moments.
-- Make ingredients and allergens accessible.
-- Home is a vertical editorial feed with a floating location header and horizontal taxonomy.
-- Checkout uses layered sheets and compact product summaries.
-- Preserve gallery-like breathing room around hero products; tighten only in builder, cart, and payment steps.
+- Product photography is the largest visual mass on discovery and detail screens, often occupying roughly the upper half.
+- Electric cobalt or ultramarine owns primary actions, selected chips, price controls, map pins, and active toggles.
+- White and very pale blue surfaces carry transactional content; they do not become a generic gray grouped form.
+- Category navigation is a compact horizontal text rail, not a grid of oversized category cards.
+- Product customization keeps the product image visible behind a dark gradient and translucent glass-like modifier tiles.
+- Sticky bottom price, cart, and payment actions sit above the home indicator and remain visually dominant.
+- Cards and sheets use generous 16–30-point rounding, while small icons and labels stay visually light.
+- Product imagery, price, current selection, and nutrition or composition remain clearly separated even on dense builder screens.
 
 # Color and surfaces
 
-- **Primary** ({colors.primary}): Purchase, order status, favorite, and prediction actions.
-- **Primary Soft** ({colors.primary-soft}): Selection and low-emphasis controls.
-- **Accent** ({colors.accent}): Supporting location and informational emphasis.
+White and an almost white cool blue form the default canvas. Cobalt is the dominant interactive accent; a brighter cyan may support location or informational emphasis. Near-black leads product names and prices, while neutral gray carries ingredients, timing, nutrition, and inactive taxonomy.
 
-- **Canvas** ({colors.canvas}): Neutral ordering and sheet background.
-- **Surface 1** ({colors.surface-1}): Product detail, forms, and cards.
-- **Surface 2** ({colors.surface-2}): Editorial and seasonal modules.
-- **Hairline** ({colors.hairline}): Form and order separation.
-
-- **Ink** ({colors.ink}): Product names, headings, and prices.
-- **Ink Muted** ({colors.ink-muted}): Ingredients and operational detail.
-- **Ink Subtle** ({colors.ink-subtle}): Inactive taxonomy and placeholder.
-
-- **Success** ({colors.semantic-success}): Accepted or ready state.
-- **Warning** ({colors.semantic-warning}): Limited gifts and attention.
-- **Danger** ({colors.semantic-danger}): Error or destructive action.
-- **Overlay** ({colors.semantic-overlay}): Product and order sheets.
+Discovery imagery introduces warm brown, cream, seasonal red, winter blue, and other campaign colors, but these remain inside photography or promotional frames. Product detail and builder views add a dark photo scrim with translucent gray tiles and crisp white selected tiles. Cart and checkout use tall white sheets over dimmed content. Green confirms accepted or ready status; red remains local to destructive or error meaning. Default iOS blue used inconsistently with the cobalt system would visibly weaken the reference.
 
 # Typography
 
-- **SF Pro Display** — product storytelling and campaign headings.
-- **SF Pro Text** — menu, composition, checkout, and status.
-- **SF Mono** — order identifiers and verification references.
+Use SF Pro as the iOS-safe typeface. Product and status titles sit around 28–34 points with medium or semibold weight rather than extreme black weight. Section and product names are about 18–22 points; body, price, and control labels are 13–16 points; tab, nutrition, and supporting captions are 11–12 points.
 
-Use 33–40 points for editorial statements, 23 points for product detail, 18 points for cards, 14–17 points body, and 10–12 points metadata.
-
-- Let photography precede product explanation.
-- Keep names concise and confident.
-- Use restrained weights over atmospheric imagery.
-- Keep composition and allergens highly readable.
-
-Use the platform system sans or **Inter** with medium display weights and tabular prices.
-
-The hierarchy must remain legible with Dynamic Type: supporting text may wrap before the primary metric, title, or action loses its role.
+Text over photography is sparse and protected by quiet image regions or gradients. Prices are compact and stable; nutrition values and additive prices align consistently. With Dynamic Type, supporting ingredient or nutrition text may wrap before the product title, price, current selection, or sticky action loses priority. Builder tiles can grow vertically or reflow rather than reducing labels below legibility.
 
 # Screen composition
 
-Use a 4 points base, 16 points gutters, 16 points card padding, 24 points between editorial modules, and generous full-bleed media height.
+Use approximately 16-point side gutters for surfaced content, 12–16-point internal card spacing, and 20–28 points between major modules. Full-bleed product or campaign imagery may extend through the top safe area; operational content remains within readable insets.
 
-Home is a vertical editorial feed with a floating location header and horizontal taxonomy. Checkout uses layered sheets and compact product summaries.
+Observed archetypes:
 
-Preserve gallery-like breathing room around hero products; tighten only in builder, cart, and payment steps.
+- Image-led discovery: a large photographic hero in the upper half, compact location/profile controls over or above it, a horizontal taxonomy near the hero boundary, and vertically stacked product sections below.
+- Product grid: cutout drinks or food arranged in clean rounded cards with concise name, price, and add/disclosure affordance.
+- Product detail: full-bleed editorial photo with close and favorite controls, followed by composition, nutrition, size, and a sticky cobalt price action.
+- Modifier builder: darkened product photo behind translucent category tiles, selected white tiles, small ingredient imagery, live nutrition totals, and a fixed accumulating-price action.
+- Cart and checkout: tall rounded white sheet with compact item rows, quantity steppers, recommendation rail, payment selection, and a broad bottom payment button.
+- Order status: pale blue or image-backed status area with one dominant state title, order facts, and compact review or support actions.
 
-Use studio still lifes, miniature seasonal scenes, and softly rendered 3D characters rather than generic gradients.
-
-Primary iPhone screens keep the documented content grouping and vertical rhythm inside a scroll container when content exceeds the viewport. Bottom-owned actions or navigation reserve the lower safe area rather than covering content.
+Long lists and forms scroll vertically. Sticky actions reserve their own bottom inset rather than covering the final row.
 
 # Navigation appearance
 
-Location and profile remain at the top; taxonomy moves within the feed; cart and current order appear contextually.
+The top treatment is visually light: a small brand or coffee-shop mark and selected location on the left, with a circular profile, close, or contextual control on the right. Horizontal category labels provide selected-state emphasis through cobalt color or weight. Product detail commonly uses circular close and favorite controls directly over imagery.
 
-This section governs appearance only; product behavior and information architecture come from the approved Research and Planning artifacts.
+Sheets and overlays use large rounded top corners, dimmed backgrounds, and a compact close control or drag affordance. Cart, price, or payment controls can become a sticky bottom bar. No generic heavy navigation container should be introduced; these rules define appearance only, not routes or destination architecture.
 
 # Components
 
-Use cobalt-violet filled pills for purchase, favorite, and status actions; neutral icons handle close, profile, and overflow.
+Primary actions are cobalt rounded rectangles or pills, about 48–52 points high, with white semibold labels. Pressed state deepens the cobalt; disabled state lowers contrast without changing geometry. Secondary actions use white or pale-blue fills with dark labels.
 
-Use full-bleed hero media, editorial banners, product cards, builder controls, cart rows, order sheets, and character status cards.
+Product cards prioritize a cutout photograph, then a short name, price, and small chevron or plus. Detail controls pair translucent tiles with miniature ingredient images, additive prices, and a clear check or plus state. Selected modifier tiles become brighter and more opaque than their neighbors.
 
-Builder and checkout expose size, ingredients, modifiers, payment, shop, recipient, and pickup details without covering media context.
-
-Show shop availability, accepted, preparing, ready, gift, favorite, payment, and prediction state with explicit text and character cues.
-
-Controls retain at least a 44-point interactive area. Pressed and disabled treatments should stay within the documented palette and hierarchy.
+Cart rows combine product thumbnail, concise specification, current and crossed-out price when present, and a compact quantity stepper. Payment and shop selectors use broad rounded rows with a leading icon or mark, text stack, and trailing disclosure. Promo toggles, review stars, and chips use the same cobalt selected language. Every visible compact icon retains at least a 44-point target.
 
 # Imagery and icons
 
-Compose drinks as central still-life subjects with tactile props and soft light; frame character scenes in rounded cards with uncluttered backgrounds.
+Product photography is structural, not optional. Drinks and food appear as clean cutouts in catalog cards and as large editorial images on detail screens. Use contain for isolated products and deliberate cover crops for hero photography, preserving the cup, food silhouette, and text-safe region.
 
-Crop editorial scenes intentionally while protecting the product silhouette; contain character cards and never stretch embedded artwork.
+Seasonal campaign art may combine real or rendered products with gingerbread, snow, ornaments, gifts, or merchandise. Order/status characters and avatar-like 3D figures are isolated branded moments rather than a stable app-wide illustration system. Do not extrapolate them into every empty or status screen.
 
-When imagery is part of the documented composition, it cannot be omitted while final assets are pending. A temporary asset must preserve its placement, crop, scale, and approximate visual weight.
+Functional icons are compact line or filled utility marks: close, heart, profile, location, cart, plus/minus, trash, dropdown, and payment. Keep weight consistent within one surface and avoid arbitrary mixed SF Symbols. While final imagery is pending, retain representative image blocks with the same crop, scale, lighting weight, and relationship to controls.
 
 # States
 
-Show shop availability, accepted, preparing, ready, gift, favorite, payment, and prediction state with explicit text and character cues.
+Observed states include onboarding, location selection, populated catalog, selected category, product favorite, modifier selection, added-to-cart, quantity changes, promotional toggle, payment-method sheet, checkout, order tracking, review, support contact, and copy-confirmation toast.
 
-- **Success** ({colors.semantic-success}): Accepted or ready state.
-- **Warning** ({colors.semantic-warning}): Limited gifts and attention.
-- **Danger** ({colors.semantic-danger}): Error or destructive action.
-- **Overlay** ({colors.semantic-overlay}): Product and order sheets.
-
-Only the states documented above are specified; other states must preserve the same canvas, hierarchy, and component language without inventing a new visual system.
+Selected modifier and taxonomy states retain cobalt or white-on-glass contrast. Transaction sheets remain white and rounded over a dimmed context. Status screens preserve one dominant state and concise operational details rather than adding decorative copy. No dedicated empty or error screen was confirmed; adaptations must preserve the same photography, surface, and action hierarchy without inventing a new visual language.
 
 # iOS adaptation
 
-- Extend the documented canvas through the iPhone safe areas while keeping readable content within appropriate insets.
-- Use a vertical `ScrollView` for content that does not fit compact heights; keep documented bottom actions and navigation clear of the home indicator.
-- Keep shop, taxonomy, product, modifier, favorite, cart, payment, and status controls at least 44 points.
-- Preserve shop, active product, price, cart, and order status. Move campaigns and predictions below the current transaction.
-- Present the keyboard and system permission UI natively, then return to the same visual context.
-- Preserve semantic reading order in VoiceOver and allow text to grow with Dynamic Type.
-- Preserve the documented appearance instead of introducing an unrelated light or dark palette.
+Allow full-bleed hero photography beneath the status bar when contrast is protected, while keeping controls within safe-area insets. Use vertical scrolling for catalogs, product detail, builder content, cart, and checkout. Reserve space above the home indicator for sticky price, cart, and payment controls.
+
+Horizontal taxonomy, recommendations, and modifier rails may scroll without shrinking targets. Present keyboard, payment, location, and system permission transitions natively, then restore the same visual context. VoiceOver should announce product, selected options, price, nutrition, and action in a logical sequence. Dynamic Type may increase tile and row height; compact widths should stack secondary facts before reducing the main image or action. The observed system is light-first, with dark treatment confined to photo-backed builder surfaces.
 
 # Anti-generic checklist
 
-- Do not place dense copy over busy imagery.
-- Do not reuse one background color for every product.
-- Do not make checkout as decorative as discovery.
-- Do not mix unrelated illustration styles.
-- Do not replace the documented canvas and surfaces with a generic grouped background and uniform white cards.
-- Do not use an unstyled `TabView`, default blue tint, or arbitrary SF Symbols when they contradict the reference.
-- Do not collapse every component to one corner radius or remove compositionally important imagery.
+- Do not replace the image-led upper half with a generic white navigation header and card stack.
+- Do not omit product photography or substitute flat placeholder gradients.
+- Do not turn horizontal category labels into oversized rounded tiles.
+- Do not remove the dark photo scrim and translucent modifier system from builder-style compositions.
+- Do not make checkout as decorative as discovery; preserve white, focused transaction sheets.
+- Do not use default blue tint, an unstyled `TabView`, or generic `Form` sections.
+- Do not use one uniform radius for hero media, product cards, modifier tiles, and sheets.
+- Do not scatter campaign-specific characters or seasonal props across ordinary operational states.
 
 </design-context>

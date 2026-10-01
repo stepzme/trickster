@@ -3,142 +3,111 @@
 version: 1
 platform: iOS
 name: Ohmywishes-design-analysis
-description: "A light social wishlist system defined by bold black type, product photography, translucent white navigation, soft gray tiles, black save actions, and restrained pink-to-lilac creation accents."
-colors: {primary: "#111111", on-primary: "#FFFFFF", primary-focus: "#000000", ink: "#141416", ink-muted: "#6E6E73", ink-subtle: "#A1A1A6", ink-tertiary: "#C8C8CC", canvas: "#FFFFFF", surface-1: "#F4F4F5", surface-2: "#ECECEE", surface-3: "#DFDFE2", surface-4: "#D2D2D6", hairline: "#E5E5E7", hairline-strong: "#CDCDD0", hairline-tertiary: "#B5B5BA", inverse-canvas: "#1B1C20", inverse-surface-1: "#2C2D32", inverse-surface-2: "#3D3E45", inverse-ink: "#FFFFFF", brand-secure: "#8D9CFF", semantic-success: "#5EBB69", semantic-overlay: "#17181C"}
+description: "An airy white, photography-led wishlist interface with oversized rounded black headings, soft-gray controls, blue pill actions, circular social imagery, and a translucent floating tab bar."
+colors:
+  canvas: "#FFFFFF"
+  surface-primary: "#F3F3F5"
+  surface-secondary: "#E8E8EB"
+  accent-primary: "#3478F6"
+  accent-secondary: "#6BCB77"
+  text-primary: "#111113"
+  text-secondary: "#74747A"
+  divider: "#E3E3E6"
+  destructive: "#E5484D"
 typography:
-  display-xl: {fontFamily: SF Pro Display, fontSize: 36, fontWeight: 700, lineHeight: 1.06, letterSpacing: -0.8}
-  display-lg: {fontFamily: SF Pro Display, fontSize: 30, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.5}
-  display-md: {fontFamily: SF Pro Display, fontSize: 24, fontWeight: 700, lineHeight: 1.14, letterSpacing: -0.3}
-  headline: {fontFamily: SF Pro Display, fontSize: 21, fontWeight: 700, lineHeight: 1.20, letterSpacing: -0.2}
-  card-title: {fontFamily: SF Pro Text, fontSize: 16, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0}
-  subhead: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 600, lineHeight: 1.30, letterSpacing: 0}
-  body-lg: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0}
-  body: {fontFamily: SF Pro Text, fontSize: 13, fontWeight: 400, lineHeight: 1.36, letterSpacing: 0}
-  body-sm: {fontFamily: SF Pro Text, fontSize: 11, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0}
-  caption: {fontFamily: SF Pro Text, fontSize: 10, fontWeight: 400, lineHeight: 1.25, letterSpacing: 0}
-  button: {fontFamily: SF Pro Text, fontSize: 14, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0}
-  eyebrow: {fontFamily: SF Pro Text, fontSize: 10, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0.2}
-  mono: {fontFamily: SF Mono, fontSize: 11, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0}
-rounded: {xs: 6, sm: 10, md: 14, lg: 20, xl: 26, xxl: 30, pill: 9999, full: 9999}
-spacing: {xxs: 4, xs: 8, sm: 12, md: 16, lg: 20, xl: 24, xxl: 32, section: 40}
+  hero: {fontFamily: "SF Pro Rounded", fontSize: 36, fontWeight: 700, lineHeight: 40}
+  title: {fontFamily: "SF Pro Rounded", fontSize: 30, fontWeight: 700, lineHeight: 35}
+  section: {fontFamily: "SF Pro Text", fontSize: 20, fontWeight: 600, lineHeight: 25}
+  body: {fontFamily: "SF Pro Text", fontSize: 17, fontWeight: 400, lineHeight: 22}
+  label: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 600, lineHeight: 20}
+  caption: {fontFamily: "SF Pro Text", fontSize: 13, fontWeight: 400, lineHeight: 18}
+spacing:
+  screen-horizontal: 16
+  section-gap: 28
+  card-padding: 16
+  control-gap: 12
+rounded:
+  control: 14
+  card: 20
+  sheet: 28
+  pill: 999
 components:
-  button-primary: {backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: 14 18}
-  button-primary-pressed: {backgroundColor: "{colors.primary-focus}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.pill}"}
-  button-secondary: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: 12 16}
-  button-tertiary: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: 10 14}
-  content-card: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 14}
-  feature-card: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 16}
-  text-input: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: 12 14}
-  status-badge: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.pill}", padding: 3 7}
-  bottom-nav: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink-subtle}", typography: "{typography.caption}", rounded: "{rounded.xl}", padding: 8 10}
+  primary-action: {fill: "{colors.accent-primary}", text: "#FFFFFF", height: 52, radius: "{rounded.pill}"}
+  secondary-action: {fill: "{colors.surface-primary}", text: "{colors.text-primary}", height: 48, radius: "{rounded.pill}"}
+  primary-card: {fill: "{colors.surface-primary}", radius: "{rounded.card}", border: "none"}
+  navigation: {fill: "translucent white material", activeFill: "{colors.surface-secondary}", radius: "{rounded.pill}"}
+  image-tile: {fill: "photography", radius: 16, columns: 2}
+  avatar: {shape: "circle", border: "white or none"}
 ---
 
 # Overview
 
-Ohmywishes is a nearly colorless social-shopping canvas where product photos, editorial collections, large profile type, and a floating dock keep gift discovery and wish management friendly.
+Ohmywishes is visually led by generous white space, large friendly black type, and real product or people imagery. Dense content appears mainly in photo grids; the surrounding chrome stays pale, rounded, and quiet. Blue actions and occasional green confirmation surfaces are functional accents rather than a general color wash.
 
 # Non-negotiable visual invariants
 
-- Primary screens use white canvas.
-- The recurring color treatment uses bold black headings.
-- Characteristic content and controls use pale gray tiles.
-- The sampled screens consistently show image grids.
-- Characteristic content and controls use black pill actions.
-- Navigation or control chrome uses frosted dock.
-- The sampled screens consistently show small pink-lilac creation accents.
-- Preserve photography-led discovery and almost colorless chrome.
+- Keep the main canvas white and let content imagery provide most of the color.
+- Use oversized, heavy, rounded black headings with a clear scale jump from body copy.
+- Build fields, secondary controls, and quiet cards from borderless pale-gray rounded surfaces.
+- Present browseable items as image-first rounded tiles, commonly in a two-column grid.
+- Use circular crops for people and brand identities; do not substitute square generic avatars.
+- Render bottom navigation as a detached translucent rounded bar with a soft filled selected state.
+- Reserve saturated blue for primary actions and green for confirmed or successful feedback.
+- Preserve the open spacing around identity, creation, and social-content headers.
 
 # Color and surfaces
 
-Black is the primary action and content anchor. Warm pink-red and blue-lilac gradients appear sparingly on add, create, and social game moments.
-
-White carries primary content; pale gray organizes profile categories, gift topics, and inactive controls.
-
-Near-black leads names, gift titles, and prices; medium gray supports descriptions, reservation, and list metadata.
-
-Green marks active game or confirmed state; blue may indicate discovery links; red remains distinct from the soft creation gradient.
+White is a full-screen field, not merely the background behind a stack of white cards. Pale neutral gray distinguishes inputs, filters, secondary actions, list containers, and inactive navigation without strong borders or shadows. Near-black carries headings and primary values; medium gray carries metadata and placeholders. Blue belongs to primary save, continue, or creation actions. Green is limited to successful or confirmed feedback, and red to destructive actions. A generic grouped-gray iOS canvas or default blue applied to every link would visibly change the reference.
 
 # Typography
 
-Use SF Pro Display for profile and collection headings and SF Pro Text for controls, content, and metadata.
-
-- display-lg — 30 points — 700 — Hero or state
-- headline — 21 points — 700 — Section title
-- card-title — 16 points — 600 — Primary item
-- body — 13 points — 400 — Detail
-- caption — 10 points — 400 — Metadata
-
-- Lead with the person, gift title, price, or social state.
-- Keep repeated metadata aligned and visually quieter.
-- Reserve high contrast and weight for real decisions.
-
-Use a rounded modern system sans; preserve the friendly oversized headings and compact commerce copy.
-
-The hierarchy must remain legible with Dynamic Type: supporting text may wrap before the primary metric, title, or action loses its role.
+The defining contrast is between large, bold, softly rounded display headings and compact system body text. Headings are usually left aligned, short, and allowed to occupy more than one line; product names and values use semibold labels, while metadata is smaller and gray. Use SF Pro Rounded for display roles and SF Pro Text for functional copy. Under Dynamic Type, let supporting copy and item titles wrap before shrinking the main title, value, or action; grids may become a single column when readable tile width can no longer be maintained.
 
 # Screen composition
 
-Use a 4 points base, 8–12 points internal gaps, and 16 points horizontal screen gutters.
+Screens begin with a compact native-height top area or a generously spaced identity/title block, followed by either a photo-led content field or a small number of broad soft-gray modules. Typical horizontal insets are about 16 points, with 24–32 points between major sections and 8–12 points inside repeated content.
 
-Gift ideas and wishlists use two image-led columns; profiles and Secret Santa use wide tiles and horizontal category rails.
+The observed visual archetypes are:
 
-Keep generous space around profile identity and social creation, while allowing dense product grids below.
+- Image discovery: a large heading or compact filter row above a dense two-column grid of tall rounded photographs with short text beneath or over the lower edge.
+- Identity and collection: circular avatar or logo, bold name/title, compact actions, then lists, image tiles, or horizontal category rows.
+- Creation and editing: large title above stacked pale-gray rounded fields, sparse inline controls, and one strong blue pill action anchored after the form or near the lower safe area.
+- Social grouping: broad rounded modules with circular participant imagery, concise status, and ample negative space rather than a dense settings table.
+- Modal choice: a native-feeling rounded sheet or action sheet over a dimmed view, with clear separation between primary, neutral, and destructive choices.
 
-Use frosted navigation, soft gray tiles, and image content rather than visible card shadows.
-
-Primary iPhone screens keep the documented content grouping and vertical rhythm inside a scroll container when content exceeds the viewport. Bottom-owned actions or navigation reserve the lower safe area rather than covering content.
+Long grids and forms scroll vertically. The floating navigation or bottom-owned action reserves enough inset that the final item is never hidden behind it.
 
 # Navigation appearance
 
-Use a floating translucent four-item dock with soft active capsule and minimal line icons.
-
-This section governs appearance only; product behavior and information architecture come from the approved Research and Planning artifacts.
+Primary navigation appears as a floating, translucent white pill above the home indicator, with compact monochrome line icons and a soft gray selected capsule. Top bars are visually light: text actions or small circular icon controls sit directly on the white canvas without a heavy toolbar background. Modal screens use a restrained close or back control and large rounded sheets. This section defines appearance only; destinations and hierarchy come from the product specification.
 
 # Components
 
-Primary save uses a black full-width pill; create actions may use a subtle red-to-lilac gradient; secondary buttons stay gray.
+Primary actions are full-width or content-width blue pills, about 48–52 points high, with white semibold text and no shadow. Secondary actions are light-gray pills with black text. Inputs are borderless pale-gray rounded rectangles with generous horizontal padding and quiet placeholder text.
 
-Gift cards are image-first with title, price, add, and overflow; social games use large simple tiles with avatar stacks.
-
-Search floats above navigation in a white pill, and forms inherit the same soft rounded treatment.
-
-Keep reserved count, game state, ownership, and save status next to the relevant wish or group.
-
-Controls retain at least a 44-point interactive area. Pressed and disabled treatments should stay within the documented palette and hierarchy.
+Image tiles use large rounded crops as the dominant mass, followed by a compact title/value cluster and small circular or minimal line actions. Avatars and brand marks remain circular. Search and filter controls use rounded white or pale-gray capsules. Context actions appear in compact circular buttons or native-looking action sheets. Selected states use a subtle filled surface; disabled states reduce contrast without changing geometry. Every interactive target remains at least 44 points.
 
 # Imagery and icons
 
-Product images use tall rounded crops; avatars are circular; social tiles use broad rounded rectangles.
-
-Use consistent portrait or square crops and keep product focal objects clear; never stretch source photography.
-
-When imagery is part of the documented composition, it cannot be omitted while final assets are pending. A temporary asset must preserve its placement, crop, scale, and approximate visual weight.
+Real product photography, editorial images, brand marks, and people avatars carry the visual identity. Product imagery is tall or near-square, fills most of each tile, and uses consistent rounded crops without stretching. People and brand identities use circular crops. Icons are small, simple, and subordinate to imagery; arbitrary oversized SF Symbols would upset the hierarchy. Imagery is compositionally required: temporary assets must preserve the final crop, occupied area, scale, and color weight rather than leaving empty gray cards.
 
 # States
 
-Keep reserved count, game state, ownership, and save status next to the relevant wish or group.
-
-Green marks active game or confirmed state; blue may indicate discovery links; red remains distinct from the soft creation gradient.
-
-Only the states documented above are specified; other states must preserve the same canvas, hierarchy, and component language without inventing a new visual system.
+Observed loading states retain the same grid/card geometry with pale neutral skeleton blocks. Populated states replace those blocks with photography without changing spacing. Selected or saved controls use a local fill or icon change. Successful confirmation uses a green message surface while leaving the white canvas and typography intact. Modal choices dim the underlying screen and preserve rounded sheet geometry. Destructive choices are red and visually isolated. No separate dark appearance was established in the sampled screens; preserve the documented light appearance unless product requirements explicitly add one.
 
 # iOS adaptation
 
-- Extend the documented canvas through the iPhone safe areas while keeping readable content within appropriate insets.
-- Use a vertical `ScrollView` for content that does not fit compact heights; keep documented bottom actions and navigation clear of the home indicator.
-- Primary actions, navigation, cards, and contextual controls remain at least 44 points.
-- Preserve identity, item image, price, and save action; reduce collection metadata before core wish content.
-- Present the keyboard and system permission UI natively, then return to the same visual context.
-- Preserve semantic reading order in VoiceOver and allow text to grow with Dynamic Type.
-- Preserve the documented appearance instead of introducing an unrelated light or dark palette.
+Extend the white canvas through both safe areas, but keep headings, fields, and grids inside 16-point compact-width insets. Use a vertical `ScrollView` or lazy grid for long content and add bottom content inset for the floating tab bar. Forms should lift or scroll the focused field above the keyboard; native permission screens may interrupt the flow, then return to the same white visual context. Maintain 44-point targets, logical VoiceOver order from heading through content to actions, and meaningful labels for image-only controls. Dynamic Type may reflow grid columns and wrap labels but must not collapse the display/body contrast. On compact heights, reduce empty gaps before reducing image or action prominence.
 
 # Anti-generic checklist
 
-- Do not wrap every wish in heavy borders or use gradients on ordinary controls.
-- Do not hide status, constraints, or secondary conditions.
-- Do not add heavy shadows around every container.
-- Do not replace the documented canvas and surfaces with a generic grouped background and uniform white cards.
-- Do not use an unstyled `TabView`, default blue tint, or arbitrary SF Symbols when they contradict the reference.
-- Do not collapse every component to one corner radius or remove compositionally important imagery.
+- Do not replace the white field with a default grouped-gray `Form` background.
+- Do not turn every content group into the same white card with shadow and border.
+- Do not use an unstyled `TabView`; preserve the detached translucent pill and selected capsule.
+- Do not replace photo-led tiles or circular identities with empty placeholders or arbitrary SF Symbols.
+- Do not flatten the oversized rounded heading into standard navigation-title typography.
+- Do not apply blue to all text and controls; it is a focused action color.
+- Do not force one corner radius onto fields, image tiles, sheets, and navigation.
+- Do not add decorative copy, gradients, or illustrations that compete with the real imagery.
 
 </design-context>

@@ -3,191 +3,102 @@
 version: 1
 platform: iOS
 name: Joi-design-analysis
-description: "A restrained monochrome daily planner where bold editorial date typography, a coral day marker, hairline timeline rows, and softly blurred navigation chrome create a quiet focus tool. White and charcoal themes share the same hierarchy; native controls may be used, but their fills, radii, weight, and spacing must inherit this sparse visual language."
+description: "A sparse monochrome planner built on expansive warm-white or charcoal fields, oversized weekday type, hairline task structure, tiny coral time markers, tall rounded sheets, and softly translucent bottom navigation."
 colors:
-  primary: "#EF625E"
-  on-primary: "#FFFFFF"
-  primary-focus: "#D94E4A"
-  ink: "#1D1B1D"
-  ink-muted: "#777377"
-  ink-subtle: "#B3AFB3"
-  ink-tertiary: "#D0CCD0"
-  canvas: "#FBF9FB"
-  surface-1: "#FFFFFF"
-  surface-2: "#F2EFF2"
-  surface-3: "#E8E4E8"
-  surface-4: "#DCD7DC"
-  hairline: "#E9E5E9"
-  hairline-strong: "#D8D3D8"
-  hairline-tertiary: "#C2BCC2"
-  inverse-canvas: "#201E20"
-  inverse-surface-1: "#2B292B"
-  inverse-surface-2: "#373437"
-  inverse-ink: "#FFFFFF"
-  brand-secure: "#EF625E"
-  semantic-success: "#52B986"
-  semantic-overlay: "#1D1B1D"
+  canvas: "#FBF9FA"
+  surface-primary: "#FFFFFF"
+  surface-secondary: "#F0EDEF"
+  accent-primary: "#EF625E"
+  accent-secondary: "#2F6FEF"
+  text-primary: "#1C1A1C"
+  text-secondary: "#817C80"
+  divider: "#E5E1E4"
+  destructive: "#E24B4B"
 typography:
-  display-xl: {fontFamily: SF Pro Display, fontSize: 40, fontWeight: 700, lineHeight: 1.02, letterSpacing: -1.4}
-  display-lg: {fontFamily: SF Pro Display, fontSize: 34, fontWeight: 700, lineHeight: 1.06, letterSpacing: -1.0}
-  display-md: {fontFamily: SF Pro Display, fontSize: 28, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.7}
-  headline: {fontFamily: SF Pro Display, fontSize: 23, fontWeight: 700, lineHeight: 1.18, letterSpacing: -0.4}
-  card-title: {fontFamily: SF Pro Text, fontSize: 17, fontWeight: 600, lineHeight: 1.25, letterSpacing: -0.1}
-  subhead: {fontFamily: SF Pro Text, fontSize: 16, fontWeight: 500, lineHeight: 1.32, letterSpacing: 0}
-  body-lg: {fontFamily: SF Pro Text, fontSize: 16, fontWeight: 400, lineHeight: 1.42, letterSpacing: 0}
-  body: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0}
-  body-sm: {fontFamily: SF Pro Text, fontSize: 12, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0}
-  caption: {fontFamily: SF Pro Text, fontSize: 10, fontWeight: 500, lineHeight: 1.20, letterSpacing: 0.1}
-  button: {fontFamily: SF Pro Text, fontSize: 16, fontWeight: 500, lineHeight: 1.20, letterSpacing: 0}
-  eyebrow: {fontFamily: SF Pro Text, fontSize: 11, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0.2}
-  mono: {fontFamily: SF Mono, fontSize: 12, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0}
-rounded:
-  xs: 4
-  sm: 8
-  md: 12
-  lg: 16
-  xl: 24
-  xxl: 32
-  pill: 9999
-  full: 9999
+  hero: {fontFamily: "SF Pro Display", fontSize: 40, fontWeight: 700, lineHeight: 43}
+  title: {fontFamily: "SF Pro Display", fontSize: 30, fontWeight: 700, lineHeight: 35}
+  section: {fontFamily: "SF Pro Text", fontSize: 21, fontWeight: 600, lineHeight: 26}
+  body: {fontFamily: "SF Pro Text", fontSize: 17, fontWeight: 400, lineHeight: 23}
+  label: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 600, lineHeight: 20}
+  caption: {fontFamily: "SF Pro Text", fontSize: 12, fontWeight: 400, lineHeight: 16}
 spacing:
-  xxs: 4
-  xs: 8
-  sm: 12
-  md: 16
-  lg: 20
-  xl: 24
-  xxl: 32
-  section: 48
+  screen-horizontal: 22
+  section-gap: 32
+  card-padding: 20
+  control-gap: 12
+rounded:
+  control: 14
+  card: 20
+  sheet: 30
+  pill: 999
 components:
-  button-primary: {backgroundColor: "{colors.ink}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.md}", padding: 16 20}
-  button-primary-pressed: {backgroundColor: "{colors.inverse-surface-2}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.md}"}
-  button-secondary: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.md}", padding: 14 18}
-  button-tertiary: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.md}", padding: 10 14}
-  button-inverse: {backgroundColor: "{colors.inverse-canvas}", textColor: "{colors.inverse-ink}", typography: "{typography.button}", rounded: "{rounded.md}", padding: 14 18}
-  timeline-row: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xs}", padding: 14 4}
-  habit-chip: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.pill}", padding: 7 12}
-  modal-sheet: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xxl}", padding: 24}
-  date-cell: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.caption}", rounded: "{rounded.sm}", padding: 8 6}
-  navigation-bar: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.xs}", height: 48}
-  bottom-nav: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xl}", padding: 10 16}
+  day-header: {fill: "clear", geometry: "oversized weekday with a tiny coral marker"}
+  date-strip: {fill: "clear", geometry: "seven evenly spaced compact date cells"}
+  timeline-row: {fill: "clear", geometry: "minimal row with circular checkbox and faint divider"}
+  editor-sheet: {fill: "white or charcoal", geometry: "tall rounded bottom sheet with generous empty space"}
+  bottom-dock: {fill: "soft translucent surface", geometry: "low floating icon dock"}
 ---
 
 # Overview
 
-Joi is a minimal day timeline with editorial date typography, barely visible structure, and one coral temporal marker. Controls feel native but are restyled to match the product's restrained system.
+Joi uses typography and empty space as its main visual material. An oversized weekday anchors the top, a compact date strip follows it, and minimal task rows sit directly on a warm-white canvas. Tall rounded sheets and a quiet translucent bottom dock supply the only substantial surfaces. The same sparse hierarchy inverts to charcoal and white in the observed dark appearance.
 
 # Non-negotiable visual invariants
 
-- Primary screens use Warm white or charcoal canvas.
-- Preserve large quiet areas.
-- Use coral as a tiny temporal signal.
-- Keep completed tasks visible but subdued.
-- Style native controls to match Joi's visual system.
-- Use sheets for one focused choice at a time.
-- The screen is one vertical timeline.
-- The week strip uses seven equal columns; modal sheets keep one centered column.
+- Large quiet areas remain visible; the interface never fills unused space with cards or decorative copy.
+- The current weekday is oversized and paired with a tiny coral dot or similarly small temporal marker.
+- A seven-column horizontal date strip sits directly beneath the dominant day heading.
+- Task rows remain visually minimal: circular checkbox or small icon, concise title, faint divider, and optional right-aligned time.
+- Creation and editing use tall rounded bottom sheets with a focused top cluster and generous open space below.
+- Primary onboarding or premium actions use solid black pills in light appearance and high-contrast inverse treatment in dark appearance.
+- Small system-like icons and tiny status marks support the typography; illustrative scenes do not occupy the viewport.
+- Dark appearance preserves the exact sparse composition while exchanging warm white for charcoal and primary text for white.
 
 # Color and surfaces
 
-- Coral marks today and tiny timeline cues; it is not the button color.
-- Primary actions are black in light theme and white in dark theme.
-
-- Warm white reduces clinical contrast.
-- Dark theme uses charcoal rather than pure black; sheets invert to white when focus is needed.
-
-- Near-black or white carries date and task labels.
-- Pale grays make completed and inactive information recede strongly.
-
-- Completion is communicated by strike-through and opacity.
-- Blue is limited to system calendar selection inside focused sheets.
+The light canvas is a warm near-white field with white sheets and very pale gray translucent controls. Dark appearance uses charcoal rather than a colorful replacement and keeps text nearly white. Near-black carries the main day and task hierarchy; medium gray carries metadata and inactive dates; hairline gray creates barely visible row structure. Coral is a tiny day/status signal, not a broad button color. Blue is limited to focused system-like selection or upgrade emphasis, and green may appear in native toggles. Default grouped gray backgrounds, large colored panels, or pervasive iOS blue would overwhelm the reference.
 
 # Typography
 
-Use SF Pro Display for dates and onboarding headlines, SF Pro Text for task rows and controls.
-
-- display-xl — 40 points — 700 — Weekday
-- display-lg — 34 points — 700 — Onboarding claim
-- display-md — 28 points — 700 — Step question
-- headline — 23 points — 700 — Sheet title
-- card-title — 17 points — 600 — Timeline item
-- body — 15 points — 400 — Supporting copy
-- caption — 10 points — 500 — Week strip
-
-- Let scale, not color, establish the main hierarchy.
-- Keep timeline labels single-line where possible.
-- Use subdued weight and opacity for dates outside the active day.
-
-SF Pro is the intended reference. A neutral system sans must preserve tight date metrics.
-
-The hierarchy must remain legible with Dynamic Type: supporting text may wrap before the primary metric, title, or action loses its role.
+Use SF Pro Display for the oversized day and major onboarding headings, and SF Pro Text for task rows, metadata, and controls. Scale contrast establishes hierarchy: the day is roughly 40 points and bold; sheet titles are around 21–30 points; rows remain 15–17 points; date and metadata labels are 12 points. Keep copy concise and mostly left-aligned. Use tabular numerals for times and dates. Under Dynamic Type, let the date strip maintain equal columns and allow task titles to wrap before shrinking the day heading into the same scale as body text.
 
 # Screen composition
 
-Use a 4 points base, 20–24 points side padding, and 14–16 points vertical padding per timeline row.
+Daily timeline archetype: use roughly 20–24-point horizontal insets, place the oversized day near the top safe area, align the seven-column date strip directly below, and let minimal rows occupy only as much height as their content requires. A large unfilled middle region is valid when the day is sparse; the low translucent dock remains clear of the home indicator.
 
-The screen is one vertical timeline. The week strip uses seven equal columns; modal sheets keep one centered column.
+Creation or edit archetype: raise a tall sheet from the bottom with large top corners. Cluster the segmented choice, title, and essential fields near the top, use compact native pickers or lists when needed, and preserve a calm open field rather than introducing decorative cards.
 
-Large empty regions are intentional. Avoid adding cards merely to fill the day.
-
-Use blur and subtle tonal contrast instead of shadows. Dark theme may expose a white sheet as a deliberate high-contrast layer.
-
-Primary iPhone screens keep the documented content grouping and vertical rhythm inside a scroll container when content exceeds the viewport. Bottom-owned actions or navigation reserve the lower safe area rather than covering content.
+Calendar or settings archetype: use a restrained grid or direct list on the same warm-white/charcoal field. Focused rows may use soft gray fills, but the screen should still read as one continuous surface. Scroll long lists vertically and avoid stacking independent card containers.
 
 # Navigation appearance
 
-Keep the week strip close to the date header and a low-contrast action dock near the bottom safe area.
-
-This section governs appearance only; product behavior and information architecture come from the approved Research and Planning artifacts.
+Top chrome is minimal: a small back chevron or text control sits apart from the dominant title. The bottom navigation is a low, softly translucent or blurred dock with three compact icons and a centered add affordance; selected states rely on contrast rather than a large colored capsule. Sheets use broad white or charcoal planes with large top radii and subdued dismiss controls. This section defines appearance only; routes and information architecture come from the consuming product.
 
 # Components
 
-Primary buttons are full-width black or white with restrained radius. The central add control is a compact blurred surface, not a floating brand-colored button.
-
-Avoid standard cards. Timeline content sits directly on the canvas; sheets appear only for focused decisions.
-
-Use simple rows, chips, and system pickers restyled with Joi spacing, type, and monochrome fills. Native controls must visually inherit this UI rather than retain generic iOS styling.
-
-Use opacity, strike-through, a tiny coral dot, and concise day summaries. Do not add celebratory banners to routine completion.
-
-Controls retain at least a 44-point interactive area. Pressed and disabled treatments should stay within the documented palette and hierarchy.
+The day header has no container: bold black or white type sits directly on the canvas with a tiny coral marker. Date cells are equal-width, compact, and mostly transparent, using type contrast for selection. Timeline rows use circular checkboxes, concise labels, faint dotted or hairline separation, and optional right-aligned time. Completed rows keep their position and become quieter through reduced opacity, checkmarks, or strike-through. Editor sheets use large top corners, minimal borders, generous spacing, and controls restyled into monochrome or pale-gray surfaces. Primary actions are solid black rounded pills in light appearance; secondary actions remain tonal or text-only. Native toggles, wheels, and rating prompts may remain behaviorally native but should sit within this restrained hierarchy.
 
 # Imagery and icons
 
-No photography or expressive illustration was observed. Use only simple line glyphs that inherit the typographic weight.
-
-No content imagery is part of the reference system. If user media is introduced, keep it secondary and softly rounded.
-
-When imagery is part of the documented composition, it cannot be omitted while final assets are pending. A temporary asset must preserve its placement, crop, scale, and approximate visual weight.
+No independent authored illustration system is part of the observed visual language. Use tiny system-like calendar, location, list, sun/moon, and completion glyphs with consistent optical weight. App-icon choices may appear as small square previews, but they do not become decorative hero imagery. Blurred abstract panels remain subtle background surfaces. Do not introduce photography, character art, or large symbolic scenes to occupy deliberate empty space.
 
 # States
 
-Use opacity, strike-through, a tiny coral dot, and concise day summaries. Do not add celebratory banners to routine completion.
-
-- Completion is communicated by strike-through and opacity.
-- Blue is limited to system calendar selection inside focused sheets.
-
-Only the states documented above are specified; other states must preserve the same canvas, hierarchy, and component language without inventing a new visual system.
+Completed tasks remain in place with a checkmark, strike-through, or reduced opacity. Selected days and focused calendar values use concise contrast or limited blue emphasis while the coral current-day marker remains small. Empty days retain the same day header, date strip, and open canvas rather than adding explanatory artwork. Editing and premium states appear in rounded sheets; dark appearance changes canvas and text values but preserves geometry, spacing, and hierarchy. Native rating or legal views may appear as system surfaces without redefining the surrounding product style.
 
 # iOS adaptation
 
-- Extend the documented canvas through the iPhone safe areas while keeping readable content within appropriate insets.
-- Use a vertical `ScrollView` for content that does not fit compact heights; keep documented bottom actions and navigation clear of the home indicator.
-- Checkboxes, date cells, and dock icons keep at least 44 points hit areas despite their minimal visible forms.
-- Task labels truncate only after preserving time. Sheets scroll vertically; the save action stays near the safe area.
-- Present the keyboard and system permission UI natively, then return to the same visual context.
-- Preserve semantic reading order in VoiceOver and allow text to grow with Dynamic Type.
-- Preserve the documented appearance instead of introducing an unrelated light or dark palette.
+Extend the warm-white or charcoal canvas through both safe areas. Keep day headings and date strips within readable top insets and place the bottom dock above the home indicator. Visible checkboxes and icons may be small, but every interactive target must reach at least 44 points. Use vertical scrolling for long timelines, settings, and sheets; keep the seven date columns stable on compact widths. Present keyboards, date wheels, rating prompts, and system sheets natively, then return to the same sparse context. VoiceOver order follows day, date strip, task rows, then bottom actions. Dynamic Type may increase row height and sheet scrolling without turning the timeline into cards. Support both observed light and charcoal appearances with identical composition.
 
 # Anti-generic checklist
 
-- Do not wrap every task in a card.
-- Do not make every control coral.
-- Do not use heavy shadows or visible gradients.
-- Do not leave default iOS control styling unmodified.
-- Do not crowd the header with utilities.
-- Do not replace the documented canvas and surfaces with a generic grouped background and uniform white cards.
-- Do not use an unstyled `TabView`, default blue tint, or arbitrary SF Symbols when they contradict the reference.
-- Do not collapse every component to one corner radius or remove compositionally important imagery.
+- Do not wrap every task or setting in a white card.
+- Do not fill open space with mood copy, empty-state illustration, or promotional panels.
+- Do not make coral the fill for every primary control.
+- Do not use heavy shadows, visible gradients, or thick separators.
+- Do not substitute a default labeled `TabView` for the low translucent icon dock.
+- Do not use default `Form` section chrome for creation and settings surfaces.
+- Do not make heading, task, metadata, and date text nearly the same size.
+- Do not replace the oversized weekday and tiny temporal marker with a generic navigation title.
 
 </design-context>

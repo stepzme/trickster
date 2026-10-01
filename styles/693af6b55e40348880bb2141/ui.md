@@ -3,142 +3,123 @@
 version: 1
 platform: iOS
 name: My-Rostelecom-design-analysis
-description: "A telecom account system pairing a deep navy-to-violet dashboard header with white grouped cards, vivid violet navigation, orange payment actions, and occasional hand-painted campaign art."
-colors: {primary: "#8200FF", on-primary: "#FFFFFF", primary-focus: "#6900D1", ink: "#17181C", ink-muted: "#6D6E75", ink-subtle: "#9FA0A6", ink-tertiary: "#C6C7CC", canvas: "#F6F6F7", surface-1: "#FFFFFF", surface-2: "#EFEEF2", surface-3: "#E3E2E7", surface-4: "#D6D5DB", hairline: "#E5E4E8", hairline-strong: "#CCC9D0", hairline-tertiary: "#B3AFB8", inverse-canvas: "#202126", inverse-surface-1: "#303138", inverse-surface-2: "#42434B", inverse-ink: "#FFFFFF", brand-secure: "#FF5B20", semantic-success: "#45C77C", semantic-overlay: "#17181C"}
+description: "A light telecom account interface that alternates pale utility surfaces with large navy-to-violet account fields, using bold black type, thick rounded cards, violet selected navigation, vivid orange primary actions, and mixed campaign imagery."
+colors:
+  canvas: "#F6F6F7"
+  surface-primary: "#FFFFFF"
+  surface-secondary: "#EFEEF2"
+  accent-primary: "#8200FF"
+  accent-secondary: "#FF5B20"
+  text-primary: "#17181C"
+  text-secondary: "#6D6E75"
+  divider: "#E5E4E8"
+  destructive: "#D94A55"
 typography:
-  display-xl: {fontFamily: SF Pro Display, fontSize: 36, fontWeight: 700, lineHeight: 1.06, letterSpacing: -0.8}
-  display-lg: {fontFamily: SF Pro Display, fontSize: 30, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.5}
-  display-md: {fontFamily: SF Pro Display, fontSize: 24, fontWeight: 700, lineHeight: 1.14, letterSpacing: -0.3}
-  headline: {fontFamily: SF Pro Display, fontSize: 21, fontWeight: 700, lineHeight: 1.20, letterSpacing: -0.2}
-  card-title: {fontFamily: SF Pro Text, fontSize: 16, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0}
-  subhead: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 600, lineHeight: 1.30, letterSpacing: 0}
-  body-lg: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0}
-  body: {fontFamily: SF Pro Text, fontSize: 13, fontWeight: 400, lineHeight: 1.36, letterSpacing: 0}
-  body-sm: {fontFamily: SF Pro Text, fontSize: 11, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0}
-  caption: {fontFamily: SF Pro Text, fontSize: 10, fontWeight: 400, lineHeight: 1.25, letterSpacing: 0}
-  button: {fontFamily: SF Pro Text, fontSize: 14, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0}
-  eyebrow: {fontFamily: SF Pro Text, fontSize: 10, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0.2}
-  mono: {fontFamily: SF Mono, fontSize: 11, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0}
-rounded: {xs: 4, sm: 10, md: 14, lg: 18, xl: 24, xxl: 28, pill: 9999, full: 9999}
-spacing: {xxs: 4, xs: 8, sm: 12, md: 16, lg: 20, xl: 24, xxl: 32, section: 40}
+  hero: {fontFamily: "SF Pro Display", fontSize: 34, fontWeight: 700, lineHeight: 39}
+  title: {fontFamily: "SF Pro Display", fontSize: 28, fontWeight: 700, lineHeight: 34}
+  section: {fontFamily: "SF Pro Display", fontSize: 21, fontWeight: 700, lineHeight: 26}
+  body: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 400, lineHeight: 21}
+  label: {fontFamily: "SF Pro Text", fontSize: 14, fontWeight: 600, lineHeight: 19}
+  caption: {fontFamily: "SF Pro Text", fontSize: 12, fontWeight: 400, lineHeight: 16}
+spacing:
+  screen-horizontal: 16
+  section-gap: 28
+  card-padding: 16
+  control-gap: 12
+rounded:
+  control: 12
+  card: 20
+  sheet: 28
+  pill: 999
 components:
-  button-primary: {backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 14 18}
-  button-primary-pressed: {backgroundColor: "{colors.primary-focus}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}"}
-  button-secondary: {backgroundColor: "{colors.surface-1}", textColor: "{colors.primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 12 16}
-  button-tertiary: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 10 14}
-  content-card: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 14}
-  feature-card: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 16}
-  text-input: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: 12 14}
-  status-badge: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.pill}", padding: 3 7}
-  bottom-nav: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink-subtle}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: 8 10}
+  primary-action: {fill: "orange-red", text: "white semibold", height: 52, radius: 12}
+  account-card: {fill: "navy-to-violet gradient", text: "white", padding: 20, radius: 20}
+  service-card: {fill: "white", padding: 16, radius: 20, shadow: "minimal or none"}
+  navigation: {fill: "light", selected: "violet icon and label", unselected: "light gray"}
 ---
 
 # Overview
 
-My Rostelecom uses a dark branded account stage above bright operational service cards, keeping balance, payment, connectivity, equipment, and offers easy to scan.
+My Rostelecom is a light utility interface organized around dramatic branded account fields. Pale gray and white dominate operational screens, while deep navy-to-violet gradients create large upper or card-sized masses around balances, services, and bonus contexts. Bold black headings, compact gray metadata, thick rounded groups, violet navigation, and orange-red primary actions make the hierarchy immediately visible. Campaign art and photography appear in bounded stories or promotions, but account cards, lists, and controls remain the structural core.
 
 # Non-negotiable visual invariants
 
-- The recurring color treatment uses navy-violet gradient.
-- Navigation or control chrome uses violet navigation.
-- The recurring color treatment uses orange payment.
-- The recurring color treatment uses thick white service groups.
-- The sampled screens consistently show outlined actions.
-- The principal image treatment uses seasonal editorial art.
-- Preserve the split between dark account context and white service operations.
-- Keep the primary task and current state immediately legible.
+- Pale gray fills the full utility canvas, with thick white rounded cards used for grouped account and service information.
+- Navy-to-violet gradients form large branded masses rather than small decorative accents.
+- Violet identifies selected navigation, focused controls, links, and some confirmation states; orange-red is reserved for the strongest primary or payment action.
+- Primary values and section titles use bold black type and clearly outrank compact gray explanatory text.
+- The main bottom bar contains four icon-and-label items, with violet selected state and very light inactive items.
+- Account and service groups use generous corner radii and internal padding but little visible shadow.
+- Campaign imagery stays bounded to splash, story, bonus, or promotional regions and does not replace operational service structure.
+- Modal sheets and dialogs preserve the same white, pale-gray, violet, and orange hierarchy over a dimmed background.
 
 # Color and surfaces
 
-Violet identifies navigation, connection, and brand focus. Orange is reserved for top-up and secondary outlined commerce actions.
+The base canvas is a cool very light gray. White primary surfaces form service cards, list groups, fields, and modal content. Slightly darker gray separates disabled controls, secondary groups, and skeleton placeholders. Dividers are quiet and often replaced by internal spacing.
 
-White cards group services over light gray; the account header uses a deep navy-violet field for balance and quick actions.
-
-Near-black carries tariff and service facts; gray supports recurring price, equipment, and inactive status.
-
-Green indicates active service; red remains reserved for errors or destructive actions.
+The signature branded field moves from deep navy into saturated violet and may occupy an entire upper stage or large card. Violet marks selection, navigation, focus, and secondary actions. Bright orange-red fills the strongest primary action and appears selectively in payment or commerce emphasis. White text is used on gradient and orange surfaces. Black carries primary facts; medium gray carries explanations, status detail, and inactive elements. Green is limited to positive or active-state confirmation; red is reserved for destructive or error states. Default iOS blue, heavy shadows, or indiscriminate mixing of orange and violet would break the reference.
 
 # Typography
 
-Use SF Pro Display for account and tariff headings and SF Pro Text for controls, content, and metadata.
+Use SF Pro Display for hero values, page titles, and section headings and SF Pro Text for controls, rows, and metadata. Hero values and prominent states sit around 28–34 points, page and section titles around 21–28, card titles around 16–18, and supporting text around 11–15. Titles are bold and direct; supporting copy is regular and visibly lighter in both scale and color.
 
-- display-lg — 30 points — 700 — Hero or state
-- headline — 21 points — 700 — Section title
-- card-title — 16 points — 600 — Primary item
-- body — 13 points — 400 — Detail
-- caption — 10 points — 400 — Metadata
-
-- Lead with balance, monthly fee, active status, or next connection step.
-- Keep repeated metadata aligned and visually quieter.
-- Reserve high contrast and weight for real decisions.
-
-Use the platform sans and preserve the bold, plain Cyrillic hierarchy.
-
-The hierarchy must remain legible with Dynamic Type: supporting text may wrap before the primary metric, title, or action loses its role.
+Most operational content is left-aligned, while authentication, splash, and some modal states may center a title and action. Numeric balances, prices, and usage values use tabular figures where alignment matters. Secondary details wrap before primary values or action labels lose prominence. With Dynamic Type, card heights expand, two-column choice groups become one column, and long row labels wrap above their secondary value or disclosure control.
 
 # Screen composition
 
-Use a 4 points base, 8–12 points internal gaps, and 16 points horizontal screen gutters.
+Screens generally use 16-point horizontal insets, 12–16 points inside controls, and 24–32 points between major groups. Light canvas or branded gradient extends through the top safe area according to the screen archetype. Long account, service, offer, and settings surfaces scroll vertically; the four-item tab bar or a lower action reserves the bottom safe area.
 
-Home stacks wide grouped cards; Connect uses a two-column offer grid and tariff detail uses one column.
+Observed archetypes include:
 
-Use strong gaps between service families while keeping rows inside each group compact.
-
-Let the gradient account stage and white grouped blocks establish layers; ordinary rows stay flat.
-
-Primary iPhone screens keep the documented content grouping and vertical rhythm inside a scroll container when content exceeds the viewport. Bottom-owned actions or navigation reserve the lower safe area rather than covering content.
+- Account-dashboard composition: a large navy-violet field dominates the upper region, with white balance or service information and compact actions; stacked white cards continue below on pale gray.
+- Service composition: bold black title, short muted context, then one-column white cards or a compact two-column offer arrangement with visible state, recurring value, and disclosure.
+- Authentication and form composition: large black title over white or pale gray, rounded inputs, segmented or text selectors, and a wide orange or violet action; native keyboard may occupy the lower viewport.
+- Bonus and promotional composition: gradient or white stage combines a large value, tabs or pills, and bounded campaign banners, photo cards, or story artwork.
+- Utility-list composition: white grouped rows with line icons, compact labels, secondary gray values, toggles, and chevrons on a pale canvas.
+- Modal composition: large-radius white bottom sheet or compact centered dialog over dimmed content, with strong title, concise body, and clearly separated confirmation actions.
+- Empty or loading composition: the same light field and card geometry remain while content is replaced by skeleton blocks, compact status text, or one centered action.
 
 # Navigation appearance
 
-Use four bottom destinations, with violet for the active item and very light gray for inactive items.
-
-This section governs appearance only; product behavior and information architecture come from the approved Research and Planning artifacts.
+The primary bottom bar is light and contains four evenly spaced icon-and-label items. The selected item is vivid violet; inactive items are very light gray with lower contrast. Inner surfaces use simple leading back arrows, text cancel actions, or compact close icons, usually with a bold black title. Authentication and bonus contexts may use segmented text tabs with violet selection. Bottom sheets are white with large top corners and a small drag indicator when present; centered dialogs use rounded white panels and minimal shadow.
 
 # Components
 
-Violet drives connection and confirmation; orange handles top-up and selected outlined prompts.
-
-Service cards group active products, options, and equipment with visible recurring price and state.
-
-Registration and payment fields use sparse light surfaces with violet focus and disabled-state clarity.
-
-Place active, loading, promised-payment, autopay, and connection states beside their specific account or service.
-
-Controls retain at least a 44-point interactive area. Pressed and disabled treatments should stay within the documented palette and hierarchy.
+- Primary action: approximately 52 points tall, full or near-full width, orange-red fill, 12–14 point radius, and centered white semibold text. Pressing deepens the fill; disabled state becomes gray without changing size.
+- Violet action: filled or outlined violet control used for connection, confirmation, focused selection, or secondary priority. It remains distinct from the orange primary action.
+- Account card: navy-to-violet gradient, 18–24 point radius, 16–20 point padding, large white value, and smaller white or translucent metadata. Actions are compact and visually grouped below the value.
+- Service card: white fill, 18–22 point radius, no heavy shadow, bold title or value, muted supporting details, optional status mark, and clear trailing disclosure or action.
+- Input field: white or very light-gray fill, 12–14 point radius, black entry text, gray placeholder, and violet focus or selection treatment.
+- Grouped row: line icon, black label, optional gray secondary value, and trailing toggle, chevron, or state. Active switches and selections use violet.
+- Story or offer tile: rounded bounded image with saturated campaign art or photography, concise adjacent or overlaid type, and enough contrast to keep the focal subject clear.
 
 # Imagery and icons
 
-Seasonal art stays full-bleed at launch or inside story cards; service icons remain simple line symbols.
+Imagery is mixed rather than governed by one standalone authored illustration system. The sample includes a large seasonal splash image, cartoon campaign characters, product and offer photography, story artwork, and graphic bonus banners. These assets may be visually expressive, but they do not establish one reusable medium, line language, or character system across the interface.
 
-Keep campaign art bounded and preserve its focal subject; service UI should not depend on imagery.
-
-When imagery is part of the documented composition, it cannot be omitted while final assets are pending. A temporary asset must preserve its placement, crop, scale, and approximate visual weight.
+Keep campaign images bounded to large story, splash, promotion, or bonus regions with a clear focal subject. Product photography remains recognizable and appropriately cropped. Operational service icons are simple line symbols in violet, gray, or black and should not be replaced by arbitrary decorative artwork. When final imagery is unavailable, a temporary asset must preserve the observed placement, crop, palette intensity, and visual mass.
 
 # States
 
-Place active, loading, promised-payment, autopay, and connection states beside their specific account or service.
+Observed states include active and inactive services, selected tabs, focused and filled inputs, loading skeletons, disabled gray actions, green positive checks, empty and populated lists, confirmation dialogs, support chat input, story loading, and selected or unselected controls. These states retain the same pale canvas, white card geometry, bold black hierarchy, and violet/orange role separation.
 
-Green indicates active service; red remains reserved for errors or destructive actions.
-
-Only the states documented above are specified; other states must preserve the same canvas, hierarchy, and component language without inventing a new visual system.
+Loading uses neutral gray placeholders within the existing card structure. Active or selected controls use violet; positive outcomes may add green. Destructive confirmation uses red sparingly. Modal focus dims the underlying screen rather than replacing it with a new palette. Native keyboards and payment surfaces appear as system transitions while the surrounding product chrome stays consistent.
 
 # iOS adaptation
 
-- Extend the documented canvas through the iPhone safe areas while keeping readable content within appropriate insets.
-- Use a vertical `ScrollView` for content that does not fit compact heights; keep documented bottom actions and navigation clear of the home indicator.
-- Primary actions, navigation, cards, and contextual controls remain at least 44 points.
-- Keep balance, payment, and active services first; stack package choices and defer survey content.
-- Present the keyboard and system permission UI natively, then return to the same visual context.
-- Preserve semantic reading order in VoiceOver and allow text to grow with Dynamic Type.
-- Preserve the documented appearance instead of introducing an unrelated light or dark palette.
+Extend the pale canvas or the branded gradient through the top safe area and reserve the lower inset for the tab bar or documented action. Use vertical scroll containers for dashboards, service lists, forms, bonuses, and settings. Bottom sheets and fixed actions must not obscure the final content row or keyboard-focused field.
+
+All icon buttons, tabs, toggles, and compact row actions require at least 44-point targets. VoiceOver should announce the primary account or service value, its state, supporting metadata, and action in that order. Preserve native keyboard, chat, permission, and modal transitions. At compact widths or large Dynamic Type, stack two-column cards and wrap metadata before shrinking type. The observed system is light-first with bounded dark gradients; do not convert the whole product into a dark theme.
 
 # Anti-generic checklist
 
-- Do not mix orange and violet indiscriminately across all controls.
-- Do not hide status, constraints, or secondary conditions.
-- Do not add heavy shadows around every container.
-- Do not replace the documented canvas and surfaces with a generic grouped background and uniform white cards.
-- Do not use an unstyled `TabView`, default blue tint, or arbitrary SF Symbols when they contradict the reference.
-- Do not collapse every component to one corner radius or remove compositionally important imagery.
+- Do not replace the navy-to-violet account field with a small decorative gradient strip.
+- Do not use default iOS blue where the reference requires violet selection or orange primary action.
+- Do not mix violet and orange indiscriminately across every control.
+- Do not add heavy shadows to every white card or turn all rows into separate floating panels.
+- Do not ship an unstyled `TabView`; preserve the four-item bar and violet selected state.
+- Do not force mixed campaign imagery into one invented illustration style.
+- Do not give inputs, service cards, sheets, and pills one uniform radius.
+- Do not let disabled, loading, and active states lose the documented contrast hierarchy.
 
 </design-context>

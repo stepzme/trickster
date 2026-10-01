@@ -3,156 +3,101 @@
 version: 1
 platform: iOS
 name: Windy-app-design-analysis
-description: "A dark teal outdoor-weather dashboard built from layered blue panels, neon-mint actions, yellow Pro accents, full-color wind maps, white sport pictograms, compact forecast cards, and a highly structured personalization flow. The style feels technical yet recreational rather than institutional."
-
+description: "A dense weather workspace where pale cartography or deep petroleum panels dominate the viewport, compact measurement typography overlays live data, bright aqua marks active controls, and navigation floats directly over maps and forecasts."
 colors:
-  primary: "#00F0B5"
-  on-primary: "#063F46"
-  primary-pressed: "#00C998"
-  pro: "#F2C83B"
-  ink: "#FFFFFF"
-  ink-muted: "#B9D0D5"
-  ink-subtle: "#73949C"
-  canvas: "#0B3946"
-  surface-1: "#204D5B"
-  surface-2: "#2C5966"
-  surface-3: "#173F4C"
-  map-green: "#4BA865"
-  map-yellow: "#D4BC45"
-  map-red: "#B65351"
-  hairline: "#FFFFFF24"
-  semantic-success: "#00D7A6"
-  semantic-warning: "#F2C83B"
-  semantic-danger: "#ED5D67"
-  semantic-overlay: "#000000"
-
+  canvas: "#0B3943"
+  surface-primary: "#174B55"
+  surface-secondary: "#27616A"
+  accent-primary: "#18D9D0"
+  accent-secondary: "#F1C84B"
+  text-primary: "#FFFFFF"
+  text-secondary: "#B6CDD0"
+  divider: "#4F737A"
+  destructive: "#E85C63"
 typography:
-  display-xl: { fontFamily: System Sans, fontSize: 40, fontWeight: 750, lineHeight: 1.04, letterSpacing: -0.8 }
-  display-lg: { fontFamily: System Sans, fontSize: 32, fontWeight: 700, lineHeight: 1.08, letterSpacing: -0.5 }
-  display-md: { fontFamily: System Sans, fontSize: 25, fontWeight: 700, lineHeight: 1.14, letterSpacing: -0.25 }
-  headline: { fontFamily: System Sans, fontSize: 20, fontWeight: 700, lineHeight: 1.2, letterSpacing: 0 }
-  card-title: { fontFamily: System Sans, fontSize: 15, fontWeight: 650, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: System Sans, fontSize: 17, fontWeight: 450, lineHeight: 1.35, letterSpacing: 0 }
-  body-lg: { fontFamily: System Sans, fontSize: 16, fontWeight: 400, lineHeight: 1.42, letterSpacing: 0 }
-  body: { fontFamily: System Sans, fontSize: 13, fontWeight: 400, lineHeight: 1.38, letterSpacing: 0 }
-  body-sm: { fontFamily: System Sans, fontSize: 11, fontWeight: 400, lineHeight: 1.32, letterSpacing: 0 }
-  caption: { fontFamily: System Sans, fontSize: 9, fontWeight: 500, lineHeight: 1.28, letterSpacing: 0 }
-  button: { fontFamily: System Sans, fontSize: 15, fontWeight: 650, lineHeight: 1.2, letterSpacing: 0 }
-  eyebrow: { fontFamily: System Sans, fontSize: 9, fontWeight: 700, lineHeight: 1.25, letterSpacing: 0.2 }
-  mono: { fontFamily: System Mono, fontSize: 10, fontWeight: 450, lineHeight: 1.3, letterSpacing: 0 }
-
-rounded: { xs: 4, sm: 8, md: 12, lg: 16, xl: 22, xxl: 28, pill: 9999, full: 9999 }
-spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
-
+  hero: {fontFamily: "SF Pro Display", fontSize: 36, fontWeight: 700, lineHeight: 40}
+  title: {fontFamily: "SF Pro Display", fontSize: 26, fontWeight: 700, lineHeight: 31}
+  section: {fontFamily: "SF Pro Text", fontSize: 19, fontWeight: 600, lineHeight: 24}
+  body: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 400, lineHeight: 20}
+  label: {fontFamily: "SF Pro Text", fontSize: 13, fontWeight: 600, lineHeight: 17}
+  caption: {fontFamily: "SF Pro Text", fontSize: 11, fontWeight: 400, lineHeight: 15}
+spacing:
+  screen-horizontal: 16
+  section-gap: 24
+  card-padding: 14
+  control-gap: 10
+rounded:
+  control: 10
+  card: 14
+  sheet: 24
+  pill: 999
 components:
-  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [14, 18]}
-  forecast-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 12 }
-  activity-tile: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.caption}", rounded: "{rounded.sm}", padding: 10 }
-  map-panel: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.lg}", padding: 12 }
-  pro-badge: { backgroundColor: "{colors.pro}", textColor: "{colors.canvas}", typography: "{typography.eyebrow}", rounded: "{rounded.pill}", padding: [3, 7]}
+  map-control-stack: {fill: "dark translucent teal", geometry: "compact vertically grouped rounded controls"}
+  forecast-panel: {fill: "layered teal", geometry: "full-width dense data panel"}
+  time-scrubber: {fill: "dark overlay", geometry: "bottom timeline with aqua selected position"}
+  pro-marker: {fill: "yellow", geometry: "small inline chip or lock"}
 ---
 
 # Overview
 
-Windy.app uses a stable deep-teal shell for outdoor planning, then lets weather maps and community photography add color. Neon mint makes selection and next action unmistakable.
+Windy.app is a data-first weather interface. Map screens devote nearly the whole viewport to cartography, radar, wind color fields, or route overlays, while other screens use a deep petroleum shell filled with compact forecasts and controls. Aqua selection, dense measurement labels, and floating tool clusters make it visibly different from a generic card-based SwiftUI app.
 
 # Non-negotiable visual invariants
 
-- Keep mint exclusive to action and selection.
-- Personalize around sport and spot.
-- Preserve model, unit, time, and layer context.
-- Use real outdoor content for community.
-- Onboarding uses a single decision per screen.
-- Home stacks forecast, nearest spot, map, favorites, route, community, and nearby lists.
-- Keep dark panels clearly separated and avoid filling every gap with forecast detail.
-- Maps and sport selection need broad visual breathing room.
+- Real map, weather, or forecast data occupies the largest visual region whenever that data is present.
+- Deep petroleum teal is the persistent chrome and panel color around data visualizations.
+- Bright aqua is reserved for primary actions, selected modes, slider positions, and active controls.
+- Map controls appear as compact floating stacks over the current visualization rather than as large detached cards.
+- Forecasts and station views use dense microdata, compact labels, charts, and tables instead of spacious editorial layouts.
+- Premium status appears as a small yellow `PRO` marker or lock adjacent to the affected control.
+- Mode changes and secondary settings use layered sheets or action panels without discarding the visible context beneath them.
+- Icons describe weather, direction, layer, or measurement functions; decorative imagery does not compete with the data.
 
 # Color and surfaces
 
-Use neon mint for primary action, active time, selected filters, routes, and locations. Yellow is reserved for Pro and rating emphasis.
-
-Use deep teal canvas, layered blue-teal cards, darker side menu, and full-color weather maps.
-
-Use white for headings and values, pale blue-gray for descriptions, and muted teal-gray for inactive or disabled content.
-
-Use mint for normal success, yellow for premium or caution, red for dangerous weather, and the map legend strictly for magnitude.
+On non-map screens, the canvas is a full-screen petroleum field with progressively lighter blue-teal cards and rows. Map screens replace most of that mass with pale cartographic tiles, satellite texture, or multicolor weather overlays, but retain dark teal floating chrome and bottom timelines. Primary aqua is a narrow signal rather than a background color. Yellow identifies premium access; red is reserved for destructive or severe conditions. White carries primary values, blue-gray carries supporting units and metadata, and low-contrast teal dividers separate dense rows. Default iOS blue or grouped gray surfaces would visibly break this system.
 
 # Typography
 
-Use a modern system sans with tabular numerals and compact outdoor icon labels.
-
-Use 25–32 points onboarding headings, 20 points card or screen headings, 13–17 points forecast values, and 9–11 points technical labels.
-
-Keep sport, spot, time, unit, and condition aligned. Use bold for section titles and current values, not every row.
-
-Use Inter or SF Pro with tabular figures; use a system mono only when dense timelines require it.
-
-The hierarchy must remain legible with Dynamic Type: supporting text may wrap before the primary metric, title, or action loses its role.
+Use SF Pro as the iOS-safe sans. Hierarchy is compact: medium-bold screen or panel titles, semibold current values, small labels, and very small captions for units, times, models, and chart axes. Numeric weather data should use tabular figures so columns and timelines remain stable. Uppercase may be used sparingly for terse technical or premium labels, not for paragraphs. Under Dynamic Type, preserve the primary measurement and its unit together; let secondary metadata wrap or move below before enlarging dense charts beyond their available width.
 
 # Screen composition
 
-Use a 4 points base, 12 points card gaps, 12–16 points gutters, and 24 points between Home sections.
+Map archetype: extend the map or weather layer under the safe areas and across almost the entire screen; place a restrained top bar, one or two vertical floating control stacks, and a dark bottom time scrubber directly over it. Preserve enough unobscured map to keep location and weather patterns legible.
 
-Onboarding uses a single decision per screen. Home stacks forecast, nearest spot, map, favorites, route, community, and nearby lists.
+Forecast archetype: begin with compact location/context chrome, then stack full-width forecast strips, graphs, tables, and station panels with roughly 16-point side insets and 10–14-point internal padding. The viewport should feel information-rich, not like a sequence of oversized cards.
 
-Keep dark panels clearly separated and avoid filling every gap with forecast detail. Maps and sport selection need broad visual breathing room.
-
-Use real map texture, activity photography, subtle blurred outdoor backgrounds, and UI mockups. Avoid unrelated illustration or 3D objects.
-
-Primary iPhone screens keep the documented content grouping and vertical rhythm inside a scroll container when content exceeds the viewport. Bottom-owned actions or navigation reserve the lower safe area rather than covering content.
+Selection or settings archetype: use a dark teal canvas with compact rows, segmented controls, sliders, and toggles; focused choices may rise in a rounded bottom sheet. Long content scrolls vertically while the current action or timeline remains clear of the home indicator.
 
 # Navigation appearance
 
-Use a left side menu for Profile and services, while Home exposes search and map shortcuts. Deep forecast tools use local back, layers, and time controls.
-
-This section governs appearance only; product behavior and information architecture come from the approved Research and Planning artifacts.
+Navigation chrome is dark teal, compact, and usually overlaid on the active visualization. Top controls use simple white line symbols; map and layer tools form rounded vertical groups; selected states turn aqua. Bottom timelines and sheets use darker translucent surfaces with a clear selected time or mode. Back controls and sheet dismissals stay visually small while retaining full hit areas. This section defines appearance only; routes and information architecture come from the consuming product.
 
 # Components
 
-Primary onboarding, favorite, route, and download actions are mint rounded rectangles. Secondary actions use transparent or dark teal outlines. Native controls must inherit these colors and radii.
-
-Forecast cards combine spot, daily weather, wind bar, nearest action, and map preview. Community and nearby sections use compact dark rows.
-
-Search, registration, unit settings, route creation, and notification forms use layered teal rows with white labels and mint completion action.
-
-Use selected sport, nearest spot, favorite, Pro, offline, route, station, notification, archive, and community states in direct context.
-
-Controls retain at least a 44-point interactive area. Pressed and disabled treatments should stay within the documented palette and hierarchy.
+Map control stacks use small rounded teal cells, white line icons, minimal separators, and aqua selected icons or fills. Forecast panels use full-width teal surfaces, compact headings, aligned numeric columns, thin chart strokes, and restrained corner radii. Time scrubbers sit along the bottom edge with dense time labels, a colored selection indicator, and weather-layer color scales nearby. Primary actions are aqua rounded rectangles with dark text; secondary actions remain dark or outlined. Sliders and segmented controls inherit the same aqua active state. Premium markers are tiny yellow pills or locks placed inline with the affected label. Pressed states deepen the existing surface; disabled states reduce contrast without changing the layout.
 
 # Imagery and icons
 
-Use rounded community thumbnails and full-width weather maps. Sport pictograms remain crisp white silhouettes with no container when possible.
-
-Maps fill their panel with readable labels. Use `cover` for community photos and outdoor backgrounds, and `contain` for sport pictograms and device mockups.
-
-When imagery is part of the documented composition, it cannot be omitted while final assets are pending. A temporary asset must preserve its placement, crop, scale, and approximate visual weight.
+The dominant imagery is functional: map tiles, satellite texture, radar and wind overlays, route lines, compass graphics, color legends, and line charts. These visualizations must keep their large scale and cannot be replaced by blank placeholders or generic cards. Photography, when present in community content, stays secondary and cropped into compact rounded thumbnails. Use consistent thin weather and map glyphs with measurement labels; do not introduce decorative illustration or arbitrary symbol styles.
 
 # States
 
-Use selected sport, nearest spot, favorite, Pro, offline, route, station, notification, archive, and community states in direct context.
-
-Use mint for normal success, yellow for premium or caution, red for dangerous weather, and the map legend strictly for magnitude.
-
-Only the states documented above are specified; other states must preserve the same canvas, hierarchy, and component language without inventing a new visual system.
+Selected layers, times, tabs, and slider positions retain the dark teal base and add aqua emphasis. Premium controls retain their normal geometry and add a yellow chip or lock. Modal choices appear over the current map or forecast using a darker sheet, while native permission or rating prompts may temporarily sit above the same context. Populated maps and charts preserve their legends and units; unavailable or disabled items reduce contrast rather than becoming unrelated empty-state artwork.
 
 # iOS adaptation
 
-- Extend the documented canvas through the iPhone safe areas while keeping readable content within appropriate insets.
-- Use a vertical `ScrollView` for content that does not fit compact heights; keep documented bottom actions and navigation clear of the home indicator.
-- Sports, spot cards, search, map controls, layers, timeline, favorites, route, side menu, and Pro actions require at least 44 points targets.
-- Keep selected spot, current forecast, next time window, map access, and primary activity action visible. Collapse community, guides, archive, and secondary services.
-- Present the keyboard and system permission UI natively, then return to the same visual context.
-- Preserve semantic reading order in VoiceOver and allow text to grow with Dynamic Type.
-- Preserve the documented appearance instead of introducing an unrelated light or dark palette.
+Extend maps and the petroleum canvas through the safe areas, then inset labels and controls from the status bar and home indicator. Place overlay controls in safe, reachable zones with at least 44-point hit targets even when the visible icon is compact. Use vertical scrolling for long forecasts and settings, horizontal scrolling only for time-based data where the sequence remains evident. Sheets should use native presentation and keyboard behavior while adopting the documented teal surfaces and radii. VoiceOver order follows location/context, primary visualization or value, controls, then supporting data. Dynamic Type may stack labels and values, but must not erase the dominant map/data region. Preserve the observed dark shell; do not invent an unrelated light appearance for non-map surfaces.
 
 # Anti-generic checklist
 
-- Do not use yellow for ordinary selection.
-- Do not flatten weather maps into generic cards.
-- Do not overload Home with full technical tables.
-- Do not retain default native blue controls.
-- Do not replace the documented canvas and surfaces with a generic grouped background and uniform white cards.
-- Do not use an unstyled `TabView`, default blue tint, or arbitrary SF Symbols when they contradict the reference.
-- Do not collapse every component to one corner radius or remove compositionally important imagery.
+- Do not replace the map or chart region with a generic white card stack.
+- Do not use default blue tint for selected controls.
+- Do not spread sparse content across oversized editorial cards.
+- Do not convert floating map tools into an unstyled toolbar or `TabView`.
+- Do not use `Form` sections with default grouped backgrounds for dense weather settings.
+- Do not remove units, legends, time labels, or data alignment from technical panels.
+- Do not use yellow for ordinary selection or aqua as a full-screen decorative field.
+- Do not add decorative illustrations where functional cartography and weather graphics carry the visual weight.
 
 </design-context>

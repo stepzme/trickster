@@ -3,142 +3,127 @@
 version: 1
 platform: iOS
 name: MTBank-Moby-design-analysis
-description: "A bright mobile-banking system with saturated blue account headers, white rounded product cards, cool gray grouped backgrounds, fine line icons, and a cyan-magenta Moby brand accent."
-colors: {primary: "#1677E8", on-primary: "#FFFFFF", primary-focus: "#0B61C5", ink: "#17191C", ink-muted: "#697079", ink-subtle: "#969DA6", ink-tertiary: "#C3C8CE", canvas: "#FFFFFF", surface-1: "#F2F3F4", surface-2: "#E8EBEE", surface-3: "#DDE1E5", surface-4: "#CFD5DB", hairline: "#E2E5E8", hairline-strong: "#CBD0D5", hairline-tertiary: "#AFB6BE", inverse-canvas: "#0A1830", inverse-surface-1: "#102949", inverse-surface-2: "#173B62", inverse-ink: "#FFFFFF", brand-secure: "#E31E55", semantic-success: "#2FB978", semantic-overlay: "#101820"}
+description: "A light native-feeling banking interface anchored by a large electric-blue gradient account stage, rounded white financial cards, blue outline actions, restrained gray forms, realistic card art, and bottom sheets."
+colors:
+  canvas: "#FFFFFF"
+  surface-primary: "#FFFFFF"
+  surface-secondary: "#F2F3F4"
+  accent-primary: "#1677E8"
+  accent-secondary: "#20C7E8"
+  text-primary: "#17191C"
+  text-secondary: "#697079"
+  divider: "#E2E5E8"
+  destructive: "#D93B4C"
 typography:
-  display-xl: {fontFamily: SF Pro Display, fontSize: 36, fontWeight: 700, lineHeight: 1.06, letterSpacing: -0.8}
-  display-lg: {fontFamily: SF Pro Display, fontSize: 30, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.5}
-  display-md: {fontFamily: SF Pro Display, fontSize: 24, fontWeight: 700, lineHeight: 1.14, letterSpacing: -0.3}
-  headline: {fontFamily: SF Pro Display, fontSize: 20, fontWeight: 700, lineHeight: 1.20, letterSpacing: -0.2}
-  card-title: {fontFamily: SF Pro Text, fontSize: 16, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0}
-  subhead: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 600, lineHeight: 1.30, letterSpacing: 0}
-  body-lg: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0}
-  body: {fontFamily: SF Pro Text, fontSize: 13, fontWeight: 400, lineHeight: 1.36, letterSpacing: 0}
-  body-sm: {fontFamily: SF Pro Text, fontSize: 11, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0}
-  caption: {fontFamily: SF Pro Text, fontSize: 10, fontWeight: 400, lineHeight: 1.25, letterSpacing: 0}
-  button: {fontFamily: SF Pro Text, fontSize: 14, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0}
-  eyebrow: {fontFamily: SF Pro Text, fontSize: 10, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0.2}
-  mono: {fontFamily: SF Mono, fontSize: 11, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0}
-rounded: {xs: 6, sm: 12, md: 18, lg: 24, xl: 28, xxl: 32, pill: 9999, full: 9999}
-spacing: {xxs: 4, xs: 8, sm: 12, md: 16, lg: 20, xl: 24, xxl: 32, section: 40}
+  hero: {fontFamily: "SF Pro Display", fontSize: 34, fontWeight: 700, lineHeight: 39}
+  title: {fontFamily: "SF Pro Display", fontSize: 28, fontWeight: 700, lineHeight: 34}
+  section: {fontFamily: "SF Pro Text", fontSize: 20, fontWeight: 600, lineHeight: 25}
+  body: {fontFamily: "SF Pro Text", fontSize: 16, fontWeight: 400, lineHeight: 22}
+  label: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 600, lineHeight: 20}
+  caption: {fontFamily: "SF Pro Text", fontSize: 13, fontWeight: 400, lineHeight: 18}
+spacing:
+  screen-horizontal: 16
+  section-gap: 28
+  card-padding: 16
+  control-gap: 12
+rounded:
+  control: 14
+  card: 22
+  sheet: 28
+  pill: 999
 components:
-  button-primary: {backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 14 18}
-  button-primary-pressed: {backgroundColor: "{colors.primary-focus}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}"}
-  button-secondary: {backgroundColor: "{colors.surface-1}", textColor: "{colors.primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 12 16}
-  button-tertiary: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 10 14}
-  content-card: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 14}
-  feature-card: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 16}
-  text-input: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: 12 14}
-  status-badge: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.pill}", padding: 3 7}
-  bottom-nav: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink-subtle}", typography: "{typography.caption}", rounded: "{rounded.lg}", padding: 8 10}
+  primary-action: {background: "#1677E8", foreground: "#FFFFFF", minHeight: 52, cornerRadius: 14}
+  secondary-action: {background: "#F2F3F4", foreground: "#1677E8", minHeight: 48, cornerRadius: 14}
+  primary-card: {background: "#FFFFFF", foreground: "#17191C", cornerRadius: 22, padding: 16}
+  navigation: {background: "#FFFFFF", selected: "#1677E8", unselected: "#969DA6"}
 ---
 
 # Overview
 
-MTBank Moby uses a saturated blue account stage and soft white product cards to make balances, actions, cards, deposits, and applications feel direct and approachable.
+MTBank Moby combines a mostly native, white iOS banking shell with one distinctive blue account stage. The home composition is dominated by a large electric-blue gradient header containing balance context, quick actions, and overlapping financial cards; task screens become quieter white forms with blue controls, generous spacing, and pinned bottom actions. Realistic card art and compact blue outline icons provide most of the imagery.
 
 # Non-negotiable visual invariants
 
-- Navigation or control chrome uses blue gradient headers.
-- Characteristic content and controls use generous rounded cards.
-- The sampled screens consistently show line icons.
-- The sampled screens consistently show account carousels.
-- Characteristic content and controls use white quick-action tiles.
-- The recurring color treatment uses a small cyan-magenta identity.
-- Preserve the blue account stage and calm white product hierarchy.
-- Keep the primary task and current state immediately legible.
+- The main account overview uses a large blue gradient field across roughly the upper half, ending in broad rounded lower corners.
+- Primary actions, back controls, active states, and key icons use saturated bank blue.
+- Three equal white quick-action tiles sit visibly against the blue account stage.
+- Financial products appear as generously rounded white cards with clear balance, identifier, status, and controlled shadows.
+- Task screens remain mostly white, sparse, and vertically composed rather than inheriting the full gradient.
+- Primary form actions are broad blue rounded rectangles pinned near the bottom safe area; disabled versions retain geometry in light gray.
+- Bottom sheets are tall white rounded panels with a grab handle, blue line icons, and dimmed context.
+- Amount, currency, transaction direction, and status retain stronger hierarchy than promotional content.
 
 # Color and surfaces
 
-Electric blue drives active navigation, action icons, and financial focus; cyan-magenta belongs to the Moby mark and rare brand moments.
+White is the default canvas for transfers, payments, history, settings, and product details. Cool light gray groups inputs, disabled actions, search, and secondary rows. The account overview introduces a saturated electric-blue gradient as the largest color mass, with white action tiles and cards layered over or below it.
 
-White owns operational content, while cool light gray groups stacked products and blue gradients frame account context.
-
-Near-black carries balances and product titles; blue may emphasize actions, dates, and favorable product facts.
-
-Green indicates positive money movement and success; red is reserved for warnings or destructive decisions.
+Near-black carries balances, amounts, titles, and form values; medium gray carries subtitles, masked identifiers, timestamps, and inactive navigation. Bright blue defines actions, active navigation, outline icons, and focused controls. Green marks positive amounts and completed outcomes; red is restricted to destructive decisions, failure, or logout. Cyan and magenta appear only in bounded brand or sub-product moments. A generic system palette that spreads blue across all secondary content would flatten the hierarchy.
 
 # Typography
 
-Use SF Pro Display for balances and section headings and SF Pro Text for controls, content, and metadata.
+Use SF Pro Display for balance and major financial values and SF Pro Text for titles, rows, inputs, and metadata. Hero balances or state values sit around 30–34 points in bold weight. Page titles are roughly 24–28 points; section headings 18–20 points; standard rows and form values 15–16 points; timestamps, masked identifiers, and helper text 11–13 points.
 
-- display-lg — 30 points — 700 — Hero or state
-- headline — 20 points — 700 — Section title
-- card-title — 16 points — 600 — Primary item
-- body — 13 points — 400 — Detail
-- caption — 10 points — 400 — Metadata
-
-- Lead with balance, product status, and next action.
-- Keep repeated metadata aligned and visually quieter.
-- Reserve high contrast and weight for real decisions.
-
-Use the system sans with tabular numerals; keep currency and masked account identifiers stable.
-
-The hierarchy must remain legible with Dynamic Type: supporting text may wrap before the primary metric, title, or action loses its role.
+Amounts use stable, high-contrast numerals with currency visually attached but quieter when appropriate. Green or black communicates direction in transaction lists; labels and conditions remain gray. Titles are plain and usually left aligned, with centered treatment limited to focused confirmation or detail states. Under Dynamic Type, helper text and key-value rows wrap before amounts, selected accounts, or the primary CTA lose priority.
 
 # Screen composition
 
-Use a 4 points base, 8–12 points internal gaps, and 16 points horizontal screen gutters.
+Task screens use roughly 16-point side insets, 12–16-point control gaps, and 24–32 points between major groups. The native status bar and compact title row sit at the top; form or list content flows vertically; a primary CTA frequently occupies the bottom safe-area region.
 
-Home stacks full-width account and deposit cards; Products uses simple vertical rows beneath a promotion rail.
+Observed archetypes:
 
-Give money values and quick actions room, then keep settings and product lists compact.
+- Account overview: blue gradient upper stage, masked balance and identity, three white quick actions, horizontally peeking product cards, promo strip, and persistent bottom tab bar.
+- Transfer or payment form: compact blue back control, plain title, source and destination selectors, large amount field, sparse white space, and pinned blue CTA.
+- Catalog or product list: search or promotion near the top, flat rows with blue outline icons and chevrons, and occasional floating bottom action.
+- Transaction history: date-grouped flat rows with small icon tiles, concise status, and aligned signed amounts.
+- Operation detail: centered status icon and amount above key-value facts, followed by two restrained bottom actions.
+- Card detail: large realistic card image, compact quick actions, segmented content, and grouped settings rows.
+- Bottom decision sheet: large rounded white panel over dimmed content, with handle, title, option rows, and primary button.
 
-Use gradient headers, nested card layers, and restrained soft shadows only where a product floats above the grouped canvas.
-
-Primary iPhone screens keep the documented content grouping and vertical rhythm inside a scroll container when content exceeds the viewport. Bottom-owned actions or navigation reserve the lower safe area rather than covering content.
+Long content scrolls vertically, but bottom actions remain above the home indicator. Promotion remains secondary to accounts and tasks.
 
 # Navigation appearance
 
-Use four bottom destinations in a white rounded bar; the active icon may use the Moby gradient while labels remain crisp.
+Back navigation is a compact blue chevron with a plain text title rather than a heavy custom header. The observed bottom tab bar is a white edge-integrated surface with four icon-and-label items; the selected item uses blue while inactive items remain gray.
 
-This section governs appearance only; product behavior and information architecture come from the approved Research and Planning artifacts.
+Bottom sheets use a small centered handle, pronounced rounded top corners, a dimmed backdrop, and blue outline iconography. Floating action pills appear on some quiet lists but are not the global navigation style. These properties govern appearance only; tab count and route structure belong to the product definition.
 
 # Components
 
-Primary actions use blue; the three core money actions appear as equal white tiles within the blue header.
+Primary buttons are full-width blue rounded rectangles around 48–52 points high with white semibold labels. Pressed states deepen the blue; disabled states use a light-gray fill and muted label. Secondary actions use white or pale gray with blue text or outline icons.
 
-Product cards combine balance, masked identifier, status, bonuses, and one clear expansion or action affordance.
+Account and product cards have 18–24-point radii, white fills, restrained elevation, and internally grouped balance, masked number, badge, and visibility controls. Quick actions are equal white rounded tiles with blue line icons. Amount inputs use large numerals, currency labels, and compact clear or swap controls.
 
-Inputs and keypads remain light and sparse, with blue focus and no generic default styling.
-
-Attach transaction direction, pending state, balance impact, and product availability to the relevant card or row.
-
-Controls retain at least a 44-point interactive area. Pressed and disabled treatments should stay within the documented palette and hierarchy.
+Selectors are broad rounded rows containing account or bank identity, supporting text, and a chevron. History rows use date grouping, small blue icon tiles, and right-aligned signed amounts. Card settings and profile modules use flat grouped rows with native-feeling switches. Confirmation code uses four visible positions above the iOS numeric keyboard. All icons and compact affordances keep at least a 44-point hit area.
 
 # Imagery and icons
 
-Keep cards, account art, and promotional imagery within generous rounded rectangles; avoid decorative cropping near financial data.
+The core banking UI uses realistic card previews, payment network marks, compact promo banners, and simple blue outline icons. Card art is contained within generous rounded bounds and never competes with the balance or primary task. No financial data charts were observed.
 
-Contain promotional art in dedicated banners and keep it away from balances, limits, and control labels.
+Onboarding uses polished dark space imagery with a glowing glass-like emblem, while a separate rewards area uses bright cyan and magenta blob characters and confetti. These are distinct branded clusters rather than one coherent app-wide illustration system; do not merge them or extrapolate either into routine forms, histories, or settings.
 
-When imagery is part of the documented composition, it cannot be omitted while final assets are pending. A temporary asset must preserve its placement, crop, scale, and approximate visual weight.
+Functional icons remain small, clear, and secondary to text and amounts. Do not substitute arbitrary mixed SF Symbols when the observed blue outline set is visible. When card or promotion imagery is compositionally present, preserve its scale, crop, and text-safe area while final assets are pending.
 
 # States
 
-Attach transaction direction, pending state, balance impact, and product availability to the relevant card or row.
+Observed states include onboarding, native notification and Face ID permission alerts, populated account overview, selected transfer sources and destinations, amount entry, SMS code with keyboard and timer, payment and product bottom sheets, completed transaction, empty deposit state, blocking missing-account state, populated history, card settings, profile switches, and notifications.
 
-Green indicates positive money movement and success; red is reserved for warnings or destructive decisions.
-
-Only the states documented above are specified; other states must preserve the same canvas, hierarchy, and component language without inventing a new visual system.
+Success uses a green confirmation mark within a white rounded sheet while retaining the blue return action. Empty states use a small centered line icon and muted explanatory text with ample white space. Blocking states use a pale elevated message card and disabled gray CTA rather than a full-screen color change. Across states, blue remains action color, white remains operational canvas, and amounts or status retain the strongest hierarchy.
 
 # iOS adaptation
 
-- Extend the documented canvas through the iPhone safe areas while keeping readable content within appropriate insets.
-- Use a vertical `ScrollView` for content that does not fit compact heights; keep documented bottom actions and navigation clear of the home indicator.
-- Primary actions, navigation, cards, and contextual controls remain at least 44 points.
-- Preserve balances and money actions first, then stack product metadata and shorten promotional content.
-- Present the keyboard and system permission UI natively, then return to the same visual context.
-- Preserve semantic reading order in VoiceOver and allow text to grow with Dynamic Type.
-- Preserve the documented appearance instead of introducing an unrelated light or dark palette.
+Extend the blue home stage through the top safe area where the gradient is active; keep balances and controls inside readable insets. White task pages respect the status-bar inset. Use vertical scrolling for forms, history, cards, products, and settings, reserving the bottom safe area for tab bars, sheets, or pinned actions.
+
+Keep account carousels horizontally scrollable and allow cards to peek without shrinking financial text. Present numeric keyboard, notification, Face ID, and other system transitions natively, then return to the same surface. VoiceOver should announce account or transaction identity, amount, currency, status, and action in that order. Dynamic Type may increase rows and cards; compact widths should stack metadata before compressing amounts. The observed package is light-first, with dark imagery limited to onboarding.
 
 # Anti-generic checklist
 
-- Do not extend cosmic launch art into every transactional surface.
-- Do not hide status, constraints, or secondary conditions.
-- Do not add heavy shadows around every container.
-- Do not replace the documented canvas and surfaces with a generic grouped background and uniform white cards.
-- Do not use an unstyled `TabView`, default blue tint, or arbitrary SF Symbols when they contradict the reference.
-- Do not collapse every component to one corner radius or remove compositionally important imagery.
+- Do not extend the cosmic onboarding art or rewards characters across core banking tasks.
+- Do not remove the large blue account stage from overview-style compositions.
+- Do not replace the three white quick-action tiles with a generic toolbar.
+- Do not turn every task page into a blue gradient screen; most forms remain white and sparse.
+- Do not use heavy shadows around every card or input.
+- Do not replace pinned blue actions with default blue text links or an unstyled `Form`.
+- Do not make the tab bar a floating glass capsule when the observed bar is edge-integrated.
+- Do not collapse card previews, input fields, sheets, and small icon tiles to one uniform radius.
 
 </design-context>

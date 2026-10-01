@@ -1126,7 +1126,7 @@
     "categories": [
       "AI"
     ],
-    "uiSummary": "A quiet AI conversation interface with an expansive white canvas, a blue-to-violet greeting accent, soft gray prompt chips, pale blue user messages, and a large rounded composer anchored to the bottom. Minimal chrome keeps the prompt, generated answer, tools, and source-rich content in focus.",
+    "uiSummary": "A sparse white AI conversation interface with broad negative space, moderate open type, pale blue user surfaces, restrained blue-to-violet brand moments, unboxed reading columns, and a large rounded composer anchored above the bottom safe area.",
     "illustrationSummary": null
   },
   {
@@ -1137,8 +1137,8 @@
     "categories": [
       "Finance"
     ],
-    "uiSummary": "A bright, friendly banking system built around white space, high-contrast black text, and unmistakable signal yellow. Soft gray cards structure dense finance tasks, while pastel blue, mint, peach, and lavender education cards introduce a hand-drawn illustration layer. Rounded icon tiles, short coaching bubbles, and broad yellow actions make complex flows feel approachable.",
-    "illustrationSummary": "Raiffeisen uses friendly editorial illustrations to explain onboarding, security, cashback, savings, subscriptions, and feature education. They soften otherwise utilitarian banking tasks without replacing core financial information."
+    "uiSummary": "A high-key banking interface with white and pale-gray task surfaces, bold dark financial values, unmistakable signal-yellow actions, compact five-item navigation, charcoal product cards, and pastel hand-drawn campaign imagery.",
+    "illustrationSummary": "Raiffeisen uses a repeatable authored illustration system for onboarding, campaigns, financial education, subscriptions, and success or result moments. The art introduces a friendly hand-drawn layer around otherwise utilitarian banking surfaces while staying separate from balances, transaction data, functional icons, partner marks, and profile photography."
   },
   {
     "appId": "69160bc60ed1d541250c7e96",
@@ -1151,7 +1151,7 @@
       "Utilities",
       "Weather"
     ],
-    "uiSummary": "A dark teal outdoor-weather dashboard built from layered blue panels, neon-mint actions, yellow Pro accents, full-color wind maps, white sport pictograms, compact forecast cards, and a highly structured personalization flow. The style feels technical yet recreational rather than institutional.",
+    "uiSummary": "A dense weather workspace where pale cartography or deep petroleum panels dominate the viewport, compact measurement typography overlays live data, bright aqua marks active controls, and navigation floats directly over maps and forecasts.",
     "illustrationSummary": null
   },
   {
@@ -1162,7 +1162,7 @@
     "categories": [
       "Lifestyle"
     ],
-    "uiSummary": "A restrained monochrome daily planner where bold editorial date typography, a coral day marker, hairline timeline rows, and softly blurred navigation chrome create a quiet focus tool. White and charcoal themes share the same hierarchy; native controls may be used, but their fills, radii, weight, and spacing must inherit this sparse visual language.",
+    "uiSummary": "A sparse monochrome planner built on expansive warm-white or charcoal fields, oversized weekday type, hairline task structure, tiny coral time markers, tall rounded sheets, and softly translucent bottom navigation.",
     "illustrationSummary": null
   },
   {
@@ -1174,8 +1174,8 @@
       "Telecom & Connectivity",
       "Utilities"
     ],
-    "uiSummary": "A dark telecom dashboard built from charcoal panels, electric lime-green branding, allowance gauges, compact service lists, and photography-backed promotional tiles. The interface is high-contrast, functional, and unmistakably carrier-oriented.",
-    "illustrationSummary": null
+    "uiSummary": "A dark, compact carrier interface in which electric-lime header fields and actions cut through layered charcoal account surfaces, while tabular metrics, restrained photography, and a recurring line-art mascot provide hierarchy and identity.",
+    "illustrationSummary": "Ucom uses a recurring authored mascot and supporting line-art language for introductory, permission, roaming, and empty-state moments. The art is a distinct layer from utility icons and promotional photography: it gives sparse dark screens a recognizable focal point and must be delivered as generated image assets rather than reconstructed from interface primitives."
   },
   {
     "appId": "691df1a2428a30f32d2f8e6f",
@@ -1185,8 +1185,8 @@
     "categories": [
       "Education"
     ],
-    "uiSummary": "A dark editorial learning interface where cultural imagery carries the emotion and the UI stays quiet. Pure black canvas, white type, charcoal controls, and a restrained violet-blue access accent frame collage-led course cards. Large serif display titles appear at key editorial moments, while compact sans-serif metadata, chips, tabs, and lesson controls keep dense educational content easy to scan.",
-    "illustrationSummary": "The app uses editorial collage as a content identity: photographed people, sculpture, architecture, paintings, and cut-out objects are assembled into compact cultural scenes."
+    "uiSummary": "A black editorial learning interface where large cultural imagery and occasional serif display titles carry the atmosphere, while restrained charcoal controls, compact sans-serif metadata, and violet-to-blue access actions keep dense content precise.",
+    "illustrationSummary": null
   },
   {
     "appId": "69260a51bf5740a557fb20f3",
@@ -1198,8 +1198,8 @@
       "Entertainment",
       "Lifestyle"
     ],
-    "uiSummary": "A mystical dark mobile system with warm editorial serif titles, violet-glowing controls, translucent charcoal cards, celestial 3D objects, and image-led personalized guidance.",
-    "illustrationSummary": "Moonly uses mystical editorial art as a functional layer: planets, moon phases, tarot characters, glowing guides, and atmospheric scenes identify practices and personalized readings."
+    "uiSummary": "An immersive near-black astrology interface where oversized white serif headings, translucent charcoal cards, warm active navigation, and large mystical media create a layered editorial ritual space.",
+    "illustrationSummary": null
   },
   {
     "appId": "692f0bb4f06b581e9f76921c",
@@ -1210,7 +1210,7 @@
       "Telecom & Connectivity",
       "Utilities"
     ],
-    "uiSummary": "A bright telecom utility with clean white surfaces, Viva red activation controls, blue allowance meters, compact story tiles, and straightforward account modules.",
+    "uiSummary": "A bright telecom utility built from white and pale-gray fields, compact account cards, bold functional sans-serif hierarchy, Viva-red actions and selected navigation, blue usage meters, and secondary promotional photography.",
     "illustrationSummary": null
   },
   {
@@ -1221,8 +1221,8 @@
     "categories": [
       "Shopping, Listings & Marketplaces"
     ],
-    "uiSummary": "A fast, promotion-dense marketplace on a bright white canvas, organized by coral-red commerce actions, compact black type, rounded category thumbnails, two-column product grids, and playful 3D reward moments. Product photography carries browsing while hot coral, pink, violet, and deep blue promotional panels create momentum.",
-    "illustrationSummary": "Joom uses glossy 3D objects and playful characters for onboarding, rewards, and post-purchase promotions; the catalog itself remains photography-led."
+    "uiSummary": "A dense white marketplace interface where near-square product photography, bold black prices, coral-red commerce accents, pale search and filter controls, compact five-item navigation, and campaign-specific promotional art drive the visual hierarchy.",
+    "illustrationSummary": null
   },
   {
     "appId": "69388e354af03fa5db6dd8a2",
@@ -1234,7 +1234,7 @@
       "Maps & Navigation",
       "Weather"
     ],
-    "uiSummary": "A bright marine-weather workstation built from cyan actions, full-screen multicolor wind maps, white forecast sheets, dense color-coded tables, black line icons, and orange warning or subscription accents. The interface balances technical data density with simple rounded map controls and a five-tool navigation bar.",
+    "uiSummary": "A marine-weather workstation combining full-screen dark nautical maps, multicolor forecast overlays, dense white tabular sheets, cyan selection and navigation, sparse rounded map controls, and orange-coral subscription actions.",
     "illustrationSummary": null
   },
   {
@@ -1245,7 +1245,7 @@
     "categories": [
       "Food and Drinks"
     ],
-    "uiSummary": "A photo-led food and grocery marketplace with white surfaces, dense horizontal merchandising rails, strong black hierarchy, forest-green actions, red promotional prices, and compact yellow rating badges. Search, restaurant menus, cart, checkout, and delivery tracking remain direct and information-rich.",
+    "uiSummary": "A bright photo-led marketplace built on white and mist-gray surfaces, where dense food and product imagery is organized by black rounded type, pill filters, compact metadata, a five-item tab bar, and decisive Bolt-green actions.",
     "illustrationSummary": null
   },
   {
@@ -1256,8 +1256,8 @@
     "categories": [
       "Telecom & Connectivity"
     ],
-    "uiSummary": "A telecom account system pairing a deep navy-to-violet dashboard header with white grouped cards, vivid violet navigation, orange payment actions, and occasional hand-painted campaign art.",
-    "illustrationSummary": "Rostelecom uses expressive seasonal editorial illustrations for launch and bounded campaigns, combining saturated violet backdrops with hand-drawn objects, characters, gifts, and playful light."
+    "uiSummary": "A light telecom account interface that alternates pale utility surfaces with large navy-to-violet account fields, using bold black type, thick rounded cards, violet selected navigation, vivid orange primary actions, and mixed campaign imagery.",
+    "illustrationSummary": null
   },
   {
     "appId": "693c4468f74eb3a4972ec4f3",
@@ -1267,7 +1267,7 @@
     "categories": [
       "Shopping, Listings & Marketplaces"
     ],
-    "uiSummary": "A dense promotional marketplace where white product grids are punctuated by lime conversion actions, yellow buy-now buttons, coral navigation, and campaign-specific violet or mint shells. Product photography, price hierarchy, and delivery evidence carry the interface.",
+    "uiSummary": "A dense white marketplace interface where product photography, bold prices, red active navigation, lime checkout actions, yellow immediate-purchase controls, compact metadata, and campaign-specific promotional color create a high-conversion visual hierarchy.",
     "illustrationSummary": null
   },
   {
@@ -1278,8 +1278,8 @@
     "categories": [
       "Job & Recruitment"
     ],
-    "uiSummary": "A utilitarian recruiter interface built from white surfaces, near-black typography, bright blue actions, pale status chips, and compact vacancy or candidate cards. The visual system favors operational clarity, visible state, and direct contact over decorative branding.",
-    "illustrationSummary": null
+    "uiSummary": "A compact recruiter workspace with white operational surfaces, strong black hierarchy, bright blue actions, pale-blue secondary controls, restrained status color, thin-line navigation, rounded utility cards, and occasional hand-drawn human illustrations.",
+    "illustrationSummary": "hh business uses a lightweight but repeatable authored illustration system in onboarding and selected empty or gated states. Simple hand-drawn human figures and recruiting scenes soften operational white screens, while candidate avatars, photographs, functional icons, payment marks, and brand logos remain separate image categories."
   },
   {
     "appId": "693d968ca65e5f751bf3e181",
@@ -1289,7 +1289,7 @@
     "categories": [
       "Shopping, Listings & Marketplaces"
     ],
-    "uiSummary": "A dense global marketplace built around a dark green commerce header, white content modules, yellow purchase actions, and highly variable campaign imagery. Search, delivery context, price, availability, and recommendations dominate every screen.",
+    "uiSummary": "A commerce-dense white interface anchored by aqua or deep-green search chrome, compact product facts, image-heavy discovery rails, persistent line-icon navigation, and yellow pill-shaped purchase actions.",
     "illustrationSummary": null
   },
   {
@@ -1300,7 +1300,7 @@
     "categories": [
       "Food and Drinks"
     ],
-    "uiSummary": "A vivid omnichannel grocery system on white, led by bright red commerce actions, warm orange-pink promotional gradients, dense product photography, compact prices and discounts, and loyalty-first navigation.",
+    "uiSummary": "A brand-forward grocery interface that moves from full-screen red-orange-pink onboarding art into dense white shopping feeds with rounded product photography, bold Russian sans-serif headings, red sticky actions, and a five-item bottom bar.",
     "illustrationSummary": null
   },
   {
@@ -1311,7 +1311,7 @@
     "categories": [
       "Shopping, Listings & Marketplaces"
     ],
-    "uiSummary": "A dense jewelry hypermarket built from white canvas, vivid red branding, black transactional controls, fine gray dividers, compact catalog typography, and high-detail product photography. Square category grids and underlined utility links create a practical retail tone; large campaign banners bring most decorative color.",
+    "uiSummary": "A dense jewelry-commerce interface built on white fields, black transactional controls, sharp red brand accents, compact product data, and highly detailed product photography.",
     "illustrationSummary": null
   },
   {
@@ -1322,7 +1322,7 @@
     "categories": [
       "Telecom & Connectivity"
     ],
-    "uiSummary": "A modular telecom dashboard built from soft white and lavender surfaces, MTS magenta actions, cyan financial utilities, rounded account cards, and compact promotional story tiles.",
+    "uiSummary": "A modular telecom dashboard with a pale lavender canvas, large rounded white account cards, hot MTS red actions, blue usage indicators, compact service icons, and bounded promotional imagery.",
     "illustrationSummary": null
   },
   {
@@ -1333,7 +1333,7 @@
     "categories": [
       "Social Networking"
     ],
-    "uiSummary": "A light social wishlist system defined by bold black type, product photography, translucent white navigation, soft gray tiles, black save actions, and restrained pink-to-lilac creation accents.",
+    "uiSummary": "An airy white, photography-led wishlist interface with oversized rounded black headings, soft-gray controls, blue pill actions, circular social imagery, and a translucent floating tab bar.",
     "illustrationSummary": null
   },
   {
@@ -1344,8 +1344,8 @@
     "categories": [
       "Food and Drinks"
     ],
-    "uiSummary": "A warm, playful fast-food ordering interface built from cream backgrounds, dark-brown headers, flame orange actions, bold retro display type, product cutouts, and crown-themed red-yellow promotion art. Menu, cart, checkout, delivery tracking, loyalty crowns, and coupons share chunky rounded cards and a persistent five-item navigation.",
-    "illustrationSummary": "Illustration makes crowns, challenges, campaigns, and rewards feel playful while food ordering remains product-led."
+    "uiSummary": "A warm, high-density food interface built on cream fields, dark chocolate headers, chunky rounded type and cards, orange-red actions, dominant food photography, and vivid illustrated loyalty panels.",
+    "illustrationSummary": "Burger King uses an authored illustration layer for loyalty, crown education, seasonal promotions, profile identity, and reward messaging. It complements rather than replaces food photography: transactional menu, customization, address, payment, and order content remain photo- or data-led. New illustration assets must be produced with the available image-generation model, visually approved before integration, and inserted as approved image assets; an illustration-required screen is incomplete until the asset is visibly integrated."
   },
   {
     "appId": "6949660d167fe8d28a09d943",
@@ -1355,7 +1355,7 @@
     "categories": [
       "Finance"
     ],
-    "uiSummary": "A modular finance interface that layers translucent white cards over adaptive navy, violet, blue, and aqua gradients. Bold black-and-white actions, large numeric balances, compact market data, and configurable rounded widgets create a system that can move between atmospheric account dashboards and clean task sheets without losing hierarchy.",
+    "uiSummary": "A modular finance interface that shifts between atmospheric violet-blue gradient roots and calm off-white task surfaces, using oversized balances, compact black actions, translucent rounded widgets, dense financial rows, and restrained product imagery.",
     "illustrationSummary": null
   },
   {
@@ -1366,8 +1366,8 @@
     "categories": [
       "Finance"
     ],
-    "uiSummary": "A confident global-finance system built from bright acid green, white or near-black canvases, bold condensed headings, calm gray account cards, and highly legible transaction detail. Playful painted 3D imagery appears selectively while money tasks remain direct and transparent.",
-    "illustrationSummary": "Use tactile surreal 3D objects photographed or rendered like small hand-painted sculptures. Forms are simple and symbolic—locks, arrows, travel objects, cards—with saturated turquoise, pink, violet, and lime textures against quiet white or brand-green fields."
+    "uiSummary": "A high-contrast global-finance interface built from warm white or near-black canvases, acid-green pill actions, oversized condensed black headings, calm gray account surfaces, explicit financial rows, and selective tactile 3D object imagery.",
+    "illustrationSummary": "Wise uses a recurring authored system of tactile symbolic objects in onboarding, empty, educational, card, task, and promotional contexts. The imagery gives open brand surfaces a physical focal point while critical financial rows remain intentionally illustration-free."
   },
   {
     "appId": "6953df7da2e589fa71f79ce1",
@@ -1377,8 +1377,8 @@
     "categories": [
       "Food and Drinks"
     ],
-    "uiSummary": "An immersive coffee ordering experience led by editorial product photography, warm full-bleed color atmospheres, clean black typography, cobalt-violet actions, horizontal taxonomy, spacious product storytelling, and whimsical 3D barista characters used for order status, predictions, and seasonal moments.",
-    "illustrationSummary": "Drinkit uses softly rendered 3D baristas, expressive heads, miniature seasonal worlds, and whimsical product companions to turn order status and campaigns into warm character moments."
+    "uiSummary": "An image-led coffee-ordering interface with full-bleed product photography, white and icy-blue surfaces, electric cobalt actions, translucent modifier tiles, horizontal category rails, and tall rounded checkout sheets.",
+    "illustrationSummary": null
   },
   {
     "appId": "695b744f5f5a3772f4b5fe99",
@@ -1388,8 +1388,8 @@
     "categories": [
       "Finance"
     ],
-    "uiSummary": "A bright mobile-banking system with saturated blue account headers, white rounded product cards, cool gray grouped backgrounds, fine line icons, and a cyan-magenta Moby brand accent.",
-    "illustrationSummary": "Moby uses polished 3D brand imagery for the launch and selected promotional moments, pairing the M-shaped cyan-magenta object with space, glass, coins, and luminous trails."
+    "uiSummary": "A light native-feeling banking interface anchored by a large electric-blue gradient account stage, rounded white financial cards, blue outline actions, restrained gray forms, realistic card art, and bottom sheets.",
+    "illustrationSummary": null
   },
   {
     "appId": "696118461a385834dfcfcaf3",
@@ -1399,7 +1399,7 @@
     "categories": [
       "Job & Recruitment"
     ],
-    "uiSummary": "A compact professional job marketplace with a very light lavender canvas, white rounded order cards, black text-heavy listings, restrained teal and yellow status accents, horizontal story tiles, and a five-tab task model for orders, chats, balance, profile, and support.",
+    "uiSummary": "A compact professional marketplace built on a very pale lavender-gray canvas, dense white information cards, black pill actions, text-first hierarchy, a five-item tab bar, restrained status color, and secondary maps, portfolio photos, and story artwork.",
     "illustrationSummary": null
   },
   {
@@ -1410,8 +1410,8 @@
     "categories": [
       "Finance"
     ],
-    "uiSummary": "A mobile design system defined by bright-blue branding, airy white surfaces, pale gradients, card-first banking, and compact transactions.",
-    "illustrationSummary": null
+    "uiSummary": "An airy white fintech interface with saturated blue pill actions, rounded sans-serif hierarchy, pale cyan information surfaces, compact account rows, a restrained bottom bar, and recurring flat-vector objects on soft circular backplates.",
+    "illustrationSummary": "Monese uses a recurring flat-vector illustration language across introductory, address, feature, transfer, and savings-oriented surfaces. The artwork provides a friendly explanatory focal point while operational account rows and forms remain visually restrained."
   },
   {
     "appId": "6969167d51cf036d2364f1af",
@@ -1421,7 +1421,7 @@
     "categories": [
       "Travel & Transportation"
     ],
-    "uiSummary": "A photography-led travel marketplace on a bright white canvas, organized by a compact black typographic hierarchy and the signature coral-pink accent. Rounded image cards, floating search surfaces, light-gray sheets, map price pins, and a persistent five-tab bar keep discovery approachable while fixed bottom reservation actions make conversion explicit. Traveler and host modes share the same restrained surfaces but use distinct navigation.",
+    "uiSummary": "A bright photography-led marketplace with a white canvas, bold black titles, coral-pink actions, pill search surfaces, generously rounded cards and sheets, minimal line icons, and a clean persistent tab bar.",
     "illustrationSummary": null
   },
   {
@@ -1432,7 +1432,7 @@
     "categories": [
       "Medical"
     ],
-    "uiSummary": "A clinical utility with a vivid blue identity header, light gray canvas, white rounded service cards, small blue medical pictograms, strong black headings, restrained green confirmation, and a three-tab structure centered on booking, medical records, and account utilities.",
+    "uiSummary": "A compact clinical utility built from saturated blue headers and actions, pale-gray page fields, rounded white service groups, dense black system type, small blue medical pictograms, and sparse icon-led status screens.",
     "illustrationSummary": null
   },
   {

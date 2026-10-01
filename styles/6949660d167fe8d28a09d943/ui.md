@@ -3,303 +3,123 @@
 version: 1
 platform: iOS
 name: Revolut-design-analysis
-description: "A modular finance interface that layers translucent white cards over adaptive navy, violet, blue, and aqua gradients. Bold black-and-white actions, large numeric balances, compact market data, and configurable rounded widgets create a system that can move between atmospheric account dashboards and clean task sheets without losing hierarchy."
-
+description: "A modular finance interface that shifts between atmospheric violet-blue gradient roots and calm off-white task surfaces, using oversized balances, compact black actions, translucent rounded widgets, dense financial rows, and restrained product imagery."
 colors:
-  primary: "#5E5CE6"
-  on-primary: "#FFFFFF"
-  primary-soft: "#DDD8FF"
-  ink: "#101014"
-  ink-muted: "#6F7078"
-  ink-subtle: "#A2A3AA"
   canvas: "#F5F4F7"
-  surface-1: "#FFFFFF"
-  surface-2: "#F0EFF2"
-  surface-glass: "#FFFFFFD9"
-  dark-canvas: "#0A0A0D"
-  dark-surface: "#1F1F23"
-  gradient-navy: "#151A38"
-  gradient-violet: "#9C62E6"
-  gradient-blue: "#264CF2"
-  gradient-aqua: "#10A6B4"
-  hairline: "#E3E2E6"
-  semantic-success: "#1F9E73"
-  semantic-warning: "#F0A02E"
-  semantic-danger: "#D94D5A"
-  semantic-overlay: "#000000"
-
+  surface-primary: "#FFFFFF"
+  surface-secondary: "#F0EFF2"
+  accent-primary: "#5E5CE6"
+  accent-secondary: "#10A6B4"
+  text-primary: "#101014"
+  text-secondary: "#6F7078"
+  divider: "#E3E2E6"
+  destructive: "#D94D5A"
 typography:
-  display-xl:
-    fontFamily: System Sans
-    fontSize: 40
-    fontWeight: 700
-    lineHeight: 1.02
-    letterSpacing: -1.0
-  display-lg:
-    fontFamily: System Sans
-    fontSize: 34
-    fontWeight: 700
-    lineHeight: 1.06
-    letterSpacing: -0.7
-  display-md:
-    fontFamily: System Sans
-    fontSize: 28
-    fontWeight: 700
-    lineHeight: 1.10
-    letterSpacing: -0.4
-  headline:
-    fontFamily: System Sans
-    fontSize: 23
-    fontWeight: 650
-    lineHeight: 1.16
-    letterSpacing: -0.2
-  card-title:
-    fontFamily: System Sans
-    fontSize: 17
-    fontWeight: 600
-    lineHeight: 1.24
-    letterSpacing: 0
-  subhead:
-    fontFamily: System Sans
-    fontSize: 16
-    fontWeight: 500
-    lineHeight: 1.35
-    letterSpacing: 0
-  body-lg:
-    fontFamily: System Sans
-    fontSize: 16
-    fontWeight: 400
-    lineHeight: 1.40
-    letterSpacing: 0
-  body:
-    fontFamily: System Sans
-    fontSize: 14
-    fontWeight: 400
-    lineHeight: 1.40
-    letterSpacing: 0
-  body-sm:
-    fontFamily: System Sans
-    fontSize: 12
-    fontWeight: 400
-    lineHeight: 1.35
-    letterSpacing: 0
-  caption:
-    fontFamily: System Sans
-    fontSize: 11
-    fontWeight: 400
-    lineHeight: 1.30
-    letterSpacing: 0
-  button:
-    fontFamily: System Sans
-    fontSize: 15
-    fontWeight: 550
-    lineHeight: 1.20
-    letterSpacing: 0
-  eyebrow:
-    fontFamily: System Sans
-    fontSize: 12
-    fontWeight: 500
-    lineHeight: 1.25
-    letterSpacing: 0.2
-  mono:
-    fontFamily: System Mono
-    fontSize: 12
-    fontWeight: 400
-    lineHeight: 1.35
-    letterSpacing: 0
-
-rounded:
-  xs: 6
-  sm: 10
-  md: 14
-  lg: 18
-  xl: 24
-  xxl: 30
-  pill: 9999
-  full: 9999
-
+  hero: {fontFamily: "SF Pro Display", fontSize: 40, fontWeight: 700, lineHeight: 44}
+  title: {fontFamily: "SF Pro Display", fontSize: 28, fontWeight: 700, lineHeight: 34}
+  section: {fontFamily: "SF Pro Display", fontSize: 21, fontWeight: 600, lineHeight: 26}
+  body: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 400, lineHeight: 21}
+  label: {fontFamily: "SF Pro Text", fontSize: 14, fontWeight: 600, lineHeight: 19}
+  caption: {fontFamily: "SF Pro Text", fontSize: 12, fontWeight: 400, lineHeight: 16}
 spacing:
-  xxs: 4
-  xs: 8
-  sm: 12
-  md: 16
-  lg: 24
-  xl: 32
-  xxl: 48
-  section: 64
-
+  screen-horizontal: 16
+  section-gap: 28
+  card-padding: 16
+  control-gap: 12
+rounded:
+  control: 14
+  card: 20
+  sheet: 28
+  pill: 999
 components:
-  button-primary:
-    backgroundColor: "{colors.dark-surface}"
-    textColor: "{colors.on-primary}"
-    typography: "{typography.button}"
-    rounded: "{rounded.pill}"
-    padding: [14, 20]
-  button-secondary:
-    backgroundColor: "{colors.surface-2}"
-    textColor: "{colors.ink}"
-    typography: "{typography.button}"
-    rounded: "{rounded.pill}"
-    padding: [14, 20]
-  glass-action:
-    backgroundColor: "#FFFFFF38"
-    textColor: "#FFFFFF"
-    typography: "{typography.body-sm}"
-    rounded: "{rounded.full}"
-    padding: 12
-  widget-card:
-    backgroundColor: "{colors.surface-glass}"
-    textColor: "{colors.ink}"
-    typography: "{typography.body}"
-    rounded: "{rounded.lg}"
-    padding: 14
-  list-group:
-    backgroundColor: "{colors.surface-1}"
-    textColor: "{colors.ink}"
-    typography: "{typography.body}"
-    rounded: "{rounded.lg}"
-    padding: [8, 12]
-  search-field:
-    backgroundColor: "#FFFFFF70"
-    textColor: "#FFFFFF"
-    typography: "{typography.body}"
-    rounded: "{rounded.pill}"
-    padding: [10, 14]
-  warning-card:
-    backgroundColor: "{colors.surface-glass}"
-    textColor: "{colors.ink}"
-    typography: "{typography.body-sm}"
-    rounded: "{rounded.lg}"
-    padding: 12
-  bottom-nav:
-    backgroundColor: "{colors.surface-1}"
-    textColor: "{colors.ink-muted}"
-    typography: "{typography.caption}"
-    rounded: "{rounded.xs}"
-    height: 58
+  primary-action: {fill: "near-black", text: "white semibold", height: 52, radius: 999}
+  gradient-widget: {fill: "translucent white over violet-blue field", padding: 16, radius: 20}
+  circular-action: {fill: "translucent white or pale gray", diameter: 48, icon: "compact monochrome"}
+  navigation: {fill: "white or translucent light", selected: "dark icon and label", unselected: "muted gray"}
 ---
 
 # Overview
 
-Revolut uses an atmospheric shell around a highly modular finance product. The current domain sets the background gradient, while translucent white widgets hold accounts, transactions, markets, warnings, and contacts. Focused task screens switch to a calm off-white canvas with black pill actions, preserving continuity through typography and shape rather than color.
+Revolut combines two visual registers. Root and account-oriented surfaces use large violet, blue, aqua, or navy gradient fields with oversized white values and translucent widgets. Focused forms, lists, settings, and modal tasks move onto calm off-white or white surfaces with black typography and black pill actions. Rounded modular cards, circular actions, dense financial rows, and compact icon grids connect those registers. Photography and product renders appear selectively; financial hierarchy rather than imagery remains dominant.
 
 # Non-negotiable visual invariants
 
-- The recurring color treatment uses Adaptive gradients move from navy and violet to blue and aqua.
-- Use gradients to establish domain context, not to decorate every card.
-- Keep widgets modular and independently scannable.
-- Use black for high-commitment actions.
-- Preserve account context before money movement.
-- Keep warnings self-contained with one remedy.
-- Home and Invest are single-column configurable feeds.
-- Cards may split into two equal metric tiles or form horizontal carousels for accounts and cards.
+- Saturated violet-blue or aqua gradients form large background fields on atmospheric root surfaces rather than decorating every card.
+- Focused tasks switch to an off-white or white canvas with near-black primary actions and retain the same rounded geometry.
+- The primary balance or financial value is oversized, tabular, and visually isolated from compact supporting metadata.
+- Dashboard information is organized into independent translucent or white rounded widgets with minimal shadow.
+- High-priority actions are black full-width pills; compact account actions are circular and visually lighter.
+- Bottom navigation remains a light four-item bar with a dark selected state and muted inactive items.
+- Green, red, and amber appear only for direction, outcome, restriction, or warning states, not as general decoration.
+- Product photography, flags, avatars, and card renders remain supporting imagery and never displace core financial values.
 
 # Color and surfaces
 
-- **Primary Violet** ({colors.primary}) supports selected states and purple gradient families.
-- Navy, violet, blue, and aqua gradient anchors change by domain or selected account.
-- Black, rather than a bright brand color, carries decisive actions.
+The neutral canvas is a cool off-white used for focused tasks, lists, settings, and sheets. White primary surfaces and pale-gray secondary controls create quiet separation with thin cool-gray dividers. On atmospheric screens, navy, violet, blue, and aqua blend into broad full-width fields. White or lightly translucent widgets float over these gradients without heavy shadows.
 
-- **Canvas** ({colors.canvas}) is used for sheets, settings, transactions, and focused tasks.
-- **Glass Surface** ({colors.surface-glass}) creates dashboard widgets above gradients.
-- **Surface 2** ({colors.surface-2}) supports inactive chips and secondary controls.
-- Dark canvas and surface tokens belong to plan, onboarding, and premium contexts.
-
-- Use white text directly on saturated gradients.
-- Use near-black ink inside glass and white cards.
-- Muted gray carries labels, dates, rates, and supporting account context.
-
-Green and red are limited to market movement and transaction outcomes. Amber identifies restrictions or information that needs corrective action.
+Near-black carries primary text and decisive actions on light surfaces; white type sits directly on saturated gradients. Violet and aqua support contextual selected states and background families rather than becoming universal control colors. Medium gray carries dates, rates, labels, and inactive navigation. Green and red communicate positive or negative financial direction and transaction results; amber marks warnings or restrictions. Default iOS blue, strong colored borders on every card, and saturated gradients inside every widget would break the reference.
 
 # Typography
 
-Use a modern system sans throughout. Amounts and screen titles rely on size and weight; data-heavy views stay compact and neutral.
+Use SF Pro Display for balances, amounts, and page titles, and SF Pro Text for rows, labels, and controls. Hero balances reach roughly 34–40 points, page titles 26–30, widget headings 18–22, body content 14–16, and dense metadata 11–13. Primary numbers use bold weight and tabular figures; secondary financial qualifiers remain regular and compact.
 
-- `{typography.display-xl}` — 40 points — 700 — Hero balance or investment statement
-- `{typography.display-lg}` — 34 points — 700 — Amount and major metric
-- `{typography.display-md}` — 28 points — 700 — Screen title
-- `{typography.headline}` — 23 points — 650 — Widget group heading
-- `{typography.card-title}` — 17 points — 600 — Account, asset, and plan title
-- `{typography.body}` — 14 points — 400 — Default content
-- `{typography.caption}` — 11 points — 400 — Rate, date, and legal copy
-
-- Keep balances centered in atmospheric headers and left-align detailed task content.
-- Use bold only for value, decision, or title hierarchy.
-- Let compact captions carry dense financial qualifiers.
-- Avoid decorative type effects on already colorful gradient surfaces.
-
-Use SF Pro Display/Text on iOS or Inter elsewhere. Preserve relatively tight heading tracking and open numeric forms.
-
-The hierarchy must remain legible with Dynamic Type: supporting text may wrap before the primary metric, title, or action loses its role.
+Balances may center within atmospheric headers, while focused task content and detailed lists are left-aligned. Bold weight is reserved for values, decisions, and section hierarchy rather than applied to every row. Supporting labels wrap before amounts or currencies lose their relationship. With Dynamic Type, metric pairs stack, widgets grow vertically, and dense trailing metadata moves below the label before primary values are truncated.
 
 # Screen composition
 
-Use a 4 points base, 12 points page gutters on dashboard feeds, 8–12 points gaps between widgets, and 16 points card interiors. Focused task sheets use 16 points gutters and 24 points section separation.
+Atmospheric screens use approximately 12–16 point edge insets, 8–12 point gaps between widgets, and 16 points inside cards. Focused task surfaces use 16-point insets and roughly 24–28 points between major groups. Gradient or neutral canvas extends through the top safe area. Long feeds and lists scroll vertically; bottom navigation or a single completion action reserves the lower safe area.
 
-Home and Invest are single-column configurable feeds. Cards may split into two equal metric tiles or form horizontal carousels for accounts and cards. Payment contacts use compact list cards; task sheets remain one column.
+Observed archetypes include:
 
-Atmospheric color occupies the gaps between widgets. Inside cards, keep enough white space to separate metrics and actions without oversized empty zones.
-
-Use the gradient field, translucent cards, and a single foreground sheet to establish depth. Decorative orbs and blur belong in the background only and must not reduce financial contrast.
-
-Primary iPhone screens keep the documented content grouping and vertical rhythm inside a scroll container when content exceeds the viewport. Bottom-owned actions or navigation reserve the lower safe area rather than covering content.
+- Atmospheric dashboard composition: compact circular controls frame a centered account label and oversized value, followed by a row of circular actions and a one-column feed of translucent widgets.
+- Modular data composition: white or translucent cards hold a short heading, one main metric, compact chart or list content, and at most one subordinate footer action.
+- Focused amount composition: off-white canvas, large numeric value or entry area, small currency or account selectors, native numeric keyboard, and one black lower action.
+- Dense list composition: white or pale surface with compact leading icon or avatar, black label, muted financial metadata, and occasional trailing status or disclosure.
+- Product-card composition: one large physical-card render or product tile occupies the central visual region, with circular contextual actions and restrained supporting rows below.
+- Modal composition: rounded white bottom sheets or full-height light task pages present grouped selectors, warnings, and one strong black action.
+- Premium composition: near-black or dark surfaces invert the type and use controlled product imagery without changing the core pill-and-card geometry.
 
 # Navigation appearance
 
-Four bottom tabs use a white base, dark selected icons, and muted inactive states. Search remains prominent in domain headers, while profile and contextual actions occupy compact circular controls.
-
-This section governs appearance only; product behavior and information architecture come from the approved Research and Planning artifacts.
+The primary bottom bar is white or lightly translucent and contains four evenly spaced icon-and-label items. The selected item is dark and higher contrast; inactive items are muted gray. Atmospheric headers use compact circular profile, search, or contextual controls. Detail surfaces use minimal leading back or close controls on a light bar. Bottom sheets have white surfaces, large top corners, and a small drag indicator where observed. Segmented or overflow controls use pale rounded fills and stronger black selected text.
 
 # Components
 
-Use black full-width pill buttons for decisive actions, pale pills for secondary actions, and translucent circular controls on gradients. Native controls must visually inherit the active domain instead of exposing default platform blue.
-
-Place avatar, search, analytics, and card controls at the top. Center the account label and balance, then show Accounts and four circular actions before the first widget.
-Use a translucent white surface, short heading, one primary metric or list, and a single footer action. Widgets can contain transactions, spending charts, watchlists, warnings, or news.
-
-Use a clean off-white modal page with currency chips, grouped funding methods, and one black full-width completion action near the bottom.
-
-Show one large card with partial neighbors. Place Show details, Freeze, and Settings below, followed by transactions and an optional black wallet action.
-Use white rounded cards for news, watchlists, events, and analytics. Green and red are reserved for direction; all other content remains neutral.
-
-Controls retain at least a 44-point interactive area. Pressed and disabled treatments should stay within the documented palette and hierarchy.
+- Primary action: 50–54 points tall, full or near-full width, near-black fill, pill radius, and centered white semibold label. Disabled state turns gray while preserving geometry.
+- Gradient widget: translucent or opaque white fill over a saturated field, 18–22 point radius, 14–16 point padding, near-black content, and little visible shadow.
+- Circular action: 44–52 point circle using translucent white on gradients or pale gray on neutral surfaces, with a compact monochrome icon and short caption beneath when needed.
+- Metric tile: white rounded surface with one strong value, compact label, and optional green/red direction mark. Adjacent tiles align their numeric baseline.
+- Search or selector field: pale or translucent fill, 44–48 point height, pill geometry, compact leading icon, and muted placeholder.
+- Financial row: compact icon, flag, avatar, or card thumbnail; primary label; secondary date, rate, or context; and trailing amount or status. Dividers are subtle or replaced by spacing.
+- Warning card: contained white or pale surface with amber or neutral icon, concise text, and one clear remedy action.
 
 # Imagery and icons
 
-Photography is secondary and appears as small news thumbnails, contact avatars, or account identity. Keep crops simple and circular or softly rounded; do not introduce illustration as a parallel visual language.
+Imagery is secondary. Onboarding uses full-bleed or large product photography; other surfaces use small news thumbnails, circular avatars, currency flags, card renders, QR codes, and product icons. Crops are simple and controlled: avatars remain circular, news images stay small and rounded, flags and security marks are never cropped, and card renders preserve their physical ratio.
 
-News thumbnails use consistent small aspect ratios; avatars remain circular. Background gradients scale to fill without introducing visible seams or putting bright hotspots behind white text.
-
-When imagery is part of the documented composition, it cannot be omitted while final assets are pending. A temporary asset must preserve its placement, crop, scale, and approximate visual weight.
+The sampled screens do not establish a recurring standalone authored illustration system. Functional icons are compact black, white, or gray line and filled glyphs, sometimes placed inside circular or rounded-square containers. Background gradients must scale without seams and avoid bright hotspots behind white text. When final supporting media is unavailable, placeholders must preserve the documented scale, crop, and hierarchy.
 
 # States
 
-Show one large card with partial neighbors. Place Show details, Freeze, and Settings below, followed by transactions and an optional black wallet action.
-Use white rounded cards for news, watchlists, events, and analytics. Green and red are reserved for direction; all other content remains neutral.
+Observed states include selected and inactive bottom tabs, disabled completion actions, expanded overflow menus, warnings and restrictions, empty or no-transaction cards, keyboard-open amount entry, modal overlays, notification badges, and a dark premium or plan surface. Across states, the hierarchy of one primary value, restrained supporting metadata, rounded surfaces, and high-contrast action remains stable.
 
-Green and red are limited to market movement and transaction outcomes. Amber identifies restrictions or information that needs corrective action.
-
-Only the states documented above are specified; other states must preserve the same canvas, hierarchy, and component language without inventing a new visual system.
+Positive and negative direction uses green and red; warnings use amber or contained neutral emphasis. Disabled actions become gray. Empty states preserve the widget geometry and open space rather than introducing decorative illustration. Dark premium states invert canvas and type while retaining familiar cards, pills, and spacing.
 
 # iOS adaptation
 
-- Extend the documented canvas through the iPhone safe areas while keeping readable content within appropriate insets.
-- Use a vertical `ScrollView` for content that does not fit compact heights; keep documented bottom actions and navigation clear of the home indicator.
-- Circular account actions, bottom tabs, chips, and sheet actions remain at least 44 points. Small market indicators are informative, not the only tappable target.
-- Keep widgets full-width and card carousels partially visible. Allow transaction text to wrap before shrinking values, and preserve bottom navigation plus safe-area actions.
-- Present the keyboard and system permission UI natively, then return to the same visual context.
-- Preserve semantic reading order in VoiceOver and allow text to grow with Dynamic Type.
-- Preserve the documented appearance instead of introducing an unrelated light or dark palette.
+Extend the active gradient, off-white canvas, or dark field through the safe areas. Use vertical scroll containers for widget feeds and lists; reserve the lower inset for the four-item tab bar or full-width action. Horizontal card carousels may retain a partial neighboring card, but financial text must remain readable on compact widths.
+
+All circular actions, icon buttons, selectors, tabs, and rows need at least 44-point targets. VoiceOver should announce the primary amount and currency first, then account context, state, and action. Preserve native keyboards, QR/camera, system sheets, and permission transitions. With large Dynamic Type, stack metric tiles and trailing metadata before shrinking text. Maintain the observed light, atmospheric, and bounded dark contexts instead of forcing one palette over every screen.
 
 # Anti-generic checklist
 
-- Do not place saturated gradients inside every widget.
-- Do not reduce glass opacity until financial text loses contrast.
-- Do not mix unrelated accent colors inside the same domain.
-- Do not turn compact market data into oversized promotional typography.
-- Do not use heavy shadows to create hierarchy.
-- Do not replace the documented canvas and surfaces with a generic grouped background and uniform white cards.
-- Do not use an unstyled `TabView`, default blue tint, or arbitrary SF Symbols when they contradict the reference.
-- Do not collapse every component to one corner radius or remove compositionally important imagery.
+- Do not flatten atmospheric roots into a generic white card stack.
+- Do not place saturated gradients inside every widget or use them as decorative button fills.
+- Do not use default blue primary actions; focused completion actions are near-black pills.
+- Do not reduce balances and amounts to the same scale as row labels.
+- Do not add heavy shadows or glass blur that lowers financial contrast.
+- Do not ship an unstyled `TabView`; preserve the four-item light bar and dark selected state.
+- Do not replace card renders, flags, avatars, or product photography with arbitrary SF Symbols.
+- Do not give circular actions, pills, widgets, and sheets one uniform corner treatment.
 
 </design-context>

@@ -3,142 +3,123 @@
 version: 1
 platform: iOS
 name: Monese-design-analysis
-description: "A mobile design system defined by bright-blue branding, airy white surfaces, pale gradients, card-first banking, and compact transactions."
-colors: {primary: "#1688E8", on-primary: "#FFFFFF", primary-focus: "#1688E8", ink: "#20242B", ink-muted: "#777981", ink-subtle: "#A7A8AE", ink-tertiary: "#CACBD0", canvas: "#FFFFFF", surface-1: "#F4F8FC", surface-2: "#F4F8FC", surface-3: "#E2E3E7", surface-4: "#D6D7DC", hairline: "#E5E6E9", hairline-strong: "#CFD0D5", hairline-tertiary: "#B6B8BF", inverse-canvas: "#17181C", inverse-surface-1: "#292A30", inverse-surface-2: "#3B3D45", inverse-ink: "#FFFFFF", brand-secure: "#7DD8F7", semantic-success: "#34A86B", semantic-overlay: "#17181C"}
+description: "An airy white fintech interface with saturated blue pill actions, rounded sans-serif hierarchy, pale cyan information surfaces, compact account rows, a restrained bottom bar, and recurring flat-vector objects on soft circular backplates."
+colors:
+  canvas: "#FFFFFF"
+  surface-primary: "#FFFFFF"
+  surface-secondary: "#F4F8FC"
+  accent-primary: "#1688E8"
+  accent-secondary: "#7DD8F7"
+  text-primary: "#20242B"
+  text-secondary: "#777981"
+  divider: "#E5E6E9"
+  destructive: "#D94D5A"
 typography:
-  display-xl: {fontFamily: SF Pro Display, fontSize: 36, fontWeight: 700, lineHeight: 1.06, letterSpacing: -0.8}
-  display-lg: {fontFamily: SF Pro Display, fontSize: 30, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.6}
-  display-md: {fontFamily: SF Pro Display, fontSize: 24, fontWeight: 700, lineHeight: 1.14, letterSpacing: -0.3}
-  headline: {fontFamily: SF Pro Display, fontSize: 20, fontWeight: 700, lineHeight: 1.20, letterSpacing: -0.2}
-  card-title: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 600, lineHeight: 1.24, letterSpacing: 0}
-  subhead: {fontFamily: SF Pro Text, fontSize: 14, fontWeight: 600, lineHeight: 1.30, letterSpacing: 0}
-  body-lg: {fontFamily: SF Pro Text, fontSize: 14, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0}
-  body: {fontFamily: SF Pro Text, fontSize: 12, fontWeight: 400, lineHeight: 1.34, letterSpacing: 0}
-  body-sm: {fontFamily: SF Pro Text, fontSize: 10, fontWeight: 400, lineHeight: 1.28, letterSpacing: 0}
-  caption: {fontFamily: SF Pro Text, fontSize: 9, fontWeight: 400, lineHeight: 1.22, letterSpacing: 0}
-  button: {fontFamily: SF Pro Text, fontSize: 13, fontWeight: 600, lineHeight: 1.18, letterSpacing: 0}
-  eyebrow: {fontFamily: SF Pro Text, fontSize: 9, fontWeight: 600, lineHeight: 1.18, letterSpacing: 0.1}
-  mono: {fontFamily: SF Mono, fontSize: 10, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0}
-rounded: {xs: 4, sm: 8, md: 12, lg: 16, xl: 20, xxl: 26, pill: 9999, full: 9999}
-spacing: {xxs: 4, xs: 8, sm: 12, md: 16, lg: 20, xl: 24, xxl: 32, section: 40}
+  hero: {fontFamily: "SF Pro Rounded", fontSize: 34, fontWeight: 700, lineHeight: 39}
+  title: {fontFamily: "SF Pro Rounded", fontSize: 28, fontWeight: 700, lineHeight: 34}
+  section: {fontFamily: "SF Pro Display", fontSize: 20, fontWeight: 700, lineHeight: 25}
+  body: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 400, lineHeight: 21}
+  label: {fontFamily: "SF Pro Text", fontSize: 14, fontWeight: 600, lineHeight: 19}
+  caption: {fontFamily: "SF Pro Text", fontSize: 12, fontWeight: 400, lineHeight: 16}
+spacing:
+  screen-horizontal: 16
+  section-gap: 28
+  card-padding: 16
+  control-gap: 12
+rounded:
+  control: 14
+  card: 20
+  sheet: 28
+  pill: 999
 components:
-  button-primary: {backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 13 18}
-  button-primary-pressed: {backgroundColor: "{colors.primary-focus}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}"}
-  button-secondary: {backgroundColor: "{colors.surface-1}", textColor: "{colors.primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 12 16}
-  button-tertiary: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 10 14}
-  button-inverse: {backgroundColor: "{colors.inverse-canvas}", textColor: "{colors.inverse-ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 12 16}
-  content-card: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 12}
-  feature-card: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 14}
-  compact-chip: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.caption}", rounded: "{rounded.pill}", padding: 7 10}
-  bottom-nav: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink-subtle}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: 7 8}
+  primary-action: {fill: "saturated blue", text: "white semibold", height: 52, radius: 999}
+  account-card: {fill: "white or pale cyan", padding: 16, radius: 20, content: "large value and compact details"}
+  selection-row: {fill: "white", height: 56, divider: "thin gray", selected: "blue radio or check"}
+  navigation: {fill: "white", selected: "blue icon and label", unselected: "muted gray"}
 ---
 
 # Overview
 
-Monese is defined by bright-blue branding, airy white surfaces, pale gradients, card-first banking, and compact transactions.
+Monese is an airy, blue-led finance interface. White occupies most of the viewport, while pale cyan and blue-tinted surfaces group information and saturated blue pill actions mark the next decision. Rounded bold headings, compact gray metadata, tall list rows, and large vertical gaps keep forms and account surfaces approachable. A recurring flat-vector language places simplified financial or identity objects on soft circular backplates in onboarding, informational, transfer, and savings contexts.
 
 # Non-negotiable visual invariants
 
-- The recurring color treatment uses bright-blue branding.
-- The recurring color treatment uses airy white surfaces.
-- The recurring color treatment uses pale gradients.
-- Characteristic content and controls use card-first banking.
-- The sampled screens consistently show compact transactions.
-- Preserve the defining color and content hierarchy.
-- Keep primary actions easy to reach.
-- Style native controls to inherit the visual system.
+- White remains the dominant full-screen field, with pale cyan or very light blue used for bounded information surfaces rather than the entire background.
+- Saturated blue owns primary actions, selected controls, links, and active navigation.
+- Primary actions are large pill-like blue controls with centered white labels and clear lower-screen placement.
+- Bold rounded headings visibly outrank compact sans-serif labels and gray explanatory text.
+- Operational screens use tall clean list rows, thin dividers, and restrained rounded cards rather than stacked decorative panels.
+- Authored flat-vector objects sit on pale circular backplates and occupy meaningful open space in introductory or explanatory states.
+- Bottom navigation stays light and compact; the selected item turns blue while inactive items remain muted gray.
+- Small yellow, green, and red accents remain semantic and never compete with the blue brand field.
 
 # Color and surfaces
 
-Bright blue carries brand, active navigation, and finance actions.
+The canvas and primary surfaces are white. Pale blue-gray or cyan-tinted secondary surfaces contain information callouts, account cards, accordion groups, and illustration backplates. Thin cool-gray dividers support tall list rows. Modal scrims use muted black, while rounded sheets remain white.
 
-Use the canvas for primary content and the grouped surface for controls, cards, and focused sections.
-
-Primary text remains high-contrast; secondary metadata stays quieter than the current decision.
-
-Use success, warning, and destructive colors only for their conventional meanings.
+Saturated medium blue fills decisive actions, selected radios or checks, active navigation, chevrons, and key links. Light cyan supports informational emphasis and authored imagery. Near-black carries headings and financial values; medium gray carries helper copy, captions, and inactive controls. Green is limited to positive state, yellow to small attention accents, and red to destructive or failure actions. Default iOS blue used inconsistently, broad purple gradients, heavy shadows, or tinted cards for every section would break the reference.
 
 # Typography
 
-Use SF Pro Display for headings and SF Pro Text for controls, content, and metadata.
+Use SF Pro Rounded as the iOS-safe match for large friendly headings and SF Pro Display/Text for sections, forms, rows, values, and metadata. Hero and onboarding titles sit around 28–34 points, operational page titles around 24–28, section titles around 19–21, body and controls around 14–16, and captions around 11–13.
 
-- display-lg — 30 points — 700 — Hero or state
-- headline — 20 points — 700 — Section title
-- card-title — 15 points — 600 — Primary item
-- body — 12 points — 400 — Detail
-- caption — 9 points — 400 — Metadata
-
-- Lead with the current task or value.
-- Align repeated metadata.
-- Reserve emphasis for real decisions.
-
-Inter is suitable; preserve hierarchy, contrast, and numeric clarity.
-
-The hierarchy must remain legible with Dynamic Type: supporting text may wrap before the primary metric, title, or action loses its role.
+Introductory titles are often centered above imagery; operational text is primarily left-aligned. Primary values and titles are bold, while helper copy stays regular and gray. Numeric input uses tabular figures and keeps currency or unit visibly attached. With Dynamic Type, rows and cards grow vertically, labels wrap before trailing values, and illustration/title/action groups reflow without overlapping.
 
 # Screen composition
 
-Use a 4 points base, 8–12 points card gaps, and 12–16 points screen gutters.
+Screens use approximately 16-point horizontal insets, 12–16 points inside cards and controls, and 24–32 points between major groups. Introductory surfaces may devote the upper or middle third to a single authored illustration and open white space. Operational lists use a denser vertical rhythm. White extends through the safe areas; a bottom tab bar or primary action reserves the lower inset.
 
-Home and Card stack modules; payments use lists and focused forms.
+Observed archetypes include:
 
-Dense content stays grouped; focused decisions receive more breathing room.
-
-Let content imagery and approved visual language provide depth; keep ordinary controls restrained.
-
-Primary iPhone screens keep the documented content grouping and vertical rhythm inside a scroll container when content exceeds the viewport. Bottom-owned actions or navigation reserve the lower safe area rather than covering content.
+- Introductory composition: centered authored illustration on a pale circular field, bold rounded title, short gray copy, carousel indicator where present, and one blue pill action near the bottom.
+- Account composition: large value or account context leads, followed by compact circular or pill actions and a one-column stack of cards or transaction rows.
+- Selection composition: bold title above tall rows with flag or icon, label, and trailing radio or check; selected state turns blue.
+- Amount-entry composition: large numeric field, compact currency or account context, native numeric keyboard, and one lower blue action.
+- Information composition: pale cyan callout or rounded feature group combines a small icon or illustration with short explanatory text and a clear link or action.
+- Utility-list composition: clean white rows with leading line icons, dark labels, gray secondary values, and trailing switches or chevrons.
+- Modal composition: white rounded-top sheet or system prompt over a darkened current screen, retaining the blue action hierarchy.
 
 # Navigation appearance
 
-Preserve the reference navigation hierarchy and make only the active destination prominent.
-
-This section governs appearance only; product behavior and information architecture come from the approved Research and Planning artifacts.
+The primary bottom bar is white with compact icon-and-label items. The selected item becomes saturated blue; inactive items are muted gray. Inner screens use simple leading back or close controls, occasional top-right blue text or icon actions, and concise dark titles. Sheets rise with large white top corners and may leave a dark status-area margin visible. Carousel dots and segmented controls use blue only for the current selection.
 
 # Components
 
-Primary actions use the brand color; secondary actions use grouped surfaces and clear labels.
-
-Account cards group balance, card visual, allowances, fees, and actions.
-
-Inputs inherit the brand focus, shared radius, and text hierarchy instead of generic native styling.
-
-Keep progress, result, and recovery close to the content or action they describe.
-
-Controls retain at least a 44-point interactive area. Pressed and disabled treatments should stay within the documented palette and hierarchy.
+- Primary action: approximately 52 points tall, full or near-full width, saturated-blue fill, pill radius, and centered white semibold label. Pressing darkens the blue; loading or disabled state reduces contrast while preserving size.
+- Account card: white or pale-cyan fill, 18–22 point radius, 16-point padding, prominent value, compact account label, and restrained supporting facts.
+- Selection row: about 52–60 points tall, white fill, leading flag or icon, dark label, optional gray caption, and trailing blue radio or check when selected.
+- Input: white or pale-blue field, 12–14 point radius, dark entry text, gray placeholder, and blue focus or cursor treatment.
+- Information callout: pale cyan rounded surface with simplified icon or small authored object, concise dark text, and optional blue link.
+- Circular action: 44–52 point blue or pale-cyan circle with simple dark or white icon and short caption below.
+- Illustration stage: one flat-vector object or compact scene centered on a soft pale-blue circular backplate, kept separate from text and controls.
 
 # Imagery and icons
 
-Contain card artwork and partner imagery inside clean rounded crops.
+The recurring illustration language is flat and softly geometric. Simplified financial, address, identity, transfer, and savings objects use blue, cyan, yellow, and occasional green accents over a pale circular backplate. Shapes have clean edges, minimal internal detail, very limited shading, and a friendly symbolic rather than realistic character. The art is centered and large enough to carry introductory or explanatory composition.
 
-Preserve source aspect ratios and keep focal content inside safe areas.
-
-When imagery is part of the documented composition, it cannot be omitted while final assets are pending. A temporary asset must preserve its placement, crop, scale, and approximate visual weight.
+Payment-card mockups preserve their physical ratio; flags remain uncropped; profile, QR, passkey, and social-login marks remain functional. Utility icons are small line symbols in blue, dark gray, or muted gray. The authored illustration cannot be omitted where it occupies the primary visual region. Temporary imagery must preserve the observed scale, circular backing field, palette, and relationship to text.
 
 # States
 
-Keep progress, result, and recovery close to the content or action they describe.
+Observed states include selected radio and check rows, loading or disabled-looking blue actions, partially scrolled sheets, text-field editing with keyboard and selection handles, selected bottom tabs, modal scrims, and account or feature information states. Across them, white remains dominant, blue marks selection and action, and gray carries secondary status.
 
-Use success, warning, and destructive colors only for their conventional meanings.
-
-Only the states documented above are specified; other states must preserve the same canvas, hierarchy, and component language without inventing a new visual system.
+Loading uses a spinner within the existing action geometry. Selected rows use a clear blue radio or check rather than relying on color alone. Introductory and empty states may use the authored illustration, while dense financial rows remain illustration-free. Destructive actions use red and stay visually separate from the primary blue action.
 
 # iOS adaptation
 
-- Extend the documented canvas through the iPhone safe areas while keeping readable content within appropriate insets.
-- Use a vertical `ScrollView` for content that does not fit compact heights; keep documented bottom actions and navigation clear of the home indicator.
-- Primary actions, navigation, cards, and contextual controls remain at least 44 points.
-- Preserve the main decision, stack complex groups, and reduce secondary detail before shrinking type.
-- Present the keyboard and system permission UI natively, then return to the same visual context.
-- Preserve semantic reading order in VoiceOver and allow text to grow with Dynamic Type.
-- Preserve the documented appearance instead of introducing an unrelated light or dark palette.
+Extend white through the safe areas and reserve the lower inset for the tab bar or blue action. Use vertical scroll containers for forms, account content, and settings; keep pinned actions clear of native keyboards and final rows. Introductory illustration groups may compress their negative space on short devices but should not shrink into small decorative icons.
+
+All radios, flags, list rows, icon controls, and tab items need at least 44-point targets. VoiceOver should announce the title or primary value first, then context, selected state, and action; decorative backplates should not become separate elements. Preserve native keyboard, permission, sign-in, QR/camera, and sheet transitions. With Dynamic Type or compact widths, stack content and expand rows before reducing type. The sampled system is light-first; do not invent a dark theme unless required by the consuming product.
 
 # Anti-generic checklist
 
-- Do not introduce unrelated decorative styles.
-- Do not hide status or secondary conditions.
-- Do not use heavy shadows around every container.
-- Do not replace the documented canvas and surfaces with a generic grouped background and uniform white cards.
-- Do not use an unstyled `TabView`, default blue tint, or arbitrary SF Symbols when they contradict the reference.
-- Do not collapse every component to one corner radius or remove compositionally important imagery.
+- Do not replace the white and pale-cyan field with a generic grouped gray background.
+- Do not use default system-blue controls with inconsistent radii; preserve the saturated-blue pill action language.
+- Do not reduce bold rounded headings and body copy to one uniform type level.
+- Do not replace the authored flat-vector objects with SF Symbols, emojis, stock people, or unrelated 3D assets.
+- Do not color every account card and row blue.
+- Do not ship an unstyled `TabView`; preserve the light bar and blue selected state.
+- Do not give pills, cards, rows, sheets, and circular backplates one uniform radius.
+- Do not place illustration inside dense account-detail or transaction rows.
 
 </design-context>

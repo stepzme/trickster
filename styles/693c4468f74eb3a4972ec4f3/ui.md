@@ -3,174 +3,98 @@
 version: 1
 platform: iOS
 name: AliExpress-design-analysis
-description: "A dense promotional marketplace where white product grids are punctuated by lime conversion actions, yellow buy-now buttons, coral navigation, and campaign-specific violet or mint shells. Product photography, price hierarchy, and delivery evidence carry the interface."
+description: "A dense white marketplace interface where product photography, bold prices, red active navigation, lime checkout actions, yellow immediate-purchase controls, compact metadata, and campaign-specific promotional color create a high-conversion visual hierarchy."
 colors:
-  primary: "#B8F43B"
-  on-primary: "#151515"
-  buy-now: "#FFE052"
-  brand-coral: "#FF4B4F"
-  combo-violet: "#8063E8"
-  market-mint: "#42E3A7"
-  ink: "#171717"
-  ink-muted: "#777777"
-  ink-subtle: "#AAAAAA"
   canvas: "#FFFFFF"
-  surface-1: "#F6F6F7"
-  surface-2: "#ECEDEF"
-  hairline: "#E2E3E5"
-  semantic-success: "#18A957"
-  semantic-danger: "#E84A45"
-  semantic-overlay: "#000000"
+  surface-primary: "#FFFFFF"
+  surface-secondary: "#F3F3F5"
+  accent-primary: "#B8F43B"
+  accent-secondary: "#FF4747"
+  text-primary: "#171717"
+  text-secondary: "#777777"
+  divider: "#E2E3E5"
+  destructive: "#E84A45"
 typography:
-  display-xl: { fontFamily: System Sans, fontSize: 38, fontWeight: 800, lineHeight: 1.00, letterSpacing: -0.8 }
-  display-lg: { fontFamily: System Sans, fontSize: 30, fontWeight: 750, lineHeight: 1.05, letterSpacing: -0.5 }
-  display-md: { fontFamily: System Sans, fontSize: 25, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.3 }
-  headline: { fontFamily: System Sans, fontSize: 21, fontWeight: 700, lineHeight: 1.15, letterSpacing: -0.2 }
-  card-title: { fontFamily: System Sans, fontSize: 13, fontWeight: 500, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: System Sans, fontSize: 16, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
-  body-lg: { fontFamily: System Sans, fontSize: 16, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
-  body: { fontFamily: System Sans, fontSize: 13, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
-  body-sm: { fontFamily: System Sans, fontSize: 11, fontWeight: 400, lineHeight: 1.28, letterSpacing: 0 }
-  caption: { fontFamily: System Sans, fontSize: 9, fontWeight: 500, lineHeight: 1.20, letterSpacing: 0 }
-  button: { fontFamily: System Sans, fontSize: 14, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0 }
-  eyebrow: { fontFamily: System Sans, fontSize: 10, fontWeight: 700, lineHeight: 1.20, letterSpacing: 0.2 }
-  mono: { fontFamily: System Mono, fontSize: 12, fontWeight: 500, lineHeight: 1.30, letterSpacing: 0 }
-rounded: { xs: 4, sm: 8, md: 12, lg: 16, xl: 22, xxl: 28, pill: 9999, full: 9999 }
-spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
+  hero: {fontFamily: "SF Pro Display", fontSize: 30, fontWeight: 800, lineHeight: 34}
+  title: {fontFamily: "SF Pro Display", fontSize: 25, fontWeight: 700, lineHeight: 30}
+  section: {fontFamily: "SF Pro Text", fontSize: 18, fontWeight: 700, lineHeight: 23}
+  body: {fontFamily: "SF Pro Text", fontSize: 14, fontWeight: 400, lineHeight: 19}
+  label: {fontFamily: "SF Pro Text", fontSize: 14, fontWeight: 600, lineHeight: 18}
+  caption: {fontFamily: "SF Pro Text", fontSize: 11, fontWeight: 400, lineHeight: 15}
+spacing:
+  screen-horizontal: 10
+  section-gap: 22
+  card-padding: 10
+  control-gap: 8
+rounded:
+  control: 10
+  card: 12
+  sheet: 26
+  pill: 999
 components:
-  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.xs}", padding: [13, 18]}
-  button-buy-now: { backgroundColor: "{colors.buy-now}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.xs}", padding: [13, 18]}
-  product-card: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xs}", padding: 6 }
-  campaign-strip: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.card-title}", rounded: "{rounded.sm}", padding: 10 }
-  cart-row: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xs}", padding: 10 }
-  navigation-bar: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xs}", height: 50 }
-  footer: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: [10, 12]}
+  checkout-action: {backgroundColor: "{colors.accent-primary}", textColor: "{colors.text-primary}", cornerRadius: "{rounded.control}", minHeight: 50}
+  buy-now-action: {backgroundColor: "#FFE052", textColor: "{colors.text-primary}", cornerRadius: "{rounded.control}", minHeight: 50}
+  product-card: {backgroundColor: "{colors.surface-primary}", textColor: "{colors.text-primary}", cornerRadius: "{rounded.card}", padding: 0}
+  search-field: {backgroundColor: "{colors.surface-secondary}", textColor: "{colors.text-secondary}", cornerRadius: "{rounded.pill}", minHeight: 42}
+  filter-chip: {backgroundColor: "{colors.surface-secondary}", textColor: "{colors.text-primary}", cornerRadius: "{rounded.pill}", minHeight: 36}
+  navigation: {backgroundColor: "{colors.surface-primary}", selectedColor: "{colors.accent-secondary}", unselectedColor: "{colors.text-secondary}"}
 ---
 
 # Overview
 
-AliExpress is visually dense but rule-driven: white product cards expose complete purchase evidence, while bright campaign shells and conversion actions create urgency without replacing product information.
+AliExpress is a visually dense marketplace in which product photography and complete purchase evidence dominate. White and pale-gray surfaces hold two-column grids, large media-led details, compact price metadata, and store-grouped cart rows. Conversion uses several deliberately distinct accents: red identifies brand and active navigation, lime marks major cart or checkout actions, yellow marks immediate purchase, and black appears on selected pills or focused sheet actions.
 
 # Non-negotiable visual invariants
 
-- The sampled screens consistently show Two-column product grid with dense metadata.
-- Show full price and delivery context.
-- Preserve seller and variant identity in cart.
-- Explain campaign eligibility.
-- Keep add and buy-now actions distinct.
-- Use product imagery as decision evidence.
-- Discovery uses two-column product grids, horizontal campaign rails, and full-width banners.
-- Product detail, cart, and checkout are single-column with fixed actions.
+- White is the dominant commerce canvas, with pale gray reserved for gutters, search, chips, and grouped panels.
+- Discovery uses a dense two-column product grid with narrow spacing and image-first cards.
+- Current price is the strongest text; old price, discount, rating, purchase count, and delivery remain adjacent as smaller evidence.
+- Red marks brand and active navigation, lime marks decisive checkout actions, and yellow distinguishes immediate purchase.
+- Product details begin with a large media region and keep paired purchase actions persistent near the bottom.
+- Cart content remains grouped by seller and shows selection, variant, quantity, price, and delivery context together.
+- Campaign colors remain bounded to banners and sale modules rather than recoloring ordinary forms.
 
 # Color and surfaces
 
-- **Lime** ({colors.primary}): Cart, checkout, and decisive conversion.
-- **Yellow** ({colors.buy-now}): Immediate purchase.
-- **Coral** ({colors.brand-coral}): Brand navigation and sale emphasis.
-- **Violet / Mint**: Dedicated campaign environments.
-
-- **Canvas** ({colors.canvas}): Product and checkout base.
-- **Surface 1** ({colors.surface-1}): Search, recommendations, and grouped panels.
-- **Surface 2** ({colors.surface-2}): Disabled and nested controls.
-- **Hairline** ({colors.hairline}): Dense product separation.
-
-- **Ink** ({colors.ink}): Price, product title, and actions.
-- **Ink Muted** ({colors.ink-muted}): Old price, shipping detail, and seller metadata.
-- **Ink Subtle** ({colors.ink-subtle}): Placeholder and disabled content.
-
-- **Success** ({colors.semantic-success}): Free delivery and stock.
-- **Danger** ({colors.semantic-danger}): Discount, scarcity, and destructive action.
-- **Overlay** ({colors.semantic-overlay}): List creation and information sheets.
+The base canvas and most cards are white. Very light gray separates gutters, grouped checkout regions, search fields, skeletons, and inactive controls; thin gray lines divide dense rows. Saturated red fills splash and brand moments and tints the active tab or sale labels. Bright lime is the strongest conversion fill in cart and checkout. Yellow marks a distinct immediate-purchase action. Black or dark charcoal appears on selected chips, prominent sheet actions, and primary text. Green can communicate favorable delivery or stock; destructive and scarcity states use red with explicit labels. Violet, mint, or other saturated fields belong to campaign-specific modules only. Default iOS blue or a single accent applied to every commerce state would erase the reference hierarchy.
 
 # Typography
 
-- **System Sans** — all commerce, campaign, form, and navigation UI.
-- **System Mono** — order numbers and tracking identifiers only.
-
-- `{typography.display-xl}` — 38 points — 800 — Campaign claim
-- `{typography.display-md}` — 25 points — 700 — Checkout total
-- `{typography.headline}` — 21 points — 700 — Section heading
-- `{typography.card-title}` — 13 points — 500 — Product title
-- `{typography.body}` — 13 points — 400 — Default details
-- `{typography.caption}` — 9 points — 500 — Badges and navigation
-- `{typography.button}` — 14 points — 600 — Conversion actions
-
-- Make current price stronger than old price and discount.
-- Keep delivery and purchase count adjacent to product evidence.
-- Use compressed display type only in campaign artwork.
-- Allow two-line product titles before truncation.
-
-Use **SF Pro**, **Inter**, or **Roboto** with compact numerals and Cyrillic support.
-
-The hierarchy must remain legible with Dynamic Type: supporting text may wrap before the primary metric, title, or action loses its role.
+Use SF Pro Display and SF Pro Text. Campaign claims may reach 25–30 points in bold or extra-bold; section headings are around 17–21 points; current prices are large and bold, commonly 18–24 points; product titles and body details are around 13–16 points; delivery, legal text, ratings, and counters are around 10–13 points in gray. Dense grids use tight line height and controlled two-line truncation. Prices should use tabular figures when aligned. Dynamic Type should wrap delivery and product titles, then switch the grid to rows before price, variant, or action hierarchy becomes ambiguous.
 
 # Screen composition
 
-Use a 4 points base. Screen gutters are 6–10 points, product gaps 6 points, and checkout groups use 12–16 points padding.
-
-Discovery uses two-column product grids, horizontal campaign rails, and full-width banners. Product detail, cart, and checkout are single-column with fixed actions.
-
-Use whitespace between content groups, not inside product metadata. Keep forms calmer than discovery surfaces.
-
-Use promotional backgrounds, product crops, and compact badges. Avoid decorative shadows that compete with pricing.
-
-Primary iPhone screens keep the documented content grouping and vertical rhythm inside a scroll container when content exceeds the viewport. Bottom-owned actions or navigation reserve the lower safe area rather than covering content.
+Discovery archetypes place a pale rounded search field and compact top controls above campaign rails or banners and a long two-column product grid. Horizontal insets and gutters are intentionally narrow, commonly around 6–10 points. Detail archetypes dedicate the upper region to large product media or gallery, then stack price, promotion, variants, ratings, purchase count, delivery, seller, reviews, and recommendations above a sticky two-action bar. Search and filter archetypes use compact chips, sort controls, and skeleton-loading grids. Cart archetypes group rows by store and keep selection, thumbnail, variant, quantity, and totals visible. Checkout archetypes use calmer one-column white groups for recipient, address, delivery, payment, promo code, and total, with a sticky lime action. Profile, orders, and review archetypes use list or card rows with status labels and compact imagery. Sheets handle filters, promo codes, card entry, and other focused decisions.
 
 # Navigation appearance
 
-Home, Combo, Below Market, Cart, and Profile form the bottom bar. Search remains high in discovery and campaign screens.
-
-This section governs appearance only; product behavior and information architecture come from the approved Research and Planning artifacts.
+The bottom bar is white with gray inactive icons and labels; selected content turns saturated red. Top bars remain compact, using a back chevron, pale pill search field, visual-search/camera action, heart, share, or centered title depending on the surface. Detail screens keep a small overlay or top action group over media. Bottom sheets use a dark dimmed backdrop, white panel with large top corners, short grab handle, and close control. Sticky purchase and checkout regions sit above the home indicator with strong color separation from the scroll content.
 
 # Components
 
-Use lime for add/checkout and yellow for buy now. Secondary actions use outline or plain text. Avoid merging the two purchase intents.
-
-Product cards combine photo, discount, price, rating, purchase count, title, and delivery. Cart rows add seller grouping, variant, quantity, and selection.
-
-Search supports text and image input. Checkout groups recipient, address, payment, and delivery with a persistent total action.
-
-Sale, Combo, Below Market, free delivery, stock, and order states use explicit labels plus color. Campaign rules remain available from information sheets.
-
-Controls retain at least a 44-point interactive area. Pressed and disabled treatments should stay within the documented palette and hierarchy.
+Product cards combine a large photo, discount or campaign badge, bold current price, smaller old price, rating, purchase count, compact title, and delivery line. Search fields are pale pills with text and visual-search action. Filter chips are short neutral pills that become dark or accented when selected. Skeleton states preserve the exact product-grid geometry. Variant controls use photo, color, or size swatches with a strong selected outline or check. Detail purchase controls pair a lime add-to-cart action with a yellow buy-now action. Cart rows use circular selection, product thumbnail, seller grouping, variant text, quantity stepper, and price. Checkout rows use white grouped surfaces with radio or disclosure controls. Promo-code surfaces use ticket-like banners or a focused sheet. Review cards include avatar, stars, text, photo thumbnails, and a small like action.
 
 # Imagery and icons
 
-Product images use contain when shape or packaging matters and cover for promotional lifestyle cards. Keep sale labels outside critical product details.
-
-Use contain for products and cover for lifestyle campaigns. Never crop labels, variants, or real purchase evidence.
-
-When imagery is part of the documented composition, it cannot be omitted while final assets are pending. A temporary asset must preserve its placement, crop, scale, and approximate visual weight.
+Product photography overwhelmingly defines the interface. Use aspect-fit where packaging or product shape is purchase evidence and aspect-fill for lifestyle or campaign imagery. Large detail media and grid photography cannot be omitted while final assets are pending. Campaign art varies by sale and can include product composites, saturated backgrounds, confetti, sparkles, or simple promotional figures, but it does not establish a reusable illustration system. Empty address and promo-success art are isolated symbols rather than a family. Functional icons mix simple outline and filled commerce symbols, while service and payment marks may retain their own colors.
 
 # States
 
-Sale, Combo, Below Market, free delivery, stock, and order states use explicit labels plus color. Campaign rules remain available from information sheets.
-
-- **Success** ({colors.semantic-success}): Free delivery and stock.
-- **Danger** ({colors.semantic-danger}): Discount, scarcity, and destructive action.
-- **Overlay** ({colors.semantic-overlay}): List creation and information sheets.
-
-Only the states documented above are specified; other states must preserve the same canvas, hierarchy, and component language without inventing a new visual system.
+Selected tabs, checkmarks, filters, and variants change color or border without changing layout. Search loading uses skeleton blocks matching the grid. Cart selection uses clear circular marks and preserves seller grouping. Discount, stock, free-delivery, and campaign states pair color with explicit labels. Checkout and payment keep the lime CTA fixed; disabled states lower saturation. Permission prompts use native alerts. Filters, promo codes, and card entry appear in white sheets over dimmed content. Payment failure is a focused transactional state with clear recovery action rather than decorative art. Empty address and sparse profile/order states retain the same white canvas. Media gallery uses a darker focused overlay while preserving safe-area controls.
 
 # iOS adaptation
 
-- Extend the documented canvas through the iPhone safe areas while keeping readable content within appropriate insets.
-- Use a vertical `ScrollView` for content that does not fit compact heights; keep documented bottom actions and navigation clear of the home indicator.
-- Maintain 44 points for search, filters, variant choices, quantity, favorites, and fixed actions.
-- Reduce discovery grid columns before shrinking product text. Stack checkout choices and keep total action full width.
-- Present the keyboard and system permission UI natively, then return to the same visual context.
-- Preserve semantic reading order in VoiceOver and allow text to grow with Dynamic Type.
-- Preserve the documented appearance instead of introducing an unrelated light or dark palette.
+Extend white through the safe areas and keep bottom navigation or sticky conversion actions above the home indicator. Use lazy grids for discovery and switch to one-column rows at accessibility text sizes. Put details, cart, checkout, orders, and reviews in vertical scroll containers. Present filters, variants, promo entry, and card forms as native-behaving sheets with the documented scrim and radius. Move checkout fields and actions with the keyboard while keeping the active field visible. Maintain at least 44-point targets around hearts, swatches, chips, steppers, selection circles, tabs, gallery actions, and sheet controls. VoiceOver order should follow image description, price, discount/old price, title, delivery, options, then purchase actions. A separate dark appearance was not established and should not be introduced by default components.
 
 # Anti-generic checklist
 
-- Do not hide old price or delivery terms behind badges.
-- Do not let campaign colors recolor checkout forms.
-- Do not crop product packaging when it matters.
-- Do not remove seller grouping.
-- Do not use discount color alone to communicate meaning.
-- Do not replace the documented canvas and surfaces with a generic grouped background and uniform white cards.
-- Do not use an unstyled `TabView`, default blue tint, or arbitrary SF Symbols when they contradict the reference.
-- Do not collapse every component to one corner radius or remove compositionally important imagery.
+- Do not replace the two-column discovery grid with uniform full-width cards.
+- Do not use one generic accent color for brand, checkout, and buy-now actions.
+- Do not hide old price, delivery, rating, purchase count, or seller grouping behind extra taps.
+- Do not crop packaging or product shape when it is purchase evidence.
+- Do not let campaign colors leak into ordinary checkout and account forms.
+- Do not use an unstyled `TabView`, visible default `Form`, or arbitrary SF Symbols.
+- Do not remove the large gallery, skeleton geometry, or sticky purchase region.
+- Do not infer a decorative illustration system from isolated promo graphics.
 
 </design-context>

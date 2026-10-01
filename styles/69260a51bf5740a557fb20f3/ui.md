@@ -3,142 +3,101 @@
 version: 1
 platform: iOS
 name: Moonly-design-analysis
-description: "A mystical dark mobile system with warm editorial serif titles, violet-glowing controls, translucent charcoal cards, celestial 3D objects, and image-led personalized guidance."
-colors: {primary: "#6A4BE8", on-primary: "#FFFFFF", primary-focus: "#5638C8", ink: "#F7F3F1", ink-muted: "#B1ABB8", ink-subtle: "#77727F", ink-tertiary: "#54505B", canvas: "#17181C", surface-1: "#202126", surface-2: "#282832", surface-3: "#343441", surface-4: "#41404D", hairline: "#343540", hairline-strong: "#4A4956", hairline-tertiary: "#5C5A68", inverse-canvas: "#F5F1EC", inverse-surface-1: "#E9E3DC", inverse-surface-2: "#DCD4CC", inverse-ink: "#17181C", brand-secure: "#FF9F45", semantic-success: "#52C99A", semantic-overlay: "#08090B"}
+description: "An immersive near-black astrology interface where oversized white serif headings, translucent charcoal cards, warm active navigation, and large mystical media create a layered editorial ritual space."
+colors:
+  canvas: "#15161A"
+  surface-primary: "#202126"
+  surface-secondary: "#2A2932"
+  accent-primary: "#7558E8"
+  accent-secondary: "#D9A45E"
+  text-primary: "#F7F3F1"
+  text-secondary: "#ACA6B2"
+  divider: "#393942"
+  destructive: "#D95765"
 typography:
-  display-xl: {fontFamily: Georgia, fontSize: 38, fontWeight: 700, lineHeight: 1.06, letterSpacing: -0.8}
-  display-lg: {fontFamily: Georgia, fontSize: 32, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.5}
-  display-md: {fontFamily: Georgia, fontSize: 26, fontWeight: 700, lineHeight: 1.14, letterSpacing: -0.3}
-  headline: {fontFamily: Georgia, fontSize: 24, fontWeight: 700, lineHeight: 1.20, letterSpacing: -0.2}
-  card-title: {fontFamily: SF Pro Text, fontSize: 16, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0}
-  subhead: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 600, lineHeight: 1.30, letterSpacing: 0}
-  body-lg: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0}
-  body: {fontFamily: SF Pro Text, fontSize: 13, fontWeight: 400, lineHeight: 1.36, letterSpacing: 0}
-  body-sm: {fontFamily: SF Pro Text, fontSize: 11, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0}
-  caption: {fontFamily: SF Pro Text, fontSize: 10, fontWeight: 400, lineHeight: 1.25, letterSpacing: 0}
-  button: {fontFamily: SF Pro Text, fontSize: 14, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0}
-  eyebrow: {fontFamily: SF Pro Text, fontSize: 10, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0.2}
-  mono: {fontFamily: SF Mono, fontSize: 11, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0}
-rounded: {xs: 6, sm: 10, md: 16, lg: 22, xl: 28, xxl: 32, pill: 9999, full: 9999}
-spacing: {xxs: 4, xs: 8, sm: 12, md: 16, lg: 20, xl: 24, xxl: 32, section: 40}
+  hero: {fontFamily: "Georgia", fontSize: 38, fontWeight: 700, lineHeight: 43}
+  title: {fontFamily: "Georgia", fontSize: 30, fontWeight: 700, lineHeight: 36}
+  section: {fontFamily: "Georgia", fontSize: 23, fontWeight: 700, lineHeight: 29}
+  body: {fontFamily: "SF Pro Text", fontSize: 16, fontWeight: 400, lineHeight: 22}
+  label: {fontFamily: "SF Pro Text", fontSize: 14, fontWeight: 600, lineHeight: 19}
+  caption: {fontFamily: "SF Pro Text", fontSize: 12, fontWeight: 400, lineHeight: 16}
+spacing:
+  screen-horizontal: 16
+  section-gap: 28
+  card-padding: 16
+  control-gap: 10
+rounded:
+  control: 12
+  card: 20
+  sheet: 28
+  pill: 999
 components:
-  button-primary: {backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 14 18}
-  button-primary-pressed: {backgroundColor: "{colors.primary-focus}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}"}
-  button-secondary: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 12 16}
-  button-tertiary: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 10 14}
-  content-card: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 14}
-  feature-card: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 16}
-  text-input: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: 12 14}
-  status-badge: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.pill}", padding: 3 7}
-  bottom-nav: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink-subtle}", typography: "{typography.caption}", rounded: "{rounded.lg}", padding: 8 10}
+  mystical-media-card: {fill: "dark image-led surface", geometry: "large rounded portrait or landscape card"}
+  translucent-pill: {fill: "low-contrast charcoal", geometry: "compact capsule"}
+  premium-lock: {fill: "dark badge", geometry: "small circular or pill lock marker"}
+  floating-tab-bar: {fill: "translucent near-black", geometry: "rounded icon-and-label dock"}
 ---
 
 # Overview
 
-Moonly is a dark celestial interface where editorial cards, symbolic artwork, and a stable five-tab ritual navigation make dense spiritual content feel personal and browsable.
+Moonly is a dark, image-led editorial interface. Near-black fills the screen, large serif headings establish the current theme, and rounded translucent cards layer mystical imagery with concise labels. Moon, planet, tarot, rune, meditation, and glowing fantasy imagery frequently occupy the largest content block, while the floating bottom navigation stays subdued.
 
 # Non-negotiable visual invariants
 
-- Primary screens use near-black canvas.
-- The sampled screens consistently show warm serif headings.
-- The recurring color treatment uses violet glow.
-- Characteristic content and controls use large visual cards.
-- The sampled screens consistently show amber celestial accent.
-- Navigation or control chrome uses softly translucent navigation.
-- Preserve the dark celestial atmosphere and editorial hierarchy.
-- Keep the primary task and current state immediately legible.
+- Near-black extends through the full viewport and remains visible between every card and control.
+- Primary section headings use large high-contrast white serif type, distinct from sans-serif controls and metadata.
+- Mystical media cards occupy substantial vertical space and preserve one legible celestial, symbolic, or meditative focal subject.
+- Violet glow and warm amber accents appear selectively against charcoal rather than filling the entire interface.
+- Secondary controls are compact translucent pills or dark tonal segments with low-contrast borders.
+- A rounded floating bottom bar combines small symbols and labels, with a warm or violet active state.
+- Premium or unavailable content remains visible but adds a small lock badge and reduced emphasis.
+- Major screens retain a compact circular avatar or profile affordance near the upper-right safe area.
 
 # Color and surfaces
 
-Violet identifies selected practices and focused controls; warm amber marks lunar identity and important celestial details.
-
-Use near-black for the canvas, charcoal for stacked cards, and slightly violet surfaces for segments and ritual containers.
-
-Warm white leads titles; lavender-gray supports instructions, dates, and locked descriptions.
-
-Green is reserved for positive progress; amber and violet remain brand signals rather than general warnings.
+The canvas is a continuous near-black or charcoal field. Primary cards are slightly lighter charcoal; secondary panels introduce a restrained violet cast or translucency. White carries headings and primary readings, while cool gray supports dates, explanations, and locked labels. Violet marks focused practices and selected controls; warm amber identifies lunar or celestial emphasis and active navigation. Glows stay localized around imagery and never become a generic full-screen gradient. Default white grouped surfaces, iOS blue, or bright flat purple panels would break the observed atmosphere.
 
 # Typography
 
-Use Georgia for editorial headings and SF Pro Text for controls, content, and metadata.
-
-- display-lg — 32 points — 700 — Hero or state
-- headline — 24 points — 700 — Section title
-- card-title — 16 points — 600 — Primary item
-- body — 13 points — 400 — Detail
-- caption — 10 points — 400 — Metadata
-
-- Lead with the day, ritual, or reading.
-- Keep repeated metadata aligned and visually quieter.
-- Reserve high contrast and weight for real decisions.
-
-A high-contrast editorial serif may replace Georgia; pair it with a neutral system sans and preserve the strong contrast.
-
-The hierarchy must remain legible with Dynamic Type: supporting text may wrap before the primary metric, title, or action loses its role.
+Use Georgia as an iOS-safe substitute for the observed editorial serif, paired with SF Pro Text for controls, metadata, and longer reading copy. Serif titles use a pronounced 30–38-point scale; card titles sit around 18–23 points; sans-serif body and labels remain compact. Keep headings left-aligned and allow them to wrap naturally. Numeric dates and small status values may use tabular figures. With Dynamic Type, let supporting text and cards grow vertically while preserving the serif-versus-sans contrast and leaving the symbolic subject unobscured.
 
 # Screen composition
 
-Use a 4 points base, 8–12 points internal gaps, and 16 points horizontal screen gutters.
+Editorial feed archetype: inset content about 16 points, begin with a large serif heading and compact top-right avatar, then stack wide image-led cards, horizontal media rails, and smaller translucent controls. Cards may peek at the horizontal edge, but the main column remains readable.
 
-Calendar and practice views use one wide column, horizontal day strips, and edge-peeking card rails.
+Symbolic reading archetype: center a large tarot card, rune stone, moon, planet, or glowing object in the middle half of the viewport; surround it with dark negative space, then anchor concise controls or interpretation below. Text overlays require a dark protective scrim.
 
-Use generous breathing room around symbolic content, while related daily cards can stack tightly.
-
-Let celestial glows, translucent layers, and artwork create depth; ordinary controls stay restrained.
-
-Primary iPhone screens keep the documented content grouping and vertical rhythm inside a scroll container when content exceeds the viewport. Bottom-owned actions or navigation reserve the lower safe area rather than covering content.
+Focused sheet archetype: use a broad rounded dark sheet over the existing canvas, with a serif or strong sans title, short options, pills, and one clear action. Vertical scrolling keeps long content above the floating navigation and home indicator.
 
 # Navigation appearance
 
-Use a floating dark rounded bar with five labeled symbols; warm or violet emphasis marks the active destination.
-
-This section governs appearance only; product behavior and information architecture come from the approved Research and Planning artifacts.
+The bottom navigation is a floating rounded dark bar with small icon-and-label items; inactive items are muted gray and the selected item gains warm amber or violet emphasis. Top chrome is minimal and transparent, with compact back, avatar, or utility controls. Sheets preserve the charcoal palette and large top radius. This section describes appearance only; routes and information architecture belong to the consuming product.
 
 # Components
 
-Primary ritual actions use violet with white labels; secondary actions use dark filled surfaces and subtle outlines.
-
-Daily guidance cards combine a small category label, large editorial statement, artwork, and a clear chevron.
-
-Onboarding fields stay minimal on the dark canvas, with warm focus accents and progress visible above.
-
-Place locks, progress, timing, and completion close to the ritual or reading they affect.
-
-Controls retain at least a 44-point interactive area. Pressed and disabled treatments should stay within the documented palette and hierarchy.
+Mystical media cards use 18–22-point radii, dark imagery, localized colored glow, and a single clear focal subject; titles either sit below or overlay a protected dark region. Translucent pills and segmented controls use charcoal fills, subtle borders, compact sans labels, and violet selection. Primary actions use violet with white labels; secondary actions stay dark and tonal. Lock badges are small, close to the affected item, and do not replace its preview. The floating tab bar uses evenly spaced compact items and restrained selection. Pressed states deepen the current surface; disabled and locked states reduce contrast without changing geometry.
 
 # Imagery and icons
 
-Crop atmospheric scenes to rounded portrait cards; keep planets and tarot figures fully legible inside safe areas.
-
-Preserve focal figures and celestial objects; use overlays only to protect text contrast.
-
-When imagery is part of the documented composition, it cannot be omitted while final assets are pending. A temporary asset must preserve its placement, crop, scale, and approximate visual weight.
+Imagery is compositionally essential and cannot be omitted while final assets are pending. Preserve the scale and crop of moon phases, celestial bodies, tarot cards, rune stones, meditative figures, glowing orbs, and fantasy-astrology scenes. One symbolic subject should dominate each card, with dark negative space and localized violet, magenta, amber, or moon-white light. The sampled imagery mixes rendered, painterly, and photo-like treatments, so do not assume one production medium; unify it through darkness, glow, subject scale, and card composition. Icons remain thin, symbolic, and visually quieter than the media.
 
 # States
 
-Place locks, progress, timing, and completion close to the ritual or reading they affect.
-
-Green is reserved for positive progress; amber and violet remain brand signals rather than general warnings.
-
-Only the states documented above are specified; other states must preserve the same canvas, hierarchy, and component language without inventing a new visual system.
+Selected segments and navigation items add violet or amber while retaining the dark surface. Locked and premium items keep their imagery visible with a small lock and dimmed text. Progress or completion uses restrained positive color close to the affected practice. Paywalls and focused choices appear as dark rounded sheets. Sign-in and assistant surfaces preserve the same canvas, serif hierarchy where applicable, and translucent controls rather than adopting generic light forms.
 
 # iOS adaptation
 
-- Extend the documented canvas through the iPhone safe areas while keeping readable content within appropriate insets.
-- Use a vertical `ScrollView` for content that does not fit compact heights; keep documented bottom actions and navigation clear of the home indicator.
-- Primary actions, navigation, cards, and contextual controls remain at least 44 points.
-- Keep the symbolic subject and current reading, stack controls, and trim explanatory copy before shrinking type.
-- Present the keyboard and system permission UI natively, then return to the same visual context.
-- Preserve semantic reading order in VoiceOver and allow text to grow with Dynamic Type.
-- Preserve the documented appearance instead of introducing an unrelated light or dark palette.
+Extend the near-black canvas through safe areas, but keep titles, avatars, and overlay controls clear of the status bar. Reserve space above the home indicator for the floating tab bar and any bottom action. Use vertical scrolling for editorial feeds and long readings; use horizontal rails only where adjacent cards remain visibly discoverable. All compact icons and pills require at least 44-point hit targets. Native keyboard and system permission transitions may remain native, then return to the dark context. VoiceOver order follows heading, primary symbolic media, its reading or status, controls, then navigation. Dynamic Type expands cards and sheets vertically without shrinking or removing compositionally important imagery. No unrelated light appearance was observed.
 
 # Anti-generic checklist
 
-- Do not turn every surface purple or use generic bright gradients.
-- Do not hide status, constraints, or secondary conditions.
-- Do not add heavy shadows around every container.
-- Do not replace the documented canvas and surfaces with a generic grouped background and uniform white cards.
-- Do not use an unstyled `TabView`, default blue tint, or arbitrary SF Symbols when they contradict the reference.
-- Do not collapse every component to one corner radius or remove compositionally important imagery.
+- Do not replace the near-black field with grouped white cards or a default system background.
+- Do not use one generic purple gradient across every surface.
+- Do not replace the serif display hierarchy with uniform SF Pro body sizing.
+- Do not omit the large mystical media or substitute arbitrary SF Symbols for symbolic subjects.
+- Do not use an unstyled `TabView` with default blue selection.
+- Do not make locks or premium status into full-width warning banners.
+- Do not fill dark negative space with decorative copy or extra utility cards.
+- Do not force every image into one medium when the observed coherence comes from composition, darkness, and glow.
 
 </design-context>

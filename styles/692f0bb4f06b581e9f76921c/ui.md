@@ -3,142 +3,102 @@
 version: 1
 platform: iOS
 name: My-Viva-design-analysis
-description: "A bright telecom utility with clean white surfaces, Viva red activation controls, blue allowance meters, compact story tiles, and straightforward account modules."
-colors: {primary: "#E9001D", on-primary: "#FFFFFF", primary-focus: "#C60019", ink: "#18191C", ink-muted: "#696B71", ink-subtle: "#9B9DA3", ink-tertiary: "#C5C7CC", canvas: "#FFFFFF", surface-1: "#F7F7F9", surface-2: "#EFEFF2", surface-3: "#E4E4E8", surface-4: "#D7D7DC", hairline: "#E6E6E9", hairline-strong: "#CDCDD2", hairline-tertiary: "#B4B4BA", inverse-canvas: "#202126", inverse-surface-1: "#303138", inverse-surface-2: "#42434B", inverse-ink: "#FFFFFF", brand-secure: "#2A9FDB", semantic-success: "#32B877", semantic-overlay: "#17181C"}
+description: "A bright telecom utility built from white and pale-gray fields, compact account cards, bold functional sans-serif hierarchy, Viva-red actions and selected navigation, blue usage meters, and secondary promotional photography."
+colors:
+  canvas: "#F6F6F8"
+  surface-primary: "#FFFFFF"
+  surface-secondary: "#ECECEF"
+  accent-primary: "#E60022"
+  accent-secondary: "#269BD3"
+  text-primary: "#1B1C20"
+  text-secondary: "#74767C"
+  divider: "#E2E2E6"
+  destructive: "#D83B45"
 typography:
-  display-xl: {fontFamily: SF Pro Display, fontSize: 36, fontWeight: 700, lineHeight: 1.06, letterSpacing: -0.8}
-  display-lg: {fontFamily: SF Pro Display, fontSize: 30, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.5}
-  display-md: {fontFamily: SF Pro Display, fontSize: 24, fontWeight: 700, lineHeight: 1.14, letterSpacing: -0.3}
-  headline: {fontFamily: SF Pro Display, fontSize: 21, fontWeight: 700, lineHeight: 1.20, letterSpacing: -0.2}
-  card-title: {fontFamily: SF Pro Text, fontSize: 16, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0}
-  subhead: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 600, lineHeight: 1.30, letterSpacing: 0}
-  body-lg: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0}
-  body: {fontFamily: SF Pro Text, fontSize: 13, fontWeight: 400, lineHeight: 1.36, letterSpacing: 0}
-  body-sm: {fontFamily: SF Pro Text, fontSize: 11, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0}
-  caption: {fontFamily: SF Pro Text, fontSize: 10, fontWeight: 400, lineHeight: 1.25, letterSpacing: 0}
-  button: {fontFamily: SF Pro Text, fontSize: 14, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0}
-  eyebrow: {fontFamily: SF Pro Text, fontSize: 10, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0.2}
-  mono: {fontFamily: SF Mono, fontSize: 11, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0}
-rounded: {xs: 4, sm: 8, md: 12, lg: 16, xl: 20, xxl: 24, pill: 9999, full: 9999}
-spacing: {xxs: 4, xs: 8, sm: 12, md: 16, lg: 20, xl: 24, xxl: 32, section: 40}
+  hero: {fontFamily: "SF Pro Display", fontSize: 34, fontWeight: 700, lineHeight: 40}
+  title: {fontFamily: "SF Pro Display", fontSize: 28, fontWeight: 700, lineHeight: 34}
+  section: {fontFamily: "SF Pro Text", fontSize: 20, fontWeight: 600, lineHeight: 25}
+  body: {fontFamily: "SF Pro Text", fontSize: 16, fontWeight: 400, lineHeight: 22}
+  label: {fontFamily: "SF Pro Text", fontSize: 14, fontWeight: 600, lineHeight: 19}
+  caption: {fontFamily: "SF Pro Text", fontSize: 12, fontWeight: 400, lineHeight: 16}
+spacing:
+  screen-horizontal: 16
+  section-gap: 24
+  card-padding: 16
+  control-gap: 10
+rounded:
+  control: 10
+  card: 16
+  sheet: 24
+  pill: 999
 components:
-  button-primary: {backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 14 18}
-  button-primary-pressed: {backgroundColor: "{colors.primary-focus}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}"}
-  button-secondary: {backgroundColor: "{colors.surface-1}", textColor: "{colors.primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 12 16}
-  button-tertiary: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 10 14}
-  content-card: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 14}
-  feature-card: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 16}
-  text-input: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: 12 14}
-  status-badge: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.pill}", padding: 3 7}
-  bottom-nav: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink-subtle}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: 8 10}
+  account-card: {fill: "white", geometry: "full-width rounded module with compact metrics"}
+  usage-meter: {fill: "pale track with blue progress", geometry: "thin horizontal bar"}
+  utility-row: {fill: "white", geometry: "icon-label-chevron row"}
+  promotional-card: {fill: "image and white text area", geometry: "rounded wide crop"}
+  bottom-tab-bar: {fill: "white", geometry: "low standard icon-and-label bar"}
 ---
 
 # Overview
 
-My Viva is a restrained white account interface where red actions, blue usage meters, and image-led promotional cards separate daily telecom work from offers.
+My Viva is a practical account interface dominated by white and very pale gray surfaces. Compact modules organize balances, allowances, payments, services, and forms; strong red actions and blue usage bars carry most of the color. Promotional photography and occasional pale spot art are secondary to the operational hierarchy.
 
 # Non-negotiable visual invariants
 
-- Primary screens use white canvas.
-- The recurring color treatment uses Viva red.
-- The recurring color treatment uses blue progress meters.
-- Characteristic content and controls use soft shadowed account cards.
-- The sampled screens consistently show compact stories.
-- The sampled screens consistently show plain icon utilities.
-- Preserve red action hierarchy and blue allowance feedback.
-- Keep the primary task and current state immediately legible.
+- White or pale gray fills the full screen and leaves clear space between compact account modules.
+- Viva red is reserved for primary actions, active navigation, and key brand emphasis.
+- Blue appears in thin allowance or consumption meters rather than competing with red as a general action color.
+- Account and service modules use white rounded rectangles with restrained shadow or tonal separation.
+- Operational lists use a left icon, concise label, optional metadata, and a right chevron.
+- Payment and form screens end in a prominent full-width red action.
+- The bottom tab bar stays visually light, with gray inactive items and a red active item.
+- Photography, phone mockups, and small spot art remain secondary to balances, statuses, and controls.
 
 # Color and surfaces
 
-Viva red owns activation, pay, active navigation, and brand identity. Blue is functional for allowances and selected service metrics.
-
-White is the main canvas; very pale gray lifts account, shortcut, and promotion cards without heavy borders.
-
-Near-black carries balances and headings; gray supports cost timestamps, package totals, and promotional detail.
-
-Blue shows usage, green confirms success, and red remains brand-led unless a destructive state is explicit.
+The main canvas is a pale neutral gray or white field. White primary cards lift from it through a soft shadow or subtle tonal edge; secondary inputs and grouped controls use cooler light gray. Viva red marks the current tab, primary button, and brand-critical emphasis. Blue is functional for allowance progress and selected consumption data. Near-black carries amounts and page titles; medium gray carries timestamps, package details, and inactive labels. Green may confirm success, while destructive red must remain distinguishable from brand-red actions through context. Default iOS blue actions or heavy dark surfaces would visibly break the reference.
 
 # Typography
 
-Use SF Pro Display for account and promotion headings and SF Pro Text for controls, content, and metadata.
-
-- display-lg — 30 points — 700 — Hero or state
-- headline — 21 points — 700 — Section title
-- card-title — 16 points — 600 — Primary item
-- body — 13 points — 400 — Detail
-- caption — 10 points — 400 — Metadata
-
-- Lead with balance, remaining allowance, or activation decision.
-- Keep repeated metadata aligned and visually quieter.
-- Reserve high contrast and weight for real decisions.
-
-Use the platform sans and preserve compact numeric clarity across Armenian, Russian, or English content.
-
-The hierarchy must remain legible with Dynamic Type: supporting text may wrap before the primary metric, title, or action loses its role.
+Use SF Pro Display for large balances and page titles and SF Pro Text for rows, controls, and metadata. Titles are bold but not editorial; account values receive the strongest numeric emphasis. Section labels sit around 18–20 points, operational rows around 14–16 points, and metadata around 12 points. Use tabular numerals for balances, allowances, dates, and payment amounts. Multilingual strings may wrap, but amounts and units should remain paired. Dynamic Type increases card and row height while keeping the primary metric before supporting details.
 
 # Screen composition
 
-Use a 4 points base, 8–12 points internal gaps, and 16 points horizontal screen gutters.
+Account dashboard archetype: use approximately 16-point side insets, place the primary account or balance card near the top, follow it with compact utilities and allowance modules, then secondary recommendations. Modules occupy full width or a simple two-column grid; the hierarchy remains operational rather than promotional.
 
-Home uses one account column, compact utility tiles, and two-column recommendations; promotions use a single vertical feed.
+List or settings archetype: place a bold title below the safe area, then use direct white rows separated by hairlines or grouped in restrained rounded surfaces. Keep icons and chevrons aligned and avoid nested cards.
 
-Keep operational account facts concise and give promotional detail more vertical breathing room.
-
-Use restrained soft card separation and crisp white space; promotional images provide most visual depth.
-
-Primary iPhone screens keep the documented content grouping and vertical rhythm inside a scroll container when content exceeds the viewport. Bottom-owned actions or navigation reserve the lower safe area rather than covering content.
+Payment or form archetype: stack sparse fields, amount or keypad content, and summaries on the pale canvas, with the large red action near the bottom safe area. Promotion archetypes may use a wide image crop followed by concise text, but do not place account data over the image.
 
 # Navigation appearance
 
-Use four bottom destinations with red active icon and quiet gray inactive labels.
-
-This section governs appearance only; product behavior and information architecture come from the approved Research and Planning artifacts.
+The bottom navigation is a low white icon-and-label bar with minimal separation from the content; inactive items are gray and the selected item is red. Detail screens use a small dark back chevron and bold title on the light canvas. Action sheets and modals use white surfaces, restrained rounding, and standard dimming. This section governs appearance only; routes and information architecture come from the consuming product.
 
 # Components
 
-Full-width red buttons drive pay and activate; secondary utilities use white tiles or text links.
-
-Account cards align balance, pay, allowance meters, and timestamp; promotion cards separate image and explanatory copy.
-
-Phone and account fields are sparse, with red actions and platform keypad controls visually integrated.
-
-Keep package usage, service cost, activation, and account timestamp next to the relevant metric.
-
-Controls retain at least a 44-point interactive area. Pressed and disabled treatments should stay within the documented palette and hierarchy.
+Account cards are white rounded rectangles with 14–18-point radii, compact padding, bold values, small gray metadata, and little or no border. Usage meters are thin pale tracks with blue progress and adjacent numeric labels. Utility rows combine a simple left icon, medium-weight label, optional secondary line, and gray chevron. Primary buttons are full-width red rectangles with white semibold text and a moderate radius; pressed states deepen the red and disabled states reduce saturation. Toggles may retain native geometry but must sit within the quiet neutral palette. Promotional cards use rounded photographic crops with their copy in a separate readable region.
 
 # Imagery and icons
 
-Story tiles are compact rounded squares; promotion art uses wide rounded crops; account icons remain simple.
-
-Preserve promotion crops and embedded brand text; keep account content independent of imagery.
-
-When imagery is part of the documented composition, it cannot be omitted while final assets are pending. A temporary asset must preserve its placement, crop, scale, and approximate visual weight.
+Imagery supports rather than defines the interface. Use wide rounded promotional photography, compact story thumbnails, onboarding phone mockups, and occasional small pastel spot art. Preserve image crops where a promotion is visibly image-led, but never place critical balance or service status over photography. Operational icons are simple, consistent, and aligned to list rows. The sampled screens do not establish a broad independent authored illustration system, so do not extrapolate isolated spot assets into a dominant illustrated language.
 
 # States
 
-Keep package usage, service cost, activation, and account timestamp next to the relevant metric.
-
-Blue shows usage, green confirms success, and red remains brand-led unless a destructive state is explicit.
-
-Only the states documented above are specified; other states must preserve the same canvas, hierarchy, and component language without inventing a new visual system.
+Active navigation and actionable confirmations retain red emphasis; allowance progress remains blue. Populated account cards keep bold values and muted timestamps. Forms, keypad states, and payment summaries preserve the same light surface hierarchy and culminate in the red action. Action sheets use white modal surfaces. Native permission or PIN prompts may appear during onboarding without changing the surrounding visual system. Theme-selection evidence should be represented only when directly required; the dominant sampled appearance remains light.
 
 # iOS adaptation
 
-- Extend the documented canvas through the iPhone safe areas while keeping readable content within appropriate insets.
-- Use a vertical `ScrollView` for content that does not fit compact heights; keep documented bottom actions and navigation clear of the home indicator.
-- Primary actions, navigation, cards, and contextual controls remain at least 44 points.
-- Retain balance, pay, and allowance values; reduce recommendations before core account utilities.
-- Present the keyboard and system permission UI natively, then return to the same visual context.
-- Preserve semantic reading order in VoiceOver and allow text to grow with Dynamic Type.
-- Preserve the documented appearance instead of introducing an unrelated light or dark palette.
+Extend the white or pale-gray canvas through safe areas, keep titles below the status bar, and reserve the lower inset for the tab bar or primary payment action. Long account, service, and promotion pages scroll vertically. Two-column modules collapse to one column when Dynamic Type or localization makes labels collide. Buttons, rows, icons, and tab items need at least 44-point hit targets. Use native keyboards, numeric keypads, sheets, and permission transitions, then return to the same light context. VoiceOver order follows title, primary metric, status, actions, supporting modules, then navigation. Dynamic Type may expand modules without hiding amounts, units, or action labels.
 
 # Anti-generic checklist
 
-- Do not use promotional imagery as background behind account data.
-- Do not hide status, constraints, or secondary conditions.
-- Do not add heavy shadows around every container.
-- Do not replace the documented canvas and surfaces with a generic grouped background and uniform white cards.
-- Do not use an unstyled `TabView`, default blue tint, or arbitrary SF Symbols when they contradict the reference.
-- Do not collapse every component to one corner radius or remove compositionally important imagery.
+- Do not replace the red action hierarchy with default iOS blue.
+- Do not add heavy shadows or thick borders around every white module.
+- Do not turn operational lists into oversized marketing cards.
+- Do not place balances, usage, or service status over promotional photography.
+- Do not use an unstyled `Form` or grouped system background for account screens.
+- Do not use an unstyled `TabView` whose active state ignores Viva red.
+- Do not make isolated pastel spot art the dominant visual language.
+- Do not hide units, timestamps, chevrons, or usage-meter labels that make compact modules scannable.
 
 </design-context>

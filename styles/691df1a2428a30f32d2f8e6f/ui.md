@@ -3,342 +3,122 @@
 version: 1
 platform: iOS
 name: Synchronize-design-analysis
-description: "A dark editorial learning interface where cultural imagery carries the emotion and the UI stays quiet. Pure black canvas, white type, charcoal controls, and a restrained violet-blue access accent frame collage-led course cards. Large serif display titles appear at key editorial moments, while compact sans-serif metadata, chips, tabs, and lesson controls keep dense educational content easy to scan."
-
+description: "A black editorial learning interface where large cultural imagery and occasional serif display titles carry the atmosphere, while restrained charcoal controls, compact sans-serif metadata, and violet-to-blue access actions keep dense content precise."
 colors:
-  primary: "#675CFF"
-  on-primary: "#FFFFFF"
-  primary-focus: "#5549E8"
-  ink: "#FFFFFF"
-  ink-muted: "#C9C6CB"
-  ink-subtle: "#8B888E"
-  ink-tertiary: "#666268"
   canvas: "#000000"
-  surface-1: "#171518"
-  surface-2: "#242126"
-  surface-3: "#302C33"
-  surface-4: "#3A3540"
-  hairline: "#2B282D"
-  hairline-strong: "#474149"
-  hairline-tertiary: "#5A535D"
-  inverse-canvas: "#FFFFFF"
-  inverse-surface-1: "#F2F0F3"
-  inverse-surface-2: "#E7E4E8"
-  inverse-ink: "#111012"
-  brand-secure: "#D871FF"
-  semantic-success: "#A8D984"
-  semantic-overlay: "#000000"
-
+  surface-primary: "#171518"
+  surface-secondary: "#242126"
+  accent-primary: "#675CFF"
+  accent-secondary: "#D871FF"
+  text-primary: "#FFFFFF"
+  text-secondary: "#C9C6CB"
+  divider: "#2B282D"
+  destructive: "#E45A68"
 typography:
-  display-xl:
-    fontFamily: New York
-    fontSize: 42
-    fontWeight: 700
-    lineHeight: 1.05
-    letterSpacing: -1.2
-  display-lg:
-    fontFamily: New York
-    fontSize: 34
-    fontWeight: 700
-    lineHeight: 1.10
-    letterSpacing: -0.8
-  display-md:
-    fontFamily: New York
-    fontSize: 28
-    fontWeight: 700
-    lineHeight: 1.15
-    letterSpacing: -0.5
-  headline:
-    fontFamily: SF Pro Display
-    fontSize: 24
-    fontWeight: 700
-    lineHeight: 1.20
-    letterSpacing: -0.4
-  card-title:
-    fontFamily: SF Pro Display
-    fontSize: 20
-    fontWeight: 700
-    lineHeight: 1.18
-    letterSpacing: -0.3
-  subhead:
-    fontFamily: SF Pro Text
-    fontSize: 17
-    fontWeight: 500
-    lineHeight: 1.35
-    letterSpacing: -0.1
-  body-lg:
-    fontFamily: SF Pro Text
-    fontSize: 16
-    fontWeight: 400
-    lineHeight: 1.42
-    letterSpacing: 0
-  body:
-    fontFamily: SF Pro Text
-    fontSize: 15
-    fontWeight: 400
-    lineHeight: 1.40
-    letterSpacing: 0
-  body-sm:
-    fontFamily: SF Pro Text
-    fontSize: 13
-    fontWeight: 400
-    lineHeight: 1.35
-    letterSpacing: 0
-  caption:
-    fontFamily: SF Pro Text
-    fontSize: 11
-    fontWeight: 400
-    lineHeight: 1.30
-    letterSpacing: 0
-  button:
-    fontFamily: SF Pro Text
-    fontSize: 15
-    fontWeight: 600
-    lineHeight: 1.20
-    letterSpacing: 0
-  eyebrow:
-    fontFamily: SF Pro Text
-    fontSize: 12
-    fontWeight: 600
-    lineHeight: 1.25
-    letterSpacing: 0.2
-  mono:
-    fontFamily: SF Mono
-    fontSize: 12
-    fontWeight: 400
-    lineHeight: 1.35
-    letterSpacing: 0
-
-rounded:
-  xs: 4
-  sm: 8
-  md: 12
-  lg: 18
-  xl: 24
-  xxl: 30
-  pill: 9999
-  full: 9999
-
+  hero: {fontFamily: "New York", fontSize: 40, fontWeight: 700, lineHeight: 44}
+  title: {fontFamily: "New York", fontSize: 30, fontWeight: 700, lineHeight: 35}
+  section: {fontFamily: "SF Pro Display", fontSize: 22, fontWeight: 700, lineHeight: 27}
+  body: {fontFamily: "SF Pro Text", fontSize: 16, fontWeight: 400, lineHeight: 22}
+  label: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 600, lineHeight: 20}
+  caption: {fontFamily: "SF Pro Text", fontSize: 12, fontWeight: 400, lineHeight: 16}
 spacing:
-  xxs: 4
-  xs: 8
-  sm: 12
-  md: 16
-  lg: 20
-  xl: 24
-  xxl: 32
-  section: 48
-
+  screen-horizontal: 16
+  section-gap: 32
+  card-padding: 16
+  control-gap: 12
+rounded:
+  control: 14
+  card: 20
+  sheet: 28
+  pill: 999
 components:
-  button-primary:
-    backgroundColor: "{colors.primary}"
-    textColor: "{colors.on-primary}"
-    typography: "{typography.button}"
-    rounded: "{rounded.pill}"
-    padding: [13, 24]
-  button-primary-pressed:
-    backgroundColor: "{colors.primary-focus}"
-    textColor: "{colors.on-primary}"
-    typography: "{typography.button}"
-    rounded: "{rounded.pill}"
-    backgroundColor: "{colors.primary}"
-    textColor: "{colors.on-primary}"
-    typography: "{typography.button}"
-    rounded: "{rounded.pill}"
-  button-secondary:
-    backgroundColor: "{colors.inverse-canvas}"
-    textColor: "{colors.inverse-ink}"
-    typography: "{typography.button}"
-    rounded: "{rounded.pill}"
-    padding: [12, 20]
-  button-tertiary:
-    backgroundColor: "{colors.surface-2}"
-    textColor: "{colors.ink}"
-    typography: "{typography.button}"
-    rounded: "{rounded.pill}"
-    padding: [10, 16]
-  button-inverse:
-    backgroundColor: "{colors.inverse-canvas}"
-    textColor: "{colors.inverse-ink}"
-    typography: "{typography.button}"
-    rounded: "{rounded.pill}"
-    padding: [12, 20]
-  course-hero-card:
-    backgroundColor: "{colors.surface-1}"
-    textColor: "{colors.ink}"
-    typography: "{typography.body}"
-    rounded: "{rounded.xl}"
-    padding: 20
-  course-tile:
-    backgroundColor: "{colors.canvas}"
-    textColor: "{colors.ink}"
-    typography: "{typography.body-sm}"
-    rounded: "{rounded.md}"
-    padding: 0
-  category-chip:
-    backgroundColor: "{colors.surface-2}"
-    textColor: "{colors.ink}"
-    typography: "{typography.body-sm}"
-    rounded: "{rounded.pill}"
-    padding: [7, 12]
-  text-input:
-    backgroundColor: "{colors.surface-1}"
-    textColor: "{colors.ink}"
-    typography: "{typography.body}"
-    rounded: "{rounded.md}"
-    padding: [14, 16]
-  text-input-focused:
-    backgroundColor: "{colors.surface-1}"
-    textColor: "{colors.ink}"
-    typography: "{typography.body}"
-    rounded: "{rounded.md}"
-    padding: [14, 16]
-  lesson-player:
-    backgroundColor: "{colors.canvas}"
-    textColor: "{colors.ink}"
-    typography: "{typography.body}"
-    rounded: "{rounded.xs}"
-    padding: 0
-  status-badge:
-    backgroundColor: "{colors.inverse-surface-1}"
-    textColor: "{colors.inverse-ink}"
-    typography: "{typography.caption}"
-    rounded: "{rounded.pill}"
-    padding: [4, 8]
-  navigation-bar:
-    backgroundColor: "{colors.canvas}"
-    textColor: "{colors.ink}"
-    typography: "{typography.body-sm}"
-    rounded: "{rounded.xs}"
-    height: 52
-  bottom-nav:
-    backgroundColor: "{colors.surface-2}"
-    textColor: "{colors.ink-muted}"
-    typography: "{typography.caption}"
-    rounded: "{rounded.lg}"
-    padding: [8, 12]
+  primary-action: {fill: "violet-to-blue gradient", text: "white semibold", height: 52, radius: 999}
+  featured-card: {fill: "cultural image with dark lower gradient", radius: 20, text: "white editorial title and compact metadata"}
+  category-chip: {fill: "charcoal or white", height: 36, radius: 999, text: "compact sans-serif"}
+  navigation: {fill: "charcoal rounded bar", selected: "white or violet emphasis", unselected: "muted gray"}
 ---
 
 # Overview
 
-Synchronize is a black, content-first learning system. Cultural photography and collage supply the visual energy, while controls remain neutral charcoal or white. Oversized editorial titles introduce courses; utility text becomes compact and systematic around duration, lecture count, views, filters, and progress.
+Synchronize is a black, image-led editorial interface. Cultural photography, paintings, sculpture, film stills, and constructed collages provide most of the color and emotional weight; interface chrome stays quiet in charcoal, white, and a controlled violet-to-blue accent. Large serif titles appear selectively at editorial moments, while dense metadata, filters, progress, and lesson controls use compact sans-serif type. The specific imagery and mixed-type hierarchy distinguish it from a generic streaming or course-card application.
 
 # Non-negotiable visual invariants
 
-- Primary screens use Black canvas with charcoal controls and almost no shadow.
-- Lead discovery with culturally specific imagery.
-- Keep controls monochrome until an access action needs emphasis.
-- Pair editorial titles with precise metadata.
-- Preserve the two-column library rhythm.
-- Keep playback and lesson context on one continuous screen.
-- Featured content uses nearly full-width cards with a sliver of the next card visible.
-- Catalog content uses a two-column image grid; lesson lists return to one column.
+- Pure black remains the dominant full-screen canvas; cards and controls use nearby charcoal values with little or no shadow.
+- Culturally specific imagery is the primary visual mass on discovery and collection surfaces and cannot be omitted.
+- Editorial display moments use a large serif title, while navigation, metadata, filters, and controls remain sans-serif.
+- Violet-to-blue gradients are reserved for high-priority access or continuation actions rather than spread across every surface.
+- Featured content uses a nearly full-width image card with a visible hint of adjacent content in horizontal rails.
+- Dense libraries use a two-column image rhythm; detailed lesson or utility material returns to a single vertical column.
+- White and charcoal pill controls coexist with the image field, using restrained geometry and no decorative shadow.
+- Text over imagery is protected by a deliberate dark gradient and remains subordinate to the art's focal subject.
 
 # Color and surfaces
 
-- Violet-blue is used for access CTAs, locked states, and selected emphasis.
-- Lilac appears occasionally inside editorial artwork.
+The canvas is uninterrupted black. Primary charcoal surfaces hold fields and quiet cards; secondary charcoal carries pills, nested controls, the bottom bar, and modal groupings. Dividers are subtle and often unnecessary when spacing or imagery already establishes separation.
 
-- Canvas is the uninterrupted page background.
-- Surface 1 holds inputs and dark cards.
-- Surface 2 carries chips, tabs, and the bottom bar.
-- Stronger charcoal levels are reserved for pressed and nested states.
-
-- Ink carries headlines and primary controls.
-- Ink muted carries course summaries and navigation labels.
-- Subtle and tertiary ink handle disabled and low-priority metadata.
-
-- Success marks available or completed learning states.
-- Overlay protects text over photography and video.
+White is the primary reading color and soft cool gray carries metadata and inactive navigation. A saturated violet-to-blue gradient marks decisive access, subscription, locked, or selected emphasis; pink-lilac appears as a secondary accent in badges and artwork but does not become a general UI tint. Destructive actions use a restrained red. Default iOS blue, light grouped backgrounds, pastel card stacks, and indiscriminate multicolor gradients would visibly break the reference.
 
 # Typography
 
-- New York or a similarly editorial serif for course and campaign display titles.
-- SF Pro Display/Text for navigation, metadata, lesson UI, and controls.
-- SF Mono only when a timed or technical value needs fixed-width rhythm.
+Use New York as the iOS-safe editorial serif for hero and campaign-like titles, and SF Pro Display/Text for sections, body, metadata, and controls. Serif is selective rather than universal: it introduces featured material and gives a publication-like tone, while the functional layer remains compact and neutral.
 
-- display-xl — 42 points — 700 — Featured editorial title
-- display-lg — 34 points — 700 — Course title
-- display-md — 28 points — 700 — Section opener
-- headline — 24 points — 700 — Screen title
-- card-title — 20 points — 700 — Course card title
-- body — 15 points — 400 — Main copy
-- caption — 11 points — 400 — Counts and navigation labels
-
-- Use serif display type selectively; utility hierarchy stays sans-serif.
-- Keep metadata short, aligned, and visually quieter than titles.
-- Allow two-line card titles before truncation.
-
-Use New York on Apple platforms; Georgia is an acceptable fallback. System SF fonts preserve the compact native reading rhythm for controls.
-
-The hierarchy must remain legible with Dynamic Type: supporting text may wrap before the primary metric, title, or action loses its role.
+The hierarchy ranges from 30–40 point editorial titles to 20–24 point sans-serif section headings, 15–17 point body or control text, and 11–13 point metadata. Titles use bold weight and controlled multi-line wrapping; metadata is regular or medium and often placed in short horizontal groups. Avoid giving unrelated text levels nearly identical size and weight. With Dynamic Type, metadata groups wrap below titles, grids can become one column, and no image-overlay title may be clipped.
 
 # Screen composition
 
-Use a 4 points base with 12–20 points gaps inside cards and 24–48 points between major content groups.
+Screens typically use 16-point edge insets, 12–16 points between related controls, and 28–32 points between editorial sections. Black extends through both safe areas. Image surfaces are allowed to dominate: a featured card can occupy much of the upper viewport, while utility controls remain comparatively compact.
 
-Featured content uses nearly full-width cards with a sliver of the next card visible. Catalog content uses a two-column image grid; lesson lists return to one column.
+Observed archetypes include:
 
-Black negative space separates editorial stories. Dense metadata clusters are kept close to their image or lesson rather than separated into detached panels.
-
-Depth comes from collage layering, image crops, and gradient overlays. Avoid floating shadows on the dark canvas.
-
-Primary iPhone screens keep the documented content grouping and vertical rhythm inside a scroll container when content exceeds the viewport. Bottom-owned actions or navigation reserve the lower safe area rather than covering content.
+- Featured editorial composition: a nearly full-width image or collage card leads, with a partial next card visible in a horizontal rail and short supporting metadata below or over a dark gradient.
+- Library composition: filter and sort pills sit above a two-column grid of tall image tiles. Titles and status marks remain compact so the repeated artwork establishes the rhythm.
+- Detail composition: a large media header or artwork is followed by an editorial title, concise metadata, a prominent rounded action, and a single-column sequence of dark lesson or information rows.
+- Playback composition: video or audio content occupies the upper visual field; title, progress, supporting lesson context, and feedback controls continue in one vertical scroll context.
+- Authentication and payment composition: black canvas, sparing editorial imagery or title, dark rounded inputs, and one strong white or violet-gradient pill action; native keyboard or web payment content remains visually contained.
+- Modal composition: charcoal bottom sheets group choices in a single column, with large top corners and pill-like selections where observed.
 
 # Navigation appearance
 
-Use the persistent four-item rounded bottom bar. The active destination is white and visually solid; inactive icons and labels remain gray.
-
-This section governs appearance only; product behavior and information architecture come from the approved Research and Planning artifacts.
+Primary navigation uses a rounded charcoal bottom bar with compact icons and labels. Selected content gains white or violet emphasis; inactive items remain muted gray. Detail surfaces use a minimal dark navigation bar with a leading back control and concise title treatment. Sheets are dark with approximately 28-point top corners and a subtle drag indicator. Filters and sorting controls appear as rounded sheets or pill groups without introducing a new navigation architecture.
 
 # Components
 
-Primary access buttons are violet gradients or solid violet-blue. Course-start actions are often white with black text. Both use pill geometry and strong compact labels.
-
-Featured cards combine art, large title, concise descriptor, metadata, and a CTA. Catalog tiles place controls over the image and text below. Avoid generic elevated white cards.
-
-Inputs are wide charcoal pills with subdued placeholders. Disabled primary actions remain near-black; focus uses a restrained violet outline.
-
-Small badges such as new, free, hit, and locked sit directly on imagery. Progress and completion appear close to lessons rather than in a separate dashboard.
-
-Controls retain at least a 44-point interactive area. Pressed and disabled treatments should stay within the documented palette and hierarchy.
+- Primary action: 50–54 points tall, full or near-full width, strongly rounded, and filled with a violet-to-blue gradient when access or continuation needs emphasis. The label is centered white semibold; a pressed state slightly deepens the gradient.
+- Secondary action: white pill with black label or charcoal pill with white label, chosen according to surrounding contrast. It remains visually quieter than the gradient action.
+- Featured card: large cultural image, 18–24 point radius, restrained dark lower gradient, editorial title, and compact white metadata. The crop keeps the subject recognizable and leaves a safe text zone.
+- Grid tile: portrait-oriented cultural image with a smaller 12–16 point radius; short title and metadata sit below or over a controlled lower fade. Tiles do not receive floating white card backgrounds.
+- Category chip: 34–40 points tall, charcoal or white fill, pill radius, compact sans-serif label, and clear selected contrast. Multiple chips form a horizontal scroll or wrapped group.
+- Input: dark charcoal fill, 14-point radius, off-white entry text, and muted placeholder. Focus changes border or luminance subtly rather than turning system blue.
+- Status badge: small white, violet, or pink pill placed over artwork for lock, availability, or progress information; it never obscures the image subject.
 
 # Imagery and icons
 
-Use tall and square crops with subjects centered or offset to leave room for titles. Editorial collage may extend beyond an implied frame, while utility imagery remains clipped to rounded rectangles.
+Imagery is structurally essential. The observed system uses paintings, architecture, sculpture, photographed people, film stills, and topic-specific cut-out collages. Assets are cropped boldly and often fill almost the entire card. Featured images are wide and immersive; library images are repeated portrait tiles; detail screens may use a large banner or media frame. Dark gradients protect overlaid text without flattening the underlying color.
 
-Use aspect-fill crops with protected text gradients. Preserve the focal subject and avoid stretching collage elements.
-
-When imagery is part of the documented composition, it cannot be omitted while final assets are pending. A temporary asset must preserve its placement, crop, scale, and approximate visual weight.
+This is an editorial content direction rather than one stable standalone authored illustration system. Do not force all assets into one synthetic drawing style. Use subject-specific cultural media with consistent crop, contrast, and text-safe composition. Icons remain compact, simple, and mostly white or gray; violet or pink signals a state rather than decorating every icon. If final media is unavailable, temporary imagery must still preserve the documented crop, scale, palette density, and visual weight.
 
 # States
 
-Small badges such as new, free, hit, and locked sit directly on imagery. Progress and completion appear close to lessons rather than in a separate dashboard.
+Selected filters, locked access, active continuation, progress, completed content, feedback, authentication, and modal choices are visible across the sample. These states preserve the black canvas and image-first hierarchy. Violet, blue, or pink may mark access and lock states; completion uses a restrained positive indication; inactive and disabled states reduce contrast within the same charcoal system.
 
-- Success marks available or completed learning states.
-- Overlay protects text over photography and video.
-
-Only the states documented above are specified; other states must preserve the same canvas, hierarchy, and component language without inventing a new visual system.
+Search and filtered surfaces keep the same grid geometry even when the result set changes. Player and lesson states preserve media prominence while progress and actions update below it. Native keyboard and payment surfaces may introduce system white regions, but they are transitions rather than a new app-wide appearance. Confirmation and destructive dialogs remain visually simple and do not introduce decorative artwork.
 
 # iOS adaptation
 
-- Extend the documented canvas through the iPhone safe areas while keeping readable content within appropriate insets.
-- Use a vertical `ScrollView` for content that does not fit compact heights; keep documented bottom actions and navigation clear of the home indicator.
-- Buttons and navigation targets stay at least 44 points high. Overlay bookmark and playback controls use enlarged invisible hit areas.
-- Long chip rows scroll horizontally. Course metadata wraps before controls. Lesson details remain a single vertical flow.
-- Present the keyboard and system permission UI natively, then return to the same visual context.
-- Preserve semantic reading order in VoiceOver and allow text to grow with Dynamic Type.
-- Preserve the documented appearance instead of introducing an unrelated light or dark palette.
+Extend black through the safe areas and keep bottom navigation or actions clear of the home indicator. Use vertical scroll containers for detail, playback, and form surfaces; use horizontal scrolling only where the partial-next-card composition is intentional. On narrow widths or large Dynamic Type, change two-column libraries to one column before reducing readable type or damaging image crops.
+
+Controls and icons need at least 44-point targets even when their visible pills are compact. VoiceOver should announce artwork meaning, title, status, and action in that order; decorative collage fragments should not become separate accessibility elements. Keep keyboard avoidance native, preserve system payment and permission transitions, and return to the same black context. Dark appearance is the observed source; do not invent a generic light theme. Use aspect-filled imagery with deliberate focal positioning rather than center-cropping every asset identically.
 
 # Anti-generic checklist
 
-- Do not turn the interface into a bright streaming-service clone.
-- Do not use violet as a full-page background.
-- Do not add heavy drop shadows.
-- Do not make every title serif.
-- Do not separate progress from the lesson it describes.
-- Do not replace the documented canvas and surfaces with a generic grouped background and uniform white cards.
-- Do not use an unstyled `TabView`, default blue tint, or arbitrary SF Symbols when they contradict the reference.
-- Do not collapse every component to one corner radius or remove compositionally important imagery.
+- Do not replace the black canvas with a light grouped background or white card stack.
+- Do not omit cultural imagery or substitute uniform stock-photo thumbnails.
+- Do not use one sans-serif size and weight for every level; preserve the selective serif editorial hierarchy.
+- Do not apply the violet gradient to every button, card, or icon.
+- Do not ship an unstyled `TabView`, default blue tint, or generic `Form` sections.
+- Do not give featured cards, grid tiles, inputs, and sheets one uniform corner radius.
+- Do not use arbitrary SF Symbols as decorative replacements for image-led content.
+- Do not place text directly on busy imagery without a controlled contrast gradient and text-safe crop.
 
 </design-context>

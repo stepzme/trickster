@@ -3,152 +3,128 @@
 version: 1
 platform: iOS
 name: SUNLIGHT-design-analysis
-description: "A dense jewelry hypermarket built from white canvas, vivid red branding, black transactional controls, fine gray dividers, compact catalog typography, and high-detail product photography. Square category grids and underlined utility links create a practical retail tone; large campaign banners bring most decorative color."
-
+description: "A dense jewelry-commerce interface built on white fields, black transactional controls, sharp red brand accents, compact product data, and highly detailed product photography."
 colors:
-  primary: "#F10D16"
-  on-primary: "#FFFFFF"
-  primary-pressed: "#CF0810"
-  action: "#050505"
-  on-action: "#FFFFFF"
-  ink: "#111111"
-  ink-muted: "#717174"
-  ink-subtle: "#A5A5A8"
   canvas: "#FFFFFF"
-  surface-1: "#FFFFFF"
-  surface-2: "#F4F4F5"
-  hairline: "#DEDEE0"
-  semantic-success: "#2CA96A"
-  semantic-warning: "#EFAE2E"
-  semantic-danger: "#F10D16"
-  semantic-overlay: "#000000"
-
+  surface-primary: "#FFFFFF"
+  surface-secondary: "#F4F4F5"
+  accent-primary: "#F10D16"
+  accent-secondary: "#111111"
+  text-primary: "#111111"
+  text-secondary: "#717174"
+  divider: "#DEDEE0"
+  destructive: "#D90812"
 typography:
-  display-xl: { fontFamily: System Sans, fontSize: 38, fontWeight: 700, lineHeight: 1.05, letterSpacing: -0.7 }
-  display-lg: { fontFamily: System Sans, fontSize: 32, fontWeight: 700, lineHeight: 1.1, letterSpacing: -0.4 }
-  display-md: { fontFamily: System Sans, fontSize: 26, fontWeight: 700, lineHeight: 1.15, letterSpacing: -0.2 }
-  headline: { fontFamily: System Sans, fontSize: 21, fontWeight: 700, lineHeight: 1.2, letterSpacing: 0 }
-  card-title: { fontFamily: System Sans, fontSize: 15, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: System Sans, fontSize: 17, fontWeight: 500, lineHeight: 1.3, letterSpacing: 0 }
-  body-lg: { fontFamily: System Sans, fontSize: 16, fontWeight: 400, lineHeight: 1.4, letterSpacing: 0 }
-  body: { fontFamily: System Sans, fontSize: 14, fontWeight: 400, lineHeight: 1.38, letterSpacing: 0 }
-  body-sm: { fontFamily: System Sans, fontSize: 12, fontWeight: 400, lineHeight: 1.32, letterSpacing: 0 }
-  caption: { fontFamily: System Sans, fontSize: 10, fontWeight: 400, lineHeight: 1.25, letterSpacing: 0 }
-  button: { fontFamily: System Sans, fontSize: 14, fontWeight: 500, lineHeight: 1.2, letterSpacing: 0 }
-  eyebrow: { fontFamily: System Sans, fontSize: 11, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0.5 }
-  mono: { fontFamily: System Mono, fontSize: 12, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
-
-rounded: { xs: 0, sm: 3, md: 6, lg: 10, xl: 14, xxl: 20, pill: 9999, full: 9999 }
-spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 60 }
-
+  hero: {fontFamily: "SF Pro Display", fontSize: 34, fontWeight: 700, lineHeight: 38}
+  title: {fontFamily: "SF Pro Display", fontSize: 26, fontWeight: 700, lineHeight: 31}
+  section: {fontFamily: "SF Pro Text", fontSize: 20, fontWeight: 600, lineHeight: 25}
+  body: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 400, lineHeight: 20}
+  label: {fontFamily: "SF Pro Text", fontSize: 14, fontWeight: 600, lineHeight: 18}
+  caption: {fontFamily: "SF Pro Text", fontSize: 12, fontWeight: 400, lineHeight: 16}
+spacing:
+  screen-horizontal: 16
+  section-gap: 24
+  card-padding: 12
+  control-gap: 8
+rounded:
+  control: 8
+  card: 10
+  sheet: 28
+  pill: 999
 components:
-  button-primary: { backgroundColor: "{colors.action}", textColor: "{colors.on-action}", typography: "{typography.button}", rounded: "{rounded.xs}", padding: [13, 18]}
-  product-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.xs}", padding: 8 }
-  category-cell: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.xs}", padding: 8 }
-  search-field: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xs}", padding: 10 }
-  bottom-nav: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", height: 58 }
+  primary-action: {background: "#111111", foreground: "#FFFFFF", minHeight: 52, cornerRadius: 8}
+  secondary-action: {background: "#FFFFFF", foreground: "#111111", border: "#DEDEE0", minHeight: 48, cornerRadius: 8}
+  primary-card: {background: "#FFFFFF", foreground: "#111111", cornerRadius: 10}
+  navigation: {background: "#FFFFFF", selected: "#111111", unselected: "#8A8A8E"}
 ---
 
 # Overview
 
-SUNLIGHT is a broad, dense retail system. White surfaces and black actions keep commerce legible while red establishes the brand and high-impact campaign imagery supplies category color.
+SUNLIGHT uses an information-dense retail composition rather than a soft card dashboard. White occupies most of the viewport, jewelry photography carries the visual detail, black anchors purchase decisions, and saturated red appears as a concentrated brand and promotion signal. Product grids, compact metadata, and thin separators make the interface feel closer to a catalog than to a generic grouped iOS form.
 
 # Non-negotiable visual invariants
 
-- Keep commerce surfaces white and direct.
-- Use black for commitment actions.
-- Reserve red for brand and promotion.
-- Preserve dense but aligned product data.
-- Home stacks campaign banners and rails.
-- Catalog combines a narrow vertical taxonomy with a multi-column product-category grid; detail and cart are single-column.
-- Favor breadth and scan density, but keep each jewelry cutout on a clean white field with unambiguous ownership of labels.
+- White remains the dominant full-screen field; pale gray is limited to inputs, secondary groups, and separators.
+- Primary purchase and checkout actions are broad black controls with white labels.
+- SUNLIGHT red is concentrated in the brand mark, loyalty surfaces, badges, pins, and selected promotional moments rather than filling every control.
+- Product photography is large, clean, and centered; jewelry stays fully legible against white rather than being treated as decoration.
+- Browsing surfaces remain dense: compact labels and prices sit close to two-column imagery with narrow, regular gaps.
+- Corner radii stay restrained on commerce content; only pills, badges, and iOS sheets become strongly rounded.
+- Top bars remain visually sparse and white, while bottom navigation uses black selected and gray unselected states.
+- Price, discount, rating, availability, size, and status retain a clear order even when several appear in one product block.
 
 # Color and surfaces
 
-Red identifies the wordmark, loyalty, badges, and selective promotion. Black carries the main checkout and purchase actions.
+The canvas, navigation bars, product areas, and most rows are white. Secondary search fields, segmented backgrounds, and grouped utilities use a very pale neutral gray; dividers are thin, light, and visible without turning content into separate floating cards.
 
-White is dominant; pale gray separates search, grouped utilities, and minor panels. Borders are fine and visible.
-
-Black carries product data and headings; gray supports details, old prices, and inactive navigation.
-
-Red may mark both brand and discount, so destructive states need explicit labels. Green confirms success; gold-yellow supports ratings.
+Near-black leads headings, prices, selected navigation, and commitment actions. Mid-gray carries metadata, old prices, placeholders, and inactive navigation. Bright SUNLIGHT red is the main chromatic accent for branding, loyalty, discount emphasis, pins, and promo banners. Green is reserved for positive availability or completed status; occasional gold or yellow supports ratings and campaign material. Default iOS blue would visibly break this black-red retail hierarchy.
 
 # Typography
 
-Use a neutral system sans with compact retail metrics. The brand wordmark may use tracked uppercase lettering.
+Use SF Pro as the safe iOS substitute. Screen and product-detail titles are bold and compact, typically around 24–28 points. Section headings are about 18–20 points; primary product labels and prices sit around 14–16 points; secondary attributes and catalog labels fall to 11–13 points. Large hero type is uncommon outside campaigns.
 
-Use 21–26 points screen titles, 15–17 points module headings, 14 points product data, and 10–12 points catalog labels and metadata.
-
-Keep price, metal, size, rating, and availability scannable. Underlining may clarify utility links but should not decorate headings.
-
-SF Pro or Inter are suitable. Preserve tabular clarity for prices and dense category labels.
-
-The hierarchy must remain legible with Dynamic Type: supporting text may wrap before the primary metric, title, or action loses its role.
+Prices use strong weight and tabularly stable numerals. Old prices, installment notes, metal, size, rating, and availability are quieter but remain tightly aligned. Some product-detail titles can use a higher-contrast editorial feel, but the operational interface stays sans-serif. With Dynamic Type, metadata may wrap before the price, title, or main action loses prominence; dense grids may reduce columns rather than compress text below legibility.
 
 # Screen composition
 
-Use a 4 points base, 12 points page gutters, 6–8 points catalog gaps, and 16–20 points between major sections.
+Primary pages use roughly 16-point side insets, 8–12-point local gaps, and 20–28 points between major modules. Content usually begins directly below a sparse top bar and continues as a long vertical scroll above a persistent tab bar or bottom-owned action.
 
-Home stacks campaign banners and rails. Catalog combines a narrow vertical taxonomy with a multi-column product-category grid; detail and cart are single-column.
+Observed archetypes:
 
-Favor breadth and scan density, but keep each jewelry cutout on a clean white field with unambiguous ownership of labels.
+- Catalog grid: search or filter controls above a dense two-column product field, with large square imagery and compact price/attribute stacks.
+- Taxonomy browser: a narrow vertical category rail paired with a wider multi-column image grid.
+- Product detail: image-led upper region followed by title, price and discount, ratings, options, delivery facts, and a prominent bottom purchase action.
+- Cart and checkout: flat full-width rows, segmented delivery choices, compact labeled fields, summary data, and a broad black commitment control near the bottom.
+- Account and utility lists: white rows divided by hairlines, restrained iconography, and local red or green status cues.
+- Modal decisions: rounded iOS sheets over a dimmed backdrop, containing compact option lists or a focused form.
 
-Use jewelry photography, packaging, and campaign color as decoration. Keep transactional surfaces crisp and flat.
-
-Primary iPhone screens keep the documented content grouping and vertical rhythm inside a scroll container when content exceeds the viewport. Bottom-owned actions or navigation reserve the lower safe area rather than covering content.
+Campaign banners may interrupt the white catalog with a large red or colorful field, but they remain bounded modules. Bottom-owned controls reserve the lower safe area and never cover the last product or form row.
 
 # Navigation appearance
 
-Use five persistent bottom destinations. Active navigation is black; the red logo or small badge may remain visible without replacing active state.
+The persistent tab bar is white with thin outline-style icons and short labels. The selected destination turns near-black; inactive items remain medium gray. A small red brand mark or badge may coexist with this selection treatment but does not replace it.
 
-This section governs appearance only; product behavior and information architecture come from the approved Research and Planning artifacts.
+Top navigation bars are white and visually light, with a back chevron and compact search, share, favorite, or bag controls. Detail screens avoid oversized navigation chrome. Sheets use large rounded top corners, a dimmed backdrop, and either a drag indicator or explicit close control. These rules describe appearance only, not destination count or product architecture.
 
 # Components
 
-Primary transactional actions are black rectangles with white text. Red is appropriate for brand or promotional actions; native controls must inherit the same square geometry.
+Primary actions are full-width or near-full-width black rectangles, about 48–52 points high, with modest 6–10-point rounding and a semibold white label. Disabled actions reduce contrast without becoming default blue or gray capsules. Secondary actions are white or pale gray with a thin neutral border.
 
-Product and category cells are flat and image-led. Loyalty uses a large red card; cart summaries use white rows and separators.
+Product cells are flat, image-led blocks rather than raised cards: a clean image field, compact title, strong price, quieter old price or installment line, and small rating/favorite controls. Favorite hearts, bag controls, and utility icons use fine dark outlines. Discount and loyalty badges are compact red accents.
 
-Search is a pale rectangular field with photo-search access. Checkout fields use compact white or gray rows with visible labels.
+Search fields are pale rectangular controls with restrained rounding and leading utility icons. Size selection uses a precise grid of bordered choices with a visibly selected state. Cart rows pair product imagery with tightly aligned price, quantity, service, and removal controls. Segmented controls use quiet neutral containers and strong text contrast rather than oversized pills.
 
-Order, bonus, gift, discount, and cart states appear close to their affected item, with explicit copy and restrained color.
-
-Controls retain at least a 44-point interactive area. Pressed and disabled treatments should stay within the documented palette and hierarchy.
+Pressed states darken black actions or slightly reduce surface brightness. Selected filters, sizes, and tabs must be distinguishable by fill, border, or weight, not red alone. All targets remain at least 44 points even when the visible icon is small.
 
 # Imagery and icons
 
-Use centered jewelry cutouts and square category images. Campaign banners use landscape crops; the rare line drawing should remain confined to its promotion.
+High-resolution jewelry photography is structural: product cutouts occupy most of their cells and preserve the full object, fine metal detail, and scale. Use aspect-fit behavior for isolated product imagery and avoid aggressive crops. Lifestyle or campaign photography may use edge-to-edge cover inside landscape banners with protected text areas.
 
-Use `contain` for jewelry and product cutouts; use `cover` for campaigns. Preserve fine product detail on high-density screens.
+Campaign graphics, loyalty art, occasional line diagrams, and isolated promotional drawings are situational rather than a reusable illustration language. Do not imitate them with SwiftUI shapes or treat them as the default image style. Functional icons are thin, economical pictograms; use consistent stroke weight and do not substitute arbitrary filled SF Symbols where the outline system is visible.
 
-When imagery is part of the documented composition, it cannot be omitted while final assets are pending. A temporary asset must preserve its placement, crop, scale, and approximate visual weight.
+Product imagery cannot be omitted while final assets are pending. Any temporary asset must preserve the documented crop, scale, white field, and visual density.
 
 # States
 
-Order, bonus, gift, discount, and cart states appear close to their affected item, with explicit copy and restrained color.
+Observed states include onboarding and system-permission transitions, populated search suggestions, sort and filter sheets, signed-out phone entry and code entry, favorite-list creation, added-to-cart confirmation, promo selection, checkout with keyboard, completed order confirmation, empty notifications, and settings toggles.
 
-Red may mark both brand and discount, so destructive states need explicit labels. Green confirms success; gold-yellow supports ratings.
-
-Only the states documented above are specified; other states must preserve the same canvas, hierarchy, and component language without inventing a new visual system.
+Across states, white remains dominant, black retains action priority, red stays a localized brand/status accent, and sheets preserve rounded geometry over a dimmed backdrop. Empty states use restrained iconography and concise copy rather than large decorative scenes. No explicit error state was visible in the sample; an error adaptation must keep the same hierarchy and introduce a semantic treatment without turning the screen into a new visual system.
 
 # iOS adaptation
 
-- Extend the documented canvas through the iPhone safe areas while keeping readable content within appropriate insets.
-- Use a vertical `ScrollView` for content that does not fit compact heights; keep documented bottom actions and navigation clear of the home indicator.
-- Bottom navigation, category rail items, favorites, sizes, photo search, and cart actions require at least 44 points targets.
-- Allow promotional rails and filters to scroll horizontally. Keep checkout total and action pinned on long carts.
-- Present the keyboard and system permission UI natively, then return to the same visual context.
-- Preserve semantic reading order in VoiceOver and allow text to grow with Dynamic Type.
-- Preserve the documented appearance instead of introducing an unrelated light or dark palette.
+Extend white or the active campaign field through the safe areas while keeping text and controls inside appropriate insets. Use vertical scrolling for dense catalogs, product details, and checkout forms; reserve space for the home indicator, tab bar, and any bottom purchase action.
+
+Let filter rails and segmented collections scroll horizontally when necessary. For compact widths or larger text, reduce grid columns before shrinking product labels. Present keyboard, camera/photo access, location, tracking, and other system permission prompts natively, then return to the same visual context. Maintain a logical VoiceOver order from image and title through price, attributes, and action; give every icon-only control an accessible label. The observed package is light-first, so do not invent a dark palette unless the product requirements explicitly require one.
 
 # Anti-generic checklist
 
-- Do not round every category into a soft card.
-- Do not use red alone to communicate destructive meaning.
-- Do not crop jewelry so tightly that scale is lost.
-- Do not introduce pastel marketplace styling.
-- Do not replace the documented canvas and surfaces with a generic grouped background and uniform white cards.
-- Do not use an unstyled `TabView`, default blue tint, or arbitrary SF Symbols when they contradict the reference.
-- Do not collapse every component to one corner radius or remove compositionally important imagery.
+- Do not replace the dense catalog with a loose stack of oversized rounded cards.
+- Do not use default blue tint for links, selected tabs, or purchase controls.
+- Do not make every surface pale gray or floating; white is the main canvas and content surface.
+- Do not round black actions into exaggerated capsules.
+- Do not omit product photography or crop jewelry until its silhouette and scale are unclear.
+- Do not use red for every interactive element or as the sole signal for destructive meaning.
+- Do not substitute an unstyled `TabView`, `Form`, or arbitrary mixed-weight SF Symbols for the observed navigation and icon treatment.
+- Do not flatten price, discount, installment, rating, and availability into one undifferentiated text block.
 
 </design-context>
