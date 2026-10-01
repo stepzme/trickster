@@ -48,7 +48,7 @@ The Designer:
 - translates the approved UI source to native iOS while preserving its dominant visual properties;
 - uses the UX source only for interaction and navigation;
 - creates any necessary illustrations, images, or icons instead of omitting their compositional role;
-- avoids default `Form`, generic white-card dashboards, unstyled `TabView`, arbitrary SF Symbols, and default blue controls when they contradict the UI source;
+- uses native iOS controls for behavior and accessibility, but does not use their default visual appearance unless that exact appearance is visible in the approved UI source; styles every visible control to match the reference, and when the reference has no equivalent control, derives its appearance from the closest component in the same `ui.md` instead of falling back to default SwiftUI styling;
 - implements the real system access flows assigned to the MVP;
 - builds, installs, and runs the app in Simulator;
 - shows the actual main screens and interaction states to the user.

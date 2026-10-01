@@ -26,7 +26,7 @@ Own the complete visual result: reference research, reference selection, native 
 
 ## Visual failure conditions
 
-The MVP is not ready for user approval when it relies on generic white cards, default `Form` styling, an unstyled tab bar, arbitrary SF Symbols, absent required imagery, or default system colors that contradict the approved UI source. A successful build does not override these failures.
+Use native iOS controls for behavior and accessibility, but do not use their default visual appearance unless that exact appearance is visible in the approved UI source. Style every visible control to match the reference. If the reference does not show an equivalent control, derive its appearance from the closest component in the same `ui.md`; never fall back to default SwiftUI styling. A successful build does not override these requirements.
 
 ## Ownership
 
