@@ -3,176 +3,109 @@
 version: 1
 platform: iOS
 name: Perplexity-AI-design-analysis
-description: "A quiet AI-search interface with a warm off-white canvas, deep green-black typography, teal voice and submit controls, soft floating composers, sparse hairlines, and photography-led discovery cards."
-colors: {primary: "#2F98A3", on-primary: "#FFFFFF", primary-focus: "#227A84", ink: "#163536", ink-muted: "#6E7776", ink-subtle: "#9EA6A4", ink-tertiary: "#C7CCCA", canvas: "#FCFBF8", surface-1: "#FFFFFF", surface-2: "#F5F3EF", surface-3: "#ECE9E4", surface-4: "#E1DED8", hairline: "#E5E2DC", hairline-strong: "#CDC9C2", hairline-tertiary: "#B7B2A9", inverse-canvas: "#173536", inverse-surface-1: "#24484A", inverse-surface-2: "#315C5E", inverse-ink: "#FFFFFF", brand-secure: "#1D6268", semantic-success: "#2F9483", semantic-overlay: "#1B2525"}
+description: "A quiet warm-white AI search interface where document-like answers, sparse teal actions, small inline citations, photography-led discovery cards, compact icon chrome, and a persistent rounded composer carry more visual weight than decoration."
+colors:
+  canvas: "#FBFAF7"
+  surface-primary: "#FFFFFF"
+  surface-secondary: "#F2F1EE"
+  accent-primary: "#27A7A4"
+  accent-secondary: "#39C7D2"
+  text-primary: "#111312"
+  text-secondary: "#737572"
+  divider: "#E5E2DC"
+  destructive: "#D5534F"
 typography:
-  display-xl: {fontFamily: SF Pro Display, fontSize: 36, fontWeight: 500, lineHeight: 1.08, letterSpacing: -0.8}
-  display-lg: {fontFamily: SF Pro Display, fontSize: 30, fontWeight: 500, lineHeight: 1.12, letterSpacing: -0.5}
-  display-md: {fontFamily: SF Pro Display, fontSize: 24, fontWeight: 500, lineHeight: 1.16, letterSpacing: -0.3}
-  headline: {fontFamily: SF Pro Display, fontSize: 20, fontWeight: 600, lineHeight: 1.22, letterSpacing: -0.2}
-  card-title: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 600, lineHeight: 1.28, letterSpacing: 0}
-  subhead: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 500, lineHeight: 1.34, letterSpacing: 0}
-  body-lg: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 400, lineHeight: 1.48, letterSpacing: 0}
-  body: {fontFamily: SF Pro Text, fontSize: 13, fontWeight: 400, lineHeight: 1.45, letterSpacing: 0}
-  body-sm: {fontFamily: SF Pro Text, fontSize: 11, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0}
-  caption: {fontFamily: SF Pro Text, fontSize: 10, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0}
-  button: {fontFamily: SF Pro Text, fontSize: 13, fontWeight: 500, lineHeight: 1.20, letterSpacing: 0}
-  eyebrow: {fontFamily: SF Pro Text, fontSize: 10, fontWeight: 500, lineHeight: 1.20, letterSpacing: 0.1}
-  mono: {fontFamily: SF Mono, fontSize: 11, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0}
-rounded: {xs: 4, sm: 8, md: 12, lg: 16, xl: 22, xxl: 28, pill: 9999, full: 9999}
-spacing: {xxs: 4, xs: 8, sm: 12, md: 16, lg: 20, xl: 24, xxl: 32, section: 48}
+  hero: {fontFamily: "SF Pro Display", fontSize: 34, fontWeight: 500, lineHeight: 40}
+  title: {fontFamily: "SF Pro Display", fontSize: 27, fontWeight: 600, lineHeight: 33}
+  section: {fontFamily: "SF Pro Text", fontSize: 20, fontWeight: 600, lineHeight: 25}
+  body: {fontFamily: "SF Pro Text", fontSize: 16, fontWeight: 400, lineHeight: 24}
+  label: {fontFamily: "SF Pro Text", fontSize: 14, fontWeight: 600, lineHeight: 19}
+  caption: {fontFamily: "SF Pro Text", fontSize: 12, fontWeight: 400, lineHeight: 16}
+spacing:
+  screen-horizontal: 16
+  section-gap: 28
+  card-padding: 14
+  control-gap: 10
+rounded:
+  control: 16
+  card: 14
+  sheet: 28
+  pill: 999
 components:
-  button-primary: {backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.full}", padding: [12, 16]}
-  button-primary-pressed: {backgroundColor: "{colors.primary-focus}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.full}"}
-  button-secondary: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: [10, 14]}
-  button-tertiary: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.full}", padding: 10}
-  discovery-card: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 8}
-  answer-card: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body-lg}", rounded: "{rounded.xs}", padding: 16}
-  text-input: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: [12, 14]}
-  status-badge: {backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: [4, 8]}
-  bottom-nav: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: [8, 10]}
+  composer: {fill: "#FFFFFF", border: "#E5E2DC", radius: 22, action: "teal circular control"}
+  source-chip: {fill: "#F2F1EE", text: "#737572", radius: 999}
+  discovery-card: {fill: "#FFFFFF", radius: 14, media: "wide rounded crop"}
+  navigation: {fill: "visually open or warm-white", icons: "thin near-black line", selected: "teal"}
 ---
 
 # Overview
 
-Perplexity uses a warm, almost paper-like canvas with deep green-black type and restrained teal actions. The interface is organized around a floating composer, readable long-form answers, and photography-led discovery cards.
-
-**Key Characteristics:** warm off-white canvas, teal circular actions, floating white composer, sparse chrome, readable answer text, topical card feed, and voice waveform states.
+Perplexity is visually closer to a calm reading tool than to a dashboard. Warm off-white fills most of the viewport, near-black text supplies the dominant mass, and teal is confined to decisive input and selected-state details. The empty search surface relies on negative space and a floating composer; populated answers become a single document-like reading column with small sources. Discovery screens introduce broad content photography inside quiet rounded cards. A dark subscription surface is the deliberate high-contrast exception.
 
 # Non-negotiable visual invariants
 
-- Sampled screens consistently use warm off-white canvas.
-- The reference consistently shows teal circular actions.
-- The reference consistently shows floating white composer.
-- The reference consistently shows sparse chrome.
-- Typography consistently uses readable answer text.
-- Sampled screens consistently use topical card feed.
-- The reference consistently shows voice waveform states.
+- Warm white or off-white dominates ordinary search, answer, discovery, and settings surfaces.
+- Teal is a sparse interactive signal, not a full-screen brand wash.
+- The prompt composer remains a rounded bottom anchor on search and chat-like surfaces.
+- Long answers read as an open vertical document rather than a stack of equal cards or chat bubbles.
+- Sources and citations remain compact, muted, and visually adjacent to the claims or sections they support.
+- Navigation chrome uses thin line icons and restrained back controls with little surrounding decoration.
+- Photography is substantial inside discovery cards but does not become a background behind answer text.
+- Dark charcoal, cyan, and yellow are reserved for the subscription presentation and do not leak into ordinary reading screens.
 
 # Color and surfaces
 
-### Brand & Accent
+The main canvas is a warm paper-like off-white, with pure white used for the floating composer, cards, and focused modal surfaces. Pale warm gray separates chips, inactive controls, skeletons, and settings rows. Near-black text carries titles and long-form answers; medium gray carries source names, timestamps, and helper labels. Teal marks send, voice, selected modes, checks, and small active elements. Dividers and borders are warm, thin, and low contrast. Destructive messaging uses a restrained red.
 
-Teal marks submit, voice, saved preference feedback, and selected settings. It is applied to small decisive elements rather than large surfaces.
-
-### Surface
-
-Warm off-white is the base; white lifts the composer and cards; pale beige-gray separates settings and skeleton states.
-
-### Text
-
-Deep green-black carries headings and answer text; warm grays support sources, metadata, and inactive categories.
-
-### Semantic
-
-Teal confirms an action or active mode; neutral red and orange are reserved for warnings not represented in the primary flows.
+The subscription archetype reverses the ordinary light hierarchy with charcoal surfaces, white type, cyan highlights, and a controlled yellow plan accent. Default iOS blue, cool gray grouped backgrounds, bright multicolor gradients, or a teal fill applied to every card would visibly break the reference.
 
 # Typography
 
-### Font Family
+Typography is restrained system sans with moderate rather than dramatic scale contrast. Empty-state titles and subscription statements use medium-large display sizing; answer headings use compact semibold; body text receives generous line height for sustained reading. Sources, citations, and metadata are much smaller and muted but remain legible. Centered text appears on sparse empty and purchase surfaces, while answers, settings, and discovery copy are left aligned.
 
-Use SF Pro for the interface and readable answer text; a restrained editorial serif may appear in content labels such as further reading.
-
-### Hierarchy
-
-| Token | Size | Weight | Use |
-|---|---:|---:|---|
-| display-lg | 30 points | 500 | Empty or voice state |
-| headline | 20 points | 600 | Page or answer section |
-| card-title | 15 points | 600 | Story title |
-| body | 13 points | 400 | Answer and settings detail |
-| caption | 10 points | 400 | Sources and metadata |
-
-### Principles
-
-- Optimize for sustained reading rather than dashboard density.
-- Keep the composer visually available but quiet.
-- Use teal only to signal actionable AI input or completion.
-
-### Note on Font Substitutes
-
-Use a neutral system sans with excellent long-form legibility and a light-to-semibold range.
+Use SF Pro Display and SF Pro Text as the iOS-safe family. Preserve hierarchy under Dynamic Type by allowing answer headings and body paragraphs to wrap independently, placing metadata on an additional line before shrinking it, and retaining visible contrast between body and captions. Use tabular numerals for plan prices or other aligned numeric comparisons.
 
 # Screen composition
 
-### Spacing System
+The empty search archetype places a modest title or mark in a large open middle region, with the composer occupying roughly the bottom 12–18 percent above the home indicator. Answer screens use a compact safe-area header, one vertically scrolling readable column, inline source treatments, and a persistent follow-up composer. Discovery uses compact top tabs followed by a single vertical sequence of wide image-led cards. Horizontal insets are commonly about 16 points, with 12–16 points inside cards and wider vertical pauses between answer sections.
 
-Use a 4 points base, 12–16 points card padding, 16 points gutters, and generous vertical breathing room around the composer.
-
-### Grid & Container
-
-Discovery is a single-column feed; answer pages are one readable text column; voice mode centers a single horizontal waveform and action.
-
-### Whitespace Philosophy
-
-Whitespace separates thought, source, and action. Avoid crowding the search surface with persistent navigation or promotional modules.
-
-Surface hierarchy observed in the source:
-
-| Level | Treatment | Use |
-|---|---|---|
-| 0 | Warm canvas | Reading context |
-| 1 | White hairline card | Composer and discovery |
-| 2 | Soft floating control | Voice and follow-up action |
-| 3 | Native sheet or permission | Focused system choice |
-
-### Decorative Depth
-
-Use subtle edge shadow on the floating composer and strong content photography in discovery; avoid glossy decoration.
+Observed archetypes include the sparse search entry; keyboard-raised prompt entry; long-form answer with sources and related content; discovery feed with broad photography; centered voice or loading treatment; settings rows in light modal sheets; a dark plan comparison and purchase surface; and native purchase confirmation over a dimmed background. Imagery grows dominant only in discovery cards, while text remains dominant in search results.
 
 # Navigation appearance
 
-Rely on the composer, contextual back actions, and horizontal topics rather than a persistent multi-tab shell.
+Top bars are compact and visually open, using small back chevrons and thin utility icons without a heavy filled navigation band. Topic or plan selection uses low-profile horizontal tabs or segments with subtle selected emphasis. Bottom sheets use large top radii and sit over a blurred or dimmed source screen. No persistent multi-item tab bar was visible in the inspected screens. The rounded composer supplies the strongest recurring bottom-edge control.
 
 # Components
 
-### Buttons
+The composer is a floating white rounded field with a fine warm-gray edge, compact attachment or mode controls, and a teal circular voice or submit action. It becomes taller for multiline input without losing its bottom anchoring. Source chips are small pale pills with muted type and minimal padding; citations may also appear as tiny inline markers.
 
-Use teal circles or rounded rectangles for submit, voice, and save; keep dismiss, attach, share, and favorite as quiet icon actions.
-
-### Cards & Containers
-
-Discovery cards combine a large image, title, source count, favorite, and overflow; answer content stays mostly unboxed.
-
-### Inputs & Forms
-
-The composer is a white rounded floating field with attach, search, microphone, and teal submit controls; native keyboard and permissions remain platform-correct but inherit surrounding teal emphasis.
+Discovery cards pair a wide rounded photographic crop with a concise title, small source information, and quiet icon actions. Answer content stays mostly unboxed, using section spacing instead of repeated card backgrounds. Settings use compact white or warm-gray rows with thin separators, trailing controls, native toggles, and checkmarks. Subscription surfaces use dark rounded cards, segmented plan selection, and a clearly dominant cyan or light action. Pressed and selected states intensify teal or the local plan accent without adding heavy shadows.
 
 # Imagery and icons
 
-Use subtle edge shadow on the floating composer and strong content photography in discovery; avoid glossy decoration.
+Discovery photography is compositionally important on feed cards: preserve its broad crop, rounded corners, and roughly upper-half relationship to the card copy. Product, news, and editorial images are content assets rather than an authored illustration family. Avatars and source marks remain small and subordinate. Ordinary answers should not acquire decorative hero imagery.
 
-Discovery photography uses broad rounded crops; avatars stay small and circular; voice visualization remains a thin centered line.
-
-If final imagery is not yet available, any placeholder must preserve the documented scale, placement, crop, and visual weight rather than removing that layer.
+Icons are thin, monochrome utility outlines at compact optical size. Teal identifies the active input or selected state; inactive icons remain near-black or gray. Voice visualization is a restrained centered line or waveform rather than a decorative illustration. Branding and App Store purchase symbols are not reusable illustration assets.
 
 # States
 
-Use small teal toasts, checks, or button states for saved preference, recording, and successful submission.
+Observed states include empty prompt entry, keyboard input, answer loading, populated answer, selected search mode, voice focus, settings toggles on and off, selected subscription plan, empty purchase history, and native App Store confirmation. Loading uses a small restrained spinner or centered progress signal. Modal states blur or dim the underlying warm canvas. Across states, light surfaces, sparse teal emphasis, thin icons, and compact metadata remain constant; the paywall alone switches to a dark high-contrast field.
 
 # iOS adaptation
 
-### Touch Targets
+Keep the top bar and composer within current iPhone safe areas, with answer and discovery content in a vertical scroll container. The composer should follow the keyboard, preserve access to its primary action, and avoid covering the latest response. Use native sheet, keyboard, toggle, and App Store purchase behavior while styling adjacent surfaces to the recorded warmth, radii, and teal emphasis. Maintain at least 44-point targets for icon actions even when glyphs are visually small.
 
-Composer actions, category tabs, cards, voice controls, and settings rows remain at least 44 points.
-
-### Collapsing Strategy
-
-Preserve prompt, answer, sources, follow-up, and voice action; reduce secondary recommendations first.
-
-### Image Behavior
-
-Crop discovery media consistently and never stretch source or avatar imagery.
-
-Apply these rules within current iPhone safe areas and scrolling containers. Keep interactive targets at least 44 points, preserve a logical VoiceOver order, and let Dynamic Type wrap supporting text without flattening the documented hierarchy. Preserve the documented appearance.
+VoiceOver order should move from title and navigation controls through the answer or discovery content, sources, then composer controls. On compact widths, wrap source chips and metadata, reduce secondary recommendations before the primary answer, and keep photography at a stable card aspect rather than compressing it into a strip. Dynamic Type should lengthen the document vertically, not collapse type roles. If a dark appearance is required outside the observed paywall, preserve semantic contrast without importing its promotional cyan-yellow treatment.
 
 # Anti-generic checklist
 
-- Don't turn answers into a stack of heavy dashboard cards.
-- Don't add persistent navigation that competes with the composer.
-- Don't use multiple bright accents or ornamental gradients.
-- Do not replace the documented hierarchy with a generic stack of identical white cards or `Form` sections.
-- Do not use default blue tint, an unstyled `TabView`, arbitrary SF Symbols, or uniform corner radii when they contradict the recorded tokens and components.
-- Do not omit compositionally important imagery while final assets are pending; preserve its footprint with a faithful placeholder.
+- Do not turn answers into chat bubbles or a stack of identical elevated cards.
+- Do not replace the warm canvas with a cool system-gray grouped background.
+- Do not use default blue tint in place of the sparse teal interaction color.
+- Do not add a generic persistent tab bar to the observed compact navigation treatment.
+- Do not simplify the composer to a plain `TextField` and text button.
+- Do not enlarge citations until they compete with answer body text.
+- Do not omit discovery photography or replace its broad crops with arbitrary SF Symbols.
+- Do not apply the dark subscription palette to ordinary search and reading surfaces.
 
 </design-context>

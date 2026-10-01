@@ -3,221 +3,125 @@
 version: 1
 platform: iOS
 name: Litres-design-analysis
-description: "A content-first reading and listening system on bright white, led by vivid orange branding, violet purchase actions, dark navy text, and richly colored book covers. Discovery is compact and commercial; reading and playback become quiet, focused workspaces."
+description: "A bright, cover-led iPhone bookstore and library with dense editorial shelves, orange navigation emphasis, violet commercial actions, flat white surfaces, and deliberately quieter reader and audio-player modes."
 colors:
-  primary: "#F25A24"
-  on-primary: "#FFFFFF"
-  primary-focus: "#D94715"
-  ink: "#171727"
-  ink-muted: "#737386"
-  ink-subtle: "#A5A5B2"
-  ink-tertiary: "#C9C9D1"
   canvas: "#FFFFFF"
-  surface-1: "#F7F6FA"
-  surface-2: "#F0EEF5"
-  surface-3: "#E7E4ED"
-  surface-4: "#DBD7E3"
-  hairline: "#E8E6EC"
-  hairline-strong: "#D2CFD9"
-  hairline-tertiary: "#B9B5C1"
-  inverse-canvas: "#181725"
-  inverse-surface-1: "#262436"
-  inverse-surface-2: "#37344A"
-  inverse-ink: "#FFFFFF"
-  brand-secure: "#4D48D8"
-  semantic-success: "#35A66F"
-  semantic-overlay: "#171727"
+  surface-primary: "#F7F6FA"
+  surface-secondary: "#EEEAF3"
+  accent-primary: "#F25A24"
+  accent-secondary: "#5147D9"
+  text-primary: "#171727"
+  text-secondary: "#737386"
+  divider: "#E7E4EC"
+  destructive: "#D93B45"
 typography:
-  display-xl: {fontFamily: SF Pro Display, fontSize: 36, fontWeight: 700, lineHeight: 1.06, letterSpacing: -0.8}
-  display-lg: {fontFamily: SF Pro Display, fontSize: 30, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.6}
-  display-md: {fontFamily: SF Pro Display, fontSize: 24, fontWeight: 700, lineHeight: 1.14, letterSpacing: -0.3}
-  headline: {fontFamily: SF Pro Display, fontSize: 20, fontWeight: 700, lineHeight: 1.20, letterSpacing: -0.2}
-  card-title: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 600, lineHeight: 1.24, letterSpacing: 0}
-  subhead: {fontFamily: SF Pro Text, fontSize: 14, fontWeight: 600, lineHeight: 1.30, letterSpacing: 0}
-  body-lg: {fontFamily: SF Pro Text, fontSize: 14, fontWeight: 400, lineHeight: 1.45, letterSpacing: 0}
-  body: {fontFamily: SF Pro Text, fontSize: 12, fontWeight: 400, lineHeight: 1.38, letterSpacing: 0}
-  body-sm: {fontFamily: SF Pro Text, fontSize: 10, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0}
-  caption: {fontFamily: SF Pro Text, fontSize: 9, fontWeight: 400, lineHeight: 1.24, letterSpacing: 0}
-  button: {fontFamily: SF Pro Text, fontSize: 13, fontWeight: 600, lineHeight: 1.18, letterSpacing: 0}
-  eyebrow: {fontFamily: SF Pro Text, fontSize: 9, fontWeight: 600, lineHeight: 1.18, letterSpacing: 0.1}
-  mono: {fontFamily: SF Mono, fontSize: 10, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0}
-rounded:
-  xs: 4
-  sm: 8
-  md: 12
-  lg: 16
-  xl: 20
-  xxl: 26
-  pill: 9999
-  full: 9999
+  hero: {fontFamily: "SF Pro Display", fontSize: 34, fontWeight: 700, lineHeight: 40}
+  title: {fontFamily: "SF Pro Display", fontSize: 28, fontWeight: 700, lineHeight: 34}
+  section: {fontFamily: "SF Pro Text", fontSize: 20, fontWeight: 700, lineHeight: 25}
+  body: {fontFamily: "SF Pro Text", fontSize: 17, fontWeight: 400, lineHeight: 23}
+  label: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 600, lineHeight: 20}
+  caption: {fontFamily: "SF Pro Text", fontSize: 13, fontWeight: 400, lineHeight: 18}
 spacing:
-  xxs: 4
-  xs: 8
-  sm: 12
-  md: 16
-  lg: 20
-  xl: 24
-  xxl: 32
-  section: 40
+  screen-horizontal: 16
+  section-gap: 28
+  card-padding: 16
+  control-gap: 12
+rounded:
+  control: 12
+  card: 14
+  sheet: 24
+  pill: 999
 components:
-  button-primary: {backgroundColor: "{colors.brand-secure}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [13, 18]}
-  button-primary-pressed: {backgroundColor: "{colors.primary-focus}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}"}
-  button-secondary: {backgroundColor: "{colors.canvas}", textColor: "{colors.brand-secure}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [12, 16]}
-  button-tertiary: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [10, 14]}
-  button-inverse: {backgroundColor: "{colors.inverse-canvas}", textColor: "{colors.inverse-ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [12, 16]}
-  book-card: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: 0}
-  search-field: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink-muted}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: [10, 12]}
-  reader-toolbar: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: [8, 12]}
-  audio-player: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 16}
-  subscription-action: {backgroundColor: "{colors.brand-secure}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [13, 18]}
-  bottom-nav: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink-subtle}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: [7, 8]}
+  primary-action: {fill: "violet", text: "white", height: 50, radius: 12}
+  secondary-action: {fill: "pale lavender-gray or white", text: "dark navy", height: 46, radius: 12}
+  book-tile: {fill: "transparent", cover: "portrait contained", metadata: "compact stacked text"}
+  search-field: {fill: "pale gray", text: "dark navy", radius: 12}
+  reader-toolbar: {fill: "warm paper or white overlay", icon: "dark neutral"}
+  navigation: {fill: "white", active: "orange", inactive: "muted gray"}
 ---
 
 # Overview
 
-Litres is a cover-led bookstore and library where orange identifies the service, violet drives acquisition, and reading or listening tools recede around the content.
-
-**Key Characteristics:**
-- Dense horizontal shelves of book covers.
-- Orange brand and active navigation.
-- Violet purchase and subscription actions.
-- Separate focused reader and audio-player modes.
-- Compact ratings, formats, and price metadata.
+Litres is a bright content marketplace and library in which book covers, not decorative UI cards, supply most color and depth. White canvas, dark navy text, orange brand/navigation emphasis, and violet acquisition controls form the stable shell. Focused modes deliberately change density: the reader becomes a warm paper-like page with serif text, while audio playback becomes a pale minimal control surface around one large cover.
 
 # Non-negotiable visual invariants
 
-- The reference consistently shows dense horizontal shelves of book covers.
-- Navigation consistently uses orange brand and active navigation.
-- The reference consistently shows violet purchase and subscription actions.
-- The reference consistently shows separate focused reader and audio-player modes.
-- The reference consistently shows compact ratings, formats, and price metadata.
+- Store and library screens are white, flat, and cover-led; portrait covers form the dominant mass in dense horizontal shelves.
+- Orange identifies the service and selected navigation, while violet is reserved for the strongest purchase, subscription, or access action.
+- Book tiles are not generic elevated cards: the contained cover and compact metadata sit directly on the canvas.
+- Book detail gives one cover a large central role, supported by a blurred cover-derived backdrop and structured metadata.
+- Reader mode uses a warm paper canvas, generous margins, long-form serif text, and contextual controls that do not permanently crowd the page.
+- Audio mode centers a large cover, chapter information, orange progress, one dominant play/pause control, and symmetric transport utilities.
+- Navigation and supporting chrome remain light and quiet so publishing artwork retains color leadership.
+- Search, filters, selectors, and settings use pale neutral or lavender-gray fills with modest radii, not shadowed card stacks.
 
 # Color and surfaces
 
-### Brand & Accent
+White is the principal storefront and library canvas. Pale cool gray or lavender-gray separates search fields, format choices, selected settings, and secondary control groups; thin light dividers organize longer lists. Dark navy rather than pure black carries titles and primary labels, with neutral gray for authors, duration, format, legal text, and metadata.
 
-Orange carries brand recognition and active library navigation. Violet is the stronger commercial action for buying, subscribing, or continuing access.
+Orange is the brand and selected-navigation color and may mark progress or small highlights. Violet/indigo is the strongest filled action for purchase, subscription, or continued access. Warm yellow can appear in ratings and green only in success or availability signals. Heavy shadows, dark dashboard surfaces, default blue tint, and competing orange/violet primary buttons would break the reference.
 
-### Surface
-
-White is the bookstore and library canvas. Pale lavender-gray separates search, format choices, playback controls, and secondary panels.
-
-### Text
-
-Dark navy carries titles and reading copy. Muted gray supports author, duration, format, and legal or subscription conditions.
-
-### Semantic
-
-Green is limited to availability or completed states. Ratings may use warm yellow; orange and violet must not compete within one action group.
+Reader mode shifts to a warm off-white paper field. Book detail can derive a soft blurred field from the current cover, but the rest of the product should not be flooded with arbitrary gradients.
 
 # Typography
 
-### Font Family
+The store UI uses a clean SF Pro-compatible sans. Section headings are bold and clearly larger than compact rows of book title, author, rating, format, duration, and price. Book titles lead tiles; author and metadata are quieter but readable. Controls use short semibold labels and sentence case.
 
-Use SF Pro Display for storefront headings and SF Pro Text for metadata, controls, and interface copy. Reader body text may use a restrained serif chosen for long-form comfort.
+Reader content is the exception: use a comfortable book-like serif with increased line height and stable paragraph measure, while toolbars and settings remain sans. Audio chapter labels and elapsed time are compact and centered around the cover and transport controls.
 
-### Hierarchy
-
-| Token | Size | Weight | Use |
-|---|---:|---:|---|
-| display-lg | 30 points | 700 | Reader or library state title |
-| headline | 20 points | 700 | Shelf and book-detail heading |
-| card-title | 15 points | 600 | Book title and price |
-| body-lg | 14 points | 400 | Description and reading copy |
-| caption | 9 points | 400 | Author, rating, duration, format |
-
-### Principles
-
-- Let book titles lead cards and details.
-- Keep author and format quieter than title and price.
-- Increase line height and reduce chrome inside the reader.
-
-### Note on Font Substitutes
-
-Inter is suitable for the interface. Use a highly legible serif only for book content, not for store controls.
+With Dynamic Type, keep the contrast between section heading, book title, and metadata. Let titles wrap before shrinking covers into insignificance; secondary metadata may truncate conservatively. Reader typography scales independently while preserving horizontal margins and paragraph rhythm.
 
 # Screen composition
 
-### Spacing System
+Home and catalog archetypes begin below the safe area with a wide pale search field, compact horizontal category strip, and sometimes a broad promotional banner. Circular shortcuts or compact topics can follow, then repeated horizontal shelves of portrait covers. Shelves use 16-point screen gutters, narrow cover gaps, bold left-aligned headings, and minimal container chrome; vertical scrolling reveals more rails.
 
-Use a 4 points base, 8–12 points cover gaps, and 16 points screen gutters.
+Book detail is a focused single column. A cover-derived blurred backdrop supports one large contained cover near the top, followed by a compact text/audio format switch, title and author hierarchy, ratings or facts, and flat descriptive sections. High-value actions remain prominent near the lower viewport or in a sticky white action area without covering metadata.
 
-### Grid & Container
+Reader mode uses nearly the full viewport as a page: warm background, generous side margins, serif text, a light top control row, and a bottom progress scrubber or compact controls when revealed. Audio mode places one large cover in the upper half, chapter/title information below it, then orange progress, large central play/pause, symmetric seek controls, and a final row for speed, sleep, and bookmark.
 
-Discovery uses horizontal cover rails and compact vertical lists. Book detail, reader, and playback use one focused column.
-
-### Whitespace Philosophy
-
-Storefronts stay information-dense; reading and playback reserve more uninterrupted space around content and transport controls.
-
-Surface hierarchy observed in the source:
-
-| Level | Treatment | Use |
-|---|---|---|
-| 0 | White canvas | Shelves, library, and reader |
-| 1 | Pale group fill | Search and format options |
-| 2 | Sticky white action bar | Buy, read, or listen action |
-| 3 | Dark or light overlay | Reader and player controls |
-
-### Decorative Depth
-
-Book-cover artwork supplies nearly all visual depth. Keep containers flat and shadows subtle.
+Search suggestions, profile/library lists, subscription management, and saved states are vertically scanning compositions with flat rows or focused empty content. Modal choices and purchase confirmations use compact sheets or system surfaces rather than marketing-page layouts.
 
 # Navigation appearance
 
-Keep the bottom library navigation stable. Reader and player modes use reduced contextual controls that hide when content needs focus.
+The persistent bottom bar is white with simple dark or gray glyphs and an orange selected item; its shadow or divider is subtle. Top bars use a compact title with ordinary back, close, search, share, or overflow controls. Search can take over the top region with the keyboard below, while focused reader and player screens reduce persistent navigation and expose contextual chrome.
+
+Format and category choices appear as compact pills, tabs, or segmented rows using pale fills and a distinct selected state. Sheets have rounded upper corners and light surfaces. Back controls remain standard in scale; this appearance must not import the source product's routes into another product.
 
 # Components
 
-### Buttons
+Book tiles use a contained portrait cover with uncropped artwork, then a short stack of title, author, rating, format, or price. Covers may have a subtle shadow to separate them from white, but the surrounding tile stays flat. Horizontal shelves show enough adjacent content to communicate continuation.
 
-Use violet filled buttons for purchase, subscription, and access. Orange identifies brand or current destination; secondary controls are pale or outlined.
+The search field is broad, pale, and softly rounded, with a restrained magnifier and placeholder. Violet filled buttons handle the strongest commercial/access action; pale or outlined controls handle samples and secondary choices. Orange is used for selected navigation, brand markers, and progress rather than every button.
 
-### Cards & Containers
-
-Book cards pair a portrait cover with title, author, rating, and price. Detail sections stay flat and use dividers instead of elevated panels.
-
-### Inputs & Forms
-
-Search is a wide pale field. Reader settings use compact rows, sliders, and segmented choices styled with the same radius and accent system.
+Book detail uses a compact format switcher, rating/fact rows, favorite control, and sticky action group. Reader controls include progress, search, appearance/font settings, and compact overlays. The audio player uses a large circular play/pause, symmetric skip controls, thin progress, and compact speed, timer, and bookmark utilities. Native permission, keyboard, subscription confirmation, toggles, and alert surfaces may stay native when their appearance is observed.
 
 # Imagery and icons
 
-Book-cover artwork supplies nearly all visual depth. Keep containers flat and shadows subtle.
+Book-cover artwork is the main imagery language. Preserve every cover's portrait ratio and full composition with aspect-fit; do not crop, recolor, or mask several covers into generic thumbnails. A large detail cover can cast a subtle shadow and provide color to a blurred backdrop. Author/article photography and promotional banners support rather than replace covers.
 
-Preserve portrait book-cover ratios without cropping. Author portraits are circular; no additional illustration language should compete with publishing artwork.
-
-If final imagery is not yet available, any placeholder must preserve the documented scale, placement, crop, and visual weight rather than removing that layer.
+Icons are simple product glyphs with consistent optical weight. Orange or dark neutral gives selected or actionable emphasis. Occasional promotional illustrations were observed, but they do not form a stable independent system and should not be generalized into every empty, subscription, or content state. When final covers are unavailable, placeholders retain the same portrait footprint and varied color mass.
 
 # States
 
-Downloads, samples, and access states use short labels near the related book. Progress is visible but visually subordinate to content.
+Observed states include search suggestions with keyboard, notification permission, language selection, populated shelves, an empty saved state, book favoriting, compact action sheets, sticky reading or mini-player bars, reader search and appearance controls, font selection, subscription purchase and system confirmation, subscription management/cancellation, and audio loading/playing.
+
+The visual constants are a light shell, restrained dividers, dark-navy hierarchy, orange selection/progress, violet commercial emphasis, and content-led imagery. Reader and audio states keep their focused compositions rather than falling back to the dense storefront.
 
 # iOS adaptation
 
-### Touch Targets
+Place storefront content in a vertical scroll container with independently scrolling horizontal cover rails, safe-area-aware top search, and a bottom inset for navigation. Preserve 16-point outer gutters and tighten rail spacing before reducing covers below recognition size. Use aspect-fit for covers and aspect-fill only for blurred backdrops or banners.
 
-Search, cover cards, purchase actions, reader tools, transport controls, and navigation remain at least 44 points.
-
-### Collapsing Strategy
-
-Keep horizontal shelves scrollable, stack purchase options, and reduce secondary metadata before shrinking covers excessively.
-
-### Image Behavior
-
-Contain portrait covers, preserve their full artwork, and use a neutral fallback when an image is unavailable.
-
-Apply these rules within current iPhone safe areas and scrolling containers. Keep interactive targets at least 44 points, preserve a logical VoiceOver order, and let Dynamic Type wrap supporting text without flattening the documented hierarchy. Preserve the documented appearance.
+Book detail, reader, audio player, and keyboard search adapt to shorter iPhones without hiding the primary control. Reader text reflows with Dynamic Type and user-selected size while toolbars remain reachable; audio utilities can tighten spacing or wrap below transport. Clear the home indicator with sticky actions and bottom bars, maintain 44-point targets, provide VoiceOver labels, and order cover/title/metadata/action logically. Preserve the sampled light appearance and warm reader surface instead of inventing unsupported dark mode.
 
 # Anti-generic checklist
 
-- Don't recolor book artwork to fit the brand.
-- Don't make orange and violet equal primary actions.
-- Don't add heavy shadows behind every cover.
-- Don't crowd reading text with permanent chrome.
-- Don't hide whether content is a sample, purchase, or subscription.
-- Do not replace the documented hierarchy with a generic stack of identical white cards or `Form` sections.
-- Do not use default blue tint, an unstyled `TabView`, arbitrary SF Symbols, or uniform corner radii when they contradict the recorded tokens and components.
-- Do not omit compositionally important imagery while final assets are pending; preserve its footprint with a faithful placeholder.
+- Do not replace cover shelves with equal white dashboard cards or a generic two-column app grid.
+- Do not crop, recolor, or normalize the visual diversity of book-cover artwork.
+- Do not make orange and violet compete as identical primary actions.
+- Do not use default blue links, an unstyled `TabView`, or arbitrary SF Symbols with mixed weights.
+- Do not add heavy shadows, glass panels, or large radii around every piece of metadata.
+- Do not use sans UI body text as the reader's long-form book typography.
+- Do not leave permanent dense chrome over the reader or turn the audio player into a settings list.
+- Do not introduce a generic illustration system where the observed product relies on publishing artwork.
 
 </design-context>

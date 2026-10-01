@@ -3,184 +3,116 @@
 version: 1
 platform: iOS
 name: Find-My-design-analysis
-description: "A native location utility built around pale Apple maps, system-blue person and device markers, white translucent bottom sheets, rounded action tiles, Memoji identity, red lost-device controls, and a four-tab structure for People, Devices, Items, and Me."
+description: "A native location utility with pale full-screen maps, white draggable bottom sheets, system-blue selection, compact identity rows, floating map controls, translucent tab navigation, and system modal states."
 colors:
-  primary: "#3478E5"
-  on-primary: "#FFFFFF"
-  primary-soft: "#E8F1FF"
-  accent-person: "#3B82F6"
-  accent-item: "#8E8E93"
-  ink: "#111216"
-  ink-muted: "#6C6C70"
-  ink-subtle: "#AEAEB2"
   canvas: "#F5F5F7"
-  surface-1: "#FFFFFF"
-  surface-2: "#F2F2F7"
-  hairline: "#D1D1D6"
-  semantic-success: "#30D158"
-  semantic-warning: "#FF9F0A"
-  semantic-danger: "#FF3B30"
-  semantic-overlay: "#000000"
+  surface-primary: "#FFFFFF"
+  surface-secondary: "#F2F2F7"
+  accent-primary: "#3478E5"
+  accent-secondary: "#30D158"
+  text-primary: "#111216"
+  text-secondary: "#6C6C70"
+  divider: "#D1D1D6"
+  destructive: "#FF3B30"
 typography:
-  display-xl: { fontFamily: SF Pro Display, fontSize: 40, fontWeight: 700, lineHeight: 1.05, letterSpacing: -0.8 }
-  display-lg: { fontFamily: SF Pro Display, fontSize: 34, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.5 }
-  display-md: { fontFamily: SF Pro Display, fontSize: 28, fontWeight: 700, lineHeight: 1.15, letterSpacing: -0.3 }
-  headline: { fontFamily: SF Pro Display, fontSize: 22, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0 }
-  card-title: { fontFamily: SF Pro Text, fontSize: 17, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: SF Pro Text, fontSize: 16, fontWeight: 500, lineHeight: 1.30, letterSpacing: 0 }
-  body-lg: { fontFamily: SF Pro Text, fontSize: 17, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
-  body: { fontFamily: SF Pro Text, fontSize: 15, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
-  body-sm: { fontFamily: SF Pro Text, fontSize: 13, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
-  caption: { fontFamily: SF Pro Text, fontSize: 10, fontWeight: 400, lineHeight: 1.20, letterSpacing: 0 }
-  button: { fontFamily: SF Pro Text, fontSize: 17, fontWeight: 400, lineHeight: 1.20, letterSpacing: 0 }
-  eyebrow: { fontFamily: SF Pro Text, fontSize: 12, fontWeight: 500, lineHeight: 1.20, letterSpacing: 0.2 }
-  mono: { fontFamily: SF Mono, fontSize: 12, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
-rounded: { xs: 4, sm: 8, md: 12, lg: 16, xl: 24, xxl: 30, pill: 9999, full: 9999 }
-spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
+  hero: {fontFamily: "SF Pro Display", fontSize: 32, fontWeight: 700, lineHeight: 38}
+  title: {fontFamily: "SF Pro Display", fontSize: 28, fontWeight: 700, lineHeight: 34}
+  section: {fontFamily: "SF Pro Text", fontSize: 21, fontWeight: 600, lineHeight: 26}
+  body: {fontFamily: "SF Pro Text", fontSize: 17, fontWeight: 400, lineHeight: 22}
+  label: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 600, lineHeight: 20}
+  caption: {fontFamily: "SF Pro Text", fontSize: 13, fontWeight: 400, lineHeight: 18}
+spacing:
+  screen-horizontal: 16
+  section-gap: 24
+  card-padding: 16
+  control-gap: 12
+rounded:
+  control: 12
+  card: 16
+  sheet: 24
+  pill: 999
 components:
-  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.md}", padding: [13, 18]}
-  map-sheet: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xl}", padding: 16 }
-  action-tile: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.md}", padding: 12 }
-  person-row: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xs}", padding: [10, 16]}
-  input: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: 12 }
-  bottom navigation: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: [8, 12]}
+  map-sheet: {fill: "surface-primary", radiusTop: 24, handle: "centered", positions: "compact and expanded"}
+  identity-row: {fill: "surface-primary", height: 56, leading: "avatar or device image", trailing: "status or action"}
+  map-control: {fill: "surface-primary", size: 44, radius: 10, icon: "system line"}
+  action-tile: {fill: "surface-primary", radius: 12, icon: "blue or semantic", label: "compact"}
+  bottom-navigation: {fill: "translucent light material", selected: "blue", items: 4}
 ---
 
 # Overview
 
-Find My keeps a live map visible while people, devices, and items occupy progressive white sheets. System blue marks trusted location and sharing; red is isolated to loss and erasure.
-
-**Key Characteristics:**
-- Pale Apple map as spatial canvas.
-- White rounded bottom sheets.
-- System-blue markers and actions.
-- Memoji and device glyph identity.
-- Four stable tabs for People, Devices, Items, and Me.
+Find My is a map-first native iOS utility in which a pale map usually occupies most of the viewport and white draggable sheets organize identities, statuses, and actions above it. System-blue selection, compact rows, floating square map controls, circular avatars or device imagery, and translucent bottom navigation produce a restrained functional hierarchy. Full-screen setup and modal states retain standard iOS spacing and typography rather than adding a separate branded layer.
 
 # Non-negotiable visual invariants
 
-- Sampled screens consistently use pale Apple map as spatial canvas.
-- The reference consistently shows white rounded bottom sheets.
-- The reference consistently shows system-blue markers and actions.
-- The reference consistently shows memoji and device glyph identity.
-- The reference consistently shows four stable tabs for People, Devices, Items, and Me.
+- A pale map is the dominant field on location-oriented screens and remains visible behind compact or expanded white sheets.
+- Bottom sheets use white surfaces, large rounded top corners, and a centered drag handle rather than floating card stacks.
+- System blue marks selected navigation, map location, checks, links, outlines, and primary actions; red is isolated to destructive states.
+- Identity rows pair a circular avatar, device image, or item glyph with primary text and compact gray status metadata.
+- Floating map controls are small white rounded squares or circles with restrained shadows and dark system icons.
+- Navigation and modal chrome use native iOS typography, spacing, alerts, action sheets, toggles, and keyboard treatment.
+- Map imagery, avatars, and device or item assets remain functional content and are not replaced by decorative illustration.
+- Expanded sheets and full-page forms preserve thin dividers, grouped surfaces, and clear 44-point action rows.
 
 # Color and surfaces
 
-### Brand & Accent
-- **Primary** ({colors.primary}): Location, sharing, navigation, and active tab.
-- **Primary Soft** ({colors.primary-soft}): Selected and informational state.
-- **Person Accent** ({colors.accent-person}): People markers.
-- **Item Accent** ({colors.accent-item}): Devices and items.
+The largest color field comes from pale map tiles: warm beige land, muted green areas, white roads, and soft blue water or location markers. White sheets and modal cards sit above the map, while full-screen forms and settings use grouped light gray around `#F2F2F7`. Thin gray separators organize rows; dim black overlays isolate alerts and sheets.
 
-### Surface
-- **Canvas** ({colors.canvas}): Map and neutral system background.
-- **Surface 1** ({colors.surface-1}): Sheets, actions, and lists.
-- **Surface 2** ({colors.surface-2}): Secondary controls.
-- **Hairline** ({colors.hairline}): Sheet and list separation.
-
-### Text
-- **Ink** ({colors.ink}): Names, device status, and actions.
-- **Ink Muted** ({colors.ink-muted}): Address and availability.
-- **Ink Subtle** ({colors.ink-subtle}): Disabled state.
-
-### Semantic
-- **Success** ({colors.semantic-success}): Found and reachable.
-- **Warning** ({colors.semantic-warning}): Limited or pending state.
-- **Danger** ({colors.semantic-danger}): Lost, remove, and erase.
-- **Overlay** ({colors.semantic-overlay}): Modal focus.
+System blue around `#3478E5` identifies selection, location, navigation, text actions, checkmarks, and focused outlines. Green belongs to enabled toggles or positive availability, orange to warning or pending states, and red to removal, lost, erase, or destructive swipe states. Default system colors are appropriate here, but decorative brand palettes or broad colored backgrounds would break the restrained map-and-sheet system.
 
 # Typography
 
-### Font Family
-- **SF Pro Display** — large sheet and onboarding titles.
-- **SF Pro Text** — people, devices, locations, and actions.
-- **SF Mono** — serial or technical identifiers when needed.
+Use SF Pro Display and SF Pro Text. Introductory or full-page titles are approximately 28-32 points bold, sheet headings around 20-22 points semibold, navigation and primary row text about 17 points, body 15-17 points, and addresses or status metadata 13-15 points gray. Blue edge actions remain regular-weight and compact.
 
-### Hierarchy
-Use 34–40 points bold for onboarding, 22 points for sheet titles, 17 points for actions, 15 points body, and 10–13 points status detail.
-
-### Principles
-- Keep name, location, and availability together.
-- Make dangerous device actions explicit.
-- Use native truncation for long addresses.
-- Support Dynamic Type.
-
-### Note on Font Substitutes
-Use the platform system sans. **Inter** is acceptable outside Apple platforms.
+Hierarchy relies on system weight, placement, and color rather than a custom face. Sheet titles and names are left-aligned; modal navigation titles are centered; alerts center their compact copy. Dynamic Type should increase row and sheet height, allow secondary location text to wrap, and preserve clear separation between identity, status, and action.
 
 # Screen composition
 
-### Spacing System
-Use a 4 points base, 16 points sheet padding, 12 points action gaps, and safe-area spacing.
+The map-and-sheet archetype places a full-screen map behind a white bottom sheet. In its compact position, the map remains the majority of the viewport; in expanded positions, the sheet becomes a scrolling list or detail surface. Floating controls stack near the map edge above the sheet, and persistent navigation aligns to the lower safe area. Map markers use a blue dot, soft halo, or cone without competing decorative chrome.
 
-### Grid & Container
-The map fills the viewport; a bottom sheet moves from compact list to expanded person, device, or item detail.
+The list/detail archetype uses 16-20 point insets, 44-60 point rows, thin separators, circular or aspect-fit leading imagery, and compact trailing status or actions. The action-grid archetype groups small rounded white tiles with blue or semantic icons. Full-page forms use generous empty space, large titles, native fields, and keyboard-safe bottom actions.
 
-### Whitespace Philosophy
-Keep sheets concise to preserve map context; allow onboarding cards to breathe over blurred background.
-
-Surface hierarchy observed in the source:
-
-Use map-to-sheet separation, native blur, rounded corners, and floating map controls. Avoid decorative shadow.
-
-### Decorative Depth
-Memoji, item glyphs, and map markers are functional identity; the system needs no added illustration.
+Modal archetypes include centered alerts, bottom action sheets, dimmed add/search sheets, and full-height setup or status pages. Grouped settings use light-gray canvas with rounded white blocks. At every level, surface depth comes from sheet overlap, material, and minimal shadow rather than decorative elevation.
 
 # Navigation appearance
 
-People, Devices, Items, and Me remain in the bottom bar; map and recenter controls float above the active sheet.
+The bottom navigation uses translucent white material, four evenly spaced icon-and-label items, blue selected state, and gray inactive state. The count and appearance may inform adaptation, but destination names and product structure must come from approved Research and Planning.
+
+Top navigation bars use compact blue text actions at the edges and a centered title where present. Back, close, add, edit, and completion controls retain native proportions. Bottom sheets expose a centered drag handle; alerts and action sheets use standard stacked iOS geometry over a dimmed backdrop.
 
 # Components
 
-### Buttons
+The map sheet is a white surface with approximately 24-point top corners, a small centered gray handle, 16-point padding, and compact or expanded positions. Identity rows are roughly 52-60 points high, using a circular avatar, Memoji-like image, product image, or simple item glyph at the leading edge; primary name and gray status stack in the middle, with a concise trailing action when needed.
 
-Use blue text or filled actions for sharing and continue; red text handles lost, remove, and erase.
+Map controls are 40-44 point white rounded squares or circles with dark system line icons and subtle shadow. Selectable map thumbnails use compact rounded crops, a blue focus outline, and checkmark. Action tiles use white fill, 12-16 point corners, blue or semantic symbols, and short labels.
 
-### Cards & Containers
-
-Use map sheets, person rows, device cards, item cards, action tiles, permission alerts, and lost-mode forms.
-
-### Inputs & Forms
-
-Sharing, contact, lost message, phone, and notification settings follow native fields and consent patterns.
+Inputs, toggles, popovers, alerts, and action sheets preserve native iOS geometry. Enabled toggles are green; disabled actions are pale gray; selected rows use blue checks; destructive swipe reveals a solid red trash block. Modal primary actions use blue text or fill without creating a separate branded button language.
 
 # Imagery and icons
 
-Memoji, item glyphs, and map markers are functional identity; the system needs no added illustration.
+Maps are the principal imagery and must retain enough visible area for spatial context. Avatars and Memoji-like identity images are circular, device and item images are aspect-fit, and small map-mode thumbnails preserve recognizable terrain. Do not crop informative map labels or enlarge identity assets until they compete with location status. These functional image regions cannot be omitted while final data or assets are pending; placeholders must preserve their scale and role.
 
-Use circular avatars, Memoji, and simple item glyphs as functional identity. Do not introduce decorative scenes.
-
-If final imagery is not yet available, any placeholder must preserve the documented scale, placement, crop, and visual weight rather than removing that layer.
+System icons, device glyphs, item symbols, permission artwork, and isolated search or phone-outline graphics support specific states. They do not establish a reusable authored illustration system, so no decorative scene language should be inferred or added. Icon weight remains native and labels clarify ambiguous object glyphs.
 
 # States
 
-Show with you, shared, no location, offline, sound playing, lost, found, notification enabled, and erasing states explicitly.
+Observed states include compact and expanded map sheet, blue selected tab, current-location dot and halo, selected map thumbnail with outline and check, empty and populated search, keyboard form, green and gray toggles, permission alert, centered system alert, bottom action sheet, dimmed add/search modal, disabled action, red destructive swipe, full-page status form, password prompt, and edit or completion actions. Pale maps, white grouped surfaces, system type, and blue selection remain constant.
 
 # iOS adaptation
 
-### Touch Targets
+Extend maps beneath the status and navigation regions while keeping markers, floating controls, sheet handles, and actions inside safe areas. Use native sheet detents or equivalent compact and expanded geometry, internal scrolling for long lists, keyboard avoidance for forms and search, and standard safe-area treatment for alerts and action sheets.
 
-Keep tabs, markers, sheet rows, action tiles, map controls, and permission actions at least 44 points.
-
-### Collapsing Strategy
-
-Preserve map, selected entity, location status, key action, and navigation. Move secondary actions into an expanded sheet.
-
-### Image Behavior
-
-Keep map bounds relevant, avatars circular, and device or item glyphs aspect-fit; do not crop informative map labels unnecessarily.
-
-Apply these rules within current iPhone safe areas and scrolling containers. Keep interactive targets at least 44 points, preserve a logical VoiceOver order, and let Dynamic Type wrap supporting text without flattening the documented hierarchy. Preserve the documented appearance.
+Tabs, map controls, rows, markers, action tiles, and navigation actions require at least 44-point hit targets. VoiceOver order should follow map context and selected location, floating controls, sheet title and rows, then bottom navigation; modal presentation should trap focus appropriately. On compact widths, let secondary addresses wrap or truncate before shrinking avatars, map controls, or hit areas. Dynamic Type should grow sheets and rows without fully obscuring the map when the compact state is shown. Preserve native light materials unless the approved product explicitly defines another appearance.
 
 # Anti-generic checklist
 
-- Don't cover the whole map without need.
-- Don't use red for ordinary navigation.
-- Don't share location without explicit consent.
-- Don't use ambiguous item icons without labels.
-- Do not replace the documented hierarchy with a generic stack of identical white cards or `Form` sections.
-- Do not use default blue tint, an unstyled `TabView`, arbitrary SF Symbols, or uniform corner radii when they contradict the recorded tokens and components.
-- Do not omit compositionally important imagery while final assets are pending; preserve its footprint with a faithful placeholder.
+- Do not replace the map with a decorative background or hide it behind a full-height generic card stack by default.
+- Do not turn draggable sheets into unrelated floating cards with heavy shadows.
+- Do not use red for ordinary navigation, selection, or location markers.
+- Do not remove avatars, device images, item glyphs, map markers, or map thumbnails from their functional compositions.
+- Do not style lists and forms as custom marketing panels or default web components.
+- Do not use an unstyled `TabView` without the observed material, spacing, icon-label balance, and blue selection.
+- Do not invent a decorative illustration system from permission icons or isolated instructional assets.
+- Do not copy visible tab destinations, entity types, or flows into the adapted product.
 
 </design-context>

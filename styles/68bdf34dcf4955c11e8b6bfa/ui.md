@@ -3,177 +3,125 @@
 version: 1
 platform: iOS
 name: Phone-design-analysis
-description: "A classic native iOS utility interface built from white list surfaces, SF typography, system-blue navigation and links, green call actions, red destructive controls, gray tab icons, and a blurred full-screen in-call layer."
-colors: {primary: "#007AFF", on-primary: "#FFFFFF", primary-focus: "#0062CC", ink: "#111113", ink-muted: "#6D6D72", ink-subtle: "#9A9AA0", ink-tertiary: "#C7C7CC", canvas: "#FFFFFF", surface-1: "#F2F2F7", surface-2: "#E5E5EA", surface-3: "#D1D1D6", surface-4: "#C7C7CC", hairline: "#E5E5EA", hairline-strong: "#C7C7CC", hairline-tertiary: "#AEAEB2", inverse-canvas: "#101113", inverse-surface-1: "#2C2C2E", inverse-surface-2: "#3A3A3C", inverse-ink: "#FFFFFF", brand-secure: "#34C759", semantic-success: "#34C759", semantic-overlay: "#000000"}
+description: "A classic native iOS utility built from white and grouped-gray list surfaces, large SF titles, system-blue navigation, green call controls, red destructive actions, a five-item tab bar, circular keypad geometry, and an immersive blurred in-call layer."
+colors:
+  canvas: "#FFFFFF"
+  surface-primary: "#FFFFFF"
+  surface-secondary: "#F2F2F7"
+  accent-primary: "#007AFF"
+  accent-secondary: "#34C759"
+  text-primary: "#111113"
+  text-secondary: "#6D6D72"
+  divider: "#E5E5EA"
+  destructive: "#FF3B30"
 typography:
-  display-xl: {fontFamily: SF Pro Display, fontSize: 40, fontWeight: 400, lineHeight: 1.05, letterSpacing: -0.8}
-  display-lg: {fontFamily: SF Pro Display, fontSize: 34, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.5}
-  display-md: {fontFamily: SF Pro Display, fontSize: 28, fontWeight: 600, lineHeight: 1.14, letterSpacing: -0.3}
-  headline: {fontFamily: SF Pro Display, fontSize: 22, fontWeight: 600, lineHeight: 1.20, letterSpacing: -0.2}
-  card-title: {fontFamily: SF Pro Text, fontSize: 17, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0}
-  subhead: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0}
-  body-lg: {fontFamily: SF Pro Text, fontSize: 17, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0}
-  body: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0}
-  body-sm: {fontFamily: SF Pro Text, fontSize: 13, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0}
-  caption: {fontFamily: SF Pro Text, fontSize: 10, fontWeight: 400, lineHeight: 1.25, letterSpacing: 0}
-  button: {fontFamily: SF Pro Text, fontSize: 17, fontWeight: 400, lineHeight: 1.20, letterSpacing: 0}
-  eyebrow: {fontFamily: SF Pro Text, fontSize: 11, fontWeight: 500, lineHeight: 1.20, letterSpacing: 0.1}
-  mono: {fontFamily: SF Mono, fontSize: 13, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0}
-rounded: {xs: 4, sm: 8, md: 10, lg: 14, xl: 20, xxl: 28, pill: 9999, full: 9999}
-spacing: {xxs: 4, xs: 8, sm: 12, md: 16, lg: 20, xl: 24, xxl: 32, section: 44}
+  hero: {fontFamily: "SF Pro Display", fontSize: 40, fontWeight: 400, lineHeight: 44}
+  title: {fontFamily: "SF Pro Display", fontSize: 34, fontWeight: 700, lineHeight: 41}
+  section: {fontFamily: "SF Pro Text", fontSize: 22, fontWeight: 600, lineHeight: 27}
+  body: {fontFamily: "SF Pro Text", fontSize: 17, fontWeight: 400, lineHeight: 22}
+  label: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 600, lineHeight: 20}
+  caption: {fontFamily: "SF Pro Text", fontSize: 12, fontWeight: 400, lineHeight: 16}
+spacing:
+  screen-horizontal: 16
+  section-gap: 24
+  card-padding: 16
+  control-gap: 12
+rounded:
+  control: 10
+  card: 14
+  sheet: 20
+  pill: 999
 components:
-  button-primary: {backgroundColor: "{colors.brand-secure}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.full}", padding: 16}
-  button-primary-pressed: {backgroundColor: "#28A745", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.full}"}
-  button-secondary: {backgroundColor: "{colors.surface-1}", textColor: "{colors.primary}", typography: "{typography.button}", rounded: "{rounded.md}", padding: [10, 14]}
-  button-tertiary: {backgroundColor: "{colors.canvas}", textColor: "{colors.primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [8, 12]}
-  list-row: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body-lg}", rounded: "{rounded.xs}", padding: [12, 16]}
-  call-control: {backgroundColor: "{colors.inverse-surface-2}", textColor: "{colors.inverse-ink}", typography: "{typography.body-sm}", rounded: "{rounded.full}", padding: 16}
-  text-input: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: [9, 12]}
-  status-badge: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.pill}", padding: [3, 7]}
-  bottom-nav: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink-subtle}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: [8, 8]}
+  primary-action: {fill: "system green", text: "white", shape: "large circle", minimumTarget: 64}
+  secondary-action: {fill: "system grouped gray", text: "system blue or black", border: "none", shape: "rounded rectangle"}
+  primary-card: {fill: "white grouped contact block", radius: 14, padding: 16, divider: "system hairline"}
+  navigation: {fill: "white or translucent system chrome", selected: "system blue", inactive: "gray", items: 5}
 ---
 
 # Overview
 
-Phone is a direct native iOS utility. White list surfaces, system blue, restrained gray dividers, and SF typography make the information hierarchy familiar; active calls switch to a blurred, immersive dark layer with circular controls.
+Phone is a direct native iOS utility whose visual identity is rooted in platform geometry and action semantics. White list surfaces, grouped light-gray forms, SF typography, blue navigation, green call initiation, red hang-up or deletion, circular keypad controls, and a fixed five-item tab bar make the interface immediately familiar. Active calls deliberately break from the light shell with a full-screen blurred dark color field and translucent circular controls.
 
-**Key Characteristics:** white lists, blue navigation, green call action, red end and delete controls, five-tab shell, large keypad circles, grouped contact rows, and a blurred in-call background.
+The product avoids decorative cards and brand artwork. Lists, forms, segmented controls, wheel pickers, native keyboards, action sheets, and modal contact panels create the structure. Whitespace is often substantial in keypad and empty states, while contact editing becomes compact and row-driven.
 
 # Non-negotiable visual invariants
 
-- The reference consistently shows white lists.
-- Navigation consistently uses blue navigation.
-- Sampled screens consistently use green call action.
-- The reference consistently shows red end and delete controls.
-- Navigation consistently uses five-tab shell.
-- The reference consistently shows large keypad circles.
-- The reference consistently shows grouped contact rows.
-- The reference consistently shows a blurred in-call background.
+- Primary utility screens use white canvas and native grouped-gray sections; they do not become a custom card dashboard.
+- System blue marks selected tabs, links, information buttons, navigation actions, and editable values; it does not replace semantic green or red.
+- The keypad is a centered 3-by-4 grid of large circular keys with a separate large green circular call button below.
+- Active call screens fill the viewport with a dark blurred multicolor field and use translucent circular call controls plus a distinct red end-call circle.
+- The persistent bottom bar contains five labeled items with blue selected content and gray inactive content.
+- Contacts, recents, voicemail, ringtone, and form content use full-width rows, thin dividers, native chevrons, and minimal shadow.
+- Contact identity is expressed through large circular photo, Memoji, or initials avatars rather than rectangular profile imagery.
+- Empty tabs preserve generous blank space and concise system text; they do not introduce decorative illustrations or promotional copy.
 
 # Color and surfaces
 
-### Brand & Accent
+White `#FFFFFF` is the base for keypad, contacts, recents, favorites, voicemail, and detail content. System grouped gray `#F2F2F7` sits behind grouped forms, search, segmented controls, and modal content. Hairlines use `#E5E5EA`; deeper gray is reserved for disabled or pressed native controls.
 
-System blue owns navigation, selected tabs, links, edit actions, and information controls. Green starts calls; red ends calls or deletes history.
+System blue `#007AFF` identifies navigation, selected tab items, links, edit/add actions, info controls, and current selection. Green `#34C759` is reserved for starting or adding a call-related action. Red `#FF3B30` ends calls and marks delete or remove controls. Primary text is near-black, and secondary values, labels, timestamps, and inactive tabs are gray. These semantic roles are non-interchangeable; a generic single-brand tint would break the reference.
 
-### Surface
-
-White carries lists and contact details; iOS grouped gray supports search and segmented controls; the call surface uses dark blur and translucent circles.
-
-### Text
-
-Black leads names and numbers, medium gray carries labels and secondary values, and white appears on the active call layer.
-
-### Semantic
-
-Green means start or connected, red means terminate or delete, and blue means selectable or current.
+During a call, dark blurred color fills the screen edge to edge and white text/icons sit above translucent dark circles. Modal sheets rise over a dimmed or blurred version of the underlying light screen.
 
 # Typography
 
-### Font Family
+Use SF Pro Display and SF Pro Text. Large list-tab titles such as Contacts or Voicemail use approximately 34 points bold and align to the leading content edge. The dialed number can use 28–40 points at regular weight, centered above the keypad. Contact names and major detail headings sit around 20–22 points semibold; list rows and form values use 17 points regular; secondary labels and tab captions use 10–13 points in gray.
 
-Use SF Pro Display for large titles and dialed numbers and SF Pro Text for lists, tabs, labels, and controls.
-
-### Hierarchy
-
-| Token | Size | Weight | Use |
-|---|---:|---:|---|
-| display-lg | 34 points | 700 | Large list title |
-| display-md | 28 points | 600 | Dialed number |
-| headline | 22 points | 600 | Contact name |
-| body-lg | 17 points | 400 | List row |
-| caption | 10 points | 400 | Tab label |
-
-### Principles
-
-- Follow native iOS title, row, and navigation proportions.
-- Keep phone numbers and names visually dominant.
-- Use color to communicate action semantics, not decoration.
-
-### Note on Font Substitutes
-
-SF Pro is the reference. On other platforms use the local system sans while preserving size and weight relationships.
+Compact modal and sheet titles are centered around 17 points semibold. Navigation actions are blue, regular or semibold, and remain text-based. Phone numbers need clear digit grouping and may use tabular numerals. Dynamic Type should grow list rows, grouped fields, and empty-state text; keypad digits and critical call state must remain visually dominant without clipping.
 
 # Screen composition
 
-### Spacing System
+The keypad screen places the status area above a large quiet upper field, then the entered number, centered 3-by-4 keypad, green call circle, and five-item tab bar above the home indicator. The keypad occupies the middle rather than filling the entire viewport, allowing large balanced negative space.
 
-Use a 4 points base, 12–16 points list-row padding, standard iOS gutters, and generous empty space around keypad and call controls.
+List tabs use a large leading title and compact edit/add actions at top, optional search or segmented control beneath, full-width rows or a sparse empty state through the middle, and the tab bar fixed at bottom. Contact-detail screens center a large circular identity image near the top, place round communication/info actions below it, then use rounded white grouped blocks for details. Contact editing appears as a modal sheet or navigation surface with compact stacked rows, inline add/remove controls, keyboards, and wheel pickers.
 
-### Grid & Container
+Active calls replace the tab bar and white canvas entirely. Identity and call state occupy the upper area, two rows of three translucent circular controls sit through the middle/lower area, and a red end-call circle anchors the bottom above the home indicator. Error or wait states preserve this immersive field and may add a large lower dismiss action.
 
-Lists are single column; keypad is a centered 3-by-4 circular grid; active call controls form two rows of three.
-
-### Whitespace Philosophy
-
-Whitespace is structural and native: sparse utilities remain calm, while rows and dividers provide enough scanning rhythm without card clutter.
-
-Surface hierarchy observed in the source:
-
-| Level | Treatment | Use |
-|---|---|---|
-| 0 | White canvas | Lists and keypad |
-| 1 | Grouped gray fill | Search and segmented controls |
-| 2 | Native sheet | Contact forms |
-| 3 | Blur with translucent circles | Active call |
-
-### Decorative Depth
-
-Reserve depth for system blur during calls and subtle grouped-control shading; avoid ornamental shadows.
+Typical list and form insets follow native 16-point rhythm; row separators align after avatars or icons. Search fields are inset and rounded. Content must clear the bottom bar, keyboard, sheets, and home indicator.
 
 # Navigation appearance
 
-Use a five-item bottom tab bar with blue active state, gray inactive icons, and large-title navigation above lists.
+The bottom bar is a white full-width native tab surface with five icon-and-label items. Selected icon and label are blue; inactive content is gray. It is compact and safe-area aware without a floating capsule or custom selection background.
+
+Large-title navigation appears over lists, while contact editing and modal pages use compact centered titles with blue Cancel, Done, Edit, Clear, plus, or back actions at the edges. Contact sheets have rounded top corners above a dimmed or blurred context. Product behavior and information architecture come from approved Research and Planning artifacts.
 
 # Components
 
-### Buttons
+Keypad controls are large light-gray circles with centered dark digits and small letter groups; pressed state darkens the fill. The green call control and red hang-up control are larger or visually isolated circles with white phone glyphs. In-call controls use translucent dark circles, white icons and labels, and clear selected fills for mute or speaker.
 
-Start call uses a large green circle, end call a large red circle, and navigation actions use borderless system-blue text.
+Search fields are native rounded gray bars. Segmented controls use the standard All/Missed-like compact capsule. List rows use flat white fill, black primary label, gray supporting label, blue info controls or actions, a chevron where needed, and an inset hairline. Contact detail groups are white blocks with about 14-point corners on a grouped-gray canvas.
 
-### Cards & Containers
-
-Use flat list rows and grouped contact panels rather than custom floating cards.
-
-### Inputs & Forms
-
-Search and contact editing follow native iOS behavior; their presentation must retain this blue, gray, SF, and spacing system.
+Editing forms use full-width grouped rows, green plus and red minus circles, native text and number keyboards, a date wheel, ringtone checkmarks, action sheets, and avatar/photo selection panels. Error presentation can use a large full-width dismiss button. Favorites may include a small dismissible helper banner above the list.
 
 # Imagery and icons
 
-Reserve depth for system blur during calls and subtle grouped-control shading; avoid ornamental shadows.
+The product uses system symbols, circular contact photos, initials avatars, Memoji/avatar selection, and a heavily blurred call background. Photos and Memoji are identity content rather than decoration. Keep avatars circular and preserve face-safe crops. The in-call background must remain full bleed and sufficiently blurred to support white labels and translucent controls.
 
-Contact avatars are circles; no decorative illustration is used; the call background is full-bleed and heavily blurred.
-
-If final imagery is not yet available, any placeholder must preserve the documented scale, placement, crop, and visual weight rather than removing that layer.
+No repeatable authored illustration system is present. Empty states should use concise text or system symbols rather than invented artwork. If a contact image is absent, use a platform-consistent initials or avatar treatment rather than unrelated stock photography.
 
 # States
 
-Expose call state, duration, missed state, voicemail availability, and destructive affordances directly in context.
+Observed keypad states include idle and number entered. Call states include active, waiting, mute selected, speaker selected, error, and dismissed/error recovery. The dark blurred background, white identity/state text, translucent controls, and semantic green/red actions remain consistent.
+
+Contact states include list, empty and filled new-contact form, added email/URL/address/date/related/social/note/phone fields, text and numeric keyboards, wheel date picker, ringtone selection, no-photo media state, and avatar/style chooser. Recents include normal and edit/delete; favorites include empty, helper banner, contact picker, add sheet, and populated list. Voicemail includes empty and calling-keypad presentation.
 
 # iOS adaptation
 
-### Touch Targets
+Use native safe-area-aware navigation, tab bars, grouped tables, sheets, keyboards, wheel pickers, and call presentation. The keypad grid should adapt its vertical spacing to available height while preserving circular keys and a clear separation from tab bar. Active call content must avoid the Dynamic Island/status area and home indicator while keeping the blurred field edge to edge.
 
-Tabs, keypad keys, call controls, list rows, and edit actions remain at least 44 points.
+Tabs, keypad keys, call controls, list rows, blue edge actions, info buttons, add/remove controls, ringtone choices, and avatar actions require at least 44-point effective targets. VoiceOver should announce keypad digits with letters, entered number, call state, contact identity, and control selection. Semantic green/red meaning needs explicit action labels.
 
-### Collapsing Strategy
-
-Preserve number, call state, primary controls, names, and tab destinations; truncate secondary labels first.
-
-### Image Behavior
-
-Keep avatars circular and call backgrounds full-bleed with sufficient blur for white control contrast.
-
-Apply these rules within current iPhone safe areas and scrolling containers. Keep interactive targets at least 44 points, preserve a logical VoiceOver order, and let Dynamic Type wrap supporting text without flattening the documented hierarchy. Preserve the documented appearance.
+Dynamic Type expands rows and form groups; contact labels can wrap while values remain associated. On compact widths, stack or truncate secondary contact detail before shrinking primary names, numbers, or call controls. Follow current semantic system colors for appearance adaptation rather than manually inverting the light shell; preserve blur and contrast on the active-call layer.
 
 # Anti-generic checklist
 
-- Don't replace lists with decorative card grids.
-- Don't use blue for destructive or call-start actions.
-- Don't add brand illustration or promotional surfaces.
-- Do not replace the documented hierarchy with a generic stack of identical white cards or `Form` sections.
-- Do not use default blue tint, an unstyled `TabView`, arbitrary SF Symbols, or uniform corner radii when they contradict the recorded tokens and components.
-- Do not omit compositionally important imagery while final assets are pending; preserve its footprint with a faithful placeholder.
+- Do not replace the native five-item tab bar with a floating pill or custom card navigation.
+- Do not use blue for start-call, end-call, delete, or remove actions; green and red carry explicit semantics.
+- Do not turn contact, recent, voicemail, ringtone, or form rows into floating decorative cards.
+- Do not replace the centered circular keypad with a grid of rounded rectangles.
+- Do not flatten the active call into a white sheet or remove its full-screen blurred field.
+- Do not substitute rectangular profile photography for circular contact identity.
+- Do not invent onboarding, empty-state, or promotional illustration where the reference uses native content and whitespace.
+- Do not apply one radius to keypad circles, grouped contact blocks, search fields, sheets, and avatars.
 
 </design-context>

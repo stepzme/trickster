@@ -3,177 +3,97 @@
 version: 1
 platform: iOS
 name: Clock-design-analysis
-description: "A pure-black iOS utility shell with oversized white titles, thin separators, warm amber actions, precise time numerals, native grouped sheets, and an unwavering four-tab structure. The visual language is nearly decoration-free: hierarchy comes from type scale, spacing, system controls, and direct manipulation."
+description: "A pure-black iOS utility with oversized precise time numerals, white and gray hierarchy, warm orange actions, green and red semantic controls, native dark lists and sheets, and a compact four-item bottom bar without decorative imagery."
 colors:
-  primary: "#FF9F0A"
-  on-primary: "#000000"
-  primary-soft: "#3B2C13"
-  ink: "#FFFFFF"
-  ink-muted: "#A0A0A6"
-  ink-subtle: "#636366"
   canvas: "#000000"
-  surface-1: "#1C1C1E"
-  surface-2: "#2C2C2E"
-  hairline: "#2D2D30"
-  semantic-success: "#30D158"
-  semantic-danger: "#FF453A"
-  semantic-overlay: "#000000"
+  surface-primary: "#1C1C1E"
+  surface-secondary: "#2C2C2E"
+  accent-primary: "#FF9F0A"
+  accent-secondary: "#30D158"
+  text-primary: "#FFFFFF"
+  text-secondary: "#A0A0A6"
+  divider: "#38383A"
+  destructive: "#FF453A"
 typography:
-  display-xl: { fontFamily: SF Pro Display, fontSize: 40, fontWeight: 300, lineHeight: 1.05, letterSpacing: -0.8 }
-  display-lg: { fontFamily: SF Pro Display, fontSize: 34, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.5 }
-  display-md: { fontFamily: SF Pro Display, fontSize: 28, fontWeight: 700, lineHeight: 1.15, letterSpacing: -0.3 }
-  headline: { fontFamily: SF Pro Display, fontSize: 22, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0 }
-  card-title: { fontFamily: SF Pro Text, fontSize: 17, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: SF Pro Text, fontSize: 16, fontWeight: 500, lineHeight: 1.30, letterSpacing: 0 }
-  body-lg: { fontFamily: SF Pro Text, fontSize: 17, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
-  body: { fontFamily: SF Pro Text, fontSize: 15, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
-  body-sm: { fontFamily: SF Pro Text, fontSize: 13, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
-  caption: { fontFamily: SF Pro Text, fontSize: 10, fontWeight: 400, lineHeight: 1.20, letterSpacing: 0 }
-  button: { fontFamily: SF Pro Text, fontSize: 17, fontWeight: 400, lineHeight: 1.20, letterSpacing: 0 }
-  eyebrow: { fontFamily: SF Pro Text, fontSize: 12, fontWeight: 500, lineHeight: 1.20, letterSpacing: 0.2 }
-  mono: { fontFamily: SF Mono, fontSize: 15, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
-rounded: { xs: 4, sm: 8, md: 10, lg: 14, xl: 18, xxl: 24, pill: 9999, full: 9999 }
-spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
+  hero: {fontFamily: "SF Pro Display", fontSize: 64, fontWeight: 300, lineHeight: 68}
+  title: {fontFamily: "SF Pro Display", fontSize: 34, fontWeight: 700, lineHeight: 41}
+  section: {fontFamily: "SF Pro Text", fontSize: 20, fontWeight: 600, lineHeight: 25}
+  body: {fontFamily: "SF Pro Text", fontSize: 17, fontWeight: 400, lineHeight: 22}
+  label: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 500, lineHeight: 20}
+  caption: {fontFamily: "SF Pro Text", fontSize: 11, fontWeight: 400, lineHeight: 14}
+spacing:
+  screen-horizontal: 16
+  section-gap: 28
+  card-padding: 16
+  control-gap: 12
+rounded:
+  control: 12
+  card: 14
+  sheet: 22
+  pill: 999
 components:
-  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.md}", padding: [12, 16]}
-  time-row: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body-lg}", rounded: "{rounded.xs}", padding: [12, 16]}
-  grouped-list: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body-lg}", rounded: "{rounded.md}", padding: [4, 12]}
-  input: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: [8, 10]}
-  bottom navigation: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: [8, 12]}
+  text-action: {text: "#FF9F0A", height: 44}
+  time-display: {fill: "#000000", text: "#FFFFFF", numeralStyle: "thin tabular"}
+  grouped-row: {fill: "#2C2C2E", text: "#FFFFFF", height: 48, radius: 12}
+  circular-control: {diameter: 72, fill: "#1C1C1E", active: "#30D158", destructive: "#FF453A"}
+  navigation: {fill: "#000000", active: "#FF9F0A", inactive: "#8E8E93"}
 ---
 
 # Overview
 
-Clock is a native dark utility in which time values, direct actions, and platform controls do all the visual work. Amber marks selection and creation; everything else stays black, white, and gray.
-
-**Key Characteristics:**
-- True-black full-screen canvas.
-- Large bold navigation titles and light time numerals.
-- Warm amber active tabs and actions.
-- Native lists, pickers, toggles, search, and swipe actions.
-- No decorative imagery in the app shell.
+Clock is a sparse native dark utility where time values and direct manipulation carry nearly all visual weight. Large white titles and exceptionally large thin numerals sit on uninterrupted black. Orange marks navigation and editing actions; gray grouped surfaces appear only where configuration needs structure.
 
 # Non-negotiable visual invariants
 
-- Sampled screens consistently use true-black full-screen canvas.
-- Navigation consistently uses large bold navigation titles and light time numerals.
-- The reference consistently shows warm amber active tabs and actions.
-- The reference consistently shows native lists, pickers, toggles, search, and swipe actions.
-- Imagery consistently uses no decorative imagery in the app shell.
+- True black fills the main viewport; gray is reserved for grouped controls, sheets, and overlays.
+- Live time or countdown numerals are the largest visual object on instrument screens.
+- Orange consistently marks active navigation and text actions.
+- Main roots retain a compact black bottom bar with small icons and labels.
+- Configuration uses native-looking grouped rows, wheels, switches, checkmarks, and thin separators.
+- Stopwatch and timer actions are large separated circles, not a generic full-width button.
+- Destructive actions are red; start and enabled states use green.
+- Empty space remains black and calm, without promotional cards or decorative imagery.
 
 # Color and surfaces
 
-### Brand & Accent
-- **Primary** ({colors.primary}): Active tab, add, save, and edit actions.
-- **Primary Soft** ({colors.primary-soft}): Low-emphasis amber tint when needed.
-
-### Surface
-- **Canvas** ({colors.canvas}): Main World Clock, Alarm, Stopwatch, and Timer screens.
-- **Surface 1** ({colors.surface-1}): Modal sheets and picker backgrounds.
-- **Surface 2** ({colors.surface-2}): Grouped controls, fields, and selected picker rows.
-- **Hairline** ({colors.hairline}): Row separators.
-
-### Text
-- **Ink** ({colors.ink}): Titles, times, and selected values.
-- **Ink Muted** ({colors.ink-muted}): Secondary settings and inactive tabs.
-- **Ink Subtle** ({colors.ink-subtle}): Empty-state and disabled text.
-
-### Semantic
-- **Success** ({colors.semantic-success}): Enabled switches.
-- **Danger** ({colors.semantic-danger}): Delete and remove actions.
-- **Overlay** ({colors.semantic-overlay}): Sheet backdrop.
+The canvas is pure black. White carries titles and critical values; medium gray supports labels, inactive tabs, and secondary data. Dark graphite surfaces organize grouped settings and sheets without shadows. Orange is the recurring interactive accent, green identifies start/enabled treatment, and red is limited to stop, remove, or delete. Automatic system blue, light grouped backgrounds, gradients, and ornamental textures would break the reference.
 
 # Typography
 
-### Font Family
-- **SF Pro Display** — screen titles and large time values.
-- **SF Pro Text** — actions, city labels, settings, and tab labels.
-- **SF Mono** — optional substitute for aligned numeric readouts only.
-
-### Hierarchy
-Use 34 points bold for screen titles, 40 points light for times, 17 points for rows and actions, 13 points for supporting values, and 10 points for tab labels.
-
-### Principles
-- Give live values the largest visual weight.
-- Keep action labels short and familiar.
-- Use tabular numerals where alignment matters.
-- Preserve Dynamic Type without truncating critical values.
-
-### Note on Font Substitutes
-Use the platform system sans. **Inter** is acceptable off Apple platforms if numeric widths are controlled.
+Root titles are bold large-title scale. Timer and stopwatch values use very large, light-weight, tabular system numerals; row labels remain standard 17-point text with smaller gray support. Numeric alignment and stable widths matter more than decorative type. Dynamic Type may grow titles and rows vertically, while primary time readouts should use available-width fitting with a readable minimum rather than wrap.
 
 # Screen composition
 
-### Spacing System
-Use a 4 points base, 16 points screen gutters, 12 points row padding, and 24–32 points separation between functional groups.
-
-### Grid & Container
-Each tab is a single full-height list or instrument above a fixed four-item tab bar. Modal configuration uses centered sheets and grouped rows.
-
-### Whitespace Philosophy
-Allow large black empty fields around sparse utility states. Do not fill unused space with cards or promotion.
-
-Surface hierarchy observed in the source:
-
-Keep the main interface flat. Sheets, search, and grouped settings gain depth from gray surfaces rather than shadows.
-
-### Decorative Depth
-The only decorative depth is native blur behind overlays and the analog clock face; avoid added gradients or artwork.
+List archetypes place a large title at the top, full-width rows beneath it, and the fixed bottom bar at the safe-area edge. Sparse or empty states intentionally leave most of the black viewport open. Search and add surfaces introduce a keyboard or a rounded dark sheet. Alarm editing uses a centered picker wheel above grouped rounded rows. Stopwatch screens reserve the upper and middle field for a huge readout or dial, place two circular actions below, and use the remaining area for laps. Timer screens similarly center a wheel or circular countdown and keep primary circles clearly separated.
 
 # Navigation appearance
 
-World Clock, Alarm, Stopwatch, and Timer remain fixed in the bottom tab bar; detail screens use native back, cancel, and save actions.
+The bottom bar is black with compact gray icons and labels; the selected item turns orange. Top actions such as edit, add, cancel, save, or done are orange text with generous hit areas. Detail stacks use white titles and restrained native back treatment. Sheets have rounded top corners, graphite fill, and dim the black content behind them. These properties do not prescribe product destinations.
 
 # Components
 
-### Buttons
-
-Use amber text actions for Add, Save, Done, and Set Up; reserve filled buttons for rare modal confirmation.
-
-### Cards & Containers
-
-Use full-width time rows, thin separators, grouped settings blocks, and modal sheets; avoid generic card grids.
-
-### Inputs & Forms
-
-Use native dark search fields, wheels, toggles, checkmarks, and labeled settings rows.
+Time rows are full-width black rows divided by hairlines, with primary values and gray context aligned to opposite edges. Grouped settings cells share a graphite container and use chevrons, checkmarks, switches, or trailing values. Picker wheels keep a dark field and centered selection band. Circular controls use concentric dark rings with green, red, orange, or gray state colors. Swipe actions and minus controls use solid red. Search fields are rounded graphite. Pressed and disabled states lower brightness while retaining geometry.
 
 # Imagery and icons
 
-The only decorative depth is native blur behind overlays and the analog clock face; avoid added gradients or artwork.
-
-Do not introduce photography or illustration. Analog clock faces are functional instruments and stay within a square or circular frame.
-
-If final imagery is not yet available, any placeholder must preserve the documented scale, placement, crop, and visual weight rather than removing that layer.
+There is no authored illustration or photographic system. Analog faces, circular progress, widgets, and tab glyphs are functional instruments, not decorative imagery. Icons are familiar monochrome system-style symbols at restrained scale. Do not introduce art, hero graphics, emoji, or symbol-filled cards.
 
 # States
 
-Express no clocks, no alarm, active alarm, running stopwatch, countdown, and selected weekdays with direct text or native state indicators.
+Observed states include empty and populated time lists, edit/reorder/delete, search results and no results, alarm creation and repeat selection, label and sound configuration, custom vibration recording, stopwatch running/paused/laps, timer running/paused/resumed, alerts, and a notification banner. The black canvas, orange actions, semantic green/red, and precise numeric hierarchy remain constant.
 
 # iOS adaptation
 
-### Touch Targets
-
-Keep tabs, add, edit, rows, picker controls, toggles, and swipe actions at least 44 points.
-
-### Collapsing Strategy
-
-Preserve current time or timer state, primary control, and tab navigation. Move secondary configuration to a sheet rather than compressing rows.
-
-### Image Behavior
-
-Keep clock faces and widgets aspect-fit. No content imagery should be introduced.
-
-Apply these rules within current iPhone safe areas and scrolling containers. Keep interactive targets at least 44 points, preserve a logical VoiceOver order, and let Dynamic Type wrap supporting text without flattening the documented hierarchy. Preserve the documented appearance.
+Respect top and bottom safe areas and keep the bottom bar above the home indicator. Use scrollable grouped content and keyboard avoidance for search and labels. Native sheets and alerts may retain platform motion while using the recorded dark surfaces. Keep rows, tabs, wheel controls, and circles at least 44 points tappable. VoiceOver should announce the primary time before controls and supporting state. Dynamic Type expands lists and sheets; compact widths preserve the central readout and move secondary settings into scrolling content. Dark appearance is canonical and should not be automatically inverted.
 
 # Anti-generic checklist
 
-- Don't add promotional cards.
-- Don't place white panels on the main canvas.
-- Don't replace direct labels with novel icons.
-- Don't animate a clock at the expense of legibility.
-- Do not replace the documented hierarchy with a generic stack of identical white cards or `Form` sections.
-- Do not use default blue tint, an unstyled `TabView`, arbitrary SF Symbols, or uniform corner radii when they contradict the recorded tokens and components.
-- Do not omit compositionally important imagery while final assets are pending; preserve its footprint with a faithful placeholder.
+- No white cards, light forms, or decorative gradients on the black canvas.
+- No default blue tint replacing orange actions.
+- No ordinary full-width button replacing paired circular timer controls.
+- No small bold number replacing the dominant thin time readout.
+- No unstyled `TabView` with mismatched selected color or spacing.
+- No card grid, photography, illustration, or arbitrary SF Symbols as decoration.
+- No duplicate explanatory or mood-setting copy in sparse empty space.
 
 </design-context>

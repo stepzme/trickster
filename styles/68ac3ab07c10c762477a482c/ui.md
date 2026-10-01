@@ -3,202 +3,116 @@
 version: 1
 platform: iOS
 name: Balance-Pay-design-analysis
-description: "A compact digital-wallet interface built from white surfaces, very pale lavender grouped cards, a magenta-to-violet brand gradient, black utility type, and small purple line icons. Finance, payments, history, and support remain deliberately sparse, with balances and transaction amounts as the only strong hierarchy."
+description: "A sparse light iPhone wallet built from broad white fields, pale lavender-gray cards, compact SF-style financial hierarchy, purple-to-magenta brand accents, native modal layers, and almost no content imagery."
 colors:
-  primary: "#B72CF3"
-  on-primary: "#FFFFFF"
-  primary-soft: "#F3E7FF"
-  accent-magenta: "#F018B6"
-  accent-violet: "#6F26F5"
-  ink: "#101010"
-  ink-muted: "#77777E"
-  ink-subtle: "#A9A9B0"
   canvas: "#FFFFFF"
-  surface-1: "#F5F4F8"
-  surface-2: "#ECEAF0"
-  hairline: "#DFDDE4"
-  semantic-success: "#16B768"
-  semantic-danger: "#E44558"
-  semantic-overlay: "#000000"
+  surface-primary: "#F4F3F8"
+  surface-secondary: "#ECEAF0"
+  accent-primary: "#8B35E8"
+  accent-secondary: "#ED27B7"
+  text-primary: "#101010"
+  text-secondary: "#77777E"
+  divider: "#DFDDE4"
+  destructive: "#E44558"
 typography:
-  display-xl: { fontFamily: SF Pro Display, fontSize: 36, fontWeight: 700, lineHeight: 1.05, letterSpacing: -0.7 }
-  display-lg: { fontFamily: SF Pro Display, fontSize: 30, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.5 }
-  display-md: { fontFamily: SF Pro Display, fontSize: 25, fontWeight: 700, lineHeight: 1.12, letterSpacing: -0.4 }
-  headline: { fontFamily: SF Pro Display, fontSize: 21, fontWeight: 700, lineHeight: 1.18, letterSpacing: -0.2 }
-  card-title: { fontFamily: SF Pro Text, fontSize: 16, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: SF Pro Text, fontSize: 17, fontWeight: 500, lineHeight: 1.35, letterSpacing: 0 }
-  body-lg: { fontFamily: SF Pro Text, fontSize: 16, fontWeight: 400, lineHeight: 1.45, letterSpacing: 0 }
-  body: { fontFamily: SF Pro Text, fontSize: 14, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
-  body-sm: { fontFamily: SF Pro Text, fontSize: 12, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
-  caption: { fontFamily: SF Pro Text, fontSize: 10, fontWeight: 400, lineHeight: 1.20, letterSpacing: 0 }
-  button: { fontFamily: SF Pro Text, fontSize: 14, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0 }
-  eyebrow: { fontFamily: SF Pro Text, fontSize: 11, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0.2 }
-  mono: { fontFamily: SF Mono, fontSize: 12, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
-rounded: { xs: 7, sm: 11, md: 15, lg: 20, xl: 26, xxl: 32, pill: 9999, full: 9999 }
-spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
+  hero: {fontFamily: "SF Pro Display", fontSize: 34, fontWeight: 700, lineHeight: 40}
+  title: {fontFamily: "SF Pro Display", fontSize: 22, fontWeight: 700, lineHeight: 27}
+  section: {fontFamily: "SF Pro Text", fontSize: 18, fontWeight: 600, lineHeight: 23}
+  body: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 400, lineHeight: 21}
+  label: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 600, lineHeight: 20}
+  caption: {fontFamily: "SF Pro Text", fontSize: 12, fontWeight: 400, lineHeight: 17}
+spacing:
+  screen-horizontal: 16
+  section-gap: 28
+  card-padding: 16
+  control-gap: 12
+rounded:
+  control: 14
+  card: 18
+  sheet: 28
+  pill: 999
 components:
-  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.md}", padding: [14, 18]}
-  balance-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 14 }
-  action-icon: { backgroundColor: "{colors.primary-soft}", textColor: "{colors.primary}", typography: "{typography.caption}", rounded: "{rounded.full}", padding: 12 }
-  transaction-row: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: 12 }
-  setting-row: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: 12 }
-  bottom navigation: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: [8, 12]}
+  primary-action: {fill: "purple", text: "white", height: 52, radius: 14}
+  secondary-action: {fill: "pale lavender-gray", text: "near-black", height: 48, radius: 14}
+  balance-card: {fill: "pale lavender-gray", radius: 18, padding: 16}
+  amount-chip: {fill: "pale purple", text: "purple", radius: 999}
+  navigation: {fill: "white translucent", active: "purple", inactive: "gray"}
 ---
 
 # Overview
 
-Balance Pay is intentionally small and calm: two financial products, clear transfer and top-up actions, a filtered history, settings, and support. Purple supplies identity while most everyday tasks remain monochrome and spacious.
-
-**Key Characteristics:**
-- White canvas with pale lavender grouped cards.
-- Magenta-violet gradient reserved for brand moments.
-- Sparse purple line icons.
-- Balance-first finance screen.
-- Four-item bottom navigation.
+Balance Pay is deliberately calm and sparse. Large white fields surround a small number of pale grouped cards, financial rows, and forms. Purple carries active controls and wallet identity; a magenta-to-violet gradient is concentrated in splash or compact brand marks. Amounts and balances are the strongest information, while native iOS sheets, keyboards, alerts, and permission dialogs remain visually compatible with the restrained shell.
 
 # Non-negotiable visual invariants
 
-- Sampled screens consistently use white canvas with pale lavender grouped cards.
-- Sampled screens consistently use magenta-violet gradient reserved for brand moments.
-- The reference consistently shows sparse purple line icons.
-- The reference consistently shows balance-first finance screen.
-- Navigation consistently uses four-item bottom navigation.
+- White occupies most functional screens, with intentionally unused space around a few financial tasks.
+- Product, history, and settings groups use very pale lavender-gray cards without prominent shadow.
+- Purple marks selected navigation, active actions, chips, icons, and chart progress; gradient is reserved for concentrated brand moments.
+- Balance, amount, and transaction values are heavier than product names, descriptions, dates, and legal copy.
+- Forms use one vertical column, generous separation, and a full-width CTA close to the lower safe area.
+- Bottom navigation stays light and visually soft, with one clearly purple selected item and muted gray inactive items.
+- Bottom sheets, receipts, and confirmations use large rounded tops, a drag handle, and a dimmed or blurred backdrop.
+- Success green and error red appear only in outcome panels, alerts, or compact feedback, never as ambient decoration.
 
 # Color and surfaces
 
-### Brand & Accent
-- **Pay Purple** ({colors.primary}): Active tab, actions, icons, and emphasis.
-- **Magenta** ({colors.accent-magenta}) and **Violet** ({colors.accent-violet}): Launch and app-mark gradient.
-- Keep everyday financial surfaces neutral.
+White is the dominant canvas. Pale lavender-gray separates balance cards, transaction groups, settings rows, and disabled controls; slightly darker neutral supports selection or nested content. Dividers are minimal. Near-black carries amounts and headings, with medium gray for helper, date, and legal text.
 
-### Surface
-- **Canvas** ({colors.canvas}): Default screen background.
-- **Surface 1** ({colors.surface-1}): Balance, payment, history, and settings groups.
-- **Surface 2** ({colors.surface-2}): Disabled and selected segment background.
-- **Hairline** ({colors.hairline}): Quiet separation.
-
-### Text
-- **Ink** ({colors.ink}): Balances, headings, and actions.
-- **Ink Muted** ({colors.ink-muted}): Supporting transaction copy.
-- **Ink Subtle** ({colors.ink-subtle}): Disabled and placeholder text.
-
-### Semantic
-- **Success** ({colors.semantic-success}): Incoming funds and enabled wallet.
-- **Danger** ({colors.semantic-danger}): Blocking, logout, and failure.
-- **Overlay** ({colors.semantic-overlay}): Confirmation focus.
+Purple is the operational accent. Magenta and violet can blend in the splash, logo, or compact wallet mark, but transaction screens remain neutral. Green can fill a successful result header or mark incoming value; red is limited to errors, destructive wallet actions, and retry feedback. Default blue tint, decorative gradients behind ledgers, and heavy dark cards would break the system.
 
 # Typography
 
-### Font Family
+Use SF Pro. Screen titles are compact bold rather than oversized, body copy sits near 13–15 points, and captions/legal text are small gray. Amounts, balances, history totals, and statistics values use semibold or bold weight. Labels remain sentence case and direct.
 
-- **SF Pro Display** — screen headings and empty-state title.
-- **SF Pro Text** — balances, rows, forms, and navigation.
-- **SF Mono** — identifiers only.
-
-### Hierarchy
-
-| Token | Size | Weight | Use |
-|---|---|---|---|
-| `{typography.display-xl}` | 36 points | 700 | Launch or major state |
-| `{typography.headline}` | 21 points | 700 | Screen heading |
-| `{typography.card-title}` | 16 points | 600 | Product and amount |
-| `{typography.body}` | 14 points | 400 | Row and form copy |
-| `{typography.caption}` | 10 points | 400 | Tab and secondary metadata |
-| `{typography.button}` | 14 points | 600 | Primary action |
-
-### Principles
-
-- Make balance and amount the strongest information.
-- Keep product names and actions direct.
-- Use purple in labels sparingly.
-- Align amounts and dates consistently.
-
-### Note on Font Substitutes
-
-Use **Inter** or the platform system sans when SF Pro is unavailable.
+Dynamic Type should increase rows and allow explanations to wrap while preserving amount prominence. Legal text can occupy more lines; it should not force CTAs below an unreachable keyboard. Do not make titles, values, body, and captions nearly identical in size or weight.
 
 # Screen composition
 
-### Spacing System
+Finance and overview archetypes use a centered navigation title, optional small actions at the edges, then one or two full-width pale product cards separated by broad white space. Action glyphs or short rows sit inside or immediately below the card. A light bottom bar stays above the home indicator.
 
-Use a 4 points base, 12 points gutters, 10–12 points card gaps, and 12–16 points group padding.
+Payment and settings archetypes are one-column lists of rounded rows, chevrons, and compact icons. Transfer, top-up, certificate, and identity forms place a short title above fields, amount chips or selectors in the middle, and a full-width action near the lower safe area. Keyboard presence reduces whitespace before shrinking controls.
 
-### Grid & Container
-
-Finance and Payments stack full-width product cards. History uses a segmented product switch, statistics summary, filters, and a one-column ledger. Settings use grouped rows.
-
-### Whitespace Philosophy
-
-Keep large open regions around the few primary tasks; do not fill unused space with promotions.
-
-Surface hierarchy observed in the source:
-
-| Level | Treatment | Use |
-|---|---|---|
-| 0 | White canvas | Default screen |
-| 1 | Pale lavender card | Products and settings |
-| 2 | Purple gradient | Brand launch only |
-| 3 | Scrim plus confirmation | Blocking or logout |
-
-### Decorative Depth
-
-Use a smooth gradient only for launch and app icon. Functional screens remain flat.
+History and statistics use segmented pills, filter chips, ledger rows, bold totals, and simple donut/ring graphics. Confirmation, limit, receipt, and destructive states rise as rounded sheets over the existing screen. Outcome screens can allocate a large green or neutral upper panel but keep the rest spare.
 
 # Navigation appearance
 
-Finance, Payments, History, and Support form the bottom bar. Notifications and settings sit in the finance header.
+Top bars resemble restrained native iOS navigation: centered title, standard-scale back icon, and occasional compact settings or notification glyph. The bottom bar is white or subtly translucent, pinned to the safe area, with small monochrome glyphs, compact labels, purple selection, and gray inactive states.
+
+Sheets have a visible drag handle and large top radius; standard alerts remain native. Pill segments use a pale track and stronger selected label or fill. This appearance is reusable without importing the source product's destination structure.
 
 # Components
 
-### Buttons
+Balance cards are broad pale panels with product mark, label, bold amount, and a few concise actions. Transaction rows pair a small rounded icon with description/date and a trailing signed amount. Amount chips are compact pills; selected bank or wallet rows use a clear check or purple emphasis.
 
-Purple handles top-up and confirmation. Neutral gray can indicate unavailable transfer. Destructive wallet actions remain explicit and separated.
-
-### Cards & Containers
-
-Balance cards expose product, masked balance, certificate or limits, and gift balance. Payment cards group transfer and top-up actions. Transaction rows show direction, amount, time, and description.
-
-### Inputs & Forms
-
-Onboarding uses numeric code entry. Transfer, top-up, certificate, and support forms use one-column fields and clear submit actions.
+Primary buttons are full-width purple with white semibold text. Disabled buttons retain geometry but become low-contrast gray. Forms use flat pale inputs, native numeric keyboards, OTP/passcode cells, and short helper text. Donut charts use a purple arc with neutral remainder. Chat uses a quiet message list and native-feeling composer.
 
 # Imagery and icons
 
-Use a smooth gradient only for launch and app icon. Functional screens remain flat.
+There is almost no content imagery. Small rounded wallet/card glyphs, monochrome utility symbols, the SBP mark, and a compact purple gradient brand mark provide identification. The gradient splash can fill the viewport, but it should not be mistaken for an illustration or copied behind functional content.
 
-The inspected product uses no expressive illustration system. Use only simple purple line icons or abstract gradient brand marks consistent with the interface.
-
-If final imagery is not yet available, any placeholder must preserve the documented scale, placement, crop, and visual weight rather than removing that layer.
+No standalone authored illustration system was observed. Do not invent characters, scenes, stock finance artwork, or decorative hero images. Sparse screens should remain sparse.
 
 # States
 
-Show hidden balance, gift funds, income, expense, empty history, notification, wallet limit, and blocked state in direct text.
+Observed states include empty notifications, disabled and filled forms, numeric keyboard, contact permission, red retry feedback, limit information sheet, selected bank, transfer confirmation, success receipt, filtered history, expense/income statistics, wallet block confirmation, blocked/unblocked row, and active support chat.
+
+Across states, white space, pale cards, compact typography, purple operation color, and native modal geometry stay constant. Success and failure may introduce green or red locally without recoloring the whole interface.
 
 # iOS adaptation
 
-### Touch Targets
+Respect status and home-indicator areas, pin the bottom bar and lower CTAs with safe-area insets, and move active inputs above numeric or text keyboards. Use vertical scrolling for forms, history, settings, and support; sheets should remain reachable at compact height. Keep icon and row targets at least 44 points.
 
-Keep tabs, product actions, filters, toggles, settings rows, and support composer at least 44 points.
-
-### Collapsing Strategy
-
-Keep products stacked and amounts visible. Truncate descriptions before dates or transaction direction.
-
-### Image Behavior
-
-No content imagery is required. Preserve gradient aspect ratio for launch and contain simple product marks.
-
-Apply these rules within current iPhone safe areas and scrolling containers. Keep interactive targets at least 44 points, preserve a logical VoiceOver order, and let Dynamic Type wrap supporting text without flattening the documented hierarchy. Preserve the documented appearance.
+VoiceOver order should follow title, value, supporting detail, then action; amounts need explicit signed semantics beyond color. Dynamic Type expands rows and sheet height. Preserve the observed light appearance and native system prompt transitions rather than inventing an unsupported dark theme.
 
 # Anti-generic checklist
 
-- Don't add promotional modules to empty space.
-- Don't use gradient behind transaction content.
-- Don't hide balances without an obvious reveal gesture.
-- Don't rely on color alone for income and expense.
-- Don't invent decorative illustration.
-- Do not replace the documented hierarchy with a generic stack of identical white cards or `Form` sections.
-- Do not use default blue tint, an unstyled `TabView`, arbitrary SF Symbols, or uniform corner radii when they contradict the recorded tokens and components.
-- Do not omit compositionally important imagery while final assets are pending; preserve its footprint with a faithful placeholder.
+- Do not fill intentional white space with promotions, tips, or decorative copy.
+- Do not place the purple-magenta gradient behind transaction lists or every card.
+- Do not substitute default blue tint, an unstyled `TabView`, or a grouped `Form`.
+- Do not add stock finance illustrations, characters, or empty-state scenes.
+- Do not flatten amounts, descriptions, dates, and legal copy into one text role.
+- Do not rely on green/red alone to communicate transaction direction or outcome.
+- Do not apply heavy shadows, glass panels, or one uniform radius to every surface.
+- Do not replace native alerts and permission prompts with fake in-app replicas.
 
 </design-context>

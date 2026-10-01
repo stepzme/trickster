@@ -3,146 +3,116 @@
 version: 1
 platform: iOS
 name: Yandex-Translate-design-analysis
-description: "A utility-first translation interface built from white and pale-gray surfaces, dark slate typography, restrained orange accents, simple line icons, and large focused text areas. Mode switching stays persistent while history, favorites, cards, and settings remain intentionally plain."
-colors: { primary: "#F39A24", on-primary: "#FFFFFF", primary-soft: "#FFF1D9", accent: "#3A89D8", ink: "#242B31", ink-muted: "#777E84", ink-subtle: "#B6BBC0", canvas: "#F5F7FA", surface-1: "#FFFFFF", surface-2: "#EEF1F4", hairline: "#E0E4E8", semantic-success: "#3CAA6D", semantic-warning: "#F39A24", semantic-danger: "#D95454", semantic-overlay: "#000000" }
+description: "A dense light utility interface combining a cool-gray canvas, white rounded translation cards, large focused text, compact contextual accents, dark selected chips, minimal top chrome, and a five-item icon-and-label tab bar."
+colors:
+  canvas: "#F5F6FA"
+  surface-primary: "#FFFFFF"
+  surface-secondary: "#EEF0F4"
+  accent-primary: "#3D95F3"
+  accent-secondary: "#F6D957"
+  text-primary: "#111820"
+  text-secondary: "#7A8088"
+  divider: "#E0E3E8"
+  destructive: "#EF5A4D"
 typography:
-  display-xl: { fontFamily: Yandex Sans, fontSize: 40, fontWeight: 500, lineHeight: 1.05, letterSpacing: -0.8 }
-  display-lg: { fontFamily: Yandex Sans, fontSize: 32, fontWeight: 500, lineHeight: 1.10, letterSpacing: -0.5 }
-  display-md: { fontFamily: Yandex Sans, fontSize: 27, fontWeight: 600, lineHeight: 1.15, letterSpacing: -0.3 }
-  headline: { fontFamily: Yandex Sans, fontSize: 22, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0 }
-  card-title: { fontFamily: Yandex Sans, fontSize: 16, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: Yandex Sans, fontSize: 16, fontWeight: 500, lineHeight: 1.30, letterSpacing: 0 }
-  body-lg: { fontFamily: Yandex Sans, fontSize: 16, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
-  body: { fontFamily: Yandex Sans, fontSize: 14, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
-  body-sm: { fontFamily: Yandex Sans, fontSize: 12, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
-  caption: { fontFamily: Yandex Sans, fontSize: 10, fontWeight: 500, lineHeight: 1.20, letterSpacing: 0 }
-  button: { fontFamily: Yandex Sans, fontSize: 15, fontWeight: 500, lineHeight: 1.20, letterSpacing: 0 }
-  eyebrow: { fontFamily: Yandex Sans, fontSize: 11, fontWeight: 500, lineHeight: 1.20, letterSpacing: 0.2 }
-  mono: { fontFamily: SF Mono, fontSize: 12, fontWeight: 500, lineHeight: 1.30, letterSpacing: 0 }
-rounded: { xs: 4, sm: 8, md: 12, lg: 16, xl: 22, xxl: 28, pill: 9999, full: 9999 }
-spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
+  hero: {fontFamily: "SF Pro Display", fontSize: 52, fontWeight: 400, lineHeight: 58}
+  title: {fontFamily: "SF Pro Display", fontSize: 22, fontWeight: 600, lineHeight: 27}
+  section: {fontFamily: "SF Pro Text", fontSize: 20, fontWeight: 600, lineHeight: 25}
+  body: {fontFamily: "SF Pro Text", fontSize: 16, fontWeight: 400, lineHeight: 21}
+  label: {fontFamily: "SF Pro Text", fontSize: 14, fontWeight: 600, lineHeight: 18}
+  caption: {fontFamily: "SF Pro Text", fontSize: 12, fontWeight: 400, lineHeight: 16}
+spacing:
+  screen-horizontal: 12
+  section-gap: 24
+  card-padding: 16
+  control-gap: 10
+rounded:
+  control: 12
+  card: 16
+  sheet: 28
+  pill: 999
 components:
-  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.xs}", padding: [13, 18]}
-  translation-panel: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body-lg}", rounded: "{rounded.md}", padding: 16 }
-  history-row: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: 12 }
-  input: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: [11, 13]}
-  bottom navigation: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: [8, 10]}
+  translation-card: {fill: "surface-primary", radius: 16, textArea: "dominant", actions: "compact lower row"}
+  language-control: {fill: "surface-primary", height: 44, layout: "paired labels with central swap"}
+  selection-chip: {fill: "surface-secondary", selectedFill: "text-primary", selectedText: "white", radius: 999}
+  bottom-navigation: {fill: "surface-primary", selected: "filled dark icon", unselected: "gray outline icon"}
+  collection-tile: {fill: "contextual saturated color", radius: 14, layout: "two-column"}
 ---
 
 # Overview
 
-Yandex Translate keeps language input, output, and mode switching dominant while learning and history stay one tap away.
+Yandex Translate is a functional, text-dominant interface built from a cool light-gray page and rounded white working surfaces. The central translation card, language controls, and active text receive most of the viewport, while icons and metadata remain compact. Accent color changes by context rather than behaving as one dominant brand wash: blue marks links and actions, yellow marks learning or theme emphasis, green appears in switches, and saturated colors differentiate collection tiles. Decorative imagery is rare and subordinate.
 
 # Non-negotiable visual invariants
 
-- The reference consistently shows source and target languages visible.
-- The reference consistently shows preserve input when switching modes.
-- The reference consistently shows make audio and save actions discoverable.
-- The reference consistently shows a utility-first translation interface built from white and pale-gray surfaces.
-- The reference consistently shows dark slate typography.
-- The reference consistently shows restrained orange accents.
-- The reference consistently shows simple line icons.
-- Large focused text areas. Mode switching stays persistent while history.
+- Light operational screens use a cool-gray canvas with distinct white rounded cards and sheets.
+- The translation text area remains the largest and quietest content region, with a noticeably larger placeholder or result than surrounding labels.
+- Top navigation stays minimal: centered compact title with at most one leading and one trailing control.
+- Language controls use paired compact labels with a central swap icon and remain visually tied to the main card.
+- Selected chips use a dark fill with light text; unselected chips use pale-gray fill rather than outlines.
+- The bottom bar uses five icon-above-label items on white with tiny labels and a darker filled selected icon.
+- Functional text and controls dominate; sparse illustration must never displace the primary language content.
+- Modal sheets dim the underlying screen, use rounded top corners and a grabber, and retain native iOS alert or keyboard geometry when present.
 
 # Color and surfaces
 
-### Brand & Accent
-Use orange for learning actions and chosen accents; keep translation controls slate or system blue.
+The main canvas is a very light cool gray around `#F5F6FA`; translation panels, lists, and sheets are white. Pale gray around `#EEF0F4` distinguishes inactive chips, secondary fields, and grouped controls. Primary type is dark slate, secondary labels are medium gray, and dividers are light and unobtrusive.
 
-### Surface
-Use a pale gray canvas with white translation panels, lists, cards, and sheets.
-
-### Text
-Use dark slate for entered and translated text, gray for pronunciation and metadata, and pale gray for placeholders.
-
-### Semantic
-Use blue for enabled settings, orange for study actions, and red for destructive confirmation.
+Blue around `#3D95F3` is used for action, link, or transient emphasis. Yellow around `#F6D957` supports learning and selected themes; green belongs to enabled toggles. Red-orange around `#EF5A4D` appears in destructive or contextual collection accents. Saturated blue, orange, coral, red, and lime can fill collection tiles, but the overall operational field must remain light and neutral. A single global default-blue tint or a dominant orange wash would misrepresent the observed contextual accent system.
 
 # Typography
 
-### Font Family
-Use Yandex Sans for interface and translated text, with script-appropriate fallback fonts.
+Use SF Pro with script-appropriate system fallbacks. Centered top titles use roughly 17 point semibold type; page headings use 20-22 point semibold; list and translation body rows use 15-16 point regular; chips, tabs, and small labels use 10-13 points. The empty input placeholder is larger at about 22 points, while focused full-screen translated words can reach approximately 48-56 points at regular weight.
 
-### Hierarchy
-Use 32–40 points for focused word display, 22 points for page titles, 16 points for entries, 14 points body, and 10–12 points labels.
-
-### Principles
-Give source and target text equal clarity while keeping language direction visible.
-
-### Note on Font Substitutes
-Use the platform sans or Inter and preserve native-script coverage.
+Translated text should use generous line height and wrap naturally inside the dominant card. Preserve native-script glyph coverage and do not force all languages into one fixed line count. Dynamic Type must expand the card and rows while retaining a clear distinction between main text, language labels, actions, and metadata.
 
 # Screen composition
 
-### Spacing System
-Use a 4 points base, 16 points gutters, 12 points gaps, and 16 points translation-panel padding.
+Most portrait screens preserve the status bar, use compact top chrome, and place white rounded content within unusually tight 6-12 point horizontal margins on a pale canvas. The main translation archetype stacks a language row, a large input/output field, and a compact lower action row inside one dominant white card. Supporting results and dictionary regions continue vertically below in additional flat or rounded white sections.
 
-### Grid & Container
-Place language selectors above a large input/output panel and keep five modes in the bottom bar.
+The list archetype uses dense full-width white rows under a centered title, with sparse separators, trailing chevrons or switches, and little decorative padding. The collection archetype uses a two-column grid of square-ish saturated tiles. The modal archetype dims the underlying screen and raises a rounded white half-height sheet with a small grabber. The camera archetype switches to a black full-screen field with a compact top language pill and circular controls near the bottom.
 
-### Whitespace Philosophy
-Leave generous empty space around the active translation and keep history denser.
-
-Surface hierarchy observed in the source:
-
-Use subtle surface separation and sheets; avoid decorative shadow.
-
-### Decorative Depth
-Depth is functional: modals, cards, and dimmed overlays only.
+Native keyboard screens give the lower half to the keyboard while keeping the active card and language controls visible above. Avoid turning every subsection into an elevated card; dense utility content should remain scannable and flat.
 
 # Navigation appearance
 
-Favorites, Photo, Text, Sites, and Dialogue stay in the bottom bar.
+Top chrome uses a centered 17 point semibold title, one compact leading control such as back or close, and an optional trailing gear or overflow icon. Language selection is a separate paired control with a central swap symbol, not a navigation title. Secondary pages use simple back navigation and sparse actions.
+
+The persistent bottom bar has a white base, five evenly spaced icons above 10-11 point labels, gray inactive items, and a darker or filled selected icon. Bottom sheets use a dim scrim, white rounded panel, and small grabber. The adapted product derives destinations from approved Research and Planning rather than copying the reference's mode labels.
 
 # Components
 
-### Buttons
+The translation card is a large white rounded rectangle with about 16 point padding, a compact language row, dominant text area, and small action icons aligned along the lower edge. Input and result text share the same calm surface but use scale, tone, and spacing to separate states.
 
-Use compact icon controls in translation and one full-width orange action for learning.
+Selection chips are rounded pills: selected uses near-black fill and white text, while unselected uses pale gray and dark text. Dictionary and grammar cards use dense text, blue linked terms, and small diagrams without heavy shadow. Collection tiles are two-column, square-ish, saturated color blocks with concise high-contrast labels.
 
-### Cards & Containers
-
-Use translation panels, history rows, flashcards, favorites, and configuration sheets.
-
-### Inputs & Forms
-
-Support text, URL, voice, camera, and dialogue input with visible clear and swap actions.
+Settings rows are white or canvas-level strips with trailing chevrons and native switches. Camera controls are high-contrast circles on black. Disabled actions retain their footprint with pale gray fill and subdued text; alerts and action menus preserve familiar iOS geometry.
 
 # Imagery and icons
 
-Depth is functional: modals, cards, and dimmed overlays only.
+The product is text- and symbol-led. Icons are compact line or filled glyphs positioned in top chrome, the translation-card action row, chips, lists, and bottom navigation. Camera previews and photo grids use real imagery with functional crops. Small timelines and diagrams remain crisp and subordinate to language content.
 
-Contain camera results and site thumbnails; rely on icons rather than decorative imagery.
-
-If final imagery is not yet available, any placeholder must preserve the documented scale, placement, crop, and visual weight rather than removing that layer.
+A few rounded pastel vector assets appear in empty, onboarding, dialogue, and widget contexts, but their roles and treatments are too sparse to define a standalone illustration system. Do not expand those isolated assets into a decorative layer across ordinary translation screens. When camera or photo content is required, preserve its real-image area instead of substituting a symbol.
 
 # States
 
-Show listening, loading, offline package, saved, remembered, and deleted state in context.
+Observed states include splash/loading, empty input, active language selector, keyboard-open entry, translated result, selected dictionary/example/declension chips, correction mode, rounded sheets, native alerts, empty history, search with no results, disabled collection creation, privacy toggle variants, loading spinner, black camera mode, photo picker grid, settings and accent selection, and offline download or delete states. Pale canvas, white working surfaces, compact chrome, and contextual accents remain consistent.
 
 # iOS adaptation
 
-### Touch Targets
+Respect the status and home-indicator safe areas on light, camera, sheet, and tab-bar screens. Translation content, lists, and collection grids require vertical scrolling; bottom sheets should scroll internally when Dynamic Type or the keyboard reduces space. Keep native keyboard, alert, photo picker, and camera transitions native.
 
-Keep language, swap, voice, camera, save, and bottom navigation actions at least 44 points.
-
-### Collapsing Strategy
-
-Preserve languages, current text, translation, and input actions; collapse history metadata first.
-
-### Image Behavior
-
-Contain camera captures and recognition crops without obscuring detected text.
-
-Apply these rules within current iPhone safe areas and scrolling containers. Keep interactive targets at least 44 points, preserve a logical VoiceOver order, and let Dynamic Type wrap supporting text without flattening the documented hierarchy. Preserve the documented appearance.
+Provide at least 44-point targets for language controls, swap, audio, microphone, camera, save, chips, settings actions, and bottom navigation even when visible glyphs are smaller. On compact widths, keep the dominant card full width and let text wrap; move action icons to a second row before shrinking them. VoiceOver should read language direction, main text, result, card actions, supporting results, then persistent navigation. Preserve the observed light appearance unless an approved product requirement defines another theme.
 
 # Anti-generic checklist
 
-- Don't decorate the translation canvas.
-- Don't hide offline limitations.
-- Don't make destructive history actions immediate.
-- Do not replace the documented hierarchy with a generic stack of identical white cards or `Form` sections.
-- Do not use default blue tint, an unstyled `TabView`, arbitrary SF Symbols, or uniform corner radii when they contradict the recorded tokens and components.
-- Do not omit compositionally important imagery while final assets are pending; preserve its footprint with a faithful placeholder.
+- Do not replace the dominant translation card with a generic form or stack of equally sized cards.
+- Do not apply one global blue or orange tint to every control; accents are contextual.
+- Do not ship an unstyled `TabView`; preserve icon-above-label geometry, tiny labels, and dark filled selection.
+- Do not render history, settings, or offline content as default `Form` sections with stock spacing.
+- Do not make main translation text the same size as labels, chips, or metadata.
+- Do not decorate routine text screens with large invented illustrations or photography.
+- Do not replace camera, photo, or language actions with arbitrary symbols that obscure their meaning.
+- Do not apply one corner radius to chips, cards, sheets, grid tiles, and camera controls.
 
 </design-context>

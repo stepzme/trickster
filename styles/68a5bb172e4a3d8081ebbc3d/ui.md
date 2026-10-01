@@ -3,332 +3,125 @@
 version: 1
 platform: iOS
 name: Radio-Arzamas-design-analysis
-description: "A dark editorial audio interface built on warm charcoal surfaces, oversized white cultural headlines, and a single vivid yellow accent. Museum photography, archival imagery, and illustrated cover art carry discovery while thin white outlines, compact metadata, and a restrained five-tab shell keep playback and library tasks legible."
-
+description: "A warm-charcoal editorial audio interface dominated by cultural cover imagery, tightly wrapped heavy white headlines, a single vivid yellow accent, icon-only five-item navigation, and restrained dark sheets and playback controls."
 colors:
-  primary: "#FFD81A"
-  on-primary: "#211E21"
-  primary-soft: "#4A431B"
-  ink: "#F7F6F4"
-  ink-muted: "#B8B4B6"
-  ink-subtle: "#858184"
-  canvas: "#211E21"
-  surface-1: "#2D2A2E"
-  surface-2: "#3B383C"
-  surface-3: "#4A474B"
-  hairline: "#5E5A60"
-  outline: "#EEECEF"
-  semantic-success: "#77B86A"
-  semantic-danger: "#E46B72"
-  semantic-overlay: "#000000"
-
+  canvas: "#211F22"
+  surface-primary: "#333136"
+  surface-secondary: "#3B383D"
+  accent-primary: "#FFD91A"
+  accent-secondary: "#36C86A"
+  text-primary: "#F6F4F2"
+  text-secondary: "#AAA4A8"
+  divider: "#5E5960"
+  destructive: "#E46B72"
 typography:
-  display-xl:
-    fontFamily: System Sans
-    fontSize: 40
-    fontWeight: 800
-    lineHeight: 0.95
-    letterSpacing: -1.2
-  display-lg:
-    fontFamily: System Sans
-    fontSize: 34
-    fontWeight: 800
-    lineHeight: 0.98
-    letterSpacing: -0.9
-  display-md:
-    fontFamily: System Sans
-    fontSize: 28
-    fontWeight: 700
-    lineHeight: 1.05
-    letterSpacing: -0.5
-  headline:
-    fontFamily: System Sans
-    fontSize: 23
-    fontWeight: 600
-    lineHeight: 1.15
-    letterSpacing: -0.2
-  card-title:
-    fontFamily: System Sans
-    fontSize: 16
-    fontWeight: 500
-    lineHeight: 1.25
-    letterSpacing: 0
-  subhead:
-    fontFamily: System Sans
-    fontSize: 17
-    fontWeight: 500
-    lineHeight: 1.35
-    letterSpacing: 0
-  body-lg:
-    fontFamily: System Sans
-    fontSize: 16
-    fontWeight: 400
-    lineHeight: 1.45
-    letterSpacing: 0
-  body:
-    fontFamily: System Sans
-    fontSize: 14
-    fontWeight: 400
-    lineHeight: 1.42
-    letterSpacing: 0
-  body-sm:
-    fontFamily: System Sans
-    fontSize: 12
-    fontWeight: 400
-    lineHeight: 1.35
-    letterSpacing: 0
-  caption:
-    fontFamily: System Sans
-    fontSize: 11
-    fontWeight: 400
-    lineHeight: 1.30
-    letterSpacing: 0
-  button:
-    fontFamily: System Sans
-    fontSize: 14
-    fontWeight: 500
-    lineHeight: 1.20
-    letterSpacing: 0
-  eyebrow:
-    fontFamily: System Sans
-    fontSize: 11
-    fontWeight: 500
-    lineHeight: 1.25
-    letterSpacing: 0.3
-  mono:
-    fontFamily: System Mono
-    fontSize: 12
-    fontWeight: 400
-    lineHeight: 1.35
-    letterSpacing: 0
-
-rounded:
-  xs: 4
-  sm: 6
-  md: 10
-  lg: 14
-  xl: 20
-  xxl: 28
-  pill: 9999
-  full: 9999
-
+  hero: {fontFamily: "SF Pro Display", fontSize: 36, fontWeight: 800, lineHeight: 38}
+  title: {fontFamily: "SF Pro Display", fontSize: 28, fontWeight: 750, lineHeight: 31}
+  section: {fontFamily: "SF Pro Display", fontSize: 23, fontWeight: 700, lineHeight: 27}
+  body: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 400, lineHeight: 21}
+  label: {fontFamily: "SF Pro Text", fontSize: 14, fontWeight: 600, lineHeight: 18}
+  caption: {fontFamily: "SF Pro Text", fontSize: 12, fontWeight: 400, lineHeight: 16}
 spacing:
-  xxs: 4
-  xs: 8
-  sm: 12
-  md: 16
-  lg: 24
-  xl: 32
-  xxl: 48
-  section: 64
-
+  screen-horizontal: 16
+  section-gap: 24
+  card-padding: 16
+  control-gap: 12
+rounded:
+  control: 12
+  card: 10
+  sheet: 24
+  pill: 999
 components:
-  button-primary:
-    backgroundColor: "{colors.primary}"
-    textColor: "{colors.on-primary}"
-    typography: "{typography.button}"
-    rounded: "{rounded.pill}"
-    padding: [14, 20]
-  button-secondary:
-    backgroundColor: "{colors.canvas}"
-    textColor: "{colors.ink}"
-    borderColor: "{colors.outline}"
-    typography: "{typography.button}"
-    rounded: "{rounded.pill}"
-    padding: [13, 20]
-  topic-chip:
-    backgroundColor: "{colors.canvas}"
-    textColor: "{colors.primary}"
-    borderColor: "{colors.primary}"
-    typography: "{typography.body-sm}"
-    rounded: "{rounded.pill}"
-    padding: [8, 12]
-  content-card:
-    backgroundColor: "{colors.surface-1}"
-    textColor: "{colors.ink}"
-    typography: "{typography.body}"
-    rounded: "{rounded.md}"
-    padding: 0
-  subscription-card:
-    backgroundColor: "{colors.surface-2}"
-    textColor: "{colors.ink}"
-    typography: "{typography.body}"
-    rounded: "{rounded.xl}"
-    padding: 16
-  search-field:
-    backgroundColor: "{colors.surface-2}"
-    textColor: "{colors.ink}"
-    typography: "{typography.body}"
-    rounded: "{rounded.md}"
-    padding: [13, 14]
-  mini-player:
-    backgroundColor: "{colors.surface-2}"
-    textColor: "{colors.ink}"
-    typography: "{typography.body-sm}"
-    rounded: "{rounded.sm}"
-    padding: [8, 10]
-  bottom-nav:
-    backgroundColor: "{colors.canvas}"
-    textColor: "{colors.ink-subtle}"
-    typography: "{typography.caption}"
-    rounded: "{rounded.xs}"
-    height: 56
+  primary-action: {fill: "yellow", text: "warm charcoal semibold", height: 50, shape: "rounded pill"}
+  secondary-action: {fill: "transparent charcoal", text: "white", border: "thin white", shape: "rounded pill"}
+  primary-card: {fill: "cultural artwork with dark lower fade", radius: 10, padding: 0, text: "white"}
+  navigation: {fill: "warm charcoal", selected: "yellow icon", inactive: "white or muted icon", labels: "none"}
 ---
 
 # Overview
 
-Radio Arzamas is a dark editorial listening environment. Warm charcoal rather than pure black keeps archival imagery and art reproductions from feeling harsh. White display type overlays image-led heroes, while yellow is reserved for the active tab, saved state, outlined topic filters, and subscription actions.
+Radio Arzamas is an image-led cultural listening environment set almost entirely on warm near-black. Paintings, engravings, portraits, archival photographs, and authored cover compositions provide most of the color and identity. Large tightly wrapped white headlines sit directly on hero imagery or uninterrupted charcoal, while yellow is reserved for unmistakable interaction and selection.
 
-**Key Characteristics:**
-- Warm near-black canvas with no separate light mode in the reviewed screens.
-- One yellow accent used sparingly and consistently.
-- Large, tightly stacked cultural headlines over full-width imagery.
-- Dense horizontal shelves for courses, podcasts, topics, and lecturers.
-- Thin white outlines for secondary actions and circular playback controls.
-- Persistent mini-player that remains visually subordinate to content.
+The interface remains editorial rather than dashboard-like. Wide visual heroes and horizontal shelves alternate with compact metadata, outlined circular playback controls, dark modal sheets, and a persistent audio strip. Tonal layering replaces white cards and heavy shadows; the charcoal canvas stays visible enough to unify imagery from many historical periods.
 
 # Non-negotiable visual invariants
 
-- Sampled screens consistently use warm near-black canvas with no separate light mode in the reviewed screens.
-- The reference consistently shows one yellow accent used sparingly and consistently.
-- Imagery consistently uses large, tightly stacked cultural headlines over full-width imagery.
-- The reference consistently shows dense horizontal shelves for courses, podcasts, topics, and lecturers.
-- The reference consistently shows thin white outlines for secondary actions and circular playback controls.
-- Persistent mini-player that remains visually subordinate to content.
+- Warm charcoal fills the entire viewport, navigation, and most structural surfaces; pure black and light card canvases do not replace it.
+- Yellow is the single dominant UI accent and appears selectively in active navigation, selected filters, progress, subscription choices, and primary actions.
+- Cultural imagery is compositionally essential: heroes and cover cards occupy large areas and cannot be reduced to incidental thumbnails.
+- Editorial titles are heavy, white, tightly led, and allowed to wrap into forceful short lines rather than shrink into uniform body hierarchy.
+- Content discovery uses horizontal image shelves with partial neighboring cards visible against an uninterrupted dark canvas.
+- Playback controls are simple circles or thin white outlines; a compact dark mini-player may sit immediately above the bottom navigation.
+- Bottom navigation uses five icon-only items, with yellow for the selected icon and white or muted gray for inactive icons.
+- Sheets, search fields, subscription choices, and forms use lighter charcoal layers with deliberate rounded geometry, never default white system surfaces.
 
 # Color and surfaces
 
-### Brand & Accent
+The base is warm charcoal around `#211F22`, not neutral black. Primary and secondary layers rise only slightly to `#333136` and `#3B383D`, providing enough separation for search, mini-player, settings, paywall choices, and sheets without fragmenting the screen into cards. Dividers are muted gray-brown and used sparingly.
 
-- **Yellow** ({colors.primary}) marks selection, progress, bookmarks, filter outlines, and purchase actions.
-- **Yellow Soft** ({colors.primary-soft}) may support subtle progress or selected backgrounds but should never replace the clear yellow stroke or fill.
+Primary text is warm off-white `#F6F4F2`; supporting authors, durations, descriptions, and quiet actions use `#AAA4A8`. Vivid yellow around `#FFD91A` is the brand and interaction accent. Green appears only as a compact download or completion signal; destructive red is equally restrained. Content artwork is allowed to introduce additional hues, but those colors do not migrate into general controls. Default iOS blue would visibly break the reference.
 
-### Surface
-
-- **Canvas** ({colors.canvas}) is the default page and navigation background.
-- **Surface 1** ({colors.surface-1}) supports content rows and image fallbacks.
-- **Surface 2** ({colors.surface-2}) carries search, subscription cards, and the mini-player.
-- **Surface 3** ({colors.surface-3}) is limited to pressed or layered controls.
-
-### Text
-
-- **Ink** ({colors.ink}) is used for headlines and primary content.
-- **Muted** ({colors.ink-muted}) carries authors, descriptions, and secondary actions.
-- **Subtle** ({colors.ink-subtle}) is reserved for inactive tabs and quiet metadata.
-
-### Semantic
-
-Semantic success and danger appear only when the task requires them. Do not introduce additional bright hues into the shell; content artwork provides color variety.
+Hero photographs and cover artwork often fade into the canvas with a dark gradient rather than sit inside a raised panel. Modal focus is created with a dark scrim and a lighter charcoal rounded sheet, not with a bright background.
 
 # Typography
 
-### Font Family
+Use SF Pro Display as the iOS-safe substitute for the observed heavy rounded grotesk and SF Pro Text for metadata and controls. Hero titles are about 32–36 points in heavy or black weight with compact line height. Page and detail titles are 24–28 points bold; card titles are commonly 15–17 points medium or semibold. Body and metadata occupy the 12–16-point range, with secondary information lower in contrast.
 
-- Use a neutral system grotesk for interface and editorial display type.
-- Use serif typography only when it is part of supplied artwork, never as a competing UI family.
+The scale contrast between image-led headlines and metadata is pronounced. Preserve that contrast instead of making every text level 16–20 points. Most text is sentence case; compact uppercase may appear in small shelf labels but should not spread to descriptions. The serif identity belongs to the wordmark or supplied artwork, not the general UI.
 
-### Hierarchy
-
-| Token | Size | Weight | Use |
-|---|---|---|---|
-| `{typography.display-xl}` | 40 points | 800 | Home hero title |
-| `{typography.display-lg}` | 34 points | 800 | Course and campaign headline |
-| `{typography.display-md}` | 28 points | 700 | Screen or paywall heading |
-| `{typography.headline}` | 23 points | 600 | Catalog and library title |
-| `{typography.card-title}` | 16 points | 500 | Course and episode title |
-| `{typography.body}` | 14 points | 400 | Default copy |
-| `{typography.caption}` | 11 points | 400 | Duration, author, and count |
-
-### Principles
-
-- Break editorial headlines into short, forceful lines rather than shrinking them.
-- Use uppercase sparingly for shelf labels and metadata, not paragraph copy.
-- Keep episode descriptions readable and left-aligned.
-- Let content imagery and hierarchy create drama; avoid decorative interface type.
-
-### Note on Font Substitutes
-
-Use SF Pro Display/Text on iOS or Inter elsewhere. Preserve the heavy display weight and compact leading; do not substitute a rounded or friendly display face.
+At larger Dynamic Type sizes, let editorial headlines add lines and let descriptions expand vertically. Keep author, duration, download, and playback labels grouped with their related content; do not reduce the title below a recognisable editorial scale merely to preserve one-line cards.
 
 # Screen composition
 
-### Spacing System
+Most screens begin beneath the status safe area with either a full-width image hero fading into charcoal or a plain dark header with a large left-aligned title. Compact circular identity or utility controls may occupy the top edge. The middle alternates horizontal cover shelves, author portrait rows, detail metadata, searchable lists, forms, or playback content. The lower region contains continued scroll content, a mini-player strip when active, and the icon-only tab bar at the safe-area edge.
 
-Use a 4 points base, 12 points screen gutters, 12–16 points card gaps, and 24 points between editorial shelves. Detail pages use 16 points horizontal insets and larger 24–32 points gaps around the hero.
+Home-like screens use one vertical feed of editorial sections separated by roughly 24 points. Each section pairs a compact heading with a horizontally scrolling row; at least part of the next card remains visible. Detail screens devote the upper third or more to artwork and title, then use a single readable text column with playback and save controls. Full-player screens center cover art and primary transport controls, with progress and secondary actions kept visually subordinate. Search and library screens use broad dark fields and compact list or card results. Profile, FAQ, settings, registration, and support screens are quieter vertical columns rather than a different light theme.
 
-### Grid & Container
-
-Home and catalog use one vertical feed with horizontally scrolling card rows. Course detail screens keep controls and text in a single column. Circular author portraits form a separate horizontal row.
-
-### Whitespace Philosophy
-
-Whitespace is compact around shelves but generous around the hero title and playback button. Do not fill every dark area with panels; the uninterrupted canvas is part of the editorial tone.
-
-Surface hierarchy observed in the source:
-
-The system relies on tonal layering, image gradients, and bottom sheets rather than shadows. Fade hero imagery into the canvas. The mini-player and subscription sheet lift through a lighter charcoal surface, not a large drop shadow.
-
-### Decorative Depth
-
-Use dark image fades, overlapping artwork, and the persistent mini-player to create depth. Avoid ornamental glows, bevels, and visible shadow stacks.
+Bottom sheets for timer, filters, downloads, paid access, and subscription rise from a dimmed charcoal context with 18–24-point top corners. Outer gutters are normally about 16 points; imagery shelves may approach the edge while preserving the same leading alignment. Avoid placing a dark card behind every text group—the continuous canvas and vertical breathing space are part of the hierarchy.
 
 # Navigation appearance
 
-The five-item bottom bar stays on the canvas with yellow active state and muted inactive icons. Profile remains a circular top-right control; back actions use simple white chevrons.
+The bottom bar remains on the warm-charcoal field and uses five evenly spaced icons without persistent text labels. The selected icon is vivid yellow; inactive icons are white or muted gray. When present, the mini-player forms a distinct lighter-charcoal strip directly above it, with a thumbnail, compact title, and playback actions.
+
+Top navigation uses a small white back chevron and lightweight line icons for saving, downloading, sharing, settings, or more actions. A circular avatar/profile control may sit at the upper trailing edge. Sheets show a clear rounded top and may use a compact close affordance. Product behavior and information architecture come from the approved Research and Planning artifacts.
 
 # Components
 
-### Buttons
+The primary action is a high-visibility yellow rounded pill about 50 points high with warm-charcoal semibold text. Secondary actions remain dark with a thin white outline and white label. Selected topic or filter chips use yellow border and yellow text; unselected variants recede into charcoal with muted content. Subscription choice cards are thickly rounded: selected is filled yellow with dark text, while unselected remains charcoal with a fine light outline.
 
-Primary buttons use yellow fill and dark text. Secondary buttons remain charcoal with a thin white outline. Circular playback buttons follow the same outline treatment. Native controls must inherit these colors, radii, and typography rather than exposing default iOS blue.
+Editorial cards use paintings, photography, or designed cover art with roughly 6–10-point corners. A lower dark fade may carry a title and metadata; save or play affordances sit in controlled corners. Playback buttons are circular with thin white strokes or yellow emphasis. Author rows use circular portrait crops. Search and form fields are wide dark rounded rectangles with white entry text and muted placeholders.
 
-### Cards & Containers
-
-Use a wide image with a bottom dark fade, large white title, small explanatory line, pagination dots, bookmark, and outlined circular play action.
-Pair compact uppercase shelf labels with a chevron. Cards prioritize artwork, then title and author or episode count. Keep save affordances in the image corner.
-
-### Inputs & Forms
-
-Search uses a full-width charcoal field with white input text and a quiet clear action. Registration and support forms keep one column and outlined or yellow bottom actions.
+The mini-player is a compact lighter-charcoal strip, visually flatter than a sheet and denser than a content card. Timer, queue, filtering, and download actions live in rounded dark sheets with clear selection marks. Settings toggles may retain native behavior, but their tint and surrounding rows must follow the charcoal/yellow hierarchy.
 
 # Imagery and icons
 
-Use dark image fades, overlapping artwork, and the persistent mini-player to create depth. Avoid ornamental glows, bevels, and visible shadow stacks.
+Curated cultural imagery is the primary visual material: paintings, historical photographs, engravings, portraits, manuscripts, and illustrated podcast or course covers. Images use deliberate cover crops focused on the human subject, artwork focal point, or central object. Rectangular and softly rounded formats dominate; circles are reserved for author or identity portraits.
 
-Editorial imagery stays rectangular or softly rounded and may fade into the dark canvas. Circular crops are reserved for lecturer portraits and profile identity.
-
-If final imagery is not yet available, any placeholder must preserve the documented scale, placement, crop, and visual weight rather than removing that layer.
+Dark lower fades connect bright or detailed imagery to white text and the charcoal canvas. Some covers use authored collage or humorous graphic intervention, such as a pixel accessory layered onto a historical portrait. Such treatment is intentional cover art, not a license to scatter decorative symbols across the UI. Line icons remain simple white or yellow and must not compete with the artwork. If final imagery is pending, preserve its area, crop, and tonal balance with a faithful placeholder rather than removing the shelf or hero.
 
 # States
 
-The mini-player includes thumbnail, current title, replay, and play/pause. Full playback may add timer, queue, download, and sharing without changing the surrounding visual grammar.
-Place monthly and annual options side by side. The selected plan becomes yellow with dark text; the unselected plan remains charcoal with a white outline. Use one full-width yellow confirmation button.
+Observed listening states include no player, a compact mini-player, and a full player with artwork, progress, transport, timer, queue, download, and sharing controls. Downloads use green sparingly while the rest of the state remains charcoal, white, and yellow. Saved, downloaded, filtered, and history screens maintain the same dark canvas and image-forward card treatment.
+
+Paid-content and subscription states appear in rounded dark sheets or cards; selected plans become yellow and processing can add a dim overlay and centered progress. Search shows both keyboard-active entry and populated/filtered results. Settings include toggle states; help includes an offline state; registration and support show keyboard-visible forms. Native payment confirmation can appear above the dark app while the underlying composition remains visible.
 
 # iOS adaptation
 
-### Touch Targets
+Use safe-area-aware dark containers so the canvas continues beneath status and home-indicator regions. Horizontal shelves should preserve stable artwork aspect ratios and expose a partial following card rather than compressing all cards onto one screen. Long detail, search, profile, FAQ, and form screens scroll vertically; mini-player and tab bar require explicit bottom content inset.
 
-Keep playback, bookmarks, topic chips, and bottom navigation at least 44 points where they are direct controls, even when the visible icon is smaller.
+All icon-only tabs, playback circles, bookmark/download actions, chips, and compact header controls need at least 44-point hit regions even when their visible glyphs are smaller. VoiceOver order should announce section title, artwork title, author/duration, and then actions. Provide labels for icon-only navigation and playback controls. Keyboard-visible forms must keep the active field and primary action above the keyboard.
 
-### Collapsing Strategy
-
-Keep two partial content cards visible to communicate horizontal scrolling. Allow large titles to wrap before reducing below 32 points, and preserve the bottom bar plus mini-player above the safe area.
-
-### Image Behavior
-
-Crop hero images around the main subject and retain the lower dark fade for text. Shelf artwork keeps a stable aspect ratio and should scroll rather than compress.
-
-Apply these rules within current iPhone safe areas and scrolling containers. Keep interactive targets at least 44 points, preserve a logical VoiceOver order, and let Dynamic Type wrap supporting text without flattening the documented hierarchy. Preserve the documented appearance.
+Dynamic Type may increase card height and move metadata below an image, but hero imagery, headline scale, and shelf rhythm should remain recognisable. On compact widths, reduce shelf card width enough to preserve the partial-next-card cue and stack subscription options before shrinking text. The observed product is deliberately dark; preserve its warm tonal hierarchy instead of applying generic light/dark inversion.
 
 # Anti-generic checklist
 
-- Do not introduce colorful navigation chrome.
-- Do not put every shelf inside a separate card.
-- Do not use heavy shadows or glossy glass effects.
-- Do not center long descriptions.
-- Do not turn archival imagery into decorative background noise.
-- Do not replace the documented hierarchy with a generic stack of identical white cards or `Form` sections.
-- Do not use default blue tint, an unstyled `TabView`, arbitrary SF Symbols, or uniform corner radii when they contradict the recorded tokens and components.
-- Do not omit compositionally important imagery while final assets are pending; preserve its footprint with a faithful placeholder.
+- Do not replace the continuous warm-charcoal field with white `List`, `Form`, or generic black backgrounds.
+- Do not introduce default blue tint; selection and action belong to the restrained yellow system.
+- Do not reduce cultural artwork to small leading icons or remove imagery while waiting for final assets.
+- Do not use an unstyled labeled `TabView`; the observed bar is icon-only with yellow selection.
+- Do not put every section inside an identical raised charcoal card; much of the hierarchy depends on open dark space.
+- Do not substitute arbitrary SF Symbols for authored cover art or historical imagery.
+- Do not use uniform capsule corners for editorial cards, sheets, fields, and playback controls.
+- Do not let the mini-player, metadata, or secondary actions overpower the current artwork and headline.
 
 </design-context>

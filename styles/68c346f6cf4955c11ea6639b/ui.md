@@ -3,177 +3,97 @@
 version: 1
 platform: iOS
 name: Translate-design-analysis
-description: "A quiet translation utility built from pale-gray grouped canvas, large white input cards, black system typography, and a soft aqua-teal accent. Generous empty space and simple icon actions keep language exchange immediate and calm."
-
+description: "A calm translation iOS utility with a pale grouped canvas, large white language cards, black multilingual type, aqua-teal translated content and voice controls, a compact three-item bottom bar, and no decorative imagery beyond functional audio feedback."
 colors:
-  primary: "#58AFC0"
-  on-primary: "#FFFFFF"
-  primary-pressed: "#438E9E"
-  ink: "#111214"
-  ink-muted: "#7A7C80"
-  ink-subtle: "#B5B7BA"
   canvas: "#F2F2F7"
-  surface-1: "#FFFFFF"
-  surface-2: "#E9E9EE"
-  hairline: "#D8D9DD"
-  semantic-success: "#3AA873"
-  semantic-warning: "#E0A23A"
-  semantic-danger: "#D84B57"
-  semantic-overlay: "#000000"
-
+  surface-primary: "#FFFFFF"
+  surface-secondary: "#E9E9EE"
+  accent-primary: "#58AFC0"
+  accent-secondary: "#3AA873"
+  text-primary: "#111214"
+  text-secondary: "#7A7C80"
+  divider: "#D8D9DD"
+  destructive: "#D84B57"
 typography:
-  display-xl: { fontFamily: System Sans, fontSize: 34, fontWeight: 700, lineHeight: 1.1, letterSpacing: -0.4 }
-  display-lg: { fontFamily: System Sans, fontSize: 28, fontWeight: 700, lineHeight: 1.15, letterSpacing: -0.2 }
-  display-md: { fontFamily: System Sans, fontSize: 23, fontWeight: 650, lineHeight: 1.18, letterSpacing: 0 }
-  headline: { fontFamily: System Sans, fontSize: 20, fontWeight: 650, lineHeight: 1.22, letterSpacing: 0 }
-  card-title: { fontFamily: System Sans, fontSize: 17, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: System Sans, fontSize: 17, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
-  body-lg: { fontFamily: System Sans, fontSize: 17, fontWeight: 400, lineHeight: 1.42, letterSpacing: 0 }
-  body: { fontFamily: System Sans, fontSize: 15, fontWeight: 400, lineHeight: 1.42, letterSpacing: 0 }
-  body-sm: { fontFamily: System Sans, fontSize: 13, fontWeight: 400, lineHeight: 1.38, letterSpacing: 0 }
-  caption: { fontFamily: System Sans, fontSize: 10, fontWeight: 500, lineHeight: 1.3, letterSpacing: 0 }
-  button: { fontFamily: System Sans, fontSize: 16, fontWeight: 600, lineHeight: 1.2, letterSpacing: 0 }
-  eyebrow: { fontFamily: System Sans, fontSize: 11, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0.2 }
-  mono: { fontFamily: System Mono, fontSize: 12, fontWeight: 400, lineHeight: 1.4, letterSpacing: 0 }
-
-rounded: { xs: 4, sm: 8, md: 12, lg: 16, xl: 22, xxl: 28, pill: 9999, full: 9999 }
-spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
-
+  hero: {fontFamily: "SF Pro Display", fontSize: 34, fontWeight: 700, lineHeight: 40}
+  title: {fontFamily: "SF Pro Display", fontSize: 28, fontWeight: 700, lineHeight: 34}
+  section: {fontFamily: "SF Pro Text", fontSize: 20, fontWeight: 600, lineHeight: 25}
+  body: {fontFamily: "SF Pro Text", fontSize: 17, fontWeight: 400, lineHeight: 24}
+  label: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 600, lineHeight: 20}
+  caption: {fontFamily: "SF Pro Text", fontSize: 12, fontWeight: 400, lineHeight: 16}
+spacing:
+  screen-horizontal: 12
+  section-gap: 24
+  card-padding: 16
+  control-gap: 12
+rounded:
+  control: 12
+  card: 16
+  sheet: 24
+  pill: 999
 components:
-  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.full}", padding: [14, 18]}
-  language-selector: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: [10, 12]}
-  translation-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body-lg}", rounded: "{rounded.md}", padding: 16 }
-  microphone: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.full}", padding: 16 }
-  bottom-nav: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.sm}", height: 58 }
+  translation-card: {fill: "#FFFFFF", radius: 16, padding: 16}
+  language-selector: {fill: "#FFFFFF", text: "#111214", radius: 10}
+  microphone: {fill: "#58AFC0", text: "#FFFFFF", diameter: 64}
+  conversation-bubble: {fill: "#FFFFFF", translated: "#58AFC0", radius: 16}
+  navigation: {fill: "#FFFFFF", active: "#58AFC0", inactive: "#8E8E93"}
 ---
 
 # Overview
 
-Translate uses familiar system structure, large white language cards, and soft aqua actions. The design minimizes chrome so source and translated text remain the focus.
+Translate reduces chrome so entered and translated language remain central. Large white cards float on pale gray, aqua-teal distinguishes output and primary voice actions, and generous blank space accommodates typing or listening without decorative content.
 
 # Non-negotiable visual invariants
 
-- The reference consistently shows source and target visually distinct.
-- The reference consistently shows support all scripts with proper fonts.
-- The reference consistently shows preserve large speech targets.
-- The reference consistently shows open space intentionally.
-- Sampled screens consistently use a quiet translation utility built from pale-gray grouped canvas.
-- The reference consistently shows large white input cards.
-- The reference consistently shows black system typography.
-- The reference consistently shows a soft aqua-teal accent. Generous empty space and simple icon actions keep language exchange immediate and calm.
+- Pale neutral gray fills the page while white rounded cards contain language content.
+- Source and translated content remain visually distinct through hierarchy and teal, not two identical text blocks.
+- Language selectors stay compact and prominent above the translation surface.
+- Voice input uses an oversized circular teal control relative to secondary actions.
+- Secondary copy/share/play/favorite actions are small icon-only controls and low contrast until active.
+- Conversation surfaces use paired bubbles and clear dual-language or dual-microphone treatment.
+- The bottom bar is white with teal selected and gray inactive items.
+- Empty space remains intentional; no promotional art or prose fills an empty translation state.
 
 # Color and surfaces
 
-### Brand & Accent
-
-Aqua-teal marks output text, microphone actions, playback, favorites, and active navigation.
-
-### Surface
-
-Use pale grouped gray behind white selectors, translation panels, conversation bubbles, and favorite cards.
-
-### Text
-
-Near-black carries source language and primary content; teal carries translated output; gray carries hints and inactive navigation.
-
-### Semantic
-
-Use green for successful downloads, amber for limited availability, and red for errors. Teal remains the interaction accent.
+The canvas is iOS grouped gray; white cards and selectors provide the working surfaces. Aqua-teal is the only persistent product accent and marks translated text, selected navigation, microphones, playback, and favorites. Near-black carries source content, gray carries hints and metadata, while green, amber, and red remain local semantic states. Default blue, gradients, and colorful card backgrounds would disrupt the quiet system.
 
 # Typography
 
-### Font Family
-
-Use a neutral system sans with excellent multilingual coverage.
-
-### Hierarchy
-
-Use 23–34 points translated phrases, 17–20 points source text and section headings, and 10–15 points controls and language labels.
-
-### Principles
-
-Prioritize script legibility, allow dynamic type, and never rely on case or weight alone to distinguish languages.
-
-### Note on Font Substitutes
-
-Use SF Pro, Inter, or Noto Sans with the correct script-specific fallback for every supported language.
+Use a neutral system sans with reliable script fallbacks. Entered and translated phrases are large, readable, and allowed to wrap; language labels and metadata are much smaller. Teal output may be equal or slightly stronger than source text without relying on casing. Dynamic Type grows cards vertically and preserves script-specific glyph metrics rather than shrinking text or clipping long languages.
 
 # Screen composition
 
-### Spacing System
-
-Use a 4 points base, 12 points page gutters, 12–16 points within cards, and 24 points around microphone actions.
-
-### Grid & Container
-
-Place two equal language selectors at the top. Stack source and result inside a large white card above input and bottom navigation.
-
-### Whitespace Philosophy
-
-Keep generous blank space for typing and speech. Avoid filling the canvas when no translation exists.
-
-Surface hierarchy observed in the source:
-
-Use tonal grouping and minimal shadow. Language menus and text-selection overlays may float above the base surface.
-
-### Decorative Depth
-
-The interface has no decorative depth beyond soft rounded surfaces and a subtle waveform. Avoid gradients and ornamental art.
+The primary archetype stacks a compact language selector row, a large white input region, a translated result region, and sparse action icons above the bottom bar. Dictionary detail rises in a sheet beneath the result. Language choice appears as a white list or popover. Conversation screens use alternating or side-by-side bubbles and prominent mic controls; face-to-face mode divides the viewport clearly. Listening becomes an immersive sparse screen with a central voice control and waveform. Favorites/history use a simple vertical list of paired phrases.
 
 # Navigation appearance
 
-Use three bottom destinations for Translation, Conversation, and Favorites. Keep language selectors persistent across the first two modes.
+The bottom bar is white with three compact icon-label items; aqua-teal marks selection and gray marks inactivity. Top controls are minimal, usually language selectors and small utility glyphs. Sheets and popovers remain native light surfaces with rounded corners and dimmed context. Navigation appearance must not prescribe destinations beyond the approved product structure.
 
 # Components
 
-### Buttons
-
-Primary speech actions are circular teal buttons; secondary actions use teal icons. Native controls must inherit the aqua accent and calm rounded styling.
-
-### Cards & Containers
-
-Translation cards separate source and target with a fine divider. Favorite cards group language labels and paired phrases.
-
-### Inputs & Forms
-
-Text input is a large borderless white region. Language selection uses checked list menus and clear source/target placement.
+Translation cards are broad white rounded rectangles with 16-point internal padding and fine separation between source and output. Language selectors are compact white controls with short labels and chevrons. Primary microphones are teal circles with white glyphs; secondary glyphs use gray or teal without colored tiles. Conversation bubbles use moderate rounding and preserve clear speaker/language distinction. Language lists use checkmarks; share, confirmation, keyboard, menu, and swipe-delete states retain native geometry. Disabled controls reduce saturation and opacity.
 
 # Imagery and icons
 
-The interface has no decorative depth beyond soft rounded surfaces and a subtle waveform. Avoid gradients and ornamental art.
-
-Camera translation uses the live image full-screen with legible controls over it. No separate illustration language is present.
-
-If final imagery is not yet available, any placeholder must preserve the documented scale, placement, crop, and visual weight rather than removing that layer.
+There is no independent illustration system. Functional line icons, language glyphs, waveform/audio feedback, and live camera content are the only visual media. Camera content, when present, is full-screen functional imagery with safe overlay controls. Do not add illustrations, decorative flags, emoji, or arbitrary symbols to represent languages.
 
 # States
 
-Listening, playback, offline language availability, favorite state, and camera capture appear near the associated control.
+Observed states include empty input, keyboard typing, suggestions, translated result, dictionary sheet, favorite selected, language detection/list, share sheet, side-by-side and face-to-face conversation, clear confirmation, live waveform listening, and favorite-list swipe actions. Pale canvas, white cards, teal actions, and quiet gray secondary controls remain constant.
 
 # iOS adaptation
 
-### Touch Targets
-
-Language selectors, microphones, playback, favorites, and navigation require at least 44 points targets.
-
-### Collapsing Strategy
-
-Keep language pair and primary microphone visible. Move less-used camera, expand, or copy actions into a compact overflow group when space is tight.
-
-### Image Behavior
-
-Camera mode uses `cover` for the live view and keeps overlays within safe areas. UI previews remain `contain` when shown in help.
-
-Apply these rules within current iPhone safe areas and scrolling containers. Keep interactive targets at least 44 points, preserve a logical VoiceOver order, and let Dynamic Type wrap supporting text without flattening the documented hierarchy. Preserve the documented appearance.
+Use safe-area-aware vertical layout and keyboard avoidance so selectors and edited text remain visible. Cards grow with multilingual Dynamic Type and scroll when content exceeds the viewport. Keep selectors, microphones, tab items, and icon controls at least 44 points tappable. VoiceOver reads source language/content before target language/content and then actions. Face-to-face layout must preserve orientation and adequate type size on compact widths. Light appearance is canonical; any dark mode requires deliberate remapping rather than inversion.
 
 # Anti-generic checklist
 
-- Do not add decorative imagery.
-- Do not make language menus tiny.
-- Do not use teal for errors.
-- Do not expose default accent colors.
-- Do not replace the documented hierarchy with a generic stack of identical white cards or `Form` sections.
-- Do not use default blue tint, an unstyled `TabView`, arbitrary SF Symbols, or uniform corner radii when they contradict the recorded tokens and components.
-- Do not omit compositionally important imagery while final assets are pending; preserve its footprint with a faithful placeholder.
+- No default-blue accent replacing aqua-teal.
+- No dense settings table replacing large translation cards.
+- No small ordinary button replacing the dominant circular microphone.
+- No decorative imagery, flags, slogans, or duplicated instructions in empty space.
+- No unstyled `TabView`, generic `Form`, or colored icon tiles.
+- No identical hierarchy for source, translated result, language labels, and metadata.
+- No illustration file inferred from line icons, waveform, or camera content.
 
 </design-context>

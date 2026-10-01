@@ -3,181 +3,116 @@
 version: 1
 platform: iOS
 name: Cofix-Club-design-analysis
-description: "A high-energy coffee loyalty and preorder app with a near-black shell, stark white wordmark, condensed display typography, saturated orange and purple campaign blocks, product photography on bold color fields, oversized numeric rewards, and a three-destination bottom bar."
+description: "A black-and-orange loyalty and commerce interface with condensed uppercase typography, centered chrome, a dark three-zone bottom bar, oversized wallet numerals, barcode surfaces, saturated product tiles, and prominent product photography."
 colors:
-  primary: "#FF6B00"
-  on-primary: "#FFFFFF"
-  primary-soft: "#FFE0CA"
-  accent: "#7650E8"
-  accent-green: "#83C93A"
-  ink: "#FFFFFF"
-  ink-dark: "#171518"
-  ink-muted: "#A9A5AA"
-  canvas: "#171518"
-  surface-1: "#242124"
-  surface-2: "#353236"
-  hairline: "#4B474C"
-  semantic-success: "#83C93A"
-  semantic-danger: "#F05246"
-  semantic-overlay: "#000000"
+  canvas: "#141215"
+  surface-primary: "#FFFFFF"
+  surface-secondary: "#242124"
+  accent-primary: "#FF7900"
+  accent-secondary: "#6C45E8"
+  text-primary: "#FFFFFF"
+  text-secondary: "#A9A5AA"
+  divider: "#4B474C"
+  destructive: "#F05246"
 typography:
-  display-xl: { fontFamily: Bebas Neue, fontSize: 52, fontWeight: 400, lineHeight: 0.95, letterSpacing: 0.2 }
-  display-lg: { fontFamily: Bebas Neue, fontSize: 40, fontWeight: 400, lineHeight: 1.00, letterSpacing: 0.2 }
-  display-md: { fontFamily: Bebas Neue, fontSize: 32, fontWeight: 400, lineHeight: 1.05, letterSpacing: 0.2 }
-  headline: { fontFamily: Bebas Neue, fontSize: 26, fontWeight: 400, lineHeight: 1.05, letterSpacing: 0.2 }
-  card-title: { fontFamily: Bebas Neue, fontSize: 22, fontWeight: 400, lineHeight: 1.10, letterSpacing: 0.2 }
-  subhead: { fontFamily: SF Pro Text, fontSize: 16, fontWeight: 600, lineHeight: 1.30, letterSpacing: 0 }
-  body-lg: { fontFamily: SF Pro Text, fontSize: 16, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
-  body: { fontFamily: SF Pro Text, fontSize: 14, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
-  body-sm: { fontFamily: SF Pro Text, fontSize: 12, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
-  caption: { fontFamily: SF Pro Text, fontSize: 10, fontWeight: 500, lineHeight: 1.20, letterSpacing: 0.2 }
-  button: { fontFamily: Bebas Neue, fontSize: 20, fontWeight: 400, lineHeight: 1.10, letterSpacing: 0.3 }
-  eyebrow: { fontFamily: Bebas Neue, fontSize: 15, fontWeight: 400, lineHeight: 1.10, letterSpacing: 0.4 }
-  mono: { fontFamily: SF Mono, fontSize: 12, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
-rounded: { xs: 4, sm: 8, md: 12, lg: 16, xl: 20, xxl: 28, pill: 9999, full: 9999 }
-spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
+  hero: {fontFamily: "Avenir Next Condensed", fontSize: 88, fontWeight: 400, lineHeight: 88}
+  title: {fontFamily: "Avenir Next Condensed", fontSize: 30, fontWeight: 700, lineHeight: 34}
+  section: {fontFamily: "Avenir Next Condensed", fontSize: 20, fontWeight: 700, lineHeight: 24}
+  body: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 400, lineHeight: 20}
+  label: {fontFamily: "Avenir Next Condensed", fontSize: 18, fontWeight: 700, lineHeight: 20}
+  caption: {fontFamily: "SF Pro Text", fontSize: 11, fontWeight: 400, lineHeight: 14}
+spacing:
+  screen-horizontal: 16
+  section-gap: 24
+  card-padding: 16
+  control-gap: 10
+rounded:
+  control: 12
+  card: 16
+  sheet: 28
+  pill: 999
 components:
-  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.md}", padding: [12, 18]}
-  campaign-card: { backgroundColor: "{colors.accent}", textColor: "{colors.on-primary}", typography: "{typography.card-title}", rounded: "{rounded.md}", padding: 14 }
-  menu-tile: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.body-sm}", rounded: "{rounded.sm}", padding: 12 }
-  wallet-card: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 16 }
-  input: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: 12 }
-  bottom navigation: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: [8, 10]}
+  barcode-card: {fill: "surface-primary", radius: 16, code: "high-contrast black on white"}
+  promo-banner: {fill: "campaign artwork", radius: 14, crop: "edge-to-edge"}
+  product-tile: {fill: "saturated category color", radius: 16, image: "large cutout photography"}
+  bottom-navigation: {fill: "canvas", zones: 3, center: "raised circular location control"}
+  product-sheet: {fill: "surface-primary", radiusTop: 28, action: "sticky full-width"}
 ---
 
 # Overview
 
-Cofix Club mixes a dark hospitality shell with loud retail campaigns, bright product grids, and a reward wallet. Condensed display type creates the distinct menu-board voice.
-
-**Key Characteristics:**
-- Near-black navigation shell and white wordmark.
-- Saturated orange as loyalty and purchase anchor.
-- Condensed all-caps display typography.
-- Coffee photography isolated on flat color tiles.
-- Oversized reward figures and coupon sections.
+Cofix Club uses a near-black shell, bright orange loyalty surfaces, compressed uppercase display type, and large product photography to create a dense but unmistakable retail interface. The strongest screens are built from full-width color fields rather than generic card stacks: a dark home shell, an orange wallet field, saturated product grids, and tall white product sheets. Centered brand chrome and a dark three-zone bottom bar keep the visual system consistent across otherwise varied content.
 
 # Non-negotiable visual invariants
 
-- Navigation consistently uses near-black navigation shell and white wordmark.
-- The reference consistently shows saturated orange as loyalty and purchase anchor.
-- The reference consistently shows condensed all-caps display typography.
-- Sampled screens consistently use coffee photography isolated on flat color tiles.
-- The reference consistently shows oversized reward figures and coupon sections.
+- Near-black remains the dominant shell color, while white and bright orange appear as decisive full-width surfaces rather than small decorative accents.
+- Condensed uppercase typography carries navigation, section labels, product names, and major actions; neutral body copy stays secondary.
+- Key numeric or transactional content uses extreme scale contrast, including wallet values that occupy a substantial portion of the upper viewport.
+- The principal bottom navigation is a fixed dark bar divided into three visual zones with a raised circular control in the center.
+- Product tiles use saturated flat-color backgrounds and large cutout product photography; a text-only grid is not an acceptable substitute.
+- Overlays and detail views use tall white sheets with large rounded top corners over a dimmed dark background.
+- Barcode, campaign artwork, product photography, and map content retain their real compositional area instead of becoming generic placeholders.
+- Orange marks the main brand action and loyalty state; purple, blue, green, and red remain bounded to distinct secondary surfaces or semantic states.
 
 # Color and surfaces
 
-### Brand & Accent
-- **Primary** ({colors.primary}): Wallet, checkout, promotions, and dominant loyalty surfaces.
-- **Purple Accent** ({colors.accent}): Partnership campaigns.
-- **Green Accent** ({colors.accent-green}): Completed orders and positive progress.
+The authored shell is near-black around `#141215`, with slightly lighter charcoal panels around `#242124`. White is a second major surface, used for content-heavy screens, barcode cards, fields, and product-detail sheets. Bright orange around `#FF7900` can fill an entire wallet region or primary control rather than acting only as a tint. Red-orange around `#F64B32`, product blue around `#3D63B7`, purple around `#6C45E8`, and muted green appear as bounded campaign, category, or status fields.
 
-### Surface
-- **Canvas** ({colors.canvas}): Home and payment shell.
-- **Surface 1** ({colors.surface-1}): Forms and dark content panels.
-- **Surface 2** ({colors.surface-2}): Elevated field groups.
-- **Hairline** ({colors.hairline}): Menu dividers and input rules.
-
-### Text
-- **Ink** ({colors.ink}): Headings and labels on dark or colored fields.
-- **Ink Dark** ({colors.ink-dark}): Product copy on light surfaces.
-- **Ink Muted** ({colors.ink-muted}): Payment hints and secondary metadata.
-
-### Semantic
-- **Success** ({colors.semantic-success}): Ready order and reward progress.
-- **Danger** ({colors.semantic-danger}): Form error or destructive action.
-- **Overlay** ({colors.semantic-overlay}): Checkout and modal focus.
+On dark surfaces, primary text is white and supporting text is cool gray. On white surfaces, reverse the hierarchy to near-black and medium gray. Dividers are subtle charcoal on dark backgrounds or pale gray on white. Destructive messaging uses a restrained red. Default iOS blue, grouped gray, and automatic white cards would visibly break the reference if used as the main palette.
 
 # Typography
 
-### Font Family
-- **Bebas Neue** — close substitute for tall condensed menu-board headings and CTAs.
-- **SF Pro Text** — forms, metadata, and explanatory copy.
-- **SF Mono** — order identifiers and payment references.
+Use an iOS-safe condensed family such as Avenir Next Condensed for the brand-facing hierarchy, with SF Pro Text for explanatory copy and metadata. Large wallet numerals may reach 78-96 points with tight leading. Prominent titles and drawer-style labels sit around 25-30 points; section headings around 18-22 points; product names and control labels around 11-18 points, usually uppercase; metadata around 9-12 points.
 
-### Hierarchy
-Use 52 points condensed type for rewards and order numbers, 32 points for section links, 22–26 points for campaign cards, 14 points body, and 10–12 points metadata.
-
-### Principles
-- Let condensed headlines carry brand energy.
-- Keep form copy in a conventional sans.
-- Use strong size contrast, not many weights.
-- Keep product names readable over bold color.
-
-### Note on Font Substitutes
-Use **Bebas Neue** or **Oswald** for the display voice and the platform sans for body.
+The visual hierarchy depends on large jumps in scale, condensed widths, and uppercase treatment rather than many nearby font sizes. Major labels are centered or aligned to the geometry of their surface; body copy remains left-aligned. With Dynamic Type, preserve the difference between display values, section labels, and metadata: allow labels to wrap or increase container height instead of enlarging every tier uniformly.
 
 # Screen composition
 
-### Spacing System
-Use a 4 points base, 8 points between campaign tiles, 16 points gutters, and 16 points inside loyalty or order cards.
+Dark-shell screens extend behind the status area and reserve the lower safe area for persistent dark navigation. A compact centered wordmark or title anchors the top, while the middle region is occupied by one dominant object: a wallet value, barcode, campaign banner, product grid, map, or support surface. Horizontal insets are typically 14-18 points, with 20-28 points between major sections.
 
-### Grid & Container
-Home stacks barcode, hero carousel, two-up campaigns, large menu links, and a fixed three-way bottom navigation. Menu uses a two-column product grid.
+The loyalty archetype uses a large orange or black upper field, oversized centered numerals, and a high-contrast white barcode card. The promotional archetype stacks full-width raster banners with 12-16 point corners and compact section labels. The product-list archetype uses a two-column grid of saturated tiles, each dominated by a cutout drink photograph with concise uppercase naming. The product-detail archetype presents a tall white rounded-top sheet over a dimmed background, with a large product image, compact segmented choices, option rows, price metadata, and a bottom-pinned action.
 
-### Whitespace Philosophy
-Favor bold filled blocks and tight retail rhythm; keep enough separation that campaigns, menu, and wallet remain distinct.
-
-Surface hierarchy observed in the source:
-
-Use color contrast and photography rather than shadow. Sheets and checkout forms lift through darker grouped panels.
-
-### Decorative Depth
-Campaigns use photographed products, branded partner images, and flat color fields; operational screens stay direct.
+White utility screens use centered top chrome, compact underlined fields or white cards, and sparse iconography rather than generic grouped forms. A side panel, when visually required by the adapted product, occupies roughly three quarters of the width and leaves a darkened strip of the underlying screen visible; its destinations must come from approved product artifacts, not from this reference.
 
 # Navigation appearance
 
-Keep Wallet, Location, and Menu for points in the bottom bar; profile and notifications remain in the header.
+The recurring bottom navigation is an opaque near-black bar with three evenly spaced visual zones. The center zone is emphasized by a circular location-style control that rises above or separates from the flat icon row. Active states use white or orange emphasis; inactive symbols and labels recede to gray. It must be custom styled rather than an unmodified translucent `TabView`.
+
+Top chrome is compact and centered, using a wordmark or short uppercase title with sparse edge controls. Back and close affordances are ordinary compact icon buttons, not oversized navigation objects. Tall modal content uses a white rounded-top sheet over a dimmed backdrop, with a visible drag affordance or compact close control when present.
 
 # Components
 
-### Buttons
+The barcode card is a wide white rounded rectangle with generous internal whitespace, a crisp black code, and compact supporting labels. Its collapsed and expanded forms preserve the same black-white contrast. Promotional banners are edge-to-edge raster compositions inside 12-16 point rounded crops; text baked into campaign artwork must remain legible at device width.
 
-Use full-width high-contrast purchase and order-state buttons. Close, back, search, and filter remain icon-led but familiar.
+Product tiles are approximately half-width, use saturated flat backgrounds, 14-18 point corners, a large cutout beverage image, concise uppercase naming, small metadata, and a compact add or unavailable affordance. Product sheets use a large image zone, pill-like segmented size controls, divider-led option rows with checkboxes, and a wide orange bottom action.
 
-### Cards & Containers
-
-Use campaign cards, product tiles, wallet panels, coupon tickets, order-status cards, and dark payment groups.
-
-### Inputs & Forms
-
-Payment fields sit in a dark rounded group with underline-like divisions and an unmistakable disabled or enabled pay state.
+Profile-style fields are visually light, with labels and underlines rather than heavy rounded boxes. Notification badges are small orange pills. Support surfaces use white cards or chat bubbles against a black-to-white field. Disabled controls reduce contrast but keep their geometry; selected controls use orange fill, white type, or a clear checked state.
 
 # Imagery and icons
 
-Campaigns use photographed products, branded partner images, and flat color fields; operational screens stay direct.
+Product photography is a primary compositional layer, not supporting decoration. Drink cutouts are large, cleanly masked, and often overlap the visual center of saturated tiles or white detail sheets. Promotional cards use authored raster campaigns, while barcode, map, avatar, and occasional campaign characters remain tied to their content. These image regions cannot be omitted while waiting for final assets; use approved generated or licensed stand-ins with the same crop and visual mass.
 
-Cut out food and drink photography onto saturated rectangles. Preserve product silhouette, cup branding, and generous padding around the object.
-
-If final imagery is not yet available, any placeholder must preserve the documented scale, placement, crop, and visual weight rather than removing that layer.
+The sampled screens do not establish a reusable standalone illustration system. A single cartoon-like campaign image is campaign artwork, not evidence for recurring illustrated scenes or characters. Icons are sparse, mostly white or black line symbols with occasional filled active states. Keep stroke weight and size consistent, and do not replace photography with SwiftUI shapes or arbitrary SF Symbols.
 
 # States
 
-Show order ready, order identifier, wallet points, cashback, coupon count, and campaign progress with oversized values and explicit labels.
+Observed states include dark splash or loading, disabled consent action, collapsed and expanded barcode, empty and populated wallet, selected bottom-navigation zone, open side panel, profile fields with avatar or selection controls, populated product grid, product detail with size and add-on selections, unavailable product, notifications content, a not-found modal sheet, and empty or bot-populated support. The near-black shell, condensed labels, centered chrome, and bounded orange emphasis remain stable across these states.
 
 # iOS adaptation
 
-### Touch Targets
+Extend dark and orange background fields through the status-bar region while keeping controls inside safe areas. Use scroll containers for campaign stacks, grids, profile fields, and sheet content; keep any bottom action above the home indicator and keyboard. Present tall detail surfaces with current iOS sheet APIs or equivalent custom geometry while preserving the 28-point top radius and dimmed backdrop.
 
-Keep campaign cards, category chips, products, purchase buttons, and bottom navigation destinations at least 44 points.
-
-### Collapsing Strategy
-
-Preserve loyalty identity, menu access, active order, and checkout. Move lower-priority campaigns below the task content.
-
-### Image Behavior
-
-Contain cut-out products and crop campaign photography to its designed banner frame; never stretch cups or embedded copy.
-
-Apply these rules within current iPhone safe areas and scrolling containers. Keep interactive targets at least 44 points, preserve a logical VoiceOver order, and let Dynamic Type wrap supporting text without flattening the documented hierarchy. Preserve the documented appearance.
+Give compact icons, barcode actions, tile controls, segmented choices, and bottom-navigation zones at least 44-point hit targets. VoiceOver should read the centered title, primary content, local controls, then persistent navigation in visual order. On narrow devices, preserve the two-column photographic grid only while labels and 44-point controls still fit; otherwise reduce imagery crop or move to one column without shrinking touch targets. Dynamic Type may increase cards and rows, but must not erase the condensed display hierarchy. Maintain the authored dark appearance instead of automatically converting the shell to a generic light theme.
 
 # Anti-generic checklist
 
-- Don't turn body or form text into condensed display type.
-- Don't layer photography directly on busy app chrome.
-- Don't soften the palette into muted pastels.
-- Don't hide wallet points behind generic account settings.
-- Do not replace the documented hierarchy with a generic stack of identical white cards or `Form` sections.
-- Do not use default blue tint, an unstyled `TabView`, arbitrary SF Symbols, or uniform corner radii when they contradict the recorded tokens and components.
-- Do not omit compositionally important imagery while final assets are pending; preserve its footprint with a faithful placeholder.
+- Do not replace the black shell and full orange fields with a pale grouped background and white card stack.
+- Do not use default SF Pro at one uniform scale for every title, product label, value, and action.
+- Do not implement the bottom bar as an unstyled `TabView` with four or five equal items.
+- Do not shrink the central circular control into an ordinary inline tab icon.
+- Do not omit product photography, barcode, campaign art, or map content from compositions where they dominate the reference.
+- Do not turn saturated product tiles into neutral list rows or generic ecommerce cards.
+- Do not use default `Form`, blue tint, stock button styling, or one corner radius everywhere.
+- Do not infer product routes, menu destinations, or interaction sequences from the sampled reference screens.
 
 </design-context>

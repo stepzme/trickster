@@ -3,185 +3,116 @@
 version: 1
 platform: iOS
 name: Yandex-Metro-design-analysis
-description: "A dark, map-first navigation system built from near-black charcoal, crisp white labels, authentic metro-line colors, and bright green active-route emphasis. Translucent rounded sheets preserve network context while revealing itinerary detail."
-
+description: "A dense dark transit interface where a full-bleed schematic map, charcoal draggable sheets, compact white type, blue action affordances, and brightly colored line badges replace conventional card-based navigation."
 colors:
-  primary: "#32D26E"
-  on-primary: "#08110B"
-  primary-pressed: "#25B95C"
-  ink: "#FFFFFF"
-  ink-muted: "#C5C7CC"
-  ink-subtle: "#8E9198"
-  canvas: "#111214"
-  surface-1: "#1C1D20"
-  surface-2: "#282A2E"
-  surface-3: "#34363B"
-  hairline: "#45484E"
-  semantic-success: "#32D26E"
-  semantic-warning: "#F2C94C"
-  semantic-danger: "#F05252"
-  semantic-overlay: "#000000"
-
+  canvas: "#1F1F1F"
+  surface-primary: "#2E2E2E"
+  surface-secondary: "#3A3A3A"
+  accent-primary: "#4AA3FF"
+  accent-secondary: "#FF3B3B"
+  text-primary: "#F5F5F5"
+  text-secondary: "#9B9B9B"
+  divider: "#484848"
+  destructive: "#FF6B6B"
 typography:
-  display-xl: { fontFamily: YS Text, fontSize: 34, fontWeight: 750, lineHeight: 1.05, letterSpacing: -0.8 }
-  display-lg: { fontFamily: YS Text, fontSize: 28, fontWeight: 700, lineHeight: 1.1, letterSpacing: -0.5 }
-  display-md: { fontFamily: YS Text, fontSize: 24, fontWeight: 700, lineHeight: 1.15, letterSpacing: -0.3 }
-  headline: { fontFamily: YS Text, fontSize: 20, fontWeight: 650, lineHeight: 1.2, letterSpacing: -0.15 }
-  card-title: { fontFamily: YS Text, fontSize: 16, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: YS Text, fontSize: 15, fontWeight: 500, lineHeight: 1.35, letterSpacing: 0 }
-  body-lg: { fontFamily: YS Text, fontSize: 16, fontWeight: 400, lineHeight: 1.4, letterSpacing: 0 }
-  body: { fontFamily: YS Text, fontSize: 14, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
-  body-sm: { fontFamily: YS Text, fontSize: 12, fontWeight: 400, lineHeight: 1.3, letterSpacing: 0 }
-  caption: { fontFamily: YS Text, fontSize: 11, fontWeight: 450, lineHeight: 1.25, letterSpacing: 0 }
-  button: { fontFamily: YS Text, fontSize: 14, fontWeight: 600, lineHeight: 1.2, letterSpacing: 0 }
-  eyebrow: { fontFamily: YS Text, fontSize: 11, fontWeight: 650, lineHeight: 1.2, letterSpacing: 0.1 }
-  mono: { fontFamily: System Mono, fontSize: 12, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
-
-rounded: { xs: 6, sm: 10, md: 14, lg: 18, xl: 24, xxl: 30, pill: 9999, full: 9999 }
-spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 56 }
-
+  hero: {fontFamily: "SF Pro Display", fontSize: 24, fontWeight: 600, lineHeight: 29}
+  title: {fontFamily: "SF Pro Display", fontSize: 22, fontWeight: 600, lineHeight: 27}
+  section: {fontFamily: "SF Pro Text", fontSize: 18, fontWeight: 600, lineHeight: 23}
+  body: {fontFamily: "SF Pro Text", fontSize: 16, fontWeight: 400, lineHeight: 21}
+  label: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 600, lineHeight: 19}
+  caption: {fontFamily: "SF Pro Text", fontSize: 13, fontWeight: 400, lineHeight: 17}
+spacing:
+  screen-horizontal: 16
+  section-gap: 24
+  card-padding: 16
+  control-gap: 10
+rounded:
+  control: 8
+  card: 14
+  sheet: 24
+  pill: 999
 components:
-  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: [14, 20]}
-  button-secondary: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: [12, 18]}
-  route-sheet: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xl}", padding: 16 }
-  search-input: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.pill}", padding: [13, 16]}
-  station-badge: { backgroundColor: "{colors.surface-3}", textColor: "{colors.ink}", typography: "{typography.caption}", rounded: "{rounded.full}", padding: 6 }
-  map-controls: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.full}", padding: 10 }
+  route-sheet: {fill: "surface-primary", radiusTop: 24, grabber: "muted gray", close: "circular"}
+  endpoint-action: {fill: "white", height: 48, radius: 8, text: "dark medium"}
+  search-row: {fill: "surface-primary", height: 60, leading: "line badge", trailing: "blue info circle"}
+  route-timeline: {line: "transit color", stationDot: "filled circle", metadata: "aligned compact"}
+  map-control: {fill: "surface-secondary", size: 44, radius: 999, text: "text-primary"}
 ---
 
 # Overview
 
-Yandex Metro is a night-mode transit tool where the network diagram is the product, not a decorative background.
+Yandex Metro is a map-first dark interface in which transit geometry is the primary visual content. A dense near-black schematic fills the viewport while charcoal sheets, compact white labels, colored line badges, station dots, and blue action controls layer directly above it. The product avoids promotional blocks and decorative cards; hierarchy comes from map scale, sheet height, route color, and tightly aligned time and station data.
 
 # Non-negotiable visual invariants
 
-- The reference consistently shows preserve official line colors.
-- The reference consistently shows the map visible while choosing a route.
-- The reference consistently shows make origin, destination, and active route unmistakable.
-- The reference consistently shows style native sheets and controls in the Metro system.
-- The reference consistently shows a dark.
-- Navigation consistently uses map-first navigation system built from near-black charcoal.
-- The reference consistently shows crisp white labels.
-- The reference consistently shows authentic metro-line colors.
+- Dark charcoal remains the default chrome across map, sheets, search, route detail, alerts, and settings.
+- The schematic map fills the viewport behind controls rather than appearing inside a framed card.
+- Bottom sheets use rounded top corners, a centered grabber, and a circular close control at the upper right.
+- Transit identity remains encoded by bright line badges, colored station dots, and vertical route timelines.
+- Dense information uses compact 12-18 point text and aligned columns rather than large promotional typography.
+- Blue is confined to actions, navigation, and information affordances; red marks warnings, destructive actions, or the brand symbol.
+- High-emphasis endpoint controls are white rectangles on dark sheets with moderate, not pill-like, corners.
+- Status-bar and home-indicator safe areas remain visible and clear across map and sheet states.
 
 # Color and surfaces
 
-Use charcoal surfaces and white labels, preserving official line colors. Reserve fluorescent green for the currently chosen route.
+The base alternates between a nearly black map around `#1F1F1F` and charcoal panels around `#2E2E2E`; raised controls use a slightly lighter gray. Primary labels are off-white and secondary metadata is muted gray. Thin mid-gray dividers structure lists without creating separate cards.
 
-### Brand & Accent
-
-Use green to connect route segments, duration, and confirmation. Do not recolor the underlying metro lines to match the brand.
-
-### Surface
-
-Use a near-black map canvas, dark translucent sheets, and slightly lighter controls with thin cool-gray separators.
-
-### Text
-
-Use white for station and route names, light gray for secondary instructions, and muted gray for inactive controls.
-
-### Semantic
-
-Use green for the active route, red for disruptions, yellow for warnings, and route colors only for transport identity.
+Bright transit colors remain attached to lines, station badges, and route diagrams: yellow, green, red, and cyan-blue are all visible. Blue around `#4AA3FF` identifies actions and information buttons, while red around `#FF6B6B` signals warnings or destructive emphasis. Do not replace the multicolor transit encoding with one brand tint, and do not introduce generic light surfaces into the main dark shell.
 
 # Typography
 
-Typography is compact and functional, designed to remain legible over complex network geometry.
+Use SF Pro as the iOS-safe substitute. Route durations and main titles sit around 20-24 points at medium or semibold weight. Station and list labels use 16-18 points; action labels use 14-15 points; line, distance, exit, and transfer metadata use 12-14 points in gray. The splash wordmark is artwork rather than live interface type.
 
-### Font Family
-
-Use YS Text or a neutral system sans with clear small-size Cyrillic and numerals.
-
-### Hierarchy
-
-Use 22–28 points route duration, 17–20 points sheet titles, 14–16 points station names, and 11–13 points transfer or exit metadata.
-
-### Principles
-
-Keep station names concise, align time and transfer facts consistently, and never let labels overpower route geometry.
-
-### Note on Font Substitutes
-
-Use SF Pro or Inter when YS Text is unavailable; verify legibility at 11–12 points on dark surfaces.
+Keep time, line, and station columns aligned and use tabular numerals where timing data repeats. Dynamic Type should expand rows and route steps vertically while preserving the distinction between primary station names and secondary metadata; never solve crowding by shrinking map labels below legibility.
 
 # Screen composition
 
-Treat the map as a full-screen canvas with bottom-origin sheets that expand from search to route detail.
+Core screens use an edge-to-edge schematic beneath safe-area-aware floating controls. Compact branding or title treatment sits at the upper edge, with a circular menu control opposite. A dark sheet rises from the bottom and occupies roughly 35-70% of the viewport depending on information density, leaving the map visible above. Sheet content uses 16 point insets, 8-12 point row gaps, and one vertical information column.
 
-### Spacing System
+The station-sheet archetype pairs a short header and metadata with two side-by-side white endpoint actions. The search archetype replaces the map with a full dark panel, a top search field, 52-70 point result rows, and the native keyboard. The route-detail archetype uses a vertical colored line, aligned time labels, station names, information circles, expandable pills, and train-car diagrams. Settings uses flat full-width dark rows 48-64 points high with dividers, chevrons, switches, or checkmarks.
 
-Use a 4 points base, 8–12 points within route rows, 16 points sheet padding, and 24 points between itinerary groups.
-
-### Grid & Container
-
-The map is edge-to-edge; sheets use one vertical column with aligned time, line, station, and transfer data.
-
-### Whitespace Philosophy
-
-Keep controls compact to protect map visibility, but give every itinerary step enough vertical separation to trace the journey.
-
-Surface hierarchy observed in the source:
-
-Use translucent sheets, soft top shadows, and dimmed map regions to separate route detail without abandoning location context.
-
-### Decorative Depth
-
-Do not add decorative imagery. Depth comes from layered map, route highlight, markers, and sliding sheets.
+Alerts and service notices appear as compact dark sheets or native action overlays. Avoid wrapping every route step or settings row in its own rounded card.
 
 # Navigation appearance
 
-The map is home. Search, route, station, messages, and settings appear as overlays or secondary pages rather than a tab bar.
+Map surfaces use floating circular controls and draggable sheets rather than a persistent tab bar. Secondary dark pages use a compact centered title with an upper-left blue back label or chevron. Close actions appear as blue text or a gray circular `x`. Sheets are visually anchored by their grabber and large top radius.
+
+External modal surfaces may retain native browser-like chrome, but it should not be treated as the authored core style. Product destinations and screen structure come from approved Research and Planning, not from the reference application's settings hierarchy.
 
 # Components
 
-### Buttons
+Route sheets are charcoal panels with approximately 24-point top corners, a centered gray grabber, a circular close button, and compact stacked information. Endpoint actions are two equal-width white rectangles about 48 points high with dark medium labels and roughly 8-point corners.
 
-Use green filled route actions, dark secondary pills, and circular map controls. Avoid default platform blue.
+Search result rows are dark, 52-70 points high, and contain a colored line icon or badge, a 16-18 point station name, smaller gray metadata, and a blue circular information control. Route timelines use a continuous bright line with station dots, aligned time text, and compact expandable segments. Settings rows are flat full-width strips separated by thin gray rules.
 
-### Cards & Containers
-
-Route cards show duration, transfers, line colors, and alerts; station sheets group exits and adjacent services.
-
-### Inputs & Forms
-
-Use a rounded dark search field with clear From and To states, large A/B markers, and focused suggestion lists.
+Floating map controls are compact dark or charcoal circles with white glyphs. Disabled rows and actions remain present but lower contrast; destructive confirmations use red text within native dark action-sheet geometry.
 
 # Imagery and icons
 
-Do not add decorative imagery. Depth comes from layered map, route highlight, markers, and sliding sheets.
+The schematic metro map, line badges, station dots, small transport icons, map previews, and train-car diagrams are the functional imagery. There is no decorative photography or independent illustration language. Network geometry must remain crisp, dense, and visually dominant; it cannot be replaced by generic route cards or arbitrary symbols.
 
-There is no photography. Preserve geographic and network geometry; keep icons small, symbolic, and aligned with the map grid.
-
-If final imagery is not yet available, any placeholder must preserve the documented scale, placement, crop, and visual weight rather than removing that layer.
+Icons are small and utilitarian, using white or blue on dark surfaces. Transit colors require accompanying shapes or labels so meaning is not color-only. Placeholders for map content must preserve line density, station rhythm, and the relative scale of controls rather than leaving an empty dark background.
 
 # States
 
-Show closures, delays, transfer walking, carriage advice, and service disruptions inline with the affected line or step.
+Observed states include splash/loading, idle map, active search with keyboard, populated search results, selected-station sheet, favorite added and removed, collapsed route summary, expanded route detail, warning sheets, default settings, destructive confirmation, disabled history clearing, and selected city/language rows. Dark surfaces, compact hierarchy, blue affordances, and transit-color encoding remain stable across states.
 
 # iOS adaptation
 
-### Touch Targets
+Keep the map full-bleed while positioning branding, menu, and sheet content inside current status and home-indicator safe areas. All map controls, station targets, endpoint actions, grabbers, information buttons, and settings rows need at least 44-point hit regions. Sheets and route details must scroll internally as content or Dynamic Type grows.
 
-Stations, A/B fields, route options, sheet handles, exits, settings, and map controls require at least 44 points.
-
-### Collapsing Strategy
-
-Keep endpoints, duration, transfer count, active line, and disruption status; collapse exit detail and secondary services first.
-
-### Image Behavior
-
-The map is vector-like and must scale crisply without changing line relationships or hiding labels under controls.
-
-Apply these rules within current iPhone safe areas and scrolling containers. Keep interactive targets at least 44 points, preserve a logical VoiceOver order, and let Dynamic Type wrap supporting text without flattening the documented hierarchy. Preserve the documented appearance.
+On compact widths, stack endpoint actions only when equal halves can no longer preserve readable labels; keep route time and station columns aligned. VoiceOver order should move from upper map controls to selected map content, sheet title, route steps, and sheet actions. Announce line identity in text in addition to color. Preserve the observed dark appearance rather than relying on an automatic generic dark-mode inversion.
 
 # Anti-generic checklist
 
-- Do not add ornamental color.
-- Do not cover the full map prematurely.
-- Do not rely on color without labels.
-- Do not use default light native controls.
-- Do not replace the documented hierarchy with a generic stack of identical white cards or `Form` sections.
-- Do not use default blue tint, an unstyled `TabView`, arbitrary SF Symbols, or uniform corner radii when they contradict the recorded tokens and components.
-- Do not omit compositionally important imagery while final assets are pending; preserve its footprint with a faithful placeholder.
+- Do not replace the full-bleed schematic with a generic dark dashboard or card stack.
+- Do not use white `Form` sections, light navigation bars, or an unstyled `TabView`.
+- Do not recolor all transit lines into one accent or rely on color without labels and shapes.
+- Do not cover the map with a full-height sheet before dense detail requires it.
+- Do not use oversized promotional titles or spacious marketing cards on operational screens.
+- Do not replace route timelines, station dots, or train diagrams with arbitrary SF Symbols.
+- Do not apply one corner radius to endpoint buttons, rows, sheets, pills, and circular controls.
+- Do not treat external browser chrome as the primary visual language.
 
 </design-context>

@@ -3,181 +3,129 @@
 version: 1
 platform: iOS
 name: Weather-design-analysis
-description: "An atmospheric iOS weather system built from full-screen condition imagery, blue-gray translucent forecast cards, very large white temperature type, compact weather glyphs, thin range bars, and data-rich animated maps. The saved-city list shifts to near-black so each photographic location card becomes a vivid window."
-
+description: "An atmospheric dark-mode weather interface built from condition imagery, translucent blue-gray forecast cards, huge thin white temperature numerals, dense multicolor metric charts, full-screen weather maps, and edge-mounted native controls without a tab bar."
 colors:
-  primary: "#FFFFFF"
-  on-primary: "#23445E"
-  primary-pressed: "#E9F2F8"
-  ink: "#FFFFFF"
-  ink-muted: "#DCE8F0"
-  ink-subtle: "#AFC3D0"
-  canvas: "#315F7C"
-  surface-1: "#416F91"
-  surface-2: "#537E9E"
-  list-canvas: "#000000"
-  list-surface: "#242426"
-  map-blue: "#4D86B8"
-  map-cyan: "#67C9DA"
-  map-violet: "#A157C7"
-  hairline: "#FFFFFF33"
-  semantic-warning: "#FFD45A"
-  semantic-danger: "#FF6B6B"
-  semantic-overlay: "#000000"
-
+  canvas: "#0B1520"
+  surface-primary: "#416F91"
+  surface-secondary: "#537E9E"
+  accent-primary: "#FFFFFF"
+  accent-secondary: "#4D86B8"
+  text-primary: "#FFFFFF"
+  text-secondary: "#DCE8F0"
+  divider: "#FFFFFF33"
+  destructive: "#FF453A"
 typography:
-  display-xl: { fontFamily: SF Pro Display, fontSize: 76, fontWeight: 250, lineHeight: 0.95, letterSpacing: -2 }
-  display-lg: { fontFamily: SF Pro Display, fontSize: 52, fontWeight: 300, lineHeight: 1.0, letterSpacing: -1 }
-  display-md: { fontFamily: SF Pro Display, fontSize: 34, fontWeight: 550, lineHeight: 1.1, letterSpacing: -0.4 }
-  headline: { fontFamily: SF Pro Text, fontSize: 20, fontWeight: 600, lineHeight: 1.2, letterSpacing: 0 }
-  card-title: { fontFamily: SF Pro Text, fontSize: 17, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: SF Pro Text, fontSize: 17, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
-  body-lg: { fontFamily: SF Pro Text, fontSize: 16, fontWeight: 400, lineHeight: 1.42, letterSpacing: 0 }
-  body: { fontFamily: SF Pro Text, fontSize: 14, fontWeight: 400, lineHeight: 1.4, letterSpacing: 0 }
-  body-sm: { fontFamily: SF Pro Text, fontSize: 12, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
-  caption: { fontFamily: SF Pro Text, fontSize: 10, fontWeight: 500, lineHeight: 1.3, letterSpacing: 0.15 }
-  button: { fontFamily: SF Pro Text, fontSize: 16, fontWeight: 500, lineHeight: 1.2, letterSpacing: 0 }
-  eyebrow: { fontFamily: SF Pro Text, fontSize: 10, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0.3 }
-  mono: { fontFamily: SF Mono, fontSize: 12, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
-
-rounded: { xs: 4, sm: 8, md: 12, lg: 16, xl: 22, xxl: 28, pill: 9999, full: 9999 }
-spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
-
+  hero: {fontFamily: "SF Pro Display", fontSize: 76, fontWeight: 250, lineHeight: 76}
+  title: {fontFamily: "SF Pro Display", fontSize: 34, fontWeight: 700, lineHeight: 40}
+  section: {fontFamily: "SF Pro Text", fontSize: 20, fontWeight: 600, lineHeight: 25}
+  body: {fontFamily: "SF Pro Text", fontSize: 16, fontWeight: 400, lineHeight: 21}
+  label: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 600, lineHeight: 20}
+  caption: {fontFamily: "SF Pro Text", fontSize: 12, fontWeight: 400, lineHeight: 16}
+spacing:
+  screen-horizontal: 16
+  section-gap: 24
+  card-padding: 14
+  control-gap: 12
+rounded:
+  control: 12
+  card: 18
+  sheet: 24
+  pill: 999
 components:
-  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: [10, 16]}
-  forecast-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 14 }
-  city-card: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 12 }
-  search-field: { backgroundColor: "{colors.list-surface}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: [10, 12]}
-  map-control: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.body-sm}", rounded: "{rounded.md}", padding: 10 }
+  primary-action: {fill: "white or translucent material", text: "dark blue-gray", shape: "compact rounded control", minimumTarget: 44}
+  secondary-action: {fill: "translucent blue-gray", text: "white", border: "subtle white hairline", shape: "rounded rectangle"}
+  primary-card: {fill: "frosted blue-gray or weather-image surface", radius: 18, padding: 14, text: "white"}
+  navigation: {fill: "atmospheric or black canvas", selected: "white", inactive: "pale blue-gray", tabBar: "none"}
 ---
 
 # Overview
 
-Weather turns conditions into the environment itself. Atmospheric imagery establishes mood, translucent forecast cards organize data, and the map becomes a full-screen scientific surface.
+Weather turns current conditions and forecast data into the interface environment. City forecasts place huge thin white temperature numerals over atmospheric cloudy, rainy, or sky imagery, then layer translucent blue-gray hourly, ten-day, alert, and metric cards below. Saved-city lists shift toward black so each photographic city card reads as a vivid window. Detail views become compact scientific dashboards, and weather maps replace the entire canvas with colored layers, legends, and playback controls.
+
+The interface is recognisably iOS through SF typography, continuous rounded corners, translucent materials, system permission alerts, circular edge controls, and modal navigation. It has no persistent tab bar; map, location, city list, close, menu, and modal edge actions carry the visible navigation appearance.
 
 # Non-negotiable visual invariants
 
-- The reference consistently shows let the current condition define the atmosphere.
-- The reference consistently shows forecast rows aligned and comparable.
-- The reference consistently shows translucent materials consistently.
-- The reference consistently shows preserve the map as a full-screen tool.
-- Imagery consistently uses an atmospheric iOS weather system built from full-screen condition imagery.
-- The reference consistently shows blue-gray translucent forecast cards.
-- Typography consistently uses very large white temperature type.
-- The reference consistently shows compact weather glyphs.
+- Current-condition screens use atmospheric imagery or condition-colored fields as the full viewport environment; the weather is not presented inside an isolated white card.
+- The current temperature is an extremely large, thin white numeral that dominates the upper region without heavy bold weight.
+- Hourly, ten-day, alert, and metric data sit in translucent blue-gray cards with large continuous corners and subtle white separators.
+- Saved-city screens use a near-black canvas with broad image-backed weather cards containing city, condition, high/low, and large temperature.
+- Detail pages pair a compact date selector with a large line, area, bar, or arc visualization, followed by summary and explanatory content.
+- Weather maps fill the screen edge to edge and retain a left legend, right floating controls, central marker, and bottom playback/timeline surface.
+- Navigation uses edge-mounted map/location/list/menu/close/Done actions rather than a tab bar.
+- Condition photography, map layers, weather glyphs, and charts remain compositionally essential and cannot be replaced by generic symbols or omitted placeholders.
 
 # Color and surfaces
 
-### Brand & Accent
+Forecast canvases vary with conditions but stay within dark blue, slate, cyan, cloudy gray, and near-black atmospheric fields. Translucent cards commonly sit around blue-gray `#416F91`–`#537E9E`, with material blur allowing background weather imagery to remain perceptible. Saved-city and search canvases may approach black `#0B0B0D`, while search and menu controls use darker rounded material.
 
-There is no fixed chromatic brand beyond white system chrome. Blue, cyan, violet, green, and yellow change with sky and weather layers.
+White is the main text and floating-control color. Secondary labels use pale blue-gray `#DCE8F0`, and dividers use low-opacity white. Chart and map semantics introduce bounded hues: blue/cyan for temperature or precipitation, green for UV/humidity or acceptable range, purple for pressure/heavier weather layers, yellow for sunlight/warnings, and red only for severe or destructive action. These colors belong to data, not decorative branding.
 
-### Surface
-
-Use full-screen atmospheric imagery, translucent blue-gray cards, near-black saved-city canvas, and white floating map controls.
-
-### Text
-
-Use white over condition imagery, pale blue-gray for secondary labels, and black inside light map controls or system sheets.
-
-### Semantic
-
-Use yellow for sun and warnings, blue for rain and cold, violet for heavy precipitation, and red only for severe conditions.
+Opaque white cards over forecast imagery would visibly break the system. Light surfaces are reserved for compact floating controls, system alerts, or settings contexts where contrast requires them.
 
 # Typography
 
-### Font Family
+Use SF Pro Display and SF Pro Text. Current temperature reaches roughly 64–76 points in ultra-light or thin weight. Saved-city card temperatures may sit around 34–52 points. Large list titles use approximately 34 points bold. City names, conditions, card titles, and metric labels sit around 17–20 points semibold or regular; explanatory copy and chart axes use 10–14 points.
 
-Use SF Pro Display and SF Pro Text with thin large numerals and compact labels.
+Temperature dominates through size rather than weight. High/low, condition, hour, day, units, and chart labels remain compact and aligned for comparison. Metric labels may use restrained uppercase but body explanations remain sentence case. Numeric chart values need stable alignment and clear units.
 
-### Hierarchy
-
-Use 52–76 points current temperature, 34 points city-list temperature, 17–20 points condition and row titles, and 10–14 points metrics.
-
-### Principles
-
-Let temperature dominate without bold weight. Keep metric labels uppercase and quiet; align forecast numbers for comparison.
-
-### Note on Font Substitutes
-
-Use Inter with light display numerals and medium text weights when SF Pro is unavailable.
+Dynamic Type should expand explanatory sections, list rows, alerts, and settings; forecast grids and chart labels can remain compact only when accessible equivalents are provided. Avoid shrinking the current condition and key warning hierarchy to make all metrics fit at once.
 
 # Screen composition
 
-### Spacing System
+City-list screens begin with the status area, large leading title, trailing circular ellipsis menu, and dark rounded search field. A compact severe-weather or notification card may follow, then broad image-backed city cards in a vertical stack. Small data/legal links sit low on the page above the home indicator. Edit mode retains the same stack while exposing drag handles and red delete affordances.
 
-Use a 4 points base, 16 points screen gutters, 12 points card gaps, and 8 points between forecast rows.
+City-forecast screens place city name, condition, and huge temperature in an open upper region over full-screen condition imagery. The middle and lower scroll contain full-width translucent hourly and ten-day forecast cards followed by smaller metric tiles and informational sections. Bottom edge controls expose map, current location, and list as separated system icons rather than a tab surface.
 
-### Grid & Container
+Metric detail screens use a compact modal top bar with title and circular close control, a date strip, a large data visualization, a summary card, and explanatory text. Temperature and feels-like use line/area graphs; UV uses a green curve; wind adds direction arrows; precipitation uses bars; humidity uses blue/green area; visibility a gray line; pressure a purple line; sunrise an arc and daylight bars.
 
-City detail is a vertical stack of full-width translucent cards. The map fills the viewport with legends and controls pinned to edges.
+Map screens devote the full viewport to Apple map tiles plus translucent or colored weather overlays. Done sits at top, a vertical stack of floating controls sits at the right edge, the legend runs along the left, a location marker anchors the center, and a rounded playback/timeline sheet occupies the bottom. Search uses top search/cancel controls, results or no-results in the middle, and keyboard below. Widget preview shows a small rounded weather tile over blurred home wallpaper.
 
-### Whitespace Philosophy
-
-Keep the condition header open and cinematic. Data cards may be dense but require stable row alignment and clear grouping.
-
-Surface hierarchy observed in the source:
-
-Use material blur, translucent overlays, soft gradients, and atmospheric parallax. Avoid opaque floating card stacks over the forecast.
-
-### Decorative Depth
-
-Condition imagery, animated particles, moving cloud layers, and blurred glass provide all decoration. Do not add unrelated ornaments.
+Standard gutters are about 16 points with 12-point card gaps. Forecast cards are dense internally but outer condition headers remain open. Every scrolling or map surface must clear safe areas and bottom controls.
 
 # Navigation appearance
 
-Use map and list controls at the bottom of city detail; map view uses Done, location, city list, layers, and timeline controls.
+There is no visible persistent tab bar. Forecast screens expose three bottom icon controls—map at leading, location/current-position near center, and list at trailing—using white or translucent material. Detail pages use a top-right circular close control. City list uses a circular ellipsis menu. Map uses a textual Done action with floating circular controls and bottom sheet.
+
+Notification and report surfaces use modal top bars with Cancel, Done, or Submit actions. Search uses search/cancel treatment; editing uses Done and row affordances. Product behavior and information architecture come from the approved Research and Planning artifacts.
 
 # Components
 
-### Buttons
+City cards are broad rounded image surfaces with city and condition aligned at leading, high/low nearby, and a large temperature at trailing or upper corner. A severe-alert card uses a clear icon, title, chevron, and small dismiss control. Forecast cards use one coherent translucent material, inset separators, aligned hours/days, weather glyphs, precipitation percentages, and colored range bars.
 
-Use light translucent or white compact controls with system glyphs. Native controls may be used, but their blur, tint, contrast, and radius must match the current weather surface.
+Metric tiles and detail summaries maintain the same rounded blue-gray material. Charts use crisp lines, areas, bars, dots, arrows, axes, and labels with data-specific color. Floating map controls are compact white or frosted circles/rounded rectangles. Playback combines play/pause, time labels, and scrub/timeline affordance inside a bottom material panel.
 
-### Cards & Containers
-
-Forecast cards use one translucent tone with hairline separation, compact labels, weather glyphs, and colored range bars.
-
-### Inputs & Forms
-
-City search uses a dark rounded field with magnifier and clear action. Notification setup uses a concise full-width row.
+Search fields are dark rounded bars with magnifier, clear, and cancel actions. Editing uses drag handles, red minus or swipe-to-delete controls, and Done. Report forms use grouped toggles, checkmarked rows, broad pill-like descriptor buttons, and a restrained thank-you state. Native location/notification permission alerts remain system-authentic.
 
 # Imagery and icons
 
-Condition imagery, animated particles, moving cloud layers, and blurred glass provide all decoration. Do not add unrelated ornaments.
+Weather imagery fills city forecasts and card backgrounds with cloudy, rainy, overcast, or sky atmosphere. It may be photographic or generated but must preserve readable sky/condition fields behind white text and translucent panels. Saved-city cards use wide cover crops, while full forecast backgrounds extend edge to edge.
 
-Weather imagery fills edge to edge and may blur beneath cards. Maps remain uncropped; widgets use a soft rounded square.
-
-If final imagery is not yet available, any placeholder must preserve the documented scale, placement, crop, and visual weight rather than removing that layer.
+Maps use factual Apple-style tiles and colored forecast overlays. Weather glyphs, condition icons, alert icons, and map layer symbols are compact and consistent. Charts are a primary form of imagery rather than decoration. The observed screens do not establish a separate authored illustration language; a single notification bell graphic is insufficient. If weather imagery is pending, preserve its full-background or card-sized visual mass with an honest condition-specific placeholder.
 
 # States
 
-Show current condition, severe alert, precipitation chance, map intensity, location permission, notification permission, and widget state directly.
+Observed permissions include location system prompt, app-authored notification explanation, standard notification prompt, and critical-alert prompt. City list appears populated, menu-open, editing, reordering, swipe-delete, and post-delete. Search includes suggestions, no results, keyboard, and add-city preview. Forecast screens appear at multiple scroll depths and include alert/notification banners.
+
+Metric detail states cover temperature, UV, wind, precipitation, feels-like, humidity, visibility, pressure, and sunrise. Map states include precipitation/temperature layers, unavailable air-quality data, playback, layer selection, duration/type selection, marker context menu, and bottom sheet. Report issue includes grouped selection and submitted thank-you. Widget preview and unavailable/loading city data preserve the same native material and typography.
 
 # iOS adaptation
 
-### Touch Targets
+Use safe-area-aware full-bleed backgrounds so condition imagery and map tiles continue beneath status and edge controls while text remains inside readable safe regions. City forecast is a vertical scroll with a large open header and dense card stack. Metric detail, notifications, report, search, and list editing use native modal or navigation containers. Map legends, right-edge controls, and bottom timeline need collision avoidance on compact widths.
 
-City cards, hourly items, metric cards, map layers, timeline, location, list, search, and alert controls require at least 44 points targets.
+Every city card, hourly/day cell, metric tile, close/menu/map/location/list button, map layer control, timeline control, edit/delete affordance, search result, and alert action needs at least a 44-point effective target. VoiceOver should announce city, condition, current/high/low temperature, alert, and actionable forecast groups in visible order. Charts and maps require accessible text summaries independent of color.
 
-### Collapsing Strategy
-
-Keep city, current temperature, next hours, warning, and map access visible. Collapse deeper metrics below the ten-day forecast.
-
-### Image Behavior
-
-Use `cover` for condition photography and `fill` for map tiles. Keep weather glyphs and widgets sharp with `contain`.
-
-Apply these rules within current iPhone safe areas and scrolling containers. Keep interactive targets at least 44 points, preserve a logical VoiceOver order, and let Dynamic Type wrap supporting text without flattening the documented hierarchy. Preserve the documented appearance.
+Dynamic Type expands explanatory content and cards; on compact widths, allow forecast labels to wrap or scroll horizontally before hiding key values. Preserve the huge thin temperature, atmospheric imagery, and map viewport. The observed record uses dark mode; any alternate appearance must keep translucent hierarchy and condition contrast rather than replacing cards with generic opaque surfaces.
 
 # Anti-generic checklist
 
-- Do not force one static background across conditions.
-- Do not use heavy bold type for temperature.
-- Do not add opaque white cards over the city forecast.
-- Do not leave mismatched default control styling.
-- Do not replace the documented hierarchy with a generic stack of identical white cards or `Form` sections.
-- Do not use default blue tint, an unstyled `TabView`, arbitrary SF Symbols, or uniform corner radii when they contradict the recorded tokens and components.
-- Do not omit compositionally important imagery while final assets are pending; preserve its footprint with a faithful placeholder.
+- Do not replace condition imagery with one static gradient or a white dashboard canvas.
+- Do not make the current temperature small or heavy-bold; it is the dominant thin numeral.
+- Do not place opaque generic white cards over forecast imagery or maps.
+- Do not replace forecast rows and metric visualizations with identical text-only cards or progress bars.
+- Do not add a tab bar; navigation is expressed by bottom edge icons, close/menu/Done actions, and sheets.
+- Do not omit weather backgrounds, map layers, glyphs, charts, legends, or range bars while assets are pending.
+- Do not use one data color for temperature, UV, wind, precipitation, humidity, pressure, and sunlight.
+- Do not introduce a decorative illustration system where the reference uses atmospheric imagery, data visualization, and native symbols.
 
 </design-context>

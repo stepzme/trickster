@@ -3,320 +3,116 @@
 version: 1
 platform: iOS
 name: Safari-design-analysis
-description: "A restrained native iOS browser interface built from translucent toolbars, white content sheets, system typography, blue actions, and context-sensitive material effects. Web content remains primary while tabs, bookmarks, privacy, sharing, and customization appear as compact sheets or controls with familiar platform geometry."
-
+description: "A content-first native iOS interface with white and grouped-gray surfaces, translucent bottom browser chrome, a compact address pill, system typography, blue text actions, rounded sheets, divider-led lists, and contextual website imagery."
 colors:
-  primary: "#0A72D8"
-  on-primary: "#FFFFFF"
-  primary-soft: "#E7F2FD"
-  ink: "#111214"
-  ink-muted: "#6C6C70"
-  ink-subtle: "#9A9AA0"
   canvas: "#FFFFFF"
-  surface-1: "#F2F2F7"
-  surface-2: "#E5E5EA"
-  material-light: "#F7F7F9"
-  material-dark: "#3A3A3C"
-  hairline: "#D1D1D6"
-  semantic-success: "#34C759"
-  semantic-warning: "#FF9F0A"
-  semantic-danger: "#FF3B30"
-  semantic-overlay: "#000000"
-
+  surface-primary: "#FFFFFF"
+  surface-secondary: "#F2F2F7"
+  accent-primary: "#007AFF"
+  accent-secondary: "#34C759"
+  text-primary: "#111214"
+  text-secondary: "#6C6C70"
+  divider: "#DADCE0"
+  destructive: "#FF3B30"
 typography:
-  display-xl:
-    fontFamily: SF Pro Display
-    fontSize: 34
-    fontWeight: 700
-    lineHeight: 1.10
-    letterSpacing: -0.4
-  display-lg:
-    fontFamily: SF Pro Display
-    fontSize: 28
-    fontWeight: 700
-    lineHeight: 1.15
-    letterSpacing: -0.3
-  display-md:
-    fontFamily: SF Pro Display
-    fontSize: 22
-    fontWeight: 700
-    lineHeight: 1.20
-    letterSpacing: -0.2
-  headline:
-    fontFamily: SF Pro Text
-    fontSize: 20
-    fontWeight: 600
-    lineHeight: 1.25
-    letterSpacing: 0
-  card-title:
-    fontFamily: SF Pro Text
-    fontSize: 17
-    fontWeight: 600
-    lineHeight: 1.25
-    letterSpacing: 0
-  subhead:
-    fontFamily: SF Pro Text
-    fontSize: 16
-    fontWeight: 500
-    lineHeight: 1.30
-    letterSpacing: 0
-  body-lg:
-    fontFamily: SF Pro Text
-    fontSize: 17
-    fontWeight: 400
-    lineHeight: 1.35
-    letterSpacing: 0
-  body:
-    fontFamily: SF Pro Text
-    fontSize: 15
-    fontWeight: 400
-    lineHeight: 1.35
-    letterSpacing: 0
-  body-sm:
-    fontFamily: SF Pro Text
-    fontSize: 13
-    fontWeight: 400
-    lineHeight: 1.30
-    letterSpacing: 0
-  caption:
-    fontFamily: SF Pro Text
-    fontSize: 11
-    fontWeight: 400
-    lineHeight: 1.25
-    letterSpacing: 0
-  button:
-    fontFamily: SF Pro Text
-    fontSize: 17
-    fontWeight: 400
-    lineHeight: 1.20
-    letterSpacing: 0
-  eyebrow:
-    fontFamily: SF Pro Text
-    fontSize: 12
-    fontWeight: 500
-    lineHeight: 1.25
-    letterSpacing: 0.2
-  mono:
-    fontFamily: SF Mono
-    fontSize: 12
-    fontWeight: 400
-    lineHeight: 1.35
-    letterSpacing: 0
-
-rounded:
-  xs: 4
-  sm: 8
-  md: 12
-  lg: 16
-  xl: 22
-  xxl: 28
-  pill: 9999
-  full: 9999
-
+  hero: {fontFamily: "SF Pro Display", fontSize: 28, fontWeight: 700, lineHeight: 34}
+  title: {fontFamily: "SF Pro Display", fontSize: 21, fontWeight: 700, lineHeight: 26}
+  section: {fontFamily: "SF Pro Text", fontSize: 20, fontWeight: 700, lineHeight: 25}
+  body: {fontFamily: "SF Pro Text", fontSize: 17, fontWeight: 400, lineHeight: 22}
+  label: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 600, lineHeight: 20}
+  caption: {fontFamily: "SF Pro Text", fontSize: 12, fontWeight: 400, lineHeight: 16}
 spacing:
-  xxs: 4
-  xs: 8
-  sm: 12
-  md: 16
-  lg: 24
-  xl: 32
-  xxl: 48
-  section: 64
-
+  screen-horizontal: 16
+  section-gap: 28
+  card-padding: 16
+  control-gap: 10
+rounded:
+  control: 12
+  card: 16
+  sheet: 24
+  pill: 999
 components:
-  button-primary:
-    backgroundColor: "{colors.primary}"
-    textColor: "{colors.on-primary}"
-    typography: "{typography.button}"
-    rounded: "{rounded.md}"
-    padding: [12, 16]
-  button-text:
-    backgroundColor: transparent
-    textColor: "{colors.primary}"
-    typography: "{typography.button}"
-    rounded: "{rounded.sm}"
-    padding: 8
-  address-field:
-    backgroundColor: "{colors.material-light}"
-    textColor: "{colors.ink-muted}"
-    typography: "{typography.body}"
-    rounded: "{rounded.md}"
-    padding: [10, 12]
-  sheet:
-    backgroundColor: "{colors.surface-1}"
-    textColor: "{colors.ink}"
-    typography: "{typography.body}"
-    rounded: "{rounded.xl}"
-    padding: 16
-  tab-card:
-    backgroundColor: "{colors.canvas}"
-    textColor: "{colors.ink}"
-    typography: "{typography.caption}"
-    rounded: "{rounded.md}"
-    padding: 0
-  segmented-control:
-    backgroundColor: "{colors.surface-2}"
-    textColor: "{colors.ink}"
-    typography: "{typography.body-sm}"
-    rounded: "{rounded.sm}"
-    padding: 2
-  toolbar:
-    backgroundColor: "{colors.material-light}"
-    textColor: "{colors.ink-muted}"
-    typography: "{typography.body}"
-    rounded: "{rounded.xs}"
-    height: 50
+  address-pill: {fill: "translucent light material", height: 36, radius: 12, controls: "compact inline"}
+  browser-toolbar: {fill: "translucent material", height: 50, icons: "system blue or gray"}
+  modal-sheet: {fill: "surface-secondary", radiusTop: 24, backdrop: "dimmed or blurred"}
+  compact-row: {fill: "surface-primary", height: 46, divider: "hairline", trailing: "chevron or control"}
+  favorite-tile: {imageSize: 52, label: "small centered caption", fill: "transparent"}
 ---
 
 # Overview
 
-Safari is a content-first browser shell built from native iOS materials. White and translucent chrome, system type, blue text actions, and familiar sheets stay subordinate to the current webpage. Tabs, bookmarks, privacy, sharing, and start-page customization reuse a small set of platform patterns.
-
-**Key Characteristics:**
-- Web content remains visually dominant.
-- Toolbars and address fields use translucent or pale material surfaces.
-- Blue marks links, selected controls, and completion actions.
-- Tabs are shown as rounded page previews over blurred context.
-- Share, bookmarks, privacy, and customization use sheets and grouped rows.
+Safari is a restrained browser shell whose own interface remains subordinate to webpage content. White and grouped-light-gray surfaces, translucent bottom chrome, familiar system icons, and blue text actions form the authored UI. Sheets, lists, tabs, and customization panels reuse native iOS geometry and typography; contextual websites, favicons, and thumbnails supply imagery rather than an app-wide decorative layer.
 
 # Non-negotiable visual invariants
 
-- Web content remains visually dominant.
-- Toolbars and address fields use translucent or pale material surfaces.
-- Blue marks links, selected controls, and completion actions.
-- Tabs are shown as rounded page previews over blurred context.
-- Share, bookmarks, privacy, and customization use sheets and grouped rows.
+- Web or primary content remains the largest visual field; browser chrome occupies compact top or bottom safe-area regions.
+- Bottom controls use translucent material and a centered rounded address/search pill rather than an opaque heavy tab bar.
+- White and grouped light gray dominate authored surfaces; blue is reserved for actions, selection, and completion.
+- Modal interactions use rounded bottom sheets with a dimmed or blurred underlying page and safe-area padding.
+- Lists remain compact, full-width, icon-led, and separated by thin dividers with chevrons or trailing controls.
+- Typography is neutral SF Pro with hierarchy created by size and weight rather than decorative faces.
+- Selected state appears through blue tint, checkmarks, segmented highlights, green switches, or red destructive labels.
+- Contextual imagery may vary with content, but recurring authored characters or illustrative scenes must not be invented.
 
 # Color and surfaces
 
-### Brand & Accent
+The dominant authored fields are white and grouped gray around `#F2F2F7`, with slightly darker inactive materials and fine separators. Toolbars and the address pill use a translucent light material that allows page color or blur to remain perceptible. Some webpage content is black or highly colored, but it is not part of the browser shell palette.
 
-- **System Blue** ({colors.primary}) marks actionable text, active icons, selection outlines, and confirmation.
-- **Soft Blue** ({colors.primary-soft}) supports subtle selected or informational states.
-
-### Surface
-
-- **Canvas** ({colors.canvas}) is the default start-page and sheet content surface.
-- **Surface 1** ({colors.surface-1}) supports grouped settings, sheets, and browser chrome.
-- **Surface 2** ({colors.surface-2}) carries segmented controls and inactive material.
-- **Materials** ({colors.material-light}, {colors.material-dark}) adapt toolbars to page context.
-
-### Text
-
-- **Ink** ({colors.ink}) carries titles and primary values.
-- **Muted** ({colors.ink-muted}) is used for explanatory copy and inactive toolbar icons.
-- **Subtle** ({colors.ink-subtle}) is limited to placeholders and disabled information.
-
-### Semantic
-
-Use standard system green, orange, and red for switches, warnings, and destructive actions. These colors are semantic, not part of the browser's decorative identity.
+System blue around `#007AFF` identifies text actions, active icons, checkmarks, and selected affordances. Green around `#34C759` belongs to enabled toggles; red marks destructive menu actions. Primary text is near-black, supporting copy medium gray. Do not spread semantic green or red decoratively, and do not replace material translucency with flat branded color blocks.
 
 # Typography
 
-### Font Family
+Use SF Pro Display and SF Pro Text. Start-page section headings are approximately 20-21 points bold, sheet titles around 17 points semibold, body and row labels 15-17 points regular, explanations 13-15 points gray, and labels beneath favorite icons 11-12 points. Toolbar actions remain compact and regular rather than bold.
 
-Use SF Pro Display and SF Pro Text, with SF Mono only for technical strings when needed. The interface should feel platform-native and neutral.
-
-### Hierarchy
-
-| Token | Size | Weight | Use |
-|---|---:|---:|---|
-| `{typography.display-xl}` | 34 points | 700 | Start-page title |
-| `{typography.display-lg}` | 28 points | 700 | Large section heading |
-| `{typography.display-md}` | 22 points | 700 | Sheet title |
-| `{typography.headline}` | 20 points | 600 | Start-page section |
-| `{typography.card-title}` | 17 points | 600 | Group or privacy title |
-| `{typography.body}` | 15 points | 400 | Default rows and descriptions |
-| `{typography.caption}` | 11 points | 400 | Tab and site metadata |
-
-### Principles
-
-- Keep browser controls concise and familiar.
-- Use bold type for start-page structure, not toolbar actions.
-- Let websites retain their own typography inside the content viewport.
-- Preserve readable system metrics in sheets and privacy explanations.
-
-### Note on Font Substitutes
-
-Use the platform system font. On non-Apple targets, Inter is acceptable, but preserve iOS-like weight, spacing, and numeral proportions.
+Text is generally left-aligned in content lists and centered in sheet navigation bars. Dynamic Type should increase row and sheet height, wrap descriptions, and keep blue actions distinct without allowing titles to collide with Cancel, Done, or Edit controls.
 
 # Screen composition
 
-### Spacing System
+Full-height screens preserve the top status bar and reserve the bottom safe area for a translucent toolbar and address pill. The webpage or start-page content scrolls behind or above this chrome. The address pill is approximately 34-38 points high, horizontally inset, and contains compact leading and trailing affordances.
 
-Use a 4 points base, 16 points screen gutters, 8–12 points gaps inside grouped sheets, and 24 points between start-page sections. Toolbar spacing is tighter but must preserve tap targets.
+The start-page archetype uses white or a soft pastel background, bold section headings, grids of 48-56 point favorite icons with small centered labels, and grouped customization content. The sheet archetype rises from the bottom with large top corners, a compact centered title, blue edge actions, and full-width rows. The tab-overview archetype places rounded page previews over a blurred pastel wash and uses a compact bottom control row. Share surfaces use rounded grouped panels, a horizontal row of 44-52 point app icons, and 44-48 point action rows.
 
-### Grid & Container
-
-The webpage fills the main viewport. Browser chrome anchors to the lower edge. Tab overview uses a two-column preview grid, while bookmarks, privacy, and customization use one-column sheets.
-
-### Whitespace Philosophy
-
-Chrome remains compact so content can breathe. Sheets use open white space and clear grouping, while the start page allows large gaps between favorites, privacy, and reading list sections.
-
-Surface hierarchy observed in the source:
-
-Blur, translucency, and layered sheets create depth. Tab cards float above a defocused background; share and privacy sheets stack above the current page without replacing it.
-
-### Decorative Depth
-
-Use material blur, shallow card shadows, and page preview scaling. Avoid decorative gradients except user-selected start-page imagery or the soft system background behind tab overview.
+Utility lists rely on dividers and grouped-gray containers rather than individually elevated cards. Underlying content remains visibly dimmed or blurred beneath overlays.
 
 # Navigation appearance
 
-The bottom toolbar provides back, forward, share, bookmarks, and tabs around the address field. Sheets use Cancel, Done, or a simple back title. Private mode changes the material to dark charcoal while preserving the same structure.
+The primary browser chrome is a bottom translucent toolbar with compact back, forward, share, bookmark, and tab symbols around a centered address/search pill. The pill may contain small leading text or privacy controls, a domain or placeholder, and compact microphone, reload, or close affordances.
+
+Sheets use centered titles with blue Cancel, Done, Edit, or back labels at the edges. Tab overview uses a bottom bar with a plus action, centered tab-count/dropdown treatment, and Done. The adapted product takes screen structure from approved Research and Planning rather than copying browser destinations.
 
 # Components
 
-### Buttons
+The address/search field is a 34-38 point translucent rounded rectangle with compact inline glyphs and gray placeholder or domain text. Toolbar icons use familiar system-weight line art with blue active and gray inactive states.
 
-Most actions are blue text or toolbar icons, not filled buttons. Filled blue is reserved for clear sign-in or confirmation moments. Native controls are appropriate, but their visible styling must follow the selected material, type, tint, and geometry.
+Favorite tiles pair a 48-56 point square icon with an 11-12 point centered label and no surrounding card. Share panels use rounded grouped containers, circular or rounded-square app icons, and divider-led rows with trailing line icons. Bookmark and privacy panels use compact segmented controls, full-width rows, and blue selection marks.
 
-### Cards & Containers
-
-Tab cards show a live page preview, site identity, and close control. Start-page information uses soft white cards. Share actions and settings are grouped into rounded rows with familiar icons.
-
-### Inputs & Forms
-
-The address and search field is the primary input and stays near the bottom toolbar. Search within tabs or bookmarks uses the same pale rounded field. Use system keyboard, focus, and clear behavior while preserving the chosen material tint.
+Customization groups are rounded light-gray blocks containing toggles, drag handles, and concise rows; selectable background thumbnails form a three-column square grid. Destructive context-menu actions use system red text while preserving otherwise neutral material styling.
 
 # Imagery and icons
 
-Use material blur, shallow card shadows, and page preview scaling. Avoid decorative gradients except user-selected start-page imagery or the soft system background behind tab overview.
+Imagery is contextual: website content, favicons, app icons, page previews, small background thumbnails, and occasional webpage artwork. It can occupy most of the viewport, but its style belongs to the current content rather than to a reusable Safari illustration system. Tab previews should preserve readable page silhouettes and rounded crops.
 
-Web content keeps its source geometry. Optional start-page backgrounds fill the viewport behind translucent sections; thumbnails remain evenly rounded and selected with a blue outline.
-
-If final imagery is not yet available, any placeholder must preserve the documented scale, placement, crop, and visual weight rather than removing that layer.
+Icons are concise native line or filled symbols with familiar proportions. Do not insert branded illustrations between content and browser controls. When page thumbnails or favorite icons are compositionally required, retain their area and crop rather than substituting generic placeholders.
 
 # States
 
-No-internet states keep the failed page context visible and place the explanation centrally. Privacy reports summarize key metrics before detailed educational copy. Loading remains inside the page or address-field context.
+Observed states include focused search with keyboard, suggestions prompt, loading page, loaded content with an overlay control, no-connection text, expanded share sheet, checked options, editable app list, bookmark hierarchy, tab grid with selected and close states, destructive context menu, segmented privacy selection, and customization toggles on and off. Neutral materials, blue actions, compact rows, and safe-area-aware bottom chrome remain stable.
 
 # iOS adaptation
 
-### Touch Targets
+Use native safe-area insets for the status bar, keyboard, bottom toolbar, sheets, and home indicator. Web/content regions should scroll independently of persistent browser chrome. Sheets and grouped lists must scroll internally as Dynamic Type expands them. Preserve material effects using current iOS blur APIs while keeping contrast sufficient against unpredictable content.
 
-Toolbar icons, tab close controls, segmented options, rows, and switches require at least 44 points touch targets.
-
-### Collapsing Strategy
-
-Collapse the address field as the page scrolls and restore it on interaction. Present detailed actions in sheets rather than crowding the toolbar.
-
-### Image Behavior
-
-Tab previews use scaled page captures with proportional cropping. User-selected start-page backgrounds use `cover` and maintain sufficient contrast behind translucent sections.
-
-Apply these rules within current iPhone safe areas and scrolling containers. Keep interactive targets at least 44 points, preserve a logical VoiceOver order, and let Dynamic Type wrap supporting text without flattening the documented hierarchy. Preserve the documented appearance.
+All toolbar symbols, favorite tiles, sheet actions, segmented controls, and row affordances require at least 44-point hit areas even when glyphs are smaller. On compact widths, shorten nonessential labels before compressing the address pill or overlapping controls. VoiceOver order should follow visible content, address context, toolbar actions, then overlay or sheet content. Support system light/dark material adaptation only when the approved product requires it.
 
 # Anti-generic checklist
 
-- Do not wrap every browser control in a filled button.
-- Do not add ornamental branding to neutral chrome.
-- Do not replace blur and layering with heavy shadows.
-- Do not let start-page imagery reduce text readability.
-- Do not mix unrelated custom control styles with the system grammar.
-- Do not replace the documented hierarchy with a generic stack of identical white cards or `Form` sections.
-- Do not use default blue tint, an unstyled `TabView`, arbitrary SF Symbols, or uniform corner radii when they contradict the recorded tokens and components.
-- Do not omit compositionally important imagery while final assets are pending; preserve its footprint with a faithful placeholder.
+- Do not replace translucent bottom chrome with a heavy opaque tab bar.
+- Do not frame the main content inside a decorative card or shrink it behind oversized navigation.
+- Do not replace compact divider-led lists with repeated floating cards or default `Form` spacing.
+- Do not use a custom brand color where system blue, green, or red communicates state.
+- Do not apply one radius to the address pill, sheets, tab previews, grouped panels, and thumbnails.
+- Do not substitute arbitrary custom icons for familiar platform controls.
+- Do not invent an illustration system from contextual webpage art or pastel background thumbnails.
+- Do not ignore contrast changes caused by translucency over dark or colorful content.
 
 </design-context>

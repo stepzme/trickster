@@ -3,204 +3,116 @@
 version: 1
 platform: iOS
 name: Anytime-design-analysis
-description: "A map-first car-sharing interface anchored by vivid turquoise, white floating controls, translucent map overlays, and compact bottom sheets. Real vehicle photography and the live map carry trust; onboarding uses full-screen mobility imagery with a thin turquoise route motif."
+description: "A map-first car-sharing interface with pale colorful cartography, vivid aqua actions, white circular floating controls, deep rounded vehicle sheets, sparse registration surfaces, and realistic vehicle and document imagery."
 colors:
-  primary: "#23D7B2"
-  on-primary: "#10201D"
-  primary-soft: "#DDF9F3"
-  ink: "#151919"
-  ink-muted: "#6F7775"
-  ink-subtle: "#A7ADAB"
-  canvas: "#EEF1F0"
-  surface-1: "#FFFFFF"
-  surface-2: "#F1F4F3"
-  hairline: "#DFE4E2"
-  map-water: "#6CCDF0"
-  map-land: "#D8EBDD"
-  semantic-success: "#25C779"
-  semantic-danger: "#E65D56"
-  semantic-overlay: "#000000"
+  canvas: "#E8E5E2"
+  surface-primary: "#FFFFFF"
+  surface-secondary: "#F2F4F3"
+  accent-primary: "#36DEBC"
+  accent-secondary: "#83D5E8"
+  text-primary: "#111111"
+  text-secondary: "#737A78"
+  divider: "#DFE4E2"
+  destructive: "#E65D56"
 typography:
-  display-xl: { fontFamily: System Sans, fontSize: 40, fontWeight: 750, lineHeight: 1.00, letterSpacing: -0.9 }
-  display-lg: { fontFamily: System Sans, fontSize: 32, fontWeight: 700, lineHeight: 1.05, letterSpacing: -0.6 }
-  display-md: { fontFamily: System Sans, fontSize: 26, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.3 }
-  headline: { fontFamily: System Sans, fontSize: 21, fontWeight: 700, lineHeight: 1.18, letterSpacing: -0.2 }
-  card-title: { fontFamily: System Sans, fontSize: 15, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: System Sans, fontSize: 16, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
-  body-lg: { fontFamily: System Sans, fontSize: 16, fontWeight: 400, lineHeight: 1.45, letterSpacing: 0 }
-  body: { fontFamily: System Sans, fontSize: 14, fontWeight: 400, lineHeight: 1.38, letterSpacing: 0 }
-  body-sm: { fontFamily: System Sans, fontSize: 12, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
-  caption: { fontFamily: System Sans, fontSize: 10, fontWeight: 400, lineHeight: 1.20, letterSpacing: 0 }
-  button: { fontFamily: System Sans, fontSize: 16, fontWeight: 500, lineHeight: 1.20, letterSpacing: 0 }
-  eyebrow: { fontFamily: System Sans, fontSize: 11, fontWeight: 650, lineHeight: 1.20, letterSpacing: 0.3 }
-  mono: { fontFamily: System Mono, fontSize: 12, fontWeight: 500, lineHeight: 1.30, letterSpacing: 0 }
-rounded: { xs: 6, sm: 10, md: 14, lg: 20, xl: 28, xxl: 34, pill: 9999, full: 9999 }
-spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
+  hero: {fontFamily: "SF Pro Display", fontSize: 30, fontWeight: 800, lineHeight: 34}
+  title: {fontFamily: "SF Pro Display", fontSize: 22, fontWeight: 700, lineHeight: 27}
+  section: {fontFamily: "SF Pro Text", fontSize: 18, fontWeight: 600, lineHeight: 23}
+  body: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 400, lineHeight: 20}
+  label: {fontFamily: "SF Pro Text", fontSize: 16, fontWeight: 600, lineHeight: 21}
+  caption: {fontFamily: "SF Pro Text", fontSize: 12, fontWeight: 400, lineHeight: 16}
+spacing:
+  screen-horizontal: 16
+  section-gap: 24
+  card-padding: 16
+  control-gap: 12
+rounded:
+  control: 12
+  card: 16
+  sheet: 28
+  pill: 999
 components:
-  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [14, 20]}
-  map-control: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.full}", padding: 12 }
-  vehicle-sheet: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xl}", padding: 16 }
-  status-banner: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.md}", padding: 12 }
-  drawer-row: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xs}", padding: [12, 16]}
-  bottom navigation: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.caption}", rounded: "{rounded.xl}", padding: [12, 16]}
+  primary-action: {fill: "accent-primary", height: 52, radius: 12, text: "text-primary semibold"}
+  secondary-action: {fill: "surface-primary", border: "accent-primary", height: 50, radius: 12}
+  vehicle-sheet: {fill: "surface-primary", radiusTop: 28, imageRole: "overlapping vehicle cutout"}
+  map-control: {fill: "surface-primary", size: 44, radius: 999, shadow: "soft"}
+  confirmation-modal: {fill: "surface-primary", radius: 16, backdrop: "dimmed", actions: "stacked"}
 ---
 
 # Overview
 
-Anytime keeps navigation subordinate to the map. White circular controls and bottom sheets float above soft map colors; turquoise signals availability, progress, and remote car actions.
-
-**Key Characteristics:**
-- Full-screen live map as home.
-- Turquoise primary actions and route motif.
-- White circular floating controls.
-- Rounded vehicle and confirmation sheets.
-- Real vehicle images and map markers.
-- Side drawer that preserves map context.
+Anytime is visually governed by full-bleed pale cartography rather than by conventional app chrome. White circular controls and large white bottom sheets float over cyan water, mint land, and light-gray roads, while vivid aqua identifies primary actions and status. Registration and support surfaces become much sparser, using white or lightly textured fields, compact system-like type, conversational cards, and bottom-pinned actions. Real vehicle, document, and camera imagery carries the visual evidence; illustration is incidental.
 
 # Non-negotiable visual invariants
 
-- The reference consistently shows full-screen live map as home.
-- The reference consistently shows turquoise primary actions and route motif.
-- The reference consistently shows white circular floating controls.
-- The reference consistently shows rounded vehicle and confirmation sheets.
-- The reference consistently shows real vehicle images and map markers.
-- The reference consistently shows side drawer that preserves map context.
+- Operational screens preserve a full-viewport map as the dominant color field, with controls layered above rather than placed in a heavy navigation bar.
+- Aqua around `#36DEBC` remains the repeated action and active-status color across buttons, top chrome, icons, and progress.
+- Map controls are independent white circles approximately 40-44 points across with dark glyphs and soft shadow.
+- Dense vehicle information sits in a white bottom sheet with large top corners and clear home-indicator padding.
+- Primary actions are nearly full-width, bottom-biased aqua rectangles approximately 48-56 points high with moderate corners.
+- Vehicle imagery is realistic and prominent, often overlapping the upper edge of a sheet rather than sitting inside a small thumbnail.
+- Confirmation uses a centered white rounded modal over a clearly dimmed underlying screen, with two vertically stacked choices.
+- Registration remains sparse and conversational, using white assistant cards, pale-green reply bubbles, wide margins, and restrained supporting copy.
 
 # Color and surfaces
 
-### Brand & Accent
-- **Turquoise** ({colors.primary}): Remote car action, progress, route motif, and active emphasis.
-- **Soft Turquoise** ({colors.primary-soft}): Selected or informational support.
-- **Map Blue / Green**: Geographic context, not brand action.
+The operational canvas is the map itself: pale cyan water around `#83D5E8`, mint-green land around `#98E8B4`, and light gray-beige roads around `#E8E5E2`. White creates high-contrast floating controls, sheets, drawers, and centered modals. Vivid aqua from approximately `#31DDBB` to `#43E6C4` is the single brand action color; pale gray indicates disabled controls or nested fields.
 
-### Surface
-- **Canvas** ({colors.canvas}): Neutral fallback behind map.
-- **Surface 1** ({colors.surface-1}): Controls, sheets, and drawer.
-- **Surface 2** ({colors.surface-2}): Disabled and nested content.
-- **Hairline** ({colors.hairline}): Sheet and form separators.
-
-### Text
-- **Ink** ({colors.ink}): Vehicle, action, and navigation labels.
-- **Ink Muted** ({colors.ink-muted}): Range, status, and supporting detail.
-- **Ink Subtle** ({colors.ink-subtle}): Disabled and placeholder text.
-
-### Semantic
-- **Success** ({colors.semantic-success}): Completed command or verification.
-- **Danger** ({colors.semantic-danger}): Rental issue and destructive action.
-- **Overlay** ({colors.semantic-overlay}): Command and drawer scrim.
+Primary text is near-black, with muted gray for range, instructions, and secondary data. Dividers are light and sparse. Dark translucent scrims separate centered modals or drawers from the map. Map colors remain geographic context and must not be reused arbitrarily as action colors. Default iOS blue would visibly conflict with the aqua action system.
 
 # Typography
 
-### Font Family
+Use SF Pro as the iOS-safe approximation. The hierarchy is modest: 20-22 point semibold or bold titles, 18 point section headings, 15-17 point medium or semibold button labels, 13-15 point regular body copy, and 11-13 point map-card metadata. Some drawer or support labels appear uppercase or nearly all caps at approximately 14-16 points. The heavy rounded wordmark remains artwork rather than live UI text.
 
-- **System Sans** — map, vehicle, registration, and profile UI.
-- **System Mono** — plate fragments and technical identifiers where needed.
-
-### Hierarchy
-
-| Token | Size | Weight | Use |
-|---|---|---|---|
-| `{typography.display-xl}` | 40 points | 750 | Onboarding statement |
-| `{typography.display-md}` | 26 points | 700 | Registration heading |
-| `{typography.headline}` | 21 points | 700 | Vehicle or confirmation title |
-| `{typography.card-title}` | 15 points | 600 | Vehicle model and drawer group |
-| `{typography.body}` | 14 points | 400 | Default content |
-| `{typography.caption}` | 10 points | 400 | Status and metadata |
-| `{typography.button}` | 16 points | 500 | Remote actions |
-
-### Principles
-
-- Keep map labels secondary to vehicle actions.
-- Make model, plate, fuel/range, and rental status scan together.
-- Use concise remote-command verbs.
-- Keep onboarding copy readable over photography.
-
-### Note on Font Substitutes
-
-Use **SF Pro**, **Inter**, or **Roboto**.
+Most content is left-aligned, with centered treatment reserved for focused prompts and modal titles. Keep technical identifiers compact and visually grouped with nearby vehicle metadata. Dynamic Type should grow registration cards, drawer rows, and sheet height while maintaining a clear step down from title to body and caption.
 
 # Screen composition
 
-### Spacing System
+Map archetypes extend beneath most of the viewport while respecting readable controls inside the status and home-indicator safe areas. Circular controls form a vertical edge stack with roughly 12 point gaps. A white sheet rises from the bottom, uses about 16 point internal padding, and can place a realistic vehicle cutout across its top boundary. Compact metadata, horizontal option cards, and one or more wide actions stack below.
 
-Use a 4 points base. Floating controls keep 12 points spacing, sheets use 16 points padding, and full-width actions use 14 points vertical padding.
+Registration archetypes use white or subtly textured backgrounds, wide side margins, a centered wordmark or compact top bar, generous empty space, and a bottom-pinned action above the home indicator. Conversational variants stack small white assistant cards and pale-green reply bubbles rather than forming a conventional form. Drawer archetypes cover most of the left side with white while leaving a narrow strip of the map visible. Confirmation archetypes place a moderate-width white modal in the center of a darkened map or sheet. Camera archetypes are black full-screen capture surfaces with low shutter, accept, and cancel controls.
 
-### Grid & Container
-
-The map fills the viewport. Controls align vertically at the edges. Vehicle detail and active rental use a bottom sheet; profile uses a left drawer.
-
-### Whitespace Philosophy
-
-Whitespace lives inside sheets and controls. The map remains visually open; avoid covering more geography than the current task requires.
-
-Surface hierarchy observed in the source:
-
-| Level | Treatment | Use |
-|---|---|---|
-| 0 | Live map | Primary canvas |
-| 1 | Shadowed white circle | Map control |
-| 2 | White rounded sheet | Vehicle and rental |
-| 3 | Dimmed map plus modal | Command confirmation |
-
-### Decorative Depth
-
-Use soft control shadows and literal vehicle renders. Onboarding may layer turquoise route lines over mobility photography.
+The map should remain visibly open; do not permanently cover most of it with dense panels. Supporting content scrolls inside sheets, drawers, or registration surfaces rather than moving the map canvas itself.
 
 # Navigation appearance
 
-Map controls replace a tab bar. The menu opens a left drawer for account, pricing, and support destinations.
+Navigation chrome is light and context-specific. Map screens use a floating white circular menu control near the upper edge plus a vertical group of circular map controls. A left-side white drawer overlays most of the map but leaves the opposite edge visible. Registration and support may use a solid aqua top bar with a compact title and simple back glyph.
+
+Bottom sheets communicate depth through large rounded top corners and soft shadow rather than a standard tab bar. Centered modals use a dark scrim and stacked actions. The adapted product must derive destinations and screen structure from approved Research and Planning rather than copying the reference application's drawer contents.
 
 # Components
 
-### Buttons
+Primary actions are nearly full-width aqua rounded rectangles 48-56 points high with dark medium or semibold text. Secondary actions use a white fill, aqua outline, and matching label. Disabled actions become solid light gray with subdued text while preserving size.
 
-Primary remote actions use turquoise fill. End rental uses a turquoise outline or explicit secondary styling. Confirmation sheets use one full-width return action.
+Map controls are 40-44 point white circles with dark glyphs and shallow shadow. Vehicle sheets are white with approximately 28-point top corners; a realistic vehicle image can overlap the top edge, followed by compact metadata rows, horizontally arranged option cards, and stacked actions. Status banners are compact white rounded rectangles floating above the map.
 
-### Cards & Containers
-
-Vehicle sheets combine model, plate, range, user state, issue chips, car image, and remote actions. Status banners remain pinned above the map.
-
-### Inputs & Forms
-
-Registration uses direct conversational prompts with explicit document capture. Camera actions name the required identity side or page.
+Confirmation modals are centered white rectangles with roughly 16 point corners, a strong title, concise body, and two full-width stacked choices. Registration/support messages are small white cards with subtle shadow and restrained corner radius, paired with pale-green response bubbles. Camera controls remain high-contrast and circular against a black capture field.
 
 # Imagery and icons
 
-Use soft control shadows and literal vehicle renders. Onboarding may layer turquoise route lines over mobility photography.
+Realistic or photographic vehicles are the principal object imagery. They appear as cutouts over maps or sheets and must preserve recognizable silhouette, color, and branding-like detail without being reduced to generic symbols. Onboarding may combine real mobility photography with a thin aqua route-line doodle and small transport/location icons. Document upload uses real example document imagery, camera previews, and evidence-like photographs.
 
-Vehicle images use contain and preserve branding. Onboarding photography uses cover with a readable route overlay. Map markers stay legible at multiple zoom levels.
-
-If final imagery is not yet available, any placeholder must preserve the documented scale, placement, crop, and visual weight rather than removing that layer.
+Functional icons are simple dark glyphs inside white circles or aqua chrome. A single grayscale instructional figure was observed, but it does not define a reusable illustration system. Compositionally important vehicle, document, and camera imagery cannot be omitted while assets are pending; placeholders must retain their size, crop, and realistic visual weight.
 
 # States
 
-Remote commands show loading in place, then a clear success sheet. Active rental stays visible through a persistent banner and bottom sheet.
+Observed states include gray disabled and aqua enabled actions, keyboard-open registration, outlined secondary controls, centered confirmation modal with dim scrim, expanded bottom sheet, active-rental status banner, loading support chat, empty/help chat, camera capture and retake confirmation, and completed-trip rating with yellow stars. Across these states, aqua action emphasis, white floating surfaces, black type, and safe-area spacing remain stable.
 
 # iOS adaptation
 
-### Touch Targets
+Keep maps full-bleed while placing controls within current top and bottom safe areas. Circular buttons require at least 44-point hit regions and must avoid the Dynamic Island, status bar, sheet edge, and each other. Use scrollable sheet content and detents that retain visible map context; low actions require home-indicator padding. Camera and keyboard transitions should use native system behavior.
 
-Maintain 44 points for map controls, markers, issue chips, drawer rows, and remote actions.
-
-### Collapsing Strategy
-
-Keep the map full viewport. Constrain sheets before increasing height; stack vehicle actions only on the narrowest screens.
-
-### Image Behavior
-
-Contain vehicle renders and identity evidence. Use cover for onboarding photography while preserving people, car, logo, and route line.
-
-Apply these rules within current iPhone safe areas and scrolling containers. Keep interactive targets at least 44 points, preserve a logical VoiceOver order, and let Dynamic Type wrap supporting text without flattening the documented hierarchy. Preserve the documented appearance.
+On compact widths, stack horizontal sheet actions and option cards before shrinking type or touch regions. Vehicle cutouts may scale down but must remain the visual anchor at the sheet boundary. Dynamic Type may increase modal, message, row, and sheet heights; allow scrolling rather than clipping. VoiceOver order should move from floating/top controls through map summary and sheet content to low actions. Preserve the observed light/map appearance unless the approved product defines an alternate dark state.
 
 # Anti-generic checklist
 
-- Don't cover the map with permanent chrome.
-- Don't use map color as action color.
-- Don't hide plate or range information.
-- Don't combine destructive and routine controls.
-- Don't make document capture ambiguous.
-- Do not replace the documented hierarchy with a generic stack of identical white cards or `Form` sections.
-- Do not use default blue tint, an unstyled `TabView`, arbitrary SF Symbols, or uniform corner radii when they contradict the recorded tokens and components.
-- Do not omit compositionally important imagery while final assets are pending; preserve its footprint with a faithful placeholder.
+- Do not replace the map-first composition with a generic white dashboard or stack of cards.
+- Do not use default blue tint for primary actions, progress, icons, or top chrome.
+- Do not place map controls inside a conventional navigation toolbar; preserve their independent circular form.
+- Do not cover the map permanently with an oversized sheet when spatial context is compositionally important.
+- Do not turn sparse conversational registration into default `Form` sections.
+- Do not replace realistic vehicle, document, or camera imagery with arbitrary SF Symbols or SwiftUI shape drawings.
+- Do not use one uniform corner radius for circular controls, message cards, bottom sheets, actions, and centered modals.
+- Do not reuse cyan water or mint map colors as competing primary action fills.
 
 </design-context>

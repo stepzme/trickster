@@ -3,176 +3,127 @@
 version: 1
 platform: iOS
 name: Ostrovok-design-analysis
-description: "A bright travel interface built from lime brand fields, royal-blue search and booking actions, large destination photography, clean white result cards, map price pins, and playful travel-object art."
-colors: {primary: "#1355DE", on-primary: "#FFFFFF", primary-focus: "#0C42B4", ink: "#18191C", ink-muted: "#666A70", ink-subtle: "#989CA2", ink-tertiary: "#C2C5CA", canvas: "#FFFFFF", surface-1: "#F4F6F7", surface-2: "#EAF0ED", surface-3: "#DDE5E0", surface-4: "#D0D9D3", hairline: "#E2E7E4", hairline-strong: "#C9D1CC", hairline-tertiary: "#AFBAB3", inverse-canvas: "#1A1B1F", inverse-surface-1: "#2B2C31", inverse-surface-2: "#3C3D44", inverse-ink: "#FFFFFF", brand-secure: "#91F36B", semantic-success: "#41B866", semantic-overlay: "#17181C"}
+description: "A dense but bright travel interface combining a saturated lime search header, royal-blue booking actions, white and pale-gray cards, large hotel photography, green rating badges, map overlays, and a labeled five-item blue-selected tab bar."
+colors:
+  canvas: "#F4F4F6"
+  surface-primary: "#FFFFFF"
+  surface-secondary: "#EEF1F2"
+  accent-primary: "#0752E8"
+  accent-secondary: "#97EF72"
+  text-primary: "#222222"
+  text-secondary: "#8E8E93"
+  divider: "#E2E4E7"
+  destructive: "#E1121B"
 typography:
-  display-xl: {fontFamily: SF Pro Display, fontSize: 36, fontWeight: 700, lineHeight: 1.06, letterSpacing: -0.8}
-  display-lg: {fontFamily: SF Pro Display, fontSize: 30, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.5}
-  display-md: {fontFamily: SF Pro Display, fontSize: 24, fontWeight: 700, lineHeight: 1.14, letterSpacing: -0.3}
-  headline: {fontFamily: SF Pro Display, fontSize: 21, fontWeight: 700, lineHeight: 1.20, letterSpacing: -0.2}
-  card-title: {fontFamily: SF Pro Text, fontSize: 16, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0}
-  subhead: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 600, lineHeight: 1.30, letterSpacing: 0}
-  body-lg: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0}
-  body: {fontFamily: SF Pro Text, fontSize: 13, fontWeight: 400, lineHeight: 1.36, letterSpacing: 0}
-  body-sm: {fontFamily: SF Pro Text, fontSize: 11, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0}
-  caption: {fontFamily: SF Pro Text, fontSize: 10, fontWeight: 400, lineHeight: 1.25, letterSpacing: 0}
-  button: {fontFamily: SF Pro Text, fontSize: 14, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0}
-  eyebrow: {fontFamily: SF Pro Text, fontSize: 10, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0.2}
-  mono: {fontFamily: SF Mono, fontSize: 11, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0}
-rounded: {xs: 6, sm: 10, md: 16, lg: 20, xl: 26, xxl: 30, pill: 9999, full: 9999}
-spacing: {xxs: 4, xs: 8, sm: 12, md: 16, lg: 20, xl: 24, xxl: 32, section: 40}
+  hero: {fontFamily: "SF Pro Display", fontSize: 30, fontWeight: 700, lineHeight: 34}
+  title: {fontFamily: "SF Pro Display", fontSize: 27, fontWeight: 700, lineHeight: 32}
+  section: {fontFamily: "SF Pro Text", fontSize: 20, fontWeight: 700, lineHeight: 25}
+  body: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 400, lineHeight: 20}
+  label: {fontFamily: "SF Pro Text", fontSize: 14, fontWeight: 600, lineHeight: 18}
+  caption: {fontFamily: "SF Pro Text", fontSize: 12, fontWeight: 400, lineHeight: 16}
+spacing:
+  screen-horizontal: 12
+  section-gap: 24
+  card-padding: 14
+  control-gap: 10
+rounded:
+  control: 12
+  card: 16
+  sheet: 22
+  pill: 999
 components:
-  button-primary: {backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [14, 18]}
-  button-primary-pressed: {backgroundColor: "{colors.primary-focus}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}"}
-  button-secondary: {backgroundColor: "{colors.surface-1}", textColor: "{colors.primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [12, 16]}
-  button-tertiary: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [10, 14]}
-  content-card: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 14}
-  feature-card: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 16}
-  text-input: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: [12, 14]}
-  status-badge: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.pill}", padding: [3, 7]}
-  bottom-nav: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink-subtle}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: [8, 10]}
+  primary-action: {fill: "royal blue", text: "white semibold", height: 50, shape: "rounded rectangle"}
+  secondary-action: {fill: "white or pale gray", text: "royal blue", border: "none", shape: "rounded rectangle"}
+  primary-card: {fill: "white", radius: 16, padding: 14, media: "wide hotel photography"}
+  navigation: {fill: "white", selected: "blue icon and label", inactive: "gray icon and label", items: 5}
 ---
 
 # Overview
 
-Ostrovok pairs energetic lime identity and blue booking actions with large travel photography, clear property facts, and friendly trip states.
+Ostrovok is a bright, information-dense travel interface whose strongest visual signature is the combination of saturated lime brand areas and decisive royal-blue actions. Search and home surfaces introduce large green fields and broad white input cards; result, booking, account, and support screens settle onto a pale-gray canvas with white grouped cards. Real hotel and destination photography carries most of the emotion and comparison value.
 
-**Key Characteristics:** lime brand backdrop, royal-blue actions, white search field, large editorial destination cards, map price pins, clean booking cards, and 3D travel objects.
+The interface stays utilitarian even when visual. Large photos lead property and destination cards, while ratings, dates, prices, policy, and next actions are arranged in compact text blocks beneath or beside them. Blue buttons and selected navigation consistently identify commitment; green numeric badges identify quality rather than functioning as a general success tint.
 
 # Non-negotiable visual invariants
 
-- The reference consistently shows lime brand backdrop.
-- The reference consistently shows royal-blue actions.
-- The reference consistently shows white search field.
-- The reference consistently shows large editorial destination cards.
-- The reference consistently shows map price pins.
-- The reference consistently shows clean booking cards.
-- The reference consistently shows 3D travel objects.
+- A saturated lime field is a major visual mass on brand and search-entry screens, paired with white controls rather than used as a minor decorative accent.
+- Royal blue is the dominant action and selected-navigation color across search, booking, payment, filters, maps, and account surfaces.
+- Hotel and destination photography remains large and comparison-ready; it cannot be collapsed into small thumbnails or omitted while assets are pending.
+- Search results and booking content use broad white cards on a light-gray canvas with compact 12-point gutters and 8–12-point vertical gaps.
+- Property cards keep rating, review context, price, and key metadata visually grouped beneath or beside the image, with price and primary action carrying the strongest type contrast.
+- The bottom bar is white with five labeled destinations, blue selected content, and gray inactive content.
+- Map screens preserve the map as the full visual canvas, with compact price markers, a blue radius overlay, and floating white or blue controls above it.
+- Focused decisions appear in white bottom sheets with large top corners over a dimmed context; destructive confirmation stays explicitly red.
 
 # Color and surfaces
 
-### Brand & Accent
+Light gray `#F4F4F6` is the default background behind result lists, forms, settings, trips, and support. White carries cards, search controls, sheets, top and bottom bars, and form groups. A slightly darker secondary gray separates nested controls and disabled areas without adding heavy borders. Dividers are pale and largely confined to dense row groups.
 
-Royal blue drives search, booking, active navigation, and payment. Lime owns identity, campaign framing, and positive travel energy.
+Saturated lime around `#97EF72` owns splash and home/search identity. Royal blue around `#0752E8` marks primary buttons, active tabs, links, selected map/filter controls, and booking commitment. Near-black `#222222` carries titles, property names, dates, totals, and decision-critical text; cool gray `#8E8E93` supports location, guests, reviews, policy, and helper copy. Green rating badges, orange payment warnings, and red destructive controls remain semantically bounded. Generic iOS blue without the observed geometry and hierarchy would not be sufficient.
 
-### Surface
-
-White carries results and trips; pale mint-gray separates grouped controls; lime may frame the Home header and campaign context.
-
-### Text
-
-Near-black leads destination, date, and property title; gray supports distance, review, guests, and policy.
-
-### Semantic
-
-Green confirms rating or availability, orange highlights payment deadline, and blue remains action.
+Large lime areas should remain flat and confident rather than becoming soft gradients. White cards use little or no shadow; separation comes from background contrast, radius, and spacing.
 
 # Typography
 
-### Font Family
+Use SF Pro Display for major travel and section headings and SF Pro Text for controls, dense property facts, and metadata. Major headings are about 26–30 points bold. Centered navigation titles are roughly 16–17 points semibold. Card titles and important dates sit around 15–17 points semibold; body content is 14–16 points; ratings, policies, distance, and tab labels use 10–13 points.
 
-Use SF Pro Display for destination and booking headings and SF Pro Text for controls, content, and metadata.
+Hierarchy is built through weight and alignment more than custom typography. Prices, totals, destination, property name, and booking state must remain more prominent than surrounding detail. Dense metadata can wrap into two lines but should not become visually equal to the title or CTA. Numeric ratings appear compact and bold inside colored badges.
 
-### Hierarchy
-
-| Token | Size | Weight | Use |
-|---|---:|---:|---|
-| display-lg | 30 points | 700 | Hero or state |
-| headline | 21 points | 700 | Section title |
-| card-title | 16 points | 600 | Primary item |
-| body | 13 points | 400 | Detail |
-| caption | 10 points | 400 | Metadata |
-
-### Principles
-
-- Lead with destination, dates, property, total, or booking state.
-- Keep repeated metadata aligned and visually quieter.
-- Reserve high contrast and weight for real decisions.
-
-### Note on Font Substitutes
-
-Use the platform sans with clear prices and compact Russian travel metadata.
+Dynamic Type should increase card and form height while preserving the order of destination/property, dates or context, price/status, and action. Do not keep all rows artificially single-line by shrinking below readable iOS sizes.
 
 # Screen composition
 
-### Spacing System
+The status safe area is followed by one of three top treatments: a lime brand/search field with broad white controls, a compact white navigation bar with centered title and back action, or a condensed search-summary strip above results. The middle is dominated by large photo cards, compact white form groups, map content, or bottom-sheet content. The lower region commonly contains the five-item tab bar or a sticky white price/action zone with a full-width blue button.
 
-Use a 4 points base, 8–12 points internal gaps, and 16 points horizontal screen gutters.
+Search-entry screens use a large lime upper field with stacked white destination/date/guest controls and a prominent blue action. Results form a single vertical list of broad property cards: a wide rounded photo leads, followed by rating, location, benefit, and price information. Detail screens expand photography into a hero or gallery area with circular floating utility buttons, then stack white information sections. Room selection uses white cards with media and dense two-column rate options, each retaining a clear blue selection action.
 
-### Grid & Container
+Booking and transfer forms use broad white groups with aligned labels, values, underlined or lightly framed fields, and persistent commitment actions. Trips, profile, menu, support, and settings use quieter single-column cards or row groups. Map screens allow map tiles and a blue radius overlay to occupy nearly all available height while price markers and floating controls remain compact. Modal login, cancellation, payment, profile editing, and card-entry states use a white sheet with roughly 16–22-point top corners.
 
-Home uses one wide editorial column and horizontal shelves; results use list or map; Trips uses one booking column.
-
-### Whitespace Philosophy
-
-Give editorial photography breathing room, then tighten repeated property facts for comparison.
-
-Surface hierarchy observed in the source:
-
-| Level | Treatment | Use |
-|---|---|---|
-| 0 | Base canvas | Primary context |
-| 1 | Grouped surface | Cards and sections |
-| 2 | Sticky or floating action | Commitment |
-| 3 | Sheet over scrim | Focused choice |
-
-### Decorative Depth
-
-Use photography, map layering, and light card elevation; illustration remains bounded to campaigns and empty states.
+Outer gutters are commonly about 12 points, internal card padding around 14 points, and repeated-card gaps 8–12 points. Major sections separate by about 24 points. Scroll content must clear sticky lower actions and the home indicator.
 
 # Navigation appearance
 
-Use five labeled destinations on white, with blue active icon and gray inactive icons.
+The bottom navigation is a white full-width bar with five icon-and-label items. The selected icon and label are royal blue; inactive items are gray. Labels remain compact but visible, and the bar respects the home-indicator safe area without becoming a floating decorative capsule.
+
+Top bars use a standard compact back chevron, centered semibold title, and occasional trailing share, search, favorite, or utility icons. Property-detail utilities may appear as small white circular buttons above photography. Modal decisions use rounded bottom sheets over a dimmed screen. Product behavior and information architecture come from the approved Research and Planning artifacts.
 
 # Components
 
-### Buttons
+Primary buttons are royal blue rounded rectangles about 50 points high with white semibold labels. Pressed state darkens the blue without changing geometry. Secondary actions use white or pale-gray fill with blue labels. Disabled actions retain their size and radius with reduced contrast. Destructive actions use explicit red text or fill and remain visually isolated from ordinary blue actions.
 
-Primary search, pay, and booking actions use full-width blue; secondary actions use white or translucent blue.
+Property cards are broad white containers with 10–16-point corners. A large wide photograph sits above compact facts; a heart may float in a small white chip over the image. Green numeric rating badges are compact, strongly rounded, and paired with review context. Price and available action anchor the lower part of the card. Room and transfer cards keep media, option facts, and CTA aligned rather than splitting into unrelated generic rows.
 
-### Cards & Containers
-
-Property cards align photo, rating, reviews, price, and dates; booking cards expose payment timing and one next action.
-
-### Inputs & Forms
-
-Search, dates, and guests use white rounded fields with blue focus and clear sheet-based selection.
+Search fields are white, 10–12-point rounded rectangles on lime or pale surfaces. Filter and map controls use blue or white floating pills/buttons. Booking forms use lightly separated text fields and grouped payment/prepayment cards. Settings and profile rows use simple chevrons and toggles. Sheets use a visible rounded top and clear action grouping.
 
 # Imagery and icons
 
-Use photography, map layering, and light card elevation; illustration remains bounded to campaigns and empty states.
+Real destination and hotel photography is the primary image language. Search and property cards use wide cover crops that retain a recognisable room, building, landscape, or amenity focal point. Detail headers may devote a large fraction of the upper viewport to photography; image galleries and room cards preserve consistent crops for comparison. Transfer cards use realistic vehicle cutouts on clean fields.
 
-Destination cards use wide rounded crops; property cards pair wide image and facts; price pins stay compact.
-
-If final imagery is not yet available, any placeholder must preserve the documented scale, placement, crop, and visual weight rather than removing that layer.
+Icons are simple line symbols in blue, gray, or white and remain subordinate to photos and decisions. Map pins and price markers are compact high-contrast overlays. Occasional promotional game or travel-object art is a bounded campaign exception, not a broad illustration system; do not use it to replace photography in ordinary search, property, booking, or trip surfaces. If final photos are pending, placeholders must retain the observed dimensions and focal role.
 
 # States
 
-Keep availability, payment deadline, confirmation, cancellation, and booking status beside the trip.
+Observed states include splash and populated home/search, result lists with applied filters, map radius selection, property detail, room choice, booking entry, confirmation and prepayment, transfer options and order, and logged-out or populated trip surfaces. Empty favorites and empty support chat stay light and sparse without changing the blue/lime identity.
+
+Modal states include authentication provider selection, login, booking cancellation, profile editing, bank-card entry with keyboard, and account deletion. Calling can show a system permission alert over the app. Payment deadlines use a bounded orange warning; destructive deletion and confirmation use red. Native alerts and sheets remain visually distinct but the underlying white/gray/blue hierarchy stays visible.
 
 # iOS adaptation
 
-### Touch Targets
+Use safe-area-aware vertical scrolling for search, result, detail, booking, trip, profile, and support surfaces. The lime header may extend beneath the status area while its controls remain within readable safe bounds. Sticky price and action zones should use safe-area insets rather than fixed coordinates. Map overlays must avoid status, tab-bar, and home-indicator regions.
 
-Primary actions, navigation, cards, and contextual controls remain at least 44 points.
+Keep tab items, photo utility buttons, hearts, filter pills, map controls, row actions, and compact chevrons within at least 44-point hit regions. VoiceOver should announce property image and title, rating/review, key policy, price, then action. Map markers need accessible labels independent of their visual price text. Keyboard-visible login, profile, payment, and support forms must keep focused fields and their relevant action visible.
 
-### Collapsing Strategy
-
-Preserve destination, dates, price, and action; reduce editorial shelves before search and trip state.
-
-### Image Behavior
-
-Preserve destination and property focal points; use subtle dark gradients only behind overlaid titles.
-
-Apply these rules within current iPhone safe areas and scrolling containers. Keep interactive targets at least 44 points, preserve a logical VoiceOver order, and let Dynamic Type wrap supporting text without flattening the documented hierarchy. Preserve the documented appearance.
+On compact widths, allow metadata and price groups to wrap or stack before shrinking photographs below comparison usefulness. Dynamic Type should grow card and sheet height while retaining the visual priority of title, state, total, and action. The observed product is predominantly light; if a dark appearance is required without reference evidence, adapt contrast deliberately rather than automatically inverting photographs or lime brand fields.
 
 # Anti-generic checklist
 
-- Don't place text-heavy booking details directly on destination photography.
-- Don't hide status, constraints, or secondary conditions.
-- Don't add heavy shadows around every container.
-- Do not replace the documented hierarchy with a generic stack of identical white cards or `Form` sections.
-- Do not use default blue tint, an unstyled `TabView`, arbitrary SF Symbols, or uniform corner radii when they contradict the recorded tokens and components.
-- Do not omit compositionally important imagery while final assets are pending; preserve its footprint with a faithful placeholder.
+- Do not shrink hotel and destination photography into list thumbnails or omit it while waiting for assets.
+- Do not replace the lime search field with a generic white navigation header.
+- Do not use default blue controls without the observed full-width CTA, selected navigation, and floating map/filter treatment.
+- Do not turn result, room, booking, and trip information into identical `Form` rows with no price or rating hierarchy.
+- Do not ship an unstyled `TabView`; preserve the labeled five-item white bar and blue selected state.
+- Do not put a heavy shadow around every white card; use the pale canvas, spacing, and radius for separation.
+- Do not use one corner radius for photo cards, controls, sheets, pills, and circular utilities.
+- Do not spread the occasional promotional illustration style across ordinary hotel, map, transfer, and booking screens.
 
 </design-context>

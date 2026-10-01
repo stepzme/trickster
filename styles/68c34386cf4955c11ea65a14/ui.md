@@ -3,202 +3,116 @@
 version: 1
 platform: iOS
 name: Magnifier-design-analysis
-description: "A high-contrast camera utility with a live full-screen view, translucent black control deck, bright white circular controls, yellow active states, and minimal accessibility-first typography."
+description: "A high-contrast camera utility dominated by a full-screen live view, a dark translucent rounded control deck, dense circular white-on-charcoal tools, yellow active feedback, native dark settings, and minimal system typography."
 colors:
-  primary: "#FFD83D"
-  on-primary: "#111111"
-  primary-focus: "#E3B900"
-  ink: "#FFFFFF"
-  ink-muted: "#B8B8BC"
-  ink-subtle: "#85858A"
-  ink-tertiary: "#5B5B60"
   canvas: "#090909"
-  surface-1: "#1D1D1F"
-  surface-2: "#2C2C2E"
-  surface-3: "#3A3A3C"
-  surface-4: "#48484A"
-  hairline: "#39393D"
-  hairline-strong: "#515156"
-  hairline-tertiary: "#6A6A70"
-  inverse-canvas: "#FFFFFF"
-  inverse-surface-1: "#F2F2F4"
-  inverse-surface-2: "#E5E5E8"
-  inverse-ink: "#111111"
-  brand-secure: "#FFFFFF"
-  semantic-success: "#34C759"
-  semantic-overlay: "#000000"
+  surface-primary: "#1D1D1F"
+  surface-secondary: "#2C2C2E"
+  accent-primary: "#FFD83D"
+  accent-secondary: "#34C759"
+  text-primary: "#FFFFFF"
+  text-secondary: "#B8B8BC"
+  divider: "#39393D"
+  destructive: "#FF453A"
 typography:
-  display-xl: {fontFamily: SF Pro Display, fontSize: 36, fontWeight: 700, lineHeight: 1.06, letterSpacing: -0.8}
-  display-lg: {fontFamily: SF Pro Display, fontSize: 30, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.6}
-  display-md: {fontFamily: SF Pro Display, fontSize: 24, fontWeight: 700, lineHeight: 1.14, letterSpacing: -0.3}
-  headline: {fontFamily: SF Pro Display, fontSize: 20, fontWeight: 700, lineHeight: 1.20, letterSpacing: -0.2}
-  card-title: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 600, lineHeight: 1.24, letterSpacing: 0}
-  subhead: {fontFamily: SF Pro Text, fontSize: 14, fontWeight: 600, lineHeight: 1.30, letterSpacing: 0}
-  body-lg: {fontFamily: SF Pro Text, fontSize: 14, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0}
-  body: {fontFamily: SF Pro Text, fontSize: 12, fontWeight: 400, lineHeight: 1.34, letterSpacing: 0}
-  body-sm: {fontFamily: SF Pro Text, fontSize: 10, fontWeight: 400, lineHeight: 1.28, letterSpacing: 0}
-  caption: {fontFamily: SF Pro Text, fontSize: 9, fontWeight: 500, lineHeight: 1.22, letterSpacing: 0}
-  button: {fontFamily: SF Pro Text, fontSize: 13, fontWeight: 600, lineHeight: 1.18, letterSpacing: 0}
-  eyebrow: {fontFamily: SF Pro Text, fontSize: 9, fontWeight: 700, lineHeight: 1.18, letterSpacing: 0.1}
-  mono: {fontFamily: SF Mono, fontSize: 10, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0}
-rounded: {xs: 4, sm: 8, md: 12, lg: 16, xl: 20, xxl: 26, pill: 9999, full: 9999}
-spacing: {xxs: 4, xs: 8, sm: 12, md: 16, lg: 20, xl: 24, xxl: 32, section: 40}
+  hero: {fontFamily: "SF Pro Display", fontSize: 30, fontWeight: 700, lineHeight: 35}
+  title: {fontFamily: "SF Pro Display", fontSize: 24, fontWeight: 700, lineHeight: 29}
+  section: {fontFamily: "SF Pro Text", fontSize: 20, fontWeight: 700, lineHeight: 25}
+  body: {fontFamily: "SF Pro Text", fontSize: 17, fontWeight: 400, lineHeight: 22}
+  label: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 600, lineHeight: 20}
+  caption: {fontFamily: "SF Pro Text", fontSize: 12, fontWeight: 500, lineHeight: 16}
+spacing:
+  screen-horizontal: 16
+  section-gap: 24
+  card-padding: 16
+  control-gap: 12
+rounded:
+  control: 12
+  card: 16
+  sheet: 24
+  pill: 999
 components:
-  button-primary: {backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [13, 18]}
-  button-primary-pressed: {backgroundColor: "{colors.primary-focus}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}"}
-  button-secondary: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.full}", padding: 12}
-  button-tertiary: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [10, 14]}
-  button-inverse: {backgroundColor: "{colors.inverse-canvas}", textColor: "{colors.inverse-ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [12, 16]}
-  control-deck: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xl}", padding: 12}
-  circular-control: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.caption}", rounded: "{rounded.full}", padding: 12}
-  slider: {backgroundColor: "{colors.surface-3}", textColor: "{colors.primary}", typography: "{typography.caption}", rounded: "{rounded.pill}", padding: [8, 10]}
-  bottom-nav: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: [7, 8]}
+  control-deck: {fill: "translucent graphite", radiusTop: 24, height: "quarter to third of viewport"}
+  circular-tool: {fill: "surface-secondary", icon: "white line", selected: "yellow"}
+  adjustment-slider: {track: "charcoal", thumb: "white or yellow", endpoints: "minus and plus"}
+  status-pill: {fill: "accent-primary", text: "black uppercase", radius: 999}
+  configuration-row: {fill: "surface-secondary", height: 48, controls: "check, add, remove, or drag"}
 ---
 
 # Overview
 
-Magnifier is a low-vision camera tool where a dark expandable deck keeps large controls readable over changing live imagery.
-
-**Key Characteristics:**
-- Full-screen camera context.
-- Translucent black control deck.
-- White circular tools and yellow selection.
-- Zoom, brightness, contrast, filter, focus, torch, and description controls.
-- Configurable activities and control order.
+Magnifier is a camera-first utility whose main visual field is live imagery rather than an application canvas. A dark translucent control deck occupies the lower quarter to third of the screen, keeping dense circular tools legible without fully hiding the camera. Bright white controls, graphite surfaces, and yellow selection or feedback create an accessibility-oriented, high-contrast system that continues into native dark settings and modal screens.
 
 # Non-negotiable visual invariants
 
-- The reference consistently shows full-screen camera context.
-- Sampled screens consistently use translucent black control deck.
-- The reference consistently shows white circular tools and yellow selection.
-- The reference consistently shows zoom, brightness, contrast, filter, focus, torch, and description controls.
-- Sampled screens consistently use configurable activities and control order.
+- Live camera imagery fills the viewport and remains visible behind the primary controls.
+- A dark translucent deck with large rounded top corners anchors the lower quarter to third of camera screens.
+- Tools are circular charcoal controls with white line icons; active tools, slider thumbs, checks, and feedback use bright yellow.
+- The central capture control is visually larger than surrounding utility controls and remains aligned near the bottom safe area.
+- Adjustment controls use dense horizontal slider rows with clear minus and plus endpoints above or within the tool deck.
+- Immediate mode feedback appears as compact yellow pills with high-contrast black labels over the camera image.
+- Configuration screens switch to opaque native dark grouped lists with white labels, gray supporting text, and yellow navigation actions.
+- Camera, filter, and captured-image content remains functional imagery; decorative illustration is not introduced.
 
 # Color and surfaces
 
-### Brand & Accent
+Camera pixels provide the variable full-screen background. Interface surfaces are black and graphite: a near-black base around `#090909`, translucent primary panels around `#1D1D1F`, and circular or grouped secondary controls around `#2C2C2E`. Dividers are subdued charcoal so control grouping is visible without reducing camera contrast.
 
-Yellow identifies active adjustments and confirmation. White carries high-contrast controls over black.
-
-### Surface
-
-Live camera is the canvas; black and charcoal overlays isolate controls.
-
-### Text
-
-White is primary, gray secondary, and black is used only on yellow or white actions.
-
-### Semantic
-
-Yellow means current or selected; green success and red removal remain conventional.
+Bright yellow around `#FFD83D` is the defining state color for selected icons, active slider elements, checks, navigation actions, and floating status pills. White carries primary labels and icons; cool gray carries helper text and disabled controls. Green and red remain bounded to add/success and removal/destructive controls. Default iOS blue would visibly contradict the yellow-on-black state language.
 
 # Typography
 
-### Font Family
+Use SF Pro Display and SF Pro Text. Camera HUD labels are compact, often uppercase, and approximately 11-12 points semibold inside yellow pills. Circular tools rely primarily on icons with concise adjacent labels where needed. Dark modal or settings titles are about 20-24 points bold, list labels 15-17 points regular or semibold, and helper text 12-15 points gray.
 
-Use SF Pro Display and SF Pro Text for maximum platform legibility.
-
-### Hierarchy
-
-| Token | Size | Weight | Use |
-|---|---:|---:|---|
-| display-lg | 30 points | 700 | Activity setup |
-| headline | 20 points | 700 | Sheet title |
-| card-title | 15 points | 600 | Control group |
-| body | 12 points | 400 | Guidance |
-| caption | 9 points | 500 | Control label |
-
-### Principles
-
-- Keep labels literal and short.
-- Prioritize size and contrast over density.
-- Never rely on icons alone in configuration.
-
-### Note on Font Substitutes
-
-Inter is suitable; preserve large targets and strong contrast.
+Typography stays literal and sparse because imagery and controls carry the hierarchy. Centered modal titles and edge-aligned yellow actions follow native iOS patterns; settings copy is left-aligned. Dynamic Type should increase row, field, and modal height while keeping camera controls spatially stable and avoiding label collisions with sliders or circular tools.
 
 # Screen composition
 
-### Spacing System
+The camera archetype uses a full-bleed live view from the status area to the home indicator. A bottom deck with a centered grabber or chevron rises above the lower safe area. Its upper row holds a full-width adjustment slider; lower rows place several secondary circular tools around one larger central capture control. Floating yellow feedback stays near the image edge rather than covering the focal center.
 
-Use a 4 points base, 12 points control gaps, and 16 points sheet gutters.
+An expanded-tool archetype adds a horizontal strip of rectangular image swatches or additional controls above the core deck. A multi-image state introduces concise top copy and a bottom pill while preserving the live-view field. Native share sheets overlay and dim the camera context.
 
-### Grid & Container
-
-The live view is full bleed; the control deck uses slider rows and a centered circular tool grid.
-
-### Whitespace Philosophy
-
-Keep separation generous enough for recognition and motor accuracy.
-
-Surface hierarchy observed in the source:
-
-| Level | Treatment | Use |
-|---|---|---|
-| 0 | Live camera | Visual target |
-| 1 | Translucent black deck | Controls |
-| 2 | Opaque charcoal sheet | Configuration |
-| 3 | Yellow confirmation | Immediate action |
-
-### Decorative Depth
-
-No decorative depth; translucency preserves camera context.
+Configuration archetypes replace the camera with a full-height black or grouped-dark canvas. They use 16-20 point side insets, 44-52 point rounded rows, section headers, drag handles, add/remove controls, or checkmarks. Keyboard forms use a dark field and preserve the bottom safe area around the keyboard.
 
 # Navigation appearance
 
-Keep live-view tools in reach; deeper settings return directly to the camera.
+Camera screens avoid a conventional tab bar; navigation and mode controls are integrated into the lower deck. The deck uses a small centered expansion affordance, circular icon groups, and a visually dominant central action. Selected state is yellow rather than blue.
+
+Deeper full-screen surfaces use native dark navigation bars with centered titles and compact edge actions in yellow. Modal forms, share sheets, and the keyboard follow system geometry. Back and completion controls remain ordinary text or icon affordances rather than oversized branded buttons.
 
 # Components
 
-### Buttons
+The control deck is a translucent graphite panel with roughly 24-point top corners, tight 12-point gaps, and a small centered grabber. Circular tools are at least 44 points, use charcoal fill and white line icons, and switch their icon, ring, or adjacent indicator to yellow when selected. The capture control is materially larger and may use a bright white face or ring.
 
-Use large circular black or white tools; yellow filled actions confirm activity or view choices.
+Adjustment sliders span most of the deck width, use a dark track, white or yellow thumb, and recognizable minus and plus endpoints. Filter choices appear as small rectangular camera-derived thumbnails with a yellow check for selection. Status feedback uses a bright yellow pill and compact black uppercase label.
 
-### Cards & Containers
-
-The deck is one grouped container; customization uses dark rows with drag handles and add/remove controls.
-
-### Inputs & Forms
-
-Activity naming uses a dark field and a wide yellow Done action styled into the system.
+Configuration rows use opaque dark rounded rectangles, white labels, optional gray descriptions, and trailing checkmarks, drag handles, green add controls, or red remove controls. Disabled completion actions turn gray; active completion actions turn yellow. Destructive swipe reveals a solid red block.
 
 # Imagery and icons
 
-No decorative depth; translucency preserves camera context.
+Live or captured camera imagery is the primary visual content and must retain full-viewport scale. Filter thumbnails are transformed samples of that same imagery, not decorative cards. Camera content should not be arbitrarily cropped independently of the visible zoom state, and overlays must avoid obscuring the central recognition area. This imagery layer cannot be omitted while final capture integration is pending; a temporary camera/sample frame must preserve its full-screen role.
 
-Camera imagery stays uncropped; recognition labels float near detected content without obscuring it.
-
-If final imagery is not yet available, any placeholder must preserve the documented scale, placement, crop, and visual weight rather than removing that layer.
+Icons are concise SF-symbol-like line forms in white, yellow when active, and gray when unavailable. They sit in consistent circular containers and are supported by visible state feedback. No stable authored illustration system appears in the sampled screens; do not add decorative scenes or treat instructional symbols as illustrations.
 
 # States
 
-Recognition and selected mode appear as short high-contrast floating labels.
+Observed states include default camera view, active yellow tool, yellow status label, zoom and image-adjustment changes, selected filter with yellow check, expanded tool deck, multi-image capture with a view pill, share sheet, dark naming form with keyboard, disabled and enabled completion action, customized control list, green add control, red remove control, drag ordering, and selected activity or filter checkmark. Full-screen imagery, dark controls, white legibility, and yellow selection remain constant.
 
 # iOS adaptation
 
-### Touch Targets
+Extend the camera view through the full screen while keeping the deck, top feedback, and capture controls within safe areas. Use a bottom safe-area inset for the deck and home indicator, native keyboard avoidance for forms, and internally scrolling grouped lists when Dynamic Type increases row height. Share sheets and modal forms should use current iOS presentation behavior.
 
-Every tool, slider end, drag handle, and confirmation remains at least 44 points.
-
-### Collapsing Strategy
-
-Keep primary tools visible and move secondary tools into the expandable deck.
-
-### Image Behavior
-
-Never resize or crop the live view independently of zoom intent.
-
-Apply these rules within current iPhone safe areas and scrolling containers. Keep interactive targets at least 44 points, preserve a logical VoiceOver order, and let Dynamic Type wrap supporting text without flattening the documented hierarchy. Preserve the documented appearance.
+All circular tools, slider endpoints, drag handles, filter cells, and navigation actions require at least 44-point hit regions. VoiceOver should identify the live view context, current mode, slider value, tools in visual order, central capture action, then deck expansion. On compact widths, reduce the number of simultaneously visible secondary tools or allow horizontal scrolling rather than shrinking targets. Preserve strong contrast over unpredictable camera frames with dark materials and clear state tinting; do not auto-convert the authored dark control system to a light panel.
 
 # Anti-generic checklist
 
-- Don't use thin low-contrast controls.
-- Don't hide the active mode.
-- Don't crowd the camera center.
-- Don't add decorative illustration.
-- Do not replace the documented hierarchy with a generic stack of identical white cards or `Form` sections.
-- Do not use default blue tint, an unstyled `TabView`, arbitrary SF Symbols, or uniform corner radii when they contradict the recorded tokens and components.
-- Do not omit compositionally important imagery while final assets are pending; preserve its footprint with a faithful placeholder.
+- Do not replace the live full-screen camera field with a conventional page background or card preview.
+- Do not use default blue selection; active controls and navigation actions are yellow.
+- Do not flatten the bottom deck into a standard toolbar or unstyled `TabView`.
+- Do not make all controls equal-sized; the capture action remains dominant.
+- Do not use low-contrast thin controls or hide the current mode against camera imagery.
+- Do not build configuration screens as default light `Form` sections.
+- Do not crop or cover the center of the camera view with decorative content.
+- Do not invent illustrations, promotional cards, or product navigation from this utility reference.
 
 </design-context>

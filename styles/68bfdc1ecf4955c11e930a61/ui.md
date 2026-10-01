@@ -3,185 +3,116 @@
 version: 1
 platform: iOS
 name: Wolt-design-analysis
-description: "A bright delivery marketplace using cyan-blue as its decisive accent, crisp white canvases, bold rounded headings, photo-rich restaurant cards, and compact metadata. Friendly polished 3D mascot scenes appear in onboarding and rewards while commerce stays clean and fast."
-
+description: "A bright image-led marketplace with white and pale-cool surfaces, decisive cyan actions, heavy rounded headings, dense photographic discovery shelves, compact metadata, outlined bottom navigation, and occasional high-saturation mascot illustration."
 colors:
-  primary: "#00C2E8"
-  on-primary: "#FFFFFF"
-  primary-pressed: "#00A8CC"
-  ink: "#202125"
-  ink-muted: "#6A6D70"
-  ink-subtle: "#A0A4A7"
   canvas: "#F7F8F8"
-  surface-1: "#FFFFFF"
-  surface-2: "#EEF4F5"
-  surface-3: "#E1EAEC"
-  hairline: "#D9E0E2"
-  semantic-success: "#1FAF63"
-  semantic-warning: "#F5A623"
-  semantic-danger: "#E74C58"
-  semantic-overlay: "#000000"
-
+  surface-primary: "#FFFFFF"
+  surface-secondary: "#EEF4F5"
+  accent-primary: "#00C2E8"
+  accent-secondary: "#F5A623"
+  text-primary: "#202125"
+  text-secondary: "#6A6D70"
+  divider: "#D9E0E2"
+  destructive: "#E74C58"
 typography:
-  display-xl: { fontFamily: Wolt Sans, fontSize: 40, fontWeight: 750, lineHeight: 1.05, letterSpacing: -1.0 }
-  display-lg: { fontFamily: Wolt Sans, fontSize: 32, fontWeight: 700, lineHeight: 1.1, letterSpacing: -0.7 }
-  display-md: { fontFamily: Wolt Sans, fontSize: 26, fontWeight: 700, lineHeight: 1.15, letterSpacing: -0.4 }
-  headline: { fontFamily: Wolt Sans, fontSize: 22, fontWeight: 650, lineHeight: 1.2, letterSpacing: -0.2 }
-  card-title: { fontFamily: Wolt Sans, fontSize: 17, fontWeight: 650, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: Wolt Sans, fontSize: 16, fontWeight: 500, lineHeight: 1.35, letterSpacing: 0 }
-  body-lg: { fontFamily: Wolt Sans, fontSize: 16, fontWeight: 400, lineHeight: 1.45, letterSpacing: 0 }
-  body: { fontFamily: Wolt Sans, fontSize: 14, fontWeight: 400, lineHeight: 1.42, letterSpacing: 0 }
-  body-sm: { fontFamily: Wolt Sans, fontSize: 12, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
-  caption: { fontFamily: Wolt Sans, fontSize: 11, fontWeight: 450, lineHeight: 1.3, letterSpacing: 0 }
-  button: { fontFamily: Wolt Sans, fontSize: 14, fontWeight: 600, lineHeight: 1.2, letterSpacing: 0 }
-  eyebrow: { fontFamily: Wolt Sans, fontSize: 11, fontWeight: 650, lineHeight: 1.25, letterSpacing: 0.2 }
-  mono: { fontFamily: System Mono, fontSize: 12, fontWeight: 400, lineHeight: 1.4, letterSpacing: 0 }
-
-rounded: { xs: 6, sm: 10, md: 14, lg: 18, xl: 22, xxl: 28, pill: 9999, full: 9999 }
-spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
-
+  hero: {fontFamily: "Avenir Next", fontSize: 36, fontWeight: 700, lineHeight: 40}
+  title: {fontFamily: "Avenir Next", fontSize: 28, fontWeight: 700, lineHeight: 33}
+  section: {fontFamily: "Avenir Next", fontSize: 21, fontWeight: 700, lineHeight: 26}
+  body: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 400, lineHeight: 21}
+  label: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 600, lineHeight: 19}
+  caption: {fontFamily: "SF Pro Text", fontSize: 12, fontWeight: 400, lineHeight: 16}
+spacing:
+  screen-horizontal: 16
+  section-gap: 28
+  card-padding: 16
+  control-gap: 10
+rounded:
+  control: 14
+  card: 18
+  sheet: 28
+  pill: 999
 components:
-  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: [14, 22]}
-  button-secondary: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: [12, 18]}
-  content-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 16 }
-  text-input: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: [12, 14]}
-  status-badge: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.pill}", padding: [4, 8]}
-  bottom-nav: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.caption}", rounded: "{rounded.xs}", height: 56 }
+  photo-card: {fill: "surface-primary", radius: 18, image: "wide cover crop", metadata: "compact stacked"}
+  primary-action: {fill: "accent-primary", radius: 14, text: "white semibold", height: 52}
+  filter-chip: {fill: "surface-secondary", radius: 999, state: "cyan selected"}
+  bottom-navigation: {fill: "surface-primary", icons: "thin outline", selected: "cyan"}
+  bottom-sheet: {fill: "surface-primary", radiusTop: 28, backdrop: "dimmed"}
 ---
 
 # Overview
 
-Wolt is a bright image-led marketplace where cyan actions, friendly rounded type, and structured commerce surfaces make discovery and checkout feel quick.
+Wolt is a bright, commerce-focused interface in which food and product photography supplies most of the visual mass. Crisp white and pale-cool surfaces keep dense catalogs legible, while cyan actions, heavy rounded headings, pill controls, and compact metadata provide a friendly recognizable frame. The interface alternates between abundant photographic discovery, focused single-column forms, full-screen maps, and occasional authored mascot scenes.
 
 # Non-negotiable visual invariants
 
-- The reference consistently shows authentic food photography.
-- The reference consistently shows add and checkout totals sticky.
-- The reference consistently shows show delivery fee and time early.
-- The reference consistently shows style native controls with Wolt cyan and rounded geometry.
-- The reference consistently shows a bright delivery marketplace using cyan-blue as its decisive accent.
-- The reference consistently shows crisp white canvases.
-- The reference consistently shows bold rounded headings.
-- Imagery consistently uses photo-rich restaurant cards.
+- White or very pale cool gray remains the dominant canvas, with cyan reserved for decisive actions, active states, badges, and selected outlines.
+- Real food, product, venue, or category photography occupies the leading area of discovery cards and cannot be replaced by text-only rows.
+- Page and entity titles use heavy rounded display type with clear scale contrast over compact regular metadata.
+- Discovery compositions combine horizontal shelves, wide promotional media, and vertical lists rather than a uniform stack of identical cards.
+- Primary actions are broad cyan rounded rectangles or pills with white semibold labels and remain visually anchored near the relevant content.
+- Bottom navigation uses a white surface, thin outlined icons, short labels, and a cyan active state.
+- Sheets have large rounded top corners and dimmed backdrops; map screens use floating circular controls over full-screen map imagery.
+- Authored mascot illustration stays bounded to onboarding, reward, address, or promotional moments and does not replace transactional photography.
 
 # Color and surfaces
 
-Use white and pale cool gray for most UI, cyan for interaction, and food photography for richness.
+The base canvas is white to very pale cool gray around `#F7F8F8`. Cards are usually white with subtle separation from the canvas; utility fields and chips use a pale cyan-gray around `#EEF4F5`. Thin cool-gray dividers and restrained shadows separate dense content without turning every block into a floating panel.
 
-### Brand & Accent
-
-Use Wolt cyan for primary buttons, active navigation, links, delivery chips, and small badges.
-
-### Surface
-
-Use white cards on a near-white canvas, pale cyan utility surfaces, and translucent overlays over photography.
-
-### Text
-
-Use near-black for titles, slate gray for cuisine, fee, distance, and time, and faint gray for disabled states.
-
-### Semantic
-
-Use green for confirmed or available, amber for rewards and attention, and red for errors or destructive account actions.
+Wolt cyan around `#00C2E8` is the primary action and selection color. It fills full-screen splash moments, broad call-to-action controls, active navigation, selected borders, delivery labels, and map actions. Orange is bounded to rewards or attention, green to confirmations and toggles, and red to destructive controls. Black may appear in payment-specific actions. Default iOS blue would weaken the reference because cyan is a structural brand signal, not a replaceable system tint.
 
 # Typography
 
-Rounded, sturdy headings support a friendly voice; working text stays compact and highly legible.
+Use a rounded, sturdy iOS-safe sans such as Avenir Next for hero, title, and section roles, with SF Pro Text for compact body and metadata. Page or entity titles typically sit around 28-36 points heavy, section headings around 20-22 points bold, item labels around 15-17 points semibold, and fulfillment or price metadata around 11-14 points regular.
 
-### Font Family
-
-Use Wolt Sans or a rounded grotesk with broad counters.
-
-### Hierarchy
-
-Use 24–32 points page and restaurant titles, 17–20 points section headings, 14–16 points item text, and 11–12 points metadata.
-
-### Principles
-
-Lead with the restaurant or product name, keep fulfillment facts compact, and avoid verbose labels.
-
-### Note on Font Substitutes
-
-Use Arial Rounded or a softened grotesk for headings and Inter or SF Pro for body text.
+Hierarchy comes from large weight and scale jumps rather than decorative casing. Titles are usually left-aligned; metadata is concise and clustered close to the image or item it describes. Dynamic Type should expand rows and allow secondary lines to wrap while preserving the dominance of the page title, item name, price, and primary action.
 
 # Screen composition
 
-Use horizontal discovery shelves, two-up recommendation cards, full-width restaurant heroes, and single-column checkout rows.
+Discovery screens begin with a compact safe-area-aware location or action row, then alternate horizontal category tiles, wide media banners, photographic card rails, and vertical lists above a persistent bottom navigation bar. Screen gutters are roughly 16 points, gaps within rails 8-12 points, and major section gaps 24-32 points. Content scrolls vertically while individual shelves may scroll horizontally.
 
-### Spacing System
+The catalog archetype uses image-first cards with a wide cover crop, followed by a bold name and two or three compact metadata lines. The entity-detail archetype opens with a full-bleed photographic header and floating circular controls, then transitions into a white information and product region. The transaction archetype becomes a focused single-column list or form with thin separators and a sticky bottom action. The map archetype lets map imagery fill the viewport and floats circular controls, a toast or sheet, and a bottom action above it.
 
-Use a 4 points base, 12 points card padding, 12 points gaps, 16 points gutters, and 24–32 points section spacing.
-
-### Grid & Container
-
-Discovery mixes full-width banners with horizontal card rails; product sheets and checkout remain one focused column.
-
-### Whitespace Philosophy
-
-Keep control areas airy while allowing photography grids to feel abundant.
-
-Surface hierarchy observed in the source:
-
-Use soft card shadows, sticky action bars, and modal dimming rather than heavy borders.
-
-### Decorative Depth
-
-Use mascot 3D, warm promotional gradients, reward coins, and subtle cyan tints only in marketing or reward modules.
+Promotional and reward archetypes may center a high-saturation mascot or object scene in the upper half, followed by a short text block and action. These remain visually distinct from the everyday photographic catalog.
 
 # Navigation appearance
 
-Use a five-item white bottom bar; active icons and labels are cyan while inactive items are gray.
+The persistent bottom navigation is a white bar aligned to the lower safe area, using evenly spaced thin outlined symbols and short labels. The selected item changes to cyan; inactive items remain dark gray. It should be custom tinted and spaced rather than left as an unstyled `TabView`.
+
+Top controls are compact and often circular, with pale fills or translucent white over photography and maps. Back, close, search, favorite, and overflow symbols use simple line treatment. Modal choices appear in white rounded-top sheets over dimmed content, while focused screens keep a broad primary action visually attached to the bottom safe area.
 
 # Components
 
-### Buttons
+Photo cards use 16-18 point corners, edge-to-edge wide imagery, a white text region, a bold title, and tightly stacked gray metadata with small line icons or compact badges. Product rows keep image, name, price, and add or quantity affordance visually close. Promotional banners use wider image crops and may carry a small pill label.
 
-Primary buttons are cyan full-width rounded rectangles or pills with white text. Native controls must inherit fill, radius, and pressed darkening.
+Primary actions are approximately 50-54 points high, cyan-filled, white-labeled, and rounded 14 points or fully pill-shaped. Secondary actions and search fields use pale filled surfaces. Filter chips are compact pills, with selected state communicated by cyan fill, stroke, text, or checkmark. Selection rows use cyan outlines and checks; toggles use system-like green when observed.
 
-### Cards & Containers
-
-Restaurant cards lead with photography then name, cuisine, fee, time, and rating. Product tiles keep price and add control close together.
-
-### Inputs & Forms
-
-Use clean white rows, pale filled search fields, and sheets for modifiers, address, notes, and payment.
+Bottom sheets use a 28-point top radius, clear grouped rows, and dimmed context. Floating map and photographic-header buttons are circular with pale or translucent fills. Disabled rows reduce contrast but preserve geometry; destructive actions use red; payment-specific actions may use an opaque black button.
 
 # Imagery and icons
 
-Use mascot 3D, warm promotional gradients, reward coins, and subtle cyan tints only in marketing or reward modules.
+Food, grocery, merchant, and category photography is central to the composition. Use generous cover crops for dishes and venues, cleaner contained crops for packaged products, and preserve the readable focal object rather than centering mechanically. Maps, store logos, and campaign banners are content-specific imagery, not parts of the reusable illustration system. These media regions cannot be omitted while final assets are pending; any temporary image must preserve their size, crop, and density.
 
-Food imagery uses generous cover crops; mascot art uses contained silhouettes. Avoid cropping essential dishes or logos.
-
-If final imagery is not yet available, any placeholder must preserve the documented scale, placement, crop, and visual weight rather than removing that layer.
+Mascot and onboarding artwork uses a separate cheerful authored language documented in `illustrations.md`. It is secondary to photography and must not spread into dense product rows, forms, or checkout surfaces. Interface icons use simple thin outlines, compact filled state markers, and consistent circular containers where controls overlay imagery.
 
 # States
 
-Show popular, sponsored, Wolt+, discount, scheduled, tracking, and reward states as compact labeled badges.
+Observed states include a cyan splash, blank white loading with a spinner, selected and unselected plan, payment, or address rows, active cyan tab, favorite heart, green toggle, red removal action, black payment action, delivery or pickup segment selection, compact promotional and availability badges, dimmed modal sheets, and muted disabled rows. Photographic hierarchy, white surfaces, rounded type, and cyan selection remain consistent across states.
 
 # iOS adaptation
 
-### Touch Targets
+Respect the status bar, bottom safe area, keyboard, and home indicator on all screen archetypes. Use vertical scroll containers for discovery and forms, horizontal scroll containers for shelves, sticky safe-area insets for transaction actions, and sheet detents or equivalent geometry for modal choices. Full-screen maps and photo headers may extend behind chrome while all controls retain safe-area clearance.
 
-Search, filters, add, quantity, cart, checkout, tracking, chat, and navigation targets require at least 44 points.
-
-### Collapsing Strategy
-
-Keep restaurant identity, delivery facts, cart total, and primary action visible; collapse promotions and secondary recommendations first.
-
-### Image Behavior
-
-Use cover for food and store imagery, contain for products and mascot scenes, and stable aspect ratios to prevent list movement.
-
-Apply these rules within current iPhone safe areas and scrolling containers. Keep interactive targets at least 44 points, preserve a logical VoiceOver order, and let Dynamic Type wrap supporting text without flattening the documented hierarchy. Preserve the documented appearance.
+Give chips, add controls, floating icons, tabs, and sheet rows at least 44-point hit regions even when their visible shapes are smaller. VoiceOver should follow the visible reading order from title through cards or rows to sticky action and navigation. On compact widths, reduce the number of partially visible cards before shrinking text or touch targets. Dynamic Type should grow rows and allow metadata wrapping; imagery keeps stable aspect ratios to prevent layout movement. Preserve the light authored appearance unless the approved product explicitly defines a dark variant.
 
 # Anti-generic checklist
 
-- Do not use default platform blue.
-- Do not hide modifiers or fees.
-- Do not replace products with illustration.
-- Do not overuse mascot art in checkout.
-- Do not replace the documented hierarchy with a generic stack of identical white cards or `Form` sections.
-- Do not use default blue tint, an unstyled `TabView`, arbitrary SF Symbols, or uniform corner radii when they contradict the recorded tokens and components.
-- Do not omit compositionally important imagery while final assets are pending; preserve its footprint with a faithful placeholder.
+- Do not replace Wolt cyan with default iOS blue or distribute it decoratively across every surface.
+- Do not turn discovery into a uniform vertical stack of generic white SwiftUI cards.
+- Do not omit food, product, venue, map, or promotional imagery where it is the dominant content layer.
+- Do not substitute illustrations for real catalog photography or use mascot art inside dense transactional rows.
+- Do not use one type size and weight for titles, item names, prices, and metadata.
+- Do not leave `TabView`, buttons, search fields, chips, or sheets at their default appearance.
+- Do not apply the same radius and elevation to photo cards, pills, sheets, fields, and floating controls.
+- Do not copy the reference product's destinations or transaction sequence into the adapted product.
 
 </design-context>

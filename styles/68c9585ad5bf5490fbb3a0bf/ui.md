@@ -3,178 +3,116 @@
 version: 1
 platform: iOS
 name: Vivid-design-analysis
-description: "A bright premium-finance interface built from white space, bold black headings, saturated violet actions, pale-lilac cards, and glossy 3D product metaphors. It makes banking, rewards, and investing feel approachable and collectible."
-
+description: "A bright premium-finance interface with expansive white space, heavy black hierarchy, saturated violet actions, pale-lilac cards and icon wells, bold balances, persistent purple-selected tab navigation, and glossy 3D product objects as bounded promotional imagery."
 colors:
-  primary: "#8A32F4"
-  on-primary: "#FFFFFF"
-  primary-pressed: "#6F22D1"
-  ink: "#242426"
-  ink-muted: "#747478"
-  ink-subtle: "#A9A9AE"
   canvas: "#FFFFFF"
-  surface-1: "#FFFFFF"
-  surface-2: "#F6F4F7"
-  accent-lilac: "#E7D9FA"
-  hairline: "#E6E4E8"
-  semantic-success: "#35B978"
-  semantic-warning: "#E9A337"
-  semantic-danger: "#E05762"
-  semantic-overlay: "#000000"
-
+  surface-primary: "#FFFFFF"
+  surface-secondary: "#F6F4F7"
+  accent-primary: "#8A32F4"
+  accent-secondary: "#E7D9FA"
+  text-primary: "#242426"
+  text-secondary: "#747478"
+  divider: "#E6E4E8"
+  destructive: "#E05762"
 typography:
-  display-xl: { fontFamily: System Sans, fontSize: 40, fontWeight: 800, lineHeight: 1.04, letterSpacing: -0.8 }
-  display-lg: { fontFamily: System Sans, fontSize: 32, fontWeight: 750, lineHeight: 1.08, letterSpacing: -0.5 }
-  display-md: { fontFamily: System Sans, fontSize: 25, fontWeight: 700, lineHeight: 1.15, letterSpacing: -0.2 }
-  headline: { fontFamily: System Sans, fontSize: 20, fontWeight: 700, lineHeight: 1.2, letterSpacing: 0 }
-  card-title: { fontFamily: System Sans, fontSize: 16, fontWeight: 650, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: System Sans, fontSize: 17, fontWeight: 450, lineHeight: 1.35, letterSpacing: 0 }
-  body-lg: { fontFamily: System Sans, fontSize: 16, fontWeight: 400, lineHeight: 1.42, letterSpacing: 0 }
-  body: { fontFamily: System Sans, fontSize: 14, fontWeight: 400, lineHeight: 1.42, letterSpacing: 0 }
-  body-sm: { fontFamily: System Sans, fontSize: 12, fontWeight: 400, lineHeight: 1.38, letterSpacing: 0 }
-  caption: { fontFamily: System Sans, fontSize: 10, fontWeight: 500, lineHeight: 1.3, letterSpacing: 0 }
-  button: { fontFamily: System Sans, fontSize: 16, fontWeight: 650, lineHeight: 1.2, letterSpacing: 0 }
-  eyebrow: { fontFamily: System Sans, fontSize: 11, fontWeight: 650, lineHeight: 1.25, letterSpacing: 0.3 }
-  mono: { fontFamily: System Mono, fontSize: 12, fontWeight: 450, lineHeight: 1.35, letterSpacing: 0 }
-
-rounded: { xs: 4, sm: 8, md: 12, lg: 16, xl: 22, xxl: 28, pill: 9999, full: 9999 }
-spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
-
+  hero: {fontFamily: "SF Pro Display", fontSize: 36, fontWeight: 800, lineHeight: 40}
+  title: {fontFamily: "SF Pro Display", fontSize: 30, fontWeight: 750, lineHeight: 35}
+  section: {fontFamily: "SF Pro Display", fontSize: 22, fontWeight: 700, lineHeight: 27}
+  body: {fontFamily: "SF Pro Text", fontSize: 16, fontWeight: 400, lineHeight: 22}
+  label: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 650, lineHeight: 20}
+  caption: {fontFamily: "SF Pro Text", fontSize: 12, fontWeight: 400, lineHeight: 16}
+spacing:
+  screen-horizontal: 16
+  section-gap: 28
+  card-padding: 16
+  control-gap: 12
+rounded:
+  control: 12
+  card: 18
+  sheet: 28
+  pill: 999
 components:
-  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [14, 18]}
-  pocket-tile: { backgroundColor: "{colors.accent-lilac}", textColor: "{colors.ink}", typography: "{typography.card-title}", rounded: "{rounded.lg}", padding: 0 }
-  action-row: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: [12, 14]}
-  promo-card: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 14 }
-  bottom-nav: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.sm}", height: 58 }
+  balance-block: {fill: "canvas", value: "oversized bold tabular", metadata: "gray compact"}
+  product-tile: {fill: "pale lilac or gradient", radius: 18, image: "centered glossy object"}
+  transaction-row: {fill: "surface-primary", leading: "circular category icon", trailing: "signed amount"}
+  primary-action: {fill: "accent-primary", text: "white semibold", radius: 12, height: 52}
+  bottom-navigation: {fill: "surface-primary", selected: "violet", badge: "red optional"}
 ---
 
 # Overview
 
-Vivid pairs strong black headlines and white canvas with saturated violet action and collectible 3D financial objects. Product breadth is organized through pockets, search, and clear bottom navigation.
+Vivid combines expansive white finance surfaces with heavy black headings, oversized balances, saturated violet actions, pale-lilac grouped cards, and dense but orderly transaction data. Glossy 3D objects and gradient campaign media give selected product tiles visual ownership, while everyday rows remain flat and restrained. Persistent bottom navigation uses violet selection and keeps the broader interface recognizably product-oriented rather than generic banking gray.
 
 # Non-negotiable visual invariants
 
-- The reference consistently shows give product objects clear visual ownership.
-- The reference consistently shows transactional lists simple.
-- Sampled screens consistently use reserve violet for action and brand.
-- The reference consistently shows align balances and returns.
-- The reference consistently shows a bright premium-finance interface built from white space.
-- The reference consistently shows bold black headings.
-- The reference consistently shows saturated violet actions.
-- The reference consistently shows pale-lilac cards.
+- White remains the dominant canvas, with generous vertical space around page titles, balances, and major product blocks.
+- Saturated violet marks primary actions, selected navigation, focus, progress, and active controls; green and red remain financial or semantic.
+- Page titles and monetary values use heavy black type with strong scale contrast over compact gray metadata.
+- Product discovery uses pale-lilac or gradient tiles with one centered glossy 3D object and ample clear space.
+- Transactional content stays in flat, compact rows with circular category icons and aligned signed amounts rather than decorative cards.
+- Persistent bottom navigation uses a white surface, gray inactive icons and labels, and violet selected state.
+- Modal selections use white rounded-top sheets over a dimmed backdrop with a small centered handle.
+- Product imagery is bounded to tiles, onboarding, and campaigns; it does not appear in every data row or become a character illustration system.
 
 # Color and surfaces
 
-### Brand & Accent
+The base canvas and most list surfaces are white. Pale gray around `#F6F4F7` groups rows, fields, and secondary controls, while light lilac around `#E7D9FA` supports icon wells and product tiles. Important promotional blocks may use violet-to-magenta, pink, or occasional orange gradients, but transactional areas remain flat and quiet.
 
-Violet owns primary actions, active navigation, and promotional emphasis. Lilac supports product tiles and icon backgrounds.
-
-### Surface
-
-Use white as the default canvas and very pale gray or lavender for grouped rows, search, and cards.
-
-### Text
-
-Charcoal carries headings and values; gray carries account labels and helper copy. White appears on violet promotions and buttons.
-
-### Semantic
-
-Green and red show financial direction or result, amber warns, and violet remains brand action.
+Saturated violet around `#8A32F4` owns primary buttons, selected navigation, active chips, progress, links, and focus. Charcoal carries primary text; gray carries helper copy and timestamps. Green and red communicate signed performance, transaction direction, or success/failure; amber is reserved for warnings. Default iOS blue as the main tint would visibly break the reference.
 
 # Typography
 
-### Font Family
+Use SF Pro Display and SF Pro Text with heavy weights and tabular figures for money. Page and hero titles sit around 28-36 points at 700-800 weight, section titles around 20-24 points bold, item titles 14-17 points semibold, and captions 11-13 points gray. Balances and key monetary values are oversized, bold, and aligned for rapid comparison.
 
-Use a bold geometric sans with tabular figures for money and rates.
-
-### Hierarchy
-
-Use 32–40 points product messages, 20–25 points page headings, 16–17 points card titles, and 10–14 points detail.
-
-### Principles
-
-Use heavy headings sparingly, align monetary values, and keep supporting copy short inside product tiles.
-
-### Note on Font Substitutes
-
-Use Inter or SF Pro with 700–800 headline weights and tabular numerals.
+Titles and data are predominantly left-aligned; onboarding or status messages may center. Hierarchy depends on strong scale jumps, not many near-identical text sizes. Dynamic Type should increase card and row height, wrap supporting copy, and preserve alignment between labels and trailing values without reducing the prominence of the primary balance.
 
 # Screen composition
 
-### Spacing System
+Main product screens begin below the status area with a large title or balance block, then stack full-width sections, two-column square product tiles, compact rows, or horizontal promotional media above a persistent bottom bar. Side insets are roughly 16 points, card gaps about 12 points, and major section gaps 24-32 points.
 
-Use a 4 points base, 16 points gutters, 12 points card gaps, and 24–32 points between product sections.
+The dashboard archetype combines a prominent balance with account or product cards and compact quick actions. The product-grid archetype uses two-column square tiles with a centered glossy object, concise label, and short value or benefit. The timeline archetype uses search or filter chrome, summary metrics, date-grouped transaction rows, and aligned signed amounts. Investment and rewards archetypes mix compact logo rows with promotional tiles or performance indicators.
 
-### Grid & Container
-
-Pockets use a two-column tile grid above cards. Payments use grouped actions; Rewards and Invest use vertical sections and horizontal rails.
-
-### Whitespace Philosophy
-
-Give headings and product art room to breathe. Dense transaction data should stay in flat lists rather than decorative tiles.
-
-Surface hierarchy observed in the source:
-
-Use subtle card lift and soft contact shadow beneath 3D assets. Most transactional surfaces remain flat.
-
-### Decorative Depth
-
-Use violet gradients, translucent glows, and glossy miniature objects in product and promo cards. Avoid decorative depth in timeline rows.
+Onboarding uses a large image hero or product object in the upper half, a compact segment control, and fixed bottom actions. Status or restriction screens use one centered icon/object, large title, concise copy, and one dominant action. Selection flows appear in white rounded-top sheets over dimmed context.
 
 # Navigation appearance
 
-Use five bottom destinations for Pockets, Timeline, Payments, Rewards, and Invest. Keep local categories inside each destination.
+The persistent bottom navigation is white with evenly spaced icon-label items, gray inactive states, violet selected state, and occasional small red notification badges. It remains visually light and distinct from scrolling content. Destination labels and order belong to approved Research and Planning, not this style package.
+
+Internal screens use centered compact titles, purple back or close affordances, and occasional concise right-side actions. Bottom sheets have large rounded top corners and a centered grabber. Full-screen status pages and onboarding preserve clear safe-area spacing without introducing oversized custom navigation chrome.
 
 # Components
 
-### Buttons
+Balance blocks use a large bold tabular value, short gray account label, and minimal surrounding chrome. Product tiles are square or near-square, rounded 16-20 points, filled pale lilac or a controlled gradient, and give one glossy object most of the visual area. Copy remains brief and aligned away from the object focal point.
 
-Primary actions are filled violet rectangles; secondary actions are white or pale rows. Native controls must inherit violet focus and rounded geometry.
+Primary buttons are approximately 50-54 points high, violet, white-labeled, and rounded about 12 points. Secondary actions use white or pale surfaces. Transaction rows pair a circular category or merchant icon with two text lines and a right-aligned signed amount in charcoal, green, or red. Category and filter controls use pills, toggles, or compact selection rows with violet active state.
 
-### Cards & Containers
-
-Pocket tiles pair one 3D object, product name, and balance or benefit. Transaction rows are flatter and denser.
-
-### Inputs & Forms
-
-Registration and payments use pale filled fields with strong focus. Search remains full-width and quiet.
+Account, card, reward, and investment rows may include mini card art, logos, small badges, or red/green performance indicators. Warning banners use bounded semantic color. Bottom sheets group selectable rows with checks; disabled or loading states reduce contrast while keeping the same geometry.
 
 # Imagery and icons
 
-Use violet gradients, translucent glows, and glossy miniature objects in product and promo cards. Avoid decorative depth in timeline rows.
+Glossy 3D objects—rings, stars, cards, gifts, coins, luggage, hourglasses, and similar product metaphors—appear as centered contained imagery inside pale-lilac or gradient wells. They use soft highlights, smooth materials, and clear silhouettes with ample empty space. Merchant photographs, campaign banners, payment-card art, and logos remain content-specific. These image regions cannot be omitted while final assets are pending; placeholders must preserve their scale, crop, material weight, and clear space.
 
-Center glossy 3D objects on square gradient tiles with safe margins. Marketing photography, when present, uses restrained rounded crops.
-
-If final imagery is not yet available, any placeholder must preserve the documented scale, placement, crop, and visual weight rather than removing that layer.
+Despite recurring 3D objects, the sampled screens do not establish a broad standalone illustration system with repeated scene composition or character variants. Treat them as product and campaign imagery, not permission to invent scenes or populate every row with 3D art. UI icons are simple filled or outlined glyphs, often violet inside pale-lilac circles or squares.
 
 # States
 
-Pocket balance, card availability, reward earned, planned payment, verification, and order state appear beside the related product.
+Observed states include splash, onboarding hero, selected segment, populated balances and product tiles, date-grouped transaction timeline, active filters, empty state, restriction warning, verification or loading, selected category toggles, planned payment, transfer sheet, avatar selection, search, green/red performance, red notification badge, and dimmed bottom-sheet selection. White space, heavy black hierarchy, violet action, and bounded product art remain stable.
 
 # iOS adaptation
 
-### Touch Targets
+Respect status, keyboard, bottom navigation, home indicator, and sheet safe areas. Use vertical scrolling for dashboards, product lists, settings, and data histories; keep fixed bottom actions above the keyboard and home indicator. Grids may reduce from two columns to one on narrow layouts only when labels, artwork, and 44-point targets no longer fit.
 
-Pocket tiles, payment actions, filters, category chips, navigation, and order controls require at least 44 points targets.
-
-### Collapsing Strategy
-
-Keep balances, primary payment actions, and current product visible. Collapse secondary benefits and analysis into detail pages.
-
-### Image Behavior
-
-Use `contain` for 3D product metaphors and logos; use `cover` only for lifestyle reward photography.
-
-Apply these rules within current iPhone safe areas and scrolling containers. Keep interactive targets at least 44 points, preserve a logical VoiceOver order, and let Dynamic Type wrap supporting text without flattening the documented hierarchy. Preserve the documented appearance.
+Tabs, tiles, transaction rows, filter chips, toggles, and sheet actions need at least 44-point hit regions. VoiceOver order should follow title and balance, local actions, product or transaction content, then bottom navigation. Read signed amounts with their direction and context rather than color alone. Dynamic Type should expand rows and tiles without allowing glossy imagery to crowd text. Preserve the authored light appearance unless the approved product explicitly defines a dark variant.
 
 # Anti-generic checklist
 
-- Do not add 3D art to every row.
-- Do not make gains violet.
-- Do not crowd product tiles with copy.
-- Do not expose default native accents.
-- Do not replace the documented hierarchy with a generic stack of identical white cards or `Form` sections.
-- Do not use default blue tint, an unstyled `TabView`, arbitrary SF Symbols, or uniform corner radii when they contradict the recorded tokens and components.
-- Do not omit compositionally important imagery while final assets are pending; preserve its footprint with a faithful placeholder.
+- Do not replace violet with default blue or use gains and losses as brand-purple values.
+- Do not turn every financial row into a large rounded card or fill every surface with gradients.
+- Do not omit glossy product objects from tiles where they provide most of the visual identity.
+- Do not add 3D objects to every transaction, setting, or support row.
+- Do not use an unstyled `TabView`, default `Form`, or generic system button as the finished appearance.
+- Do not flatten balances, section titles, row labels, and captions into similar sizes or weights.
+- Do not infer a standalone illustration package or character system from bounded product and campaign assets.
+- Do not copy the reference product's tabs, account architecture, or financial flows.
 
 </design-context>

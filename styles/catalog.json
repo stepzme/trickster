@@ -279,8 +279,8 @@
     "categories": [
       "Food and Drinks"
     ],
-    "uiSummary": "A bright grocery and loyalty interface built from fresh green actions, bold black headings, white commerce cards, yellow price highlights, pastel product collages, and dense but friendly catalog grids. It feels wholesome, practical, and personal.",
-    "illustrationSummary": "No dedicated imagery overview was documented."
+    "uiSummary": "A photography-first grocery interface with bright green actions and selected states, dense white commerce surfaces, compact black type, colored price badges, restrained top chrome, and a persistent white tab bar often paired with a green delivery strip.",
+    "illustrationSummary": null
   },
   {
     "appId": "6882247cf7a353d59bb42cd2",
@@ -290,8 +290,8 @@
     "categories": [
       "Travel & Transportation"
     ],
-    "uiSummary": "A multi-service mobility hub that combines a white dashboard and cart-like commerce modules with detailed maps, draggable white sheets, saturated yellow confirmations, black primary text, and friendly 3D service miniatures. Rounded service tiles, fare cards, route overlays, and feedback controls make complex transport tasks feel direct.",
-    "illustrationSummary": "Yandex Go uses friendly 3D service miniatures and tactile object icons to make a complex service hub immediately scannable."
+    "uiSummary": "A map-and-sheet mobility interface pairing pale cartography and white utility surfaces with saturated yellow actions, compact black type, floating circular controls, rounded bottom panels, and object-led service tiles.",
+    "illustrationSummary": null
   },
   {
     "appId": "688926f08f67a4ca4efce9c3",
@@ -302,8 +302,8 @@
       "Lifestyle",
       "Social Networking"
     ],
-    "uiSummary": "A dark, portrait-first dating system with coral-to-pink brand gradients, cyan utilities, rounded full-screen discovery cards, compact profile grids, and playful flat promotion symbols.",
-    "illustrationSummary": "Mamba uses compact flat illustrations to explain profile promotion and paid discovery without competing with member photography."
+    "uiSummary": "A dual-mode iPhone system pairing sparse pastel illustrated onboarding with a near-black, portrait-first core built from immersive member photography, coral emphasis, compact utility chrome, and rounded floating actions.",
+    "illustrationSummary": "Mamba uses an authored flat illustration language for onboarding, education, and selected promotional moments. It is a separate visual layer from the member photography that dominates the core product. When a product requires illustration in this language, generate it with the available image-generation model and integrate the result as an image asset. Do not recreate required product illustration programmatically with SwiftUI shapes, SF Symbols, or emoji. A screen that depends on the illustration is not ready for design approval until the generated image asset is integrated in the running app."
   },
   {
     "appId": "688c94bd347a9edd48e88d35",
@@ -315,7 +315,7 @@
       "Education",
       "Entertainment"
     ],
-    "uiSummary": "A content-first reading and listening system on bright white, led by vivid orange branding, violet purchase actions, dark navy text, and richly colored book covers. Discovery is compact and commercial; reading and playback become quiet, focused workspaces.",
+    "uiSummary": "A bright, cover-led iPhone bookstore and library with dense editorial shelves, orange navigation emphasis, violet commercial actions, flat white surfaces, and deliberately quieter reader and audio-player modes.",
     "illustrationSummary": null
   },
   {
@@ -326,8 +326,8 @@
     "categories": [
       "Shopping, Listings & Marketplaces"
     ],
-    "uiSummary": "A playful pet-commerce interface built from pale blue-gray surfaces, white rounded cards, bold black actions, and a high-energy palette of orange, pink, violet, cyan, and yellow. Black animal silhouettes, sticker-like symbols, cropped pet photography, and campaign collage give the system a distinctive graphic voice while dense catalog and checkout screens remain conventional.",
-    "illustrationSummary": "4 lapy uses a graphic pet language built from black animal silhouettes, bright color blocks, speech bubbles, stickers, and playful photo collage."
+    "uiSummary": "A pale blue-gray pet-commerce interface built from broad white rounded surfaces, compact black hierarchy, black pill actions, six-item navigation, and high-impact pet cutouts on orange, pink, violet, cyan, and yellow graphic fields.",
+    "illustrationSummary": "4 lapy uses a repeatable image language built from real pet cutouts, bold black animal silhouettes, and flat saturated geometric backplates. It carries onboarding, promotions, categories, empty results, favorites, payment, and order-confirmation moments while clean product photography remains a separate commerce layer."
   },
   {
     "appId": "689a4289c24219241662e7eb",
@@ -338,8 +338,8 @@
       "Lifestyle",
       "Social Networking"
     ],
-    "uiSummary": "A photo-led dating interface that alternates between dark immersive profile cards and bright white discovery collections. Blue system actions, pink category labels, and red-purple-blue reaction controls create a familiar but energetic social aesthetic.",
-    "illustrationSummary": null
+    "uiSummary": "A photo-dominant dating interface that moves between dark immersive signup media, tall rounded profile cards, and bright white social surfaces, using VK-blue navigation, red-purple-blue reactions, compact system typography, and occasional saturated premium artwork.",
+    "illustrationSummary": "VK Dating is primarily photographic, but it also has a repeatable authored image layer for premium attention, gifts, and safety education. Premium scenes use polished 3D gift-like objects with saturated blue, purple, pink, and orange-yellow accents; safety content uses softer, flatter editorial icons. These roles remain secondary to real profile photography."
   },
   {
     "appId": "689e5fa5c24219241679d9fc",
@@ -351,8 +351,8 @@
       "Entertainment",
       "Lifestyle"
     ],
-    "uiSummary": "A sharp culture-discovery system combining stark white and black, electric yellow purchase actions, full-bleed event photography, and expressive hand-drawn onboarding art. The interface is editorial at discovery and precise at seat selection and ticket management.",
-    "illustrationSummary": "No dedicated imagery overview was documented."
+    "uiSummary": "A photo-led entertainment interface built on white and pale-gray surfaces, neon-yellow pill actions, compact black type, a visually light five-item tab bar, rounded photographic cards, and bold yellow-black character art in supporting states.",
+    "illustrationSummary": "Yandex Afisha uses a supporting authored illustration system for onboarding, empty states, account prompts, and category-like symbols. The art is secondary to event photography but visually coherent: bold yellow shapes, thick black contours, white face or hand details, and simple mascot-like metaphors communicate one state at a time."
   },
   {
     "appId": "689f238ec2421924167c7cc5",
@@ -362,7 +362,7 @@
     "categories": [
       "Travel & Transportation"
     ],
-    "uiSummary": "A map-first car-sharing interface anchored by vivid turquoise, white floating controls, translucent map overlays, and compact bottom sheets. Real vehicle photography and the live map carry trust; onboarding uses full-screen mobility imagery with a thin turquoise route motif.",
+    "uiSummary": "A map-first car-sharing interface with pale colorful cartography, vivid aqua actions, white circular floating controls, deep rounded vehicle sheets, sparse registration surfaces, and realistic vehicle and document imagery.",
     "illustrationSummary": null
   },
   {
@@ -373,7 +373,7 @@
     "categories": [
       "Shopping, Listings & Marketplaces"
     ],
-    "uiSummary": "A dense automotive marketplace built from a white canvas, bold black utility type, vivid Auto.ru red, pale gray grouped surfaces, and vehicle photography. Search, listings, reports, selling, messages, and services share a compact card language; full-width black and green actions make high-consequence steps unmistakable.",
+    "uiSummary": "A dense light automotive marketplace where white utility surfaces, bold black pricing, restrained red branding, pale-gray filter groups, persistent tab chrome, and large vehicle photography create a compact information-first hierarchy.",
     "illustrationSummary": null
   },
   {
@@ -384,8 +384,8 @@
     "categories": [
       "Finance"
     ],
-    "uiSummary": "An expressive banking interface built on an airy blue-to-pink wash, ink-black floating controls, oversized experimental typography, and soft irregular white cards. Banking actions coexist with conversational prompts, lifestyle photography, mascot-led assistance, and deep personalization. The system feels more like an animated culture product than a conventional financial dashboard.",
-    "illustrationSummary": "Rocketbank uses expressive character and lifestyle imagery as part of the product personality. Visuals include the Rocky mascot, surreal avatars, cinematic venue photography, and playful generated scenes integrated directly into navigation and customization."
+    "uiSummary": "An expressive iPhone banking shell built from a full-screen blue-to-pink pastel wash, oversized soft white account cards, ink-black floating pills, extreme display-type contrast, chunky custom glyphs, and large lifestyle photography.",
+    "illustrationSummary": null
   },
   {
     "appId": "68a5bb172e4a3d8081ebbc3d",
@@ -395,8 +395,8 @@
     "categories": [
       "Education"
     ],
-    "uiSummary": "A dark editorial audio interface built on warm charcoal surfaces, oversized white cultural headlines, and a single vivid yellow accent. Museum photography, archival imagery, and illustrated cover art carry discovery while thin white outlines, compact metadata, and a restrained five-tab shell keep playback and library tasks legible.",
-    "illustrationSummary": null
+    "uiSummary": "A warm-charcoal editorial audio interface dominated by cultural cover imagery, tightly wrapped heavy white headlines, a single vivid yellow accent, icon-only five-item navigation, and restrained dark sheets and playback controls.",
+    "illustrationSummary": "Radio Arzamas uses a stable authored image language built from curated paintings, engravings, archival photographs, historical portraits, and designed podcast or course covers. The imagery is not generic decoration: it supplies subject, mood, color, and the dominant visual mass for discovery, detail, playback, and promotional surfaces."
   },
   {
     "appId": "68ab4d1db7e7cf3909f9eb18",
@@ -406,8 +406,8 @@
     "categories": [
       "Travel & Transportation"
     ],
-    "uiSummary": "A bright travel interface built from lime brand fields, royal-blue search and booking actions, large destination photography, clean white result cards, map price pins, and playful travel-object art.",
-    "illustrationSummary": "Ostrovok uses playful 3D travel objects for campaigns and empty states, including luggage, cars, travel gifts, tickets, and paper-like destination characters."
+    "uiSummary": "A dense but bright travel interface combining a saturated lime search header, royal-blue booking actions, white and pale-gray cards, large hotel photography, green rating badges, map overlays, and a labeled five-item blue-selected tab bar.",
+    "illustrationSummary": null
   },
   {
     "appId": "68ac3ab07c10c762477a482c",
@@ -417,7 +417,7 @@
     "categories": [
       "Finance"
     ],
-    "uiSummary": "A compact digital-wallet interface built from white surfaces, very pale lavender grouped cards, a magenta-to-violet brand gradient, black utility type, and small purple line icons. Finance, payments, history, and support remain deliberately sparse, with balances and transaction amounts as the only strong hierarchy.",
+    "uiSummary": "A sparse light iPhone wallet built from broad white fields, pale lavender-gray cards, compact SF-style financial hierarchy, purple-to-magenta brand accents, native modal layers, and almost no content imagery.",
     "illustrationSummary": null
   },
   {
@@ -428,8 +428,8 @@
     "categories": [
       "Shopping, Listings & Marketplaces"
     ],
-    "uiSummary": "A content-rich sports marketplace built from white commerce surfaces, a strong cobalt action color, navy promotional frames, a floating pill-like navigation dock, and energetic product photography. Rounded service tiles and bright 3D icons add playfulness without weakening the practical product and checkout hierarchy.",
-    "illustrationSummary": "Sportmaster uses a lively service-illustration family beside its product photography."
+    "uiSummary": "A dense blue-led iPhone sports retailer combining white commerce surfaces, dark-navy discovery headers, saturated cobalt actions, product and athlete photography, colorful campaign blocks, a raised-center bottom bar, and playful service artwork.",
+    "illustrationSummary": "Sportmaster uses a recurring authored illustration language in activity, wellness, service, and selected empty states. Fire, food, water, map, and location characters or objects form a playful utility layer distinct from product photography and one-off campaign art. When a product requires illustration in this language, generate it with the available image-generation model and integrate the result as an image asset. Do not recreate required art programmatically with SwiftUI shapes, SF Symbols, or emoji. A dependent screen is not ready for design approval until the generated asset is integrated in the running app."
   },
   {
     "appId": "68b0e4b6df5217cb0f50e373",
@@ -439,7 +439,7 @@
     "categories": [
       "Travel & Transportation"
     ],
-    "uiSummary": "A utilitarian rail-booking interface dominated by a vivid red application bar, white transaction surfaces, cool gray work areas, and compact timetable data. Hierarchy comes from strong red actions, uppercase route labels, thin dividers, and persistent booking controls rather than decorative cards.",
+    "uiSummary": "A dense rail-booking interface organized by a solid RZD-red application bar, white transactional rows on pale gray, compact timetable typography, modest radii, fixed red actions, and precise seat, route, and ticket diagrams.",
     "illustrationSummary": null
   },
   {
@@ -450,8 +450,8 @@
     "categories": [
       "Finance"
     ],
-    "uiSummary": "A dark trading interface built from pure-black canvas, charcoal account cards, white financial typography, green and red market movement, clear blue actions, and a small Tinkoff-yellow brand marker. Charts and data dominate; sparse graphite-yellow 3D objects appear only in empty or explanatory states.",
-    "illustrationSummary": "Tinkoff Investments uses sparse graphite-and-yellow 3D illustrations for empty states and product education."
+    "uiSummary": "A data-first black trading interface built from charcoal cards, large white values, compact gray labels, blue commitment actions, green and red market signals, a small yellow brand marker, dense charts, and sparse 3D financial objects.",
+    "illustrationSummary": "Tinkoff Investments uses a stable authored illustration layer for onboarding, referral, empty portfolios or lists, screener education, restrictions, and promotional explanations. The language turns simple financial metaphors into isolated 3D-ish objects on black, while populated portfolio, chart, and trading screens remain data-first."
   },
   {
     "appId": "68b17958a2bf263e4d1e41d3",
@@ -461,7 +461,7 @@
     "categories": [
       "Maps & Navigation"
     ],
-    "uiSummary": "A dark, map-first navigation system built from near-black charcoal, crisp white labels, authentic metro-line colors, and bright green active-route emphasis. Translucent rounded sheets preserve network context while revealing itinerary detail.",
+    "uiSummary": "A dense dark transit interface where a full-bleed schematic map, charcoal draggable sheets, compact white type, blue action affordances, and brightly colored line badges replace conventional card-based navigation.",
     "illustrationSummary": null
   },
   {
@@ -472,7 +472,7 @@
     "categories": [
       "Utilities"
     ],
-    "uiSummary": "A utility-first translation interface built from white and pale-gray surfaces, dark slate typography, restrained orange accents, simple line icons, and large focused text areas. Mode switching stays persistent while history, favorites, cards, and settings remain intentionally plain.",
+    "uiSummary": "A dense light utility interface combining a cool-gray canvas, white rounded translation cards, large focused text, compact contextual accents, dark selected chips, minimal top chrome, and a five-item icon-and-label tab bar.",
     "illustrationSummary": null
   },
   {
@@ -486,8 +486,8 @@
       "Lifestyle",
       "News & Media"
     ],
-    "uiSummary": "An editorial learning app built from white reading surfaces, oversized black headlines, vivid cobalt actions, image-led article cards, and expressive flat line illustrations on bold color fields. The interface balances magazine energy with highly readable course and calculator content.",
-    "illustrationSummary": "Tinkoff Journal uses an editorial illustration language to explain finance, work, travel, and everyday decisions."
+    "uiSummary": "A bright editorial iOS system built from white reading fields, heavy black headlines, cobalt actions, wide rounded media cards, restrained navigation chrome, and a deliberate mix of photography and pastel learning illustrations.",
+    "illustrationSummary": "Tinkoff Journal uses a stable authored illustration language on learning and course surfaces. It explains ideas, distinguishes lessons, and creates the dominant mass of course cards; it is not decoration for every screen."
   },
   {
     "appId": "68b185baa2bf263e4d1e7e70",
@@ -498,7 +498,7 @@
       "AI",
       "Entertainment"
     ],
-    "uiSummary": "A media-first short-video interface built from edge-to-edge video, black creator tools, white overlay actions, cool-blue selection, and a pink-to-cyan creation accent. Chrome stays compact so motion content remains dominant.",
+    "uiSummary": "A black edge-to-edge video-first iOS system where moving media supplies the color, thin white overlay controls form a right action rail, dark sheets layer above playback, and a glowing gradient creation control punctuates restrained navigation.",
     "illustrationSummary": null
   },
   {
@@ -509,7 +509,7 @@
     "categories": [
       "Communication"
     ],
-    "uiSummary": "A mobile design system defined by native white chrome, blue outgoing bubbles, gray incoming bubbles, rounded media, and contextual composer tools.",
+    "uiSummary": "A native iOS communication interface defined by white and grouped-gray system surfaces, large black list titles, Apple-blue actions and outgoing bubbles, gray incoming bubbles, compact centered chat headers, and a highly adaptive bottom composer.",
     "illustrationSummary": null
   },
   {
@@ -521,8 +521,8 @@
       "AI",
       "Entertainment"
     ],
-    "uiSummary": "An airy editorial city-discovery interface built on white, thin black typography, organic bubble selectors, cloud-like section silhouettes, and a vivid coral-red action color. Expressive wide display lettering, fashion-sketch illustration, playful chips, and large place photography make route planning feel more like browsing a culture magazine than operating a map utility.",
-    "illustrationSummary": "Idoo uses fashion-sketch illustration and cloud-like organic frames to make city discovery feel expressive and personal."
+    "uiSummary": "An airy white city-discovery interface combining wide geometric display type, coral-red pill actions, irregular circular choice fields, very rounded sheets and photo cards, a minimal three-item tab bar, warm gradient fashion illustrations, and large place photography.",
+    "illustrationSummary": "Idoo uses a stable authored illustration language for onboarding, selected permission or transition moments, empty friends/history-like states, and city identity. Cropped walking legs and fashion figures sit on warm peach-to-pink/lilac gradients, pairing expressive movement with oversized geometric display type. Real places remain photographic and maps remain factual."
   },
   {
     "appId": "68b711069d6ff48c56e06c18",
@@ -532,7 +532,7 @@
     "categories": [
       "Utilities"
     ],
-    "uiSummary": "A restrained native iOS browser interface built from translucent toolbars, white content sheets, system typography, blue actions, and context-sensitive material effects. Web content remains primary while tabs, bookmarks, privacy, sharing, and customization appear as compact sheets or controls with familiar platform geometry.",
+    "uiSummary": "A content-first native iOS interface with white and grouped-gray surfaces, translucent bottom browser chrome, a compact address pill, system typography, blue text actions, rounded sheets, divider-led lists, and contextual website imagery.",
     "illustrationSummary": null
   },
   {
@@ -543,7 +543,7 @@
     "categories": [
       "Food and Drinks"
     ],
-    "uiSummary": "A high-energy coffee loyalty and preorder app with a near-black shell, stark white wordmark, condensed display typography, saturated orange and purple campaign blocks, product photography on bold color fields, oversized numeric rewards, and a three-destination bottom bar.",
+    "uiSummary": "A black-and-orange loyalty and commerce interface with condensed uppercase typography, centered chrome, a dark three-zone bottom bar, oversized wallet numerals, barcode surfaces, saturated product tiles, and prominent product photography.",
     "illustrationSummary": null
   },
   {
@@ -555,7 +555,7 @@
       "Communication",
       "Utilities"
     ],
-    "uiSummary": "A classic native iOS utility interface built from white list surfaces, SF typography, system-blue navigation and links, green call actions, red destructive controls, gray tab icons, and a blurred full-screen in-call layer.",
+    "uiSummary": "A classic native iOS utility built from white and grouped-gray list surfaces, large SF titles, system-blue navigation, green call controls, red destructive actions, a five-item tab bar, circular keypad geometry, and an immersive blurred in-call layer.",
     "illustrationSummary": null
   },
   {
@@ -568,7 +568,7 @@
       "Utilities",
       "Weather"
     ],
-    "uiSummary": "An atmospheric iOS weather system built from full-screen condition imagery, blue-gray translucent forecast cards, very large white temperature type, compact weather glyphs, thin range bars, and data-rich animated maps. The saved-city list shifts to near-black so each photographic location card becomes a vivid window.",
+    "uiSummary": "An atmospheric dark-mode weather interface built from condition imagery, translucent blue-gray forecast cards, huge thin white temperature numerals, dense multicolor metric charts, full-screen weather maps, and edge-mounted native controls without a tab bar.",
     "illustrationSummary": null
   },
   {
@@ -579,7 +579,7 @@
     "categories": [
       "Utilities"
     ],
-    "uiSummary": "A pure-black iOS utility shell with oversized white titles, thin separators, warm amber actions, precise time numerals, native grouped sheets, and an unwavering four-tab structure. The visual language is nearly decoration-free: hierarchy comes from type scale, spacing, system controls, and direct manipulation.",
+    "uiSummary": "A pure-black iOS utility with oversized precise time numerals, white and gray hierarchy, warm orange actions, green and red semantic controls, native dark lists and sheets, and a compact four-item bottom bar without decorative imagery.",
     "illustrationSummary": null
   },
   {
@@ -591,7 +591,7 @@
       "Finance",
       "Utilities"
     ],
-    "uiSummary": "A native dark market utility built from pure-black canvas, graphite sheets, white condensed information hierarchy, vivid green and red quote movement, blue system actions, thin chart lines, and dense watchlist rows. Visual character comes from financial data rather than decoration.",
+    "uiSummary": "A dense black iOS market interface where aligned white financial data, thin green and red charts, blue actions, compact watchlist rows, graphite news cards, and tall rounded detail sheets replace decorative imagery.",
     "illustrationSummary": null
   },
   {
@@ -602,8 +602,8 @@
     "categories": [
       "Food and Drinks"
     ],
-    "uiSummary": "A bright delivery marketplace using cyan-blue as its decisive accent, crisp white canvases, bold rounded headings, photo-rich restaurant cards, and compact metadata. Friendly polished 3D mascot scenes appear in onboarding and rewards while commerce stays clean and fast.",
-    "illustrationSummary": "No dedicated imagery overview was documented."
+    "uiSummary": "A bright image-led marketplace with white and pale-cool surfaces, decisive cyan actions, heavy rounded headings, dense photographic discovery shelves, compact metadata, outlined bottom navigation, and occasional high-saturation mascot illustration.",
+    "illustrationSummary": "Wolt uses a secondary authored illustration language for onboarding, address or location guidance, rewards, subscription promotion, and selected profile moments. Cheerful mascot characters and simplified objects make these moments warmer without replacing the product photography that dominates everyday commerce. When this language is required in an adapted product, generate finished raster artwork with an image-generation model and obtain explicit approval before integrating it; do not recreate it from SwiftUI shapes or symbol assemblies."
   },
   {
     "appId": "68c1ceb8cf4955c11e9e3cbd",
@@ -613,7 +613,7 @@
     "categories": [
       "Music & Audio"
     ],
-    "uiSummary": "A content-led music interface built from white iOS surfaces, heavy black titles, Apple Music coral, and richly varied album artwork. A translucent mini-player and five-tab navigation remain persistent, while the full player derives its atmospheric color from the current cover.",
+    "uiSummary": "A content-led native iOS music interface with white and grouped-gray browsing surfaces, large black titles, coral selection, artwork-dense rails and grids, a translucent mini-player above tab navigation, and cover-derived atmospheric playback screens.",
     "illustrationSummary": null
   },
   {
@@ -624,7 +624,7 @@
     "categories": [
       "Utilities"
     ],
-    "uiSummary": "A restrained system calendar using white schedule space, thin gray time rules, coral-red navigation and current-time markers, black event text, and pale grouped sheets. Day, week strip, calendar list, event creation, search, inbox, widgets, and subscription management follow native iOS conventions.",
+    "uiSummary": "A white-first native iOS calendar with coral-red actions, precise date grids and time rules, compact black system type, pale grouped forms, centered modal titles, and color dots as the only recurring visual marks.",
     "illustrationSummary": null
   },
   {
@@ -635,7 +635,7 @@
     "categories": [
       "Finance"
     ],
-    "uiSummary": "A light finance super-app built from warm gray canvas, white modular tiles, a vivid orange action system, promotional story cards, and a prominent central QR control. Dense banking and service functions remain approachable through grouped icons, compact pills, and soft shadows rather than heavy dashboard chrome.",
+    "uiSummary": "A light modular fintech iOS system built from pale-gray canvas, white rounded service and account cards, vivid orange identity and CTAs, dark inner-page headers, photo-led story tiles, compact financial type, and a bottom bar centered on an oversized orange QR control.",
     "illustrationSummary": null
   },
   {
@@ -646,7 +646,7 @@
     "categories": [
       "Utilities"
     ],
-    "uiSummary": "A pure black system calculator with a large right-aligned white result, circular dark-gray number keys, light-gray function keys, and a saturated orange operator column. The fixed four-column keypad emphasizes one-handed muscle memory and immediate state change without decoration.",
+    "uiSummary": "A full-screen black numeric workspace with an oversized right-aligned white display above a fixed lower keypad of charcoal, light-gray, and orange controls, using scale, strict circular geometry, and operator-state inversion as its entire visual hierarchy.",
     "illustrationSummary": null
   },
   {
@@ -658,8 +658,8 @@
       "Finance",
       "Utilities"
     ],
-    "uiSummary": "A highly native iOS utility built from soft cool-gray canvas, stacked white sheets, large black titles, system-blue actions, grouped form rows, and restrained flat setup graphics. Depth comes from the visible stack of cards and modal dimming rather than ornamental shadow.",
-    "illustrationSummary": "Wallet uses restrained flat onboarding graphics to explain what can be stored: colorful payment cards and ticket-shaped passes arranged as simple object groups."
+    "uiSummary": "A sparse system-native iOS utility built from white and cool grouped-gray fields, large black titles, blue actions, oversized rounded card and pass surfaces, and visibly layered sheets whose depth comes from scale, dimming, and cropped underlying panels rather than ornament.",
+    "illustrationSummary": null
   },
   {
     "appId": "68c34386cf4955c11ea65a14",
@@ -669,7 +669,7 @@
     "categories": [
       "Utilities"
     ],
-    "uiSummary": "A high-contrast camera utility with a live full-screen view, translucent black control deck, bright white circular controls, yellow active states, and minimal accessibility-first typography.",
+    "uiSummary": "A high-contrast camera utility dominated by a full-screen live view, a dark translucent rounded control deck, dense circular white-on-charcoal tools, yellow active feedback, native dark settings, and minimal system typography.",
     "illustrationSummary": null
   },
   {
@@ -680,7 +680,7 @@
     "categories": [
       "Utilities"
     ],
-    "uiSummary": "A native location utility built around pale Apple maps, system-blue person and device markers, white translucent bottom sheets, rounded action tiles, Memoji identity, red lost-device controls, and a four-tab structure for People, Devices, Items, and Me.",
+    "uiSummary": "A native location utility with pale full-screen maps, white draggable bottom sheets, system-blue selection, compact identity rows, floating map controls, translucent tab navigation, and system modal states.",
     "illustrationSummary": null
   },
   {
@@ -691,7 +691,7 @@
     "categories": [
       "Utilities"
     ],
-    "uiSummary": "A quiet translation utility built from pale-gray grouped canvas, large white input cards, black system typography, and a soft aqua-teal accent. Generous empty space and simple icon actions keep language exchange immediate and calm.",
+    "uiSummary": "A calm translation iOS utility with a pale grouped canvas, large white language cards, black multilingual type, aqua-teal translated content and voice controls, a compact three-item bottom bar, and no decorative imagery beyond functional audio feedback.",
     "illustrationSummary": null
   },
   {
@@ -702,7 +702,7 @@
     "categories": [
       "Utilities"
     ],
-    "uiSummary": "A native iOS file utility with a white canvas, oversized black section titles, system blue actions, pale-gray search, familiar blue folder glyphs, sparse file rows, native menus and sheets, and a stable three-tab structure for Recents, Shared, and Browse.",
+    "uiSummary": "A native white iOS document browser with oversized black titles, pale search, blue actions and folder marks, sparse list-or-grid content, preview-led imagery, translucent system menus, and a stable compact bottom bar.",
     "illustrationSummary": null
   },
   {
@@ -713,7 +713,7 @@
     "categories": [
       "Utilities"
     ],
-    "uiSummary": "A calm Apple-style reference interface built from white and pale-gray grouped surfaces, large black system headlines, blue actions, colorful category heroes, and crisp device screenshots. The visual language is native, instructional, and content-first.",
+    "uiSummary": "A calm Apple-native editorial interface with white and pale grouped-gray reading surfaces, bold black system titles, blue navigation actions, saturated gradient category bands, and centered real-device screenshots as the primary instructional imagery.",
     "illustrationSummary": null
   },
   {
@@ -724,7 +724,7 @@
     "categories": [
       "Utilities"
     ],
-    "uiSummary": "A minimal augmented-reality utility where the camera fills the screen, thin white geometry explains detection and measurement, oversized white placement controls support precision, and a full-screen red level state gives immediate angle feedback.",
+    "uiSummary": "A camera-first spatial utility with full-bleed live imagery, sparse white AR geometry and circular controls, a fixed black two-item bottom bar, and an alternate level surface where enormous centered degree numerals sit directly on functional black, white, red, or green color fields.",
     "illustrationSummary": null
   },
   {
@@ -736,7 +736,7 @@
       "AI",
       "Productivity"
     ],
-    "uiSummary": "A sparse chat-first assistant built from near-white surfaces, black text, soft gray controls, and a single violet-to-blue brand gradient. Conversation, attachments, generation controls, and Pro states remain readable through generous whitespace and compact rounded actions.",
+    "uiSummary": "A sparse near-white assistant interface where black reading text, compact icon-led chrome, a fixed soft-gray composer, and concentrated violet-to-blue AI accents frame generated media without turning the conversation into a generic card stack.",
     "illustrationSummary": null
   },
   {
@@ -747,8 +747,8 @@
     "categories": [
       "Travel & Transportation"
     ],
-    "uiSummary": "A map-first ride and courier interface with pale cartography, vivid lime primary actions, blue pickup markers, green destinations, white rounded bottom sheets, compact vehicle selectors, negotiated price controls, and direct live-status panels that preserve route context.",
-    "illustrationSummary": null
+    "uiSummary": "A map-first transport interface where pale cartography remains visible behind white rounded bottom sheets, vivid lime actions, compact dense rows, blue location markers, floating controls, and occasional flat driver illustrations.",
+    "illustrationSummary": "Drivee uses a recurring flat illustration language on driver and courier onboarding or verification surfaces. The scenes explain working roles, documents, vehicles, phones, bags, and order handling while providing the main visual mass on otherwise sparse white screens. They are distinct from the live map, vehicle selector silhouettes, interface icons, and user photographs. When a surface requires this illustration language, generate the image with an available image-generation model and integrate the resulting asset. Do not recreate it with SwiftUI shapes, SF Symbols, or emoji. The screen is not ready for design approval until the generated asset is visible in the running interface."
   },
   {
     "appId": "68c83c0dcf4955c11eb4d631",
@@ -758,8 +758,8 @@
     "categories": [
       "Travel & Transportation"
     ],
-    "uiSummary": "A map-first mobility interface with pale cartography, crisp white bottom sheets, near-black actions, restrained blue links, and friendly illustrated service icons. Large rounded panels and compact type keep location, vehicle, fare, and driver states calm and legible.",
-    "illustrationSummary": "gg uses small friendly transport and service illustrations to make otherwise utilitarian map actions immediately recognizable."
+    "uiSummary": "A restrained map-first mobility interface with pale cartography, large white rounded bottom sheets, compact system typography, near-black primary actions, sparse blue selection, floating map controls, and small functional vehicle imagery.",
+    "illustrationSummary": null
   },
   {
     "appId": "68c9585ad5bf5490fbb3a0bf",
@@ -769,8 +769,8 @@
     "categories": [
       "Finance"
     ],
-    "uiSummary": "A bright premium-finance interface built from white space, bold black headings, saturated violet actions, pale-lilac cards, and glossy 3D product metaphors. It makes banking, rewards, and investing feel approachable and collectible.",
-    "illustrationSummary": "No dedicated imagery overview was documented."
+    "uiSummary": "A bright premium-finance interface with expansive white space, heavy black hierarchy, saturated violet actions, pale-lilac cards and icon wells, bold balances, persistent purple-selected tab navigation, and glossy 3D product objects as bounded promotional imagery.",
+    "illustrationSummary": null
   },
   {
     "appId": "68c9a1d3d5bf5490fbb61105",
@@ -781,8 +781,8 @@
       "Lifestyle",
       "Social Networking"
     ],
-    "uiSummary": "A photo-led dating interface built from bright white surfaces, a saturated violet gradient, heavy black headings, circular portraits, and full-height encounter cards. Five stable tabs move between nearby people, encounters, likes, chat, and profile; expressive line-and-color illustrations explain onboarding, empty states, premium, and safety.",
-    "illustrationSummary": "No dedicated imagery overview was documented."
+    "uiSummary": "A bright photo-led social interface with white high-whitespace canvases, bold black system typography, violet-to-purple gradient actions, immersive rounded portrait cards, a five-item icon tab bar, and restrained gray sheets and lists around the imagery.",
+    "illustrationSummary": null
   },
   {
     "appId": "68cc56ded5bf5490fbc6d754",
@@ -793,7 +793,7 @@
       "Communication",
       "Social Networking"
     ],
-    "uiSummary": "A restrained dark calling interface built from black and charcoal surfaces, blue and green action tiles, large circular in-call controls, pale video-room backdrops, and thin system iconography. It feels direct, familiar, and operational.",
+    "uiSummary": "A dark-first calling utility built from near-black canvases, charcoal tiles and sheets, white system typography, VK-blue selected states, full-width light primary buttons, and sparse circular call controls over blurred video or participant surfaces.",
     "illustrationSummary": null
   },
   {
@@ -804,7 +804,7 @@
     "categories": [
       "AI"
     ],
-    "uiSummary": "A warm, editorial conversational workspace with an off-white paper canvas, dark ink, restrained terracotta actions, serif headings, fine outline icons, neutral rounded composers, and compact blue system toggles. Chats, artifacts, image and file input, code, voice, capabilities, privacy, subscription, and settings remain calm and text-led.",
+    "uiSummary": "A warm editorial conversation interface with an ivory paper-like canvas, black ink, large serif brand headings, compact sans-serif prose, restrained terracotta feedback, a floating rounded composer, minimal top chrome, and text-led sheets and artifacts.",
     "illustrationSummary": null
   },
   {
@@ -815,7 +815,7 @@
     "categories": [
       "Music & Audio"
     ],
-    "uiSummary": "A dark music interface built from black listening surfaces, vivid blue-violet gradients, album-art shelves, circular artist portraits, and a persistent compact player. It feels immersive, social, and recommendation-led.",
+    "uiSummary": "A dense dark music interface with near-black listening surfaces, blue active states, album-art shelves, circular artist imagery, a persistent graphite mini-player above tab navigation, and immersive photographic or cover-derived player backgrounds.",
     "illustrationSummary": null
   },
   {
@@ -827,7 +827,7 @@
       "AI",
       "Productivity"
     ],
-    "uiSummary": "A quiet AI-search interface with a warm off-white canvas, deep green-black typography, teal voice and submit controls, soft floating composers, sparse hairlines, and photography-led discovery cards.",
+    "uiSummary": "A quiet warm-white AI search interface where document-like answers, sparse teal actions, small inline citations, photography-led discovery cards, compact icon chrome, and a persistent rounded composer carry more visual weight than decoration.",
     "illustrationSummary": null
   },
   {
@@ -838,8 +838,8 @@
     "categories": [
       "Shopping, Listings & Marketplaces"
     ],
-    "uiSummary": "A playful family marketplace on a pale icy-blue canvas with bright blue commerce actions, bold black headings, white rounded product cards, red discount signals, colorful category tiles, dense catalog grids, and a friendly blue bear mascot used across loyalty and promotional guidance.",
-    "illustrationSummary": "Detsky Mir uses a friendly blue bear mascot and toy-like family graphics to explain savings, loyalty, resale, gifts, and notification benefits without making commerce feel childish."
+    "uiSummary": "A dense family-commerce interface built on a pale blue canvas with white rounded modules, bright blue navigation and actions, loud red sale pricing, product-led photography, a persistent four-item tab bar, and recurring blue-bear state illustrations.",
+    "illustrationSummary": "Detsky Mir uses a recurring blue bear mascot and related family-friendly spot scenes on onboarding, authentication, notification, and empty-state surfaces. The artwork makes sparse guidance and state screens recognizable while remaining separate from product photography, campaign banners, category pictograms, and interface icons. When a surface requires this illustration language, generate the image with an available image-generation model and integrate the resulting asset. Do not recreate it with SwiftUI shapes, SF Symbols, or emoji. The screen is not ready for design approval until the generated asset is visible in the running interface."
   },
   {
     "appId": "68cf1400d5bf5490fbd22572",

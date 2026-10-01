@@ -3,179 +3,127 @@
 version: 1
 platform: iOS
 name: Tinkoff-Investments-design-analysis
-description: "A dark trading interface built from pure-black canvas, charcoal account cards, white financial typography, green and red market movement, clear blue actions, and a small Tinkoff-yellow brand marker. Charts and data dominate; sparse graphite-yellow 3D objects appear only in empty or explanatory states."
-
+description: "A data-first black trading interface built from charcoal cards, large white values, compact gray labels, blue commitment actions, green and red market signals, a small yellow brand marker, dense charts, and sparse 3D financial objects."
 colors:
-  primary: "#4C83F3"
-  on-primary: "#FFFFFF"
-  brand-yellow: "#FFDD2D"
-  market-up: "#3BC96B"
-  market-down: "#E65063"
-  ink: "#F5F5F7"
-  ink-muted: "#A0A1A6"
-  ink-subtle: "#63656A"
   canvas: "#000000"
-  surface-1: "#1A1A1C"
-  surface-2: "#2B2B2E"
-  hairline: "#343438"
-  semantic-success: "#3BC96B"
-  semantic-warning: "#D5AA22"
-  semantic-danger: "#E65063"
-  semantic-overlay: "#000000"
-
+  surface-primary: "#1A1A1C"
+  surface-secondary: "#2B2B2E"
+  accent-primary: "#4C83F3"
+  accent-secondary: "#FFDD2D"
+  text-primary: "#F5F5F7"
+  text-secondary: "#A0A1A6"
+  divider: "#343438"
+  destructive: "#E65063"
 typography:
-  display-xl: { fontFamily: System Sans, fontSize: 40, fontWeight: 700, lineHeight: 1.02, letterSpacing: -0.8 }
-  display-lg: { fontFamily: System Sans, fontSize: 34, fontWeight: 700, lineHeight: 1.08, letterSpacing: -0.5 }
-  display-md: { fontFamily: System Sans, fontSize: 28, fontWeight: 700, lineHeight: 1.12, letterSpacing: -0.3 }
-  headline: { fontFamily: System Sans, fontSize: 22, fontWeight: 700, lineHeight: 1.2, letterSpacing: 0 }
-  card-title: { fontFamily: System Sans, fontSize: 16, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: System Sans, fontSize: 17, fontWeight: 500, lineHeight: 1.3, letterSpacing: 0 }
-  body-lg: { fontFamily: System Sans, fontSize: 16, fontWeight: 400, lineHeight: 1.4, letterSpacing: 0 }
-  body: { fontFamily: System Sans, fontSize: 14, fontWeight: 400, lineHeight: 1.38, letterSpacing: 0 }
-  body-sm: { fontFamily: System Sans, fontSize: 12, fontWeight: 400, lineHeight: 1.34, letterSpacing: 0 }
-  caption: { fontFamily: System Sans, fontSize: 10, fontWeight: 400, lineHeight: 1.3, letterSpacing: 0 }
-  button: { fontFamily: System Sans, fontSize: 14, fontWeight: 600, lineHeight: 1.2, letterSpacing: 0 }
-  eyebrow: { fontFamily: System Sans, fontSize: 11, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0.1 }
-  mono: { fontFamily: System Mono, fontSize: 12, fontWeight: 500, lineHeight: 1.3, letterSpacing: 0 }
-
-rounded: { xs: 3, sm: 6, md: 10, lg: 14, xl: 18, xxl: 24, pill: 9999, full: 9999 }
-spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
-
+  hero: {fontFamily: "SF Pro Display", fontSize: 34, fontWeight: 700, lineHeight: 38}
+  title: {fontFamily: "SF Pro Display", fontSize: 28, fontWeight: 700, lineHeight: 33}
+  section: {fontFamily: "SF Pro Text", fontSize: 20, fontWeight: 700, lineHeight: 25}
+  body: {fontFamily: "SF Pro Text", fontSize: 14, fontWeight: 400, lineHeight: 19}
+  label: {fontFamily: "SF Pro Text", fontSize: 14, fontWeight: 600, lineHeight: 18}
+  caption: {fontFamily: "SF Pro Text", fontSize: 11, fontWeight: 400, lineHeight: 15}
+spacing:
+  screen-horizontal: 12
+  section-gap: 24
+  card-padding: 16
+  control-gap: 10
+rounded:
+  control: 10
+  card: 16
+  sheet: 24
+  pill: 999
 components:
-  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.md}", padding: [14, 18]}
-  portfolio-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 16 }
-  quote-row: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.xs}", padding: 10 0 }
-  range-tab: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.caption}", rounded: "{rounded.pill}", padding: [7, 10]}
-  bottom-nav: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", height: 58 }
+  primary-action: {fill: "clear blue", text: "white semibold", height: 50, shape: "rounded rectangle"}
+  secondary-action: {fill: "charcoal or white", text: "white or black", border: "none", shape: "rounded rectangle"}
+  primary-card: {fill: "charcoal", radius: 16, padding: 16, hierarchy: "large white value over gray metadata"}
+  navigation: {fill: "black or charcoal", selected: "white with compact accent", inactive: "gray", labels: "visible"}
 ---
 
 # Overview
 
-Tinkoff Investments is a data-first dark system. Black and charcoal recede behind quotes, charts, positions, and warnings while blue, green, red, and yellow retain precise roles.
+Tinkoff Investments is a dense dark financial interface where numbers, charts, instrument rows, and transaction state dominate the viewport. Pure black canvas and charcoal cards recede behind large white portfolio values, aligned prices, compact gray captions, and full-width analytic graphics. Blue identifies ordinary commitment, green and red encode market direction, and yellow is kept to a small brand marker or authored object rather than used as the default CTA.
+
+The screens range from portfolio summaries and lists to chart-led instrument detail, order books, analytics, calendars, community posts, screeners, and focused trade tickets. Despite the density, hierarchy stays legible through clear numeric scale, restrained surfaces, thin separators, and dedicated bottom action zones.
 
 # Non-negotiable visual invariants
 
-- The reference consistently shows reserve green and red for movement.
-- The reference consistently shows risk and commission explicit.
-- The reference consistently shows blue for commitment.
-- The reference consistently shows align all numeric data.
-- Sampled screens consistently use a dark trading interface built from pure-black canvas.
-- The reference consistently shows charcoal account cards.
-- The reference consistently shows white financial typography.
-- The reference consistently shows green and red market movement.
+- Pure black fills the full viewport while charcoal surfaces group related data; no light cards or automatic white background appear inside the app shell.
+- Large white financial values and titles visibly outrank compact gray tickers, labels, timestamps, commissions, and explanatory copy.
+- Green is reserved for positive market movement and red for negative, destructive, blocked, or loss states; neither becomes generic decoration.
+- Blue marks primary commitment, selected inputs, and app actions; yellow remains a small identity or illustration accent rather than a universal button color.
+- Instrument rows align logo, name/ticker, price, and signed movement in a tight repeatable structure with thin separators.
+- Chart-led screens devote a substantial middle region to candlesticks, volume, bars, depth, or calendar cells and preserve fixed buy/sell actions near the bottom.
+- The persistent bottom bar uses five labeled items on black/charcoal, with selected content visibly brighter or compactly accented and inactive content gray.
+- Bottom sheets, filters, tickets, and numeric forms remain dark, rounded, and keyboard-aware; light native controls never leak into the surface.
 
 # Color and surfaces
 
-### Brand & Accent
+The canvas is pure black `#000000`. Primary cards and navigation surfaces rise to `#1A1A1C`; selected controls, sheets, chips, and nested groups may use `#2B2B2E`. Hairlines around `#343438` structure dense rows without producing bright grid lines. Shadows are unnecessary because tonal steps supply depth.
 
-Blue marks trading actions and selection; yellow is a small identity marker. Green and red are reserved for market movement.
+Primary text is near-white `#F5F5F7`; secondary labels, tickers, timestamps, and calculations use `#A0A1A6`, with still quieter gray for disabled or tertiary data. Clear blue around `#4C83F3` is the ordinary action and selection color. Green around `#3BC96B` communicates positive change; red around `#E65063` communicates negative movement, destructive action, and some trade-state emphasis. Tinkoff yellow `#FFDD2D` appears as a compact pill-like brand mark and in authored imagery.
 
-### Surface
-
-Black is the canvas; charcoal cards group portfolio, discovery, alerts, and order details.
-
-### Text
-
-White carries values and titles; gray carries instrument metadata, labels, and secondary calculations.
-
-### Semantic
-
-Green means positive movement, red negative or destructive state, and yellow warns about qualification or risk.
+Some transaction detail states use a red upper field. Treat that as bounded status emphasis, not a new general canvas. Generic system blue, green, and red are acceptable only when tuned to the observed dark palette and attached to explicit labels or signed values.
 
 # Typography
 
-### Font Family
+Use SF Pro Display and SF Pro Text with tabular numerals for aligned financial data. Portfolio totals, prominent quotes, and some screen titles sit around 26–34 points bold. Section headings are 18–22 points bold; instrument names and key row labels are about 14–16 points medium or semibold. Tickers, exchange metadata, timestamps, chart labels, fees, and supporting calculations occupy 10–13 points in gray.
 
-Use a system sans with tabular numerals. A compact mono may support chart annotations.
+Numeric hierarchy is more important than decorative display type. Preserve currency symbols, signs, percent units, decimal precision, and aligned columns. Use tabular figures for quote lists, positions, order book, trade tickets, and chart annotations. Dense data can remain compact, but warning, commission, total, and projected result must not become visually indistinguishable.
 
-### Hierarchy
-
-Use 22–28 points values and headings, 16 points instrument names, 14 points data rows, and 10–12 points exchange metadata.
-
-### Principles
-
-Align numbers, preserve signs and units, and keep account, lot, commission, and total explicit.
-
-### Note on Font Substitutes
-
-Use SF Pro or Inter with tabular numerals. JetBrains Mono is suitable for dense annotations.
+At larger Dynamic Type sizes, allow rows and cards to grow and place secondary calculations on additional lines. Chart labels may remain compact if their accessible equivalents are available, while titles, actions, warnings, and key totals must scale normally.
 
 # Screen composition
 
-### Spacing System
+Most screens begin with a black safe-area region and a compact header: a small centered yellow brand marker, a large left-aligned title, or an instrument bar with back, name/ticker, favorite, and sharing controls. The middle contains stacked charcoal summaries, instrument lists, search/screener controls, community content, transaction rows, or a large analytic visualization. The lower region is either continued scrolling plus the labeled tab bar or a fixed dark action zone with blue and secondary buy/sell controls above the home indicator.
 
-Use a 4 points base, 12 points gutters, 8–12 points row gaps, and 20–24 points between portfolio, chart, warnings, and order sections.
+Portfolio-like screens place one broad value or account summary near the top, then dense position and transaction lists. Empty versions preserve the same black structure but center an authored object and concise action. Discovery, favorites, search, screeners, and calendars use vertical lists, compact filter chips, or grid-like data cells. Community screens use avatar/post cards and bottom action sheets while staying within the dark palette.
 
-### Grid & Container
+Instrument detail uses a compact header and horizontal top tab strip, then current quote, a large chart or order-book visualization, time/range controls, information cards, and fixed sell/buy actions. Full-screen chart states devote most of the viewport to candlesticks and volume. Trade tickets use stacked account, instrument, quantity, price, fee, and total groups with a numeric keypad or stepper and a clear full-width CTA. Analytics uses full-width bar charts and tooltips; order books use tightly aligned bid/ask columns and depth shapes.
 
-Home and discovery use stacked cards and lists. Security detail and analytics use a chart-led single column; orders use focused forms.
-
-### Whitespace Philosophy
-
-Density is appropriate, but charts and headline values need clear surrounding space.
-
-Surface hierarchy observed in the source:
-
-Charcoal cards and modal sheets create depth over black. Avoid visible shadow; surface contrast is sufficient.
-
-### Decorative Depth
-
-Use charts as decoration and sparse graphite-yellow objects only in empty states.
+Typical outer gutters are about 12 points, row gaps 8–12 points, card padding 16 points, and major section separation 20–24 points. Sheets use 24-point top corners and a small drag handle. Scroll content must clear both action zones and the tab bar.
 
 # Navigation appearance
 
-Use five bottom destinations for Home, What to buy, Pulse, Chat, and More. Selected state uses a small red or blue accent.
+The persistent bottom bar uses five labeled icon items on black or dark charcoal. Selected content is brighter white or receives a small blue/red accent; inactive items are gray. The bar is full width, compact, and safe-area aware rather than floating in a decorative pill.
+
+Instrument screens use a horizontally arranged top tab strip with white selected label and a compact underline or contrast change; unselected labels recede to gray. Headers use simple white back, favorite, share, close, and more icons. Bottom sheets use a centered drag handle and dark rounded top. Product behavior and information architecture come from the approved Research and Planning artifacts.
 
 # Components
 
-### Buttons
+Primary actions are full-width blue rounded rectangles about 50 points high with white semibold text. Disabled states keep the same geometry with muted charcoal fill and low-contrast label. Secondary sell or alternate actions may use white, outline, or charcoal treatment, but remain paired clearly with the primary action.
 
-Buy and primary actions are blue; Sell may be white or outlined. Native controls must inherit dark surfaces and package typography.
+Portfolio cards are charcoal, about 16-point radius, with a large white total, signed green/red movement, gray metadata, and compact shortcuts. Quote rows use circular security logos, white instrument name, gray ticker, right-aligned white price, and signed colored change. Transaction rows follow a similarly dense alignment with state and amount.
 
-### Cards & Containers
-
-Portfolio cards show account value, positions, movement, and shortcuts. Quote rows align logo, name, price, and change.
-
-### Inputs & Forms
-
-Trade forms group account, instrument, lot, price, commission, and total. Search uses a dark rounded field.
+Pill filters, range controls, segmented controls, and chips use dark nested fills with a clear selected label. Search fields are dark rounded rectangles. Trade tickets use numeric fields, plus/minus steppers, and full-width summaries. Tooltips are compact dark bubbles tied to chart selection. Calendar and screener tiles retain crisp boundaries and concise labels. Native keyboards and permission alerts may appear, but app-owned content remains dark.
 
 # Imagery and icons
 
-Use charts as decoration and sparse graphite-yellow objects only in empty states.
+Charts and data are the primary visual imagery: candlesticks, lines, volume bars, depth areas, analytics bars, and calendar cells are crisp, high contrast, and sized to the full available width. Security logos are compact circular or rounded marks that aid scanning but never replace instrument text.
 
-Charts remain sharp and full width. Security logos are compact circles; educational illustrations stay centered with ample black space.
-
-If final imagery is not yet available, any placeholder must preserve the documented scale, placement, crop, and visual weight rather than removing that layer.
+Authored imagery appears selectively in onboarding, referral, empty, screener, restriction, and product-education surfaces. It uses chunky 3D-ish financial objects on generous black space with graphite bases and yellow accents. This artwork is structurally important in those states but must not displace chart or data space on populated financial screens. If temporary imagery is required, preserve the central object scale and surrounding negative space rather than substituting a tiny icon.
 
 # States
 
-Qualification, liquidity, market state, alert, order, and forecast status appear directly beside the relevant data.
+Observed states include onboarding and education, empty and populated portfolio, favorites list and empty variant, account-choice and top-up forms, referral permission alert, keyboard-visible text input, operations empty/list/detail, and analytics with chart tooltips. Search and screener screens appear empty, populated, filtering, and construction states.
+
+Instrument states include overview, full-screen chart, order book, indicators, alerts with numeric keypad, buy and sell tickets, blocked or restricted prompts, and processing or completed transaction detail. Positive and negative data retain green/red semantics across states. Community content includes feed, post, comments, and action sheets while maintaining the same black/charcoal shell.
 
 # iOS adaptation
 
-### Touch Targets
+Use safe-area-aware black containers so status and home-indicator regions merge with the app canvas. Lists, community content, screeners, calendars, and transaction history scroll vertically. Horizontal instrument and range tabs may scroll while retaining a clear selected state. Fixed buy/sell or submit actions should use bottom safe-area insets and never cover chart annotations or the final ticket summary.
 
-Rows, tabs, range controls, chart actions, and Buy or Sell require at least 44 points targets.
+Every tab, quote row, icon-only header action, chip, chart range, tooltip target, stepper, and trade action needs at least a 44-point effective target. VoiceOver should announce instrument name/ticker, price, signed change, position, and action in that order; charts require accessible summaries and selected-point values independent of color. Green/red meaning must also be expressed through sign and label.
 
-### Collapsing Strategy
-
-Allow instrument tabs and ranges to scroll horizontally. Keep trading actions visible below long charts.
-
-### Image Behavior
-
-Charts scale to width without distorting time or value. Use `contain` for security logos and empty-state objects.
-
-Apply these rules within current iPhone safe areas and scrolling containers. Keep interactive targets at least 44 points, preserve a logical VoiceOver order, and let Dynamic Type wrap supporting text without flattening the documented hierarchy. Preserve the documented appearance.
+Dynamic Type may increase card/row height and move metadata beneath values. On compact widths, preserve chart width and primary numeric columns before secondary copy; allow tabs and filters to scroll instead of compressing. Keyboard and numeric-keypad screens must keep the active field, total, warning, and commitment action visible. The observed system is intentionally dark; do not generate an automatic light variant by inversion.
 
 # Anti-generic checklist
 
-- Do not decorate the black canvas.
-- Do not hide warnings behind tooltips only.
-- Do not use yellow as a generic CTA.
-- Do not expose light native controls.
-- Do not replace the documented hierarchy with a generic stack of identical white cards or `Form` sections.
-- Do not use default blue tint, an unstyled `TabView`, arbitrary SF Symbols, or uniform corner radii when they contradict the recorded tokens and components.
-- Do not omit compositionally important imagery while final assets are pending; preserve its footprint with a faithful placeholder.
+- Do not place light `Form`, `List`, keyboard-adjacent fields, or alerts inside app-owned dark surfaces.
+- Do not use yellow as the default CTA; ordinary commitment is blue and yellow is a restrained identity/art accent.
+- Do not encode gain/loss or buy/sell meaning through color alone, or reuse green/red decoratively.
+- Do not turn dense instrument, operation, or order-book rows into oversized cards with lost numeric alignment.
+- Do not replace candlestick, volume, depth, analytics, or calendar visualizations with generic progress bars.
+- Do not ship an unstyled `TabView`; preserve the dark five-item labeled bar and its bright selected state.
+- Do not remove authored empty/onboarding objects or shrink them into arbitrary SF Symbols.
+- Do not use one corner radius for cards, chips, fields, sheets, and circular security marks.
 
 </design-context>

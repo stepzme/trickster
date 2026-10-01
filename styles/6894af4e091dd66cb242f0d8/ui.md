@@ -3,206 +3,123 @@
 version: 1
 platform: iOS
 name: 4-lapy-design-analysis
-description: "A playful pet-commerce interface built from pale blue-gray surfaces, white rounded cards, bold black actions, and a high-energy palette of orange, pink, violet, cyan, and yellow. Black animal silhouettes, sticker-like symbols, cropped pet photography, and campaign collage give the system a distinctive graphic voice while dense catalog and checkout screens remain conventional."
+description: "A pale blue-gray pet-commerce interface built from broad white rounded surfaces, compact black hierarchy, black pill actions, six-item navigation, and high-impact pet cutouts on orange, pink, violet, cyan, and yellow graphic fields."
 colors:
-  primary: "#0B0B0D"
-  on-primary: "#FFFFFF"
-  accent-orange: "#FF7108"
-  accent-pink: "#F3ABC5"
-  accent-violet: "#8D78F7"
-  accent-cyan: "#50CDEA"
-  accent-yellow: "#FFD719"
-  ink: "#111216"
-  ink-muted: "#707681"
-  ink-subtle: "#A7ADB6"
-  canvas: "#F3F8FC"
-  surface-1: "#FFFFFF"
-  surface-2: "#EAF1F6"
-  hairline: "#DFE7ED"
-  semantic-success: "#43B869"
-  semantic-danger: "#DC4D5B"
-  semantic-overlay: "#000000"
+  canvas: "#F3F8FB"
+  surface-primary: "#FFFFFF"
+  surface-secondary: "#EAF1F6"
+  accent-primary: "#000000"
+  accent-secondary: "#FF7108"
+  text-primary: "#0A0A0A"
+  text-secondary: "#707681"
+  divider: "#DFE7ED"
+  destructive: "#DC4D5B"
 typography:
-  display-xl: { fontFamily: Bold Grotesk, fontSize: 40, fontWeight: 700, lineHeight: 1.00, letterSpacing: -1.0 }
-  display-lg: { fontFamily: Bold Grotesk, fontSize: 32, fontWeight: 700, lineHeight: 1.05, letterSpacing: -0.6 }
-  display-md: { fontFamily: System Sans, fontSize: 26, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.3 }
-  headline: { fontFamily: System Sans, fontSize: 22, fontWeight: 700, lineHeight: 1.15, letterSpacing: -0.2 }
-  card-title: { fontFamily: System Sans, fontSize: 16, fontWeight: 600, lineHeight: 1.22, letterSpacing: 0 }
-  subhead: { fontFamily: System Sans, fontSize: 16, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
-  body-lg: { fontFamily: System Sans, fontSize: 16, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
-  body: { fontFamily: System Sans, fontSize: 14, fontWeight: 400, lineHeight: 1.38, letterSpacing: 0 }
-  body-sm: { fontFamily: System Sans, fontSize: 12, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
-  caption: { fontFamily: System Sans, fontSize: 11, fontWeight: 500, lineHeight: 1.25, letterSpacing: 0 }
-  button: { fontFamily: System Sans, fontSize: 15, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0 }
-  eyebrow: { fontFamily: System Sans, fontSize: 11, fontWeight: 700, lineHeight: 1.20, letterSpacing: 0.2 }
-  mono: { fontFamily: System Mono, fontSize: 12, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
-rounded: { xs: 6, sm: 10, md: 14, lg: 18, xl: 24, xxl: 30, pill: 9999, full: 9999 }
-spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
+  hero: {fontFamily: "SF Pro Display", fontSize: 36, fontWeight: 700, lineHeight: 39}
+  title: {fontFamily: "SF Pro Display", fontSize: 24, fontWeight: 700, lineHeight: 29}
+  section: {fontFamily: "SF Pro Text", fontSize: 18, fontWeight: 700, lineHeight: 23}
+  body: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 400, lineHeight: 20}
+  label: {fontFamily: "SF Pro Text", fontSize: 14, fontWeight: 600, lineHeight: 18}
+  caption: {fontFamily: "SF Pro Text", fontSize: 12, fontWeight: 400, lineHeight: 16}
+spacing:
+  screen-horizontal: 12
+  section-gap: 24
+  card-padding: 16
+  control-gap: 10
+rounded:
+  control: 16
+  card: 20
+  sheet: 24
+  pill: 999
 components:
-  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: [14, 20]}
-  promo-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 0 }
-  category-row: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.card-title}", rounded: "{rounded.lg}", padding: 14 }
-  cart-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 14 }
-  segmented-control: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.pill}", padding: 4 }
-  bottom navigation: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: [20, 16]}
+  primary-action: {fill: "black", text: "white semibold", height: 52, shape: "full-width pill"}
+  secondary-action: {fill: "white or pale blue-gray", text: "near-black", border: "none", shape: "rounded rectangle"}
+  primary-card: {fill: "white", radius: 20, padding: 16, shadow: "subtle or none"}
+  navigation: {fill: "white", selected: "black icon and label", inactive: "gray-blue icon and label", badge: "small yellow disk"}
 ---
 
 # Overview
 
-4 lapy combines retail and pet care in a bright graphic system. Pale blue-gray canvas supports white commerce cards, while campaigns and categories use black animal silhouettes, pet photography, and saturated color blocks.
+4 lapy uses a cool, nearly white blue-gray canvas as a quiet base for broad white commerce surfaces and vivid pet-led artwork. The interface is recognisable through the contrast between dense retail information and playful cutout animals on saturated geometric backplates. Black is the primary action color rather than iOS blue: it appears in full-width pill buttons, selected controls, strong prices, and active navigation.
 
-**Key Characteristics:**
-- Pale cool canvas with large white rounded groups.
-- Black pill actions with strong contrast.
-- Orange, pink, violet, cyan, and yellow graphic accents.
-- Silhouette-based animal categories.
-- Six-item bottom navigation.
-- Photo collage and sticker language for campaigns.
+The real screens alternate among white card grids, single-column forms and lists, map canvases, and promotional compositions. This is not a generic white-card app: pet imagery, irregular color fields, large corner radii, compact gutters, and the black action language carry equal visual weight.
 
 # Non-negotiable visual invariants
 
-- Pale cool canvas with large white rounded groups.
-- Sampled screens consistently use black pill actions with strong contrast.
-- Imagery consistently uses orange, pink, violet, cyan, and yellow graphic accents.
-- The reference consistently shows silhouette-based animal categories.
-- Navigation consistently uses six-item bottom navigation.
-- Imagery consistently uses photo collage and sticker language for campaigns.
+- The default screen is a pale blue-gray full-height field with large white groups; pure white is reserved for cards, sheets, and navigation rather than used as an undifferentiated canvas.
+- Primary actions are high-contrast black pills with white semibold labels, normally spanning the usable content width or anchoring a bottom action area.
+- Commerce screens use compact 12-point outer gutters and visibly larger 16-point internal card padding, creating dense but readable layouts.
+- Product and category content is broken into rounded white cards or rows with roughly 16–24-point corners; it is not rendered as borderless system lists.
+- Pet cutouts and black animal silhouettes on orange, pink, violet, cyan, or yellow fields remain a major visual mass in onboarding, promotions, categories, and empty or confirmation states.
+- The bottom navigation is a white/translucent six-item bar with black selected content, gray-blue inactive content, and occasional small yellow badges.
+- Prices, totals, and screen titles use heavy near-black type; secondary delivery, bonus, and product metadata stay smaller and cool gray.
+- Search, chips, segment controls, fields, sheets, and steppers have deliberately rounded custom appearance rather than default SwiftUI styling.
 
 # Color and surfaces
 
-### Brand & Accent
-- **Black** ({colors.primary}): Primary actions, selected service segment, and strong text.
-- **Orange**, **Pink**, **Violet**, **Cyan**, and **Yellow**: Category identity, campaigns, and rewards.
+The cool canvas `#F3F8FB` or nearby `#EEF5F8` is visible between cards and behind long lists. White primary surfaces form large rounded groups for products, checkout sections, profile rows, and service content. Nested search fields, disabled controls, and secondary containers use `#EAF1F6`; dividers are quiet blue-gray and should never dominate a group.
 
-### Surface
-- **Canvas** ({colors.canvas}): Cool page background.
-- **Surface 1** ({colors.surface-1}): Cards, rows, checkout, and navigation.
-- **Surface 2** ({colors.surface-2}): Search, disabled, and nested surfaces.
-- **Hairline** ({colors.hairline}): Quiet separation in dense groups.
+Near-black `#0A0A0A` is both the strongest text and action color. Orange around `#FF7108` is the most persistent warm accent, joined by soft pink, violet, cyan, and yellow in artwork, category markers, bonuses, and badges. These colors appear as contained high-energy masses against the pale structure, not as arbitrary system tints on every control. Generic iOS blue for primary buttons or links would visibly weaken the reference.
 
-### Text
-- **Ink** ({colors.ink}): Titles, prices, totals, and controls.
-- **Ink Muted** ({colors.ink-muted}): Delivery, bonus, and product metadata.
-- **Ink Subtle** ({colors.ink-subtle}): Inactive navigation and placeholders.
-
-### Semantic
-- **Success** ({colors.semantic-success}): Confirmed and available state.
-- **Danger** ({colors.semantic-danger}): Delete and error.
-- **Overlay** ({colors.semantic-overlay}): Onboarding and modal scrim.
+Success and destructive colors appear sparingly beside explicit labels or actions. Overlay states use a dark translucent scrim while preserving a bright white rounded sheet above it.
 
 # Typography
 
-### Font Family
+The typography is a compact iOS sans hierarchy. Use SF Pro Display for large titles and promotional statements and SF Pro Text for functional content. Screen titles are typically 20–24 points, bold, and centered or aligned to the content edge. Section headings sit around 17–18 points bold; product names and row labels are 14–16 points with medium or semibold weight. Prices are heavier than adjacent metadata. Captions, tab labels, bonus details, and delivery notes sit around 11–12 points in cool gray.
 
-- **Bold Grotesk** — campaign statements and brand moments.
-- **System Sans** — catalog, services, pets, profile, cart, and navigation.
-- **System Mono** — technical order identifiers only.
-
-### Hierarchy
-
-| Token | Size | Weight | Use |
-|---|---|---|---|
-| `{typography.display-xl}` | 40 points | 700 | Campaign statement |
-| `{typography.display-md}` | 26 points | 700 | Screen title |
-| `{typography.headline}` | 22 points | 700 | Section heading |
-| `{typography.card-title}` | 16 points | 600 | Category and product |
-| `{typography.body}` | 14 points | 400 | Default copy |
-| `{typography.caption}` | 11 points | 500 | Tabs and bonuses |
-| `{typography.button}` | 15 points | 600 | Primary action |
-
-### Principles
-
-- Keep campaign type bold and playful.
-- Use compact neutral typography for care and commerce.
-- Let price and final total outrank promotional copy at checkout.
-- Keep animal names and service categories scannable.
-
-### Note on Font Substitutes
-
-Use **Arial Black** or **Archivo Black** for campaign display and **SF Pro / Inter** for system content.
+Scale contrast is controlled rather than theatrical: imagery supplies most of the expression. Reserve the 36-point hero style for the few full-screen brand or campaign moments. Avoid uppercase as a general hierarchy device. At larger Dynamic Type sizes, let titles and metadata wrap while retaining weight contrast; never reduce product prices, primary actions, and section headings to the same apparent size.
 
 # Screen composition
 
-### Spacing System
+The common upper zone contains the safe-area status region followed by one compact visual anchor: a centered title, location row, search field, or close/back control. The middle zone carries most information in edge-to-edge-with-gutters cards, grids, forms, or a map. The lower zone is either scroll content plus the six-item bar or a sticky black CTA separated from the content by white space or a white action surface.
 
-Use a 4 points base. Screen gutters are 8–12 points, card interiors 14–16 points, and campaign gaps 12 points.
+Home-like screens mix a two-column utility grid with wide promotional artwork and horizontal or vertical product groups. Promotional imagery occupies a substantial fraction of its card instead of becoming a thumbnail. Catalog-like screens use a single column of broad category rows or a two-column product grid, with search and filtering visually grouped above. Product-detail screens begin with a large contained product image area, then transition into white information sections, price, controls, and recommendations. Checkout, profile, pet, and history screens are vertically stacked groups whose internal rows remain compact. Map screens allow the map to become the canvas while search, zoom controls, pins, and a rounded bottom sheet float above it. Modal states use a dimmed underlying screen and a white sheet with a visible top radius and drag handle.
 
-### Grid & Container
-
-Home uses two-column utility tiles and large campaign cards. Catalog is a single list of animal or need categories. Cart, pet, and profile screens use one vertical column.
-
-### Whitespace Philosophy
-
-Keep structural screens airy and card-led. Concentrate visual energy inside campaign artwork rather than coloring the entire canvas.
-
-Surface hierarchy observed in the source:
-
-| Level | Treatment | Use |
-|---|---|---|
-| 0 | Pale canvas | Base |
-| 1 | White rounded card | Commerce and service rows |
-| 2 | Saturated collage card | Campaigns |
-| 3 | White story sheet on black | Onboarding |
-
-### Decorative Depth
-
-Use slight card shadows, photo cutouts, flat shapes, and sticker overlap. Avoid glossy realism outside product imagery.
+Typical outer insets are about 12 points, with 10–12-point gaps between adjacent controls and 20–24 points between major sections. Scrolling content must clear both sticky actions and the bottom safe area. A card should normally occupy the full available width within the gutter; arbitrary narrow centered cards are foreign to the system.
 
 # Navigation appearance
 
-Home, Catalog, Pets, Cart, Favorites, and Profile form the bottom bar. Selected state uses black while inactive items are blue-gray.
+The bottom bar is a broad white or lightly translucent surface with six evenly spaced icon-and-label items. The selected item is black without an oversized filled selection capsule; inactive items are cool gray-blue. A badge may appear as a small yellow disk attached to an icon. The bar respects the home-indicator safe area and remains visually separate from the pale canvas.
+
+Inner-screen bars use a compact back chevron at leading edge and a centered bold title; sheets may substitute a simple close mark. Search or utility controls may occupy the same top zone but should not compete with the title. Product behavior and information architecture come from the approved Research and Planning artifacts.
 
 # Components
 
-### Buttons
+Primary buttons are about 52 points high, black, pill-shaped, and labeled in white semibold type. Disabled primary actions keep the same geometry but move to a pale gray fill with muted text. Secondary actions use white or pale surfaces and near-black labels without default blue outlines.
 
-Primary actions are full-width black pills with white text. Secondary controls use white or pale backgrounds. Quantity controls are compact circular minus and plus actions.
+Primary cards are white with roughly 20-point corners and 16-point padding. Product cards combine contained pack photography, a compact name, muted metadata, a heavy price, and a small favorite control. Category rows pair a high-contrast animal mark or image field with a bold label. Search bars and text fields sit on pale blue-gray rounded rectangles. Filter chips and segmented controls are compact capsules; selection is conveyed with black or clearly saturated fill and strong label contrast.
 
-### Cards & Containers
-
-Promo cards combine pets, people, text, and graphic shapes. Category rows pair silhouette icons with labels. Cart cards combine selection, product, quantity, bonus, and price.
-
-### Inputs & Forms
-
-Search and delivery address stay at the top of commerce screens. Checkout uses stacked white groups for address, delivery, payment, and comment.
+Quantity controls use discrete circular or rounded minus and plus buttons with the count between them. Favorite actions use a consistent heart treatment. Checkout sections, pet-service accordions, and profile groups retain the white-card geometry. Sheets use a centered drag handle and generous top corners. Map zoom controls are small white rounded buttons with simple high-contrast symbols.
 
 # Imagery and icons
 
-Use slight card shadows, photo cutouts, flat shapes, and sticker overlap. Avoid glossy realism outside product imagery.
+Imagery is structurally important. Commerce uses clean product photography on uncluttered light fields; pet content uses real animal photography as cutouts, rounded crops, or avatars. Promotional and state artwork combines those cutouts with flat saturated blobs, circles, hearts, stickers, black speech bubbles, and occasional black animal silhouettes. Category marks are bold and simplified rather than a random collection of SF Symbols.
 
-Pet and product photos use rounded crops or cutouts. Category silhouettes sit in saturated circles. Campaign collage may overlap photography, type, and flat shapes.
-
-If final imagery is not yet available, any placeholder must preserve the documented scale, placement, crop, and visual weight rather than removing that layer.
+On promotional cards, a pet cutout or silhouette may occupy a third to half of the card and can overlap its geometric backplate. Product imagery uses `contain` so packaging is not cropped; campaign photography uses deliberate cover or cutout crops. If final imagery is pending, retain its observed footprint and focal balance with a faithful placeholder—do not collapse the card into text.
 
 # States
 
-Discounts, bonuses, promo eligibility, order state, and service availability use explicit labels. Color reinforces but does not replace them.
+Observed loading grids preserve product-card geometry with pale skeleton blocks. Search can show a keyboard-active field or a no-results state with large pet-led artwork. Favorites appear both populated and empty while preserving the same pale canvas and navigation. Checkout and order history distinguish active, completed, and paid states through explicit text, compact semantic accents, and state imagery rather than color alone.
+
+Forms show enabled black actions and pale disabled actions with identical geometry. Error feedback can appear as a compact toast near the active form. Modal payment, sorting, filtering, photo-source, address, and bonus states use the same white-sheet treatment over a dimmed context. Logged-in and logged-out profile states retain the shared type, row, and card system.
 
 # iOS adaptation
 
-### Touch Targets
+Use a vertical `ScrollView` or collection layout for card and grid screens, allowing content to extend beneath a custom safe-area-aware bottom bar only when sufficient inset is applied. Sticky CTAs should use safe-area insets rather than fixed device coordinates. Map controls and sheets must remain clear of the status and home-indicator regions. Present modal content with native sheet behavior while styling its visible surface, handle, radius, and controls to match the reference.
 
-Keep bottom tabs, category rows, pet-service accordions, and quantity controls at least 44 points.
+Keep every tab, chip, stepper control, map button, and compact icon action inside at least a 44-point hit target. VoiceOver order should follow the visible top-to-bottom hierarchy, with product image and metadata grouped before purchase controls. Dynamic Type may increase card height and turn one-line metadata into multiple lines; do not shrink imagery until it loses its compositional role. On compact widths, stack utility tiles and action rows before compressing labels. Keyboard-visible forms must scroll the focused field and CTA above the keyboard.
 
-### Collapsing Strategy
-
-Stack campaign and utility cards before shrinking labels. Pet categories remain single-column. Checkout groups expand vertically.
-
-### Image Behavior
-
-Use cover for campaign photography, contain for silhouettes and product packs, and circular crops for saved pets.
-
-Apply these rules within current iPhone safe areas and scrolling containers. Keep interactive targets at least 44 points, preserve a logical VoiceOver order, and let Dynamic Type wrap supporting text without flattening the documented hierarchy. Preserve the documented appearance.
+The sampled appearance is light. If a product requires dark mode without a demonstrated reference state, preserve the relative pale-surface hierarchy and contrast deliberately rather than applying automatic inversion.
 
 # Anti-generic checklist
 
-- Don't place every card on a saturated background.
-- Don't use playful display type in medical detail.
-- Don't replace real products or pets with drawings.
-- Don't hide bonus conditions.
-- Don't add more bottom destinations.
-- Do not replace the documented hierarchy with a generic stack of identical white cards or `Form` sections.
-- Do not use default blue tint, an unstyled `TabView`, arbitrary SF Symbols, or uniform corner radii when they contradict the recorded tokens and components.
-- Do not omit compositionally important imagery while final assets are pending; preserve its footprint with a faithful placeholder.
+- Do not replace the pale blue-gray canvas and grouped white surfaces with a plain white `List` or `Form`.
+- Do not use default iOS blue for primary actions; the dominant action language is black and pill-shaped.
+- Do not ship an unstyled `TabView` with arbitrary SF Symbols or omit the six-item bar's selected, inactive, and badge treatments.
+- Do not reduce pet artwork, product imagery, or promotional collage to small leading thumbnails.
+- Do not use one universal corner radius for cards, sheets, fields, chips, and pills.
+- Do not crop product packs with `fill`, or stretch cutout pets into rectangular photographs.
+- Do not turn every accent into a gradient; the characteristic accents are mostly flat, saturated shapes.
+- Do not flatten dense product, checkout, pet, and profile content into identical generic cards with equal type hierarchy.
 
 </design-context>

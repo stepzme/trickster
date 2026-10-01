@@ -3,204 +3,118 @@
 version: 1
 platform: iOS
 name: Auto-ru-design-analysis
-description: "A dense automotive marketplace built from a white canvas, bold black utility type, vivid Auto.ru red, pale gray grouped surfaces, and vehicle photography. Search, listings, reports, selling, messages, and services share a compact card language; full-width black and green actions make high-consequence steps unmistakable."
+description: "A dense light automotive marketplace where white utility surfaces, bold black pricing, restrained red branding, pale-gray filter groups, persistent tab chrome, and large vehicle photography create a compact information-first hierarchy."
 colors:
-  primary: "#F20D0D"
-  on-primary: "#FFFFFF"
-  primary-soft: "#FFE4E4"
-  accent-green: "#31C55B"
-  accent-blue: "#DCEEFF"
-  accent-orange: "#FFAA00"
-  ink: "#111111"
-  ink-muted: "#777777"
-  ink-subtle: "#A8A8A8"
   canvas: "#FFFFFF"
-  surface-1: "#F3F3F5"
-  surface-2: "#E8E8EB"
-  hairline: "#DEDEE2"
-  semantic-success: "#31C55B"
-  semantic-danger: "#F20D0D"
-  semantic-overlay: "#000000"
+  surface-primary: "#F3F3F5"
+  surface-secondary: "#E8E8EB"
+  accent-primary: "#F20D0D"
+  accent-secondary: "#31C55B"
+  text-primary: "#111111"
+  text-secondary: "#777777"
+  divider: "#DEDEE2"
+  destructive: "#E23535"
 typography:
-  display-xl: { fontFamily: YS Text, fontSize: 36, fontWeight: 700, lineHeight: 1.05, letterSpacing: -0.7 }
-  display-lg: { fontFamily: YS Text, fontSize: 30, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.5 }
-  display-md: { fontFamily: YS Text, fontSize: 26, fontWeight: 700, lineHeight: 1.12, letterSpacing: -0.4 }
-  headline: { fontFamily: YS Text, fontSize: 21, fontWeight: 700, lineHeight: 1.18, letterSpacing: -0.2 }
-  card-title: { fontFamily: YS Text, fontSize: 16, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: YS Text, fontSize: 17, fontWeight: 500, lineHeight: 1.35, letterSpacing: 0 }
-  body-lg: { fontFamily: YS Text, fontSize: 16, fontWeight: 400, lineHeight: 1.45, letterSpacing: 0 }
-  body: { fontFamily: YS Text, fontSize: 14, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
-  body-sm: { fontFamily: YS Text, fontSize: 12, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
-  caption: { fontFamily: YS Text, fontSize: 10, fontWeight: 400, lineHeight: 1.20, letterSpacing: 0 }
-  button: { fontFamily: YS Text, fontSize: 14, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0 }
-  eyebrow: { fontFamily: YS Text, fontSize: 11, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0.2 }
-  mono: { fontFamily: SF Mono, fontSize: 12, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
-rounded: { xs: 6, sm: 10, md: 14, lg: 18, xl: 24, xxl: 30, pill: 9999, full: 9999 }
-spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
+  hero: {fontFamily: "SF Pro Display", fontSize: 34, fontWeight: 700, lineHeight: 40}
+  title: {fontFamily: "SF Pro Display", fontSize: 28, fontWeight: 700, lineHeight: 34}
+  section: {fontFamily: "SF Pro Text", fontSize: 21, fontWeight: 700, lineHeight: 26}
+  body: {fontFamily: "SF Pro Text", fontSize: 16, fontWeight: 400, lineHeight: 22}
+  label: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 600, lineHeight: 20}
+  caption: {fontFamily: "SF Pro Text", fontSize: 12, fontWeight: 400, lineHeight: 17}
+spacing:
+  screen-horizontal: 16
+  section-gap: 24
+  card-padding: 14
+  control-gap: 10
+rounded:
+  control: 12
+  card: 14
+  sheet: 26
+  pill: 999
 components:
-  button-primary: { backgroundColor: "{colors.ink}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.md}", padding: [14, 18]}
-  button-contact: { backgroundColor: "{colors.accent-green}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.md}", padding: [14, 18]}
-  listing-card: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.sm}", padding: 0 }
-  filter-panel: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 12 }
-  service-tile: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 12 }
-  status-badge: { backgroundColor: "{colors.primary-soft}", textColor: "{colors.primary}", typography: "{typography.caption}", rounded: "{rounded.sm}", padding: [3, 6]}
-  bottom navigation: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: [8, 12]}
+  primary-action: {fill: "black", text: "white", height: 52, radius: 12}
+  contact-action: {fill: "green", text: "white", height: 52, radius: 12}
+  vehicle-card: {fill: "white", image: "landscape photography", radius: 12}
+  filter-chip: {fill: "light gray", text: "near-black", radius: 999}
+  navigation: {fill: "white", active: "near-black or red", inactive: "gray"}
 ---
 
 # Overview
 
-Auto.ru is a task-dense marketplace where car photos, price, year, and mileage lead. Red carries identity, black advances forms, green initiates seller contact, and pale grouped surfaces organize extensive search and service tools.
-
-**Key Characteristics:**
-- White utility canvas with compact typography.
-- Photo-led two-column listing grid.
-- Red brand marks and selected emphasis.
-- Deep filter and multistep selling forms.
-- Green seller-contact bar.
+Auto.ru is a utilitarian light marketplace in which vehicle photography, model, price, year, and mileage carry the screen. Most surfaces are white, grouped controls are pale gray, and the interface stays dense without becoming ornamental. Red identifies the product, black advances high-priority tasks, and green is a narrow trust/contact accent. Its recognisable quality comes from compact automotive information and image-led listings rather than generic rounded dashboard cards.
 
 # Non-negotiable visual invariants
 
-- Sampled screens consistently use white utility canvas with compact typography.
-- Imagery consistently uses photo-led two-column listing grid.
-- Red brand marks and selected emphasis.
-- The reference consistently shows deep filter and multistep selling forms.
-- The reference consistently shows green seller-contact bar.
+- White occupies most list, form, and detail screens; pale-gray groups organize controls without becoming elevated cards.
+- Landscape vehicle photography is the dominant content mass in results and the upper part of detail screens.
+- Model and bold price outrank year, mileage, location, and other compact gray metadata.
+- Primary progression uses wide black controls; red remains brand/selection emphasis and green is reserved for trust or contact.
+- Search and results remain information-dense, using chips, concise rows, and narrow gaps rather than spacious editorial composition.
+- Persistent navigation is a white bottom bar with thin glyphs and a restrained selected state aligned to the home-indicator safe area.
+- Long filters and entry forms use one scanning column with grouped rows and a sticky bottom action.
+- Sheets and menus use a dimmed backdrop, high light panel, and rounded upper corners rather than a separate decorative page.
 
 # Color and surfaces
 
-### Brand & Accent
-- **Auto Red** ({colors.primary}): Wordmark, launch, and branded highlights.
-- **Contact Green** ({colors.accent-green}): Call, chat, verified, and successful actions.
-- **Service Blue** ({colors.accent-blue}): Edit and management actions.
-- **Promotion Orange** ({colors.accent-orange}): Paid selling packages.
+White is the canvas and largest visual mass. Light neutral gray groups filters, service panels, empty-state regions, and secondary controls; slightly darker gray handles disabled or nested areas. Dividers are thin and quiet. Near-black carries headings, prices, and primary actions, while medium gray carries specifications and supporting copy.
 
-### Surface
-- **Canvas** ({colors.canvas}): Listings and detail pages.
-- **Surface 1** ({colors.surface-1}): Search, filters, services, and grouped panels.
-- **Surface 2** ({colors.surface-2}): Disabled or nested areas.
-- **Hairline** ({colors.hairline}): Form and list separation.
-
-### Text
-- **Ink** ({colors.ink}): Prices, headings, and primary facts.
-- **Ink Muted** ({colors.ink-muted}): Year, mileage, and helper text.
-- **Ink Subtle** ({colors.ink-subtle}): Disabled and placeholder text.
-
-### Semantic
-- **Success** ({colors.semantic-success}): Verified, fair price, and contact.
-- **Danger** ({colors.semantic-danger}): Brand and critical state.
-- **Overlay** ({colors.semantic-overlay}): Menus and sheets.
+Red is a compact brand and selection signal rather than the universal CTA fill. Green identifies contact, positive trust, or availability-like information. Small blue or orange pictograms may distinguish service tools, but these colors do not take over the interface. Default blue links, colored gradients, dark panels, and strong shadows would visibly disrupt the reference.
 
 # Typography
 
-### Font Family
+Use an SF Pro-compatible sans with an efficient, system-like character. Large screen titles are bold, but most of the product works with compact label and caption sizes. Within listings, vehicle identity and price are semibold or bold; year, mileage, location, and status are smaller gray rows. Technical facts remain aligned and scannable rather than displayed as oversized metrics.
 
-- **YS Text** — headings, prices, listings, forms, and navigation.
-- **SF Mono** — VIN or technical identifiers only.
-
-### Hierarchy
-
-| Token | Size | Weight | Use |
-|---|---|---|---|
-| `{typography.display-xl}` | 36 points | 700 | Launch statement |
-| `{typography.headline}` | 21 points | 700 | Screen and form heading |
-| `{typography.card-title}` | 16 points | 600 | Price or service title |
-| `{typography.body}` | 14 points | 400 | Listing and form copy |
-| `{typography.caption}` | 10 points | 400 | Badges and tab labels |
-| `{typography.button}` | 14 points | 600 | Primary actions |
-
-### Principles
-
-- Lead each listing with price and vehicle identity.
-- Use bold weight for headings and totals, not every fact.
-- Keep helper text compact and gray.
-- Treat vehicle specifications as scannable rows.
-
-### Note on Font Substitutes
-
-Use **Inter** or the platform system sans when YS Text is unavailable.
+Buttons use concise semibold labels. Avoid all-caps decoration. Dynamic Type should wrap headings and form explanations while preserving price prominence; secondary metadata can move to a new line before the card image or price is reduced. Do not allow every row to expand into the same oversized hierarchy.
 
 # Screen composition
 
-### Spacing System
+The marketplace archetype begins below a minimal safe-area top bar with search and utility controls, then uses a compact filter/chip region and either a two-column image grid or full-width listing rows. Cards sit close together with narrow gutters; photography occupies roughly the upper half of each tile and concise metadata follows directly below.
 
-Use a 4 points base, 12 points gutters, 8 points listing gaps, 12–16 points card padding, and 44 points form rows.
+Detail pages place a large vehicle gallery at the top, then stack price, identity, facts, trust/report rows, and supporting sections on white. A sticky high-contrast action group stays above the home indicator. Filters and listing creation switch to a single column of pale grouped rows, selectors, toggles, and short explanations, with progress or title above and a full-width black CTA below.
 
-### Grid & Container
-
-Search results use a two-column image grid. Filters and selling use one-column forms. Vehicle details stack media, facts, reports, recommendations, and a pinned contact bar.
-
-### Whitespace Philosophy
-
-Favor information density, using pale grouped cards and strong section headings to prevent visual noise.
-
-Surface hierarchy observed in the source:
-
-| Level | Treatment | Use |
-|---|---|---|
-| 0 | White canvas | Listings and forms |
-| 1 | Pale rounded group | Filters and services |
-| 2 | Colored offer panel | Selling promotion |
-| 3 | Scrim plus rounded sheet | Menu |
-
-### Decorative Depth
-
-Vehicle photography supplies depth. UI panels use little or no shadow.
+Empty favorites or messages use generous white space and one small supportive graphic or concise panel, not a marketing hero. Menus rise as tall light sheets with rounded tops and compact service tiles or rows. All archetypes retain visible iOS status and bottom safe areas.
 
 # Navigation appearance
 
-Search, Favorites, Place, Messages, and Logbook form the bottom bar. A separate menu sheet exposes account, reports, garage, insurance, credit, valuation, catalog, and settings.
+The bottom bar is white, separated by a subtle line or tonal edge, and uses thin familiar glyphs with compact labels. Inactive items are gray; active treatment is darker or carries restrained red emphasis. Top bars are minimal: centered or left-aligned title, ordinary back/close controls, and small search, favorite, filter, or overflow icons.
+
+Sheets have a dim scrim and large rounded upper corners. Selected chips or segmented options use filled pale surfaces, stronger text, a check, or red detail. This describes only the visual shell; product routes and section structure come from project requirements.
 
 # Components
 
-### Buttons
+Vehicle cards combine a rounded landscape image with badge, bold price, model, and compact specifications. Full-width variants give imagery more horizontal weight; two-column variants tighten metadata without removing the price. Favorite controls float over photos as small high-contrast circles.
 
-Black full-width buttons advance forms and filters. Green buttons contact sellers. Pale blue buttons manage existing listings; red is not the default CTA fill.
+Filter chips are compact pale pills. Form rows use light grouped surfaces, concise values, chevrons, and iOS-like switches. Primary actions are black, wide, and approximately control-height; contact/trust actions may be green. Sticky bars use a white base above the home indicator. Menu service tiles use small colored square pictograms but keep labels and geometry quiet.
 
-### Cards & Containers
-
-Listing cards combine photo, badge, price, model, year, and mileage. Service tiles pair compact artwork with title and explanation. Report sections use icon-led fact rows.
-
-### Inputs & Forms
-
-Forms are long, explicit, and step-numbered. Group related specs, retain a bottom Continue action, and show generated help without replacing editable input.
+Observed states support disabled/enabled actions, selected regions and chips, toggles, unread badges, and empty content. Pressed controls should darken or slightly compress their existing fill rather than adopt a new accent.
 
 # Imagery and icons
 
-Vehicle photography supplies depth. UI panels use little or no shadow.
+Real vehicle photography is essential. Use landscape aspect-fill crops that keep the vehicle recognisable and avoid cutting away condition-relevant areas. Detail galleries may become the largest block on screen; list images remain consistent enough for quick comparison. Do not recolor, stylize, or replace photographs with symbols while final assets are pending.
 
-Vehicle photos use landscape crops and rounded corners. Preserve the entire car where possible and avoid color treatments that distort condition.
-
-If final imagery is not yet available, any placeholder must preserve the documented scale, placement, crop, and visual weight rather than removing that layer.
+Icons are simple line or filled utility glyphs for search, filter, favorite, posting, messages, menu, close, and disclosure. Bright service pictograms are supporting navigation markers, not a standalone illustration system. Occasional key, flag, or pencil graphics in empty/intro states are isolated functional assets and should not be generalized into a character or scene language.
 
 # States
 
-Fair price, New, warranty, credit, report, views, calls, favorites, and listing age appear as compact status elements near the relevant content.
+Observed states include populated feeds, selected search parameters, result lists, vehicle detail, a listing-intro state, a phone/form step with selected value and toggles, empty favorites, empty and unread-message lists, and an open menu sheet. Across them, the white/gray surface hierarchy, compact black type, restrained red identity, and fixed bottom-safe-area treatment remain stable.
+
+Empty states remove density but do not enlarge decorative copy or illustration into a dominant campaign. Form states preserve row geometry and sticky action placement as values, selections, or keyboard conditions change.
 
 # iOS adaptation
 
-### Touch Targets
+Use vertical scrolling for feeds, detail, filters, and forms, with independently scrolling compact chip rows where needed. Keep the bottom bar and sticky actions clear of the home indicator and the top controls below the status area. On compact widths, retain two listing columns only while price and model remain readable; otherwise use full-width rows rather than shrinking photography beyond recognition.
 
-Keep chips, favorites, tabs, filter rows, form controls, Call, Chat, and Continue at least 44 points.
-
-### Collapsing Strategy
-
-Truncate listing model text before price or photo. Preserve one-column filters and selling steps; service tiles may collapse to a list.
-
-### Image Behavior
-
-Use consistent landscape cover crops in result grids and larger contained media on details. Never stretch or recolor vehicle photos.
-
-Apply these rules within current iPhone safe areas and scrolling containers. Keep interactive targets at least 44 points, preserve a logical VoiceOver order, and let Dynamic Type wrap supporting text without flattening the documented hierarchy. Preserve the documented appearance.
+Maintain 44-point hit targets around small icons and chips, logical VoiceOver order from image and identity through specifications to action, descriptive labels for icon-only controls, and keyboard avoidance for entry forms. Dynamic Type can increase row height and wrap secondary text. Preserve the observed light appearance; do not invent an unverified dark palette.
 
 # Anti-generic checklist
 
-- Don't use red for every action.
-- Don't hide ownership or report caveats.
-- Don't crop cars beyond recognition.
-- Don't collapse long filters into ambiguous icons.
-- Don't mix seller contact with purchase guarantees.
-- Do not replace the documented hierarchy with a generic stack of identical white cards or `Form` sections.
-- Do not use default blue tint, an unstyled `TabView`, arbitrary SF Symbols, or uniform corner radii when they contradict the recorded tokens and components.
-- Do not omit compositionally important imagery while final assets are pending; preserve its footprint with a faithful placeholder.
+- Do not replace vehicle photography and compact specifications with a generic white card dashboard.
+- Do not use red as the fill for every primary action or default blue for links and selection.
+- Do not apply large shadows, glass blur, or oversized radii to dense marketplace rows.
+- Do not crop cars beyond recognition or omit the gallery footprint while assets are pending.
+- Do not collapse explicit filters and form values into ambiguous icon-only controls.
+- Do not use an unstyled `TabView`, default grouped `Form`, or arbitrary mixed-weight SF Symbols.
+- Do not make empty-state artwork larger or more important than the actual marketplace content.
+- Do not flatten price, model, specifications, and helper copy into nearly identical text sizes.
 
 </design-context>

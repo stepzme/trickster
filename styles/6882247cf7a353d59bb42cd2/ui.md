@@ -2,204 +2,117 @@
 ---
 version: 1
 platform: iOS
-name: yandex-go-design-analysis
-description: "A multi-service mobility hub that combines a white dashboard and cart-like commerce modules with detailed maps, draggable white sheets, saturated yellow confirmations, black primary text, and friendly 3D service miniatures. Rounded service tiles, fare cards, route overlays, and feedback controls make complex transport tasks feel direct."
+name: Yandex-Go-design-analysis
+description: "A map-and-sheet mobility interface pairing pale cartography and white utility surfaces with saturated yellow actions, compact black type, floating circular controls, rounded bottom panels, and object-led service tiles."
 colors:
-  primary: "#FFE600"
-  on-primary: "#161616"
-  action-dark: "#252525"
-  route-blue: "#1877F2"
-  route-green: "#38B66A"
-  ink: "#171717"
-  ink-muted: "#6D6E73"
-  ink-subtle: "#A4A5AA"
   canvas: "#FFFFFF"
-  surface-1: "#F4F4F5"
-  surface-2: "#EDEDEF"
-  surface-3: "#DFE0E2"
-  hairline: "#E3E3E5"
-  semantic-danger: "#E24A4A"
-  semantic-overlay: "#000000"
+  surface-primary: "#FFFFFF"
+  surface-secondary: "#F3F3F3"
+  accent-primary: "#FFE22E"
+  accent-secondary: "#20B866"
+  text-primary: "#111111"
+  text-secondary: "#8A8A8A"
+  divider: "#E3E3E3"
+  destructive: "#E24A4A"
 typography:
-  display-xl: { fontFamily: YS Text, fontSize: 38, fontWeight: 700, lineHeight: 1.02, letterSpacing: -0.9 }
-  display-lg: { fontFamily: YS Text, fontSize: 31, fontWeight: 700, lineHeight: 1.06, letterSpacing: -0.6 }
-  display-md: { fontFamily: YS Text, fontSize: 26, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.4 }
-  headline: { fontFamily: YS Text, fontSize: 22, fontWeight: 700, lineHeight: 1.14, letterSpacing: -0.25 }
-  card-title: { fontFamily: YS Text, fontSize: 16, fontWeight: 600, lineHeight: 1.22, letterSpacing: 0 }
-  subhead: { fontFamily: YS Text, fontSize: 17, fontWeight: 400, lineHeight: 1.34, letterSpacing: 0 }
-  body-lg: { fontFamily: YS Text, fontSize: 16, fontWeight: 400, lineHeight: 1.38, letterSpacing: 0 }
-  body: { fontFamily: YS Text, fontSize: 14, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
-  body-sm: { fontFamily: YS Text, fontSize: 12, fontWeight: 400, lineHeight: 1.28, letterSpacing: 0 }
-  caption: { fontFamily: YS Text, fontSize: 11, fontWeight: 400, lineHeight: 1.22, letterSpacing: 0 }
-  button: { fontFamily: YS Text, fontSize: 15, fontWeight: 500, lineHeight: 1.18, letterSpacing: 0 }
-  eyebrow: { fontFamily: YS Text, fontSize: 11, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0.1 }
-  mono: { fontFamily: System Mono, fontSize: 12, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
-rounded: { xs: 6, sm: 10, md: 14, lg: 18, xl: 24, xxl: 30, pill: 9999, full: 9999 }
-spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
+  hero: {fontFamily: "SF Pro Display", fontSize: 30, fontWeight: 800, lineHeight: 34}
+  title: {fontFamily: "SF Pro Display", fontSize: 24, fontWeight: 700, lineHeight: 29}
+  section: {fontFamily: "SF Pro Text", fontSize: 20, fontWeight: 700, lineHeight: 25}
+  body: {fontFamily: "SF Pro Text", fontSize: 16, fontWeight: 400, lineHeight: 21}
+  label: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 600, lineHeight: 19}
+  caption: {fontFamily: "SF Pro Text", fontSize: 12, fontWeight: 400, lineHeight: 16}
+spacing:
+  screen-horizontal: 16
+  section-gap: 24
+  card-padding: 16
+  control-gap: 10
+rounded:
+  control: 14
+  card: 18
+  sheet: 28
+  pill: 999
 components:
-  confirm-button: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.md}", padding: [14, 20]}
-  order-button: { backgroundColor: "{colors.action-dark}", textColor: "#FFFFFF", typography: "{typography.button}", rounded: "{rounded.md}", padding: [14, 20]}
-  service-tile: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.caption}", rounded: "{rounded.md}", padding: 8 }
-  destination-field: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: [13, 16]}
-  map-sheet: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xl}", padding: 16 }
-  fare-card: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.caption}", rounded: "{rounded.md}", padding: 8 }
-  feedback-chip: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.md}", padding: [8, 10]}
-  map-control: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.full}", size: 44 }
-  bottom navigation: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: 16 }
+  primary-action: {fill: "accent-primary", height: 50, radius: 14, text: "text-primary semibold"}
+  service-tile: {fill: "surface-secondary", radius: 18, imageRole: "centered dominant object"}
+  bottom-sheet: {fill: "surface-primary", radiusTop: 28, grabber: "subtle gray"}
+  map-control: {fill: "surface-primary", size: 44, radius: 999, shadow: "soft"}
+  search-field: {fill: "surface-secondary", height: 48, radius: 14, text: "text-primary"}
 ---
 
 # Overview
 
-Yandex Go behaves as both service launcher and map-driven task UI. Home is a white dashboard of illustrated destinations, search, recent places, and offers. Taxi flows foreground cartography and place a rounded white task sheet over it.
-
-**Key Characteristics:**
-- Saturated yellow progress and confirmation.
-- White dashboard and sheets over maps.
-- 3D service miniatures.
-- Horizontal fare comparison.
-- Strong route and status visibility.
+Yandex Go alternates between two dominant visual fields: pale full-screen cartography with layered white controls, and white utility canvases composed from soft-gray service tiles and dense rows. Saturated yellow is concentrated in branding, progress, and primary actions rather than spread across every surface. Recognizable depth comes from rounded bottom sheets, floating circular controls, and small object-led service imagery, not from generic card stacks or standard navigation bars.
 
 # Non-negotiable visual invariants
 
-- The reference consistently shows saturated yellow progress and confirmation.
-- The reference consistently shows white dashboard and sheets over maps.
-- The reference consistently shows 3D service miniatures.
-- The reference consistently shows horizontal fare comparison.
-- The reference consistently shows strong route and status visibility.
+- Saturated yellow remains the primary brand/action signal and is strongest in full-width low actions, progress, and selected emphasis.
+- Map compositions keep a meaningful portion of pale cartography visible behind floating controls and rounded white sheets.
+- White bottom sheets have large top corners, a subtle grabber, and generous home-indicator padding.
+- Map controls are separate white circular buttons approximately 40-44 points across with soft shadow, never toolbar items inside a standard navigation bar.
+- Primary actions sit low and span most of the available width with dark semibold text on yellow.
+- Dense utility lists use 15-17 point dark labels, muted secondary metadata, fine dividers, and compact chevrons.
+- Service tiles use pale surfaces with one centered, visually dominant object or miniature and a short subordinate label.
+- Full-screen story compositions retain top progress marks, a close control below the status area, sparse bold type, and one dominant visual object.
 
 # Color and surfaces
 
-### Brand & Accent
-- **Yellow** ({colors.primary}): Continue, learn, confirm, rating stars, and highlighted service state.
-- **Action Dark** ({colors.action-dark}): Final order action when contrast over white is needed.
-- **Route Blue/Green**: Route line, navigation, and traffic alternatives.
+White is the principal sheet and utility canvas. Soft gray around `#F3F3F3` separates search fields, chips, service tiles, and secondary controls without heavy borders. Map screens use pale gray-green cartography around `#EEF3EC` as a full-viewport field. Saturated yellow around `#FFE22E` creates concentrated brand and action masses; green around `#20B866` appears as a secondary mobility or map accent.
 
-### Surface
-- **Canvas** ({colors.canvas}): Dashboard and sheets.
-- **Surface 1** ({colors.surface-1}): Service tiles, search, chips, and feedback controls.
-- **Surface 2/3**: Disabled and selected utility states.
-- **Hairline** ({colors.hairline}): Sheet and row separation.
-
-### Text
-- **Ink** ({colors.ink}): Addresses, fares, status, and primary actions.
-- **Ink Muted** ({colors.ink-muted}): Time, secondary address, and trip metadata.
-- **Ink Subtle** ({colors.ink-subtle}): Inactive modes and placeholders.
-
-### Semantic
-- **Danger** ({colors.semantic-danger}): Cancellation and disruption.
-- **Overlay** ({colors.semantic-overlay}): Modal teaching prompts.
+Primary text is nearly black and secondary text is medium gray. Fine gray rules organize list rows. Promotional screens can introduce black-yellow gradients or isolated green fields, but these do not replace the white/map foundation of operational screens. Default system blue used as a global tint, or strong decorative map colors unrelated to cartography, would visibly break the reference.
 
 # Typography
 
-### Font Family
+Use SF Pro as the iOS-safe substitute for the observed Yandex-style sans. Utility UI is compact: 15-17 point regular or medium row labels, 11-13 point gray captions and addresses, and 16 point semibold actions. Sheets use 20-24 point bold titles. Story and promotional screens rise to approximately 24-30 point heavy headings and may feel slightly more compressed than operational text.
 
-- **YS Text** — all service, transport, map, and commerce surfaces.
-- Brand wordmarks remain artwork rather than live interface type.
-
-### Hierarchy
-
-| Token | Size | Weight | Use |
-|---|---|---|---|
-| `{typography.display-xl}` | 38 points | 700 | Campaign or annual result |
-| `{typography.display-md}` | 26 points | 700 | Onboarding message |
-| `{typography.headline}` | 22 points | 700 | Sheet status and feedback |
-| `{typography.card-title}` | 16 points | 600 | Service and fare title |
-| `{typography.body}` | 14 points | 400 | Address and details |
-| `{typography.caption}` | 11 points | 400 | Tile and fare metadata |
-
-### Principles
-
-- Make addresses and ETA immediately scannable.
-- Use compact type inside maps and fare cards.
-- Keep guidance short and bold.
-- Use yellow fill instead of yellow body text.
-
-### Note on Font Substitutes
-
-Use **SF Pro** on iOS or **Inter** when YS Text is unavailable.
+Most utility copy is left-aligned and arranged for fast scanning; story text can be centered or placed high in the composition. Avoid negative tracking and preserve clear size steps. With Dynamic Type, grow sheet content and list rows while keeping captions subordinate, allowing addresses to wrap and retaining the low primary action as a distinct visual block.
 
 # Screen composition
 
-### Spacing System
+Map-first screens fill the viewport beneath the status safe area with pale cartography. White circular controls float near the edges, while a white sheet rises from the bottom and covers only the portion required by the current state. Sheets use roughly 16 point horizontal content insets, 10-16 point internal gaps, large rounded top corners, and bottom padding around the home indicator. Search bars and map markers remain visually separated from the sheet.
 
-Use a 4 points base. Home tiles use 8–12 points gaps; map sheets use 16 points gutters; major actions use 12–16 points outer spacing.
+The service-dashboard archetype uses a white scroll surface, broad pale search field, two-column tiles or horizontal shortcut groups, and 10-12 point gaps. Each tile reserves substantial central space for an object image and keeps its label brief. The utility-list archetype uses full-width white rows, small leading icons, fine separators, chevrons, and restrained metadata. The story archetype is full-screen, with progress bars at the top, a close icon, sparse large text, and one large object or image occupying much of the remaining field.
 
-### Grid & Container
-
-Home uses a four-column service grid and full-width search. Fare selection is horizontal. Trip state uses one bottom sheet over a full map.
-
-### Whitespace Philosophy
-
-Keep home modular but open. On maps, preserve enough uncovered area to understand location and route.
-
-Surface hierarchy observed in the source:
-
-| Level | Treatment | Use |
-|---|---|---|
-| 0 | Map or white dashboard | Base |
-| 1 | Pale service tile | Service entry |
-| 2 | White rounded sheet | Ride task |
-| 3 | Teaching modal on dimmed state | Timely guidance |
-
-### Decorative Depth
-
-Use shallow 3D object rendering in service tiles. Functional sheets rely on soft edge shadow and map contrast.
+Dimmed overlays and a left-side drawer may cover most of the underlying content while leaving its edge visible. Do not flatten these archetypes into the same container treatment: maps, sheets, dashboards, lists, and stories have deliberately different proportions.
 
 # Navigation appearance
 
-Home relies on service tiles and a side menu rather than a persistent global tab bar. Map flows use back, location, and sheet gestures.
+The sampled screens do not rely on a dominant standard iOS navigation bar or persistent tab bar. Navigation chrome appears as floating circular back controls, small menu buttons, close `X` controls, story progress bars, white rounded sheets, and a broad left-side drawer over a dimmed surface. These controls use dark glyphs, white or transparent bases, and compact visual footprints.
+
+Sheet handles and top corners communicate layering; low yellow actions anchor the bottom safe area. The adapted product must take destinations and screen structure from its approved Research and Planning artifacts rather than copying the reference application's menu or service arrangement.
 
 # Components
 
-### Buttons
+Primary actions are saturated yellow rounded rectangles approximately 48-52 points high with near-black semibold text. They normally span most of the screen width near the bottom. Secondary buttons are white or pale gray with dark icons and labels.
 
-Yellow buttons advance or acknowledge. The final taxi order may use a dark filled action. Secondary controls are white or pale with dark icons.
+Bottom sheets are white, have approximately 28-point top corners, a subtle centered grabber when appropriate, and a soft edge shadow over maps. Search and address fields are 46-50 point pale-gray rounded bars with embedded icons. Suggestion and settings rows use small gray glyphs, dark labels, optional right-aligned metadata, fine dividers, and compact chevrons.
 
-### Cards & Containers
-
-Service tiles combine a miniature and short label. Map sheets combine address, route, mode tabs, fares, and the primary action.
-
-### Inputs & Forms
-
-Destination and pickup fields are large pale bars. Address suggestions open in a white sheet above the keyboard.
+Service tiles are soft gray rounded rectangles arranged in two columns or horizontal groups. A centered object or miniature supplies most of the visual weight, with a short label near an edge. Map controls are independent 44-point white circles with dark glyphs and shallow shadow. Selection chips, rating stars, tip options, and feedback controls remain compact and use yellow only for meaningful emphasis.
 
 # Imagery and icons
 
-Use shallow 3D object rendering in service tiles. Functional sheets rely on soft edge shadow and map contrast.
+Operational screens combine real map imagery with compact rendered objects: vehicles, food, parcels, scooters, and other service motifs. These objects are softly modeled, centered, and large enough to define a tile, usually on pale neutral backgrounds with shallow shadow. Story and promotional surfaces may scale a single object much larger against white, yellow-black gradient, or green fields. Advertising and product photography also appear, so the imagery system is intentionally mixed rather than a single standalone illustration language.
 
-Service miniatures sit centered in pale rounded tiles. Offer photography uses rounded cards. Driver photos and avatars are circular.
-
-If final imagery is not yet available, any placeholder must preserve the documented scale, placement, crop, and visual weight rather than removing that layer.
+Functional glyphs are simple, dark, and compact. Map pins and vehicle markers remain visually distinct from ordinary icons. When object imagery is compositionally important, retain its tile footprint with a generated or approved image asset; do not approximate the object with SwiftUI shapes or replace it with an arbitrary SF Symbol.
 
 # States
 
-Ride status combines map marker, ETA, driver/car data, and contextual actions. Rating uses five yellow stars and optional attribute chips.
+Observed visual states include splash/loading, populated dashboard, destination search with keyboard, pickup adjustment, search-in-progress over a map, arriving vehicle information, active micromobility map, empty support chat, categorized support list, dimmed side drawer, rating and tip controls, and full-screen stories. Map, sheet, action, and typography treatments remain consistent while sheet height, marker density, and low controls change. Native keyboard and system surfaces remain native.
 
 # iOS adaptation
 
-### Touch Targets
+Keep the map or base canvas full-bleed while placing tappable content within current safe areas. Floating controls need at least 44-point hit regions and must not collide with the Dynamic Island, status bar, keyboard, sheet, or home indicator. Implement sheets with scrollable content and detents that preserve enough visible map context; low actions require bottom safe-area padding.
 
-Keep service tiles, map controls, fare cards, and sheet actions at least 44 points.
-
-### Collapsing Strategy
-
-Scroll fares and service rows horizontally. Keep addresses stacked and the primary action full width.
-
-### Image Behavior
-
-Contain service miniatures, cover offer photography, and crop driver portraits as circles. Never raster-scale the map UI.
-
-Apply these rules within current iPhone safe areas and scrolling containers. Keep interactive targets at least 44 points, preserve a logical VoiceOver order, and let Dynamic Type wrap supporting text without flattening the documented hierarchy. Preserve the documented appearance.
+On compact widths, retain two service columns only if object imagery and labels remain legible; otherwise use a horizontal rail or one-column list without shrinking tap targets. Dynamic Type may increase sheet height and row height, but must not eliminate the visual gap between title, metadata, and primary action. VoiceOver order should move from floating/top controls through primary content and sheet controls to the low action. Preserve the observed light operational appearance unless the approved product defines a separate dark state.
 
 # Anti-generic checklist
 
-- Don't cover the whole map with a sheet.
-- Don't mix multiple primary action colors in one state.
-- Don't hide price until final confirmation.
-- Don't turn service tiles into text-only menus.
-- Don't use decorative map colors outside cartography.
-- Do not replace the documented hierarchy with a generic stack of identical white cards or `Form` sections.
-- Do not use default blue tint, an unstyled `TabView`, arbitrary SF Symbols, or uniform corner radii when they contradict the recorded tokens and components.
-- Do not omit compositionally important imagery while final assets are pending; preserve its footprint with a faithful placeholder.
+- Do not replace map-and-sheet compositions with a generic white screen containing stacked cards.
+- Do not use a standard large-title navigation bar where the reference uses floating controls or sheet chrome.
+- Do not let a bottom sheet cover the entire map by default when spatial context is compositionally important.
+- Do not substitute default blue tint for yellow actions or selection emphasis.
+- Do not turn service tiles into text-only menu rows or remove their dominant object imagery.
+- Do not use an unstyled `Form`, default list separators, or an unstyled `TabView` as the visual foundation.
+- Do not apply one corner radius to search fields, service tiles, buttons, circular map controls, and sheets.
+- Do not draw object imagery from SwiftUI primitives or arbitrary SF Symbols; use generated or approved image assets that preserve scale and material character.
 
 </design-context>

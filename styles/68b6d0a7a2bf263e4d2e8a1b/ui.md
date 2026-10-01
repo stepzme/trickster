@@ -3,174 +3,125 @@
 version: 1
 platform: iOS
 name: Messages-design-analysis
-description: "A mobile design system defined by native white chrome, blue outgoing bubbles, gray incoming bubbles, rounded media, and contextual composer tools."
-colors: {primary: "#0A84FF", on-primary: "#FFFFFF", primary-focus: "#0A84FF", ink: "#111114", ink-muted: "#777981", ink-subtle: "#A7A8AE", ink-tertiary: "#CACBD0", canvas: "#FFFFFF", surface-1: "#F2F2F7", surface-2: "#F2F2F7", surface-3: "#E2E3E7", surface-4: "#D6D7DC", hairline: "#E5E6E9", hairline-strong: "#CFD0D5", hairline-tertiary: "#B6B8BF", inverse-canvas: "#17181C", inverse-surface-1: "#292A30", inverse-surface-2: "#3B3D45", inverse-ink: "#FFFFFF", brand-secure: "#34C759", semantic-success: "#34A86B", semantic-overlay: "#17181C"}
+description: "A native iOS communication interface defined by white and grouped-gray system surfaces, large black list titles, Apple-blue actions and outgoing bubbles, gray incoming bubbles, compact centered chat headers, and a highly adaptive bottom composer."
+colors:
+  canvas: "#FFFFFF"
+  surface-primary: "#FFFFFF"
+  surface-secondary: "#F2F2F7"
+  accent-primary: "#0A84FF"
+  accent-secondary: "#34C759"
+  text-primary: "#111114"
+  text-secondary: "#777981"
+  divider: "#E5E6E9"
+  destructive: "#FF3B30"
 typography:
-  display-xl: {fontFamily: SF Pro Display, fontSize: 36, fontWeight: 700, lineHeight: 1.06, letterSpacing: -0.8}
-  display-lg: {fontFamily: SF Pro Display, fontSize: 30, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.6}
-  display-md: {fontFamily: SF Pro Display, fontSize: 24, fontWeight: 700, lineHeight: 1.14, letterSpacing: -0.3}
-  headline: {fontFamily: SF Pro Display, fontSize: 20, fontWeight: 700, lineHeight: 1.20, letterSpacing: -0.2}
-  card-title: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 600, lineHeight: 1.24, letterSpacing: 0}
-  subhead: {fontFamily: SF Pro Text, fontSize: 14, fontWeight: 600, lineHeight: 1.30, letterSpacing: 0}
-  body-lg: {fontFamily: SF Pro Text, fontSize: 14, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0}
-  body: {fontFamily: SF Pro Text, fontSize: 12, fontWeight: 400, lineHeight: 1.34, letterSpacing: 0}
-  body-sm: {fontFamily: SF Pro Text, fontSize: 10, fontWeight: 400, lineHeight: 1.28, letterSpacing: 0}
-  caption: {fontFamily: SF Pro Text, fontSize: 9, fontWeight: 400, lineHeight: 1.22, letterSpacing: 0}
-  button: {fontFamily: SF Pro Text, fontSize: 13, fontWeight: 600, lineHeight: 1.18, letterSpacing: 0}
-  eyebrow: {fontFamily: SF Pro Text, fontSize: 9, fontWeight: 600, lineHeight: 1.18, letterSpacing: 0.1}
-  mono: {fontFamily: SF Mono, fontSize: 10, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0}
-rounded: {xs: 4, sm: 8, md: 12, lg: 16, xl: 20, xxl: 26, pill: 9999, full: 9999}
-spacing: {xxs: 4, xs: 8, sm: 12, md: 16, lg: 20, xl: 24, xxl: 32, section: 40}
+  hero: {fontFamily: "SF Pro Display", fontSize: 34, fontWeight: 700, lineHeight: 39}
+  title: {fontFamily: "SF Pro Display", fontSize: 28, fontWeight: 700, lineHeight: 34}
+  section: {fontFamily: "SF Pro Text", fontSize: 20, fontWeight: 600, lineHeight: 25}
+  body: {fontFamily: "SF Pro Text", fontSize: 17, fontWeight: 400, lineHeight: 22}
+  label: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 600, lineHeight: 20}
+  caption: {fontFamily: "SF Pro Text", fontSize: 13, fontWeight: 400, lineHeight: 18}
+spacing:
+  screen-horizontal: 16
+  section-gap: 24
+  card-padding: 16
+  control-gap: 8
+rounded:
+  control: 10
+  card: 16
+  sheet: 20
+  pill: 999
 components:
-  button-primary: {backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [13, 18]}
-  button-primary-pressed: {backgroundColor: "{colors.primary-focus}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}"}
-  button-secondary: {backgroundColor: "{colors.surface-1}", textColor: "{colors.primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [12, 16]}
-  button-tertiary: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [10, 14]}
-  button-inverse: {backgroundColor: "{colors.inverse-canvas}", textColor: "{colors.inverse-ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [12, 16]}
-  content-card: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 12}
-  feature-card: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 14}
-  compact-chip: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.caption}", rounded: "{rounded.pill}", padding: [7, 10]}
-  bottom-nav: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink-subtle}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: [7, 8]}
+  primary-action: {fill: "Apple blue", text: "white or blue label", shape: "contextual system control", minimumTarget: 44}
+  secondary-action: {fill: "grouped light gray", text: "black or blue", border: "none", shape: "rounded rectangle"}
+  primary-card: {fill: "conversation row or grouped settings section", radius: 0, padding: 16, divider: "one-pixel gray"}
+  navigation: {fill: "white or translucent system chrome", selected: "Apple blue", inactive: "gray", title: "large leading or compact centered"}
 ---
 
 # Overview
 
-Messages is defined by native white chrome, blue outgoing bubbles, gray incoming bubbles, rounded media, and contextual composer tools.
+Messages is a native iOS communication system whose identity comes from spatial restraint and context-sensitive controls rather than custom cards. White conversation and chat surfaces, grouped light-gray settings, black SF typography, Apple-blue actions and outgoing bubbles, gray incoming bubbles, large circular avatars, and thin separators define the visual grammar.
 
-**Key Characteristics:** native white chrome, blue outgoing bubbles, gray incoming bubbles, rounded media, and contextual composer tools.
+The lower part of the viewport is unusually important. Depending on context it may contain a minimal composer, the keyboard, an app strip, media picker, voice affordance, Digital Touch canvas, action sheet, translation sheet, or location card. The design remains recognisably consistent by preserving native spacing, material, corner treatment, and blue selection across these variants.
 
 # Non-negotiable visual invariants
 
-- The reference consistently shows native white chrome.
-- The reference consistently shows blue outgoing bubbles.
-- The reference consistently shows gray incoming bubbles.
-- The reference consistently shows rounded media.
-- The reference consistently shows contextual composer tools.
+- Conversation and chat canvases remain white with native translucent or white chrome; grouped settings may use `#F2F2F7` but do not become decorative card feeds.
+- Apple blue identifies compose, links, back/actions, selection, and outgoing messages; incoming messages use neutral gray with black text.
+- Message bubbles are content-sized, fully rounded, and directionally shaped with compact tails; they are not uniform full-width cards.
+- List screens use a large bold leading title, while chat and modal screens use compact centered titles with blue edge actions.
+- The composer is anchored immediately above the keyboard or home indicator and adapts without losing its rounded field, attachment/app access, and send affordance.
+- Conversation rows align large circular avatars, primary identity/message text, trailing time/state, and thin separators in a sparse full-width list.
+- Context menus, tapbacks, action sheets, bottom sheets, permission alerts, and share sheets retain native blur, dimming, and layered system appearance.
+- Real content—media thumbnails, maps, Memoji, app cards, music, effects—remains inside message or service surfaces and is not replaced by decorative illustration.
 
 # Color and surfaces
 
-### Brand & Accent
+White is the dominant canvas and primary surface. System grouped gray `#F2F2F7` appears behind settings, contact details, service lists, sheets, and inactive controls. Thin dividers `#E5E6E9` separate full-width rows. Translucent blur and dim overlays establish modal depth without heavy shadows.
 
-System blue carries outgoing messages, compose, links, and active controls.
+Apple blue `#0A84FF` is the main interactive and outgoing-message color. Gray incoming bubbles sit near the grouped background but remain distinct from the white conversation canvas. Black `#111114` carries primary copy; gray `#777981` carries timestamps, read receipts, previews, placeholders, and helper text. Green is reserved for enabled system toggles or location-related confirmation; red marks deletion and destructive action. These are platform-semantic colors and should not be replaced with a product palette.
 
-### Surface
-
-Use the canvas for primary content and the grouped surface for controls, cards, and focused sections.
-
-### Text
-
-Primary text remains high-contrast; secondary metadata stays quieter than the current decision.
-
-### Semantic
-
-Use success, warning, and destructive colors only for their conventional meanings.
+Dark inverse surfaces appear temporarily in effects, Digital Touch, media, or context presentation, but do not redefine the main light application shell.
 
 # Typography
 
-### Font Family
+Use SF Pro throughout. Conversation-list titles are 28–34 points bold and left aligned. Compact navigation titles and contact names are around 17 points semibold and often centered. Message text is approximately 17 points regular with comfortable native line height. Conversation previews, timestamps, read receipts, attachment labels, service captions, and settings detail use 12–15 points in gray.
 
-Use SF Pro Display for headings and SF Pro Text for controls, content, and metadata.
-
-### Hierarchy
-
-| Token | Size | Weight | Use |
-|---|---:|---:|---|
-| display-lg | 30 points | 700 | Hero or state |
-| headline | 20 points | 700 | Section title |
-| card-title | 15 points | 600 | Primary item |
-| body | 12 points | 400 | Detail |
-| caption | 9 points | 400 | Metadata |
-
-### Principles
-
-- Lead with the current task or value.
-- Align repeated metadata.
-- Reserve emphasis for real decisions.
-
-### Note on Font Substitutes
-
-Inter is suitable; preserve hierarchy, contrast, and numeric clarity.
+Hierarchy is deliberately familiar: identity outranks preview, message content outranks delivery metadata, and sheet titles outrank actions. Avoid introducing a branded display face. Text inside bubbles wraps naturally and determines bubble width up to a readable maximum. Dynamic Type should increase bubble, row, composer, and grouped-table height rather than reducing text or forcing a fixed layout.
 
 # Screen composition
 
-### Spacing System
+Conversation-list screens place the status area above a large leading title and trailing compose/edit action, followed by a rounded search field and full-width rows. Empty variants leave most of the middle white with one restrained system icon and concise explanation. Edit or pin mode keeps the same list geometry while adding selection or pinned-row treatment.
 
-Use a 4 points base, 8–12 points card gaps, and 12–16 points screen gutters.
+Chat screens use a compact top bar with back control, circular avatar, centered name/status, and optional utility action. The middle is an open white timeline with bubbles clustered by sender and abundant unused space when conversation density is low. The bottom holds a rounded composer and contextual controls; when the keyboard is visible, it directly attaches below the composer. Service, app, media, voice, Memoji, music, and Digital Touch modes expand this lower work area rather than creating unrelated full-screen visual systems.
 
-### Grid & Container
+New-message and contact-selection screens use centered modal titles, leading cancel, recipient token field, searchable contact rows, and alphabet index. Profile and contact-detail screens use large circular identity imagery above grouped settings tables on light gray. Location may use a map as the middle canvas with a white card or bottom sheet. Translation, delete, and contextual actions appear in rounded sheets or menus over blurred/dimmed chat content.
 
-Conversation list uses full rows; chat uses one message column and bottom composer.
-
-### Whitespace Philosophy
-
-Dense content stays grouped; focused decisions receive more breathing room.
-
-Surface hierarchy observed in the source:
-
-| Level | Treatment | Use |
-|---|---|---|
-| 0 | Base canvas | Primary content |
-| 1 | Grouped surface | Cards and sections |
-| 2 | Sticky or floating action | Commitment |
-| 3 | Sheet over scrim | Focused choice |
-
-### Decorative Depth
-
-Let content imagery and approved visual language provide depth; keep ordinary controls restrained.
+Horizontal insets commonly follow native 16-point rhythm; bubbles can approach an edge while preserving sender-side margins. List separators align to text rather than the avatar edge. Content must clear the home indicator, keyboard, and any presented sheet.
 
 # Navigation appearance
 
-Preserve the reference navigation hierarchy and make only the active destination prominent.
+List screens use large-title navigation with blue edit/compose actions. Chat headers are compact and centered, combining a circular avatar with name and optional status. Leading back chevrons and edge actions such as cancel, done, edit, or select remain blue and text- or icon-based rather than filled buttons.
+
+Modal pages use centered compact titles and blue leading/trailing actions. Context menus float near selected content with rounded dark or light material. Bottom sheets use native rounded top corners and dimmed background. Product behavior and information architecture come from the approved Research and Planning artifacts.
 
 # Components
 
-### Buttons
+Conversation rows are full-width white cells with circular avatar, bold or semibold name, one- or two-line gray preview, trailing timestamp or state, and a thin inset separator. Search uses a soft-gray rounded system field. Recipient entry combines a plain field with blue contact tokens and a compact add control.
 
-Primary actions use the brand color; secondary actions use grouped surfaces and clear labels.
+Outgoing bubbles use blue fill and white body text; incoming bubbles use light gray and black text. Both have near-pill corners with a directional tail and content-driven width. Delivery/read labels are small and gray. Media keeps rounded masking matched to bubble placement. Reply markers, tapbacks, and reaction strips attach closely to the source message.
 
-### Cards & Containers
-
-Use message bubbles, media frames, reply threads, and contact sheets instead of generic cards.
-
-### Inputs & Forms
-
-Inputs inherit the brand focus, shared radius, and text hierarchy instead of generic native styling.
+The composer is a rounded light field with attachment/app control, placeholder or entered text, and contextual send, voice, or effect affordance. App/services appear as a horizontal strip of rounded icon tiles. Profile and settings use grouped native rows, toggles, reorder handles, chevrons, and destructive red actions. Location cards combine map, pin, and compact action. Native action sheets, share sheets, permission alerts, and keyboards remain platform-authentic.
 
 # Imagery and icons
 
-Let content imagery and approved visual language provide depth; keep ordinary controls restrained.
+The visual content comes from conversation data and system services: avatars, photos, video thumbnails, maps, app icons, Memoji, music artwork, reaction glyphs, Digital Touch strokes, and send effects. Maintain their native aspect ratios and place them inside rounded message/media frames or dedicated service areas. Profile avatars remain large circles.
 
-Preserve media ratios inside rounded message frames; effects may fill the screen.
-
-If final imagery is not yet available, any placeholder must preserve the documented scale, placement, crop, and visual weight rather than removing that layer.
+Onboarding may use Apple/system collage artwork and effects may temporarily fill the screen, but the sampled product does not establish a separate reusable authored illustration language. Use platform-consistent symbols and actual content rather than inventing decorative art. If media is pending, preserve the message frame's size and aspect ratio with an honest placeholder.
 
 # States
 
-Keep progress, result, and recovery close to the content or action they describe.
+Observed list states include onboarding, empty and populated inbox, edit/pin selection, and new-message/contact picking. Chat states include idle, keyboard visible, entered text, sent and read, reply marker, tapback/context menu, translate sheet, deletion selection and confirmation, and undo-send feedback.
+
+Composer/service states include send effects, app drawer, media grid, app/game preview, voice recording, Memoji, empty music, Digital Touch, and reordered service list. Profile and contact states include view, edit, avatar actions, toggles, and grouped detail. Location states include permission prompt, loading, picker/list, map card, and sent location. Across them, native blue, white/gray material, SF type, and compact corner treatment remain stable.
 
 # iOS adaptation
 
-### Touch Targets
+Use native safe-area-aware navigation, lists, chat scrolling, sheets, keyboards, and context menus where possible. A chat timeline should maintain its bottom anchor as composer and keyboard heights change, preserve scroll position, and clear the home indicator. Large list titles collapse according to native navigation behavior. Media pickers, maps, and service panels must not cover the compact chat header.
 
-Primary actions, navigation, cards, and contextual controls remain at least 44 points.
+All edge actions, avatar/header controls, rows, tapbacks, message menu targets, app tiles, composer buttons, and attachment controls require at least 44-point effective targets. VoiceOver order should follow header, messages chronologically, message metadata/actions, then composer. Bubble direction and read state need accessible labels independent of color or position.
 
-### Collapsing Strategy
-
-Preserve the main decision, stack complex groups, and reduce secondary detail before shrinking type.
-
-### Image Behavior
-
-Preserve source aspect ratios and keep focal content inside safe areas.
-
-Apply these rules within current iPhone safe areas and scrolling containers. Keep interactive targets at least 44 points, preserve a logical VoiceOver order, and let Dynamic Type wrap supporting text without flattening the documented hierarchy. Preserve the documented appearance.
+Dynamic Type expands rows and bubbles and can move trailing metadata below preview text. On compact widths, cap bubble width while preserving a readable opposite-side margin; service strips scroll horizontally rather than shrinking icon labels. The observed style follows system appearance, so light/dark adaptation should use current semantic system colors rather than hard-coded inversion, while maintaining outgoing/incoming contrast.
 
 # Anti-generic checklist
 
-- Don't introduce unrelated decorative styles.
-- Don't hide status or secondary conditions.
-- Don't use heavy shadows around every container.
-- Do not replace the documented hierarchy with a generic stack of identical white cards or `Form` sections.
-- Do not use default blue tint, an unstyled `TabView`, arbitrary SF Symbols, or uniform corner radii when they contradict the recorded tokens and components.
-- Do not omit compositionally important imagery while final assets are pending; preserve its footprint with a faithful placeholder.
+- Do not replace message bubbles with full-width generic cards or equal-width chat rows.
+- Do not invent a branded accent that displaces Apple blue, system gray, green toggles, and destructive red.
+- Do not style conversation lists as floating rounded cards with heavy shadows.
+- Do not use a generic form field in place of the adaptive composer and its service, voice, effect, and keyboard states.
+- Do not replace avatars, maps, media, Memoji, app cards, or message effects with decorative SF Symbols.
+- Do not ignore native blur, dimming, action-sheet, share-sheet, permission-alert, and context-menu material.
+- Do not apply one uniform radius to bubbles, media, search, app tiles, sheets, and avatars.
+- Do not crowd sparse chat and empty-list states with mood copy or unrelated imagery.
 
 </design-context>

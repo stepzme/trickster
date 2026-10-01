@@ -3,175 +3,116 @@
 version: 1
 platform: iOS
 name: gg-design-analysis
-description: "A map-first mobility interface with pale cartography, crisp white bottom sheets, near-black actions, restrained blue links, and friendly illustrated service icons. Large rounded panels and compact type keep location, vehicle, fare, and driver states calm and legible."
-colors: {primary: "#111214", on-primary: "#FFFFFF", primary-focus: "#000000", ink: "#15171A", ink-muted: "#656A70", ink-subtle: "#969BA1", ink-tertiary: "#C2C6CA", canvas: "#F3F4F2", surface-1: "#FFFFFF", surface-2: "#F4F5F5", surface-3: "#EAECED", surface-4: "#DDE1E3", hairline: "#E2E5E7", hairline-strong: "#C8CDD1", hairline-tertiary: "#AEB5BA", inverse-canvas: "#111214", inverse-surface-1: "#232529", inverse-surface-2: "#35383D", inverse-ink: "#FFFFFF", brand-secure: "#2F7EF7", semantic-success: "#2AAA64", semantic-overlay: "#111214"}
+description: "A restrained map-first mobility interface with pale cartography, large white rounded bottom sheets, compact system typography, near-black primary actions, sparse blue selection, floating map controls, and small functional vehicle imagery."
+colors:
+  canvas: "#F3F4F2"
+  surface-primary: "#FFFFFF"
+  surface-secondary: "#F4F5F5"
+  accent-primary: "#111214"
+  accent-secondary: "#2F7EF7"
+  text-primary: "#15171A"
+  text-secondary: "#656A70"
+  divider: "#E2E5E7"
+  destructive: "#FF3B30"
 typography:
-  display-xl: {fontFamily: SF Pro Display, fontSize: 34, fontWeight: 700, lineHeight: 1.08, letterSpacing: -0.7}
-  display-lg: {fontFamily: SF Pro Display, fontSize: 28, fontWeight: 700, lineHeight: 1.12, letterSpacing: -0.4}
-  display-md: {fontFamily: SF Pro Display, fontSize: 24, fontWeight: 700, lineHeight: 1.16, letterSpacing: -0.2}
-  headline: {fontFamily: SF Pro Display, fontSize: 20, fontWeight: 700, lineHeight: 1.22, letterSpacing: -0.1}
-  card-title: {fontFamily: SF Pro Text, fontSize: 16, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0}
-  subhead: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 600, lineHeight: 1.30, letterSpacing: 0}
-  body-lg: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 400, lineHeight: 1.42, letterSpacing: 0}
-  body: {fontFamily: SF Pro Text, fontSize: 14, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0}
-  body-sm: {fontFamily: SF Pro Text, fontSize: 12, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0}
-  caption: {fontFamily: SF Pro Text, fontSize: 10, fontWeight: 400, lineHeight: 1.25, letterSpacing: 0}
-  button: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0}
-  eyebrow: {fontFamily: SF Pro Text, fontSize: 11, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0.1}
-  mono: {fontFamily: SF Mono, fontSize: 11, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0}
-rounded: {xs: 4, sm: 8, md: 12, lg: 18, xl: 24, xxl: 30, pill: 9999, full: 9999}
-spacing: {xxs: 4, xs: 8, sm: 12, md: 16, lg: 20, xl: 24, xxl: 32, section: 40}
+  hero: {fontFamily: "SF Pro Display", fontSize: 30, fontWeight: 700, lineHeight: 35}
+  title: {fontFamily: "SF Pro Display", fontSize: 24, fontWeight: 700, lineHeight: 29}
+  section: {fontFamily: "SF Pro Text", fontSize: 20, fontWeight: 700, lineHeight: 25}
+  body: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 400, lineHeight: 21}
+  label: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 600, lineHeight: 20}
+  caption: {fontFamily: "SF Pro Text", fontSize: 12, fontWeight: 400, lineHeight: 16}
+spacing:
+  screen-horizontal: 16
+  section-gap: 24
+  card-padding: 16
+  control-gap: 12
+rounded:
+  control: 12
+  card: 16
+  sheet: 24
+  pill: 999
 components:
-  button-primary: {backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.md}", padding: [14, 18]}
-  button-secondary: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.md}", padding: [12, 16]}
-  bottom-sheet: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xl}", padding: 20}
-  service-card: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.md}", padding: 10}
-  text-input: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: [13, 14]}
-  status-badge: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.pill}", padding: [4, 8]}
-  map-pin: {backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.caption}", rounded: "{rounded.full}", padding: 8}
+  map-sheet: {fill: "surface-primary", radiusTop: 24, handle: "centered", action: "fixed bottom"}
+  primary-action: {fill: "accent-primary", text: "white semibold", radius: 12, height: 52}
+  location-pill: {fill: "surface-primary", radius: 999, icon: "compact leading"}
+  service-row: {fill: "surface-primary", leading: "vehicle thumbnail", state: "blue outline or check"}
+  menu-tile: {fill: "surface-secondary", radius: 16, icon: "blue utility glyph"}
 ---
 
 # Overview
 
-gg is a restrained map-first mobility system. Pale maps supply context while large white sheets, black controls, compact blue links, and illustrated service shortcuts guide the next decision.
-
-**Key Characteristics:** pale cartography, white floating sheets, black primary actions, sparse blue links, large corner radii, compact service cards, clear vehicle and fare hierarchy, and friendly transport icons.
+gg is a map-first mobility interface in which pale cartography and route context remain visible behind large white bottom sheets. Near-black primary actions, compact system typography, sparse blue links and selections, floating map controls, and small functional vehicle imagery keep decision surfaces calm and direct. Non-map account areas use simple white lists and pale utility tiles rather than a separate decorative system.
 
 # Non-negotiable visual invariants
 
-- The reference consistently shows pale cartography.
-- The reference consistently shows white floating sheets.
-- The reference consistently shows black primary actions.
-- The reference consistently shows sparse blue links.
-- The reference consistently shows large corner radii.
-- The reference consistently shows compact service cards.
-- The reference consistently shows clear vehicle and fare hierarchy.
-- The reference consistently shows friendly transport icons.
+- Pale map imagery remains the dominant field on location screens and is not reduced to a small decorative preview.
+- One large white sheet with rounded top corners contains the current decision; unrelated floating card stacks are avoided.
+- Primary actions are near-black with white labels, while blue is limited to secondary links, focus, checks, and selection outlines.
+- Map controls use compact white circular or rounded containers with dark line icons and restrained shadow.
+- Location, service, price, and status information uses compact system type with bold headings and lighter gray metadata.
+- Bottom actions remain fixed above the home indicator while sheet content scrolls independently when necessary.
+- Vehicle thumbnails, maps, avatars, and campaign media stay functional and bounded; isolated assets do not become an illustration system.
+- Full-page list and menu screens preserve flat white surfaces, pale grouped tiles, and native navigation chrome.
 
 # Color and surfaces
 
-### Brand & Accent
+Pale map fields combine light gray roads, muted green land, pale blue water, and occasional colored traffic lines. White is the principal overlay and page surface; secondary controls and grouped cards use very light gray around `#F4F5F5`. Thin cool-gray dividers and minimal shadow separate rows and sheets.
 
-Near-black owns the logo, map pin, primary action, and selected state. Blue is secondary and appears only on links, optional actions, and focused information.
-
-### Surface
-
-The map is a quiet gray-green canvas. White sheets and cards sit above it; pale gray fills separate search, services, and secondary controls.
-
-### Text
-
-Near-black carries destinations, prices, and titles. Mid-gray handles labels and trip detail; lighter gray is reserved for inactive or unavailable information.
-
-### Semantic
-
-Green confirms successful trip states, blue marks optional interaction, and black indicates the committed action. Keep warnings localized and high contrast.
+Near-black around `#111214` owns primary actions and strong markers. System-like blue around `#2F7EF7` marks optional links, selected outlines, checks, and focused information. Purple may appear in bounded price or energy markers; green and red remain semantic. Broad blue backgrounds, colorful gradients, or default-blue primary buttons would change the observed hierarchy.
 
 # Typography
 
-### Font Family
+Use SF Pro Display and SF Pro Text. Major sheet or state headings are approximately 20-24 points bold, centered navigation titles 15-17 points semibold, row and button labels 14-16 points, and secondary metadata 12-13 points gray. Prices and primary values use weight and alignment rather than oversized display numerals.
 
-Use SF Pro Display for large route or state headings and SF Pro Text for addresses, fares, vehicle detail, and controls.
-
-### Hierarchy
-
-| Token | Size | Weight | Use |
-|---|---:|---:|---|
-| display-lg | 28 points | 700 | Major trip state |
-| headline | 20 points | 700 | Sheet title or fare |
-| card-title | 16 points | 600 | Destination or service |
-| body | 14 points | 400 | Address and trip detail |
-| caption | 10 points | 400 | ETA and helper meta |
-
-### Principles
-
-- Lead with destination, pickup state, fare, or driver status.
-- Keep labels short and use weight before color for hierarchy.
-- Align repeated vehicle facts and prices for quick comparison.
-
-### Note on Font Substitutes
-
-Use the platform sans with excellent map-label contrast and tabular numerals.
+Text is mostly left-aligned inside sheets and lists, with centered compact navigation titles. Repeated service facts and prices align for comparison. Dynamic Type should expand rows and allow addresses or support text to wrap while keeping current location, principal value, and primary action visually dominant.
 
 # Screen composition
 
-### Spacing System
+The main archetype uses a full-height map with a floating location/search pill near the top, small map controls at the edges, and a white rounded sheet rising from the bottom. The sheet uses 12-16 point side padding, a centered grabber, compact rows, and a fixed bottom action above the home indicator. Map context remains visible above the sheet until more space is required.
 
-Use a 4 points base, 12–16 points control gaps, 20 points sheet padding, and generous separation between route decisions.
+Search and selection archetypes expand the sheet into a keyboard-aware list. Service comparison uses stacked rows with small vehicle thumbnails, aligned metadata, and blue selected states over the map. Rating and feedback use a focused white sheet with centered stars or compact chips. Menu and account archetypes move to full-screen white surfaces with a grid of large pale square tiles or simple flat lists.
 
-### Grid & Container
-
-The map fills the viewport. A single bottom sheet holds search, service choice, fare, driver, rating, or trip actions.
-
-### Whitespace Philosophy
-
-Let the map breathe above the sheet; keep the decision area compact and avoid stacking unrelated controls.
-
-Surface hierarchy observed in the source:
-
-| Level | Treatment | Use |
-|---|---|---|
-| 0 | Pale map | Location context |
-| 1 | White rounded card | Search and service shortcut |
-| 2 | Large white sheet | Active trip decision |
-| 3 | Black floating action | Commitment or map control |
-
-### Decorative Depth
-
-Use map texture, route geometry, small illustrated service objects, and restrained sheet shadow. Do not add ornamental gradients.
+Sparse login and profile forms use outlined or pale fields with substantial white space. Support and payment web surfaces retain their own embedded content but remain framed by compact native top chrome.
 
 # Navigation appearance
 
-Primary navigation is contextual: the map and bottom sheet stay persistent while menu and support open as focused overlays.
+No persistent tab bar was observed. Map screens use contextual floating controls, a compact location pill, close or back buttons, and a single bottom sheet. Native full pages use centered titles, standard back chevrons or close icons, and occasional compact right-side actions.
+
+Sheets have large rounded top corners, a centered grabber, and a fixed action region. System alerts and action sheets retain native geometry. The adapted product's destinations and sequence must come from approved Research and Planning rather than the sampled mobility flows.
 
 # Components
 
-### Buttons
+Primary actions are approximately 50-54 points high, near-black, white-labeled, and rounded about 12 points. Secondary actions use white or pale-gray fills, while blue text is reserved for optional actions. Disabled actions become pale gray without changing their geometry.
 
-Primary actions are near-black with white labels and moderate rounding. Secondary actions use white or pale gray; optional links may use blue text.
+Location pills are compact white capsules with a leading icon and restrained shadow. Service rows pair a contained vehicle thumbnail with bold label, gray supporting facts, and aligned price; selected state uses a blue stroke or check. Menu tiles are large pale squares with simple blue utility glyphs and short labels.
 
-### Cards & Containers
-
-Use one dominant sheet per state. Nested cards are pale, lightly separated, and reserved for route, vehicle, driver, or payment facts.
-
-### Inputs & Forms
-
-Pickup and destination inputs use pale fills, leading location marks, and clear focus. Native controls may remain native in code but must inherit these colors, radii, type, and spacing.
+Form fields are outlined or softly filled and preserve native keyboard spacing. Selection rows use blue checks; toggles use native on/off color; rating uses evenly spaced stars; tip choices use compact pills. Promo and code entry surfaces appear in rounded bottom sheets over a dimmed backdrop.
 
 # Imagery and icons
 
-Use map texture, route geometry, small illustrated service objects, and restrained sheet shadow. Do not add ornamental gradients.
+Pale maps and route lines are the main imagery and must retain full-screen scale. Vehicle thumbnails, avatars, campaign banners, and embedded payment content support specific rows or surfaces. Keep vehicles contained and readable at small size, protect map labels from controls, and preserve the footprint of any required functional imagery while assets are pending.
 
-Keep vehicles and service illustrations isolated inside soft square or circular fields; maps and route lines remain full bleed beneath the sheet.
-
-If final imagery is not yet available, any placeholder must preserve the documented scale, placement, crop, and visual weight rather than removing that layer.
+Blue utility icons and line symbols are small, direct, and consistent with native iOS weights. A phone/map mockup, an empty-state bell, a campaign banner, and isolated service graphics do not establish a stable authored illustration language. Do not create recurring characters or decorative scenes from this evidence.
 
 # States
 
-Keep arrival time, driver identity, vehicle, fare, pickup point, cancellation, and rating state near the current action.
+Observed states include sparse login, native permission alert, map with compact or expanded sheet, keyboard search, disabled pale action, blue outlined selection, checked row, toggle on and off, rating stars, tip chips, selected payment, map-mode sheet, promo-code sheet with dim backdrop, native image-source action sheet, support overlay, and embedded payment form. Pale maps, white surfaces, black commitment actions, and sparse blue selection remain constant.
 
 # iOS adaptation
 
-### Touch Targets
+Extend the map behind the status region while keeping pills, controls, sheet handles, and bottom actions inside safe areas. Use native sheet detents or equivalent compact and expanded geometry, internal scrolling for sheet lists, keyboard avoidance for search and forms, and bottom safe-area insets for primary actions.
 
-Map controls, service cards, destination rows, rating stars, and primary actions remain at least 44 points.
-
-### Collapsing Strategy
-
-Preserve destination, pickup, ETA, fare, driver, and primary action; collapse tips, promotions, and secondary service detail first.
-
-### Image Behavior
-
-Keep map labels readable, crop vehicle art as isolated objects, and preserve a clear text-safe area in every service tile.
-
-Apply these rules within current iPhone safe areas and scrolling containers. Keep interactive targets at least 44 points, preserve a logical VoiceOver order, and let Dynamic Type wrap supporting text without flattening the documented hierarchy. Preserve the documented appearance.
+Map controls, service rows, chips, stars, navigation actions, and menu tiles require at least 44-point hit regions. VoiceOver should announce map context and current location, floating controls, sheet content, then the primary action. On compact widths, wrap addresses and secondary facts or increase row height before shrinking thumbnails and targets. Dynamic Type must not cause the fixed CTA to cover sheet content. Preserve the light appearance and map contrast unless the approved product explicitly defines another mode.
 
 # Anti-generic checklist
 
-- Don't cover most of the map before a decision requires it.
-- Don't add competing brand colors or decorative gradients.
-- Don't let illustrated shortcuts overpower route information.
-- Do not replace the documented hierarchy with a generic stack of identical white cards or `Form` sections.
-- Do not use default blue tint, an unstyled `TabView`, arbitrary SF Symbols, or uniform corner radii when they contradict the recorded tokens and components.
-- Do not omit compositionally important imagery while final assets are pending; preserve its footprint with a faithful placeholder.
+- Do not replace the full-screen pale map with a generic gray page or small map card.
+- Do not stack several elevated cards where one dominant rounded sheet is observed.
+- Do not turn every action blue; near-black remains the commitment color.
+- Do not add a tab bar or copy product destinations from the source.
+- Do not omit vehicle, map, avatar, or functional media where it carries identification.
+- Do not use default `Form` styling for sparse fields, service rows, or menu tiles.
+- Do not apply one radius or shadow to pills, sheets, tiles, fields, and floating controls.
+- Do not retain or invent an illustration package from isolated campaign and empty-state assets.
 
 </design-context>

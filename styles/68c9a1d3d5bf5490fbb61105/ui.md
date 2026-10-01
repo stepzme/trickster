@@ -3,204 +3,99 @@
 version: 1
 platform: iOS
 name: Badoo-design-analysis
-description: "A photo-led dating interface built from bright white surfaces, a saturated violet gradient, heavy black headings, circular portraits, and full-height encounter cards. Five stable tabs move between nearby people, encounters, likes, chat, and profile; expressive line-and-color illustrations explain onboarding, empty states, premium, and safety."
+description: "A bright photo-led social interface with white high-whitespace canvases, bold black system typography, violet-to-purple gradient actions, immersive rounded portrait cards, a five-item icon tab bar, and restrained gray sheets and lists around the imagery."
 colors:
-  primary: "#6C36F4"
-  on-primary: "#FFFFFF"
-  primary-soft: "#EEE8FF"
-  accent-pink: "#FF8CB4"
-  accent-blue: "#4D8DFF"
-  accent-green: "#35B96B"
-  ink: "#202124"
-  ink-muted: "#777980"
-  ink-subtle: "#A9ABB1"
   canvas: "#FFFFFF"
-  surface-1: "#F4F4F6"
-  surface-2: "#E9E9ED"
-  hairline: "#DEDFE3"
-  semantic-success: "#35B96B"
-  semantic-danger: "#E74A5A"
-  semantic-overlay: "#000000"
+  surface-primary: "#FFFFFF"
+  surface-secondary: "#F4F4F6"
+  accent-primary: "#6C36F4"
+  accent-secondary: "#A44CFF"
+  text-primary: "#202124"
+  text-secondary: "#777980"
+  divider: "#DEDFE3"
+  destructive: "#E74A5A"
 typography:
-  display-xl: { fontFamily: SF Pro Display, fontSize: 38, fontWeight: 700, lineHeight: 1.03, letterSpacing: -0.8 }
-  display-lg: { fontFamily: SF Pro Display, fontSize: 31, fontWeight: 700, lineHeight: 1.08, letterSpacing: -0.6 }
-  display-md: { fontFamily: SF Pro Display, fontSize: 26, fontWeight: 700, lineHeight: 1.12, letterSpacing: -0.4 }
-  headline: { fontFamily: SF Pro Display, fontSize: 22, fontWeight: 700, lineHeight: 1.18, letterSpacing: -0.2 }
-  card-title: { fontFamily: SF Pro Text, fontSize: 17, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: SF Pro Text, fontSize: 17, fontWeight: 500, lineHeight: 1.35, letterSpacing: 0 }
-  body-lg: { fontFamily: SF Pro Text, fontSize: 16, fontWeight: 400, lineHeight: 1.45, letterSpacing: 0 }
-  body: { fontFamily: SF Pro Text, fontSize: 14, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
-  body-sm: { fontFamily: SF Pro Text, fontSize: 12, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
-  caption: { fontFamily: SF Pro Text, fontSize: 10, fontWeight: 400, lineHeight: 1.20, letterSpacing: 0 }
-  button: { fontFamily: SF Pro Text, fontSize: 15, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0 }
-  eyebrow: { fontFamily: SF Pro Text, fontSize: 11, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0.2 }
-  mono: { fontFamily: SF Mono, fontSize: 12, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
-rounded: { xs: 8, sm: 12, md: 16, lg: 22, xl: 28, xxl: 34, pill: 9999, full: 9999 }
-spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
+  hero: {fontFamily: "SF Pro Display", fontSize: 38, fontWeight: 700, lineHeight: 43}
+  title: {fontFamily: "SF Pro Display", fontSize: 28, fontWeight: 700, lineHeight: 34}
+  section: {fontFamily: "SF Pro Text", fontSize: 20, fontWeight: 600, lineHeight: 25}
+  body: {fontFamily: "SF Pro Text", fontSize: 17, fontWeight: 400, lineHeight: 23}
+  label: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 600, lineHeight: 20}
+  caption: {fontFamily: "SF Pro Text", fontSize: 12, fontWeight: 400, lineHeight: 16}
+spacing:
+  screen-horizontal: 16
+  section-gap: 28
+  card-padding: 16
+  control-gap: 12
+rounded:
+  control: 16
+  card: 24
+  sheet: 28
+  pill: 999
 components:
-  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: [14, 20]}
-  profile-card: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 0 }
-  encounter-action: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.full}", padding: 16 }
-  premium-card: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 18 }
-  safety-card: { backgroundColor: "{colors.primary-soft}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 16 }
-  bottom navigation: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: [8, 12]}
+  primary-action: {fill: "violet-gradient", foreground: "#FFFFFF", shape: "pill"}
+  secondary-action: {fill: "#F4F4F6", foreground: "#202124", shape: "circle-or-pill"}
+  primary-card: {fill: "edge-to-edge-photo", foreground: "#FFFFFF", shape: "large-rounded-rectangle"}
+  navigation: {fill: "#FFFFFF", inactive: "#A9ABB1", selected: "#6C36F4"}
 ---
 
 # Overview
 
-Badoo places people and intent first. Violet carries matching and premium actions; white chrome stays quiet around portraits, profile cards, chat, and safety tools.
-
-**Key Characteristics:**
-- Photo-led nearby grid and encounter cards.
-- Saturated violet gradient for brand and CTA.
-- Circular portraits and full-radius actions.
-- Five stable social destinations.
-- Expressive onboarding and safety illustrations.
+Badoo places photography and direct actions ahead of decorative chrome. Most interface surfaces are bright white with generous space, bold black titles, gray supporting text, and saturated violet or purple-gradient emphasis. Large face-centered photos dominate discovery and profile compositions, while lists, chat, settings, and forms stay quiet and system-like. The style is recognizable through the contrast between immersive human imagery, fully rounded actions, and a stable five-item icon tab bar.
 
 # Non-negotiable visual invariants
 
-- Imagery consistently uses photo-led nearby grid and encounter cards.
-- Sampled screens consistently use saturated violet gradient for brand and CTA.
-- The reference consistently shows circular portraits and full-radius actions.
-- The reference consistently shows five stable social destinations.
-- The reference consistently shows expressive onboarding and safety illustrations.
+- White occupies most application chrome, with high whitespace and dark bold titles rather than tinted page backgrounds.
+- Violet-to-purple gradient is the recurring primary action and premium emphasis; system blue must not replace it.
+- People photography is a dominant visual mass, presented as large rounded cards, immersive crops, circular portraits, or dense photo grids.
+- Primary actions are wide pills or large circular controls with clear high-contrast labels or glyphs.
+- The bottom bar contains five evenly spaced icon-and-label items with gray inactive states and a dark or violet selected state.
+- Sheets and modal panels are white, strongly rounded at the top, and shown over dimmed or blurred underlying content.
+- Secondary structure relies on pale gray fills and fine separators rather than shadows or heavy borders.
+- Online, verification, selection, and destructive meaning pair color with a symbol or text, not color alone.
 
 # Color and surfaces
 
-### Brand & Accent
-- **Badoo Violet** ({colors.primary}): Primary action, premium, message, and selected emphasis.
-- **Pink** ({colors.accent-pink}): Match hints and supportive illustration.
-- **Blue** ({colors.accent-blue}): Verification and linked trust signals.
-- **Green** ({colors.accent-green}): Online and success state.
-
-### Surface
-- **Canvas** ({colors.canvas}): Discovery, chat, and profile.
-- **Surface 1** ({colors.surface-1}): Inputs, safety cards, and secondary controls.
-- **Surface 2** ({colors.surface-2}): Disabled state.
-- **Hairline** ({colors.hairline}): List and input separation.
-
-### Text
-- **Ink** ({colors.ink}): Names, headings, and prompts.
-- **Ink Muted** ({colors.ink-muted}): Guidance and profile metadata.
-- **Ink Subtle** ({colors.ink-subtle}): Disabled tabs and placeholders.
-
-### Semantic
-- **Success** ({colors.semantic-success}): Online and verified completion.
-- **Danger** ({colors.semantic-danger}): Block, report, and safety warnings.
-- **Overlay** ({colors.semantic-overlay}): Match, privacy, and premium focus.
+White is the continuous base for browsing chrome, forms, chat, lists, and profile content. Pale cool gray separates fields, disabled controls, grouped rows, and secondary cards. The primary brand mass is a saturated violet-to-purple gradient used on calls to action, progress, premium areas, selected emphasis, and badges. Pink may appear in coaching or matching emphasis, green in activity or success, and red in destructive and warning actions. Black or near-black carries titles and names; medium gray carries descriptions, timestamps, placeholders, and inactive navigation. Dim black overlays and blurred photos establish modal focus. Generic iOS blue, beige backgrounds, multicolor dashboard palettes, or glass materials would visibly dilute this system.
 
 # Typography
 
-### Font Family
-
-- **SF Pro Display** — destination and match headings.
-- **SF Pro Text** — profiles, chat, forms, and plans.
-- **SF Mono** — codes only.
-
-### Hierarchy
-
-| Token | Size | Weight | Use |
-|---|---|---|---|
-| `{typography.display-xl}` | 38 points | 700 | Match statement |
-| `{typography.headline}` | 22 points | 700 | Destination or prompt |
-| `{typography.card-title}` | 17 points | 600 | Name, question, or plan |
-| `{typography.body}` | 14 points | 400 | Profile and chat copy |
-| `{typography.caption}` | 10 points | 400 | Tab and activity label |
-| `{typography.button}` | 15 points | 600 | Primary action |
-
-### Principles
-
-- Use direct conversational prompts.
-- Keep names and intent prominent.
-- Use supporting copy for safety and consent.
-- Avoid decorative typography over profile photos.
-
-### Note on Font Substitutes
-
-Use **Inter** or the platform system sans when SF Pro is unavailable.
+Typography is a conventional SF Pro hierarchy with strong weight contrast: large bold screen or state titles, semibold names and section labels, regular body and message text, and compact gray metadata. Text over photography remains minimal and high contrast, usually supported by a scrim rather than decorative display styling. Buttons use medium or semibold labels centered in pills. Numeric progress and counts remain compact. Dynamic Type should expand form rows, list items, and messages vertically while preserving the clear title-name-body-caption sequence; text over photos may move below the image before becoming unreadably small.
 
 # Screen composition
 
-### Spacing System
+Photo-led archetypes devote most of the viewport to one large rounded portrait card or a grid of circular and rounded portraits. Sparse top icon controls sit inside the safe area, decision controls cluster near the lower edge of the image, and the five-item tab bar anchors the bottom. Profile archetypes use a large photo region followed by vertically scrolling white content, chips, prompts, and actions. List and chat archetypes use compact navigation above a continuous single-column surface, with circular avatars leading rows and pale separators or message bubbles providing rhythm.
 
-Use a 4 points base, 12 points gutters, 12 points card gaps, and 16 points form padding.
-
-### Grid & Container
-
-Nearby uses a three-column circular portrait grid. Encounters use one dominant full-height card. Chat and profile use single-column lists and cards.
-
-### Whitespace Philosophy
-
-Keep chrome open and light so portraits and emotional states remain dominant.
-
-Surface hierarchy observed in the source:
-
-| Level | Treatment | Use |
-|---|---|---|
-| 0 | White canvas | Discovery and chat |
-| 1 | Soft gray control | Inputs and secondary rows |
-| 2 | Violet card or action | Premium and matching |
-| 3 | Dimmed photo plus sheet | Match, boost, and privacy |
-
-### Decorative Depth
-
-Use photo blur, overlay scrims, and flat illustration. Avoid shadows on ordinary profile rows.
+Onboarding and form archetypes use one bold prompt in the upper portion, one focused field or option group in the middle, and a wide violet pill near the lower safe area. Premium and progress archetypes concentrate stronger purple fields, circular feature marks, or comparison rows inside the otherwise white frame. Empty states leave a large centered gap for one simple symbol and short copy. Bottom sheets rise over dimmed content and retain generous internal spacing rather than filling the viewport with nested cards.
 
 # Navigation appearance
 
-Nearby, Encounters, Likes, Chat, and Profile form the bottom bar. Filters remain top-right in discovery.
+The primary navigation is a white five-item bottom tab bar with simple line icons, small labels, gray inactive states, and a dark or violet selected state; small violet dots may mark attention. Top bars are minimal, usually white, with compact black or gray icons, a simple back chevron or close control, and restrained titles. Full-screen overlays may suppress the tab bar and use a close affordance. Bottom sheets have a white surface, large top corners, and optional drag handle. Selected segmented controls, filters, or radios use violet emphasis while preserving native compact geometry.
 
 # Components
 
-### Buttons
-
-Primary actions use violet pills. Swipe decisions use circular white controls over photography. Destructive actions remain text-led and explicit.
-
-### Cards & Containers
-
-Encounter cards combine media, name, status, prompts, interests, and actions. Safety and premium cards use bounded violet treatments. Chat bubbles use compact pills.
-
-### Inputs & Forms
-
-Onboarding uses one question per screen with a single field. Chat uses a fixed composer with media, emoji, and voice. Profile editing uses grouped rows.
+The primary CTA is a wide violet or violet-gradient pill with white semibold text and no shadow. Secondary choices use outlined or pale pills with dark labels; selected variants gain violet border, fill, or mark. Photo cards use large corner radii, full-bleed `cover` crops, face-safe framing, and restrained dark scrims for overlaid labels. Decision controls are large circular buttons with crisp glyphs and ample separation. Chat bubbles are compact rounded shapes, while the composer is a fixed pale field with small media and send controls. Filters and settings use sliders, radios, switches, checkbox rows, and grouped list geometry. Premium surfaces use stronger purple blocks, circular feature icons, and aligned checkmark rows.
 
 # Imagery and icons
 
-Use photo blur, overlay scrims, and flat illustration. Avoid shadows on ordinary profile rows.
-
-Nearby portraits are circular; encounters and matches use immersive photo crops. Illustration uses clean white space, black outlines, and purple/pink geometric fills.
-
-If final imagery is not yet available, any placeholder must preserve the documented scale, placement, crop, and visual weight rather than removing that layer.
+Member photography is compositionally essential and cannot be omitted while awaiting final assets. Use `cover` crops with faces protected, circular crops for avatars, and blur only where privacy, obscured access, or background atmosphere is visibly required. Icons are simple, mostly outlined, and visually lighter than the photos. Empty, permission, coaching, premium, and safety screens contain occasional branded glyphs or spot art, but the inspected examples do not establish one reusable authored illustration system. Do not substitute generated character scenes for the photo-led hierarchy or treat the isolated spot assets as a general illustration mandate.
 
 # States
 
-Online, verified, matched, seen, boosted, profile completion, premium, and safety state use icon plus text rather than color alone.
+Observed states include sparse onboarding questions, empty and populated photo discovery, selected filters, dimmed sheets, match overlay, chat list and messages with keyboard, copied or edited message menus, profile progress, verification guidance, photo placeholders and errors, premium comparison, activity markers, settings selections, and safety or support content. White canvas, violet primary emphasis, rounded controls, bold type, and photo prominence remain stable. Disabled controls shift toward pale gray, selected states gain violet, activity gains green, and destructive states use red with explicit wording or symbols.
 
 # iOS adaptation
 
-### Touch Targets
-
-Keep tabs, swipe actions, filters, chat composer controls, premium rows, and safety actions at least 44 points.
-
-### Collapsing Strategy
-
-Reduce nearby columns before portrait size becomes illegible. Encounter media stays dominant while secondary prompts collapse behind details.
-
-### Image Behavior
-
-Use cover crops with focal-point protection on faces. Never stretch portraits; blur only for privacy, moderation, or background atmosphere.
-
-Apply these rules within current iPhone safe areas and scrolling containers. Keep interactive targets at least 44 points, preserve a logical VoiceOver order, and let Dynamic Type wrap supporting text without flattening the documented hierarchy. Preserve the documented appearance.
+Respect top and bottom safe areas while allowing large photography to approach screen edges. Use vertical scrolling for profiles, settings, forms, chat, and comparison content; keep the five-item tab bar fixed above the home indicator when present. On compact widths, retain one dominant portrait card and reduce surrounding gaps before shrinking action targets; grids may reduce columns to preserve recognizable faces. Keep all pill, circular, tab, list, and composer targets at least 44 points. VoiceOver should announce person imagery meaningfully, then visible name/status, then actions; never encode online, verified, matched, or destructive status by color alone. Allow Dynamic Type to grow sheets and rows. The sampled system is light-first; dark overlays and photo scrims do not establish a full dark appearance.
 
 # Anti-generic checklist
 
-- Don't use profile photos as decorative backgrounds for forms.
-- Don't hide block or report tools.
-- Don't signal state by color alone.
-- Don't mix safety and upsell messaging.
-- Don't shrink swipe actions below touch size.
-- Do not replace the documented hierarchy with a generic stack of identical white cards or `Form` sections.
-- Do not use default blue tint, an unstyled `TabView`, arbitrary SF Symbols, or uniform corner radii when they contradict the recorded tokens and components.
-- Do not omit compositionally important imagery while final assets are pending; preserve its footprint with a faithful placeholder.
+- Do not replace the violet gradient with default blue buttons or a generic accent color.
+- Do not reduce people photography to small decorative thumbnails inside uniform white cards.
+- Do not use an unstyled `TabView`; preserve five equal items, muted inactive states, and violet/dark selection.
+- Do not apply one radius to photo cards, pills, circles, sheets, and message bubbles.
+- Do not fill high-whitespace screens with mood copy, decorative cards, or unrelated illustrations.
+- Do not add heavy shadows, glass panels, or gradients to ordinary lists and forms.
+- Do not blur portraits unless the state visibly requires privacy or obscured access.
+- Do not let premium styling overwhelm ordinary photo, chat, or safety surfaces.
 
 </design-context>

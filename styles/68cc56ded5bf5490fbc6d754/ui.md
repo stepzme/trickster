@@ -3,178 +3,99 @@
 version: 1
 platform: iOS
 name: VK-Calls-design-analysis
-description: "A restrained dark calling interface built from black and charcoal surfaces, blue and green action tiles, large circular in-call controls, pale video-room backdrops, and thin system iconography. It feels direct, familiar, and operational."
-
+description: "A dark-first calling utility built from near-black canvases, charcoal tiles and sheets, white system typography, VK-blue selected states, full-width light primary buttons, and sparse circular call controls over blurred video or participant surfaces."
 colors:
-  primary: "#4C8FEF"
-  on-primary: "#FFFFFF"
-  primary-pressed: "#3676CF"
-  accent-green: "#4FCB89"
-  ink: "#F4F5F6"
-  ink-muted: "#9A9CA1"
-  ink-subtle: "#66686D"
   canvas: "#0C0D0E"
-  surface-1: "#191A1C"
-  surface-2: "#292A2D"
-  hairline: "#34363A"
-  semantic-success: "#4FCB89"
-  semantic-warning: "#E2A23A"
-  semantic-danger: "#F05258"
-  semantic-overlay: "#000000"
-
+  surface-primary: "#191A1C"
+  surface-secondary: "#292A2D"
+  accent-primary: "#4C8FEF"
+  accent-secondary: "#4FCB89"
+  text-primary: "#F4F5F6"
+  text-secondary: "#9A9CA1"
+  divider: "#34363A"
+  destructive: "#F05258"
 typography:
-  display-xl: { fontFamily: System Sans, fontSize: 36, fontWeight: 700, lineHeight: 1.08, letterSpacing: -0.5 }
-  display-lg: { fontFamily: System Sans, fontSize: 29, fontWeight: 700, lineHeight: 1.12, letterSpacing: -0.3 }
-  display-md: { fontFamily: System Sans, fontSize: 23, fontWeight: 650, lineHeight: 1.15, letterSpacing: 0 }
-  headline: { fontFamily: System Sans, fontSize: 20, fontWeight: 650, lineHeight: 1.2, letterSpacing: 0 }
-  card-title: { fontFamily: System Sans, fontSize: 16, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: System Sans, fontSize: 17, fontWeight: 450, lineHeight: 1.35, letterSpacing: 0 }
-  body-lg: { fontFamily: System Sans, fontSize: 16, fontWeight: 400, lineHeight: 1.42, letterSpacing: 0 }
-  body: { fontFamily: System Sans, fontSize: 14, fontWeight: 400, lineHeight: 1.42, letterSpacing: 0 }
-  body-sm: { fontFamily: System Sans, fontSize: 12, fontWeight: 400, lineHeight: 1.38, letterSpacing: 0 }
-  caption: { fontFamily: System Sans, fontSize: 10, fontWeight: 500, lineHeight: 1.3, letterSpacing: 0 }
-  button: { fontFamily: System Sans, fontSize: 16, fontWeight: 600, lineHeight: 1.2, letterSpacing: 0 }
-  eyebrow: { fontFamily: System Sans, fontSize: 10, fontWeight: 650, lineHeight: 1.25, letterSpacing: 0.3 }
-  mono: { fontFamily: System Mono, fontSize: 12, fontWeight: 400, lineHeight: 1.38, letterSpacing: 0 }
-
-rounded: { xs: 4, sm: 8, md: 12, lg: 16, xl: 22, xxl: 28, pill: 9999, full: 9999 }
-spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
-
+  hero: {fontFamily: "SF Pro Display", fontSize: 36, fontWeight: 700, lineHeight: 42}
+  title: {fontFamily: "SF Pro Display", fontSize: 28, fontWeight: 700, lineHeight: 34}
+  section: {fontFamily: "SF Pro Text", fontSize: 20, fontWeight: 600, lineHeight: 25}
+  body: {fontFamily: "SF Pro Text", fontSize: 17, fontWeight: 400, lineHeight: 23}
+  label: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 600, lineHeight: 20}
+  caption: {fontFamily: "SF Pro Text", fontSize: 12, fontWeight: 400, lineHeight: 16}
+spacing:
+  screen-horizontal: 16
+  section-gap: 28
+  card-padding: 16
+  control-gap: 12
+rounded:
+  control: 12
+  card: 16
+  sheet: 24
+  pill: 999
 components:
-  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [14, 18]}
-  action-tile: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 14 }
-  call-row: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 12 }
-  call-control: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.full}", padding: 15 }
-  bottom-nav: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", height: 58 }
+  primary-action: {fill: "#F4F5F6", foreground: "#0C0D0E", shape: "rounded-rectangle"}
+  secondary-action: {fill: "#292A2D", foreground: "#F4F5F6", shape: "circle-or-tile"}
+  primary-card: {fill: "#191A1C", foreground: "#F4F5F6", shape: "rounded-tile"}
+  navigation: {fill: "#0C0D0E", inactive: "#66686D", selected: "#4C8FEF"}
 ---
 
 # Overview
 
-VK Calls keeps scheduling and contact management on a dark utility shell, then shifts to a pale full-screen room during the call. Clear colored actions and large circular controls minimize ambiguity.
+VK Calls uses a nearly continuous dark shell across onboarding, lists, settings, sheets, and call tools. Near-black canvases and charcoal components keep the interface operational, while white type, a small amount of VK blue, green scheduling emphasis, and uniquely red hang-up controls establish hierarchy. During calls, participant video, blurred imagery, or a subdued room field becomes the primary mass, with a compact circular control dock held to the safe edge.
 
 # Non-negotiable visual invariants
 
-- The reference consistently shows make call state immediately visible.
-- The reference consistently shows hang-up uniquely red.
-- Sampled screens consistently use large control hit regions.
-- The reference consistently shows preserve participant visibility.
-- The reference consistently shows a restrained dark calling interface built from black and charcoal surfaces.
-- Sampled screens consistently use blue and green action tiles.
-- The reference consistently shows large circular in-call controls.
-- The reference consistently shows pale video-room backdrops.
+- Near-black is the baseline full-screen canvas across ordinary screens; charcoal provides restrained tonal separation for tiles, rows, fields, and sheets.
+- Primary non-destructive actions are usually wide light or white rounded rectangles with dark labels, not blue-filled default buttons.
+- VK blue is concentrated in selected navigation, switches, icons, and key emphasis; green and red remain semantically distinct.
+- Call surfaces preserve a bottom dock of large circular controls, with the hang-up control uniquely red.
+- Navigation follows compact iOS geometry: centered titles, back chevrons, close controls, drag handles, bottom sheets, and native alerts in dark appearance.
+- Lists use sparse separators, leading labels or avatars, and trailing chevrons, values, radios, or switches without elevated white cards.
+- Empty states use one monochrome line icon and short centered copy, leaving most of the dark field untouched.
+- Product screenshots, avatars, or participant media appear as contained functional imagery rather than decorative illustration.
 
 # Color and surfaces
 
-### Brand & Accent
-
-Blue marks create, join, contact, and active navigation. Green marks scheduling; red is reserved for ending a call.
-
-### Surface
-
-Use near-black canvas, charcoal panels, and a soft gray-blue room backdrop when video is absent.
-
-### Text
-
-Off-white carries labels and participant names; gray carries availability, helper copy, and inactive navigation.
-
-### Semantic
-
-Green means scheduled or available, amber warns, and red means end or destructive. Blue remains general action.
+Near-black fills the viewport and extends through safe areas. Charcoal surfaces create a shallow hierarchy: slightly lighter tiles, fields, sheets, control circles, and list groups remain clearly within the same dark family. Off-white is used for primary titles and labels, medium gray for helper copy and inactive controls, and subtle dark dividers for list rhythm. VK blue marks selection, switches, focused actions, and active icons. Green marks a distinct positive or scheduled action; red is reserved for ending, deleting, or destructive outcomes. Occasional violet or blue promotional panels remain local. Light generic canvases, blue page washes, gradients across the shell, or glass-heavy panels would break the reference.
 
 # Typography
 
-### Font Family
-
-Use a familiar system sans optimized for compact labels and contact names.
-
-### Hierarchy
-
-Use 23–36 points onboarding statements, 20 points page titles, 14–17 points controls and names, and 10–12 points status.
-
-### Principles
-
-Keep call state and participant status readable at a glance. Prefer short verb labels for controls.
-
-### Note on Font Substitutes
-
-Use SF Pro or Inter with medium weights and high contrast on charcoal.
+Typography is SF Pro-like and deliberately plain: bold 28–36-point onboarding or empty-state titles, semibold 20-point section or navigation headings, 15–17-point control and contact labels, and compact gray metadata. Text is predominantly left aligned in lists and centered in empty or permission compositions. Call controls use short verb labels beneath or inside simple glyphs. There is no decorative display face. Dynamic Type should increase row and sheet height, wrap helper copy, and preserve the title-label-caption contrast; control docks may retain compact labels while VoiceOver exposes their complete meaning.
 
 # Screen composition
 
-### Spacing System
+Onboarding archetypes place a small mark or action near the top safe area, a centered phone-frame product screenshot through the middle, pager dots below it, and two full-width bottom actions above the home indicator. Home and empty archetypes use one or more wide rounded action tiles near the top, a large open center with a monochrome empty-state symbol, and a dark icon-and-label bar along the bottom. List and settings archetypes use a compact centered title, continuous rows, sparse separators, and no large decorative header.
 
-Use a 4 points base, 12 points gutters, 10–12 points action gaps, and 24 points between major home sections.
-
-### Grid & Container
-
-Home uses a three-tile action row above active and scheduled calls. The call room fills available space above a fixed control dock.
-
-### Whitespace Philosophy
-
-Keep empty states open and calm. In-call chrome should occupy only safe edges and never cover participants.
-
-Surface hierarchy observed in the source:
-
-Use tonal card separation and bottom sheets. In-call controls may use slight lift over the room backdrop.
-
-### Decorative Depth
-
-The interface is intentionally plain. Soft blur or translucent participant backdrops are acceptable; ornamental graphics are not.
+Call archetypes give most of the screen to video, avatar, blur, or a restrained participant field. Status and participant information occupy safe upper edges, while circular mute, camera, route, reaction, and hang-up controls sit in a stable lower dock. Tool pickers, participant lists, reactions, chat, recording options, and settings appear as dark bottom sheets with rounded upper corners and drag handles. Keyboard and native modal overlays consume their expected system regions without creating additional cards.
 
 # Navigation appearance
 
-Use four bottom destinations for Home, History, Contacts, and Settings. Call-room navigation is isolated from the app shell.
+The application shell uses a dark bottom tab bar with evenly spaced outline icons and small labels; inactive items are muted gray and the selected item gains blue or white emphasis. Top navigation uses centered white titles, iOS back chevrons, and compact close controls. Sheets use dark charcoal fill, a subtle drag handle, and large top corners. Native alerts, broadcast overlays, and permission dialogs retain iOS geometry. The call surface visually separates from the application bar and relies on its own lower circular control dock.
 
 # Components
 
-### Buttons
-
-Create and join are high-contrast rectangles; in-call actions are circles. Native controls must inherit the dark palette and blue focus.
-
-### Cards & Containers
-
-Call rows show title, time or status, and one clear join action. Sheets group share, device handoff, and chat links.
-
-### Inputs & Forms
-
-Join links, schedule fields, and contact search use graphite fields with visible focus and clear actions.
+The primary action is a full-width light rounded rectangle with dark semibold text. Secondary actions use charcoal rounded rectangles, compact pills, or circular icon controls. Home action tiles are rounded squares or short rectangles with a colored icon or fill and brief label. Call controls are evenly sized dark or light circles with monochrome glyphs; active states may invert or gain blue, while hang-up is solid red. List rows use clear leading text or circular avatar, optional gray subtitle, and trailing value, chevron, radio, or switch. Search and text fields use dark graphite fills with subtle borders or tonal contrast. Bottom sheets group rows vertically without nested cards.
 
 # Imagery and icons
 
-The interface is intentionally plain. Soft blur or translucent participant backdrops are acceptable; ornamental graphics are not.
-
-Participant video uses `cover` with face-safe framing. Onboarding device previews use `contain`; no standalone illustration system is present.
-
-If final imagery is not yet available, any placeholder must preserve the documented scale, placement, crop, and visual weight rather than removing that layer.
+Onboarding product screenshots in a phone frame, real avatars, participant video, and blurred call imagery are functional and compositionally important. Phone previews use contained scaling; video uses face-aware `cover`; avatars remain circular. Most icons are thin, familiar monochrome glyphs whose contrast changes by selection. A small number of promotional or mode-specific illustrated assets appears in the sampled screens, but their recurrence is insufficient to define a reusable authored illustration system. Do not replace product previews or participant media with generated decorative art, and do not extrapolate the isolated promo drawings into ordinary empty or settings screens.
 
 # States
 
-Waiting, active, muted, camera off, recording, scheduled, and missed states appear next to the relevant participant or call.
+Observed states include onboarding pages, native microphone/camera/notification permissions, dark empty and populated call surfaces, join and schedule sheets, active and waiting calls, participant lists, muted or camera-off controls, recording and broadcast modals, filter and reaction pickers, chat with keyboard and action sheets, selected radios and switches, blocked or empty lists, long legal text, and feedback forms. Dark canvas, white hierarchy, blue selection, rounded sheets, and native geometry remain consistent. Active call controls change locally; destructive actions remain red; disabled or secondary content recedes to gray.
 
 # iOS adaptation
 
-### Touch Targets
-
-Action tiles, contact buttons, call controls, sheet rows, and navigation require at least 44 points targets.
-
-### Collapsing Strategy
-
-Keep mute, camera, audio route, reaction, and hang-up visible. Move share, device, chat, and advanced controls into a sheet.
-
-### Image Behavior
-
-Use `cover` for participant video and `contain` for avatars, QR codes, and onboarding device previews.
-
-Apply these rules within current iPhone safe areas and scrolling containers. Keep interactive targets at least 44 points, preserve a logical VoiceOver order, and let Dynamic Type wrap supporting text without flattening the documented hierarchy. Preserve the documented appearance.
+Extend the dark canvas through safe areas and keep bottom bars, call docks, and sheet actions above the home indicator. Use scroll containers for lists, settings, chat, legal text, and long sheets; participant video or call canvas should remain full bleed within its region. Keep all tile, row, tab, switch, and circular call targets at least 44 points. On compact widths, preserve the primary full-width action and essential call controls, moving secondary tools into a sheet before shrinking the dock. Dynamic Type may expand rows and sheets. VoiceOver order should announce call status and participant, then primary controls, with muted/camera/destructive state explicit rather than color-only. Native permission and broadcast transitions should remain system-owned. The sampled interface is dark-first; do not introduce light list screens from default UIKit or SwiftUI appearance.
 
 # Anti-generic checklist
 
-- Do not overload the room with labels.
-- Do not reuse red for non-destructive action.
-- Do not decorate empty states heavily.
-- Do not expose light native controls.
-- Do not replace the documented hierarchy with a generic stack of identical white cards or `Form` sections.
-- Do not use default blue tint, an unstyled `TabView`, arbitrary SF Symbols, or uniform corner radii when they contradict the recorded tokens and components.
-- Do not omit compositionally important imagery while final assets are pending; preserve its footprint with a faithful placeholder.
+- Do not expose white default `Form`, alert, search, or list surfaces inside the dark shell.
+- Do not make every primary action a blue-filled button; preserve the wide light action hierarchy.
+- Do not use an unstyled `TabView`; retain dark fill, muted icons, compact labels, and blue/white selection.
+- Do not reuse red for recording, reactions, or ordinary selection; keep it destructive and hang-up specific.
+- Do not replace the circular call dock with a generic toolbar or small text buttons.
+- Do not wrap every list group in an elevated card or add ornamental shadows and gradients.
+- Do not fill empty states with dense illustration, marketing copy, or unrelated actions.
+- Do not omit participant media, avatars, or onboarding product screenshots when they carry the composition.
 
 </design-context>

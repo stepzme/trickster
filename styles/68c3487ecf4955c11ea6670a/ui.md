@@ -3,180 +3,99 @@
 version: 1
 platform: iOS
 name: Tips-design-analysis
-description: "A calm Apple-style reference interface built from white and pale-gray grouped surfaces, large black system headlines, blue actions, colorful category heroes, and crisp device screenshots. The visual language is native, instructional, and content-first."
-
+description: "A calm Apple-native editorial interface with white and pale grouped-gray reading surfaces, bold black system titles, blue navigation actions, saturated gradient category bands, and centered real-device screenshots as the primary instructional imagery."
 colors:
-  primary: "#007AFF"
-  on-primary: "#FFFFFF"
-  primary-pressed: "#0062CC"
-  ink: "#111113"
-  ink-muted: "#6E6E73"
-  ink-subtle: "#A1A1A6"
-  canvas: "#FFFFFF"
-  surface-1: "#FFFFFF"
-  surface-2: "#F2F2F7"
-  hairline: "#D1D1D6"
-  accent-orange: "#FF9F0A"
-  accent-pink: "#FF375F"
-  accent-purple: "#AF52DE"
-  semantic-success: "#34C759"
-  semantic-warning: "#FF9F0A"
-  semantic-danger: "#FF3B30"
-  semantic-overlay: "#000000"
-
+  canvas: "#F2F2F7"
+  surface-primary: "#FFFFFF"
+  surface-secondary: "#E9E9EE"
+  accent-primary: "#007AFF"
+  accent-secondary: "#AF52DE"
+  text-primary: "#111113"
+  text-secondary: "#6E6E73"
+  divider: "#D1D1D6"
+  destructive: "#FF3B30"
 typography:
-  display-xl: { fontFamily: System Sans, fontSize: 34, fontWeight: 700, lineHeight: 1.12, letterSpacing: -0.4 }
-  display-lg: { fontFamily: System Sans, fontSize: 28, fontWeight: 700, lineHeight: 1.16, letterSpacing: -0.2 }
-  display-md: { fontFamily: System Sans, fontSize: 22, fontWeight: 700, lineHeight: 1.2, letterSpacing: 0 }
-  headline: { fontFamily: System Sans, fontSize: 20, fontWeight: 600, lineHeight: 1.22, letterSpacing: 0 }
-  card-title: { fontFamily: System Sans, fontSize: 17, fontWeight: 600, lineHeight: 1.24, letterSpacing: 0 }
-  subhead: { fontFamily: System Sans, fontSize: 17, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
-  body-lg: { fontFamily: System Sans, fontSize: 17, fontWeight: 400, lineHeight: 1.45, letterSpacing: 0 }
-  body: { fontFamily: System Sans, fontSize: 15, fontWeight: 400, lineHeight: 1.45, letterSpacing: 0 }
-  body-sm: { fontFamily: System Sans, fontSize: 13, fontWeight: 400, lineHeight: 1.4, letterSpacing: 0 }
-  caption: { fontFamily: System Sans, fontSize: 11, fontWeight: 400, lineHeight: 1.3, letterSpacing: 0 }
-  button: { fontFamily: System Sans, fontSize: 17, fontWeight: 600, lineHeight: 1.2, letterSpacing: 0 }
-  eyebrow: { fontFamily: System Sans, fontSize: 12, fontWeight: 600, lineHeight: 1.3, letterSpacing: 0 }
-  mono: { fontFamily: System Mono, fontSize: 12, fontWeight: 400, lineHeight: 1.4, letterSpacing: 0 }
-
-rounded: { xs: 4, sm: 8, md: 12, lg: 16, xl: 22, xxl: 28, pill: 9999, full: 9999 }
-spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
-
+  hero: {fontFamily: "SF Pro Display", fontSize: 34, fontWeight: 700, lineHeight: 41}
+  title: {fontFamily: "SF Pro Display", fontSize: 28, fontWeight: 700, lineHeight: 34}
+  section: {fontFamily: "SF Pro Text", fontSize: 20, fontWeight: 600, lineHeight: 25}
+  body: {fontFamily: "SF Pro Text", fontSize: 17, fontWeight: 400, lineHeight: 23}
+  label: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 600, lineHeight: 20}
+  caption: {fontFamily: "SF Pro Text", fontSize: 13, fontWeight: 400, lineHeight: 18}
+spacing:
+  screen-horizontal: 16
+  section-gap: 28
+  card-padding: 16
+  control-gap: 12
+rounded:
+  control: 12
+  card: 20
+  sheet: 24
+  pill: 999
 components:
-  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.md}", padding: [14, 20]}
-  collection-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.card-title}", rounded: "{rounded.lg}", padding: 16 }
-  list-row: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body-lg}", rounded: "{rounded.md}", padding: [12, 16]}
-  search-field: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: [10, 12]}
-  category-hero: { backgroundColor: "{colors.accent-purple}", textColor: "{colors.on-primary}", typography: "{typography.display-lg}", rounded: "{rounded.xl}", padding: 24 }
+  primary-action: {fill: "#007AFF", foreground: "#FFFFFF", shape: "pill"}
+  secondary-action: {fill: "transparent", foreground: "#007AFF", shape: "text-or-symbol"}
+  primary-card: {fill: "multicolor-gradient", foreground: "#FFFFFF", shape: "large-rounded-rectangle"}
+  navigation: {fill: "#FFFFFF", foreground: "#111113", actionColor: "#007AFF"}
 ---
 
 # Overview
 
-Tips uses restrained system chrome for browsing and reading, then gives each collection a bright gradient hero. Large typography, generous spacing, and exact screenshots keep instructions immediately legible.
+Tips combines restrained native iOS chrome with concentrated moments of color and evidence-led instructional imagery. Browsing surfaces are pale gray or white, with large black titles, inset lists, and blue actions. Category screens are recognizable by a broad rounded gradient band with one simple white glyph, while reading screens become almost entirely white and center a large, crisp iPhone screenshot above concise copy. The screenshots, not decorative cards or prose, carry most of the visual weight.
 
 # Non-negotiable visual invariants
 
-- The reference consistently shows preserve calm system hierarchy.
-- The reference consistently shows real screenshots as instruction evidence.
-- The reference consistently shows actions unmistakably blue.
-- The reference consistently shows make category heroes colorful but contained.
-- The reference consistently shows a calm Apple-style reference interface built from white and pale-gray grouped surfaces.
-- The reference consistently shows large black system headlines.
-- The reference consistently shows blue actions.
-- The reference consistently shows colorful category heroes.
+- Functional browsing and reading surfaces are white or very pale grouped gray, with system blue reserved for navigation, actions, and selected bookmarks.
+- Top-level titles are large, bold, black, and left aligned with generous safe-area breathing room.
+- Category identity is expressed by one saturated multicolor gradient band occupying roughly the upper third, paired with a single high-contrast white glyph.
+- Instructional pages center a real iPhone UI screenshot or device mockup as the dominant middle content; this imagery cannot be omitted.
+- List rows combine a small rounded screenshot thumbnail, semibold title, gray preview copy, and trailing disclosure mark.
+- Search retains native iOS geometry, cancel treatment, keyboard, and empty/result states rather than becoming a custom filter panel.
+- Detail navigation is compact and white, with blue back/action controls and a bookmark state that changes fill or color without moving.
+- Surfaces remain flat and quiet; depth comes from grouping, crop, and device framing rather than shadows or glass.
 
 # Color and surfaces
 
-### Brand & Accent
-
-System blue owns links, selection, search focus, and bookmark state. Orange, pink, purple, and yellow gradients are reserved for collection heroes.
-
-### Surface
-
-White is the reading canvas; pale grouped gray separates search, settings-like lists, and secondary panels.
-
-### Text
-
-Near-black carries titles and instructions. Medium gray carries summaries, labels, and supporting detail.
-
-### Semantic
-
-Green confirms completion, orange warns, and red marks destructive or failed states. Do not reuse category gradients as semantic status.
+White is the primary reading surface, while cool grouped gray separates the main collection canvas, search controls, and inset lists. System blue is the consistent interaction color. Saturated purple, mint, blue-green, orange-yellow, and pink gradients are confined to large category headers and occasional feature imagery; they do not tint the entire application. Black and near-black carry titles and instructional text, medium gray carries summaries and placeholders, and pale separators structure dense lists. Green, orange, or red may appear when the adapting product needs semantic success, warning, or destructive meaning, but the observed category gradients must not be reused as status colors. Beige dashboards, pervasive gradients, dark chrome, or elevated white cards would break the reference.
 
 # Typography
 
-### Font Family
-
-Use a neutral system sans with Apple-like proportions and clear optical sizing.
-
-### Hierarchy
-
-Use 28–34 points top-level titles, 20–22 points article headings, 17 points rows and body, and 11–13 points metadata.
-
-### Principles
-
-Keep headings compact, instructions conversational, and step labels visually stronger than explanatory text.
-
-### Note on Font Substitutes
-
-Use SF Pro where available; Inter or Arial are acceptable substitutes with native weight and spacing.
+The hierarchy follows SF Pro: large bold display titles, 20-point-class section headings, semibold 17-point row titles, regular body copy, and smaller gray summaries. Large titles align to the leading content edge; article titles and copy may center beneath a device screenshot. Row descriptions use compact multiline or truncated treatment without approaching the title weight. Blue pill labels and navigation actions remain compact and semibold. With Dynamic Type, body copy and rows should expand vertically, descriptions may wrap, and screenshots should move rather than compress the type hierarchy; the large title must remain visibly distinct from section and row text.
 
 # Screen composition
 
-### Spacing System
+Collection-style screens begin below the status area with a large title and rounded search field, followed by a wide feature or category surface and then vertically stacked grouped content. Horizontal insets are typically 16–20 points. Category archetypes use a gradient header across most of the width and approximately the upper third, followed by white rows that continue into a scroll view. Reading archetypes use a compact navigation bar, a large centered device screenshot in the upper-middle, a short title and body block below, then a blue pill action and small page indicators near the lower content edge. The art and text form one vertical reading column rather than side-by-side cards.
 
-Use a 4 points base, 16 points side gutters, 12–16 points row spacing, and 24–32 points between instructional sections.
-
-### Grid & Container
-
-Collections use a single-column grouped list. Articles use a centered reading column with full-width screenshots inside the gutter.
-
-### Whitespace Philosophy
-
-Leave clear breathing room around large titles and screenshots. Dense copy should be broken into short numbered steps.
-
-Surface hierarchy observed in the source:
-
-The interface is mostly flat. Grouping comes from background changes, hairlines, and overlapping device screenshots rather than prominent shadow.
-
-### Decorative Depth
-
-Use smooth category gradients and crisp screenshot framing. Avoid glass effects, heavy shadow, or ornamental texture.
+Search screens preserve the same pale canvas but let the native search bar and keyboard define the upper and lower bounds; results remain list rows, while no-results states leave a large empty center. Document-like modal screens use a white full-height surface with a compact toolbar and continuous text or table rows. Loading is represented by a small centered spinner rather than a skeleton card stack.
 
 # Navigation appearance
 
-Use large-title navigation for collections and compact bars for articles, with back, share, and bookmark actions. Avoid unnecessary persistent tabs.
+Browsing surfaces use a large-title treatment on pale or white backgrounds. Detail surfaces switch to a compact white bar with a blue back affordance, centered title, and a trailing bookmark or action symbol. The selected bookmark changes fill/color while retaining its size and position. List rows use restrained gray chevrons. A document-like modal may use a compact toolbar with blue text actions and native back/forward symbols. No persistent bottom tab bar is visible, and navigation should not be replaced with a custom floating pill.
 
 # Components
 
-### Buttons
-
-Use blue text actions or filled blue buttons with system typography. Native controls may be used, but their color, weight, and geometry must inherit this visual system.
-
-### Cards & Containers
-
-Collection cards use white surfaces, concise labels, and clear disclosure. Category heroes use saturated gradients with white type and simple symbolic imagery.
-
-### Inputs & Forms
-
-Search uses a pale-gray rounded field with a leading magnifier and clear action. Keep placeholder and focus states visibly distinct.
+The category hero is a large rounded rectangle with a smooth saturated gradient, generous internal clear space, and one simple white glyph; it is not a text-heavy marketing card. The characteristic list row uses a white surface, a small rounded screenshot thumbnail, a leading text stack, and a trailing disclosure mark, separated by subtle hairlines or grouped spacing. Search uses a pale-gray rounded field with magnifier, placeholder, clear control, and blue Cancel action when active. Primary actions are compact blue pills with white semibold labels. Page indicators are small neutral dots with a clearly darker selected dot. Bookmark controls use familiar line/fill states in a stable touch target. Native keyboards, spinners, and toolbar controls retain their standard geometry.
 
 # Imagery and icons
 
-Use smooth category gradients and crisp screenshot framing. Avoid glass effects, heavy shadow, or ornamental texture.
-
-Center device and UI screenshots with `contain` so controls remain visible. Use edge-to-edge feature imagery only when the crop is intentional; there is no separate illustration language to imitate.
-
-If final imagery is not yet available, any placeholder must preserve the documented scale, placement, crop, and visual weight rather than removing that layer.
+Real iPhone screenshots and device mockups are compositionally essential: they are large enough to inspect, centered, shown with contained crop, and paired directly with the instruction they demonstrate. Row thumbnails repeat the same screenshot language at smaller scale. Category headers use simple white system-like glyphs over gradients, not complex scenes. Device frames remain crisp and proportional; important UI must not be cropped away or obscured by overlays. The reference does not establish a reusable authored illustration system across states, so do not invent characters, editorial drawings, or stock imagery as a substitute for the observed screenshots.
 
 # States
 
-Bookmark, download, completion, and availability states appear beside the relevant article or action, never on a separate dashboard.
+Observed states include an unscrolled and scrolled collection surface, focused search with keyboard, populated results, empty search, category headers, paged instructional content, saved and unsaved bookmark controls, centered loading, and document-like modal content. White/pale canvases, SF typography, blue actions, and native spacing remain stable. Search and bookmark state changes are localized to the relevant control. Empty results use quiet space and restrained text rather than a large illustration or promotional action.
 
 # iOS adaptation
 
-### Touch Targets
-
-Rows, navigation actions, bookmarks, search controls, and related-tip links require at least 44 points targets.
-
-### Collapsing Strategy
-
-Keep article steps linear. Collapse secondary collection controls into menus while preserving the title and search entry point.
-
-### Image Behavior
-
-Use `contain` for device screenshots and instructional UI; use `cover` only for decorative feature imagery and category backgrounds.
-
-Apply these rules within current iPhone safe areas and scrolling containers. Keep interactive targets at least 44 points, preserve a logical VoiceOver order, and let Dynamic Type wrap supporting text without flattening the documented hierarchy. Preserve the documented appearance.
+Respect safe areas for large titles and compact navigation bars, and place long collections, articles, and document content in vertical scroll containers. Use native search and keyboard transitions where they reproduce the observed geometry. Scale device screenshots with `aspectFit`, preserving the full relevant UI and leaving enough width for recognition; never crop them merely to keep text above the fold. At compact widths, retain the single-column sequence of image, title, body, action, and page indicator. Keep rows and icon controls at least 44 points, order VoiceOver from title through primary image description to instruction and action, and provide meaningful accessibility labels for screenshots and bookmark state. Dynamic Type may extend the page vertically. The sampled screens show light appearance only; do not infer a dark palette.
 
 # Anti-generic checklist
 
-- Do not expose unstyled default controls.
-- Do not crop away important screenshot UI.
-- Do not turn every panel into a gradient.
-- Do not add an unrelated illustration style.
-- Do not replace the documented hierarchy with a generic stack of identical white cards or `Form` sections.
-- Do not use default blue tint, an unstyled `TabView`, arbitrary SF Symbols, or uniform corner radii when they contradict the recorded tokens and components.
-- Do not omit compositionally important imagery while final assets are pending; preserve its footprint with a faithful placeholder.
+- Do not replace the large gradient category band with a small icon tile or generic white card.
+- Do not omit, blur, or aggressively crop the instructional device screenshots.
+- Do not apply gradients to every panel, action, or list row.
+- Do not turn the reading experience into a dashboard of equal cards.
+- Do not replace the observed compact navigation with an unstyled `TabView` or floating custom bar.
+- Do not scatter arbitrary SF Symbols where screenshot thumbnails or the single category glyph carry the hierarchy.
+- Do not fill empty search states with decorative illustration, mood copy, or secondary calls to action.
+- Do not add glass materials, heavy shadows, or uniform oversized radii to native rows and controls.
 
 </design-context>

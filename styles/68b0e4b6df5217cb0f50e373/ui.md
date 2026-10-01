@@ -3,319 +3,127 @@
 version: 1
 platform: iOS
 name: RZD-Passengers-design-analysis
-description: "A utilitarian rail-booking interface dominated by a vivid red application bar, white transaction surfaces, cool gray work areas, and compact timetable data. Hierarchy comes from strong red actions, uppercase route labels, thin dividers, and persistent booking controls rather than decorative cards."
-
+description: "A dense rail-booking interface organized by a solid RZD-red application bar, white transactional rows on pale gray, compact timetable typography, modest radii, fixed red actions, and precise seat, route, and ticket diagrams."
 colors:
-  primary: "#E33A2D"
-  on-primary: "#FFFFFF"
-  primary-dark: "#B72C25"
-  ink: "#2F363C"
-  ink-muted: "#70777D"
-  ink-subtle: "#A4A9AD"
   canvas: "#F1F2F3"
-  surface-1: "#FFFFFF"
-  surface-2: "#D7DADD"
-  surface-dark: "#56606A"
-  hairline: "#D9DDE0"
-  semantic-success: "#78BF84"
-  semantic-warning: "#D9B54A"
-  semantic-danger: "#D83B32"
-  semantic-overlay: "#000000"
-
+  surface-primary: "#FFFFFF"
+  surface-secondary: "#D7DADD"
+  accent-primary: "#E33A2D"
+  accent-secondary: "#56606A"
+  text-primary: "#2F363C"
+  text-secondary: "#70777D"
+  divider: "#D9DDE0"
+  destructive: "#D83B32"
 typography:
-  display-xl:
-    fontFamily: System Sans
-    fontSize: 32
-    fontWeight: 700
-    lineHeight: 1.05
-    letterSpacing: -0.4
-  display-lg:
-    fontFamily: System Sans
-    fontSize: 27
-    fontWeight: 700
-    lineHeight: 1.10
-    letterSpacing: -0.2
-  display-md:
-    fontFamily: System Sans
-    fontSize: 23
-    fontWeight: 700
-    lineHeight: 1.15
-    letterSpacing: 0
-  headline:
-    fontFamily: System Sans
-    fontSize: 20
-    fontWeight: 700
-    lineHeight: 1.20
-    letterSpacing: 0
-  card-title:
-    fontFamily: System Sans
-    fontSize: 16
-    fontWeight: 600
-    lineHeight: 1.25
-    letterSpacing: 0
-  subhead:
-    fontFamily: System Sans
-    fontSize: 16
-    fontWeight: 500
-    lineHeight: 1.30
-    letterSpacing: 0
-  body-lg:
-    fontFamily: System Sans
-    fontSize: 16
-    fontWeight: 400
-    lineHeight: 1.40
-    letterSpacing: 0
-  body:
-    fontFamily: System Sans
-    fontSize: 14
-    fontWeight: 400
-    lineHeight: 1.40
-    letterSpacing: 0
-  body-sm:
-    fontFamily: System Sans
-    fontSize: 12
-    fontWeight: 400
-    lineHeight: 1.30
-    letterSpacing: 0
-  caption:
-    fontFamily: System Sans
-    fontSize: 10
-    fontWeight: 400
-    lineHeight: 1.25
-    letterSpacing: 0.2
-  button:
-    fontFamily: System Sans
-    fontSize: 14
-    fontWeight: 700
-    lineHeight: 1.20
-    letterSpacing: 0
-  eyebrow:
-    fontFamily: System Sans
-    fontSize: 11
-    fontWeight: 600
-    lineHeight: 1.20
-    letterSpacing: 0.3
-  mono:
-    fontFamily: System Mono
-    fontSize: 12
-    fontWeight: 400
-    lineHeight: 1.30
-    letterSpacing: 0
-
-rounded:
-  xs: 2
-  sm: 4
-  md: 8
-  lg: 12
-  xl: 18
-  xxl: 24
-  pill: 9999
-  full: 9999
-
+  hero: {fontFamily: "SF Pro Display", fontSize: 30, fontWeight: 700, lineHeight: 34}
+  title: {fontFamily: "SF Pro Display", fontSize: 24, fontWeight: 700, lineHeight: 29}
+  section: {fontFamily: "SF Pro Text", fontSize: 19, fontWeight: 700, lineHeight: 24}
+  body: {fontFamily: "SF Pro Text", fontSize: 14, fontWeight: 400, lineHeight: 19}
+  label: {fontFamily: "SF Pro Text", fontSize: 14, fontWeight: 600, lineHeight: 18}
+  caption: {fontFamily: "SF Pro Text", fontSize: 11, fontWeight: 400, lineHeight: 15}
 spacing:
-  xxs: 4
-  xs: 8
-  sm: 12
-  md: 16
-  lg: 24
-  xl: 32
-  xxl: 48
-  section: 64
-
+  screen-horizontal: 12
+  section-gap: 20
+  card-padding: 12
+  control-gap: 8
+rounded:
+  control: 8
+  card: 6
+  sheet: 18
+  pill: 999
 components:
-  button-primary:
-    backgroundColor: "{colors.primary}"
-    textColor: "{colors.on-primary}"
-    typography: "{typography.button}"
-    rounded: "{rounded.pill}"
-    padding: [14, 20]
-  button-secondary:
-    backgroundColor: "{colors.surface-dark}"
-    textColor: "{colors.on-primary}"
-    typography: "{typography.button}"
-    rounded: "{rounded.xs}"
-    padding: [14, 16]
-  route-field:
-    backgroundColor: "{colors.surface-1}"
-    textColor: "{colors.ink}"
-    typography: "{typography.body-lg}"
-    rounded: "{rounded.xs}"
-    padding: [10, 12]
-  train-row:
-    backgroundColor: "{colors.surface-1}"
-    textColor: "{colors.ink}"
-    typography: "{typography.body}"
-    rounded: "{rounded.xs}"
-    padding: 12
-  passenger-card:
-    backgroundColor: "{colors.surface-1}"
-    textColor: "{colors.ink}"
-    typography: "{typography.body}"
-    rounded: "{rounded.md}"
-    padding: 12
-  top-bar:
-    backgroundColor: "{colors.primary}"
-    textColor: "{colors.on-primary}"
-    typography: "{typography.card-title}"
-    rounded: "{rounded.xs}"
-    height: 70
-  side-menu:
-    backgroundColor: "{colors.surface-dark}"
-    textColor: "{colors.on-primary}"
-    typography: "{typography.body-lg}"
-    rounded: "{rounded.xs}"
-    padding: 20
+  primary-action: {fill: "RZD red", text: "white bold", height: 50, shape: "full-width pill"}
+  secondary-action: {fill: "blue-gray or white", text: "white or dark blue-gray", radius: 4, border: "none"}
+  primary-card: {fill: "white", radius: 6, padding: 12, border: "light divider", density: "compact"}
+  navigation: {fill: "solid RZD red", icons: "white", title: "centered white", side-panel: "dark blue-gray"}
 ---
 
 # Overview
 
-RZD Passengers is a dense rail transaction tool. A strong red application bar and CTA system frame white booking surfaces, cool gray work areas, compact train data, and route-oriented forms. The design prioritizes timetable comparison and completion over visual novelty.
+RZD Passengers is a utilitarian transaction interface rather than a lifestyle travel product. A solid red top bar repeatedly frames dense white forms, route results, ticket rows, passenger data, seat diagrams, settings, and service screens on a cool pale-gray work surface. The strongest hierarchy comes from red bands and actions, compact timetable values, clear dividers, and fixed commitment controls.
 
-**Key Characteristics:**
-- Persistent red top bar and red booking actions.
-- White rows and forms on cool gray backgrounds.
-- Compact route, date, carriage, and price information.
-- Minimal rounding except for primary CTAs and contained passenger data.
-- Dark gray side menu for broad product navigation.
+The layout is predominantly rectangular and information-forward. Modest radii distinguish fields and data groups without turning every element into a soft card. Empty screens may use a centered functional line icon, while the booking surfaces stay almost entirely typographic and diagrammatic.
 
 # Non-negotiable visual invariants
 
-- The reference consistently shows persistent red top bar and red booking actions.
-- The reference consistently shows white rows and forms on cool gray backgrounds.
-- The reference consistently shows compact route, date, carriage, and price information.
-- The reference consistently shows minimal rounding except for primary CTAs and contained passenger data.
-- Navigation consistently uses dark gray side menu for broad product navigation.
+- A full-width RZD-red application bar anchors the top of most operational screens, with white title and utility icons inside the same strong color band.
+- White transactional surfaces sit on pale cool gray and use thin dividers, compact spacing, and modest 4–8-point radii rather than oversized cards.
+- Departure, arrival, duration, route, class, seat, and price values remain dense, aligned, and more prominent than explanatory copy.
+- Primary continuation or booking actions are full-width red pills or anchored red controls; default blue is absent from the app-owned action hierarchy.
+- Seat selection is shown as a precise carriage grid with small stateful cells, not as a generic list of seat names.
+- Drawer and secondary navigation surfaces use dark blue-gray with white content, contrasting the red toolbar and light work area.
+- Empty states use restrained dark line icons and generous blank space; they do not introduce decorative illustration or promotional card stacks.
+- System dialogs and action sheets may retain iOS geometry, but the underlying screen remains visibly red, white, gray, and compact.
 
 # Color and surfaces
 
-### Brand & Accent
+The default canvas is cool light gray `#F1F2F3`. White primary surfaces hold route fields, train rows, passenger data, settings, support messages, ticket lists, and dialogs. Slightly darker gray `#D7DADD` marks inactive areas, separators, and disabled fields. Hairlines are pale but visible enough to structure dense schedules.
 
-- **Rail Red** ({colors.primary}) carries the application bar, primary action, selection, and urgent emphasis.
-- **Dark Red** ({colors.primary-dark}) is reserved for pressed or stronger action states.
+RZD red around `#E33A2D` fills the main application bar, primary actions, floating add controls, and selected high-priority affordances. Dark blue-gray around `#56606A` appears in the side panel, secondary anchored controls, text, and icons. Primary content uses `#2F363C`; supporting station, timing, policy, and helper text uses `#70777D`. Green is a bounded selection or route marker, not a general brand accent. Because red performs both identity and action roles, generic iOS blue would visibly break the reference.
 
-### Surface
-
-- **Canvas** ({colors.canvas}) is the default work background.
-- **Surface 1** ({colors.surface-1}) holds fields, rows, cards, and dialogs.
-- **Surface 2** ({colors.surface-2}) is used for inactive route areas and separators.
-- **Dark Surface** ({colors.surface-dark}) carries the side navigation and secondary anchored actions.
-
-### Text
-
-- **Ink** ({colors.ink}) carries routes, dates, prices, and body content.
-- **Muted** ({colors.ink-muted}) is for explanations and secondary timing.
-- **Subtle** ({colors.ink-subtle}) is limited to placeholders and disabled values.
-
-### Semantic
-
-Muted green indicates availability or confirmation, yellow calls attention to fare or bonus information, and red handles validation and destructive states as well as the brand action system.
+Shadows are quiet. Layering is achieved with red and dark bands, white groups, pale-gray gaps, and translucent modal overlays rather than elevated card stacks.
 
 # Typography
 
-### Font Family
+Use SF Pro as the iOS-safe compact sans. Screen titles inside the red bar are typically 16–18 points semibold; major content or empty-state titles can reach 23–30 points. Route, date, carriage, passenger, and price labels live mainly between 13 and 16 points, with bold or semibold weight reserved for decision-critical values. Metadata can fall to 10–12 points but must maintain sufficient contrast.
 
-Use a compact neutral system sans. Keep timetable data and form content straightforward; do not add a decorative display family.
+Timetable and monetary numerals require clear, stable alignment. Use tabular numbers where it materially improves departure, arrival, duration, date, seat, and price comparison. Uppercase is appropriate only for short transport or category labels. Long legal, help, and accessibility copy stays regular weight and left aligned.
 
-### Hierarchy
-
-| Token | Size | Weight | Use |
-|---|---:|---:|---|
-| `{typography.display-xl}` | 32 points | 700 | Empty-state or onboarding heading |
-| `{typography.display-lg}` | 27 points | 700 | Major route result |
-| `{typography.display-md}` | 23 points | 700 | Screen or modal title |
-| `{typography.headline}` | 20 points | 700 | Section heading |
-| `{typography.card-title}` | 16 points | 600 | Train, card, or passenger title |
-| `{typography.body}` | 14 points | 400 | Default route and form content |
-| `{typography.caption}` | 10 points | 400 | Station, fare, and timing metadata |
-
-### Principles
-
-- Keep city and station labels compact and scannable.
-- Use weight for price, departure, arrival, and totals.
-- Reserve uppercase for short route or navigation labels.
-- Keep explanatory text quieter than transaction data.
-
-### Note on Font Substitutes
-
-Use SF Pro or Inter. Preserve compact widths and clear numerals; avoid rounded fonts that weaken the utilitarian tone.
+Dynamic Type should increase row height and let station or policy text wrap; it must not erase the distinction between primary times/prices and secondary detail. Avoid adding a decorative display family—the compact administrative character is part of the reference.
 
 # Screen composition
 
-### Spacing System
+The typical screen begins with the iOS status area and a solid red app bar containing a centered white title plus leading hamburger or back control and occasional trailing cart, filter, account, or utility icon. The middle is a single vertical work column of fields, train rows, passenger groups, route data, settings, messages, or a seat map. The bottom may contain a fixed red CTA, a floating red add button, a compact chat composer, or simply the home-indicator safe region.
 
-Use a 4 points base with 12 points screen gutters, 8 points row gaps, and 16–24 points between major booking groups. Dense schedules may use tighter vertical rhythm than profile screens.
+Search-entry screens stack white origin/destination rows, compact date tiles, passenger options, and one obvious red action. Result screens use full-width white train rows separated by hairlines: route times and cities lead, while duration, train/class, availability, and price follow in aligned blocks. Booking detail continues with carriage choices, a precise seat diagram, passenger forms, and fixed continuation controls. Seat grids may occupy most of the middle viewport while a small route or carriage summary remains above.
 
-### Grid & Container
+Profile, cards, tickets, notifications, settings, support, timetable, and assistance screens retain the same single-column density. Empty variants leave a large pale or white middle region with one centered line icon and concise message. The dark side panel overlays or replaces part of the light work area without adopting card styling. iOS alerts and action sheets appear over a dimmed context.
 
-The product is a single-column mobile stack. Search results, carriage details, passenger forms, and settings use full-width rows. Seat maps may split details and the carriage diagram within the same viewport.
-
-### Whitespace Philosophy
-
-Whitespace is functional and compact. Preserve enough separation to scan routes and prices, but do not create large decorative gaps inside booking tasks.
-
-Surface hierarchy observed in the source:
-
-Hierarchy comes from strong color bands, white panels, dividers, and overlays. Shadows are minimal; dialogs and the side menu use clear overlay separation.
-
-### Decorative Depth
-
-Use full-screen seasonal photography only for onboarding. Inside the product, rely on panel overlap, tonal grouping, and the carriage diagram rather than decoration.
+Outer gutters are commonly about 12 points, row gaps about 8 points, and major group separation 16–24 points. Scroll content must clear anchored actions and the home indicator. Large decorative whitespace is reserved for empty states, not inserted between transaction rows.
 
 # Navigation appearance
 
-The red top bar contains menu, title or account state, cart, and filter access. A dark gray side menu exposes tickets, passengers, cards, timetable, support, settings, and other rail services.
+The primary navigation treatment is the solid red toolbar with white icons and a centered white title. Leading controls are compact hamburger or back icons; trailing controls may include cart, filter, account, or search-related symbols. Selected utility actions remain red or white within this bar rather than introducing a new accent.
+
+A dark blue-gray side panel uses white text and simple leading icons in vertically separated rows. Some content surfaces use compact segmented tabs with a red selected indicator or label. Modal choices use rounded white iOS-style action sheets. Product behavior and information architecture come from the approved Research and Planning artifacts.
 
 # Components
 
-### Buttons
+The primary action is a full-width red pill approximately 50 points high with white bold text. A fixed version may anchor the lower edge of a long booking screen. Secondary actions are compact white or dark blue-gray rectangles with small radii and strong labels. Disabled actions retain their placement but reduce contrast.
 
-Use a red full-width pill for the next booking step. Dark gray rectangular controls can support cancel or secondary paths. Native controls may be used internally, but they must inherit this red, gray, compact-radius, and typography system.
+Route fields are broad white rows with aligned label/value pairs and compact icons. Date choices are small adjacent tiles. Train and ticket rows are flat white groups with thin dividers and almost square corners. Passenger cards add only a little more radius and padding. Checkboxes use clear red or green selected states and an explicit label.
 
-### Cards & Containers
-
-Train rows expose route, departure, arrival, duration, class, and price with thin dividers. Passenger data uses small white rounded cards. Empty ticket and card states pair a centered line icon with one red CTA.
-
-### Inputs & Forms
-
-Route, passenger, and profile forms use full-width rows with labels above values or aligned inline. Validation stays near the affected row, and long legal confirmations remain grouped immediately before booking.
+Seat maps use repeated small rectangular cells with color or fill changes for available and selected states; carriage outline and aisle structure remain visible. Floating add actions are red circles. Support chat uses simple message bubbles plus an attachment/send composer. Settings and disclosure rows are compact and minimally styled. Native alert panels and action sheets may be used, but app-owned inputs must not fall back to blue tint.
 
 # Imagery and icons
 
-Use full-screen seasonal photography only for onboarding. Inside the product, rely on panel overlap, tonal grouping, and the carriage diagram rather than decoration.
+Operational screens rely on line icons, route markers, the carriage grid, and ticket data rather than photography. Empty cart, favorite, card, timetable, or service states use a single centered functional icon with thin dark strokes. These are supporting symbols, not a broad authored illustration system.
 
-Photography may fill an onboarding screen with white overlaid copy. Operational illustrations should remain simple dark line symbols centered in empty states; diagrams remain precise and rectangular.
-
-If final imagery is not yet available, any placeholder must preserve the documented scale, placement, crop, and visual weight rather than removing that layer.
+One onboarding state uses a full-screen seasonal train scene as a large background image with protected space for overlaid content. Treat this as a bounded campaign image, not a reusable visual language. Within booking and account screens, do not introduce lifestyle photography. If onboarding imagery is temporarily unavailable, retain the full-viewport image footprint and train focal area with a faithful placeholder.
 
 # States
 
-Ticket and booking status should precede supporting detail. Cart, ticket history, and support use restrained empty or conversation states; avoid promotional content inside unresolved transactions.
+Observed states include splash and onboarding, logged-out and identified home headers, login and recovery forms, keyboard and captcha/audio assistance, advanced search, validation alert, empty cart, train/carriage results, and seat maps with one or multiple selected seats. Selection retains the same compact geometry and changes fill, border, or marker color.
+
+Profile appears in view, edit, and logout-confirmation states. Cards/subscriptions, archived tickets, search history, support, favorites, timetable, and notifications include both sparse/empty and populated variants. Settings show enabled and disabled permission states with a system alert. Support chat can be empty or contain assistant messages while retaining the white/gray/red shell.
 
 # iOS adaptation
 
-### Touch Targets
+Use safe-area-aware containers so the red application bar extends cleanly beneath or directly below the status area while toolbar content remains readable. Dense route, result, ticket, passenger, settings, and support screens should scroll vertically. Anchored booking actions use bottom safe-area insets and must not cover the final form group. The side panel and modal overlays should preserve standard dismissal and focus behavior.
 
-Navigation, checkboxes, date choices, seat cells, and anchored actions require at least 44 points targets even when the visual information is dense.
+Every toolbar icon, checkbox, date tile, segmented item, seat cell, disclosure row, floating add button, and chat action needs at least a 44-point effective target even if the visible cell is smaller. VoiceOver should announce route direction, departure and arrival, duration, train/class, price, then available action. Seat cells require explicit carriage/seat/state labels independent of color.
 
-### Collapsing Strategy
-
-Permit horizontal scrolling for nearby dates or carriage tabs. Keep the main route summary and booking action visible while deeper fare or passenger content scrolls.
-
-### Image Behavior
-
-Crop onboarding photography to fill the viewport while keeping the train and headline visible. Do not use photography within schedule or form rows.
-
-Apply these rules within current iPhone safe areas and scrolling containers. Keep interactive targets at least 44 points, preserve a logical VoiceOver order, and let Dynamic Type wrap supporting text without flattening the documented hierarchy. Preserve the documented appearance.
+Dynamic Type may expand rows and move metadata below primary values; on compact widths, stack route facts before truncating city, time, seat, or price. Keyboard-visible login, recovery, passenger, and support forms must scroll focused fields above the keyboard. The observed product is light with red/dark navigation; do not apply automatic dark inversion without preserving this hierarchy.
 
 # Anti-generic checklist
 
-- Do not turn timetable rows into oversized lifestyle cards.
-- Do not add decorative colors to fare comparison.
-- Do not round every field and row.
-- Do not hide the next action after a long form.
-- Do not expose default blue iOS controls.
-- Do not replace the documented hierarchy with a generic stack of identical white cards or `Form` sections.
-- Do not use default blue tint, an unstyled `TabView`, arbitrary SF Symbols, or uniform corner radii when they contradict the recorded tokens and components.
-- Do not omit compositionally important imagery while final assets are pending; preserve its footprint with a faithful placeholder.
+- Do not replace the full-width red application bar with a translucent or white navigation bar.
+- Do not expose default blue tint in app-owned fields, checkboxes, links, and primary actions.
+- Do not turn compact train, ticket, passenger, or settings rows into oversized lifestyle cards.
+- Do not round every field, row, seat cell, and navigation surface into identical capsules.
+- Do not replace the carriage seat grid with a generic menu of seat buttons.
+- Do not use arbitrary decorative illustration or hotel-style travel photography inside transaction screens.
+- Do not hide the anchored next action beneath long forms or the home-indicator region.
+- Do not flatten times, routes, prices, state, and supporting copy into one uniform text hierarchy.
 
 </design-context>

@@ -3,182 +3,109 @@
 version: 1
 platform: iOS
 name: Detsky-Mir-design-analysis
-description: "A playful family marketplace on a pale icy-blue canvas with bright blue commerce actions, bold black headings, white rounded product cards, red discount signals, colorful category tiles, dense catalog grids, and a friendly blue bear mascot used across loyalty and promotional guidance."
+description: "A dense family-commerce interface built on a pale blue canvas with white rounded modules, bright blue navigation and actions, loud red sale pricing, product-led photography, a persistent four-item tab bar, and recurring blue-bear state illustrations."
 colors:
-  primary: "#078CE5"
-  on-primary: "#FFFFFF"
-  primary-soft: "#E5F4FF"
-  accent: "#6C35DB"
-  ink: "#111318"
-  ink-muted: "#737984"
-  ink-subtle: "#AEB4BE"
-  canvas: "#EFF6FF"
-  surface-1: "#FFFFFF"
-  surface-2: "#E4F0FA"
-  hairline: "#DCE5EE"
-  semantic-success: "#22A866"
-  semantic-warning: "#FFB21A"
-  semantic-danger: "#F04438"
-  semantic-overlay: "#000000"
+  canvas: "#EEF6FF"
+  surface-primary: "#FFFFFF"
+  surface-secondary: "#E4F0FA"
+  accent-primary: "#078DF2"
+  accent-secondary: "#FF3530"
+  text-primary: "#111318"
+  text-secondary: "#737984"
+  divider: "#DCE5EE"
+  destructive: "#F04438"
 typography:
-  display-xl: { fontFamily: SF Pro Display, fontSize: 38, fontWeight: 800, lineHeight: 1.05, letterSpacing: -0.8 }
-  display-lg: { fontFamily: SF Pro Display, fontSize: 32, fontWeight: 800, lineHeight: 1.10, letterSpacing: -0.5 }
-  display-md: { fontFamily: SF Pro Display, fontSize: 27, fontWeight: 750, lineHeight: 1.15, letterSpacing: -0.3 }
-  headline: { fontFamily: SF Pro Display, fontSize: 22, fontWeight: 750, lineHeight: 1.20, letterSpacing: -0.1 }
-  card-title: { fontFamily: SF Pro Text, fontSize: 16, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: SF Pro Text, fontSize: 16, fontWeight: 600, lineHeight: 1.30, letterSpacing: 0 }
-  body-lg: { fontFamily: SF Pro Text, fontSize: 16, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
-  body: { fontFamily: SF Pro Text, fontSize: 14, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
-  body-sm: { fontFamily: SF Pro Text, fontSize: 12, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
-  caption: { fontFamily: SF Pro Text, fontSize: 10, fontWeight: 500, lineHeight: 1.20, letterSpacing: 0 }
-  button: { fontFamily: SF Pro Text, fontSize: 15, fontWeight: 650, lineHeight: 1.20, letterSpacing: 0 }
-  eyebrow: { fontFamily: SF Pro Text, fontSize: 11, fontWeight: 650, lineHeight: 1.20, letterSpacing: 0.2 }
-  mono: { fontFamily: SF Mono, fontSize: 12, fontWeight: 500, lineHeight: 1.30, letterSpacing: 0 }
-rounded: { xs: 6, sm: 10, md: 14, lg: 18, xl: 24, xxl: 30, pill: 9999, full: 9999 }
-spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
+  hero: {fontFamily: "SF Pro Display", fontSize: 36, fontWeight: 800, lineHeight: 40}
+  title: {fontFamily: "SF Pro Display", fontSize: 28, fontWeight: 750, lineHeight: 34}
+  section: {fontFamily: "SF Pro Text", fontSize: 21, fontWeight: 700, lineHeight: 26}
+  body: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 400, lineHeight: 21}
+  label: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 600, lineHeight: 20}
+  caption: {fontFamily: "SF Pro Text", fontSize: 12, fontWeight: 500, lineHeight: 16}
+spacing:
+  screen-horizontal: 16
+  section-gap: 24
+  card-padding: 12
+  control-gap: 10
+rounded:
+  control: 14
+  card: 16
+  sheet: 28
+  pill: 999
 components:
-  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.md}", padding: [13, 18]}
-  product-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.md}", padding: 10 }
-  category-tile: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.caption}", rounded: "{rounded.sm}", padding: [10, 8]}
-  promo-banner: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.card-title}", rounded: "{rounded.md}", padding: 14 }
-  input: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: [11, 13]}
-  bottom navigation: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: [8, 10]}
+  primary-action: {fill: "#078DF2", text: "#FFFFFF", radius: 14, height: 50}
+  product-card: {fill: "#FFFFFF", radius: 16, media: "contained product photo", price: "bold red when discounted"}
+  search-field: {fill: "#FFFFFF", radius: 14, icon: "blue or dark utility symbol"}
+  navigation: {fill: "#FFFFFF", selected: "#078DF2", unselected: "#737984"}
 ---
 
 # Overview
 
-Detsky Mir combines a dense family catalog with cheerful loyalty and promotion. Blue anchors navigation and purchase, while a friendly bear and toy-like graphics make benefits approachable.
-
-**Key Characteristics:**
-- Pale blue retail canvas and white rounded modules.
-- Bright blue purchase actions and selected navigation.
-- Red discount prices with crossed-out history.
-- Dense two-column product cards and horizontal offers.
-- Blue bear mascot across loyalty and guidance.
+Detsky Mir combines high retail density with a light, family-oriented shell. Pale icy blue fills the page behind white rounded modules; bright blue anchors navigation, search, and purchase actions; red creates deliberate pressure around discounts and current prices. Product photography is the dominant content imagery across grids and rails. A recurring blue bear and related spot art appear on onboarding, authentication, notification, and empty-state surfaces without replacing the commerce-first structure.
 
 # Non-negotiable visual invariants
 
-- Sampled screens consistently use pale blue retail canvas and white rounded modules.
-- Navigation consistently uses bright blue purchase actions and selected navigation.
-- The reference consistently shows red discount prices with crossed-out history.
-- The reference consistently shows dense two-column product cards and horizontal offers.
-- Imagery consistently uses blue bear mascot across loyalty and guidance.
+- The base shell is pale blue with white rounded cards, fields, and content sections layered above it.
+- Bright blue identifies primary navigation, purchase actions, links, and selected controls.
+- Discounted prices, sale badges, and crossed previous prices use conspicuous red emphasis.
+- Product photography remains central and generously sized inside catalog cards and product-detail surfaces.
+- Dense commerce discovery uses repeated two-column cards, horizontal rails, and compact metadata rather than oversized editorial blocks.
+- A large rounded search field remains a prominent top control on discovery surfaces.
+- The persistent bottom bar uses four evenly spaced icon-and-label items with blue selected and gray inactive states.
+- Blue-bear mascot or related authored spot art remains a substantial visual mass on the specific state and guidance surfaces where it appears.
 
 # Color and surfaces
 
-### Brand & Accent
-- **Primary** ({colors.primary}): Catalog, cart actions, active navigation, and links.
-- **Primary Soft** ({colors.primary-soft}): Selected or informational modules.
-- **Purple Accent** ({colors.accent}): Zoo and special campaign entry points.
+Pale blue is the large background field, while white carries product cards, search, profile groups, checkout sections, and modal content. A slightly stronger pale blue separates selected or informational areas. Bright blue is the structural brand color for tabs, main actions, links, and active controls. Red is intentionally loud for sale price, discount badges, old-price contrast, and destructive meaning; context must distinguish promotion from error. Green appears on selected authentication or success actions, while yellow and orange remain small supporting accents in ratings and pictograms.
 
-### Surface
-- **Canvas** ({colors.canvas}): Home and catalog background.
-- **Surface 1** ({colors.surface-1}): Cards, forms, and checkout sections.
-- **Surface 2** ({colors.surface-2}): Secondary bands and selection.
-- **Hairline** ({colors.hairline}): Product and form boundaries.
-
-### Text
-- **Ink** ({colors.ink}): Product names, headings, and current prices.
-- **Ink Muted** ({colors.ink-muted}): Specifications and fulfillment metadata.
-- **Ink Subtle** ({colors.ink-subtle}): Old price and disabled state.
-
-### Semantic
-- **Success** ({colors.semantic-success}): Availability and completed status.
-- **Warning** ({colors.semantic-warning}): Rating and limited attention.
-- **Danger** ({colors.semantic-danger}): Discounts, failures, and destructive action.
-- **Overlay** ({colors.semantic-overlay}): Modal focus.
+Primary text is almost black and supporting metadata is medium gray. Dividers are cool pale blue-gray and usually subtle. Generic system grouped gray, default purple tint, muted discount colors, or applying red to ordinary navigation would destroy the observed hierarchy.
 
 # Typography
 
-### Font Family
-- **SF Pro Display** — store headings and benefit statements.
-- **SF Pro Text** — product cards, specifications, and checkout.
-- **SF Mono** — order numbers and payment references.
+Section titles are bold and slightly rounded in character, with strong black-on-light contrast. Product cards compress hierarchy into bold current price, smaller previous price, medium product name, and tiny rating, size, or delivery metadata. Utility, profile, support, and checkout rows use readable medium-weight labels rather than display typography. Promotional statements may become heavier and larger, but transactional screens remain compact.
 
-### Hierarchy
-Use 32–38 points heavy for campaign statements, 22 points for sections, 16 points semibold for cards, 14 points body, and 10–12 points dense product metadata.
-
-### Principles
-- Keep current price strongest in product cards.
-- Limit labels to readable short lines.
-- Use bold headings for family-friendly clarity.
-- Keep checkout copy calmer than campaigns.
-
-### Note on Font Substitutes
-Use the platform system sans or **Inter** with a heavy display weight and tabular prices.
+Use SF Pro Display for heavy campaign or section headings and SF Pro Text for products, forms, and rows. Use tabular numerals for aligned prices, quantities, bonuses, and payment totals. Under Dynamic Type, let product names and row details wrap or move below the primary line; keep the current price visibly stronger than old price and metadata rather than shrinking everything to one compact size.
 
 # Screen composition
 
-### Spacing System
-Use a 4 points base, 12 points module gaps, 16 points gutters, 10 points product-card padding, and 16 points checkout section padding.
+The typical commerce screen has a utility-heavy safe-area top containing location or support detail and a large rounded search or catalog control. The middle is a vertically scrolling sequence of full-width white sections, promotional tiles, horizontal product rails, or dense two-column grids. The white bottom tab bar occupies a stable band above the home indicator. Screen gutters are around 12–16 points, card gaps about 8–12 points, and product cards devote their upper half or more to imagery.
 
-### Grid & Container
-Home stacks search, utility tiles, promotions, product rails, and the fixed four-tab bar. Catalog and recommendations use dense two-column grids.
-
-### Whitespace Philosophy
-Keep retail density high but separate discovery, product comparison, and checkout into clear white zones.
-
-Surface hierarchy observed in the source:
-
-Use white cards and pale-blue bands with light boundaries. Reserve stronger elevation for sticky cart actions and payment confirmation.
-
-### Decorative Depth
-Mascot art, toy icons, product photography, and bright campaign fields supply depth while the commerce shell stays flat.
+Observed archetypes include a discovery surface with search, banners, category tiles, and product rails; a catalog or search-results grid; a filter sheet or full-height filter form with chips and rows; a product-detail surface dominated by large product imagery followed by price and action; an empty or filled cart with sticky purchase control; checkout built from stacked white transactional sections; account and support lists; support chat with rounded message bubbles; and sparse state screens where a mascot or spot illustration sits above concise text and an action. Product photography remains dominant in shopping contexts, while illustration dominates only the relevant guidance or empty state.
 
 # Navigation appearance
 
-Home, Catalog, Profile, and Cart remain in the tab bar; search and support are surfaced near the top of Home.
+The bottom navigation is a persistent white bar with four evenly spaced compact icons and labels; the selected item is bright blue and inactive items are gray. Top controls use a modest back arrow, rounded search field, and small share, favorite, scan, or support icons. Filter and selection surfaces appear as white rounded sheets or light full-page lists with clear blue selected treatments. Native permission or Settings handoffs retain their system appearance rather than being visually imitated.
 
 # Components
 
-### Buttons
+Product cards are white rounded rectangles with a large contained product image, compact favorite control, bold price, muted old price, short product title, and small rating or availability information. Discount states add red badges and pricing without recoloring the whole card. Category and promotion tiles use brighter campaign imagery but retain rounded framing.
 
-Use blue filled purchase buttons, blue text links, and outlined filters. Keep sticky Add to cart and Pay controls full-width.
-
-### Cards & Containers
-
-Use product cards, campaign banners, utility tiles, bonus cards, recommendation rails, cart items, and checkout sections.
-
-### Inputs & Forms
-
-Search stays globally prominent with barcode scan. Checkout groups fulfillment, payment, recipient, and certificate fields.
+The search field is wide, white, and rounded, with short placeholder text and compact utility icons. Filter chips are outlined or softly filled pills; selected chips shift to blue or a clearly marked state. Primary purchase and continue actions are full-width blue controls with white semibold labels, while authentication can use the observed green affirmative treatment. Cart, checkout, payment, and profile sections use white full-width cards with 12–16-point padding, restrained dividers, trailing values, selectors, or chevrons. Chat uses compact rounded bubbles and a bottom input without importing product-card styling.
 
 # Imagery and icons
 
-Mascot art, toy icons, product photography, and bright campaign fields supply depth while the commerce shell stays flat.
+Product photography is compositionally essential: keep products large, fully inspectable, and generally contained against clean light backgrounds rather than cropping them into decorative fragments. Discovery rails and grids depend on the repetition of these images, and product-detail imagery should remain the largest mass near the top. Promotional banners are campaign graphics, not a reusable illustration specification.
 
-Use isolated product photography on white cards and rounded mascot scenes with generous light-blue negative space.
-
-If final imagery is not yet available, any placeholder must preserve the documented scale, placement, crop, and visual weight rather than removing that layer.
+The recurring blue bear and related spot scenes are authored state imagery, distinct from products and small UI pictograms. On onboarding, authentication, notifications, and empty states, preserve their generous blue or white negative space and prominent central or upper placement. Icons in the commerce shell are compact, friendly pictograms; selected navigation icons turn blue while inactive icons stay gray. Do not substitute required product or mascot imagery with arbitrary SF Symbols.
 
 # States
 
-Show discount, rating, exclusive price, availability, cart count, payment confirmation, canceled order, and bonus state explicitly.
+Observed states include unauthenticated account, authentication choices, notification permission prompt, native Settings handoff, search suggestions with keyboard, selected filter, empty cart, populated cart, selected payment method, payment-pending order card, support chat, and ordinary profile or catalog content. Empty and guidance states retain the pale blue and white shell but allocate more space to mascot art. Selection uses blue fill, outline, check, or label emphasis. Commerce states keep red price pressure and stable product imagery even as quantities, availability, or totals change.
 
 # iOS adaptation
 
-### Touch Targets
+Respect safe areas for the utility header and keep the persistent tab bar above the home indicator. Use vertical scroll containers for dense catalog, product, profile, and checkout content; maintain sticky purchase actions without covering the final rows. Native keyboard, notification prompt, Settings handoff, and modal presentation should remain platform-correct. Keep search, scan, favorite, quantity, filter, purchase, support, and tab items at least 44 points even when their visible glyphs are compact.
 
-Keep search, scan, tiles, products, favorite, quantity, fulfillment, payment, and navigation at least 44 points.
-
-### Collapsing Strategy
-
-Preserve search, catalog, cart, price, fulfillment, and pay. Move campaigns and recommendation rails below active shopping tasks.
-
-### Image Behavior
-
-Contain product photography without crop; crop mascot banners only within their designed rounded frames and preserve embedded copy.
-
-Apply these rules within current iPhone safe areas and scrolling containers. Keep interactive targets at least 44 points, preserve a logical VoiceOver order, and let Dynamic Type wrap supporting text without flattening the documented hierarchy. Preserve the documented appearance.
+VoiceOver order should follow the visible retail hierarchy: page and search controls, section heading, product image and essential product information, actions, then navigation. On compact widths, preserve two columns only while product image, price, and name remain legible; otherwise move to one column rather than reducing tap targets. Dynamic Type should expand cards and rows vertically. The sampled shell is light; if dark appearance is required without direct evidence, preserve blue selection, red price distinction, product-image clarity, and surface hierarchy instead of simply inverting campaign artwork.
 
 # Anti-generic checklist
 
-- Don't mix mascot art into dense product rows.
-- Don't hide old price or unit context.
-- Don't let campaign color overtake checkout.
-- Don't rely on icons alone for family-critical actions.
-- Do not replace the documented hierarchy with a generic stack of identical white cards or `Form` sections.
-- Do not use default blue tint, an unstyled `TabView`, arbitrary SF Symbols, or uniform corner radii when they contradict the recorded tokens and components.
-- Do not omit compositionally important imagery while final assets are pending; preserve its footprint with a faithful placeholder.
+- Do not replace the pale-blue retail shell with a plain white or system-gray `List`.
+- Do not use default blue buttons without the recorded rounded geometry and surrounding commerce hierarchy.
+- Do not reduce product photography to tiny thumbnails or crop away the product.
+- Do not flatten current price, old price, sale badge, product name, and metadata into one typographic level.
+- Do not use an unstyled `TabView`; selected blue icons and gray inactive labels are part of the visual identity.
+- Do not turn dense grids and rails into a loose stack of oversized generic cards.
+- Do not mix the bear mascot into every product row or replace it with emoji and arbitrary SF Symbols.
+- Do not omit mascot or spot imagery from observed guidance and empty-state archetypes while final assets are pending.
 
 </design-context>
