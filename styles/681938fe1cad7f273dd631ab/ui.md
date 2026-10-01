@@ -2,177 +2,133 @@
 ---
 version: 1
 platform: iOS
-name: Ozon-design-analysis
-description: "A high-density marketplace interface with Ozon blue purchase actions, hot-pink sale signals, bright promotional banners, image-first product grids, compact commerce metadata, and persistent search."
-colors: {primary: "#006DFF", on-primary: "#FFFFFF", primary-focus: "#0057CC", ink: "#16181B", ink-muted: "#686B71", ink-subtle: "#9A9DA3", ink-tertiary: "#C3C6CB", canvas: "#FFFFFF", surface-1: "#F5F7F9", surface-2: "#EAF0F5", surface-3: "#DEE5EB", surface-4: "#D1D9E0", hairline: "#E2E7EB", hairline-strong: "#CAD1D7", hairline-tertiary: "#B1BAC2", inverse-canvas: "#1A1B1F", inverse-surface-1: "#2B2C31", inverse-surface-2: "#3C3D44", inverse-ink: "#FFFFFF", brand-secure: "#F20D7A", semantic-success: "#18B766", semantic-overlay: "#17181C"}
+name: ozon-design-analysis
+description: "A dense image-first marketplace language built from an electric-blue brand frame, white commerce surfaces, compact product metadata, pink promotional signals, and persistent purchase actions."
+colors:
+  brand-blue: "#005BFF"
+  brand-blue-deep: "#2400B8"
+  brand-blue-soft: "#EAF2FF"
+  sale-pink: "#F91176"
+  value-green: "#00A94F"
+  rating-yellow: "#FFB800"
+  ink: "#111318"
+  ink-secondary: "#667085"
+  ink-tertiary: "#9AA1AA"
+  canvas: "#FFFFFF"
+  surface-subtle: "#F3F5F8"
+  surface-selected: "#E8F1FF"
+  divider: "#E8EBEF"
+  success: "#22C55E"
+  destructive: "#E63E62"
 typography:
-  display-xl: {fontFamily: SF Pro Display, fontSize: 36, fontWeight: 700, lineHeight: 1.06, letterSpacing: -0.8}
-  display-lg: {fontFamily: SF Pro Display, fontSize: 30, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.5}
-  display-md: {fontFamily: SF Pro Display, fontSize: 24, fontWeight: 700, lineHeight: 1.14, letterSpacing: -0.3}
-  headline: {fontFamily: SF Pro Display, fontSize: 21, fontWeight: 700, lineHeight: 1.20, letterSpacing: -0.2}
-  card-title: {fontFamily: SF Pro Text, fontSize: 16, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0}
-  subhead: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 600, lineHeight: 1.30, letterSpacing: 0}
-  body-lg: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0}
-  body: {fontFamily: SF Pro Text, fontSize: 13, fontWeight: 400, lineHeight: 1.36, letterSpacing: 0}
-  body-sm: {fontFamily: SF Pro Text, fontSize: 11, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0}
-  caption: {fontFamily: SF Pro Text, fontSize: 10, fontWeight: 400, lineHeight: 1.25, letterSpacing: 0}
-  button: {fontFamily: SF Pro Text, fontSize: 14, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0}
-  eyebrow: {fontFamily: SF Pro Text, fontSize: 10, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0.2}
-  mono: {fontFamily: SF Mono, fontSize: 11, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0}
-rounded: {xs: 4, sm: 8, md: 12, lg: 16, xl: 22, xxl: 28, pill: 9999, full: 9999}
-spacing: {xxs: 4, xs: 8, sm: 12, md: 16, lg: 20, xl: 24, xxl: 32, section: 40}
+  hero: {fontFamily: "SF Pro Display", fontSize: 28, fontWeight: 700, lineHeight: 32, letterSpacing: -0.4}
+  page-title: {fontFamily: "SF Pro Display", fontSize: 20, fontWeight: 700, lineHeight: 24, letterSpacing: -0.2}
+  section-title: {fontFamily: "SF Pro Text", fontSize: 18, fontWeight: 700, lineHeight: 22, letterSpacing: -0.1}
+  product-title: {fontFamily: "SF Pro Text", fontSize: 13, fontWeight: 400, lineHeight: 17, letterSpacing: 0}
+  price: {fontFamily: "SF Pro Text", fontSize: 16, fontWeight: 700, lineHeight: 20, letterSpacing: -0.1}
+  body: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 400, lineHeight: 20, letterSpacing: 0}
+  label: {fontFamily: "SF Pro Text", fontSize: 13, fontWeight: 600, lineHeight: 17, letterSpacing: 0}
+  metadata: {fontFamily: "SF Pro Text", fontSize: 11, fontWeight: 400, lineHeight: 14, letterSpacing: 0}
+  button: {fontFamily: "SF Pro Text", fontSize: 14, fontWeight: 600, lineHeight: 18, letterSpacing: 0}
+spacing:
+  unit: 4
+  screen-horizontal: 12
+  compact-gap: 6
+  control-gap: 8
+  section-gap: 20
+  card-padding: 12
+rounded:
+  small: 8
+  control: 12
+  card: 16
+  sheet: 24
+  pill: 999
 components:
-  button-primary: {backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [14, 18]}
-  button-primary-pressed: {backgroundColor: "{colors.primary-focus}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}"}
-  button-secondary: {backgroundColor: "{colors.surface-1}", textColor: "{colors.primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [12, 16]}
-  button-tertiary: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [10, 14]}
-  content-card: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 14}
-  feature-card: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 16}
-  text-input: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: [12, 14]}
-  status-badge: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.pill}", padding: [3, 7]}
-  bottom-nav: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink-subtle}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: [8, 10]}
+  search-field: {height: 44, fill: "#F3F5F8", foreground: "#667085", radius: 12}
+  primary-action: {height: 48, fill: "#005BFF", foreground: "#FFFFFF", radius: 8}
+  product-tile: {fill: "#FFFFFF", foreground: "#111318", imageTreatment: "edge-aligned", radius: 8}
+  filter-chip: {height: 34, fill: "#F3F5F8", selectedFill: "#005BFF", radius: 999}
+  information-panel: {fill: "#F3F5F8", foreground: "#111318", radius: 16, padding: 12}
+  bottom-navigation: {height: 58, fill: "#FFFFFF", selected: "#005BFF", unselected: "#9AA1AA"}
 ---
 
 # Overview
 
-Ozon is a dense image-led marketplace where blue purchase actions, pink sale metadata, constant search, and compact two-column products support fast discovery and checkout.
+Ozon's visual language is built for fast comparison under high information density. Product photography occupies most of the browsing surface; price, discount, remaining stock, merchant assurance, rating, delivery timing, and purchase action are compressed directly beneath it. Electric blue anchors the brand frame and commitment actions, hot pink marks promotions, and green distinguishes price or benefit conditions tied to Ozon financial products. Operational steps such as identity, checkout, and order details become calmer white-and-gray compositions without losing the same compact hierarchy.
 
-**Key Characteristics:** Ozon blue, sale pink, white canvas, promotional banners, two-column product grids, sticky blue purchase actions, and dense rating and delivery metadata.
+The transferable system is the relationship between image dominance, dense comparison metadata, restrained neutral surfaces, and highly legible actions. The literal marketplace departments, Ozon financial products, delivery network, promotions, destination count, and recommendation content belong to the source product and must not be copied into an unrelated application.
 
 # Non-negotiable visual invariants
 
-- The reference consistently shows ozon blue.
-- The reference consistently shows sale pink.
-- Sampled screens consistently use white canvas.
-- The reference consistently shows promotional banners.
-- The reference consistently shows two-column product grids.
-- The reference consistently shows sticky blue purchase actions.
-- The reference consistently shows dense rating and delivery metadata.
+- Browsing surfaces give product or campaign imagery substantially more area than descriptive copy.
+- Electric blue owns the brand frame, selected navigation, and primary purchase actions.
+- Hot pink is reserved for promotion, discount, urgency, and favorite signals rather than ordinary navigation.
+- Product lists expose price, condition, rating, and fulfillment metadata without enclosing every item in a raised card.
+- White is the dominant reading surface; pale cool gray groups checkout, account, and order information.
+- Search remains a visually persistent entry point across discovery and product evaluation.
+- Commitment controls remain available at the active decision point while surrounding content can scroll.
 
 # Color and surfaces
 
-### Brand & Accent
+The home entry uses a saturated blue-to-violet brand field behind identity, location, search, and the first promotion. Once the user enters search, product detail, cart, checkout, orders, or profile, the canvas becomes white. This change separates discovery branding from operational reading rather than tinting the whole product blue.
 
-Blue owns cart, checkout, active navigation, fulfillment, and trust. Pink marks sale, urgency, and favorites; it is not the default action color.
+Blue is the stable action color. Pink labels carry sale names, discount percentages, low-stock urgency, and favorites. Green is narrower: it identifies Ozon Card pricing, free delivery, positive value, or fulfilled states. Yellow appears in ratings and small reward accents. Black and near-black carry names, amounts, and totals; cool grays carry merchant, date, delivery, and review details.
 
-### Surface
-
-White carries browsing and checkout; pale blue-gray separates sticky bars, seller groups, and recommendation modules.
-
-### Text
-
-Near-black leads product and total; gray supports seller, delivery, review count, and crossed-out price.
-
-### Semantic
-
-Green confirms delivery and order success; yellow marks rating or reward; pink remains sale-specific.
+Pale gray panels group related controls without visible elevation. Section boundaries rely on fill changes and whitespace; shadows are faint and uncommon. An adapted product should preserve these color roles, but it should map them to its own actions and states instead of reproducing Ozon-specific payment or sale programs.
 
 # Typography
 
-### Font Family
+The hierarchy is compact and numeric. Page and section titles use bold display text, while product names remain regular and smaller so images and prices lead. Current prices are bold; previous prices and discount percentages are smaller and quieter. Delivery promises, seller assurance, stock, review counts, and legal conditions use short metadata lines.
 
-Use SF Pro Display for commerce and checkout headings and SF Pro Text for controls, content, and metadata.
-
-### Hierarchy
-
-| Token | Size | Weight | Use |
-|---|---:|---:|---|
-| display-lg | 30 points | 700 | Hero or state |
-| headline | 21 points | 700 | Section title |
-| card-title | 16 points | 600 | Primary item |
-| body | 13 points | 400 | Detail |
-| caption | 10 points | 400 | Metadata |
-
-### Principles
-
-- Lead with product, current price, delivery promise, or order total.
-- Keep repeated metadata aligned and visually quieter.
-- Reserve high contrast and weight for real decisions.
-
-### Note on Font Substitutes
-
-Use the platform sans with compact price metrics and clear small Cyrillic.
+Use the platform sans as a practical substitute. Keep Cyrillic and numerals clear at small sizes, use tabular figures where amounts update in place, and avoid oversized editorial headlines inside operational screens. Dynamic Type may increase vertical space, but price, product identity, and the associated action must remain grouped.
 
 # Screen composition
 
-### Spacing System
+Discovery begins with a branded top region, a wide search entry, horizontally scrolling campaign or service modules, and a dense two-column product feed. Search results preserve two columns and place filter and sort actions before the feed. Product detail changes to a single column: large media first, commercial terms next, then description, verification, seller information, and related content. A persistent action stays attached to the current product decision.
 
-Use a 4 points base, 8–12 points internal gaps, and 16 points horizontal screen gutters.
+Cart, checkout, orders, and profile use full-width sections on white or pale-gray fields. These screens alternate compact rows with larger summary panels. Totals and the next commitment action are separated from editable choices. Success may introduce a large status mark, then resume the product grid with recommendations; this is a commerce-specific continuation pattern, not a requirement for every adapted completion state.
 
-### Grid & Container
-
-Home and results use two product columns and wide campaign rails; detail and checkout use one structured column.
-
-### Whitespace Philosophy
-
-Catalog density is intentional; checkout and success states must simplify and separate commitments.
-
-Surface hierarchy observed in the source:
-
-| Level | Treatment | Use |
-|---|---|---|
-| 0 | Base canvas | Primary context |
-| 1 | Grouped surface | Cards and sections |
-| 2 | Sticky or floating action | Commitment |
-| 3 | Sheet over scrim | Focused choice |
-
-### Decorative Depth
-
-Use product photography, banner art, and sticky action bars; product cards themselves stay nearly flat.
+Use a 4-point base, approximately 12-point horizontal insets in dense feeds, 6–8-point gaps inside repeated product metadata, and 16–20-point separation between operational sections. Density is intentional, but unrelated controls must not collapse into one visual block.
 
 # Navigation appearance
 
-Use compact bottom destinations with blue active icon and pale gray inactive icons.
+The persistent navigation is visually quiet on white, with compact monochrome destinations and one blue selected state. It may remain present through discovery, product, cart, and profile contexts when the task is not modal. Focused identity and checkout steps can replace it with a short top identity row and an explicit close action.
+
+For adaptation, copy the distinction between persistent top-level destinations and focused tasks, not the source's destination count or marketplace-specific sections. Search can remain a repeated control when discovery is genuinely central; it should not be inserted into unrelated detail screens by imitation.
 
 # Components
 
-### Buttons
+Search uses a wide pale field with a leading search affordance and optional trailing scan or media action. Filter chips are compact and mostly neutral; an applied filter becomes blue and carries a removal affordance. Product tiles are edge-aligned cells rather than boxed cards. Each cell combines media, favorite, promotional labels, current and previous price, stock or benefit text, title, assurance, rating, review count, delivery promise, and a compact blue action.
 
-Primary cart and checkout use solid blue; favorite uses pink; secondary actions use pale fills or text.
+Product detail uses a large media stage followed by commercial information and a full-width action. Content sections can use segmented labels for description, specifications, and delivery, plus pale verification and seller panels. Cart rows add selection, quantity adjustment, favorite, removal, seller benefit, and fulfillment grouping without changing the product's identity.
 
-### Cards & Containers
-
-Product cards align image, price, discount, stock, rating, reviews, and delivery; seller or checkout groups span full width.
-
-### Inputs & Forms
-
-Search remains a pale prominent bar with suggestions, categories, and native keyboard styled by surrounding Ozon chrome.
+Checkout uses readable selection rows for delivery, date, payment, promo code, personal data, and order summary. The final action states the consequence directly. Account and order surfaces use compact summary tiles and plain action rows; recommendation modules remain image-led and subordinate to the current order or account state.
 
 # Imagery and icons
 
-Use product photography, banner art, and sticky action bars; product cards themselves stay nearly flat.
+Product photography is the primary visual material. Result images use consistent white or very light backgrounds and generous containment so items remain comparable. Detail media becomes nearly full width. Campaign banners combine photography or rendered characters with embedded promotional lettering; treat those as supplied marketing assets, not as a reusable illustration grammar.
 
-Product images use consistent square or portrait crops; banners remain wide; detail media is large and centered.
-
-If final imagery is not yet available, any placeholder must preserve the documented scale, placement, crop, and visual weight rather than removing that layer.
+Icons are compact, familiar, and secondary to content. Conventional actions such as back, search, share, favorite, delete, disclosure, quantity, and close may use a coherent system-symbol set. Merchant marks and product badges remain authored assets. When final product media is unavailable, placeholders must preserve the intended crop, color mass, and image-to-text ratio instead of removing the media region.
 
 # States
 
-Keep scarcity, sale time, delivery, installment, cart count, payment, and order confirmation near the affected item.
+Selection is shown locally: checked items, active chips, changed quantities, or the selected payment option update without rebuilding the surrounding screen. Sale and stock state stays beside the affected product. Checkout preserves entered identity and delivery choices while validating or changing payment. Unpaid orders offer recovery actions; active orders update their stage, expected date, and available actions; completed and cancelled orders retain their outcome and next relevant action.
+
+Success uses an explicit status result before the user continues or returns. Empty account sections explain what is missing and offer the next action. Errors and constraints remain attached to the affected row or summary, while the rest of the task stays available.
 
 # iOS adaptation
 
-### Touch Targets
+Build dense feeds with custom lazy grids and rows rather than default `List` cards. Keep safe-area handling explicit for the branded header, persistent navigation, sticky action, keyboard, and focused checkout tasks. Interactive regions remain at least 44 points even when their visible icon or label is smaller. Product tiles should expose image, title, current price, previous price, discount, rating, delivery, and action as coherent VoiceOver groups.
 
-Primary actions, navigation, cards, and contextual controls remain at least 44 points.
-
-### Collapsing Strategy
-
-Preserve image, price, delivery, and cart action; reduce banner and recommendation density first.
-
-### Image Behavior
-
-Contain product photography without distortion and preserve embedded campaign copy inside safe areas.
-
-Apply these rules within current iPhone safe areas and scrolling containers. Keep interactive targets at least 44 points, preserve a logical VoiceOver order, and let Dynamic Type wrap supporting text without flattening the documented hierarchy. Preserve the documented appearance.
+At larger text sizes, allow metadata to wrap and product cells to grow; switch comparison layouts to one column before truncating essential terms. Keep the purchase action reachable without covering the last content. System keyboard and accessibility behavior remain native, while surrounding fields and states follow the documented surface and color roles.
 
 # Anti-generic checklist
 
-- Don't wrap each product in a heavy bordered container or hide fulfillment facts.
-- Don't hide status, constraints, or secondary conditions.
-- Don't add heavy shadows around every container.
-- Do not replace the documented hierarchy with a generic stack of identical white cards or `Form` sections.
-- Do not use default blue tint, an unstyled `TabView`, arbitrary SF Symbols, or uniform corner radii when they contradict the recorded tokens and components.
-- Do not omit compositionally important imagery while final assets are pending; preserve its footprint with a faithful placeholder.
+- Do not turn every product or order section into an elevated rounded card with a shadow.
+- Do not replace the blue, pink, green, and yellow role separation with one undifferentiated accent color.
+- Do not hide price conditions, stock, rating, or delivery information behind an extra detail step when comparison depends on it.
+- Do not copy Ozon's departments, financial products, delivery labels, tab count, or promotional wording into another product.
+- Do not remove image regions while waiting for assets or substitute unrelated decorative illustrations for product media.
+- Do not apply default SwiftUI `List`, `Form`, `TabView`, or blue tint without restyling their visible presentation.
 
 </design-context>

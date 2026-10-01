@@ -2,176 +2,122 @@
 ---
 version: 1
 platform: iOS
-name: Gold-Apple-design-analysis
-description: "An editorial beauty-commerce interface with white and cool-gray space, near-black typography, acid chartreuse highlights, fashion-forward campaign photography, and austere black purchase actions. Fine dividers and low-chrome product pages make merchandising feel premium without becoming precious."
-colors: {primary: "#111111", on-primary: "#FFFFFF", primary-focus: "#000000", ink: "#111111", ink-muted: "#686868", ink-subtle: "#979797", ink-tertiary: "#C6C6C6", canvas: "#FFFFFF", surface-1: "#F6F6F4", surface-2: "#EFEFEC", surface-3: "#E4E4E0", surface-4: "#D7D7D2", hairline: "#E7E7E3", hairline-strong: "#CCCCCC", hairline-tertiary: "#B5B5B2", inverse-canvas: "#111111", inverse-surface-1: "#292929", inverse-surface-2: "#414141", inverse-ink: "#FFFFFF", brand-secure: "#CCFF00", semantic-success: "#36A66A", semantic-overlay: "#111111"}
+name: gold-apple-design-analysis
+description: "A high-contrast beauty storefront built from white space, near-black type, fluorescent chartreuse promotion bars, squared commerce controls, pale product stages, and full-bleed campaign photography."
+colors:
+  canvas: "#FFFFFF"
+  surface-product: "#F4F4F4"
+  surface-muted: "#E9E9E9"
+  ink: "#0A0A0A"
+  ink-secondary: "#626262"
+  ink-disabled: "#A7A7A7"
+  divider: "#B8B8B8"
+  accent-chartreuse: "#D7FF00"
+  accent-pink: "#F50087"
+  positive: "#2B8A57"
 typography:
-  display-xl: {fontFamily: Helvetica Neue, fontSize: 40, fontWeight: 500, lineHeight: 1.04, letterSpacing: -1.1}
-  display-lg: {fontFamily: Helvetica Neue, fontSize: 32, fontWeight: 500, lineHeight: 1.08, letterSpacing: -0.7}
-  display-md: {fontFamily: Helvetica Neue, fontSize: 26, fontWeight: 500, lineHeight: 1.12, letterSpacing: -0.4}
-  headline: {fontFamily: Helvetica Neue, fontSize: 21, fontWeight: 600, lineHeight: 1.18, letterSpacing: -0.2}
-  card-title: {fontFamily: Helvetica Neue, fontSize: 15, fontWeight: 500, lineHeight: 1.25, letterSpacing: 0}
-  subhead: {fontFamily: Helvetica Neue, fontSize: 14, fontWeight: 500, lineHeight: 1.30, letterSpacing: 0}
-  body-lg: {fontFamily: Helvetica Neue, fontSize: 15, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0}
-  body: {fontFamily: Helvetica Neue, fontSize: 13, fontWeight: 400, lineHeight: 1.38, letterSpacing: 0}
-  body-sm: {fontFamily: Helvetica Neue, fontSize: 11, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0}
-  caption: {fontFamily: Helvetica Neue, fontSize: 10, fontWeight: 400, lineHeight: 1.25, letterSpacing: 0}
-  button: {fontFamily: Helvetica Neue, fontSize: 13, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0}
-  eyebrow: {fontFamily: Helvetica Neue, fontSize: 10, fontWeight: 500, lineHeight: 1.20, letterSpacing: 0.2}
-  mono: {fontFamily: SF Mono, fontSize: 11, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0}
-rounded: {xs: 2, sm: 6, md: 10, lg: 14, xl: 20, xxl: 26, pill: 9999, full: 9999}
-spacing: {xxs: 4, xs: 8, sm: 12, md: 16, lg: 20, xl: 24, xxl: 32, section: 44}
+  display: {fontFamily: "Helvetica Neue", fontSize: 34, fontWeight: 700, lineHeight: 36, letterSpacing: -0.8}
+  page-title: {fontFamily: "Helvetica Neue", fontSize: 28, fontWeight: 700, lineHeight: 30, letterSpacing: -0.5}
+  section-title: {fontFamily: "Helvetica Neue", fontSize: 20, fontWeight: 700, lineHeight: 24, letterSpacing: -0.2}
+  product-title: {fontFamily: "Helvetica Neue", fontSize: 18, fontWeight: 500, lineHeight: 21, letterSpacing: -0.2}
+  body: {fontFamily: "Helvetica Neue", fontSize: 15, fontWeight: 400, lineHeight: 20, letterSpacing: 0}
+  label: {fontFamily: "Helvetica Neue", fontSize: 13, fontWeight: 500, lineHeight: 16, letterSpacing: 0}
+  caption: {fontFamily: "Helvetica Neue", fontSize: 11, fontWeight: 400, lineHeight: 14, letterSpacing: 0}
+  overline: {fontFamily: "Helvetica Neue", fontSize: 10, fontWeight: 600, lineHeight: 12, letterSpacing: 1.1}
+  action: {fontFamily: "Helvetica Neue", fontSize: 12, fontWeight: 600, lineHeight: 15, letterSpacing: 1.0}
+spacing: {micro: 4, compact: 8, control: 12, gutter: 16, section: 24, editorial: 40}
+rounded: {none: 0, micro: 2, small: 4, circular: 999}
 components:
-  button-primary: {backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.xs}", padding: [15, 18]}
-  button-secondary: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.xs}", padding: [13, 16]}
-  product-card: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xs}", padding: 8}
-  editorial-card: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 16}
-  text-input: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: [12, 14]}
-  status-badge: {backgroundColor: "#CCFF00", textColor: "{colors.ink}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: [3, 7]}
-  bottom-nav: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink-subtle}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: [8, 10]}
+  primary-action: {height: 52, fill: "{colors.ink}", foreground: "{colors.canvas}", radius: "{rounded.none}", typography: "{typography.action}"}
+  secondary-action: {height: 48, fill: "{colors.canvas}", foreground: "{colors.ink}", border: "{colors.ink}", radius: "{rounded.none}"}
+  promotion-strip: {minHeight: 24, fill: "{colors.accent-chartreuse}", foreground: "{colors.ink}", radius: "{rounded.none}"}
+  product-stage: {fill: "{colors.surface-product}", radius: "{rounded.none}"}
+  bottom-navigation: {height: 58, fill: "{colors.canvas}", selected: "{colors.ink}", unselected: "{colors.ink-secondary}"}
 ---
 
 # Overview
 
-Gold Apple treats beauty commerce like an editorial catalog. White space and fashion photography establish tone, black controls make purchase unambiguous, and acid chartreuse punctuates only high-value promotional moments.
+The reference combines editorial beauty imagery with an intentionally severe commerce shell. Product information sits on white, merchandise is isolated on very pale gray, and almost every decision is expressed through black type, thin rules, or a solid black action. Fluorescent chartreuse is the recognisable promotional interruption: it appears as narrow offer strips, small badges, branded labels, and campaign objects rather than as a general interface tint.
 
-**Key Characteristics:** white editorial canvas, black typography and CTAs, acid chartreuse labels, fashion and beauty photography, fine dividers, restrained radii, image-dominant product pages, and low-chrome navigation.
+The transferable language is the contrast system, typographic scale, image treatment, square control geometry, and sparse separation. The source's exact catalog destinations, loyalty offers, promotional wording, and checkout fields belong to its retail architecture and should not be copied into an unrelated product.
 
 # Non-negotiable visual invariants
 
-- Sampled screens consistently use white editorial canvas.
-- The reference consistently shows black typography and CTAs.
-- The reference consistently shows acid chartreuse labels.
-- The reference consistently shows fashion and beauty photography.
-- The reference consistently shows fine dividers.
-- The reference consistently shows restrained radii.
-- The reference consistently shows image-dominant product pages.
-- Navigation consistently uses low-chrome navigation.
+- Primary reading surfaces are white and almost-black; medium gray is reserved for supporting information and disabled content.
+- Fluorescent chartreuse appears in concentrated promotional bands, labels, and campaign objects, never as the default screen background.
+- Product cutouts sit on broad pale-gray image stages without elevated card shadows or decorative frames.
+- Headlines use large, tightly set grotesk type; compact labels and actions often use uppercase text with visible tracking.
+- Purchase actions are solid black rectangles with white labels and little or no corner rounding.
+- Sections separate through whitespace, hairlines, or image boundaries rather than repeated floating cards.
+- Campaign photography may fill a large region, while routine product browsing returns to a flat, restrained grid.
 
 # Color and surfaces
 
-### Brand & Accent
+White is the storefront canvas. Pale neutral gray creates product-image stages, loading fields, and quiet secondary regions. Near-black owns headings, prices, navigation symbols, selection, and commitment actions. Supporting copy steps down to medium gray; unavailable actions use a lighter neutral.
 
-Black owns action, selection, and core brand presence. Acid chartreuse is a sharp promotional highlight, never the default surface or purchase button.
-
-### Surface
-
-White dominates. Cool light gray groups search, product imagery, and editorial content; borders stay fine and neutral.
-
-### Text
-
-Near-black leads brand, product, price, and headings. Medium gray carries description, size, old price, and service detail.
-
-### Semantic
-
-Chartreuse signals promotion or special editorial emphasis, green confirms success, and red is reserved for errors or genuine urgency.
+The signature chartreuse is extremely bright and slightly yellow. Keep it to promotions, short attention strips, small status labels, and branded artifacts. Pink can mark a discount percentage, but it is a local retail accent rather than a second theme color. Avoid soft pastel gradients, tinted card stacks, and broad chartreuse panels in ordinary task screens.
 
 # Typography
 
-### Font Family
+Use a neutral neo-grotesk with a high x-height and reliable Cyrillic. Large page and campaign titles are bold, tightly spaced, and allowed to wrap into short blocks. Product names use a calmer medium weight. Prices are prominent through weight and proximity, not a separate decorative face. Supporting retail metadata is compact but still legible.
 
-Use Helvetica Neue or a similarly neutral neo-grotesk for both editorial titles and commerce detail.
-
-### Hierarchy
-
-| Token | Size | Weight | Use |
-|---|---:|---:|---|
-| display-lg | 32 points | 500 | Campaign title |
-| headline | 21 points | 600 | Section or product |
-| card-title | 15 points | 500 | Brand and item |
-| body | 13 points | 400 | Detail and description |
-| caption | 10 points | 400 | Size, promo, service meta |
-
-### Principles
-
-- Let scale and whitespace create premium hierarchy.
-- Keep product names and editorial labels concise.
-- Use medium weights rather than heavy display typography.
-
-### Note on Font Substitutes
-
-Use Helvetica Neue, Arial, or the platform sans with neutral proportions and clean Cyrillic.
+Uppercase, tracked text is appropriate for product categories, compact offer labels, accordion headings, and commitment actions. Do not uppercase paragraphs or long navigation labels. Preserve the reference's abrupt scale contrast between a 28–34 point title and 10–13 point commerce metadata instead of normalising everything into one medium text size.
 
 # Screen composition
 
-### Spacing System
+Use 16-point horizontal gutters for task content. Discovery may break the gutter with a full-width campaign image, followed by circular shortcuts, unframed product columns, and strong section headings. Product detail begins with title and a large pale product stage, then price, offer, variant or availability information, and expandable details. A purchase action can remain available at the lower edge while the detail scrolls.
 
-Use a 4 points base, 12–16 points card gaps, 16–24 points content gutters, and 32–44 points between editorial sections.
-
-### Grid & Container
-
-Home alternates full-width campaigns, circular shortcuts, and product rails. Product detail uses one dominant image followed by price, action, and fine-rule information rows.
-
-### Whitespace Philosophy
-
-Whitespace is part of the luxury signal. Avoid filling every gap with badges, frames, or recommendations.
-
-Surface hierarchy observed in the source:
-
-| Level | Treatment | Use |
-|---|---|---|
-| 0 | White canvas | Primary storefront |
-| 1 | Cool-gray field | Search and image area |
-| 2 | Photography | Editorial emphasis |
-| 3 | Black sticky action | Add or checkout |
-
-### Decorative Depth
-
-Use campaign and product photography as the depth system. Prefer fine rules and tonal fields to visible shadows.
+The composition is flat and linear. Dotted leaders can connect labels and values in totals; thin rules divide expandable information; generous blank regions create hierarchy around titles and decision blocks. Recommendations use the same product-grid grammar rather than a new generic card style.
 
 # Navigation appearance
 
-Use a light five-item bottom bar with thin line icons and a black active state. Search, favorites, and bag remain visually quiet until needed.
+Primary navigation is a quiet white bar with thin black line icons and very small labels where labels are present. Selection changes through icon emphasis, not a colored capsule or filled navigation background. Secondary screens use a simple back control, a short title, and an optional share or close action.
+
+Carry over the low-chrome treatment, not the source's exact destination count or retail information architecture. A new product should expose only its real top-level destinations and should not reproduce the bag, favorites, profile, or editorial sections unless those concepts exist.
 
 # Components
 
-### Buttons
+## Primary and secondary actions
 
-Primary purchase actions are black rectangular controls with white labels. Secondary actions are white or pale with hairline boundaries.
+The main action is a full-width black rectangle about 52 points high with a white tracked label. A paired favorite action may use a separate outlined square. Secondary actions are white with a one-point black outline or appear as underlined text. Disabled actions change to a flat light-gray fill and low-contrast label.
 
-### Cards & Containers
+## Product tile
 
-Product cards minimize chrome around image, brand, name, price, and favorite. Editorial cards use strong photography with sparse overlaid or adjacent copy.
+The image area is a large square or portrait pale-gray field. Small discount or novelty badges attach directly to an image corner. Brand, item name, current price, and crossed-out previous price follow without a surrounding container. Favorite and add actions remain compact and visually independent from the product copy.
 
-### Inputs & Forms
+## Promotion strip and badge
 
-Search is broad and pale. Native controls may remain native in code but must inherit black focus, restrained radii, neutral type, and exact spacing.
+A promotion strip is a thin, edge-to-edge chartreuse band with small black copy. A badge uses the same chartreuse or a local pink discount color and square geometry. Do not enlarge either into a generic announcement card.
+
+## Forms and disclosure rows
+
+Text fields are underline- or rule-led rather than soft filled capsules. Radio selections use simple outlined circles with a black selected center. Product details use uppercase disclosure labels, plus/minus indicators, and full-width hairlines. Checkout totals may use dotted leaders to preserve a ledger-like rhythm.
 
 # Imagery and icons
 
-Use campaign and product photography as the depth system. Prefer fine rules and tonal fields to visible shadows.
+Campaign imagery is photographic or campaign-specific product art with deliberate fashion styling, bold scale, and clear room for copy. Product imagery uses clean cutouts on pale neutral stages; packaging must remain fully legible and should not be over-cropped. Circular photographic crops are appropriate for shortcut topics, not for every product or action.
 
-Use clean product cutouts in large square or portrait fields and full-bleed editorial crops. Circular crops are reserved for category navigation.
-
-If final imagery is not yet available, any placeholder must preserve the documented scale, placement, crop, and visual weight rather than removing that layer.
+Use a coherent set of thin, black utility icons for conventional actions such as back, search, favorite, share, close, scan, and disclosure. Campaign objects, editorial photography, and merchandise photography are separate asset categories; they do not establish a reusable illustration system. If final photography is unavailable, preserve the intended crop, scale, and color mass with a faithful placeholder.
 
 # States
 
-Keep availability, shade or size, price, discount, loyalty benefit, delivery, cart total, and order state near the decision.
+Selection is expressed with a black center, border, or text emphasis. Disabled inputs and actions use flat neutral gray. Promotion, discount, and new-item states use compact chartreuse or pink markers. Expanded product information swaps a plus for a minus and reveals content without changing the surrounding hierarchy. The cart exposes quantity, savings, total, delivery choice, payment choice, promo-code result, and order confirmation as explicit task states.
+
+Loading should reserve the real image and text footprints rather than replacing the page with a centered spinner. Errors belong beside the affected input or decision. Success uses a clear title and order facts; it should not introduce celebratory styling that is absent from the rest of the reference.
 
 # iOS adaptation
 
-### Touch Targets
+Keep actionable regions at least 44 points even when icons and visible labels are compact. Respect safe areas while allowing campaign images and narrow offer strips to reach the screen edges. The lower action region must not cover the final scroll content, and keyboard presentation must keep the active field and its result visible.
 
-Category circles, filters, favorites, shade and size choices, navigation, add, and checkout remain at least 44 points.
-
-### Collapsing Strategy
-
-Preserve product image, brand, price, variant, availability, and purchase action; reduce editorial modules and recommendations first.
-
-### Image Behavior
-
-Keep product cutouts fully visible and preserve campaign focal points; do not stretch or over-crop packaging.
-
-Apply these rules within current iPhone safe areas and scrolling containers. Keep interactive targets at least 44 points, preserve a logical VoiceOver order, and let Dynamic Type wrap supporting text without flattening the documented hierarchy. Preserve the documented appearance.
+Dynamic Type may wrap product names, addresses, and explanations, but preserve the contrast between bold section hierarchy and compact metadata. VoiceOver should read a product as one coherent item with price and availability, and totals as label-value pairs. Use native permission dialogs and keyboards; style only app-owned surfaces. Standard controls may keep native behavior while adopting the documented black, white, squared presentation.
 
 # Anti-generic checklist
 
-- Don't turn the interface into a neon-green theme.
-- Don't add soft bubbly styling to every control.
-- Don't surround every product with borders or shadows.
-- Do not replace the documented hierarchy with a generic stack of identical white cards or `Form` sections.
-- Do not use default blue tint, an unstyled `TabView`, arbitrary SF Symbols, or uniform corner radii when they contradict the recorded tokens and components.
-- Do not omit compositionally important imagery while final assets are pending; preserve its footprint with a faithful placeholder.
+- Do not turn chartreuse into a global background, primary button fill, or tint for every interactive control.
+- Do not wrap each product, checkout row, or disclosure section in a rounded elevated card.
+- Do not replace the large product stages and campaign crops with small thumbnails beside text.
+- Do not soften every action into a pill or apply one generous radius throughout the interface.
+- Do not copy the source's catalog, promotional modules, or navigation destinations into a product with different tasks.
+- Do not use default blue tint, thick multicolor icons, or arbitrary SF Symbols as brand decoration.
 
 </design-context>

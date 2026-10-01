@@ -265,12 +265,15 @@
     "categories": [
       "Shopping, Listings & Marketplaces"
     ],
-    "uiSummary": "A restrained monochrome fashion marketplace built on white, black selection and purchase controls, fine gray separators, and large studio photography. Editorial campaigns and outfit imagery carry personality while catalog, sizing, cart, and checkout remain precise, flat, and utilitarian.",
-    "uxSummary": "Lamoda is a photography-first fashion marketplace that moves from editorial discovery into catalog filtering, product styling, cart, pickup or courier delivery, and order management.",
-    "navigationSummary": "Five fixed destinations cover Home, Catalog, Cart, Favorites, and Account. Search and gender or audience segments sit above Home and Catalog; product and checkout screens use focused back navigation with persistent actions.",
+    "uiSummary": "A dense, photography-led fashion commerce language built on a white canvas, compact black typography, pale utility fields, nearly square controls, and decisive black purchase actions.",
+    "uxSummary": "Lamoda supports discovery, catalog search, filtering, product evaluation, favorites, cart management, checkout, and post-purchase account tasks. Browsing actions preserve the user's current audience, query, filters, and list position; consequential actions expose their result before the user leaves the task.",
+    "navigationSummary": "Five persistent destinations provide access to Home, Catalog, Cart, Favorites, and Account. Home and Catalog also expose audience selection and search. Articles, collections, product details, reviews, size guidance, checkout, orders, and account settings are drill-down destinations that return to their originating context. Filters use a focused task that can be applied or closed. Delivery conditions and supporting explanations can open without replacing the underlying cart or product context. Checkout advances through delivery, recipient, and payment decisions while retaining completed information when the user moves backward.",
     "coreFlows": [
-      "Discover and select",
-      "Checkout"
+      "Search, filter, and evaluate a product",
+      "Select a product and add it to the cart",
+      "Save a favorite",
+      "Review the cart and place an order",
+      "Manage an existing order"
     ],
     "illustrationSummary": null
   },
@@ -282,15 +285,18 @@
     "categories": [
       "Food and Drinks"
     ],
-    "uiSummary": "A fast-food loyalty and ordering interface built from dark forest-green branding, vivid orange actions, bold black headings, white commerce surfaces, real food photography, and friendly flat service illustrations. It feels energetic, practical, and promotional.",
-    "uxSummary": "Vkusno I Tochka combines restaurant loyalty, promotions, menu browsing, mobile ordering, restaurant selection, QR redemption, and account support.",
-    "navigationSummary": "- Five primary destinations cover Home, Promotions, Menu, Map, and More. - Home summarizes bonus balance, campaigns, referral, and mobile-order entry points. - Menu switches pickup and delivery, location, categories, product items, and cart.",
+    "uiSummary": "A high-energy food ordering language that combines a persistent deep-green brand frame, orange conversion controls, bold compact hierarchy, clean food cutouts, and a restrained family of flat service illustrations.",
+    "uxSummary": "Vkusno I tochka connects loyalty, promotions, menu browsing, fulfillment selection, product customization, checkout, and live order follow-up. The user can move between discovery and ordering without losing the selected restaurant, delivery address, cart, or active order context.",
+    "navigationSummary": "Five persistent destinations provide access to Home, Promotions, Menu, Map, and More. Home links to loyalty actions, offers, referrals, and mobile ordering. Menu owns fulfillment mode, restaurant or address context, category browsing, product selection, and cart entry. More provides profile, city, order history, referral, support, feedback, and app information. Product details and order details are self-contained tasks that can be dismissed back to their originating context. Restaurant and address selection refine the current order context. Checkout and payment proceed as focused tasks, while an active order remains reachable from Home and Menu after the user resumes browsing.",
     "coreFlows": [
-      "Use a promotion",
-      "Build a mobile order",
-      "Earn and spend bonuses"
+      "Sign in and verify the phone number",
+      "Choose fulfillment context",
+      "Browse and redeem a promotion",
+      "Customize a product and add it to the cart",
+      "Complete a mobile order",
+      "Follow an active order"
     ],
-    "illustrationSummary": "No dedicated imagery overview was documented."
+    "illustrationSummary": "The illustration system explains benefits, service entry points, and real-world order states with friendly flat scenes. It is separate from food cutouts, campaign photography, celebrity imagery, packaging shots, and one-off promotional creatives."
   },
   {
     "appId": "681938fe1cad7f273dd631ab",
@@ -300,12 +306,15 @@
     "categories": [
       "Shopping, Listings & Marketplaces"
     ],
-    "uiSummary": "A high-density marketplace interface with Ozon blue purchase actions, hot-pink sale signals, bright promotional banners, image-first product grids, compact commerce metadata, and persistent search.",
-    "uxSummary": "Ozon is a broad marketplace for discovery, search, product comparison, favorites, cart, installment offers, checkout, pickup delivery, order tracking, and profile services.",
-    "navigationSummary": "Six primary destinations connect Home, discovery or catalog tools, finance, messages or notifications, Cart, and Profile. Search stays on Home, results, and detail.",
+    "uiSummary": "A dense image-first marketplace language built from an electric-blue brand frame, white commerce surfaces, compact product metadata, pink promotional signals, and persistent purchase actions.",
+    "uxSummary": "Ozon supports repeated movement between discovery, search, product evaluation, cart, checkout, order tracking, and account activity. Users can enter a product from recommendations, search, or a campaign, inspect increasingly detailed information, and retain their shopping context while comparing or completing an order. The transferable behavior is progressive disclosure with preserved context; marketplace destinations and payment programs are source-specific.",
+    "navigationSummary": "Persistent primary navigation connects the main shopping and account areas during ordinary browsing. Search can be entered from discovery and product contexts and returns to the previous task without clearing the current query or results. Product, seller, review, question, order, and account details are drill-down destinations with back navigation. Identity collection and checkout are focused tasks with an explicit close path. Profile provides entry to orders, favorites, reviews, messages, lists, bonuses, and account details; an adapted product should expose only equivalent destinations that actually exist.",
     "coreFlows": [
       "Find and evaluate a product",
-      "Complete an order"
+      "Add a product and manage the cart",
+      "Complete checkout",
+      "Track and manage an order",
+      "Use profile activity"
     ],
     "illustrationSummary": null
   },
@@ -317,14 +326,18 @@
     "categories": [
       "Food and Drinks"
     ],
-    "uiSummary": "A photo-led food ordering interface with a white canvas, vivid orange purchase actions, black editorial product names, soft pink and orange food backdrops, oversized dish photography, horizontal category strips, stacked checkout sheets, and playful map markers for live order tracking.",
-    "uxSummary": "Dodo Pizza guides users from address and menu discovery through customization, cart, delivery, payment, tracking, and rating.",
-    "navigationSummary": "Address anchors the top of the menu. Stories and category rails provide discovery, while cart, profile, and current-order entry points appear contextually.",
+    "uiSummary": "A food-first ordering language that pairs isolated product photography and warm campaign art with white menu space, vivid orange actions, compact category controls, and cool-gray transactional sheets.",
+    "uxSummary": "Dodo Pizza connects delivery context, menu discovery, product configuration, cart, checkout, live order status, loyalty, and account tasks. Users can browse before committing, but availability, delivery time, and checkout depend on a confirmed address. The reusable behavior is a staged order that preserves selections across discovery, configuration, and checkout; the restaurant menu and loyalty program are source-specific.",
+    "navigationSummary": "The menu is the primary browsing context. Product families, categories, stories, and offers change or refine the current menu context. Product configuration is a focused task that returns to the menu or cart. Cart, profile, and the current order open as self-contained destinations with explicit close or back actions. Profile leads to loyalty, order history, saved delivery addresses, support, and profile editing. Order details can open from the current-order entry or order history and return to their originating context.",
     "coreFlows": [
-      "Order food",
-      "Track and close an order"
+      "Establish delivery context",
+      "Browse and configure a product",
+      "Review the cart and complete checkout",
+      "Track an active order",
+      "Rate or review a completed order",
+      "Use profile and loyalty"
     ],
-    "illustrationSummary": null
+    "illustrationSummary": "Dodo Pizza uses a recurring authored image language beyond ordinary food photography. Loyalty, missions, campaign products, notification prompts, and delivery tracking use playful 3D objects or simple character forms tied to the same brand world. These assets explain a product-specific concept or make an operational state memorable; conventional controls and ordinary menu items do not need illustration."
   },
   {
     "appId": "6827103ba83ae746a8acfe54",
@@ -334,12 +347,15 @@
     "categories": [
       "Shopping, Listings & Marketplaces"
     ],
-    "uiSummary": "An editorial beauty-commerce interface with white and cool-gray space, near-black typography, acid chartreuse highlights, fashion-forward campaign photography, and austere black purchase actions. Fine dividers and low-chrome product pages make merchandising feel premium without becoming precious.",
-    "uxSummary": "Gold Apple combines editorial beauty discovery with search, catalog and brand browsing, product and variant evaluation, favorites, bag, checkout, delivery, and account tasks.",
-    "navigationSummary": "A five-item primary navigation provides the main storefront destinations. Home, search, favorites, and bag remain so campaigns and products lead.",
+    "uiSummary": "A high-contrast beauty storefront built from white space, near-black type, fluorescent chartreuse promotion bars, squared commerce controls, pale product stages, and full-bleed campaign photography.",
+    "uxSummary": "Gold Apple supports discovery, catalog search, product evaluation, saving, cart management, checkout, order status, account tasks, and gift-card creation. Preserve the behavioral pattern of moving from broad discovery into progressively more specific product and fulfillment decisions; do not copy retail destinations that the adapted product does not need.",
+    "navigationSummary": "Primary destinations remain directly switchable during browsing. Search opens catalog, brand, new-item, editorial, and promotional paths. Product details are pushed from results or recommendations and retain a return path. Cart and checkout form a task sequence; checkout steps return to the active order rather than creating new primary destinations. Account tasks lead to orders, saved items, addresses, notifications, gift cards, and documents.",
     "coreFlows": [
-      "Discover and evaluate",
-      "Buy"
+      "Discover from the home feed",
+      "Search and refine the catalog",
+      "Evaluate and add a product",
+      "Complete an order",
+      "Create a gift card"
     ],
     "illustrationSummary": null
   },
@@ -352,13 +368,17 @@
       "Lifestyle",
       "Shopping, Listings & Marketplaces"
     ],
-    "uiSummary": "A premium local-gifting marketplace with a white canvas, black primary actions, mint bonus labels, product-first floral photography, editorial store grids, compact price and delivery metadata, and layered checkout sheets for gifts, postcards, timing, tips, and live tracking.",
-    "uxSummary": "Flowwow connects local gift discovery, store comparison, configuration, payment, scheduled delivery, tracking, and chat.",
-    "navigationSummary": "Home, Collections, Self-pickup, Inbox, and Cabinet remain stable; search and address anchor discovery.",
+    "uiSummary": "A dense local-gifting marketplace with photo mosaics, soft gray utility surfaces, compact black actions, mint trust and bonus signals, coral loyalty accents, and expressive floral object art.",
+    "uxSummary": "Flowwow supports location-aware discovery, category and store comparison, product evaluation, saved collections, cart configuration, checkout, order tracking, seller or courier communication, cancellation, and post-order rating. Preserve the continuity of recipient, address, timing, seller, and order context; do not copy gifting-specific tasks when the adapted product does not have them.",
+    "navigationSummary": "Primary destinations remain directly switchable during discovery. Category results lead into a store, and store navigation leads into products, messages, reviews, and store information without losing the current seller context. Product details open as a focused task and return to the originating store or result. Cart, checkout, payment, and tracking are successive states of one order rather than new primary destinations. Messages reached from an order retain the order and participant context.",
     "coreFlows": [
-      "Send a gift"
+      "Set location and discover an item",
+      "Evaluate a store and product",
+      "Configure the cart",
+      "Complete checkout",
+      "Track and manage an order"
     ],
-    "illustrationSummary": null
+    "illustrationSummary": "Flowwow uses authored imagery as a distinct layer alongside product photography. The recurring system has two related scales: immersive, polished floral-and-gift scenes for onboarding or major promotions, and small colorful object illustrations for categories, recipients, occasions, and gift types. It gives abstract discovery choices a tangible identity without replacing real seller photography."
   },
   {
     "appId": "68331e45b1876253fc7acedf",

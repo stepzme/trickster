@@ -2,147 +2,130 @@
 ---
 version: 1
 platform: iOS
-name: Flowwow-design-analysis
-description: "A premium local-gifting marketplace with a white canvas, black primary actions, mint bonus labels, product-first floral photography, editorial store grids, compact price and delivery metadata, and layered checkout sheets for gifts, postcards, timing, tips, and live tracking."
-colors: { primary: "#111111", on-primary: "#FFFFFF", primary-soft: "#F1F1F1", accent: "#45C58B", ink: "#171717", ink-muted: "#747474", ink-subtle: "#B0B0B0", canvas: "#FFFFFF", surface-1: "#F6F6F6", surface-2: "#EEF9F3", hairline: "#E4E4E4", semantic-success: "#36AD72", semantic-warning: "#F3B61F", semantic-danger: "#D94C55", semantic-overlay: "#000000" }
+name: flowwow-design-analysis
+description: "A dense local-gifting marketplace with photo mosaics, soft gray utility surfaces, compact black actions, mint trust and bonus signals, coral loyalty accents, and expressive floral object art."
+colors:
+  canvas: "#FFFFFF"
+  surface-soft: "#F5F5F5"
+  surface-selected: "#ECECEC"
+  ink: "#111111"
+  ink-secondary: "#777777"
+  ink-disabled: "#B8B8B8"
+  divider: "#E7E7E7"
+  trust-mint: "#84D9A5"
+  trust-soft: "#DDF6D9"
+  loyalty-coral: "#F2745F"
+  rating: "#FFC22E"
+  payment-violet: "#2C005B"
 typography:
-  display-xl: { fontFamily: SF Pro Display, fontSize: 36, fontWeight: 700, lineHeight: 1.05, letterSpacing: -0.7 }
-  display-lg: { fontFamily: SF Pro Display, fontSize: 30, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.5 }
-  display-md: { fontFamily: SF Pro Display, fontSize: 26, fontWeight: 700, lineHeight: 1.15, letterSpacing: -0.3 }
-  headline: { fontFamily: SF Pro Display, fontSize: 22, fontWeight: 700, lineHeight: 1.20, letterSpacing: 0 }
-  card-title: { fontFamily: SF Pro Text, fontSize: 16, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: SF Pro Text, fontSize: 16, fontWeight: 600, lineHeight: 1.30, letterSpacing: 0 }
-  body-lg: { fontFamily: SF Pro Text, fontSize: 16, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
-  body: { fontFamily: SF Pro Text, fontSize: 14, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
-  body-sm: { fontFamily: SF Pro Text, fontSize: 12, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
-  caption: { fontFamily: SF Pro Text, fontSize: 10, fontWeight: 500, lineHeight: 1.20, letterSpacing: 0 }
-  button: { fontFamily: SF Pro Text, fontSize: 15, fontWeight: 650, lineHeight: 1.20, letterSpacing: 0 }
-  eyebrow: { fontFamily: SF Pro Text, fontSize: 11, fontWeight: 650, lineHeight: 1.20, letterSpacing: 0.2 }
-  mono: { fontFamily: SF Mono, fontSize: 12, fontWeight: 500, lineHeight: 1.30, letterSpacing: 0 }
-rounded: { xs: 6, sm: 10, md: 14, lg: 18, xl: 24, xxl: 30, pill: 9999, full: 9999 }
-spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
+  display: {fontFamily: "SF Pro Display", fontSize: 30, fontWeight: 700, lineHeight: 34, letterSpacing: -0.5}
+  page-title: {fontFamily: "SF Pro Display", fontSize: 22, fontWeight: 700, lineHeight: 27, letterSpacing: -0.2}
+  section-title: {fontFamily: "SF Pro Display", fontSize: 20, fontWeight: 600, lineHeight: 25, letterSpacing: -0.2}
+  product-title: {fontFamily: "SF Pro Text", fontSize: 18, fontWeight: 500, lineHeight: 23, letterSpacing: -0.1}
+  body: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 400, lineHeight: 20, letterSpacing: 0}
+  label: {fontFamily: "SF Pro Text", fontSize: 13, fontWeight: 500, lineHeight: 17, letterSpacing: 0}
+  caption: {fontFamily: "SF Pro Text", fontSize: 11, fontWeight: 400, lineHeight: 14, letterSpacing: 0}
+  action: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 600, lineHeight: 19, letterSpacing: 0}
+spacing: {micro: 4, compact: 8, control: 12, gutter: 16, section: 24, major: 32}
+rounded: {small: 8, control: 12, card: 14, sheet: 24, circular: 999}
 components:
-  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [14, 18]}
-  product-card: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.sm}", padding: 8 }
-  store-card: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 10 }
-  input: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: [11, 13]}
-  bottom navigation: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: [8, 10]}
+  primary-action: {height: 52, fill: "{colors.ink}", foreground: "{colors.canvas}", radius: "{rounded.control}", typography: "{typography.action}"}
+  search-field: {height: 40, fill: "{colors.surface-soft}", foreground: "{colors.ink}", radius: "{rounded.control}"}
+  filter-chip: {height: 36, fill: "{colors.surface-soft}", foreground: "{colors.ink}", radius: "{rounded.small}"}
+  product-card: {fill: "{colors.canvas}", foreground: "{colors.ink}", radius: "{rounded.small}"}
+  bonus-strip: {minHeight: 28, fill: "{colors.trust-soft}", foreground: "{colors.ink}", radius: "{rounded.small}"}
+  bottom-navigation: {height: 62, fill: "{colors.canvas}", selected: "{colors.ink}", unselected: "{colors.ink-secondary}"}
 ---
 
 # Overview
 
-Flowwow is a photo-led gifting marketplace where black actions and mint bonus labels stay secondary to flowers, desserts, and store quality.
+Flowwow is visually dense but not heavy. Authentic product photography carries most of the page, while app-owned surfaces stay white or very light gray. Compact black actions, mint availability and bonus signals, coral loyalty marks, and tiny ratings or delivery facts make the marketplace operational without competing with the flowers, gifts, and store mosaics.
+
+The transferable system is photo-first density, soft utility surfaces, compact trust metadata, rounded-but-controlled geometry, and the branded floral object language. Store hierarchies, delivery products, bonus rules, exact category taxonomy, and checkout charges are source product architecture and must be adapted rather than reproduced.
 
 # Non-negotiable visual invariants
 
-- The reference consistently shows seller and delivery confidence visible.
-- The reference consistently shows authentic product photography.
-- The reference consistently shows preserve gifting notes and timing.
-- Sampled screens consistently use a premium local-gifting marketplace with a white canvas.
-- The reference consistently shows black primary actions.
-- The reference consistently shows mint bonus labels.
-- The reference consistently shows product-first floral photography.
-- The reference consistently shows editorial store grids.
+- Browsing surfaces remain white or very light gray so colorful merchandise photography supplies the dominant visual mass.
+- Store discovery uses dense multi-image mosaics and compact commerce metadata rather than isolated hero cards with large empty margins.
+- Primary purchase and progression actions are near-black with white labels.
+- Mint labels communicate availability, accepted bonuses, or positive value; coral-orange marks the loyalty program and selected promotional moments.
+- Controls and modules use moderate rounding, while photography keeps simple rectangular or softly rounded crops.
+- Rating, delivery time, fee, bonus rate, and seller identity stay visually close to the item or store they describe.
+- Custom floral, gift, and category artwork is distinct from thin conventional navigation and utility icons.
 
 # Color and surfaces
 
-### Brand & Accent
-Use black for purchase and mint for bonuses, verified availability, and positive commerce cues.
+White is the primary canvas. Soft gray groups search, filters, optional services, and inactive choices without turning the screen into stacked cards. Black anchors titles, totals, selected controls, and commitment actions. Gray recedes secondary seller and delivery information.
 
-### Surface
-Keep browsing white, filters pale gray, and bonus panels very light mint.
-
-### Text
-Use black for product and price, gray for delivery and store metadata, and pale gray for inactive state.
-
-### Semantic
-Use green for confirmed, yellow for rating, and red for error or cancel.
+Mint and pale green are trust colors for confirmed availability, bonus acceptance, and value earned. Coral-orange belongs to the loyalty identity and occasional promotional emphasis. Yellow is limited to ratings. A deep violet may appear inside a branded payment action, but it is not the general interaction tint. Use color locally and semantically; merchandise photography should remain the richest layer.
 
 # Typography
 
-### Font Family
-Use SF Pro Display for sections and SF Pro Text for products, stores, and checkout.
+Use SF Pro or a metrically similar platform sans. The everyday hierarchy is compact: 20–22 point page and section titles, 15–18 point product or store labels, and 11–13 point commerce metadata. Large 30-point display text belongs to onboarding or exceptional promotional communication, not routine listings.
 
-### Hierarchy
-Use 26–36 points for major headings, 22 points for sections, 16 points for cards, 14 points body, and 10–12 points metadata.
-
-### Principles
-Keep product name, price, delivery time, rating, and store readable without competing with photography.
-
-### Note on Font Substitutes
-Use the platform sans or Inter with tabular prices.
+Weights move from medium product names to semibold totals and actions. Prices should use tabular figures. Preserve short line lengths in category labels and seller facts; allow descriptions and order comments to wrap naturally. Do not compress delivery and pricing metadata below legibility to keep a fixed card height.
 
 # Screen composition
 
-### Spacing System
-Use a 4 points base, 8 points grid gaps, 16 points gutters, and 16 points checkout padding.
+Routine screens use 12–16 point gutters and compact 8–12 point gaps. Home combines delivery context, search, shortcut categories, promotional modules, illustrated recipient or occasion shortcuts, and product or store sections. Category browsing moves quickly into filters and vertically repeated seller mosaics. Each seller block may combine a multi-image grid with name, rating, bonus, price, and timing.
 
-### Grid & Container
-Home stacks search, categories, stores, and product rails; store and product views use two-column image grids.
+Store detail begins with seller identity and trust facts, then category shortcuts and product rails. Product detail is a sheet-like surface over a darkened media backdrop: a large photographic crop leads into thumbnails, availability, title, rating, fulfillment facts, description, and price history. Cart and checkout use denser grouped rows, optional add-on rails, editable order facts, totals, and a persistent progression action. Tracking can layer a task sheet over a map.
 
-### Whitespace Philosophy
-Let photography breathe while keeping gifting configuration compact and sequential.
-
-Surface hierarchy observed in the source:
-
-Use image depth and layered white sheets; avoid heavy shadow.
-
-### Decorative Depth
-Flowers, desserts, packaging, and postcards provide all decorative richness.
+These arrangements demonstrate density and hierarchy, not mandatory product modules. Preserve the relationship between task context, supporting facts, and the current action while substituting the adapted product's real content.
 
 # Navigation appearance
 
-Home, Collections, Self-pickup, Inbox, and Cabinet remain in the bottom bar.
+Primary navigation is a white region with small line-style icons and short labels; the selected item becomes black while inactive items recede to gray. Store detail can replace the global destinations with store-specific sections. Secondary tasks use a back or close action and a compact centered title. Product detail behaves as an app-owned sheet and retains direct close, share, and save controls over the media.
+
+Use the same restrained navigation emphasis, but only include destinations supported by the adapted product. Do not copy collections, self-pickup, inbox, cabinet, or store subsections as empty placeholders.
 
 # Components
 
-### Buttons
+## Primary action
 
-Use full-width black purchase controls and neutral outline actions for edit, cancel, or contact.
+Use a near-black control about 52 points high with white semibold text and a 12-point radius. The label may share the row with the total when the amount is decision-critical. Disabled actions use a pale neutral fill and subdued text. A payment-provider action may use that provider's authored treatment only for the actual payment choice.
 
-### Cards & Containers
+## Search and filters
 
-Use product cards, store mosaics, bonus labels, price-history chart, cart rows, add-on rails, and tracking sheets.
+Search uses a soft-gray field with a quiet leading search symbol. A separate compact filter action may sit beside it. Filter chips are pale, moderately rounded, and concise; selection changes through black fill, a border/check, or stronger text rather than a bright global accent.
 
-### Inputs & Forms
+## Store mosaic
 
-Address, postcard, seller comment, delivery time, payment, tips, and recipient stay in separate steps.
+A seller unit is led by a dense two- or three-column photo mosaic. Small labels may sit directly on the images for price or bonus acceptance. Store identity, rating, delivery, bonus rate, and timing follow as compact lines. Avoid lifting the entire seller unit with a prominent shadow.
+
+## Product detail and cart row
+
+Product detail gives the primary photograph most of the upper region and keeps dimensions or other essential facts attached to it. Thumbnail selection precedes title and fulfillment information. The cart row pairs a small product image with quantity, price, optional service state, and editable notes. Add-ons use a horizontal rail with an explicit selected state.
+
+## Trust and status elements
+
+Availability updates, earned bonuses, accepted-bonus marks, delivery estimates, and ratings use compact labels, strips, or icon-text pairs. Keep them attached to the relevant product, seller, or order instead of collecting them in a generic dashboard card.
 
 # Imagery and icons
 
-Flowers, desserts, packaging, and postcards provide all decorative richness.
+Photography is the core browsing asset. Preserve natural flower color, packaging detail, bouquet scale, and seller-specific presentation. Store mosaics intentionally show several products at once; product detail uses one dominant crop plus thumbnails. Editorial promotion art may be more stylised, but it must not overwrite product color accuracy.
 
-Use authentic product photography with consistent crops, true color, and visible scale where useful.
-
-If final imagery is not yet available, any placeholder must preserve the documented scale, placement, crop, and visual weight rather than removing that layer.
+The reference also uses authored floral and gift imagery: polished translucent 3D scenes for onboarding and promotions, plus a recurring set of colorful category and occasion objects. Those assets follow the separate illustration specification. Conventional controls such as back, close, share, favorite, search, filter, chat, disclosure, and delivery may use a coherent thin icon family. Do not treat ordinary interface icons as illustrations.
 
 # States
 
-Show confirmed availability, delivery estimate, bonus accrual, scheduled, courier, delivered, and canceled states.
+Observed commerce states include loading skeletons, selected and unselected filters, saved items, confirmed recent availability, bonus eligibility, quantity changes, optional add-on selection, applied discounts, delivery versus pickup, delivery-time choices, payment selection, tip selection, contactless delivery, active tracking, editable order details, chat access, cancellation, and ratings.
+
+Loading skeletons reserve the final content blocks and navigation context. Selection uses a clear check, border, or dark fill. Totals update immediately when quantity, add-ons, discount, delivery, or tip changes. Active tracking keeps the current status, planned time, recipient, address, comments, seller contact, and available actions recoverable from the same order context.
 
 # iOS adaptation
 
-### Touch Targets
+Keep all tap targets at least 44 points even when visible filters and metadata are compact. Product sheets, checkout actions, and navigation must respect the lower safe area. A persistent action must not obscure totals or the final optional item. Map and media may extend edge-to-edge behind app-owned overlays.
 
-Keep filters, products, favorite, quantity, add-ons, delivery, and contact at least 44 points.
-
-### Collapsing Strategy
-
-Preserve address, product, price, timing, total, and order action; move discovery below the active gift task.
-
-### Image Behavior
-
-Use consistent cover crops for product grids and aspect-fit for detail galleries when scale matters.
-
-Apply these rules within current iPhone safe areas and scrolling containers. Keep interactive targets at least 44 points, preserve a logical VoiceOver order, and let Dynamic Type wrap supporting text without flattening the documented hierarchy. Preserve the documented appearance.
+Dynamic Type should expand names, delivery facts, comments, and actions; allow mosaics and paired choices to reflow before shrinking text. VoiceOver should group each product image with its name, price, rating, availability, and delivery fact, and expose selected states explicitly. Native permission dialogs, keyboards, maps, and payment handoffs retain system behavior. App-owned surfaces adopt the documented hierarchy and styling.
 
 # Anti-generic checklist
 
-- Don't over-process flower colors.
-- Don't hide add-on or tip costs.
-- Don't add decorative illustration to the shell.
-- Do not replace the documented hierarchy with a generic stack of identical white cards or `Form` sections.
-- Do not use default blue tint, an unstyled `TabView`, arbitrary SF Symbols, or uniform corner radii when they contradict the recorded tokens and components.
-- Do not omit compositionally important imagery while final assets are pending; preserve its footprint with a faithful placeholder.
+- Do not replace seller mosaics with one oversized image and a generic elevated card.
+- Do not wash the whole interface in mint or coral; keep both as local trust and loyalty signals.
+- Do not hide delivery time, fee, seller, rating, availability, or bonus information away from the decision they qualify.
+- Do not render every category and occasion as a monochrome SF Symbol when authored object art is required.
+- Do not copy the source's exact categories, store sections, checkout charges, or navigation destinations into an unrelated product.
+- Do not use one corner radius, one card density, or one image aspect ratio for every module.
 
 </design-context>
