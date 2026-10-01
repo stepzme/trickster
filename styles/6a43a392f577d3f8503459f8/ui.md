@@ -3,7 +3,7 @@
 version: 1
 platform: iOS
 name: yandex-pay-design-analysis
-description: "A white-first financial interface that combines dense account dashboards, soft iridescent product surfaces, black commitment actions, compact four-tab navigation, and selectively oversized branded imagery."
+description: "A white-first financial interface that combines dense operational dashboards, soft iridescent product surfaces, black commitment actions, compact bottom navigation, and selectively oversized branded imagery."
 colors:
   canvas: "#FFFFFF"
   canvas-dark: "#101010"
@@ -39,7 +39,7 @@ components:
   primary-action: {height: 56, fill: "#111111", foreground: "#FFFFFF", radius: 16}
   account-card: {minHeight: 152, radius: 20, treatment: "soft-iridescent-gradient"}
   information-strip: {minHeight: 52, fill: "#F3F3F5", radius: 16}
-  bottom-navigation: {height: 64, destinations: 4, selected: "#111111", unselected: "#8A8A90"}
+  bottom-navigation: {height: 64, treatment: "compact-secondary", selected: "#111111", unselected: "#8A8A90"}
 ---
 
 # Overview
@@ -51,7 +51,7 @@ The operational product is a white, information-rich financial dashboard, not a 
 - Operational screens use a flat white canvas with pale filled modules; visible drop shadows are exceptional rather than the default separation method.
 - The main account surface is a wide, shallow iridescent color field near the top, followed by circular quick actions and smaller utility modules.
 - Final commitment actions are dark, wide pills or rounded rectangles; the interface does not use default iOS blue as its primary action color.
-- The persistent navigation has exactly four compact destinations, while payment is exposed as a separate floating action above it on the main screen.
+- Persistent bottom navigation is compact and visually secondary. Its items are top-level destinations; the cross-section payment action sits separately above the bar instead of becoming another tab.
 - Branded color appears as soft yellow-pink-blue or blue-violet washes and concentrated object accents, never as a uniform corporate tint applied to every control.
 - Product imagery is sparse but structurally important: large campaign art, account objects, or miniature 3D symbols occupy reserved space and are not replaced by arbitrary SF Symbols.
 - Promotional and game surfaces may fill the viewport with color, but financial values and primary decisions remain on calm, high-contrast surfaces.
@@ -72,11 +72,11 @@ Scale contrast increases sharply only for campaign or onboarding headlines, wher
 
 # Screen composition
 
-The common frame uses 16-point horizontal insets, a compact status/navigation area, and full-width modules separated by 16–24 points. Scrolling content reaches behind a persistent four-destination bottom bar. The top third carries identity, balance, account surface, scanner, or campaign hero; the middle carries actions and primary content; the bottom carries lists, recommendations, or secondary modules.
+The common frame uses 16-point horizontal insets, a compact status/navigation area, and full-width modules separated by 16–24 points. When persistent bottom navigation is appropriate, scrolling content may reach behind its compact bar. The top third carries identity, a primary value, a dominant product surface, task input, or campaign hero; the middle carries actions and primary content; the bottom carries lists, recommendations, or secondary modules.
 
 ## Dashboard
 
-A small wordmark and account controls sit above a stacked account summary. A narrow recommendation strip follows, then a row of three quick utilities, paired feature modules, and sectioned content. The separate payment action floats immediately above the bottom navigation and may overlap the scrolling region.
+A small identity mark and contextual controls sit above the product's primary summary. A narrow recommendation strip may follow, then a short row of quick utilities, paired feature modules, and sectioned content. When the adapted product has one genuinely cross-section primary action, it may float immediately above the bottom navigation and overlap the scrolling region without becoming another destination.
 
 ## Account detail
 
@@ -104,7 +104,7 @@ The game is a separate full-screen mode: saturated background, centered interact
 
 # Navigation appearance
 
-The primary tab bar is a flat white or near-black bottom region with four line-style icons and short labels. The selected destination uses the primary text color; unselected destinations recede to gray. It has no oversized floating capsule background and no fifth central tab.
+When used, the primary tab bar is a flat white or near-black bottom region with only the product's real top-level destinations, shown with line-style icons and short labels. The selected destination uses the primary text color; unselected destinations recede to gray. Do not add inactive destinations to reproduce the source count. A dominant cross-section action may sit separately above the bar, but a section that already exists in the tab bar must not also be presented as a pushed destination with back navigation.
 
 Secondary screens use a compact top row with a back chevron, centered wordmark or short title, and an optional help or close control. Full-screen payments and games use a close button. Bottom sheets have large upper corners and a solid surface; system-owned biometric sheets remain visually system-native.
 
@@ -112,7 +112,7 @@ Secondary screens use a compact top row with a back chevron, centered wordmark o
 
 ## Primary action
 
-A near-black, full-width control around 56 points high with white medium-weight text and 16-point or pill rounding. Floating payment uses a shorter pill with an icon and label. Pressed state may lighten slightly; disabled state uses a pale neutral fill and low-contrast label rather than opacity over black.
+A near-black, full-width control around 56 points high with white medium-weight text and 16-point or pill rounding. A cross-section floating action, when the product genuinely needs one, uses a shorter pill with an icon and label. Pressed state may lighten slightly; disabled state uses a pale neutral fill and low-contrast label rather than opacity over black.
 
 ## Account surface
 
@@ -140,7 +140,9 @@ Filters are compact rounded capsules with subtle borders or fills and a chevron 
 
 # Imagery and icons
 
-The product mixes three image roles: miniature toy-like 3D objects for benefits and product categories, larger polished 3D compositions for onboarding and campaigns, and editorial/product photography for stores. Small custom category icons use colored rounded backplates or self-contained objects; they should not become a monochrome SF Symbols grid.
+System icons and product graphics have different jobs. Native or system-style symbols are appropriate for conventional controls whose meaning should be immediately familiar: back, close, disclosure, settings, sharing, search, and other ordinary interface actions. They should remain visually quiet and consistent with the surrounding control set.
+
+Product graphics carry identity or explain product-specific content: weather, goals, rewards, benefits, categories, campaigns, and comparable domain concepts. These require authored imagery in the selected illustration language and must not be replaced by convenient generic SF Symbols. The product mixes three such image roles: miniature toy-like 3D objects for benefits and product categories, larger polished 3D compositions for onboarding and campaigns, and editorial/product photography for stores. Small custom category graphics use colored rounded backplates or self-contained objects rather than collapsing into a monochrome system-symbol grid.
 
 Imagery has reserved composition space. A trailing object can occupy roughly one third of a banner, onboarding art can dominate the middle half of the screen, and store photography can fill most of a card. During implementation, temporary art must preserve that footprint, crop, and color mass; omitting it would produce a false visual approval.
 
@@ -152,7 +154,7 @@ Selection uses black text or a white selected segment rather than a global accen
 
 # iOS adaptation
 
-Use a `ScrollView` or `List` only where its default styling is fully removed; modules should be custom SwiftUI containers with explicit spacing and fills. Keep status and navigation controls inside safe areas, but allow campaign backgrounds, scanner content, and game fields to extend edge-to-edge. Reserve the bottom safe area for the tab bar and ensure the floating payment action never covers the last scroll item.
+Use a `ScrollView` or `List` only where its default styling is fully removed; modules should be custom SwiftUI containers with explicit spacing and fills. Keep status and navigation controls inside safe areas, but allow campaign backgrounds, task-input content, and game fields to extend edge-to-edge. When present, reserve the bottom safe area for the tab bar and ensure a separate floating action never covers the last scroll item.
 
 Present app-owned tasks as custom sheets or full-screen covers according to the observed hierarchy, then yield to native Face ID and permission UI when the system takes control. Keep controls at least 44 points, expose amounts and signed transaction values as coherent VoiceOver phrases, and order accessibility from page identity through primary value, actions, then supporting content. On narrower phones, preserve full-width color masses, allow horizontal recommendation rails to scroll, and stack paired modules only when Dynamic Type makes two columns unreadable.
 
@@ -161,7 +163,8 @@ Present app-owned tasks as custom sheets or full-screen covers according to the 
 - Do not rebuild the dashboard as repeated white `Form` sections or a uniform stack of elevated cards.
 - Do not replace the iridescent account surface with a plain blue rectangle or a small gradient icon.
 - Do not use default blue tint for primary buttons, selected tabs, links, and every interactive element.
-- Do not turn the floating payment action into a fifth tab or a generic centered plus button.
-- Do not substitute all benefit, payment-category, and campaign art with unrelated SF Symbols.
+- Do not copy the source's tab count or floating payment action when the adapted product does not have matching destinations or a matching cross-section task.
+- Do not duplicate one destination as both a persistent tab and a pushed screen with back navigation.
+- Do not substitute product-specific benefits, categories, goals, weather, rewards, or campaign art with unrelated SF Symbols; reserve system symbols for conventional interface controls.
 - Do not apply one corner radius and one component density to account surfaces, strips, tiles, sheets, and editorial cards.
 </design-context>

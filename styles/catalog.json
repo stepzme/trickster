@@ -4147,7 +4147,7 @@
     "categories": [
       "Finance"
     ],
-    "uiSummary": "A white-first financial interface that combines dense account dashboards, soft iridescent product surfaces, black commitment actions, compact four-tab navigation, and selectively oversized branded imagery.",
+    "uiSummary": "A white-first financial interface that combines dense operational dashboards, soft iridescent product surfaces, black commitment actions, compact bottom navigation, and selectively oversized branded imagery.",
     "uxSummary": "Yandex Pay combines daily account review, payments, transfers, savings, rewards, shopping offers, and transaction history. Users repeatedly move from a high-level balance or destination into a focused task, confirm the consequential step, receive an explicit result, and return with their previous context preserved. Authentication and sensitive account actions add verification without changing the product hierarchy.",
     "navigationSummary": "Four persistent destinations provide access to the main account overview, stores, payments, and history. Profile is entered from the account control on the main destination. Account, card, savings, reward, and settings pages are drill-down destinations that return to their originating context. Payment scanning is available directly from the payments destination and through the persistent payment action on the main destination. Focused payment and game tasks can be closed without stepping backward through every intermediate state. App-owned tasks may use a sheet when they refine the current context; system authentication is handed to the operating system and returns to the pending task.",
     "coreFlows": [

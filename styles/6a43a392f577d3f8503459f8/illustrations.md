@@ -6,6 +6,8 @@ Yandex Pay uses imagery to give financial products and promotions a tangible ide
 
 Objects are simplified and chunky, with rounded silhouettes, clear frontal or three-quarter views, and little fine detail. Materials alternate between soft matte plastic, glossy inflatable forms, translucent glass, metallic accents, and fabric-like product renders. Lighting is diffuse and studio-like, producing soft internal highlights rather than hard cast shadows.
 
+This document governs product graphics, not ordinary interface controls. Back, close, disclosure, settings, search, sharing, and similar conventional actions may use coherent system icons. A product-specific concept such as a goal, reward, benefit, category, weather condition, or campaign is authored imagery and must not be represented by a convenient generic system symbol.
+
 The art often combines one recognisable object with an abstract brand token: coins and a case for credit, a translucent safe or wallet for savings, gift and Plus marks for rewards, or oversized merchant/product imagery for shopping. Small utility art remains readable at icon scale; campaign and onboarding scenes can layer several objects into a more theatrical composition.
 
 # Composition
@@ -34,6 +36,7 @@ Success is communicated with a small check, positive accent, or resolved product
 # Avoid
 
 - Do not replace product objects with a generic monochrome SF Symbols set.
+- Do not generate bespoke artwork for ordinary navigation and utility controls when a familiar system icon communicates the action more clearly.
 - Do not use flat corporate-vector characters, hand-drawn doodles, or stock fintech scenes with people and charts.
 - Do not scatter decorative objects through transaction lists, profile rows, or other reading-heavy screens.
 - Do not shrink hero art into a small badge; preserve its intended color mass and overlap.
