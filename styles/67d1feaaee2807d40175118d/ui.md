@@ -3,181 +3,174 @@
 version: 1
 platform: iOS
 name: Wibes-design-analysis
-description: "A dark shoppable-content interface combining edge-to-edge creator media, charcoal editorial cards, electric-violet commerce actions, bold rounded white typography, and playful lime-pink mascot art. The feed behaves like short video, while profiles, articles, products, and help remain inside the same black frame."
+description: "A media-first dark interface where vertical creator content, shoppable product strips, charcoal editorial reading, electric-violet actions, and vivid sticker-like illustration share one continuous black shell."
 
 colors:
-  primary: "#8B5CFF"
+  primary: "#8C5CFF"
   on-primary: "#FFFFFF"
-  primary-pressed: "#7342EA"
+  primary-pressed: "#7545E8"
   ink: "#FFFFFF"
-  ink-muted: "#C7C4CC"
-  ink-subtle: "#8D8A92"
-  canvas: "#0D0D0E"
-  surface-1: "#252526"
-  surface-2: "#333334"
-  accent-lime: "#E6FF58"
-  accent-pink: "#FF57C9"
-  accent-yellow: "#FFE76B"
-  accent-violet: "#7D3CDA"
+  ink-muted: "#C9C7CE"
+  ink-subtle: "#929097"
+  canvas: "#0B0B0C"
+  surface-1: "#242425"
+  surface-2: "#343435"
+  disabled: "#5B5B5E"
+  accent-lime: "#E9FF58"
+  accent-pink: "#FF55C8"
+  accent-yellow: "#FFE65F"
   price-orange: "#FF7A1A"
-  hairline: "#FFFFFF1F"
-  semantic-success: "#44B87A"
-  semantic-danger: "#EF5A65"
-  semantic-overlay: "#000000"
+  hairline: "#FFFFFF24"
+  semantic-success: "#4BC47C"
+  semantic-danger: "#F25C67"
+  semantic-overlay: "#000000A8"
 
 typography:
-  display-xl: { fontFamily: Rounded Sans, fontSize: 42, fontWeight: 800, lineHeight: 1.0, letterSpacing: -1 }
-  display-lg: { fontFamily: Rounded Sans, fontSize: 32, fontWeight: 750, lineHeight: 1.06, letterSpacing: -0.6 }
-  display-md: { fontFamily: Rounded Sans, fontSize: 26, fontWeight: 700, lineHeight: 1.12, letterSpacing: -0.3 }
-  headline: { fontFamily: Rounded Sans, fontSize: 21, fontWeight: 700, lineHeight: 1.2, letterSpacing: 0 }
-  card-title: { fontFamily: Rounded Sans, fontSize: 16, fontWeight: 650, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: Rounded Sans, fontSize: 17, fontWeight: 450, lineHeight: 1.35, letterSpacing: 0 }
-  body-lg: { fontFamily: Rounded Sans, fontSize: 16, fontWeight: 400, lineHeight: 1.42, letterSpacing: 0 }
-  body: { fontFamily: Rounded Sans, fontSize: 14, fontWeight: 400, lineHeight: 1.4, letterSpacing: 0 }
-  body-sm: { fontFamily: Rounded Sans, fontSize: 12, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
-  caption: { fontFamily: Rounded Sans, fontSize: 10, fontWeight: 500, lineHeight: 1.3, letterSpacing: 0 }
-  button: { fontFamily: Rounded Sans, fontSize: 15, fontWeight: 650, lineHeight: 1.2, letterSpacing: 0 }
-  eyebrow: { fontFamily: Rounded Sans, fontSize: 10, fontWeight: 700, lineHeight: 1.25, letterSpacing: 0.25 }
-  mono: { fontFamily: System Mono, fontSize: 12, fontWeight: 450, lineHeight: 1.35, letterSpacing: 0 }
+  display: { fontFamily: Rounded Geometric Sans, fontSize: 28, fontWeight: 800, lineHeight: 30, letterSpacing: -0.5 }
+  title: { fontFamily: Rounded Geometric Sans, fontSize: 24, fontWeight: 750, lineHeight: 27, letterSpacing: -0.3 }
+  headline: { fontFamily: Rounded Geometric Sans, fontSize: 20, fontWeight: 700, lineHeight: 24, letterSpacing: 0 }
+  card-title: { fontFamily: Rounded Geometric Sans, fontSize: 16, fontWeight: 650, lineHeight: 20, letterSpacing: 0 }
+  body-lg: { fontFamily: Rounded Geometric Sans, fontSize: 16, fontWeight: 400, lineHeight: 22, letterSpacing: 0 }
+  body: { fontFamily: Rounded Geometric Sans, fontSize: 14, fontWeight: 400, lineHeight: 19, letterSpacing: 0 }
+  body-sm: { fontFamily: Rounded Geometric Sans, fontSize: 12, fontWeight: 400, lineHeight: 16, letterSpacing: 0 }
+  caption: { fontFamily: Rounded Geometric Sans, fontSize: 10, fontWeight: 500, lineHeight: 13, letterSpacing: 0 }
+  button: { fontFamily: Rounded Geometric Sans, fontSize: 15, fontWeight: 650, lineHeight: 19, letterSpacing: 0 }
 
-rounded: { xs: 5, sm: 9, md: 13, lg: 18, xl: 24, xxl: 30, pill: 9999, full: 9999 }
-spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
+rounded: { xs: 6, sm: 10, md: 14, lg: 20, xl: 28, pill: 9999, full: 9999 }
+spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48 }
 
 components:
-  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.md}", padding: [14, 18]}
-  media-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 0 }
+  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.md}", height: 48 }
+  media-stage: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", rounded: "{rounded.lg}" }
   product-strip: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.md}", padding: 8 }
-  editorial-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body-lg}", rounded: "{rounded.lg}", padding: 14 }
-  bottom-nav: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", height: 58 }
+  editorial-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 12 }
+  bottom-navigation: { backgroundColor: "{colors.surface-1}", selectedColor: "{colors.ink}", unselectedColor: "{colors.ink-subtle}", height: 58 }
 ---
 
 # Overview
 
-Wibes frames creator video, editorial stories, and products inside a continuous black experience. Violet actions connect viewing, following, creating, and buying without competing with the media.
+Wibes is a black, media-led shell. Full-height creator video provides the dominant color mass; product rows, article surfaces, account gates, and recovery states sit in charcoal layers around it. Violet is reserved for high-value actions and selection, while lime, pink, yellow, and purple illustration carry brand personality outside ordinary content.
 
 # Non-negotiable visual invariants
 
-- The reference consistently shows let real creator media dominate the feed.
-- The reference consistently shows attached products visible without hiding the content.
-- Imagery consistently uses playful art for education and recovery.
-- Sampled screens consistently use preserve violet as the cross-product action color.
-- The reference consistently shows a dark shoppable-content interface combining edge-to-edge creator media.
-- The reference consistently shows charcoal editorial cards.
-- The reference consistently shows electric-violet commerce actions.
-- The reference consistently shows bold rounded white typography.
+- Creator media remains the largest surface in the feed; controls are overlaid or attached without turning the screen into a card dashboard.
+- The global shell stays near-black, with charcoal used for sheets, reading surfaces, product strips, and bottom navigation.
+- Electric violet identifies selected topics, sign-in/follow actions, cart affordances, and recovery actions; it is not applied to every icon.
+- Shoppable content keeps the linked product and price immediately adjacent to the media or article that introduced it.
+- Display text is broad, rounded, heavy, and compact; supporting text is noticeably smaller and calmer.
+- Branded illustration is structurally important in onboarding, sign-in gates, empty states, and network recovery, but does not replace creator media or product photography.
 
 # Color and surfaces
 
 ### Brand & Accent
 
-Electric violet is the primary action and selected state. Lime, pink, and yellow belong to onboarding, stickers, and educational art.
+Violet is the stable interactive accent. Acid lime, hot pink, warm yellow, and saturated purple form the illustration palette and may occupy large campaign fields. Orange is local to price or purchase emphasis when it appears; it is not a second global accent.
 
 ### Surface
 
-Use near-black canvas, charcoal cards, and slightly lighter modal sheets. Media may fill edge to edge within rounded clipping.
+Use `#0B0B0C` for the outer canvas and `#242425` to `#343435` for content surfaces. Feed video can run nearly edge to edge inside a large 18–20 point clip. Reading and account sheets are opaque charcoal with no glass effect. Separation comes from fill changes, spacing, and occasional thin white-alpha hairlines rather than shadows.
 
 ### Text
 
-Use white for titles and actions, light gray for supporting copy, and muted gray for metadata and inactive navigation.
+Primary text is white. Supporting copy uses light gray, metadata uses mid-gray, and disabled actions use a gray fill with low-contrast text. Text over video requires a darkened local region or placement within naturally quiet image space.
 
 ### Semantic
 
-Use green for success, red for report or removal, orange for immediate purchase, and violet for neutral social or commerce action.
+Use green only for confirmed or positive status, red for destructive/reporting feedback, and neutral gray for unavailable actions. Preserve native system coloring inside system-owned permission alerts.
 
 # Typography
 
 ### Font Family
 
-Use a bold rounded sans with broad Cyrillic and friendly display forms.
+Use the observed wide rounded geometric character for display, navigation labels, and actions. A close implementation substitute is SF Pro Rounded or a Cyrillic-capable rounded geometric sans; use the same family at regular weights for body copy.
 
 ### Hierarchy
 
-Use 32–42 points campaign statements, 21–26 points editorial headings, 14–17 points body and product labels, and 10–12 points metadata.
+Use 28 points for major onboarding or article statements, 24 points for screen and article titles, 20 points for section headings, 16 points for card titles and prominent descriptions, 14 points for ordinary copy, 12 points for product and status detail, and 10 points for compact metadata.
 
 ### Principles
 
-Keep headlines short, chunky, and left aligned. Product descriptions and legal copy use calm regular weights for contrast.
+Headlines use heavy weight, short line lengths, and tight leading. Article body copy uses regular weight with visibly more leading. Price, author, view count, and reading time stay compact so they do not compete with media.
 
 ### Note on Font Substitutes
 
-Use Manrope, Inter Rounded, or a similar geometric sans with 700–800 display weights.
+Do not substitute a narrow editorial serif or default unmodified San Francisco for the heavy branded headings. If the exact face is unavailable, use SF Pro Rounded or another rounded geometric sans and tune width, weight, and line breaks against the observed hierarchy.
 
 # Screen composition
 
 ### Spacing System
 
-Use a 4 points base, 12 points card gaps, 12–16 points phone gutters, and 20–24 points between content blocks.
+Use a 4-point base. Typical screen gutters are 12 points, card gaps 8–12 points, and section gaps 20–24 points. Feed overlays sit 12 points from media edges. Full-width primary actions use 12–16 point side insets and about 48 points height.
 
 ### Grid & Container
 
-Feed media is full-width and near full-height. Profiles use a three-column media grid; product detail uses gallery above a sticky action.
+The feed is a vertical media stage with a compact horizontal story rail above and an attached product carousel below. Author profiles use a centered identity block followed by a two-column media grid. Article detail is a single wide charcoal reading surface with a lead image, long text, attached products, and a compact action row. Product media occupies the upper half of its focused view, followed by price, thumbnails, and a sticky action.
 
 ### Whitespace Philosophy
 
-Let media fill the viewport but keep copy, actions, and product strips within safe dark zones. Text-only help screens remain open and simple.
+Media surfaces are dense; utility and recovery states are sparse. Keep feed chrome close to the content it controls, while sign-in, empty, and error states leave a large uninterrupted black field around one illustration, one message, and one action.
 
 Surface hierarchy observed in the source:
 
-Use card overlap, dark sheets, soft image shadow, and lightly extruded illustration objects. Avoid glossy glass UI.
+Use opaque charcoal sheets over black, full-bleed or rounded media, and compact attached commerce rows. Do not introduce translucent material, glossy glass, or floating white cards into the core shell.
 
 ### Decorative Depth
 
-Use sticker-like mascots, tilted cards, starbursts, orbits, speech bubbles, and small 3D extrusions only in education and empty states.
+Reserve 3D volume, doodle marks, speech bubbles, starbursts, and cutout portrait cards for the illustration layer. Ordinary content surfaces remain flat so creator media and branded art supply the depth.
 
 # Navigation appearance
 
-Use a four-item bottom bar for Feed, Create, Cart, and Profile. Keep it black and persistent across feed, editorial, and commerce surfaces.
+The observed primary bar is a dark, icon-led four-destination strip with a distinct centered create action and a thin top divider. Selection is communicated by the white icon and a small indicator, while inactive items recede to gray. The white Wibes wordmark is centered in the top chrome of feed and focused content. Deeper article, product, help, and profile views use back or close controls without introducing a second persistent navigation system. Adapt the appearance and hierarchy to the target product's real destinations rather than copying Wibes labels or count.
 
 # Components
 
 ### Buttons
 
-Primary follow, login, refresh, create, and cart actions are wide violet rectangles. Buy now may use orange for separation. Native controls must inherit these fills, radii, and type.
+Primary actions are full-width violet rounded rectangles around 48 points high with white semibold text. Disabled actions use a medium-gray fill. Secondary choices use charcoal or white depending on the containing campaign surface. Small cart actions may be square violet controls attached to product rows; follow and sign-in actions use the same violet family.
 
 ### Cards & Containers
 
-Media cards hold author, content, social actions, caption, product carousel, and price. Editorial cards combine image, read time, title, like, and share.
+Media cards combine author identity, vertical content, a right-side social rail, caption, views, and optional product carousel. Product tiles use a thumbnail, compact price/title, and a separate cart control. Editorial cards use a large image and short reading metadata; focused articles use a continuous charcoal surface rather than repeated boxed paragraphs. Profile tiles preserve tall media crops in a two-column grid.
 
 ### Inputs & Forms
 
-Creation and account forms use dark filled rows with white type and violet completion action. Keep sign-in gating inside one modal sheet.
+Topic selection uses two-column dark tiles with large category art, a violet outline, and a circular check when selected; a count/status row explains the selection requirement before the bottom action enables. Authentication and creation gates are focused sheets or sparse full-screen states with one dominant action. Long informational pages use plain dark scrolling text and conventional back navigation rather than form styling.
 
 # Imagery and icons
 
-Use sticker-like mascots, tilted cards, starbursts, orbits, speech bubbles, and small 3D extrusions only in education and empty states.
+Creator video is cropped to fill tall rounded stages. Product and editorial photography uses realistic imagery and keeps its original subject legible; it is not recolored into the illustration palette. Circular avatars and publisher marks remain small identity anchors.
 
-Use vertical creator video, rounded editorial photography, circular avatars, and tilted white portrait cards inside illustration scenes.
-
-If final imagery is not yet available, any placeholder must preserve the documented scale, placement, crop, and visual weight rather than removing that layer.
+Conventional controls—back, close, share, like, comment, overflow, cart, and bottom navigation—use simple white or gray glyphs with consistent stroke weight. Product-specific education and recovery use the authored illustration system from `illustrations.md`, not arbitrary SF Symbols. Any temporary asset must preserve the final image's footprint, crop, and color mass.
 
 # States
 
-Use like, comment, follower, verification, cart, login-required, connection error, and content-rights states in direct context.
+Selected topic tiles gain violet borders and checks, while the save action changes from disabled gray to violet. Permission requests first appear as an authored dark sheet, then hand off to native iOS permission UI. Feed engagement shows selected count or action state in place. Comments can present an illustrated empty state plus a sign-in requirement. Creation and enhanced actions can be gated by an explanatory sign-in screen. Network failure replaces content with one illustration, a concise explanation, and a violet retry action. Focused product and article views preserve the global navigation and a clear close/back path.
 
 # iOS adaptation
 
 ### Touch Targets
 
-Media, social actions, product strip, profile grid, bottom navigation, purchase, create, and sign-in controls require at least 44 points targets.
+Give topic tiles, story cards, social actions, product rows, cart controls, profile tiles, navigation items, close/back controls, and primary actions at least 44-point targets. Increase the hit region around compact overlay glyphs without enlarging their visible artwork.
 
 ### Collapsing Strategy
 
-Keep media, author, primary social action, attached product, and next action visible. Collapse comments, description, help, and secondary commerce detail.
+On compact heights, preserve the active media, author, primary engagement action, linked product, and bottom navigation. Let story rails and product strips scroll horizontally. In articles, preserve title, lead image, readable body, and attached purchase action while allowing secondary recommendations to move later in the scroll.
 
 ### Image Behavior
 
-Use `cover` for video, editorial photos, profile grids, and product media; use `contain` for sticker illustrations and device art.
+Use aspect-fill for creator video, profile tiles, article photography, and product media. Use aspect-fit for authored stickers, 3D objects, and recovery illustrations. Keep text and essential controls out of the home-indicator and status-bar safe areas even when media extends beneath them.
 
-Apply these rules within current iPhone safe areas and scrolling containers. Keep interactive targets at least 44 points, preserve a logical VoiceOver order, and let Dynamic Type wrap supporting text without flattening the documented hierarchy. Preserve the documented appearance.
+Respect Dynamic Type for body, action, and legal copy; let text wrap and allow reading surfaces to grow. Keep a logical VoiceOver order from author and media description to engagement controls, linked product, and navigation. Announce topic selection count, disabled requirements, loading, retry, and sign-in gates as state changes.
 
 # Anti-generic checklist
 
-- Do not place mascot art over real product photography.
-- Do not make every social icon violet.
-- Do not introduce light backgrounds into the main shell.
-- Do not retain default native blue controls.
-- Do not replace the documented hierarchy with a generic stack of identical white cards or `Form` sections.
-- Do not use default blue tint, an unstyled `TabView`, arbitrary SF Symbols, or uniform corner radii when they contradict the recorded tokens and components.
-- Do not omit compositionally important imagery while final assets are pending; preserve its footprint with a faithful placeholder.
+- Do not turn the feed into a stack of small identical cards.
+- Do not introduce light backgrounds into the primary shell.
+- Do not tint every social or navigation glyph violet.
+- Do not detach linked products from the content that introduced them.
+- Do not replace large branded illustration with a small generic symbol.
+- Do not use default blue tint, an unstyled `TabView`, or default `Form` sections.
+- Do not apply one corner radius to media, product rows, buttons, sheets, and thumbnails.
+- Do not copy Wibes' literal destinations when the adapted product has a different information architecture.
 
 </design-context>

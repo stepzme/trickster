@@ -136,15 +136,16 @@
       "Shopping, Listings & Marketplaces",
       "Social Networking"
     ],
-    "uiSummary": "A dark shoppable-content interface combining edge-to-edge creator media, charcoal editorial cards, electric-violet commerce actions, bold rounded white typography, and playful lime-pink mascot art. The feed behaves like short video, while profiles, articles, products, and help remain inside the same black frame.",
-    "uxSummary": "Wibes combines a creator feed, shoppable videos, editorial posts, profiles, product detail, cart actions, creation, and account help in a content marketplace.",
-    "navigationSummary": "- A four-item primary navigation moves between Feed, Create, Cart, and Profile. - feed items keep author, media, social actions, product strip, and purchase affordance in one context. - Authentication is requested only when the user tries to follow, comment, create, or buy.",
+    "uiSummary": "A media-first dark interface where vertical creator content, shoppable product strips, charcoal editorial reading, electric-violet actions, and vivid sticker-like illustration share one continuous black shell.",
+    "uxSummary": "Wibes lets a person enter a content feed, move from a post to its author or linked product, act on content, and return without losing the surrounding feed context. Actions that require an account are intercepted at the moment of intent. Recovery and empty states keep the next action explicit.",
+    "navigationSummary": "- Four peer destinations remain available across the primary experience; Create starts the creation path rather than passive browsing. - A horizontal rail above the feed opens short editorial or educational items and returns to the same primary context. - Tapping an author opens a profile; tapping a post or editorial item opens focused content; tapping an attached product opens product detail or an external purchase destination. - Focused content uses close or back to return to the originating feed, article, profile, or product context. - The target product should preserve this distinction between primary destinations, focused content, and external handoff without copying Wibes' literal destination names.",
     "coreFlows": [
-      "Discover content and products",
-      "Shop from a Wibe",
-      "Create or manage the account"
+      "Personalize the first feed",
+      "Browse content and open a linked item",
+      "Engage when signed out",
+      "Recover the feed after a connection failure"
     ],
-    "illustrationSummary": "Wibes uses a playful sticker-like illustration family combining lime, violet, pink, yellow, and white characters with rounded 3D volume, doodle accents, and cutout portraits."
+    "illustrationSummary": "Wibes has a repeatable illustration system for onboarding, topic selection, education, sign-in gates, empty comments, and connection recovery. It combines neon sticker graphics, softly extruded toy-like objects, doodle accents, and occasional cutout portraits. This system is separate from creator video and product photography."
   },
   {
     "appId": "67daed0f683f3142aa5aad45",
@@ -154,13 +155,19 @@
     "categories": [
       "Travel & Transportation"
     ],
-    "uiSummary": "A broad travel marketplace built from white booking surfaces, high-impact destination photography, bright yellow primary actions, violet brand moments, compact filters, and rounded bottom sheets. Commerce remains utilitarian while seasonal campaigns introduce playful geometric and 3D artwork.",
-    "uxSummary": "Yandex Travel moves users from broad inspiration to a precise booking decision while repeatedly surfacing price, timing, and cancellation terms.",
-    "navigationSummary": "Category shortcuts start lodging, apartments, flights, trains, and experiences; deep booking steps use sheets and clear back navigation.",
+    "uiSummary": "A white, photo-led travel interface that combines large destination imagery, compact booking data, pale-gray controls, bright yellow commitment actions, green trust signals, and occasional violet-orange campaign graphics.",
+    "uxSummary": "Yandex Travel moves from broad discovery into a focused search, comparison, booking, payment, and trip-management sequence. The user can refine or back out without losing the current destination, dates, guests, filters, or selected property. Consequential actions expose terms before commitment and return an explicit success or retry state.",
+    "navigationSummary": "- Home is the root context for profile, saved items, discovery content, and search; focused tasks return to that context. - Search begins with a product-mode choice, then uses focused destination, date, and guest steps before opening results. - Results preserve the search summary while filters, sorting, and map view refine the same result set. - A property opens as a drill-down from results; room choice, booking details, payment, and confirmation continue from that property context. - Share, favorite, review, photo, and nearby-place actions branch from detail and return to it. - Confirmed bookings are available from the trip area; a trip can open booking detail, date change, cancellation, room detail, local activities, or support. - Close exits self-contained tasks; back returns to the previous level and preserves entered state.",
     "coreFlows": [
-      "Find and book a trip"
+      "Complete onboarding and account entry",
+      "Search for a hotel",
+      "Refine and compare results",
+      "Review a property and choose a room",
+      "Book and pay",
+      "Continue from booking confirmation",
+      "Use an active trip"
     ],
-    "illustrationSummary": "Yandex Travel uses playful campaign artwork alongside photography: simple 3D travel objects, mascots, and bold geometric fields."
+    "illustrationSummary": "Yandex Travel uses a repeatable authored illustration layer alongside destination photography. Operational states use small softly modeled brand objects, while seasonal campaigns can expand into bold geometric fields with a single toy-like object. This language does not replace hotel, room, city, event, or excursion photography."
   },
   {
     "appId": "67eaaedfcd8260a2a544f9d4",
@@ -170,13 +177,17 @@
     "categories": [
       "Travel & Transportation"
     ],
-    "uiSummary": "A bright accommodation marketplace built from white sheets, near-black booking controls, a raspberry-pink brand accent, softly rounded photo cards, and dense travel metadata. Property photography is the visual protagonist while totals, ratings, dates, and conditions remain explicit.",
-    "uxSummary": "Sutochno.ru supports accommodation search, comparison, booking, host chat, reservation management, favorites, and cashback.",
-    "navigationSummary": "- Five primary destinations cover Search, Favorites, Reservations, Messages, and Profile. - Search begins with destination, dates, and guests, then continues to list or map results. - Property and checkout screens use back navigation and a remains available booking action.",
+    "uiSummary": "A photo-led accommodation interface that pairs a black search and commitment layer with white reading surfaces, raspberry selection markers, dense booking facts, and rounded sheets over maps or property imagery.",
+    "uxSummary": "Sutochno supports discovery, comparison, booking, property communication, reservation management, favorites, and account settings. Tasks move from a broad top-level destination into a focused screen or sheet, preserve the selected stay context, and expose the consequential decision before it is applied.",
+    "navigationSummary": "Five persistent destinations provide access to search, favorites, reservations, messages, and profile. Search can continue into suggestions, dates, guests, filters, a map, a result list, and property detail. Property detail and booking are drill-down tasks that return to the prior result context. Reservations and messages link to the same booking context from different starting points. Booking details provide contact, support, calendar, and cancellation branches. Profile owns account data, bonuses, promo codes, settings, invitations, support, and sign-out. Bottom sheets refine or confirm the current task; system permission, share, calendar, and keyboard interfaces return to the pending app state.",
     "coreFlows": [
       "Find accommodation",
-      "Book a stay",
-      "Manage a reservation"
+      "Review a property and its feedback",
+      "Book and pay for a stay",
+      "Communicate about a booking",
+      "Manage or cancel a reservation",
+      "Restore a recent search from favorites",
+      "Update profile and account settings"
     ],
     "illustrationSummary": null
   },
@@ -190,12 +201,17 @@
       "Lifestyle",
       "Social Networking"
     ],
-    "uiSummary": "A clean messenger with a neutral white communication shell, vivid blue active controls, pale-blue message surfaces, black circular creation actions, dark immersive call stages, and a luminous blue-violet brand mark.",
-    "uxSummary": "MAX is a messenger organized around contacts, calls, chats, media sharing, invitations, and service-account communication.",
-    "navigationSummary": "Four fixed destinations cover Contacts, Calls, Chats, and Settings. Conversation headers expose calling and overflow actions; creation uses controls.",
+    "uiSummary": "A compact white messenger with black commitment controls, restrained blue interaction accents, circular identity imagery, a pale illustrated conversation field, and separate dark stages for calls, capture, and media review.",
+    "uxSummary": "MAX centers communication around contacts, conversations, calls, invitations, identity sharing, media, and group administration. Root destinations remain stable while focused tasks open as drill-downs, sheets, or self-contained full-screen modes. Input validation, permission requests, delivery state, presence, and confirmation provide feedback without discarding the current communication context.",
+    "navigationSummary": "Four persistent destinations provide access to contacts, calls, chats, and settings. Chats can be filtered between all and new items. A conversation header provides access to audio call, overflow actions, and related identity information. Creation starts from the chats destination and continues into contact or group choices. Back returns from profiles, invitations, group administration, search, and appearance settings to their originating list or conversation. Close exits forwarding, media, camera, and other self-contained tasks. Sheets handle bounded choices such as finding a person by number, choosing recipients, inviting an unavailable contact, or confirming a destructive action. System permissions and share interfaces return to the task that requested them.",
     "coreFlows": [
-      "Start and continue communication",
-      "Manage contacts and services"
+      "Sign in and establish identity",
+      "Find or invite a person",
+      "Share identity by QR code or link",
+      "Exchange messages and attachments",
+      "Start and manage a call",
+      "Create and administer a group chat",
+      "Change conversation appearance"
     ],
     "illustrationSummary": "MAX uses a glossy dimensional speech-mark and a family of colorful hand-drawn smile symbols for brand and expressive messaging."
   },
@@ -208,15 +224,17 @@
       "Finance",
       "Lifestyle"
     ],
-    "uiSummary": "A modular finance-and-lifestyle super-app built from white rounded cards, pale gray canvas, bright yellow commitment actions, light blue utility accents, and friendly graphite-yellow 3D product objects. A five-tab structure supports dense banking, shopping, travel, and support without losing clarity.",
-    "uxSummary": "T-Bank combines accounts, payments, transfers, shopping, travel, city services, support chat, and a financial-product storefront.",
-    "navigationSummary": "- Five primary destinations cover Home, Payments, City, Chat, and Showcase. - Home exposes account context, shortcuts, operations, cashback, and product entry points. - Focused financial and lifestyle tasks use drill-down screens and bottom sheets.",
+    "uiSummary": "A dense white-and-mist financial interface where soft modular account surfaces, compact blue utilities, selective yellow commitment actions, dark product headers, and polished branded objects support fast scanning across money and adjacent services.",
+    "uxSummary": "T-Bank exposes accounts and frequently repeated actions from the main destination, then moves consequential tasks into focused drill-downs. Users choose a target and source, enter or review the required data, confirm once, receive an explicit result, and return to updated account context. Browsing services and campaigns remains reversible and does not replace the payment or account hierarchy.",
+    "navigationSummary": "The observed primary navigation has five peer destinations: Main, Payments, City, Chat, and Showcase. Main provides direct entries to transfer by phone, top up, QR scan, phone payment, accounts, rewards, and stories. Account, card, profile, travel, and service pages are drill-down destinations that return to their origin. Use this as an interaction pattern, not a required product map: the adapted product should include only its actual peer destinations. Use Back for hierarchical drill-downs, Close for self-contained camera or payment tasks, and sheets for focused selection or calculation that should preserve the underlying task.",
     "coreFlows": [
-      "Transfer or pay",
-      "Use City and travel",
-      "Discover a product"
+      "Review the main account",
+      "Transfer by phone number",
+      "Scan and pay a QR code",
+      "Open and manage an account",
+      "Review profile and support"
     ],
-    "illustrationSummary": "T-Bank uses a coherent 3D object language for financial products, services, and promotional education."
+    "illustrationSummary": "T-Bank uses a coherent authored object language for product discovery, services, rewards, education, and campaigns. Compact glossy objects appear in story tiles and service marks; larger scenes and renders anchor campaign cards. Photography is a separate system for travel and retail and must not be treated as illustration."
   },
   {
     "appId": "6807990fa0c5a91c46384e44",
@@ -226,14 +244,18 @@
     "categories": [
       "Food and Drinks"
     ],
-    "uiSummary": "A lively grocery-retail interface with a white canvas, strong brand red actions, bright green promotional fields, colorful category tiles, playful 3D mascots, dense product photography, and compact loyalty and checkout modules.",
-    "uxSummary": "Pyaterochka combines loyalty, coupons, games, catalog browsing, grocery delivery or pickup, cart editing, checkout, and post-order additions.",
-    "navigationSummary": "A four-item primary navigation anchors Home, Catalog, Contact us, and Profile. Catalog keeps delivery mode, address, search, and scan entry visible before product categories.",
+    "uiSummary": "A high-density grocery interface with a white product canvas, red purchase and navigation accents, green loyalty worlds, pastel category matrices, direct product photography, and compact checkout summaries.",
+    "uxSummary": "Pyaterochka lets users browse loyalty content without signing in, discover products by category, search, or scan, build a cart, resolve delivery choices, and complete checkout. Shopping context persists across product detail and option selection. Authentication is requested when a gated loyalty or checkout action needs it, then returns the user to the pending task.",
+    "navigationSummary": "The observed primary navigation has four peer destinations: Home, Catalog, Contact us, and Profile. Catalog exposes delivery mode, address, search, scan, categories, favorites, and prior purchases. Product and order details are drill-down destinations. Cart is a focused task entered from shopping context and closed or completed independently. Use Back for catalog and settings drill-downs, Close for cart or promotional overlays, and bottom sheets for reviewing changes without discarding the underlying cart. The adapted product should keep only its own peer destinations; these observed labels and counts are not mandatory architecture.",
     "coreFlows": [
-      "Discover and shop",
-      "Checkout and order"
+      "First launch and browse Home",
+      "Browse the catalog and choose fulfillment",
+      "Search and add an item",
+      "Configure and place an order",
+      "Handle unavailable or changed items",
+      "Open coupons or a game"
     ],
-    "illustrationSummary": "Pyaterochka uses cheerful dimensional mascots and retail pictograms alongside product photography and promotional banners."
+    "illustrationSummary": "Pyaterochka has a stable campaign illustration system built around expressive branded mascots and rounded prize or loyalty objects. It appears across Home promotion, games, coupons, and participation education. Product photography and category cutouts are separate factual imagery systems and do not become mascot illustration."
   },
   {
     "appId": "680a3ce9b58fa502c2444f88",

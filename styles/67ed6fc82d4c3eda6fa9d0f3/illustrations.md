@@ -6,6 +6,8 @@ MAX uses a glossy dimensional speech-mark and a family of colorful hand-drawn sm
 
 Brand scenes use a translucent blue-violet 3D loop with luminous depth. Sticker-like symbols are flat, chunky, irregular, and face-led in saturated blue, green, orange, and red.
 
+Required product illustration is generated with the available image-generation model, integrated as an image asset, and not recreated programmatically in SwiftUI. A screen that requires this illustration is not ready for design approval until the generated asset is integrated.
+
 # Composition
 
 Use the 3D mark as a single centered hero over a dark radial background. Keep sticker symbols isolated or arranged in a simple grid with generous black or white separation.

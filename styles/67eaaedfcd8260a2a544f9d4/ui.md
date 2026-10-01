@@ -3,178 +3,148 @@
 version: 1
 platform: iOS
 name: Sutochno-design-analysis
-description: "A bright accommodation marketplace built from white sheets, near-black booking controls, a raspberry-pink brand accent, softly rounded photo cards, and dense travel metadata. Property photography is the visual protagonist while totals, ratings, dates, and conditions remain explicit."
+description: "A photo-led accommodation interface that pairs a black search and commitment layer with white reading surfaces, raspberry selection markers, dense booking facts, and rounded sheets over maps or property imagery."
 
 colors:
-  primary: "#EA315F"
-  on-primary: "#FFFFFF"
-  action: "#171717"
+  brand: "#E72D62"
+  on-brand: "#FFFFFF"
+  action: "#181818"
   on-action: "#FFFFFF"
-  ink: "#18181A"
-  ink-muted: "#747478"
-  ink-subtle: "#A8A8AC"
-  canvas: "#F5F6F8"
-  surface-1: "#FFFFFF"
-  surface-2: "#F0F1F3"
-  hairline: "#E1E2E5"
-  semantic-success: "#2CB66C"
-  semantic-warning: "#EFAE2E"
-  semantic-danger: "#E64E57"
-  semantic-overlay: "#000000"
+  text-primary: "#171719"
+  text-secondary: "#74747A"
+  text-tertiary: "#A0A0A6"
+  canvas: "#FFFFFF"
+  grouped-canvas: "#F4F5F7"
+  control-fill: "#F0F0F2"
+  divider: "#E5E5E8"
+  positive: "#08B957"
+  recommendation: "#EAFBF2"
+  warning: "#E2AA28"
+  destructive: "#D84747"
+  overlay: "#000000"
 
 typography:
-  display-xl: { fontFamily: System Sans, fontSize: 38, fontWeight: 700, lineHeight: 1.05, letterSpacing: -0.7 }
-  display-lg: { fontFamily: System Sans, fontSize: 32, fontWeight: 700, lineHeight: 1.1, letterSpacing: -0.4 }
-  display-md: { fontFamily: System Sans, fontSize: 27, fontWeight: 700, lineHeight: 1.15, letterSpacing: -0.2 }
-  headline: { fontFamily: System Sans, fontSize: 21, fontWeight: 700, lineHeight: 1.2, letterSpacing: 0 }
-  card-title: { fontFamily: System Sans, fontSize: 15, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: System Sans, fontSize: 17, fontWeight: 500, lineHeight: 1.3, letterSpacing: 0 }
-  body-lg: { fontFamily: System Sans, fontSize: 16, fontWeight: 400, lineHeight: 1.42, letterSpacing: 0 }
-  body: { fontFamily: System Sans, fontSize: 14, fontWeight: 400, lineHeight: 1.4, letterSpacing: 0 }
-  body-sm: { fontFamily: System Sans, fontSize: 12, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
-  caption: { fontFamily: System Sans, fontSize: 10, fontWeight: 400, lineHeight: 1.3, letterSpacing: 0 }
-  button: { fontFamily: System Sans, fontSize: 14, fontWeight: 600, lineHeight: 1.2, letterSpacing: 0 }
-  eyebrow: { fontFamily: System Sans, fontSize: 11, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0.1 }
-  mono: { fontFamily: System Mono, fontSize: 12, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
+  screen-title: {fontFamily: "SF Pro Display", fontSize: 28, fontWeight: 700, lineHeight: 34, letterSpacing: -0.4}
+  page-title: {fontFamily: "SF Pro Display", fontSize: 22, fontWeight: 700, lineHeight: 27, letterSpacing: -0.2}
+  section-title: {fontFamily: "SF Pro Text", fontSize: 20, fontWeight: 700, lineHeight: 25, letterSpacing: -0.1}
+  card-title: {fontFamily: "SF Pro Text", fontSize: 16, fontWeight: 700, lineHeight: 20, letterSpacing: 0}
+  body: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 400, lineHeight: 20, letterSpacing: 0}
+  body-strong: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 600, lineHeight: 20, letterSpacing: 0}
+  metadata: {fontFamily: "SF Pro Text", fontSize: 13, fontWeight: 400, lineHeight: 17, letterSpacing: 0}
+  caption: {fontFamily: "SF Pro Text", fontSize: 11, fontWeight: 400, lineHeight: 14, letterSpacing: 0}
+  button: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 500, lineHeight: 20, letterSpacing: 0}
+  amount: {fontFamily: "SF Pro Display", fontSize: 24, fontWeight: 700, lineHeight: 29, letterSpacing: -0.2}
 
-rounded: { xs: 4, sm: 8, md: 12, lg: 16, xl: 22, xxl: 28, pill: 9999, full: 9999 }
-spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
+spacing:
+  xxs: 4
+  xs: 8
+  sm: 12
+  md: 16
+  lg: 20
+  xl: 24
+  section: 32
+
+rounded:
+  compact-control: 8
+  field: 12
+  card: 14
+  sheet: 20
+  action: 13
+  pill: 999
 
 components:
-  button-primary: { backgroundColor: "{colors.action}", textColor: "{colors.on-action}", typography: "{typography.button}", rounded: "{rounded.md}", padding: [14, 18]}
-  property-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.lg}", padding: 0 }
-  search-field: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 12 }
-  summary-sheet: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 16 }
-  bottom-nav: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", height: 60 }
+  primary-action: {height: 56, backgroundColor: "{colors.action}", textColor: "{colors.on-action}", typography: "{typography.button}", rounded: "{rounded.action}"}
+  outline-action: {height: 52, backgroundColor: "{colors.canvas}", textColor: "{colors.text-primary}", borderColor: "{colors.action}", borderWidth: 1.5, rounded: "{rounded.action}"}
+  search-field: {height: 44, backgroundColor: "{colors.canvas}", textColor: "{colors.text-primary}", typography: "{typography.body}", rounded: "{rounded.field}", padding: [0, 14]}
+  property-card: {backgroundColor: "{colors.canvas}", textColor: "{colors.text-primary}", rounded: "{rounded.card}", padding: 0}
+  grouped-section: {backgroundColor: "{colors.canvas}", textColor: "{colors.text-primary}", rounded: "{rounded.sheet}", padding: 16}
+  bottom-navigation: {height: 58, backgroundColor: "{colors.canvas}", selectedColor: "{colors.brand}", unselectedColor: "{colors.text-primary}"}
 ---
 
 # Overview
 
-Sutochno.ru is a photo-led travel marketplace with practical checkout. Pink identifies the service, while black actions and white information sheets keep booking decisions clear.
+Sutochno is visually led by real accommodation and destination photography, but booking facts never become secondary decoration. Search starts in a black brand field; results, property details, checkout, messages, and account management move onto white surfaces. Raspberry pink identifies the service, selection, bonuses, and small status accents. Near-black owns high-consequence actions and anchors a deliberately dense hierarchy of prices, dates, ratings, rules, and support information.
 
 # Non-negotiable visual invariants
 
-- The reference consistently shows let real accommodation photos lead.
-- The reference consistently shows totals and conditions explicit.
-- The reference consistently shows black for commitment.
-- The reference consistently shows preserve pink for brand and selection.
-- The reference consistently shows a bright accommodation marketplace built from white sheets.
-- The reference consistently shows near-black booking controls.
-- The reference consistently shows a raspberry-pink brand accent.
-- Imagery consistently uses softly rounded photo cards.
+- Search entry uses a near-black upper field with the white wordmark and a single white rounded destination control.
+- Property photos are the largest mass in result cards and detail headers; facts remain directly adjacent rather than hidden behind imagery.
+- Raspberry pink is concentrated in brand marks, selected navigation, bonus values, and compact badges, not spread across every control.
+- Booking, payment, sign-in, messaging, and recovery actions use wide near-black controls with white labels.
+- Long detail and checkout screens are segmented by white rounded sections on a very pale cool-gray grouped canvas.
+- Ratings use compact green values and recommendation labels, while prices remain large black numerals.
+- Maps keep their native geographic color mass and use white price labels or hollow pins rather than decorative custom scenery.
 
 # Color and surfaces
 
-### Brand & Accent
+The largest operational surfaces are white. A pale cool-gray grouped canvas appears between booking, reservation, profile, and cancellation sections, creating separation without card shadows. Search is the exception: its black upper field gives the white wordmark and destination input a strong entry point. Map screens are dominated by the map itself, with white controls and a white results sheet layered above it.
 
-Raspberry pink marks brand, active navigation, ratings, bonuses, and select toggles. Black is reserved for booking commitment.
+Raspberry pink is a small, high-recognition accent. It marks the persistent mini-wordmark, active tab, bonus and cashback values, some badges, and active switches. The principal action color is not pink but near-black. Green is restricted to rating values, recommendation labels, valid state, and positive status bars. Gold identifies exceptional host or property status. Destructive red belongs to cancellation and account consequences; it must not be confused with the brand accent.
 
-### Surface
-
-White cards and sheets sit on cool gray. Search headers may use a black band for high contrast.
-
-### Text
-
-Near-black carries property names, totals, and headings; gray carries location, attributes, and conditions.
-
-### Semantic
-
-Green confirms ratings or recommendations, red marks errors, and pink carries loyalty. Never use brand pink alone for destructive state.
+Outlines are used selectively on secondary actions, fields, checkboxes, and radio controls. Most section boundaries rely on background contrast and spacing. Shadows are soft and rare: result cards may lift slightly over the list, while information-heavy grouped sections remain visually flat.
 
 # Typography
 
-### Font Family
+Use SF Pro as the iOS implementation face. The reference depends on clear Cyrillic, strong numerals, and frequent shifts between bold decision text and compact supporting facts. Large destination titles and top-level areas sit around 28 points; page and modal titles use 20–22 points; property and section titles use 16–20 points. Body copy is approximately 15 points, with 13-point metadata for locations, dates, occupancy, unit attributes, and timestamps. Bottom navigation and very compact status details can fall to 11 points.
 
-Use a neutral system sans with strong numerals and readable Cyrillic.
-
-### Hierarchy
-
-Use 21–27 points page headings, 15–17 points property titles, 14 points body, and 10–12 points travel metadata.
-
-### Principles
-
-Keep nightly and total prices distinct, pair ratings with review counts, and state dates and guests consistently.
-
-### Note on Font Substitutes
-
-SF Pro or Inter are suitable. Use tabular numerals for prices and dates.
+Prices and totals must remain immediately scannable. Use a 24-point bold amount for a section total and 16–18-point bold text where price shares a result card with other facts. Keep ruble values, nightly price, full-stay total, prepayment, and payment-on-arrival labels aligned as separate pieces of information. Do not shrink dense copy to fit: allow descriptions, policies, and support text to wrap vertically.
 
 # Screen composition
 
-### Spacing System
+Use 12–16-point horizontal screen insets and a 4-point spacing base. Compact rows can repeat every 8–12 points, while distinct booking or profile sections need 20–32 points of separation. The composition changes by task, but the content hierarchy stays explicit.
 
-Use a 4 points base, 12 points gutters, 8–12 points card gaps, and 20–24 points between search, results, amenities, and payment groups.
+Home places the black search region above horizontally scrolling destination photography and review-led accommodation cards. Search drill-downs use a compact centered title and a full-width input, followed by plain suggestion rows. Guest selection is intentionally sparse, ending in a bottom-pinned action.
 
-### Grid & Container
+Results alternate between a full map and a vertical photo-card list. On mixed map/list screens, the map fills the upper region and a white sheet starts the results below. Result cards begin with a wide rounded photo, overlay only compact badges and favorite controls, then stack category, property name, location, occupancy, price, and rating beneath.
 
-Home uses horizontal destination and review rails. Results stack image-led cards; property and checkout screens are single-column.
+Property detail begins with a large edge-to-edge gallery and a white rounded information sheet overlapping its lower edge. The reading column then advances through summary facts, sleeping arrangement, description, facilities, reviews, host, and rules. A persistent bottom booking bar keeps total, nightly price, and action together without covering the current section.
 
-### Whitespace Philosophy
-
-Allow photography to breathe while keeping booking facts dense and aligned beneath or beside each image.
-
-Surface hierarchy observed in the source:
-
-White cards lift gently from gray. Sticky black booking bars and overlapping summary sheets create functional depth.
-
-### Decorative Depth
-
-Use accommodation and destination photography. Avoid gradients, generic travel illustrations, or ornamental shadows.
+Checkout, reservation management, profile, and cancellation use full-width white grouped sections separated by thin bands of cool gray. Sheets rise from the bottom for sorting, contacts, editing, warnings, and alternative actions. Empty account areas use generous open space around one small authored object, a short explanation, and a bottom action.
 
 # Navigation appearance
 
-Five bottom tabs persist across search, favorites, bookings, messages, and profile. Detail tasks use a compact top bar.
+The observed top-level shell uses five bottom destinations with line icons and short labels. The selected destination turns raspberry pink; unselected items remain near-black or gray on a flat white bar. This count and these literal destinations belong to the source product, so an adapted product should preserve the compact five-item appearance only when its own information architecture supports it.
+
+Drill-down screens use a small back control at leading, a centered title or compact search summary, and optional filter, share, or favorite controls at trailing. Property gallery controls appear as white circular buttons over photography. Modal tasks use a white bottom sheet with a grabber or a close control. Full-screen editors may show a text back label when cancellation needs to be explicit.
 
 # Components
 
-### Buttons
+Primary actions are near-black, full-width, approximately 52–56 points high, with white medium-weight text and 12–14-point corners. The action may contain a small contextual symbol, total, or loading indicator, but it remains a single commitment target. Secondary actions are white with a 1–1.5-point black outline. Disabled actions switch to a solid light-gray fill with muted text instead of retaining a black shell at low opacity.
 
-Primary booking actions are black with white text; pink appears in smaller brand actions. Native controls must inherit package color and geometry.
+Search controls are white or pale-gray rounded rectangles with concise value summaries. Guest steppers use separate circular minus and plus controls around a centered value. Filter rows use checkboxes, radio circles, toggles, or value disclosures aligned to trailing; the active result count remains in the pinned black action.
 
-### Cards & Containers
+Property cards use a wide photographic header with 12–14-point rounding, compact overlaid badges, and an unboxed fact stack below. Detail sections are larger white rounded containers. Review cards can scroll horizontally inside their section, pairing an avatar placeholder, score, metadata, excerpt, and a disclosure to the full review.
 
-Result cards combine photo, badges, rating, location, title, occupancy, and price. Checkout sheets group terms and totals.
-
-### Inputs & Forms
-
-Search uses rounded destination fields and explicit date and guest pickers. Checkout fields remain linear and labeled.
+Status strips are local to the decision they affect: a pale-green prepayment notice, green check for valid contact data, narrow red or green markers in booking-related chat rows, and a pink unread badge. Chat service messages use outlined white containers and may contain a black action. User input stays as a rounded field with a circular black send action.
 
 # Imagery and icons
 
-Use accommodation and destination photography. Avoid gradients, generic travel illustrations, or ornamental shadows.
+Accommodation and destination photography is structural content. Use large `fill` crops for result and gallery images while keeping rooms, beds, or destinations identifiable. Thumbnails for bookings, messages, favorites, and checkout repeat the same source imagery at smaller scale to preserve continuity. A gallery count appears over the image rather than below it.
 
-Use `cover` crops that show the room or destination clearly. Galleries are large and edge-to-edge; map pins remain functional.
-
-If final imagery is not yet available, any placeholder must preserve the documented scale, placement, crop, and visual weight rather than removing that layer.
+Icons are thin, compact, mostly monochrome, and literal: back, search, filter, share, favorite, location, bed, facilities, support, phone, and disclosure. Colored service badges remain small. Do not turn those functional symbols into an illustration system. Sparse three-dimensional objects seen in isolated empty states are not enough to define a reusable product-wide illustration language.
 
 # States
 
-Pending, active, past, canceled, cashback, promo, and payment states appear beside the relevant reservation or amount.
+Observed states include first entry, location and tracking permission, empty and populated search, map loading, loaded price pins, filters with inactive and active controls, saved and unsaved properties, collapsed and expanded descriptions, booking input, disabled and enabled submission, payment loading, successful booking, missed prepayment, populated and signed-out messages or reservations, active and canceled booking, empty search results, notification permission, recent-search restoration, profile editing, cancellation reasons, and destructive confirmations.
+
+State feedback stays close to its cause. A changed filter updates the count in the pinned action; a valid contact gains a green check; loading replaces action text; a canceled booking becomes a dedicated result sheet; an unread conversation gains a compact badge; and failure or expiry offers a next action without removing the relevant booking context. Native permission and share dialogs remain system-owned.
 
 # iOS adaptation
 
-### Touch Targets
+Build the composition with safe-area-aware custom containers rather than default `Form` styling. Use a bottom inset for the compact tab bar and for persistent booking or confirmation controls. Long property and policy content belongs in a vertical `ScrollView`; review cards, destinations, and similar browseable groups may scroll horizontally. When a map and list share the screen, keep the map interactive and present results as a draggable or fixed lower sheet without making controls unreachable.
 
-Dates, guests, filters, cards, favorites, navigation, and booking actions require at least 44 points targets.
+Every row control, favorite, stepper, filter, close button, and tab needs a minimum 44-point hit target even when its visible mark is smaller. VoiceOver should read a result card as property identity, location, key attributes, total or nightly price, rating, then available actions. Read checkout totals as coherent phrases and distinguish prepayment from later payment. Dynamic Type may increase section height and stack trailing values, but must not detach a price from its label or cover the persistent action.
 
-### Collapsing Strategy
-
-Allow destination and review rails to scroll horizontally. Keep total and booking action pinned through long detail screens.
-
-### Image Behavior
-
-Use `cover` for property and destination photography. Preserve gallery aspect ratios and avoid hiding key room features.
-
-Apply these rules within current iPhone safe areas and scrolling containers. Keep interactive targets at least 44 points, preserve a logical VoiceOver order, and let Dynamic Type wrap supporting text without flattening the documented hierarchy. Preserve the documented appearance.
+Preserve the high photographic mass on narrow devices and use responsive `fill` crops rather than reducing galleries to thumbnails. Let descriptive copy wrap. Use native permission, calendar, keyboard, and share interfaces when they take control; app-owned sheets should retain the package's white surface, generous upper corners, and black decision actions.
 
 # Anti-generic checklist
 
-- Do not obscure price with badges.
-- Do not use decorative travel art instead of photos.
-- Do not hide cancellation terms.
-- Do not expose default platform-blue controls.
-- Do not replace the documented hierarchy with a generic stack of identical white cards or `Form` sections.
-- Do not use default blue tint, an unstyled `TabView`, arbitrary SF Symbols, or uniform corner radii when they contradict the recorded tokens and components.
-- Do not omit compositionally important imagery while final assets are pending; preserve its footprint with a faithful placeholder.
+- Do not replace the black search header with a generic white navigation bar and tinted search field.
+- Do not reduce property results to identical text cards or hide photos, totals, ratings, and stay facts behind a disclosure.
+- Do not use raspberry pink for every button; wide commitment actions are near-black.
+- Do not make every white section float with a shadow; grouped screens separate mostly through pale background bands and spacing.
+- Do not copy the source's five literal destinations when the adapted product has a different information architecture.
+- Do not omit cancellation terms, split payment, host status, or other consequential facts to make the layout feel cleaner.
+- Do not invent a travel illustration system from isolated empty-state objects; real photography remains the defining imagery.
 
 </design-context>
