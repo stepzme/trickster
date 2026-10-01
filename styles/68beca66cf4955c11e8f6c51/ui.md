@@ -179,8 +179,4 @@ Apply these rules within current iPhone safe areas and scrolling containers. Kee
 - Do not use default blue tint, an unstyled `TabView`, arbitrary SF Symbols, or uniform corner radii when they contradict the recorded tokens and components.
 - Do not omit compositionally important imagery while final assets are pending; preserve its footprint with a faithful placeholder.
 
-# Known gaps
-
-Screen Gallery contains 37 inspectable Stocks images but no flow sequences. Screen relationships, watchlist editing, quote ranges, news, widgets, and menus are visually documented; exact transition order and unshown states remain unverified.
-
 </design-context>

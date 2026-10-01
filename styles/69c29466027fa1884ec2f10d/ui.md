@@ -153,8 +153,4 @@ Only the states documented above are specified; other states must preserve the s
 - Do not use an unstyled `TabView`, default blue tint, or arbitrary SF Symbols when they contradict the reference.
 - Do not collapse every component to one corner radius or remove compositionally important imagery.
 
-# Known gaps
-
-The inspected catalog documents 53 flows across onboarding, discovery, compatibility, matches, cards, chat, profile, settings, and monetization. Real-world empty and safety escalation states are less represented.
-
 </design-context>

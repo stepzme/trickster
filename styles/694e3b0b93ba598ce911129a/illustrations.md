@@ -30,7 +30,3 @@ Use only the formats and crops supported by the implemented placement. Where the
 - Multiple competing objects in one frame.
 - Glossy stock 3D without the painted, imperfect texture.
 - Decorative gradients that reduce text contrast.
-
-# Known Gaps
-
-- Export aspect ratios, safe crop measurements, animation, and unobserved state variants were not documented.

@@ -208,10 +208,4 @@ Source-specific guardrails retained from the review:
 - Don't use promotional banners as status.
 - Don't merge wallet balance with order total.
 
-# Known gaps
-
-- Tokens were inferred visually from inspected mobile screens.
-- All 38 available flow names were inventoried; main page, ordering, and order tracking were image-reviewed.
-- Live courier map, cross-vertical fulfillment, and payment completion were not fully assessed.
-
 </design-context>

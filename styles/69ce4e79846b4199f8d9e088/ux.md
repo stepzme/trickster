@@ -31,7 +31,3 @@ The live scene is primary. A rail changes energy and presence; the vibe tile swi
 # System Access Timing
 
 No system-access request timing or denial recovery was documented in the reviewed source.
-
-# Known Gaps
-
-- Permission-denial recovery and unobserved secondary flows were not documented.

@@ -207,10 +207,4 @@ Source-specific guardrails retained from the review:
 - Don't replace merchant photography with illustration.
 - Don't let embedded browser chrome dominate.
 
-# Known gaps
-
-- Checkout verification motion was not measured.
-- iPad layouts were not represented.
-- Dark appearance was not reviewed in this sample.
-
 </design-context>

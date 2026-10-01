@@ -167,11 +167,4 @@ Only the states documented above are specified; other states must preserve the s
 - Do not use an unstyled `TabView`, default blue tint, or arbitrary SF Symbols when they contradict the reference.
 - Do not collapse every component to one corner radius or remove compositionally important imagery.
 
-# Known gaps
-
-- Exact map styling and font tokens were inferred visually.
-- Onboarding video motion was unavailable as a still preview.
-- The 129-flow inventory was complete; long child flows were sampled at key screens.
-- Large-screen map behavior was not represented.
-
 </design-context>

@@ -129,10 +129,4 @@ Only the states documented above are specified; other states must preserve the s
 - Do not use an unstyled `TabView`, default blue tint, or arbitrary SF Symbols when they contradict the reference.
 - Do not collapse every component to one corner radius or remove compositionally important imagery.
 
-# Known gaps
-
-- Tokens were inferred visually from inspected mobile screens.
-- All 36 flows were inventoried; Timer, Start focus session, and Statistics were image-reviewed.
-- Some timer steps were video-only; app blocking and subscription were not deeply sampled.
-
 </design-context>

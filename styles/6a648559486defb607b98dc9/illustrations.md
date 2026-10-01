@@ -30,7 +30,3 @@ Exact export formats, aspect ratios, animation behavior, and appearance variants
 - Do not place illustration behind amounts or account data.
 - Do not mix flat cartoons with the polished 3D material language.
 - Keep green and blue aligned with `ui.md` rather than introducing a new palette.
-
-# Known Gaps
-
-Export specifications, animation rules, safe-crop measurements, and unobserved state variants were not available in the reviewed source.

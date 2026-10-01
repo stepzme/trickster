@@ -35,7 +35,3 @@ four persistent destinations cover Home, Kaspi QR, Messages, and Services. Home 
 # System Access Timing
 
 No system-access request timing or denial recovery was documented in the reviewed source.
-
-# Known Gaps
-
-- Permission-denial recovery and unobserved secondary flows were not documented.

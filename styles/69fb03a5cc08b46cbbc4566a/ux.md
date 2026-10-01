@@ -39,7 +39,3 @@ Feed, Save, Pay, Invest, and Credit remain in primary navigation. Each tab opens
 # System Access Timing
 
 No system-access request timing or denial recovery was documented in the reviewed source.
-
-# Known Gaps
-
-- Permission-denial recovery and unobserved secondary flows were not documented.

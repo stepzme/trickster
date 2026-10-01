@@ -42,7 +42,3 @@ Today, Vitals, and My Health remain in primary navigation. A persistent plus but
 # System Access Timing
 
 No system-access request timing or denial recovery was documented in the reviewed source.
-
-# Known Gaps
-
-- Permission-denial recovery and unobserved secondary flows were not documented.

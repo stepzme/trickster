@@ -185,8 +185,4 @@ Source-specific guardrails retained from the review:
 - Do not invent decorative illustration.
 - Do not crop products ambiguously.
 
-# Known gaps
-
-All 90 flow records were surveyed; representative discovery, category, product, cart, checkout, order, and profile screens were inspected. iPad behavior and every payment failure were not visible.
-
 </design-context>

@@ -221,10 +221,4 @@ Source-specific guardrails retained from the review:
 - Don't merge posting and promotion.
 - Don't add decorative illustration to listings.
 
-# Known gaps
-
-- Tokens were inferred visually from inspected mobile screens.
-- All 64 flow names were inventoried; onboarding, home, search, car detail, posting, and profile flows were image-reviewed.
-- Video, phone handoff, and motion were not assessed.
-
 </design-context>

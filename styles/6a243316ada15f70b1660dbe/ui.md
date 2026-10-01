@@ -187,8 +187,4 @@ Source-specific guardrails retained from the review:
 - Do not crowd product cutouts with decoration.
 - Do not expose default platform-blue controls.
 
-# Known gaps
-
-The reviewed scenarios cover onboarding, Home, menu categories and products, loyalty, nearby cafés, Account, purchase history, and gift certificates. iPad layouts and every failure state were not visible.
-
 </design-context>

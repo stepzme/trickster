@@ -218,11 +218,4 @@ Source-specific guardrails retained from the review:
 - Don't use decorative icons as product evidence.
 - Don't crowd the bottom bar with labels.
 
-# Known gaps
-
-- Exact tokens and fonts were inferred visually.
-- Onboarding video motion was not available as a still.
-- The 44-flow inventory was complete; representative product and checkout states were sampled.
-- iPad layouts were not present.
-
 </design-context>

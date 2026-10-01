@@ -139,9 +139,4 @@ Only the states documented above are specified; other states must preserve the s
 - Do not use an unstyled `TabView`, default blue tint, or arbitrary SF Symbols when they contradict the reference.
 - Do not collapse every component to one corner radius or remove compositionally important imagery.
 
-# Known gaps
-
-- Source expansion, history management, and error recovery were not fully sampled.
-- Tablet and landscape layouts were not represented.
-
 </design-context>

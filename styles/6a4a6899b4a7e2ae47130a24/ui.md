@@ -186,11 +186,4 @@ Source-specific guardrails retained from the review:
 - Don't make service names icon-only.
 - Don't mix unrelated institutional accent colors in core navigation.
 
-# Known gaps
-
-- Tokens were inferred visually from inspected mobile screens.
-- All 64 flows were inventoried; Home, Digital documents, and Receiving a service were image-reviewed.
-- One reviewed document step was video-only; signatures and QR were not deeply sampled.
-- No separate expressive illustration system appeared in task screens.
-
 </design-context>

@@ -200,8 +200,4 @@ Prioritize learning continuity and course clarity.
 - Do not hide completed state behind color alone.
 - Do not decorate lesson content unnecessarily.
 
-# Known gaps
-
-Fifty-six available flow structures and representative screens across sign-in, empty and active learning, curriculum, Catalog, Support, and Account were sampled. Video-only transitions and full lesson content were not exhaustively reviewed.
-
 </design-context>

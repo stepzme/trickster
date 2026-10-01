@@ -221,8 +221,4 @@ Source-specific guardrails retained from the review:
 - Do not crowd exercise copy.
 - Do not expose default platform controls.
 
-# Known gaps
-
-The reviewed scenarios cover onboarding, home, courses, lessons, AI speaking, vocabulary, profile, and settings. iPad layouts, accessibility scaling, and every live-tutor state were not visible.
-
 </design-context>

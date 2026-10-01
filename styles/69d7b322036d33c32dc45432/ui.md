@@ -153,8 +153,4 @@ Only the states documented above are specified; other states must preserve the s
 - Do not use an unstyled `TabView`, default blue tint, or arbitrary SF Symbols when they contradict the reference.
 - Do not collapse every component to one corner radius or remove compositionally important imagery.
 
-# Known gaps
-
-Ninety available flow structures and representative screens across onboarding, Home, search, Favorites, Chats, Profile, purchase, rent, listing detail, and posting were sampled. Every seller, mortgage, and publication branch was not exhaustively viewed.
-
 </design-context>

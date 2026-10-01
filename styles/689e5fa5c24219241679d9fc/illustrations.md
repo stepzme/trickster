@@ -30,7 +30,3 @@ Preserve the documented placement, crop, negative space, and visual weight in pr
 - Soft pastel palettes, gradients, or dimensional shadows.
 - Detailed scenes that compete with copy.
 - Applying the illustration style to venue maps or ticket data.
-
-# Known Gaps
-
-Animation, export dimensions, safe-crop specifications, appearance variants, and unshown state treatments were not documented.

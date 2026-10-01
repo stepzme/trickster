@@ -29,7 +29,3 @@ The live camera owns the screen. A control panel exposes zoom and a configurable
 # System Access Timing
 
 No system-access timing or denial-recovery path was documented in the reviewed source.
-
-# Known Gaps
-
-Unobserved flows, denial paths, cancellation behavior, and recovery states remain unspecified.

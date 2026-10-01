@@ -188,8 +188,4 @@ Source-specific guardrails retained from the review:
 - Do not mix inconsistent image ratios in one grid.
 - Do not retain default native blue actions.
 
-# Known gaps
-
-Forty-five catalog flows were reviewed by structure with complete representative scenarios across Home, tour search, hotel booking, flight search, experiences, and ideas. Rare filter combinations and post-payment states were not exhaustively inspected.
-
 </design-context>

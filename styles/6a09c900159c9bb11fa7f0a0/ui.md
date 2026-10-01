@@ -187,10 +187,4 @@ Source-specific guardrails retained from the review:
 - Don't add heavy borders or colorful card backgrounds.
 - Don't shrink product media to make room for decorative chrome.
 
-# Known gaps
-
-- Returns and support recovery were not sampled.
-- Rare validation and payment failures were not reviewed.
-- iPad and landscape layouts were not represented.
-
 </design-context>

@@ -340,8 +340,4 @@ Source-specific guardrails retained from the review:
 - Do not introduce multiple competing card radii.
 - Do not expose unstyled platform controls.
 
-# Known gaps
-
-The reviewed scenarios cover onboarding, home, sending, tracking, pickup, offices, help, jobs, and profile. iPad layouts, large accessibility sizes, and rare operational failures were not visible.
-
 </design-context>

@@ -155,8 +155,4 @@ Only the states documented above are specified; other states must preserve the s
 - Do not use an unstyled `TabView`, default blue tint, or arbitrary SF Symbols when they contradict the reference.
 - Do not collapse every component to one corner radius or remove compositionally important imagery.
 
-# Known gaps
-
-All 29 catalog flows were reviewed by structure with complete representative scenarios across onboarding, Home, Weather Map, Spot Forecast, and Profile. Some live weather and route transitions are video-only or not fully represented by stills.
-
 </design-context>

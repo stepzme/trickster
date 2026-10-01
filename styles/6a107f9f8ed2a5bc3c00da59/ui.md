@@ -233,10 +233,4 @@ Source-specific guardrails retained from the review:
 - Don't use multiple campaign colors on functional controls.
 - Don't leave native iOS styling visually unadapted.
 
-# Known gaps
-
-- Loyalty redemption details were not opened.
-- Store pickup was not reviewed.
-- iPad and landscape layouts were not represented.
-
 </design-context>

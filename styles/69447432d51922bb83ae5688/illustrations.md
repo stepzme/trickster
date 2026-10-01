@@ -31,7 +31,3 @@ Use only the formats and crops supported by the implemented placement. Where the
 - Do not place characters behind prices or totals.
 - Preserve the warm brand palette from `ui.md`.
 - For a new campaign, use one playful flat scene, chunky crown geometry, bold outline, and a simple warm color field.
-
-# Known Gaps
-
-- Export aspect ratios, safe crop measurements, animation, and unobserved state variants were not documented.

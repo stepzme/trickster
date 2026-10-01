@@ -23,7 +23,3 @@ Suggestions reduce blank-state friction, the composer expands for multiline inpu
 # System Access Timing
 
 - Microphone access follows the user choosing the documented voice or recording action. Denial recovery was not documented.
-
-# Known Gaps
-
-- Permission-denial recovery and unobserved secondary flows were not documented.

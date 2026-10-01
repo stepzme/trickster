@@ -23,7 +23,3 @@ The sampled flows use direct actions, explicit completion, and return to the cur
 # System Access Timing
 
 - Speech Recognition follows the user choosing transcription. Denial recovery was not documented.
-
-# Known Gaps
-
-- Permission-denial recovery and unobserved secondary flows were not documented.

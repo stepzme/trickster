@@ -189,8 +189,4 @@ Source-specific guardrails retained from the review:
 - Do not overdecorate empty states.
 - Do not leave default blue accents on native controls.
 
-# Known gaps
-
-Eighty-four catalog flows were reviewed by structure with complete representative scenarios across login, Home, private chat, group creation, profile, and dark theme. Call and media transitions were not exhaustively inspected.
-
 </design-context>

@@ -173,11 +173,4 @@ Only the states documented above are specified; other states must preserve the s
 - Do not use an unstyled `TabView`, default blue tint, or arbitrary SF Symbols when they contradict the reference.
 - Do not collapse every component to one corner radius or remove compositionally important imagery.
 
-# Known gaps
-
-- Exact brand tokens and font names were inferred visually.
-- The 242-flow inventory was complete; representative leaf flows were inspected.
-- Several recorded screens were video-only and motion was not assessed.
-- No tablet or desktop screens were present.
-
 </design-context>

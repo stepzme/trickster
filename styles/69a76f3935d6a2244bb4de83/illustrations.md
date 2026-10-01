@@ -31,7 +31,3 @@ Use only the formats and crops supported by the implemented placement. Where the
 - Do not mix multiple lighting directions or rendering styles in one grid.
 - Keep product art compact and subordinate to title and rate.
 - If a new subject lacks a reference, match the same glossy material, cool palette, isolated object cluster, and soft studio shadow so it harmonizes with `ui.md`.
-
-# Known Gaps
-
-- Export aspect ratios, safe crop measurements, animation, and unobserved state variants were not documented.

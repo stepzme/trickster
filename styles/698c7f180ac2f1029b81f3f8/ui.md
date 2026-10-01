@@ -151,8 +151,4 @@ Only the states documented above are specified; other states must preserve the s
 - Do not use an unstyled `TabView`, default blue tint, or arbitrary SF Symbols when they contradict the reference.
 - Do not collapse every component to one corner radius or remove compositionally important imagery.
 
-# Known gaps
-
-Several catalog steps are video-only, so motion and chart interaction timing are not fully inspectable. Complete flows establish registration, funding, portfolio, research, buying, social, card, and settings behavior.
-
 </design-context>

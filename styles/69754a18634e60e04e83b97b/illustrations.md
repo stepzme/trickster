@@ -31,7 +31,3 @@ Use only the formats and crops supported by the implemented placement. Where the
 - Do not place the mascot behind prices or quantities.
 - Preserve yellow, black, red, and pink from `ui.md`.
 - For a new branded moment, use one compact mascot pose or flat scene on a bold solid field with heavy black type.
-
-# Known Gaps
-
-- Export aspect ratios, safe crop measurements, animation, and unobserved state variants were not documented.

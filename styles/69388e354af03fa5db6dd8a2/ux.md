@@ -37,7 +37,3 @@ WindHub is a marine planning tool combining weather maps, dense forecast tables,
 # System Access Timing
 
 No system-access request timing or denial recovery was documented in the reviewed source.
-
-# Known Gaps
-
-- Permission-denial recovery and unobserved secondary flows were not documented.

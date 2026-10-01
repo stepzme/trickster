@@ -186,9 +186,4 @@ Source-specific guardrails retained from the review:
 - Don't use many unrelated accent colors.
 - Don't shrink the main number to fit secondary content.
 
-# Known gaps
-
-- Reminder setup and long-term history were not fully sampled.
-- Only portrait phone layouts were represented.
-
 </design-context>

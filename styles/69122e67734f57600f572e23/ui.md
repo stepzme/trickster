@@ -300,10 +300,4 @@ Only the states documented above are specified; other states must preserve the s
 - Do not use an unstyled `TabView`, default blue tint, or arbitrary SF Symbols when they contradict the reference.
 - Do not collapse every component to one corner radius or remove compositionally important imagery.
 
-# Known gaps
-
-- Exact typeface and production shadow values were not available.
-- Some long onboarding steps were represented by video and could not be evaluated frame by frame.
-- Tablet, landscape, and accessibility text-size layouts were not shown.
-
 </design-context>

@@ -31,7 +31,3 @@ Exact export formats, aspect ratios, animation behavior, and appearance variants
 - Do not mix flat vector characters with the rendered 3D set.
 - Do not place labels inside the artwork.
 - If a new subject has no reference, match the same soft 3D material, camera angle, lighting, and saturated palette so it harmonizes with `ui.md`.
-
-# Known Gaps
-
-Export specifications, animation rules, safe-crop measurements, and unobserved state variants were not available in the reviewed source.

@@ -177,8 +177,4 @@ Apply these rules within current iPhone safe areas and scrolling containers. Kee
 - Do not use default blue tint, an unstyled `TabView`, arbitrary SF Symbols, or uniform corner radii when they contradict the recorded tokens and components.
 - Do not invent decorative imagery or symbol treatments that are absent from the reference.
 
-# Known gaps
-
-The reviewed scenarios cover Home, services, transfers, tickets, BON, QR, Banking, Profile, and settings. Tablet layouts and every payment failure were not visible.
-
 </design-context>

@@ -129,11 +129,4 @@ Only the states documented above are specified; other states must preserve the s
 - Do not use an unstyled `TabView`, default blue tint, or arbitrary SF Symbols when they contradict the reference.
 - Do not collapse every component to one corner radius or remove compositionally important imagery.
 
-# Known gaps
-
-- Tokens were inferred visually from inspected mobile screens.
-- All 35 flows were inventoried; Homepage, Job description, and Response were image-reviewed.
-- Map, portfolio, and payment edge cases were not deeply sampled.
-- No expressive illustration language appeared in reviewed task screens.
-
 </design-context>

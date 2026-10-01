@@ -40,7 +40,3 @@ A persistent four-item primary navigation separates Home, My Courses, Library, a
 # System Access Timing
 
 No system-access request timing or denial recovery was documented in the reviewed source.
-
-# Known Gaps
-
-- Permission-denial recovery and unobserved secondary flows were not documented.

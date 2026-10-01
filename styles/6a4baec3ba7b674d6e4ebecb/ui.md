@@ -185,9 +185,4 @@ Source-specific guardrails retained from the review:
 - Don't use large shadow on every catalog item.
 - Don't hide unit price or fulfillment behind decoration.
 
-# Known gaps
-
-- Substitution and refund recovery were not fully sampled.
-- iPad and landscape layouts were not represented.
-
 </design-context>

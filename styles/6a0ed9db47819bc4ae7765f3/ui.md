@@ -205,10 +205,4 @@ Source-specific guardrails retained from the review:
 - Don't add decorative illustration.
 - Don't leave default iOS form styling.
 
-# Known gaps
-
-- Ad-publishing screens were cataloged but not visually sampled here.
-- iPad layouts were not represented.
-- Map-based browsing was not reviewed.
-
 </design-context>

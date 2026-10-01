@@ -305,11 +305,4 @@ Only the states documented above are specified; other states must preserve the s
 - Do not use an unstyled `TabView`, default blue tint, or arbitrary SF Symbols when they contradict the reference.
 - Do not collapse every component to one corner radius or remove compositionally important imagery.
 
-# Known gaps
-
-- Exact proprietary font names and brand tokens were inferred visually.
-- Re-launch video motion could not be assessed from still previews.
-- Some editorial and profile child flows were sampled at representative steps.
-- Tablet and desktop layouts were not available in the inspected scenarios.
-
 </design-context>

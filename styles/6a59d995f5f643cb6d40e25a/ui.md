@@ -186,9 +186,4 @@ Source-specific guardrails retained from the review:
 - Don't use decorative art behind critical numbers.
 - Don't let native controls ignore the surrounding custom visual language.
 
-# Known gaps
-
-- Dispute and fraud-report recovery were not fully sampled.
-- iPad and landscape layouts were not represented.
-
 </design-context>

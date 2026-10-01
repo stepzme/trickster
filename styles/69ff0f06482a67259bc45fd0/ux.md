@@ -34,7 +34,3 @@ five persistent destinations: Feed, Search, Mini-series, My, and Account. Detail
 # System Access Timing
 
 No system-access request timing or denial recovery was documented in the reviewed source.
-
-# Known Gaps
-
-- Permission-denial recovery and unobserved secondary flows were not documented.

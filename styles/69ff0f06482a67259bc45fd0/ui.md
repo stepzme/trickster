@@ -189,10 +189,4 @@ Only the states documented above are specified; other states must preserve the s
 - Do not use an unstyled `TabView`, default blue tint, or arbitrary SF Symbols when they contradict the reference.
 - Do not collapse every component to one corner radius or remove compositionally important imagery.
 
-# Known gaps
-
-- Playback gesture timing was available only as video, not measured.
-- Tablet and landscape catalog layouts were not represented.
-- Dynamic states for downloads and offline viewing were not reviewed.
-
 </design-context>

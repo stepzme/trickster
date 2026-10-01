@@ -30,7 +30,3 @@ Exact export formats, aspect ratios, animation behavior, and appearance variants
 - Every object must support the concept being taught.
 - Do not add decorative characters or scenery that competes with the model.
 - Preserve variable colors and contrast defined in `ui.md`.
-
-# Known Gaps
-
-Export specifications, animation rules, safe-crop measurements, and unobserved state variants were not available in the reviewed source.

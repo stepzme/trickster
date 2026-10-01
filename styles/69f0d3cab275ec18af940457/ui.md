@@ -163,10 +163,4 @@ Only the states documented above are specified; other states must preserve the s
 - Do not use an unstyled `TabView`, default blue tint, or arbitrary SF Symbols when they contradict the reference.
 - Do not collapse every component to one corner radius or remove compositionally important imagery.
 
-# Known gaps
-
-- Calendar was not visually sampled.
-- Complex compose attachment states were not represented.
-- Tablet and landscape layouts were not represented.
-
 </design-context>

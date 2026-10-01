@@ -31,7 +31,3 @@ Exact export formats, aspect ratios, animation behavior, and appearance variants
 - Do not mix realistic photography with illustrated objects in one scene.
 - Preserve the bright blue and yellow brand balance.
 - If a new subject lacks a reference, match the same flat-isometric depth, rounded shapes, simple faces, and limited saturated palette so it harmonizes with `ui.md`.
-
-# Known Gaps
-
-Export specifications, animation rules, safe-crop measurements, and unobserved state variants were not available in the reviewed source.

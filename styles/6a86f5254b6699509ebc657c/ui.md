@@ -191,8 +191,4 @@ Source-specific guardrails retained from the review:
 - Do not mix unrelated character styles.
 - Do not cover the world with dense chrome.
 
-# Known gaps
-
-Video-only moments in the catalog limit inspection of some animation transitions. Static screens and complete flow structures clearly establish the world, overlays, chat, progression, shop, and settings patterns.
-
 </design-context>

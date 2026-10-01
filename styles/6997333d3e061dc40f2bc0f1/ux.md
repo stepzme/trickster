@@ -30,7 +30,3 @@ Menu and add sit . The main list holds active challenges; detail contains progre
 # System Access Timing
 
 No system-access request timing or denial recovery was documented in the reviewed source.
-
-# Known Gaps
-
-- Permission-denial recovery and unobserved secondary flows were not documented.

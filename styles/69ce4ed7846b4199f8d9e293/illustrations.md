@@ -31,7 +31,3 @@ Use only the formats and crops supported by the implemented placement. Where the
 - Do not add multiple focal objects.
 - Preserve black, white, and warm yellow-orange contrast from `ui.md`.
 - For a new milestone, create one low-poly symbol with a strong silhouette, deep shadow, and the same theatrical warm light.
-
-# Known Gaps
-
-- Export aspect ratios, safe crop measurements, animation, and unobserved state variants were not documented.

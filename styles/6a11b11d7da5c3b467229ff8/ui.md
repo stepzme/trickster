@@ -186,9 +186,4 @@ Source-specific guardrails retained from the review:
 - Don't box every answer section.
 - Don't make premium blue the default action color.
 
-# Known gaps
-
-- Connector authorization and generation failure recovery were not fully sampled.
-- iPad and landscape layouts were not represented.
-
 </design-context>

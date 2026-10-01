@@ -225,10 +225,4 @@ Source-specific guardrails retained from the review:
 - Don't hide card security toggles.
 - Don't use orange for destructive actions.
 
-# Known gaps
-
-- Tokens were inferred visually from inspected mobile screens.
-- All 90 available flow names were inventoried; sign-in, home, card detail, transfers, payments, and deposit flows were image-reviewed.
-- Animation, investment detail, and biometric behavior were not assessed.
-
 </design-context>

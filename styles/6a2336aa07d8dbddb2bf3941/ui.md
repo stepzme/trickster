@@ -186,8 +186,4 @@ Source-specific guardrails retained from the review:
 - Do not crowd the home header.
 - Do not expose default native accents.
 
-# Known gaps
-
-The catalog contains 245 flows across core banking and product management. Representative complete scenarios were inspected; rare product branches and some video-only transition states are less visually verified.
-
 </design-context>

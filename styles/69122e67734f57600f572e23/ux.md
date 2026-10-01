@@ -39,7 +39,3 @@ Raiffeisen is a task-first banking app that combines accounts, fast transfers, p
 # System Access Timing
 
 No system-access request timing or denial recovery was documented in the reviewed source.
-
-# Known Gaps
-
-- Permission-denial recovery and unobserved secondary flows were not documented.

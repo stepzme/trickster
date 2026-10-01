@@ -138,11 +138,4 @@ Source-specific guardrails retained from the review:
 - Don't rely on red or green alone.
 - Don't hide consent or eligibility.
 
-# Known gaps
-
-- Tokens were inferred visually from inspected mobile screens.
-- All 127 flows were inventoried; Home screen, Cards, and Transfer by card number were image-reviewed.
-- Marketplace, eSIM, government services, and advanced product branches were not deeply sampled.
-- No coherent illustration language appeared in reviewed task screens.
-
 </design-context>

@@ -186,8 +186,4 @@ Source-specific guardrails retained from the review:
 - Do not hide specifications behind decorative content.
 - Do not expose default platform-blue controls that differ from the brand blue.
 
-# Known gaps
-
-The reviewed scenarios cover Home, Catalog, Search and filters, product details, reviews, Cart, checkout structure, Favorites, stores, gifting, and Profile. iPad layouts and every error state were not visible.
-
 </design-context>

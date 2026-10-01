@@ -33,7 +33,3 @@ The primary navigation keeps Wallet, Location, and Menu for points available. Ho
 # System Access Timing
 
 No system-access timing or denial-recovery path was documented in the reviewed source.
-
-# Known Gaps
-
-Unobserved flows, denial paths, cancellation behavior, and recovery states remain unspecified.

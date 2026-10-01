@@ -214,11 +214,4 @@ Source-specific guardrails retained from the review:
 - Don't use heavy display type for long metadata.
 - Don't remove persistent cart context.
 
-# Known gaps
-
-- Exact typefaces and color tokens were inferred visually.
-- The 87-flow inventory was surveyed; key purchase flows were sampled visually.
-- Motion-only first-launch footage was not reviewed frame by frame.
-- iPad layouts were not present.
-
 </design-context>

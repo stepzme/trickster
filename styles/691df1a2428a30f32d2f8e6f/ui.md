@@ -341,10 +341,4 @@ Only the states documented above are specified; other states must preserve the s
 - Do not use an unstyled `TabView`, default blue tint, or arbitrary SF Symbols when they contradict the reference.
 - Do not collapse every component to one corner radius or remove compositionally important imagery.
 
-# Known gaps
-
-- Motion timing is not defined by the sampled still screens.
-- External payment UI follows its provider rather than this visual system.
-- Tablet and landscape course-player behavior were not present in the reviewed flows.
-
 </design-context>

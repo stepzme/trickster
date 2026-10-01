@@ -184,8 +184,4 @@ Source-specific guardrails retained from the review:
 - Do not use unrelated decorative illustration.
 - Do not expose light native controls.
 
-# Known gaps
-
-The reviewed scenarios cover Home, generation, Explore, playback, social actions, Library, publishing, Profile, and settings. iPad layouts and every generation failure were not visible.
-
 </design-context>

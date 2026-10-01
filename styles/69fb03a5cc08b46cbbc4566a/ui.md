@@ -307,11 +307,4 @@ Only the states documented above are specified; other states must preserve the s
 - Do not use an unstyled `TabView`, default blue tint, or arbitrary SF Symbols when they contradict the reference.
 - Do not collapse every component to one corner radius or remove compositionally important imagery.
 
-# Known gaps
-
-- Exact proprietary colors, typeface names, and gradient stops were inferred visually.
-- Motion, haptics, and video behavior were not available from still screens.
-- Tablet and desktop layouts were not represented.
-- Several secondary product flows were inventoried through Screen Gallery metadata but visually sampled at representative steps.
-
 </design-context>

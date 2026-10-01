@@ -334,8 +334,4 @@ Source-specific guardrails retained from the review:
 - Do not mix multiple unrelated chip and button geometries.
 - Do not expose default blue iOS controls.
 
-# Known gaps
-
-The reviewed scenarios show iPhone ordering, promotions, account, and tracking states. iPad behavior, accessibility text scaling, dark mode, and rare payment failures were not visible.
-
 </design-context>

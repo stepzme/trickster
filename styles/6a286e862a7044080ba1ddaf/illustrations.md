@@ -31,7 +31,3 @@ Exact export formats, aspect ratios, animation behavior, and appearance variants
 - Do not mix casual flat characters into premium product campaigns.
 - Keep orange the primary brand cue.
 - If a new product lacks a reference, match the metallic materials, dramatic studio light, isolated object, and restrained dark background so it harmonizes with `ui.md`.
-
-# Known Gaps
-
-Export specifications, animation rules, safe-crop measurements, and unobserved state variants were not available in the reviewed source.

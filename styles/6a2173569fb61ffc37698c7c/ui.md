@@ -378,10 +378,4 @@ Source-specific guardrails retained from the review:
 - Don't hide progress behind decorative charts.
 - Don't make the Record action visually equal to the other tabs.
 
-# Known gaps
-
-- Live recording controls beyond the sampled lock-screen summary were not observed.
-- Dark-mode variants were not present in the reviewed flows.
-- iPad, landscape, and accessibility text-size behavior was not shown.
-
 </design-context>

@@ -37,7 +37,3 @@ Translate is a focused language utility for typed, spoken, camera, and face-to-f
 # System Access Timing
 
 No system-access timing or denial-recovery path was documented in the reviewed source.
-
-# Known Gaps
-
-Unobserved flows, denial paths, cancellation behavior, and recovery states remain unspecified.

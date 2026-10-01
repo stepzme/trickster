@@ -184,10 +184,4 @@ Source-specific guardrails retained from the review:
 - Don't hide service fee or final total.
 - Don't merge catalog discovery with checkout form density.
 
-# Known gaps
-
-- Tokens were inferred visually from inspected mobile screens.
-- All 78 flow names were inventoried; Home, Loyalty card, and Placing an order were image-reviewed.
-- Scanner, seasonal hub, reviews, and post-order branches were not deeply sampled.
-
 </design-context>

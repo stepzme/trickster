@@ -129,10 +129,4 @@ Only the states documented above are specified; other states must preserve the s
 - Do not use an unstyled `TabView`, default blue tint, or arbitrary SF Symbols when they contradict the reference.
 - Do not collapse every component to one corner radius or remove compositionally important imagery.
 
-# Known gaps
-
-- Tokens were inferred visually from sampled mobile screens.
-- Operations, Bonuses, and Receive salary on card were image-reviewed.
-- Identity and transfer edge cases were not deeply sampled.
-
 </design-context>

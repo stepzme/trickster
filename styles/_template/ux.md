@@ -21,7 +21,3 @@ Describe repeated behavioral patterns: progressive disclosure, editing, confirma
 # System Access Timing
 
 Record only observed or clearly implied moments when a flow needs Photos, Camera, biometrics, Microphone, Speech, Contacts, Calendar, Location, Bluetooth, or CallKit. State the user action that precedes access and the denial recovery path. Do not invent a permission request that was not observed.
-
-# Known Gaps
-
-List flows and behavioral states that were not available in the reviewed source.

@@ -351,10 +351,4 @@ Source-specific guardrails retained from the review:
 - Don't flatten onboarding into a conventional settings form.
 - Don't use strong shadows on ordinary grouped rows.
 
-# Known gaps
-
-- Exact typeface names and color values were inferred visually from the inspected screens.
-- Motion of the duck and video-only interactions could not be assessed from still frames.
-- iPad-specific layouts were not present in the available scenarios.
-
 </design-context>

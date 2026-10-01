@@ -208,10 +208,4 @@ Source-specific guardrails retained from the review:
 - Don't hide address requirements.
 - Don't replace listing photography with icons.
 
-# Known gaps
-
-- Tokens were inferred visually from inspected mobile screens.
-- All 101 available flow names were inventoried; main, grocery, checkout, tracking, restaurant, and entertainment flows were image-reviewed.
-- Cross-vertical wallet behavior, QR completion, and live courier motion were not fully assessed.
-
 </design-context>

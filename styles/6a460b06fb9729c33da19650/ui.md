@@ -221,10 +221,4 @@ Source-specific guardrails retained from the review:
 - Don't merge telecom security with entertainment upsell.
 - Don't shrink bento tiles below touch size.
 
-# Known gaps
-
-- Tokens were inferred visually from inspected mobile screens.
-- All 90 available flow names were inventoried; first launch, home, products, services, history, and settings were image-reviewed.
-- eSIM handoff, video playback, and motion were not assessed.
-
 </design-context>

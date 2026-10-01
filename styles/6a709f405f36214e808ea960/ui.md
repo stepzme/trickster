@@ -207,10 +207,4 @@ Source-specific guardrails retained from the review:
 - Don't add decorative illustration.
 - Don't leave default iOS form styling.
 
-# Known gaps
-
-- Identification camera states were not reviewed.
-- iPad layouts were not represented.
-- Loan and deposit detail variants were not visually sampled.
-
 </design-context>

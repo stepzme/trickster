@@ -187,11 +187,4 @@ Source-specific guardrails retained from the review:
 - Don't distort the bank-card aspect ratio.
 - Don't turn merchant tiles into full-page decoration.
 
-# Known gaps
-
-- Tokens were inferred visually from inspected mobile screens.
-- All 119 flow names were inventoried; Home, My cards, and Transfer were image-reviewed.
-- Payments, deposits, messages, and security branches were not deeply sampled.
-- Reviewed depth came from gradients and card artwork, not a separate illustration system.
-
 </design-context>

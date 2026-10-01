@@ -380,11 +380,4 @@ Only the states documented above are specified; other states must preserve the s
 - Do not use an unstyled `TabView`, default blue tint, or arbitrary SF Symbols when they contradict the reference.
 - Do not collapse every component to one corner radius or remove compositionally important imagery.
 
-# Known gaps
-
-- The inspected material shows an iPhone layout; dedicated tablet and desktop compositions are not visible.
-- Video screens in SCRN have no still preview, so motion timing and transitions are not documented here.
-- The original serif family and source design tokens are not available; the documented sizes, spacing, and colors are reconstructed from the visible screens.
-- Error states, validation failures, offline behavior, and reduced-data variants are not visible in the reviewed scenarios.
-
 </design-context>

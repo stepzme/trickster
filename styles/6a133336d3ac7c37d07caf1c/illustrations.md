@@ -27,7 +27,3 @@ Exact export formats, aspect ratios, animation behavior, and appearance variants
 # Avoid
 
 Do not introduce an unrelated illustration style or substitute decorative symbols for source-supported imagery.
-
-# Known Gaps
-
-Export specifications, animation rules, safe-crop measurements, and unobserved state variants were not available in the reviewed source.

@@ -208,10 +208,4 @@ Source-specific guardrails retained from the review:
 - Don't mix course accent roles.
 - Don't bury progress recovery.
 
-# Known gaps
-
-- Tokens were inferred visually from inspected mobile screens.
-- All 37 available flow names were inventoried; onboarding, home, lesson, incorrect answers, courses, and profile were image-reviewed.
-- Drag physics, voice assistant quality, and lesson audio were not directly assessed.
-
 </design-context>

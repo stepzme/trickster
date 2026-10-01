@@ -191,10 +191,4 @@ Source-specific guardrails retained from the review:
 - Don't crop packaging.
 - Don't add heavy shadows.
 
-# Known gaps
-
-- Full checkout forms were not visually sampled.
-- Support conversation was not represented.
-- iPad and landscape layouts were not represented.
-
 </design-context>

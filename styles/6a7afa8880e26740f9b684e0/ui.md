@@ -208,10 +208,4 @@ Source-specific guardrails retained from the review:
 - Don't bury traveler edits.
 - Don't use yellow as a second primary button.
 
-# Known gaps
-
-- Tokens were inferred visually from inspected mobile screens.
-- All 89 available flow names were inventoried; home, stay search, property results, booking, flights, and bookings were image-reviewed.
-- Live map behavior, AI filtering detail, and payment completion were not fully assessed.
-
 </design-context>

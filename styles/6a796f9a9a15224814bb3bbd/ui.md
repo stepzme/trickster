@@ -185,8 +185,4 @@ Source-specific guardrails retained from the review:
 - Do not enlarge controls at the expense of charts.
 - Do not expose light native controls.
 
-# Known gaps
-
-The catalog contains 154 flows but some entry and transition moments are video-only. Complete inspected flows establish onboarding, subscriptions, watchlists, charts, and account surfaces.
-
 </design-context>

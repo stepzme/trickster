@@ -235,8 +235,4 @@ Source-specific guardrails retained from the review:
 - Do not overload checkout with promotional chrome.
 - Do not expose default blue platform controls.
 
-# Known gaps
-
-The reviewed scenarios cover login, home, catalog, search, products, cart, checkout, tracking, recipes, history, and profile. iPad layouts, dark mode, accessibility scaling, and rare delivery failures were not visible.
-
 </design-context>

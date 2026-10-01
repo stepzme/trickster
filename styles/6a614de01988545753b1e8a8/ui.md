@@ -221,10 +221,4 @@ Source-specific guardrails retained from the review:
 - Don't overuse gradient inside web content.
 - Don't hide native page access.
 
-# Known gaps
-
-- Exact tokens and font names were inferred visually.
-- The 35-flow inventory was complete and all top-level flows were inspected.
-- Many preview transitions were video-only; motion was not assessed.
-
 </design-context>

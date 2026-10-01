@@ -28,7 +28,3 @@ The live map is the home context. A scanner anchors the bottom center, with menu
 # System Access Timing
 
 No system-access timing or denial-recovery path was documented in the reviewed source.
-
-# Known Gaps
-
-Unobserved flows, denial paths, cancellation behavior, and recovery states remain unspecified.

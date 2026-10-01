@@ -187,10 +187,4 @@ Source-specific guardrails retained from the review:
 - Don't hide status, constraints, or secondary conditions.
 - Don't add heavy shadows around every container.
 
-# Known gaps
-
-- Long-tail error recovery was not fully sampled.
-- Rare support and account states were not reviewed.
-- iPad and landscape layouts were not represented.
-
 </design-context>

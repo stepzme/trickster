@@ -233,10 +233,4 @@ Source-specific guardrails retained from the review:
 - Don't mix illustrated service art into property galleries.
 - Don't leave generic iOS styling on segmented controls or contact buttons.
 
-# Known gaps
-
-- Posting a listing was not reviewed.
-- Messaging behavior was not opened.
-- iPad and landscape layouts were not represented.
-
 </design-context>

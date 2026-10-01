@@ -31,7 +31,3 @@ Use only the formats and crops supported by the implemented placement. Where the
 - Do not place art behind prices or form fields.
 - Keep the multicolor palette controlled by one dominant accent per scene.
 - If a new subject lacks a reference, use the same rounded forms, soft depth, sparse detail, and Avito accent set so it harmonizes with `ui.md`.
-
-# Known Gaps
-
-- Export aspect ratios, safe crop measurements, animation, and unobserved state variants were not documented.

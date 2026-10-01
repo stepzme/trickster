@@ -239,10 +239,4 @@ Source-specific guardrails retained from the review:
 - Don't add dark outlines to 3D icons.
 - Don't use the central gradient for ordinary buttons.
 
-# Known gaps
-
-- Motion of the central launcher was not measured.
-- iPad and landscape states were not represented.
-- Several secondary service flows were cataloged but not deeply reviewed.
-
 </design-context>

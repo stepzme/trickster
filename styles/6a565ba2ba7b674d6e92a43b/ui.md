@@ -217,11 +217,4 @@ Source-specific guardrails retained from the review:
 - Don't make every campaign full bleed.
 - Don't remove add controls from product cards.
 
-# Known gaps
-
-- Exact tokens and typeface metrics were inferred visually.
-- The 104-flow inventory was surveyed; key shopping flows were sampled visually.
-- Video promotions and motion-only entry states were not evaluated frame by frame.
-- iPad layouts were not present.
-
 </design-context>

@@ -206,10 +206,4 @@ Source-specific guardrails retained from the review:
 - Don't use coral for every interactive element.
 - Don't separate hotel photos from rating and price context.
 
-# Known gaps
-
-- Tokens were inferred visually from reviewed mobile screens.
-- Live purchase completion, change, cancellation, support chat, and map gestures were not executed.
-- iPad and landscape layouts were not represented.
-
 </design-context>

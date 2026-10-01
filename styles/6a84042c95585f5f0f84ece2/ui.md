@@ -182,10 +182,4 @@ Source-specific guardrails retained from the review:
 - Don't crowd a tile with more than one primary task.
 - Don't flatten wallet, services, and campaigns into one list.
 
-# Known gaps
-
-- Tokens were inferred visually from inspected mobile screens.
-- All 76 flow names were inventoried; Home, Wallet, and Transfers were image-reviewed.
-- Motion inside promotional media and the complete customization flow were not assessed.
-
 </design-context>

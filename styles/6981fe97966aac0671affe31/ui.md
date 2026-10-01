@@ -307,11 +307,4 @@ Only the states documented above are specified; other states must preserve the s
 - Do not use an unstyled `TabView`, default blue tint, or arbitrary SF Symbols when they contradict the reference.
 - Do not collapse every component to one corner radius or remove compositionally important imagery.
 
-# Known gaps
-
-- Exact colors and typefaces were inferred from inspected screens.
-- Video-only motion and ring animations were unavailable as still previews.
-- Long health-detail flows were sampled at key steps rather than every repeated chart state.
-- Tablet and landscape adaptations were not present.
-
 </design-context>

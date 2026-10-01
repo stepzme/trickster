@@ -31,7 +31,3 @@ Use only the formats and crops supported by the implemented placement. Where the
 - Do not mix photorealistic assets or unrelated illustration styles.
 - Preserve mode palette and edge contrast defined in `ui.md`.
 - For a new vibe, build one coherent low-poly environment with a clear horizon, restrained geometry, atmospheric depth, and a distinct but harmonious palette.
-
-# Known Gaps
-
-- Export aspect ratios, safe crop measurements, animation, and unobserved state variants were not documented.

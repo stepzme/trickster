@@ -219,10 +219,4 @@ Source-specific guardrails retained from the review:
 - Don't use 3D objects as unlabeled controls.
 - Don't crowd the four-item navigation.
 
-# Known gaps
-
-- Exact brand tokens and font names were inferred visually.
-- The 18-flow inventory was complete; representative full flows were inspected.
-- Video-only transitions were not visually assessed.
-
 </design-context>

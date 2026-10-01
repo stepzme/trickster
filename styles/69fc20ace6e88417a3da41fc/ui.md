@@ -170,11 +170,4 @@ Only the states documented above are specified; other states must preserve the s
 - Do not use an unstyled `TabView`, default blue tint, or arbitrary SF Symbols when they contradict the reference.
 - Do not collapse every component to one corner radius or remove compositionally important imagery.
 
-# Known gaps
-
-- Exact typeface and color tokens were inferred visually.
-- Motion-only onboarding footage was not evaluated frame by frame.
-- Desktop and tablet browser states were not present.
-- Native focus and keyboard behavior should remain platform-correct.
-
 </design-context>

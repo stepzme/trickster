@@ -243,10 +243,4 @@ Source-specific guardrails retained from the review:
 - Don't remove sticky purchase actions.
 - Don't introduce decorative brand colors.
 
-# Known gaps
-
-- iPad and landscape layouts were not observed.
-- Animation and loading behavior were not captured in stills.
-- Subscription-specific flows were not reviewed.
-
 </design-context>

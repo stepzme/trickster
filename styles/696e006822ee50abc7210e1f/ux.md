@@ -31,7 +31,3 @@ five persistent destinations cover Home, Catalog, Cart, Favorites, and Account. 
 # System Access Timing
 
 No system-access request timing or denial recovery was documented in the reviewed source.
-
-# Known Gaps
-
-- Permission-denial recovery and unobserved secondary flows were not documented.

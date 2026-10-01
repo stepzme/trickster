@@ -144,10 +144,4 @@ Source-specific guardrails retained from the review:
 - Don't use dark reward styling on long forms.
 - Don't crop collectible objects.
 
-# Known gaps
-
-- Tokens were inferred visually from sampled mobile screens.
-- Dumbbells, Enroll in the program, and Visiting calendar were image-reviewed.
-- Community and arena flows were not deeply sampled.
-
 </design-context>

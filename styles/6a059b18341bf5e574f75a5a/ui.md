@@ -208,10 +208,4 @@ Source-specific guardrails retained from the review:
 - Don't rely on color alone for delivery status.
 - Don't remove the review before payment.
 
-# Known gaps
-
-- Tokens were inferred visually from inspected mobile screens.
-- All 58 available flow names were inventoried; home, sending route, dimensions, order details, and tracking were image-reviewed.
-- Live map movement, barcode handling, and payment completion were not fully assessed.
-
 </design-context>

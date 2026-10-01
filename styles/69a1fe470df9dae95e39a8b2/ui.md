@@ -129,10 +129,4 @@ Only the states documented above are specified; other states must preserve the s
 - Do not use an unstyled `TabView`, default blue tint, or arbitrary SF Symbols when they contradict the reference.
 - Do not collapse every component to one corner radius or remove compositionally important imagery.
 
-# Known gaps
-
-- Tokens were inferred visually from sampled mobile screens.
-- Bank account, Add money instantly, Assistant, and Send money were image-reviewed.
-- Lending application and card-management edge cases were not deeply sampled.
-
 </design-context>

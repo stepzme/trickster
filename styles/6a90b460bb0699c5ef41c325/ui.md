@@ -348,10 +348,4 @@ Source-specific guardrails retained from the review:
 - Don't add heavy shadows to every white card.
 - Don't use promotional illustration inside dense financial history rows.
 
-# Known gaps
-
-- Exact brand tokens and font names were inferred visually.
-- Video motion and transitions were not available in the still-image inspection.
-- Some long-tail profile flows were inventoried but only representative screens were visually sampled.
-
 </design-context>

@@ -226,10 +226,4 @@ Source-specific guardrails retained from the review:
 - Don't shrink map controls below touch size.
 - Don't mix photographic and rendered object styles in one tile.
 
-# Known gaps
-
-- Tokens were inferred visually from the inspected mobile screens.
-- All 59 flow names were inventoried; onboarding, hub, transport, routes, metro, and QR payment flows were image-reviewed.
-- Map gestures, payment hardware behavior, and motion were not assessed.
-
 </design-context>

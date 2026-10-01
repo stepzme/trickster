@@ -185,10 +185,4 @@ Source-specific guardrails retained from the review:
 - Don't introduce multiple competing neon accents.
 - Don't place decorative art behind long conversation text.
 
-# Known gaps
-
-- Some recorded video screens had no still preview.
-- Subscription and long-tail account recovery were not reviewed.
-- iPad and landscape layouts were not represented.
-
 </design-context>

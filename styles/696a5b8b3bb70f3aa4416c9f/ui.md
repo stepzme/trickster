@@ -165,11 +165,4 @@ Only the states documented above are specified; other states must preserve the s
 - Do not use an unstyled `TabView`, default blue tint, or arbitrary SF Symbols when they contradict the reference.
 - Do not collapse every component to one corner radius or remove compositionally important imagery.
 
-# Known gaps
-
-- Tokens were inferred visually from inspected mobile screens.
-- All 80 flows were inventoried; Main, Doctor appointment, and Medical record were image-reviewed.
-- One sampled booking step was video-only; hospitalization and health diary were not deeply sampled.
-- No expressive illustration language appeared in reviewed clinical screens.
-
 </design-context>

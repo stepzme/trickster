@@ -26,7 +26,3 @@ Home, Catalog, Cart, Stores, and Profile remain available; search and fulfillmen
 # System Access Timing
 
 No system-access request timing or denial recovery was documented in the reviewed source.
-
-# Known Gaps
-
-- Permission-denial recovery and unobserved secondary flows were not documented.

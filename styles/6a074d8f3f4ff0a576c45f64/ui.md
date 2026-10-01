@@ -188,10 +188,4 @@ Source-specific guardrails retained from the review:
 - Don't use fuchsia as a full-time background on every screen.
 - Don't cover profile faces or safety information with decorative stickers.
 
-# Known gaps
-
-- Long conversation and moderation recovery were not fully sampled.
-- Some premium and adult-content states were only represented by entry screens.
-- iPad and landscape layouts were not represented.
-
 </design-context>

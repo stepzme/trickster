@@ -35,7 +35,3 @@ The map remains the spatial anchor. A progressive bottom sheet handles ride type
 # System Access Timing
 
 No system-access timing or denial-recovery path was documented in the reviewed source.
-
-# Known Gaps
-
-Unobserved flows, denial paths, cancellation behavior, and recovery states remain unspecified.

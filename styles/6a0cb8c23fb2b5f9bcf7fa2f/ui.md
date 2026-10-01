@@ -233,10 +233,4 @@ Source-specific guardrails retained from the review:
 - Don't mix editorial typography into specifications.
 - Don't replace real project imagery with decorative illustration.
 
-# Known gaps
-
-- Payment selection after contact details was not visible in the sampled checkout screens.
-- Scanner camera interaction was not reviewed.
-- iPad and landscape layouts were not represented.
-
 </design-context>

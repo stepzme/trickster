@@ -33,7 +33,3 @@ Search, Trips, Navigator, Friends, and Tips form primary navigation. Map control
 # System Access Timing
 
 - Location access follows the user choosing the documented current-location or sharing action. Denial recovery was not documented.
-
-# Known Gaps
-
-- Permission-denial recovery and unobserved secondary flows were not documented.

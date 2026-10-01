@@ -186,9 +186,4 @@ Source-specific guardrails retained from the review:
 - Don't mix document colors into generic actions.
 - Don't hide legal requirements or data review before submission.
 
-# Known gaps
-
-- Payment failure and complex appeal recovery were not fully sampled.
-- iPad and landscape layouts were not represented.
-
 </design-context>

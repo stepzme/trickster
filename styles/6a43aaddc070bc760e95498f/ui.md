@@ -141,11 +141,4 @@ Source-specific guardrails retained from the review:
 - Don't hide seller or verification context.
 - Don't crowd checkout with discovery modules.
 
-# Known gaps
-
-- Tokens were inferred visually from inspected mobile screens.
-- All 95 flows were inventoried; Main page, Product details, and Checkout were image-reviewed.
-- Business shipping and subscription branches were not deeply sampled.
-- No coherent illustration system appeared beyond campaign artwork.
-
 </design-context>

@@ -204,10 +204,4 @@ Source-specific guardrails retained from the review:
 - Don't turn teal into a general background color.
 - Don't flatten multi-step booking into one undifferentiated form.
 
-# Known gaps
-
-- Tokens were inferred visually from reviewed mobile screens.
-- Live validation, payment completion, refund confirmation, and dynamic delay updates were not executed.
-- iPad and landscape layouts were not represented.
-
 </design-context>

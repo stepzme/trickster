@@ -221,10 +221,4 @@ Source-specific guardrails retained from the review:
 - Don't crop destination labels into images.
 - Don't use blue and orange interchangeably.
 
-# Known gaps
-
-- Tokens were inferred visually from the inspected mobile screens.
-- All 90 flow names were inventoried; onboarding, home, ticket search, ticket detail, purchase, and hotels were image-reviewed.
-- Video, audio-guide playback, map gestures, and motion were not assessed.
-
 </design-context>

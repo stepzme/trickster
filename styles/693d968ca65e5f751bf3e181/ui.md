@@ -174,11 +174,4 @@ Only the states documented above are specified; other states must preserve the s
 - Do not use an unstyled `TabView`, default blue tint, or arbitrary SF Symbols when they contradict the reference.
 - Do not collapse every component to one corner radius or remove compositionally important imagery.
 
-# Known gaps
-
-- Exact tokens were inferred visually; Amazon Ember is proprietary.
-- The 37-flow inventory was complete and all top-level flows were inspected.
-- Campaign motion was not assessed.
-- No tablet or desktop screens were present.
-
 </design-context>

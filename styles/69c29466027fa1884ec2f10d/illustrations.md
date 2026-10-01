@@ -31,7 +31,3 @@ Use only the formats and crops supported by the implemented placement. Where the
 - Keep illustrations direct, diverse, and conversation-oriented.
 - Reuse the same flat proportions and saturated palette across every pack.
 - Do not introduce detailed realism, thin corporate line art, or glossy 3D rendering.
-
-# Known Gaps
-
-- Export aspect ratios, safe crop measurements, animation, and unobserved state variants were not documented.

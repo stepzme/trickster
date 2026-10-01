@@ -219,8 +219,4 @@ Source-specific guardrails retained from the review:
 - Do not confuse yellow with warning.
 - Do not expose default platform controls.
 
-# Known gaps
-
-The reviewed scenarios cover onboarding, home, payments, history, transfers, card, bonuses, promotions, and profile. iPad layouts, dark mode, accessibility scaling, and rare transaction failures were not visible.
-
 </design-context>

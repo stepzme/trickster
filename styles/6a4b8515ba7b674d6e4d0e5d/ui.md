@@ -186,9 +186,4 @@ Source-specific guardrails retained from the review:
 - Don't cover the map before information is needed.
 - Don't let environmental messaging obscure trip safety.
 
-# Known gaps
-
-- Password recovery and support-request resolution were not fully sampled.
-- iPad and landscape layouts were not represented.
-
 </design-context>

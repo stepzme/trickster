@@ -188,10 +188,4 @@ Source-specific guardrails retained from the review:
 - Don't add borders or shadows around every product.
 - Don't replace dense shopping utility with oversized editorial whitespace.
 
-# Known gaps
-
-- Rare payment failures and substitution disputes were not sampled.
-- iPad and landscape layouts were not represented.
-- The courier map's intermediate states were only partially reviewed.
-
 </design-context>

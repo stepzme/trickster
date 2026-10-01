@@ -183,10 +183,4 @@ Only the states documented above are specified; other states must preserve the s
 - Do not use an unstyled `TabView`, default blue tint, or arbitrary SF Symbols when they contradict the reference.
 - Do not collapse every component to one corner radius or remove compositionally important imagery.
 
-# Known gaps
-
-- Order-success and returns states were not visually sampled.
-- Search and profile account management were not opened in detail.
-- Tablet and landscape layouts were not represented.
-
 </design-context>

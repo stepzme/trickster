@@ -200,8 +200,4 @@ Keep musical content primary and the listening state unmistakable.
 - Do not crop cover typography.
 - Do not make secondary actions compete with Play.
 
-# Known gaps
-
-One hundred two available flow structures and representative screens across onboarding, Home, player, search, catalog, Collection, and settings were sampled. The full catalog and every subscription-management branch were not exhaustively viewed.
-
 </design-context>

@@ -237,10 +237,4 @@ Source-specific guardrails retained from the review:
 - Don't enlarge prose inside the feed.
 - Don't leave native form controls visually generic.
 
-# Known gaps
-
-- Registration and wallet payment completion were not sampled visually.
-- Chat conversation content was not opened.
-- iPad and landscape layouts were not represented.
-
 </design-context>

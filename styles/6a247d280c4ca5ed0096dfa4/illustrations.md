@@ -31,7 +31,3 @@ Exact export formats, aspect ratios, animation behavior, and appearance variants
 - Do not mix photoreal people with outlined characters in one scene.
 - Keep the blue brand field dominant in onboarding.
 - If a new subject has no reference, match the playful outline weight, limited bright palette, simple facial expression, and rounded composition so it harmonizes with `ui.md`.
-
-# Known Gaps
-
-Export specifications, animation rules, safe-crop measurements, and unobserved state variants were not available in the reviewed source.

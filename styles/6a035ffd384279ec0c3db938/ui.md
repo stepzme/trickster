@@ -235,10 +235,4 @@ Source-specific guardrails retained from the review:
 - Don't use illustration instead of event artwork.
 - Don't leave default iOS controls unchanged.
 
-# Known gaps
-
-- Seat-map gestures and zoom timing were not measured.
-- Payment confirmation screens were not represented in the reviewed flow.
-- iPad and landscape layouts were not shown.
-
 </design-context>

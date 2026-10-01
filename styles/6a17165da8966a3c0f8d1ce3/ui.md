@@ -221,10 +221,4 @@ Source-specific guardrails retained from the review:
 - Don't replace product packs in the catalogue.
 - Don't hide subscription terms.
 
-# Known gaps
-
-- Exact brand tokens and font names were inferred visually.
-- The 35-flow inventory was complete and all top-level flows were inspected.
-- Some entry and campaign screens were video-only; motion was not assessed.
-
 </design-context>

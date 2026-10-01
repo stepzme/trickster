@@ -204,8 +204,4 @@ Make money movement legible before making it delightful.
 - Do not obscure fees or schedules.
 - Do not mix merchant imagery into balance cards.
 
-# Known gaps
-
-One hundred twenty-nine available flow structures and representative screens across sign-in, Home, QR payment, Stores, Payments, History, and Profile were sampled. Every transfer, credit, and subscription branch was not exhaustively viewed.
-
 </design-context>

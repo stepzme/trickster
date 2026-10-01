@@ -184,8 +184,4 @@ Apply these rules within current iPhone safe areas and scrolling containers. Kee
 - Do not use default blue tint, an unstyled `TabView`, arbitrary SF Symbols, or uniform corner radii when they contradict the recorded tokens and components.
 - Do not invent decorative imagery or symbol treatments that are absent from the reference.
 
-# Known gaps
-
-Only one authored onboarding flow exists. All 290 available image screens were enumerated and representative screens across onboarding, Home, camera search, Alice, identity, and Settings were directly reviewed; full interaction sequences outside onboarding are therefore inferred.
-
 </design-context>

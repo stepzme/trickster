@@ -31,7 +31,3 @@ The drawer contains New chat, Chats, Artifacts, recents, account, and settings. 
 # System Access Timing
 
 No system-access timing or denial-recovery path was documented in the reviewed source.
-
-# Known Gaps
-
-Unobserved flows, denial paths, cancellation behavior, and recovery states remain unspecified.

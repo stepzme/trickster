@@ -222,10 +222,4 @@ Source-specific guardrails retained from the review:
 - Don't use discount color alone.
 - Don't crop labels needed for purchase.
 
-# Known gaps
-
-- Exact brand tokens and font names were inferred visually.
-- The 81-flow inventory was complete and all top-level flows were inspected.
-- Some campaign previews were video-only; motion was not assessed.
-
 </design-context>

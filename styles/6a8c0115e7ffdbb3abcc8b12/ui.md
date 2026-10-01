@@ -219,10 +219,4 @@ Source-specific guardrails retained from the review:
 - Don't hide the current-time rule.
 - Don't separate search by data type.
 
-# Known gaps
-
-- Exact tokens and font names were inferred visually.
-- The 44-flow inventory was complete and all top-level flows were inspected.
-- Several previewed transitions were video-only; motion was not assessed.
-
 </design-context>

@@ -31,7 +31,3 @@ Use only the formats and crops supported by the implemented placement. Where the
 - Do not cover faces or key gestures with progress controls.
 - Keep the black stage and saturated palette aligned with `ui.md`.
 - For a new challenge, draw one angular editorial figure performing the activity on a single bold color field.
-
-# Known Gaps
-
-- Export aspect ratios, safe crop measurements, animation, and unobserved state variants were not documented.

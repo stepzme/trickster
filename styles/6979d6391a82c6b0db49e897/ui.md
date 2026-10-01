@@ -150,8 +150,4 @@ Only the states documented above are specified; other states must preserve the s
 - Do not use an unstyled `TabView`, default blue tint, or arbitrary SF Symbols when they contradict the reference.
 - Do not collapse every component to one corner radius or remove compositionally important imagery.
 
-# Known gaps
-
-The reviewed scenarios cover Home, music and podcast discovery, player and lyrics, Search, Library, playlists, Premium, side menu, and settings. Tablet layouts and every playback error were not visible.
-
 </design-context>

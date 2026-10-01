@@ -188,8 +188,4 @@ Source-specific guardrails retained from the review:
 - Do not hide vehicle charge or price.
 - Do not leave mismatched native blue controls.
 
-# Known gaps
-
-Forty-two catalog flows were reviewed by structure with complete representative scenarios across launch, map, vehicle detail, start, finish, Menu, and subscriptions. Several preview entries are video-only, so campaign and ride motion are less fully verified.
-
 </design-context>

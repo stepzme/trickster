@@ -223,10 +223,4 @@ Source-specific guardrails retained from the review:
 - Don't compress touch rows below comfortable height.
 - Don't rely on icon color alone for status.
 
-# Known gaps
-
-- Tokens were inferred visually from inspected mobile screens.
-- All 90 available flow names were inventoried; first launch, main, debit card, transfers, payments, and services were image-reviewed.
-- Motion, accessibility settings, and biometric transitions were not assessed.
-
 </design-context>

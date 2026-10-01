@@ -186,11 +186,4 @@ Source-specific guardrails retained from the review:
 - Don't turn the assistant accent into a page background.
 - Don't cover document content with persistent controls.
 
-# Known gaps
-
-- Tokens were inferred visually from inspected mobile screens.
-- All 153 flow names were inventoried; Home, Document details, and Tasks were image-reviewed.
-- Rich editor formatting, collaboration, publishing, and assistant interactions were not deeply sampled.
-- No coherent decorative illustration language appeared in reviewed screens.
-
 </design-context>

@@ -37,7 +37,3 @@ Home, Account, Basket, and Menu remain in primary navigation; Rufus is a distinc
 # System Access Timing
 
 - Camera or Photos access follows the user choosing the documented capture, scan, or photo action. Denial recovery was not documented.
-
-# Known Gaps
-
-- Permission-denial recovery and unobserved secondary flows were not documented.

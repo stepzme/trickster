@@ -154,8 +154,4 @@ Only the states documented above are specified; other states must preserve the s
 - Do not use an unstyled `TabView`, default blue tint, or arbitrary SF Symbols when they contradict the reference.
 - Do not collapse every component to one corner radius or remove compositionally important imagery.
 
-# Known gaps
-
-Nineteen catalog flows were reviewed by structure with complete representative scenarios across launch, Home, ride request, active trip, and Profile. One active-trip preview is video-only, so detailed ride motion remains less verified.
-
 </design-context>

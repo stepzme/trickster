@@ -138,10 +138,4 @@ Source-specific guardrails retained from the review:
 - Don't overcrowd form labels.
 - Don't let banners displace the primary service grid.
 
-# Known gaps
-
-- Tokens were inferred visually from sampled mobile screens.
-- Main page, Insurance, and All services were image-reviewed.
-- Transfers and authenticated account states were not deeply sampled.
-
 </design-context>

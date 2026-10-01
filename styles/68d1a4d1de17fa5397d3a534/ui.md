@@ -201,11 +201,4 @@ Apply these rules within current iPhone safe areas and scrolling containers. Kee
 - Do not use default blue tint, an unstyled `TabView`, arbitrary SF Symbols, or uniform corner radii when they contradict the recorded tokens and components.
 - Do not omit compositionally important imagery while final assets are pending; preserve its footprint with a faithful placeholder.
 
-# Known gaps
-
-- Tokens were inferred visually from inspected mobile screens.
-- All 75 available flow names were inventoried; onboarding, home, ride booking, Bolt Send, scooters, and side navigation were image-reviewed.
-- Live map motion, driver tracking cadence, and accessibility settings were not assessed.
-- Some selected flow entries were video-only; static screens were used as visual evidence.
-
 </design-context>

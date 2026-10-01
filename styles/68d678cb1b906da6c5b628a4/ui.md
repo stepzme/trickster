@@ -184,8 +184,4 @@ Apply these rules within current iPhone safe areas and scrolling containers. Kee
 - Do not use default blue tint, an unstyled `TabView`, arbitrary SF Symbols, or uniform corner radii when they contradict the recorded tokens and components.
 - Do not invent decorative imagery or symbol treatments that are absent from the reference.
 
-# Known gaps
-
-Fifty-five flow structures and representative screens across authorization, Library, reading, listening, My books, Profile, and kids mode were reviewed. Video-only reading transitions and the full range of publication-specific content were not exhaustively captured.
-
 </design-context>

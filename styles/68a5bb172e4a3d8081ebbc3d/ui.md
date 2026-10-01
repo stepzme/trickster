@@ -331,10 +331,4 @@ Apply these rules within current iPhone safe areas and scrolling containers. Kee
 - Do not use default blue tint, an unstyled `TabView`, arbitrary SF Symbols, or uniform corner radii when they contradict the recorded tokens and components.
 - Do not omit compositionally important imagery while final assets are pending; preserve its footprint with a faithful placeholder.
 
-# Known gaps
-
-- Exact custom font files were not available; system substitutes are specified.
-- Video-only motion in onboarding was not reproducible from still images.
-- Tablet and landscape layouts were not present in the reviewed material.
-
 </design-context>

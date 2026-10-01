@@ -25,7 +25,3 @@ Record required aspect ratios, transparent backgrounds, safe crop regions, dark/
 # Avoid
 
 List image styles, stock treatments, symbol substitutions, crops, or densities that would break the observed language.
-
-# Known Gaps
-
-List unobserved illustration states or production details. Do not infer them.

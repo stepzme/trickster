@@ -234,10 +234,4 @@ Source-specific guardrails retained from the review:
 - Don't leave system sheets visually disconnected.
 - Don't overdecorate active usage lists.
 
-# Known gaps
-
-- Blocking countdown and live-session motion were not represented.
-- iPad layout was not available.
-- Squad collaboration states were not deeply reviewed.
-
 </design-context>

@@ -179,11 +179,4 @@ Apply these rules within current iPhone safe areas and scrolling containers. Kee
 - Do not use default blue tint, an unstyled `TabView`, arbitrary SF Symbols, or uniform corner radii when they contradict the recorded tokens and components.
 - Do not omit compositionally important imagery while final assets are pending; preserve its footprint with a faithful placeholder.
 
-# Known gaps
-
-- Tokens were inferred visually from inspected mobile screens.
-- All 23 flow names were inventoried; Home, Product details, and Checking out were image-reviewed.
-- Games, support, widgets, and secret-order verification were not deeply sampled.
-- Product photography dominates; no separate broad illustration specification was warranted.
-
 </design-context>

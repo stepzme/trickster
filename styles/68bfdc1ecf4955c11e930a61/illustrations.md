@@ -30,7 +30,3 @@ Preserve the documented placement, crop, negative space, and visual weight in pr
 - Using 3D characters inside dense transactional rows.
 - Replacing food photos with synthetic art.
 - Heavy texture, hard shadows, or muted corporate palettes.
-
-# Known Gaps
-
-Animation, export dimensions, safe-crop specifications, appearance variants, and unshown state treatments were not documented.

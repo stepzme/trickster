@@ -189,8 +189,4 @@ Source-specific guardrails retained from the review:
 - Do not carry 3D art into receipts.
 - Do not leave native blue controls in the interface.
 
-# Known gaps
-
-Eighty-two catalog flows were reviewed by structure with complete representative scenarios across launch, Home, transfer, card, and savings. Some promotional previews are video-only, so motion and rare secondary product branches are less visually verified.
-
 </design-context>

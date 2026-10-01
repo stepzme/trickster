@@ -218,10 +218,4 @@ Source-specific guardrails retained from the review:
 - Don't crop packaging.
 - Don't add heavy card shadows.
 
-# Known gaps
-
-- Completed delivery tracking was not visually sampled.
-- Support and cancellation were not opened in detail.
-- iPad and landscape layouts were not represented.
-
 </design-context>

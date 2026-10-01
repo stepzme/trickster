@@ -34,7 +34,3 @@ Primary navigation connects primary areas. Product detail and money movement pro
 # System Access Timing
 
 No system-access timing or denial-recovery behavior was documented in the reviewed source.
-
-# Known Gaps
-
-System-permission denial paths, interrupted flows, and recovery behavior not described above were not available in the reviewed source.

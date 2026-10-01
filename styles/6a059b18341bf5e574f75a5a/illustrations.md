@@ -30,7 +30,3 @@ Exact export formats, aspect ratios, animation behavior, and appearance variants
 - Do not mix retail photography into logistics icons.
 - Never place a 3D object behind route or price data.
 - Preserve neon green and neutral surfaces from `ui.md`.
-
-# Known Gaps
-
-Export specifications, animation rules, safe-crop measurements, and unobserved state variants were not available in the reviewed source.

@@ -36,7 +36,3 @@ VK Video is a broad video platform for personalized feeds, long-form playback, c
 # System Access Timing
 
 No system-access request timing or denial recovery was documented in the reviewed source.
-
-# Known Gaps
-
-- Permission-denial recovery and unobserved secondary flows were not documented.

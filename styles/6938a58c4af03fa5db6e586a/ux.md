@@ -35,7 +35,3 @@ Home, Stores, Search, Orders, and Account form the persistent base. Restaurant, 
 # System Access Timing
 
 No system-access request timing or denial recovery was documented in the reviewed source.
-
-# Known Gaps
-
-- Permission-denial recovery and unobserved secondary flows were not documented.

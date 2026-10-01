@@ -165,11 +165,4 @@ Only the states documented above are specified; other states must preserve the s
 - Do not use an unstyled `TabView`, default blue tint, or arbitrary SF Symbols when they contradict the reference.
 - Do not collapse every component to one corner radius or remove compositionally important imagery.
 
-# Known gaps
-
-- Tokens were inferred visually from inspected mobile screens.
-- All 107 flow names were inventoried; Home, Buy and sell, and Trade were image-reviewed.
-- Advanced derivatives, support, and the full verification journey were not deeply sampled.
-- No coherent decorative illustration language appeared in reviewed task screens.
-
 </design-context>

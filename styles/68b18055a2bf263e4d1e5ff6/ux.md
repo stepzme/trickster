@@ -25,7 +25,3 @@ Five primary modes separate Favorites, Photo, Text, Sites, and Dialogue; history
 # System Access Timing
 
 No system-access timing or denial-recovery path was documented in the reviewed source.
-
-# Known Gaps
-
-Unobserved flows, denial paths, cancellation behavior, and recovery states remain unspecified.

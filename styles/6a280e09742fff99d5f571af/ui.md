@@ -218,10 +218,4 @@ Source-specific guardrails retained from the review:
 - Don't overload cards with badges.
 - Don't use green outside conversion actions.
 
-# Known gaps
-
-- Tokens were inferred visually from the inspected mobile screens.
-- All 53 flow names were inventoried; representative onboarding, home, catalog, filter, product, and checkout flows were image-reviewed.
-- Motion, video behavior, and accessibility labels were not assessed.
-
 </design-context>

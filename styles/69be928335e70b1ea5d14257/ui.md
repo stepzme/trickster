@@ -196,10 +196,4 @@ Only the states documented above are specified; other states must preserve the s
 - Do not use an unstyled `TabView`, default blue tint, or arbitrary SF Symbols when they contradict the reference.
 - Do not collapse every component to one corner radius or remove compositionally important imagery.
 
-# Known gaps
-
-- Live map motion and driver-position updates were not represented by stills.
-- Dark theme was not reviewed.
-- Tablet and landscape behavior were not shown.
-
 </design-context>

@@ -17,7 +17,6 @@ const UI_HEADINGS = [
   "States",
   "iOS adaptation",
   "Anti-generic checklist",
-  "Known gaps",
 ];
 
 const UX_HEADINGS = [
@@ -26,7 +25,6 @@ const UX_HEADINGS = [
   "Core Flows",
   "Interaction Patterns",
   "System Access Timing",
-  "Known Gaps",
 ];
 
 const ILLUSTRATION_HEADINGS = [
@@ -37,7 +35,6 @@ const ILLUSTRATION_HEADINGS = [
   "Variants and States",
   "Production Requirements",
   "Avoid",
-  "Known Gaps",
 ];
 
 function topLevelHeadings(markdown) {

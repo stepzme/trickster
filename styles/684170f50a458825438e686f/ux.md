@@ -35,7 +35,3 @@ Wildberries is a dense marketplace covering personalized discovery, search, prod
 # System Access Timing
 
 No system-access timing or denial-recovery path was documented in the reviewed source.
-
-# Known Gaps
-
-Unobserved flows, denial paths, cancellation behavior, and recovery states remain unspecified.

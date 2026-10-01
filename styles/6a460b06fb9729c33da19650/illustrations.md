@@ -31,7 +31,3 @@ Exact export formats, aspect ratios, animation behavior, and appearance variants
 - Do not place art behind balance or allowance values.
 - Keep yellow as the dominant brand cue.
 - If a new subject lacks a reference, match the same friendly 3D volume, soft studio shadow, restrained yellow-black palette, and spacious panel composition so it harmonizes with `ui.md`.
-
-# Known Gaps
-
-Export specifications, animation rules, safe-crop measurements, and unobserved state variants were not available in the reviewed source.

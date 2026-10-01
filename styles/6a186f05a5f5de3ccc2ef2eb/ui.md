@@ -218,10 +218,4 @@ Source-specific guardrails retained from the review:
 - Don't hide installment conditions.
 - Don't add decorative illustration to product cards.
 
-# Known gaps
-
-- Returns and support were not visually sampled.
-- Long-term order tracking was not represented.
-- iPad and landscape layouts were not represented.
-
 </design-context>

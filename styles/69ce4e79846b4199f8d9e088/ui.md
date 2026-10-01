@@ -171,11 +171,4 @@ Only the states documented above are specified; other states must preserve the s
 - Do not use an unstyled `TabView`, default blue tint, or arbitrary SF Symbols when they contradict the reference.
 - Do not collapse every component to one corner radius or remove compositionally important imagery.
 
-# Known gaps
-
-- Tokens were inferred visually from inspected mobile screens.
-- All 28 available flow names were inventoried; onboarding, home, energy, focusing modes, settings, and shop were image-reviewed.
-- Audio transitions, parallax speed, and haptics were not directly assessed.
-- No tablet or desktop captures were present.
-
 </design-context>

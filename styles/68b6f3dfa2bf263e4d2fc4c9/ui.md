@@ -227,10 +227,4 @@ Apply these rules within current iPhone safe areas and scrolling containers. Kee
 - Do not use default blue tint, an unstyled `TabView`, arbitrary SF Symbols, or uniform corner radii when they contradict the recorded tokens and components.
 - Do not omit compositionally important imagery while final assets are pending; preserve its footprint with a faithful placeholder.
 
-# Known gaps
-
-- Motion timing for route swipes was not visible in stills.
-- Dark theme and tablet behavior were not present.
-- Map navigation after accepting a route was not fully represented.
-
 </design-context>

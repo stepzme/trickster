@@ -219,10 +219,4 @@ Source-specific guardrails retained from the review:
 - Don't overfill account groups.
 - Don't use cashback badges without explanation.
 
-# Known gaps
-
-- Tokens were inferred visually from inspected mobile screens.
-- All 90 available flow names were inventoried; unauthorized home, signed-in home, card, transfers, payments, and services were image-reviewed.
-- QR hardware, Apple Pay handoff, and motion were not assessed.
-
 </design-context>

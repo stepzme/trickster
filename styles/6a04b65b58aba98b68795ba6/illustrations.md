@@ -31,7 +31,3 @@ Exact export formats, aspect ratios, animation behavior, and appearance variants
 - Do not mix flat cartoon characters with the studio 3D set.
 - Keep emerald as the dominant campaign hue.
 - If a new product lacks a reference, match the glossy materials, centered studio composition, clean reflection, and restrained green palette so it harmonizes with `ui.md`.
-
-# Known Gaps
-
-Export specifications, animation rules, safe-crop measurements, and unobserved state variants were not available in the reviewed source.

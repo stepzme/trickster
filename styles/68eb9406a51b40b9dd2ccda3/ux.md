@@ -28,7 +28,3 @@ The home screen is composer-first. A slide-out sidebar contains search, projects
 # System Access Timing
 
 No system-access timing or denial-recovery path was documented in the reviewed source.
-
-# Known Gaps
-
-Unobserved flows, denial paths, cancellation behavior, and recovery states remain unspecified.

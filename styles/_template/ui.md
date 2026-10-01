@@ -86,8 +86,4 @@ Do not introduce desktop hover states, web breakpoints, top navigation, footers,
 
 List the default SwiftUI substitutions that would destroy the reference, such as a generic white card stack, default blue tint, unstyled `TabView`, `Form` sections, arbitrary SF Symbols, missing imagery, or uniform corner radii.
 
-# Known gaps
-
-List screens, states, orientations, appearances, or content ranges not visible in the reviewed source. Do not invent rules for them.
-
 </design-context>

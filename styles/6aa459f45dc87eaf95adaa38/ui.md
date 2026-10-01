@@ -188,8 +188,4 @@ Source-specific guardrails retained from the review:
 - Do not add heavy shadows to every tile.
 - Do not leave default native blue on controls.
 
-# Known gaps
-
-Fifty-seven catalog flows were reviewed by structure with complete representative scenarios across onboarding, feed, creation, messaging, and profile. Several preview entries are video-only, so their transitional motion is not fully captured here.
-
 </design-context>

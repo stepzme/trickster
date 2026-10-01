@@ -201,10 +201,4 @@ Source-specific guardrails retained from the review:
 - Don't add decorative illustration to media rails.
 - Don't leave generic iOS player chrome.
 
-# Known gaps
-
-- Player gesture timing was not measured.
-- iPad and landscape catalogs were not represented.
-- Kids mode was not visually reviewed in this sample.
-
 </design-context>

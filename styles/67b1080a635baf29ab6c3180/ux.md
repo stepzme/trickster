@@ -29,7 +29,3 @@ Three fixed destinations connect Home, Explore, and Profile. The content viewer 
 # System Access Timing
 
 No system-access timing or denial-recovery path was documented in the reviewed source.
-
-# Known Gaps
-
-Unobserved flows, denial paths, cancellation behavior, and recovery states remain unspecified.

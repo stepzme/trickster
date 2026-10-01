@@ -233,10 +233,4 @@ Source-specific guardrails retained from the review:
 - Don't mix cart decisions into discovery rails.
 - Don't leave segmented controls in generic native styling.
 
-# Known gaps
-
-- Product-detail interactions were not sampled in this batch.
-- Live order tracking was not reviewed.
-- iPad and landscape layouts were not represented.
-
 </design-context>

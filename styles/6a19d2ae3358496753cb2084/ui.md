@@ -187,10 +187,4 @@ Source-specific guardrails retained from the review:
 - Don't use magenta as the primary payment or search action.
 - Don't flatten itinerary facts into unstructured prose.
 
-# Known gaps
-
-- Cancellation and refund recovery were not fully sampled.
-- Live disruption states were not reviewed.
-- iPad and landscape layouts were not represented.
-
 </design-context>

@@ -235,8 +235,4 @@ Source-specific guardrails retained from the review:
 - Do not let illustration obscure financial data.
 - Do not expose default blue platform controls.
 
-# Known gaps
-
-The reviewed scenarios cover onboarding, home, wallet, cards, history, transfers, payments, savings, loans, profile, and GigaChat. iPad behavior, accessibility scaling, dark mode, and every specialized banking product were not visually sampled.
-
 </design-context>

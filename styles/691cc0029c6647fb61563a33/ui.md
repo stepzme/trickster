@@ -150,8 +150,4 @@ Only the states documented above are specified; other states must preserve the s
 - Do not use an unstyled `TabView`, default blue tint, or arbitrary SF Symbols when they contradict the reference.
 - Do not collapse every component to one corner radius or remove compositionally important imagery.
 
-# Known gaps
-
-The inspected catalog documents 37 flows across onboarding, re-entry, home, payments, tariffs, services, and settings. Some payment completion and service error states are less represented.
-
 </design-context>

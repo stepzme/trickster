@@ -225,10 +225,4 @@ Source-specific guardrails retained from the review:
 - Don't mix illustration into ledgers.
 - Don't shrink route rows below touch size.
 
-# Known gaps
-
-- Tokens were inferred visually from inspected mobile screens.
-- All 50 flow names were inventoried; onboarding, home, wallet, payment, routes, and menu flows were image-reviewed.
-- Bluetooth hardware behavior, map gestures, and motion were not assessed.
-
 </design-context>

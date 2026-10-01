@@ -222,10 +222,4 @@ Source-specific guardrails retained from the review:
 - Don't place dark cards on an isolated light canvas.
 - Don't remove receipt actions.
 
-# Known gaps
-
-- Exact brand tokens and font names were inferred visually.
-- The 152-flow inventory was complete; representative leaf flows were inspected.
-- Motion in promotional and identity flows was not assessed.
-
 </design-context>
