@@ -3,142 +3,129 @@
 version: 1
 platform: iOS
 name: Otello-design-analysis
-description: "A hotel discovery system with electric green search and savings accents, white content canvas, black rating badges, image-led property rails, neighborhood maps, and small toy-like 3D state symbols."
-colors: {primary: "#67E82F", on-primary: "#142112", primary-focus: "#4FC21D", ink: "#17191B", ink-muted: "#696C71", ink-subtle: "#9B9EA3", ink-tertiary: "#C3C6CA", canvas: "#FFFFFF", surface-1: "#F6F6F5", surface-2: "#EDEFEA", surface-3: "#E2E5DF", surface-4: "#D5D9D2", hairline: "#E4E7E2", hairline-strong: "#CCD1C9", hairline-tertiary: "#B3B9B0", inverse-canvas: "#1A1B1F", inverse-surface-1: "#2B2C31", inverse-surface-2: "#3C3D44", inverse-ink: "#FFFFFF", brand-secure: "#173C43", semantic-success: "#67E82F", semantic-overlay: "#17181C"}
+description: "A white accommodation interface framed by neon-green actions and deep teal brand moments, with large photographic search heroes, softly raised rounded cards, dense hotel imagery, compact dark type, map price pills, a lightweight five-item tab bar, and isolated glossy 3D state objects."
+colors:
+  canvas: "#FFFFFF"
+  surface-primary: "#FFFFFF"
+  surface-secondary: "#F4F5F2"
+  accent-primary: "#67E82F"
+  accent-secondary: "#173C43"
+  text-primary: "#17191B"
+  text-secondary: "#696C71"
+  divider: "#E3E6E1"
+  destructive: "#D84A4A"
 typography:
-  display-xl: {fontFamily: SF Pro Display, fontSize: 36, fontWeight: 700, lineHeight: 1.06, letterSpacing: -0.8}
-  display-lg: {fontFamily: SF Pro Display, fontSize: 30, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.5}
-  display-md: {fontFamily: SF Pro Display, fontSize: 24, fontWeight: 700, lineHeight: 1.14, letterSpacing: -0.3}
-  headline: {fontFamily: SF Pro Display, fontSize: 21, fontWeight: 700, lineHeight: 1.20, letterSpacing: -0.2}
-  card-title: {fontFamily: SF Pro Text, fontSize: 16, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0}
-  subhead: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 600, lineHeight: 1.30, letterSpacing: 0}
-  body-lg: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0}
-  body: {fontFamily: SF Pro Text, fontSize: 13, fontWeight: 400, lineHeight: 1.36, letterSpacing: 0}
-  body-sm: {fontFamily: SF Pro Text, fontSize: 11, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0}
-  caption: {fontFamily: SF Pro Text, fontSize: 10, fontWeight: 400, lineHeight: 1.25, letterSpacing: 0}
-  button: {fontFamily: SF Pro Text, fontSize: 14, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0}
-  eyebrow: {fontFamily: SF Pro Text, fontSize: 10, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0.2}
-  mono: {fontFamily: SF Mono, fontSize: 11, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0}
-rounded: {xs: 6, sm: 10, md: 16, lg: 20, xl: 26, xxl: 30, pill: 9999, full: 9999}
-spacing: {xxs: 4, xs: 8, sm: 12, md: 16, lg: 20, xl: 24, xxl: 32, section: 40}
+  hero: {fontFamily: "SF Pro Display", fontSize: 34, fontWeight: 700, lineHeight: 40}
+  title: {fontFamily: "SF Pro Display", fontSize: 28, fontWeight: 700, lineHeight: 34}
+  section: {fontFamily: "SF Pro Text", fontSize: 21, fontWeight: 700, lineHeight: 26}
+  body: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 400, lineHeight: 21}
+  label: {fontFamily: "SF Pro Text", fontSize: 14, fontWeight: 600, lineHeight: 19}
+  caption: {fontFamily: "SF Pro Text", fontSize: 11, fontWeight: 400, lineHeight: 15}
+spacing:
+  screen-horizontal: 16
+  section-gap: 26
+  card-padding: 14
+  control-gap: 10
+rounded:
+  control: 14
+  card: 18
+  sheet: 28
+  pill: 999
 components:
-  button-primary: {backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 14 18}
-  button-primary-pressed: {backgroundColor: "{colors.primary-focus}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}"}
-  button-secondary: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 12 16}
-  button-tertiary: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 10 14}
-  content-card: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 14}
-  feature-card: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 16}
-  text-input: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: 12 14}
-  status-badge: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.pill}", padding: 3 7}
-  bottom-nav: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink-subtle}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: 8 10}
+  primary-action: {fill: "#67E82F", text: "#142112", height: 52, radius: 14}
+  property-card: {fill: "#FFFFFF", radius: 18, imageRatio: "4:3"}
+  search-panel: {fill: "#FFFFFF", radius: 20, padding: 16}
+  navigation: {fill: "#FFFFFF", selected: "#173C43", unselected: "#989C9F"}
 ---
 
 # Overview
 
-Otello uses vivid green search and savings cues, crisp hotel photography, black comparison badges, and simple booking states to make accommodation discovery direct.
+Otello combines a predominantly white accommodation interface with a high-contrast neon-green action system and deep teal brand moments. A large destination photograph and overlapping white search panel dominate the opening composition; hotel listings and detail screens remain photography-led. Rounded white cards, soft shadows, black rating and toggle treatments, and compact gray metadata keep dense travel information legible. Small glossy 3D objects appear only in launch, loading, empty, and loyalty-like states, while the persistent five-item tab bar stays visually light.
 
 # Non-negotiable visual invariants
 
-- The recurring color treatment uses electric green accent.
-- Primary screens use white canvas.
-- The recurring color treatment uses black rating badges.
-- The sampled screens consistently show horizontal property rails.
-- The sampled screens consistently show map photo clusters.
-- Characteristic content and controls use compact filter chips.
-- The principal image treatment uses friendly 3D state objects.
-- Preserve green savings emphasis and black factual badges.
+- Reserve neon green for primary actions, search submission, selected utility controls, favorable values, and concentrated brand moments.
+- Keep functional screens mostly white or warm off-white, with broad rounded cards and only subtle shadow or divider contrast.
+- Make real accommodation and destination photography the dominant imagery in search, listing, and detail compositions.
+- Preserve the large white rounded search panel that overlaps or follows a photographic upper region and ends in a green action.
+- Use a lightweight fixed five-item bottom bar with simple glyphs, tiny labels, and a dark or brand-accented selected state.
+- Present filters and secondary choices in large-radius white bottom sheets with pill chips and a sticky primary action.
+- Use isolated glossy 3D objects in generous whitespace for loading, empty, utility, and loyalty-like states rather than inside inventory cards.
+- Keep map mode readable through compact price pills, floating round controls, and a high-contrast green/dark map-list switch.
 
 # Color and surfaces
 
-Electric green owns search, savings, booking action, and favorable price. Charcoal provides contrast for ratings and selected segments.
+White is the continuous functional canvas and primary card surface. Warm light gray (`#F4F5F2`) groups inactive fields, chips, empty panels, and secondary sections. Neon green (`#67E82F`) is the only dominant action accent; it carries search, booking, selected utilities, and strong savings signals. Deep teal (`#173C43`) anchors the wordmark, full-screen brand states, dark toggles, and occasional selected controls. Primary text is near-black, metadata is medium gray, and dividers remain faint.
 
-White is primary; light warm gray groups cards, chips, and empty booking panels.
-
-Near-black leads property and destination titles; green may emphasize price; gray supports dates, location, and review count.
-
-Green communicates favorable or primary action, while red and amber remain available for cancellation or warning.
+Launch alternates between a full deep-teal field with a green key mark and a full neon-green field with a dark wordmark. Elsewhere, large color comes from travel photography, maps, or a focused green action rather than green page backgrounds. Destructive feedback uses explicit red; warning can use a restrained amber. Default iOS blue, heavy gray grouped backgrounds, and multiple competing bright accents would break the system.
 
 # Typography
 
-Use SF Pro Display for destination and property headings and SF Pro Text for controls, content, and metadata.
+Large page and destination titles use bold SF Pro Display at roughly 28–34 points. Section headings are about 20–22 points; hotel names, booking labels, and prices use 14–17 point semibold text; metadata, dates, locations, review counts, and tab labels sit between 10 and 13 points. Price and rating numerals should use tabular figures where alignment matters. Text is mostly left aligned, with centered type reserved for empty, loading, and focused confirmation states.
 
-- display-lg — 30 points — 700 — Hero or state
-- headline — 21 points — 700 — Section title
-- card-title — 16 points — 600 — Primary item
-- body — 13 points — 400 — Detail
-- caption — 10 points — 400 — Metadata
-
-- Lead with destination, property, price, rating, or booking state.
-- Keep repeated metadata aligned and visually quieter.
-- Reserve high contrast and weight for real decisions.
-
-Use the system sans with compact rating and price numerals.
-
-The hierarchy must remain legible with Dynamic Type: supporting text may wrap before the primary metric, title, or action loses its role.
+Use SF Pro Display and SF Pro Text as the iOS-safe families. Dynamic Type should expand card height, wrap location and booking details, and preserve price/action hierarchy. Reduce rail density or image width before clipping names or totals. Copy should identify place, date, price, condition, state, or action; do not add travel slogans or mood text that repeats what the photograph and search context already communicate.
 
 # Screen composition
 
-Use a 4 points base, 8–12 points internal gaps, and 16 points horizontal screen gutters.
+Horizontal gutters are typically 16 points. On the primary discovery composition, a photographic banner occupies roughly the upper third, a wide white search panel overlaps its lower edge, horizontal destination chips follow, and promotional or property blocks fill the scrollable middle above the five-item bottom bar. Listing and booking screens use a denser one-column stack. Cards are nearly full width with 10–14 point internal gaps and 20–28 point separation between major sections.
 
-Home and Super Prices use horizontal property rails; map clusters images by area; bookings use one wide column.
+Observed visual archetypes include:
 
-Allow search and empty states more space, while repeated hotel rails stay compact.
+- **Photo-led discovery:** large destination image, overlapping white search panel, horizontal chips, promotional blocks, and property rails above the fixed tab bar.
+- **Search or listing:** compact top query context and filter chips, then vertically stacked photo-first property cards with rating, review, price, and condition data aligned beneath or beside the image.
+- **Map results:** map fills most of the viewport; white or dark price pills, small image clusters, round zoom/location controls, and a green/dark floating map-list switch layer above it.
+- **Property detail:** photo gallery dominates the upper region, followed by title, rating and location, compact facility or condition rows, room cards, and a lower booking action.
+- **Booking and payment form:** plain white vertical groups, clear section titles, broad rounded inputs or choice rows, price summary, and a sticky neon-green action above the safe area.
+- **Filter or selection sheet:** dimmed underlying screen with a tall white large-radius sheet, chips, segments, slider or choice rows, and a lower green action.
+- **Empty, loading, or sign-in state:** large white field, one centered glossy 3D object or concise brand mark, short necessary copy, and one clear action.
+- **Profile or settings:** sparse white grouped rows, subtle separators, small utility icons, and straightforward state/value alignment.
 
-Use photography, black badges, and restrained card contrast; 3D symbols remain small and centered.
-
-Primary iPhone screens keep the documented content grouping and vertical rhythm inside a scroll container when content exceeds the viewport. Bottom-owned actions or navigation reserve the lower safe area rather than covering content.
+Use vertical scrolling for long lists and forms; keep map and fixed bottom regions safe-area aware rather than covering content.
 
 # Navigation appearance
 
-Use five labeled destinations on white, with black active icon and gray inactive icons.
+The bottom bar is white, full width, and visually light, with five evenly spaced simple glyphs and very small labels. Inactive items are gray; the selected item becomes dark or gains a concentrated brand accent. It is not a floating glass pill and does not require a heavy top border. Its appearance is reusable, but its original destinations are not.
 
-This section governs appearance only; product behavior and information architecture come from the approved Research and Planning artifacts.
+Top bars use a simple bold title with compact back, close, or utility controls. Filters, date/guest selection, and other focused choices use white bottom sheets with about 28-point top corners and a dimmed backdrop. Segments and pill chips use gray or white fills, with dark or green selected states. Avoid default blue back buttons, oversized circular navigation controls, and unstyled system tab icons.
 
 # Components
 
-Primary search and booking use green with dark text; secondary actions use white or charcoal segments.
-
-Property cards align image, discount, rating, reviews, dates, and price; booking cards emphasize state and recovery.
-
-Destination search uses white rounded field with green focus or trailing action, styled consistently across map and Home.
-
-Keep discount, upgrade, availability, active or past booking, and sign-in requirement close to the item.
-
-Controls retain at least a 44-point interactive area. Pressed and disabled treatments should stay within the documented palette and hierarchy.
+- **Primary action:** approximately 52 points high, neon-green fill, dark semibold label, 14-point radius, and a slightly deeper green pressed state. Disabled state becomes a muted neutral rather than another bright color.
+- **Search panel:** wide white surface with 20-point radius, 16-point padding, compact labeled rows or input areas, and a clearly separated green submit control. It may overlap a hero image and uses restrained shadow.
+- **Property card:** wide white 18-point-radius card led by a 4:3 accommodation photo, followed by dark title, black rating badge, gray review/location data, and aligned price or savings information.
+- **Filter chip:** compact capsule with light neutral fill or border, short dark label, and a dark/green selected treatment. Maintain a 44-point tap target even if the visible chip is smaller.
+- **Map price pin:** small white or dark pill with bold compact price, high map contrast, and a selected state that uses green or stronger dark fill.
+- **Floating map control:** circular white control with subtle shadow and a simple dark glyph; primary map/list switch combines dark and neon-green for stronger emphasis.
+- **Choice row:** full-width white or pale-neutral row with concise labels, supporting value, and trailing chevron, radio, or check.
+- **Bottom sheet:** white surface with large top corners, compact header, vertically grouped controls, and a sticky green action clear of the home indicator.
 
 # Imagery and icons
 
-Property photos use rounded landscape crops; map pins can be image clusters; state objects sit centered in white panels.
+Accommodation and destination photography is essential. Use bright, clean landscape crops that preserve interiors, facades, beds, pools, or location cues; do not replace them with illustration or generic travel symbols. Map imagery remains functional and must retain label and pin legibility. Temporary photography must preserve the documented scale, aspect, crop, density, and visual weight so composition can be approved before final assets arrive.
 
-Use consistent hotel crops and protect focal interiors or facades; do not distort map thumbnails.
-
-When imagery is part of the documented composition, it cannot be omitted while final assets are pending. A temporary asset must preserve its placement, crop, scale, and approximate visual weight.
+Glossy 3D state objects are a separate, smaller image system: green keys, hearts, luggage, and soft abstract forms appear centered in white or brand-colored space. Follow `illustrations.md` when that role is required. Operational icons remain simple and mostly monochrome; green is applied selectively to actionable or selected states rather than every symbol.
 
 # States
 
-Keep discount, upgrade, availability, active or past booking, and sign-in requirement close to the item.
+Observed states include alternating brand splash screens, photo-led home, search with keyboard, loading with a 3D key, map and list results, filter sheet, no-results state, saved-items empty state, sign-in prompt, populated property detail, booking and payment entry, processing, reservation detail, profile, settings, and support/cancellation content. White surfaces, compact dark typography, neon-green primary actions, rounded geometry, and photography remain stable throughout.
 
-Green communicates favorable or primary action, while red and amber remain available for cancellation or warning.
-
-Only the states documented above are specified; other states must preserve the same canvas, hierarchy, and component language without inventing a new visual system.
+Loading and empty states use one isolated object and concise text instead of a stack of explanatory cards. Focused forms keep native keyboard behavior within custom rounded fields. Processing uses restrained progress rather than a new palette. Do not claim an observed dark appearance or invent system permission, error, and success art beyond the captured roles.
 
 # iOS adaptation
 
-- Extend the documented canvas through the iPhone safe areas while keeping readable content within appropriate insets.
-- Use a vertical `ScrollView` for content that does not fit compact heights; keep documented bottom actions and navigation clear of the home indicator.
-- Primary actions, navigation, cards, and contextual controls remain at least 44 points.
-- Preserve destination, photo, rating, price, and booking action; reduce collections before core comparison.
-- Present the keyboard and system permission UI natively, then return to the same visual context.
-- Preserve semantic reading order in VoiceOver and allow text to grow with Dynamic Type.
-- Preserve the documented appearance instead of introducing an unrelated light or dark palette.
+Extend white or the active brand splash color through the safe areas. Use vertical scroll containers for discovery, listings, detail, and forms; horizontal lazy stacks for genuine destination or property rails; and a dedicated map container for map states. Keep the bottom bar and sticky green actions above the home indicator. When the keyboard appears, scroll the active field and its validation into view without hiding the price summary or final action.
+
+All chips, icon buttons, pins, and navigation items need at least 44-point hit targets. VoiceOver should announce property name, rating, location, price, cancellation condition, and action in a useful order; group visual metadata without merging distinct actions. Dynamic Type should expand rows and sheets, wrap supporting labels, and reduce rail density before truncating essential facts. Compact widths retain 16-point gutters and image aspect ratios. The observed application is light outside brand splash screens; do not claim a separate dark theme.
 
 # Anti-generic checklist
 
-- Do not turn every card green or cover property photos with excessive chrome.
-- Do not hide status, constraints, or secondary conditions.
-- Do not add heavy shadows around every container.
-- Do not replace the documented canvas and surfaces with a generic grouped background and uniform white cards.
-- Do not use an unstyled `TabView`, default blue tint, or arbitrary SF Symbols when they contradict the reference.
-- Do not collapse every component to one corner radius or remove compositionally important imagery.
+- Do not replace neon green with default blue or spread green across every card and page background.
+- Do not omit the large photo/search composition or reduce accommodation photography to tiny icons.
+- Do not ship an unstyled `TabView`, generic `Form`, default grouped lists, or blue selection controls.
+- Do not add heavy shadows, thick borders, or identical corner radii to every surface.
+- Do not replace map price pills and floating controls with generic annotation pins.
+- Do not use glossy 3D objects inside hotel inventory cards or as a substitute for real property photography.
+- Do not recreate branded state objects with SwiftUI shapes, SF Symbols, emoji, or code-drawn gradients.
+- Do not add decorative travel copy that duplicates place, search, price, or booking context.
 
 </design-context>

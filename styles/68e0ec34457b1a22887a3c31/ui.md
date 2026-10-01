@@ -3,220 +3,100 @@
 version: 1
 platform: iOS
 name: List.am-design-analysis
-description: "A broad classifieds marketplace on bright white, organized by clear blue navigation, compact black type, rounded photo cards, pastel promotional tiles, and green or blue seller-contact actions. The system is calm and flexible enough for goods, vehicles, housing, jobs, and services."
+description: "A bright, photo-led marketplace interface with white and pale-gray fields, compact black type, saturated blue controls, dense two-column browsing, restrained rounded geometry, and occasional promotional or service imagery."
 colors:
-  primary: "#168AF1"
-  on-primary: "#FFFFFF"
-  primary-focus: "#0B70C8"
-  ink: "#17171B"
-  ink-muted: "#74747C"
-  ink-subtle: "#A8A8AF"
-  ink-tertiary: "#CACACF"
   canvas: "#FFFFFF"
-  surface-1: "#F7F6F8"
-  surface-2: "#EFEEF1"
-  surface-3: "#E5E4E8"
-  surface-4: "#DAD9DE"
-  hairline: "#E7E6EA"
-  hairline-strong: "#D2D1D7"
-  hairline-tertiary: "#B9B8C0"
-  inverse-canvas: "#0B263A"
-  inverse-surface-1: "#17384E"
-  inverse-surface-2: "#254B62"
-  inverse-ink: "#FFFFFF"
-  brand-secure: "#71A9FF"
-  semantic-success: "#00D96B"
-  semantic-overlay: "#17171B"
+  surface-primary: "#FFFFFF"
+  surface-secondary: "#F3F3F6"
+  accent-primary: "#168AF1"
+  accent-secondary: "#00C968"
+  text-primary: "#17171B"
+  text-secondary: "#74747C"
+  divider: "#E3E3E7"
+  destructive: "#E5484D"
 typography:
-  display-xl: {fontFamily: SF Pro Display, fontSize: 36, fontWeight: 700, lineHeight: 1.06, letterSpacing: -0.8}
-  display-lg: {fontFamily: SF Pro Display, fontSize: 30, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.6}
-  display-md: {fontFamily: SF Pro Display, fontSize: 24, fontWeight: 700, lineHeight: 1.14, letterSpacing: -0.3}
-  headline: {fontFamily: SF Pro Display, fontSize: 20, fontWeight: 700, lineHeight: 1.20, letterSpacing: -0.2}
-  card-title: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 600, lineHeight: 1.24, letterSpacing: 0}
-  subhead: {fontFamily: SF Pro Text, fontSize: 14, fontWeight: 600, lineHeight: 1.30, letterSpacing: 0}
-  body-lg: {fontFamily: SF Pro Text, fontSize: 14, fontWeight: 400, lineHeight: 1.38, letterSpacing: 0}
-  body: {fontFamily: SF Pro Text, fontSize: 12, fontWeight: 400, lineHeight: 1.34, letterSpacing: 0}
-  body-sm: {fontFamily: SF Pro Text, fontSize: 10, fontWeight: 400, lineHeight: 1.28, letterSpacing: 0}
-  caption: {fontFamily: SF Pro Text, fontSize: 9, fontWeight: 400, lineHeight: 1.22, letterSpacing: 0}
-  button: {fontFamily: SF Pro Text, fontSize: 13, fontWeight: 500, lineHeight: 1.18, letterSpacing: 0}
-  eyebrow: {fontFamily: SF Pro Text, fontSize: 9, fontWeight: 600, lineHeight: 1.18, letterSpacing: 0.1}
-  mono: {fontFamily: SF Mono, fontSize: 10, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0}
-rounded:
-  xs: 4
-  sm: 8
-  md: 12
-  lg: 16
-  xl: 20
-  xxl: 26
-  pill: 9999
-  full: 9999
+  hero: {fontFamily: "SF Pro Display", fontSize: 30, fontWeight: 700, lineHeight: 35}
+  title: {fontFamily: "SF Pro Display", fontSize: 24, fontWeight: 700, lineHeight: 29}
+  section: {fontFamily: "SF Pro Text", fontSize: 18, fontWeight: 700, lineHeight: 23}
+  body: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 400, lineHeight: 20}
+  label: {fontFamily: "SF Pro Text", fontSize: 14, fontWeight: 600, lineHeight: 18}
+  caption: {fontFamily: "SF Pro Text", fontSize: 12, fontWeight: 400, lineHeight: 16}
 spacing:
-  xxs: 4
-  xs: 8
-  sm: 12
-  md: 16
-  lg: 20
-  xl: 24
-  xxl: 32
-  section: 40
+  screen-horizontal: 12
+  section-gap: 24
+  card-padding: 12
+  control-gap: 8
+rounded:
+  control: 10
+  card: 14
+  sheet: 24
+  pill: 999
 components:
-  button-primary: {backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [13, 18]}
-  button-primary-pressed: {backgroundColor: "{colors.primary-focus}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}"}
-  button-secondary: {backgroundColor: "{colors.semantic-success}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [12, 16]}
-  button-tertiary: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [10, 14]}
-  button-inverse: {backgroundColor: "{colors.inverse-canvas}", textColor: "{colors.inverse-ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [12, 16]}
-  listing-card: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 0}
-  promo-tile: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.caption}", rounded: "{rounded.md}", padding: 8}
-  search-field: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink-muted}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: [10, 12]}
-  filter-chip: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.caption}", rounded: "{rounded.pill}", padding: [7, 10]}
-  bottom-nav: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink-subtle}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: [7, 8]}
+  primary-action: {backgroundColor: "{colors.accent-primary}", textColor: "{colors.surface-primary}", cornerRadius: "{rounded.control}", minHeight: 48}
+  contact-action: {backgroundColor: "{colors.accent-secondary}", textColor: "{colors.surface-primary}", cornerRadius: "{rounded.control}", minHeight: 48}
+  listing-card: {backgroundColor: "{colors.surface-primary}", textColor: "{colors.text-primary}", cornerRadius: "{rounded.card}", padding: 0}
+  filter-chip: {backgroundColor: "{colors.surface-secondary}", textColor: "{colors.text-primary}", cornerRadius: "{rounded.pill}", minHeight: 36}
+  choice-sheet: {backgroundColor: "{colors.surface-primary}", cornerRadius: "{rounded.sheet}", padding: 20}
+  navigation: {backgroundColor: "{colors.surface-primary}", selectedColor: "{colors.accent-primary}", unselectedColor: "{colors.text-secondary}"}
 ---
 
 # Overview
 
-List.am is a flexible classifieds system where blue navigation and photo-led cards support many marketplace verticals without changing interaction grammar.
-
-**Key Characteristics:**
-- White canvas with clear blue actions.
-- Two-column cards across goods, cars, housing, and jobs.
-- Pastel promotional tiles and business rails.
-- Green Call and blue Message actions.
-- Long stepped posting and promotion flows.
+List.am is visually led by dense marketplace photography on a clean white canvas. Compact price-and-title clusters, pale-gray controls, saturated blue actions, and restrained rounded containers keep a large amount of content legible without making the interface feel like a generic stack of cards. Promotional art appears as a secondary interruption rather than the main visual field.
 
 # Non-negotiable visual invariants
 
-- Sampled screens consistently use white canvas with clear blue actions.
-- The reference consistently shows two-column cards across goods, cars, housing, and jobs.
-- The reference consistently shows pastel promotional tiles and business rails.
-- The reference consistently shows green Call and blue Message actions.
-- The reference consistently shows long stepped posting and promotion flows.
+- Browsing surfaces remain predominantly white, with pale gray reserved for fields, grouped rows, and selected control backgrounds.
+- Product photography is the primary visual mass and listing results commonly form a tight two-column grid.
+- Price is the strongest text inside each listing cluster, followed by a compact title and subdued metadata.
+- Saturated blue consistently marks selection, progress, primary actions, and active navigation; green is limited to direct positive contact actions.
+- Search, filters, badges, and sheets use compact rounded geometry, while ordinary content stays flat and lightly separated.
+- Detail compositions begin with a large edge-to-edge or near-edge photo region and end with persistent contact actions above the safe area.
+- Modal choices appear in a rounded bottom sheet over a dimmed background, with a visible grab handle and generous row height.
 
 # Color and surfaces
 
-### Brand & Accent
-
-Bright blue carries brand, publishing, message, and active navigation. Green is reserved for direct phone contact and positive actions.
-
-### Surface
-
-White is the browsing canvas. Pale lavender-gray supports search, form groups, and promotion cards.
-
-### Text
-
-Near-black carries price and title. Gray supports category, location, seller, and specification metadata.
-
-### Semantic
-
-Green means call or confirmed positive state. Blue remains primary progress; campaign savings can use green, cyan, or violet badges.
+The canvas and most content surfaces are white. Very light neutral gray distinguishes search fields, form groups, filter controls, and grouped settings without introducing heavy borders. Thin cool-gray dividers separate dense rows. Saturated blue is the unmistakable interaction color and occupies full button fills as well as small selected symbols and badges. Green is a narrower secondary accent for positive contact actions. Near-black text carries price and titles; medium gray carries location, time, attributes, and helper text. Red is reserved for destructive or removal affordances. A generic iOS blue combined with default grouped-form gray would weaken the specific bright-blue/near-white contrast and compact marketplace density.
 
 # Typography
 
-### Font Family
-
-Use SF Pro Display for headings and SF Pro Text for listing, filter, form, and profile information.
-
-### Hierarchy
-
-| Token | Size | Weight | Use |
-|---|---:|---:|---|
-| display-lg | 30 points | 700 | Verification or promotion claim |
-| headline | 20 points | 700 | Detail and posting title |
-| card-title | 15 points | 600 | Price and listing title |
-| body | 12 points | 400 | Attributes and location |
-| caption | 9 points | 400 | Chips, badges, and navigation |
-
-### Principles
-
-- Price leads each listing card.
-- Keep descriptions compact in grids and expansive on details.
-- Maintain readable multilingual text without decorative type.
-
-### Note on Font Substitutes
-
-Inter is a suitable substitute; preserve Armenian, Cyrillic, and Latin coverage.
+Use SF Pro Display and SF Pro Text. Page titles are approximately 22–24 points in bold or semibold; section headings sit around 17–18 points; listing price, title, and form labels occupy the 13–16 point range; metadata is about 11–13 points in gray. The hierarchy relies on weight and proximity more than dramatic scale. Prices and major decisions use bold figures with stable tabular alignment where values compare. Text is predominantly left aligned and sentence case. Under Dynamic Type, allow listing titles and metadata to wrap, but preserve the visual order of photo, price, title, and secondary details rather than collapsing all text to equal size.
 
 # Screen composition
 
-### Spacing System
+The repeated structure is a compact top control region, a scrollable content field, and either a light bottom navigation bar or anchored action area. Horizontal insets are commonly around 12–16 points and gaps inside dense card grids are about 8–12 points.
 
-Use a 4 points base, 8 points grid gaps, and 10–12 points screen padding.
-
-### Grid & Container
-
-Listings use two columns. Business pages and promotions use horizontal rails; details and posting use one column.
-
-### Whitespace Philosophy
-
-Browsing is dense but calm. Increase space for verification, policy, payment, and promotion decisions.
-
-Surface hierarchy observed in the source:
-
-| Level | Treatment | Use |
-|---|---|---|
-| 0 | White canvas | Search and listing grid |
-| 1 | Pale group fill | Forms and promotion cards |
-| 2 | Sticky white action bar | Call and Message |
-| 3 | Modal sheet | Focused account actions |
-
-### Decorative Depth
-
-Listing photography and soft 3D promo objects provide depth; ordinary cards stay flat.
+Browsing archetypes combine a search or title bar, horizontal chips or compact category items, occasional promotional tiles, and a two-column photo grid. Result variants may exchange the grid for dense horizontal rows or a map with small price bubbles and a floating view switch. Detail archetypes devote the upper region to a large photo carousel, then stack title, price, location, attributes, seller information, and related photo cards; the contact bar remains visually anchored at the bottom. Form archetypes use a single vertical column of grouped fields, selectors, uploaded-photo thumbnails, and a full-width progress action. Account archetypes place icon-and-label rows inside pale grouped areas. Empty or gated compositions trade the dense grid for a centered service illustration, concise text, and one clear action.
 
 # Navigation appearance
 
-Keep five bottom destinations fixed with an enlarged blue Post control. Native controls must inherit the blue focus and compact geometry.
+Top bars are visually minimal: white background, compact back control, a short title or rounded search field, and small outline actions on the right. The bottom bar is white or lightly translucent with evenly spaced outline symbols; the selected item is blue and inactive items are muted gray. A central creation control may receive stronger blue emphasis, but it remains aligned to the bar rather than becoming an unrelated floating ornament. Sheets rise from the bottom with a dim overlay, large top corners, a short grab handle, and flat list rows.
 
 # Components
 
-### Buttons
-
-Primary progress uses blue filled buttons. Call uses green; Message uses blue. Secondary actions use white with dark or blue outlines.
-
-### Cards & Containers
-
-Listing cards combine image, favorite, price, title, and location. Detail pages use full-width attribute sections with sticky contact actions.
-
-### Inputs & Forms
-
-Search is a pale field. Posting uses white form groups, dropdowns, validation, image grids, and blue anchored progress actions.
+Listing cards are flat image-first clusters: a rounded near-square crop, overlaid favorite control, bold price, compact title, and one or two gray metadata lines. Promotional tiles pair a pastel rounded field with one large contained visual and very little copy. Search fields are pale-gray rounded rectangles with a leading symbol and compact placeholder. Filter chips are short pills, filled pale gray by default and blue-tinted when selected. Primary buttons are full-width blue fills with white semibold labels; direct contact can use a green fill beside a blue action. Form selectors are white or pale grouped rows with trailing disclosure marks. Photo-upload grids use real thumbnails with small destructive badges. Disabled actions lose saturation but retain their geometry. Choice sheets use a white panel, large title, separated rows, and blue selection or action marks.
 
 # Imagery and icons
 
-Listing photography and soft 3D promo objects provide depth; ordinary cards stay flat.
-
-Listings use near-square aspect-fill photos. Promotional objects are contained inside pastel rounded tiles; verification drawings stay centered.
-
-If final imagery is not yet available, any placeholder must preserve the documented scale, placement, crop, and visual weight rather than removing that layer.
+Real listing photography dominates browsing and detail screens. Grid images are close to square and aspect-fill; detail galleries use a wider, larger crop and must preserve a clear focal subject. Merchant marks and category symbols remain small supporting identifiers. Promotional imagery is contained within pastel rounded tiles and should not be confused with seller photography. A limited service-illustration language appears in verification and empty/gated states; its scale and negative space are compositionally important and cannot be omitted while assets are pending. Functional icons are compact, mostly outline-based, and visually consistent in stroke weight; avoid mixing arbitrary filled SF Symbols into the same control row.
 
 # States
 
-Urgent and promoted status use colored labels. Promotion packages show price and savings in clean stacked cards.
+Populated grids preserve the photo-price-title hierarchy. Promoted, urgent, or verified content adds small colored badges without recoloring the whole card. Selected filters use a stronger blue or blue-tinted fill while unselected controls remain neutral. Form progress moves from desaturated disabled actions to saturated blue and shows uploaded images as real thumbnails. Empty and account-gated states retain the white canvas but replace dense content with centered illustration, short text, and one action. Modal choice, confirmation, loading, and destructive states preserve the rounded sheet geometry and dim overlay. A supported dark appearance may invert grouped surfaces and text, but must retain the same density, blue selection logic, and content hierarchy.
 
 # iOS adaptation
 
-### Touch Targets
-
-Search, filters, favorite, call, message, post, and navigation remain at least 44 points.
-
-### Collapsing Strategy
-
-Keep two-column browsing until labels become unreadable, then use one-column rows; forms remain stacked.
-
-### Image Behavior
-
-Use aspect-fill for listings, contain for promotional objects, and preserve full galleries on detail pages.
-
-Apply these rules within current iPhone safe areas and scrolling containers. Keep interactive targets at least 44 points, preserve a logical VoiceOver order, and let Dynamic Type wrap supporting text without flattening the documented hierarchy. Preserve the documented appearance.
+Place scrolling grids, forms, and details inside safe-area-aware containers; allow only large image regions or dim overlays to extend beneath bars. Keep sticky contact and progress actions above the home indicator. Use lazy grids for two-column results and switch to a compact single-column row only when Dynamic Type makes price/title clusters unreadable. Present selectors as native-behaving sheets with the documented custom surface and radius. Keyboard presentation must keep the active form field and anchored action reachable. Maintain at least 44-point hit regions around favorites, chips, back controls, tab items, and small overlay buttons. VoiceOver order should follow image description, price, title, metadata, then actions. Do not force two columns when accessibility sizes require a row layout.
 
 # Anti-generic checklist
 
-- Don't over-brand seller content.
-- Don't use heavy shadows around every listing.
-- Don't hide location or category filters.
-- Don't mix decorative art into ad galleries.
-- Don't collapse long posting steps into one crowded screen.
-- Do not replace the documented hierarchy with a generic stack of identical white cards or `Form` sections.
-- Do not use default blue tint, an unstyled `TabView`, arbitrary SF Symbols, or uniform corner radii when they contradict the recorded tokens and components.
-- Do not omit compositionally important imagery while final assets are pending; preserve its footprint with a faithful placeholder.
+- Do not replace the photo-dense two-column result field with uniform full-width white cards.
+- Do not use `Form` as the visible styling for posting or settings groups.
+- Do not apply default system blue indiscriminately; preserve the brighter reference blue and the separate green contact role.
+- Do not give every section the same corner radius, fill, and shadow.
+- Do not use an unstyled `TabView` with arbitrary mixed-weight SF Symbols.
+- Do not remove the large gallery, promotional visual, or service illustration and leave text-only empty space.
+- Do not add heavy shadows or borders around ordinary listing clusters.
+- Do not enlarge metadata until it competes with price and title.
 
 </design-context>

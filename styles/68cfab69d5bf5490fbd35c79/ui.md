@@ -3,176 +3,116 @@
 version: 1
 platform: iOS
 name: MyAmeria-design-analysis
-description: "A light modular banking interface built around vivid lime green, softly elevated white product panels, pale gray service tiles, compact account lists, and a prominent central QR scanner."
-colors: {primary: "#73D04B", on-primary: "#102010", primary-focus: "#59B936", ink: "#151719", ink-muted: "#696D6C", ink-subtle: "#9A9E9D", ink-tertiary: "#C2C6C4", canvas: "#F8F9F8", surface-1: "#FFFFFF", surface-2: "#F0F3F1", surface-3: "#E4E8E5", surface-4: "#D6DCD8", hairline: "#E3E7E4", hairline-strong: "#CBD1CD", hairline-tertiary: "#B1B9B4", inverse-canvas: "#202126", inverse-surface-1: "#303138", inverse-surface-2: "#42434B", inverse-ink: "#FFFFFF", brand-secure: "#322F37", semantic-success: "#73D04B", semantic-overlay: "#17181C"}
+description: "A light modular banking interface with a pale-gray canvas, softly elevated white financial cards, vivid lime actions and focus, compact account typography, dense service grids, a white tab bar, and a prominent elevated circular center control."
+colors:
+  canvas: "#F8F9F8"
+  surface-primary: "#FFFFFF"
+  surface-secondary: "#F0F3F1"
+  accent-primary: "#73D04B"
+  accent-secondary: "#202126"
+  text-primary: "#151719"
+  text-secondary: "#696D6C"
+  divider: "#E3E7E4"
+  destructive: "#E24D4D"
 typography:
-  display-xl: {fontFamily: SF Pro Display, fontSize: 36, fontWeight: 700, lineHeight: 1.06, letterSpacing: -0.8}
-  display-lg: {fontFamily: SF Pro Display, fontSize: 30, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.5}
-  display-md: {fontFamily: SF Pro Display, fontSize: 24, fontWeight: 700, lineHeight: 1.14, letterSpacing: -0.3}
-  headline: {fontFamily: SF Pro Display, fontSize: 21, fontWeight: 700, lineHeight: 1.20, letterSpacing: -0.2}
-  card-title: {fontFamily: SF Pro Text, fontSize: 16, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0}
-  subhead: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 600, lineHeight: 1.30, letterSpacing: 0}
-  body-lg: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0}
-  body: {fontFamily: SF Pro Text, fontSize: 13, fontWeight: 400, lineHeight: 1.36, letterSpacing: 0}
-  body-sm: {fontFamily: SF Pro Text, fontSize: 11, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0}
-  caption: {fontFamily: SF Pro Text, fontSize: 10, fontWeight: 400, lineHeight: 1.25, letterSpacing: 0}
-  button: {fontFamily: SF Pro Text, fontSize: 14, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0}
-  eyebrow: {fontFamily: SF Pro Text, fontSize: 10, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0.2}
-  mono: {fontFamily: SF Mono, fontSize: 11, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0}
-rounded: {xs: 6, sm: 10, md: 16, lg: 22, xl: 28, xxl: 32, pill: 9999, full: 9999}
-spacing: {xxs: 4, xs: 8, sm: 12, md: 16, lg: 20, xl: 24, xxl: 32, section: 40}
+  hero: {fontFamily: "SF Pro Display", fontSize: 30, fontWeight: 700, lineHeight: 36}
+  title: {fontFamily: "SF Pro Display", fontSize: 24, fontWeight: 700, lineHeight: 29}
+  section: {fontFamily: "SF Pro Text", fontSize: 21, fontWeight: 700, lineHeight: 26}
+  body: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 400, lineHeight: 21}
+  label: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 600, lineHeight: 20}
+  caption: {fontFamily: "SF Pro Text", fontSize: 12, fontWeight: 400, lineHeight: 16}
+spacing:
+  screen-horizontal: 16
+  section-gap: 24
+  card-padding: 16
+  control-gap: 10
+rounded:
+  control: 12
+  card: 18
+  sheet: 28
+  pill: 999
 components:
-  button-primary: {backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [14, 18]}
-  button-primary-pressed: {backgroundColor: "{colors.primary-focus}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}"}
-  button-secondary: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [12, 16]}
-  button-tertiary: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [10, 14]}
-  content-card: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 14}
-  feature-card: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 16}
-  text-input: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: [12, 14]}
-  status-badge: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.pill}", padding: [3, 7]}
-  bottom-nav: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink-subtle}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: [8, 10]}
+  account-card: {fill: "surface-primary", radius: 18, value: "masked balance", trailing: "overflow"}
+  primary-action: {fill: "accent-primary", text: "dark semibold", radius: 12, height: 52}
+  financial-input: {fill: "surface-primary", radius: 12, focus: "lime outline", trailing: "context icon"}
+  service-tile: {fill: "surface-secondary", radius: 16, icon: "thin outline", label: "compact"}
+  bottom-navigation: {fill: "surface-primary", selected: "black and lime", center: "elevated lime circle"}
 ---
 
 # Overview
 
-MyAmeria uses lime brand energy and customizable white modules to bring products, transfers, payments, apps, exchange rates, and QR actions into one calm banking workspace.
-
-**Key Characteristics:** lime green accent, white modules, pale gray service tiles, product tabs, customizable Home, compact line icons, and a central scan action.
+MyAmeria is a light modular banking interface built from a pale-gray canvas, white rounded financial panels, vivid lime actions, compact account typography, and dense but orderly service grids. Product dashboards, transfer forms, history filters, and investment tables share the same quiet surface system. A white bottom navigation bar with an elevated lime center control gives the otherwise restrained layout a distinct visual anchor.
 
 # Non-negotiable visual invariants
 
-- The reference consistently shows lime green accent.
-- The reference consistently shows white modules.
-- The reference consistently shows pale gray service tiles.
-- The reference consistently shows product tabs.
-- The reference consistently shows customizable Home.
-- The reference consistently shows compact line icons.
-- Sampled screens consistently use a central scan action.
+- Pale gray fills the application canvas while white rounded cards carry accounts, products, forms, and grouped financial information.
+- Vivid lime is reserved for primary actions, focus outlines, selected states, progress, and the elevated center navigation control.
+- Financial hierarchy is compact: bold product or amount labels sit above or beside muted account, fee, date, and status metadata.
+- Inputs are large white rounded rectangles with light borders, inline labels, context-specific trailing icons, and lime focus.
+- Main screens use a white icon-label tab bar with a prominent circular lime control raised at the center.
+- Forms and dashboards use 12-16 point gutters, scrollable vertical stacks, horizontal chips, segmented tabs, and sticky bottom actions.
+- Modal filters and selectors use white rounded-top sheets over a dimmed backdrop with a full-width lime bottom button.
+- Bank cards, merchant media, charts, logos, and isolated line drawings remain functional or campaign assets rather than a decorative illustration system.
 
 # Color and surfaces
 
-### Brand & Accent
+The base canvas is an almost-white gray around `#F8F9F8`. Primary cards, inputs, top bars, and navigation are white; service tiles and grouped controls use pale cool gray around `#F0F3F1`. Subtle shadow or blur separates large panels, while thin gray dividers organize dense lists and tables without heavy borders.
 
-Lime marks active navigation, product identity, scanning, new badges, and primary payment. Dark olive text keeps bright actions legible.
-
-### Surface
-
-Use almost-white canvas and crisp white modules, with pale cool-gray tiles for services and app shortcuts.
-
-### Text
-
-Near-black leads products and amounts; neutral gray supports account identifiers and exchange or application detail.
-
-### Semantic
-
-Lime communicates positive or active state; specific warnings use amber or red rather than muddying the brand.
+Lime around `#73D04B` fills primary controls, selected indicators, focus outlines, badges, and the central navigation control. Labels on lime use very dark olive or charcoal for contrast. Near-black carries headings, balances, and active navigation; gray carries masked identifiers and metadata. Red and amber remain semantic. Default blue primary actions or green-filled product cards everywhere would visibly break the reference.
 
 # Typography
 
-### Font Family
+Use SF Pro Display and SF Pro Text with tabular numerals for monetary values. Centered top titles are around 17-18 points semibold, screen and section headings 18-22 points bold, main labels and amounts 14-17 points semibold, body 13-15 points, and captions or statuses 11-13 points gray.
 
-Use SF Pro Display for product and transaction headings and SF Pro Text for controls, content, and metadata.
-
-### Hierarchy
-
-| Token | Size | Weight | Use |
-|---|---:|---:|---|
-| display-lg | 30 points | 700 | Hero or state |
-| headline | 21 points | 700 | Section title |
-| card-title | 16 points | 600 | Primary item |
-| body | 13 points | 400 | Detail |
-| caption | 10 points | 400 | Metadata |
-
-### Principles
-
-- Lead with the product, amount, destination, or exchange value.
-- Keep repeated metadata aligned and visually quieter.
-- Reserve high contrast and weight for real decisions.
-
-### Note on Font Substitutes
-
-Use the system sans with stable tabular numbers and compact multilingual labels.
+Hierarchy relies on weight, alignment, and spacing more than dramatic display scale. Amount, source, destination, and fee values align consistently in forms and tables. Dynamic Type should expand rows, cards, and filters, wrap secondary labels, and preserve alignment between monetary labels and trailing values.
 
 # Screen composition
 
-### Spacing System
+Logged-in screens use a white or pale top bar, a scrollable vertical dashboard, and persistent bottom navigation. Sixteen-point side gutters frame horizontal product carousels, account cards, service grids, rate tables, and history groups. Major sections are separated by roughly 20-28 points; internal card gaps are 8-12 points.
 
-Use a 4 points base, 8–12 points internal gaps, and 16 points horizontal screen gutters.
+The dashboard archetype combines horizontally scrollable account or product cards, shortcut rows, and wide information modules. The service archetype uses a structured grid of pale rounded tiles with thin icons and short labels. The transfer archetype stacks large labeled inputs, source selectors, amount and fee rows, and a sticky lime action above the home indicator.
 
-### Grid & Container
-
-Home mixes product tabs, horizontal shortcut rails, and wide modules; Services uses structured lists by type.
-
-### Whitespace Philosophy
-
-Give products and transactions breathing room while keeping large service catalogs compact.
-
-Surface hierarchy observed in the source:
-
-| Level | Treatment | Use |
-|---|---|---|
-| 0 | Base canvas | Primary context |
-| 1 | Grouped surface | Cards and sections |
-| 2 | Sticky or floating action | Commitment |
-| 3 | Sheet over scrim | Focused choice |
-
-### Decorative Depth
-
-Use broad rounded panels and subtle surface contrast; avoid decorative shadow on every service tile.
+History uses date or status chips, grouped transaction cards, compact approved-state metadata, and filter sheets. Investment screens use a prominent portfolio balance, segmented product tabs, instrument rows or tables, story/campaign media, and compact performance data. Authentication and registration use more open vertical stacks and system permission or Face ID overlays.
 
 # Navigation appearance
 
-Use Home, Services, central QR, History, and Apps, with a glowing lime scan control at center.
+Bottom navigation is a white bar with small outline icons and labels. Inactive items are light gray; active items use black and lime emphasis. The center position is a larger circular lime control elevated above the bar, making it visually dominant without increasing the height of every item. Destination names and order must come from approved Research and Planning.
+
+Internal screens use white top bars, compact centered titles, and minimal back chevrons or action icons. Bottom sheets have large rounded top corners, centered titles, close, cancel, or clear controls, a dimmed backdrop, and a full-width lime bottom action. Native permission, Face ID, and confirmation dialogs retain platform geometry.
 
 # Components
 
-### Buttons
+Account and card panels use white fill, 16-20 point corners, soft elevation, masked balance or account data, compact product label, and three-dot overflow. Service tiles use pale-gray fill, 14-18 point corners, thin outline icons, and short labels. Transaction rows use compact status, date, counterparty, and amount hierarchy with subtle separators.
 
-Primary payment uses full-width lime; secondary choices use white or pale gray with simple dark labels.
+Primary actions are approximately 50-54 points high, lime-filled, dark-labeled, and rounded about 12 points. Inputs are large white rounded rectangles with light border, inline label, dark value, and trailing scan, clear, dropdown, edit, or currency affordance; focused state uses a lime outline. Filter chips and segmented tabs use lime or black selected emphasis.
 
-### Cards & Containers
-
-Product panels combine account type, masked value, and overflow menu; modules group one financial domain.
-
-### Inputs & Forms
-
-Payment and transfer fields use clean white groups, green focus, and precise validation messaging.
+Sheets group selectable rows, date controls, amount or currency filters, and a sticky lime action. Selected source accounts use checks or stronger outlines. Success receipts use concise action rows; disabled states recede to pale gray. Face ID appears as a centered dark system overlay on a dimmed form.
 
 # Imagery and icons
 
-Use broad rounded panels and subtle surface contrast; avoid decorative shadow on every service tile.
+Bank logos, card art, account tiles, merchant or stock imagery, campaign stories, avatars, and investment logos are content-specific and stay inside bounded rounded frames. Charts, exchange-rate tables, portfolio rows, and performance indicators are functional data visualization rather than decoration. Compositionally required card or campaign media cannot be omitted; placeholders must preserve its crop, scale, and position.
 
-Campaign cards and app icons stay in bounded rounded frames; financial lists and QR states remain image-independent.
-
-If final imagery is not yet available, any placeholder must preserve the documented scale, placement, crop, and visual weight rather than removing that layer.
+Icons use a consistent thin outline style across services and navigation. A small person/door drawing and a success doodle are isolated state graphics, not evidence for a reusable illustration system. Do not introduce recurring characters, large scenes, or decorative background art.
 
 # States
 
-Place insufficient funds, technical issue, success, and application state beside the relevant account or action.
+Observed states include onboarding and registration, permission alert, populated account dashboard, hidden and visible balance, product carousel, selected tab, transfer inputs, card scan overlay, numeric keyboard, selected source account, fee summary, Face ID confirmation, success receipt, transaction history with approved status, filter chips, date-picker sheet, amount and currency filters, empty transaction state, investment balance, stock or bond selection, portfolio table, top-up form, language selection, and logout confirmation. Pale surfaces, lime action, compact hierarchy, and safe-area-aware navigation remain stable.
 
 # iOS adaptation
 
-### Touch Targets
+Respect the status bar, keyboard, bottom navigation, home indicator, sheet, and system-dialog safe areas. Dashboards, forms, history, and investment tables scroll vertically; product shelves may scroll horizontally. Sticky actions remain above the keyboard and home indicator, while sheets scroll internally when filters or Dynamic Type exceed available height.
 
-Primary actions, navigation, cards, and contextual controls remain at least 44 points.
-
-### Collapsing Strategy
-
-Keep account, amount, and primary action first; stack shortcut rails and shorten customization prompts.
-
-### Image Behavior
-
-Keep campaigns and partner app art bounded; never overlay transaction data on promotional imagery.
-
-Apply these rules within current iPhone safe areas and scrolling containers. Keep interactive targets at least 44 points, preserve a logical VoiceOver order, and let Dynamic Type wrap supporting text without flattening the documented hierarchy. Preserve the documented appearance.
+Tabs, elevated center control, account cards, fields, chips, service tiles, table rows, and sheet actions require at least 44-point hit regions. VoiceOver should follow title, primary balance or form context, content rows, sticky action, then navigation. On compact widths, stack paired fields or reduce grid columns before shrinking targets or financial text. Dynamic Type should preserve amount/label alignment and never let the center navigation control cover content. Keep the authored light appearance unless another variant is explicitly approved.
 
 # Anti-generic checklist
 
-- Don't turn all product tiles green or hide amounts inside decorative cards.
-- Don't hide status, constraints, or secondary conditions.
-- Don't add heavy shadows around every container.
-- Do not replace the documented hierarchy with a generic stack of identical white cards or `Form` sections.
-- Do not use default blue tint, an unstyled `TabView`, arbitrary SF Symbols, or uniform corner radii when they contradict the recorded tokens and components.
-- Do not invent decorative imagery or symbol treatments that are absent from the reference.
+- Do not replace lime with default iOS blue or fill every product surface green.
+- Do not flatten white financial panels into one generic `Form` or identical card stack.
+- Do not remove the elevated circular center control or turn all navigation items into equal default tabs.
+- Do not use heavy shadow around every service tile, row, and field.
+- Do not hide amount, fee, source, destination, or status hierarchy inside decorative media.
+- Do not omit card, merchant, investment, or campaign assets where they identify content.
+- Do not invent an illustration package from isolated Face ID and success drawings.
+- Do not copy source account structure, service destinations, or transaction flow into the adapted product.
 
 </design-context>

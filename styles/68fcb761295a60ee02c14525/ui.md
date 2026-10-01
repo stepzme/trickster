@@ -3,184 +3,99 @@
 version: 1
 platform: iOS
 name: Kupibilet-design-analysis
-description: "A travel-booking system that pairs a deep navy search canvas with vivid mint-green actions, then shifts into white and ice-gray comparison screens. Rounded form cards, compact itinerary diagrams, green selection outlines, and playful travel illustrations balance a long, data-heavy booking journey."
+description: "A travel-booking interface that opens on a deep navy search field with stacked white inputs and bright green action, then shifts to white and ice-gray comparison screens built from rounded itinerary cards, compact route data, green selection, native sheets, and a light icon tab bar."
 colors:
-  primary: "#22E986"
-  on-primary: "#10241A"
-  primary-focus: "#18B968"
-  ink: "#191A1E"
-  ink-muted: "#70737A"
-  ink-subtle: "#A0A3AA"
-  ink-tertiary: "#C2C5CA"
   canvas: "#F4F5F8"
-  surface-1: "#FFFFFF"
-  surface-2: "#ECEEF3"
-  surface-3: "#E1E4EA"
-  surface-4: "#D4D8E0"
-  hairline: "#E3E5EA"
-  hairline-strong: "#CED2D9"
-  hairline-tertiary: "#B5BAC3"
-  inverse-canvas: "#303D63"
-  inverse-surface-1: "#3A486F"
-  inverse-surface-2: "#47557B"
-  inverse-ink: "#FFFFFF"
-  brand-secure: "#1FAF67"
-  semantic-success: "#23AF65"
-  semantic-overlay: "#161923"
+  surface-primary: "#FFFFFF"
+  surface-secondary: "#ECEEF3"
+  accent-primary: "#22E986"
+  accent-secondary: "#303D63"
+  text-primary: "#191A1E"
+  text-secondary: "#70737A"
+  divider: "#E3E5EA"
+  destructive: "#D84A4A"
 typography:
-  display-xl: {fontFamily: SF Pro Rounded, fontSize: 38, fontWeight: 700, lineHeight: 1.05, letterSpacing: -1.0}
-  display-lg: {fontFamily: SF Pro Rounded, fontSize: 30, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.6}
-  display-md: {fontFamily: SF Pro Rounded, fontSize: 24, fontWeight: 700, lineHeight: 1.14, letterSpacing: -0.3}
-  headline: {fontFamily: SF Pro Rounded, fontSize: 20, fontWeight: 700, lineHeight: 1.20, letterSpacing: -0.2}
-  card-title: {fontFamily: SF Pro Text, fontSize: 16, fontWeight: 600, lineHeight: 1.24, letterSpacing: 0}
-  subhead: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 600, lineHeight: 1.30, letterSpacing: 0}
-  body-lg: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0}
-  body: {fontFamily: SF Pro Text, fontSize: 13, fontWeight: 400, lineHeight: 1.36, letterSpacing: 0}
-  body-sm: {fontFamily: SF Pro Text, fontSize: 11, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0}
-  caption: {fontFamily: SF Pro Text, fontSize: 10, fontWeight: 400, lineHeight: 1.25, letterSpacing: 0}
-  button: {fontFamily: SF Pro Text, fontSize: 14, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0}
-  eyebrow: {fontFamily: SF Pro Text, fontSize: 10, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0.1}
-  mono: {fontFamily: SF Mono, fontSize: 11, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0}
-rounded:
-  xs: 5
-  sm: 9
-  md: 13
-  lg: 18
-  xl: 22
-  xxl: 28
-  pill: 9999
-  full: 9999
+  hero: {fontFamily: "SF Pro Rounded", fontSize: 36, fontWeight: 700, lineHeight: 42}
+  title: {fontFamily: "SF Pro Rounded", fontSize: 28, fontWeight: 700, lineHeight: 34}
+  section: {fontFamily: "SF Pro Text", fontSize: 20, fontWeight: 600, lineHeight: 25}
+  body: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 400, lineHeight: 21}
+  label: {fontFamily: "SF Pro Text", fontSize: 14, fontWeight: 600, lineHeight: 19}
+  caption: {fontFamily: "SF Pro Text", fontSize: 12, fontWeight: 400, lineHeight: 16}
 spacing:
-  xxs: 4
-  xs: 8
-  sm: 12
-  md: 16
-  lg: 20
-  xl: 24
-  xxl: 32
-  section: 40
+  screen-horizontal: 16
+  section-gap: 24
+  card-padding: 14
+  control-gap: 10
+rounded:
+  control: 12
+  card: 18
+  sheet: 24
+  pill: 999
 components:
-  button-primary: {backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 14 20}
-  button-primary-pressed: {backgroundColor: "{colors.primary-focus}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}"}
-  button-secondary: {backgroundColor: "{colors.inverse-surface-1}", textColor: "{colors.inverse-ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 12 18}
-  button-tertiary: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 10 14}
-  button-inverse: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 12 18}
-  search-form: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 12}
-  flight-card: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 14}
-  form-section: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 14}
-  status-panel: {backgroundColor: "#FFF8EC", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: 10}
-  navigation-bar: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xs}", height: 50}
-  bottom-nav: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: 8 10}
+  primary-action: {fill: "#22E986", foreground: "#10241A", shape: "rounded-rectangle"}
+  secondary-action: {fill: "#303D63", foreground: "#FFFFFF", shape: "rounded-rectangle-or-pill"}
+  primary-card: {fill: "#FFFFFF", foreground: "#191A1E", shape: "rounded-itinerary-card"}
+  navigation: {fill: "#FFFFFF", inactive: "#A0A3AA", selected: "#22A96B"}
 ---
 
 # Overview
 
-Kupibilet combines a dark navy search stage with bright green commitment actions and calm white comparison, form, and payment screens.
+Kupibilet uses a strong two-field contrast: a deep navy branded search stage and a light white/ice-gray workspace for comparison, forms, payment, chat, and account content. Bright mint-green consistently marks the next decision, selection, or confirmation. Dense route, date, price, baggage, and status information is contained in rounded white cards and sheets, while native iOS pickers, keyboards, alerts, and tab geometry remain visible.
 
 # Non-negotiable visual invariants
 
-- Primary screens use Deep navy home with stacked white search fields.
-- Keep price comparisons close to dates.
-- Use green consistently for selection and progress.
-- Group long forms into clear sections.
-- Show transfer and baggage consequences before purchase.
-- Preserve the navy-to-light journey transition.
-- Search is one stacked form.
-- Results are a single vertical list with horizontal price/date chips; insurance options use a horizontal card rail.
+- The primary search composition uses a large deep-navy upper field with stacked white rounded inputs and one bright green CTA.
+- Downstream content uses white or ice-gray canvases with rounded white cards rather than carrying navy across every screen.
+- Mint green is the recurring primary action, selected, confirmed, and favorable-price color; default blue must not replace it.
+- Travel data is dense but aligned into clear vertical stacks with price, route endpoints, time, duration, baggage, and status separated by weight and spacing.
+- Bottom sheets are the dominant transient surface, with white fill, rounded top corners, a grab handle, and bottom CTA where needed.
+- The light bottom tab bar uses thin line icons, small labels, and green selected emphasis.
+- Sticky or bottom-proximate CTAs stay above the home indicator and retain the same green geometry through long forms.
+- Native iOS keyboards, wheel pickers, permission alerts, and confirmations remain visibly native.
 
 # Color and surfaces
 
-Electric mint-green marks forward progress, selected states, the brand mark, and favorable prices. Deep navy anchors search and branded navigation.
-
-Home uses navy; the rest of the journey uses pale gray with white cards, sheets, and form groups.
-
-Near-black carries flight facts and totals. Gray handles labels and timing metadata; green highlights selection and advantageous price.
-
-Warm orange marks waiting; red marks failed payment or problematic route facts. Keep these states inside softly tinted panels.
+Deep navy forms the branded search and occasional navigation mass. The rest of the interface is white or pale ice gray, with white cards and form groups separated by fine cool-gray dividers. Electric mint-green is the strongest interaction color for progress, selection, active tabs, buttons, checks, and favorable price. Near-black carries route facts, prices, and titles; medium gray carries labels, time details, airports, and helper copy. Warm orange or pale yellow is limited to waiting and urgency panels, while red marks validation, failed payment, or destructive action. Destination photos, map content, and airline marks provide local color. Purple, generic iOS blue, or gradient-heavy surfaces would break the navy-green grammar.
 
 # Typography
 
-Use a rounded display sans for branded headings and SF Pro Text for itineraries, forms, and payment.
-
-- display-lg — 30 points — 700 — Onboarding claim
-- headline — 20 points — 700 — Booking and route heading
-- card-title — 16 points — 600 — Price, passenger, or section title
-- body — 13 points — 400 — Flight details and forms
-- caption — 10 points — 400 — Duration, airport, and navigation
-
-- Prices, dates, and route endpoints receive priority.
-- Keep itinerary detail compact but never cryptic.
-- Use rounded bold headings sparingly above functional content.
-
-SF Pro Rounded or Nunito Sans matches the brand tone; Inter works for dense travel data.
-
-The hierarchy must remain legible with Dynamic Type: supporting text may wrap before the primary metric, title, or action loses its role.
+Large branded headings use SF Pro Rounded or a similar friendly rounded sans; dense itineraries, forms, and payment content use SF Pro Text. Prices and route endpoints receive the strongest weight, followed by times and section titles; airport, duration, baggage, seller, and helper text remain smaller and gray. CTA labels are semibold and dark on green. The hierarchy must remain compact but readable. Dynamic Type should expand cards and form sections vertically, allow supporting details to wrap, and preserve price-route-status order rather than shrinking the entire data block.
 
 # Screen composition
 
-Use a 4 points base, 12 points card gaps, and 12–16 points screen padding.
+Search archetypes place a compact mark or title in the upper safe area, one vertically stacked white form in the navy field, and a full-width green CTA below it. Optional recommendations or destination imagery continue on lighter surfaces. Results archetypes use a compact back/header region, horizontal date-price chips, and a single vertical list of rounded flight cards. Each card groups route times and endpoints, connection or duration facts, baggage/status, then a bold price and action.
 
-Search is one stacked form. Results are a single vertical list with horizontal price/date chips; insurance options use a horizontal card rail.
-
-Keep comparison screens dense, but isolate each booking decision in its own white rounded group.
-
-Use bold flat illustration shadows and occasional map depth. Functional cards rely on surface contrast, not heavy shadow.
-
-Primary iPhone screens keep the documented content grouping and vertical rhythm inside a scroll container when content exceeds the viewport. Bottom-owned actions or navigation reserve the lower safe area rather than covering content.
+Booking, passenger, payment, and account archetypes use pale canvases with one-column white rounded form groups, short section titles, validation near the relevant field, and a sticky green CTA. Filter and sort controls rise in sheets containing chips, checkboxes, sliders, toggles, or radio rows. Map archetypes let the map or globe occupy most of the screen with compact filters floating over it. Chat uses a vertically scrolling message surface and bottom composer. Empty states center one spot asset or symbol, short copy, and a single action.
 
 # Navigation appearance
 
-Keep five bottom destinations fixed on discovery. Results and booking use a simple back header with the small navy brand capsule centered above.
-
-This section governs appearance only; product behavior and information architecture come from the approved Research and Planning artifacts.
+The main shell uses a light bottom tab bar with thin line icons, compact labels, muted gray inactive states, and green selected emphasis. Many tab surfaces use a small centered brand mark in the top region. Task-focused screens use a simple back chevron, compact title, and minimal close or trailing action. Bottom sheets have white fill, large top corners, centered handle, and optional fixed green action. Native alert, picker, keyboard, and permission surfaces remain unmasked.
 
 # Components
 
-Primary actions are full-width green rectangles with modest rounding. Navy secondary actions appear on dark search surfaces; pale gray supports low-priority choices.
-
-Flight cards stack timings, transfers, baggage, duration, and price. Booking forms and order summaries use white rounded groups on pale gray.
-
-Search fields are large white rows on navy. Passenger and card fields use thin gray borders; focus shifts to a green outline without changing geometry.
-
-Order status groups waiting and failure messages above the route. Use warm tints, a clear icon, and a direct recovery explanation.
-
-Controls retain at least a 44-point interactive area. Pressed and disabled treatments should stay within the documented palette and hierarchy.
+The primary CTA is a full-width mint-green rounded rectangle with dark semibold text; disabled states shift to pale gray without changing geometry. Search inputs are large white rows grouped on navy, with clear labels and route/date/passenger hierarchy. Flight cards use white fill, 18-point-class corners, compact route diagrams, bold times and price, gray metadata, and restrained status panels. Date and filter chips are small rounded pills with clear green selected treatment. Forms use thin gray borders or grouped white surfaces, and focus or validation remains local. Sheets group checkbox, radio, slider, and toggle rows with generous touch height.
 
 # Imagery and icons
 
-Destination photography stays in rounded portrait cards. Illustration uses one large object on a saturated field or a small line drawing aligned to a helper card corner.
-
-Destination photos use aspect-fill with labels outside the image. Illustrations scale proportionally and retain clear space around form copy.
-
-When imagery is part of the documented composition, it cannot be omitted while final assets are pending. A temporary asset must preserve its placement, crop, scale, and approximate visual weight.
+Destination photography, map/globe content, airline marks, and route symbols are functional and retain their natural roles. Photos use intentional `cover` crops inside rounded cards; maps remain full surfaces; airline logos stay small and contained. Onboarding rabbit art, travel line drawings, order/card empty states, profile promo assets, push bell, and other spot graphics vary among hand-drawn line, flat colored vector, and photographic treatments. The evidence does not confirm one tightly stable authored illustration system, so do not generalize a universal mascot or drawing language from these assets. Empty-state imagery cannot replace route data or decorate flight cards.
 
 # States
 
-Order status groups waiting and failure messages above the route. Use warm tints, a clear icon, and a direct recovery explanation.
-
-Warm orange marks waiting; red marks failed payment or problematic route facts. Keep these states inside softly tinted panels.
-
-Only the states documented above are specified; other states must preserve the same canvas, hierarchy, and component language without inventing a new visual system.
+Observed states include splash and onboarding, system notification permission, search and recommendation loading, date-price calendar, route results and filters, sort sheet, booking validation, wheel picker, fare and support selections, card payment and confirmation loading, map filters and city download, chat introduction and messages, empty and populated orders, logged-out and logged-in profile, registration keyboard, referral modal, saved-card emptiness and list, settings toggles, notebook validation, price-tracking feedback, and empty subscriptions. Navy-green identity, rounded white groups, compact travel hierarchy, and native transient surfaces remain consistent.
 
 # iOS adaptation
 
-- Extend the documented canvas through the iPhone safe areas while keeping readable content within appropriate insets.
-- Use a vertical `ScrollView` for content that does not fit compact heights; keep documented bottom actions and navigation clear of the home indicator.
-- Route fields, calendar dates, filters, result cards, payment choices, and bottom navigation remain at least 44 points.
-- Keep the journey single-column; allow date, destination, and insurance rails to scroll horizontally rather than shrinking content.
-- Present the keyboard and system permission UI natively, then return to the same visual context.
-- Preserve semantic reading order in VoiceOver and allow text to grow with Dynamic Type.
-- Preserve the documented appearance instead of introducing an unrelated light or dark palette.
+Respect safe areas for navy headers, bottom tabs, sticky CTAs, sheets, and the home indicator. Put search extensions, results, booking forms, profile, settings, chat, and order content in vertical scroll containers; let date, insurance, and filter rails scroll horizontally rather than shrinking. Keep fields, chips, cards, toggles, tab items, and CTAs at least 44 points. On compact widths, stack route facts and secondary details while preserving endpoints, price, primary status, and action. VoiceOver order should announce route endpoints and times, duration/connections, baggage/status, price, then action; favorable, selected, waiting, and error states cannot rely on color alone. Native keyboard, picker, permission, and alert transitions should remain system-owned. Preserve the navy-to-light composition rather than flattening everything into one theme.
 
 # Anti-generic checklist
 
-- Do not decorate flight-result cards with illustration.
-- Do not use red for ordinary price emphasis.
-- Do not hide fees or route complexity.
-- Do not over-round dense form fields.
-- Do not leave native inputs visually disconnected from the green focus system.
-- Do not replace the documented canvas and surfaces with a generic grouped background and uniform white cards.
-- Do not use an unstyled `TabView`, default blue tint, or arbitrary SF Symbols when they contradict the reference.
-- Do not collapse every component to one corner radius or remove compositionally important imagery.
+- Do not carry navy across every form and result screen or remove the observed navy-to-light contrast.
+- Do not replace green primary actions and selection with default blue.
+- Do not turn dense flight information into a grid of unrelated mini-cards or hide fees and route complexity.
+- Do not over-round individual data rows inside an already rounded flight or form card.
+- Do not use an unstyled `TabView`; preserve the light bar, line icons, and green active state.
+- Do not decorate result, booking, or payment cards with rabbit, bell, or travel illustration.
+- Do not infer one universal illustration language from the mixed custom assets.
+- Do not cover the bottom CTA or final form fields with the tab bar, keyboard, or home indicator.
 
 </design-context>

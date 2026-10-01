@@ -3,190 +3,99 @@
 version: 1
 platform: iOS
 name: ChatGPT-design-analysis
-description: "A nearly monochrome conversational workspace with a white canvas, black text, pale-gray user bubbles and composer, sparse outline icons, black circular voice controls, and a faint violet upgrade accent. Chat, projects, library, GPTs, multimodal input, research, image generation, and settings remain quiet and content-first."
+description: "A sparse native-iOS conversational workspace with white and pale-gray canvases, black system typography and actions, a persistent rounded bottom composer, compact monochrome icon controls, and content-driven color confined to generated media, avatars, and the soft blue voice orb."
 colors:
-  primary: "#111111"
-  on-primary: "#FFFFFF"
-  primary-soft: "#F2F2F2"
-  accent: "#6C63D9"
-  accent-secondary: "#10A37F"
-  ink: "#111111"
-  ink-muted: "#6F6F73"
-  ink-subtle: "#A8A8AC"
   canvas: "#FFFFFF"
-  surface-1: "#FFFFFF"
-  surface-2: "#F3F3F3"
-  hairline: "#E6E6E6"
-  semantic-success: "#10A37F"
-  semantic-danger: "#D84A4A"
-  semantic-overlay: "#000000"
+  surface-primary: "#FFFFFF"
+  surface-secondary: "#F3F3F3"
+  accent-primary: "#111111"
+  accent-secondary: "#6E6E73"
+  text-primary: "#111111"
+  text-secondary: "#6F6F73"
+  divider: "#E6E6E6"
+  destructive: "#D84A4A"
 typography:
-  display-xl: { fontFamily: SF Pro Display, fontSize: 36, fontWeight: 700, lineHeight: 1.05, letterSpacing: -0.7 }
-  display-lg: { fontFamily: SF Pro Display, fontSize: 30, fontWeight: 700, lineHeight: 1.08, letterSpacing: -0.5 }
-  display-md: { fontFamily: SF Pro Display, fontSize: 26, fontWeight: 700, lineHeight: 1.12, letterSpacing: -0.3 }
-  headline: { fontFamily: SF Pro Display, fontSize: 22, fontWeight: 700, lineHeight: 1.18, letterSpacing: -0.2 }
-  card-title: { fontFamily: SF Pro Text, fontSize: 16, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: SF Pro Text, fontSize: 17, fontWeight: 500, lineHeight: 1.35, letterSpacing: 0 }
-  body-lg: { fontFamily: SF Pro Text, fontSize: 16, fontWeight: 400, lineHeight: 1.45, letterSpacing: 0 }
-  body: { fontFamily: SF Pro Text, fontSize: 14, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
-  body-sm: { fontFamily: SF Pro Text, fontSize: 12, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
-  caption: { fontFamily: SF Pro Text, fontSize: 10, fontWeight: 400, lineHeight: 1.20, letterSpacing: 0 }
-  button: { fontFamily: SF Pro Text, fontSize: 15, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0 }
-  eyebrow: { fontFamily: SF Pro Text, fontSize: 11, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0.3 }
-  mono: { fontFamily: SF Mono, fontSize: 12, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
-rounded: { xs: 8, sm: 12, md: 16, lg: 20, xl: 26, xxl: 32, pill: 9999, full: 9999 }
-spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
+  hero: {fontFamily: "SF Pro Display", fontSize: 34, fontWeight: 700, lineHeight: 41}
+  title: {fontFamily: "SF Pro Display", fontSize: 28, fontWeight: 700, lineHeight: 34}
+  section: {fontFamily: "SF Pro Text", fontSize: 20, fontWeight: 600, lineHeight: 25}
+  body: {fontFamily: "SF Pro Text", fontSize: 17, fontWeight: 400, lineHeight: 24}
+  label: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 600, lineHeight: 20}
+  caption: {fontFamily: "SF Pro Text", fontSize: 13, fontWeight: 400, lineHeight: 18}
+spacing:
+  screen-horizontal: 16
+  section-gap: 28
+  card-padding: 16
+  control-gap: 10
+rounded:
+  control: 16
+  card: 20
+  sheet: 28
+  pill: 999
 components:
-  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.md}", padding: [14, 18]}
-  feature-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 16 }
-  action-tile: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.md}", padding: 12 }
-  grouped-list: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: [8, 16]}
-  input: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body-lg}", rounded: "{rounded.md}", padding: [14, 16]}
-  bottom navigation: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: [8, 12]}
+  primary-action: {fill: "#111111", foreground: "#FFFFFF", shape: "rounded-rectangle-or-circle"}
+  secondary-action: {fill: "#F3F3F3", foreground: "#111111", shape: "pill-or-icon"}
+  primary-card: {fill: "#FFFFFF", foreground: "#111111", shape: "content-dependent"}
+  navigation: {fill: "#FFFFFF", foreground: "#111111", iconStyle: "small-monochrome-line"}
 ---
 
 # Overview
 
-ChatGPT keeps the conversation and composer dominant. Tools, projects, library, model choice, voice, and settings stay one layer away in drawers or compact controls.
-
-**Key Characteristics:**
-- White content-first canvas.
-- Pale-gray message and suggestion surfaces.
-- Black circular voice and stop controls.
-- Sparse outline iconography.
-- Subtle violet upgrade chip.
+ChatGPT is visually defined by a quiet conversation canvas and a persistent composer rather than a decorative shell. White and very pale gray fill most screens; black text, black primary controls, restrained gray grouping, and small line icons create the hierarchy. Long-form responses, user prompts, generated images, external avatars, or voice visualization are allowed to become the main content mass, while surrounding UI remains almost monochrome and native to iOS.
 
 # Non-negotiable visual invariants
 
-- Sampled screens consistently use white content-first canvas.
-- The reference consistently shows pale-gray message and suggestion surfaces.
-- The reference consistently shows black circular voice and stop controls.
-- The reference consistently shows sparse outline iconography.
-- Sampled screens consistently use subtle violet upgrade chip.
+- White or very pale gray occupies the viewport; black is the recurring primary action and text color rather than default iOS blue.
+- Conversation screens preserve a wide, mostly unframed reading column and a persistent rounded composer above the bottom safe area.
+- The composer combines a leading circular add control, open text region, compact microphone, and a black circular send or voice control.
+- Icons are small monochrome line glyphs with generous touch targets and little surrounding chrome.
+- State feedback is lightweight and local: toast, inline progress, contextual menu, or rounded bottom sheet rather than a new dashboard.
+- Secondary and account screens use native grouped-list geometry, compact chevrons, switches, and destructive rows.
+- Strong color belongs to generated or attached content, external avatars, widgets, or the blue voice orb; it does not decorate the application background.
+- Sheets preserve large top corners, a subtle grab handle, and visible dimmed context beneath.
 
 # Color and surfaces
 
-### Brand & Accent
-- **Primary** ({colors.primary}): Voice, stop, and high-commitment actions.
-- **Accent** ({colors.accent}): Upgrade and selected premium state.
-- **Secondary Accent** ({colors.accent-secondary}): Positive completion and product identity.
-
-### Surface
-- **Canvas** ({colors.canvas}): Conversation, research, library, and settings.
-- **Surface 1** ({colors.surface-1}): Main cards and sheets.
-- **Surface 2** ({colors.surface-2}): Secondary controls and grouped fields.
-- **Hairline** ({colors.hairline}): Quiet separation.
-
-### Text
-- **Ink** ({colors.ink}): Headings and primary values.
-- **Ink Muted** ({colors.ink-muted}): Supporting detail.
-- **Ink Subtle** ({colors.ink-subtle}): Placeholder and inactive state.
-
-### Semantic
-- **Success** ({colors.semantic-success}): Completed or positive state.
-- **Danger** ({colors.semantic-danger}): Error and destructive state.
-- **Overlay** ({colors.semantic-overlay}): Modal focus.
+White is the dominant conversation, library, marketplace, onboarding, and settings surface. Very pale gray distinguishes the composer, prompt chips, grouped rows, selected attachments, and some user-content regions. Black carries headings, body text, primary buttons, send/voice controls, and important icons. Medium gray carries placeholders, timestamps, metadata, inactive options, and separators. Native green appears in enabled switches and red in destructive account or confirmation actions. Saturated media, avatars, home-screen widgets, and the soft blue voice visualization remain isolated content elements. Default blue CTA styling, colorful gradients, tinted chat backgrounds, or glass-heavy cards would break the observed shell.
 
 # Typography
 
-### Font Family
-
-- **SF Pro Display** — conversation section headings and settings.
-- **SF Pro Text** — controls, forms, and explanatory copy.
-- **SF Mono** — code, identifiers, or compact numeric data.
-
-### Hierarchy
-
-Use 36 points bold for major statements, 22 points bold for screen headings, 16 points semibold for cards, 14 points regular for detail, and 15 points semibold for primary actions.
-
-### Principles
-
-- Let the response be the main visual object.
-- Keep the composer persistent.
-- Use labels for non-obvious tools.
-- Distinguish user content without heavy chrome.
-
-### Note on Font Substitutes
-
-Use **Inter** or the platform system sans when the reference display face is unavailable.
+Typography is SF Pro-like and content-first. Onboarding and settings use large bold titles; conversation uses regular 17-point-class body text with comfortable line height; section and list titles use semibold weight; metadata and helper copy are smaller gray text. User and assistant content avoid ornamental display styling. Button and chip labels remain compact and medium or semibold. Under Dynamic Type, messages, settings rows, and sheet content should grow and wrap vertically while the composer expands to multiple lines; title, body, and caption roles must remain visibly distinct.
 
 # Screen composition
 
-### Spacing System
+Empty conversation archetypes use a compact top navigation row, a large open center with minimal prompt or loading content, and the rounded composer fixed at the bottom. Populated conversations become a continuous vertical scroll of text and media with generous horizontal insets and minimal message framing; the composer remains visually separated only by its pale rounded field. Mode or attachment chips appear directly above or within this bottom region and use compact removable pills.
 
-Use a 4 points base, 16 points edge gutters, 12 points control gaps, and 16 points card padding.
-
-### Grid & Container
-
-Conversation is a single readable column with a bottom composer. The drawer groups search, ChatGPT, Library, GPTs, projects, recents, and account.
-
-### Whitespace Philosophy
-
-Use generous open space around short prompts and compact vertical rhythm for long responses.
-
-Surface hierarchy observed in the source:
-
-Keep the base flat, raise actionable cards slightly, and reserve overlays for confirmation or interruption.
-
-### Decorative Depth
-
-Use only subtle surface tint and sheet separation. Generated media may be visually rich but does not redefine the shell.
+Onboarding and subscription archetypes use centered or upper-centered titles, concise supporting copy, and one or two wide black actions near the lower safe area. Settings and marketplace archetypes use compact top bars and continuous grouped rows, sometimes with circular avatars. Media results occupy a large contained rectangle in the conversation and may open into a full-screen review. Tool pickers, model menus, attachment choices, confirmations, and account actions appear as contextual menus or rounded bottom sheets over dimmed content. Native share, photo, file, subscription, permission, keyboard, and widget-gallery surfaces retain their system proportions.
 
 # Navigation appearance
 
-The side drawer holds global destinations; each chat keeps model, edit, and overflow actions at the top.
+Top navigation is compact and nearly borderless: a small hamburger or back chevron at the leading edge, a short centered title, and edit, search, close, or overflow icons at the trailing edge. Selected model or mode controls appear as compact text-and-chevron elements, not large tabs. Bottom sheets use white surfaces, large top corners, and a subtle handle. Grouped settings rows use native chevrons, toggles, and section spacing. There is no persistent bottom tab bar in the sampled primary application screens.
 
 # Components
 
-### Buttons
-
-Black circular controls handle voice and stop. Text and outline icons handle copy, listen, feedback, share, and sources.
-
-### Cards & Containers
-
-Suggestion chips, user bubbles, processing cards, sources, and project rows use light neutral surfaces.
-
-### Inputs & Forms
-
-The composer supports text, voice, image, file, and tool selection with a single clear send or stop state.
+The composer is a wide pale-gray rounded rectangle with a circular add button, flexible multiline input, compact microphone, and black circular send/voice/stop state. Mode chips are small pale pills with a line icon, short label, and removable close glyph. Primary actions are black rounded rectangles or black circles with white content; secondary actions are text, outline icons, or pale pills. Conversation actions such as copy, listen, feedback, and share use small monochrome glyphs without large containers. Settings use grouped white or pale rows, fine dividers, chevrons, green switches, and red destructive labels. Marketplace rows combine circular avatar, title, short gray description, and restrained disclosure.
 
 # Imagery and icons
 
-Use only subtle surface tint and sheet separation. Generated media may be visually rich but does not redefine the shell.
-
-User or generated images appear as content with full-screen review. The product shell has no decorative illustration language.
-
-If final imagery is not yet available, any placeholder must preserve the documented scale, placement, crop, and visual weight rather than removing that layer.
+Generated images, user attachments, GPT avatars, product marks, and external content are treated as content, not shell decoration. Generated images are large enough to inspect, retain their natural crop, and may expand full screen; their color must not leak into the surrounding UI. The voice surface uses a large soft blue abstract orb as a singular focal object on an otherwise restrained field. The knot mark, Plus sparkle, tutorial assets, and widget previews are isolated brand or product elements. They do not establish a repeatable authored illustration system across states, so do not extrapolate them into decorative scenes or characters.
 
 # States
 
-Show generating, researching, searching, listening, uploading, completed, failed, and saved through text plus control state.
+Observed states include system permission and authentication surfaces, loading, empty home, typed prompt, long response, copy and feedback toasts, audio playback, share sheet, attachment menu, photo and file pickers, generated-image progress and result, removable mode chips, subscription confirmation, empty library, marketplace lists, settings toggles, empty memory, and destructive account confirmations. White/pale surfaces, black hierarchy, compact icons, rounded composer, and native sheets remain stable. Progress is expressed inline or with restrained spinners and labels; destructive choices switch to red without recoloring the full screen.
 
 # iOS adaptation
 
-### Touch Targets
-
-Keep every row, tab, selector, map control, and primary action at least 44 points.
-
-### Collapsing Strategy
-
-Preserve chat title, latest content, composer, send or stop, and drawer access. Collapse secondary actions into overflow.
-
-### Image Behavior
-
-Contain generated images in the conversation, then open full screen with save, share, select, and edit actions.
-
-Apply these rules within current iPhone safe areas and scrolling containers. Keep interactive targets at least 44 points, preserve a logical VoiceOver order, and let Dynamic Type wrap supporting text without flattening the documented hierarchy. Preserve the documented appearance.
+Keep the conversation in a vertical scroll container and pin or safe-area-inset the composer above the home indicator and keyboard. Let the composer grow for multiline input without covering the latest content. Preserve at least 44-point touch areas around small glyphs, chips, sheet rows, and circular controls. On compact widths, keep a single readable content column and allow sheets, media, and grouped rows to span the available width inside 16-point-class insets. VoiceOver order should follow top controls, conversation in reading order, active state feedback, then composer controls; generated media and mode state need explicit labels. Native permission, file, photo, share, subscription, and keyboard transitions should remain system-owned. The sampled shell is light-first; dark system overlays do not demonstrate a full dark appearance.
 
 # Anti-generic checklist
 
-- Don't add decorative backgrounds.
-- Don't use generated images as shell decoration.
-- Don't crowd the composer.
-- Don't hide stop or cancel.
-- Don't over-card long responses.
-- Do not replace the documented hierarchy with a generic stack of identical white cards or `Form` sections.
-- Do not use default blue tint, an unstyled `TabView`, arbitrary SF Symbols, or uniform corner radii when they contradict the recorded tokens and components.
-- Do not omit compositionally important imagery while final assets are pending; preserve its footprint with a faithful placeholder.
+- Do not turn responses into a stack of elevated white cards or speech bubbles with heavy borders.
+- Do not replace black primary actions with default blue tint.
+- Do not crowd the composer with always-visible labels, large tool buttons, or multiple competing rows.
+- Do not add a persistent `TabView`, colorful navigation bar, or decorative chat background.
+- Do not use generated images, avatars, the voice orb, or the Plus sparkle as general-purpose shell decoration.
+- Do not apply one radius to composer, sheets, media, grouped rows, circles, and chips.
+- Do not replace lightweight toasts and inline progress with full-screen status cards.
+- Do not expose unstyled `Form` spacing when it breaks the compact grouped-list hierarchy.
 
 </design-context>

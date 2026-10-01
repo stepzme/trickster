@@ -3,171 +3,100 @@
 version: 1
 platform: iOS
 name: Simple-design-analysis
-description: "A dark wellness dashboard built on deep indigo-charcoal surfaces, lavender-to-violet premium actions, green progress signals, rounded tracking modules, and image-led learning cards. A plush purple mascot and friendly editorial illustrations soften the otherwise data-rich health interface."
-
+description: "A dark wellness interface built from navy-purple full-screen fields, layered slate cards, rounded white type, lavender actions, green progress signals, compact metric visualizations, and a deliberate mix of photography and friendly branded artwork."
 colors:
-  primary: "#A56AFF"
-  on-primary: "#FFFFFF"
-  primary-soft: "#3A3151"
-  ink: "#F7F5FA"
-  ink-muted: "#B7B3BF"
-  ink-subtle: "#7F7C87"
-  canvas: "#20202B"
-  surface-1: "#292936"
-  surface-2: "#323240"
-  surface-3: "#3C3C4B"
-  hairline: "#464655"
-  semantic-success: "#78D65B"
-  semantic-warning: "#F2B34C"
-  semantic-danger: "#EF657A"
-  semantic-info: "#61A9FF"
-  semantic-overlay: "#000000"
-
+  canvas: "#1D1D29"
+  surface-primary: "#292936"
+  surface-secondary: "#373746"
+  accent-primary: "#A56AFF"
+  accent-secondary: "#78D65B"
+  text-primary: "#F7F5FA"
+  text-secondary: "#B7B3BF"
+  divider: "#464655"
+  destructive: "#EF657A"
 typography:
-  display-xl: { fontFamily: System Sans, fontSize: 38, fontWeight: 700, lineHeight: 1.02, letterSpacing: -0.7 }
-  display-lg: { fontFamily: System Sans, fontSize: 30, fontWeight: 700, lineHeight: 1.08, letterSpacing: -0.4 }
-  display-md: { fontFamily: System Sans, fontSize: 25, fontWeight: 700, lineHeight: 1.12, letterSpacing: -0.2 }
-  headline: { fontFamily: System Sans, fontSize: 21, fontWeight: 700, lineHeight: 1.2, letterSpacing: 0 }
-  card-title: { fontFamily: System Sans, fontSize: 16, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: System Sans, fontSize: 17, fontWeight: 600, lineHeight: 1.3, letterSpacing: 0 }
-  body-lg: { fontFamily: System Sans, fontSize: 16, fontWeight: 400, lineHeight: 1.42, letterSpacing: 0 }
-  body: { fontFamily: System Sans, fontSize: 14, fontWeight: 400, lineHeight: 1.4, letterSpacing: 0 }
-  body-sm: { fontFamily: System Sans, fontSize: 12, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
-  caption: { fontFamily: System Sans, fontSize: 10, fontWeight: 400, lineHeight: 1.3, letterSpacing: 0 }
-  button: { fontFamily: System Sans, fontSize: 15, fontWeight: 600, lineHeight: 1.2, letterSpacing: 0 }
-  eyebrow: { fontFamily: System Sans, fontSize: 12, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0.1 }
-  mono: { fontFamily: System Mono, fontSize: 12, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
-
-rounded: { xs: 4, sm: 8, md: 12, lg: 16, xl: 22, xxl: 28, pill: 9999, full: 9999 }
-spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
-
+  hero: {fontFamily: "SF Pro Rounded", fontSize: 30, fontWeight: 700, lineHeight: 35}
+  title: {fontFamily: "SF Pro Rounded", fontSize: 27, fontWeight: 700, lineHeight: 32}
+  section: {fontFamily: "SF Pro Rounded", fontSize: 19, fontWeight: 700, lineHeight: 24}
+  body: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 400, lineHeight: 21}
+  label: {fontFamily: "SF Pro Text", fontSize: 14, fontWeight: 600, lineHeight: 19}
+  caption: {fontFamily: "SF Pro Text", fontSize: 11, fontWeight: 400, lineHeight: 15}
+spacing:
+  screen-horizontal: 16
+  section-gap: 24
+  card-padding: 16
+  control-gap: 10
+rounded:
+  control: 14
+  card: 18
+  sheet: 28
+  pill: 999
 components:
-  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: [14, 20]}
-  tracker-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 16 }
-  metric-tile: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.md}", padding: 12 }
-  content-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 0 }
-  input-field: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 12 }
-  filter-chip: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.pill}", padding: [8, 12]}
-  bottom-nav: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink-subtle}", typography: "{typography.caption}", rounded: "{rounded.xs}", height: 62 }
+  primary-action: {backgroundColor: "{colors.accent-primary}", textColor: "{colors.text-primary}", cornerRadius: "{rounded.pill}", minHeight: 48}
+  tracker-card: {backgroundColor: "{colors.surface-primary}", textColor: "{colors.text-primary}", cornerRadius: "{rounded.card}", padding: "{spacing.card-padding}"}
+  progress-ring: {trackColor: "{colors.surface-secondary}", progressColor: "{colors.accent-secondary}", textColor: "{colors.text-primary}"}
+  media-card: {backgroundColor: "{colors.surface-primary}", textColor: "{colors.text-primary}", cornerRadius: "{rounded.card}", padding: 0}
+  message-bubble: {incomingColor: "{colors.surface-secondary}", outgoingColor: "{colors.accent-primary}", cornerRadius: "{rounded.control}"}
+  navigation: {backgroundColor: "{colors.canvas}", selectedColor: "{colors.text-primary}", unselectedColor: "{colors.text-secondary}"}
 ---
 
 # Overview
 
-Simple is a dark AI wellness companion combining daily plans, fasting, food, hydration, movement, weight, coaching, and a content library. Violet actions and green progress stand out on layered indigo-charcoal cards, while a plush mascot and friendly illustrations make guidance approachable.
+Simple is dominated by a deep navy-purple field with soft violet glow, layered charcoal cards, and bright lavender actions. Rounded bold headings, circular progress graphics, compact health metrics, and friendly media give the interface a softer character than a conventional data dashboard. Photography and authored art are structurally important in content and premium surfaces, while tracking screens remain comparatively restrained.
 
 # Non-negotiable visual invariants
 
-- Primary screens use Deep indigo-charcoal shell and layered tracking cards.
-- Keep tracking metrics concise.
-- Use violet for primary and premium actions.
-- Use green only for progress.
-- Separate coaching from raw tracking.
-- Let mascot and content imagery humanize learning.
-- Home and Track use one vertical dashboard with occasional two-column metric tiles.
-- Explore uses horizontal shelves and two-column content grids.
+- Near-black indigo fills the full viewport and safe areas; dark slate cards create depth without switching to light panels.
+- Lavender-violet is reserved for primary, selected, and premium emphasis, while green marks positive progress rather than general interaction.
+- Large rounded headings establish each screen before compact metric cards and controls begin.
+- Tracking surfaces combine bold numerals, circular arcs or progress bars, short labels, and small pictograms inside layered rounded modules.
+- Cards use several related dark tones and generous radii, but do not all share identical geometry or elevation.
+- Photography and authored illustration occupy a substantial portion of content and premium cards and cannot be replaced by text-only blocks.
+- Persistent navigation and anchored composers remain dark, compact, and visibly separated from the home indicator.
 
 # Color and surfaces
 
-- **Lavender Violet** ({colors.primary}) marks primary, premium, and selected actions.
-- **Soft Violet** ({colors.primary-soft}) supports selected fields and subtle emphasis.
-
-- **Canvas** ({colors.canvas}) is the app shell.
-- **Surface 1** ({colors.surface-1}) carries large tracker and content cards.
-- **Surface 2** ({colors.surface-2}) carries fields and metric tiles.
-- **Surface 3** ({colors.surface-3}) is for pressed and nested states.
-
-- **Ink** ({colors.ink}) carries headings and metrics.
-- **Muted** ({colors.ink-muted}) carries explanations.
-- **Subtle** ({colors.ink-subtle}) is for inactive navigation and metadata.
-
-Green communicates progress, amber attention, pink-red danger, and blue hydration or information. Pair color with labels and icons.
+The default visual field is deep charcoal with a navy-purple bias. A subtle blurred violet glow may soften the upper region, but it does not become a bright gradient background. Primary cards are slightly lighter slate; nested metrics, fields, and incoming messages use a second graphite-purple tone. Lavender fills primary buttons, selected controls, outgoing messages, and premium emphasis. Green is a narrow semantic accent for completed or healthy progress; amber can signal attention, blue can identify information or hydration, and pink-red marks destructive or adverse states. White carries titles and key values, while cool lavender-gray carries explanations and inactive controls. Default white grouped surfaces or generic system-blue controls would visibly break the reference. A light appearance is observed as an optional setting, but it must preserve the same violet accent, rounded hierarchy, and metric structure.
 
 # Typography
 
-Use a neutral system sans with strong, compact headings and clear health metrics.
-
-- `{typography.display-xl}` — 38 points — 700 — Main score
-- `{typography.display-lg}` — 30 points — 700 — Screen title
-- `{typography.display-md}` — 25 points — 700 — Section title
-- `{typography.headline}` — 21 points — 700 — Plan or tracker heading
-- `{typography.card-title}` — 16 points — 600 — Metric and content title
-- `{typography.body}` — 14 points — 400 — Coaching and tracker copy
-- `{typography.caption}` — 10 points — 400 — Goals and metadata
-
-- Keep goals and progress numeric and scannable.
-- Use bold copy for actionable health guidance.
-- Keep assistant responses conversational and readable.
-- Avoid overly clinical typography.
-
-Use SF Pro or Inter. Preserve strong headings, compact metrics, and comfortable coaching copy.
-
-The hierarchy must remain legible with Dynamic Type: supporting text may wrap before the primary metric, title, or action loses its role.
+Use SF Pro Rounded for prominent titles and card headings, with SF Pro Text for body and metadata. Screen titles are approximately 26–30 points bold; card headings are around 16–20 points; body copy is around 13–15 points; captions and microcopy are around 10–12 points. Primary measurements use bold numerals and should remain easy to scan, with tabular figures where changing values align. Most text is left aligned, while circular metrics and premium benefit panels may center a short value-and-label stack. Dynamic Type should wrap explanations and card labels before reducing the visual prominence of the title or primary metric.
 
 # Screen composition
 
-Use a 4 points base, 12 points gutters, 8 points card gaps, and 24 points between major tracking or content sections.
+Most screens use a vertically scrolling dark canvas with a large title or compact translucent top bar, 16-point side insets, stacked rounded sections, and a persistent bottom region. Major sections are separated by roughly 20–24 points; compact controls inside cards use 8–12 point gaps.
 
-Home and Track use one vertical dashboard with occasional two-column metric tiles. Explore uses horizontal shelves and two-column content grids. Coach is a single chat column.
-
-Keep dashboards dense but separate domains with card boundaries. Explore can breathe more around mascot and educational content.
-
-Use soft blurred color at the top, progress arcs, and mascot imagery. Avoid glass-heavy effects or glossy metric cards.
-
-Primary iPhone screens keep the documented content grouping and vertical rhythm inside a scroll container when content exceeds the viewport. Bottom-owned actions or navigation reserve the lower safe area rather than covering content.
+Dashboard archetypes place a large greeting or title near the top, followed by one dominant progress module and a mixture of full-width trackers and paired metric tiles. Tracker archetypes stack dark cards containing a progress visualization, current value, goal, status indicator, and compact action. Conversational archetypes use a single message column, gray incoming bubbles, violet outgoing bubbles, a small assistant avatar, and an anchored composer. Content archetypes use horizontal shelves or two-column grids of rounded photography and authored artwork with small locks, labels, or category chips. Premium archetypes use a close control, one large benefit visual, short centered copy, carousel indicators, outlined pricing choices, and a wide violet action. Settings archetypes use grouped dark table cards with leading icons and trailing chevrons or toggles. Sheets are inset from the screen edge and preserve visible safe-area clearance.
 
 # Navigation appearance
 
-Use four bottom destinations for Home, Coach, Track, and Explore. Profile opens from a circular top-right control.
-
-This section governs appearance only; product behavior and information architecture come from the approved Research and Planning artifacts.
+Top bars are dark or softly translucent and may carry a lavender back control, compact centered title, or circular profile action. The bottom bar uses a dark continuous surface with four evenly spaced icon-and-label items; active content becomes bright white while inactive items stay muted lavender-gray. Icons are small and optically consistent rather than oversized. Modal sheets use a dark panel with large top corners, a dim overlay, and clear inset spacing. Full-screen premium panels retain the dark field and use a small circular close control.
 
 # Components
 
-Primary and premium actions use lavender or violet pills. Semantic actions may use green only when they confirm healthy progress. Native controls must inherit the dark palette and radii.
-
-Tracker cards combine metric, goal, progress, and one action. Content cards place title over photography or illustration. Premium locks stay visible but secondary.
-
-Meal logging and chat use dark rounded fields, contextual chips, scan action, and anchored confirmation. Keep keyboard state and close action obvious.
-
-Progress arcs show meals, hydration, movement, fasting, and weight. Coach results use green checks and amber warnings. Locked score states explain the next action.
-
-Controls retain at least a 44-point interactive area. Pressed and disabled treatments should stay within the documented palette and hierarchy.
+Tracker cards are large rounded slate panels with bold metric text, a short label, circular arc or horizontal progress, and one compact pill action. Nested metric tiles use a slightly lighter surface and reduced radius. Primary actions are lavender filled pills with white semibold labels; disabled actions lower saturation and contrast without changing size. Progress rings use a dark track and bright semantic segment with centered numerals. Content cards use large rounded image crops, small lock or video badges, and compact titles below or over a protected dark region. Chat bubbles are asymmetrical rounded blocks: incoming graphite on the left, outgoing violet on the right. The composer is a dark rounded field with compact media controls. Premium choices are outlined dark cards with a stronger selected border, ribbon, or discount badge. Grouped settings rows use simple monochrome or lavender leading icons, thin dividers, and trailing controls.
 
 # Imagery and icons
 
-Use edge-to-edge photo cards for workouts and recipes. Mascot and flat illustrations sit on clean colored fields with generous cropping.
-
-Use `cover` for workout and food photography and `contain` for mascot or flat illustration. Preserve readable text overlays.
-
-When imagery is part of the documented composition, it cannot be omitted while final assets are pending. A temporary asset must preserve its placement, crop, scale, and approximate visual weight.
+Photography is dominant in onboarding, exercise, food, recipe, and educational cards, using decisive aspect-fill crops and readable focal subjects. Authored card art includes a recurring fuzzy violet mascot, flat wellness scenes, premium benefit symbols, and campaign-like library artwork. These assets have meaningful visual weight and cannot be omitted while final assets are pending. Contain mascot or flat scenes within their colored card field; use aspect-fill for photography. Functional icons are compact, monochrome or lavender, and visually distinct from the authored art. Subtle glow, carousel dots, and small decorative marks support composition but do not replace imagery.
 
 # States
 
-Progress arcs show meals, hydration, movement, fasting, and weight. Coach results use green checks and amber warnings. Locked score states explain the next action.
-
-Green communicates progress, amber attention, pink-red danger, and blue hydration or information. Pair color with labels and icons.
-
-Only the states documented above are specified; other states must preserve the same canvas, hierarchy, and component language without inventing a new visual system.
+Active trackers use green or context-specific progress against a dark track; locked metrics retain their layout but add a subdued lock and explanatory action. Selected chips and pricing options receive violet fill or border emphasis, while disabled controls remain structurally visible. Loading states show a small spinner or typing dots without replacing the surrounding dark composition. Permission-blocked states use a focused card and system handoff. Uploaded media appears as a real preview inside the conversation or logging surface. Premium-gated output may blur or obscure content beneath a clear upsell. Logout and other confirmations appear in a dark rounded sheet. No dedicated product error screen was observed; unobserved errors should retain the same surface, hierarchy, and semantic color logic.
 
 # iOS adaptation
 
-- Extend the documented canvas through the iPhone safe areas while keeping readable content within appropriate insets.
-- Use a vertical `ScrollView` for content that does not fit compact heights; keep documented bottom actions and navigation clear of the home indicator.
-- Trackers, add actions, chips, cards, and bottom navigation require at least 44 points targets.
-- Allow content shelves and filters to scroll horizontally. Keep logging or chat actions above the keyboard.
-- Present the keyboard and system permission UI natively, then return to the same visual context.
-- Preserve semantic reading order in VoiceOver and allow text to grow with Dynamic Type.
-- Preserve the documented appearance instead of introducing an unrelated light or dark palette.
+Extend the indigo canvas through both safe areas and keep tab bars, composers, and persistent actions above the home indicator. Use vertical scroll containers for dashboards, trackers, premium panels, and settings; keep two-column content grids only while Dynamic Type leaves titles legible. Move composers and confirmation actions with the keyboard and keep media previews reachable. Present system permissions natively, then return to the same dark context. Maintain at least 44-point hit regions around small tracker actions, locks, tabs, back controls, and media buttons. VoiceOver order should follow screen title, primary metric, goal/status, supporting content, then action. At accessibility text sizes, stack paired metric tiles and allow buttons to grow vertically. Preserve the observed dark default and adapt a supported light appearance without changing the violet/green roles.
 
 # Anti-generic checklist
 
-- Do not add bright colors without semantic purpose.
-- Do not make every card a promotion.
-- Do not hide locked versus available content.
-- Do not use light surfaces inside the dark shell without reason.
-- Do not expose default platform styling.
-- Do not replace the documented canvas and surfaces with a generic grouped background and uniform white cards.
-- Do not use an unstyled `TabView`, default blue tint, or arbitrary SF Symbols when they contradict the reference.
-- Do not collapse every component to one corner radius or remove compositionally important imagery.
+- Do not replace the indigo field with a generic grouped gray background or white card stack.
+- Do not use default blue tint for primary, selected, or premium actions.
+- Do not flatten progress rings, metrics, and trackers into identical text rows.
+- Do not give every card the same fill, radius, and shadow.
+- Do not use an unstyled `TabView`, `Form`, or arbitrary mixed-weight SF Symbols.
+- Do not remove photography, mascot art, or premium imagery and leave empty text-only cards.
+- Do not use green as a general brand color; keep it tied to positive progress.
+- Do not make every surface glossy or glass-like; depth comes mainly from related dark tones.
 
 </design-context>

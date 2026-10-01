@@ -3,185 +3,99 @@
 version: 1
 platform: iOS
 name: Yandex-Books-design-analysis
-description: "A reading-first system with crisp white canvases, black pill actions, book-cover carousels, subtle gray cards, and a warm coral-orange brand gradient reserved for launch and identity. Controls stay quiet so typography, covers, and reading progress remain central."
-
+description: "A white reading-first library where colorful uncropped book covers create the visual rhythm, compact grotesk headings and near-black pill actions frame discovery, a three-item outline tab bar anchors browsing, and the reader shifts to large serif text with almost all chrome removed."
 colors:
-  primary: "#2C2C2E"
-  on-primary: "#FFFFFF"
-  primary-pressed: "#151516"
-  ink: "#1F1F21"
-  ink-muted: "#68686C"
-  ink-subtle: "#A2A2A7"
   canvas: "#FFFFFF"
-  surface-1: "#FFFFFF"
-  surface-2: "#F2F2F3"
-  surface-3: "#E7E7E9"
-  hairline: "#DDDDDF"
-  semantic-success: "#2DA66A"
-  semantic-warning: "#E4A11B"
-  semantic-danger: "#D84A4A"
-  semantic-overlay: "#000000"
-
+  surface-primary: "#FFFFFF"
+  surface-secondary: "#F2F2F3"
+  accent-primary: "#1F1F21"
+  accent-secondary: "#FF6B52"
+  text-primary: "#1F1F21"
+  text-secondary: "#68686C"
+  divider: "#DDDDDF"
+  destructive: "#D84A4A"
 typography:
-  display-xl: { fontFamily: YS Text, fontSize: 40, fontWeight: 750, lineHeight: 1.05, letterSpacing: -1.0 }
-  display-lg: { fontFamily: YS Text, fontSize: 32, fontWeight: 700, lineHeight: 1.1, letterSpacing: -0.7 }
-  display-md: { fontFamily: YS Text, fontSize: 26, fontWeight: 700, lineHeight: 1.15, letterSpacing: -0.4 }
-  headline: { fontFamily: YS Text, fontSize: 22, fontWeight: 650, lineHeight: 1.2, letterSpacing: -0.2 }
-  card-title: { fontFamily: YS Text, fontSize: 17, fontWeight: 650, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: YS Text, fontSize: 16, fontWeight: 500, lineHeight: 1.35, letterSpacing: 0 }
-  body-lg: { fontFamily: YS Text, fontSize: 16, fontWeight: 400, lineHeight: 1.45, letterSpacing: 0 }
-  body: { fontFamily: YS Text, fontSize: 14, fontWeight: 400, lineHeight: 1.42, letterSpacing: 0 }
-  body-sm: { fontFamily: YS Text, fontSize: 12, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
-  caption: { fontFamily: YS Text, fontSize: 11, fontWeight: 450, lineHeight: 1.3, letterSpacing: 0 }
-  button: { fontFamily: YS Text, fontSize: 14, fontWeight: 600, lineHeight: 1.2, letterSpacing: 0 }
-  eyebrow: { fontFamily: YS Text, fontSize: 11, fontWeight: 650, lineHeight: 1.25, letterSpacing: 0.2 }
-  mono: { fontFamily: System Mono, fontSize: 12, fontWeight: 400, lineHeight: 1.4, letterSpacing: 0 }
-
-rounded: { xs: 6, sm: 10, md: 14, lg: 18, xl: 22, xxl: 28, pill: 9999, full: 9999 }
-spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
-
+  hero: {fontFamily: "SF Pro Display", fontSize: 36, fontWeight: 700, lineHeight: 41}
+  title: {fontFamily: "SF Pro Display", fontSize: 28, fontWeight: 700, lineHeight: 34}
+  section: {fontFamily: "SF Pro Text", fontSize: 20, fontWeight: 600, lineHeight: 25}
+  body: {fontFamily: "SF Pro Text", fontSize: 16, fontWeight: 400, lineHeight: 22}
+  label: {fontFamily: "SF Pro Text", fontSize: 14, fontWeight: 600, lineHeight: 19}
+  caption: {fontFamily: "SF Pro Text", fontSize: 12, fontWeight: 400, lineHeight: 17}
+spacing:
+  screen-horizontal: 16
+  section-gap: 28
+  card-padding: 16
+  control-gap: 12
+rounded:
+  control: 14
+  card: 18
+  sheet: 28
+  pill: 999
 components:
-  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: [14, 22]}
-  button-secondary: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: [12, 18]}
-  content-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 16 }
-  text-input: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: [12, 14]}
-  status-badge: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.pill}", padding: [4, 8]}
-  bottom-nav: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.caption}", rounded: "{rounded.xs}", height: 56 }
+  primary-action: {fill: "#1F1F21", foreground: "#FFFFFF", shape: "pill"}
+  secondary-action: {fill: "#F2F2F3", foreground: "#1F1F21", shape: "pill-or-row"}
+  primary-card: {fill: "book-cover-art", foreground: "content-dependent", shape: "portrait-rectangle"}
+  navigation: {fill: "#FFFFFF", inactive: "#A2A2A7", selected: "#1F1F21"}
 ---
 
 # Overview
 
-Yandex Books is a calm reading and listening system where covers provide color and the shell stays monochrome. Progress, resume, notes, and format switching connect discovery with use.
+Yandex Books keeps its application shell almost monochrome so publication covers and long-form text carry the experience. White dominates discovery, profile, settings, and reading surfaces; near-black pills and compact bold headings establish action hierarchy; pale gray chips and rows provide quiet structure. Browsing screens are visually rhythmic because portrait covers repeat in horizontal rails, while reading screens strip the interface down to a large serif text page and minimal edge controls.
 
 # Non-negotiable visual invariants
 
-- Typography consistently uses preserve covers and readable text measure.
-- The reference consistently shows resume progress visible.
-- The reference consistently shows make Read and Listen easy to switch.
-- The reference consistently shows style native controls in the Books system.
-- The reference consistently shows a reading-first system with crisp white canvases.
-- Sampled screens consistently use black pill actions.
-- The reference consistently shows book-cover carousels.
-- The reference consistently shows subtle gray cards.
+- White is the dominant canvas, with very light gray grouping and sparse dividers rather than elevated card stacks.
+- Primary actions are near-black fully rounded pills with white labels; default platform blue is not the visual anchor.
+- Book covers retain portrait proportions, complete typography, and high color fidelity, forming the main visual richness of browsing screens.
+- Horizontal cover rails and centered featured covers use partial neighboring content or open space to signal continuation.
+- Application headings use a compact bold grotesk, while long-form reader content switches to a clearly book-like serif with generous leading.
+- A white three-item bottom bar uses thin outline icons and small labels with understated dark selection.
+- Reader screens make text the dominant mass and reduce top and bottom chrome to narrow controls or transient sheets.
+- Modal actions use white rounded bottom sheets, drag handles, and line-icon rows over a dimmed page.
 
 # Color and surfaces
 
-Use white, black, and soft gray for UI; allow cover art to be colorful and reserve the warm coral gradient for brand moments.
-
-### Brand & Accent
-
-Use charcoal for primary actions and the cat-book mark for identity. Coral-orange may appear in launch or small Plus accents.
-
-### Surface
-
-Use white pages, pale gray cards and chips, and dark reader themes only when selected by the user.
-
-### Text
-
-Use near-black for titles and reading, medium gray for author and supporting copy, and pale gray for inactive controls.
-
-### Semantic
-
-Use green for downloaded or complete, amber for achievements, and red for errors or destructive account actions.
+White fills the library, catalog, detail, profile, settings, and default reader surfaces. Very light gray separates chips, search fields, list groups, empty-state panels, and secondary actions. Near-black is used for titles, primary controls, selected navigation, and key values. Medium gray carries authors, metadata, progress labels, placeholders, and inactive icons. The publication covers supply most saturated colors. Coral-orange appears in the launch identity, while isolated dark navy and bright blue may occur inside a promotional card; these do not define the general canvas. Red remains destructive, green can mark completion or availability, and amber can mark achievements. Default blue actions, tinted page backgrounds, or cover-colored gradients across the shell would break the reference.
 
 # Typography
 
-The shell uses a neutral grotesk while the reader may expose user-selectable serif and sans families.
-
-### Font Family
-
-Use YS Text for interface and a curated readable serif as the default long-form reading option.
-
-### Hierarchy
-
-Use 28–32 points page titles, 20–24 points book/section titles, 15–17 points body, 13–14 points metadata, and user-adjustable reading size.
-
-### Principles
-
-Keep interface text concise, preserve book-title casing, and maximize reading measure and line-height inside the reader.
-
-### Note on Font Substitutes
-
-Use SF Pro or Inter for interface; use Charter, Georgia, or Literata for long-form reading.
+The application shell uses a neutral grotesk with bold 28–36-point page titles, semibold 20-point section headings, compact 14–17-point labels and metadata, and small gray captions. An iOS-safe implementation should use SF Pro for shell typography when the original face is unavailable. The reader changes to a readable serif such as New York, Charter, Georgia, or Literata, with adjustable size and generous line height. Book titles may wrap to two lines while authors and metadata remain quieter. Dynamic Type should grow list rows, book detail copy, and settings vertically; reader type scaling must preserve comfortable measure and leading rather than compressing the page.
 
 # Screen composition
 
-Use horizontal cover carousels and category tabs in Library, single-column progress cards in My books, and a distraction-free reader/player.
+Browsing archetypes begin with a large or compact title and optional chips, followed by vertically stacked sections containing horizontal portrait-cover rails. Covers are shown at consistent aspect ratios with title and author beneath or alongside them; featured content may center one larger cover with partial neighbors. Detail archetypes center a prominent cover in the upper portion, then use aligned title, author, metadata, and one or more black pill actions before recommendations continue in a scroll view. Profile and settings archetypes use continuous white list rows with sparse separators and trailing chevrons or values.
 
-### Spacing System
-
-Use a 4 points base, 12 points card gaps, 16 points gutters, and 24–32 points between library sections.
-
-### Grid & Container
-
-Library shows a central featured cover with partial neighbors; My books stacks progress cards; reader content uses a comfortable narrow measure.
-
-### Whitespace Philosophy
-
-Keep large quiet areas around reading content and player art. Discovery can be denser but should never crowd book covers.
-
-Surface hierarchy observed in the source:
-
-Use faint card shadows and bottom sheets; covers and progress establish most hierarchy.
-
-### Decorative Depth
-
-Use the warm tunnel-like brand gradient on launch and subtle glows around special Plus or achievement moments.
+Reader archetypes devote nearly the whole viewport to a single serif text column inside comfortable side insets. Top and bottom controls remain narrow and may disappear, while selection overlays, highlight colors, and compact action menus attach directly to text. Audiobook archetypes center cover art with generous breathing room and place transport, progress, and speed controls below; a mini-player may stack immediately above the bottom bar. Bottom sheets and share panels rise over dimmed content without nesting multiple cards.
 
 # Navigation appearance
 
-Use a three-item bottom bar for My books, Library, and Search, with an active-book mini player immediately above it.
+The primary browsing shell uses a white three-item bottom tab bar with thin outline icons, small labels, gray inactive states, and a darker selected state. When audio is active, a compact mini-player strip may sit directly above it. Top bars use back chevrons, close icons, compact centered or leading titles, kebab menus, checkmarks, and share actions in near-black. Reader controls are deliberately quieter and may collapse to edge chrome. Sheets use white fill, large upper corners, a short grab handle, and vertically aligned icon-and-text rows.
 
 # Components
 
-### Buttons
-
-Primary actions are charcoal pills with white labels; secondary actions use pale gray fills. Remove default native blue.
-
-### Cards & Containers
-
-Book cards combine cover, title, author, short recommendation, and save action. Progress cards add percentage and Read/Listen choices.
-
-### Inputs & Forms
-
-Use pale search fields, simple title/shelf inputs, and bottom sheets for filters, notes, book actions, and settings.
+The primary CTA is a near-black pill with a white medium or semibold label; secondary actions use pale-gray pills or text rows. Book-cover cards preserve the publication rectangle, use minimal or no surrounding border, and place compact text nearby. Filter chips are small rounded pills with restrained selected fill. Settings rows use white backgrounds, thin dividers, leading labels, and trailing chevrons, checks, switches, or values. Bottom action menus use consistent line icons, left-aligned labels, large row targets, and no ornamental cards. The audio player uses a large central play/pause control with smaller transport and speed controls around a clear progress track.
 
 # Imagery and icons
 
-Use the warm tunnel-like brand gradient on launch and subtle glows around special Plus or achievement moments.
-
-Preserve book-cover aspect ratios and never crop cover typography. Author avatars are circular; all other art follows its publication format.
-
-If final imagery is not yet available, any placeholder must preserve the documented scale, placement, crop, and visual weight rather than removing that layer.
+Book covers are compositionally indispensable and must never be replaced by generic placeholders when evaluating this style. Use `aspectFit`, preserve all cover typography and edges, avoid stretching, and do not crop publication artwork into landscape marketing cards. Author avatars, when present, are circular; player artwork remains centered and proportional. Shell icons are simple monochrome line glyphs. The coral launch mark, gift/promo objects, kids symbol, achievement decoration, and empty-state graphic are isolated assets rather than a repeated authored illustration system across ordinary states. Do not extrapolate them into a new character or scene language.
 
 # States
 
-Show saved, reading, listening, downloaded, followed, finished, achievement, and kids-mode states with explicit labels.
+Observed states include launch and loading, authentication input, populated catalog rails, filters and search, centered book detail, reading and page loading, text selection with colored highlights, notes and action sheets, share panels, mini-player and full audiobook controls, empty support or kids surfaces, profile and settings lists, achievements, theme and icon selections, PIN keypad, and destructive confirmations. White canvas, near-black actions, compact headings, cover proportions, and rounded sheets remain stable. Progress is understated through small bars, checks, labels, and spinners rather than large status cards.
 
 # iOS adaptation
 
-### Touch Targets
-
-Cover, save, read, listen, play, seek, note, settings, and navigation targets require at least 44 points.
-
-### Collapsing Strategy
-
-Keep current title, progress, resume control, and active reading/player tools visible; collapse recommendations and secondary metadata.
-
-### Image Behavior
-
-Use contain for covers, preserve aspect ratios, and avoid upscaling low-resolution art. Player art remains centered with breathing room.
-
-Apply these rules within current iPhone safe areas and scrolling containers. Keep interactive targets at least 44 points, preserve a logical VoiceOver order, and let Dynamic Type wrap supporting text without flattening the documented hierarchy. Preserve the documented appearance.
+Place catalogs, details, settings, and long lists in vertical scroll containers while keeping horizontal cover rails independently scrollable. Respect safe areas for top bars, mini-player, three-item tab bar, player controls, and bottom sheets. Preserve cover aspect ratios across compact widths; reduce the number of visible covers and reveal partial neighbors rather than shrinking titles below legibility. Keep rows, chips, covers, transport controls, and sheet actions at least 44 points. Reader width should stay narrow enough for comfortable line length, with user-selected type and Dynamic Type allowed to reflow vertically. VoiceOver order should announce section, cover title and author, progress, then action. The sampled product is light-first; optional reader themes do not justify applying dark appearance to the whole shell.
 
 # Anti-generic checklist
 
-- Do not use default platform blue.
-- Do not crop cover titles.
-- Do not decorate the reader unnecessarily.
-- Do not hide active-book progress behind deep navigation.
-- Do not replace the documented hierarchy with a generic stack of identical white cards or `Form` sections.
-- Do not use default blue tint, an unstyled `TabView`, arbitrary SF Symbols, or uniform corner radii when they contradict the recorded tokens and components.
-- Do not invent decorative imagery or symbol treatments that are absent from the reference.
+- Do not crop, stretch, recolor, or obscure book-cover titles.
+- Do not replace near-black pill actions with default blue controls.
+- Do not surround every cover rail or section with an elevated white card.
+- Do not use an unstyled `TabView`; preserve three compact outline items and understated dark selection.
+- Do not use the shell grotesk for long-form reading or the reader serif for navigation and settings.
+- Do not decorate the reader with gradients, large cards, persistent recommendations, or dense chrome.
+- Do not apply one uniform radius to covers, pills, sheets, chips, and list rows.
+- Do not invent a general illustration style from isolated launch, kids, achievement, promo, or empty-state assets.
 
 </design-context>

@@ -3,220 +3,129 @@
 version: 1
 platform: iOS
 name: Le-Chat-design-analysis
-description: "A near-black AI workspace with charcoal composer surfaces, bright orange creation actions, cyan research states, and a retro pixel-art mascot. The interface is sparse and tool-like: conversation text carries most of the screen, the composer remains anchored, and projects, history, modes, and upgrade controls stay compact."
+description: "A sparse charcoal AI workspace centered on a persistent bottom composer, restrained off-white conversation type, orange creation controls, cyan research cues, drawer-and-sheet navigation, large intentional negative space, and a recurring crisp pixel-art mascot."
 colors:
-  primary: "#FF4A1C"
-  on-primary: "#FFFFFF"
-  primary-focus: "#D93610"
-  ink: "#F6F4F7"
-  ink-muted: "#B6B1B8"
-  ink-subtle: "#817C84"
-  ink-tertiary: "#5E5961"
   canvas: "#211F24"
-  surface-1: "#2B292E"
-  surface-2: "#353238"
-  surface-3: "#403C43"
-  surface-4: "#4A464E"
-  hairline: "#3C3940"
-  hairline-strong: "#514D55"
-  hairline-tertiary: "#66616A"
-  inverse-canvas: "#FFF8F3"
-  inverse-surface-1: "#F3ECE8"
-  inverse-surface-2: "#E7DFDB"
-  inverse-ink: "#201D22"
-  brand-secure: "#46BDD7"
-  semantic-success: "#7FB348"
-  semantic-overlay: "#0D0C0E"
+  surface-primary: "#2B292E"
+  surface-secondary: "#37343A"
+  accent-primary: "#FF4A1C"
+  accent-secondary: "#46BDD7"
+  text-primary: "#F6F4F7"
+  text-secondary: "#AAA5AD"
+  divider: "#464249"
+  destructive: "#E5484D"
 typography:
-  display-xl: {fontFamily: SF Pro Display, fontSize: 36, fontWeight: 700, lineHeight: 1.06, letterSpacing: -0.8}
-  display-lg: {fontFamily: SF Pro Display, fontSize: 30, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.6}
-  display-md: {fontFamily: SF Pro Display, fontSize: 24, fontWeight: 700, lineHeight: 1.14, letterSpacing: -0.3}
-  headline: {fontFamily: SF Pro Display, fontSize: 20, fontWeight: 600, lineHeight: 1.20, letterSpacing: -0.2}
-  card-title: {fontFamily: SF Pro Text, fontSize: 16, fontWeight: 600, lineHeight: 1.24, letterSpacing: 0}
-  subhead: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 500, lineHeight: 1.30, letterSpacing: 0}
-  body-lg: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 400, lineHeight: 1.48, letterSpacing: 0}
-  body: {fontFamily: SF Pro Text, fontSize: 13, fontWeight: 400, lineHeight: 1.44, letterSpacing: 0}
-  body-sm: {fontFamily: SF Pro Text, fontSize: 11, fontWeight: 400, lineHeight: 1.34, letterSpacing: 0}
-  caption: {fontFamily: SF Pro Text, fontSize: 10, fontWeight: 400, lineHeight: 1.28, letterSpacing: 0}
-  button: {fontFamily: SF Pro Text, fontSize: 14, fontWeight: 500, lineHeight: 1.20, letterSpacing: 0}
-  eyebrow: {fontFamily: SF Pro Text, fontSize: 10, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0.1}
-  mono: {fontFamily: SF Mono, fontSize: 11, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0}
-rounded:
-  xs: 4
-  sm: 7
-  md: 10
-  lg: 14
-  xl: 18
-  xxl: 24
-  pill: 9999
-  full: 9999
+  hero: {fontFamily: "SF Pro Display", fontSize: 32, fontWeight: 700, lineHeight: 38}
+  title: {fontFamily: "SF Pro Display", fontSize: 26, fontWeight: 700, lineHeight: 32}
+  section: {fontFamily: "SF Pro Text", fontSize: 20, fontWeight: 600, lineHeight: 25}
+  body: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 400, lineHeight: 22}
+  label: {fontFamily: "SF Pro Text", fontSize: 14, fontWeight: 600, lineHeight: 19}
+  caption: {fontFamily: "SF Pro Text", fontSize: 11, fontWeight: 400, lineHeight: 15}
 spacing:
-  xxs: 4
-  xs: 8
-  sm: 12
-  md: 16
-  lg: 20
-  xl: 24
-  xxl: 32
-  section: 40
+  screen-horizontal: 16
+  section-gap: 24
+  card-padding: 14
+  control-gap: 10
+rounded:
+  control: 12
+  card: 16
+  sheet: 26
+  pill: 999
 components:
-  button-primary: {backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [13, 18]}
-  button-primary-pressed: {backgroundColor: "{colors.primary-focus}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}"}
-  button-secondary: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [11, 16]}
-  button-tertiary: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink-muted}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [9, 12]}
-  button-inverse: {backgroundColor: "{colors.inverse-canvas}", textColor: "{colors.inverse-ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [11, 16]}
-  composer: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 12}
-  user-message: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: [10, 12]}
-  project-card: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: 12}
-  mode-chip: {backgroundColor: "{colors.surface-2}", textColor: "{colors.brand-secure}", typography: "{typography.caption}", rounded: "{rounded.sm}", padding: [5, 8]}
-  sidebar: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xs}", padding: 16}
+  primary-action: {fill: "#FF4A1C", text: "#FFFFFF", height: 50, radius: 12}
+  composer: {fill: "#2B292E", text: "#F6F4F7", radius: 16, padding: 12}
+  message-surface: {fill: "#37343A", text: "#F6F4F7", radius: 14, padding: 12}
+  navigation: {fill: "#211F24", selected: "#FF4A1C", unselected: "#AAA5AD"}
 ---
 
 # Overview
 
-Le Chat is a dark, composer-first AI workspace where orange creation actions and a pixel mascot add identity without interrupting long-form work.
-
-**Key Characteristics:**
-- Near-black canvas with charcoal input surfaces.
-- Anchored composer across home, chats, and projects.
-- Orange primary actions and cyan Research mode.
-- Minimal message chrome and readable long responses.
-- Retro pixel-art mascot and onboarding world.
+Le Chat is a sparse, composer-first AI workspace on a warm charcoal field rather than pure black. Off-white response text forms the main content mass, while compact dark panels hold prompts, tools, projects, settings, and modal tasks. Orange identifies the assistant and the most important creation actions; cyan marks research or source-oriented states. Large empty regions are intentional, often framing a crisp pixel mascot above the bottom composer. The interface must remain calm and tool-like rather than becoming a dashboard of equal cards.
 
 # Non-negotiable visual invariants
 
-- Sampled screens consistently use near-black canvas with charcoal input surfaces.
-- The reference consistently shows anchored composer across home, chats, and projects.
-- The reference consistently shows orange primary actions and cyan Research mode.
-- The reference consistently shows minimal message chrome and readable long responses.
-- Imagery consistently uses retro pixel-art mascot and onboarding world.
+- Keep the default canvas warm charcoal with small surface steps between the background, composer, messages, drawer, and modal panels.
+- Anchor conversational screens with a broad rounded composer at the bottom, including compact attachment, mode, voice, and send controls.
+- Reserve bright orange for the assistant identity, primary actions, microphone or send state, checks, settings accents, and upgrade emphasis.
+- Use cyan sparingly for research, sources, and advanced informational states rather than as a second general-purpose action color.
+- Preserve large vertical negative space on welcome, empty, loading, and lightweight project surfaces.
+- Keep assistant answers mostly borderless as readable text blocks with a compact action row; do not wrap every paragraph in a card.
+- Use drawer, sheet, and top-control navigation with no persistent bottom tab bar.
+- Keep the pixel mascot visibly crisp and recurring across splash, onboarding, empty chat, assistant avatar, incognito, and upgrade contexts.
 
 # Color and surfaces
 
-### Brand & Accent
+The default canvas is a warm charcoal (`#211F24`), with primary panels around `#2B292E` and stronger selected or input surfaces around `#37343A`. These small tonal steps define depth without heavy shadows. Off-white is used for primary conversation text; muted gray handles placeholders, timestamps, disclaimers, and inactive controls. Orange-red (`#FF4A1C`) identifies actions and brand moments. Cyan (`#46BDD7`) is limited to research, sources, or advanced-state emphasis. Destructive controls use a compact red.
 
-Orange-red drives sign-in, new-chat, upgrade, and active voice or generation cues. Cyan identifies Research and linked advanced work.
-
-### Surface
-
-Near-black is the canvas. Charcoal steps distinguish composer, user messages, sidebar search, projects, and modal controls.
-
-### Text
-
-Off-white carries content; soft gray carries labels, timestamps, disclaimers, and inactive utilities.
-
-### Semantic
-
-Cyan is informational mode state, green is positive feedback, and red is destructive. Keep semantic color compact.
+Most screens remain dark and low-saturation. The upgrade composition is the deliberate exception: an orange gradient becomes the full-screen field while a dark plan card remains the focal surface. A light appearance is explicitly offered and uses white or warm off-white surfaces with dark type, but the same component hierarchy must remain intact. Avoid default iOS blue, hard black cards, multicolor assistant messages, and elevated shadows that overpower the subtle surface steps.
 
 # Typography
 
-### Font Family
+Typography is restrained because conversation content carries the screen. Onboarding and upgrade headings use 26–32 point bold SF Pro Display; screen and modal titles are about 20–24 points. Prompts, responses, project rows, and settings use 14–16 point SF Pro Text with comfortable 21–23 point line height. Utilities, source labels, disclaimers, and action captions sit around 10–12 points. Text is primarily left aligned; centered type is reserved for welcome, empty, loading, and upgrade compositions.
 
-Use SF Pro Display for onboarding and subscription headings and SF Pro Text for conversation, projects, and controls.
-
-### Hierarchy
-
-| Token | Size | Weight | Use |
-|---|---:|---:|---|
-| display-lg | 30 points | 700 | Onboarding and upgrade claim |
-| headline | 20 points | 600 | Project and modal title |
-| card-title | 16 points | 600 | Conversation section title |
-| body | 13 points | 400 | Prompt and response text |
-| caption | 10 points | 400 | Mode, disclaimer, and utility labels |
-
-### Principles
-
-- Optimize body rhythm for long answers.
-- Keep interface labels compact and quiet.
-- Use display weight only for onboarding and plan comparison.
-
-### Note on Font Substitutes
-
-Inter is a close cross-platform substitute; use a bitmap font only inside pixel-art assets, never for conversation text.
+Use SF Pro for functional text and keep pixel lettering inside generated illustration assets only. Preserve readable paragraph measure and spacing under Dynamic Type. Let answers, settings values, source rows, and composer text wrap and expand vertically. Do not introduce oversized motivational headings or decorative copy: visible text should be a prompt, response, mode, source, state, setting, value, or action that is not already clear from context.
 
 # Screen composition
 
-### Spacing System
+Most conversational screens divide into a compact top control band, a flexible central content region, and a bottom composer that occupies roughly 12–18% of the viewport before the keyboard. With little or no conversation, the center remains largely empty and the mascot sits near the visual center. With content, one readable column fills vertically and scrolls behind or above the composer. Horizontal insets are about 16 points, with 10–14 points inside dark panels.
 
-Use a 4 points base, 12 points composer padding, 16 points content gutters, and 20–24 points between answer sections.
+Observed visual archetypes include:
 
-### Grid & Container
+- **Welcome or empty workspace:** sparse top controls, centered pixel mascot with generous surrounding space, and the composer anchored near the bottom.
+- **Conversation:** compact header, vertically scrolling prompt and borderless response blocks, small assistant avatar, source or progress treatment when present, response action row, then the persistent composer.
+- **Research or tool state:** a cyan-accented mode chip, compact progress and source cards in the content column, and otherwise unchanged charcoal composition.
+- **Drawer and search:** a dark panel slides over most of the width from the left, leaving a dimmed strip of the underlying screen; search and history rows stack in one compact column.
+- **Projects or lightweight management:** large empty field, one or two restrained rows or cards, and a focused creation modal when needed.
+- **Settings or account sheet:** tall rounded dark sheet with grouped rows, quiet section labels, toggles or checks, and compact close/back controls.
+- **Upgrade:** saturated orange gradient fills the viewport, brand mark and concise plan text sit above or around one dark pricing card, followed by a clear orange or light purchase action.
 
-Chats are one readable column. The sidebar is a vertical history list; upgrade uses one centered plan card.
-
-### Whitespace Philosophy
-
-Keep large calm fields around the mascot and composer. Long answers use paragraph spacing instead of card separation.
-
-Surface hierarchy observed in the source:
-
-| Level | Treatment | Use |
-|---|---|---|
-| 0 | Near-black canvas | Home and conversation |
-| 1 | Charcoal fill | Composer and user message |
-| 2 | Stronger charcoal outline | Project and modal fields |
-| 3 | Scrim plus focused sheet | Rename, delete, and upgrade tasks |
-
-### Decorative Depth
-
-Depth comes from small surface steps and generated media. Pixel art remains flat with crisp edges.
+Keep chat and settings vertical. Do not introduce multi-column layouts on iPhone, dense dashboard grids, or decorative cards solely to occupy negative space.
 
 # Navigation appearance
 
-Use a slide-out sidebar for history, projects, plan, and New chat. Keep conversation title and one contextual action in the header.
+There is no bottom tab bar. Primary navigation is expressed through small top controls, a large left-side drawer, ordinary back arrows, and rounded modal sheets. The top-left control may be a compact profile-initial circle; a centered upgrade pill can appear in the header; contextual controls stay at the right. These are visual treatments only and do not define reusable product routes.
+
+The side drawer uses the same charcoal canvas, covers most of the width, and leaves a narrow dimmed edge of the current screen. Sheets have about 26-point top corners, a dark fill, a close or back affordance, and grouped rows. Selected theme or settings choices use an orange check. Mode selection appears as a dark popover or sheet with orange/cyan emphasis. Avoid adding a tab bar, light navigation bar, blue system back button, or oversized branded close control.
 
 # Components
 
-### Buttons
-
-Primary actions are orange full-width rectangles. Secondary actions use charcoal fills; compact answer utilities stay icon-only and gray.
-
-### Cards & Containers
-
-Assistant responses are mostly borderless. User prompts use charcoal bubbles; projects use simple outlined dark fields; upgrade uses one bounded card.
-
-### Inputs & Forms
-
-The composer combines attachments, mode selection, voice, and submit in one charcoal panel. Focus changes border and icon state without introducing a light native field.
+- **Composer:** broad charcoal rounded panel with about 12-point internal padding, multiline off-white input, gray placeholder, and a compact lower tool row. Attachment and mode actions remain quiet; microphone or send becomes orange when actionable. Keyboard state expands the composer without replacing its visual identity.
+- **Primary action:** about 50 points high, orange fill, 12-point radius, centered semibold white label, and a deeper orange pressed state. Use for focused confirmation or upgrade rather than every inline action.
+- **User prompt surface:** compact darker charcoal bubble or block with 12-point padding and 14-point radius, sized to content rather than filling the width unnecessarily.
+- **Assistant response:** largely borderless body text preceded by the small pixel avatar when needed, followed by a low-contrast icon row for feedback, copy, regenerate, or more.
+- **Mode chip:** compact dark rounded control with concise label and cyan research emphasis or orange active mark; it stays subordinate to the input.
+- **Source or progress card:** small dark rounded surface with compact title, metadata, and cyan informational cue. Do not turn the entire response into nested cards.
+- **Drawer row:** full-width quiet row with white primary label, gray metadata where needed, subtle selected fill, and no heavy separator.
+- **Settings row:** dark grouped surface with concise label, optional secondary value, and an orange check/toggle or neutral chevron.
+- **Toast:** small dark floating banner with concise feedback, muted shadow, and no unrelated illustration.
 
 # Imagery and icons
 
-Depth comes from small surface steps and generated media. Pixel art remains flat with crisp edges.
+The pixel mascot is compositionally important on splash, onboarding, welcome, assistant identity, incognito, and upgrade surfaces. It must not be omitted while waiting for final assets or substituted with an SF Symbol, emoji, smooth vector logo, or code-drawn blocks. Follow `illustrations.md`: generate required pixel artwork with the available image-generation model, obtain approval, and integrate the approved image asset.
 
-Generated images use rounded landscape rectangles. The pixel mascot remains small, centered, and unblurred against the dark field.
-
-If final imagery is not yet available, any placeholder must preserve the documented scale, placement, crop, and visual weight rather than removing that layer.
+Generated user or assistant output, such as a realistic image or document preview, is content rather than part of the brand illustration language. Show it in a rounded preview with an appropriate crop without pixelating it. Functional icons are compact, monochrome, and visually consistent; active send, microphone, check, or settings accents become orange, while research/source marks may become cyan.
 
 # States
 
-Generation progress appears inline with the assistant avatar and stop control. Research keeps a cyan mode chip visible in the composer.
+Observed states include splash and welcome, loading primary action, empty composer with keyboard, typed first prompt, streaming with a stop control, completed answer with action row and feedback toast, quick-answer notice, mode picker, research progress and sources, document or browser preview, generated image result, empty file library and attached file, drawer search with results and reached-end state, monthly/yearly upgrade and system payment confirmation, empty and created project states, settings, light/dark/system theme selection, and data/account toggles.
+
+The charcoal hierarchy, bottom composer, restrained type, orange identity/action color, and large negative space stay stable. Progress remains inline rather than becoming a blocking full-screen loader. Light appearance changes surface and text contrast but not composition. Do not invent branded error, permission, or success illustration variants beyond the observed evidence.
 
 # iOS adaptation
 
-### Touch Targets
+Extend the chosen theme through the status and home-indicator safe areas. Use one vertical scroll container for chat content with a keyboard-safe bottom inset matching the composer height. Keep the composer attached above the keyboard and scroll the active prompt or latest response into view without covering content. Drawers should respect the status region and preserve a visible dimmed strip; settings and mode surfaces can use native sheet behavior with custom charcoal fill, radius, and selection colors.
 
-Composer actions, sidebar rows, feedback, mode chips, and subscription controls remain at least 44 points.
-
-### Collapsing Strategy
-
-Keep chat single-column; collapse secondary composer tools behind one menu before reducing the prompt area.
-
-### Image Behavior
-
-Generated images use aspect-fill previews and open to full detail. Pixel art scales only by integer multiples where practical.
-
-Apply these rules within current iPhone safe areas and scrolling containers. Keep interactive targets at least 44 points, preserve a logical VoiceOver order, and let Dynamic Type wrap supporting text without flattening the documented hierarchy. Preserve the documented appearance.
+Give every compact icon a minimum 44-point hit target even when its visible glyph is small. VoiceOver order should follow header, conversation content, response actions, and composer tools; group each response meaningfully without hiding individual actions. Dynamic Type should widen or wrap tool labels, grow prompts and settings rows, and let the composer expand. On compact widths, move lower-priority composer tools into one menu before shrinking the text area. Pixel art should scale with crisp nearest-neighbor treatment where practical. Both dark and light appearances are observed; preserve semantic surface hierarchy and orange/cyan contrast in each.
 
 # Anti-generic checklist
 
-- Don't wrap every assistant paragraph in a card.
-- Don't use orange as a large conversation background.
-- Don't mix pixel typography into functional text.
-- Don't leave native inputs light or rounded like generic iOS controls.
-- Don't crowd the home mascot with navigation chrome.
-- Do not replace the documented hierarchy with a generic stack of identical white cards or `Form` sections.
-- Do not use default blue tint, an unstyled `TabView`, arbitrary SF Symbols, or uniform corner radii when they contradict the recorded tokens and components.
-- Do not invent decorative imagery or symbol treatments that are absent from the reference.
+- Do not add a bottom tab bar or convert drawer-and-sheet navigation into a generic five-tab structure.
+- Do not replace the warm charcoal surface steps with pure black, blue-gray, or a stack of identical floating cards.
+- Do not wrap every assistant paragraph, source, and action row in nested cards.
+- Do not omit the bottom composer or separate its tools into a detached toolbar.
+- Do not use default blue tint, light native text fields, generic `Form` styling, or arbitrary mixed SF Symbols.
+- Do not fill intentional empty space with tips, slogans, suggested-copy poetry, or decorative panels.
+- Do not recreate the pixel mascot with SwiftUI shapes, emoji, a smooth vector mark, or a generic chatbot icon.
+- Do not apply pixel-art styling to generated images, documents, functional icons, or conversation typography.
 
 </design-context>

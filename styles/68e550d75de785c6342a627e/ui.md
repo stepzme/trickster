@@ -3,174 +3,99 @@
 version: 1
 platform: iOS
 name: Megamarket-design-analysis
-description: "A mobile design system defined by purple purchase actions, lime savings, campaign art, product photography, and a floating dock."
-colors: {primary: "#8B43D6", on-primary: "#FFFFFF", primary-focus: "#8B43D6", ink: "#202024", ink-muted: "#777981", ink-subtle: "#A7A8AE", ink-tertiary: "#CACBD0", canvas: "#FFFFFF", surface-1: "#F5F3F7", surface-2: "#F5F3F7", surface-3: "#E2E3E7", surface-4: "#D6D7DC", hairline: "#E5E6E9", hairline-strong: "#CFD0D5", hairline-tertiary: "#B6B8BF", inverse-canvas: "#17181C", inverse-surface-1: "#292A30", inverse-surface-2: "#3B3D45", inverse-ink: "#FFFFFF", brand-secure: "#D8ED16", semantic-success: "#34A86B", semantic-overlay: "#17181C"}
+description: "A white high-density marketplace with purple purchase actions, green bonus badges, rounded product-photo cards, saturated campaign banners, and a distinctive dark translucent floating bottom dock whose selected destination sits in a white capsule."
+colors:
+  canvas: "#FFFFFF"
+  surface-primary: "#FFFFFF"
+  surface-secondary: "#F5F3F7"
+  accent-primary: "#8B43D6"
+  accent-secondary: "#34A86B"
+  text-primary: "#202024"
+  text-secondary: "#777981"
+  divider: "#E5E6E9"
+  destructive: "#D94A55"
 typography:
-  display-xl: {fontFamily: SF Pro Display, fontSize: 36, fontWeight: 700, lineHeight: 1.06, letterSpacing: -0.8}
-  display-lg: {fontFamily: SF Pro Display, fontSize: 30, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.6}
-  display-md: {fontFamily: SF Pro Display, fontSize: 24, fontWeight: 700, lineHeight: 1.14, letterSpacing: -0.3}
-  headline: {fontFamily: SF Pro Display, fontSize: 20, fontWeight: 700, lineHeight: 1.20, letterSpacing: -0.2}
-  card-title: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 600, lineHeight: 1.24, letterSpacing: 0}
-  subhead: {fontFamily: SF Pro Text, fontSize: 14, fontWeight: 600, lineHeight: 1.30, letterSpacing: 0}
-  body-lg: {fontFamily: SF Pro Text, fontSize: 14, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0}
-  body: {fontFamily: SF Pro Text, fontSize: 12, fontWeight: 400, lineHeight: 1.34, letterSpacing: 0}
-  body-sm: {fontFamily: SF Pro Text, fontSize: 10, fontWeight: 400, lineHeight: 1.28, letterSpacing: 0}
-  caption: {fontFamily: SF Pro Text, fontSize: 9, fontWeight: 400, lineHeight: 1.22, letterSpacing: 0}
-  button: {fontFamily: SF Pro Text, fontSize: 13, fontWeight: 600, lineHeight: 1.18, letterSpacing: 0}
-  eyebrow: {fontFamily: SF Pro Text, fontSize: 9, fontWeight: 600, lineHeight: 1.18, letterSpacing: 0.1}
-  mono: {fontFamily: SF Mono, fontSize: 10, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0}
-rounded: {xs: 4, sm: 8, md: 12, lg: 16, xl: 20, xxl: 26, pill: 9999, full: 9999}
-spacing: {xxs: 4, xs: 8, sm: 12, md: 16, lg: 20, xl: 24, xxl: 32, section: 40}
+  hero: {fontFamily: "SF Pro Display", fontSize: 34, fontWeight: 700, lineHeight: 40}
+  title: {fontFamily: "SF Pro Display", fontSize: 28, fontWeight: 700, lineHeight: 34}
+  section: {fontFamily: "SF Pro Text", fontSize: 20, fontWeight: 700, lineHeight: 25}
+  body: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 400, lineHeight: 21}
+  label: {fontFamily: "SF Pro Text", fontSize: 14, fontWeight: 600, lineHeight: 19}
+  caption: {fontFamily: "SF Pro Text", fontSize: 12, fontWeight: 400, lineHeight: 16}
+spacing:
+  screen-horizontal: 12
+  section-gap: 24
+  card-padding: 12
+  control-gap: 8
+rounded:
+  control: 12
+  card: 16
+  sheet: 24
+  pill: 999
 components:
-  button-primary: {backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [13, 18]}
-  button-primary-pressed: {backgroundColor: "{colors.primary-focus}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}"}
-  button-secondary: {backgroundColor: "{colors.surface-1}", textColor: "{colors.primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [12, 16]}
-  button-tertiary: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [10, 14]}
-  button-inverse: {backgroundColor: "{colors.inverse-canvas}", textColor: "{colors.inverse-ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [12, 16]}
-  content-card: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 12}
-  feature-card: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 14}
-  compact-chip: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.caption}", rounded: "{rounded.pill}", padding: [7, 10]}
-  bottom-nav: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink-subtle}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: [7, 8]}
+  primary-action: {fill: "#8B43D6", foreground: "#FFFFFF", shape: "rounded-rectangle"}
+  secondary-action: {fill: "#F5F3F7", foreground: "#8B43D6", shape: "pill-or-icon"}
+  primary-card: {fill: "#FFFFFF", foreground: "#202024", shape: "rounded-product-card"}
+  navigation: {fill: "dark-translucent", inactive: "#FFFFFF", selectedFill: "#FFFFFF"}
 ---
 
 # Overview
 
-Megamarket is defined by purple purchase actions, lime savings, campaign art, product photography, and a floating dock.
-
-**Key Characteristics:** purple purchase actions, lime savings, campaign art, product photography, and a floating dock.
+Megamarket is a dense commerce interface in which white space is filled with product photography, prices, bonuses, category objects, and saturated campaign banners rather than large editorial text. Purple drives purchasing and selection, green distinguishes bonus value, and rounded containers keep the high information density approachable. Its strongest shell signature is a dark translucent floating dock near the bottom, where the selected item sits inside a light capsule and the cart may appear as a separate bubble.
 
 # Non-negotiable visual invariants
 
-- The reference consistently shows purple purchase actions.
-- The reference consistently shows lime savings.
-- Imagery consistently uses campaign art.
-- The reference consistently shows product photography.
-- Navigation consistently uses a floating dock.
+- White is the default full-screen canvas; purple is the recurring purchase, selected, link, and primary-action color.
+- Product content uses rounded image containers and a price-first hierarchy with compact rating, seller, delivery, and bonus metadata.
+- Green bonus or loyalty badges remain visually distinct from purple interaction styling.
+- The persistent bottom dock is dark, translucent or charcoal, fully rounded, and floated above the home indicator; selected content gains a white capsule.
+- Promo and category imagery is highly saturated, rounded, and photographic or polished 3D/rendered rather than generic flat illustration.
+- Search uses a wide rounded field with a visible scan affordance and anchors dense discovery surfaces near the top.
+- Forms and purchase-focused screens become sparse white single columns with thin dividers and large purple bottom actions.
+- Native payment, browser, keyboard, alert, and action-sheet surfaces remain visibly system-owned.
 
 # Color and surfaces
 
-### Brand & Accent
-
-Purple leads brand and purchase; lime marks savings and bonuses.
-
-### Surface
-
-Use the canvas for primary content and the grouped surface for controls, cards, and focused sections.
-
-### Text
-
-Primary text remains high-contrast; secondary metadata stays quieter than the current decision.
-
-### Semantic
-
-Use success, warning, and destructive colors only for their conventional meanings.
+White dominates catalog, product, cart, checkout, profile, and settings screens. Very pale violet-gray groups controls, cards, filters, and empty-state backgrounds. Brand purple is used for CTA fill, links, selected controls, price/action emphasis, and active indicators. Green is reserved for bonuses, loyalty value, payment or positive status. Bright yellow appears in high-visibility campaigns, while red remains destructive or error-related. Dark translucent gray forms the floating dock and creates a strong contrast with the white content field. Campaign imagery may introduce broad saturated color inside bounded banners, but those colors do not tint ordinary forms or product grids. Default blue action styling or beige ecommerce surfaces would break the reference.
 
 # Typography
 
-### Font Family
-
-Use SF Pro Display for headings and SF Pro Text for controls, content, and metadata.
-
-### Hierarchy
-
-| Token | Size | Weight | Use |
-|---|---:|---:|---|
-| display-lg | 30 points | 700 | Hero or state |
-| headline | 20 points | 700 | Section title |
-| card-title | 15 points | 600 | Primary item |
-| body | 12 points | 400 | Detail |
-| caption | 9 points | 400 | Metadata |
-
-### Principles
-
-- Lead with the current task or value.
-- Align repeated metadata.
-- Reserve emphasis for real decisions.
-
-### Note on Font Substitutes
-
-Inter is suitable; preserve hierarchy, contrast, and numeric clarity.
+Typography is a bold rounded or friendly grotesk for display headings, paired with compact SF Pro-like product text. Price is the strongest repeated numeric element, set bold and larger than seller, rating, delivery, or bonus metadata. Section headings are bold but smaller than campaign copy; product titles use medium weight and wrap sparingly; secondary details are small gray text. Purple links and actions remain legible without competing with price. Dynamic Type should increase card and row height, allow titles and form labels to wrap, and preserve price-title-metadata order rather than shrinking all commerce text uniformly.
 
 # Screen composition
 
-### Spacing System
+Discovery archetypes begin with a top search field, optional horizontal chips, and a vertical sequence of wide rounded promo banners, category rails, or two-column product grids. Product cards allocate their upper majority to a contained or cropped packshot and their lower portion to price, title, rating, seller, delivery, bonus, and compact action. Category pages mix rounded campaign imagery with object tiles and dense scrolling content. Detail archetypes use a large image gallery, compact top overlay icons, stacked product information, and a sticky lower purchase region.
 
-Use a 4 points base, 8–12 points card gaps, and 12–16 points screen gutters.
-
-### Grid & Container
-
-Home uses campaign rails, results two columns, and detail or checkout one column.
-
-### Whitespace Philosophy
-
-Dense content stays grouped; focused decisions receive more breathing room.
-
-Surface hierarchy observed in the source:
-
-| Level | Treatment | Use |
-|---|---|---|
-| 0 | Base canvas | Primary content |
-| 1 | Grouped surface | Cards and sections |
-| 2 | Sticky or floating action | Commitment |
-| 3 | Sheet over scrim | Focused choice |
-
-### Decorative Depth
-
-Let content imagery and approved visual language provide depth; keep ordinary controls restrained.
+Cart, checkout, address, profile, and settings archetypes use a simpler white single column with thin dividers, list rows, toggles, and large purple actions anchored above the safe area or keyboard. Filters rise in full or partial sheets with chips, sliders, toggles, and a bottom CTA. Empty states center one small branded object or symbol with concise text. The dark floating dock remains over app-native main surfaces but yields to task-specific bottom actions or native external payment/browser chrome.
 
 # Navigation appearance
 
-Preserve the reference navigation hierarchy and make only the active destination prominent.
+The signature navigation is a fully rounded dark translucent bottom dock floating above the home indicator. Items use white or muted glyphs and compact labels; the selected destination appears on a white capsule with dark or purple content. A cart control may float as a separate circular bubble. Top bars use a simple back affordance and compact search, share, favorite, or overflow icons. Sheets have white fill, large upper corners, and optional grab handle. Web and payment screens may switch to Safari-like or provider-native bars without being masked by the marketplace shell.
 
 # Components
 
-### Buttons
-
-Primary actions use the brand color; secondary actions use grouped surfaces and clear labels.
-
-### Cards & Containers
-
-Product cards combine image, price, seller, rating, delivery, and bonuses.
-
-### Inputs & Forms
-
-Inputs inherit the brand focus, shared radius, and text hierarchy instead of generic native styling.
+The primary CTA is a saturated purple rounded rectangle with white semibold text; disabled states recede toward pale gray. Product cards use a white or pale surface, 16-point-class corners, a large image region, bold price, compact metadata stack, heart/share glyphs, and a small purchase control. Bonus badges are green pills or highlighted labels. Search is a wide pale rounded field with leading magnifier and trailing scan icon. Promo banners use high-saturation imagery and intentional typography inside rounded clipping. Filter chips are small pills with clear selected fill or outline. Checkout and settings rows use thin separators, trailing values or toggles, and minimal card framing.
 
 # Imagery and icons
 
-Let content imagery and approved visual language provide depth; keep ordinary controls restrained.
-
-Contain product shots; keep campaign art inside rounded frames.
-
-If final imagery is not yet available, any placeholder must preserve the documented scale, placement, crop, and visual weight rather than removing that layer.
+Product photography and campaign artwork are compositionally essential. Packshots should retain recognizable shape and packaging, use `aspectFit` where inspection matters, and use controlled `cover` only for lifestyle scenes. Campaign banners use rounded frames, high saturation, and deliberate focal crops. Category grids include soft polished 3D objects; isolated empty-state and payment art uses different treatments. The evidence does not establish one reusable authored illustration system across states, so do not extrapolate a universal 3D or mascot language from those assets. Generic placeholders cannot replace product photography during design evaluation.
 
 # States
 
-Keep progress, result, and recovery close to the content or action they describe.
+Observed states include splash, dense home feed, benefit and campaign landings, category grids and lists, barcode/search/filter surfaces, populated and empty favorites, product detail and image variants, reviews and questions, compare and share, cart addition and removal, checkout forms, address and recipient editing, points toggles, provider payment, profile and personal data, bonus history, notifications, active and cancelled orders, pending credit, saved cards, interests, and support. White canvas, purple action, green bonus, rounded products, compact metadata, and floating dock remain stable where app-native shell is present.
 
 # iOS adaptation
 
-### Touch Targets
-
-Primary actions, navigation, cards, and contextual controls remain at least 44 points.
-
-### Collapsing Strategy
-
-Preserve the main decision, stack complex groups, and reduce secondary detail before shrinking type.
-
-### Image Behavior
-
-Preserve source aspect ratios and keep focal content inside safe areas.
-
-Apply these rules within current iPhone safe areas and scrolling containers. Keep interactive targets at least 44 points, preserve a logical VoiceOver order, and let Dynamic Type wrap supporting text without flattening the documented hierarchy. Preserve the documented appearance.
+Respect the top safe area for search and compact icons, and float the dock above the home indicator without covering sticky purchase actions or the last content row. Use vertical scrolling for feeds, grids, details, forms, and filters; horizontal rails may scroll independently. On compact widths, keep two product columns only while price and title remain legible, otherwise collapse to one wider card. Preserve at least 44-point actions around hearts, scan, chips, dock items, cart, toggles, and CTAs. VoiceOver order should announce product image description, price, title, rating/seller, bonus, then action; sale, bonus, selected, and destructive states cannot rely on color alone. Native keyboard, payment, web, and action-sheet transitions should remain system-owned.
 
 # Anti-generic checklist
 
-- Don't introduce unrelated decorative styles.
-- Don't hide status or secondary conditions.
-- Don't use heavy shadows around every container.
-- Do not replace the documented hierarchy with a generic stack of identical white cards or `Form` sections.
-- Do not use default blue tint, an unstyled `TabView`, arbitrary SF Symbols, or uniform corner radii when they contradict the recorded tokens and components.
-- Do not omit compositionally important imagery while final assets are pending; preserve its footprint with a faithful placeholder.
+- Do not replace the floating dark dock with an unstyled `TabView` or a full-width white tab bar.
+- Do not replace purple purchasing controls with default blue or merge green bonus meaning into purple.
+- Do not turn product cards into uniform text-only white tiles or shrink photography to a decorative thumbnail.
+- Do not crop packshots like lifestyle banners or use generic stock photography for products.
+- Do not apply the same radius to cards, chips, dock, selected capsule, sheets, and icon buttons.
+- Do not fill checkout and forms with nested promotional cards or campaign gradients.
+- Do not infer a universal illustration style from isolated 3D category objects, mascot-like empty states, or payment art.
+- Do not cover bottom CTAs or content with the floating dock on compact iPhones.
 
 </design-context>

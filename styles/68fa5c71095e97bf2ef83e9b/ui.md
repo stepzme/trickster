@@ -3,151 +3,99 @@
 version: 1
 platform: iOS
 name: Wink-design-analysis
-description: "A cinematic near-black entertainment system with heavy extended display type, vivid orange-red action gradients, poster-led shelves, and rounded media cards. Content imagery provides most color while the interface stays dark, bold, and immersive."
-
+description: "A cinematic near-black entertainment interface with edge-to-edge poster imagery, oversized heavy rounded titles, orange-to-red gradient actions, dense horizontal media rails, compact orange rating badges, and a low-contrast dark tab bar beneath the content."
 colors:
-  primary: "#FF5A2E"
-  on-primary: "#FFFFFF"
-  primary-pressed: "#E94725"
-  ink: "#FFFFFF"
-  ink-muted: "#B7ADB6"
-  ink-subtle: "#777078"
   canvas: "#080006"
-  surface-1: "#19161A"
-  surface-2: "#242126"
-  surface-3: "#302B31"
-  hairline: "#3B353D"
-  semantic-success: "#62C97A"
-  semantic-warning: "#FFB547"
-  semantic-danger: "#FF4D6A"
-  semantic-overlay: "#000000"
-
+  surface-primary: "#19161A"
+  surface-secondary: "#242126"
+  accent-primary: "#FF5A2E"
+  accent-secondary: "#FF315F"
+  text-primary: "#FFFFFF"
+  text-secondary: "#B7ADB6"
+  divider: "#3B353D"
+  destructive: "#FF4D6A"
 typography:
-  display-xl: { fontFamily: Wink Sans, fontSize: 40, fontWeight: 750, lineHeight: 1.05, letterSpacing: -1.0 }
-  display-lg: { fontFamily: Wink Sans, fontSize: 32, fontWeight: 700, lineHeight: 1.1, letterSpacing: -0.7 }
-  display-md: { fontFamily: Wink Sans, fontSize: 26, fontWeight: 700, lineHeight: 1.15, letterSpacing: -0.4 }
-  headline: { fontFamily: Wink Sans, fontSize: 22, fontWeight: 650, lineHeight: 1.2, letterSpacing: -0.2 }
-  card-title: { fontFamily: Wink Sans, fontSize: 17, fontWeight: 650, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: Wink Sans, fontSize: 16, fontWeight: 500, lineHeight: 1.35, letterSpacing: 0 }
-  body-lg: { fontFamily: Wink Sans, fontSize: 16, fontWeight: 400, lineHeight: 1.45, letterSpacing: 0 }
-  body: { fontFamily: Wink Sans, fontSize: 14, fontWeight: 400, lineHeight: 1.42, letterSpacing: 0 }
-  body-sm: { fontFamily: Wink Sans, fontSize: 12, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
-  caption: { fontFamily: Wink Sans, fontSize: 11, fontWeight: 450, lineHeight: 1.3, letterSpacing: 0 }
-  button: { fontFamily: Wink Sans, fontSize: 14, fontWeight: 600, lineHeight: 1.2, letterSpacing: 0 }
-  eyebrow: { fontFamily: Wink Sans, fontSize: 11, fontWeight: 650, lineHeight: 1.25, letterSpacing: 0.2 }
-  mono: { fontFamily: System Mono, fontSize: 12, fontWeight: 400, lineHeight: 1.4, letterSpacing: 0 }
-
-rounded: { xs: 6, sm: 10, md: 14, lg: 18, xl: 24, xxl: 30, pill: 9999, full: 9999 }
-spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
-
+  hero: {fontFamily: "SF Pro Rounded", fontSize: 40, fontWeight: 800, lineHeight: 44}
+  title: {fontFamily: "SF Pro Rounded", fontSize: 30, fontWeight: 700, lineHeight: 35}
+  section: {fontFamily: "SF Pro Rounded", fontSize: 22, fontWeight: 700, lineHeight: 27}
+  body: {fontFamily: "SF Pro Text", fontSize: 16, fontWeight: 400, lineHeight: 22}
+  label: {fontFamily: "SF Pro Text", fontSize: 14, fontWeight: 600, lineHeight: 19}
+  caption: {fontFamily: "SF Pro Text", fontSize: 12, fontWeight: 400, lineHeight: 16}
+spacing:
+  screen-horizontal: 18
+  section-gap: 32
+  card-padding: 14
+  control-gap: 12
+rounded:
+  control: 14
+  card: 18
+  sheet: 24
+  pill: 999
 components:
-  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: [14, 22]}
-  button-secondary: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: [12, 18]}
-  content-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 16 }
-  text-input: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: [12, 14]}
-  status-badge: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.pill}", padding: [4, 8]}
-  bottom-nav: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.caption}", rounded: "{rounded.xs}", height: 56 }
+  primary-action: {fill: "orange-red-gradient", foreground: "#FFFFFF", shape: "pill"}
+  secondary-action: {fill: "#242126", foreground: "#FFFFFF", shape: "pill-or-icon"}
+  primary-card: {fill: "media-artwork", foreground: "#FFFFFF", shape: "poster-or-wide-still"}
+  navigation: {fill: "#19161A", inactive: "#777078", selected: "#FFFFFF"}
 ---
 
 # Overview
 
-Wink is a dark entertainment canvas where large expressive headings, cinematic imagery, and one warm action color organize films, series, television, music, books, and sport.
+Wink is a dark cinematic catalog in which poster art, video stills, sports imagery, and music artwork supply nearly all color. The shell stays black or dark plum, while oversized rounded display titles, white type, orange-to-red gradient CTAs, and compact rating badges create a bold hierarchy. Browsing is built from dense horizontal rails and partial next-card cues rather than isolated dashboard panels.
 
 # Non-negotiable visual invariants
 
-- Let one hero or title lead each screen.
-- Keep the warm action unmistakable.
-- Preserve partial shelves as browse cues.
-- Style native controls to inherit Wink's visual language.
-- Heroes span edge to edge; poster shelves show partial next items; title pages use one continuous vertical column.
-- Preserve black breathing room around section titles and actions, but let visual catalogs remain dense.
+- Black or dark plum fills the complete screen and continues through both safe areas.
+- Large media artwork is the dominant visual mass: edge-to-edge heroes, tall posters, wide stills, and horizontal rails cannot be omitted.
+- Primary actions use a vivid orange-to-red gradient, white bold labels, and fully rounded or strongly rounded geometry.
+- Page and section headings use unusually heavy rounded or extended display type with strong scale contrast over small gray metadata.
+- Browsing rails reveal partial neighboring items and preserve poster or still aspect ratios.
+- Media cards use compact orange rating or status badges over or beside artwork.
+- The bottom tab bar remains dark and low contrast, with white or orange emphasis reserved for the selected item.
+- Forms, settings, and empty states keep the same dark shell even when media density drops.
 
 # Color and surfaces
 
-Use orange-to-coral for watch, confirm, purchase, and the Wink mark. Hot pink may label originals or editorial badges, but never compete with the primary action.
-
-Use an ink-black canvas, charcoal navigation, and softly differentiated dark cards. Light surfaces are exceptional overlays only.
-
-Use white for titles, pale gray for synopsis and metadata, and dim gray for inactive navigation.
-
-Use green for available or complete, amber for time-sensitive access, and coral-red for destructive or unavailable states.
+Ink black and dark plum form the uninterrupted application canvas. Charcoal differentiates tab bars, settings groups, fields, cards, disabled controls, and sheets without introducing light panels. White carries hero and page titles, primary labels, and active icons; pale gray carries synopsis, metadata, inactive navigation, and helper copy. Orange-to-coral or orange-to-red is the primary action and selection gradient, while hot pink may mark originals or editorial emphasis. Green signals available or completed state, amber time-sensitive access, and coral-red destructive or unavailable states. Media supplies blue, purple, skin tones, sport fields, and other large color masses. Default blue tint, light grouped backgrounds, or gray card dashboards would break the reference.
 
 # Typography
 
-Use a wide geometric display sans for titles and a neutral sans for body copy.
-
-Use 26–40 points heavy section and hero titles, 16–18 points card titles, 13–15 points body text, and 11–12 points metadata.
-
-Keep headings short, allow intentional line breaks, and avoid dense paragraphs over imagery.
-
-Use Druk Wide or a widened heavy grotesk for display; use SF Pro or Inter for body text.
-
-The hierarchy must remain legible with Dynamic Type: supporting text may wrap before the primary metric, title, or action loses its role.
+Display hierarchy uses a heavy, wide, rounded grotesk for 30–40-point hero and page titles and 22-point section headings. On iOS, SF Pro Rounded with heavy weight and slightly expanded width is a safe substitute when the original display face is unavailable; body and metadata use SF Pro Text. Titles are short, stacked when necessary, and rarely placed as long paragraphs over imagery. Card labels and buttons are semibold; synopsis and metadata are smaller gray text. Dynamic Type should move or wrap supporting text and increase settings rows while retaining the dominant title and CTA roles.
 
 # Screen composition
 
-Use a 4 points base, 18 points gutters, 12 points card gaps, and 28–36 points between shelves.
+Discovery archetypes begin with a compact logo/action cluster in the top safe area, a large hero or first rail, then a vertical scroll of titled horizontal media shelves. Posters and wide stills occupy most of each row, with partial next items visible at the trailing edge. Detail archetypes use an edge-to-edge image or video still in the upper portion with a dark gradient scrim, followed by title, metadata, synopsis, large CTA, and additional rails in one continuous column.
 
-Heroes span edge to edge; poster shelves show partial next items; title pages use one continuous vertical column.
-
-Preserve black breathing room around section titles and actions, but let visual catalogs remain dense.
-
-Use dark-to-transparent scrims over hero imagery, warm action gradients, and occasional luminous music artwork.
-
-Primary iPhone screens keep the documented content grouping and vertical rhythm inside a scroll container when content exceeds the viewport. Bottom-owned actions or navigation reserve the lower safe area rather than covering content.
+Player archetypes strip the composition to a black field, full-screen video, sparse edge controls, a progress line, and dark bottom sheets. Forms and settings use compact centered or top-aligned headings, charcoal fields or grouped rows, and one bottom-proximate orange action. Empty states leave a large centered illustration area, short copy, and an optional CTA while retaining black breathing room. Subscription and payment screens use vertically stacked dark offer rows and orange commitment controls rather than bright cards.
 
 # Navigation appearance
 
-Use a five-item dark bottom bar with white active icon and muted inactive items; keep search, trends, and profile visible above discovery.
-
-This section governs appearance only; product behavior and information architecture come from the approved Research and Planning artifacts.
+The main shell uses a dark five-item icon-and-label bottom bar with muted inactive states and white or orange selected emphasis. Top discovery chrome is compact and visually overlays the dark/media field. Detail and settings surfaces use a simple back arrow with either a centered title or large leading heading. Player chrome uses close, overflow, cast, quality, and transport glyphs around the screen edges. Bottom sheets are charcoal, use rounded top corners and an optional grab handle, and remain within the dark palette.
 
 # Components
 
-Use full-width orange gradient pills for watch and confirm; style native buttons with the same fill, radius, weight, and pressed state.
-
-Media cards prioritize artwork, then concise title, year, rating, or progress. Account cards use charcoal surfaces with one clear action.
-
-Use dark filled fields with pale text, minimal hairlines, and warm focus/action treatment.
-
-Represent rating, age, original, downloaded, reminder, and subscription status as compact badges or labeled rows.
-
-Controls retain at least a 44-point interactive area. Pressed and disabled treatments should stay within the documented palette and hierarchy.
+Primary CTAs are full-width orange-red gradient pills with white bold labels; disabled variants become dark gray without changing size. Media cards are artwork-first, with tall or wide aspect ratios, modest corner radii, compact title/metadata, and small orange rating badges. Filter rows use checks or segmented tabs with orange selection. Fields use dark fill, pale text, minimal hairlines, and an orange focus underline or action. Settings rows use charcoal grouping, white labels, gray values, switches, sliders, and chevrons. PIN and code entry use evenly spaced dark cells. Empty-state compositions use a centered character or line-art asset rather than a generic SF Symbol.
 
 # Imagery and icons
 
-Crop stills in wide editorial frames and posters in tall ratios. Keep faces and title artwork visible beneath scrims.
-
-Use cover for heroes and stills, preserve poster ratios, and apply bottom scrims where text overlaps.
-
-When imagery is part of the documented composition, it cannot be omitted while final assets are pending. A temporary asset must preserve its placement, crop, scale, and approximate visual weight.
+Film and series posters, editorial stills, sports, video, music, book covers, and promotional artwork are compositionally essential. Heroes and wide stills use face-aware `cover` plus a dark text scrim; posters and covers retain their vertical ratios and recognizable title artwork. Compact icons are monochrome or gray, with orange active states. The recurring black-and-white TV-headed/question-mark character is a distinct authored empty-state system and cannot be replaced with arbitrary symbols. Other colorful promotional artwork remains content-specific and does not redefine that empty-state language.
 
 # States
 
-Represent rating, age, original, downloaded, reminder, and subscription status as compact badges or labeled rows.
-
-Use green for available or complete, amber for time-sensitive access, and coral-red for destructive or unavailable states.
-
-Only the states documented above are specified; other states must preserve the same canvas, hierarchy, and component language without inventing a new visual system.
+Observed states include splash and registration, profile selection, populated home rails, idle and populated search, filters, recommendation prompt, empty notifications, media detail, selected favorite, playback and quality sheet, trailer, subscription offers, download and storage warning, TV guide, music promotion and sort, category catalogs, profile and parental settings, PIN fields, promo-code form, empty continue/download/reminder/subscription surfaces, devices and TV activation, and logout alert. Dark canvas, heavy type, orange action, media proportions, and compact controls remain stable.
 
 # iOS adaptation
 
-- Extend the documented canvas through the iPhone safe areas while keeping readable content within appropriate insets.
-- Use a vertical `ScrollView` for content that does not fit compact heights; keep documented bottom actions and navigation clear of the home indicator.
-- Watch, play, save, share, download, episode, and navigation targets require at least 44 points.
-- Keep title, watch action, progress, and current media mode visible; collapse cast, extras, and secondary metadata.
-- Present the keyboard and system permission UI natively, then return to the same visual context.
-- Preserve semantic reading order in VoiceOver and allow text to grow with Dynamic Type.
-- Preserve the documented appearance instead of introducing an unrelated light or dark palette.
+Extend the black canvas and hero imagery through safe areas while keeping titles and controls readable within 18-point-class insets. Use a vertical scroll container for discovery, detail, settings, offers, and catalogs; keep each media rail independently horizontal. Preserve posters and stills at stable aspect ratios and reveal partial neighbors rather than shrinking several full cards into the width. Keep tab, playback, card, filter, and CTA targets at least 44 points. On compact heights, keep title, current media, primary action, progress, and essential player controls visible before secondary metadata. VoiceOver order should follow heading, media description, metadata, action, then rail items. Native keyboards and alerts remain system-owned. The reference is dark-first with no general light appearance.
 
 # Anti-generic checklist
 
-- Do not use default iOS blue.
-- Do not brighten the canvas to generic gray.
-- Do not place long text directly on busy imagery.
-- Do not give every card a border or shadow.
-- Do not replace the documented canvas and surfaces with a generic grouped background and uniform white cards.
-- Do not use an unstyled `TabView`, default blue tint, or arbitrary SF Symbols when they contradict the reference.
-- Do not collapse every component to one corner radius or remove compositionally important imagery.
+- Do not replace the black cinematic field with generic system gray or white grouped cards.
+- Do not use default blue actions; preserve the orange-red gradient hierarchy.
+- Do not omit or flatten media rails, hero artwork, posters, ratings, or partial next-card cues.
+- Do not crop tall posters into uniform landscape cards or obscure title art with text.
+- Do not use an unstyled `TabView`; preserve the low-contrast dark bar and white/orange selection.
+- Do not apply one radius to posters, pills, sheets, inputs, and badges.
+- Do not use arbitrary SF Symbols or colorful promo assets in place of the recurring empty-state character.
+- Do not place long copy directly over busy imagery without the observed dark scrim.
 
 </design-context>

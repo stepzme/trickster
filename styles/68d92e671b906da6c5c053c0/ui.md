@@ -3,178 +3,99 @@
 version: 1
 platform: iOS
 name: VK-Messenger-design-analysis
-description: "A dark communication interface built from black and charcoal surfaces, compact avatar-led lists, blue call actions, violet messaging accents, and expressive gradient chat bubbles. It is familiar, dense, and optimized for frequent return."
-
+description: "A dense dark-mode messenger with black and charcoal list surfaces, white compact typography, blue-violet selected states, avatar-led rows, rounded search and composer fields, a four-item bottom bar, and circular call controls over frosted participant imagery."
 colors:
-  primary: "#4C8FF0"
-  on-primary: "#FFFFFF"
-  primary-pressed: "#3576D0"
-  accent-violet: "#8B56EE"
-  ink: "#F4F5F6"
-  ink-muted: "#989BA0"
-  ink-subtle: "#62656A"
   canvas: "#0B0C0D"
-  surface-1: "#18191B"
-  surface-2: "#2A2B2E"
-  hairline: "#34363A"
-  semantic-success: "#45B877"
-  semantic-warning: "#E2A23A"
-  semantic-danger: "#E95664"
-  semantic-overlay: "#000000"
-
+  surface-primary: "#18191B"
+  surface-secondary: "#2A2B2E"
+  accent-primary: "#4C8FF0"
+  accent-secondary: "#8B56EE"
+  text-primary: "#F4F5F6"
+  text-secondary: "#989BA0"
+  divider: "#34363A"
+  destructive: "#E95664"
 typography:
-  display-xl: { fontFamily: System Sans, fontSize: 36, fontWeight: 700, lineHeight: 1.08, letterSpacing: -0.5 }
-  display-lg: { fontFamily: System Sans, fontSize: 29, fontWeight: 700, lineHeight: 1.12, letterSpacing: -0.3 }
-  display-md: { fontFamily: System Sans, fontSize: 23, fontWeight: 650, lineHeight: 1.15, letterSpacing: 0 }
-  headline: { fontFamily: System Sans, fontSize: 20, fontWeight: 650, lineHeight: 1.2, letterSpacing: 0 }
-  card-title: { fontFamily: System Sans, fontSize: 16, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: System Sans, fontSize: 16, fontWeight: 450, lineHeight: 1.35, letterSpacing: 0 }
-  body-lg: { fontFamily: System Sans, fontSize: 16, fontWeight: 400, lineHeight: 1.4, letterSpacing: 0 }
-  body: { fontFamily: System Sans, fontSize: 14, fontWeight: 400, lineHeight: 1.4, letterSpacing: 0 }
-  body-sm: { fontFamily: System Sans, fontSize: 12, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
-  caption: { fontFamily: System Sans, fontSize: 10, fontWeight: 500, lineHeight: 1.3, letterSpacing: 0 }
-  button: { fontFamily: System Sans, fontSize: 15, fontWeight: 600, lineHeight: 1.2, letterSpacing: 0 }
-  eyebrow: { fontFamily: System Sans, fontSize: 10, fontWeight: 650, lineHeight: 1.25, letterSpacing: 0.3 }
-  mono: { fontFamily: System Mono, fontSize: 12, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
-
-rounded: { xs: 4, sm: 8, md: 12, lg: 16, xl: 22, xxl: 28, pill: 9999, full: 9999 }
-spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
-
+  hero: {fontFamily: "SF Pro Display", fontSize: 34, fontWeight: 700, lineHeight: 41}
+  title: {fontFamily: "SF Pro Display", fontSize: 28, fontWeight: 700, lineHeight: 34}
+  section: {fontFamily: "SF Pro Text", fontSize: 20, fontWeight: 600, lineHeight: 25}
+  body: {fontFamily: "SF Pro Text", fontSize: 16, fontWeight: 400, lineHeight: 22}
+  label: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 600, lineHeight: 20}
+  caption: {fontFamily: "SF Pro Text", fontSize: 12, fontWeight: 400, lineHeight: 16}
+spacing:
+  screen-horizontal: 12
+  section-gap: 24
+  card-padding: 14
+  control-gap: 10
+rounded:
+  control: 12
+  card: 16
+  sheet: 24
+  pill: 999
 components:
-  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [13, 18]}
-  chat-row: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: [10, 12]}
-  message-bubble: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: [9, 12]}
-  composer: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.pill}", padding: [9, 12]}
-  bottom-nav: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", height: 58 }
+  primary-action: {fill: "#4C8FF0", foreground: "#FFFFFF", shape: "rounded-rectangle-or-circle"}
+  secondary-action: {fill: "#2A2B2E", foreground: "#F4F5F6", shape: "pill-or-icon"}
+  primary-card: {fill: "#18191B", foreground: "#F4F5F6", shape: "flat-list-or-message"}
+  navigation: {fill: "#0B0C0D", inactive: "#62656A", selected: "#4C8FF0"}
 ---
 
 # Overview
 
-VK Messenger uses a dark utility shell for lists and calls, then allows richer wallpaper and violet message styling inside conversations. Avatars, presence, and unread state organize dense communication.
+VK Messenger is a dark, high-frequency communication interface whose identity comes from dense avatar-led rows, compact white type, blue-violet interaction states, and native iOS transient surfaces. The shell is predominantly black and charcoal. Conversations can introduce purple doodle wallpaper, richer bubbles, media, stickers, or participant imagery, but navigation, search, settings, and calls remain operational and restrained.
 
 # Non-negotiable visual invariants
 
-- The reference consistently shows list hierarchy compact and readable.
-- The reference consistently shows attach state to the related chat.
-- The reference consistently shows preserve large call and compose targets.
-- The reference consistently shows maintain bubble contrast over wallpaper.
-- The reference consistently shows a dark communication interface built from black and charcoal surfaces.
-- The reference consistently shows compact avatar-led lists.
-- The reference consistently shows blue call actions.
-- The reference consistently shows violet messaging accents.
+- Black or near-black fills the viewport; charcoal provides the only ordinary surface elevation for search, inputs, grouped panels, and sheets.
+- Lists are compact and avatar-led, with stronger names, muted previews, aligned timestamps, and localized badges or status.
+- Blue and violet carry primary selection, messaging, and call emphasis; green and red stay semantic.
+- Rounded search fields and composer fields recur across dense screens and remain visually distinct from the flat list behind them.
+- A dark four-item icon-and-label bottom bar uses muted inactive items and a blue or light selected state.
+- Calls use frosted or blurred participant surfaces, a black lower control region, large circular buttons, and a uniquely red hang-up action.
+- Bottom sheets and action sheets are the primary transient surface, with charcoal fill, large top corners, and visible dimmed context.
+- Identity and status are carried by circular avatars, small badges, and concise text rather than large decorative cards.
 
 # Color and surfaces
 
-### Brand & Accent
-
-Blue owns contact, call, link, and general navigation actions. Violet belongs to message controls, chat bubbles, and expressive conversation themes.
-
-### Surface
-
-Use near-black for lists, charcoal for search and sheets, and optional dark wallpaper behind chat bubbles.
-
-### Text
-
-Off-white carries names and messages; gray carries presence, timestamps, previews, and inactive navigation.
-
-### Semantic
-
-Green marks online or successful delivery, amber warns, and red marks missed calls or destructive actions.
+Near-black is the default canvas across lists, settings, chats, and navigation. Charcoal tones distinguish search bars, message composer, bubbles, sheets, selected rows, and grouped settings without creating a bright layered dashboard. Off-white carries names, messages, and titles; gray carries previews, timestamps, presence, placeholders, and inactive navigation. Blue marks navigation, call, link, switch, and selected control states, while violet is especially visible in conversation emphasis, themes, and messaging controls. Green signals positive or online state; red marks missed, destructive, or hang-up state. Decorative gradients, pale system backgrounds, or exposed white forms would break the reference.
 
 # Typography
 
-### Font Family
-
-Use a familiar system sans with compact list metrics and strong multilingual support.
-
-### Hierarchy
-
-Use 23–36 points onboarding titles, 20 points page titles, 14–16 points names and messages, and 10–12 points status.
-
-### Principles
-
-Keep names stronger than previews, timestamps aligned, and message copy comfortable at small sizes.
-
-### Note on Font Substitutes
-
-Use SF Pro or Inter with medium weights and reliable Cyrillic coverage.
+Typography uses SF Pro-like proportions with strong Cyrillic support. Large bold type is limited to onboarding or empty-state titles; screen titles are compact semibold; names and message labels sit around 15–17 points; previews, timestamps, and tab labels are smaller and gray. In lists, name weight must clearly exceed preview weight, and timestamps align without competing with unread badges. Message text uses comfortable regular weight inside compact bubbles. Dynamic Type should increase row and bubble height, wrap previews or labels when space allows, and preserve name-message-metadata hierarchy rather than shrinking avatars or controls.
 
 # Screen composition
 
-### Spacing System
+List archetypes use a safe-area top bar, a rounded full-width search field, and a continuous vertical table of avatar-text-state rows above the fixed bottom bar. Horizontal insets are tight, around 12–16 points, because density is part of the style. Conversation archetypes use a compact participant bar, vertically scrolling bubbles or media over a dark or themed wallpaper, and a persistent rounded composer above the keyboard or home indicator. Settings and picker archetypes use grouped dark rows with sparse separators, trailing controls, and no card-per-section treatment.
 
-Use a 4 points base, 12 points gutters, 8–10 points list gaps, and 16–24 points between grouped account sections.
-
-### Grid & Container
-
-Lists align avatar, text block, timestamp, and state. Conversations reserve the bottom for a persistent composer.
-
-### Whitespace Philosophy
-
-Keep list rhythm compact. Give media, quoted messages, and grouped call actions extra internal space.
-
-Surface hierarchy observed in the source:
-
-Use tonal sheets and subtle bubble contrast. Chat wallpaper may add atmospheric depth without reducing text contrast.
-
-### Decorative Depth
-
-Onboarding may use blue gradients and translucent device art. Core lists remain flat; chat themes carry optional decoration.
+Call archetypes devote most of the screen to participant tiles, avatars, blur, or video, with status in safe upper regions and circular controls in a stable lower strip. Member, reaction, chat, recording, access, and sharing controls rise in rounded charcoal sheets. Onboarding or QR archetypes allow a larger centered graphic, but ordinary screens return immediately to dense native tables and controls.
 
 # Navigation appearance
 
-Use four bottom destinations for Contacts, Calls, Chats, and Account. Conversation navigation stays local and focused.
+The main shell uses a dark four-item bottom bar with outline icons, compact labels, muted inactive states, and blue or off-white selection. Task-focused screens use iOS back chevrons, compact centered titles, and blue or white Cancel/Done actions. Search uses a rounded graphite field. Sheets have charcoal fill, large upper corners, a short grab handle, and vertically arranged rows. Native permission dialogs, keyboards, alerts, and action sheets retain iOS geometry in dark appearance. Call surfaces replace the tab bar with their own black circular-control dock.
 
 # Components
 
-### Buttons
-
-Call and contact actions use blue icons or tiles; message send and voice use violet. Native controls must inherit the dark palette and current accent.
-
-### Cards & Containers
-
-Chat rows remain mostly flat. Promotions, permission reminders, and community prompts use contained graphite cards.
-
-### Inputs & Forms
-
-Search uses a graphite field; the composer is a dark pill with attachment, emoji, media, and voice actions.
+Chat and contact rows use a circular avatar, leading-aligned name and preview stack, trailing timestamp or status, and optional compact badge. Message bubbles are rounded charcoal or violet-tinted shapes with off-white text; media keeps its aspect ratio within rounded clipping. The composer is a dark pill containing attachment, emoji or media, text, and voice or send controls. Search is a wide graphite pill with a leading magnifier. Call controls are large flat circles with monochrome glyphs, with blue for active emphasis and red for hang-up. Settings rows use switches, checks, segmented controls, chips, or chevrons aligned to the trailing edge. Empty states use one line icon and short centered text.
 
 # Imagery and icons
 
-Onboarding may use blue gradients and translucent device art. Core lists remain flat; chat themes carry optional decoration.
-
-Avatars are circular and media respects its aspect ratio inside rounded bubbles. There is no standalone illustration system.
-
-If final imagery is not yet available, any placeholder must preserve the documented scale, placement, crop, and visual weight rather than removing that layer.
+Real avatars, contact thumbnails, message media, QR content, participant video, and call blur are functional imagery and should retain their visual footprint. Avatars use face-aware circular `cover`; message attachments preserve their natural aspect ratio; QR codes use contained square framing. Icons are simple monochrome line glyphs. Purple doodle wallpaper, Vmoji assets, sticker graphics, onboarding visuals, empty-state symbols, and promotional cards vary in construction and role; together they do not establish one stable authored illustration system. Do not extrapolate them into a universal decorative language.
 
 # States
 
-Online, typing, unread, pinned, muted, delivered, missed call, and recording states appear beside the relevant chat or participant.
+Observed states include onboarding, populated and searched lists, message sending with keyboard, phantom or themed conversation, unread and muted rows, profile and contact panels, permission alerts, active and grouped calls, participant access, recording and broadcast controls, reactions, in-call chat, scheduled-call forms, archive, sticker and avatar pickers, appearance choices, cache and privacy settings, blocked lists, location panels, and payment promos. Dark canvas, native navigation, rounded inputs, compact type, avatar hierarchy, and blue-violet selection remain constant. Status changes remain local to badges, icons, controls, or text.
 
 # iOS adaptation
 
-### Touch Targets
-
-Chat rows, avatars, tabs, call controls, composer actions, and navigation require at least 44 points targets.
-
-### Collapsing Strategy
-
-Keep participant, messages, composer, and call actions visible. Move media, search, and advanced chat tools into panels.
-
-### Image Behavior
-
-Use `cover` for avatars and story media, `contain` for files and QR codes, and preserve message attachment aspect ratios.
-
-Apply these rules within current iPhone safe areas and scrolling containers. Keep interactive targets at least 44 points, preserve a logical VoiceOver order, and let Dynamic Type wrap supporting text without flattening the documented hierarchy. Preserve the documented appearance.
+Use safe-area-aware top bars, a bottom inset for the four-item bar, and keyboard-aware positioning for the composer. Long lists, messages, settings, members, and sheets must scroll while top bars and active input remain stable. Preserve at least 44-point targets around compact icons, avatars, rows, tabs, call controls, and composer actions. On compact widths, truncate previews before names, keep timestamps and badges readable, and allow message bubbles to narrow rather than shrinking type. VoiceOver order should follow row avatar/name/preview/state, or conversation participant/messages/composer; online, unread, muted, recording, and destructive state must not rely on color alone. Keep native permission transitions system-owned. The sampled reference is dark-first; do not expose light defaults.
 
 # Anti-generic checklist
 
-- Do not decorate the chat list heavily.
-- Do not make previews compete with names.
-- Do not use red outside warning or failure.
-- Do not expose light native controls.
-- Do not replace the documented hierarchy with a generic stack of identical white cards or `Form` sections.
-- Do not use default blue tint, an unstyled `TabView`, arbitrary SF Symbols, or uniform corner radii when they contradict the recorded tokens and components.
-- Do not omit compositionally important imagery while final assets are pending; preserve its footprint with a faithful placeholder.
+- Do not replace the dark dense list with a stack of elevated cards or oversized rows.
+- Do not expose light `Form`, search, alert, or sheet styling inside the dark shell.
+- Do not use an unstyled `TabView`; preserve four compact items and the muted-to-blue/light selected contrast.
+- Do not let previews, timestamps, or badges compete with participant names.
+- Do not replace the persistent composer with a generic text field and detached send button.
+- Do not reuse red outside missed, destructive, or hang-up states.
+- Do not apply one radius to avatars, bubbles, sheets, pills, call circles, and media.
+- Do not turn isolated Vmoji, QR, onboarding, wallpaper, or promo graphics into general decoration.
 
 </design-context>

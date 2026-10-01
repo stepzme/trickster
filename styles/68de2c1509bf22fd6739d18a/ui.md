@@ -3,177 +3,116 @@
 version: 1
 platform: iOS
 name: Pomosch-design-analysis
-description: "A humane aid interface combining a white canvas, documentary photography, charcoal support actions, bright blue navigation, lavender progress bars, green completion states, and small pastel line illustrations."
-colors: {primary: "#348EF4", on-primary: "#FFFFFF", primary-focus: "#2472C9", ink: "#171A1C", ink-muted: "#6C7075", ink-subtle: "#9DA1A6", ink-tertiary: "#C7CACD", canvas: "#FFFFFF", surface-1: "#F7F7F8", surface-2: "#F0EEF8", surface-3: "#E7E5EF", surface-4: "#DAD8E3", hairline: "#E7E8EA", hairline-strong: "#CDD1D5", hairline-tertiary: "#B6BCC1", inverse-canvas: "#293331", inverse-surface-1: "#36413F", inverse-surface-2: "#46514F", inverse-ink: "#FFFFFF", brand-secure: "#8C7CF4", semantic-success: "#7DD12E", semantic-overlay: "#111514"}
+description: "A humane photo-led aid interface with white and pale-lilac surfaces, bright-blue navigation, charcoal commitment actions, lavender progress, compact financial reporting, persistent tab navigation, and large rounded detail sheets."
+colors:
+  canvas: "#FFFFFF"
+  surface-primary: "#FFFFFF"
+  surface-secondary: "#F0EEF8"
+  accent-primary: "#348EF4"
+  accent-secondary: "#8C7CF4"
+  text-primary: "#171A1C"
+  text-secondary: "#6C7075"
+  divider: "#E7E8EA"
+  destructive: "#E75555"
 typography:
-  display-xl: {fontFamily: SF Pro Display, fontSize: 36, fontWeight: 500, lineHeight: 1.06, letterSpacing: -0.8}
-  display-lg: {fontFamily: SF Pro Display, fontSize: 30, fontWeight: 500, lineHeight: 1.10, letterSpacing: -0.5}
-  display-md: {fontFamily: SF Pro Display, fontSize: 25, fontWeight: 500, lineHeight: 1.14, letterSpacing: -0.3}
-  headline: {fontFamily: SF Pro Display, fontSize: 21, fontWeight: 600, lineHeight: 1.20, letterSpacing: -0.2}
-  card-title: {fontFamily: SF Pro Text, fontSize: 16, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0}
-  subhead: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 500, lineHeight: 1.30, letterSpacing: 0}
-  body-lg: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 400, lineHeight: 1.42, letterSpacing: 0}
-  body: {fontFamily: SF Pro Text, fontSize: 13, fontWeight: 400, lineHeight: 1.38, letterSpacing: 0}
-  body-sm: {fontFamily: SF Pro Text, fontSize: 11, fontWeight: 400, lineHeight: 1.32, letterSpacing: 0}
-  caption: {fontFamily: SF Pro Text, fontSize: 10, fontWeight: 400, lineHeight: 1.25, letterSpacing: 0}
-  button: {fontFamily: SF Pro Text, fontSize: 14, fontWeight: 500, lineHeight: 1.20, letterSpacing: 0}
-  eyebrow: {fontFamily: SF Pro Text, fontSize: 10, fontWeight: 500, lineHeight: 1.20, letterSpacing: 0.1}
-  mono: {fontFamily: SF Mono, fontSize: 11, fontWeight: 400, lineHeight: 1.38, letterSpacing: 0}
-rounded: {xs: 4, sm: 8, md: 12, lg: 18, xl: 24, xxl: 30, pill: 9999, full: 9999}
-spacing: {xxs: 4, xs: 8, sm: 12, md: 16, lg: 20, xl: 24, xxl: 32, section: 44}
+  hero: {fontFamily: "SF Pro Display", fontSize: 32, fontWeight: 500, lineHeight: 38}
+  title: {fontFamily: "SF Pro Display", fontSize: 26, fontWeight: 600, lineHeight: 32}
+  section: {fontFamily: "SF Pro Text", fontSize: 21, fontWeight: 600, lineHeight: 26}
+  body: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 400, lineHeight: 21}
+  label: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 600, lineHeight: 20}
+  caption: {fontFamily: "SF Pro Text", fontSize: 12, fontWeight: 400, lineHeight: 16}
+spacing:
+  screen-horizontal: 16
+  section-gap: 24
+  card-padding: 16
+  control-gap: 10
+rounded:
+  control: 12
+  card: 18
+  sheet: 28
+  pill: 999
 components:
-  button-primary: {backgroundColor: "{colors.inverse-canvas}", textColor: "{colors.inverse-ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [14, 18]}
-  button-primary-pressed: {backgroundColor: "{colors.inverse-surface-1}", textColor: "{colors.inverse-ink}", typography: "{typography.button}", rounded: "{rounded.sm}"}
-  button-secondary: {backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [12, 16]}
-  button-tertiary: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [10, 14]}
-  beneficiary-card: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 14}
-  report-card: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 14}
-  text-input: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: [12, 14]}
-  status-badge: {backgroundColor: "{colors.semantic-success}", textColor: "{colors.ink}", typography: "{typography.caption}", rounded: "{rounded.pill}", padding: [3, 7]}
-  bottom-nav: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink-subtle}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: [8, 10]}
+  photo-card: {fill: "surface-primary", radius: 18, image: "wide documentary crop", content: "progress and amount"}
+  primary-action: {fill: "#293331", text: "white medium", radius: 12, height: 52}
+  progress-bar: {track: "pale lilac", fill: "accent-secondary or success", radius: 999}
+  status-chip: {fill: "semantic tint", radius: 999, label: "compact"}
+  bottom-navigation: {fill: "surface-primary", selected: "blue", icons: "thin line"}
 ---
 
 # Overview
 
-Pomosch balances trust and warmth. Documentary photography makes aid concrete, white and pale lavender keep financial detail calm, charcoal anchors the support action, and blue marks navigation and project-level tools.
-
-**Key Characteristics:** white canvas, documentary portraits, charcoal donation actions, blue navigation, lavender progress, lime completion, pastel line illustrations, and transparent reporting modules.
+Pomosch is a humane, photo-led aid interface in which documentary images make people and projects concrete while white and pale-lilac surfaces keep amounts, progress, and reports calm. Bright blue identifies navigation and secondary actions, charcoal anchors commitment, and lavender or green communicates collection status. Large rounded cards and full-height detail sheets balance emotional imagery with compact, transparent financial information.
 
 # Non-negotiable visual invariants
 
-- Sampled screens consistently use white canvas.
-- The reference consistently shows documentary portraits.
-- The reference consistently shows charcoal donation actions.
-- Navigation consistently uses blue navigation.
-- The reference consistently shows lavender progress.
-- The reference consistently shows lime completion.
-- The reference consistently shows pastel line illustrations.
-- The reference consistently shows transparent reporting modules.
+- Documentary photography remains the leading visual mass on person, project, onboarding, and detail surfaces.
+- White dominates the canvas; pale gray and lilac group progress, reporting, payment, and filter controls.
+- Bright blue marks selected navigation, links, active segments, and secondary project actions.
+- High-emphasis commitment actions use dark charcoal rather than default blue.
+- Aid cards pair a wide photo with person or project identity, amount, progress, status chips, and a nearby action.
+- Detail content often appears as a tall white rounded sheet over a darkened background, with a fixed bottom action.
+- Progress uses lavender or green bars and explicit amounts rather than celebratory decorative effects.
+- Photos, avatars, partner assets, and sparse line decorations remain content-specific; they do not form a standalone illustration system.
 
 # Color and surfaces
 
-### Brand & Accent
+The principal canvas and cards are white. Very pale gray or lilac around `#F0EEF8` groups reporting modules, filters, payment controls, and supporting panels. Large sheets use white over a black or dimmed scrim, with subtle surface separation rather than heavy shadow.
 
-Bright blue owns active navigation, project support shortcuts, and links. Charcoal is the primary donation action; lavender carries collection progress.
-
-### Surface
-
-White is continuous, pale gray and lavender group financial or reporting modules, and photography fills the top of beneficiary cards.
-
-### Text
-
-Near-black leads names, amounts, and headings; gray carries location, cadence, conditions, and explanatory copy.
-
-### Semantic
-
-Lime green confirms collected goals, blue marks action, lavender marks progress, and red flags urgent remaining time.
+Blue around `#348EF4` identifies active navigation, links, selected segments, and secondary actions. Violet around `#8C7CF4` appears in payment or subscription controls and progress. Dark charcoal fills the strongest support action. Soft green communicates reached, collected, or successful states; red and orange flag urgent or destructive conditions. Applying blue to every primary commitment or flooding cards with semantic color would weaken the observed hierarchy.
 
 # Typography
 
-### Font Family
+Use SF Pro Display and SF Pro Text with clear Cyrillic support and tabular amounts. Screen titles are roughly 28-32 points medium or semibold, modal and sheet titles 20-24 points, card titles 18-20 points, body 14-16 points, and metadata 11-13 points. Monetary values use selective weight rather than extreme display scale.
 
-Use SF Pro Display for headings and amounts and SF Pro Text for aid details, reports, and navigation.
-
-### Hierarchy
-
-| Token | Size | Weight | Use |
-|---|---:|---:|---|
-| display-lg | 30 points | 500 | Project amount |
-| headline | 21 points | 600 | Person or section |
-| card-title | 16 points | 600 | Aid target |
-| body | 13 points | 400 | Detail |
-| caption | 10 points | 400 | Location and status |
-
-### Principles
-
-- Lead with person, need, amount, and progress.
-- Keep evidence and reporting easy to scan.
-- Use restrained weight and color to avoid sensationalizing aid.
-
-### Note on Font Substitutes
-
-Use the platform sans with clear Cyrillic, tabular amounts, and soft medium weights.
+Names, needs, amounts, and progress lead; location, cadence, supporter count, and conditions remain gray and compact. Text is mainly left-aligned, with centered titles and status moments in sheets. Dynamic Type should expand cards, report rows, and amount lines while preserving the photo-to-identity-to-progress hierarchy.
 
 # Screen composition
 
-### Spacing System
+Feed screens use a vertically scrolling series of large rounded photo cards within 16-point gutters above persistent bottom navigation. A wide documentary image occupies the upper portion; identity, concise need, progress bar, amount rows, chips, and action sit below. Horizontal category or filter chips may precede the feed.
 
-Use a 4 points base, 12–16 points card padding, 16 points gutters, and clear vertical gaps between need, progress, evidence, and action.
+Detail archetypes use a full-height or tall white rounded sheet over a dimmed background. The sheet stacks title, photo or avatar, progress, financial summary, reporting evidence, donor rows, and a fixed bottom CTA. Payment and form archetypes use radio lists, amount presets, fields, OTP boxes, toggles, and keyboard-aware bottom actions.
 
-### Grid & Container
-
-Help is a single feed of photo-led cards; Project is a vertically grouped information page; finances and reports use compact two-column summaries and lists.
-
-### Whitespace Philosophy
-
-Whitespace supports dignity and transparency. Avoid crowding a beneficiary profile with unrelated campaigns or gamified decoration.
-
-Surface hierarchy observed in the source:
-
-| Level | Treatment | Use |
-|---|---|---|
-| 0 | White canvas | Project and navigation |
-| 1 | Pale rounded group | Progress and reports |
-| 2 | Photo-led card | Beneficiary profile |
-| 3 | Sheet over context | Transfer and focused detail |
-
-### Decorative Depth
-
-Use documentary photography and small pastel line art; keep financial surfaces nearly flat with subtle grouping.
+Reports and finance use nearly flat pale modules, compact two-column summaries, document or donor rows, and explicit values. Empty, warning, confirmation, and success states center a concise icon or mark above short text and one clear action without replacing the surrounding surface language.
 
 # Navigation appearance
 
-Use five destinations for Project, Payments, Help, Doing, and Awards, with blue active state and gray inactive icons.
+The persistent bottom bar is white with thin line icons, small labels, gray inactive states, and blue selection. Top bars are minimal: a typographic logo or title at the left or center, small icon actions on the right, and ordinary back or close affordances on detail surfaces. Destination names and order must come from approved product artifacts.
+
+Bottom and full-height sheets use large rounded top corners, a close icon, generous top spacing, dimmed context, and a fixed bottom CTA. Segmented navigation uses a thin underline or concise selected label rather than a heavy filled tab.
 
 # Components
 
-### Buttons
+Photo cards use 18-point corners, a wide documentary crop, white information area, clear title, gray metadata, progress bar, amount summary, and compact chips. Progress tracks are pale lavender; active fill is violet or green depending on the visible state. Donor and report rows use avatars or small document assets with aligned amounts and dates.
 
-Primary help actions use charcoal, project shortcuts use blue, and completed states use lime-accented pills.
+Primary support actions are approximately 50-54 points high, charcoal-filled, white-labeled, and rounded 12 points. Blue or purple actions remain secondary or context-specific. Filter and category chips are compact pills; segmented tabs use a selected underline. Inputs are pale or white rounded controls with light borders and clear focus.
 
-### Cards & Containers
-
-Beneficiary cards align photo, cadence, category, location, goal, progress, supporters, and action; report modules show explicit amounts and documents.
-
-### Inputs & Forms
-
-Search, filters, profile forms, and transfer sheets use pale grouped controls; native behavior remains intact while presentation follows this palette and spacing.
+Payment presets, radio lists, toggles, and OTP boxes retain native interaction but match the palette and spacing. Disabled buttons become pale gray. Warning and success sheets use centered circular red or green icons, concise copy, and an anchored action.
 
 # Imagery and icons
 
-Use documentary photography and small pastel line art; keep financial surfaces nearly flat with subtle grouping.
+Real documentary photography and portraits dominate. Use respectful wide or portrait crops that keep the person and context readable; do not obscure faces with status UI. Avatars stay circular, and reporting or partner media stays bounded inside compact rows or cards. These photographs cannot be omitted while final assets are pending; placeholders must preserve crop, scale, and emotional weight.
 
-Use wide documentary portraits with a soft curved lower edge; place line illustrations inside compact pale rounded panels.
-
-If final imagery is not yet available, any placeholder must preserve the documented scale, placement, crop, and visual weight rather than removing that layer.
+Icons are thin monochrome system-like symbols, with small emoji-like category marks and partner logos where content requires them. Sparse basket, flower, person, or success line drawings are isolated supporting decoration mixed with photos and icons, not a coherent standalone illustration family. Do not generate a reusable character or scene system from them.
 
 # States
 
-Keep remaining days, amount raised, collection status, supporter count, reporting, and payment outcome adjacent to the related aid action.
+Observed states include populated photo feed, selected blue tab, category and filter selection, search, project detail sheet, progress and collected states, urgent warning chips, donor list, report and document rows, payment presets, selected radio row, OTP input, keyboard forms, disabled button, subscription or recurring-help prompt, dimmed warning confirmation, green success sheet, empty state, profile form, and native modal controls. Photography, white surfaces, explicit amounts, and restrained state color remain constant.
 
 # iOS adaptation
 
-### Touch Targets
+Respect status, bottom navigation, home indicator, keyboard, and sheet safe areas. Feed and detail content scroll vertically; fixed CTAs remain above the home indicator or keyboard. Full-height sheets require internal scrolling for reports and Dynamic Type while retaining rounded top geometry and close access.
 
-Filters, map, beneficiary cards, support actions, tabs, and report rows remain at least 44 points.
-
-### Collapsing Strategy
-
-Preserve person, need, amount, progress, reports, and support action; reduce secondary stories and partner content first.
-
-### Image Behavior
-
-Crop portraits respectfully around the subject and preserve curved card transitions; never stretch reporting imagery.
-
-Apply these rules within current iPhone safe areas and scrolling containers. Keep interactive targets at least 44 points, preserve a logical VoiceOver order, and let Dynamic Type wrap supporting text without flattening the documented hierarchy. Preserve the documented appearance.
+Cards, filters, tabs, report rows, amount presets, inputs, and bottom actions require at least 44-point hit regions. VoiceOver should follow person or project identity, need, progress and amounts, evidence, then action and navigation. On compact widths, stack financial summaries and allow metadata wrapping before shrinking imagery or controls. Preserve the light authored appearance and adequate contrast over photos.
 
 # Anti-generic checklist
 
-- Don't gamify urgent need with celebratory visual noise.
-- Don't hide reports or transfer conditions behind promotional copy.
-- Don't replace real beneficiary photography with generic illustration.
-- Do not replace the documented hierarchy with a generic stack of identical white cards or `Form` sections.
-- Do not use default blue tint, an unstyled `TabView`, arbitrary SF Symbols, or uniform corner radii when they contradict the recorded tokens and components.
-- Do not omit compositionally important imagery while final assets are pending; preserve its footprint with a faithful placeholder.
+- Do not replace documentary photography with generic illustration, symbols, or blank placeholders.
+- Do not gamify urgent need with oversized celebratory art or noisy reward effects.
+- Do not make every action blue; charcoal anchors the primary commitment.
+- Do not hide amounts, progress, status, fees, or reporting evidence behind promotional copy.
+- Do not turn the feed into identical text-only cards or default `Form` sections.
+- Do not use an unstyled `TabView`, arbitrary SF Symbols, or one radius everywhere.
+- Do not promote sparse line decoration into a standalone illustration package.
+- Do not copy the source product's destinations, categories, or contribution flow.
 
 </design-context>

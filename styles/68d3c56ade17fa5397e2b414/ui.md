@@ -3,178 +3,109 @@
 version: 1
 platform: iOS
 name: Telcell-Wallet-design-analysis
-description: "A light multifunction wallet built from white surfaces, pale gray grouping, coral navigation accents, cyan balance actions, compact service grids, and glossy multicolor 3D promotional cards. The visual tone is airy and modern while finance, rewards, QR, and banking remain explicit."
-
+description: "A light financial dashboard of white and pale-gray cards, coral selection and actions, cyan brand support, compact service grids, right-aligned transaction amounts, persistent four-item navigation, and heterogeneous card and promotional imagery."
 colors:
-  primary: "#F37A68"
-  on-primary: "#FFFFFF"
-  accent-cyan: "#54D4EA"
-  accent-violet: "#7462DB"
-  ink: "#25272B"
-  ink-muted: "#777B81"
-  ink-subtle: "#ADB0B5"
-  canvas: "#F7F7F9"
-  surface-1: "#FFFFFF"
-  surface-2: "#F0F1F4"
-  hairline: "#E5E6E9"
-  semantic-success: "#34B87A"
-  semantic-warning: "#F1B43A"
-  semantic-danger: "#E95A61"
-  semantic-overlay: "#000000"
-
+  canvas: "#FAFAFC"
+  surface-primary: "#FFFFFF"
+  surface-secondary: "#F3F4F6"
+  accent-primary: "#FF6656"
+  accent-secondary: "#25C7D9"
+  text-primary: "#25272B"
+  text-secondary: "#777B81"
+  divider: "#E5E6E9"
+  destructive: "#E95A61"
 typography:
-  display-xl: { fontFamily: System Sans, fontSize: 38, fontWeight: 700, lineHeight: 1.05, letterSpacing: -0.7 }
-  display-lg: { fontFamily: System Sans, fontSize: 32, fontWeight: 700, lineHeight: 1.1, letterSpacing: -0.4 }
-  display-md: { fontFamily: System Sans, fontSize: 27, fontWeight: 700, lineHeight: 1.15, letterSpacing: -0.2 }
-  headline: { fontFamily: System Sans, fontSize: 21, fontWeight: 700, lineHeight: 1.2, letterSpacing: 0 }
-  card-title: { fontFamily: System Sans, fontSize: 15, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: System Sans, fontSize: 17, fontWeight: 500, lineHeight: 1.3, letterSpacing: 0 }
-  body-lg: { fontFamily: System Sans, fontSize: 16, fontWeight: 400, lineHeight: 1.4, letterSpacing: 0 }
-  body: { fontFamily: System Sans, fontSize: 14, fontWeight: 400, lineHeight: 1.4, letterSpacing: 0 }
-  body-sm: { fontFamily: System Sans, fontSize: 12, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
-  caption: { fontFamily: System Sans, fontSize: 10, fontWeight: 400, lineHeight: 1.3, letterSpacing: 0 }
-  button: { fontFamily: System Sans, fontSize: 14, fontWeight: 600, lineHeight: 1.2, letterSpacing: 0 }
-  eyebrow: { fontFamily: System Sans, fontSize: 11, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0.2 }
-  mono: { fontFamily: System Mono, fontSize: 12, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
-
-rounded: { xs: 4, sm: 8, md: 12, lg: 16, xl: 22, xxl: 28, pill: 9999, full: 9999 }
-spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
-
+  hero: {fontFamily: "SF Pro Display", fontSize: 32, fontWeight: 700, lineHeight: 38}
+  title: {fontFamily: "SF Pro Display", fontSize: 22, fontWeight: 700, lineHeight: 28}
+  section: {fontFamily: "SF Pro Text", fontSize: 18, fontWeight: 600, lineHeight: 23}
+  body: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 400, lineHeight: 21}
+  label: {fontFamily: "SF Pro Text", fontSize: 14, fontWeight: 600, lineHeight: 19}
+  caption: {fontFamily: "SF Pro Text", fontSize: 12, fontWeight: 400, lineHeight: 16}
+spacing:
+  screen-horizontal: 16
+  section-gap: 24
+  card-padding: 14
+  control-gap: 10
+rounded:
+  control: 14
+  card: 18
+  sheet: 28
+  pill: 999
 components:
-  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.md}", padding: [13, 18]}
-  wallet-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 14 }
-  promo-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.on-primary}", typography: "{typography.card-title}", rounded: "{rounded.lg}", padding: 0 }
-  service-tile: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.md}", padding: 12 }
-  bottom-nav: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", height: 60 }
+  primary-action: {fill: "#FF6656", text: "#FFFFFF", radius: 999, height: 50}
+  balance-card: {fill: "#FFFFFF", radius: 18, value: "large dark numeral"}
+  transaction-row: {fill: "#FFFFFF", amount: "right aligned", status: "small green label"}
+  navigation: {fill: "#FFFFFF", selected: "#FF6656", unselected: "#777B81"}
 ---
 
 # Overview
 
-Telcell Wallet is an airy finance utility with a colorful promotional layer. Coral and cyan guide action while white cards keep services, rewards, QR, and banking legible.
+Telcell Wallet is a light, modular finance utility rather than a single-purpose banking screen. White and near-white occupy most of the viewport; pale-gray grouping, rounded cards, compact service icons, and thin dividers structure dense financial content. Coral consistently marks primary actions and selection, while cyan appears mainly in branding and selected card artwork. The home surface combines balances, promo tiles, service grids, and transaction snippets; emptier states collapse to a centered icon or spinner with generous whitespace.
 
 # Non-negotiable visual invariants
 
-- The reference consistently shows white finance surfaces calm.
-- The reference consistently shows coral consistently for selection.
-- Imagery consistently uses contain 3D art inside promotions.
-- The reference consistently shows preserve currency and reward units.
-- The reference consistently shows a light multifunction wallet built from white surfaces.
-- The reference consistently shows pale gray grouping.
-- Navigation consistently uses coral navigation accents.
-- The reference consistently shows cyan balance actions.
+- Ordinary surfaces remain white or near-white with pale-gray grouping and low-shadow rounded cards.
+- Coral is the primary action, active-tab, underline, and selected-control color.
+- Cyan supports branding and card imagery but does not replace coral as the main interaction signal.
+- Major sections use a persistent four-item bottom bar with coral selected and gray inactive states.
+- Dashboard sections pair a left-aligned title with a small right-aligned secondary action when present.
+- Transaction rows place the amount or value on the right and keep status smaller, often green, beneath or nearby.
+- Forms finish with a wide coral pill, while dense dashboards rely on cards, grids, rails, and lists.
+- Empty and loading states are sparse and centered, with a compact coral icon or spinner rather than decorative scenes.
 
 # Color and surfaces
 
-### Brand & Accent
+The canvas is an almost-white cool neutral, with pure white used for balance modules, lists, banking cards, QR surfaces, forms, and navigation. Pale gray separates service groups, input rows, and inactive cards. Coral-orange is the dominant interactive color for buttons, active navigation, selected tabs, underlines, favorites, and progress emphasis. Cyan belongs to the brand mark, some balance actions, and financial card artwork. Green communicates successful or completed status; yellow, violet, and blue are confined to product or promotional content.
 
-Coral marks active navigation, icons, and primary actions. Cyan supports add-money and status; violet and blue live mainly in promos.
-
-### Surface
-
-White cards sit on very pale gray. Modals use white over a neutral dimmed scrim.
-
-### Text
-
-Dark gray carries titles and values; medium gray carries instructions, terms, and inactive navigation.
-
-### Semantic
-
-Green confirms success, amber warns, and red marks failure. Coral remains a brand accent and needs explicit destructive labels.
+Primary text is dark gray rather than pure black, supporting labels are medium gray, and dividers are fine and pale. Destructive actions use a red distinct enough from the warmer coral brand color. Default iOS blue, dark grouped backgrounds, heavy shadows, or expanding multicolor gradients beyond their local promo cards would break the observed hierarchy.
 
 # Typography
 
-### Font Family
+Typography is a neutral system sans with moderate scale contrast and comparatively regular weights. Page titles sit around 20–22 points; balance values and key financial amounts may be larger; section labels and card titles use 14–18-point medium or semibold text; captions, limits, dates, and status labels use 11–12-point gray text. Forms and lists are left aligned, while amount columns align to the trailing edge. Promotional artwork may contain its own lettering, but operational copy stays restrained.
 
-Use a neutral system sans with clear Latin, Armenian, and numerals.
-
-### Hierarchy
-
-Use 21–27 points page headings, 15–17 points module titles, 14 points body, and 10–12 points balance or service metadata.
-
-### Principles
-
-Keep balance, currency, limits, and reward cost explicit. Labels should remain short in the service grid.
-
-### Note on Font Substitutes
-
-Use SF Pro or Inter with an Armenian-capable fallback such as Noto Sans Armenian.
+Use SF Pro with an Armenian-capable fallback where required. Use tabular numerals for balances, transaction amounts, fees, dates, and reward values. Under Dynamic Type, keep amount and currency together, move secondary metadata to another line, and expand rows vertically before reducing the contrast between title, value, label, and caption.
 
 # Screen composition
 
-### Spacing System
+Main surfaces start with a compact safe-area row containing identity, notification, search, or a back-title-action combination. The middle is a vertical scroll of balance cards, horizontal promo or financial-card rails, compact service grids, section headers, and transaction lists. A white four-item tab bar anchors the bottom. Forms replace the dashboard with one vertical column of pale input rows and place a wide coral action above the home indicator. Typical horizontal insets are 12–16 points, with 10–14 points inside cards and 20–24 points between major modules.
 
-Use a 4 points base, 12 points gutters, 10–12 points card gaps, and 20–24 points between wallet sections.
-
-### Grid & Container
-
-Home stacks paired balance cards, promo rails, service grid, and favorites. Banking and Profile use single-column lists.
-
-### Whitespace Philosophy
-
-Keep finance lists airy and simple; promo cards may be visually rich but remain contained.
-
-Surface hierarchy observed in the source:
-
-White cards lift softly from gray. Promo objects add visual depth through material and lighting rather than shadowed chrome.
-
-### Decorative Depth
-
-Use glossy 3D objects and soft gradients inside promo cards only. Keep QR and transaction surfaces flat.
+Observed archetypes include a populated wallet dashboard; service-category grid; transfer or purchase form with validation; transport or product list; map-backed utility card; favorites and filter bottom sheets; populated or loading history; notification list and empty state; reward or market product rails; QR display and input surfaces; banking dashboard with card carousel and accounts; digital-card design selection; and long profile or settings lists. Rich imagery stays within cards and rails, while QR, forms, transaction lists, and empty states remain visually flat.
 
 # Navigation appearance
 
-Four bottom destinations persist across Home, BON, QR, and Banking. Coral identifies the current section.
+The bottom bar is a persistent white band with four evenly spaced icon-and-label items; coral marks the active item and gray marks the rest. Secondary categories use compact horizontal tabs with a coral underline, segmented pills, or short filter chips. Full-page utility screens use a restrained back control, centered or left-aligned title, and occasional compact trailing action. Bottom sheets rise as white rounded surfaces over a dim scrim and may include selectable rows, filters, or confirmation actions.
 
 # Components
 
-### Buttons
+Balance cards are white rounded modules with a large dark numeric value, smaller unit or account label, and compact coral or cyan actions. Service tiles are small icon-led cells arranged in a regular grid with short labels and limited decoration. Promo, partner, product, ticket, and bank-card tiles may use their own contained artwork, but share rounded framing and clear margins.
 
-Primary actions are coral with white text; add-money controls may be cyan circles. Native controls must inherit the same palette and geometry.
-
-### Cards & Containers
-
-Balance, pay-later, banking, reward, and profile cards each contain one clear domain. Service tiles stay icon-led and compact.
-
-### Inputs & Forms
-
-Payment and profile forms use pale fields with direct labels. Keep currency and limits adjacent to entered values.
+Transaction rows use a small leading service mark, a primary label and date or status detail, and a right-aligned amount. Selected or completed status is concise and often green. Forms use pale rounded fields, direct labels, dropdown or chevron rows, validation messaging near the affected field, and a wide coral pill action. QR cards preserve a square code and ample white quiet zone. Selected tabs, favorites, cards, or payment methods use coral fill, underline, outline, or check rather than a generic blue state.
 
 # Imagery and icons
 
-Use glossy 3D objects and soft gradients inside promo cards only. Keep QR and transaction surfaces flat.
+Imagery is heterogeneous and tied to specific financial products: bank-card designs, promotional tiles, partner or product thumbnails, ticket visuals, service pictograms, QR artifacts, and occasional map content. Preserve each asset's contained card placement and legible crop, but do not extrapolate them into a single authored illustration style. Card designs should remain wide and inspectable; QR codes require clear square boundaries and quiet space; maps must retain relevant location context.
 
-Center 3D objects in rounded cards; use clean card artwork for banking. QR codes remain square with ample quiet zone.
-
-If final imagery is not yet available, any placeholder must preserve the documented scale, placement, crop, and visual weight rather than removing that layer.
+Interface icons are compact and mostly simple, with coral indicating selection and cyan appearing selectively in branded assets. Small vector-like empty-state or feature images are isolated treatments, not evidence of a reusable character or scene family. Do not replace important card, product, QR, or map content with arbitrary SF Symbols.
 
 # States
 
-BON progress, account status, card attachment, payment, and ticket availability appear inline with the affected item.
+Observed states include language and login onboarding, populated home dashboard, promo carousel, service selection, transfer validation error, centered request loader, transport-ticket options, active power-bank state with map, favorites sheet, populated and loading history, populated and empty notifications, selected favorite products, empty market favorites, QR display or input, banking cards and accounts, filter sheet, digital-card design selection, questionnaire, empty transactions, and profile or logout rows. Coral remains the stable selected/action cue; green remains the stable successful-status cue.
 
 # iOS adaptation
 
-### Touch Targets
+Keep the top utility row and four-item navigation within current iPhone safe areas. Use vertical scrolling for dashboards, lists, profile, and forms; horizontal scrolling is appropriate for observed card and promo rails. Keep the primary form action above the keyboard and home indicator. Native keyboards, sheets, alerts, map views, and QR or camera permission transitions should retain platform behavior while surrounding controls use the documented coral, radii, and spacing.
 
-Service tiles, reward tabs, QR controls, banking rows, and bottom navigation require at least 44 points targets.
-
-### Collapsing Strategy
-
-Allow promo rails to scroll horizontally. Keep confirmation actions visible through long forms.
-
-### Image Behavior
-
-Use `contain` for 3D objects and bank cards; use `cover` only for promotional photography. Preserve QR quiet zones.
-
-Apply these rules within current iPhone safe areas and scrolling containers. Keep interactive targets at least 44 points, preserve a logical VoiceOver order, and let Dynamic Type wrap supporting text without flattening the documented hierarchy. Preserve the documented appearance.
+Maintain 44-point targets for service tiles, tabs, QR controls, list rows, favorites, filters, fields, and navigation. VoiceOver should read section title, balance or product label, value and currency, status, then action in visual order. On compact widths, reduce service-grid columns or wrap labels before shrinking tap targets; stack transaction metadata while preserving right-aligned amount priority. Dynamic Type should grow cards and lists vertically. If dark appearance is required without sampled evidence, preserve coral selection, cyan brand distinction, semantic green, and QR contrast instead of mechanically inverting every product asset.
 
 # Anti-generic checklist
 
-- Do not decorate QR screens.
-- Do not mix multiple gradients outside promos.
-- Do not hide financial limits.
-- Do not expose default blue controls.
-- Do not replace the documented hierarchy with a generic stack of identical white cards or `Form` sections.
-- Do not use default blue tint, an unstyled `TabView`, arbitrary SF Symbols, or uniform corner radii when they contradict the recorded tokens and components.
-- Do not invent decorative imagery or symbol treatments that are absent from the reference.
+- Do not replace the modular dashboard with one undifferentiated `Form` or generic white-card stack.
+- Do not use default blue tint instead of coral for selected tabs, buttons, and active controls.
+- Do not style every financial product with the same gradient or imagery treatment.
+- Do not hide currency, unit, fee, limit, status, or right-aligned transaction amount hierarchy.
+- Do not use an unstyled `TabView`; the coral selected state and four-item white bar are visual invariants.
+- Do not decorate QR and transaction surfaces with unrelated promotional imagery.
+- Do not claim a shared illustration family from payment cards, partner thumbnails, service icons, maps, and one-off empty-state assets.
+- Do not replace required card, QR, product, or map imagery with emoji or arbitrary SF Symbols.
 
 </design-context>

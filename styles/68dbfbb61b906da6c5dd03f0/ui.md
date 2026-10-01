@@ -3,177 +3,128 @@
 version: 1
 platform: iOS
 name: Perekrestok-design-analysis
-description: "A clean grocery-retail interface with a white canvas, layered fresh greens, loyalty-first home content, food photography, compact campaign tiles, circular quantity controls, and restrained gray utility structure."
-colors: {primary: "#49BF45", on-primary: "#FFFFFF", primary-focus: "#339A32", ink: "#17191B", ink-muted: "#676A6E", ink-subtle: "#9B9EA3", ink-tertiary: "#C7C9CD", canvas: "#FFFFFF", surface-1: "#F6F7F7", surface-2: "#EDF0EE", surface-3: "#E1E5E2", surface-4: "#D5DAD6", hairline: "#E5E8E5", hairline-strong: "#CCD2CD", hairline-tertiary: "#B6BDB7", inverse-canvas: "#1D512E", inverse-surface-1: "#2D7040", inverse-surface-2: "#3D8D50", inverse-ink: "#FFFFFF", brand-secure: "#1F8E46", semantic-success: "#43B94A", semantic-overlay: "#171A18"}
+description: "A bright white grocery interface where product photography and campaign banners provide most of the color, fresh green is reserved for brand, selection, quantity, and purchase actions, flat rounded cards keep dense commerce content approachable, and a lightweight five-item tab bar anchors the screen."
+colors:
+  canvas: "#FFFFFF"
+  surface-primary: "#FFFFFF"
+  surface-secondary: "#F3F3F3"
+  accent-primary: "#39B54A"
+  accent-secondary: "#1F8E46"
+  text-primary: "#202020"
+  text-secondary: "#676A6E"
+  divider: "#E5E8E5"
+  destructive: "#D94B4B"
 typography:
-  display-xl: {fontFamily: SF Pro Display, fontSize: 34, fontWeight: 700, lineHeight: 1.08, letterSpacing: -0.7}
-  display-lg: {fontFamily: SF Pro Display, fontSize: 28, fontWeight: 700, lineHeight: 1.12, letterSpacing: -0.4}
-  display-md: {fontFamily: SF Pro Display, fontSize: 24, fontWeight: 700, lineHeight: 1.15, letterSpacing: -0.3}
-  headline: {fontFamily: SF Pro Display, fontSize: 20, fontWeight: 700, lineHeight: 1.20, letterSpacing: -0.2}
-  card-title: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0}
-  subhead: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 600, lineHeight: 1.30, letterSpacing: 0}
-  body-lg: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0}
-  body: {fontFamily: SF Pro Text, fontSize: 13, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0}
-  body-sm: {fontFamily: SF Pro Text, fontSize: 11, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0}
-  caption: {fontFamily: SF Pro Text, fontSize: 10, fontWeight: 400, lineHeight: 1.25, letterSpacing: 0}
-  button: {fontFamily: SF Pro Text, fontSize: 14, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0}
-  eyebrow: {fontFamily: SF Pro Text, fontSize: 10, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0.1}
-  mono: {fontFamily: SF Mono, fontSize: 11, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0}
-rounded: {xs: 4, sm: 8, md: 12, lg: 16, xl: 22, xxl: 28, pill: 9999, full: 9999}
-spacing: {xxs: 4, xs: 8, sm: 12, md: 16, lg: 20, xl: 24, xxl: 32, section: 40}
+  hero: {fontFamily: "SF Pro Display", fontSize: 30, fontWeight: 700, lineHeight: 36}
+  title: {fontFamily: "SF Pro Display", fontSize: 27, fontWeight: 700, lineHeight: 33}
+  section: {fontFamily: "SF Pro Text", fontSize: 20, fontWeight: 700, lineHeight: 25}
+  body: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 400, lineHeight: 21}
+  label: {fontFamily: "SF Pro Text", fontSize: 14, fontWeight: 600, lineHeight: 19}
+  caption: {fontFamily: "SF Pro Text", fontSize: 11, fontWeight: 400, lineHeight: 15}
+spacing:
+  screen-horizontal: 16
+  section-gap: 24
+  card-padding: 12
+  control-gap: 8
+rounded:
+  control: 12
+  card: 16
+  sheet: 28
+  pill: 999
 components:
-  button-primary: {backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [14, 18]}
-  button-primary-pressed: {backgroundColor: "{colors.primary-focus}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}"}
-  button-secondary: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [12, 16]}
-  button-tertiary: {backgroundColor: "{colors.inverse-surface-1}", textColor: "{colors.inverse-ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [10, 14]}
-  product-card: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: 10}
-  feature-card: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 14}
-  text-input: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: [12, 14]}
-  status-badge: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.caption}", rounded: "{rounded.pill}", padding: [3, 7]}
-  bottom-nav: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink-subtle}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: [8, 10]}
+  primary-action: {fill: "#39B54A", text: "#FFFFFF", height: 52, radius: 12}
+  product-card: {fill: "#FFFFFF", radius: 16, imageRatio: "1:1"}
+  quantity-stepper: {fill: "#39B54A", text: "#FFFFFF", radius: 999}
+  navigation: {fill: "#FFFFFF", selected: "#39B54A", unselected: "#777A7C"}
 ---
 
 # Overview
 
-Perekrestok uses a straightforward white grocery canvas with fresh green actions. Loyalty, offers, food photography, and a familiar cart hierarchy create a practical supermarket rhythm rather than a decorative lifestyle experience.
-
-**Key Characteristics:** white canvas, fresh green actions, loyalty barcode, compact campaign rails, food photography, circular cart controls, clear payment sheets, and five-tab navigation.
+Perekrestok is a bright, product-led grocery interface rather than a green-themed dashboard. White dominates the viewport, while real product photography, category imagery, and campaign-specific promotional banners supply most of the visual variety. Fresh green is concentrated in the brand, selected navigation, add and quantity controls, loyalty emphasis, and purchase actions. Dense retail information remains approachable through flat rounded cards, concise dark type, and a lightweight persistent tab bar.
 
 # Non-negotiable visual invariants
 
-- Sampled screens consistently use white canvas.
-- The reference consistently shows fresh green actions.
-- The reference consistently shows loyalty barcode.
-- The reference consistently shows compact campaign rails.
-- The reference consistently shows food photography.
-- The reference consistently shows circular cart controls.
-- The reference consistently shows clear payment sheets.
-- Navigation consistently uses five-tab navigation.
+- Keep white as the dominant full-screen field; green is an action and brand accent rather than a large universal background.
+- Give real product photography primary visual weight in discovery and detail surfaces; never reduce the experience to text cards and symbols.
+- Preserve the light five-item bottom navigation with neutral icons, green selected state, small labels, and compact badges when needed.
+- Use flat, softly rounded cards and light-gray group surfaces with little or no shadow; separation comes from spacing and surface tone.
+- Keep green add pills, quantity steppers, and full-width purchase actions visually consistent and immediately distinguishable from passive content.
+- In product detail compositions, lead with a large image, then price and benefit information, then the purchase control; do not reverse that hierarchy.
+- Let promotional banners use their own blue, orange, yellow, or photographic campaign palette while keeping navigation and commerce controls consistently green.
+- Present checkout choices in white rounded sheets and keep the current purchase action visible as a sticky green control above the safe area.
 
 # Color and surfaces
 
-### Brand & Accent
+The canvas and primary surface are white. Soft gray (`#F3F3F3`) creates search fields, quiet groups, empty-state panels, and selected backgrounds without making the screen look card-heavy. Brand green (`#39B54A`) marks the logo, active tab, loyalty emphasis, add controls, quantity steppers, selected choices, and primary checkout actions. A deeper green can support pressed states or secondary brand contrast. Primary text is near-black; metadata and old prices use medium gray; dividers are faint.
 
-Fresh green owns selection, add-to-cart, checkout, active navigation, and loyalty. Deeper greens support branding and secondary emphasis.
-
-### Surface
-
-White carries most content; pale gray groups shortcuts, cards, checkout sections, and selected payment rows.
-
-### Text
-
-Near-black leads headings, products, and totals; gray carries labels, crossed prices, conditions, and inactive navigation.
-
-### Semantic
-
-Green confirms action and success, yellow marks discount, and red is limited to destructive or attention states.
+Promotional artwork may introduce strong local color fields, including blue, orange, and yellow, but those colors belong to the image or campaign card rather than the global control system. Destructive actions use red and should not be confused with promotional color. Default iOS blue, automatic grouped-list gray, large green page backgrounds outside a loyalty-led composition, and heavy card shadows would all break the observed system.
 
 # Typography
 
-### Font Family
+Page titles are bold and compact at roughly 27–30 points. Section headings and product names use 16–20 point semibold or bold type; prices and purchase values carry strong weight while supporting weights, quantities, delivery details, and old prices remain 11–15 points. Bottom navigation labels are small, around 10–11 points. Text is primarily left aligned, with tightly grouped price and metadata rows. Monetary values should use tabular figures where live changes need alignment, and old prices use muted color with a restrained strikethrough.
 
-Use SF Pro Display for section and total emphasis and SF Pro Text for catalog, loyalty, and checkout detail.
-
-### Hierarchy
-
-| Token | Size | Weight | Use |
-|---|---:|---:|---|
-| display-lg | 28 points | 700 | Major state |
-| headline | 20 points | 700 | Screen or section title |
-| card-title | 15 points | 600 | Product or choice |
-| body | 13 points | 400 | Detail |
-| caption | 10 points | 400 | Price and delivery meta |
-
-### Principles
-
-- Lead with the current task, product, or total.
-- Keep loyalty and offer facts compact.
-- Align repeated price and quantity information.
-
-### Note on Font Substitutes
-
-Use the platform sans with clear small Cyrillic and stable numeric widths.
+Use SF Pro Display and SF Pro Text as the iOS-safe typography. Under Dynamic Type, allow product names, address rows, benefit text, and sheet options to wrap, and let cards grow vertically. Keep the image and price hierarchy intact rather than shrinking type. Do not write decorative or mood-setting copy: labels should identify a product, value, state, or action without repeating information already visible in the photograph, title, or control.
 
 # Screen composition
 
-### Spacing System
+Standard horizontal insets are about 16 points, reduced to 8–12 points inside dense product grids. The upper region contains a compact title, delivery or pickup context, search, and occasionally a loyalty barcode; it should not expand into a marketing hero by default. The middle is a vertical feed of promotional banners, horizontal categories, product grids, or structured checkout rows. The bottom is either the white five-item tab bar or a sticky green purchase action, sometimes paired with a modal sheet.
 
-Use a 4 points base, 8–12 points internal gaps, and 16 points screen gutters.
+Observed archetypes include:
 
-### Grid & Container
+- **Discovery feed:** compact location/search region, wide promotional carousel, circular or tile-like categories, then horizontally scrolling or gridded product cards with visible photos and add controls.
+- **Catalog listing:** title and search/filter controls followed by dense two-column product cards whose images dominate their upper half and whose prices and controls align near the bottom.
+- **Product detail:** large isolated product photograph on white, concise product identity and price block, benefit or loyalty details, then a prominent add or quantity action.
+- **Cart and checkout:** vertical rows with small product thumbnails, aligned quantity and price data, grouped delivery/payment choices, summary values, and a sticky full-width green action above the lower safe area.
+- **Loyalty surface:** stronger green band or field, barcode or QR code as the focal object, concise status and level information, then white supporting cards.
+- **Map or address selection:** map as the main field, white search and location controls layered above it, and a raised white sheet or action surface near the bottom.
+- **Empty or result state:** generous white or pale-gray space, one restrained supporting image, a short bold title, concise necessary explanation, and one clear action.
 
-Home uses horizontal campaign and product rails; cart and checkout use a single vertically structured column.
-
-### Whitespace Philosophy
-
-Retail density is expected on Home and Catalog; checkout reduces noise and separates each commitment.
-
-Surface hierarchy observed in the source:
-
-| Level | Treatment | Use |
-|---|---|---|
-| 0 | White canvas | Catalog and cart |
-| 1 | Pale grouped panel | Shortcut and checkout section |
-| 2 | Sticky green action | Checkout commitment |
-| 3 | Bottom sheet over scrim | Payment choice |
-
-### Decorative Depth
-
-Use food photography and softly tinted campaigns; keep functional rows flat and avoid heavy shadows.
+Long retail feeds scroll vertically. Product rails may scroll horizontally, but core checkout choices should remain in a predictable vertical order. Preserve edge-to-edge white continuity around the safe areas.
 
 # Navigation appearance
 
-Use five compact bottom destinations with green active icon and gray inactive items.
+The bottom bar is white, full width, and visually light. Five evenly spaced neutral icons with small labels sit above the home indicator; the selected item turns green and a compact badge may appear on a cart-related destination. It is not a floating glass pill and does not need a heavy divider or shadow. This appearance must not be interpreted as reusable product information architecture.
+
+Top bars use a simple title with small back, close, search, or utility controls. Back controls are ordinary compact chevrons rather than branded oversized buttons. Checkout and address choices appear in white bottom sheets with large rounded top corners, clear row separators, and a dimmed underlying view. Selection uses a green check or radio. Avoid default blue navigation tint and unstyled system tab imagery.
 
 # Components
 
-### Buttons
-
-Primary cart and checkout use solid green; quantity changes use green circles; secondary actions remain pale or text-only.
-
-### Cards & Containers
-
-Product rows align image, label, price, discount, quantity, and removal; home campaigns use small rounded tinted cards.
-
-### Inputs & Forms
-
-Search, wishes, delivery, and payment rows use grouped pale surfaces; native controls inherit green selection and platform behavior.
+- **Product card:** flat white or very lightly grouped surface with 16-point radius, square or near-square product image, compact name and metadata, bold price, and a green add pill or stepper near the lower edge. Maintain aligned control baselines across a grid.
+- **Add pill:** green capsule with a concise white label or plus mark, at least 44 points tappable even if the visible capsule is smaller. Pressed state deepens the green; unavailable state becomes neutral gray.
+- **Quantity stepper:** elongated green pill with clear minus and plus targets and a centered count. It replaces the add control without changing the card's footprint dramatically.
+- **Primary purchase action:** roughly 52 points high, full width above the safe area, green fill, 12-point radius, centered semibold white label, and optional price aligned within the same control when observed.
+- **Promotion card:** wide image-led rounded banner with campaign-specific color and art. Keep native text minimal if the banner already carries campaign typography; do not recreate it as a generic colored rectangle.
+- **Loyalty code card:** high-contrast barcode or QR on a clean light surface, framed by concise value or level information. The code remains the primary visual object.
+- **Checkout choice row:** white rounded or grouped row with a leading label, supporting value, and trailing chevron, radio, or check. Selected state is green; missing required data uses concise destructive feedback.
+- **Bottom sheet:** white surface with 28-point top radius, small grabber where appropriate, generous title spacing, and vertically stacked native rows above a safe-area-aware action.
 
 # Imagery and icons
 
-Use food photography and softly tinted campaigns; keep functional rows flat and avoid heavy shadows.
+Real product photography is essential. Products are isolated cleanly against white or pale neutral backgrounds, consistently scaled within square crops, and remain legible at grid size. Do not substitute generic food icons, gradients, or placeholders when a product image is compositionally expected. Promotional banners are authored campaign images with varied palettes and stronger typography or art; retain their image-led role rather than trying to reproduce them with system components.
 
-Food photography uses clean square or landscape crops; campaign tiles stay compact; empty-state graphics remain centered and utilitarian.
-
-If final imagery is not yet available, any placeholder must preserve the documented scale, placement, crop, and visual weight rather than removing that layer.
+Operational icons are simple and mostly monochrome, turning green when selected. Cart badges are compact and high contrast. Maps use the visible map provider's native cartography beneath custom white search and selection surfaces. A one-off mascot and a few pale empty or success images were observed, but they do not establish a reusable independent illustration system; do not infer a global mascot or illustration language from them.
 
 # States
 
-Keep cart count, total, discount, delivery, payment, and order state visible near the affected action.
+Observed states include splash/onboarding, populated home and catalog, product detail, empty and filled cart, checkout with payment choice, missing delivery address, address entry, loyalty-level modal, payment-card and cashback views, delete-card confirmation, no saved card, success confirmation, pickup map, and overloaded-store feedback. Across these states, the white field, dark compact type, green commerce controls, flat rounded surfaces, product photography, and light navigation remain stable.
+
+Empty states use generous white or pale-gray space, restrained imagery, concise information, and one clear next action. Required or unavailable delivery information is explicit but should not fill the screen with redundant prose. Destructive confirmation is presented as a focused modal rather than a globally red screen. Do not invent permission, dark-mode, or skeleton styling beyond the observed evidence.
 
 # iOS adaptation
 
-### Touch Targets
+Keep white continuous through the status-bar and bottom safe areas. Use vertical scroll containers for feeds and checkout, lazy grids for product collections, and horizontal scroll containers only for genuine rails. Sticky purchase controls must remain above the home indicator and keyboard. In address or payment forms, scroll the focused field into view and preserve the action when the keyboard is raised. Present choice surfaces with native sheet behavior but custom white fill, radius, spacing, and green selection.
 
-Quantity controls, navigation, campaign tiles, payment rows, and checkout remain at least 44 points.
-
-### Collapsing Strategy
-
-Preserve product, price, quantity, total, payment, and checkout action; reduce campaigns and recommendations first.
-
-### Image Behavior
-
-Contain product imagery without distortion and preserve text-safe areas in campaign tiles.
-
-Apply these rules within current iPhone safe areas and scrolling containers. Keep interactive targets at least 44 points, preserve a logical VoiceOver order, and let Dynamic Type wrap supporting text without flattening the documented hierarchy. Preserve the documented appearance.
+Every icon, add control, quantity segment, and compact utility button needs a 44-point hit target. VoiceOver should announce product name, quantity or weight, current and old price, promotion, and add/quantity action in a useful order; do not merge multiple product cards into one element. Dynamic Type should expand rows and cards, with product grids reducing columns if necessary rather than truncating essential labels. On compact widths, keep the product image legible and reduce gaps before reducing type. The evidence is light appearance; do not claim an observed dark theme. If dark appearance is required, preserve product-photo fidelity, green action contrast, and the hierarchy between base and secondary surfaces.
 
 # Anti-generic checklist
 
-- Don't turn campaign colors into permanent navigation accents.
-- Don't add card outlines and shadows to every catalog item.
-- Don't hide fees or payment choices behind decorative layouts.
-- Do not replace the documented hierarchy with a generic stack of identical white cards or `Form` sections.
-- Do not use default blue tint, an unstyled `TabView`, arbitrary SF Symbols, or uniform corner radii when they contradict the recorded tokens and components.
-- Do not omit compositionally important imagery while final assets are pending; preserve its footprint with a faithful placeholder.
+- Do not turn the app into a green full-screen dashboard; white and product imagery must dominate.
+- Do not replace product photography, promotion artwork, barcodes, or maps with arbitrary SF Symbols, emoji, or code-drawn placeholders.
+- Do not ship an unstyled `TabView`, default blue tint, generic `Form`, or stock grouped settings cards.
+- Do not use one universal card radius or heavy shadow for products, banners, sheets, and controls.
+- Do not separate every row into a floating white card; preserve flat grouped retail density and light dividers.
+- Do not hide add, quantity, or checkout actions behind decorative content; green commerce controls stay visually immediate.
+- Do not infer a reusable illustration or mascot system from isolated empty-state and kids-club artwork.
+- Do not add promotional-sounding, mood-setting, or context-duplicating copy to fill open space.
 
 </design-context>
