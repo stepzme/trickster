@@ -4,8 +4,8 @@ Yandex Realty is a listing marketplace that balances image-heavy property search
 
 # Navigation
 
-- A five-item bottom bar keeps Home, Search, Favorites, Chats, and Profile available.
-- Search results retain query and filter controls at the top and map/save actions near the bottom.
+- A five-item primary navigation keeps Home, Search, Favorites, Chats, and Profile available.
+- Search results retain query and filter controls and map/save actions .
 - Listing detail uses a continuous scroll with a persistent contact action.
 
 # Core Flows
@@ -24,7 +24,14 @@ Yandex Realty is a listing marketplace that balances image-heavy property search
 
 # Interaction Patterns
 
-- Yellow marks the primary marketplace action and active destination.
 - Search chips expose high-value filters without opening the full form.
-- Photography carries trust; structured facts follow in a clear vertical hierarchy.
+- Listing details present structured facts in a consistent hierarchy.
 - Favorites separate saved listings from saved searches, while chats keep service and human threads together.
+
+# System Access Timing
+
+No system-access request timing or denial recovery was documented in the reviewed source.
+
+# Known Gaps
+
+- Permission-denial recovery and unobserved secondary flows were not documented.

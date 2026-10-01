@@ -18,7 +18,7 @@ Home exposes primary services and recent orders; profile holds identity, payment
 
 ## Track and manage
 
-Search by tracking number, inspect status and order detail, open pickup instructions, repeat, rename, print, contact support, or review payment.
+1. Search by tracking number, inspect status and order detail, open pickup instructions, repeat, rename, print, contact support, or review payment.
 
 # Interaction Patterns
 
@@ -27,3 +27,11 @@ Search by tracking number, inspect status and order detail, open pickup instruct
 - Keep shipment and shopping orders distinct.
 - Explain required pickup documents.
 - Confirm payment before tracking begins.
+
+# System Access Timing
+
+No system-access timing or denial-recovery behavior was documented in the reviewed source.
+
+# Known Gaps
+
+System-permission denial paths, interrupted flows, and recovery behavior not described above were not available in the reviewed source.

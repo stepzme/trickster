@@ -4,9 +4,9 @@ Suno combines AI song creation, social music discovery, playback, library manage
 
 # Navigation
 
-- Five bottom destinations cover Home, Explore, Create, Library, and Profile.
-- Create is a prominent gradient action at the center of the bar.
-- A mini-player remains above navigation while audio is active.
+- Five primary destinations cover Home, Explore, Create, Library, and Profile.
+- Create remains a primary destination in the global navigation.
+- A mini-player remains from the current task while audio is active.
 
 # Core Flows
 
@@ -30,7 +30,13 @@ Suno combines AI song creation, social music discovery, playback, library manage
 
 # Interaction Patterns
 
-- Artwork and sampled color provide atmosphere over a near-black shell.
 - Bottom sheets group creation options without leaving the current context.
-- Gradient accents identify creative actions, not generic navigation.
-- Mini-player and full-screen playback preserve continuous listening.
+- The mini-player expands into playback without interrupting listening.
+
+# System Access Timing
+
+No system-access timing or denial-recovery behavior was documented in the reviewed source.
+
+# Known Gaps
+
+System-permission denial paths, interrupted flows, and recovery behavior not described above were not available in the reviewed source.

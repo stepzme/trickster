@@ -4,8 +4,8 @@ Vivid is a consumer finance hub combining account pockets, debit cards, timeline
 
 # Navigation
 
-- Five bottom destinations cover Pockets, Timeline, Payments, Rewards, and Invest.
-- Pockets is the account home, with balances, product tiles, cards, and creation actions.
+- Five primary destinations cover Pockets, Timeline, Payments, Rewards, and Invest.
+- Pockets is the account home, with balances, product tiles, items, and creation actions.
 - Payments and Invest use local categories and search while preserving the bottom product map.
 
 # Core Flows
@@ -30,7 +30,12 @@ Vivid is a consumer finance hub combining account pockets, debit cards, timeline
 
 # Interaction Patterns
 
-- Pockets make products feel like visual objects rather than account rows.
-- Purple marks action and selection; green and red retain financial meaning.
-- Search and category chips tame broad reward and investment catalogs.
 - Product creation is progressive and always returns to the pocket overview.
+
+# System Access Timing
+
+No system-access timing or denial-recovery path was documented in the reviewed source.
+
+# Known Gaps
+
+Unobserved flows, denial paths, cancellation behavior, and recovery states remain unspecified.

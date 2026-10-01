@@ -4,7 +4,7 @@ Simply joins a mobile wallet, card, service payments, transfers, history, bonuse
 
 # Navigation
 
-- Bottom navigation switches among Home, Promotions, and Profile.
+- Primary navigation switches among Home, Promotions, and Profile.
 - Home exposes wallet balance, top-up, payments, history, transfer, card, installment, and bonuses.
 - Deep finance tasks use back navigation and focused lists or forms.
 
@@ -35,3 +35,11 @@ Simply joins a mobile wallet, card, service payments, transfers, history, bonuse
 - Finance forms stay linear and use native verification patterns.
 - Promotions are visually richer but return into the same wallet context.
 - Profile groups identity, security, other, and support sections.
+
+# System Access Timing
+
+No system-access timing or denial-recovery behavior was documented in the reviewed source.
+
+# Known Gaps
+
+System-permission denial paths, interrupted flows, and recovery behavior not described above were not available in the reviewed source.

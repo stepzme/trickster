@@ -1,10 +1,10 @@
 # Overview
 
-Kuper is a multi-store delivery marketplace that brings restaurants, groceries, pharmacies, and general goods into one dense but task-focused surface.
+Kuper is a multi-store delivery marketplace that brings restaurants, groceries, pharmacies, and general goods into one task-focused marketplace.
 
 # Navigation
 
-The home screen starts with location and account controls, then shortcuts, search, departments, and merchant rails. Store pages switch to a dedicated five-item bar; cart and checkout use focused full-screen stacks with persistent totals.
+Home provides location and account controls, shortcuts, search, departments, and merchants. Store pages switch to store-specific navigation; cart and checkout preserve the current total until confirmation.
 
 # Core Flows
 
@@ -24,6 +24,12 @@ The home screen starts with location and account controls, then shortcuts, searc
 # Interaction Patterns
 
 - The address anchors availability and follows the user across discovery.
-- Horizontal rails expose departments and merchants without hiding the vertical store list.
-- A dark floating cart chip bridges browsing and checkout.
-- Checkout is grouped into rounded sections; price and the next action stay fixed at the bottom.
+- Browsing sections expose departments and merchants without hiding the store list.
+
+# System Access Timing
+
+No system-access timing or denial-recovery behavior was documented in the reviewed source.
+
+# Known Gaps
+
+System-permission denial paths, interrupted flows, and recovery behavior not described above were not available in the reviewed source.

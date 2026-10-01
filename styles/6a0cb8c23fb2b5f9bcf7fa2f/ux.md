@@ -4,7 +4,7 @@ Lemana PRO is a home-improvement marketplace that combines loyalty, promotions, 
 
 # Navigation
 
-A floating bottom dock keeps Home, Cart, Search, and Scanner close. Home adds loyalty, promo, purchase, and list shortcuts; catalog and product pages use focused headers with search and share.
+A primary navigation keeps Home, Cart, Search, and Scanner close. Home adds loyalty, promo, purchase, and list shortcuts; catalog and product pages use focused headers with search and share.
 
 # Core Flows
 
@@ -24,7 +24,14 @@ A floating bottom dock keeps Home, Cart, Search, and Scanner close. Home adds lo
 
 # Interaction Patterns
 
-- Yellow marks loyalty, cart, and commitment while charcoal carries filters and secondary controls.
-- Search, cart, and scanner remain accessible through the floating dock.
-- Product cards expose fulfillment availability before checkout.
-- Long project and product pages use stacked sections with a persistent cart action.
+- Search, cart, and scanner remain accessible through primary navigation.
+- Products expose fulfillment availability before checkout.
+- Long project and product flows keep the cart action available.
+
+# System Access Timing
+
+No system-access timing or denial-recovery behavior was documented in the reviewed source.
+
+# Known Gaps
+
+System-permission denial paths, interrupted flows, and recovery behavior not described above were not available in the reviewed source.

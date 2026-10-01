@@ -1,13 +1,13 @@
 <design-context>
 ---
-version: alpha
+version: 1
+platform: iOS
 name: Simply-design-analysis
 description: "A bright wallet-and-benefits interface built on a cool off-white canvas, white elevated cards, black text, yellow financial accents, and violet promotional objects. Core payments remain native and restrained, while loyalty and installment areas become more graphic and colorful."
 
 colors:
   primary: "#FFD514"
   on-primary: "#111111"
-  primary-hover: "#FFE04A"
   primary-soft: "#FFF6BE"
   accent-violet: "#7B43D9"
   accent-blue: "#2288D8"
@@ -25,34 +25,34 @@ colors:
   semantic-overlay: "#000000"
 
 typography:
-  display-xl: { fontFamily: System Sans, fontSize: 36px, fontWeight: 700, lineHeight: 1.05, letterSpacing: -0.6px }
-  display-lg: { fontFamily: System Sans, fontSize: 30px, fontWeight: 700, lineHeight: 1.1, letterSpacing: -0.4px }
-  display-md: { fontFamily: System Sans, fontSize: 25px, fontWeight: 700, lineHeight: 1.15, letterSpacing: -0.2px }
-  headline: { fontFamily: System Sans, fontSize: 21px, fontWeight: 700, lineHeight: 1.2, letterSpacing: 0 }
-  card-title: { fontFamily: System Sans, fontSize: 16px, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: System Sans, fontSize: 17px, fontWeight: 600, lineHeight: 1.3, letterSpacing: 0 }
-  body-lg: { fontFamily: System Sans, fontSize: 16px, fontWeight: 400, lineHeight: 1.42, letterSpacing: 0 }
-  body: { fontFamily: System Sans, fontSize: 14px, fontWeight: 400, lineHeight: 1.4, letterSpacing: 0 }
-  body-sm: { fontFamily: System Sans, fontSize: 12px, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
-  caption: { fontFamily: System Sans, fontSize: 10px, fontWeight: 400, lineHeight: 1.3, letterSpacing: 0 }
-  button: { fontFamily: System Sans, fontSize: 15px, fontWeight: 600, lineHeight: 1.2, letterSpacing: 0 }
-  eyebrow: { fontFamily: System Sans, fontSize: 12px, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0.1px }
-  mono: { fontFamily: System Mono, fontSize: 12px, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
+  display-xl: { fontFamily: System Sans, fontSize: 36, fontWeight: 700, lineHeight: 1.05, letterSpacing: -0.6 }
+  display-lg: { fontFamily: System Sans, fontSize: 30, fontWeight: 700, lineHeight: 1.1, letterSpacing: -0.4 }
+  display-md: { fontFamily: System Sans, fontSize: 25, fontWeight: 700, lineHeight: 1.15, letterSpacing: -0.2 }
+  headline: { fontFamily: System Sans, fontSize: 21, fontWeight: 700, lineHeight: 1.2, letterSpacing: 0 }
+  card-title: { fontFamily: System Sans, fontSize: 16, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
+  subhead: { fontFamily: System Sans, fontSize: 17, fontWeight: 600, lineHeight: 1.3, letterSpacing: 0 }
+  body-lg: { fontFamily: System Sans, fontSize: 16, fontWeight: 400, lineHeight: 1.42, letterSpacing: 0 }
+  body: { fontFamily: System Sans, fontSize: 14, fontWeight: 400, lineHeight: 1.4, letterSpacing: 0 }
+  body-sm: { fontFamily: System Sans, fontSize: 12, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
+  caption: { fontFamily: System Sans, fontSize: 10, fontWeight: 400, lineHeight: 1.3, letterSpacing: 0 }
+  button: { fontFamily: System Sans, fontSize: 15, fontWeight: 600, lineHeight: 1.2, letterSpacing: 0 }
+  eyebrow: { fontFamily: System Sans, fontSize: 12, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0.1 }
+  mono: { fontFamily: System Mono, fontSize: 12, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
 
-rounded: { xs: 4px, sm: 8px, md: 12px, lg: 16px, xl: 22px, xxl: 28px, pill: 9999px, full: 9999px }
-spacing: { xxs: 4px, xs: 8px, sm: 12px, md: 16px, lg: 24px, xl: 32px, xxl: 48px, section: 64px }
+rounded: { xs: 4, sm: 8, md: 12, lg: 16, xl: 22, xxl: 28, pill: 9999, full: 9999 }
+spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
 
 components:
-  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.md}", padding: 14px 18px }
-  wallet-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 16px }
-  shortcut-tile: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.caption}", rounded: "{rounded.md}", padding: 12px }
-  promo-banner: { backgroundColor: "{colors.surface-dark}", textColor: "{colors.surface-1}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 14px }
-  benefit-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.md}", padding: 12px }
-  search-field: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 12px }
-  bottom-nav: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", height: 62px }
+  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.md}", padding: [14, 18]}
+  wallet-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 16 }
+  shortcut-tile: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.caption}", rounded: "{rounded.md}", padding: 12 }
+  promo-banner: { backgroundColor: "{colors.surface-dark}", textColor: "{colors.surface-1}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 14 }
+  benefit-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.md}", padding: 12 }
+  search-field: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 12 }
+  bottom-nav: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", height: 62 }
 ---
 
-## Overview
+# Overview
 
 Simply combines a wallet, card, payments, transfers, bonuses, installments, promotions, and telecom-linked benefits. Core tasks use restrained white cards on a cool gray canvas; yellow marks the financial brand while violet 3D objects add energy to offers.
 
@@ -63,7 +63,15 @@ Simply combines a wallet, card, payments, transfers, bonuses, installments, prom
 - Dark promotional banners and glossy violet benefit objects.
 - Three-tab navigation for Home, Promotions, and Profile.
 
-## Colors
+# Non-negotiable visual invariants
+
+- The reviewed screens show this treatment: Cool off-white shell with softly elevated white cards.
+- The reviewed screens show this treatment: Yellow brand and selection accent.
+- The reviewed screens show this treatment: Four square shortcuts for top-up, payments, history, and transfer.
+- The reviewed screens show this treatment: Dark promotional banners and glossy violet benefit objects.
+- The reviewed screens show this treatment: Three-tab navigation for Home, Promotions, and Profile.
+
+# Color and surfaces
 
 ### Brand & Accent
 
@@ -87,7 +95,7 @@ Simply combines a wallet, card, payments, transfers, bonuses, installments, prom
 
 Use green for incoming value and success, amber for attention, and red for errors or destructive actions. Yellow remains brand selection rather than warning.
 
-## Typography
+# Typography
 
 ### Font Family
 
@@ -97,13 +105,13 @@ Use a neutral system sans with clear numerals and compact labels.
 
 | Token | Size | Weight | Use |
 |---|---:|---:|---|
-| `{typography.display-xl}` | 36px | 700 | Wallet balance |
-| `{typography.display-lg}` | 30px | 700 | Major product title |
-| `{typography.display-md}` | 25px | 700 | Screen title |
-| `{typography.headline}` | 21px | 700 | Module heading |
-| `{typography.card-title}` | 16px | 600 | Wallet or card title |
-| `{typography.body}` | 14px | 400 | Transaction and service copy |
-| `{typography.caption}` | 10px | 400 | Benefits and navigation |
+| `{typography.display-xl}` | 36pt | 700 | Wallet balance |
+| `{typography.display-lg}` | 30pt | 700 | Major product title |
+| `{typography.display-md}` | 25pt | 700 | Screen title |
+| `{typography.headline}` | 21pt | 700 | Module heading |
+| `{typography.card-title}` | 16pt | 600 | Wallet or card title |
+| `{typography.body}` | 14pt | 400 | Transaction and service copy |
+| `{typography.caption}` | 10pt | 400 | Benefits and navigation |
 
 ### Principles
 
@@ -116,11 +124,7 @@ Use a neutral system sans with clear numerals and compact labels.
 
 Use SF Pro or Inter. Preserve readable numerals and compact module labels.
 
-## Layout
-
-### Spacing System
-
-Use a 4px base, 12px gutters, 10px card gaps, and 20–24px between wallet, card, promotion, and bonus groups.
+# Screen composition
 
 ### Grid & Container
 
@@ -130,34 +134,15 @@ Home is a vertical stack of full-width cards with a four-column shortcut row. Pa
 
 Use gray canvas between modules, but keep transactions and settings compact inside white groups.
 
-## Elevation & Depth
+# Navigation appearance
 
-Use shallow shadows and white-on-gray separation. Promotional 3D objects create depth without affecting form surfaces.
+Use three bottom destinations for Home, Promotions, and Profile. Deep payment, card, and transfer tasks use a simple back title.
 
-### Decorative Depth
-
-Reserve glossy violet objects and dark banners for benefits. Keep core financial rows flat and calm.
-
-## Shapes
-
-### Border Radius Scale
-
-- Wallet and benefit cards use 12–16px corners.
-- Shortcut tiles use 12px corners.
-- Switches and small filters are pill-shaped.
-- Promotional objects may break their internal card grid but not overflow the container.
-
-### Photography & Illustration Geometry
-
-Use isolated 3D objects on clean white or gradient benefit cards. Financial lists and forms should remain illustration-free.
-
-## Components
+# Components
 
 ### Buttons
 
 Primary actions use yellow with black text. Secondary finance actions use white or pale gray. Native controls must inherit yellow selection, radii, and typography.
-
-### Pricing Tabs
 
 Payments use a compact My Payments and History segment. Selection stays white with outline or yellow emphasis; avoid adding decorative tabs.
 
@@ -177,11 +162,46 @@ History groups transactions by date, with green incoming amounts and black outgo
 
 Use three bottom destinations for Home, Promotions, and Profile. Deep payment, card, and transfer tasks use a simple back title.
 
-### Footer
+# Imagery and icons
 
-There is no marketing footer. Profile ends with product version; task flows end with navigation or the final action.
+Use shallow shadows and white-on-gray separation. Promotional 3D objects create depth without affecting form surfaces.
 
-## Do's and Don'ts
+### Decorative Depth
+
+Reserve glossy violet objects and dark banners for benefits. Keep core financial rows flat and calm.
+
+# States
+
+History groups transactions by date, with green incoming amounts and black outgoing values. Receipts and modal notices use standard white system surfaces.
+
+# iOS adaptation
+
+Keep payments, transfers, and profile single-column. Benefit cards may stack if percentage copy or art becomes cramped.
+
+### Touch Targets
+
+Shortcuts, benefit cards, rows, switches, and bottom navigation require at least 44pt targets.
+
+### Collapsing Strategy
+
+Allow benefit strips to scroll horizontally. Keep confirmation actions reachable above keyboard and safe area.
+
+### Image Behavior
+
+Scale 3D objects proportionally with `contain`. Do not crop away the object or obscure percentage copy.
+
+On iPhone, respect top and bottom safe areas, use scrolling for content that does not fit, keep interactive targets at least 44 points, and preserve the visual reading order for VoiceOver. At larger Dynamic Type sizes, allow supporting text to wrap without collapsing the dominant hierarchy. Use native sheets and permission transitions while explicitly styling app-owned surfaces to match the reference.
+
+# Anti-generic checklist
+
+- Do not substitute the documented accent hierarchy with default iOS blue.
+- Do not turn the documented white canvas into a generic card stack; preserve the observed accent, density, imagery, and surface grouping.
+- Do not use an unstyled `TabView`, `Form`, or arbitrary SF Symbols when they contradict the documented navigation and component language.
+- Do not flatten the documented typography into one body-text scale.
+- Do not remove compositionally important photography or illustration while assets are pending.
+- Do not apply one corner radius to every control and surface.
+
+Source-specific guardrails retained from the review:
 
 ### Do
 
@@ -199,28 +219,8 @@ There is no marketing footer. Profile ends with product version; task flows end 
 - Do not confuse yellow with warning.
 - Do not expose default platform controls.
 
-## Responsive Behavior
+# Known gaps
 
-### Breakpoints
+The reviewed scenarios cover onboarding, home, payments, history, transfers, card, bonuses, promotions, and profile. iPad layouts, dark mode, accessibility scaling, and rare transaction failures were not visible.
 
-Keep payments, transfers, and profile single-column. Benefit cards may stack if percentage copy or art becomes cramped.
-
-### Touch Targets
-
-Shortcuts, benefit cards, rows, switches, and bottom navigation require at least 44px targets.
-
-### Collapsing Strategy
-
-Allow benefit strips to scroll horizontally. Keep confirmation actions reachable above keyboard and safe area.
-
-### Image Behavior
-
-Scale 3D objects proportionally with `contain`. Do not crop away the object or obscure percentage copy.
-
-## Iteration Guide
-
-Start with the gray canvas, wallet card, four shortcuts, yellow accent, and bottom navigation. Add payments and transfers, then promotions and 3D benefits.
-
-## Known Gaps
-
-The reviewed scenarios cover onboarding, home, payments, history, transfers, card, bonuses, promotions, and profile. Tablet layouts, dark mode, accessibility scaling, and rare transaction failures were not visible.
+</design-context>

@@ -4,9 +4,9 @@ Vkusno I Tochka combines restaurant loyalty, promotions, menu browsing, mobile o
 
 # Navigation
 
-- Five bottom destinations cover Home, Promotions, Menu, Map, and More.
+- Five primary destinations cover Home, Promotions, Menu, Map, and More.
 - Home summarizes bonus balance, campaigns, referral, and mobile-order entry points.
-- Menu switches pickup and delivery, location, categories, product cards, and cart.
+- Menu switches pickup and delivery, location, categories, product items, and cart.
 
 # Core Flows
 
@@ -30,7 +30,12 @@ Vkusno I Tochka combines restaurant loyalty, promotions, menu browsing, mobile o
 
 # Interaction Patterns
 
-- Dark green anchors brand and navigation; orange marks conversion and reward.
-- Food photography leads menu and promotions.
 - Loyalty actions are grouped into earn and spend.
-- Location eligibility appears before redemption or ordering.
+
+# System Access Timing
+
+No system-access timing or denial-recovery path was documented in the reviewed source.
+
+# Known Gaps
+
+Unobserved flows, denial paths, cancellation behavior, and recovery states remain unspecified.

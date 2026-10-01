@@ -4,7 +4,7 @@ Files supports recent access, shared content, hierarchical browsing, preview, sc
 
 # Navigation
 
-Recents, Shared, and Browse remain in the bottom bar. Browse uses location titles and back navigation; previews expose contextual actions.
+Recents, Shared, and Browse remain in the primary navigation. Browse uses location titles and back navigation; previews expose contextual actions.
 
 # Core Flows
 
@@ -29,3 +29,11 @@ Recents, Shared, and Browse remain in the bottom bar. Browse uses location title
 - Preserve aspect ratio in previews.
 - Confirm destructive file actions.
 - Show local versus cloud availability.
+
+# System Access Timing
+
+No system-access timing or denial-recovery path was documented in the reviewed source.
+
+# Known Gaps
+
+Unobserved flows, denial paths, cancellation behavior, and recovery states remain unspecified.

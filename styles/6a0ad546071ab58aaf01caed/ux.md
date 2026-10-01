@@ -4,13 +4,13 @@ Buy.am unifies restaurants, supermarkets, retail stores, pharmacy, services, and
 
 # Navigation
 
-Home, Restaurants, Mall, Basket, and Profile remain stable. Search and vertical filters narrow the current commerce context.
+Home, Restaurants, Mall, Basket, and Profile remain stable. Search and filters narrow the current commerce context.
 
 # Core Flows
 
 ## Discover and buy
 
-Select a vertical, merchant, or product; compare rating, delivery time, fee, and price; then add to basket without losing the source merchant.
+1. Select a vertical, merchant, or product; compare rating, delivery time, fee, and price; then add to basket without losing the source merchant.
 
 ## Checkout and tracking
 
@@ -27,3 +27,11 @@ Select a vertical, merchant, or product; compare rating, delivery time, fee, and
 - Show packaging and delivery separately.
 - Support reorder from history.
 - Confirm cancellation explicitly.
+
+# System Access Timing
+
+No system-access timing or denial-recovery behavior was documented in the reviewed source.
+
+# Known Gaps
+
+System-permission denial paths, interrupted flows, and recovery behavior not described above were not available in the reviewed source.

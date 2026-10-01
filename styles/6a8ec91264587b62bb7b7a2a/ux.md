@@ -4,7 +4,7 @@ Ozon Bank combines accounts, cards, cashback, transfers, payments, credit, savin
 
 # Navigation
 
-Home, Payments, Benefits, Chats, and More form the bottom bar. Home starts with a blue account carousel and quick money actions, then rewards, promotions, products, and recent operations.
+Home, Payments, Benefits, Chats, and More are the primary destinations. Home begins with account access and quick money actions, followed by rewards, promotions, products, and recent operations.
 
 # Core Flows
 
@@ -24,7 +24,13 @@ Home, Payments, Benefits, Chats, and More form the bottom bar. Home starts with 
 
 # Interaction Patterns
 
-- Blue gradient account stages organize products; white modules carry operations and analytics.
-- Bright blue is primary action, while pastel green and yellow communicate benefit or guidance.
-- Product carousels preserve adjacent context and keep quick actions anchored below.
+- Product browsing preserves adjacent context and keeps quick actions available.
 - Transaction rows align merchant, category, description, and signed amount for fast scanning.
+
+# System Access Timing
+
+No system-access timing or denial-recovery behavior was documented in the reviewed source.
+
+# Known Gaps
+
+System-permission denial paths, interrupted flows, and recovery behavior not described above were not available in the reviewed source.

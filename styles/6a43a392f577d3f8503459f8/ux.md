@@ -4,8 +4,8 @@ Yandex Pay is a bright financial hub for cards, Split, rewards, payments, shoppi
 
 # Navigation
 
-- A four-item bottom bar separates Home, Stores, Payments, and History.
-- The centered floating Pay button opens the camera and payment scanner.
+- A four-item primary navigation separates Home, Stores, Payments, and History.
+- The Pay action opens the camera and payment scanner.
 - Profile and Plus balance remain accessible from the top of primary screens.
 
 # Core Flows
@@ -24,7 +24,12 @@ Yandex Pay is a bright financial hub for cards, Split, rewards, payments, shoppi
 
 # Interaction Patterns
 
-- Financial products are grouped in rounded gradient cards rather than dense tables.
-- The dark Pay button stays visually stable across colorful content.
-- Camera mode uses a dark upper canvas and a white service sheet.
 - Confirmation screens reduce the interface to merchant, amount, source, and one decisive action.
+
+# System Access Timing
+
+No system-access timing or denial-recovery behavior was documented in the reviewed source.
+
+# Known Gaps
+
+System-permission denial paths, interrupted flows, and recovery behavior not described above were not available in the reviewed source.

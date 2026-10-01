@@ -1,18 +1,18 @@
 # Overview
 
-Wibes combines a vertical creator feed, shoppable videos, editorial posts, profiles, product detail, cart actions, creation, and account help in a dark content marketplace.
+Wibes combines a creator feed, shoppable videos, editorial posts, profiles, product detail, cart actions, creation, and account help in a content marketplace.
 
 # Navigation
 
-- A four-item bottom bar moves between Feed, Create, Cart, and Profile.
-- Feed cards keep author, media, social actions, product strip, and purchase affordance in one vertical surface.
+- A four-item primary navigation moves between Feed, Create, Cart, and Profile.
+- feed items keep author, media, social actions, product strip, and purchase affordance in one context.
 - Authentication is requested only when the user tries to follow, comment, create, or buy.
 
 # Core Flows
 
 ## Discover content and products
 
-1. Personalize topics during onboarding and enter the vertical feed.
+1. Personalize topics during onboarding and enter the feed.
 2. Watch a video or open an editorial post, author profile, or attached product.
 3. Like, comment, follow, share, or continue to product detail.
 
@@ -30,6 +30,12 @@ Wibes combines a vertical creator feed, shoppable videos, editorial posts, profi
 
 # Interaction Patterns
 
-- Full-height media owns the screen while social actions float at the right edge.
-- Purple actions bridge social and commerce moments without replacing the black content frame.
 - The catalog has one onboarding flow; the remaining product behavior was verified from all 56 available image screens.
+
+# System Access Timing
+
+No system-access timing or denial-recovery path was documented in the reviewed source.
+
+# Known Gaps
+
+Unobserved flows, denial paths, cancellation behavior, and recovery states remain unspecified.

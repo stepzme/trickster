@@ -4,7 +4,7 @@ Citydrive moves users from map discovery to booking, inspection, active rental, 
 
 # Navigation
 
-The map and bottom dock anchor Carsharing, Long-term rental, and Menu. Focused bottom sheets handle the current vehicle and rental.
+The map and primary navigation anchor Carsharing, Long-term rental, and Menu. Focused modals handle the current vehicle and rental.
 
 # Core Flows
 
@@ -24,3 +24,11 @@ The map and bottom dock anchor Carsharing, Long-term rental, and Menu. Focused b
 - Keep door lock state explicit.
 - Warn before ending outside an allowed zone.
 - Confirm tariff, debt, and payment state.
+
+# System Access Timing
+
+No system-access request timing or denial recovery was documented in the reviewed source.
+
+# Known Gaps
+
+- Permission-denial recovery and unobserved secondary flows were not documented.

@@ -10,10 +10,22 @@ Scenes combine simplified 3D objects, soft gradients, photographic cutouts, and 
 
 Place one recognizable object or small scene inside a rounded tile, leaving a clear corner for the service label. Wider campaigns reserve one side for copy and one for the object or person.
 
-# Color
+# Color and Materials
 
 Use saturated green, yellow, orange, purple, cyan, and pink over bright fields. Maintain enough contrast with the white dashboard and preserve MBANK green for core finance actions.
 
-# Usage
+# Variants and States
 
 Use the language for service discovery, rewards, campaigns, tickets, travel, insurance, and partner products. Keep balances, transactions, and confirmations data-led; new art must inherit the UI's rounded cards and vivid service palette.
+
+# Production Requirements
+
+Use only the formats and crops supported by the implemented placement. Where the documented imagery is compositionally important, temporary placeholders must preserve its placement, crop, scale, negative space, and approximate visual weight until final art exists. No unobserved light/dark variants or export ratios are prescribed.
+
+# Avoid
+
+- Do not replace the documented image language with unrelated stock art, arbitrary symbols, or a denser composition.
+
+# Known Gaps
+
+- Export aspect ratios, safe crop measurements, animation, and unobserved state variants were not documented.

@@ -4,7 +4,7 @@ Tinkoff Investments combines portfolio monitoring, security discovery, charts, o
 
 # Navigation
 
-- Five bottom destinations cover Home, What to buy, Pulse, Chat, and More.
+- Five primary destinations cover Home, What to buy, Pulse, Chat, and More.
 - Home combines portfolio, operations, funding, analytics, and positions.
 - Security pages use tabs for Overview, Order book, Pulse, Indicators, and News.
 
@@ -30,7 +30,13 @@ Tinkoff Investments combines portfolio monitoring, security discovery, charts, o
 
 # Interaction Patterns
 
-- Black surfaces and white type prioritize market data.
-- Green and red encode movement; blue marks actions and selected tabs.
 - Charts are full-width and time-range controls remain near the data.
 - Regulatory and liquidity warnings appear before trading commitment.
+
+# System Access Timing
+
+No system-access timing or denial-recovery path was documented in the reviewed source.
+
+# Known Gaps
+
+Unobserved flows, denial paths, cancellation behavior, and recovery states remain unspecified.

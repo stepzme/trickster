@@ -4,7 +4,7 @@ MyAmeria is a modular banking hub for cards and accounts, savings, loans, transf
 
 # Navigation
 
-Home, Services, a central QR scanner, History, and Apps form the bottom bar. Home can be customized and combines product tabs, service shortcuts, partner apps, mobile transfers, and exchange rates.
+Home, Services, a QR scanner, History, and Apps form the primary navigation. Home can be customized and combines product tabs, service shortcuts, partner apps, mobile transfers, and exchange rates.
 
 # Core Flows
 
@@ -24,7 +24,12 @@ Home, Services, a central QR scanner, History, and Apps form the bottom bar. Hom
 
 # Interaction Patterns
 
-- Lime green highlights active controls, product identity, scanning, and primary payment.
-- White rounded modules float on an almost white cool-gray canvas.
-- Horizontal rails expose shortcuts and apps; long financial catalogs use plain rows.
 - The customizable Home announces configuration without blocking current banking tasks.
+
+# System Access Timing
+
+No system-access timing or denial-recovery path was documented in the reviewed source.
+
+# Known Gaps
+
+Unobserved flows, denial paths, cancellation behavior, and recovery states remain unspecified.

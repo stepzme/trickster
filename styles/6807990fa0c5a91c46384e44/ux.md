@@ -4,7 +4,7 @@ Pyaterochka combines loyalty, coupons, games, catalog browsing, grocery delivery
 
 # Navigation
 
-A four-item bottom bar anchors Home, Catalog, Contact us, and Profile. Catalog keeps delivery mode, address, search, and scan entry visible before product categories.
+A four-item primary navigation anchors Home, Catalog, Contact us, and Profile. Catalog keeps delivery mode, address, search, and scan entry visible before product categories.
 
 # Core Flows
 
@@ -18,4 +18,12 @@ A four-item bottom bar anchors Home, Catalog, Contact us, and Profile. Catalog k
 
 # Interaction Patterns
 
-Promotional content uses horizontal rails and games, quantity changes happen inline, selected delivery context stays near search, and checkout keeps totals, substitutions, and the next commitment visible.
+No behavior-only interaction pattern could be separated from the reviewed visual observations.
+
+# System Access Timing
+
+No system-access timing or denial-recovery path was documented in the reviewed source.
+
+# Known Gaps
+
+Unobserved flows, denial paths, cancellation behavior, and recovery states remain unspecified.

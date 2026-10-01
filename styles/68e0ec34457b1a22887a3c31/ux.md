@@ -24,7 +24,12 @@ Five fixed destinations cover Home, Favorites, Post, Messages, and Profile. Home
 
 # Interaction Patterns
 
-- Blue marks navigation, verification, message, and publishing progress; green is reserved for phone calls.
-- Dense two-column cards adapt to goods, housing, jobs, and vehicles.
-- Category chips and search stay consistent across verticals.
-- Posting is a long stepped flow with persistent bottom actions.
+- Posting is a long stepped flow with persistent actions.
+
+# System Access Timing
+
+No system-access timing or denial-recovery path was documented in the reviewed source.
+
+# Known Gaps
+
+Unobserved flows, denial paths, cancellation behavior, and recovery states remain unspecified.

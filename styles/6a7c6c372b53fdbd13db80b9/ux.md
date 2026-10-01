@@ -4,14 +4,14 @@ Craft organizes documents, folders, tasks, calendar, reminders, publishing, and 
 
 # Navigation
 
-Floating bottom controls switch between Home, Tasks, and Calendar while separate assistant and create actions remain immediately available. Document views use back, share, and overflow.
+bottom controls switch between Home, Tasks, and Calendar while separate assistant and create actions remain immediately available. Document views use back, share, and overflow.
 
 # Core Flows
 
 ## Create and organize a document
 
 1. Tap Create and start a blank document or template.
-2. Enter title and content on an uncluttered canvas.
+2. Enter title and content on an editing screen.
 3. Add the document to a folder, tag it, or star it.
 4. Share, publish, or return to Home with its preview updated.
 
@@ -29,3 +29,11 @@ Floating bottom controls switch between Home, Tasks, and Calendar while separate
 - Use previews for recognition, not decoration.
 - Keep empty states concise and actionable.
 - Make offline, sync, sharing, and publishing state explicit.
+
+# System Access Timing
+
+No system-access timing or denial-recovery behavior was documented in the reviewed source.
+
+# Known Gaps
+
+System-permission denial paths, interrupted flows, and recovery behavior not described above were not available in the reviewed source.

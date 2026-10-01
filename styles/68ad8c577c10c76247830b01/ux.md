@@ -4,9 +4,9 @@ Sportmaster combines sports retail with in-store assistance, loyalty, services, 
 
 # Navigation
 
-- A floating five-part bottom dock provides Home, Catalog/Search, Services, Cart, and Account.
-- Search and location remain visible near the top of discovery screens.
-- Product and checkout tasks use long single-column detail screens with sticky actions.
+- A five-part primary navigation provides Home, Catalog/Search, Services, Cart, and Account.
+- Search and location remain visible of discovery screens.
+- Product and checkout tasks use long single-column detail screens with remains available actions.
 
 # Core Flows
 
@@ -18,7 +18,7 @@ Sportmaster combines sports retail with in-store assistance, loyalty, services, 
 
 ## Use a service
 
-1. Open the central Services destination.
+1. Open the Services destination.
 2. Choose store, activity, training, nutrition, media, or loyalty tools.
 3. Continue into the selected focused utility.
 
@@ -29,7 +29,12 @@ Sportmaster combines sports retail with in-store assistance, loyalty, services, 
 
 # Interaction Patterns
 
-- A white floating navigation dock remains legible over dense pages.
-- Blue signals selection and commitment; promotional color stays within content cards.
-- Horizontal rails expose brands and sport categories.
-- Sticky price-and-action bars keep checkout progress visible.
+- remains available price-and-action bars keep checkout progress visible.
+
+# System Access Timing
+
+No system-access timing or denial-recovery path was documented in the reviewed source.
+
+# Known Gaps
+
+Unobserved flows, denial paths, cancellation behavior, and recovery states remain unspecified.

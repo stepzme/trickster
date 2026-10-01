@@ -4,7 +4,7 @@ Perekrestok combines loyalty, in-store support, catalog browsing, grocery orderi
 
 # Navigation
 
-A five-item bottom bar anchors Home, Catalog, Cart, Promotions, and Profile. Home begins with loyalty barcode and service shortcuts before campaigns and product rails.
+A five-item primary navigation anchors Home, Catalog, Cart, Promotions, and Profile. Home begins with loyalty barcode and service shortcuts before campaigns and product rails.
 
 # Core Flows
 
@@ -18,4 +18,12 @@ A five-item bottom bar anchors Home, Catalog, Cart, Promotions, and Profile. Hom
 
 # Interaction Patterns
 
-Green circular quantity controls support repeated basket edits, horizontally scrolling campaigns expose offers, and checkout choices use grouped rows and sheets rather than long free-form forms.
+No behavior-only interaction pattern could be separated from the reviewed visual observations.
+
+# System Access Timing
+
+No system-access timing or denial-recovery path was documented in the reviewed source.
+
+# Known Gaps
+
+Unobserved flows, denial paths, cancellation behavior, and recovery states remain unspecified.

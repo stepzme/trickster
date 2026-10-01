@@ -14,13 +14,26 @@ Wibes uses a playful sticker-like illustration family combining lime, violet, pi
 - Use asymmetric sparkles and orbit lines to create motion without filling every corner.
 - Keep large clear zones for short white headlines and one CTA.
 
-# Color
+# Color and Materials
 
 - Use electric violet, acid lime, hot pink, butter yellow, lavender, and white over black or purple gradients.
 - Avoid realistic materials except for embedded human photography.
 
-# Usage
+# Variants and States
 
 - Use the language for onboarding, topic selection, sign-in gates, network errors, creator education, and recommendations.
 - Keep product photography and real creator video dominant in commerce surfaces.
 - Do not mix unrelated corporate line art into the playful mascot family.
+
+# Production Requirements
+
+Preserve the documented placement, crop, negative space, and visual weight in production exports. Before final art exists, placeholders must preserve those same compositional properties.
+
+# Avoid
+
+- Do not replace the observed imagery language with unrelated stock art or arbitrary symbols.
+- Do not change the documented crop, density, or relationship to nearby text.
+
+# Known Gaps
+
+Animation, export dimensions, safe-crop specifications, appearance variants, and unshown state treatments were not documented.

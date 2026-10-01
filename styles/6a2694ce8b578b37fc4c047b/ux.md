@@ -4,7 +4,7 @@ Yandex Practicum is a course companion that keeps active learning, catalog disco
 
 # Navigation
 
-- The bottom bar separates Learning, Catalog, Support, and Account.
+- The primary navigation separates Learning, Catalog, Support, and Account.
 - The Learning tab centers the active course and its next lesson.
 - Course pages open a focused curriculum overlay with topic and lesson levels.
 
@@ -28,3 +28,11 @@ Yandex Practicum is a course companion that keeps active learning, catalog disco
 - Curriculum uses a drill-down list with checks for completed lessons.
 - Search and filter controls float lightly over long catalog lists.
 - Support is a simple conversation inbox; account settings use familiar rows.
+
+# System Access Timing
+
+No system-access timing or denial-recovery behavior was documented in the reviewed source.
+
+# Known Gaps
+
+System-permission denial paths, interrupted flows, and recovery behavior not described above were not available in the reviewed source.

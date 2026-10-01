@@ -1,10 +1,10 @@
 # Overview
 
-Magnifier is an accessibility camera utility for zooming, changing contrast and color, locking focus, adding light, describing images, freezing frames, and saving named activities.
+Magnifier is an accessibility camera utility for zooming, changing contrast and color, locking focus, adding, describing images, freezing frames, and saving named activities.
 
 # Navigation
 
-The live camera owns the screen. A dark bottom control panel exposes zoom and a configurable set of circular tools; deeper organization opens as dark sheets and lists.
+The live camera owns the screen. A control panel exposes zoom and a configurable set of tools; deeper organization opens as sheets and lists.
 
 # Core Flows
 
@@ -12,7 +12,7 @@ The live camera owns the screen. A dark bottom control panel exposes zoom and a 
 
 1. Point the camera at text or an object.
 2. Adjust zoom, brightness, contrast, filters, focus lock, or torch.
-3. Freeze a useful view or request an image description.
+3. Freeze an useful view or request an image description.
 4. Return to the live view or review the captured frame.
 
 ## Configure repeated use
@@ -24,7 +24,12 @@ The live camera owns the screen. A dark bottom control panel exposes zoom and a 
 
 # Interaction Patterns
 
-- Controls remain high-contrast over live imagery.
-- Yellow marks the current adjustment and confirmation.
-- Large circular targets support low-vision use.
 - The control panel expands without replacing the camera context.
+
+# System Access Timing
+
+No system-access timing or denial-recovery path was documented in the reviewed source.
+
+# Known Gaps
+
+Unobserved flows, denial paths, cancellation behavior, and recovery states remain unspecified.

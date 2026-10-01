@@ -4,7 +4,7 @@ Google Gemini supports prompt suggestions, text and voice input, tool or model s
 
 # Navigation
 
-A minimal top bar opens conversation history and account context. The current conversation occupies one reading column, while the composer remains the persistent entry point.
+Contextual controls open conversation history and account context. The composer remains available throughout the current conversation.
 
 # Core Flows
 
@@ -19,3 +19,11 @@ A minimal top bar opens conversation history and account context. The current co
 # Interaction Patterns
 
 Suggestions reduce blank-state friction, the composer expands for multiline input, generation exposes a stop state, answers remain mostly unboxed, and feedback or share actions stay secondary.
+
+# System Access Timing
+
+- Microphone access follows the user choosing the documented voice or recording action. Denial recovery was not documented.
+
+# Known Gaps
+
+- Permission-denial recovery and unobserved secondary flows were not documented.

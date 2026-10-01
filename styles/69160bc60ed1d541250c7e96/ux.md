@@ -30,6 +30,12 @@ Windy.app personalizes weather around outdoor sports, then combines a forecast d
 
 # Interaction Patterns
 
-- Deep blue panels create a stable information shell while mint highlights selection and next actions.
-- Weather maps stay visible beneath compact dark data cards and bottom timelines.
-- Onboarding uses a progress rail and one decision per screen before building the personalized Home.
+The sampled flows use direct actions, explicit completion, and return to the current context. No additional repeated interaction behavior was documented.
+
+# System Access Timing
+
+No system-access request timing or denial recovery was documented in the reviewed source.
+
+# Known Gaps
+
+- Permission-denial recovery and unobserved secondary flows were not documented.

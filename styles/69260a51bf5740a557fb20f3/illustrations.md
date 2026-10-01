@@ -10,10 +10,22 @@ Combine softly rendered 3D celestial objects with painterly or vector tarot figu
 
 Keep one clear symbolic subject per card. Celestial objects may orbit or overlap softly, while figures stay centered with enough dark negative space for labels and guidance.
 
-# Color
+# Color and Materials
 
 Build from near-black and indigo, then add violet, magenta, amber, moon-white, and occasional cyan. Glows should illuminate the subject rather than wash the whole surface.
 
-# Usage
+# Variants and States
 
 Use illustration for tarot libraries, lunar events, personalized guidance, ritual entry points, and meaningful empty or completion states. Match the dark UI, rounded card geometry, and restrained glow language.
+
+# Production Requirements
+
+Use only the formats and crops supported by the implemented placement. Where the documented imagery is compositionally important, temporary placeholders must preserve its placement, crop, scale, negative space, and approximate visual weight until final art exists. No unobserved light/dark variants or export ratios are prescribed.
+
+# Avoid
+
+- Do not replace the documented image language with unrelated stock art, arbitrary symbols, or a denser composition.
+
+# Known Gaps
+
+- Export aspect ratios, safe crop measurements, animation, and unobserved state variants were not documented.

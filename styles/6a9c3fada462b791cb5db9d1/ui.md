@@ -1,12 +1,12 @@
 <design-context>
 ---
-version: alpha
+version: 1
+platform: iOS
 name: Omio-design-analysis
 description: "A multimodal travel marketplace built from navy headers, coral commitment actions, pale gray form rows, white comparison cards, and pastel blue-pink journey collages. Search remains welcoming and image-led, while transport results, hotel listings, passenger data, extras, and payment use a dense but calm operational grid."
 colors:
   primary: "#172F72"
   on-primary: "#FFFFFF"
-  primary-hover: "#25458E"
   primary-focus: "#102255"
   accent: "#FF6570"
   accent-soft: "#FFB1B4"
@@ -30,36 +30,45 @@ colors:
   semantic-success: "#2AA37F"
   semantic-overlay: "#0E1B3F"
 typography:
-  display-xl: {fontFamily: SF Pro Display, fontSize: 38px, fontWeight: 700, lineHeight: 1.04, letterSpacing: -1.0px}
-  display-lg: {fontFamily: SF Pro Display, fontSize: 30px, fontWeight: 700, lineHeight: 1.08, letterSpacing: -0.6px}
-  display-md: {fontFamily: SF Pro Display, fontSize: 25px, fontWeight: 700, lineHeight: 1.12, letterSpacing: -0.4px}
-  headline: {fontFamily: SF Pro Display, fontSize: 21px, fontWeight: 700, lineHeight: 1.18, letterSpacing: -0.2px}
-  card-title: {fontFamily: SF Pro Text, fontSize: 16px, fontWeight: 700, lineHeight: 1.25, letterSpacing: 0}
-  subhead: {fontFamily: SF Pro Text, fontSize: 15px, fontWeight: 600, lineHeight: 1.32, letterSpacing: 0}
-  body-lg: {fontFamily: SF Pro Text, fontSize: 15px, fontWeight: 400, lineHeight: 1.42, letterSpacing: 0}
-  body: {fontFamily: SF Pro Text, fontSize: 13px, fontWeight: 400, lineHeight: 1.38, letterSpacing: 0}
-  body-sm: {fontFamily: SF Pro Text, fontSize: 11px, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0}
-  caption: {fontFamily: SF Pro Text, fontSize: 10px, fontWeight: 400, lineHeight: 1.25, letterSpacing: 0}
-  button: {fontFamily: SF Pro Text, fontSize: 14px, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0}
-  eyebrow: {fontFamily: SF Pro Text, fontSize: 10px, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0.2px}
-  mono: {fontFamily: SF Mono, fontSize: 11px, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0}
-rounded: {xs: 4px, sm: 8px, md: 12px, lg: 16px, xl: 22px, xxl: 28px, pill: 9999px, full: 9999px}
-spacing: {xxs: 4px, xs: 8px, sm: 12px, md: 16px, lg: 20px, xl: 24px, xxl: 32px, section: 44px}
+  display-xl: {fontFamily: SF Pro Display, fontSize: 38, fontWeight: 700, lineHeight: 1.04, letterSpacing: -1.0}
+  display-lg: {fontFamily: SF Pro Display, fontSize: 30, fontWeight: 700, lineHeight: 1.08, letterSpacing: -0.6}
+  display-md: {fontFamily: SF Pro Display, fontSize: 25, fontWeight: 700, lineHeight: 1.12, letterSpacing: -0.4}
+  headline: {fontFamily: SF Pro Display, fontSize: 21, fontWeight: 700, lineHeight: 1.18, letterSpacing: -0.2}
+  card-title: {fontFamily: SF Pro Text, fontSize: 16, fontWeight: 700, lineHeight: 1.25, letterSpacing: 0}
+  subhead: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 600, lineHeight: 1.32, letterSpacing: 0}
+  body-lg: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 400, lineHeight: 1.42, letterSpacing: 0}
+  body: {fontFamily: SF Pro Text, fontSize: 13, fontWeight: 400, lineHeight: 1.38, letterSpacing: 0}
+  body-sm: {fontFamily: SF Pro Text, fontSize: 11, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0}
+  caption: {fontFamily: SF Pro Text, fontSize: 10, fontWeight: 400, lineHeight: 1.25, letterSpacing: 0}
+  button: {fontFamily: SF Pro Text, fontSize: 14, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0}
+  eyebrow: {fontFamily: SF Pro Text, fontSize: 10, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0.2}
+  mono: {fontFamily: SF Mono, fontSize: 11, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0}
+rounded: {xs: 4, sm: 8, md: 12, lg: 16, xl: 22, xxl: 28, pill: 9999, full: 9999}
+spacing: {xxs: 4, xs: 8, sm: 12, md: 16, lg: 20, xl: 24, xxl: 32, section: 44}
 components:
-  button-primary: {backgroundColor: "{colors.accent}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 14px 18px}
+  button-primary: {backgroundColor: "{colors.accent}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [14, 18]}
   button-primary-pressed: {backgroundColor: "#E95361", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}"}
-  button-secondary: {backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 12px 16px}
-  search-field: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xs}", padding: 12px}
-  result-card: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: 14px}
+  button-secondary: {backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [12, 16]}
+  search-field: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xs}", padding: 12}
+  result-card: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: 14}
   hotel-card: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: 0}
-  filter-chip: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.pill}", padding: 8px 12px}
-  bottom-nav: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink-subtle}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: 8px 10px}
+  filter-chip: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.pill}", padding: [8, 12]}
+  bottom-nav: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink-subtle}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: [8, 10]}
 ---
-## Overview
+
+# Overview
 
 Omio balances a warm illustrated travel invitation with disciplined comparison and checkout surfaces. Navy carries trust and structure, coral marks commitment, and pale neutral rows keep complex travel inputs approachable.
 
-## Colors
+# Non-negotiable visual invariants
+
+- The reviewed screens use this composition: A multimodal travel marketplace built from navy headers, coral commitment actions, pale gray form rows, white comparison cards, and pastel blue-pink journey collages.
+- The dominant canvas token is #F4F5F7 and the primary accent token is #172F72.
+- The recorded display style is 38 points while the body style is 13 points.
+- Navigation appears as follows: Search, Explore, Favorites, Bookings, and Profile remain fixed in browsing.
+- The reviewed screens use this hierarchy: Search remains welcoming and image-led, while transport results, hotel listings, passenger data, extras, and payment use a dense but calm operational grid.
+
+# Color and surfaces
 
 ### Brand & Accent
 - Navy owns journey headers, prices, headings, and selected transport context.
@@ -75,7 +84,7 @@ Omio balances a warm illustrated travel invitation with disciplined comparison a
 ### Semantic
 - Green indicates savings, cheapest options, included choices, and completed selection. Coral remains transactional rather than error-specific.
 
-## Typography
+# Typography
 
 ### Font Family
 
@@ -85,11 +94,11 @@ Use SF Pro Display for journey and destination headings, SF Pro Text for results
 
 | Token | Size | Weight | Use |
 |---|---:|---:|---|
-| display-lg | 30px | 700 | Onboarding statement |
-| headline | 21px | 700 | Search or booking section |
-| card-title | 16px | 700 | Operator, hotel, or destination |
-| body | 13px | 400 | Itinerary and conditions |
-| caption | 10px | 400 | Navigation and metadata |
+| display-lg | 30pt | 700 | Onboarding statement |
+| headline | 21pt | 700 | Search or booking section |
+| card-title | 16pt | 700 | Operator, hotel, or destination |
+| body | 13pt | 400 | Itinerary and conditions |
+| caption | 10pt | 400 | Navigation and metadata |
 
 ### Principles
 
@@ -101,11 +110,7 @@ Use SF Pro Display for journey and destination headings, SF Pro Text for results
 
 Use the platform system sans with tabular numerals and reliable international glyph coverage.
 
-## Layout
-
-### Spacing System
-
-Use a 4px base, 12px card gaps, 16px side margins, and 12–16px internal padding.
+# Screen composition
 
 ### Grid & Container
 
@@ -115,41 +120,15 @@ Home stacks a scenic header, Travel or Stays tabs, search fields, offers, and me
 
 Keep search welcoming and open, then compress results and checkout enough to compare without hiding terms.
 
-## Elevation & Depth
+# Navigation appearance
 
-| Level | Treatment | Use |
-|---|---|---|
-| 0 | Pale gray canvas | Results and forms |
-| 1 | White card | Search, itinerary, hotel, payment |
-| 2 | Navy sticky header | Current journey |
-| 3 | Sheet or processing scene | Focused choice and interruption |
+Search, Explore, Favorites, Bookings, and Profile remain fixed in browsing. Focused booking uses a back action, route summary, and share or modify controls.
 
-### Decorative Depth
-
-Use soft shadows beneath result and hotel cards. Illustration depth comes from layered pastel scenery rather than pronounced drop shadows.
-
-## Shapes
-
-### Border Radius Scale
-
-| Token | Value | Use |
-|---|---:|---|
-| rounded-sm | 8px | Fields and cards |
-| rounded-md | 12px | Offers and media |
-| rounded-lg | 16px | Search composition |
-| rounded-full | full | Filters and floating map action |
-
-### Photography & Illustration Geometry
-
-Use wide pastel travel collages for headers and real destination or hotel photography in stable rectangular crops. Keep fares, ratings, and terms outside imagery.
-
-## Components
+# Components
 
 ### Buttons
 
 Coral commits search and purchase; navy handles maps and secondary commitment. Outlined white buttons support modifications and low-emphasis actions.
-
-### Pricing Tabs
 
 Transport modes, nearby dates, Travel or Stays, sort, and filters expose one coral or navy selection with quiet inactive states.
 
@@ -169,11 +148,49 @@ Use text labels for recommended, cheapest, fastest, direct, included, free, sele
 
 Search, Explore, Favorites, Bookings, and Profile remain fixed in browsing. Focused booking uses a back action, route summary, and share or modify controls.
 
-### Footer
+# Imagery and icons
 
-No footer; bottom navigation, a floating map action, or the current checkout action owns the safe area.
+| Level | Treatment | Use |
+|---|---|---|
+| 0 | Pale gray canvas | Results and forms |
+| 1 | White card | Search, itinerary, hotel, payment |
+| 2 | Navy sticky header | Current journey |
+| 3 | Sheet or processing scene | Focused choice and interruption |
 
-## Do's and Don'ts
+### Decorative Depth
+
+Use soft shadows beneath result and hotel cards. Illustration depth comes from layered pastel scenery rather than pronounced drop shadows.
+
+# States
+
+Use text labels for recommended, cheapest, fastest, direct, included, free, selected, refundable, and processing. Pair status with the affected value rather than a detached notification.
+
+# iOS adaptation
+
+### Touch Targets
+
+Tabs, fields, date chips, filters, hearts, payment rows, and actions keep at least 44pt hit areas.
+
+### Collapsing Strategy
+
+Preserve route, mode, dates, times, duration, stops, price, total, and main action. Collapse recommendation media and secondary explanation first.
+
+### Image Behavior
+
+Keep the illustrated horizon visible in home and onboarding. Crop destination and hotel photography around recognizable place or room context.
+
+On iPhone, respect top and bottom safe areas, use scrolling for content that does not fit, keep interactive targets at least 44 points, and preserve the visual reading order for VoiceOver. At larger Dynamic Type sizes, allow supporting text to wrap without collapsing the dominant hierarchy. Use native sheets and permission transitions while explicitly styling app-owned surfaces to match the reference.
+
+# Anti-generic checklist
+
+- Do not substitute the documented accent hierarchy with default iOS blue.
+- Do not collapse distinct surfaces into a uniform stack of generic white cards.
+- Do not use an unstyled `TabView`, `Form`, or arbitrary SF Symbols when they contradict the documented navigation and component language.
+- Do not flatten the documented typography into one body-text scale.
+- Do not remove compositionally important photography or illustration while assets are pending.
+- Do not apply one corner radius to every control and surface.
+
+Source-specific guardrails retained from the review:
 
 ### Do
 
@@ -189,38 +206,10 @@ No footer; bottom navigation, a floating map action, or the current checkout act
 - Don't use coral for every interactive element.
 - Don't separate hotel photos from rating and price context.
 
-## Responsive Behavior
-
-### Breakpoints
-
-| Name | Width | Key Changes |
-|---|---:|---|
-| Compact | 320–374px | Tighten result and hotel metadata |
-| Standard | 375–430px | Default mobile composition |
-| Wide | 431px+ | Widen cards and media without adding columns |
-
-### Touch Targets
-
-Tabs, fields, date chips, filters, hearts, payment rows, and actions keep at least 44px hit areas.
-
-### Collapsing Strategy
-
-Preserve route, mode, dates, times, duration, stops, price, total, and main action. Collapse recommendation media and secondary explanation first.
-
-### Image Behavior
-
-Keep the illustrated horizon visible in home and onboarding. Crop destination and hotel photography around recognizable place or room context.
-
-## Iteration Guide
-
-Tune search and comparison first, then booking extras, payment transparency, hotel density, Explore, and account utilities.
-
-## Known Gaps
+# Known gaps
 
 - Tokens were inferred visually from reviewed mobile screens.
 - Live purchase completion, change, cancellation, support chat, and map gestures were not executed.
-- Tablet and landscape layouts were not represented.
+- iPad and landscape layouts were not represented.
 
 </design-context>
-
-Use the design system above for all UI you generate.

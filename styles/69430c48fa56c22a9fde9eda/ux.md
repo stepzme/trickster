@@ -4,7 +4,7 @@ My MTS is a modular telecom account hub for balance, tariff usage, services, fam
 
 # Navigation
 
-Four bottom destinations connect My MTS, Money, Catalog, and Support. The main number selector, notifications, search, and promotional rail sit above balance and tariff modules.
+Four primary destinations connect My MTS, Money, Catalog, and Support. The main number selector, notifications, search, and promotional rail sit above balance and tariff modules.
 
 # Core Flows
 
@@ -22,7 +22,12 @@ Four bottom destinations connect My MTS, Money, Catalog, and Support. The main n
 
 # Interaction Patterns
 
-- Large white modules turn a broad service set into a vertically scannable dashboard.
-- Magenta drives primary account and payment actions; cyan identifies money utilities.
 - Promotional stories remain bounded above operational balance and tariff content.
-- Bottom sheets present short destination lists, payment choices, and confirmations without losing context.
+
+# System Access Timing
+
+No system-access request timing or denial recovery was documented in the reviewed source.
+
+# Known Gaps
+
+- Permission-denial recovery and unobserved secondary flows were not documented.

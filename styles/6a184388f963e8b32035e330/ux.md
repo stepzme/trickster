@@ -4,7 +4,7 @@ Moonlitt visualizes moon phase, orbital path, time, location, events, live activ
 
 # Navigation
 
-The visualization owns the screen. Floating controls expose date, current time, location, layers, calendar, and settings without introducing a conventional tab bar.
+The visualization owns the screen. controls expose date, current time, location, layers, calendar, and settings without introducing a conventional primary navigation.
 
 # Core Flows
 
@@ -18,13 +18,20 @@ The visualization owns the screen. Floating controls expose date, current time, 
 ## Keep the phase visible
 
 1. Enable Live Activities or add a widget.
-2. Choose a compact or expanded moon-path presentation.
-3. Read phase and next-event timing from the system surface.
+2. Choose a summary or detailed moon-path mode.
+3. Read phase and next-event timing from the system state.
 4. Return to the app for detailed exploration.
 
 # Interaction Patterns
 
 - A deep navy star field and violet haze keep the scene immersive.
 - The moon and dotted path are the primary information graphic.
-- Floating glass pills expose controls without framing the visualization.
 - Time and phase update directly as the user moves through the orbit.
+
+# System Access Timing
+
+No system-access timing or denial-recovery behavior was documented in the reviewed source.
+
+# Known Gaps
+
+System-permission denial paths, interrupted flows, and recovery behavior not described above were not available in the reviewed source.

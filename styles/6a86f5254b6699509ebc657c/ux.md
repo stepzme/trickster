@@ -4,9 +4,8 @@ Tolan turns an AI companion into a persistent character living on a small planet
 
 # Navigation
 
-- The planet is the home surface, with camera, chat, and voice actions anchored at the bottom.
 - A left drawer opens Journal, Intentions, Insights, Check-ins, Library, Family, Shop, character, planet, and settings.
-- Contextual cards above the character launch affirmations, questions, sessions, and suggested conversations.
+- Contextual entry actions launch affirmations, questions, sessions, and suggested conversations.
 
 # Core Flows
 
@@ -31,6 +30,14 @@ Tolan turns an AI companion into a persistent character living on a small planet
 # Interaction Patterns
 
 - The animated planet remains visible behind lightweight cards and chat overlays.
-- Daily activities are presented one at a time in a horizontal card carousel.
+- Daily activities are presented one at a time in a sequence.
 - Tokens, locked insights, and membership benefits make progression explicit.
 - Privacy-sensitive journal and profile actions use clear confirmation and lock states.
+
+# System Access Timing
+
+No system-access timing or denial-recovery behavior was documented in the reviewed source.
+
+# Known Gaps
+
+System-permission denial paths, interrupted flows, and recovery behavior not described above were not available in the reviewed source.

@@ -1,10 +1,10 @@
 # Overview
 
-Yandex Disk is a dark media-and-file workspace with separate Feed, Files, Photos, Albums, and More destinations.
+Yandex Disk is a media-and-file workspace with separate Feed, Files, Photos, Albums, and More destinations.
 
 # Navigation
 
-A five-item bottom bar stays visible across primary sections. Search and profile sit in the top bar; creation starts from a floating yellow plus button.
+A five-item primary navigation stays visible across primary sections. Search and profile sit in the primary navigation; creation starts from a plus button.
 
 # Core Flows
 
@@ -12,7 +12,7 @@ A five-item bottom bar stays visible across primary sections. Search and profile
 
 1. Review upload activity and media in Feed.
 2. Switch to Files for folders, offline content, and trash.
-3. Tap the yellow plus to create documents, folders, photos, scans, or office files.
+3. Tap the plus to create documents, folders, photos, scans, or office files.
 
 ## Manage storage
 
@@ -22,7 +22,12 @@ A five-item bottom bar stays visible across primary sections. Search and profile
 
 # Interaction Patterns
 
-- Keep primary creation in the floating yellow action.
-- Use dark sheets for secondary creation choices.
-- Show storage state persistently near the top.
-- Confirm file operations with blue transient banners.
+- Show storage state persistently.
+
+# System Access Timing
+
+No system-access timing or denial-recovery path was documented in the reviewed source.
+
+# Known Gaps
+
+Unobserved flows, denial paths, cancellation behavior, and recovery states remain unspecified.

@@ -4,7 +4,7 @@ Opal turns screen-time control into an immersive focus system with personal scor
 
 # Navigation
 
-Five icon-only destinations connect Focus, Blocks, activity or score, Leaderboard, and Profile. The active icon glows white, while Home keeps duration, blocked apps, and Start Timer anchored near the bottom.
+Five destinations connect Focus, Blocks, activity or score, Leaderboard, and Profile. Home keeps duration, blocked apps, and Start Timer.
 
 # Core Flows
 
@@ -24,7 +24,12 @@ Five icon-only destinations connect Focus, Blocks, activity or score, Leaderboar
 
 # Interaction Patterns
 
-- Dark immersive imagery sits behind translucent black controls and soft neon edges.
-- Mint is reserved for creation and positive focus; electric blue explains system permission steps.
-- Preset cards combine evocative art, schedule, and one Add action.
-- Bottom duration and block controls remain stable across the long Home experience.
+The sampled flows use direct actions, explicit completion, and return to the current context. No additional repeated interaction behavior was documented.
+
+# System Access Timing
+
+No system-access request timing or denial recovery was documented in the reviewed source.
+
+# Known Gaps
+
+- Permission-denial recovery and unobserved secondary flows were not documented.

@@ -1,12 +1,12 @@
 <design-context>
 ---
-version: alpha
+version: 1
+platform: iOS
 name: Detsky-Mir-design-analysis
 description: "A playful family marketplace on a pale icy-blue canvas with bright blue commerce actions, bold black headings, white rounded product cards, red discount signals, colorful category tiles, dense catalog grids, and a friendly blue bear mascot used across loyalty and promotional guidance."
 colors:
   primary: "#078CE5"
   on-primary: "#FFFFFF"
-  primary-hover: "#0075C5"
   primary-soft: "#E5F4FF"
   accent: "#6C35DB"
   ink: "#111318"
@@ -21,32 +21,31 @@ colors:
   semantic-danger: "#F04438"
   semantic-overlay: "#000000"
 typography:
-  display-xl: { fontFamily: SF Pro Display, fontSize: 38px, fontWeight: 800, lineHeight: 1.05, letterSpacing: -0.8px }
-  display-lg: { fontFamily: SF Pro Display, fontSize: 32px, fontWeight: 800, lineHeight: 1.10, letterSpacing: -0.5px }
-  display-md: { fontFamily: SF Pro Display, fontSize: 27px, fontWeight: 750, lineHeight: 1.15, letterSpacing: -0.3px }
-  headline: { fontFamily: SF Pro Display, fontSize: 22px, fontWeight: 750, lineHeight: 1.20, letterSpacing: -0.1px }
-  card-title: { fontFamily: SF Pro Text, fontSize: 16px, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: SF Pro Text, fontSize: 16px, fontWeight: 600, lineHeight: 1.30, letterSpacing: 0 }
-  body-lg: { fontFamily: SF Pro Text, fontSize: 16px, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
-  body: { fontFamily: SF Pro Text, fontSize: 14px, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
-  body-sm: { fontFamily: SF Pro Text, fontSize: 12px, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
-  caption: { fontFamily: SF Pro Text, fontSize: 10px, fontWeight: 500, lineHeight: 1.20, letterSpacing: 0 }
-  button: { fontFamily: SF Pro Text, fontSize: 15px, fontWeight: 650, lineHeight: 1.20, letterSpacing: 0 }
-  eyebrow: { fontFamily: SF Pro Text, fontSize: 11px, fontWeight: 650, lineHeight: 1.20, letterSpacing: 0.2px }
-  mono: { fontFamily: SF Mono, fontSize: 12px, fontWeight: 500, lineHeight: 1.30, letterSpacing: 0 }
-rounded: { xs: 6px, sm: 10px, md: 14px, lg: 18px, xl: 24px, xxl: 30px, pill: 9999px, full: 9999px }
-spacing: { xxs: 4px, xs: 8px, sm: 12px, md: 16px, lg: 24px, xl: 32px, xxl: 48px, section: 64px }
+  display-xl: { fontFamily: SF Pro Display, fontSize: 38, fontWeight: 800, lineHeight: 1.05, letterSpacing: -0.8 }
+  display-lg: { fontFamily: SF Pro Display, fontSize: 32, fontWeight: 800, lineHeight: 1.10, letterSpacing: -0.5 }
+  display-md: { fontFamily: SF Pro Display, fontSize: 27, fontWeight: 750, lineHeight: 1.15, letterSpacing: -0.3 }
+  headline: { fontFamily: SF Pro Display, fontSize: 22, fontWeight: 750, lineHeight: 1.20, letterSpacing: -0.1 }
+  card-title: { fontFamily: SF Pro Text, fontSize: 16, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
+  subhead: { fontFamily: SF Pro Text, fontSize: 16, fontWeight: 600, lineHeight: 1.30, letterSpacing: 0 }
+  body-lg: { fontFamily: SF Pro Text, fontSize: 16, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
+  body: { fontFamily: SF Pro Text, fontSize: 14, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
+  body-sm: { fontFamily: SF Pro Text, fontSize: 12, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
+  caption: { fontFamily: SF Pro Text, fontSize: 10, fontWeight: 500, lineHeight: 1.20, letterSpacing: 0 }
+  button: { fontFamily: SF Pro Text, fontSize: 15, fontWeight: 650, lineHeight: 1.20, letterSpacing: 0 }
+  eyebrow: { fontFamily: SF Pro Text, fontSize: 11, fontWeight: 650, lineHeight: 1.20, letterSpacing: 0.2 }
+  mono: { fontFamily: SF Mono, fontSize: 12, fontWeight: 500, lineHeight: 1.30, letterSpacing: 0 }
+rounded: { xs: 6, sm: 10, md: 14, lg: 18, xl: 24, xxl: 30, pill: 9999, full: 9999 }
+spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
 components:
-  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.md}", padding: 13px 18px }
-  product-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.md}", padding: 10px }
-  category-tile: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.caption}", rounded: "{rounded.sm}", padding: 10px 8px }
-  promo-banner: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.card-title}", rounded: "{rounded.md}", padding: 14px }
-  input: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: 11px 13px }
-  top-nav: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xs}", height: 52px }
-  footer: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: 8px 10px }
+  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.md}", padding: [13, 18]}
+  product-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.md}", padding: 10 }
+  category-tile: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.caption}", rounded: "{rounded.sm}", padding: [10, 8]}
+  promo-banner: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.card-title}", rounded: "{rounded.md}", padding: 14 }
+  input: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: [11, 13]}
+  bottom navigation: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: [8, 10]}
 ---
 
-## Overview
+# Overview
 
 Detsky Mir combines a dense family catalog with cheerful loyalty and promotion. Blue anchors navigation and purchase, while a friendly bear and toy-like graphics make benefits approachable.
 
@@ -57,7 +56,15 @@ Detsky Mir combines a dense family catalog with cheerful loyalty and promotion. 
 - Dense two-column product cards and horizontal offers.
 - Blue bear mascot across loyalty and guidance.
 
-## Colors
+# Non-negotiable visual invariants
+
+- Sampled screens consistently use pale blue retail canvas and white rounded modules.
+- Navigation consistently uses bright blue purchase actions and selected navigation.
+- The reference consistently shows red discount prices with crossed-out history.
+- The reference consistently shows dense two-column product cards and horizontal offers.
+- Imagery consistently uses blue bear mascot across loyalty and guidance.
+
+# Color and surfaces
 
 ### Brand & Accent
 - **Primary** ({colors.primary}): Catalog, cart actions, active navigation, and links.
@@ -81,7 +88,7 @@ Detsky Mir combines a dense family catalog with cheerful loyalty and promotion. 
 - **Danger** ({colors.semantic-danger}): Discounts, failures, and destructive action.
 - **Overlay** ({colors.semantic-overlay}): Modal focus.
 
-## Typography
+# Typography
 
 ### Font Family
 - **SF Pro Display** — store headings and benefit statements.
@@ -89,7 +96,7 @@ Detsky Mir combines a dense family catalog with cheerful loyalty and promotion. 
 - **SF Mono** — order numbers and payment references.
 
 ### Hierarchy
-Use 32–38px heavy for campaign statements, 22px for sections, 16px semibold for cards, 14px body, and 10–12px dense product metadata.
+Use 32–38 points heavy for campaign statements, 22 points for sections, 16 points semibold for cards, 14 points body, and 10–12 points dense product metadata.
 
 ### Principles
 - Keep current price strongest in product cards.
@@ -100,10 +107,10 @@ Use 32–38px heavy for campaign statements, 22px for sections, 16px semibold fo
 ### Note on Font Substitutes
 Use the platform system sans or **Inter** with a heavy display weight and tabular prices.
 
-## Layout
+# Screen composition
 
 ### Spacing System
-Use a 4px base, 12px module gaps, 16px gutters, 10px product-card padding, and 16px checkout section padding.
+Use a 4 points base, 12 points module gaps, 16 points gutters, 10 points product-card padding, and 16 points checkout section padding.
 
 ### Grid & Container
 Home stacks search, utility tiles, promotions, product rails, and the fixed four-tab bar. Catalog and recommendations use dense two-column grids.
@@ -111,84 +118,74 @@ Home stacks search, utility tiles, promotions, product rails, and the fixed four
 ### Whitespace Philosophy
 Keep retail density high but separate discovery, product comparison, and checkout into clear white zones.
 
-## Elevation & Depth
+Surface hierarchy observed in the source:
+
 Use white cards and pale-blue bands with light boundaries. Reserve stronger elevation for sticky cart actions and payment confirmation.
 
 ### Decorative Depth
 Mascot art, toy icons, product photography, and bright campaign fields supply depth while the commerce shell stays flat.
 
-## Shapes
+# Navigation appearance
 
-### Border Radius Scale
-Use 10px for inputs, 14px for product and promo cards, 18px for sheets, 24px for major campaign modules, and full circles for icons.
+Home, Catalog, Profile, and Cart remain in the tab bar; search and support are surfaced near the top of Home.
 
-### Photography & Illustration Geometry
-Use isolated product photography on white cards and rounded mascot scenes with generous light-blue negative space.
-
-## Components
+# Components
 
 ### Buttons
+
 Use blue filled purchase buttons, blue text links, and outlined filters. Keep sticky Add to cart and Pay controls full-width.
 
-### Pricing Tabs
-Use filter chips for category, delivery speed, exclusivity, and sorting; selection gains a blue outline or pale fill.
-
 ### Cards & Containers
+
 Use product cards, campaign banners, utility tiles, bonus cards, recommendation rails, cart items, and checkout sections.
 
 ### Inputs & Forms
+
 Search stays globally prominent with barcode scan. Checkout groups fulfillment, payment, recipient, and certificate fields.
 
-### Status & Build Page
+# Imagery and icons
+
+Mascot art, toy icons, product photography, and bright campaign fields supply depth while the commerce shell stays flat.
+
+Use isolated product photography on white cards and rounded mascot scenes with generous light-blue negative space.
+
+If final imagery is not yet available, any placeholder must preserve the documented scale, placement, crop, and visual weight rather than removing that layer.
+
+# States
+
 Show discount, rating, exclusive price, availability, cart count, payment confirmation, canceled order, and bonus state explicitly.
 
-### Navigation
-Home, Catalog, Profile, and Cart remain in the tab bar; search and support are surfaced near the top of Home.
+# iOS adaptation
 
-### Footer
-The white tab bar stays stable while sticky purchase actions sit immediately above it.
+### Touch Targets
 
-## Do's and Don'ts
+Keep search, scan, tiles, products, favorite, quantity, fulfillment, payment, and navigation at least 44 points.
 
-### Do
-- Keep current price and discount easy to compare.
-- Use mascot art for benefits and guidance.
-- Preserve scan and search access.
-- Keep fulfillment and payment choices explicit.
+### Collapsing Strategy
 
-### Don't
+Preserve search, catalog, cart, price, fulfillment, and pay. Move campaigns and recommendation rails below active shopping tasks.
+
+### Image Behavior
+
+Contain product photography without crop; crop mascot banners only within their designed rounded frames and preserve embedded copy.
+
+Apply these rules within current iPhone safe areas and scrolling containers. Keep interactive targets at least 44 points, preserve a logical VoiceOver order, and let Dynamic Type wrap supporting text without flattening the documented hierarchy. Do not infer an unobserved dark or light appearance.
+
+# Anti-generic checklist
+
 - Don't mix mascot art into dense product rows.
 - Don't hide old price or unit context.
 - Don't let campaign color overtake checkout.
 - Don't rely on icons alone for family-critical actions.
+- Do not replace the documented hierarchy with a generic stack of identical white cards or `Form` sections.
+- Do not use default blue tint, an unstyled `TabView`, arbitrary SF Symbols, or uniform corner radii when they contradict the recorded tokens and components.
+- Do not omit compositionally important imagery while final assets are pending; preserve its footprint with a faithful placeholder.
 
-## Responsive Behavior
+# Known gaps
 
-### Breakpoints
-Use two product columns on phones, three from 768px, and a wider catalog with persistent filters above 1024px.
-
-### Touch Targets
-Keep search, scan, tiles, products, favorite, quantity, fulfillment, payment, and navigation at least 44px.
-
-### Collapsing Strategy
-Preserve search, catalog, cart, price, fulfillment, and pay. Move campaigns and recommendation rails below active shopping tasks.
-
-### Image Behavior
-Contain product photography without crop; crop mascot banners only within their designed rounded frames and preserve embedded copy.
-
-## Iteration Guide
-1. Build navigation, search, and catalog.
-2. Add product detail, favorites, and cart.
-3. Add fulfillment, payment, and order status.
-4. Add bonus card, family profile, and certificates.
-5. Add campaigns, support, and reviews.
-
-## Known Gaps
 - Tokens were inferred visually from inspected mobile screens.
 - All 47 flow names were inventoried; Main, Product card, and Placing an order were image-reviewed.
 - Returns, support, and family bonus edge cases were not deeply sampled.
 - No tablet or desktop captures were present.
 
 </design-context>
-
-Use the design system above for all UI you generate.

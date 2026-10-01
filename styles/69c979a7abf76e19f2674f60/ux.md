@@ -17,7 +17,13 @@ Today supports return use, Explore supports discovery, and Profile holds persona
 
 # Interaction Patterns
 
-- Surface recent content before broad discovery.
 - Show duration before commitment.
-- Keep playback controls sparse and large.
 - Preserve progress when a lesson is interrupted.
+
+# System Access Timing
+
+No system-access request timing or denial recovery was documented in the reviewed source.
+
+# Known Gaps
+
+- Permission-denial recovery and unobserved secondary flows were not documented.

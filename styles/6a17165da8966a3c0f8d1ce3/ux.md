@@ -1,10 +1,10 @@
 # Overview
 
-Asia Online is a grocery loyalty companion centered on a QR bonus card, promotions, cashback, store discovery, subscription benefits, and profile. It supports in-store shopping rather than a full product cart.
+Asia Online is a grocery loyalty companion focused on a QR bonus card, promotions, cashback, store discovery, subscription benefits, and profile. It supports in-store shopping rather than a full product cart.
 
 # Navigation
 
-Home, Discounts, My benefit, Stores, and Profile form the bottom bar. Home keeps the bonus QR and active campaign visible. Stores switches explicitly between list and map.
+Home, Discounts, My benefit, Stores, and Profile are the primary destinations. Home keeps the bonus QR and active campaign visible. Stores switches explicitly between list and map.
 
 # Core Flows
 
@@ -17,15 +17,15 @@ Home, Discounts, My benefit, Stores, and Profile form the bottom bar. Home keeps
 
 ## Home and discounts
 
-Home combines campaign hero, QR, points, subscription savings, referral, receipt history, price lookup, delivery partner, and popular promotions. Discounts uses a two-column catalogue and age gate when necessary.
+1. Home combines campaign hero, QR, points, subscription savings, referral, receipt history, price lookup, delivery partner, and popular promotions. Discounts uses a catalogue and age gate when necessary.
 
 ## Benefits and stores
 
-My benefit shows QR, cashback, discount, history, birthday reward, and subscription benefits. Stores provides search, hours, distance, list/map switch, route, and price scanning.
+1. My benefit shows QR, cashback, discount, history, birthday reward, and subscription benefits. Stores provides search, hours, distance, list/map switch, route, and price scanning.
 
 ## Profile
 
-Profile groups personal data, referral, subscription, jobs, purchase history, loyalty cards, support, settings, agreements, and logout.
+1. Profile groups personal data, referral, subscription, jobs, purchase history, loyalty cards, support, settings, agreements, and logout.
 
 # Interaction Patterns
 
@@ -33,4 +33,11 @@ Profile groups personal data, referral, subscription, jobs, purchase history, lo
 - Explain cashback and discount separately.
 - Gate age-restricted promotions before content.
 - Preserve list/map store selection.
-- Use yellow only for decisive store or subscription actions.
+
+# System Access Timing
+
+No system-access timing or denial-recovery behavior was documented in the reviewed source.
+
+# Known Gaps
+
+System-permission denial paths, interrupted flows, and recovery behavior not described above were not available in the reviewed source.

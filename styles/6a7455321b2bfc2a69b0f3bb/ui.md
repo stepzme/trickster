@@ -1,12 +1,12 @@
 <design-context>
 ---
-version: alpha
+version: 1
+platform: iOS
 name: Jomo-design-analysis
 description: "An optimistic digital-wellbeing interface that pairs a white utility layer with immersive blue-sky photography, airy blue gradients, oversized rounded sheets, black pill actions, and a friendly app-shaped mascot. Data, blocking controls, and system permissions remain clear while the visual language feels restorative rather than punitive."
 colors:
   primary: "#2F91F3"
   on-primary: "#FFFFFF"
-  primary-hover: "#5AAAF7"
   primary-focus: "#2478D0"
   ink: "#171719"
   ink-muted: "#67676E"
@@ -28,52 +28,51 @@ colors:
   semantic-success: "#51C978"
   semantic-overlay: "#171719"
 typography:
-  display-xl: {fontFamily: SF Pro Display, fontSize: 40px, fontWeight: 700, lineHeight: 1.04, letterSpacing: -1.2px}
-  display-lg: {fontFamily: SF Pro Display, fontSize: 32px, fontWeight: 700, lineHeight: 1.08, letterSpacing: -0.8px}
-  display-md: {fontFamily: SF Pro Display, fontSize: 26px, fontWeight: 700, lineHeight: 1.12, letterSpacing: -0.5px}
-  headline: {fontFamily: SF Pro Display, fontSize: 22px, fontWeight: 700, lineHeight: 1.18, letterSpacing: -0.3px}
-  card-title: {fontFamily: SF Pro Text, fontSize: 17px, fontWeight: 600, lineHeight: 1.25, letterSpacing: -0.1px}
-  subhead: {fontFamily: SF Pro Text, fontSize: 16px, fontWeight: 600, lineHeight: 1.32, letterSpacing: 0}
-  body-lg: {fontFamily: SF Pro Text, fontSize: 16px, fontWeight: 400, lineHeight: 1.42, letterSpacing: 0}
-  body: {fontFamily: SF Pro Text, fontSize: 14px, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0}
-  body-sm: {fontFamily: SF Pro Text, fontSize: 12px, fontWeight: 400, lineHeight: 1.32, letterSpacing: 0}
-  caption: {fontFamily: SF Pro Text, fontSize: 10px, fontWeight: 500, lineHeight: 1.25, letterSpacing: 0}
-  button: {fontFamily: SF Pro Text, fontSize: 15px, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0}
-  eyebrow: {fontFamily: SF Pro Text, fontSize: 11px, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0.2px}
-  mono: {fontFamily: SF Mono, fontSize: 12px, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0}
+  display-xl: {fontFamily: SF Pro Display, fontSize: 40, fontWeight: 700, lineHeight: 1.04, letterSpacing: -1.2}
+  display-lg: {fontFamily: SF Pro Display, fontSize: 32, fontWeight: 700, lineHeight: 1.08, letterSpacing: -0.8}
+  display-md: {fontFamily: SF Pro Display, fontSize: 26, fontWeight: 700, lineHeight: 1.12, letterSpacing: -0.5}
+  headline: {fontFamily: SF Pro Display, fontSize: 22, fontWeight: 700, lineHeight: 1.18, letterSpacing: -0.3}
+  card-title: {fontFamily: SF Pro Text, fontSize: 17, fontWeight: 600, lineHeight: 1.25, letterSpacing: -0.1}
+  subhead: {fontFamily: SF Pro Text, fontSize: 16, fontWeight: 600, lineHeight: 1.32, letterSpacing: 0}
+  body-lg: {fontFamily: SF Pro Text, fontSize: 16, fontWeight: 400, lineHeight: 1.42, letterSpacing: 0}
+  body: {fontFamily: SF Pro Text, fontSize: 14, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0}
+  body-sm: {fontFamily: SF Pro Text, fontSize: 12, fontWeight: 400, lineHeight: 1.32, letterSpacing: 0}
+  caption: {fontFamily: SF Pro Text, fontSize: 10, fontWeight: 500, lineHeight: 1.25, letterSpacing: 0}
+  button: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0}
+  eyebrow: {fontFamily: SF Pro Text, fontSize: 11, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0.2}
+  mono: {fontFamily: SF Mono, fontSize: 12, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0}
 rounded:
-  xs: 4px
-  sm: 8px
-  md: 12px
-  lg: 18px
-  xl: 24px
-  xxl: 32px
-  pill: 9999px
-  full: 9999px
+  xs: 4
+  sm: 8
+  md: 12
+  lg: 18
+  xl: 24
+  xxl: 32
+  pill: 9999
+  full: 9999
 spacing:
-  xxs: 4px
-  xs: 8px
-  sm: 12px
-  md: 16px
-  lg: 20px
-  xl: 24px
-  xxl: 32px
-  section: 48px
+  xxs: 4
+  xs: 8
+  sm: 12
+  md: 16
+  lg: 20
+  xl: 24
+  xxl: 32
+  section: 48
 components:
-  button-primary: {backgroundColor: "{colors.inverse-canvas}", textColor: "{colors.inverse-ink}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: 15px 22px}
+  button-primary: {backgroundColor: "{colors.inverse-canvas}", textColor: "{colors.inverse-ink}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: [15, 22]}
   button-primary-pressed: {backgroundColor: "{colors.inverse-surface-2}", textColor: "{colors.inverse-ink}", typography: "{typography.button}", rounded: "{rounded.pill}"}
-  button-primary-hover: {backgroundColor: "{colors.inverse-surface-1}", textColor: "{colors.inverse-ink}", typography: "{typography.button}", rounded: "{rounded.pill}"}
-  button-secondary: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: 14px 20px}
-  button-tertiary: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: 10px 16px}
-  button-inverse: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: 14px 20px}
-  gradient-action: {backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: 15px 22px}
-  progress-card: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xl}", padding: 20px}
+  button-secondary: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: [14, 20]}
+  button-tertiary: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: [10, 16]}
+  button-inverse: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: [14, 20]}
+  gradient-action: {backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: [15, 22]}
+  progress-card: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xl}", padding: 20}
   rule-card: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.lg}", padding: 0}
-  modal-sheet: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xxl}", padding: 20px}
-  top-nav: {backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.body-sm}", rounded: "{rounded.xs}", height: 52px}
-  bottom-nav: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xl}", padding: 10px 12px}
+  modal-sheet: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xxl}", padding: 20}
+  bottom-nav: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xl}", padding: [10, 12]}
 ---
-## Overview
+
+# Overview
 
 Jomo combines restorative blue-sky atmosphere with clear white utility surfaces. Rounded geometry, bold black actions, blue gradient blocking controls, and a small mascot keep restrictive tasks encouraging.
 
@@ -84,7 +83,15 @@ Jomo combines restorative blue-sky atmosphere with clear white utility surfaces.
 - Compact usage bars and recognizable app icons.
 - Friendly mascot for loading and empty states.
 
-## Colors
+# Non-negotiable visual invariants
+
+- The reviewed screens show this treatment: Sky photography or gradients behind the progress experience.
+- The reviewed screens show this treatment: Large white rounded panels over atmospheric backgrounds.
+- The reviewed screens show this treatment: Black pill buttons in onboarding; blue gradient actions in the product.
+- The reviewed screens show this treatment: Compact usage bars and recognizable app icons.
+- The reviewed screens show this treatment: Friendly mascot for loading and empty states.
+
+# Color and surfaces
 
 ### Brand & Accent
 - Sky blue anchors blocking, progress, and brand identity.
@@ -103,7 +110,7 @@ Jomo combines restorative blue-sky atmosphere with clear white utility surfaces.
 - Green supports healthy progress and positive outcomes.
 - Black provides decisive onboarding actions without implying danger.
 
-## Typography
+# Typography
 
 ### Font Family
 
@@ -113,13 +120,13 @@ Use SF Pro Display for goals and outcomes, SF Pro Text for data, settings, and n
 
 | Token | Size | Weight | Use |
 |---|---:|---:|---|
-| display-xl | 40px | 700 | Goal value |
-| display-lg | 32px | 700 | Onboarding claim |
-| display-md | 26px | 700 | Setup question |
-| headline | 22px | 700 | Section title |
-| card-title | 17px | 600 | Rule or app name |
-| body | 14px | 400 | Explanation |
-| caption | 10px | 500 | Navigation and metrics |
+| display-xl | 40pt | 700 | Goal value |
+| display-lg | 32pt | 700 | Onboarding claim |
+| display-md | 26pt | 700 | Setup question |
+| headline | 22pt | 700 | Section title |
+| card-title | 17pt | 600 | Rule or app name |
+| body | 14pt | 400 | Explanation |
+| caption | 10pt | 500 | Navigation and metrics |
 
 ### Principles
 
@@ -131,11 +138,7 @@ Use SF Pro Display for goals and outcomes, SF Pro Text for data, settings, and n
 
 A neutral system sans is appropriate; preserve bold heading proportions and open counters.
 
-## Layout
-
-### Spacing System
-
-Use a 4px base, 16px screen gutters, and 20–24px inside primary cards and sheets.
+# Screen composition
 
 ### Grid & Container
 
@@ -145,45 +148,15 @@ Home is one vertical data column over an atmospheric background. Rule templates 
 
 Maintain calm space around goals and mascot states. Dense app lists can tighten vertically but should not feel compressed.
 
-## Elevation & Depth
+# Navigation appearance
 
-| Level | Treatment | Use |
-|---|---|---|
-| 0 | Sky or pale canvas | Home background |
-| 1 | White rounded card | Progress and empty states |
-| 2 | Frosted navigation | Bottom bar |
-| 3 | Large modal sheet | Blocking configuration |
+Keep four destinations fixed in a frosted white capsule. Active state is black; inactive icons remain simple outlines.
 
-### Decorative Depth
-
-Use natural cloud depth, soft blur, and very light shadows. Avoid glossy artificial card effects.
-
-## Shapes
-
-### Border Radius Scale
-
-| Token | Value | Use |
-|---|---:|---|
-| rounded-sm | 8px | Fields and small tiles |
-| rounded-md | 12px | Controls |
-| rounded-lg | 18px | Rule cards |
-| rounded-xl | 24px | Progress and navigation |
-| rounded-xxl | 32px | Sheets |
-| rounded-pill | full | CTAs and progress controls |
-
-### Photography & Illustration Geometry
-
-Sky photography fills the canvas with center-safe clouds. Mascot vignettes stay compact and centered inside white cards.
-
-## Components
+# Components
 
 ### Buttons
 
 Onboarding uses full-width black pills. In-product blocking uses a wide blue-to-cyan pill; secondary choices remain white or pale gray.
-
-### Pricing Tabs
-
-No pricing selector was observed. Use the same black-and-white segmented language if subscription choices are added.
 
 ### Cards & Containers
 
@@ -201,11 +174,49 @@ Use thin blue usage bars, concise time values, and mascot-backed empty states. L
 
 Keep four destinations fixed in a frosted white capsule. Active state is black; inactive icons remain simple outlines.
 
-### Footer
+# Imagery and icons
 
-No footer; preserve safe-area padding below the capsule navigation.
+| Level | Treatment | Use |
+|---|---|---|
+| 0 | Sky or pale canvas | Home background |
+| 1 | White rounded card | Progress and empty states |
+| 2 | Frosted navigation | Bottom bar |
+| 3 | Large modal sheet | Blocking configuration |
 
-## Do's and Don'ts
+### Decorative Depth
+
+Use natural cloud depth, soft blur, and very light shadows. Avoid glossy artificial card effects.
+
+# States
+
+Use thin blue usage bars, concise time values, and mascot-backed empty states. Loading copy stays short and reassuring.
+
+# iOS adaptation
+
+### Touch Targets
+
+Blocking, app selection, rules, and navigation controls remain at least 44pt high.
+
+### Collapsing Strategy
+
+Template rails scroll horizontally. App lists scroll vertically while the blocking action remains anchored above navigation.
+
+### Image Behavior
+
+Sky images use aspect-fill and preserve a calm center region. Rule art may crop boldly but must retain readable overlaid text.
+
+On iPhone, respect top and bottom safe areas, use scrolling for content that does not fit, keep interactive targets at least 44 points, and preserve the visual reading order for VoiceOver. At larger Dynamic Type sizes, allow supporting text to wrap without collapsing the dominant hierarchy. Use native sheets and permission transitions while explicitly styling app-owned surfaces to match the reference.
+
+# Anti-generic checklist
+
+- Do not substitute the documented accent hierarchy with default iOS blue.
+- Do not collapse distinct surfaces into a uniform stack of generic white cards.
+- Do not use an unstyled `TabView`, `Form`, or arbitrary SF Symbols when they contradict the documented navigation and component language.
+- Do not flatten the documented typography into one body-text scale.
+- Do not remove compositionally important photography or illustration while assets are pending.
+- Do not apply one corner radius to every control and surface.
+
+Source-specific guardrails retained from the review:
 
 ### Do
 
@@ -223,38 +234,10 @@ No footer; preserve safe-area padding below the capsule navigation.
 - Don't leave system sheets visually disconnected.
 - Don't overdecorate active usage lists.
 
-## Responsive Behavior
-
-### Breakpoints
-
-| Name | Width | Key Changes |
-|---|---:|---|
-| Compact | 320–374px | Reduce card padding and template width |
-| Standard | 375–430px | Default single-column layout |
-| Wide | 431px+ | Limit sheet width and expand sky breathing room |
-
-### Touch Targets
-
-Blocking, app selection, rules, and navigation controls remain at least 44px high.
-
-### Collapsing Strategy
-
-Template rails scroll horizontally. App lists scroll vertically while the blocking action remains anchored above navigation.
-
-### Image Behavior
-
-Sky images use aspect-fill and preserve a calm center region. Rule art may crop boldly but must retain readable overlaid text.
-
-## Iteration Guide
-
-Tune atmosphere-versus-utility balance first, then CTA prominence, card radius, and mascot frequency.
-
-## Known Gaps
+# Known gaps
 
 - Blocking countdown and live-session motion were not represented.
-- Tablet layout was not available.
+- iPad layout was not available.
 - Squad collaboration states were not deeply reviewed.
 
 </design-context>
-
-Use the design system above for all UI you generate.

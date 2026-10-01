@@ -4,7 +4,7 @@ Gold Apple combines editorial beauty discovery with search, catalog and brand br
 
 # Navigation
 
-A light five-item bottom bar provides the main storefront destinations. Home, search, favorites, and bag remain visually quiet so campaigns and products lead.
+A five-item primary navigation provides the main storefront destinations. Home, search, favorites, and bag remain so campaigns and products lead.
 
 # Core Flows
 
@@ -18,4 +18,12 @@ A light five-item bottom bar provides the main storefront destinations. Home, se
 
 # Interaction Patterns
 
-Photography opens discovery, filters use compact controls, product detail reveals information through fine-rule sections, and one black action remains visually dominant through purchase.
+No behavior-only interaction pattern could be separated from the reviewed visual observations.
+
+# System Access Timing
+
+No system-access timing or denial-recovery path was documented in the reviewed source.
+
+# Known Gaps
+
+Unobserved flows, denial paths, cancellation behavior, and recovery states remain unspecified.

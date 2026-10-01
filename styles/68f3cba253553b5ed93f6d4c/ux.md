@@ -4,7 +4,7 @@ Dzen joins personalized media consumption, channel subscription, engagement, cre
 
 # Navigation
 
-Home, Clips, Create, Video, and Channel remain in the bottom bar. Search, notifications, refresh, and channel actions are contextual.
+Home, Clips, Create, Video, and Channel remain in primary navigation. Search, notifications, refresh, and channel actions are contextual.
 
 # Core Flows
 
@@ -29,3 +29,11 @@ Home, Clips, Create, Video, and Channel remain in the bottom bar. Search, notifi
 - Make subscription reversible.
 - Confirm draft loss or save.
 - Keep moderation actions reachable but secondary.
+
+# System Access Timing
+
+No system-access request timing or denial recovery was documented in the reviewed source.
+
+# Known Gaps
+
+- Permission-denial recovery and unobserved secondary flows were not documented.

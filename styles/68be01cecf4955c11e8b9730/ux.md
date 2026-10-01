@@ -4,8 +4,8 @@ Weather presents current conditions, hourly and ten-day forecasts, detailed metr
 
 # Navigation
 
-- A city detail scroll combines current conditions, hourly forecast, ten-day forecast, and metric cards.
-- Bottom actions open the weather map or saved-city list without adding a persistent tab bar.
+- A city detail scroll combines current conditions, hourly forecast, ten-day forecast, and metric items.
+- Bottom actions open the weather map or saved-city list without adding a persistent primary navigation.
 - The map exposes layer, location, city-list, and timeline controls directly over the visualization.
 
 # Core Flows
@@ -30,6 +30,12 @@ Weather presents current conditions, hourly and ten-day forecasts, detailed metr
 
 # Interaction Patterns
 
-- Atmospheric photography and blur adapt to current conditions while translucent cards preserve legibility.
-- Forecast ranges use small weather symbols and thin colored bars rather than charts with axes.
-- Maps keep color legend, layer, location, and time controls visible over the forecast surface.
+No behavior-only interaction pattern could be separated from the reviewed visual observations.
+
+# System Access Timing
+
+No system-access timing or denial-recovery path was documented in the reviewed source.
+
+# Known Gaps
+
+Unobserved flows, denial paths, cancellation behavior, and recovery states remain unspecified.

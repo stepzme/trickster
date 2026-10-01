@@ -1,6 +1,7 @@
 <design-context>
 ---
-version: alpha
+version: 1
+platform: iOS
 name: Vivid-design-analysis
 description: "A bright premium-finance interface built from white space, bold black headings, saturated violet actions, pale-lilac cards, and glossy 3D product metaphors. It makes banking, rewards, and investing feel approachable and collectible."
 
@@ -22,36 +23,47 @@ colors:
   semantic-overlay: "#000000"
 
 typography:
-  display-xl: { fontFamily: System Sans, fontSize: 40px, fontWeight: 800, lineHeight: 1.04, letterSpacing: -0.8px }
-  display-lg: { fontFamily: System Sans, fontSize: 32px, fontWeight: 750, lineHeight: 1.08, letterSpacing: -0.5px }
-  display-md: { fontFamily: System Sans, fontSize: 25px, fontWeight: 700, lineHeight: 1.15, letterSpacing: -0.2px }
-  headline: { fontFamily: System Sans, fontSize: 20px, fontWeight: 700, lineHeight: 1.2, letterSpacing: 0 }
-  card-title: { fontFamily: System Sans, fontSize: 16px, fontWeight: 650, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: System Sans, fontSize: 17px, fontWeight: 450, lineHeight: 1.35, letterSpacing: 0 }
-  body-lg: { fontFamily: System Sans, fontSize: 16px, fontWeight: 400, lineHeight: 1.42, letterSpacing: 0 }
-  body: { fontFamily: System Sans, fontSize: 14px, fontWeight: 400, lineHeight: 1.42, letterSpacing: 0 }
-  body-sm: { fontFamily: System Sans, fontSize: 12px, fontWeight: 400, lineHeight: 1.38, letterSpacing: 0 }
-  caption: { fontFamily: System Sans, fontSize: 10px, fontWeight: 500, lineHeight: 1.3, letterSpacing: 0 }
-  button: { fontFamily: System Sans, fontSize: 16px, fontWeight: 650, lineHeight: 1.2, letterSpacing: 0 }
-  eyebrow: { fontFamily: System Sans, fontSize: 11px, fontWeight: 650, lineHeight: 1.25, letterSpacing: 0.3px }
-  mono: { fontFamily: System Mono, fontSize: 12px, fontWeight: 450, lineHeight: 1.35, letterSpacing: 0 }
+  display-xl: { fontFamily: System Sans, fontSize: 40, fontWeight: 800, lineHeight: 1.04, letterSpacing: -0.8 }
+  display-lg: { fontFamily: System Sans, fontSize: 32, fontWeight: 750, lineHeight: 1.08, letterSpacing: -0.5 }
+  display-md: { fontFamily: System Sans, fontSize: 25, fontWeight: 700, lineHeight: 1.15, letterSpacing: -0.2 }
+  headline: { fontFamily: System Sans, fontSize: 20, fontWeight: 700, lineHeight: 1.2, letterSpacing: 0 }
+  card-title: { fontFamily: System Sans, fontSize: 16, fontWeight: 650, lineHeight: 1.25, letterSpacing: 0 }
+  subhead: { fontFamily: System Sans, fontSize: 17, fontWeight: 450, lineHeight: 1.35, letterSpacing: 0 }
+  body-lg: { fontFamily: System Sans, fontSize: 16, fontWeight: 400, lineHeight: 1.42, letterSpacing: 0 }
+  body: { fontFamily: System Sans, fontSize: 14, fontWeight: 400, lineHeight: 1.42, letterSpacing: 0 }
+  body-sm: { fontFamily: System Sans, fontSize: 12, fontWeight: 400, lineHeight: 1.38, letterSpacing: 0 }
+  caption: { fontFamily: System Sans, fontSize: 10, fontWeight: 500, lineHeight: 1.3, letterSpacing: 0 }
+  button: { fontFamily: System Sans, fontSize: 16, fontWeight: 650, lineHeight: 1.2, letterSpacing: 0 }
+  eyebrow: { fontFamily: System Sans, fontSize: 11, fontWeight: 650, lineHeight: 1.25, letterSpacing: 0.3 }
+  mono: { fontFamily: System Mono, fontSize: 12, fontWeight: 450, lineHeight: 1.35, letterSpacing: 0 }
 
-rounded: { xs: 4px, sm: 8px, md: 12px, lg: 16px, xl: 22px, xxl: 28px, pill: 9999px, full: 9999px }
-spacing: { xxs: 4px, xs: 8px, sm: 12px, md: 16px, lg: 24px, xl: 32px, xxl: 48px, section: 64px }
+rounded: { xs: 4, sm: 8, md: 12, lg: 16, xl: 22, xxl: 28, pill: 9999, full: 9999 }
+spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
 
 components:
-  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 14px 18px }
+  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [14, 18]}
   pocket-tile: { backgroundColor: "{colors.accent-lilac}", textColor: "{colors.ink}", typography: "{typography.card-title}", rounded: "{rounded.lg}", padding: 0 }
-  action-row: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 12px 14px }
-  promo-card: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 14px }
-  bottom-nav: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.sm}", height: 58px }
+  action-row: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: [12, 14]}
+  promo-card: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 14 }
+  bottom-nav: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.sm}", height: 58 }
 ---
 
-## Overview
+# Overview
 
 Vivid pairs strong black headlines and white canvas with saturated violet action and collectible 3D financial objects. Product breadth is organized through pockets, search, and clear bottom navigation.
 
-## Colors
+# Non-negotiable visual invariants
+
+- The reference consistently shows give product objects clear visual ownership.
+- The reference consistently shows transactional lists simple.
+- Sampled screens consistently use reserve violet for action and brand.
+- The reference consistently shows align balances and returns.
+- The reference consistently shows a bright premium-finance interface built from white space.
+- The reference consistently shows bold black headings.
+- The reference consistently shows saturated violet actions.
+- The reference consistently shows pale-lilac cards.
+
+# Color and surfaces
 
 ### Brand & Accent
 
@@ -69,7 +81,7 @@ Charcoal carries headings and values; gray carries account labels and helper cop
 
 Green and red show financial direction or result, amber warns, and violet remains brand action.
 
-## Typography
+# Typography
 
 ### Font Family
 
@@ -77,7 +89,7 @@ Use a bold geometric sans with tabular figures for money and rates.
 
 ### Hierarchy
 
-Use 32–40px product messages, 20–25px page headings, 16–17px card titles, and 10–14px detail.
+Use 32–40 points product messages, 20–25 points page headings, 16–17 points card titles, and 10–14 points detail.
 
 ### Principles
 
@@ -87,11 +99,11 @@ Use heavy headings sparingly, align monetary values, and keep supporting copy sh
 
 Use Inter or SF Pro with 700–800 headline weights and tabular numerals.
 
-## Layout
+# Screen composition
 
 ### Spacing System
 
-Use a 4px base, 16px gutters, 12px card gaps, and 24–32px between product sections.
+Use a 4 points base, 16 points gutters, 12 points card gaps, and 24–32 points between product sections.
 
 ### Grid & Container
 
@@ -101,7 +113,7 @@ Pockets use a two-column tile grid above cards. Payments use grouped actions; Re
 
 Give headings and product art room to breathe. Dense transaction data should stay in flat lists rather than decorative tiles.
 
-## Elevation & Depth
+Surface hierarchy observed in the source:
 
 Use subtle card lift and soft contact shadow beneath 3D assets. Most transactional surfaces remain flat.
 
@@ -109,25 +121,15 @@ Use subtle card lift and soft contact shadow beneath 3D assets. Most transaction
 
 Use violet gradients, translucent glows, and glossy miniature objects in product and promo cards. Avoid decorative depth in timeline rows.
 
-## Shapes
+# Navigation appearance
 
-### Border Radius Scale
+Use five bottom destinations for Pockets, Timeline, Payments, Rewards, and Invest. Keep local categories inside each destination.
 
-Use 8px fields, 12px action rows, 16px product cards, 22px sheets, and round icon backgrounds.
-
-### Photography & Illustration Geometry
-
-Center glossy 3D objects on square gradient tiles with safe margins. Marketing photography, when present, uses restrained rounded crops.
-
-## Components
+# Components
 
 ### Buttons
 
 Primary actions are filled violet rectangles; secondary actions are white or pale rows. Native controls must inherit violet focus and rounded geometry.
-
-### Pricing Tabs
-
-Personal/Business, asset classes, and recommendation modes use compact white segments or chips with violet selected state.
 
 ### Cards & Containers
 
@@ -137,43 +139,23 @@ Pocket tiles pair one 3D object, product name, and balance or benefit. Transacti
 
 Registration and payments use pale filled fields with strong focus. Search remains full-width and quiet.
 
-### Status & Build Page
+# Imagery and icons
+
+Use violet gradients, translucent glows, and glossy miniature objects in product and promo cards. Avoid decorative depth in timeline rows.
+
+Center glossy 3D objects on square gradient tiles with safe margins. Marketing photography, when present, uses restrained rounded crops.
+
+If final imagery is not yet available, any placeholder must preserve the documented scale, placement, crop, and visual weight rather than removing that layer.
+
+# States
 
 Pocket balance, card availability, reward earned, planned payment, verification, and order state appear beside the related product.
 
-### Navigation
-
-Use five bottom destinations for Pockets, Timeline, Payments, Rewards, and Invest. Keep local categories inside each destination.
-
-### Footer
-
-There is no footer. Support, legal, and personal settings live in account screens.
-
-## Do's and Don'ts
-
-### Do
-
-- Give product objects clear visual ownership.
-- Keep transactional lists simple.
-- Reserve violet for action and brand.
-- Align balances and returns.
-
-### Don't
-
-- Do not add 3D art to every row.
-- Do not make gains violet.
-- Do not crowd product tiles with copy.
-- Do not expose default native accents.
-
-## Responsive Behavior
-
-### Breakpoints
-
-Use two pocket columns on phones when legible; fall back to one. Wider screens may separate product overview from activity.
+# iOS adaptation
 
 ### Touch Targets
 
-Pocket tiles, payment actions, filters, category chips, navigation, and order controls require at least 44px targets.
+Pocket tiles, payment actions, filters, category chips, navigation, and order controls require at least 44 points targets.
 
 ### Collapsing Strategy
 
@@ -183,14 +165,20 @@ Keep balances, primary payment actions, and current product visible. Collapse se
 
 Use `contain` for 3D product metaphors and logos; use `cover` only for lifestyle reward photography.
 
-## Iteration Guide
+Apply these rules within current iPhone safe areas and scrolling containers. Keep interactive targets at least 44 points, preserve a logical VoiceOver order, and let Dynamic Type wrap supporting text without flattening the documented hierarchy. Do not infer an unobserved dark or light appearance.
 
-Start with onboarding, pocket overview, timeline, payments, and five-item navigation. Add rewards, investment discovery, business products, and promotional 3D art afterward.
+# Anti-generic checklist
 
-## Known Gaps
+- Do not add 3D art to every row.
+- Do not make gains violet.
+- Do not crowd product tiles with copy.
+- Do not expose default native accents.
+- Do not replace the documented hierarchy with a generic stack of identical white cards or `Form` sections.
+- Do not use default blue tint, an unstyled `TabView`, arbitrary SF Symbols, or uniform corner radii when they contradict the recorded tokens and components.
+- Do not omit compositionally important imagery while final assets are pending; preserve its footprint with a faithful placeholder.
+
+# Known gaps
 
 The inspected catalog documents 45 flows across onboarding, pockets, timeline, payments, rewards, investing, support, and account states. Some transactional confirmations are video-only or less represented.
 
 </design-context>
-
-Use the design system above for all UI you generate.

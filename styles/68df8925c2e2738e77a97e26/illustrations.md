@@ -12,10 +12,23 @@ The imagery is atmospheric rather than decorative: tiny stars, faint nebula text
 - Place sparse bright stars across the full background with a few larger glints.
 - Allow form controls to sit in a calmer lower zone while the visual identity occupies the center.
 
-# Color
+# Color and Materials
 
 Use near-black navy, deep blue, cold white, and very pale blue. Avoid adding extra saturated hues; user-generated video provides the color after onboarding.
 
-# Usage
+# Variants and States
 
 Reserve the cosmic illustration language for entry, identity setup, advisories, and empty or waiting states. Feed, editor, drafts, and profile should remain black and media-led.
+
+# Production Requirements
+
+Preserve the documented placement, crop, negative space, and visual weight in production exports. Before final art exists, placeholders must preserve those same compositional properties.
+
+# Avoid
+
+- Do not replace the observed imagery language with unrelated stock art or arbitrary symbols.
+- Do not change the documented crop, density, or relationship to nearby text.
+
+# Known Gaps
+
+Animation, export dimensions, safe-crop specifications, appearance variants, and unshown state treatments were not documented.

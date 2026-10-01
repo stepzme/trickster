@@ -4,7 +4,7 @@ Mail.ru combines inbox, cloud files, tasks, notes, services, contacts, and accou
 
 # Navigation
 
-Five fixed destinations connect Mail, Cloud, context-specific productivity, Services, and Account. Each product keeps a compact title bar and exposes creation through a blue floating action.
+five persistent destinations connect Mail, Cloud, context-specific productivity, Services, and Account. Each product keeps a title bar and exposes creation through a create action.
 
 # Core Flows
 
@@ -20,11 +20,17 @@ Five fixed destinations connect Mail, Cloud, context-specific productivity, Serv
 1. Open Tasks or Notes from Services.
 2. Create an item and assign labels, dates, or list context.
 3. Review grouped cards and empty states.
-4. Return through the shared bottom navigation.
+4. Return through the shared primary navigation.
 
 # Interaction Patterns
 
-- Blue denotes active product actions; pastel product colors differentiate Mail, Cloud, Tasks, and Services.
 - Lists remain flat and scan-friendly with lightweight grouping.
-- Floating actions stay at the lower right above navigation.
 - Empty states pair short guidance with playful branded artwork.
+
+# System Access Timing
+
+No system-access request timing or denial recovery was documented in the reviewed source.
+
+# Known Gaps
+
+- Permission-denial recovery and unobserved secondary flows were not documented.

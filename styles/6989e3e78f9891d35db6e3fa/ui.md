@@ -1,146 +1,136 @@
 <design-context>
 ---
-version: alpha
+version: 1
+platform: iOS
 name: Haptic-design-analysis
 description: "A lightweight activity journal built from bright white surfaces, a saturated violet gradient, softly blurred backdrops, rounded bottom sheets, colorful category icons, and sparse statistics. Logging is kept fast through large action bars, icon grids, and minimal text."
-colors: { primary: "#713CFA", on-primary: "#FFFFFF", primary-hover: "#5F2EE2", primary-soft: "#EEE7FF", accent: "#FF4F59", ink: "#171719", ink-muted: "#7D7D84", ink-subtle: "#B9BBC0", canvas: "#FFFFFF", surface-1: "#F7F7F8", surface-2: "#EFEFF2", hairline: "#E4E4E7", semantic-success: "#47B56C", semantic-warning: "#F3B546", semantic-danger: "#E1515C", semantic-overlay: "#000000" }
+colors: { primary: "#713CFA", on-primary: "#FFFFFF", primary-soft: "#EEE7FF", accent: "#FF4F59", ink: "#171719", ink-muted: "#7D7D84", ink-subtle: "#B9BBC0", canvas: "#FFFFFF", surface-1: "#F7F7F8", surface-2: "#EFEFF2", hairline: "#E4E4E7", semantic-success: "#47B56C", semantic-warning: "#F3B546", semantic-danger: "#E1515C", semantic-overlay: "#000000" }
 typography:
-  display-xl: { fontFamily: SF Pro Display, fontSize: 38px, fontWeight: 700, lineHeight: 1.05, letterSpacing: -0.8px }
-  display-lg: { fontFamily: SF Pro Display, fontSize: 32px, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.5px }
-  display-md: { fontFamily: SF Pro Display, fontSize: 27px, fontWeight: 700, lineHeight: 1.15, letterSpacing: -0.3px }
-  headline: { fontFamily: SF Pro Display, fontSize: 22px, fontWeight: 700, lineHeight: 1.20, letterSpacing: 0 }
-  card-title: { fontFamily: SF Pro Text, fontSize: 16px, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: SF Pro Text, fontSize: 16px, fontWeight: 500, lineHeight: 1.30, letterSpacing: 0 }
-  body-lg: { fontFamily: SF Pro Text, fontSize: 16px, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
-  body: { fontFamily: SF Pro Text, fontSize: 14px, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
-  body-sm: { fontFamily: SF Pro Text, fontSize: 12px, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
-  caption: { fontFamily: SF Pro Text, fontSize: 10px, fontWeight: 500, lineHeight: 1.20, letterSpacing: 0 }
-  button: { fontFamily: SF Pro Text, fontSize: 15px, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0 }
-  eyebrow: { fontFamily: SF Pro Text, fontSize: 10px, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0.5px }
-  mono: { fontFamily: SF Mono, fontSize: 12px, fontWeight: 500, lineHeight: 1.30, letterSpacing: 0 }
-rounded: { xs: 6px, sm: 10px, md: 14px, lg: 20px, xl: 28px, xxl: 34px, pill: 9999px, full: 9999px }
-spacing: { xxs: 4px, xs: 8px, sm: 12px, md: 16px, lg: 24px, xl: 32px, xxl: 48px, section: 64px }
+  display-xl: { fontFamily: SF Pro Display, fontSize: 38, fontWeight: 700, lineHeight: 1.05, letterSpacing: -0.8 }
+  display-lg: { fontFamily: SF Pro Display, fontSize: 32, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.5 }
+  display-md: { fontFamily: SF Pro Display, fontSize: 27, fontWeight: 700, lineHeight: 1.15, letterSpacing: -0.3 }
+  headline: { fontFamily: SF Pro Display, fontSize: 22, fontWeight: 700, lineHeight: 1.20, letterSpacing: 0 }
+  card-title: { fontFamily: SF Pro Text, fontSize: 16, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
+  subhead: { fontFamily: SF Pro Text, fontSize: 16, fontWeight: 500, lineHeight: 1.30, letterSpacing: 0 }
+  body-lg: { fontFamily: SF Pro Text, fontSize: 16, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
+  body: { fontFamily: SF Pro Text, fontSize: 14, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
+  body-sm: { fontFamily: SF Pro Text, fontSize: 12, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
+  caption: { fontFamily: SF Pro Text, fontSize: 10, fontWeight: 500, lineHeight: 1.20, letterSpacing: 0 }
+  button: { fontFamily: SF Pro Text, fontSize: 15, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0 }
+  eyebrow: { fontFamily: SF Pro Text, fontSize: 10, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0.5 }
+  mono: { fontFamily: SF Mono, fontSize: 12, fontWeight: 500, lineHeight: 1.30, letterSpacing: 0 }
+rounded: { xs: 6, sm: 10, md: 14, lg: 20, xl: 28, xxl: 34, pill: 9999, full: 9999 }
+spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
 components:
-  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.md}", padding: 14px 18px }
-  activity-card: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 14px }
-  icon-tile: { backgroundColor: "{colors.primary-soft}", textColor: "{colors.primary}", typography: "{typography.caption}", rounded: "{rounded.sm}", padding: 12px }
-  input: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: 12px 14px }
-  top-nav: { backgroundColor: "transparent", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xs}", height: 52px }
-  footer: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: 8px 10px }
+  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.md}", padding: [14, 18]}
+  activity-card: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 14 }
+  icon-tile: { backgroundColor: "{colors.primary-soft}", textColor: "{colors.primary}", typography: "{typography.caption}", rounded: "{rounded.sm}", padding: 12 }
+  input: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: [12, 14]}
+  navigation-bar: { backgroundColor: "transparent", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xs}", height: 52 }
+  footer: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: [8, 10]}
 ---
 
-## Overview
+# Overview
 
 Haptic is a fast activity journal that turns life events into colorful icons, ratings, streaks, and simple timelines.
 
-## Colors
+# Non-negotiable visual invariants
 
-### Brand & Accent
-Use a violet-to-purple gradient for primary logging actions; assign bright colors to activity categories.
-
-### Surface
-Keep main screens white and use pale gray for search, disabled controls, and secondary cards.
-
-### Text
-Use near-black for titles and values, gray for metadata, and very light gray for unavailable choices.
-
-### Semantic
-Use green for granted or completed state, red for destructive or denied state, and system blue for permission actions.
-
-## Typography
-
-### Font Family
-Use SF Pro Display for onboarding and activity titles and SF Pro Text for controls, notes, and statistics.
-
-### Hierarchy
-Use 27–32px for onboarding statements, 22px for screen titles, 16px for activities, 14px body, and 10–12px labels.
-
-### Principles
-Keep activity name, date, rating, and streak instantly scannable; avoid long instructional copy after onboarding.
-
-### Note on Font Substitutes
-Use the platform sans or Inter.
-
-## Layout
-
-### Spacing System
-Use a 4px base, 16px gutters, 12px grid gaps, and 16px sheet padding.
-
-### Grid & Container
-Use full-screen timelines and statistics with rounded bottom sheets for choosing, logging, or editing an activity.
-
-### Whitespace Philosophy
-Leave generous blank space around the current logging task and keep dense icon grids visually even.
-
-## Elevation & Depth
-Use soft blur and lifted white sheets over dimmed content; avoid heavy card shadows.
-
-### Decorative Depth
-Use translucent violet gradients and blurred activity color rather than illustration or texture.
-
-## Shapes
-
-### Border Radius Scale
-Use 10px for search and chips, 14px for activity tiles, 20px for sheets, and full circles for compact actions.
-
-### Photography & Illustration Geometry
-Contain album art and activity symbols inside small rounded squares; do not introduce decorative scenes.
-
-## Components
-
-### Buttons
-Use wide violet gradient actions for Save or rating submission and pale circular confirmation controls.
-
-### Pricing Tabs
-Use two-part segmented controls for Symbol and Color and compact date selectors.
-
-### Cards & Containers
-Use activity rows, icon tiles, statistic cards, timeline entries, and rounded editing sheets.
-
-### Inputs & Forms
-Keep search, rename, comments, rating, date, icon, and color editing inside focused sheets.
-
-### Status & Build Page
-Show today, weekly, monthly, yearly, streak, best streak, permission, and saved state explicitly.
-
-### Navigation
-Use the timeline or activity overview as the stable base; open logging and editing in sheets.
-
-### Footer
-Keep persistent chrome minimal so the primary logging bar can occupy the bottom action area.
-
-## Do's and Don'ts
-
-### Do
 - Make logging possible in one focused sheet.
 - Keep category color consistent.
 - Show streak and rating near the activity.
+- Use full-screen timelines and statistics with rounded bottom sheets for choosing, logging, or editing an activity.
+- Leave generous blank space around the current logging task and keep dense icon grids visually even.
 
-### Don't
-- Don't decorate blank space unnecessarily.
-- Don't mix multiple gradients in one action.
-- Don't hide permission requirements until save.
+# Color and surfaces
 
-## Responsive Behavior
+Use a violet-to-purple gradient for primary logging actions; assign bright colors to activity categories.
 
-### Breakpoints
-Use one focused column on phones, a wider centered sheet on tablet, and a capped journal column on desktop.
+Keep main screens white and use pale gray for search, disabled controls, and secondary cards.
 
-### Touch Targets
-Keep icons, ratings, dates, segmented controls, save, and confirmation actions at least 44px.
+Use near-black for titles and values, gray for metadata, and very light gray for unavailable choices.
 
-### Collapsing Strategy
-Preserve activity, date, rating, note, and save; collapse secondary statistics and symbol choices first.
+Use green for granted or completed state, red for destructive or denied state, and system blue for permission actions.
 
-### Image Behavior
+# Typography
+
+Use SF Pro Display for onboarding and activity titles and SF Pro Text for controls, notes, and statistics.
+
+Use 27–32 points for onboarding statements, 22 points for screen titles, 16 points for activities, 14 points body, and 10–12 points labels.
+
+Keep activity name, date, rating, and streak instantly scannable; avoid long instructional copy after onboarding.
+
+Use the platform sans or Inter.
+
+The hierarchy must remain legible with Dynamic Type: supporting text may wrap before the primary metric, title, or action loses its role.
+
+# Screen composition
+
+Use a 4 points base, 16 points gutters, 12 points grid gaps, and 16 points sheet padding.
+
+Use full-screen timelines and statistics with rounded bottom sheets for choosing, logging, or editing an activity.
+
+Leave generous blank space around the current logging task and keep dense icon grids visually even.
+
+Use translucent violet gradients and blurred activity color rather than illustration or texture.
+
+Primary iPhone screens keep the documented content grouping and vertical rhythm inside a scroll container when content exceeds the viewport. Bottom-owned actions or navigation reserve the lower safe area rather than covering content.
+
+# Navigation appearance
+
+Use the timeline or activity overview as the stable base; open logging and editing in sheets.
+
+This section governs appearance only; destinations and transitions are defined in `ux.md`.
+
+# Components
+
+Use wide violet gradient actions for Save or rating submission and pale circular confirmation controls.
+
+Use activity rows, icon tiles, statistic cards, timeline entries, and rounded editing sheets.
+
+Keep search, rename, comments, rating, date, icon, and color editing inside focused sheets.
+
+Show today, weekly, monthly, yearly, streak, best streak, permission, and saved state explicitly.
+
+Controls retain at least a 44-point interactive area. Pressed and disabled treatments should stay within the documented palette and hierarchy; no unobserved state styling is prescribed.
+
+# Imagery and icons
+
+Contain album art and activity symbols inside small rounded squares; do not introduce decorative scenes.
+
 Contain album art and system icons without crop; allow gradient backgrounds to scale fluidly.
 
-## Iteration Guide
-1. Build activities, timeline, logging sheet, and save action.
-2. Add custom symbols, colors, comments, and ratings.
-3. Add statistics, streaks, health access, and integrations.
+When imagery is part of the documented composition, it cannot be omitted while final assets are pending. A temporary asset must preserve its placement, crop, scale, and approximate visual weight.
 
-## Known Gaps
+# States
+
+Show today, weekly, monthly, yearly, streak, best streak, permission, and saved state explicitly.
+
+Use green for granted or completed state, red for destructive or denied state, and system blue for permission actions.
+
+Only the states documented above are specified; other states must preserve the same canvas, hierarchy, and component language without inventing a new visual system.
+
+# iOS adaptation
+
+- Extend the documented canvas through the iPhone safe areas while keeping readable content within appropriate insets.
+- Use a vertical `ScrollView` for content that does not fit compact heights; keep documented bottom actions and navigation clear of the home indicator.
+- Keep icons, ratings, dates, segmented controls, save, and confirmation actions at least 44 points.
+- Preserve activity, date, rating, note, and save; collapse secondary statistics and symbol choices first.
+- Present the keyboard and system permission UI natively, then return to the same visual context.
+- Preserve semantic reading order in VoiceOver and allow text to grow with Dynamic Type.
+- Do not infer an unobserved dark or light variant; use the appearance documented by the reference.
+
+# Anti-generic checklist
+
+- Do not decorate blank space unnecessarily.
+- Do not mix multiple gradients in one action.
+- Do not hide permission requirements until save.
+- Do not replace the documented canvas and surfaces with a generic grouped background and uniform white cards.
+- Do not use an unstyled `TabView`, default blue tint, or arbitrary SF Symbols when they contradict the reference.
+- Do not collapse every component to one corner radius or remove compositionally important imagery.
+
+# Known gaps
+
 - Tokens were inferred visually from representative mobile screens.
 - All 112 image screens were inventoried through the screens fallback; 13 evenly distributed screens were image-reviewed.
 - Preview entries were video-only, and named flow metadata was unavailable.

@@ -4,7 +4,7 @@ Ostrovok is a hotel and apartment booking service built around search, destinati
 
 # Navigation
 
-Search, Trips, Favorites, Support, and Menu form the bottom bar. Home leads with a persistent accommodation search and large editorial destination cards.
+Search, Trips, Favorites, Support, and Menu form the primary navigation. Home leads with a persistent accommodation search and editorial destination items.
 
 # Core Flows
 
@@ -24,7 +24,13 @@ Search, Trips, Favorites, Support, and Menu form the bottom bar. Home leads with
 
 # Interaction Patterns
 
-- Lime background and blue actions separate brand chrome from travel photography.
-- Home uses large editorial cards; results use compact property facts and map price pins.
 - Trips use a simple segment for stays and transfers.
 - Empty states immediately pair friendly art with one useful search action.
+
+# System Access Timing
+
+No system-access timing or denial-recovery path was documented in the reviewed source.
+
+# Known Gaps
+
+Unobserved flows, denial paths, cancellation behavior, and recovery states remain unspecified.

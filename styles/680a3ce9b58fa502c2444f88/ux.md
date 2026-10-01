@@ -11,7 +11,7 @@ Five fixed destinations cover Home, Catalog, Cart, Favorites, and Account. Searc
 ## Discover and select
 
 1. Choose audience and browse campaigns, trends, brands, or the catalog.
-2. Search or filter a two-column product grid.
+2. Search or filter a product grid.
 3. Open a product and review imagery, ratings, price, sizes, colors, related items, and outfit suggestions.
 4. Select a size and add the item to the cart.
 
@@ -24,7 +24,12 @@ Five fixed destinations cover Home, Catalog, Cart, Favorites, and Account. Searc
 
 # Interaction Patterns
 
-- Full-bleed fashion photography is the main discovery and comparison surface.
-- Black filled controls mark selected filters, sizes, and primary actions.
-- Product detail keeps an anchored add-to-cart action while editorial modules continue below.
-- Checkout presents one decision per step with thin green progress at the top.
+No behavior-only interaction pattern could be separated from the reviewed visual observations.
+
+# System Access Timing
+
+No system-access timing or denial-recovery path was documented in the reviewed source.
+
+# Known Gaps
+
+Unobserved flows, denial paths, cancellation behavior, and recovery states remain unspecified.

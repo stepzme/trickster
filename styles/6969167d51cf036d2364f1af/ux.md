@@ -1,10 +1,10 @@
 # Overview
 
-Airbnb centers discovery on photography and a lightweight reservation path. Homes, experiences, and services share one search model, while wishlists, trips, messages, and profile preserve the user's travel context.
+Airbnb connects discovery to a lightweight reservation path. Homes, experiences, and services share one search model, while wishlists, trips, messages, and profile preserve the user's travel context.
 
 # Navigation
 
-Explore, Wishlists, Trips, Messages, and Profile form the traveler tab bar. Explore adds a secondary mode switch for Homes, Experiences, and Services. Hosting replaces the traveler tabs with Today, Calendar, Listings, Messages, and Menu.
+Explore, Wishlists, Trips, Messages, and Profile form the traveler primary navigation. Explore adds a secondary mode switch for Homes, Experiences, and Services. Hosting replaces the traveler tabs with Today, Calendar, Listings, Messages, and Menu.
 
 # Core Flows
 
@@ -18,21 +18,27 @@ Explore, Wishlists, Trips, Messages, and Profile form the traveler tab bar. Expl
 ## Evaluate and reserve
 
 1. Open a listing to review photos, description, sleeping arrangement, amenities, reviews, location, and rules.
-2. Keep price and Reserve visible in a fixed bottom action.
+2. Keep price and Reserve visible in a primary action.
 3. Confirm dates, identity, and notifications through focused steps.
 
 ## Save, travel, and communicate
 
-Save homes to collaborative wishlists, add notes, and share or invite others. Trips collects reservation state and details; Messages keeps host conversations and support threads separate.
+1. Save homes to collaborative wishlists, add notes, and share or invite others. Trips collects reservation state and details; Messages keeps host conversations and support threads separate.
 
 ## Host
 
-Switch modes explicitly, then create or manage listings through Today, Calendar, Listings, Messages, and Menu. Listing setup progresses from place type and location to amenities, photos, price, final details, and publish.
+1. Switch modes explicitly, then create or manage listings through Today, Calendar, Listings, Messages, and Menu. Listing setup progresses from place type and location to amenities, photos, price, final details, and publish.
 
 # Interaction Patterns
 
-- Let photography lead while labels and prices stay compact.
 - Keep search criteria visible as a resumable summary.
-- Use sheets for bounded choices and a fixed bottom action for reservation.
 - Preserve traveler and host modes as distinct navigation systems.
 - Show booking status in text as well as with badges.
+
+# System Access Timing
+
+No system-access request timing or denial recovery was documented in the reviewed source.
+
+# Known Gaps
+
+- Permission-denial recovery and unobserved secondary flows were not documented.

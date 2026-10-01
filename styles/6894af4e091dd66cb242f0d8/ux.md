@@ -1,10 +1,10 @@
 # Overview
 
-4 lapy combines pet retail, veterinary services, grooming, adoption, insurance, and pet profiles. Commerce and care share one playful card-based shell.
+4 lapy combines pet retail, veterinary services, grooming, adoption, insurance, and pet profiles. Commerce and care share one playful shared shell.
 
 # Navigation
 
-Home, Catalog, Pets, Cart, Favorites, and Profile remain in a six-item bottom bar. Home provides delivery context, promotions, local stores, and service entry points. Pet switches between service discovery and saved animals.
+Home, Catalog, Pets, Cart, Favorites, and Profile remain in a six-item primary navigation. Home provides delivery context, promotions, local stores, and service entry points. Pet switches between service discovery and saved animals.
 
 # Core Flows
 
@@ -23,12 +23,18 @@ Home, Catalog, Pets, Cart, Favorites, and Profile remain in a six-item bottom ba
 
 ## Pet care
 
-Browse vet centers, grooming, online veterinary help, walking, adoption, and insurance. Add pet profiles so services and recommendations can remain attached to an animal.
+1. Browse vet centers, grooming, online veterinary help, walking, adoption, and insurance. Add pet profiles so services and recommendations can remain attached to an animal.
 
 # Interaction Patterns
 
-- Use bold black actions against pale blue-gray surfaces.
-- Keep animal categories recognizable through silhouette icons and color.
-- Show delivery context at the top of commerce screens.
-- Separate Pet Services and saved Pets with a bottom segmented switch.
+- Show delivery context of commerce screens.
+- Separate Pet Services and saved Pets with a persistent mode switch.
 - Keep discounts, bonuses, and final totals explicit.
+
+# System Access Timing
+
+No system-access timing or denial-recovery path was documented in the reviewed source.
+
+# Known Gaps
+
+Unobserved flows, denial paths, cancellation behavior, and recovery states remain unspecified.

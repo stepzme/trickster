@@ -4,7 +4,7 @@ Yandex Afisha turns city entertainment into a photo-led discovery and ticketing 
 
 # Navigation
 
-- A five-item bar separates Home, My tickets, Favorites, Search, and Gift.
+- A five-item primary navigation separates Home, My tickets, Favorites, Search, and Gift.
 - City, date, and event type filters stay above the discovery feed.
 - Event pages connect directly to venue, reviews, schedules, and ticket purchase.
 
@@ -31,7 +31,12 @@ Yandex Afisha turns city entertainment into a photo-led discovery and ticketing 
 
 # Interaction Patterns
 
-- Full-bleed event photography does the primary discovery work.
-- Bright yellow pills keep prices and purchase actions visible over dark imagery.
-- Seat selection combines a zoomable map, color-coded prices, and a persistent order tray.
 - Empty states explain the next action instead of showing an inert list.
+
+# System Access Timing
+
+No system-access timing or denial-recovery path was documented in the reviewed source.
+
+# Known Gaps
+
+Unobserved flows, denial paths, cancellation behavior, and recovery states remain unspecified.

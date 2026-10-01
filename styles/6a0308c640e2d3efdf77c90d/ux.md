@@ -1,10 +1,10 @@
 # Overview
 
-585 Gold is a promotion-heavy jewelry marketplace. Large campaign cards establish value, while category grids, two-column product lists, favorites, cart, and profile keep purchase tasks conventional.
+585 Gold is a promotion-heavy jewelry marketplace. Campaigns lead into category browsing, product catalog, favorites, cart, and profile.
 
 # Navigation
 
-Home, Explore, Favorites, Profile, and Cart form the bottom bar. Search is repeated at the top of discovery screens. Catalog, stores, promotions, pawn services, and related offerings appear as compact shortcuts.
+Home, Explore, Favorites, Profile, and Cart are the primary destinations. Search remains available in discovery contexts. Shortcuts open catalog, stores, promotions, pawn services, and related offerings.
 
 # Core Flows
 
@@ -16,18 +16,24 @@ Home, Explore, Favorites, Profile, and Cart form the bottom bar. Search is repea
 
 ## Product selection
 
-1. Search or filter a two-column product grid.
+1. Search or filter a product catalog.
 2. Open a product for gallery, rating, price breakdown, similarity, and share.
 3. Save it or add it to cart, keeping discount context visible.
 
 ## Cart and profile
 
-Cart combines selection, promo codes, bonuses, delivery, and checkout. Profile surfaces bonus barcode, orders, gifts, pawn activity, store, and promotional games.
+1. Cart combines selection, promo codes, bonuses, delivery, and checkout. Profile surfaces bonus barcode, orders, gifts, pawn activity, store, and promotional games.
 
 # Interaction Patterns
 
 - Keep current price, previous price, and discount together.
-- Use orange-red for conversion actions and selected navigation.
-- Let jewelry imagery dominate white product cards.
 - Keep promo eligibility visible in listing, favorite, and cart contexts.
-- Use one full-width checkout action.
+- Use one explicit checkout action.
+
+# System Access Timing
+
+No system-access timing or denial-recovery behavior was documented in the reviewed source.
+
+# Known Gaps
+
+System-permission denial paths, interrupted flows, and recovery behavior not described above were not available in the reviewed source.

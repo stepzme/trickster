@@ -4,14 +4,14 @@ M.Video is an electronics marketplace spanning promotional discovery, catalog an
 
 # Navigation
 
-A fixed five-item bar connects search/catalog, favorites, Home, profile, and cart. Product and checkout screens retain contextual back actions and sticky purchase controls.
+A five-item bar connects search/catalog, favorites, Home, profile, and cart. Product and checkout screens retain contextual back actions and purchase controls.
 
 # Core Flows
 
 ## Find and compare a product
 
 1. Enter through Home, catalog, or search.
-2. Filter and sort a two-column result grid.
+2. Filter and sort a result list.
 3. Review media, price, cashback, availability, ratings, specifications, and accessories.
 4. Save, compare, or add the product to cart.
 
@@ -24,7 +24,13 @@ A fixed five-item bar connects search/catalog, favorites, Home, profile, and car
 
 # Interaction Patterns
 
-- Red carries decisive commerce actions; black and white organize dense technical content.
 - Price, discount, rating, and cashback stay adjacent.
-- Filters use removable dark chips; detail sections expand into specifications or documents.
 - Bottom sheets isolate services, credit, and delivery decisions.
+
+# System Access Timing
+
+No system-access timing or denial-recovery behavior was documented in the reviewed source.
+
+# Known Gaps
+
+System-permission denial paths, interrupted flows, and recovery behavior not described above were not available in the reviewed source.

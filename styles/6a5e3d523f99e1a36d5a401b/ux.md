@@ -4,7 +4,7 @@ Halyk Kazakhstan prioritizes breadth: users reach many services from one searcha
 
 # Navigation
 
-Frequent financial destinations stay in the footer; services open from the grid, while insurance keeps a visibly separate contextual shell.
+Frequent financial destinations stay in primary navigation; services open from the service catalog, while insurance keeps a separate contextual shell.
 
 # Core Flows
 
@@ -21,3 +21,11 @@ Frequent financial destinations stay in the footer; services open from the grid,
 - Signal when navigation context changes.
 - Group long forms into labeled cards.
 - Use empty states to lead directly to creation.
+
+# System Access Timing
+
+No system-access timing or denial-recovery behavior was documented in the reviewed source.
+
+# Known Gaps
+
+System-permission denial paths, interrupted flows, and recovery behavior not described above were not available in the reviewed source.

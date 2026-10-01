@@ -14,13 +14,26 @@ Wallet uses restrained flat onboarding graphics to explain what can be stored: c
 - Use five or six objects at most and keep the silhouette readable at small size.
 - Preserve clear space above for the title and below for the supporting action.
 
-# Color
+# Color and Materials
 
 - Use softened red, yellow, green, blue, gray, and warm taupe on pale blue-gray or beige grounds.
 - Avoid gradients, heavy shadows, or saturated brand spectacle.
 
-# Usage
+# Variants and States
 
 - Reserve illustrations for education, setup, and empty collection states.
 - Use system icons and real card artwork for operational screens.
 - Do not turn the flat object set into decorative page backgrounds.
+
+# Production Requirements
+
+Preserve the documented placement, crop, negative space, and visual weight in production exports. Before final art exists, placeholders must preserve those same compositional properties.
+
+# Avoid
+
+- Do not replace the observed imagery language with unrelated stock art or arbitrary symbols.
+- Do not change the documented crop, density, or relationship to nearby text.
+
+# Known Gaps
+
+Animation, export dimensions, safe-crop specifications, appearance variants, and unshown state treatments were not documented.

@@ -19,3 +19,11 @@ The observed core does not rely on a dense tab shell. Search and category lists 
 # Interaction Patterns
 
 Each screen asks one plain-language question, displays the available specialist count, keeps progress implicit through sequential Next actions, and uses native keyboards only for the relevant answer type.
+
+# System Access Timing
+
+No system-access timing or denial-recovery path was documented in the reviewed source.
+
+# Known Gaps
+
+Unobserved flows, denial paths, cancellation behavior, and recovery states remain unspecified.

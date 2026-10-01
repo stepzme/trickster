@@ -10,10 +10,22 @@ Objects are literal and softly modeled: cars, houses, tools, phones, plants, con
 
 Place one object or compact object pair in the center of a rounded tile. Promotional strips pair a short message with one larger gift or service object at the edge.
 
-# Color
+# Color and Materials
 
 Retain natural object colors, supported by pale blue, peach, lilac, mint, and white backgrounds. Green belongs to UI actions rather than the illustration palette.
 
-# Usage
+# Variants and States
 
-Use illustration for category shortcuts, empty guidance, and seller promotions. Keep listing cards photography-led; new art should match the UI's rounded tiles and clean white canvas.
+Use illustration for category shortcuts, empty guidance, and seller promotions. Keep listing cards photography-led;
+
+# Production Requirements
+
+Exact export formats, aspect ratios, animation behavior, and appearance variants were not documented. Where imagery is compositionally important, temporary placeholders must preserve its documented scale, placement, crop, and visual weight until final art exists.
+
+# Avoid
+
+Do not introduce an unrelated illustration style or substitute decorative symbols for source-supported imagery.
+
+# Known Gaps
+
+Export specifications, animation rules, safe-crop measurements, and unobserved state variants were not available in the reviewed source.

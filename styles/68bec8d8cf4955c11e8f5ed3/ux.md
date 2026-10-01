@@ -4,7 +4,7 @@ Clock separates four time utilities into stable tabs and keeps each task native,
 
 # Navigation
 
-World Clock, Alarm, Stopwatch, and Timer are always available in the bottom tab bar. Add, Edit, Done, Cancel, Save, and Back follow platform placement.
+World Clock, Alarm, Stopwatch, and Timer are always available in the primary navigation. Add, Edit, Done, Cancel, Save, and Back follow platform placement.
 
 # Core Flows
 
@@ -26,6 +26,13 @@ World Clock, Alarm, Stopwatch, and Timer are always available in the bottom tab 
 
 - Prefer direct manipulation and native controls.
 - Show empty states without inventing extra calls to action.
-- Keep destructive red isolated to delete.
 - Preserve live timing state across navigation.
 - Announce active alarms and countdown completion accessibly.
+
+# System Access Timing
+
+No system-access timing or denial-recovery path was documented in the reviewed source.
+
+# Known Gaps
+
+Unobserved flows, denial paths, cancellation behavior, and recovery states remain unspecified.

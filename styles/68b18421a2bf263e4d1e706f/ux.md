@@ -5,8 +5,8 @@ Tinkoff Journal presents editorial feeds, topic catalogs, financial courses, int
 # Navigation
 
 - The available catalog has no recorded flow sequences; this description is based on all 34 inspected image screens.
-- A three-part bottom bar covers Textbook, Journal, and Calculators.
-- Topic pages open article feeds; course cards open lesson content and quizzes.
+- A three-part primary navigation covers Textbook, Journal, and Calculators.
+- Topic pages open article feeds; course items open lesson content and quizzes.
 
 # Core Flows
 
@@ -29,7 +29,12 @@ Tinkoff Journal presents editorial feeds, topic catalogs, financial courses, int
 
 # Interaction Patterns
 
-- Large bold headlines and photography drive editorial scanning.
-- Course content uses illustrations and interactive cards to vary long-form reading.
-- Blue is the primary action color; most content remains black on white.
 - Exact transition order is unverified because Screen Gallery exposes no flows for this app.
+
+# System Access Timing
+
+No system-access timing or denial-recovery path was documented in the reviewed source.
+
+# Known Gaps
+
+Unobserved flows, denial paths, cancellation behavior, and recovery states remain unspecified.

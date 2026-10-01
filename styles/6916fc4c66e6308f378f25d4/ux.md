@@ -4,7 +4,7 @@ Joi merges tasks, habits, and meetings into a chronological daily timeline. It p
 
 # Navigation
 
-The day timeline is the default surface. A central add action opens creation; compact edge controls lead to secondary views. A week strip changes days without leaving the timeline.
+The day timeline is the default screen. A central add action opens creation; edge controls lead to secondary views. A week strip changes days without leaving the timeline.
 
 # Core Flows
 
@@ -29,7 +29,13 @@ The day timeline is the default surface. A central add action opens creation; co
 
 # Interaction Patterns
 
-- Week navigation is always visible near the top.
 - Creation happens in modal sheets with one decision per step.
 - Completed entries remain legible but visually recede.
-- Light and dark themes preserve the same monochrome hierarchy and coral day marker.
+
+# System Access Timing
+
+No system-access request timing or denial recovery was documented in the reviewed source.
+
+# Known Gaps
+
+- Permission-denial recovery and unobserved secondary flows were not documented.

@@ -1,10 +1,10 @@
 # Overview
 
-OTP Bank is a light modular bank for cards, exchange rates, history, transfers, payments, chat, loans, deposits, insurance, and new products.
+OTP Bank is a modular bank for cards, exchange rates, history, transfers, payments, chat, loans, deposits, insurance, and new products.
 
 # Navigation
 
-My Bank, History, Payments, Chats, and Apply form the bottom bar. My Bank leads with profile and search, stories, products, exchange rates, and useful locations.
+My Bank, History, Payments, Chats, and Apply form the primary navigation. My Bank leads with profile and search, stories, products, exchange rates, and useful locations.
 
 # Core Flows
 
@@ -24,7 +24,12 @@ My Bank, History, Payments, Chats, and Apply form the bottom bar. My Bank leads 
 
 # Interaction Patterns
 
-- Lime is reserved for brand, active navigation, and product application.
-- White modules and pale lavender-gray canvas keep banking content calm.
 - Product and insurance catalogs use illustrative objects on simple rows.
-- Promotional stories may become richly colored, but transactional controls remain restrained.
+
+# System Access Timing
+
+No system-access timing or denial-recovery path was documented in the reviewed source.
+
+# Known Gaps
+
+Unobserved flows, denial paths, cancellation behavior, and recovery states remain unspecified.

@@ -10,7 +10,7 @@ Flights, Hotels, Experiences, Favorites, and Profile persist across discovery. S
 
 ## Discover and search
 
-Home mixes route search with hot tickets, seasonal selections, anywhere search, smart search, complex routes, editorial stories, and city guides.
+1. Home mixes route search with hot tickets, seasonal selections, anywhere search, smart search, complex routes, editorial stories, and city guides.
 
 ## Compare and purchase flights
 
@@ -20,11 +20,11 @@ Home mixes route search with hot tickets, seasonal selections, anywhere search, 
 
 ## Hotels and experiences
 
-Hotel search supports map, filters, details, media, services, reviews, rooms, and booking. Experiences move from city guide to excursion or venue details, maps, collections, and booking.
+1. Hotel search supports map, filters, details, media, services, reviews, rooms, and booking. Experiences move from city guide to excursion or venue details, maps, collections, and booking.
 
 ## Profile and post-purchase
 
-Profile contains orders, issuing and issued tickets, calendar, baggage, flight statistics, maps, visited places, documents, payment, region, notification, and privacy settings.
+1. Profile contains orders, issuing and issued tickets, calendar, baggage, flight statistics, maps, visited places, documents, payment, region, notification, and privacy settings.
 
 # Interaction Patterns
 
@@ -33,3 +33,11 @@ Profile contains orders, issuing and issued tickets, calendar, baggage, flight s
 - Separate flight fare from seller choice and add-ons.
 - Preserve favorites across flights, hotels, and places.
 - Keep support adjacent to active orders.
+
+# System Access Timing
+
+No system-access timing or denial-recovery behavior was documented in the reviewed source.
+
+# Known Gaps
+
+System-permission denial paths, interrupted flows, and recovery behavior not described above were not available in the reviewed source.

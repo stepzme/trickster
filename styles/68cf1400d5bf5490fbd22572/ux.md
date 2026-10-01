@@ -4,7 +4,7 @@ DeepSeek supports normal chat, deep reasoning, web search, file input, sharing, 
 
 # Navigation
 
-The top bar keeps the drawer, chat title, and new-chat action available. The drawer provides conversation history and account access.
+The primary navigation keeps the drawer, chat title, and new-chat action available. The drawer provides conversation history and account access.
 
 # Core Flows
 
@@ -29,3 +29,11 @@ The top bar keeps the drawer, chat title, and new-chat action available. The dra
 - Let users stop generation immediately.
 - Preserve conversation context after drawer navigation.
 - Show attachment and search state explicitly.
+
+# System Access Timing
+
+No system-access timing or denial-recovery path was documented in the reviewed source.
+
+# Known Gaps
+
+Unobserved flows, denial paths, cancellation behavior, and recovery states remain unspecified.

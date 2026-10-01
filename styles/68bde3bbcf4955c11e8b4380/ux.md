@@ -1,10 +1,10 @@
 # Overview
 
-Cofix Club joins loyalty, location, menu browsing, preorder, payment, and pickup state in a compact retail loop.
+Cofix Club joins loyalty, location, menu browsing, preorder, payment, and pickup state in a retail loop.
 
 # Navigation
 
-The bottom bar keeps Wallet, Location, and Menu for points available. Home modules deep-link into campaigns, preorder, menu, coupons, and history.
+The primary navigation keeps Wallet, Location, and Menu for points available. Home modules deep-link into campaigns, preorder, menu, coupons, and history.
 
 # Core Flows
 
@@ -12,7 +12,7 @@ The bottom bar keeps Wallet, Location, and Menu for points available. Home modul
 
 1. Choose preorder and confirm a venue.
 2. Browse categories and product tiles.
-3. Add an item and review count and price in the sticky action.
+3. Add an item and review count and price in the remains available action.
 4. Enter payment details and confirm.
 5. Show order number, readiness, and pickup confirmation.
 
@@ -27,6 +27,13 @@ The bottom bar keeps Wallet, Location, and Menu for points available. Home modul
 
 - Keep venue and pickup context visible during ordering.
 - Maintain a persistent cart count and total.
-- Separate paid order status from promotional cards.
 - Show reward math directly.
 - Confirm payment and pickup completion explicitly.
+
+# System Access Timing
+
+No system-access timing or denial-recovery path was documented in the reviewed source.
+
+# Known Gaps
+
+Unobserved flows, denial paths, cancellation behavior, and recovery states remain unspecified.

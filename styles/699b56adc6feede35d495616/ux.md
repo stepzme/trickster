@@ -4,7 +4,7 @@ MBANK combines accounts, cards, payments, transfers, financial analysis, rewards
 
 # Navigation
 
-Five fixed destinations connect Home, Payments, central QR, Services, and More. Home switches between marketplace and bank contexts while preserving identity and notifications.
+five persistent destinations connect Home, Payments, central QR, Services, and More. Home switches between marketplace and bank contexts while preserving identity and notifications.
 
 # Core Flows
 
@@ -24,7 +24,12 @@ Five fixed destinations connect Home, Payments, central QR, Services, and More. 
 
 # Interaction Patterns
 
-- Green anchors banking actions; yellow marks the central QR and brand hub.
-- White rounded cards organize a dense modular dashboard.
-- Multicolor service icons and campaign tiles differentiate product families.
-- Financial lists keep amounts aligned and descriptive metadata compact.
+The sampled flows use direct actions, explicit completion, and return to the current context. No additional repeated interaction behavior was documented.
+
+# System Access Timing
+
+No system-access request timing or denial recovery was documented in the reviewed source.
+
+# Known Gaps
+
+- Permission-denial recovery and unobserved secondary flows were not documented.

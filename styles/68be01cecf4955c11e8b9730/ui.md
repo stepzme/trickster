@@ -1,6 +1,7 @@
 <design-context>
 ---
-version: alpha
+version: 1
+platform: iOS
 name: Weather-design-analysis
 description: "An atmospheric iOS weather system built from full-screen condition imagery, blue-gray translucent forecast cards, very large white temperature type, compact weather glyphs, thin range bars, and data-rich animated maps. The saved-city list shifts to near-black so each photographic location card becomes a vivid window."
 
@@ -25,36 +26,47 @@ colors:
   semantic-overlay: "#000000"
 
 typography:
-  display-xl: { fontFamily: SF Pro Display, fontSize: 76px, fontWeight: 250, lineHeight: 0.95, letterSpacing: -2px }
-  display-lg: { fontFamily: SF Pro Display, fontSize: 52px, fontWeight: 300, lineHeight: 1.0, letterSpacing: -1px }
-  display-md: { fontFamily: SF Pro Display, fontSize: 34px, fontWeight: 550, lineHeight: 1.1, letterSpacing: -0.4px }
-  headline: { fontFamily: SF Pro Text, fontSize: 20px, fontWeight: 600, lineHeight: 1.2, letterSpacing: 0 }
-  card-title: { fontFamily: SF Pro Text, fontSize: 17px, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: SF Pro Text, fontSize: 17px, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
-  body-lg: { fontFamily: SF Pro Text, fontSize: 16px, fontWeight: 400, lineHeight: 1.42, letterSpacing: 0 }
-  body: { fontFamily: SF Pro Text, fontSize: 14px, fontWeight: 400, lineHeight: 1.4, letterSpacing: 0 }
-  body-sm: { fontFamily: SF Pro Text, fontSize: 12px, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
-  caption: { fontFamily: SF Pro Text, fontSize: 10px, fontWeight: 500, lineHeight: 1.3, letterSpacing: 0.15px }
-  button: { fontFamily: SF Pro Text, fontSize: 16px, fontWeight: 500, lineHeight: 1.2, letterSpacing: 0 }
-  eyebrow: { fontFamily: SF Pro Text, fontSize: 10px, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0.3px }
-  mono: { fontFamily: SF Mono, fontSize: 12px, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
+  display-xl: { fontFamily: SF Pro Display, fontSize: 76, fontWeight: 250, lineHeight: 0.95, letterSpacing: -2 }
+  display-lg: { fontFamily: SF Pro Display, fontSize: 52, fontWeight: 300, lineHeight: 1.0, letterSpacing: -1 }
+  display-md: { fontFamily: SF Pro Display, fontSize: 34, fontWeight: 550, lineHeight: 1.1, letterSpacing: -0.4 }
+  headline: { fontFamily: SF Pro Text, fontSize: 20, fontWeight: 600, lineHeight: 1.2, letterSpacing: 0 }
+  card-title: { fontFamily: SF Pro Text, fontSize: 17, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
+  subhead: { fontFamily: SF Pro Text, fontSize: 17, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
+  body-lg: { fontFamily: SF Pro Text, fontSize: 16, fontWeight: 400, lineHeight: 1.42, letterSpacing: 0 }
+  body: { fontFamily: SF Pro Text, fontSize: 14, fontWeight: 400, lineHeight: 1.4, letterSpacing: 0 }
+  body-sm: { fontFamily: SF Pro Text, fontSize: 12, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
+  caption: { fontFamily: SF Pro Text, fontSize: 10, fontWeight: 500, lineHeight: 1.3, letterSpacing: 0.15 }
+  button: { fontFamily: SF Pro Text, fontSize: 16, fontWeight: 500, lineHeight: 1.2, letterSpacing: 0 }
+  eyebrow: { fontFamily: SF Pro Text, fontSize: 10, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0.3 }
+  mono: { fontFamily: SF Mono, fontSize: 12, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
 
-rounded: { xs: 4px, sm: 8px, md: 12px, lg: 16px, xl: 22px, xxl: 28px, pill: 9999px, full: 9999px }
-spacing: { xxs: 4px, xs: 8px, sm: 12px, md: 16px, lg: 24px, xl: 32px, xxl: 48px, section: 64px }
+rounded: { xs: 4, sm: 8, md: 12, lg: 16, xl: 22, xxl: 28, pill: 9999, full: 9999 }
+spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
 
 components:
-  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: 10px 16px }
-  forecast-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 14px }
-  city-card: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 12px }
-  search-field: { backgroundColor: "{colors.list-surface}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: 10px 12px }
-  map-control: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.body-sm}", rounded: "{rounded.md}", padding: 10px }
+  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: [10, 16]}
+  forecast-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 14 }
+  city-card: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 12 }
+  search-field: { backgroundColor: "{colors.list-surface}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: [10, 12]}
+  map-control: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.body-sm}", rounded: "{rounded.md}", padding: 10 }
 ---
 
-## Overview
+# Overview
 
 Weather turns conditions into the environment itself. Atmospheric imagery establishes mood, translucent forecast cards organize data, and the map becomes a full-screen scientific surface.
 
-## Colors
+# Non-negotiable visual invariants
+
+- The reference consistently shows let the current condition define the atmosphere.
+- The reference consistently shows forecast rows aligned and comparable.
+- The reference consistently shows translucent materials consistently.
+- The reference consistently shows preserve the map as a full-screen tool.
+- Imagery consistently uses an atmospheric iOS weather system built from full-screen condition imagery.
+- The reference consistently shows blue-gray translucent forecast cards.
+- Typography consistently uses very large white temperature type.
+- The reference consistently shows compact weather glyphs.
+
+# Color and surfaces
 
 ### Brand & Accent
 
@@ -72,7 +84,7 @@ Use white over condition imagery, pale blue-gray for secondary labels, and black
 
 Use yellow for sun and warnings, blue for rain and cold, violet for heavy precipitation, and red only for severe conditions.
 
-## Typography
+# Typography
 
 ### Font Family
 
@@ -80,7 +92,7 @@ Use SF Pro Display and SF Pro Text with thin large numerals and compact labels.
 
 ### Hierarchy
 
-Use 52–76px current temperature, 34px city-list temperature, 17–20px condition and row titles, and 10–14px metrics.
+Use 52–76 points current temperature, 34 points city-list temperature, 17–20 points condition and row titles, and 10–14 points metrics.
 
 ### Principles
 
@@ -90,11 +102,11 @@ Let temperature dominate without bold weight. Keep metric labels uppercase and q
 
 Use Inter with light display numerals and medium text weights when SF Pro is unavailable.
 
-## Layout
+# Screen composition
 
 ### Spacing System
 
-Use a 4px base, 16px screen gutters, 12px card gaps, and 8px between forecast rows.
+Use a 4 points base, 16 points screen gutters, 12 points card gaps, and 8 points between forecast rows.
 
 ### Grid & Container
 
@@ -104,7 +116,7 @@ City detail is a vertical stack of full-width translucent cards. The map fills t
 
 Keep the condition header open and cinematic. Data cards may be dense but require stable row alignment and clear grouping.
 
-## Elevation & Depth
+Surface hierarchy observed in the source:
 
 Use material blur, translucent overlays, soft gradients, and atmospheric parallax. Avoid opaque floating card stacks over the forecast.
 
@@ -112,25 +124,15 @@ Use material blur, translucent overlays, soft gradients, and atmospheric paralla
 
 Condition imagery, animated particles, moving cloud layers, and blurred glass provide all decoration. Do not add unrelated ornaments.
 
-## Shapes
+# Navigation appearance
 
-### Border Radius Scale
+Use map and list controls at the bottom of city detail; map view uses Done, location, city list, layers, and timeline controls.
 
-Use 8px compact controls, 12px map controls, 16px forecast cards, 22px widgets, and pills for timeline markers.
-
-### Photography & Illustration Geometry
-
-Weather imagery fills edge to edge and may blur beneath cards. Maps remain uncropped; widgets use a soft rounded square.
-
-## Components
+# Components
 
 ### Buttons
 
 Use light translucent or white compact controls with system glyphs. Native controls may be used, but their blur, tint, contrast, and radius must match the current weather surface.
-
-### Pricing Tabs
-
-Map layers and city selection use text menus, compact segments, or list choices rather than promotional tabs.
 
 ### Cards & Containers
 
@@ -140,43 +142,23 @@ Forecast cards use one translucent tone with hairline separation, compact labels
 
 City search uses a dark rounded field with magnifier and clear action. Notification setup uses a concise full-width row.
 
-### Status & Build Page
+# Imagery and icons
+
+Condition imagery, animated particles, moving cloud layers, and blurred glass provide all decoration. Do not add unrelated ornaments.
+
+Weather imagery fills edge to edge and may blur beneath cards. Maps remain uncropped; widgets use a soft rounded square.
+
+If final imagery is not yet available, any placeholder must preserve the documented scale, placement, crop, and visual weight rather than removing that layer.
+
+# States
 
 Show current condition, severe alert, precipitation chance, map intensity, location permission, notification permission, and widget state directly.
 
-### Navigation
-
-Use map and list controls at the bottom of city detail; map view uses Done, location, city list, layers, and timeline controls.
-
-### Footer
-
-There is no footer. Weather and map data attribution stays as a small link beneath the relevant surface.
-
-## Do's and Don'ts
-
-### Do
-
-- Let the current condition define the atmosphere.
-- Keep forecast rows aligned and comparable.
-- Use translucent materials consistently.
-- Preserve the map as a full-screen tool.
-
-### Don't
-
-- Do not force one static background across conditions.
-- Do not use heavy bold type for temperature.
-- Do not add opaque white cards over the city forecast.
-- Do not leave mismatched default control styling.
-
-## Responsive Behavior
-
-### Breakpoints
-
-Phones use one city detail or map. Wider screens may pair city list with detail and give maps a side legend or forecast panel.
+# iOS adaptation
 
 ### Touch Targets
 
-City cards, hourly items, metric cards, map layers, timeline, location, list, search, and alert controls require at least 44px targets.
+City cards, hourly items, metric cards, map layers, timeline, location, list, search, and alert controls require at least 44 points targets.
 
 ### Collapsing Strategy
 
@@ -186,14 +168,20 @@ Keep city, current temperature, next hours, warning, and map access visible. Col
 
 Use `cover` for condition photography and `fill` for map tiles. Keep weather glyphs and widgets sharp with `contain`.
 
-## Iteration Guide
+Apply these rules within current iPhone safe areas and scrolling containers. Keep interactive targets at least 44 points, preserve a logical VoiceOver order, and let Dynamic Type wrap supporting text without flattening the documented hierarchy. Do not infer an unobserved dark or light appearance.
 
-Start with location permission, saved-city list, city header, hourly and ten-day forecast, core metric cards, map layers, city search, and alerts. Add widgets and deeper metrics afterward.
+# Anti-generic checklist
 
-## Known Gaps
+- Do not force one static background across conditions.
+- Do not use heavy bold type for temperature.
+- Do not add opaque white cards over the city forecast.
+- Do not leave mismatched default control styling.
+- Do not replace the documented hierarchy with a generic stack of identical white cards or `Form` sections.
+- Do not use default blue tint, an unstyled `TabView`, arbitrary SF Symbols, or uniform corner radii when they contradict the recorded tokens and components.
+- Do not omit compositionally important imagery while final assets are pending; preserve its footprint with a faithful placeholder.
+
+# Known gaps
 
 All 18 catalog flows were reviewed by structure with complete representative scenarios across launch, city forecast, weather map, saved cities, notifications, and widget. Animated condition transitions are represented only by still screens.
 
 </design-context>
-
-Use the design system above for all UI you generate.

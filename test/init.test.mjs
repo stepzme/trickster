@@ -224,3 +224,13 @@ test("style catalog indexes every repository package", async () => {
   assert.equal(catalog.length, packageIds.length);
   assert.deepEqual(catalog.map(({ appId }) => appId).sort(), packageIds);
 });
+
+test("style packages follow the current iOS document structure", () => {
+  const result = spawnSync(
+    process.execPath,
+    [resolve(repositoryRoot, "maintainers", "validate-style-packages.mjs")],
+    { cwd: repositoryRoot, encoding: "utf8" },
+  );
+  assert.equal(result.status, 0, result.stderr);
+  assert.match(result.stdout, /Validated 277 style packages/);
+});

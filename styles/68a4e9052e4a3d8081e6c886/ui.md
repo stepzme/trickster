@@ -1,13 +1,13 @@
 <design-context>
 ---
-version: alpha
+version: 1
+platform: iOS
 name: Rocketbank-design-analysis
 description: "An expressive banking interface built on an airy blue-to-pink wash, ink-black floating controls, oversized experimental typography, and soft irregular white cards. Banking actions coexist with conversational prompts, lifestyle photography, mascot-led assistance, and deep personalization. The system feels more like an animated culture product than a conventional financial dashboard."
 
 colors:
   primary: "#0A080C"
   on-primary: "#FFFFFF"
-  primary-hover: "#262229"
   primary-soft: "#EDE8F2"
   ink: "#0A080C"
   ink-muted: "#68636C"
@@ -29,102 +29,102 @@ colors:
 typography:
   display-xl:
     fontFamily: Extended Display Sans
-    fontSize: 42px
+    fontSize: 42
     fontWeight: 800
     lineHeight: 0.92
-    letterSpacing: -1.3px
+    letterSpacing: -1.3
   display-lg:
     fontFamily: Extended Display Sans
-    fontSize: 34px
+    fontSize: 34
     fontWeight: 800
     lineHeight: 0.96
-    letterSpacing: -0.9px
+    letterSpacing: -0.9
   display-md:
     fontFamily: Extended Display Sans
-    fontSize: 28px
+    fontSize: 28
     fontWeight: 750
     lineHeight: 1.02
-    letterSpacing: -0.5px
+    letterSpacing: -0.5
   headline:
     fontFamily: Extended Display Sans
-    fontSize: 23px
+    fontSize: 23
     fontWeight: 750
     lineHeight: 1.08
-    letterSpacing: -0.3px
+    letterSpacing: -0.3
   card-title:
     fontFamily: Extended Display Sans
-    fontSize: 18px
+    fontSize: 18
     fontWeight: 700
     lineHeight: 1.15
-    letterSpacing: -0.1px
+    letterSpacing: -0.1
   subhead:
     fontFamily: System Sans
-    fontSize: 16px
+    fontSize: 16
     fontWeight: 500
     lineHeight: 1.35
     letterSpacing: 0
   body-lg:
     fontFamily: System Sans
-    fontSize: 16px
+    fontSize: 16
     fontWeight: 400
     lineHeight: 1.40
     letterSpacing: 0
   body:
     fontFamily: System Sans
-    fontSize: 14px
+    fontSize: 14
     fontWeight: 400
     lineHeight: 1.38
     letterSpacing: 0
   body-sm:
     fontFamily: System Sans
-    fontSize: 12px
+    fontSize: 12
     fontWeight: 400
     lineHeight: 1.32
     letterSpacing: 0
   caption:
     fontFamily: System Sans
-    fontSize: 11px
+    fontSize: 11
     fontWeight: 400
     lineHeight: 1.28
     letterSpacing: 0
   button:
     fontFamily: System Sans
-    fontSize: 14px
+    fontSize: 14
     fontWeight: 600
     lineHeight: 1.20
     letterSpacing: 0
   eyebrow:
     fontFamily: System Sans
-    fontSize: 11px
+    fontSize: 11
     fontWeight: 500
     lineHeight: 1.25
-    letterSpacing: 0.4px
+    letterSpacing: 0.4
   mono:
     fontFamily: System Mono
-    fontSize: 12px
+    fontSize: 12
     fontWeight: 400
     lineHeight: 1.35
     letterSpacing: 0
 
 rounded:
-  xs: 8px
-  sm: 12px
-  md: 18px
-  lg: 26px
-  xl: 34px
-  xxl: 44px
-  pill: 9999px
-  full: 9999px
+  xs: 8
+  sm: 12
+  md: 18
+  lg: 26
+  xl: 34
+  xxl: 44
+  pill: 9999
+  full: 9999
 
 spacing:
-  xxs: 4px
-  xs: 8px
-  sm: 12px
-  md: 16px
-  lg: 24px
-  xl: 32px
-  xxl: 48px
-  section: 64px
+  xxs: 4
+  xs: 8
+  sm: 12
+  md: 16
+  lg: 24
+  xl: 32
+  xxl: 48
+  section: 64
 
 components:
   button-primary:
@@ -132,37 +132,37 @@ components:
     textColor: "{colors.on-primary}"
     typography: "{typography.button}"
     rounded: "{rounded.pill}"
-    padding: 14px 20px
+    padding: [14, 20]
   button-secondary:
     backgroundColor: "{colors.surface-1}"
     textColor: "{colors.ink}"
     typography: "{typography.button}"
     rounded: "{rounded.pill}"
-    padding: 14px 20px
+    padding: [14, 20]
   balance-card:
     backgroundColor: "{colors.surface-1}"
     textColor: "{colors.ink}"
     typography: "{typography.body}"
     rounded: "{rounded.xl}"
-    padding: 20px
+    padding: 20
   shortcut-pill:
     backgroundColor: "{colors.surface-1}"
     textColor: "{colors.ink}"
     typography: "{typography.body-sm}"
     rounded: "{rounded.pill}"
-    padding: 12px 16px
+    padding: [12, 16]
   floating-dock:
     backgroundColor: "{colors.primary}"
     textColor: "{colors.on-primary}"
     typography: "{typography.caption}"
     rounded: "{rounded.pill}"
-    padding: 10px 18px
+    padding: [10, 18]
   assistant-field:
     backgroundColor: "{colors.primary}"
     textColor: "{colors.on-primary}"
     typography: "{typography.body}"
     rounded: "{rounded.pill}"
-    padding: 14px 18px
+    padding: [14, 18]
   media-card:
     backgroundColor: "{colors.surface-2}"
     textColor: "{colors.ink}"
@@ -174,10 +174,10 @@ components:
     textColor: "{colors.ink}"
     typography: "{typography.body}"
     rounded: "{rounded.xxl}"
-    padding: 24px
+    padding: 24
 ---
 
-## Overview
+# Overview
 
 Rocketbank uses a continuously shifting pastel atmosphere rather than a neutral banking shell. Large black type, floating black controls, and soft white shapes remain stable while balances, assistant messages, media, and lifestyle content change around them. The result is expressive and unconventional, but core actions still use simple high-contrast affordances.
 
@@ -189,7 +189,16 @@ Rocketbank uses a continuously shifting pastel atmosphere rather than a neutral 
 - Conversational prompts integrated into Home.
 - Full-bleed avatars, venue photography, and mascot imagery as product surfaces.
 
-## Colors
+# Non-negotiable visual invariants
+
+- The reference consistently shows pale blue-to-pink page wash with no visible hard container boundary.
+- The reference consistently shows black floating pills and circles as the primary interaction anchors.
+- Typography consistently uses wide experimental display type with tight line height.
+- The reference consistently shows white cards with soft, slightly irregular silhouettes and layered offsets.
+- The reference consistently shows conversational prompts integrated into Home.
+- Imagery consistently uses full-bleed avatars, venue photography, and mascot imagery as product surfaces.
+
+# Color and surfaces
 
 ### Brand & Accent
 
@@ -214,7 +223,7 @@ Rocketbank uses a continuously shifting pastel atmosphere rather than a neutral 
 
 Keep green and red limited to completion and failure. Do not confuse the ambient pink-blue gradient with semantic state.
 
-## Typography
+# Typography
 
 ### Font Family
 
@@ -225,13 +234,13 @@ Keep green and red limited to completion and failure. Do not confuse the ambient
 
 | Token | Size | Weight | Use |
 |---|---|---|---|
-| `{typography.display-xl}` | 42px | 800 | Catalog category or countdown |
-| `{typography.display-lg}` | 34px | 800 | Major statement |
-| `{typography.display-md}` | 28px | 750 | Screen heading |
-| `{typography.headline}` | 23px | 750 | Section title |
-| `{typography.card-title}` | 18px | 700 | Balance or media card title |
-| `{typography.body}` | 14px | 400 | Default content |
-| `{typography.caption}` | 11px | 400 | Transaction and system metadata |
+| `{typography.display-xl}` | 42 points | 800 | Catalog category or countdown |
+| `{typography.display-lg}` | 34 points | 800 | Major statement |
+| `{typography.display-md}` | 28 points | 750 | Screen heading |
+| `{typography.headline}` | 23 points | 750 | Section title |
+| `{typography.card-title}` | 18 points | 700 | Balance or media card title |
+| `{typography.body}` | 14 points | 400 | Default content |
+| `{typography.caption}` | 11 points | 400 | Transaction and system metadata |
 
 ### Principles
 
@@ -244,11 +253,11 @@ Keep green and red limited to completion and failure. Do not confuse the ambient
 
 Use a wide geometric sans such as Arial Black or a carefully expanded SF Pro Display for the expressive family, with SF Pro Text for functional content. Preserve width and weight rather than choosing a rounded substitute.
 
-## Layout
+# Screen composition
 
 ### Spacing System
 
-Use a 4px base, 15px screen gutters, 10–14px between shortcut pills, and 20–28px between major zones. Cards use 20px internal padding. Floating controls sit above the safe area with at least 12px clearance.
+Use a 4 points base, 15 points screen gutters, 10–14 points between shortcut pills, and 20–28 points between major zones. Cards use 20 points internal padding. Floating controls sit above the safe area with at least 12 points clearance.
 
 ### Grid & Container
 
@@ -258,7 +267,7 @@ Home is a single expressive column with one row of shortcut pills, a large balan
 
 Large open pastel areas are intentional. Do not fill them with extra widgets. Use empty space to isolate the assistant, balance, or current catalog selection.
 
-## Elevation & Depth
+Surface hierarchy observed in the source:
 
 Layer white cards with pale offset silhouettes and subtle blur rather than ordinary drop shadows. Black controls float through contrast. Media cards gain depth from imagery; sheets overlap the background with large top radii.
 
@@ -266,29 +275,15 @@ Layer white cards with pale offset silhouettes and subtle blur rather than ordin
 
 Use offset white silhouettes, pastel blur, oversized media, and the floating black dock as the depth system. Avoid conventional card shadows and metallic finance effects.
 
-## Shapes
+# Navigation appearance
 
-### Border Radius Scale
+The floating three-zone dock is the primary shell. Profile and assistant use large circular or pill actions; back navigation can float as a separate black circle over content.
 
-- Primary controls are black pills or circles.
-- White cards use 26–34px corners and may have subtly uneven silhouettes.
-- Media panels use 34px corners with full-bleed images.
-- Sheets use 44px top corners.
-- Avoid small 8px enterprise cards except for internal thumbnail details.
-
-### Photography & Illustration Geometry
-
-Portraits and venue images use large rounded rectangles with the subject centered and controls kept clear. Character art can occupy a pill or full card, but financial thumbnails remain small and subordinate.
-
-## Components
+# Components
 
 ### Buttons
 
 Primary actions are black pills or circles with white icons and labels. Secondary actions are white pills on the pastel wash. Native behavior is acceptable only when visible styling follows this system rather than default iOS blue or grouped gray controls.
-
-### Pricing Tabs
-
-Use an oversized vertical selector for major product categories and compact white pills for smaller filters. The active category occupies the central white card; inactive labels fade into the background.
 
 ### Cards & Containers
 
@@ -300,46 +295,24 @@ Use an irregular white card with an optional pale offset layer. Keep account lab
 
 Use broad pills and large white sheets for name, transfer, and settings inputs. Labels stay conventional and readable even when the surrounding screen is expressive.
 
-### Status & Build Page
+# Imagery and icons
+
+Use offset white silhouettes, pastel blur, oversized media, and the floating black dock as the depth system. Avoid conventional card shadows and metallic finance effects.
+
+Portraits and venue images use large rounded rectangles with the subject centered and controls kept clear. Character art can occupy a pill or full card, but financial thumbnails remain small and subordinate.
+
+If final imagery is not yet available, any placeholder must preserve the documented scale, placement, crop, and visual weight rather than removing that layer.
+
+# States
 
 Use a large photo with white display title and a short descriptor. Float black circular navigation, map, save, and assistant actions along the bottom.
 Completion appears in a black toast with a green circular status icon. Avoid celebratory modal chrome that conflicts with the persistent visual atmosphere.
 
-### Navigation
-
-The floating three-zone dock is the primary shell. Profile and assistant use large circular or pill actions; back navigation can float as a separate black circle over content.
-
-### Footer
-
-There is no conventional footer. End content with generous pastel space and keep the floating dock or final black action clear of the safe area.
-
-## Do's and Don'ts
-
-### Do
-
-- Preserve the pastel atmospheric canvas.
-- Anchor interaction with black high-contrast controls.
-- Use the display face for a few major navigational moments.
-- Keep finance data sparse and conventional inside expressive framing.
-- Treat assistant and personalization as first-class surfaces.
-
-### Don't
-
-- Do not convert the interface into a generic white banking dashboard.
-- Do not add thin borders around every white shape.
-- Do not fill open gradient areas with extra content.
-- Do not use colorful icon sets for shortcuts.
-- Do not place essential text over visually busy photography.
-
-## Responsive Behavior
-
-### Breakpoints
-
-Keep the theatrical one-column sequence at compact and regular phone widths. Wider layouts expand media and cards without changing the navigation model.
+# iOS adaptation
 
 ### Touch Targets
 
-Black circles, pills, the floating dock, and shortcut controls remain at least 44px. Oversized visual controls should not contain tiny isolated hit regions.
+Black circles, pills, the floating dock, and shortcut controls remain at least 44 points. Oversized visual controls should not contain tiny isolated hit regions.
 
 ### Collapsing Strategy
 
@@ -349,17 +322,23 @@ Keep shortcut pills in one row only while targets remain usable; otherwise wrap 
 
 Fill media cards with centered or top-weighted subjects and protect text zones with simple composition, not opaque overlays. Preserve the large rounded crop on all phone widths.
 
-## Iteration Guide
+Apply these rules within current iPhone safe areas and scrolling containers. Keep interactive targets at least 44 points, preserve a logical VoiceOver order, and let Dynamic Type wrap supporting text without flattening the documented hierarchy. Do not infer an unobserved dark or light appearance.
 
-1. Establish the pastel wash, display hierarchy, and floating dock.
-2. Build Home shortcuts, balance card, and activity feed in grayscale.
-3. Add catalog motion and sheet behavior.
-4. Introduce assistant and lifestyle media surfaces.
-5. Add avatar, voice, and theme personalization last.
+# Anti-generic checklist
 
-## Known Gaps
+- Do not convert the interface into a generic white banking dashboard.
+- Do not add thin borders around every white shape.
+- Do not fill open gradient areas with extra content.
+- Do not use colorful icon sets for shortcuts.
+- Do not place essential text over visually busy photography.
+- Do not replace the documented hierarchy with a generic stack of identical white cards or `Form` sections.
+- Do not use default blue tint, an unstyled `TabView`, arbitrary SF Symbols, or uniform corner radii when they contradict the recorded tokens and components.
+- Do not omit compositionally important imagery while final assets are pending; preserve its footprint with a faithful placeholder.
+
+# Known gaps
 
 - Exact display font and irregular card path geometry were not available.
 - Several major transitions and onboarding moments were video-only.
 - Tablet, landscape, reduced-motion, and large accessibility-text layouts were not shown.
+
 </design-context>

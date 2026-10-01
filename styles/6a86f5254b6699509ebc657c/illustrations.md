@@ -1,12 +1,10 @@
-# Illustration Language
+# Overview
 
-Use a soft 3D storybook world with a small expressive alien as the recurring focal character. Forms are rounded and toy-like, with teal skin, coral accents, simple clothing, oversized eyes, and readable emotion.
+The reviewed source uses imagery in the product roles documented below.
 
-# Palette and Light
+# Visual Style
 
-- Build scenes from deep indigo skies, misty violet terrain, muted moss greens, coral pink, cyan, and small warm-yellow rewards.
-- Use hazy bloom, soft particles, and broad colored light rather than hard shadows.
-- Keep white or cream cards calm so the world remains the visual anchor.
+No separate illustration medium was documented beyond the image treatment described in the source.
 
 # Composition
 
@@ -14,8 +12,22 @@ Use a soft 3D storybook world with a small expressive alien as the recurring foc
 - Reserve the upper-middle area for activity cards and keep bottom action zones unobstructed.
 - Product thumbnails may isolate clothes or decorations on pale neutral tiles.
 
-# Do and Don't
+# Color and Materials
 
-- Keep one consistent character model and world material system.
-- Use animation-ready poses and clear silhouettes.
-- Do not mix flat corporate vectors, photoreal people, or sharp mechanical rendering into the companion world.
+Use the palette relationships explicitly described in the visual language and `ui.md`; no additional material system was documented.
+
+# Variants and States
+
+No state-specific illustration variants were documented in the reviewed source.
+
+# Production Requirements
+
+Exact export formats, aspect ratios, animation behavior, and appearance variants were not documented. Where imagery is compositionally important, temporary placeholders must preserve its documented scale, placement, crop, and visual weight until final art exists.
+
+# Avoid
+
+Do not introduce an unrelated illustration style or substitute decorative symbols for source-supported imagery.
+
+# Known Gaps
+
+Export specifications, animation rules, safe-crop measurements, and unobserved state variants were not available in the reviewed source.

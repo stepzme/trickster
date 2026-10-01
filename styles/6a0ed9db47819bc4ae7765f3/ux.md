@@ -4,14 +4,14 @@ kolesa.kz is a vehicle marketplace for cars, motorcycles, parts, services, finan
 
 # Navigation
 
-Five bottom destinations cover Listings, Favorites, Post, Messages, and Profile. The home surface exposes vehicle categories before a live listing feed; filters and sorting remain in the listing header.
+Five primary destinations cover Listings, Favorites, Post, Messages, and Profile. Home exposes vehicle categories before a live listing feed; filters and sorting remain in the listing context.
 
 # Core Flows
 
 ## Find a vehicle
 
 1. Choose a vehicle category from Home.
-2. Browse result cards with photo, price, financing, and key specs.
+2. Browse results with media, price, financing, and key specs.
 3. Filter, sort, or subscribe to search updates.
 
 ## Evaluate a listing
@@ -29,7 +29,13 @@ Five bottom destinations cover Listings, Favorites, Post, Messages, and Profile.
 
 # Interaction Patterns
 
-- Listing cards prioritize photo, price, installment estimate, and compact specifications.
-- Blue denotes marketplace actions; green is reserved for calling.
 - Filters use staged screens rather than one overloaded sheet.
 - Contact actions stay fixed near the safe area on long details.
+
+# System Access Timing
+
+No system-access timing or denial-recovery behavior was documented in the reviewed source.
+
+# Known Gaps
+
+System-permission denial paths, interrupted flows, and recovery behavior not described above were not available in the reviewed source.

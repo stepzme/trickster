@@ -4,13 +4,13 @@ Apple Music organizes listening through Listen Now, Browse, Radio, Library, and 
 
 # Navigation
 
-Five bottom tabs remain stable for subscribers; without subscription, Browse may be absent. The mini-player sits directly above the tab bar. Profile and account actions open as sheets rather than replacing the current destination.
+Five bottom tabs remain stable for subscribers; without subscription, Browse may be absent. The mini-player sits directly above the primary navigation. Profile and account actions open as sheets rather than replacing the current destination.
 
 # Core Flows
 
 ## Discovery and search
 
-Listen Now is personalized, Browse is editorial, and Radio is schedule-led. Search switches explicitly between Apple Music and Your Library and keeps result types horizontally scannable.
+1. Listen Now is personalized, Browse is editorial, and Radio is schedule-led. Search switches explicitly between Apple Music and Your Library and keeps result types scannable.
 
 ## Playback
 
@@ -20,16 +20,23 @@ Listen Now is personalized, Browse is editorial, and Radio is schedule-led. Sear
 
 ## Library
 
-Library exposes editable categories and recently added media. Playlists support search, creation, sorting, and direct playback without hiding the mini-player.
+1. Library exposes editable categories and recently added media. Playlists support search, creation, sorting, and direct playback without hiding the mini-player.
 
 ## Subscription and account
 
-Non-subscribers see bounded trial prompts. Plan selection separates Individual and Family, then hands payment to the native purchase sheet. Account contains redemption, subscription, notifications, contacts, and Apple ID discovery.
+1. Non-subscribers see bounded trial prompts. Plan selection separates Individual and Family, then hands payment to the native purchase sheet. Account contains redemption, subscription, notifications, contacts, and Apple ID discovery.
 
 # Interaction Patterns
 
 - Keep current playback persistent across tabs.
-- Use album art and editorial art as the dominant visual layer.
 - Distinguish Apple Music search from local library search.
 - Keep destructive or account actions in sheets.
 - Preserve playback context while opening menus.
+
+# System Access Timing
+
+No system-access timing or denial-recovery path was documented in the reviewed source.
+
+# Known Gaps
+
+Unobserved flows, denial paths, cancellation behavior, and recovery states remain unspecified.

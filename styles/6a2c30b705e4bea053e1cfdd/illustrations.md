@@ -10,10 +10,22 @@ Objects are soft, rounded, and toy-like with glossy or clay materials, simple fa
 
 Place one large object on one side of a horizontal promotion card and reserve the other side for concise copy. Small service tiles use one centered object.
 
-# Color
+# Color and Materials
 
 Use saturated green, violet, cyan, and blue gradients with white highlights. Keep navy for core financial actions and text.
 
-# Usage
+# Variants and States
 
 Use this language for telecom plans, family, eSIM, onboarding, and service promotion. Keep balances, transactions, receipts, and payment confirmation data-led.
+
+# Production Requirements
+
+Exact export formats, aspect ratios, animation behavior, and appearance variants were not documented. Where imagery is compositionally important, temporary placeholders must preserve its documented scale, placement, crop, and visual weight until final art exists.
+
+# Avoid
+
+Do not introduce an unrelated illustration style or substitute decorative symbols for source-supported imagery.
+
+# Known Gaps
+
+Export specifications, animation rules, safe-crop measurements, and unobserved state variants were not available in the reviewed source.

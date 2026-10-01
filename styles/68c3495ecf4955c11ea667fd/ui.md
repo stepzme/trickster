@@ -1,12 +1,12 @@
 <design-context>
 ---
-version: alpha
+version: 1
+platform: iOS
 name: Measure-design-analysis
 description: "A minimal augmented-reality utility where the camera fills the screen, thin white geometry explains detection and measurement, oversized white placement controls support precision, and a full-screen red level state gives immediate angle feedback."
 colors:
   primary: "#FFFFFF"
   on-primary: "#111111"
-  primary-hover: "#F1F1F1"
   primary-focus: "#D8D8D8"
   ink: "#FFFFFF"
   ink-muted: "#B8B8BC"
@@ -28,34 +28,34 @@ colors:
   semantic-success: "#F2C94C"
   semantic-overlay: "#000000"
 typography:
-  display-xl: {fontFamily: SF Pro Display, fontSize: 36px, fontWeight: 400, lineHeight: 1.06, letterSpacing: -0.8px}
-  display-lg: {fontFamily: SF Pro Display, fontSize: 30px, fontWeight: 400, lineHeight: 1.10, letterSpacing: -0.6px}
-  display-md: {fontFamily: SF Pro Display, fontSize: 24px, fontWeight: 500, lineHeight: 1.14, letterSpacing: -0.3px}
-  headline: {fontFamily: SF Pro Display, fontSize: 20px, fontWeight: 500, lineHeight: 1.20, letterSpacing: -0.2px}
-  card-title: {fontFamily: SF Pro Text, fontSize: 15px, fontWeight: 500, lineHeight: 1.24, letterSpacing: 0}
-  subhead: {fontFamily: SF Pro Text, fontSize: 14px, fontWeight: 500, lineHeight: 1.30, letterSpacing: 0}
-  body-lg: {fontFamily: SF Pro Text, fontSize: 14px, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0}
-  body: {fontFamily: SF Pro Text, fontSize: 12px, fontWeight: 400, lineHeight: 1.34, letterSpacing: 0}
-  body-sm: {fontFamily: SF Pro Text, fontSize: 10px, fontWeight: 400, lineHeight: 1.28, letterSpacing: 0}
-  caption: {fontFamily: SF Pro Text, fontSize: 9px, fontWeight: 500, lineHeight: 1.22, letterSpacing: 0}
-  button: {fontFamily: SF Pro Text, fontSize: 13px, fontWeight: 500, lineHeight: 1.18, letterSpacing: 0}
-  eyebrow: {fontFamily: SF Pro Text, fontSize: 9px, fontWeight: 600, lineHeight: 1.18, letterSpacing: 0.1px}
-  mono: {fontFamily: SF Mono, fontSize: 10px, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0}
-rounded: {xs: 4px, sm: 8px, md: 12px, lg: 16px, xl: 20px, xxl: 26px, pill: 9999px, full: 9999px}
-spacing: {xxs: 4px, xs: 8px, sm: 12px, md: 16px, lg: 20px, xl: 24px, xxl: 32px, section: 40px}
+  display-xl: {fontFamily: SF Pro Display, fontSize: 36, fontWeight: 400, lineHeight: 1.06, letterSpacing: -0.8}
+  display-lg: {fontFamily: SF Pro Display, fontSize: 30, fontWeight: 400, lineHeight: 1.10, letterSpacing: -0.6}
+  display-md: {fontFamily: SF Pro Display, fontSize: 24, fontWeight: 500, lineHeight: 1.14, letterSpacing: -0.3}
+  headline: {fontFamily: SF Pro Display, fontSize: 20, fontWeight: 500, lineHeight: 1.20, letterSpacing: -0.2}
+  card-title: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 500, lineHeight: 1.24, letterSpacing: 0}
+  subhead: {fontFamily: SF Pro Text, fontSize: 14, fontWeight: 500, lineHeight: 1.30, letterSpacing: 0}
+  body-lg: {fontFamily: SF Pro Text, fontSize: 14, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0}
+  body: {fontFamily: SF Pro Text, fontSize: 12, fontWeight: 400, lineHeight: 1.34, letterSpacing: 0}
+  body-sm: {fontFamily: SF Pro Text, fontSize: 10, fontWeight: 400, lineHeight: 1.28, letterSpacing: 0}
+  caption: {fontFamily: SF Pro Text, fontSize: 9, fontWeight: 500, lineHeight: 1.22, letterSpacing: 0}
+  button: {fontFamily: SF Pro Text, fontSize: 13, fontWeight: 500, lineHeight: 1.18, letterSpacing: 0}
+  eyebrow: {fontFamily: SF Pro Text, fontSize: 9, fontWeight: 600, lineHeight: 1.18, letterSpacing: 0.1}
+  mono: {fontFamily: SF Mono, fontSize: 10, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0}
+rounded: {xs: 4, sm: 8, md: 12, lg: 16, xl: 20, xxl: 26, pill: 9999, full: 9999}
+spacing: {xxs: 4, xs: 8, sm: 12, md: 16, lg: 20, xl: 24, xxl: 32, section: 40}
 components:
-  button-primary: {backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.full}", padding: 16px}
+  button-primary: {backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.full}", padding: 16}
   button-primary-pressed: {backgroundColor: "{colors.primary-focus}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.full}"}
-  button-primary-hover: {backgroundColor: "{colors.primary-hover}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.full}"}
-  button-secondary: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 10px 14px}
-  button-tertiary: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 10px 14px}
-  button-inverse: {backgroundColor: "{colors.inverse-canvas}", textColor: "{colors.inverse-ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 12px 16px}
-  point-control: {backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.full}", padding: 18px}
-  measure-label: {backgroundColor: "{colors.inverse-canvas}", textColor: "{colors.inverse-ink}", typography: "{typography.caption}", rounded: "{rounded.pill}", padding: 5px 8px}
-  mode-nav: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: 7px 8px}
-  bottom-nav: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: 7px 8px}
+  button-secondary: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [10, 14]}
+  button-tertiary: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [10, 14]}
+  button-inverse: {backgroundColor: "{colors.inverse-canvas}", textColor: "{colors.inverse-ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [12, 16]}
+  point-control: {backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.full}", padding: 18}
+  measure-label: {backgroundColor: "{colors.inverse-canvas}", textColor: "{colors.inverse-ink}", typography: "{typography.caption}", rounded: "{rounded.pill}", padding: [5, 8]}
+  mode-nav: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: [7, 8]}
+  bottom-nav: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: [7, 8]}
 ---
-## Overview
+
+# Overview
 
 Measure is an AR tool where white geometry and oversized controls sit directly on the camera, while Level uses an immediate color field.
 
@@ -66,7 +66,15 @@ Measure is an AR tool where white geometry and oversized controls sit directly o
 - Minimal undo and clear controls.
 - Two-mode Measure and Level navigation.
 
-## Colors
+# Non-negotiable visual invariants
+
+- The reference consistently shows full-screen camera.
+- The reference consistently shows thin white measurement geometry.
+- Sampled screens consistently use large central point action.
+- The reference consistently shows minimal undo and clear controls.
+- Navigation consistently uses two-mode Measure and Level navigation.
+
+# Color and surfaces
 
 ### Brand & Accent
 
@@ -84,7 +92,7 @@ White labels sit over imagery; black text sits inside white measurement pills.
 
 The level background shifts with alignment; color must be reinforced by the numeric angle.
 
-## Typography
+# Typography
 
 ### Font Family
 
@@ -94,11 +102,11 @@ Use SF Pro Display and SF Pro Text for a native precision-tool character.
 
 | Token | Size | Weight | Use |
 |---|---:|---:|---|
-| display-xl | 36px | 400 | Level angle |
-| headline | 20px | 500 | Guidance |
-| card-title | 15px | 500 | Measurement value |
-| body | 12px | 400 | Instruction |
-| caption | 9px | 500 | Mode label |
+| display-xl | 36 points | 400 | Level angle |
+| headline | 20 points | 500 | Guidance |
+| card-title | 15 points | 500 | Measurement value |
+| body | 12 points | 400 | Instruction |
+| caption | 9 points | 500 | Mode label |
 
 ### Principles
 
@@ -110,11 +118,11 @@ Use SF Pro Display and SF Pro Text for a native precision-tool character.
 
 Inter is suitable; retain lightweight geometry and large numerals.
 
-## Layout
+# Screen composition
 
 ### Spacing System
 
-Use a 4px base and generous 16–24px spacing around placement controls.
+Use a 4 points base and generous 16–24 points spacing around placement controls.
 
 ### Grid & Container
 
@@ -124,7 +132,7 @@ The camera is full bleed; guidance centers in the upper-middle and actions sit w
 
 Treat unobstructed camera area as functional whitespace.
 
-## Elevation & Depth
+Surface hierarchy observed in the source:
 
 | Level | Treatment | Use |
 |---|---|---|
@@ -137,31 +145,15 @@ Treat unobstructed camera area as functional whitespace.
 
 No decorative depth; geometry must remain stable against real imagery.
 
-## Shapes
+# Navigation appearance
 
-### Border Radius Scale
+Keep Measure and Level fixed at the bottom without obscuring the target.
 
-| Token | Value | Use |
-|---|---:|---|
-| rounded-xs | 4px | Small labels |
-| rounded-sm | 8px | Undo and clear |
-| rounded-md | 12px | Guidance field |
-| rounded-lg | 16px | Rare sheet |
-| rounded-full | full | Point and value controls |
-
-### Photography & Illustration Geometry
-
-Camera imagery stays full bleed. Instructional line art is thin, centered, and directly tied to device movement.
-
-## Components
+# Components
 
 ### Buttons
 
 Use a large white circular point action, smaller white or gray utilities, and clear pressed feedback.
-
-### Pricing Tabs
-
-Measure and Level use a two-item dark mode bar with a bright active label.
 
 ### Cards & Containers
 
@@ -171,47 +163,23 @@ Avoid cards over the camera; use only compact floating labels and controls.
 
 No standard forms; any calibration prompt must use the same minimal geometry.
 
-### Status & Build Page
+# Imagery and icons
+
+No decorative depth; geometry must remain stable against real imagery.
+
+Camera imagery stays full bleed. Instructional line art is thin, centered, and directly tied to device movement.
+
+If final imagery is not yet available, any placeholder must preserve the documented scale, placement, crop, and visual weight rather than removing that layer.
+
+# States
 
 Surface detection uses centered movement guidance; measurement status appears on the line itself.
 
-### Navigation
-
-Keep Measure and Level fixed at the bottom without obscuring the target.
-
-### Footer
-
-No footer; the mode bar owns the safe area.
-
-## Do's and Don'ts
-
-### Do
-
-- Keep camera context visible.
-- Make placement forgiving.
-- Pair level color with angle.
-- Preserve large targets.
-
-### Don't
-
-- Don't add decorative panels.
-- Don't use low-contrast lines.
-- Don't hide undo or clear.
-- Don't crop the live view.
-
-## Responsive Behavior
-
-### Breakpoints
-
-| Name | Width | Key Changes |
-|---|---:|---|
-| Compact | 320–374px | Tighten guidance width |
-| Standard | 375–430px | Default AR geometry |
-| Wide | 431px+ | Expand action spacing |
+# iOS adaptation
 
 ### Touch Targets
 
-Point, undo, clear, Measure, and Level controls remain at least 44px.
+Point, undo, clear, Measure, and Level controls remain at least 44 points.
 
 ### Collapsing Strategy
 
@@ -221,16 +189,22 @@ Keep the point action dominant and reduce instructional copy before shrinking co
 
 The live camera always aspect-fills; AR points must stay registered during movement.
 
-## Iteration Guide
+Apply these rules within current iPhone safe areas and scrolling containers. Keep interactive targets at least 44 points, preserve a logical VoiceOver order, and let Dynamic Type wrap supporting text without flattening the documented hierarchy. Do not infer an unobserved dark or light appearance.
 
-Tune surface detection first, then point placement, measurement readability, and level feedback.
+# Anti-generic checklist
 
-## Known Gaps
+- Don't add decorative panels.
+- Don't use low-contrast lines.
+- Don't hide undo or clear.
+- Don't crop the live view.
+- Do not replace the documented hierarchy with a generic stack of identical white cards or `Form` sections.
+- Do not use default blue tint, an unstyled `TabView`, arbitrary SF Symbols, or uniform corner radii when they contradict the recorded tokens and components.
+- Do not omit compositionally important imagery while final assets are pending; preserve its footprint with a faithful placeholder.
+
+# Known gaps
 
 - Multi-segment measurement was not represented.
 - Saved measurement history was not present.
 - Tablet and landscape layouts were not represented.
 
 </design-context>
-
-Use the design system above for all UI you generate.

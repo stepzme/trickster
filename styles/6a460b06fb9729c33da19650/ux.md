@@ -10,19 +10,19 @@ Home, Services, Store, and Chat form the persistent lower navigation. Account an
 
 ## Join and access
 
-Choose sign-in, become a subscriber, transfer a number, compare plans, buy eSIM, activate SIM, or get help. Returning users use phone, PIN, and Face ID.
+1. Choose sign-in, become a subscriber, transfer a number, compare plans, buy eSIM, activate SIM, or get help. Returning users use phone, PIN, and Face ID.
 
 ## Manage mobile service
 
-Home shows balance, transfer status, autopay, tariff, allowances, tokens, and shortcuts. My Products exposes plan settings, expenses, plan change, SIM controls, eSIM, VoWiFi, and number protection.
+1. Home shows balance, transfer status, autopay, tariff, allowances, tokens, and shortcuts. My Products exposes plan settings, expenses, plan change, SIM controls, eSIM, VoWiFi, and number protection.
 
 ## Services and security
 
-Browse roaming, calls, zero-balance, internet, security, international, premium number, network name, spam, sessions, and account protection as distinct services.
+1. Browse roaming, calls, zero-balance, internet, security, international, premium number, network name, spam, sessions, and account protection as distinct services.
 
 ## History and content
 
-History separates charges, top-ups, data use, filters, and reports. Store and stories handle entertainment, books, games, AI, and partner products.
+1. History separates charges, top-ups, data use, filters, and reports. Store and stories handle entertainment, books, games, AI, and partner products.
 
 # Interaction Patterns
 
@@ -31,3 +31,11 @@ History separates charges, top-ups, data use, filters, and reports. Store and st
 - Separate telecom protection from content upsell.
 - Make number-transfer progress persistent.
 - Preserve support from every setup path.
+
+# System Access Timing
+
+No system-access timing or denial-recovery behavior was documented in the reviewed source.
+
+# Known Gaps
+
+System-permission denial paths, interrupted flows, and recovery behavior not described above were not available in the reviewed source.

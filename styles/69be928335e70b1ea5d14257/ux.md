@@ -4,7 +4,7 @@ A map-led mobility system where users name a destination, offer a price, compare
 
 # Navigation
 
-The map is the persistent base. A side menu holds profile, history, settings, help, and driver mode. Ride planning and active rides appear as layered bottom sheets over the map.
+The map is the persistent base. A side menu holds profile, history, settings, help, and driver mode. Ride planning and active rides appear as layered modals over the map.
 
 # Core Flows
 
@@ -30,8 +30,14 @@ The map is the persistent base. A side menu holds profile, history, settings, he
 
 # Interaction Patterns
 
-- Large white bottom sheets float over a muted map.
 - Acid-lime marks primary actions and safety emphasis.
 - Offer pricing uses strong numerals with increment controls and a timer.
 - Ride progress keeps driver and safety actions above route details.
-- Promotional service tiles use compact 3D scenes and bright backgrounds.
+
+# System Access Timing
+
+No system-access request timing or denial recovery was documented in the reviewed source.
+
+# Known Gaps
+
+- Permission-denial recovery and unobserved secondary flows were not documented.

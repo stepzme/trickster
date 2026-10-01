@@ -4,9 +4,9 @@ Telcell Wallet combines balance, cards, payments, transport, transfers, rewards,
 
 # Navigation
 
-- Four bottom destinations cover Home, BON, QR code, and Banking.
+- Four primary destinations cover Home, BON, QR code, and Banking.
 - Home combines balance, pay-later, promotional stories, services, and favorites.
-- Profile and settings open from the account identity at the top.
+- Profile and settings open from the account identity.
 
 # Core Flows
 
@@ -30,7 +30,13 @@ Telcell Wallet combines balance, cards, payments, transport, transfers, rewards,
 
 # Interaction Patterns
 
-- Coral marks active navigation and key links; cyan marks balance additions and status.
-- Home uses horizontal promo rails and a simple service grid.
 - Four persistent destinations keep finance domains shallow.
 - Modals explain BON rules without leaving the marketplace.
+
+# System Access Timing
+
+No system-access timing or denial-recovery path was documented in the reviewed source.
+
+# Known Gaps
+
+Unobserved flows, denial paths, cancellation behavior, and recovery states remain unspecified.

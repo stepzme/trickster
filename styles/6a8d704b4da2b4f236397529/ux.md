@@ -33,7 +33,13 @@ Skyeng combines self-study, teacher products, AI lessons, speaking scenarios, vo
 # Interaction Patterns
 
 - Lesson progress stays visible across focused steps.
-- Cyan drives navigation and acquisition; violet indicates active practice.
 - Audio controls pair waveform, transcript, and retry.
-- Discovery uses horizontal shelves; lessons collapse to one task at a time.
-- Settings preserve learning configuration without introducing a new visual system.
+- Discovery uses browsing sections; lessons collapse to one task at a time.
+
+# System Access Timing
+
+No system-access timing or denial-recovery behavior was documented in the reviewed source.
+
+# Known Gaps
+
+System-permission denial paths, interrupted flows, and recovery behavior not described above were not available in the reviewed source.

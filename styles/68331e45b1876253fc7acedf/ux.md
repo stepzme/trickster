@@ -1,10 +1,10 @@
 # Overview
 
-MTS Music is a dark, artwork-led listening service covering mixes, recommendations, releases, playlists, stations, podcasts, favorites, search, subscription, and playback.
+MTS Music is a, artwork-led listening service covering mixes, recommendations, releases, playlists, stations, podcasts, favorites, search, subscription, and playback.
 
 # Navigation
 
-Four bottom destinations connect Listen, Favorites, Search, and Subscription. A persistent mini player sits above the bar, while history and Profile remain in the top-right of Listen.
+Four primary destinations connect Listen, Favorites, Search, and Subscription. A persistent mini player sits above the primary navigation, while history and Profile remain in the top-right of Listen.
 
 # Core Flows
 
@@ -22,7 +22,12 @@ Four bottom destinations connect Listen, Favorites, Search, and Subscription. A 
 
 # Interaction Patterns
 
-- Cover art is the primary discovery object; text remains compact and subordinate.
-- Horizontal rails support browsing while track lists support quick scanning.
 - The mini player preserves listening context across navigation.
-- The full player derives its atmosphere from blurred artwork but keeps white controls crisp.
+
+# System Access Timing
+
+No system-access timing or denial-recovery path was documented in the reviewed source.
+
+# Known Gaps
+
+Unobserved flows, denial paths, cancellation behavior, and recovery states remain unspecified.

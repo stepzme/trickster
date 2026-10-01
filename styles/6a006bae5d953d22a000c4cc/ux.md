@@ -4,7 +4,7 @@ ONAY brings transit cards, QR fare payment, top-up, transfers, trip history, rou
 
 # Navigation
 
-Routes, Cards, a prominent central QR scanner, Shop, and Menu form the bottom bar. Cards opens by default with balance, city, trip count, and immediate top-up or transfer actions.
+Routes, Cards, a QR scanner, Shop, and Menu form primary navigation. Cards opens by default with balance, city, trip count, and immediate top-up or transfer actions.
 
 # Core Flows
 
@@ -24,7 +24,12 @@ Routes, Cards, a prominent central QR scanner, Shop, and Menu form the bottom ba
 
 # Interaction Patterns
 
-- Yellow identifies cards, scanner, selections, and primary mobility actions.
-- Large rounded cards and circular shortcuts sit on a cool almost-white canvas.
-- Route grids prioritize number scanning over visual decoration.
-- Shop opens as a distinct commerce surface but keeps ONAY identity and support close.
+The sampled flows use direct actions, explicit completion, and return to the current context. No additional repeated interaction behavior was documented.
+
+# System Access Timing
+
+No system-access request timing or denial recovery was documented in the reviewed source.
+
+# Known Gaps
+
+- Permission-denial recovery and unobserved secondary flows were not documented.

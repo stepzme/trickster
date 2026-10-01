@@ -10,10 +10,22 @@ Objects are high-shine and studio-lit: inflated pink lettering, chrome-blue beau
 
 Center one bold object cluster inside a white or saturated field. Onboarding keeps copy above a tall phone or character composition; category tiles crop objects generously inside pale rounded panels.
 
-# Color
+# Color and Materials
 
 Use electric blue, hot pink, silver, black, and white. Secondary campaign colors are allowed only inside bounded artwork.
 
-# Usage
+# Variants and States
 
 Use illustration for onboarding, service categories, personal-price education, gifts, and campaigns. Keep product photography and checkout functional; new art must inherit the UI's sharp black controls and blue-magenta energy.
+
+# Production Requirements
+
+Use only the formats and crops supported by the implemented placement. Where the documented imagery is compositionally important, temporary placeholders must preserve its placement, crop, scale, negative space, and approximate visual weight until final art exists. No unobserved light/dark variants or export ratios are prescribed.
+
+# Avoid
+
+- Do not replace the documented image language with unrelated stock art, arbitrary symbols, or a denser composition.
+
+# Known Gaps
+
+- Export aspect ratios, safe crop measurements, animation, and unobserved state variants were not documented.

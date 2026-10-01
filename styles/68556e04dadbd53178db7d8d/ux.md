@@ -4,9 +4,9 @@ VkusVill combines loyalty, grocery delivery, store browsing, personalized discou
 
 # Navigation
 
-- Five bottom destinations cover My Card, Catalog, Stores, Profile, and Support.
-- Catalog search, filters, favorites, fulfillment, and location remain available near the top.
-- Cart opens as a large sheet and progresses into delivery, recipient, payment, and confirmation.
+- Five primary destinations cover My item, Catalog, Stores, Profile, and Support.
+- Catalog search, filters, favorites, fulfillment, and location remain available.
+- Cart opens as a sheet and progresses into delivery, recipient, payment, and confirmation.
 
 # Core Flows
 
@@ -30,7 +30,12 @@ VkusVill combines loyalty, grocery delivery, store browsing, personalized discou
 
 # Interaction Patterns
 
-- Green marks add, loyalty, delivery, and active navigation.
-- Yellow price highlights and pastel category cards aid scanning.
-- Product ratings, availability, discount, and quantity stay attached to each card.
-- A sticky free-delivery strip keeps fulfillment value visible.
+No behavior-only interaction pattern could be separated from the reviewed visual observations.
+
+# System Access Timing
+
+No system-access timing or denial-recovery path was documented in the reviewed source.
+
+# Known Gaps
+
+Unobserved flows, denial paths, cancellation behavior, and recovery states remain unspecified.

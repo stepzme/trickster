@@ -4,7 +4,7 @@ Alice is a chat-first AI assistant with text, reasoning, photo, file, image-gene
 
 # Navigation
 
-The top bar opens chat history and starts a new chat. The bottom composer exposes attachments, media, mode chips, and send. Profile and Pro live at the bottom of the chat list rather than competing with the conversation.
+The primary navigation opens chat history and starts a new chat. The bottom composer exposes attachments, media, mode chips, and send. Profile and Pro live of the chat list rather than competing with the conversation.
 
 # Core Flows
 
@@ -16,20 +16,27 @@ The top bar opens chat history and starts a new chat. The bottom composer expose
 
 ## Modes and attachments
 
-The plus menu offers photo, file, image generation, photo animation, and reasoning. Active modes appear as removable chips in the composer so users can see what will affect the next request.
+1. The plus menu offers photo, file, image generation, photo animation, and reasoning. Active modes appear as removable chips in the composer so users can see what will affect the next request.
 
 ## Generated media
 
-Image generation exposes style, aspect ratio, and variant count near results. Photo animation starts from a preview, confirms a prompt, and ends with share, download, or new-video actions.
+1. Image generation exposes style, aspect ratio, and variant count near results. Photo animation starts from a preview, confirms a prompt, and ends with share, download, or new-video actions.
 
 ## History and settings
 
-Chat history is a simple chronological list with long-press deletion. Profile contains Pro status, sound, personalization, app information, and logout.
+1. Chat history is a simple chronological list with long-press deletion. Profile contains Pro status, sound, personalization, app information, and logout.
 
 # Interaction Patterns
 
 - Keep the composer visible throughout conversation.
-- Represent active modes as explicit removable chips.
 - Put media parameters beside the generated result.
 - Keep history actions contextual and reversible where possible.
 - Separate Pro upsell from ordinary chat actions.
+
+# System Access Timing
+
+No system-access timing or denial-recovery path was documented in the reviewed source.
+
+# Known Gaps
+
+Unobserved flows, denial paths, cancellation behavior, and recovery states remain unspecified.

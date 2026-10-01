@@ -1,10 +1,10 @@
 # Overview
 
-Flip combines broad discovery, photo search, favorites, cart, checkout, tracking, reviews, and profile management.
+Flip combines broad discovery, media search, favorites, cart, checkout, tracking, reviews, and profile management.
 
 # Navigation
 
-Home, Search, Cart, Favorites, and Profile stay in the floating tab bar.
+Home, Search, Cart, Favorites, and Profile stay in the primary navigation.
 
 # Core Flows
 
@@ -21,3 +21,11 @@ Home, Search, Cart, Favorites, and Profile stay in the floating tab bar.
 - Show seller and delivery context.
 - Confirm external payment handoff.
 - Keep order history explicit.
+
+# System Access Timing
+
+No system-access timing or denial-recovery behavior was documented in the reviewed source.
+
+# Known Gaps
+
+System-permission denial paths, interrupted flows, and recovery behavior not described above were not available in the reviewed source.

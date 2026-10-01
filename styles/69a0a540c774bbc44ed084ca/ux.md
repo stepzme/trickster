@@ -4,7 +4,7 @@ My O! + Bank is a Kyrgyzstan super app spanning mobile service, O!Money, banking
 
 # Navigation
 
-A floating four-item dock connects Home, Payments, History, and More. A central QR scanner overlaps the dock, while search, notifications, stories, and the active subscriber remain fixed near the top of Home.
+A four-item dock connects Home, Payments, History, and More. A central QR scanner overlaps the dock, while search, notifications, stories, and the active subscriber remain available .
 
 # Core Flows
 
@@ -24,7 +24,14 @@ A floating four-item dock connects Home, Payments, History, and More. A central 
 
 # Interaction Patterns
 
-- Large white modules separate telecom, banking, services, and commerce on a pale gray canvas.
 - Magenta identifies the O! ecosystem, QR scan, active navigation, and selected offers.
 - Product and financial lists stay dense but use clear section labels and aligned values.
-- The floating dock and QR scanner persist across long home and marketplace content.
+- The dock and QR scanner persist across long home and marketplace content.
+
+# System Access Timing
+
+No system-access request timing or denial recovery was documented in the reviewed source.
+
+# Known Gaps
+
+- Permission-denial recovery and unobserved secondary flows were not documented.

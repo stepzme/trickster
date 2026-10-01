@@ -4,14 +4,14 @@ Ozon is a broad marketplace for discovery, search, product comparison, favorites
 
 # Navigation
 
-Six compact bottom destinations connect Home, discovery or catalog tools, finance, messages or notifications, Cart, and Profile. Search stays prominent on Home, results, and detail.
+Six primary destinations connect Home, discovery or catalog tools, finance, messages or notifications, Cart, and Profile. Search stays on Home, results, and detail.
 
 # Core Flows
 
 ## Find and evaluate a product
 
 1. Enter through campaign, category, recommendation, or search.
-2. Refine suggestions and compare two-column result cards.
+2. Refine suggestions and compare result cards.
 3. Open product detail for media, price, sale, bonus, delivery, seller, and reviews.
 4. Favorite, choose variant, or add to cart.
 
@@ -24,7 +24,12 @@ Six compact bottom destinations connect Home, discovery or catalog tools, financ
 
 # Interaction Patterns
 
-- Ozon blue drives cart, checkout, active navigation, and fulfillment actions.
-- Product photography and promotional banners carry most color.
-- Dense grid cards keep price, discount, scarcity, rating, and delivery together.
-- Checkout reduces visual noise and anchors one blue commitment action.
+No behavior-only interaction pattern could be separated from the reviewed visual observations.
+
+# System Access Timing
+
+No system-access timing or denial-recovery path was documented in the reviewed source.
+
+# Known Gaps
+
+Unobserved flows, denial paths, cancellation behavior, and recovery states remain unspecified.

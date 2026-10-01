@@ -1,6 +1,7 @@
 <design-context>
 ---
-version: alpha
+version: 1
+platform: iOS
 name: WB-Bank-design-analysis
 description: "A dense ecosystem bank mixing Wildberries hot magenta, dark green wallet panels, pale lilac canvas, white service tiles, bold black financial typography, and glossy 3D product art. The home screen behaves like a modular marketplace dashboard, while transfers and applications simplify into bright linear forms with one charcoal confirmation action."
 
@@ -26,36 +27,44 @@ colors:
   semantic-overlay: "#000000"
 
 typography:
-  display-xl: { fontFamily: System Sans, fontSize: 40px, fontWeight: 700, lineHeight: 1.04, letterSpacing: -0.8px }
-  display-lg: { fontFamily: System Sans, fontSize: 32px, fontWeight: 700, lineHeight: 1.08, letterSpacing: -0.5px }
-  display-md: { fontFamily: System Sans, fontSize: 26px, fontWeight: 700, lineHeight: 1.14, letterSpacing: -0.3px }
-  headline: { fontFamily: System Sans, fontSize: 20px, fontWeight: 700, lineHeight: 1.2, letterSpacing: 0 }
-  card-title: { fontFamily: System Sans, fontSize: 15px, fontWeight: 650, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: System Sans, fontSize: 17px, fontWeight: 450, lineHeight: 1.35, letterSpacing: 0 }
-  body-lg: { fontFamily: System Sans, fontSize: 16px, fontWeight: 400, lineHeight: 1.42, letterSpacing: 0 }
-  body: { fontFamily: System Sans, fontSize: 14px, fontWeight: 400, lineHeight: 1.4, letterSpacing: 0 }
-  body-sm: { fontFamily: System Sans, fontSize: 12px, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
-  caption: { fontFamily: System Sans, fontSize: 10px, fontWeight: 450, lineHeight: 1.3, letterSpacing: 0 }
-  button: { fontFamily: System Sans, fontSize: 15px, fontWeight: 600, lineHeight: 1.2, letterSpacing: 0 }
-  eyebrow: { fontFamily: System Sans, fontSize: 10px, fontWeight: 700, lineHeight: 1.25, letterSpacing: 0.2px }
-  mono: { fontFamily: System Mono, fontSize: 12px, fontWeight: 450, lineHeight: 1.35, letterSpacing: 0 }
+  display-xl: { fontFamily: System Sans, fontSize: 40, fontWeight: 700, lineHeight: 1.04, letterSpacing: -0.8 }
+  display-lg: { fontFamily: System Sans, fontSize: 32, fontWeight: 700, lineHeight: 1.08, letterSpacing: -0.5 }
+  display-md: { fontFamily: System Sans, fontSize: 26, fontWeight: 700, lineHeight: 1.14, letterSpacing: -0.3 }
+  headline: { fontFamily: System Sans, fontSize: 20, fontWeight: 700, lineHeight: 1.2, letterSpacing: 0 }
+  card-title: { fontFamily: System Sans, fontSize: 15, fontWeight: 650, lineHeight: 1.25, letterSpacing: 0 }
+  subhead: { fontFamily: System Sans, fontSize: 17, fontWeight: 450, lineHeight: 1.35, letterSpacing: 0 }
+  body-lg: { fontFamily: System Sans, fontSize: 16, fontWeight: 400, lineHeight: 1.42, letterSpacing: 0 }
+  body: { fontFamily: System Sans, fontSize: 14, fontWeight: 400, lineHeight: 1.4, letterSpacing: 0 }
+  body-sm: { fontFamily: System Sans, fontSize: 12, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
+  caption: { fontFamily: System Sans, fontSize: 10, fontWeight: 450, lineHeight: 1.3, letterSpacing: 0 }
+  button: { fontFamily: System Sans, fontSize: 15, fontWeight: 600, lineHeight: 1.2, letterSpacing: 0 }
+  eyebrow: { fontFamily: System Sans, fontSize: 10, fontWeight: 700, lineHeight: 1.25, letterSpacing: 0.2 }
+  mono: { fontFamily: System Mono, fontSize: 12, fontWeight: 450, lineHeight: 1.35, letterSpacing: 0 }
 
-rounded: { xs: 5px, sm: 9px, md: 13px, lg: 18px, xl: 24px, xxl: 30px, pill: 9999px, full: 9999px }
-spacing: { xxs: 4px, xs: 8px, sm: 12px, md: 16px, lg: 24px, xl: 32px, xxl: 48px, section: 64px }
+rounded: { xs: 5, sm: 9, md: 13, lg: 18, xl: 24, xxl: 30, pill: 9999, full: 9999 }
+spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
 
 components:
-  button-primary: { backgroundColor: "{colors.secondary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.md}", padding: 14px 18px }
-  wallet-card: { backgroundColor: "{colors.wallet-green}", textColor: "{colors.on-primary}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 16px }
-  service-tile: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.md}", padding: 12px }
-  promo-banner: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 14px }
-  bottom-nav: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", height: 54px }
+  button-primary: { backgroundColor: "{colors.secondary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.md}", padding: [14, 18]}
+  wallet-card: { backgroundColor: "{colors.wallet-green}", textColor: "{colors.on-primary}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 16 }
+  service-tile: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.md}", padding: 12 }
+  promo-banner: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 14 }
+  bottom-nav: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", height: 54 }
 ---
 
-## Overview
+# Overview
 
 WB Bank is a colorful but structured financial dashboard. Hot magenta establishes ecosystem identity, dark green anchors money, and white modular tiles organize a very broad product catalog.
 
-## Colors
+# Non-negotiable visual invariants
+
+- The reviewed screens use this composition: A dense ecosystem bank mixing Wildberries hot magenta, dark green wallet panels, pale lilac canvas, white service tiles, bold black financial typography, and glossy 3D product art.
+- The dominant canvas token is #F2EFF8 and the primary accent token is #E500C8.
+- The recorded display style is 40 points while the body style is 14 points.
+- Navigation retains the five-item marketplace dock with Bank highlighted in a magenta capsule.
+- The reviewed screens use this hierarchy: The home screen behaves like a modular marketplace dashboard, while transfers and applications simplify into bright linear forms with one charcoal confirmation action.
+
+# Color and surfaces
 
 ### Brand & Accent
 
@@ -73,15 +82,11 @@ Use near-black for amounts and titles, gray for terms and product detail, and wh
 
 Use green for successful transfer and available value, red for debt or failure, amber for attention, and magenta only for brand or selection.
 
-## Typography
+# Typography
 
 ### Font Family
 
 Use a modern system sans with tabular figures for balances, rates, and payment amounts.
-
-### Hierarchy
-
-Use 32–40px amounts, 20–26px page headings, 14–17px actions and rows, and 10–12px terms or tile metadata.
 
 ### Principles
 
@@ -91,11 +96,7 @@ Keep discount, wallet balance, product rate, and next action visually distinct. 
 
 Use SF Pro or Inter with 650–700 headings and tabular numeric figures.
 
-## Layout
-
-### Spacing System
-
-Use a 4px base, 10–12px tile gaps, 12–16px phone gutters, and 24px between dashboard modules.
+# Screen composition
 
 ### Grid & Container
 
@@ -105,31 +106,15 @@ Home uses a discount/action grid, one wide wallet card, horizontal promotion rai
 
 Home is intentionally dense but each tile contains one idea. Amount entry and confirmation screens should regain broad open space.
 
-## Elevation & Depth
+# Navigation appearance
 
-Use soft shadow and color separation for modular tiles. Forms and receipts stay mostly flat against white.
+Retain the five-item marketplace dock with Bank highlighted in a magenta capsule. Keep bank-product settings local to their detail page.
 
-### Decorative Depth
-
-Use glossy 3D product objects, magenta-violet gradients, and occasional spectral glow inside promotions. Keep money-entry controls undecorated.
-
-## Shapes
-
-### Border Radius Scale
-
-Use 9px for compact controls, 13px for service tiles, 18px for wallet cards, 24px for sheets, and pills for discount and status labels.
-
-### Photography & Illustration Geometry
-
-Place angled 3D banking objects at tile edges with clear copy space. Show physical and virtual cards front-facing and proportionally accurate.
-
-## Components
+# Components
 
 ### Buttons
 
 Primary transaction buttons are wide charcoal rounded rectangles. Promotional links may be magenta or green. Native controls must inherit this hierarchy and the WB radius system.
-
-### Pricing Tabs
 
 Card formats, plans, product modes, and rate choices use compact tabs or segmented labels with magenta or dark selected state.
 
@@ -149,11 +134,46 @@ Use clear discount level, wallet tier, card state, transfer result, savings rate
 
 Retain the five-item marketplace dock with Bank highlighted in a magenta capsule. Keep bank-product settings local to their detail page.
 
-### Footer
+# Imagery and icons
 
-There is no footer. Certificates, documents, security, support, and terms live in product or settings screens.
+Use soft shadow and color separation for modular tiles. Forms and receipts stay mostly flat against white.
 
-## Do's and Don'ts
+### Decorative Depth
+
+Use glossy 3D product objects, magenta-violet gradients, and occasional spectral glow inside promotions. Keep money-entry controls undecorated.
+
+# States
+
+Use clear discount level, wallet tier, card state, transfer result, savings rate, statement progress, unread count, and cashback status.
+
+# iOS adaptation
+
+Phones show the modular dashboard and one financial task at a time. Wider screens may pair product list with detail while keeping forms narrow.
+
+### Touch Targets
+
+Tiles, quick actions, product cards, navigation, amount presets, selectors, and confirmation controls require at least 44pt targets.
+
+### Collapsing Strategy
+
+Keep amount, source, recipient, rate or fee, and next action visible. Collapse documents, explanations, and secondary benefits into details.
+
+### Image Behavior
+
+Use `contain` for product renders, cards, icons, and partner marks. Use `cover` only for editorial campaign photography.
+
+On iPhone, respect top and bottom safe areas, use scrolling for content that does not fit, keep interactive targets at least 44 points, and preserve the visual reading order for VoiceOver. At larger Dynamic Type sizes, allow supporting text to wrap without collapsing the dominant hierarchy. Use native sheets and permission transitions while explicitly styling app-owned surfaces to match the reference.
+
+# Anti-generic checklist
+
+- Do not substitute the documented accent hierarchy with default iOS blue.
+- Do not collapse distinct surfaces into a uniform stack of generic white cards.
+- Do not use an unstyled `TabView`, `Form`, or arbitrary SF Symbols when they contradict the documented navigation and component language.
+- Do not flatten the documented typography into one body-text scale.
+- Do not remove compositionally important photography or illustration while assets are pending.
+- Do not apply one corner radius to every control and surface.
+
+Source-specific guardrails retained from the review:
 
 ### Do
 
@@ -169,32 +189,8 @@ There is no footer. Certificates, documents, security, support, and terms live i
 - Do not carry 3D art into receipts.
 - Do not leave native blue controls in the interface.
 
-## Responsive Behavior
-
-### Breakpoints
-
-Phones show the modular dashboard and one financial task at a time. Wider screens may pair product list with detail while keeping forms narrow.
-
-### Touch Targets
-
-Tiles, quick actions, product cards, navigation, amount presets, selectors, and confirmation controls require at least 44px targets.
-
-### Collapsing Strategy
-
-Keep amount, source, recipient, rate or fee, and next action visible. Collapse documents, explanations, and secondary benefits into details.
-
-### Image Behavior
-
-Use `contain` for product renders, cards, icons, and partner marks. Use `cover` only for editorial campaign photography.
-
-## Iteration Guide
-
-Start with sign-in, Bank Home, wallet top-up, payments hub, phone transfer, receipt, card opening, savings, and settings. Add credit, insurance, wishlists, certificates, and advanced support afterward.
-
-## Known Gaps
+# Known gaps
 
 Eighty-two catalog flows were reviewed by structure with complete representative scenarios across launch, Home, transfer, card, and savings. Some promotional previews are video-only, so motion and rare secondary product branches are less visually verified.
 
 </design-context>
-
-Use the design system above for all UI you generate.

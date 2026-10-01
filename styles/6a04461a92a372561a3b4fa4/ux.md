@@ -4,9 +4,8 @@ SOKOLOV combines a jewelry storefront, loyalty program, store discovery, gift se
 
 # Navigation
 
-- Six bottom destinations provide Home, Catalog, offers, Favorites, Cart, and Profile.
-- Search remains near the top of shopping screens.
-- Product and checkout tasks drill into focused screens or rounded bottom sheets.
+- Six primary destinations provide Home, Catalog, offers, Favorites, Cart, and Profile.
+- Search remains in the current context of shopping screens.
 
 # Core Flows
 
@@ -14,11 +13,11 @@ SOKOLOV combines a jewelry storefront, loyalty program, store discovery, gift se
 
 1. Start from Home, Catalog, or Search.
 2. Choose a category or apply quick filters and sorting.
-3. Scan the two-column product grid and open a product.
+3. Scan the product catalog and open a product.
 
 ## Buy a product
 
-1. Review imagery, price, specifications, quality, reviews, and store availability.
+1. Review media, price, specifications, quality, reviews, and store availability.
 2. Add the item to Cart and adjust quantity, packaging, promo code, and payment.
 3. Confirm the order and open its details from Profile.
 
@@ -31,6 +30,13 @@ SOKOLOV combines a jewelry storefront, loyalty program, store discovery, gift se
 # Interaction Patterns
 
 - Promotional banners and story circles lead discovery.
-- Blue marks navigation, filters, and purchase actions.
 - Bottom sheets expose specifications and secondary details without losing product context.
-- Sticky cart actions keep price and commitment visible.
+- Cart actions keep price and commitment visible.
+
+# System Access Timing
+
+No system-access timing or denial-recovery behavior was documented in the reviewed source.
+
+# Known Gaps
+
+System-permission denial paths, interrupted flows, and recovery behavior not described above were not available in the reviewed source.

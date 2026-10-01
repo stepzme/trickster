@@ -4,9 +4,9 @@ Simbank organizes card management, transfers, payments, savings, cashback, rewar
 
 # Navigation
 
-- Five bottom destinations cover Home, Payments, Savings, Cashback, and More.
+- Five primary destinations cover Home, Payments, Savings, Cashback, and More.
 - Home exposes top-up, transfer, QR payment, stories, onboarding tasks, and recent operations.
-- Focused tasks use back navigation and a persistent black action.
+- Focused tasks use back navigation and keep their primary action available until completion.
 
 # Core Flows
 
@@ -30,8 +30,13 @@ Simbank organizes card management, transfers, payments, savings, cashback, rewar
 
 # Interaction Patterns
 
-- The balance and three shortcuts anchor frequent tasks.
-- White sheets preserve context while switching content domains.
-- Black confirmation actions indicate commitment.
 - Stories and checklists introduce features without blocking transactions.
 - Receipts expose follow-up actions after completion.
+
+# System Access Timing
+
+No system-access request timing or denial recovery was documented in the reviewed source.
+
+# Known Gaps
+
+- Permission-denial recovery and unobserved secondary flows were not documented.

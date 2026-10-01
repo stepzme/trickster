@@ -4,7 +4,7 @@ Kaspi combines banking, payments, transfers, marketplace, travel, government ser
 
 # Navigation
 
-Four fixed destinations cover Home, Kaspi QR, Messages, and Services. Home exposes the most-used services immediately; deeper banking tasks use conventional back navigation and segmented subviews.
+four persistent destinations cover Home, Kaspi QR, Messages, and Services. Home exposes the most-used services immediately; deeper banking tasks use conventional back navigation and segmented subviews.
 
 # Core Flows
 
@@ -17,7 +17,7 @@ Four fixed destinations cover Home, Kaspi QR, Messages, and Services. Home expos
 
 ## Manage money
 
-1. Open My Bank from the home shortcut grid.
+1. Open My Bank from the home shortcut collections.
 2. Choose an account, card, deposit, or loan.
 3. Review balances and progress, then open the needed action.
 
@@ -30,7 +30,12 @@ Four fixed destinations cover Home, Kaspi QR, Messages, and Services. Home expos
 
 # Interaction Patterns
 
-- Home prioritizes a compact service grid before promotional and product content.
-- Red outline icons make core services scan quickly.
-- Financial operations use pale grouped fields and one full-width blue confirmation action.
 - Success states provide a receipt path and a direct return route.
+
+# System Access Timing
+
+No system-access request timing or denial recovery was documented in the reviewed source.
+
+# Known Gaps
+
+- Permission-denial recovery and unobserved secondary flows were not documented.

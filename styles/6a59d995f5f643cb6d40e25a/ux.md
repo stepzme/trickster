@@ -4,7 +4,7 @@ Home Credit Bank supports accounts and cards, transfers, payments, conversion, p
 
 # Navigation
 
-Five bottom destinations anchor Home, All accounts, Transfers, Payments, and For me. Home exposes product tabs, quick actions, finance summary, and instant transfer entry.
+Five primary destinations anchor Home, All accounts, Transfers, Payments, and For me. Home exposes product tabs, quick actions, finance summary, and instant transfer entry.
 
 # Core Flows
 
@@ -19,3 +19,11 @@ Five bottom destinations anchor Home, All accounts, Transfers, Payments, and For
 # Interaction Patterns
 
 Amounts and sources stay visible through commitment, segmented controls switch method or period, sheets isolate focused decisions, and transaction results preserve receipt and favorite actions.
+
+# System Access Timing
+
+No system-access timing or denial-recovery behavior was documented in the reviewed source.
+
+# Known Gaps
+
+System-permission denial paths, interrupted flows, and recovery behavior not described above were not available in the reviewed source.

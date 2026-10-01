@@ -1,12 +1,12 @@
 <design-context>
 ---
-version: alpha
+version: 1
+platform: iOS
 name: Le-Chat-design-analysis
 description: "A near-black AI workspace with charcoal composer surfaces, bright orange creation actions, cyan research states, and a retro pixel-art mascot. The interface is sparse and tool-like: conversation text carries most of the screen, the composer remains anchored, and projects, history, modes, and upgrade controls stay compact."
 colors:
   primary: "#FF4A1C"
   on-primary: "#FFFFFF"
-  primary-hover: "#FF6A42"
   primary-focus: "#D93610"
   ink: "#F6F4F7"
   ink-muted: "#B6B1B8"
@@ -28,52 +28,51 @@ colors:
   semantic-success: "#7FB348"
   semantic-overlay: "#0D0C0E"
 typography:
-  display-xl: {fontFamily: SF Pro Display, fontSize: 36px, fontWeight: 700, lineHeight: 1.06, letterSpacing: -0.8px}
-  display-lg: {fontFamily: SF Pro Display, fontSize: 30px, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.6px}
-  display-md: {fontFamily: SF Pro Display, fontSize: 24px, fontWeight: 700, lineHeight: 1.14, letterSpacing: -0.3px}
-  headline: {fontFamily: SF Pro Display, fontSize: 20px, fontWeight: 600, lineHeight: 1.20, letterSpacing: -0.2px}
-  card-title: {fontFamily: SF Pro Text, fontSize: 16px, fontWeight: 600, lineHeight: 1.24, letterSpacing: 0}
-  subhead: {fontFamily: SF Pro Text, fontSize: 15px, fontWeight: 500, lineHeight: 1.30, letterSpacing: 0}
-  body-lg: {fontFamily: SF Pro Text, fontSize: 15px, fontWeight: 400, lineHeight: 1.48, letterSpacing: 0}
-  body: {fontFamily: SF Pro Text, fontSize: 13px, fontWeight: 400, lineHeight: 1.44, letterSpacing: 0}
-  body-sm: {fontFamily: SF Pro Text, fontSize: 11px, fontWeight: 400, lineHeight: 1.34, letterSpacing: 0}
-  caption: {fontFamily: SF Pro Text, fontSize: 10px, fontWeight: 400, lineHeight: 1.28, letterSpacing: 0}
-  button: {fontFamily: SF Pro Text, fontSize: 14px, fontWeight: 500, lineHeight: 1.20, letterSpacing: 0}
-  eyebrow: {fontFamily: SF Pro Text, fontSize: 10px, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0.1px}
-  mono: {fontFamily: SF Mono, fontSize: 11px, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0}
+  display-xl: {fontFamily: SF Pro Display, fontSize: 36, fontWeight: 700, lineHeight: 1.06, letterSpacing: -0.8}
+  display-lg: {fontFamily: SF Pro Display, fontSize: 30, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.6}
+  display-md: {fontFamily: SF Pro Display, fontSize: 24, fontWeight: 700, lineHeight: 1.14, letterSpacing: -0.3}
+  headline: {fontFamily: SF Pro Display, fontSize: 20, fontWeight: 600, lineHeight: 1.20, letterSpacing: -0.2}
+  card-title: {fontFamily: SF Pro Text, fontSize: 16, fontWeight: 600, lineHeight: 1.24, letterSpacing: 0}
+  subhead: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 500, lineHeight: 1.30, letterSpacing: 0}
+  body-lg: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 400, lineHeight: 1.48, letterSpacing: 0}
+  body: {fontFamily: SF Pro Text, fontSize: 13, fontWeight: 400, lineHeight: 1.44, letterSpacing: 0}
+  body-sm: {fontFamily: SF Pro Text, fontSize: 11, fontWeight: 400, lineHeight: 1.34, letterSpacing: 0}
+  caption: {fontFamily: SF Pro Text, fontSize: 10, fontWeight: 400, lineHeight: 1.28, letterSpacing: 0}
+  button: {fontFamily: SF Pro Text, fontSize: 14, fontWeight: 500, lineHeight: 1.20, letterSpacing: 0}
+  eyebrow: {fontFamily: SF Pro Text, fontSize: 10, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0.1}
+  mono: {fontFamily: SF Mono, fontSize: 11, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0}
 rounded:
-  xs: 4px
-  sm: 7px
-  md: 10px
-  lg: 14px
-  xl: 18px
-  xxl: 24px
-  pill: 9999px
-  full: 9999px
+  xs: 4
+  sm: 7
+  md: 10
+  lg: 14
+  xl: 18
+  xxl: 24
+  pill: 9999
+  full: 9999
 spacing:
-  xxs: 4px
-  xs: 8px
-  sm: 12px
-  md: 16px
-  lg: 20px
-  xl: 24px
-  xxl: 32px
-  section: 40px
+  xxs: 4
+  xs: 8
+  sm: 12
+  md: 16
+  lg: 20
+  xl: 24
+  xxl: 32
+  section: 40
 components:
-  button-primary: {backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 13px 18px}
+  button-primary: {backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [13, 18]}
   button-primary-pressed: {backgroundColor: "{colors.primary-focus}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}"}
-  button-primary-hover: {backgroundColor: "{colors.primary-hover}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}"}
-  button-secondary: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 11px 16px}
-  button-tertiary: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink-muted}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 9px 12px}
-  button-inverse: {backgroundColor: "{colors.inverse-canvas}", textColor: "{colors.inverse-ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 11px 16px}
-  composer: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 12px}
-  user-message: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 10px 12px}
-  project-card: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: 12px}
-  mode-chip: {backgroundColor: "{colors.surface-2}", textColor: "{colors.brand-secure}", typography: "{typography.caption}", rounded: "{rounded.sm}", padding: 5px 8px}
-  top-nav: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.xs}", height: 48px}
-  sidebar: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xs}", padding: 16px}
+  button-secondary: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [11, 16]}
+  button-tertiary: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink-muted}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [9, 12]}
+  button-inverse: {backgroundColor: "{colors.inverse-canvas}", textColor: "{colors.inverse-ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [11, 16]}
+  composer: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 12}
+  user-message: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: [10, 12]}
+  project-card: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: 12}
+  mode-chip: {backgroundColor: "{colors.surface-2}", textColor: "{colors.brand-secure}", typography: "{typography.caption}", rounded: "{rounded.sm}", padding: [5, 8]}
+  sidebar: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xs}", padding: 16}
 ---
-## Overview
+
+# Overview
 
 Le Chat is a dark, composer-first AI workspace where orange creation actions and a pixel mascot add identity without interrupting long-form work.
 
@@ -84,7 +83,15 @@ Le Chat is a dark, composer-first AI workspace where orange creation actions and
 - Minimal message chrome and readable long responses.
 - Retro pixel-art mascot and onboarding world.
 
-## Colors
+# Non-negotiable visual invariants
+
+- Sampled screens consistently use near-black canvas with charcoal input surfaces.
+- The reference consistently shows anchored composer across home, chats, and projects.
+- The reference consistently shows orange primary actions and cyan Research mode.
+- The reference consistently shows minimal message chrome and readable long responses.
+- Imagery consistently uses retro pixel-art mascot and onboarding world.
+
+# Color and surfaces
 
 ### Brand & Accent
 
@@ -102,7 +109,7 @@ Off-white carries content; soft gray carries labels, timestamps, disclaimers, an
 
 Cyan is informational mode state, green is positive feedback, and red is destructive. Keep semantic color compact.
 
-## Typography
+# Typography
 
 ### Font Family
 
@@ -112,11 +119,11 @@ Use SF Pro Display for onboarding and subscription headings and SF Pro Text for 
 
 | Token | Size | Weight | Use |
 |---|---:|---:|---|
-| display-lg | 30px | 700 | Onboarding and upgrade claim |
-| headline | 20px | 600 | Project and modal title |
-| card-title | 16px | 600 | Conversation section title |
-| body | 13px | 400 | Prompt and response text |
-| caption | 10px | 400 | Mode, disclaimer, and utility labels |
+| display-lg | 30 points | 700 | Onboarding and upgrade claim |
+| headline | 20 points | 600 | Project and modal title |
+| card-title | 16 points | 600 | Conversation section title |
+| body | 13 points | 400 | Prompt and response text |
+| caption | 10 points | 400 | Mode, disclaimer, and utility labels |
 
 ### Principles
 
@@ -128,11 +135,11 @@ Use SF Pro Display for onboarding and subscription headings and SF Pro Text for 
 
 Inter is a close cross-platform substitute; use a bitmap font only inside pixel-art assets, never for conversation text.
 
-## Layout
+# Screen composition
 
 ### Spacing System
 
-Use a 4px base, 12px composer padding, 16px content gutters, and 20–24px between answer sections.
+Use a 4 points base, 12 points composer padding, 16 points content gutters, and 20–24 points between answer sections.
 
 ### Grid & Container
 
@@ -142,7 +149,7 @@ Chats are one readable column. The sidebar is a vertical history list; upgrade u
 
 Keep large calm fields around the mascot and composer. Long answers use paragraph spacing instead of card separation.
 
-## Elevation & Depth
+Surface hierarchy observed in the source:
 
 | Level | Treatment | Use |
 |---|---|---|
@@ -155,31 +162,15 @@ Keep large calm fields around the mascot and composer. Long answers use paragrap
 
 Depth comes from small surface steps and generated media. Pixel art remains flat with crisp edges.
 
-## Shapes
+# Navigation appearance
 
-### Border Radius Scale
+Use a slide-out sidebar for history, projects, plan, and New chat. Keep conversation title and one contextual action in the header.
 
-| Token | Value | Use |
-|---|---:|---|
-| rounded-xs | 4px | Pixel-art frame and tiny badges |
-| rounded-sm | 7px | Buttons and sidebar search |
-| rounded-md | 10px | Composer and messages |
-| rounded-lg | 14px | Upgrade card and modal panels |
-| rounded-full | full | Avatar and compact mode status |
-
-### Photography & Illustration Geometry
-
-Generated images use rounded landscape rectangles. The pixel mascot remains small, centered, and unblurred against the dark field.
-
-## Components
+# Components
 
 ### Buttons
 
 Primary actions are orange full-width rectangles. Secondary actions use charcoal fills; compact answer utilities stay icon-only and gray.
-
-### Pricing Tabs
-
-Monthly and Yearly use a dark segmented control with the selected plan lifted; discount value is cyan.
 
 ### Cards & Containers
 
@@ -189,49 +180,23 @@ Assistant responses are mostly borderless. User prompts use charcoal bubbles; pr
 
 The composer combines attachments, mode selection, voice, and submit in one charcoal panel. Focus changes border and icon state without introducing a light native field.
 
-### Status & Build Page
+# Imagery and icons
+
+Depth comes from small surface steps and generated media. Pixel art remains flat with crisp edges.
+
+Generated images use rounded landscape rectangles. The pixel mascot remains small, centered, and unblurred against the dark field.
+
+If final imagery is not yet available, any placeholder must preserve the documented scale, placement, crop, and visual weight rather than removing that layer.
+
+# States
 
 Generation progress appears inline with the assistant avatar and stop control. Research keeps a cyan mode chip visible in the composer.
 
-### Navigation
-
-Use a slide-out sidebar for history, projects, plan, and New chat. Keep conversation title and one contextual action in the header.
-
-### Footer
-
-No footer; the anchored composer and device safe area close every working screen.
-
-## Do's and Don'ts
-
-### Do
-
-- Keep the composer persistent.
-- Use orange for creation and upgrade.
-- Preserve long-form readability.
-- Keep mode selection inside the composer.
-- Render pixel art with crisp edges.
-
-### Don't
-
-- Don't wrap every assistant paragraph in a card.
-- Don't use orange as a large conversation background.
-- Don't mix pixel typography into functional text.
-- Don't leave native inputs light or rounded like generic iOS controls.
-- Don't crowd the home mascot with navigation chrome.
-
-## Responsive Behavior
-
-### Breakpoints
-
-| Name | Width | Key Changes |
-|---|---:|---|
-| Compact | 320–374px | Tighten composer actions and answer utilities |
-| Standard | 375–430px | Default single-column chat |
-| Wide | 431px+ | Widen text measure modestly and expand sidebar |
+# iOS adaptation
 
 ### Touch Targets
 
-Composer actions, sidebar rows, feedback, mode chips, and subscription controls remain at least 44px.
+Composer actions, sidebar rows, feedback, mode chips, and subscription controls remain at least 44 points.
 
 ### Collapsing Strategy
 
@@ -241,16 +206,23 @@ Keep chat single-column; collapse secondary composer tools behind one menu befor
 
 Generated images use aspect-fill previews and open to full detail. Pixel art scales only by integer multiples where practical.
 
-## Iteration Guide
+Apply these rules within current iPhone safe areas and scrolling containers. Keep interactive targets at least 44 points, preserve a logical VoiceOver order, and let Dynamic Type wrap supporting text without flattening the documented hierarchy. Do not infer an unobserved dark or light appearance.
 
-Tune composer clarity and answer readability first, then mode visibility, history organization, and brand moments.
+# Anti-generic checklist
 
-## Known Gaps
+- Don't wrap every assistant paragraph in a card.
+- Don't use orange as a large conversation background.
+- Don't mix pixel typography into functional text.
+- Don't leave native inputs light or rounded like generic iOS controls.
+- Don't crowd the home mascot with navigation chrome.
+- Do not replace the documented hierarchy with a generic stack of identical white cards or `Form` sections.
+- Do not use default blue tint, an unstyled `TabView`, arbitrary SF Symbols, or uniform corner radii when they contradict the recorded tokens and components.
+- Do not invent decorative imagery or symbol treatments that are absent from the reference.
+
+# Known gaps
 
 - Voice-mode listening and interruption states were not viewable as still images.
 - Account deletion completion was not sampled.
 - Tablet and landscape layouts were not represented.
 
 </design-context>
-
-Use the design system above for all UI you generate.

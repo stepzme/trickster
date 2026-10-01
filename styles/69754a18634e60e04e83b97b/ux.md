@@ -19,7 +19,7 @@ Home, Catalog, Scanner, and Profile remain persistent. Product, basket, checkout
 
 ## Store and promotions
 
-Store cards expose route, catalog, reviews, vacancies, and delivery terms. Stories and promotion cards remain separate from product search.
+1. Store cards expose route, catalog, reviews, vacancies, and delivery terms. Stories and promotion cards remain separate from product search.
 
 # Interaction Patterns
 
@@ -28,3 +28,11 @@ Store cards expose route, catalog, reviews, vacancies, and delivery terms. Stori
 - Require age confirmation where necessary.
 - Preserve product favorites.
 - Confirm cart clearing and cancellation.
+
+# System Access Timing
+
+No system-access request timing or denial recovery was documented in the reviewed source.
+
+# Known Gaps
+
+- Permission-denial recovery and unobserved secondary flows were not documented.

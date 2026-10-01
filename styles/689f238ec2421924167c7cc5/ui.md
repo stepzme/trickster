@@ -1,12 +1,12 @@
 <design-context>
 ---
-version: alpha
+version: 1
+platform: iOS
 name: Anytime-design-analysis
 description: "A map-first car-sharing interface anchored by vivid turquoise, white floating controls, translucent map overlays, and compact bottom sheets. Real vehicle photography and the live map carry trust; onboarding uses full-screen mobility imagery with a thin turquoise route motif."
 colors:
   primary: "#23D7B2"
   on-primary: "#10201D"
-  primary-hover: "#14BE9C"
   primary-soft: "#DDF9F3"
   ink: "#151919"
   ink-muted: "#6F7775"
@@ -21,32 +21,31 @@ colors:
   semantic-danger: "#E65D56"
   semantic-overlay: "#000000"
 typography:
-  display-xl: { fontFamily: System Sans, fontSize: 40px, fontWeight: 750, lineHeight: 1.00, letterSpacing: -0.9px }
-  display-lg: { fontFamily: System Sans, fontSize: 32px, fontWeight: 700, lineHeight: 1.05, letterSpacing: -0.6px }
-  display-md: { fontFamily: System Sans, fontSize: 26px, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.3px }
-  headline: { fontFamily: System Sans, fontSize: 21px, fontWeight: 700, lineHeight: 1.18, letterSpacing: -0.2px }
-  card-title: { fontFamily: System Sans, fontSize: 15px, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: System Sans, fontSize: 16px, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
-  body-lg: { fontFamily: System Sans, fontSize: 16px, fontWeight: 400, lineHeight: 1.45, letterSpacing: 0 }
-  body: { fontFamily: System Sans, fontSize: 14px, fontWeight: 400, lineHeight: 1.38, letterSpacing: 0 }
-  body-sm: { fontFamily: System Sans, fontSize: 12px, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
-  caption: { fontFamily: System Sans, fontSize: 10px, fontWeight: 400, lineHeight: 1.20, letterSpacing: 0 }
-  button: { fontFamily: System Sans, fontSize: 16px, fontWeight: 500, lineHeight: 1.20, letterSpacing: 0 }
-  eyebrow: { fontFamily: System Sans, fontSize: 11px, fontWeight: 650, lineHeight: 1.20, letterSpacing: 0.3px }
-  mono: { fontFamily: System Mono, fontSize: 12px, fontWeight: 500, lineHeight: 1.30, letterSpacing: 0 }
-rounded: { xs: 6px, sm: 10px, md: 14px, lg: 20px, xl: 28px, xxl: 34px, pill: 9999px, full: 9999px }
-spacing: { xxs: 4px, xs: 8px, sm: 12px, md: 16px, lg: 24px, xl: 32px, xxl: 48px, section: 64px }
+  display-xl: { fontFamily: System Sans, fontSize: 40, fontWeight: 750, lineHeight: 1.00, letterSpacing: -0.9 }
+  display-lg: { fontFamily: System Sans, fontSize: 32, fontWeight: 700, lineHeight: 1.05, letterSpacing: -0.6 }
+  display-md: { fontFamily: System Sans, fontSize: 26, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.3 }
+  headline: { fontFamily: System Sans, fontSize: 21, fontWeight: 700, lineHeight: 1.18, letterSpacing: -0.2 }
+  card-title: { fontFamily: System Sans, fontSize: 15, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
+  subhead: { fontFamily: System Sans, fontSize: 16, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
+  body-lg: { fontFamily: System Sans, fontSize: 16, fontWeight: 400, lineHeight: 1.45, letterSpacing: 0 }
+  body: { fontFamily: System Sans, fontSize: 14, fontWeight: 400, lineHeight: 1.38, letterSpacing: 0 }
+  body-sm: { fontFamily: System Sans, fontSize: 12, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
+  caption: { fontFamily: System Sans, fontSize: 10, fontWeight: 400, lineHeight: 1.20, letterSpacing: 0 }
+  button: { fontFamily: System Sans, fontSize: 16, fontWeight: 500, lineHeight: 1.20, letterSpacing: 0 }
+  eyebrow: { fontFamily: System Sans, fontSize: 11, fontWeight: 650, lineHeight: 1.20, letterSpacing: 0.3 }
+  mono: { fontFamily: System Mono, fontSize: 12, fontWeight: 500, lineHeight: 1.30, letterSpacing: 0 }
+rounded: { xs: 6, sm: 10, md: 14, lg: 20, xl: 28, xxl: 34, pill: 9999, full: 9999 }
+spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
 components:
-  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 14px 20px }
-  map-control: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.full}", padding: 12px }
-  vehicle-sheet: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xl}", padding: 16px }
-  status-banner: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.md}", padding: 12px }
-  drawer-row: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xs}", padding: 12px 16px }
-  top-nav: { backgroundColor: "{colors.primary}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xs}", height: 52px }
-  footer: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.caption}", rounded: "{rounded.xl}", padding: 12px 16px }
+  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [14, 20]}
+  map-control: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.full}", padding: 12 }
+  vehicle-sheet: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xl}", padding: 16 }
+  status-banner: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.md}", padding: 12 }
+  drawer-row: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xs}", padding: [12, 16]}
+  bottom navigation: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.caption}", rounded: "{rounded.xl}", padding: [12, 16]}
 ---
 
-## Overview
+# Overview
 
 Anytime keeps navigation subordinate to the map. White circular controls and bottom sheets float above soft map colors; turquoise signals availability, progress, and remote car actions.
 
@@ -58,7 +57,16 @@ Anytime keeps navigation subordinate to the map. White circular controls and bot
 - Real vehicle images and map markers.
 - Side drawer that preserves map context.
 
-## Colors
+# Non-negotiable visual invariants
+
+- The reference consistently shows full-screen live map as home.
+- The reference consistently shows turquoise primary actions and route motif.
+- The reference consistently shows white circular floating controls.
+- The reference consistently shows rounded vehicle and confirmation sheets.
+- The reference consistently shows real vehicle images and map markers.
+- The reference consistently shows side drawer that preserves map context.
+
+# Color and surfaces
 
 ### Brand & Accent
 - **Turquoise** ({colors.primary}): Remote car action, progress, route motif, and active emphasis.
@@ -81,7 +89,7 @@ Anytime keeps navigation subordinate to the map. White circular controls and bot
 - **Danger** ({colors.semantic-danger}): Rental issue and destructive action.
 - **Overlay** ({colors.semantic-overlay}): Command and drawer scrim.
 
-## Typography
+# Typography
 
 ### Font Family
 
@@ -92,13 +100,13 @@ Anytime keeps navigation subordinate to the map. White circular controls and bot
 
 | Token | Size | Weight | Use |
 |---|---|---|---|
-| `{typography.display-xl}` | 40px | 750 | Onboarding statement |
-| `{typography.display-md}` | 26px | 700 | Registration heading |
-| `{typography.headline}` | 21px | 700 | Vehicle or confirmation title |
-| `{typography.card-title}` | 15px | 600 | Vehicle model and drawer group |
-| `{typography.body}` | 14px | 400 | Default content |
-| `{typography.caption}` | 10px | 400 | Status and metadata |
-| `{typography.button}` | 16px | 500 | Remote actions |
+| `{typography.display-xl}` | 40 points | 750 | Onboarding statement |
+| `{typography.display-md}` | 26 points | 700 | Registration heading |
+| `{typography.headline}` | 21 points | 700 | Vehicle or confirmation title |
+| `{typography.card-title}` | 15 points | 600 | Vehicle model and drawer group |
+| `{typography.body}` | 14 points | 400 | Default content |
+| `{typography.caption}` | 10 points | 400 | Status and metadata |
+| `{typography.button}` | 16 points | 500 | Remote actions |
 
 ### Principles
 
@@ -111,11 +119,11 @@ Anytime keeps navigation subordinate to the map. White circular controls and bot
 
 Use **SF Pro**, **Inter**, or **Roboto**.
 
-## Layout
+# Screen composition
 
 ### Spacing System
 
-Use a 4px base. Floating controls keep 12px spacing, sheets use 16px padding, and full-width actions use 14px vertical padding.
+Use a 4 points base. Floating controls keep 12 points spacing, sheets use 16 points padding, and full-width actions use 14 points vertical padding.
 
 ### Grid & Container
 
@@ -125,7 +133,7 @@ The map fills the viewport. Controls align vertically at the edges. Vehicle deta
 
 Whitespace lives inside sheets and controls. The map remains visually open; avoid covering more geography than the current task requires.
 
-## Elevation & Depth
+Surface hierarchy observed in the source:
 
 | Level | Treatment | Use |
 |---|---|---|
@@ -138,31 +146,15 @@ Whitespace lives inside sheets and controls. The map remains visually open; avoi
 
 Use soft control shadows and literal vehicle renders. Onboarding may layer turquoise route lines over mobility photography.
 
-## Shapes
+# Navigation appearance
 
-### Border Radius Scale
+Map controls replace a tab bar. The menu opens a left drawer for account, pricing, and support destinations.
 
-| Token | Value | Use |
-|---|---|---|
-| `{rounded.xs}` | 6px | Tags and compact status |
-| `{rounded.sm}` | 10px | Actions and form controls |
-| `{rounded.md}` | 14px | Status banners |
-| `{rounded.xl}` | 28px | Bottom sheets and drawer corners |
-| `{rounded.full}` | full | Map controls and markers |
-
-### Photography & Illustration Geometry
-
-Vehicle images use contain and preserve branding. Onboarding photography uses cover with a readable route overlay. Map markers stay legible at multiple zoom levels.
-
-## Components
+# Components
 
 ### Buttons
 
 Primary remote actions use turquoise fill. End rental uses a turquoise outline or explicit secondary styling. Confirmation sheets use one full-width return action.
-
-### Pricing Tabs
-
-No pricing tabs were observed. Tariff and vehicle options use compact chips or drawer rows when needed.
 
 ### Cards & Containers
 
@@ -172,49 +164,23 @@ Vehicle sheets combine model, plate, range, user state, issue chips, car image, 
 
 Registration uses direct conversational prompts with explicit document capture. Camera actions name the required identity side or page.
 
-### Status & Build Page
+# Imagery and icons
+
+Use soft control shadows and literal vehicle renders. Onboarding may layer turquoise route lines over mobility photography.
+
+Vehicle images use contain and preserve branding. Onboarding photography uses cover with a readable route overlay. Map markers stay legible at multiple zoom levels.
+
+If final imagery is not yet available, any placeholder must preserve the documented scale, placement, crop, and visual weight rather than removing that layer.
+
+# States
 
 Remote commands show loading in place, then a clear success sheet. Active rental stays visible through a persistent banner and bottom sheet.
 
-### Navigation
-
-Map controls replace a tab bar. The menu opens a left drawer for account, pricing, and support destinations.
-
-### Footer
-
-The vehicle or rental bottom sheet is the functional footer. Its primary actions remain above the safe area.
-
-## Do's and Don'ts
-
-### Do
-
-- Preserve map context during actions.
-- Keep active-rental status persistent.
-- Separate Open from End rental.
-- Confirm remote commands.
-- Use real vehicle imagery for identification.
-
-### Don't
-
-- Don't cover the map with permanent chrome.
-- Don't use map color as action color.
-- Don't hide plate or range information.
-- Don't combine destructive and routine controls.
-- Don't make document capture ambiguous.
-
-## Responsive Behavior
-
-### Breakpoints
-
-| Name | Width | Key Changes |
-|---|---|---|
-| Wide | 768px+ | Constrain sheet width and keep map visible |
-| Compact | 390–767px | Default mobile map layout |
-| Small | <390px | Stack issue chips and vehicle metadata |
+# iOS adaptation
 
 ### Touch Targets
 
-Maintain 44px for map controls, markers, issue chips, drawer rows, and remote actions.
+Maintain 44 points for map controls, markers, issue chips, drawer rows, and remote actions.
 
 ### Collapsing Strategy
 
@@ -224,15 +190,20 @@ Keep the map full viewport. Constrain sheets before increasing height; stack veh
 
 Contain vehicle renders and identity evidence. Use cover for onboarding photography while preserving people, car, logo, and route line.
 
-## Iteration Guide
+Apply these rules within current iPhone safe areas and scrolling containers. Keep interactive targets at least 44 points, preserve a logical VoiceOver order, and let Dynamic Type wrap supporting text without flattening the documented hierarchy. Do not infer an unobserved dark or light appearance.
 
-1. Establish map and floating controls.
-2. Build vehicle and active-rental sheets.
-3. Add remote-command progress and confirmation.
-4. Implement registration and profile drawer.
-5. Add onboarding photography and route motif last.
+# Anti-generic checklist
 
-## Known Gaps
+- Don't cover the map with permanent chrome.
+- Don't use map color as action color.
+- Don't hide plate or range information.
+- Don't combine destructive and routine controls.
+- Don't make document capture ambiguous.
+- Do not replace the documented hierarchy with a generic stack of identical white cards or `Form` sections.
+- Do not use default blue tint, an unstyled `TabView`, arbitrary SF Symbols, or uniform corner radii when they contradict the recorded tokens and components.
+- Do not omit compositionally important imagery while final assets are pending; preserve its footprint with a faithful placeholder.
+
+# Known gaps
 
 - Exact tokens and font names were inferred visually.
 - The 25-flow inventory was complete and all top-level flows were inspected.
@@ -240,5 +211,3 @@ Contain vehicle renders and identity evidence. Use cover for onboarding photogra
 - No tablet or desktop screens were present.
 
 </design-context>
-
-Use the design system above for all UI you generate.

@@ -4,7 +4,7 @@ Litres is a book and audiobook service spanning personalized discovery, search, 
 
 # Navigation
 
-Five fixed destinations cover Home, Search, Reader, My Books, and Profile. Home adds a horizontal content taxonomy for genres, recommendations, books, and audiobooks.
+Five fixed destinations cover Home, Search, Reader, My Books, and Profile. Home adds a content taxonomy for genres, recommendations, books, and audiobooks.
 
 # Core Flows
 
@@ -23,7 +23,12 @@ Five fixed destinations cover Home, Search, Reader, My Books, and Profile. Home 
 
 # Interaction Patterns
 
-- Covers are the primary discovery cards; orange marks brand and active navigation.
-- Violet carries purchase, fragment, and subscription actions.
-- Reader chrome recedes around the text while preserving progress and settings.
-- Audio playback uses a focused cover-first player with large transport controls.
+No behavior-only interaction pattern could be separated from the reviewed visual observations.
+
+# System Access Timing
+
+No system-access timing or denial-recovery path was documented in the reviewed source.
+
+# Known Gaps
+
+Unobserved flows, denial paths, cancellation behavior, and recovery states remain unspecified.

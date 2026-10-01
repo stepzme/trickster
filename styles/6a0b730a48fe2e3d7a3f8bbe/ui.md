@@ -1,12 +1,12 @@
 <design-context>
 ---
-version: alpha
+version: 1
+platform: iOS
 name: iHerb-design-analysis
 description: "A dense but orderly health-commerce interface with a saturated green top bar, white product surfaces, orange add-to-cart actions, and information-rich catalog rows. Product photography, ratings, discount labels, health concern imagery, persistent search, and sticky purchase controls support comparison-heavy shopping without decorative chrome."
 colors:
   primary: "#3D8B00"
   on-primary: "#FFFFFF"
-  primary-hover: "#4FA714"
   primary-focus: "#2F6E00"
   ink: "#272727"
   ink-muted: "#5F5F5F"
@@ -28,54 +28,53 @@ colors:
   semantic-success: "#3D8B00"
   semantic-overlay: "#000000"
 typography:
-  display-xl: {fontFamily: SF Pro Display, fontSize: 38px, fontWeight: 700, lineHeight: 1.06, letterSpacing: -1.0px}
-  display-lg: {fontFamily: SF Pro Display, fontSize: 31px, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.7px}
-  display-md: {fontFamily: SF Pro Display, fontSize: 26px, fontWeight: 700, lineHeight: 1.15, letterSpacing: -0.4px}
-  headline: {fontFamily: SF Pro Display, fontSize: 22px, fontWeight: 700, lineHeight: 1.20, letterSpacing: -0.3px}
-  card-title: {fontFamily: SF Pro Text, fontSize: 17px, fontWeight: 600, lineHeight: 1.25, letterSpacing: -0.1px}
-  subhead: {fontFamily: SF Pro Text, fontSize: 16px, fontWeight: 600, lineHeight: 1.35, letterSpacing: 0}
-  body-lg: {fontFamily: SF Pro Text, fontSize: 16px, fontWeight: 400, lineHeight: 1.42, letterSpacing: 0}
-  body: {fontFamily: SF Pro Text, fontSize: 14px, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0}
-  body-sm: {fontFamily: SF Pro Text, fontSize: 12px, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0}
-  caption: {fontFamily: SF Pro Text, fontSize: 10px, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0}
-  button: {fontFamily: SF Pro Text, fontSize: 14px, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0}
-  eyebrow: {fontFamily: SF Pro Text, fontSize: 11px, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0.2px}
-  mono: {fontFamily: SF Mono, fontSize: 12px, fontWeight: 500, lineHeight: 1.35, letterSpacing: 0}
+  display-xl: {fontFamily: SF Pro Display, fontSize: 38, fontWeight: 700, lineHeight: 1.06, letterSpacing: -1.0}
+  display-lg: {fontFamily: SF Pro Display, fontSize: 31, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.7}
+  display-md: {fontFamily: SF Pro Display, fontSize: 26, fontWeight: 700, lineHeight: 1.15, letterSpacing: -0.4}
+  headline: {fontFamily: SF Pro Display, fontSize: 22, fontWeight: 700, lineHeight: 1.20, letterSpacing: -0.3}
+  card-title: {fontFamily: SF Pro Text, fontSize: 17, fontWeight: 600, lineHeight: 1.25, letterSpacing: -0.1}
+  subhead: {fontFamily: SF Pro Text, fontSize: 16, fontWeight: 600, lineHeight: 1.35, letterSpacing: 0}
+  body-lg: {fontFamily: SF Pro Text, fontSize: 16, fontWeight: 400, lineHeight: 1.42, letterSpacing: 0}
+  body: {fontFamily: SF Pro Text, fontSize: 14, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0}
+  body-sm: {fontFamily: SF Pro Text, fontSize: 12, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0}
+  caption: {fontFamily: SF Pro Text, fontSize: 10, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0}
+  button: {fontFamily: SF Pro Text, fontSize: 14, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0}
+  eyebrow: {fontFamily: SF Pro Text, fontSize: 11, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0.2}
+  mono: {fontFamily: SF Mono, fontSize: 12, fontWeight: 500, lineHeight: 1.35, letterSpacing: 0}
 rounded:
-  xs: 4px
-  sm: 8px
-  md: 12px
-  lg: 16px
-  xl: 22px
-  xxl: 28px
-  pill: 9999px
-  full: 9999px
+  xs: 4
+  sm: 8
+  md: 12
+  lg: 16
+  xl: 22
+  xxl: 28
+  pill: 9999
+  full: 9999
 spacing:
-  xxs: 4px
-  xs: 8px
-  sm: 12px
-  md: 16px
-  lg: 20px
-  xl: 24px
-  xxl: 32px
-  section: 44px
+  xxs: 4
+  xs: 8
+  sm: 12
+  md: 16
+  lg: 20
+  xl: 24
+  xxl: 32
+  section: 44
 components:
-  button-primary: {backgroundColor: "{colors.brand-secure}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 12px 18px}
+  button-primary: {backgroundColor: "{colors.brand-secure}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [12, 18]}
   button-primary-pressed: {backgroundColor: "#E27F00", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}"}
-  button-primary-hover: {backgroundColor: "#FFA822", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}"}
-  button-secondary: {backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 12px 18px}
-  button-tertiary: {backgroundColor: "{colors.canvas}", textColor: "{colors.primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 10px 14px}
-  button-inverse: {backgroundColor: "{colors.inverse-canvas}", textColor: "{colors.inverse-ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 12px 18px}
-  product-row: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: 12px}
-  product-tile: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.md}", padding: 12px}
-  filter-chip: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink-muted}", typography: "{typography.body-sm}", rounded: "{rounded.pill}", padding: 7px 12px}
-  search-field: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.pill}", padding: 9px 14px}
-  detail-sheet: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xl}", padding: 20px}
-  status-badge: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: 3px 6px}
-  top-nav: {backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.body-sm}", rounded: "{rounded.xs}", height: 76px}
-  bottom-nav: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: 6px 8px}
+  button-secondary: {backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [12, 18]}
+  button-tertiary: {backgroundColor: "{colors.canvas}", textColor: "{colors.primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [10, 14]}
+  button-inverse: {backgroundColor: "{colors.inverse-canvas}", textColor: "{colors.inverse-ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [12, 18]}
+  product-row: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: 12}
+  product-tile: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.md}", padding: 12}
+  filter-chip: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink-muted}", typography: "{typography.body-sm}", rounded: "{rounded.pill}", padding: [7, 12]}
+  search-field: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.pill}", padding: [9, 14]}
+  detail-sheet: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xl}", padding: 20}
+  status-badge: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: [3, 6]}
+  bottom-nav: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: [6, 8]}
 ---
-## Overview
+
+# Overview
 
 iHerb is an information-dense marketplace where green navigation communicates health and trust, orange marks shopping actions, and white content surfaces keep product evidence legible. Search, ratings, claims, pricing, and delivery requirements remain visible throughout the purchase path.
 
@@ -87,7 +86,16 @@ iHerb is an information-dense marketplace where green navigation communicates he
 - Horizontal filters and fixed bottom purchase actions.
 - Health concern photography and product packshots.
 
-## Colors
+# Non-negotiable visual invariants
+
+- The reviewed screens show this treatment: Saturated green persistent header and search.
+- The reviewed screens show this treatment: White catalog surfaces with dense product information.
+- The reviewed screens show this treatment: Orange add-to-cart controls; green checkout controls.
+- The reviewed screens show this treatment: Ratings, review counts, discount labels, and stock status.
+- The reviewed screens show this treatment: Horizontal filters and fixed bottom purchase actions.
+- The reviewed screens show this treatment: Health concern photography and product packshots.
+
+# Color and surfaces
 
 ### Brand & Accent
 - Green anchors navigation, trust, selection, and checkout.
@@ -107,7 +115,7 @@ iHerb is an information-dense marketplace where green navigation communicates he
 - Green signals positive quality and completion.
 - Yellow stars carry rating evidence.
 
-## Typography
+# Typography
 
 ### Font Family
 
@@ -119,13 +127,13 @@ iHerb is an information-dense marketplace where green navigation communicates he
 
 | Token | Size | Weight | Use |
 |---|---:|---:|---|
-| display-xl | 38px | 700 | Major price or completion |
-| display-lg | 31px | 700 | Product title |
-| display-md | 26px | 700 | Page title |
-| headline | 22px | 700 | Section heading |
-| card-title | 17px | 600 | Product or concern |
-| body | 14px | 400 | Product details |
-| caption | 10px | 400 | Units and navigation |
+| display-xl | 38pt | 700 | Major price or completion |
+| display-lg | 31pt | 700 | Product title |
+| display-md | 26pt | 700 | Page title |
+| headline | 22pt | 700 | Section heading |
+| card-title | 17pt | 600 | Product or concern |
+| body | 14pt | 400 | Product details |
+| caption | 10pt | 400 | Units and navigation |
 
 ### Principles
 
@@ -137,11 +145,7 @@ iHerb is an information-dense marketplace where green navigation communicates he
 
 Use Apple system fonts for predictable multilingual and numeric rendering.
 
-## Layout
-
-### Spacing System
-
-Use a 4px base, 12px inside product rows, and 20–24px between major merchandising groups.
+# Screen composition
 
 ### Grid & Container
 
@@ -151,42 +155,15 @@ Home and recommendations use horizontal product rails. Search results use one-co
 
 Keep spacing efficient but preserve a visible gap between unrelated merchandising modules. Do not add card frames where whitespace is sufficient.
 
-## Elevation & Depth
+# Navigation appearance
 
-| Level | Treatment | Use |
-|---|---|---|
-| 0 | White canvas | Catalog and checkout |
-| 1 | Pale tinted module | Rewards and recommendations |
-| 2 | Sticky action bar | Add to cart and checkout |
-| 3 | Rounded modal sheet | Long product details |
+Use five bottom destinations: Home, Catalog, Categories, Cart, Account. The selected icon and label turn green.
 
-### Decorative Depth
-
-Use product photography, concern imagery, and soft tinted modules. Avoid ornamental gradients and strong shadows.
-
-## Shapes
-
-### Border Radius Scale
-
-| Token | Value | Use |
-|---|---:|---|
-| rounded-sm | 8px | Buttons and rows |
-| rounded-md | 12px | Product and concern tiles |
-| rounded-lg | 16px | Promotion modules |
-| rounded-xl | 22px | Modal sheets |
-| rounded-pill | full | Search and filter chips |
-
-### Photography & Illustration Geometry
-
-Packshots sit on white with consistent scale. Lifestyle images use simple rounded rectangles. Preserve readable packaging.
-
-## Components
+# Components
 
 ### Buttons
 
 Orange adds to cart. Green applies promo codes, saves checkout data, and completes orders. Use compact rounded rectangles, not pills.
-
-### Pricing Tabs
 
 Product detail tabs use text with a green underline. Filter choices use chips.
 
@@ -206,11 +183,49 @@ Sale, low-stock, and brand badges sit near the affected product. Order completio
 
 Use five bottom destinations: Home, Catalog, Categories, Cart, Account. The selected icon and label turn green.
 
-### Footer
+# Imagery and icons
 
-No footer; sticky purchase and navigation controls end the mobile surface.
+| Level | Treatment | Use |
+|---|---|---|
+| 0 | White canvas | Catalog and checkout |
+| 1 | Pale tinted module | Rewards and recommendations |
+| 2 | Sticky action bar | Add to cart and checkout |
+| 3 | Rounded modal sheet | Long product details |
 
-## Do's and Don'ts
+### Decorative Depth
+
+Use product photography, concern imagery, and soft tinted modules. Avoid ornamental gradients and strong shadows.
+
+# States
+
+Sale, low-stock, and brand badges sit near the affected product. Order completion returns immediately to recommendations and feedback.
+
+# iOS adaptation
+
+### Touch Targets
+
+Cart, quantity, tabs, filters, and bottom navigation retain at least 44pt hit areas.
+
+### Collapsing Strategy
+
+Filters and tabs scroll horizontally. Product rows remain one column; metadata wraps before action controls.
+
+### Image Behavior
+
+Use contain for packshots and aspect-fill for lifestyle photography.
+
+On iPhone, respect top and bottom safe areas, use scrolling for content that does not fit, keep interactive targets at least 44 points, and preserve the visual reading order for VoiceOver. At larger Dynamic Type sizes, allow supporting text to wrap without collapsing the dominant hierarchy. Use native sheets and permission transitions while explicitly styling app-owned surfaces to match the reference.
+
+# Anti-generic checklist
+
+- Do not substitute the documented accent hierarchy with default iOS blue.
+- Do not turn the documented white canvas into a generic card stack; preserve the observed accent, density, imagery, and surface grouping.
+- Do not use an unstyled `TabView`, `Form`, or arbitrary SF Symbols when they contradict the documented navigation and component language.
+- Do not flatten the documented typography into one body-text scale.
+- Do not remove compositionally important photography or illustration while assets are pending.
+- Do not apply one corner radius to every control and surface.
+
+Source-specific guardrails retained from the review:
 
 ### Do
 
@@ -228,35 +243,10 @@ No footer; sticky purchase and navigation controls end the mobile surface.
 - Don't remove sticky purchase actions.
 - Don't introduce decorative brand colors.
 
-## Responsive Behavior
+# Known gaps
 
-### Breakpoints
-
-| Name | Width | Key Changes |
-|---|---:|---|
-| Compact | 320–374px | Narrow product rows and fewer visible chips |
-| Standard | 375–430px | Default composition |
-| Wide | 431px+ | Wider rails and two-column recommendations |
-
-### Touch Targets
-
-Cart, quantity, tabs, filters, and bottom navigation retain at least 44px hit areas.
-
-### Collapsing Strategy
-
-Filters and tabs scroll horizontally. Product rows remain one column; metadata wraps before action controls.
-
-### Image Behavior
-
-Use contain for packshots and aspect-fill for lifestyle photography.
-
-## Iteration Guide
-
-Tune product hierarchy and action color separation first, then density and imagery scale.
-
-## Known Gaps
-
-- Tablet and landscape layouts were not observed.
+- iPad and landscape layouts were not observed.
 - Animation and loading behavior were not captured in stills.
 - Subscription-specific flows were not reviewed.
+
 </design-context>

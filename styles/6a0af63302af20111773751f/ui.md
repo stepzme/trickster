@@ -1,12 +1,12 @@
 <design-context>
 ---
-version: alpha
+version: 1
+platform: iOS
 name: krisha.kz-design-analysis
 description: "A bright property marketplace built on white and mist-gray surfaces, black compact type, signature yellow trust markers, sky-blue utility links, and persistent green contact actions. Real-estate photography carries listings while rounded service tiles and restrained object illustrations make the home screen approachable."
 colors:
   primary: "#FFE25B"
   on-primary: "#171717"
-  primary-hover: "#FFE875"
   primary-focus: "#F2CB2F"
   ink: "#171717"
   ink-muted: "#77777B"
@@ -28,52 +28,51 @@ colors:
   semantic-success: "#59C936"
   semantic-overlay: "#171717"
 typography:
-  display-xl: {fontFamily: SF Pro Display, fontSize: 36px, fontWeight: 700, lineHeight: 1.08, letterSpacing: -0.8px}
-  display-lg: {fontFamily: SF Pro Display, fontSize: 30px, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.6px}
-  display-md: {fontFamily: SF Pro Display, fontSize: 24px, fontWeight: 700, lineHeight: 1.16, letterSpacing: -0.3px}
-  headline: {fontFamily: SF Pro Display, fontSize: 20px, fontWeight: 700, lineHeight: 1.20, letterSpacing: -0.2px}
-  card-title: {fontFamily: SF Pro Text, fontSize: 16px, fontWeight: 600, lineHeight: 1.24, letterSpacing: 0}
-  subhead: {fontFamily: SF Pro Text, fontSize: 15px, fontWeight: 600, lineHeight: 1.30, letterSpacing: 0}
-  body-lg: {fontFamily: SF Pro Text, fontSize: 15px, fontWeight: 400, lineHeight: 1.38, letterSpacing: 0}
-  body: {fontFamily: SF Pro Text, fontSize: 13px, fontWeight: 400, lineHeight: 1.34, letterSpacing: 0}
-  body-sm: {fontFamily: SF Pro Text, fontSize: 11px, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0}
-  caption: {fontFamily: SF Pro Text, fontSize: 10px, fontWeight: 400, lineHeight: 1.24, letterSpacing: 0}
-  button: {fontFamily: SF Pro Text, fontSize: 14px, fontWeight: 500, lineHeight: 1.20, letterSpacing: 0}
-  eyebrow: {fontFamily: SF Pro Text, fontSize: 10px, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0}
-  mono: {fontFamily: SF Mono, fontSize: 11px, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0}
+  display-xl: {fontFamily: SF Pro Display, fontSize: 36, fontWeight: 700, lineHeight: 1.08, letterSpacing: -0.8}
+  display-lg: {fontFamily: SF Pro Display, fontSize: 30, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.6}
+  display-md: {fontFamily: SF Pro Display, fontSize: 24, fontWeight: 700, lineHeight: 1.16, letterSpacing: -0.3}
+  headline: {fontFamily: SF Pro Display, fontSize: 20, fontWeight: 700, lineHeight: 1.20, letterSpacing: -0.2}
+  card-title: {fontFamily: SF Pro Text, fontSize: 16, fontWeight: 600, lineHeight: 1.24, letterSpacing: 0}
+  subhead: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 600, lineHeight: 1.30, letterSpacing: 0}
+  body-lg: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 400, lineHeight: 1.38, letterSpacing: 0}
+  body: {fontFamily: SF Pro Text, fontSize: 13, fontWeight: 400, lineHeight: 1.34, letterSpacing: 0}
+  body-sm: {fontFamily: SF Pro Text, fontSize: 11, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0}
+  caption: {fontFamily: SF Pro Text, fontSize: 10, fontWeight: 400, lineHeight: 1.24, letterSpacing: 0}
+  button: {fontFamily: SF Pro Text, fontSize: 14, fontWeight: 500, lineHeight: 1.20, letterSpacing: 0}
+  eyebrow: {fontFamily: SF Pro Text, fontSize: 10, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0}
+  mono: {fontFamily: SF Mono, fontSize: 11, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0}
 rounded:
-  xs: 4px
-  sm: 8px
-  md: 12px
-  lg: 16px
-  xl: 20px
-  xxl: 24px
-  pill: 9999px
-  full: 9999px
+  xs: 4
+  sm: 8
+  md: 12
+  lg: 16
+  xl: 20
+  xxl: 24
+  pill: 9999
+  full: 9999
 spacing:
-  xxs: 4px
-  xs: 8px
-  sm: 12px
-  md: 16px
-  lg: 20px
-  xl: 24px
-  xxl: 32px
-  section: 40px
+  xxs: 4
+  xs: 8
+  sm: 12
+  md: 16
+  lg: 20
+  xl: 24
+  xxl: 32
+  section: 40
 components:
-  button-primary: {backgroundColor: "{colors.semantic-success}", textColor: "{colors.inverse-ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 13px 18px}
+  button-primary: {backgroundColor: "{colors.semantic-success}", textColor: "{colors.inverse-ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [13, 18]}
   button-primary-pressed: {backgroundColor: "#45AC27", textColor: "{colors.inverse-ink}", typography: "{typography.button}", rounded: "{rounded.sm}"}
-  button-primary-hover: {backgroundColor: "#6BD64B", textColor: "{colors.inverse-ink}", typography: "{typography.button}", rounded: "{rounded.sm}"}
-  button-secondary: {backgroundColor: "{colors.canvas}", textColor: "#4396C7", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 12px 18px}
-  button-tertiary: {backgroundColor: "{colors.primary}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: 10px 14px}
-  button-inverse: {backgroundColor: "{colors.inverse-canvas}", textColor: "{colors.inverse-ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 12px 18px}
-  listing-card: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 12px}
-  service-tile: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.caption}", rounded: "{rounded.md}", padding: 8px}
-  trust-badge: {backgroundColor: "{colors.primary}", textColor: "{colors.ink}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: 3px 6px}
-  segmented-control: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: 4px}
-  top-nav: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xs}", height: 48px}
-  bottom-nav: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: 7px 8px}
+  button-secondary: {backgroundColor: "{colors.canvas}", textColor: "#4396C7", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [12, 18]}
+  button-tertiary: {backgroundColor: "{colors.primary}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: [10, 14]}
+  button-inverse: {backgroundColor: "{colors.inverse-canvas}", textColor: "{colors.inverse-ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [12, 18]}
+  listing-card: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 12}
+  service-tile: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.caption}", rounded: "{rounded.md}", padding: 8}
+  trust-badge: {backgroundColor: "{colors.primary}", textColor: "{colors.ink}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: [3, 6]}
+  segmented-control: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: 4}
+  bottom-nav: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: [7, 8]}
 ---
-## Overview
+
+# Overview
 
 krisha.kz is a light, information-dense property marketplace. Yellow carries brand and trust, blue marks utilities, and green is reserved for direct seller contact.
 
@@ -84,7 +83,15 @@ krisha.kz is a light, information-dense property marketplace. Yellow carries bra
 - Persistent green contact actions on detail pages.
 - Friendly illustrated service shortcuts on the home screen.
 
-## Colors
+# Non-negotiable visual invariants
+
+- The reviewed screens show this treatment: White property feed with pale grouped sections.
+- The reviewed screens show this treatment: Compact cards led by price, dimensions, location, and photography.
+- The reviewed screens show this treatment: Yellow verification and seller labels.
+- The reviewed screens show this treatment: Persistent green contact actions on detail pages.
+- The reviewed screens show this treatment: Friendly illustrated service shortcuts on the home screen.
+
+# Color and surfaces
 
 ### Brand & Accent
 
@@ -102,7 +109,7 @@ Near-black carries price and titles; mid-gray carries addresses, dates, views, a
 
 Green means a direct contact or confirmed positive action. Warm red is limited to alerts and hot-listing indicators.
 
-## Typography
+# Typography
 
 ### Font Family
 
@@ -112,11 +119,11 @@ Use SF Pro Display for headings and SF Pro Text for listings, forms, and navigat
 
 | Token | Size | Weight | Use |
 |---|---:|---:|---|
-| display-lg | 30px | 700 | Campaign or launch claim |
-| headline | 20px | 700 | Property price and section title |
-| card-title | 16px | 600 | Listing title and key attribute |
-| body | 13px | 400 | Address and specifications |
-| caption | 10px | 400 | Date, views, and navigation |
+| display-lg | 30pt | 700 | Campaign or launch claim |
+| headline | 20pt | 700 | Property price and section title |
+| card-title | 16pt | 600 | Listing title and key attribute |
+| body | 13pt | 400 | Address and specifications |
+| caption | 10pt | 400 | Date, views, and navigation |
 
 ### Principles
 
@@ -128,11 +135,7 @@ Use SF Pro Display for headings and SF Pro Text for listings, forms, and navigat
 
 A neutral system sans is sufficient; preserve compact numerals and clear Cyrillic rendering.
 
-## Layout
-
-### Spacing System
-
-Use a 4px base, 12px list gaps, and 12–16px screen padding.
+# Screen composition
 
 ### Grid & Container
 
@@ -142,42 +145,15 @@ Home shortcuts form a two-column grid. Results are a single vertical feed; simil
 
 Density supports comparison. Create separation with pale backgrounds and section headers, not oversized gaps.
 
-## Elevation & Depth
+# Navigation appearance
 
-| Level | Treatment | Use |
-|---|---|---|
-| 0 | White canvas | Lists and details |
-| 1 | Pale grouped fill | Home and analytical sections |
-| 2 | Subtle border or shadow | Sticky actions and floating map chip |
-| 3 | Dark scrim | System prompts and overlays |
+Keep five bottom destinations fixed. Active Home is black; Post is a blue filled circle; other destinations use quiet gray outlines.
 
-### Decorative Depth
-
-Depth comes from property photography and softly shaded service objects; interface surfaces remain mostly flat.
-
-## Shapes
-
-### Border Radius Scale
-
-| Token | Value | Use |
-|---|---:|---|
-| rounded-xs | 4px | Trust badge |
-| rounded-sm | 8px | Buttons and photo corners |
-| rounded-md | 12px | Service tiles and grouped controls |
-| rounded-lg | 16px | Promo panels |
-| rounded-full | full | Map and compact icon actions |
-
-### Photography & Illustration Geometry
-
-Listing photos use landscape crops with modest rounding. Service art fills rounded pale tiles without competing with labels.
-
-## Components
+# Components
 
 ### Buttons
 
 Use full-width green for calling, bordered white with blue labels for messaging, and yellow pills for map or contextual actions.
-
-### Pricing Tabs
 
 Buy and Rent use a compact two-segment control; selected state is white with a border or subtle lift.
 
@@ -197,11 +173,49 @@ Trust status is yellow and adjacent to the seller or listing. Price analytics us
 
 Keep five bottom destinations fixed. Active Home is black; Post is a blue filled circle; other destinations use quiet gray outlines.
 
-### Footer
+# Imagery and icons
 
-No footer; persistent contact or bottom navigation owns the safe area.
+| Level | Treatment | Use |
+|---|---|---|
+| 0 | White canvas | Lists and details |
+| 1 | Pale grouped fill | Home and analytical sections |
+| 2 | Subtle border or shadow | Sticky actions and floating map chip |
+| 3 | Dark scrim | System prompts and overlays |
 
-## Do's and Don'ts
+### Decorative Depth
+
+Depth comes from property photography and softly shaded service objects; interface surfaces remain mostly flat.
+
+# States
+
+Trust status is yellow and adjacent to the seller or listing. Price analytics uses a green-to-red horizontal scale with a marked position.
+
+# iOS adaptation
+
+### Touch Targets
+
+Filters, favorite, map, contact, and bottom-navigation targets remain at least 44pt.
+
+### Collapsing Strategy
+
+Keep the feed single-column; stack action pairs when width is tight and preserve the persistent primary action.
+
+### Image Behavior
+
+Use aspect-fill for property photos without aggressive crops; galleries remain swipeable and show the current image count.
+
+On iPhone, respect top and bottom safe areas, use scrolling for content that does not fit, keep interactive targets at least 44 points, and preserve the visual reading order for VoiceOver. At larger Dynamic Type sizes, allow supporting text to wrap without collapsing the dominant hierarchy. Use native sheets and permission transitions while explicitly styling app-owned surfaces to match the reference.
+
+# Anti-generic checklist
+
+- Do not substitute the documented accent hierarchy with default iOS blue.
+- Do not collapse distinct surfaces into a uniform stack of generic white cards.
+- Do not use an unstyled `TabView`, `Form`, or arbitrary SF Symbols when they contradict the documented navigation and component language.
+- Do not flatten the documented typography into one body-text scale.
+- Do not remove compositionally important photography or illustration while assets are pending.
+- Do not apply one corner radius to every control and surface.
+
+Source-specific guardrails retained from the review:
 
 ### Do
 
@@ -219,38 +233,10 @@ No footer; persistent contact or bottom navigation owns the safe area.
 - Don't mix illustrated service art into property galleries.
 - Don't leave generic iOS styling on segmented controls or contact buttons.
 
-## Responsive Behavior
-
-### Breakpoints
-
-| Name | Width | Key Changes |
-|---|---:|---|
-| Compact | 320–374px | Tighten listing metadata |
-| Standard | 375–430px | Default single-column feed |
-| Wide | 431px+ | Enlarge imagery and similar-listing cards |
-
-### Touch Targets
-
-Filters, favorite, map, contact, and bottom-navigation targets remain at least 44px.
-
-### Collapsing Strategy
-
-Keep the feed single-column; stack action pairs when width is tight and preserve the persistent primary action.
-
-### Image Behavior
-
-Use aspect-fill for property photos without aggressive crops; galleries remain swipeable and show the current image count.
-
-## Iteration Guide
-
-Tune listing density and contact prominence first, then trust badges, map access, and supporting services.
-
-## Known Gaps
+# Known gaps
 
 - Posting a listing was not reviewed.
 - Messaging behavior was not opened.
-- Tablet and landscape layouts were not represented.
+- iPad and landscape layouts were not represented.
 
 </design-context>
-
-Use the design system above for all UI you generate.

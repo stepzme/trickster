@@ -4,7 +4,7 @@ Jomo turns screen-time reduction into a guided routine: set a goal, configure ap
 
 # Navigation
 
-Four bottom destinations cover Home, Rules, Squads, and Profile. The main Start blocking action is repeated above the tab bar where it stays prominent.
+Four primary destinations cover Home, Rules, Squads, and Profile. The main Start blocking action is repeated from the primary navigation.
 
 # Core Flows
 
@@ -20,7 +20,7 @@ Four bottom destinations cover Home, Rules, Squads, and Profile. The main Start 
 1. Tap the persistent blocking action.
 2. Choose included apps and websites.
 3. Configure optional restrictions.
-4. Confirm and return to the progress surface.
+4. Confirm and return to the progress context.
 
 ## Create a reusable rule
 
@@ -30,7 +30,12 @@ Four bottom destinations cover Home, Rules, Squads, and Profile. The main Start 
 
 # Interaction Patterns
 
-- Strong fixed CTAs keep the next action obvious across long setup flows.
-- Rounded sheets isolate complex system-permission choices.
-- Usage bars make relative time scannable before showing exact minutes.
-- Empty states combine a mascot, one sentence, and a direct recovery action.
+- The main blocking action remains available across long setup flows.
+
+# System Access Timing
+
+No system-access timing or denial-recovery behavior was documented in the reviewed source.
+
+# Known Gaps
+
+System-permission denial paths, interrupted flows, and recovery behavior not described above were not available in the reviewed source.

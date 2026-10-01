@@ -4,7 +4,7 @@ Teremok combines loyalty, coupons, promotions, achievements, restaurant discover
 
 # Navigation
 
-- Five bottom destinations cover Home, Promotions, Order, Teremki, and Help.
+- Five primary destinations cover Home, Promotions, Order, Teremki, and Help.
 - Home foregrounds loyalty level, coupons, campaigns, and achievements.
 - Ordering switches between delivery and restaurant pickup before exposing menu and cart.
 
@@ -30,7 +30,13 @@ Teremok combines loyalty, coupons, promotions, achievements, restaurant discover
 
 # Interaction Patterns
 
-- Burgundy red anchors actions and active navigation.
 - Loyalty and campaigns use friendly pancake mascots and hand-drawn type.
-- Real food photography takes over during ordering.
-- Bottom navigation persists through primary areas.
+- Ordering moves from menu discovery to item configuration and basket review.
+
+# System Access Timing
+
+No system-access request timing or denial recovery was documented in the reviewed source.
+
+# Known Gaps
+
+- Permission-denial recovery and unobserved secondary flows were not documented.

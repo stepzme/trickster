@@ -4,15 +4,15 @@ Kulikov combines a loyalty hub, promotions, games, and a food shop in one highly
 
 # Navigation
 
-A floating five-item bottom bar links Home, Shop, offers/loyalty, Profile, and Cart. Shop screens add delivery address, category search, filters, and favorites; checkout is presented as a focused modal-like stack.
+A five primary destinations links Home, Shop, offers/loyalty, Profile, and Cart. Shop screens add delivery address, category search, filters, and favorites; checkout is presented as a focused modal-like stack.
 
 # Core Flows
 
 ## Discover and shop
 
 1. Enter the promotional home and review loyalty, challenges, and giveaways.
-2. Open the shop and choose a visual product category.
-3. Browse a two-column catalog and open product information.
+2. Open the shop and choose a product category.
+3. Browse a product catalog and open product information.
 
 ## Complete an order
 
@@ -23,7 +23,13 @@ A floating five-item bottom bar links Home, Shop, offers/loyalty, Profile, and C
 
 # Interaction Patterns
 
-- Photography-rich tiles act as the primary category targets.
-- Rounded floating navigation remains visible over long promotional and catalog pages.
-- Product information is split into white rounded panels for nutrition, storage, and certification.
-- Checkout keeps the final amount and main action anchored at the bottom.
+- Category targets open the corresponding product collections.
+- Checkout keeps the final amount and main action available through checkout.
+
+# System Access Timing
+
+No system-access timing or denial-recovery behavior was documented in the reviewed source.
+
+# Known Gaps
+
+System-permission denial paths, interrupted flows, and recovery behavior not described above were not available in the reviewed source.

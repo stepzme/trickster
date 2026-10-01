@@ -1,11 +1,11 @@
 # Overview
 
-RZD Passengers centers on searching routes, comparing trains and fares, selecting a carriage and seat, entering passengers, completing booking, and managing tickets and rail services.
+RZD Passengers centers on searching routes, comparing trains and fares, selecting a carriage and seat, entering passengers, completing booking, and managing tickets and controls services.
 
 # Navigation
 
-- A red top bar exposes the side menu, current title, cart, and contextual filters.
-- The side menu links to ticket purchase, My Tickets, passengers, timetable, favorites, cards, support, and settings.
+- A primary navigation exposes the side menu, current title, cart, and contextual filters.
+- The side menu links to ticket purchase, My Tickets, passengers, timetable, favorites, items, support, and settings.
 - Booking itself remains linear, with the route summary carried into later steps.
 
 # Core Flows
@@ -32,8 +32,12 @@ RZD Passengers centers on searching routes, comparing trains and fares, selectin
 
 # Interaction Patterns
 
-- The persistent red action marks the next booking commitment.
 - Route and ticket context repeats across later steps to prevent errors.
-- Dates, classes, and card types use compact tabs or segmented rows.
-- Dense content relies on dividers, labels, and aligned values rather than large cards.
-- Empty tickets, cart, and card states provide one direct recovery action.
+
+# System Access Timing
+
+No system-access timing or denial-recovery path was documented in the reviewed source.
+
+# Known Gaps
+
+Unobserved flows, denial paths, cancellation behavior, and recovery states remain unspecified.

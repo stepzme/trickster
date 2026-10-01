@@ -1,12 +1,11 @@
 # Overview
 
-WB Travel unifies package tours, flights, hotels, experiences, and editorial destination ideas in a photo-led booking product.
+WB Travel unifies package tours, flights, hotels, experiences, and editorial destination ideas in a booking product.
 
 # Navigation
 
-- Home starts with a universal search and a horizontal category rail for Tours, Flights, Hotels, Experiences, and Ideas.
+- Home starts with a universal search and a category browsing for Tours, Flights, Hotels, Experiences, and Ideas.
 - Each category opens a focused search form followed by filters, results, details, and booking.
-- Detail pages keep imagery and core facts above room, fare, organizer, review, map, and payment sections.
 
 # Core Flows
 
@@ -25,11 +24,17 @@ WB Travel unifies package tours, flights, hotels, experiences, and editorial des
 ## Discover an experience
 
 1. Browse experiences or regional travel ideas.
-2. Filter the photo grid and open an excursion, place, or article.
+2. Filter the results and open an excursion, place, or article.
 3. Review meeting point and organizer details before payment.
 
 # Interaction Patterns
 
-- Large destination photography drives discovery; white cards carry structured facts and prices.
-- Magenta-to-violet gradients mark search and payment actions, while discounts use compact red badges.
 - Search preserves a predictable sequence: criteria, results, detail, traveler data, review, payment.
+
+# System Access Timing
+
+No system-access timing or denial-recovery behavior was documented in the reviewed source.
+
+# Known Gaps
+
+System-permission denial paths, interrupted flows, and recovery behavior not described above were not available in the reviewed source.

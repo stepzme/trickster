@@ -1,6 +1,7 @@
 <design-context>
 ---
-version: alpha
+version: 1
+platform: iOS
 name: yandex-eats-design-analysis
 description: "A photo-led food-delivery marketplace on a clean white canvas, anchored by saturated yellow purchase controls, black condensed display type, green delivery badges, and dense restaurant metadata. Large rounded food images, horizontal category and filter strips, sticky cart totals, and map-backed tracking keep commerce fast and legible."
 colors:
@@ -19,34 +20,33 @@ colors:
   semantic-danger: "#DE3F4E"
   semantic-overlay: "#000000"
 typography:
-  display-xl: { fontFamily: Yandex Sans Display, fontSize: 38px, fontWeight: 800, lineHeight: 0.98, letterSpacing: -1.0px }
-  display-lg: { fontFamily: Yandex Sans Display, fontSize: 31px, fontWeight: 800, lineHeight: 1.02, letterSpacing: -0.6px }
-  display-md: { fontFamily: Yandex Sans Display, fontSize: 26px, fontWeight: 800, lineHeight: 1.06, letterSpacing: -0.4px }
-  headline: { fontFamily: Yandex Sans Display, fontSize: 21px, fontWeight: 800, lineHeight: 1.10, letterSpacing: -0.25px }
-  card-title: { fontFamily: YS Text, fontSize: 15px, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0 }
-  subhead: { fontFamily: YS Text, fontSize: 16px, fontWeight: 400, lineHeight: 1.32, letterSpacing: 0 }
-  body-lg: { fontFamily: YS Text, fontSize: 16px, fontWeight: 400, lineHeight: 1.38, letterSpacing: 0 }
-  body: { fontFamily: YS Text, fontSize: 14px, fontWeight: 400, lineHeight: 1.34, letterSpacing: 0 }
-  body-sm: { fontFamily: YS Text, fontSize: 12px, fontWeight: 400, lineHeight: 1.28, letterSpacing: 0 }
-  caption: { fontFamily: YS Text, fontSize: 11px, fontWeight: 400, lineHeight: 1.22, letterSpacing: 0 }
-  button: { fontFamily: YS Text, fontSize: 15px, fontWeight: 500, lineHeight: 1.18, letterSpacing: 0 }
-  eyebrow: { fontFamily: YS Text, fontSize: 11px, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0.1px }
-  mono: { fontFamily: System Mono, fontSize: 12px, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
-rounded: { xs: 6px, sm: 10px, md: 14px, lg: 18px, xl: 24px, xxl: 30px, pill: 9999px, full: 9999px }
-spacing: { xxs: 4px, xs: 8px, sm: 12px, md: 16px, lg: 24px, xl: 32px, xxl: 48px, section: 64px }
+  display-xl: { fontFamily: Yandex Sans Display, fontSize: 38, fontWeight: 800, lineHeight: 0.98, letterSpacing: -1.0 }
+  display-lg: { fontFamily: Yandex Sans Display, fontSize: 31, fontWeight: 800, lineHeight: 1.02, letterSpacing: -0.6 }
+  display-md: { fontFamily: Yandex Sans Display, fontSize: 26, fontWeight: 800, lineHeight: 1.06, letterSpacing: -0.4 }
+  headline: { fontFamily: Yandex Sans Display, fontSize: 21, fontWeight: 800, lineHeight: 1.10, letterSpacing: -0.25 }
+  card-title: { fontFamily: YS Text, fontSize: 15, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0 }
+  subhead: { fontFamily: YS Text, fontSize: 16, fontWeight: 400, lineHeight: 1.32, letterSpacing: 0 }
+  body-lg: { fontFamily: YS Text, fontSize: 16, fontWeight: 400, lineHeight: 1.38, letterSpacing: 0 }
+  body: { fontFamily: YS Text, fontSize: 14, fontWeight: 400, lineHeight: 1.34, letterSpacing: 0 }
+  body-sm: { fontFamily: YS Text, fontSize: 12, fontWeight: 400, lineHeight: 1.28, letterSpacing: 0 }
+  caption: { fontFamily: YS Text, fontSize: 11, fontWeight: 400, lineHeight: 1.22, letterSpacing: 0 }
+  button: { fontFamily: YS Text, fontSize: 15, fontWeight: 500, lineHeight: 1.18, letterSpacing: 0 }
+  eyebrow: { fontFamily: YS Text, fontSize: 11, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0.1 }
+  mono: { fontFamily: System Mono, fontSize: 12, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
+rounded: { xs: 6, sm: 10, md: 14, lg: 18, xl: 24, xxl: 30, pill: 9999, full: 9999 }
+spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
 components:
-  checkout-button: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.md}", padding: 14px 20px }
+  checkout-button: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.md}", padding: [14, 20]}
   restaurant-card: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 0 }
   food-card: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 0 }
-  delivery-badge: { backgroundColor: "{colors.delivery}", textColor: "#FFFFFF", typography: "{typography.caption}", rounded: "{rounded.sm}", padding: 3px 6px }
-  filter-chip: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.pill}", padding: 8px 12px }
-  quantity-control: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.full}", padding: 8px }
-  detail-sheet: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xl}", padding: 16px }
-  bottom-nav: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", height: 56px }
-  footer: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: 16px }
+  delivery-badge: { backgroundColor: "{colors.delivery}", textColor: "#FFFFFF", typography: "{typography.caption}", rounded: "{rounded.sm}", padding: [3, 6]}
+  filter-chip: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.pill}", padding: [8, 12]}
+  quantity-control: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.full}", padding: 8 }
+  detail-sheet: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xl}", padding: 16 }
+  bottom-nav: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", height: 56 }
 ---
 
-## Overview
+# Overview
 
 Yandex Eats is visually driven by food photography, compact delivery facts, and bright yellow conversion controls. Restaurant and product imagery carries personality; the surrounding UI stays white, black, and systematic.
 
@@ -57,7 +57,15 @@ Yandex Eats is visually driven by food photography, compact delivery facts, and 
 - Green delivery and discount badges.
 - Persistent order context and map tracking.
 
-## Colors
+# Non-negotiable visual invariants
+
+- The reviewed screens show this treatment: White commerce canvas.
+- The reviewed screens show this treatment: Saturated yellow cart and purchase actions.
+- The reviewed screens show this treatment: Heavy condensed display headings.
+- The reviewed screens show this treatment: Green delivery and discount badges.
+- The reviewed screens show this treatment: Persistent order context and map tracking.
+
+# Color and surfaces
 
 ### Brand & Accent
 - **Yellow** ({colors.primary}): Add, cart, checkout, and order confirmation.
@@ -78,7 +86,7 @@ Yandex Eats is visually driven by food photography, compact delivery facts, and 
 - **Danger** ({colors.semantic-danger}): Removal or warning.
 - **Overlay** ({colors.semantic-overlay}): Product and detail sheet context.
 
-## Typography
+# Typography
 
 ### Font Family
 
@@ -89,12 +97,12 @@ Yandex Eats is visually driven by food photography, compact delivery facts, and 
 
 | Token | Size | Weight | Use |
 |---|---|---|---|
-| `{typography.display-xl}` | 38px | 800 | Campaign statement |
-| `{typography.display-md}` | 26px | 800 | Major section title |
-| `{typography.headline}` | 21px | 800 | Menu and checkout section |
-| `{typography.card-title}` | 15px | 600 | Restaurant or dish title |
-| `{typography.body}` | 14px | 400 | Default facts |
-| `{typography.caption}` | 11px | 400 | Delivery badge and metadata |
+| `{typography.display-xl}` | 38pt | 800 | Campaign statement |
+| `{typography.display-md}` | 26pt | 800 | Major section title |
+| `{typography.headline}` | 21pt | 800 | Menu and checkout section |
+| `{typography.card-title}` | 15pt | 600 | Restaurant or dish title |
+| `{typography.body}` | 14pt | 400 | Default facts |
+| `{typography.caption}` | 11pt | 400 | Delivery badge and metadata |
 
 ### Principles
 
@@ -107,11 +115,7 @@ Yandex Eats is visually driven by food photography, compact delivery facts, and 
 
 Use **Archivo Black** for display and **SF Pro / Inter** for body if Yandex fonts are unavailable.
 
-## Layout
-
-### Spacing System
-
-Use a 4px base. Screen gutters are 12px; image grids use 8–12px gaps; checkout groups use 16px interiors.
+# Screen composition
 
 ### Grid & Container
 
@@ -121,44 +125,15 @@ Home and restaurant lists use one wide card per row. Menu items use a two-column
 
 Keep space tight around product discovery and more generous around checkout decisions. Photography supplies visual separation.
 
-## Elevation & Depth
+# Navigation appearance
 
-| Level | Treatment | Use |
-|---|---|---|
-| 0 | White canvas | Lists and checkout |
-| 1 | Rounded food image | Restaurant and menu card |
-| 2 | White sheet with shadow | Product details |
-| 3 | Map plus tracking card | Active order |
+Home, Pickup, Eats AI, and Cart form the bottom bar. Restaurant pages replace global discovery with back, search, favorite, and sticky section tabs.
 
-### Decorative Depth
-
-Use natural food depth and minimal UI shadow. Avoid decorative gradients around product imagery.
-
-## Shapes
-
-### Border Radius Scale
-
-| Token | Value | Use |
-|---|---|---|
-| `{rounded.sm}` | 10px | Badges and small imagery |
-| `{rounded.md}` | 14px | Product image and button |
-| `{rounded.lg}` | 18px | Restaurant hero image |
-| `{rounded.xl}` | 24px | Product sheet |
-| `{rounded.full}` | full | Add and quantity controls |
-
-### Photography & Illustration Geometry
-
-Use cover-cropped food photography in rounded rectangles. Product detail recommendations use near-square crops. Logos remain secondary.
-
-## Components
+# Components
 
 ### Buttons
 
 Primary purchase actions are wide yellow rectangles with rounded corners. Add and quantity actions use white circles over photography.
-
-### Pricing Tabs
-
-No pricing-plan tabs were observed. Restaurant categories use a horizontally scrolling text tab row with an underline or stronger label.
 
 ### Cards & Containers
 
@@ -176,11 +151,52 @@ Delivery conditions use green badges. Active order status uses a map, ETA headli
 
 Home, Pickup, Eats AI, and Cart form the bottom bar. Restaurant pages replace global discovery with back, search, favorite, and sticky section tabs.
 
-### Footer
+# Imagery and icons
 
-The cart total and checkout action act as the functional footer. Active orders end in the tracking card.
+| Level | Treatment | Use |
+|---|---|---|
+| 0 | White canvas | Lists and checkout |
+| 1 | Rounded food image | Restaurant and menu card |
+| 2 | White sheet with shadow | Product details |
+| 3 | Map plus tracking card | Active order |
 
-## Do's and Don'ts
+### Decorative Depth
+
+Use natural food depth and minimal UI shadow. Avoid decorative gradients around product imagery.
+
+# States
+
+Delivery conditions use green badges. Active order status uses a map, ETA headline, and a compact action group.
+
+# iOS adaptation
+
+| Wide | 768pt+ | Two-column restaurant grid and wider menu |
+| Small | <390pt | Reduce category items and image height |
+
+### Touch Targets
+
+Keep filter chips, add controls, bottom tabs, and checkout rows at least 44pt.
+
+### Collapsing Strategy
+
+Scroll filters and menu tabs horizontally. Stack checkout rows and preserve the full-width purchase action.
+
+### Image Behavior
+
+Use cover for restaurant and dish photography. Preserve subject visibility and avoid cropping price-relevant pack detail.
+
+On iPhone, respect top and bottom safe areas, use scrolling for content that does not fit, keep interactive targets at least 44 points, and preserve the visual reading order for VoiceOver. At larger Dynamic Type sizes, allow supporting text to wrap without collapsing the dominant hierarchy. Use native sheets and permission transitions while explicitly styling app-owned surfaces to match the reference.
+
+# Anti-generic checklist
+
+- Do not substitute the documented accent hierarchy with default iOS blue.
+- Do not turn the documented white canvas into a generic card stack; preserve the observed accent, density, imagery, and surface grouping.
+- Do not use an unstyled `TabView`, `Form`, or arbitrary SF Symbols when they contradict the documented navigation and component language.
+- Do not flatten the documented typography into one body-text scale.
+- Do not remove compositionally important photography or illustration while assets are pending.
+- Do not apply one corner radius to every control and surface.
+
+Source-specific guardrails retained from the review:
 
 ### Do
 
@@ -198,43 +214,11 @@ The cart total and checkout action act as the functional footer. Active orders e
 - Don't use heavy display type for long metadata.
 - Don't remove persistent cart context.
 
-## Responsive Behavior
-
-### Breakpoints
-
-| Name | Width | Key Changes |
-|---|---|---|
-| Wide | 768px+ | Two-column restaurant grid and wider menu |
-| Compact | 390–767px | Default mobile marketplace |
-| Small | <390px | Reduce category items and image height |
-
-### Touch Targets
-
-Keep filter chips, add controls, bottom tabs, and checkout rows at least 44px.
-
-### Collapsing Strategy
-
-Scroll filters and menu tabs horizontally. Stack checkout rows and preserve the full-width purchase action.
-
-### Image Behavior
-
-Use cover for restaurant and dish photography. Preserve subject visibility and avoid cropping price-relevant pack detail.
-
-## Iteration Guide
-
-1. Establish white canvas and yellow action.
-2. Build restaurant cards and category filters.
-3. Build menu grid and quantity controls.
-4. Add checkout groups and sticky total.
-5. Add map tracking last.
-
-## Known Gaps
+# Known gaps
 
 - Exact typefaces and color tokens were inferred visually.
 - The 87-flow inventory was surveyed; key purchase flows were sampled visually.
 - Motion-only first-launch footage was not reviewed frame by frame.
-- Tablet layouts were not present.
+- iPad layouts were not present.
 
 </design-context>
-
-Use the design system above for all UI you generate.

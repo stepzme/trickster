@@ -10,10 +10,22 @@ Render chunky simplified objects with glossy or translucent materials, soft stud
 
 Place one object at the edge or center of a saturated rounded tile, leaving a clear zone for the service label. Larger campaign objects may overlap a warm gradient panel.
 
-# Color
+# Color and Materials
 
 Use saturated cyan, green, coral, yellow, and violet against the near-black UI. Each tile should choose one dominant color family and retain crisp contrast.
 
-# Usage
+# Variants and States
 
 Use this language for service categories, product promotion, rewards, and meaningful empty or success states. New illustrations should inherit the dark UI, red-gold brand cues, and compact tile geometry.
+
+# Production Requirements
+
+Use only the formats and crops supported by the implemented placement. Where the documented imagery is compositionally important, temporary placeholders must preserve its placement, crop, scale, negative space, and approximate visual weight until final art exists. No unobserved light/dark variants or export ratios are prescribed.
+
+# Avoid
+
+- Do not replace the documented image language with unrelated stock art, arbitrary symbols, or a denser composition.
+
+# Known Gaps
+
+- Export aspect ratios, safe crop measurements, animation, and unobserved state variants were not documented.

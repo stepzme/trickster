@@ -4,7 +4,7 @@ MTS Urent is a map-first rental service for scooters, bikes, and power banks. It
 
 # Navigation
 
-The live map is the home surface. A large scanner anchors the bottom center, with menu, location, layers, zoom, and vehicle markers surrounding it. Vehicle selection rises in a bottom sheet.
+The live map is the home context. A scanner anchors the bottom center, with menu, location, layers, zoom, and vehicle markers surrounding it. Vehicle selection rises in a bottom sheet.
 
 # Core Flows
 
@@ -24,6 +24,11 @@ The live map is the home surface. A large scanner anchors the bottom center, wit
 # Interaction Patterns
 
 - The map remains visible beneath sheets so every decision retains spatial context.
-- Purple identifies scanning, selection, and paid service; mint confirms success or availability.
-- Loading and error messages appear as compact top banners or focused sheets.
-- Marker density changes with zoom; the selected vehicle becomes purple and opens its details.
+
+# System Access Timing
+
+No system-access timing or denial-recovery path was documented in the reviewed source.
+
+# Known Gaps
+
+Unobserved flows, denial paths, cancellation behavior, and recovery states remain unspecified.

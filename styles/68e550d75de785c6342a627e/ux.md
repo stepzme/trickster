@@ -4,7 +4,7 @@ Megamarket is a broad marketplace spanning promotional discovery, catalog, searc
 
 # Navigation
 
-A floating rounded dock connects Home, search/catalog, favorites, profile, and cart. Address, bonuses, and search remain close to the top of Home.
+A primary navigation connects Home, search/catalog, favorites, profile, and cart. Address, bonuses, and search remain close of Home.
 
 # Core Flows
 
@@ -24,7 +24,12 @@ A floating rounded dock connects Home, search/catalog, favorites, profile, and c
 
 # Interaction Patterns
 
-- Purple carries brand and purchase; lime-yellow marks savings and selected dock fields.
-- Promotional photography and illustrated campaigns lead discovery.
-- Product detail keeps a wide sticky purple price action.
-- Comparison and checkout use structured white sections over pale gray.
+No behavior-only interaction pattern could be separated from the reviewed visual observations.
+
+# System Access Timing
+
+No system-access timing or denial-recovery path was documented in the reviewed source.
+
+# Known Gaps
+
+Unobserved flows, denial paths, cancellation behavior, and recovery states remain unspecified.

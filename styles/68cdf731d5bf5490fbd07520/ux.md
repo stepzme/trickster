@@ -4,13 +4,13 @@ Perplexity centers AI search around one persistent composer, then extends it int
 
 # Navigation
 
-The composer is the primary navigation object. Discovery categories form a horizontal top rail, while contextual back, save, share, settings, and voice controls appear only when relevant.
+The composer is the primary navigation object. Discovery categories form a controls, while contextual back, save, share, settings, and voice controls appear only when relevant.
 
 # Core Flows
 
 ## Ask and continue
 
-1. Enter a question in the floating composer, submit, read the answer and sources, then ask a follow-up from the persistent bottom field.
+1. Enter a question in the composer, submit, read the answer and sources, then ask a follow-up from the persistent composer.
 
 ## Discover and voice
 
@@ -18,4 +18,12 @@ The composer is the primary navigation object. Discovery categories form a horiz
 
 # Interaction Patterns
 
-The composer expands around the keyboard, teal circles indicate voice or submit actions, long answers preserve follow-up access, and topic content relies on cards, sources, and lightweight save controls.
+No behavior-only interaction pattern could be separated from the reviewed visual observations.
+
+# System Access Timing
+
+No system-access timing or denial-recovery path was documented in the reviewed source.
+
+# Known Gaps
+
+Unobserved flows, denial paths, cancellation behavior, and recovery states remain unspecified.

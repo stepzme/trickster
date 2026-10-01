@@ -4,7 +4,7 @@ Twinby combines swipe-based dating with compatibility scores, personality tests,
 
 # Navigation
 
-- A five-item bottom bar covers activity or matches, likes, discovery, cards, and profile.
+- A five-item primary navigation covers activity or matches, likes, discovery, cards, and profile.
 - Discovery centers one full-height profile card with undo, dislike, compatibility, superlike, and like actions.
 - Profile holds editing, settings, premium, boosts, superlikes, travel mode, and test history.
 
@@ -30,7 +30,12 @@ Twinby combines swipe-based dating with compatibility scores, personality tests,
 
 # Interaction Patterns
 
-- The profile photo dominates discovery; action circles remain anchored below it.
-- Lime compatibility and purple premium signals are distinct from pink match celebrations.
-- Tests, cards, and games reduce blank-message anxiety.
 - Sensitive profile changes and verification use explicit steps and confirmations.
+
+# System Access Timing
+
+No system-access request timing or denial recovery was documented in the reviewed source.
+
+# Known Gaps
+
+- Permission-denial recovery and unobserved secondary flows were not documented.

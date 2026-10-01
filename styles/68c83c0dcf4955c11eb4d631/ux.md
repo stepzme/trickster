@@ -4,7 +4,7 @@ gg supports taxi and delivery discovery, route setup, service and fare choice, a
 
 # Navigation
 
-The map and current bottom sheet form the primary shell. Search starts the trip; service shortcuts and a compact menu expose delivery, driver, support, settings, and related destinations.
+The map and current bottom sheet form the primary shell. Search starts the trip; service shortcuts and a menu expose delivery, driver, support, settings, and related destinations.
 
 # Core Flows
 
@@ -18,4 +18,12 @@ The map and current bottom sheet form the primary shell. Search starts the trip;
 
 # Interaction Patterns
 
-The active decision stays in one bottom sheet, route context remains visible on the map, choices use horizontally scannable cards, and irreversible actions receive one dominant black control.
+No behavior-only interaction pattern could be separated from the reviewed visual observations.
+
+# System Access Timing
+
+No system-access timing or denial-recovery path was documented in the reviewed source.
+
+# Known Gaps
+
+Unobserved flows, denial paths, cancellation behavior, and recovery states remain unspecified.

@@ -18,7 +18,7 @@ My addresses, Menu, Crowns, Coupons, and More are persistent. Product, cart, che
 
 ## Loyalty
 
-Crowns shows balance, earning history, challenges, campaigns, personalized offers, and clear spending rules.
+1. Crowns shows balance, earning history, challenges, campaigns, personalized offers, and clear spending rules.
 
 # Interaction Patterns
 
@@ -27,3 +27,11 @@ Crowns shows balance, earning history, challenges, campaigns, personalized offer
 - Confirm address immediately before payment.
 - Show crowns earned after order completion.
 - Separate coupons from crown balance.
+
+# System Access Timing
+
+No system-access request timing or denial recovery was documented in the reviewed source.
+
+# Known Gaps
+
+- Permission-denial recovery and unobserved secondary flows were not documented.

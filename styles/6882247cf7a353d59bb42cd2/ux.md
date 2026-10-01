@@ -1,10 +1,10 @@
 # Overview
 
-Yandex Go combines transport and local services around a home dashboard, map-backed task flows, and prominent yellow confirmations.
+Yandex Go combines transport and local services around a home dashboard, map-backed task flows, and confirmations.
 
 # Navigation
 
-The home screen presents service tiles, a destination field, recent places, offers, and commerce modules. Taxi flows shift to a map with a draggable white bottom sheet.
+The home screen presents service tiles, a destination field, recent places, offers, and commerce modules. Taxi flows shift to a map with a draggable bottom sheet.
 
 # Core Flows
 
@@ -18,11 +18,16 @@ The home screen presents service tiles, a destination field, recent places, offe
 
 ## Use the service hub
 
-Open Lavka, food, delivery, transport, fuel, or micromobility from illustrated tiles. Return to Home without losing the service hierarchy.
+1. Open Lavka, food, delivery, transport, fuel, or micromobility from illustrated tiles. Return to Home without losing the service hierarchy.
 
 # Interaction Patterns
 
 - Use map plus bottom sheet for location-based tasks.
-- Reserve yellow for decisive progress and confirmation.
-- Keep fare choices horizontal and visually comparable.
-- Surface timely guidance in short modal sheets.
+
+# System Access Timing
+
+No system-access timing or denial-recovery path was documented in the reviewed source.
+
+# Known Gaps
+
+Unobserved flows, denial paths, cancellation behavior, and recovery states remain unspecified.

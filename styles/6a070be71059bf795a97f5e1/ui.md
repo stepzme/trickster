@@ -1,41 +1,54 @@
 <design-context>
 ---
-version: alpha
+version: 1
+platform: iOS
 name: Gosuslugi-design-analysis
 description: "A civic-services interface that pairs a deep cobalt gradient home with crisp white service panels, saturated blue actions, colorful document cards, and a compact assistant layer. Dense public-service content becomes approachable through strong grouping, familiar icons, and one clear action per step."
-colors: {primary: "#0D5BD7", on-primary: "#FFFFFF", primary-hover: "#2872E0", primary-focus: "#0848AE", ink: "#17191D", ink-muted: "#656A72", ink-subtle: "#969BA3", ink-tertiary: "#C4C8CD", canvas: "#FFFFFF", surface-1: "#F6F8FB", surface-2: "#EDF1F7", surface-3: "#E0E6F0", surface-4: "#CDD6E5", hairline: "#E3E7ED", hairline-strong: "#C6CDD7", hairline-tertiary: "#AEB8C5", inverse-canvas: "#05276B", inverse-surface-1: "#0B3E91", inverse-surface-2: "#1558BC", inverse-ink: "#FFFFFF", brand-secure: "#0D5BD7", semantic-success: "#12A36B", semantic-overlay: "#101A2E"}
+colors: {primary: "#0D5BD7", on-primary: "#FFFFFF", primary-focus: "#0848AE", ink: "#17191D", ink-muted: "#656A72", ink-subtle: "#969BA3", ink-tertiary: "#C4C8CD", canvas: "#FFFFFF", surface-1: "#F6F8FB", surface-2: "#EDF1F7", surface-3: "#E0E6F0", surface-4: "#CDD6E5", hairline: "#E3E7ED", hairline-strong: "#C6CDD7", hairline-tertiary: "#AEB8C5", inverse-canvas: "#05276B", inverse-surface-1: "#0B3E91", inverse-surface-2: "#1558BC", inverse-ink: "#FFFFFF", brand-secure: "#0D5BD7", semantic-success: "#12A36B", semantic-overlay: "#101A2E"}
 typography:
-  display-xl: {fontFamily: SF Pro Display, fontSize: 36px, fontWeight: 700, lineHeight: 1.06, letterSpacing: -0.8px}
-  display-lg: {fontFamily: SF Pro Display, fontSize: 30px, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.5px}
-  display-md: {fontFamily: SF Pro Display, fontSize: 25px, fontWeight: 700, lineHeight: 1.14, letterSpacing: -0.3px}
-  headline: {fontFamily: SF Pro Display, fontSize: 21px, fontWeight: 700, lineHeight: 1.20, letterSpacing: -0.2px}
-  card-title: {fontFamily: SF Pro Text, fontSize: 16px, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0}
-  subhead: {fontFamily: SF Pro Text, fontSize: 15px, fontWeight: 600, lineHeight: 1.30, letterSpacing: 0}
-  body-lg: {fontFamily: SF Pro Text, fontSize: 15px, fontWeight: 400, lineHeight: 1.42, letterSpacing: 0}
-  body: {fontFamily: SF Pro Text, fontSize: 13px, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0}
-  body-sm: {fontFamily: SF Pro Text, fontSize: 11px, fontWeight: 400, lineHeight: 1.32, letterSpacing: 0}
-  caption: {fontFamily: SF Pro Text, fontSize: 10px, fontWeight: 400, lineHeight: 1.25, letterSpacing: 0}
-  button: {fontFamily: SF Pro Text, fontSize: 14px, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0}
-  eyebrow: {fontFamily: SF Pro Text, fontSize: 10px, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0.1px}
-  mono: {fontFamily: SF Mono, fontSize: 11px, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0}
-rounded: {xs: 4px, sm: 8px, md: 12px, lg: 16px, xl: 22px, xxl: 28px, pill: 9999px, full: 9999px}
-spacing: {xxs: 4px, xs: 8px, sm: 12px, md: 16px, lg: 20px, xl: 24px, xxl: 32px, section: 40px}
+  display-xl: {fontFamily: SF Pro Display, fontSize: 36, fontWeight: 700, lineHeight: 1.06, letterSpacing: -0.8}
+  display-lg: {fontFamily: SF Pro Display, fontSize: 30, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.5}
+  display-md: {fontFamily: SF Pro Display, fontSize: 25, fontWeight: 700, lineHeight: 1.14, letterSpacing: -0.3}
+  headline: {fontFamily: SF Pro Display, fontSize: 21, fontWeight: 700, lineHeight: 1.20, letterSpacing: -0.2}
+  card-title: {fontFamily: SF Pro Text, fontSize: 16, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0}
+  subhead: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 600, lineHeight: 1.30, letterSpacing: 0}
+  body-lg: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 400, lineHeight: 1.42, letterSpacing: 0}
+  body: {fontFamily: SF Pro Text, fontSize: 13, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0}
+  body-sm: {fontFamily: SF Pro Text, fontSize: 11, fontWeight: 400, lineHeight: 1.32, letterSpacing: 0}
+  caption: {fontFamily: SF Pro Text, fontSize: 10, fontWeight: 400, lineHeight: 1.25, letterSpacing: 0}
+  button: {fontFamily: SF Pro Text, fontSize: 14, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0}
+  eyebrow: {fontFamily: SF Pro Text, fontSize: 10, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0.1}
+  mono: {fontFamily: SF Mono, fontSize: 11, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0}
+rounded: {xs: 4, sm: 8, md: 12, lg: 16, xl: 22, xxl: 28, pill: 9999, full: 9999}
+spacing: {xxs: 4, xs: 8, sm: 12, md: 16, lg: 20, xl: 24, xxl: 32, section: 40}
 components:
-  button-primary: {backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 14px 18px}
-  button-secondary: {backgroundColor: "{colors.surface-1}", textColor: "{colors.primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 12px 16px}
-  service-panel: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 16px}
-  document-card: {backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.card-title}", rounded: "{rounded.md}", padding: 14px}
-  text-input: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: 12px 14px}
-  status-badge: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.pill}", padding: 4px 8px}
-  bottom-nav: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink-subtle}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: 8px 10px}
+  button-primary: {backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [14, 18]}
+  button-secondary: {backgroundColor: "{colors.surface-1}", textColor: "{colors.primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [12, 16]}
+  service-panel: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 16}
+  document-card: {backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.card-title}", rounded: "{rounded.md}", padding: 14}
+  text-input: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: [12, 14]}
+  status-badge: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.pill}", padding: [4, 8]}
+  bottom-nav: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink-subtle}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: [8, 10]}
 ---
-## Overview
+
+# Overview
 
 Gosuslugi combines a confident cobalt civic identity with white, highly structured service surfaces. Colorful documents and service icons make a large administrative catalog feel personal and navigable.
 
 **Key Characteristics:** deep blue gradient home, white rounded panels, saturated blue CTAs, multicolor document cards, compact assistant, dense structured forms, five-item navigation, and clear application status.
 
-## Colors
+# Non-negotiable visual invariants
+
+- The reviewed screens show this treatment: deep blue gradient home.
+- The reviewed screens show this treatment: white rounded panels.
+- The reviewed screens show this treatment: saturated blue CTAs.
+- The reviewed screens show this treatment: multicolor document cards.
+- The reviewed screens show this treatment: compact assistant.
+- The reviewed screens show this treatment: dense structured forms.
+- The reviewed screens show this treatment: five-item navigation.
+- The reviewed screens show this treatment: clear application status.
+
+# Color and surfaces
 
 ### Brand & Accent
 
@@ -53,7 +66,7 @@ Near-black leads services, documents, application steps, and personal data. Gray
 
 Blue means action or official navigation, green means successful or available, yellow highlights caution, and red identifies critical or document-specific information.
 
-## Typography
+# Typography
 
 ### Font Family
 
@@ -63,11 +76,11 @@ Use SF Pro Display for service and application headings and SF Pro Text for form
 
 | Token | Size | Weight | Use |
 |---|---:|---:|---|
-| display-lg | 30px | 700 | Major service state |
-| headline | 21px | 700 | Page or application step |
-| card-title | 16px | 600 | Document or service |
-| body | 13px | 400 | Form and explanation |
-| caption | 10px | 400 | Status and metadata |
+| display-lg | 30pt | 700 | Major service state |
+| headline | 21pt | 700 | Page or application step |
+| card-title | 16pt | 600 | Document or service |
+| body | 13pt | 400 | Form and explanation |
+| caption | 10pt | 400 | Status and metadata |
 
 ### Principles
 
@@ -79,11 +92,7 @@ Use SF Pro Display for service and application headings and SF Pro Text for form
 
 Use the platform sans with strong Cyrillic support and tabular numerals.
 
-## Layout
-
-### Spacing System
-
-Use a 4px base, 12–16px field gaps, 16px panel padding, and 24–32px between service sections.
+# Screen composition
 
 ### Grid & Container
 
@@ -93,42 +102,15 @@ Home stacks horizontal service stories, document shortcuts, and service groups. 
 
 Dense information is acceptable when strongly grouped. Separate official requirements, personal data, warnings, and actions into distinct blocks.
 
-## Elevation & Depth
+# Navigation appearance
 
-| Level | Treatment | Use |
-|---|---|---|
-| 0 | White or cobalt canvas | Work or home |
-| 1 | White rounded panel | Service and document group |
-| 2 | Colored document card | Identity object |
-| 3 | Sticky blue action | Continue or submit |
+Use five bottom destinations for Home, Services, assistant, Payments, and Documents, with blue active emphasis.
 
-### Decorative Depth
-
-Use the cobalt gradient, assistant character, document silhouettes, and compact service artwork. Keep form screens visually restrained.
-
-## Shapes
-
-### Border Radius Scale
-
-| Token | Value | Use |
-|---|---:|---|
-| rounded-xs | 4px | Status label |
-| rounded-sm | 8px | Input and button |
-| rounded-md | 12px | Document card |
-| rounded-lg | 16px | Service panel |
-| rounded-full | full | Assistant and icon action |
-
-### Photography & Illustration Geometry
-
-Use simple graphic objects inside square tiles or wide story cards. Documents may use stacked full-width colored cards with faint symbolic silhouettes.
-
-## Components
+# Components
 
 ### Buttons
 
 Primary actions are saturated blue with white text. Secondary actions are pale or white with blue text; destructive actions are clearly separated.
-
-### Pricing Tabs
 
 Service categories, filters, document types, and appointment options use chips, compact tabs, or structured lists with blue selection.
 
@@ -148,11 +130,49 @@ Keep application step, agency, deadline, payment, appointment, document validity
 
 Use five bottom destinations for Home, Services, assistant, Payments, and Documents, with blue active emphasis.
 
-### Footer
+# Imagery and icons
 
-No footer; bottom navigation or the current blue action owns the safe area.
+| Level | Treatment | Use |
+|---|---|---|
+| 0 | White or cobalt canvas | Work or home |
+| 1 | White rounded panel | Service and document group |
+| 2 | Colored document card | Identity object |
+| 3 | Sticky blue action | Continue or submit |
 
-## Do's and Don'ts
+### Decorative Depth
+
+Use the cobalt gradient, assistant character, document silhouettes, and compact service artwork. Keep form screens visually restrained.
+
+# States
+
+Keep application step, agency, deadline, payment, appointment, document validity, and result close to the affected service.
+
+# iOS adaptation
+
+### Touch Targets
+
+Services, documents, search, fields, assistant actions, navigation, and submit controls remain at least 44pt.
+
+### Collapsing Strategy
+
+Preserve service, current step, required data, warning, status, and next action; collapse stories and recommendations first.
+
+### Image Behavior
+
+Scale symbolic artwork without cropping labels and preserve text-safe space in service stories and document cards.
+
+On iPhone, respect top and bottom safe areas, use scrolling for content that does not fit, keep interactive targets at least 44 points, and preserve the visual reading order for VoiceOver. At larger Dynamic Type sizes, allow supporting text to wrap without collapsing the dominant hierarchy. Use native sheets and permission transitions while explicitly styling app-owned surfaces to match the reference.
+
+# Anti-generic checklist
+
+- Do not substitute the documented accent hierarchy with default iOS blue.
+- Do not collapse distinct surfaces into a uniform stack of generic white cards.
+- Do not use an unstyled `TabView`, `Form`, or arbitrary SF Symbols when they contradict the documented navigation and component language.
+- Do not flatten the documented typography into one body-text scale.
+- Do not remove compositionally important photography or illustration while assets are pending.
+- Do not apply one corner radius to every control and surface.
+
+Source-specific guardrails retained from the review:
 
 ### Do
 
@@ -166,37 +186,9 @@ No footer; bottom navigation or the current blue action owns the safe area.
 - Don't mix document colors into generic actions.
 - Don't hide legal requirements or data review before submission.
 
-## Responsive Behavior
-
-### Breakpoints
-
-| Name | Width | Key Changes |
-|---|---:|---|
-| Compact | 320–374px | Tighten service and form spacing |
-| Standard | 375–430px | Default civic layout |
-| Wide | 431px+ | Expand panels and content gutters |
-
-### Touch Targets
-
-Services, documents, search, fields, assistant actions, navigation, and submit controls remain at least 44px.
-
-### Collapsing Strategy
-
-Preserve service, current step, required data, warning, status, and next action; collapse stories and recommendations first.
-
-### Image Behavior
-
-Scale symbolic artwork without cropping labels and preserve text-safe space in service stories and document cards.
-
-## Iteration Guide
-
-Tune Home and Services first, then search, application forms, documents, notifications, payments, appointments, assistant, and results.
-
-## Known Gaps
+# Known gaps
 
 - Payment failure and complex appeal recovery were not fully sampled.
-- Tablet and landscape layouts were not represented.
+- iPad and landscape layouts were not represented.
 
 </design-context>
-
-Use the design system above for all UI you generate.

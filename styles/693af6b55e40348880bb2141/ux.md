@@ -4,7 +4,7 @@ My Rostelecom organizes household telecom around accounts, balance, autopay, bon
 
 # Navigation
 
-Four bottom destinations connect My Accounts, Bonuses, Connect, and Settings. The account dashboard leads with balance and payment actions before promotional stories and connected services.
+Four primary destinations connect My Accounts, Bonuses, Connect, and Settings. The account dashboard leads with balance and payment actions before promotional stories and connected services.
 
 # Core Flows
 
@@ -24,7 +24,12 @@ Four bottom destinations connect My Accounts, Bonuses, Connect, and Settings. Th
 
 # Interaction Patterns
 
-- The dashboard stacks large white service groups over a deep navy-to-purple account header.
-- Orange is reserved for payment and outlined secondary actions; violet drives navigation and connection.
-- Active status is stated in green beside the service it affects.
-- Loading uses structural skeletons that preserve the final service grid.
+The sampled flows use direct actions, explicit completion, and return to the current context. No additional repeated interaction behavior was documented.
+
+# System Access Timing
+
+No system-access request timing or denial recovery was documented in the reviewed source.
+
+# Known Gaps
+
+- Permission-denial recovery and unobserved secondary flows were not documented.

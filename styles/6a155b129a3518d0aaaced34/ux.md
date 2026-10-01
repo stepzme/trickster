@@ -1,17 +1,17 @@
 # Overview
 
-Lalafo is a classifieds marketplace for browsing, contacting sellers, publishing listings, and managing paid promotion from one dense two-column feed.
+Lalafo is a classifieds marketplace for browsing, contacting sellers, publishing listings, and managing paid promotion from one feed.
 
 # Navigation
 
-Five fixed destinations cover Home, Favorites, Post, Chats, and Profile. Search, filters, category shortcuts, and recommendation tabs sit above the listing grid; a large green post action remains central.
+Five primary destinations cover Home, Favorites, Post, Chats, and Profile. Search, filters, category shortcuts, recommendation tabs, and posting remain available from the listing context.
 
 # Core Flows
 
 ## Find and contact
 
 1. Choose a category, brand, model, or filters.
-2. Scan photo-led listing cards with price, badges, and quick actions.
+2. Scan listings with price, badges, and quick actions.
 3. Open a listing, review the gallery and details, then message or call the seller.
 4. Save the item or subscribe to the search.
 
@@ -24,7 +24,14 @@ Five fixed destinations cover Home, Favorites, Post, Chats, and Profile. Search,
 
 # Interaction Patterns
 
-- Two-column cards maximize inventory visibility while persistent quick actions shorten contact.
-- Bright green marks posting, search subscriptions, and primary progress.
+- Results maximize inventory visibility while persistent quick actions shorten contact.
 - Magenta marks seller contact, VIP labels, and price emphasis.
-- Long creation flows use tags, compact form controls, and anchored submit actions.
+- Long creation flows use tags, form controls, and explicit submit actions.
+
+# System Access Timing
+
+No system-access timing or denial-recovery behavior was documented in the reviewed source.
+
+# Known Gaps
+
+System-permission denial paths, interrupted flows, and recovery behavior not described above were not available in the reviewed source.

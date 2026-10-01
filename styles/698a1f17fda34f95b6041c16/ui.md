@@ -1,12 +1,12 @@
 <design-context>
 ---
-version: alpha
+version: 1
+platform: iOS
 name: MES-Diary-design-analysis
 description: "A calm school dashboard on pale lavender, built from bright white rounded cards, purple-blue actions, compact weekly navigation, color-coded service icons, and structured lesson, grade, task, attendance, meal, and account data."
 colors:
   primary: "#6B4DE6"
   on-primary: "#FFFFFF"
-  primary-hover: "#8065EC"
   primary-focus: "#5337C4"
   ink: "#202027"
   ink-muted: "#777784"
@@ -28,209 +28,145 @@ colors:
   semantic-success: "#35AE6C"
   semantic-overlay: "#202027"
 typography:
-  display-xl: {fontFamily: SF Pro Display, fontSize: 36px, fontWeight: 700, lineHeight: 1.06, letterSpacing: -0.8px}
-  display-lg: {fontFamily: SF Pro Display, fontSize: 30px, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.6px}
-  display-md: {fontFamily: SF Pro Display, fontSize: 24px, fontWeight: 700, lineHeight: 1.14, letterSpacing: -0.3px}
-  headline: {fontFamily: SF Pro Display, fontSize: 20px, fontWeight: 700, lineHeight: 1.20, letterSpacing: -0.2px}
-  card-title: {fontFamily: SF Pro Text, fontSize: 15px, fontWeight: 600, lineHeight: 1.24, letterSpacing: 0}
-  subhead: {fontFamily: SF Pro Text, fontSize: 14px, fontWeight: 600, lineHeight: 1.30, letterSpacing: 0}
-  body-lg: {fontFamily: SF Pro Text, fontSize: 14px, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0}
-  body: {fontFamily: SF Pro Text, fontSize: 12px, fontWeight: 400, lineHeight: 1.34, letterSpacing: 0}
-  body-sm: {fontFamily: SF Pro Text, fontSize: 10px, fontWeight: 400, lineHeight: 1.28, letterSpacing: 0}
-  caption: {fontFamily: SF Pro Text, fontSize: 9px, fontWeight: 400, lineHeight: 1.22, letterSpacing: 0}
-  button: {fontFamily: SF Pro Text, fontSize: 13px, fontWeight: 600, lineHeight: 1.18, letterSpacing: 0}
-  eyebrow: {fontFamily: SF Pro Text, fontSize: 9px, fontWeight: 600, lineHeight: 1.18, letterSpacing: 0.1px}
-  mono: {fontFamily: SF Mono, fontSize: 10px, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0}
-rounded: {xs: 4px, sm: 8px, md: 12px, lg: 16px, xl: 20px, xxl: 26px, pill: 9999px, full: 9999px}
-spacing: {xxs: 4px, xs: 8px, sm: 12px, md: 16px, lg: 20px, xl: 24px, xxl: 32px, section: 40px}
+  display-xl: {fontFamily: SF Pro Display, fontSize: 36, fontWeight: 700, lineHeight: 1.06, letterSpacing: -0.8}
+  display-lg: {fontFamily: SF Pro Display, fontSize: 30, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.6}
+  display-md: {fontFamily: SF Pro Display, fontSize: 24, fontWeight: 700, lineHeight: 1.14, letterSpacing: -0.3}
+  headline: {fontFamily: SF Pro Display, fontSize: 20, fontWeight: 700, lineHeight: 1.20, letterSpacing: -0.2}
+  card-title: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 600, lineHeight: 1.24, letterSpacing: 0}
+  subhead: {fontFamily: SF Pro Text, fontSize: 14, fontWeight: 600, lineHeight: 1.30, letterSpacing: 0}
+  body-lg: {fontFamily: SF Pro Text, fontSize: 14, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0}
+  body: {fontFamily: SF Pro Text, fontSize: 12, fontWeight: 400, lineHeight: 1.34, letterSpacing: 0}
+  body-sm: {fontFamily: SF Pro Text, fontSize: 10, fontWeight: 400, lineHeight: 1.28, letterSpacing: 0}
+  caption: {fontFamily: SF Pro Text, fontSize: 9, fontWeight: 400, lineHeight: 1.22, letterSpacing: 0}
+  button: {fontFamily: SF Pro Text, fontSize: 13, fontWeight: 600, lineHeight: 1.18, letterSpacing: 0}
+  eyebrow: {fontFamily: SF Pro Text, fontSize: 9, fontWeight: 600, lineHeight: 1.18, letterSpacing: 0.1}
+  mono: {fontFamily: SF Mono, fontSize: 10, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0}
+rounded: {xs: 4, sm: 8, md: 12, lg: 16, xl: 20, xxl: 26, pill: 9999, full: 9999}
+spacing: {xxs: 4, xs: 8, sm: 12, md: 16, lg: 20, xl: 24, xxl: 32, section: 40}
 components:
-  button-primary: {backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 13px 18px}
+  button-primary: {backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 13 18}
   button-primary-pressed: {backgroundColor: "{colors.primary-focus}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}"}
-  button-primary-hover: {backgroundColor: "{colors.primary-hover}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}"}
-  button-secondary: {backgroundColor: "{colors.surface-1}", textColor: "{colors.primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 12px 16px}
-  button-tertiary: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 10px 14px}
-  button-inverse: {backgroundColor: "{colors.inverse-canvas}", textColor: "{colors.inverse-ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 12px 16px}
-  lesson-card: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 12px}
-  service-card: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.caption}", rounded: "{rounded.md}", padding: 10px}
-  week-strip: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: 8px 12px}
-  bottom-nav: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink-subtle}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: 7px 8px}
+  button-secondary: {backgroundColor: "{colors.surface-1}", textColor: "{colors.primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 12 16}
+  button-tertiary: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 10 14}
+  button-inverse: {backgroundColor: "{colors.inverse-canvas}", textColor: "{colors.inverse-ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 12 16}
+  lesson-card: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 12}
+  service-card: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.caption}", rounded: "{rounded.md}", padding: 10}
+  week-strip: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: 8 12}
+  bottom-nav: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink-subtle}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: 7 8}
 ---
-## Overview
+
+# Overview
 
 MES Diary is a school operations dashboard where white cards and compact color cues organize time, work, progress, services, and balances.
 
-**Key Characteristics:**
-- Pale lavender background.
-- White lesson and service cards.
-- Weekly date strip.
-- Purple-blue actions and multicolor service icons.
-- Five fixed school destinations.
+# Non-negotiable visual invariants
 
-## Colors
+- Primary screens use Pale lavender background.
+- Keep student context visible.
+- Separate lesson, break, and event types.
+- Label every service icon.
+- Style native controls consistently.
+- Schedule is one column; School uses a service grid plus dashboard cards; grades and accounts use lists.
+- Data is dense but grouped; increase space around warnings, empty states, and account decisions.
 
-### Brand & Accent
+# Color and surfaces
 
 Purple anchors brand and selection; blue supports account and information actions. Service colors remain categorical accents.
 
-### Surface
-
 Use pale lavender canvas with bright white cards and softly tinted selected controls.
-
-### Text
 
 Near-black carries subjects and decisions; gray carries time, room, teacher, and supporting status.
 
-### Semantic
-
 Green means present or positive change; blue information; red alerts or debt; orange student identity.
 
-## Typography
-
-### Font Family
+# Typography
 
 Use SF Pro Display for section titles and SF Pro Text for schedule and account detail.
 
-### Hierarchy
-
-| Token | Size | Weight | Use |
-|---|---:|---:|---|
-| display-lg | 30px | 700 | Authentication claim |
-| headline | 20px | 700 | Destination title |
-| card-title | 15px | 600 | Subject and service |
-| body | 12px | 400 | Homework and event detail |
-| caption | 9px | 400 | Time, room, date, navigation |
-
-### Principles
+- display-lg — 30 points — 700 — Authentication claim
+- headline — 20 points — 700 — Destination title
+- card-title — 15 points — 600 — Subject and service
+- body — 12 points — 400 — Homework and event detail
+- caption — 9 points — 400 — Time, room, date, navigation
 
 - Lead with subject or service.
 - Keep time and room aligned.
 - Separate homework from lesson metadata.
 
-### Note on Font Substitutes
-
 Inter is suitable; preserve compact Cyrillic and readable numeric grades.
 
-## Layout
+The hierarchy must remain legible with Dynamic Type: supporting text may wrap before the primary metric, title, or action loses its role.
 
-### Spacing System
+# Screen composition
 
-Use a 4px base, 10–12px card gaps, and 12px screen gutters.
-
-### Grid & Container
+Use a 4 points base, 10–12 points card gaps, and 12 points screen gutters.
 
 Schedule is one column; School uses a service grid plus dashboard cards; grades and accounts use lists.
 
-### Whitespace Philosophy
-
 Data is dense but grouped; increase space around warnings, empty states, and account decisions.
-
-## Elevation & Depth
-
-| Level | Treatment | Use |
-|---|---|---|
-| 0 | Lavender canvas | Screen background |
-| 1 | White card | Lesson and service |
-| 2 | Sticky white navigation | Destinations |
-| 3 | Sheet or banner | Filters and errors |
-
-### Decorative Depth
 
 Use soft icon gradients and subtle card separation, not heavy shadow.
 
-## Shapes
+Primary iPhone screens keep the documented content grouping and vertical rhythm inside a scroll container when content exceeds the viewport. Bottom-owned actions or navigation reserve the lower safe area rather than covering content.
 
-### Border Radius Scale
-
-| Token | Value | Use |
-|---|---:|---|
-| rounded-xs | 4px | Labels |
-| rounded-sm | 8px | Buttons and fields |
-| rounded-md | 12px | Lessons and services |
-| rounded-lg | 16px | Account panels |
-| rounded-full | full | Student avatar and date selection |
-
-### Photography & Illustration Geometry
-
-Service icons stay centered in compact squares. Use photography only when tied to student or school content.
-
-## Components
-
-### Buttons
-
-Primary actions are purple or blue; secondary actions are pale and outlined.
-
-### Pricing Tabs
-
-Week dates, grade grouping, and filters use compact segmented controls with one filled selection.
-
-### Cards & Containers
-
-Lesson cards separate time, subject, room, homework, and substitution. Dashboard cards group one school metric.
-
-### Inputs & Forms
-
-Authentication and account fields use large white rounded rows with purple focus.
-
-### Status & Build Page
-
-Loading uses card skeletons. Payment and service errors use dismissible banners above affected content.
-
-### Navigation
+# Navigation appearance
 
 Keep Schedule, Grades, Tasks, School, and Accounts fixed; active state is dark with a filled icon.
 
-### Footer
+This section governs appearance only; destinations and transitions are defined in `ux.md`.
 
-No footer; bottom navigation owns the safe area.
+# Components
 
-## Do's and Don'ts
+Primary actions are purple or blue; secondary actions are pale and outlined.
 
-### Do
+Lesson cards separate time, subject, room, homework, and substitution. Dashboard cards group one school metric.
 
-- Keep student context visible.
-- Separate lesson, break, and event types.
-- Label every service icon.
-- Style native controls consistently.
+Authentication and account fields use large white rounded rows with purple focus.
 
-### Don't
+Loading uses card skeletons. Payment and service errors use dismissible banners above affected content.
 
-- Don't encode grades by color alone.
-- Don't crowd homework into the title row.
-- Don't use heavy shadows.
-- Don't turn icons into unlabeled decoration.
+Controls retain at least a 44-point interactive area. Pressed and disabled treatments should stay within the documented palette and hierarchy; no unobserved state styling is prescribed.
 
-## Responsive Behavior
+# Imagery and icons
 
-### Breakpoints
-
-| Name | Width | Key Changes |
-|---|---:|---|
-| Compact | 320–374px | Tighten dates and lesson metadata |
-| Standard | 375–430px | Default schedule and service grid |
-| Wide | 431px+ | Expand dashboard gutters |
-
-### Touch Targets
-
-Dates, lessons, services, filters, accounts, and navigation remain at least 44px.
-
-### Collapsing Strategy
-
-Scroll the week strip horizontally and stack school dashboard metrics before shrinking type.
-
-### Image Behavior
+Service icons stay centered in compact squares. Use photography only when tied to student or school content.
 
 Contain service icons and preserve student avatar circles.
 
-## Iteration Guide
+When imagery is part of the documented composition, it cannot be omitted while final assets are pending. A temporary asset must preserve its placement, crop, scale, and approximate visual weight.
 
-Tune daily schedule first, then grades, homework, school services, and account clarity.
+# States
 
-## Known Gaps
+Loading uses card skeletons. Payment and service errors use dismissible banners above affected content.
+
+Green means present or positive change; blue information; red alerts or debt; orange student identity.
+
+Only the states documented above are specified; other states must preserve the same canvas, hierarchy, and component language without inventing a new visual system.
+
+# iOS adaptation
+
+- Extend the documented canvas through the iPhone safe areas while keeping readable content within appropriate insets.
+- Use a vertical `ScrollView` for content that does not fit compact heights; keep documented bottom actions and navigation clear of the home indicator.
+- Dates, lessons, services, filters, accounts, and navigation remain at least 44 points.
+- Scroll the week strip horizontally and stack school dashboard metrics before shrinking type.
+- Present the keyboard and system permission UI natively, then return to the same visual context.
+- Preserve semantic reading order in VoiceOver and allow text to grow with Dynamic Type.
+- Do not infer an unobserved dark or light variant; use the appearance documented by the reference.
+
+# Anti-generic checklist
+
+- Do not encode grades by color alone.
+- Do not crowd homework into the title row.
+- Do not use heavy shadows.
+- Do not turn icons into unlabeled decoration.
+- Do not replace the documented canvas and surfaces with a generic grouped background and uniform white cards.
+- Do not use an unstyled `TabView`, default blue tint, or arbitrary SF Symbols when they contradict the reference.
+- Do not collapse every component to one corner radius or remove compositionally important imagery.
+
+# Known gaps
 
 - Teacher messaging was not visually sampled.
 - Payment completion was not represented.
 - Tablet and landscape layouts were not represented.
 
 </design-context>
-
-Use the design system above for all UI you generate.

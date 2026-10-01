@@ -4,7 +4,7 @@ Temu is a promotion-heavy marketplace for search, category browsing, product com
 
 # Navigation
 
-- Five bottom destinations cover Home, Categories, Profile, Cart, and a contextual fifth entry.
+- Five primary destinations cover Home, Categories, Profile, Cart, and a contextual fifth entry.
 - Search, image search, and dense filter rails remain visible across discovery.
 - Product, cart, checkout, and order tasks drill into focused screens.
 
@@ -14,7 +14,7 @@ Temu is a promotion-heavy marketplace for search, category browsing, product com
 
 1. Search, use image search, or open Categories.
 2. Apply filters, sorting, size, color, and category constraints.
-3. Compare two-column cards by image, price, rating, sales, urgency, and delivery.
+3. Compare results by image, price, rating, sales, urgency, and delivery.
 
 ## Buy products
 
@@ -30,7 +30,14 @@ Temu is a promotion-heavy marketplace for search, category browsing, product com
 
 # Interaction Patterns
 
-- Orange drives price and purchase; green communicates delivery and guarantees.
-- Urgency labels, crossed prices, countdowns, and badges compress decision cues into product cards.
-- Sticky bottom actions preserve cart total and payment.
-- Photography dominates; chrome remains dense and transactional.
+- Urgency labels, crossed prices, countdowns, and badges compress decision cues into products.
+- Checkout preserves cart total and payment.
+-
+
+# System Access Timing
+
+No system-access timing or denial-recovery behavior was documented in the reviewed source.
+
+# Known Gaps
+
+System-permission denial paths, interrupted flows, and recovery behavior not described above were not available in the reviewed source.

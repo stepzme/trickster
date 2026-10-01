@@ -14,13 +14,25 @@ The inspected Whoosh version uses a cinematic industrial sci-fi campaign languag
 - Use full-height character or vehicle art only for entry and campaign moments.
 - Reserve clear dark zones for login, ride, or parking controls.
 
-# Color
+# Color and Materials
 
 - Build from graphite, gunmetal, dirty silver, ember orange, coral red, and occasional cold blue status light.
 - Use glow as a focal cue, not a full-screen gradient.
 
-# Usage
+# Variants and States
 
 - Apply the language to campaign onboarding, themed map markers, tasks, parking guidance, and special ride moments.
 - Keep pricing, payment, safety, and support surfaces functional and legible.
 - Create original objects and characters; do not copy the referenced game assets or logos.
+
+# Production Requirements
+
+Exact export formats, aspect ratios, animation behavior, and appearance variants were not documented. Where imagery is compositionally important, temporary placeholders must preserve its documented scale, placement, crop, and visual weight until final art exists.
+
+# Avoid
+
+Do not introduce an unrelated illustration style or substitute decorative symbols for source-supported imagery.
+
+# Known Gaps
+
+Export specifications, animation rules, safe-crop measurements, and unobserved state variants were not available in the reviewed source.

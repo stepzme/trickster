@@ -1,13 +1,13 @@
 # Overview
 
-Raiffeisen is a task-first banking app that combines accounts, fast transfers, payments, history, support, and product discovery. The interface keeps high-frequency actions at the top of each tab and uses contextual education cards to explain financial features.
+Raiffeisen is a task-first banking app that combines accounts, fast transfers, payments, history, support, and product discovery. The interface keeps high-frequency actions .
 
 # Navigation
 
-- Five bottom tabs lead to Home, History, Payments, Chat, and More.
+- Five primary navigation destinations lead to Home, History, Payments, Chat, and More.
 - Home starts with total balance, four primary shortcuts, educational stories, and account cards.
-- Profile and notifications are available from compact controls in the top bar.
-- Product, payment, and settings groups open as focused lists or bottom sheets.
+- Profile and notifications are available from controls in contextual controls.
+- Product, payment, and settings groups open as focused lists or modals.
 
 # Core Flows
 
@@ -33,9 +33,13 @@ Raiffeisen is a task-first banking app that combines accounts, fast transfers, p
 
 # Interaction Patterns
 
-- Yellow full-width buttons clearly end multi-step financial tasks.
 - Short tutorial bubbles point to unfamiliar controls without blocking the whole screen.
-- Rounded icon tiles group frequent actions; colored story cards carry education and promotion.
-- Forms reveal one decision at a time and preserve a consistent bottom action.
 - Empty states use a single friendly symbol and one explanatory sentence.
-- Support remains a full bottom tab and behaves as an ordinary message thread.
+
+# System Access Timing
+
+No system-access request timing or denial recovery was documented in the reviewed source.
+
+# Known Gaps
+
+- Permission-denial recovery and unobserved secondary flows were not documented.

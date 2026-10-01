@@ -4,7 +4,7 @@ Spotify organizes music, podcasts, search, library management, creation, playbac
 
 # Navigation
 
-- Five bottom destinations cover Home, Search, Library, Premium, and Create.
+- Five primary destinations cover Home, Search, Library, Premium, and Create.
 - A persistent mini-player remains above navigation while audio is active.
 - Album, artist, podcast, playlist, and settings pages use drill-down navigation.
 
@@ -12,7 +12,7 @@ Spotify organizes music, podcasts, search, library management, creation, playbac
 
 ## Discover and play
 
-1. Browse personalized Home shelves or Search categories.
+1. Browse personalized Home collections or Search categories.
 2. Open an artist, album, podcast, or playlist.
 3. Start playback and continue through the mini-player or full player.
 
@@ -30,7 +30,12 @@ Spotify organizes music, podcasts, search, library management, creation, playbac
 
 # Interaction Patterns
 
-- Content artwork supplies color while the chrome stays near-black.
 - The mini-player preserves current media context across destinations.
-- Horizontal shelves support discovery; vertical lists support owned content.
-- Green indicates selection and playback rather than general decoration.
+
+# System Access Timing
+
+No system-access request timing or denial recovery was documented in the reviewed source.
+
+# Known Gaps
+
+- Permission-denial recovery and unobserved secondary flows were not documented.

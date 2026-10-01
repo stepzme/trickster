@@ -4,7 +4,7 @@ MegaPay combines mobile balance, tariff and data management, payments, transfers
 
 # Navigation
 
-Five fixed destinations connect Payments, Mobile, central QR, Services, and History. Mobile starts with account balance and data; payment completion returns through one clear close action.
+Five destinations connect Payments, Mobile, QR, Services, and History. Mobile starts with account balance and data; payment completion returns through one clear close action.
 
 # Core Flows
 
@@ -24,7 +24,13 @@ Five fixed destinations connect Payments, Mobile, central QR, Services, and Hist
 
 # Interaction Patterns
 
-- Dark navy anchors confirmation and navigation; green and violet gradients differentiate telecom and wallet modules.
-- Large balance cards keep amounts prominent.
-- Success uses a restrained mint glow and structured receipt.
-- Colorful 3D service imagery stays inside promotional tiles.
+- Preserve task context when users enter detail and return them to the originating flow.
+- Make consequential actions explicit and provide a clear completion or recovery state.
+
+# System Access Timing
+
+No system-access timing or denial-recovery behavior was documented in the reviewed source.
+
+# Known Gaps
+
+System-permission denial paths, interrupted flows, and recovery behavior not described above were not available in the reviewed source.

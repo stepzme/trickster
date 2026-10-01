@@ -4,7 +4,7 @@ ChatGPT supports conversational work across text, voice, images, files, search, 
 
 # Navigation
 
-The drawer contains search, ChatGPT, Library, GPTs, projects, recents, and account. Each chat keeps model choice and overflow at the top.
+The drawer contains search, ChatGPT, Library, GPTs, projects, recents, and account. Each chat keeps model choice and overflow.
 
 # Core Flows
 
@@ -18,7 +18,7 @@ The drawer contains search, ChatGPT, Library, GPTs, projects, recents, and accou
 
 ## Research and media
 
-Research and web search expose progress and sources. Image generation keeps prompt, processing, result, selection, edit, save, and share in one thread.
+1. Research and web search expose progress and sources. Image generation keeps prompt, processing, result, selection, edit, save, and share in one thread.
 
 # Interaction Patterns
 
@@ -27,3 +27,11 @@ Research and web search expose progress and sources. Image generation keeps prom
 - Show tool state before submission.
 - Attach sources to supported claims.
 - Confirm destructive history and account actions.
+
+# System Access Timing
+
+No system-access timing or denial-recovery path was documented in the reviewed source.
+
+# Known Gaps
+
+Unobserved flows, denial paths, cancellation behavior, and recovery states remain unspecified.

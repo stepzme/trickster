@@ -4,7 +4,7 @@ Dixy connects grocery discovery, loyalty, delivery, coupons, cart, checkout, tra
 
 # Navigation
 
-Home, Catalog, seasonal hub, Promotions, and Profile remain stable; search, scan, address, loyalty, and floating cart provide direct task entry.
+Home, Catalog, seasonal hub, Promotions, and Profile remain stable; search, scan, address, loyalty, and cart provide direct task entry.
 
 # Core Flows
 
@@ -28,5 +28,12 @@ Home, Catalog, seasonal hub, Promotions, and Profile remain stable; search, scan
 - Keep address and fulfillment context persistent.
 - Preserve the cart while browsing campaigns and categories.
 - Show price changes after packing transparently.
-- Pair reward imagery with explicit value.
 - Keep cancellation and support reachable from order detail.
+
+# System Access Timing
+
+No system-access timing or denial-recovery behavior was documented in the reviewed source.
+
+# Known Gaps
+
+System-permission denial paths, interrupted flows, and recovery behavior not described above were not available in the reviewed source.

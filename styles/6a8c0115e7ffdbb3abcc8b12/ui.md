@@ -1,12 +1,12 @@
 <design-context>
 ---
-version: alpha
+version: 1
+platform: iOS
 name: Amie-design-analysis
 description: "A radically sparse productivity workspace that stacks a white calendar pane over a white todo pane, joined by a black navigation strip. Fine gray grid lines, restrained pink selection, and soft event pastels create hierarchy without conventional tab chrome."
 colors:
   primary: "#EF5B82"
   on-primary: "#FFFFFF"
-  primary-hover: "#DB466E"
   primary-soft: "#FCE8EE"
   ink: "#1D1D1F"
   ink-muted: "#77777A"
@@ -23,32 +23,30 @@ colors:
   semantic-danger: "#E45561"
   semantic-overlay: "#000000"
 typography:
-  display-xl: { fontFamily: System Sans, fontSize: 38px, fontWeight: 700, lineHeight: 1.00, letterSpacing: -0.8px }
-  display-lg: { fontFamily: System Sans, fontSize: 30px, fontWeight: 700, lineHeight: 1.05, letterSpacing: -0.5px }
-  display-md: { fontFamily: System Sans, fontSize: 24px, fontWeight: 650, lineHeight: 1.10, letterSpacing: -0.3px }
-  headline: { fontFamily: System Sans, fontSize: 20px, fontWeight: 650, lineHeight: 1.20, letterSpacing: -0.2px }
-  card-title: { fontFamily: System Sans, fontSize: 15px, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: System Sans, fontSize: 16px, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
-  body-lg: { fontFamily: System Sans, fontSize: 16px, fontWeight: 400, lineHeight: 1.45, letterSpacing: 0 }
-  body: { fontFamily: System Sans, fontSize: 14px, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
-  body-sm: { fontFamily: System Sans, fontSize: 12px, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
-  caption: { fontFamily: System Sans, fontSize: 10px, fontWeight: 400, lineHeight: 1.20, letterSpacing: 0 }
-  button: { fontFamily: System Sans, fontSize: 14px, fontWeight: 500, lineHeight: 1.20, letterSpacing: 0 }
-  eyebrow: { fontFamily: System Sans, fontSize: 10px, fontWeight: 700, lineHeight: 1.20, letterSpacing: 0.4px }
-  mono: { fontFamily: System Mono, fontSize: 12px, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
-rounded: { xs: 6px, sm: 10px, md: 14px, lg: 20px, xl: 28px, xxl: 34px, pill: 9999px, full: 9999px }
-spacing: { xxs: 4px, xs: 8px, sm: 12px, md: 16px, lg: 24px, xl: 32px, xxl: 48px, section: 64px }
+  display-xl: { fontFamily: System Sans, fontSize: 38, fontWeight: 700, lineHeight: 1.00, letterSpacing: -0.8 }
+  display-lg: { fontFamily: System Sans, fontSize: 30, fontWeight: 700, lineHeight: 1.05, letterSpacing: -0.5 }
+  display-md: { fontFamily: System Sans, fontSize: 24, fontWeight: 650, lineHeight: 1.10, letterSpacing: -0.3 }
+  headline: { fontFamily: System Sans, fontSize: 20, fontWeight: 650, lineHeight: 1.20, letterSpacing: -0.2 }
+  card-title: { fontFamily: System Sans, fontSize: 15, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
+  subhead: { fontFamily: System Sans, fontSize: 16, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
+  body-lg: { fontFamily: System Sans, fontSize: 16, fontWeight: 400, lineHeight: 1.45, letterSpacing: 0 }
+  body: { fontFamily: System Sans, fontSize: 14, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
+  body-sm: { fontFamily: System Sans, fontSize: 12, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
+  caption: { fontFamily: System Sans, fontSize: 10, fontWeight: 400, lineHeight: 1.20, letterSpacing: 0 }
+  button: { fontFamily: System Sans, fontSize: 14, fontWeight: 500, lineHeight: 1.20, letterSpacing: 0 }
+  eyebrow: { fontFamily: System Sans, fontSize: 10, fontWeight: 700, lineHeight: 1.20, letterSpacing: 0.4 }
+  mono: { fontFamily: System Mono, fontSize: 12, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
+rounded: { xs: 6, sm: 10, md: 14, lg: 20, xl: 28, xxl: 34, pill: 9999, full: 9999 }
+spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
 components:
-  button-primary: { backgroundColor: "{colors.chrome}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 14px 20px }
-  calendar-pane: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.lg}", padding: 14px }
-  todo-pane: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 16px }
-  control-strip: { backgroundColor: "{colors.chrome}", textColor: "{colors.on-primary}", typography: "{typography.caption}", rounded: "{rounded.pill}", padding: 8px 12px }
-  settings-row: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: 12px }
-  top-nav: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", height: 48px }
-  footer: { backgroundColor: "{colors.chrome}", textColor: "{colors.on-primary}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: 8px 12px }
+  button-primary: { backgroundColor: "{colors.chrome}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [14, 20]}
+  calendar-pane: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.lg}", padding: 14 }
+  todo-pane: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 16 }
+  control-strip: { backgroundColor: "{colors.chrome}", textColor: "{colors.on-primary}", typography: "{typography.caption}", rounded: "{rounded.pill}", padding: [8, 12]}
+  settings-row: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: 12 }
 ---
 
-## Overview
+# Overview
 
 Amie turns calendar and todos into one physical workspace. The black divider is both navigation and structural contrast; everything else stays white, fine-lined, and deliberately quiet.
 
@@ -60,7 +58,16 @@ Amie turns calendar and todos into one physical workspace. The black divider is 
 - Large areas of untouched white space.
 - Rounded full-screen sheets without tab chrome.
 
-## Colors
+# Non-negotiable visual invariants
+
+- The reviewed screens show this treatment: Vertically split calendar and todo panes.
+- The reviewed screens show this treatment: Black central control strip and divider.
+- The reviewed screens show this treatment: Pink current-day and timeline accent.
+- The reviewed screens show this treatment: Pastel event blocks.
+- The reviewed screens show this treatment: Large areas of untouched white space.
+- The reviewed screens show this treatment: Rounded full-screen sheets without tab chrome.
+
+# Color and surfaces
 
 ### Brand & Accent
 - **Pink** ({colors.primary}): Current date, timeline, and small brand emphasis.
@@ -83,7 +90,7 @@ Amie turns calendar and todos into one physical workspace. The black divider is 
 - **Danger** ({colors.semantic-danger}): Logout or destructive action.
 - **Overlay** ({colors.semantic-overlay}): Search blur and modal scrim.
 
-## Typography
+# Typography
 
 ### Font Family
 
@@ -94,13 +101,13 @@ Amie turns calendar and todos into one physical workspace. The black divider is 
 
 | Token | Size | Weight | Use |
 |---|---|---|---|
-| `{typography.display-xl}` | 38px | 700 | Onboarding statement |
-| `{typography.display-md}` | 24px | 650 | Settings heading |
-| `{typography.headline}` | 20px | 650 | Sheet heading |
-| `{typography.card-title}` | 15px | 600 | Todo and setting title |
-| `{typography.body}` | 14px | 400 | Default content |
-| `{typography.caption}` | 10px | 400 | Time and calendar metadata |
-| `{typography.button}` | 14px | 500 | Actions |
+| `{typography.display-xl}` | 38pt | 700 | Onboarding statement |
+| `{typography.display-md}` | 24pt | 650 | Settings heading |
+| `{typography.headline}` | 20pt | 650 | Sheet heading |
+| `{typography.card-title}` | 15pt | 600 | Todo and setting title |
+| `{typography.body}` | 14pt | 400 | Default content |
+| `{typography.caption}` | 10pt | 400 | Time and calendar metadata |
+| `{typography.button}` | 14pt | 500 | Actions |
 
 ### Principles
 
@@ -113,11 +120,7 @@ Amie turns calendar and todos into one physical workspace. The black divider is 
 
 Use **SF Pro**, **Inter**, or **Helvetica Neue**.
 
-## Layout
-
-### Spacing System
-
-Use a 4px base. Pane gutters are 14–16px, todo rows 10–12px, and calendar grid follows hour-based vertical rhythm.
+# Screen composition
 
 ### Grid & Container
 
@@ -127,44 +130,15 @@ The upper pane is a day or week timeline. The lower pane is a task list. A resiz
 
 Whitespace is the dominant organization tool. Avoid filling empty time or task areas with decorative content.
 
-## Elevation & Depth
+# Navigation appearance
 
-| Level | Treatment | Use |
-|---|---|---|
-| 0 | Light gray canvas | App background |
-| 1 | White rounded pane | Calendar and todos |
-| 2 | Black divider strip | Navigation and resize boundary |
-| 3 | Blurred overlay | Search and modal state |
+Profile, search, calendar label, pane grabber, and creation live in the black central strip. No conventional bottom tabs are used.
 
-### Decorative Depth
-
-Use rounded pane silhouettes and subtle shadow only at their edges. Avoid gradients and decorative illustrations.
-
-## Shapes
-
-### Border Radius Scale
-
-| Token | Value | Use |
-|---|---|---|
-| `{rounded.xs}` | 6px | Event block and date chip |
-| `{rounded.sm}` | 10px | Rows and buttons |
-| `{rounded.md}` | 14px | Search and settings group |
-| `{rounded.lg}` | 20px | Calendar and todo panes |
-| `{rounded.pill}` | full | Control strip and Pro banner |
-
-### Photography & Illustration Geometry
-
-The core workspace uses no imagery. Avatars remain circular; empty search uses one faint symbolic glyph behind the query field.
-
-## Components
+# Components
 
 ### Buttons
 
 Primary onboarding and Pro actions use black. Workspace actions are compact icon controls in the central strip; destructive actions use text labels.
-
-### Pricing Tabs
-
-No pricing tabs were observed. Calendar switching occurs through the central strip; Pro is one compact banner in profile.
 
 ### Cards & Containers
 
@@ -182,11 +156,52 @@ Completion uses a check plus muted text and a collapsible Done group. Current ti
 
 Profile, search, calendar label, pane grabber, and creation live in the black central strip. No conventional bottom tabs are used.
 
-### Footer
+# Imagery and icons
 
-The lower todo pane reaches the safe area. In search, the query field becomes the functional footer above the keyboard.
+| Level | Treatment | Use |
+|---|---|---|
+| 0 | Light gray canvas | App background |
+| 1 | White rounded pane | Calendar and todos |
+| 2 | Black divider strip | Navigation and resize boundary |
+| 3 | Blurred overlay | Search and modal state |
 
-## Do's and Don'ts
+### Decorative Depth
+
+Use rounded pane silhouettes and subtle shadow only at their edges. Avoid gradients and decorative illustrations.
+
+# States
+
+Completion uses a check plus muted text and a collapsible Done group. Current time uses a fine pink rule across the calendar.
+
+# iOS adaptation
+
+| Wide | 768pt+ | Place panes side by side if useful |
+| Small | <390pt | Increase minimum pane height and wrap metadata |
+
+### Touch Targets
+
+Maintain 44pt for checkboxes, divider controls, search, creation, and settings rows.
+
+### Collapsing Strategy
+
+Preserve both panes and allow resizing. Collapse event metadata before hiding todo context; keep the control strip usable.
+
+### Image Behavior
+
+No content imagery is required. Avatars use cover; symbolic empty-state glyphs remain centered and faint.
+
+On iPhone, respect top and bottom safe areas, use scrolling for content that does not fit, keep interactive targets at least 44 points, and preserve the visual reading order for VoiceOver. At larger Dynamic Type sizes, allow supporting text to wrap without collapsing the dominant hierarchy. Use native sheets and permission transitions while explicitly styling app-owned surfaces to match the reference.
+
+# Anti-generic checklist
+
+- Do not substitute the documented accent hierarchy with default iOS blue.
+- Do not collapse distinct surfaces into a uniform stack of generic white cards.
+- Do not use an unstyled `TabView`, `Form`, or arbitrary SF Symbols when they contradict the documented navigation and component language.
+- Do not flatten the documented typography into one body-text scale.
+- Do not remove compositionally important photography or illustration while assets are pending.
+- Do not apply one corner radius to every control and surface.
+
+Source-specific guardrails retained from the review:
 
 ### Do
 
@@ -204,43 +219,10 @@ The lower todo pane reaches the safe area. In search, the query field becomes th
 - Don't hide the current-time rule.
 - Don't separate search by data type.
 
-## Responsive Behavior
-
-### Breakpoints
-
-| Name | Width | Key Changes |
-|---|---|---|
-| Wide | 768px+ | Place panes side by side if useful |
-| Compact | 390–767px | Default vertical split |
-| Small | <390px | Increase minimum pane height and wrap metadata |
-
-### Touch Targets
-
-Maintain 44px for checkboxes, divider controls, search, creation, and settings rows.
-
-### Collapsing Strategy
-
-Preserve both panes and allow resizing. Collapse event metadata before hiding todo context; keep the control strip usable.
-
-### Image Behavior
-
-No content imagery is required. Avatars use cover; symbolic empty-state glyphs remain centered and faint.
-
-## Iteration Guide
-
-1. Establish the two-pane structure and divider.
-2. Build calendar grid and event blocks.
-3. Add todo list and completion state.
-4. Add unified search and profile settings.
-5. Apply pink and event pastels last.
-
-## Known Gaps
+# Known gaps
 
 - Exact tokens and font names were inferred visually.
 - The 44-flow inventory was complete and all top-level flows were inspected.
 - Several previewed transitions were video-only; motion was not assessed.
-- No tablet or desktop screens were present.
 
 </design-context>
-
-Use the design system above for all UI you generate.

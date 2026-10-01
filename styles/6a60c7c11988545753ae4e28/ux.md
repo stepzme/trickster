@@ -4,7 +4,7 @@ GO Club turns steps, water, plans, goals, and daily completion into focused habi
 
 # Navigation
 
-A compact pill navigation switches between the few primary habit areas. Each destination keeps one current metric and its main control in the foreground.
+Primary navigation switches between the few primary habit areas. Each destination keeps one current metric and its main control available.
 
 # Core Flows
 
@@ -14,8 +14,16 @@ A compact pill navigation switches between the few primary habit areas. Each des
 
 ## Log water and follow a plan
 
-1. Open the habit, adjust the amount or target with large controls, confirm completion, and return to the updated progress state.
+1. Open the habit, adjust the amount or target with controls, confirm completion, and return to the updated progress state.
 
 # Interaction Patterns
 
-One metric dominates each screen, segmented pills change range or mode, large steppers support quick logging, and a single white action closes the daily task.
+Each screen focuses on one metric; users can change range or mode, log quickly, and explicitly complete the daily task.
+
+# System Access Timing
+
+No system-access timing or denial-recovery behavior was documented in the reviewed source.
+
+# Known Gaps
+
+System-permission denial paths, interrupted flows, and recovery behavior not described above were not available in the reviewed source.

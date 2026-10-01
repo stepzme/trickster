@@ -1,12 +1,12 @@
 # Overview
 
-VK Messenger combines personal and community chats, contacts, voice and video calls, shared media, stories, and account settings in one dark communication shell.
+VK Messenger combines personal and community chats, contacts, voice and video calls, shared media, stories, and account settings in one communication shell.
 
 # Navigation
 
-- Four bottom destinations cover Contacts, Calls, Chats, and Account.
-- Chat list search, archive, and compose actions sit in the top bar.
-- A conversation opens into a dedicated surface with back navigation, participant actions, and a persistent composer.
+- Four primary destinations cover Contacts, Calls, Chats, and Account.
+- Chat list search, archive, and compose actions sit in the primary navigation.
+- A conversation opens into a dedicated context with back navigation, participant actions, and a persistent composer.
 
 # Core Flows
 
@@ -30,7 +30,13 @@ VK Messenger combines personal and community chats, contacts, voice and video ca
 
 # Interaction Patterns
 
-- Blue marks contact and call actions; violet accents message composition and selected chat tools.
 - Avatars and presence make dense lists scannable.
-- Chat wallpaper may be expressive, but message bubbles remain readable.
 - Unread counts and missed calls stay attached to their navigation or list item.
+
+# System Access Timing
+
+No system-access timing or denial-recovery path was documented in the reviewed source.
+
+# Known Gaps
+
+Unobserved flows, denial paths, cancellation behavior, and recovery states remain unspecified.

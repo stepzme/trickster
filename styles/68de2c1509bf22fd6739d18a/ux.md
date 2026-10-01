@@ -4,7 +4,7 @@ Pomosch supports transparent direct aid through beneficiary profiles, project fu
 
 # Navigation
 
-A five-item bottom bar anchors Project, Payments, Help, Doing, and Awards. The Help feed adds category filters, map access, search, and a persistent project-support shortcut.
+A five-item primary navigation anchors Project, Payments, Help, Doing, and Awards. The Help feed adds category filters, map access, search, and a persistent project-support shortcut.
 
 # Core Flows
 
@@ -18,4 +18,12 @@ A five-item bottom bar anchors Project, Payments, Help, Doing, and Awards. The H
 
 # Interaction Patterns
 
-Progress and remaining amount stay near every support action, project evidence is reachable from the same detail surface, and maps, sheets, filters, and share actions preserve context instead of replacing the core feed.
+No behavior-only interaction pattern could be separated from the reviewed visual observations.
+
+# System Access Timing
+
+No system-access timing or denial-recovery path was documented in the reviewed source.
+
+# Known Gaps
+
+Unobserved flows, denial paths, cancellation behavior, and recovery states remain unspecified.

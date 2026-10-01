@@ -4,7 +4,7 @@ Calendar supports time scanning, event creation, calendar management, search, in
 
 # Navigation
 
-Top controls move back, open list, search, and add. Today, Calendars, and Inbox remain at the bottom.
+controls move back, open list, search, and add. Today, Calendars, and Inbox remain.
 
 # Core Flows
 
@@ -18,12 +18,18 @@ Top controls move back, open list, search, and add. Today, Calendars, and Inbox 
 
 ## Manage calendars
 
-Show, hide, add, recolor, edit, subscribe, or unsubscribe while keeping each calendar identity visible.
+1. Show, hide, add, recolor, edit, subscribe, or unsubscribe while keeping each calendar identity visible.
 
 # Interaction Patterns
 
 - Snap events to time accurately.
 - Keep current time visible.
-- Preserve calendar colors across views.
 - Confirm destructive unsubscribe.
-- Let empty time remain visually quiet.
+
+# System Access Timing
+
+No system-access timing or denial-recovery path was documented in the reviewed source.
+
+# Known Gaps
+
+Unobserved flows, denial paths, cancellation behavior, and recovery states remain unspecified.

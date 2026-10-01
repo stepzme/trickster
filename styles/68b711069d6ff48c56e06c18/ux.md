@@ -1,10 +1,10 @@
 # Overview
 
-Safari keeps browsing central while tabs, tab groups, bookmarks, reading list, privacy, sharing, and start-page customization appear as contextual layers around the current page.
+Safari keeps browsing while tabs, tab groups, bookmarks, reading list, privacy, sharing, and start-page customization appear as contextual layers around the current page.
 
 # Navigation
 
-- The bottom toolbar combines address/search with back, forward, share, bookmarks, and tabs.
+- The browsing controls combines address/search with back, forward, share, bookmarks, and tabs.
 - Tab overview switches between normal and private groups without leaving the browsing model.
 - Bookmarks, privacy, share actions, and customization open as sheets over current context.
 
@@ -13,7 +13,7 @@ Safari keeps browsing central while tabs, tab groups, bookmarks, reading list, p
 ## Browse and recover
 
 1. Enter a website or search query in the address field.
-2. Browse with compact toolbar controls.
+2. Browse with toolbar controls.
 3. If loading fails, keep the failed-page context and show a clear explanation.
 
 ## Manage tabs
@@ -37,7 +37,12 @@ Safari keeps browsing central while tabs, tab groups, bookmarks, reading list, p
 # Interaction Patterns
 
 - Sheets preserve the current webpage beneath secondary tasks.
-- Context menus expose tab and share actions without expanding permanent chrome.
-- Normal and Private modes share structure but change material contrast.
 - Segmented controls switch closely related collections inside one sheet.
-- Blur and live previews maintain spatial continuity between browsing and tab management.
+
+# System Access Timing
+
+No system-access timing or denial-recovery path was documented in the reviewed source.
+
+# Known Gaps
+
+Unobserved flows, denial paths, cancellation behavior, and recovery states remain unspecified.

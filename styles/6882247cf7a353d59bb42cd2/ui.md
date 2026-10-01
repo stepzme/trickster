@@ -1,6 +1,7 @@
 <design-context>
 ---
-version: alpha
+version: 1
+platform: iOS
 name: yandex-go-design-analysis
 description: "A multi-service mobility hub that combines a white dashboard and cart-like commerce modules with detailed maps, draggable white sheets, saturated yellow confirmations, black primary text, and friendly 3D service miniatures. Rounded service tiles, fare cards, route overlays, and feedback controls make complex transport tasks feel direct."
 colors:
@@ -20,34 +21,34 @@ colors:
   semantic-danger: "#E24A4A"
   semantic-overlay: "#000000"
 typography:
-  display-xl: { fontFamily: YS Text, fontSize: 38px, fontWeight: 700, lineHeight: 1.02, letterSpacing: -0.9px }
-  display-lg: { fontFamily: YS Text, fontSize: 31px, fontWeight: 700, lineHeight: 1.06, letterSpacing: -0.6px }
-  display-md: { fontFamily: YS Text, fontSize: 26px, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.4px }
-  headline: { fontFamily: YS Text, fontSize: 22px, fontWeight: 700, lineHeight: 1.14, letterSpacing: -0.25px }
-  card-title: { fontFamily: YS Text, fontSize: 16px, fontWeight: 600, lineHeight: 1.22, letterSpacing: 0 }
-  subhead: { fontFamily: YS Text, fontSize: 17px, fontWeight: 400, lineHeight: 1.34, letterSpacing: 0 }
-  body-lg: { fontFamily: YS Text, fontSize: 16px, fontWeight: 400, lineHeight: 1.38, letterSpacing: 0 }
-  body: { fontFamily: YS Text, fontSize: 14px, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
-  body-sm: { fontFamily: YS Text, fontSize: 12px, fontWeight: 400, lineHeight: 1.28, letterSpacing: 0 }
-  caption: { fontFamily: YS Text, fontSize: 11px, fontWeight: 400, lineHeight: 1.22, letterSpacing: 0 }
-  button: { fontFamily: YS Text, fontSize: 15px, fontWeight: 500, lineHeight: 1.18, letterSpacing: 0 }
-  eyebrow: { fontFamily: YS Text, fontSize: 11px, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0.1px }
-  mono: { fontFamily: System Mono, fontSize: 12px, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
-rounded: { xs: 6px, sm: 10px, md: 14px, lg: 18px, xl: 24px, xxl: 30px, pill: 9999px, full: 9999px }
-spacing: { xxs: 4px, xs: 8px, sm: 12px, md: 16px, lg: 24px, xl: 32px, xxl: 48px, section: 64px }
+  display-xl: { fontFamily: YS Text, fontSize: 38, fontWeight: 700, lineHeight: 1.02, letterSpacing: -0.9 }
+  display-lg: { fontFamily: YS Text, fontSize: 31, fontWeight: 700, lineHeight: 1.06, letterSpacing: -0.6 }
+  display-md: { fontFamily: YS Text, fontSize: 26, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.4 }
+  headline: { fontFamily: YS Text, fontSize: 22, fontWeight: 700, lineHeight: 1.14, letterSpacing: -0.25 }
+  card-title: { fontFamily: YS Text, fontSize: 16, fontWeight: 600, lineHeight: 1.22, letterSpacing: 0 }
+  subhead: { fontFamily: YS Text, fontSize: 17, fontWeight: 400, lineHeight: 1.34, letterSpacing: 0 }
+  body-lg: { fontFamily: YS Text, fontSize: 16, fontWeight: 400, lineHeight: 1.38, letterSpacing: 0 }
+  body: { fontFamily: YS Text, fontSize: 14, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
+  body-sm: { fontFamily: YS Text, fontSize: 12, fontWeight: 400, lineHeight: 1.28, letterSpacing: 0 }
+  caption: { fontFamily: YS Text, fontSize: 11, fontWeight: 400, lineHeight: 1.22, letterSpacing: 0 }
+  button: { fontFamily: YS Text, fontSize: 15, fontWeight: 500, lineHeight: 1.18, letterSpacing: 0 }
+  eyebrow: { fontFamily: YS Text, fontSize: 11, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0.1 }
+  mono: { fontFamily: System Mono, fontSize: 12, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
+rounded: { xs: 6, sm: 10, md: 14, lg: 18, xl: 24, xxl: 30, pill: 9999, full: 9999 }
+spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
 components:
-  confirm-button: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.md}", padding: 14px 20px }
-  order-button: { backgroundColor: "{colors.action-dark}", textColor: "#FFFFFF", typography: "{typography.button}", rounded: "{rounded.md}", padding: 14px 20px }
-  service-tile: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.caption}", rounded: "{rounded.md}", padding: 8px }
-  destination-field: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 13px 16px }
-  map-sheet: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xl}", padding: 16px }
-  fare-card: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.caption}", rounded: "{rounded.md}", padding: 8px }
-  feedback-chip: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.md}", padding: 8px 10px }
-  map-control: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.full}", size: 44px }
-  footer: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: 16px }
+  confirm-button: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.md}", padding: [14, 20]}
+  order-button: { backgroundColor: "{colors.action-dark}", textColor: "#FFFFFF", typography: "{typography.button}", rounded: "{rounded.md}", padding: [14, 20]}
+  service-tile: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.caption}", rounded: "{rounded.md}", padding: 8 }
+  destination-field: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: [13, 16]}
+  map-sheet: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xl}", padding: 16 }
+  fare-card: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.caption}", rounded: "{rounded.md}", padding: 8 }
+  feedback-chip: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.md}", padding: [8, 10]}
+  map-control: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.full}", size: 44 }
+  bottom navigation: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: 16 }
 ---
 
-## Overview
+# Overview
 
 Yandex Go behaves as both service launcher and map-driven task UI. Home is a white dashboard of illustrated destinations, search, recent places, and offers. Taxi flows foreground cartography and place a rounded white task sheet over it.
 
@@ -58,7 +59,15 @@ Yandex Go behaves as both service launcher and map-driven task UI. Home is a whi
 - Horizontal fare comparison.
 - Strong route and status visibility.
 
-## Colors
+# Non-negotiable visual invariants
+
+- The reference consistently shows saturated yellow progress and confirmation.
+- The reference consistently shows white dashboard and sheets over maps.
+- The reference consistently shows 3D service miniatures.
+- The reference consistently shows horizontal fare comparison.
+- The reference consistently shows strong route and status visibility.
+
+# Color and surfaces
 
 ### Brand & Accent
 - **Yellow** ({colors.primary}): Continue, learn, confirm, rating stars, and highlighted service state.
@@ -80,7 +89,7 @@ Yandex Go behaves as both service launcher and map-driven task UI. Home is a whi
 - **Danger** ({colors.semantic-danger}): Cancellation and disruption.
 - **Overlay** ({colors.semantic-overlay}): Modal teaching prompts.
 
-## Typography
+# Typography
 
 ### Font Family
 
@@ -91,12 +100,12 @@ Yandex Go behaves as both service launcher and map-driven task UI. Home is a whi
 
 | Token | Size | Weight | Use |
 |---|---|---|---|
-| `{typography.display-xl}` | 38px | 700 | Campaign or annual result |
-| `{typography.display-md}` | 26px | 700 | Onboarding message |
-| `{typography.headline}` | 22px | 700 | Sheet status and feedback |
-| `{typography.card-title}` | 16px | 600 | Service and fare title |
-| `{typography.body}` | 14px | 400 | Address and details |
-| `{typography.caption}` | 11px | 400 | Tile and fare metadata |
+| `{typography.display-xl}` | 38 points | 700 | Campaign or annual result |
+| `{typography.display-md}` | 26 points | 700 | Onboarding message |
+| `{typography.headline}` | 22 points | 700 | Sheet status and feedback |
+| `{typography.card-title}` | 16 points | 600 | Service and fare title |
+| `{typography.body}` | 14 points | 400 | Address and details |
+| `{typography.caption}` | 11 points | 400 | Tile and fare metadata |
 
 ### Principles
 
@@ -109,11 +118,11 @@ Yandex Go behaves as both service launcher and map-driven task UI. Home is a whi
 
 Use **SF Pro** on iOS or **Inter** when YS Text is unavailable.
 
-## Layout
+# Screen composition
 
 ### Spacing System
 
-Use a 4px base. Home tiles use 8–12px gaps; map sheets use 16px gutters; major actions use 12–16px outer spacing.
+Use a 4 points base. Home tiles use 8–12 points gaps; map sheets use 16 points gutters; major actions use 12–16 points outer spacing.
 
 ### Grid & Container
 
@@ -123,7 +132,7 @@ Home uses a four-column service grid and full-width search. Fare selection is ho
 
 Keep home modular but open. On maps, preserve enough uncovered area to understand location and route.
 
-## Elevation & Depth
+Surface hierarchy observed in the source:
 
 | Level | Treatment | Use |
 |---|---|---|
@@ -136,31 +145,15 @@ Keep home modular but open. On maps, preserve enough uncovered area to understan
 
 Use shallow 3D object rendering in service tiles. Functional sheets rely on soft edge shadow and map contrast.
 
-## Shapes
+# Navigation appearance
 
-### Border Radius Scale
+Home relies on service tiles and a side menu rather than a persistent global tab bar. Map flows use back, location, and sheet gestures.
 
-| Token | Value | Use |
-|---|---|---|
-| `{rounded.sm}` | 10px | Fare and feedback chip |
-| `{rounded.md}` | 14px | Tile, input, and button |
-| `{rounded.lg}` | 18px | Commerce card |
-| `{rounded.xl}` | 24px | Map sheet and modal |
-| `{rounded.full}` | full | Map controls and avatars |
-
-### Photography & Illustration Geometry
-
-Service miniatures sit centered in pale rounded tiles. Offer photography uses rounded cards. Driver photos and avatars are circular.
-
-## Components
+# Components
 
 ### Buttons
 
 Yellow buttons advance or acknowledge. The final taxi order may use a dark filled action. Secondary controls are white or pale with dark icons.
-
-### Pricing Tabs
-
-Fare cards form a horizontal selector with vehicle image, arrival time, service name, and price. Selected fare uses stronger border or surface.
 
 ### Cards & Containers
 
@@ -170,49 +163,23 @@ Service tiles combine a miniature and short label. Map sheets combine address, r
 
 Destination and pickup fields are large pale bars. Address suggestions open in a white sheet above the keyboard.
 
-### Status & Build Page
+# Imagery and icons
+
+Use shallow 3D object rendering in service tiles. Functional sheets rely on soft edge shadow and map contrast.
+
+Service miniatures sit centered in pale rounded tiles. Offer photography uses rounded cards. Driver photos and avatars are circular.
+
+If final imagery is not yet available, any placeholder must preserve the documented scale, placement, crop, and visual weight rather than removing that layer.
+
+# States
 
 Ride status combines map marker, ETA, driver/car data, and contextual actions. Rating uses five yellow stars and optional attribute chips.
 
-### Navigation
-
-Home relies on service tiles and a side menu rather than a persistent global tab bar. Map flows use back, location, and sheet gestures.
-
-### Footer
-
-The active sheet's order or confirmation action acts as the footer. Home continues into commerce modules rather than a formal footer.
-
-## Do's and Don'ts
-
-### Do
-
-- Keep map context visible.
-- Reserve yellow for progress and confirmation.
-- Make fare differences comparable.
-- Use illustrated tiles for service recognition.
-- Keep ETA and address persistent.
-
-### Don't
-
-- Don't cover the whole map with a sheet.
-- Don't mix multiple primary action colors in one state.
-- Don't hide price until final confirmation.
-- Don't turn service tiles into text-only menus.
-- Don't use decorative map colors outside cartography.
-
-## Responsive Behavior
-
-### Breakpoints
-
-| Name | Width | Key Changes |
-|---|---|---|
-| Wide | 768px+ | Wider map sheet and more service columns |
-| Compact | 390–767px | Default dashboard and bottom sheet |
-| Small | <390px | Three-column service grid and tighter fares |
+# iOS adaptation
 
 ### Touch Targets
 
-Keep service tiles, map controls, fare cards, and sheet actions at least 44px.
+Keep service tiles, map controls, fare cards, and sheet actions at least 44 points.
 
 ### Collapsing Strategy
 
@@ -222,15 +189,20 @@ Scroll fares and service rows horizontally. Keep addresses stacked and the prima
 
 Contain service miniatures, cover offer photography, and crop driver portraits as circles. Never raster-scale the map UI.
 
-## Iteration Guide
+Apply these rules within current iPhone safe areas and scrolling containers. Keep interactive targets at least 44 points, preserve a logical VoiceOver order, and let Dynamic Type wrap supporting text without flattening the documented hierarchy. Do not infer an unobserved dark or light appearance.
 
-1. Build service grid and destination field.
-2. Add map and sheet foundation.
-3. Add address and fare selection.
-4. Add ride status and rating.
-5. Apply miniature illustration polish last.
+# Anti-generic checklist
 
-## Known Gaps
+- Don't cover the whole map with a sheet.
+- Don't mix multiple primary action colors in one state.
+- Don't hide price until final confirmation.
+- Don't turn service tiles into text-only menus.
+- Don't use decorative map colors outside cartography.
+- Do not replace the documented hierarchy with a generic stack of identical white cards or `Form` sections.
+- Do not use default blue tint, an unstyled `TabView`, arbitrary SF Symbols, or uniform corner radii when they contradict the recorded tokens and components.
+- Do not omit compositionally important imagery while final assets are pending; preserve its footprint with a faithful placeholder.
+
+# Known gaps
 
 - Exact tokens and typeface metrics were inferred visually.
 - The 35-flow inventory was complete; key taxi flows were sampled visually.
@@ -238,5 +210,3 @@ Contain service miniatures, cover offer photography, and crop driver portraits a
 - Tablet layouts were not present.
 
 </design-context>
-
-Use the design system above for all UI you generate.

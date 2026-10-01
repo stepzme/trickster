@@ -1,13 +1,13 @@
 <design-context>
 ---
-version: alpha
+version: 1
+platform: iOS
 name: Sora-design-analysis
 description: "A cinematic, black-first social video interface that alternates between an immersive cosmic onboarding world and almost invisible media chrome. Full-screen video is the dominant surface; controls are compact white glyphs, translucent charcoal circles, outlined pills, and one central white create button. Creation happens in a dark prompt composer with cameo avatars, while drafts and profiles use sparse black grids."
 
 colors:
   primary: "#FFFFFF"
   on-primary: "#0A0A0A"
-  primary-hover: "#F0F0F0"
   primary-focus: "#DADADA"
   ink: "#FFFFFF"
   ink-muted: "#C8C8CE"
@@ -32,102 +32,102 @@ colors:
 typography:
   display-xl:
     fontFamily: SF Pro Display
-    fontSize: 40px
+    fontSize: 40
     fontWeight: 700
     lineHeight: 1.05
-    letterSpacing: -1.1px
+    letterSpacing: -1.1
   display-lg:
     fontFamily: SF Pro Display
-    fontSize: 32px
+    fontSize: 32
     fontWeight: 700
     lineHeight: 1.10
-    letterSpacing: -0.7px
+    letterSpacing: -0.7
   display-md:
     fontFamily: SF Pro Display
-    fontSize: 26px
+    fontSize: 26
     fontWeight: 700
     lineHeight: 1.15
-    letterSpacing: -0.4px
+    letterSpacing: -0.4
   headline:
     fontFamily: SF Pro Display
-    fontSize: 22px
+    fontSize: 22
     fontWeight: 700
     lineHeight: 1.20
-    letterSpacing: -0.3px
+    letterSpacing: -0.3
   card-title:
     fontFamily: SF Pro Display
-    fontSize: 18px
+    fontSize: 18
     fontWeight: 600
     lineHeight: 1.25
-    letterSpacing: -0.2px
+    letterSpacing: -0.2
   subhead:
     fontFamily: SF Pro Text
-    fontSize: 17px
+    fontSize: 17
     fontWeight: 500
     lineHeight: 1.35
-    letterSpacing: -0.1px
+    letterSpacing: -0.1
   body-lg:
     fontFamily: SF Pro Text
-    fontSize: 16px
+    fontSize: 16
     fontWeight: 400
     lineHeight: 1.42
     letterSpacing: 0
   body:
     fontFamily: SF Pro Text
-    fontSize: 15px
+    fontSize: 15
     fontWeight: 400
     lineHeight: 1.40
     letterSpacing: 0
   body-sm:
     fontFamily: SF Pro Text
-    fontSize: 13px
+    fontSize: 13
     fontWeight: 400
     lineHeight: 1.35
     letterSpacing: 0
   caption:
     fontFamily: SF Pro Text
-    fontSize: 11px
+    fontSize: 11
     fontWeight: 400
     lineHeight: 1.30
     letterSpacing: 0
   button:
     fontFamily: SF Pro Text
-    fontSize: 15px
+    fontSize: 15
     fontWeight: 600
     lineHeight: 1.20
     letterSpacing: 0
   eyebrow:
     fontFamily: SF Pro Text
-    fontSize: 12px
+    fontSize: 12
     fontWeight: 600
     lineHeight: 1.25
-    letterSpacing: 0.2px
+    letterSpacing: 0.2
   mono:
     fontFamily: SF Mono
-    fontSize: 12px
+    fontSize: 12
     fontWeight: 400
     lineHeight: 1.35
     letterSpacing: 0
 
 rounded:
-  xs: 4px
-  sm: 8px
-  md: 12px
-  lg: 18px
-  xl: 24px
-  xxl: 32px
-  pill: 9999px
-  full: 9999px
+  xs: 4
+  sm: 8
+  md: 12
+  lg: 18
+  xl: 24
+  xxl: 32
+  pill: 9999
+  full: 9999
 
 spacing:
-  xxs: 4px
-  xs: 8px
-  sm: 12px
-  md: 16px
-  lg: 20px
-  xl: 24px
-  xxl: 32px
-  section: 48px
+  xxs: 4
+  xs: 8
+  sm: 12
+  md: 16
+  lg: 20
+  xl: 24
+  xxl: 32
+  section: 48
 
 components:
   button-primary:
@@ -135,14 +135,12 @@ components:
     textColor: "{colors.on-primary}"
     typography: "{typography.button}"
     rounded: "{rounded.pill}"
-    padding: 13px 24px
+    padding: [13, 24]
   button-primary-pressed:
     backgroundColor: "{colors.primary-focus}"
     textColor: "{colors.on-primary}"
     typography: "{typography.button}"
     rounded: "{rounded.pill}"
-  button-primary-hover:
-    backgroundColor: "{colors.primary-hover}"
     textColor: "{colors.on-primary}"
     typography: "{typography.button}"
     rounded: "{rounded.pill}"
@@ -151,19 +149,19 @@ components:
     textColor: "{colors.ink}"
     typography: "{typography.button}"
     rounded: "{rounded.pill}"
-    padding: 12px 20px
+    padding: [12, 20]
   button-tertiary:
     backgroundColor: "{colors.canvas}"
     textColor: "{colors.ink}"
     typography: "{typography.button}"
     rounded: "{rounded.pill}"
-    padding: 10px 16px
+    padding: [10, 16]
   button-inverse:
     backgroundColor: "{colors.inverse-canvas}"
     textColor: "{colors.inverse-ink}"
     typography: "{typography.button}"
     rounded: "{rounded.pill}"
-    padding: 13px 24px
+    padding: [13, 24]
   video-feed-card:
     backgroundColor: "{colors.canvas}"
     textColor: "{colors.ink}"
@@ -175,52 +173,51 @@ components:
     textColor: "{colors.ink}"
     typography: "{typography.caption}"
     rounded: "{rounded.full}"
-    padding: 10px
+    padding: 10
   prompt-composer:
     backgroundColor: "{colors.surface-1}"
     textColor: "{colors.ink}"
     typography: "{typography.body}"
     rounded: "{rounded.xl}"
-    padding: 12px 16px
+    padding: [12, 16]
   text-input:
     backgroundColor: "{colors.surface-1}"
     textColor: "{colors.ink}"
     typography: "{typography.body}"
     rounded: "{rounded.xl}"
-    padding: 12px 16px
+    padding: [12, 16]
   text-input-focused:
     backgroundColor: "{colors.surface-1}"
     textColor: "{colors.ink}"
     typography: "{typography.body}"
     rounded: "{rounded.xl}"
-    padding: 12px 16px
+    padding: [12, 16]
   cameo-avatar:
     backgroundColor: "{colors.surface-2}"
     textColor: "{colors.ink}"
     typography: "{typography.caption}"
     rounded: "{rounded.full}"
-    padding: 2px
+    padding: 2
   status-badge:
     backgroundColor: "{colors.inverse-canvas}"
     textColor: "{colors.inverse-ink}"
     typography: "{typography.caption}"
     rounded: "{rounded.pill}"
-    padding: 4px 8px
-  top-nav:
+    padding: [4, 8]
     backgroundColor: "{colors.canvas}"
     textColor: "{colors.ink}"
     typography: "{typography.body-sm}"
     rounded: "{rounded.xs}"
-    height: 52px
+    height: 52
   bottom-nav:
     backgroundColor: "{colors.canvas}"
     textColor: "{colors.ink-subtle}"
     typography: "{typography.caption}"
     rounded: "{rounded.xs}"
-    padding: 8px 12px
+    padding: [8, 12]
 ---
 
-## Overview
+# Overview
 
 Sora combines a playful space-themed entry experience with an almost entirely black social video product. After onboarding, generated media becomes the color system. The interface avoids decorative panels and lets white controls float directly over video or black space.
 
@@ -232,7 +229,16 @@ Sora combines a playful space-themed entry experience with an almost entirely bl
 - Prompt-first creation with cameo avatars and an integrated submit action.
 - Sparse drafts and profile grids.
 
-## Colors
+# Non-negotiable visual invariants
+
+- Sampled screens consistently use full-screen vertical video with a right-side action rail.
+- The reference consistently shows black surfaces, white controls, and muted gray secondary information.
+- Central white create action anchors the bottom bar.
+- Imagery consistently uses cosmic navy onboarding with a pale-blue cloud mascot.
+- Sampled screens consistently use prompt-first creation with cameo avatars and an integrated submit action.
+- The reference consistently shows sparse drafts and profile grids.
+
+# Color and surfaces
 
 ### Brand & Accent
 - White is the main functional accent for create, continue, and publish.
@@ -252,7 +258,7 @@ Sora combines a playful space-themed entry experience with an almost entirely bl
 - Success is restrained and should not compete with video.
 - Black overlay may strengthen media legibility or focus.
 
-## Typography
+# Typography
 
 ### Font Family
 
@@ -264,12 +270,12 @@ Sora combines a playful space-themed entry experience with an almost entirely bl
 
 | Token | Size | Weight | Use |
 |---|---:|---:|---|
-| display-xl | 40px | 700 | Brand or launch title |
-| display-lg | 32px | 700 | Onboarding title |
-| display-md | 26px | 700 | Profile name or advisory title |
-| headline | 22px | 700 | Focused screen title |
-| body | 15px | 400 | Captions and prompt text |
-| caption | 11px | 400 | Counts and legal copy |
+| display-xl | 40 points | 700 | Brand or launch title |
+| display-lg | 32 points | 700 | Onboarding title |
+| display-md | 26 points | 700 | Profile name or advisory title |
+| headline | 22 points | 700 | Focused screen title |
+| body | 15 points | 400 | Captions and prompt text |
+| caption | 11 points | 400 | Counts and legal copy |
 
 ### Principles
 
@@ -281,11 +287,11 @@ Sora combines a playful space-themed entry experience with an almost entirely bl
 
 Use the Apple system family to preserve the compact, familiar control rhythm.
 
-## Layout
+# Screen composition
 
 ### Spacing System
 
-Use a 4px base. Keep overlay controls 8–12px apart, composer groups 12–16px apart, and onboarding blocks separated by 24–32px.
+Use a 4 points base. Keep overlay controls 8–12 points apart, composer groups 12–16 points apart, and onboarding blocks separated by 24–32 points.
 
 ### Grid & Container
 
@@ -295,7 +301,7 @@ Feed content is one full-width media viewport. Profile and drafts use a sparse t
 
 Black space is functional and cinematic. Avoid filling unused regions with cards, separators, or decorative copy.
 
-## Elevation & Depth
+Surface hierarchy observed in the source:
 
 | Level | Treatment | Use |
 |---|---|---|
@@ -308,32 +314,15 @@ Black space is functional and cinematic. Avoid filling unused regions with cards
 
 Onboarding uses stars and subtle nebula texture. Product screens use media and translucent overlays rather than shadows.
 
-## Shapes
+# Navigation appearance
 
-### Border Radius Scale
+The bottom bar has five glyphs. The center create action is a large white circle with a black plus; profile uses the user avatar. Focused flows temporarily remove the bar.
 
-| Token | Value | Use |
-|---|---:|---|
-| rounded-sm | 8px | Small media tags |
-| rounded-md | 12px | Draft thumbnails |
-| rounded-lg | 18px | Media containers |
-| rounded-xl | 24px | Prompt composer |
-| rounded-pill | full | CTAs and counters |
-| rounded-full | full | Cameos, avatars, action circles |
-
-### Photography & Illustration Geometry
-
-Generated media is edge-to-edge and vertically cropped. Avatars and cameos are circular. The mascot remains centered with generous star-field space.
-
-## Components
+# Components
 
 ### Buttons
 
 Use white pill buttons with black labels for primary actions. Secondary actions are black or charcoal with thin gray outlines. The submit control can collapse to a white circular arrow.
-
-### Pricing Tabs
-
-No pricing tabs appeared in the reviewed flows. If needed, use the outlined pill language rather than a card-heavy selector.
 
 ### Cards & Containers
 
@@ -343,49 +332,23 @@ Avoid conventional cards in feed and profile. Drafts use media thumbnails direct
 
 The prompt composer is a rounded charcoal field with media attachment on the left and a circular submit action on the right. Cameos sit in a horizontal avatar row immediately above it.
 
-### Status & Build Page
+# Imagery and icons
+
+Onboarding uses stars and subtle nebula texture. Product screens use media and translucent overlays rather than shadows.
+
+Generated media is edge-to-edge and vertically cropped. Avatars and cameos are circular. The mascot remains centered with generous star-field space.
+
+If final imagery is not yet available, any placeholder must preserve the documented scale, placement, crop, and visual weight rather than removing that layer.
+
+# States
 
 New or invitation counts use small white pills with black text. Draft state is conveyed by location in Drafts and a small badge rather than a dedicated status dashboard.
 
-### Navigation
-
-The bottom bar has five glyphs. The center create action is a large white circle with a black plus; profile uses the user avatar. Focused flows temporarily remove the bar.
-
-### Footer
-
-Do not add a footer. End screens on black with safe-area clearance.
-
-## Do's and Don'ts
-
-### Do
-
-- Let generated media supply the color.
-- Keep feed controls visually light and thumb-reachable.
-- Give the create action unmistakable central priority.
-- Use cosmic imagery only for entry and transitional states.
-- Keep prompt and cameo selection together.
-
-### Don't
-
-- Don't wrap every video or profile section in cards.
-- Don't add a colorful brand accent to the feed chrome.
-- Don't use the star field behind generated media.
-- Don't separate publishing into many small forms.
-- Don't crowd drafts with metadata.
-
-## Responsive Behavior
-
-### Breakpoints
-
-| Name | Width | Key Changes |
-|---|---:|---|
-| Compact | 320–374px | Tighter captions and cameo spacing |
-| Standard | 375–430px | Default full-screen composition |
-| Wide | 431px+ | Larger media crop and composer width |
+# iOS adaptation
 
 ### Touch Targets
 
-Overlay actions, bottom navigation, and close controls retain at least 44px hit areas. The center create action is larger.
+Overlay actions, bottom navigation, and close controls retain at least 44 points hit areas. The center create action is larger.
 
 ### Collapsing Strategy
 
@@ -395,13 +358,23 @@ Long captions truncate behind an explicit expansion action. Cameos scroll horizo
 
 Use aspect-fill for vertical feed media and preserve the subject in the safe center. Draft thumbnails may use fixed rounded portrait crops.
 
-## Iteration Guide
+Apply these rules within current iPhone safe areas and scrolling containers. Keep interactive targets at least 44 points, preserve a logical VoiceOver order, and let Dynamic Type wrap supporting text without flattening the documented hierarchy. Do not infer an unobserved dark or light appearance.
 
-Start with media hierarchy, then tune overlay legibility and thumb reach. Only after that refine the cosmic entry art and microcopy.
+# Anti-generic checklist
 
-## Known Gaps
+- Don't wrap every video or profile section in cards.
+- Don't add a colorful brand accent to the feed chrome.
+- Don't use the star field behind generated media.
+- Don't separate publishing into many small forms.
+- Don't crowd drafts with metadata.
+- Do not replace the documented hierarchy with a generic stack of identical white cards or `Form` sections.
+- Do not use default blue tint, an unstyled `TabView`, arbitrary SF Symbols, or uniform corner radii when they contradict the recorded tokens and components.
+- Do not invent decorative imagery or symbol treatments that are absent from the reference.
+
+# Known gaps
 
 - Video motion and generation waiting behavior were not represented by still images.
 - Moderation, error, and failed-generation states were not present in the sampled flows.
 - Tablet and landscape behavior was not observed.
+
 </design-context>

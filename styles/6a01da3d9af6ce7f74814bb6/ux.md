@@ -4,7 +4,7 @@ Choco routes users among groceries, restaurants, takeaway, entertainment, coupon
 
 # Navigation
 
-Home selects the vertical. Each vertical uses a focused catalog and its own relevant bottom navigation; orders, messages, and profile reconnect the system.
+Home selects the vertical. Each vertical uses a focused catalog and its own relevant primary navigation; orders, messages, and profile reconnect the system.
 
 # Core Flows
 
@@ -19,7 +19,7 @@ Home selects the vertical. Each vertical uses a focused catalog and its own rele
 
 ## Entertainment and coupons
 
-Browse category, map, listing detail, reviews, availability, and certificate terms before purchase.
+1. Browse category, map, listing detail, reviews, availability, and certificate terms before purchase.
 
 # Interaction Patterns
 
@@ -27,4 +27,11 @@ Browse category, map, listing detail, reviews, availability, and certificate ter
 - Keep the active address visible.
 - Show service and delivery fees separately.
 - Preserve tracking after payment handoff.
-- Use one accent per vertical.
+
+# System Access Timing
+
+No system-access timing or denial-recovery behavior was documented in the reviewed source.
+
+# Known Gaps
+
+System-permission denial paths, interrupted flows, and recovery behavior not described above were not available in the reviewed source.

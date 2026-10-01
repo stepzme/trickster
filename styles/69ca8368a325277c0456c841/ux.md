@@ -4,8 +4,8 @@ Shop combines merchant discovery, brand following, product browsing, saved colle
 
 # Navigation
 
-- Floating bottom controls provide back, home, search, bag, and overflow.
-- Top chips expose profile, notifications, Following, Minis, and Saved.
+- Contextual controls provide back, home, search, bag, and overflow.
+- Contextual controls expose profile, notifications, Following, Minis, and Saved.
 - Merchant shops retain their identity while using the shared product and purchase model.
 
 # Core Flows
@@ -32,8 +32,14 @@ Shop combines merchant discovery, brand following, product browsing, saved colle
 
 # Interaction Patterns
 
-- Floating navigation preserves browsing context across merchant surfaces.
+- navigation preserves browsing context across merchant surfaces.
 - Product hearts and following state synchronize discovery and saved areas.
-- Option selection happens before the violet purchase action.
-- The dark cart sheet creates a focused review step without leaving the product.
 - Checkout removes merchant atmosphere and exposes transaction details plainly.
+
+# System Access Timing
+
+No system-access request timing or denial recovery was documented in the reviewed source.
+
+# Known Gaps
+
+- Permission-denial recovery and unobserved secondary flows were not documented.

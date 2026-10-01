@@ -4,8 +4,8 @@ WindHub is a marine planning tool combining weather maps, dense forecast tables,
 
 # Navigation
 
-- A five-item bottom bar switches between Weather, Fishing, Route, Favorites, and Menu.
-- Weather and Fishing share a full-screen map with a location-specific forecast sheet.
+- A five-item primary navigation switches between Weather, Fishing, Route, Favorites, and Menu.
+- Weather and Fishing share a map context; selecting a location opens its forecast.
 - Route planning turns the map into a waypoint editor with forecast timeline and GPX actions.
 
 # Core Flows
@@ -33,3 +33,11 @@ WindHub is a marine planning tool combining weather maps, dense forecast tables,
 - Map, legend, model, and location controls remain visible while data sheets expand from below.
 - Forecast tables use colored cells and arrows for fast comparison across hours.
 - Onboarding progressively asks navigation and fishing preferences before explaining forecast value.
+
+# System Access Timing
+
+No system-access request timing or denial recovery was documented in the reviewed source.
+
+# Known Gaps
+
+- Permission-denial recovery and unobserved secondary flows were not documented.

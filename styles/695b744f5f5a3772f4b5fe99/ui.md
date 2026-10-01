@@ -1,206 +1,150 @@
 <design-context>
 ---
-version: alpha
+version: 1
+platform: iOS
 name: MTBank-Moby-design-analysis
 description: "A bright mobile-banking system with saturated blue account headers, white rounded product cards, cool gray grouped backgrounds, fine line icons, and a cyan-magenta Moby brand accent."
-colors: {primary: "#1677E8", on-primary: "#FFFFFF", primary-hover: "#2D8AF0", primary-focus: "#0B61C5", ink: "#17191C", ink-muted: "#697079", ink-subtle: "#969DA6", ink-tertiary: "#C3C8CE", canvas: "#FFFFFF", surface-1: "#F2F3F4", surface-2: "#E8EBEE", surface-3: "#DDE1E5", surface-4: "#CFD5DB", hairline: "#E2E5E8", hairline-strong: "#CBD0D5", hairline-tertiary: "#AFB6BE", inverse-canvas: "#0A1830", inverse-surface-1: "#102949", inverse-surface-2: "#173B62", inverse-ink: "#FFFFFF", brand-secure: "#E31E55", semantic-success: "#2FB978", semantic-overlay: "#101820"}
+colors: {primary: "#1677E8", on-primary: "#FFFFFF", primary-focus: "#0B61C5", ink: "#17191C", ink-muted: "#697079", ink-subtle: "#969DA6", ink-tertiary: "#C3C8CE", canvas: "#FFFFFF", surface-1: "#F2F3F4", surface-2: "#E8EBEE", surface-3: "#DDE1E5", surface-4: "#CFD5DB", hairline: "#E2E5E8", hairline-strong: "#CBD0D5", hairline-tertiary: "#AFB6BE", inverse-canvas: "#0A1830", inverse-surface-1: "#102949", inverse-surface-2: "#173B62", inverse-ink: "#FFFFFF", brand-secure: "#E31E55", semantic-success: "#2FB978", semantic-overlay: "#101820"}
 typography:
-  display-xl: {fontFamily: SF Pro Display, fontSize: 36px, fontWeight: 700, lineHeight: 1.06, letterSpacing: -0.8px}
-  display-lg: {fontFamily: SF Pro Display, fontSize: 30px, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.5px}
-  display-md: {fontFamily: SF Pro Display, fontSize: 24px, fontWeight: 700, lineHeight: 1.14, letterSpacing: -0.3px}
-  headline: {fontFamily: SF Pro Display, fontSize: 20px, fontWeight: 700, lineHeight: 1.20, letterSpacing: -0.2px}
-  card-title: {fontFamily: SF Pro Text, fontSize: 16px, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0}
-  subhead: {fontFamily: SF Pro Text, fontSize: 15px, fontWeight: 600, lineHeight: 1.30, letterSpacing: 0}
-  body-lg: {fontFamily: SF Pro Text, fontSize: 15px, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0}
-  body: {fontFamily: SF Pro Text, fontSize: 13px, fontWeight: 400, lineHeight: 1.36, letterSpacing: 0}
-  body-sm: {fontFamily: SF Pro Text, fontSize: 11px, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0}
-  caption: {fontFamily: SF Pro Text, fontSize: 10px, fontWeight: 400, lineHeight: 1.25, letterSpacing: 0}
-  button: {fontFamily: SF Pro Text, fontSize: 14px, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0}
-  eyebrow: {fontFamily: SF Pro Text, fontSize: 10px, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0.2px}
-  mono: {fontFamily: SF Mono, fontSize: 11px, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0}
-rounded: {xs: 6px, sm: 12px, md: 18px, lg: 24px, xl: 28px, xxl: 32px, pill: 9999px, full: 9999px}
-spacing: {xxs: 4px, xs: 8px, sm: 12px, md: 16px, lg: 20px, xl: 24px, xxl: 32px, section: 40px}
+  display-xl: {fontFamily: SF Pro Display, fontSize: 36, fontWeight: 700, lineHeight: 1.06, letterSpacing: -0.8}
+  display-lg: {fontFamily: SF Pro Display, fontSize: 30, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.5}
+  display-md: {fontFamily: SF Pro Display, fontSize: 24, fontWeight: 700, lineHeight: 1.14, letterSpacing: -0.3}
+  headline: {fontFamily: SF Pro Display, fontSize: 20, fontWeight: 700, lineHeight: 1.20, letterSpacing: -0.2}
+  card-title: {fontFamily: SF Pro Text, fontSize: 16, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0}
+  subhead: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 600, lineHeight: 1.30, letterSpacing: 0}
+  body-lg: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0}
+  body: {fontFamily: SF Pro Text, fontSize: 13, fontWeight: 400, lineHeight: 1.36, letterSpacing: 0}
+  body-sm: {fontFamily: SF Pro Text, fontSize: 11, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0}
+  caption: {fontFamily: SF Pro Text, fontSize: 10, fontWeight: 400, lineHeight: 1.25, letterSpacing: 0}
+  button: {fontFamily: SF Pro Text, fontSize: 14, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0}
+  eyebrow: {fontFamily: SF Pro Text, fontSize: 10, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0.2}
+  mono: {fontFamily: SF Mono, fontSize: 11, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0}
+rounded: {xs: 6, sm: 12, md: 18, lg: 24, xl: 28, xxl: 32, pill: 9999, full: 9999}
+spacing: {xxs: 4, xs: 8, sm: 12, md: 16, lg: 20, xl: 24, xxl: 32, section: 40}
 components:
-  button-primary: {backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 14px 18px}
+  button-primary: {backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 14 18}
   button-primary-pressed: {backgroundColor: "{colors.primary-focus}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}"}
-  button-primary-hover: {backgroundColor: "{colors.primary-hover}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}"}
-  button-secondary: {backgroundColor: "{colors.surface-1}", textColor: "{colors.primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 12px 16px}
-  button-tertiary: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 10px 14px}
-  content-card: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 14px}
-  feature-card: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 16px}
-  text-input: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: 12px 14px}
-  status-badge: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.pill}", padding: 3px 7px}
-  bottom-nav: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink-subtle}", typography: "{typography.caption}", rounded: "{rounded.lg}", padding: 8px 10px}
+  button-secondary: {backgroundColor: "{colors.surface-1}", textColor: "{colors.primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 12 16}
+  button-tertiary: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 10 14}
+  content-card: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 14}
+  feature-card: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 16}
+  text-input: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: 12 14}
+  status-badge: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.pill}", padding: 3 7}
+  bottom-nav: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink-subtle}", typography: "{typography.caption}", rounded: "{rounded.lg}", padding: 8 10}
 ---
-## Overview
+
+# Overview
 
 MTBank Moby uses a saturated blue account stage and soft white product cards to make balances, actions, cards, deposits, and applications feel direct and approachable.
 
-**Key Characteristics:** blue gradient headers, generous rounded cards, line icons, account carousels, white quick-action tiles, and a small cyan-magenta identity.
+# Non-negotiable visual invariants
 
-## Colors
+- Navigation or control chrome uses blue gradient headers.
+- Characteristic content and controls use generous rounded cards.
+- The sampled screens consistently show line icons.
+- The sampled screens consistently show account carousels.
+- Characteristic content and controls use white quick-action tiles.
+- The recurring color treatment uses a small cyan-magenta identity.
+- Preserve the blue account stage and calm white product hierarchy.
+- Keep the primary task and current state immediately legible.
 
-### Brand & Accent
+# Color and surfaces
 
 Electric blue drives active navigation, action icons, and financial focus; cyan-magenta belongs to the Moby mark and rare brand moments.
 
-### Surface
-
 White owns operational content, while cool light gray groups stacked products and blue gradients frame account context.
-
-### Text
 
 Near-black carries balances and product titles; blue may emphasize actions, dates, and favorable product facts.
 
-### Semantic
-
 Green indicates positive money movement and success; red is reserved for warnings or destructive decisions.
 
-## Typography
-
-### Font Family
+# Typography
 
 Use SF Pro Display for balances and section headings and SF Pro Text for controls, content, and metadata.
 
-### Hierarchy
-
-| Token | Size | Weight | Use |
-|---|---:|---:|---|
-| display-lg | 30px | 700 | Hero or state |
-| headline | 20px | 700 | Section title |
-| card-title | 16px | 600 | Primary item |
-| body | 13px | 400 | Detail |
-| caption | 10px | 400 | Metadata |
-
-### Principles
+- display-lg — 30 points — 700 — Hero or state
+- headline — 20 points — 700 — Section title
+- card-title — 16 points — 600 — Primary item
+- body — 13 points — 400 — Detail
+- caption — 10 points — 400 — Metadata
 
 - Lead with balance, product status, and next action.
 - Keep repeated metadata aligned and visually quieter.
 - Reserve high contrast and weight for real decisions.
 
-### Note on Font Substitutes
-
 Use the system sans with tabular numerals; keep currency and masked account identifiers stable.
 
-## Layout
+The hierarchy must remain legible with Dynamic Type: supporting text may wrap before the primary metric, title, or action loses its role.
 
-### Spacing System
+# Screen composition
 
-Use a 4px base, 8–12px internal gaps, and 16px horizontal screen gutters.
-
-### Grid & Container
+Use a 4 points base, 8–12 points internal gaps, and 16 points horizontal screen gutters.
 
 Home stacks full-width account and deposit cards; Products uses simple vertical rows beneath a promotion rail.
 
-### Whitespace Philosophy
-
 Give money values and quick actions room, then keep settings and product lists compact.
-
-## Elevation & Depth
-
-| Level | Treatment | Use |
-|---|---|---|
-| 0 | Base canvas | Primary context |
-| 1 | Grouped surface | Cards and sections |
-| 2 | Sticky or floating action | Commitment |
-| 3 | Sheet over scrim | Focused choice |
-
-### Decorative Depth
 
 Use gradient headers, nested card layers, and restrained soft shadows only where a product floats above the grouped canvas.
 
-## Shapes
+Primary iPhone screens keep the documented content grouping and vertical rhythm inside a scroll container when content exceeds the viewport. Bottom-owned actions or navigation reserve the lower safe area rather than covering content.
 
-### Border Radius Scale
-
-| Token | Value | Use |
-|---|---:|---|
-| rounded-xs | 6px | Badges |
-| rounded-sm | 12px | Buttons and fields |
-| rounded-md | 18px | Cards |
-| rounded-lg | 24px | Feature panels |
-| rounded-full | full | Circular controls |
-
-### Photography & Illustration Geometry
-
-Keep cards, account art, and promotional imagery within generous rounded rectangles; avoid decorative cropping near financial data.
-
-## Components
-
-### Buttons
-
-Primary actions use blue; the three core money actions appear as equal white tiles within the blue header.
-
-### Pricing Tabs
-
-History, settings, and information use a thin segmented row with a precise colored indicator.
-
-### Cards & Containers
-
-Product cards combine balance, masked identifier, status, bonuses, and one clear expansion or action affordance.
-
-### Inputs & Forms
-
-Inputs and keypads remain light and sparse, with blue focus and no generic default styling.
-
-### Status & Build Page
-
-Attach transaction direction, pending state, balance impact, and product availability to the relevant card or row.
-
-### Navigation
+# Navigation appearance
 
 Use four bottom destinations in a white rounded bar; the active icon may use the Moby gradient while labels remain crisp.
 
-### Footer
+This section governs appearance only; destinations and transitions are defined in `ux.md`.
 
-No footer; persistent navigation or the current action owns the bottom safe area.
+# Components
 
-## Do's and Don'ts
+Primary actions use blue; the three core money actions appear as equal white tiles within the blue header.
 
-### Do
+Product cards combine balance, masked identifier, status, bonuses, and one clear expansion or action affordance.
 
-- Preserve the blue account stage and calm white product hierarchy.
-- Keep the primary task and current state immediately legible.
-- Style native controls to inherit this visual system.
+Inputs and keypads remain light and sparse, with blue focus and no generic default styling.
 
-### Don't
+Attach transaction direction, pending state, balance impact, and product availability to the relevant card or row.
 
-- Don't extend cosmic launch art into every transactional surface.
-- Don't hide status, constraints, or secondary conditions.
-- Don't add heavy shadows around every container.
+Controls retain at least a 44-point interactive area. Pressed and disabled treatments should stay within the documented palette and hierarchy; no unobserved state styling is prescribed.
 
-## Responsive Behavior
+# Imagery and icons
 
-### Breakpoints
-
-| Name | Width | Key Changes |
-|---|---:|---|
-| Compact | 320–374px | Tighten secondary metadata |
-| Standard | 375–430px | Default mobile composition |
-| Wide | 431px+ | Expand media and gutters |
-
-### Touch Targets
-
-Primary actions, navigation, cards, and contextual controls remain at least 44px.
-
-### Collapsing Strategy
-
-Preserve balances and money actions first, then stack product metadata and shorten promotional content.
-
-### Image Behavior
+Keep cards, account art, and promotional imagery within generous rounded rectangles; avoid decorative cropping near financial data.
 
 Contain promotional art in dedicated banners and keep it away from balances, limits, and control labels.
 
-## Iteration Guide
+When imagery is part of the documented composition, it cannot be omitted while final assets are pending. A temporary asset must preserve its placement, crop, scale, and approximate visual weight.
 
-Tune the core task first, then state clarity, navigation rhythm, secondary tools, and edge cases.
+# States
 
-## Known Gaps
+Attach transaction direction, pending state, balance impact, and product availability to the relevant card or row.
+
+Green indicates positive money movement and success; red is reserved for warnings or destructive decisions.
+
+Only the states documented above are specified; other states must preserve the same canvas, hierarchy, and component language without inventing a new visual system.
+
+# iOS adaptation
+
+- Extend the documented canvas through the iPhone safe areas while keeping readable content within appropriate insets.
+- Use a vertical `ScrollView` for content that does not fit compact heights; keep documented bottom actions and navigation clear of the home indicator.
+- Primary actions, navigation, cards, and contextual controls remain at least 44 points.
+- Preserve balances and money actions first, then stack product metadata and shorten promotional content.
+- Present the keyboard and system permission UI natively, then return to the same visual context.
+- Preserve semantic reading order in VoiceOver and allow text to grow with Dynamic Type.
+- Do not infer an unobserved dark or light variant; use the appearance documented by the reference.
+
+# Anti-generic checklist
+
+- Do not extend cosmic launch art into every transactional surface.
+- Do not hide status, constraints, or secondary conditions.
+- Do not add heavy shadows around every container.
+- Do not replace the documented canvas and surfaces with a generic grouped background and uniform white cards.
+- Do not use an unstyled `TabView`, default blue tint, or arbitrary SF Symbols when they contradict the reference.
+- Do not collapse every component to one corner radius or remove compositionally important imagery.
+
+# Known gaps
 
 - Long-tail error recovery was not fully sampled.
 - Rare support and account states were not reviewed.
 - Tablet and landscape layouts were not represented.
 
 </design-context>
-
-Use the design system above for all UI you generate.

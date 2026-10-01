@@ -4,7 +4,7 @@ MTBank Moby organizes daily banking around a card-and-account dashboard, quick m
 
 # Navigation
 
-Four fixed destinations link Home, Products, Chat, and More. Home leads with identity, balance, quick actions, recent activity, cards, and deposits; Products groups account families and applications.
+four persistent destinations link Home, Products, Chat, and More. Home leads with identity, balance, quick actions, recent activity, cards, and deposits; Products groups account families and applications.
 
 # Core Flows
 
@@ -22,7 +22,12 @@ Four fixed destinations link Home, Products, Chat, and More. Home leads with ide
 
 # Interaction Patterns
 
-- Blue gradient headers establish account context before white operational cards.
-- Product carousels retain context while exposing adjacent cards or accounts.
-- Quick actions are large labeled tiles, not icon-only shortcuts.
 - Settings use plain rows, switches, segments, and immediate status feedback.
+
+# System Access Timing
+
+No system-access request timing or denial recovery was documented in the reviewed source.
+
+# Known Gaps
+
+- Permission-denial recovery and unobserved secondary flows were not documented.

@@ -4,9 +4,9 @@ Ucom is a dark telecom self-service app for checking balance and allowances, top
 
 # Navigation
 
-- Four bottom destinations cover Home, Payments, Tariffs/Services, and More.
+- Four primary destinations cover Home, Payments, Tariffs/Services, and More.
 - Home summarizes the current number, balance, data, minutes, SMS, and priority shortcuts.
-- Detail pages use back navigation and keep activation or payment actions pinned near the bottom.
+- Detail pages use back navigation and keep activation or payment actions pinned .
 
 # Core Flows
 
@@ -30,7 +30,12 @@ Ucom is a dark telecom self-service app for checking balance and allowances, top
 
 # Interaction Patterns
 
-- Lime green marks current service, progress gauges, and primary actions.
-- Allowances are grouped into data, minutes, and SMS with repeated visual meters.
-- Promotional tiles remain secondary to account actions.
-- Long tariff terms stay expandable below the summary card.
+The sampled flows use direct actions, explicit completion, and return to the current context. No additional repeated interaction behavior was documented.
+
+# System Access Timing
+
+No system-access request timing or denial recovery was documented in the reviewed source.
+
+# Known Gaps
+
+- Permission-denial recovery and unobserved secondary flows were not documented.

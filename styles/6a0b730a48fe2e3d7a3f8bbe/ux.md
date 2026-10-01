@@ -4,7 +4,7 @@ A dense health-commerce catalog that combines shopping, educational content, pro
 
 # Navigation
 
-A five-item bottom bar separates Home, Catalog, Categories, Cart, and Account. Search persists in the green top bar across catalog and product contexts. Product pages use secondary tabs for overview, details, reviews, and learning.
+Five primary destinations separate Home, Catalog, Categories, Cart, and Account. Search remains available throughout catalog and product contexts. Product pages use secondary tabs for overview, details, reviews, and learning.
 
 # Core Flows
 
@@ -29,8 +29,13 @@ A five-item bottom bar separates Home, Catalog, Categories, Cart, and Account. S
 
 # Interaction Patterns
 
-- Green top chrome keeps search and location persistent.
-- Orange buttons identify add-to-cart actions; green buttons complete checkout.
-- Product lists combine imagery, ratings, price, discount, and stock in one row.
 - Filter chips scroll horizontally.
-- Sticky bottom actions keep quantity and purchase controls reachable.
+- Actions keep quantity and purchase controls reachable.
+
+# System Access Timing
+
+No system-access timing or denial-recovery behavior was documented in the reviewed source.
+
+# Known Gaps
+
+System-permission denial paths, interrupted flows, and recovery behavior not described above were not available in the reviewed source.

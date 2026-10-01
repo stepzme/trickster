@@ -1,6 +1,10 @@
-# Illustration Language
+# Overview
 
-Use high-contrast black line art with chunky white fills and a slightly eccentric editorial character. Hands, faces, tickets, phones, and event symbols should feel hand-drawn but geometrically controlled, usually placed on electric yellow or plain white.
+No dedicated imagery overview was documented.
+
+# Visual Style
+
+No medium, line, dimensionality, texture, lighting, or motif rules were documented.
 
 # Composition
 
@@ -8,9 +12,17 @@ Use high-contrast black line art with chunky white fills and a slightly eccentri
 - Use thick black contours, white fill, and no shading.
 - Let yellow function as the stage rather than adding multiple accent colors.
 
-# Usage
+# Color and Materials
+
+No imagery-specific palette or material treatment was documented.
+
+# Variants and States
 
 Use for onboarding, permissions, empty states, gifting, and explanatory moments. Event discovery itself should use authentic posters and photography.
+
+# Production Requirements
+
+Preserve the documented placement, crop, negative space, and visual weight in production exports. Before final art exists, placeholders must preserve those same compositional properties.
 
 # Avoid
 
@@ -18,3 +30,7 @@ Use for onboarding, permissions, empty states, gifting, and explanatory moments.
 - Soft pastel palettes, gradients, or dimensional shadows.
 - Detailed scenes that compete with copy.
 - Applying the illustration style to venue maps or ticket data.
+
+# Known Gaps
+
+Animation, export dimensions, safe-crop specifications, appearance variants, and unshown state treatments were not documented.

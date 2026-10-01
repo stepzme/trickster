@@ -4,8 +4,8 @@ VK Dating is a photo-led dating product for onboarding, profile discovery, inter
 
 # Navigation
 
-- Five bottom destinations cover Profiles, Collections, Likes, Chats, and Profile.
-- Profiles presents one immersive card with filter access and explicit dislike, priority, and like actions.
+- Five primary destinations cover Profiles, Collections, Likes, Chats, and Profile.
+- Profiles presents one immersive item with filter access and explicit dislike, priority, and like actions.
 - Collections groups candidates around interests, activity, online state, and campaigns.
 
 # Core Flows
@@ -30,7 +30,12 @@ VK Dating is a photo-led dating product for onboarding, profile discovery, inter
 
 # Interaction Patterns
 
-- Photography dominates profile cards while dark scrims protect text.
-- Red, purple, and blue separate dislike, priority, and like.
-- Collection cards use real photography and bright category labels.
-- Profile completion and interest choice use explicit progress and multi-select chips.
+No behavior-only interaction pattern could be separated from the reviewed visual observations.
+
+# System Access Timing
+
+No system-access timing or denial-recovery path was documented in the reviewed source.
+
+# Known Gaps
+
+Unobserved flows, denial paths, cancellation behavior, and recovery states remain unspecified.

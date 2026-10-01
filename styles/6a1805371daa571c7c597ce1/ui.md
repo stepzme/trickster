@@ -1,39 +1,46 @@
 <design-context>
 ---
-version: alpha
+version: 1
+platform: iOS
 name: Heros-Journey-design-analysis
 description: "A gamified fitness product that combines a light utility interface with a 3D isometric journey map, saturated purple rewards, collectible chests, fantasy avatars, and visible program progression. Game layers are vivid; schedules and performance details remain mostly neutral and card-based."
-colors: { primary: "#7A20F4", on-primary: "#FFFFFF", primary-hover: "#6417D1", primary-soft: "#F0E5FF", accent: "#21B979", ink: "#17171A", ink-muted: "#77777F", ink-subtle: "#B0B0B7", canvas: "#F5F5F7", surface-1: "#FFFFFF", surface-2: "#ECECEF", hairline: "#DFDFE4", semantic-success: "#20B675", semantic-warning: "#F1A934", semantic-danger: "#E14E64", semantic-overlay: "#000000" }
+colors: { primary: "#7A20F4", on-primary: "#FFFFFF", primary-soft: "#F0E5FF", accent: "#21B979", ink: "#17171A", ink-muted: "#77777F", ink-subtle: "#B0B0B7", canvas: "#F5F5F7", surface-1: "#FFFFFF", surface-2: "#ECECEF", hairline: "#DFDFE4", semantic-success: "#20B675", semantic-warning: "#F1A934", semantic-danger: "#E14E64", semantic-overlay: "#000000" }
 typography:
-  display-xl: { fontFamily: SF Pro Display, fontSize: 38px, fontWeight: 800, lineHeight: 1.05, letterSpacing: -0.8px }
-  display-lg: { fontFamily: SF Pro Display, fontSize: 32px, fontWeight: 750, lineHeight: 1.10, letterSpacing: -0.5px }
-  display-md: { fontFamily: SF Pro Display, fontSize: 27px, fontWeight: 700, lineHeight: 1.15, letterSpacing: -0.3px }
-  headline: { fontFamily: SF Pro Display, fontSize: 22px, fontWeight: 700, lineHeight: 1.20, letterSpacing: 0 }
-  card-title: { fontFamily: SF Pro Text, fontSize: 16px, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: SF Pro Text, fontSize: 16px, fontWeight: 600, lineHeight: 1.30, letterSpacing: 0 }
-  body-lg: { fontFamily: SF Pro Text, fontSize: 16px, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
-  body: { fontFamily: SF Pro Text, fontSize: 14px, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
-  body-sm: { fontFamily: SF Pro Text, fontSize: 12px, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
-  caption: { fontFamily: SF Pro Text, fontSize: 10px, fontWeight: 500, lineHeight: 1.20, letterSpacing: 0 }
-  button: { fontFamily: SF Pro Text, fontSize: 15px, fontWeight: 650, lineHeight: 1.20, letterSpacing: 0 }
-  eyebrow: { fontFamily: SF Pro Text, fontSize: 11px, fontWeight: 650, lineHeight: 1.20, letterSpacing: 0.2px }
-  mono: { fontFamily: SF Mono, fontSize: 12px, fontWeight: 500, lineHeight: 1.30, letterSpacing: 0 }
-rounded: { xs: 6px, sm: 10px, md: 14px, lg: 18px, xl: 24px, xxl: 30px, pill: 9999px, full: 9999px }
-spacing: { xxs: 4px, xs: 8px, sm: 12px, md: 16px, lg: 24px, xl: 32px, xxl: 48px, section: 64px }
+  display-xl: { fontFamily: SF Pro Display, fontSize: 38, fontWeight: 800, lineHeight: 1.05, letterSpacing: -0.8 }
+  display-lg: { fontFamily: SF Pro Display, fontSize: 32, fontWeight: 750, lineHeight: 1.10, letterSpacing: -0.5 }
+  display-md: { fontFamily: SF Pro Display, fontSize: 27, fontWeight: 700, lineHeight: 1.15, letterSpacing: -0.3 }
+  headline: { fontFamily: SF Pro Display, fontSize: 22, fontWeight: 700, lineHeight: 1.20, letterSpacing: 0 }
+  card-title: { fontFamily: SF Pro Text, fontSize: 16, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
+  subhead: { fontFamily: SF Pro Text, fontSize: 16, fontWeight: 600, lineHeight: 1.30, letterSpacing: 0 }
+  body-lg: { fontFamily: SF Pro Text, fontSize: 16, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
+  body: { fontFamily: SF Pro Text, fontSize: 14, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
+  body-sm: { fontFamily: SF Pro Text, fontSize: 12, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
+  caption: { fontFamily: SF Pro Text, fontSize: 10, fontWeight: 500, lineHeight: 1.20, letterSpacing: 0 }
+  button: { fontFamily: SF Pro Text, fontSize: 15, fontWeight: 650, lineHeight: 1.20, letterSpacing: 0 }
+  eyebrow: { fontFamily: SF Pro Text, fontSize: 11, fontWeight: 650, lineHeight: 1.20, letterSpacing: 0.2 }
+  mono: { fontFamily: SF Mono, fontSize: 12, fontWeight: 500, lineHeight: 1.30, letterSpacing: 0 }
+rounded: { xs: 6, sm: 10, md: 14, lg: 18, xl: 24, xxl: 30, pill: 9999, full: 9999 }
+spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
 components:
-  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 13px 18px }
-  progress-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 14px }
-  reward-card: { backgroundColor: "#3A136A", textColor: "#FFFFFF", typography: "{typography.body}", rounded: "{rounded.md}", padding: 14px }
-  input: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: 12px 14px }
-  top-nav: { backgroundColor: "transparent", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xs}", height: 52px }
-  footer: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: 8px 10px }
+  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [13, 18]}
+  progress-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 14 }
+  reward-card: { backgroundColor: "#3A136A", textColor: "#FFFFFF", typography: "{typography.body}", rounded: "{rounded.md}", padding: 14 }
+  input: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: [12, 14]}
 ---
 
-## Overview
+# Overview
 
 Hero's Journey turns fitness programs into a map of levels, rewards, collectible items, and visible performance milestones.
 
-## Colors
+# Non-negotiable visual invariants
+
+- The reviewed screens use this composition: A gamified fitness product that combines a light utility interface with a 3D isometric journey map, saturated purple rewards, collectible chests, fantasy avatars, and visible program progression.
+- The source records this color relationship: Use electric purple for enrollment and rewards and green for completed fitness progress.
+- The recorded display style is 38 points while the body style is 14 points.
+- Navigation appears as follows: Home, Communities, Arena, Results, and Profile remain in the bottom bar.
+- The reviewed screens use this hierarchy: Game layers are vivid; schedules and performance details remain mostly neutral and card-based.
+
+# Color and surfaces
 
 ### Brand & Accent
 Use electric purple for enrollment and rewards and green for completed fitness progress.
@@ -47,13 +54,10 @@ Use near-black for task content, gray for metadata, and white on saturated game 
 ### Semantic
 Use green for completed, orange for calories or attention, red for pulse, and purple for progression.
 
-## Typography
+# Typography
 
 ### Font Family
 Use SF Pro Display for reward and program titles and SF Pro Text for schedules, tasks, and metrics.
-
-### Hierarchy
-Use 27–32px for reward moments, 22px for screens, 16px for cards, 14px body, and 10–12px metadata.
 
 ### Principles
 Make program level, progress, and next action stronger than supporting game currency.
@@ -61,10 +65,10 @@ Make program level, progress, and next action stronger than supporting game curr
 ### Note on Font Substitutes
 Use the platform sans or Inter with tabular metrics.
 
-## Layout
+# Screen composition
 
 ### Spacing System
-Use a 4px base, 14px gutters, 12px card gaps, and 16px panel padding.
+Use a 4pt base, 14pt gutters, 12pt card gaps, and 16pt panel padding.
 
 ### Grid & Container
 The home map fills the background; sheets contain task choices, while program detail stacks progress, shortcuts, schedule, and goals.
@@ -72,26 +76,15 @@ The home map fills the background; sheets contain task choices, while program de
 ### Whitespace Philosophy
 Let game scenes feel abundant but keep workout planning calm and vertically ordered.
 
-## Elevation & Depth
-Use raised sheets and cards over immersive scenes; reward reveals may use stronger glow and depth.
+# Navigation appearance
 
-### Decorative Depth
-Use isometric roads, buildings, chests, rays, 3D items, and fantasy avatars.
+Home, Communities, Arena, Results, and Profile remain in the bottom bar.
 
-## Shapes
-
-### Border Radius Scale
-Use 10px for chips, 14px for cards, 18px for sheets, and circles for progression markers.
-
-### Photography & Illustration Geometry
-Keep game objects fully visible; frame program art and avatar scenes inside clear bounded areas.
-
-## Components
+# Components
 
 ### Buttons
 Use purple filled buttons for progression and white filled buttons on dark reward screens.
 
-### Pricing Tabs
 Use week selectors, profile tabs, and compact calendar controls.
 
 ### Cards & Containers
@@ -106,10 +99,40 @@ Show current level, completed milestones, attendance, reward balance, and progra
 ### Navigation
 Home, Communities, Arena, Results, and Profile remain in the bottom bar.
 
-### Footer
-Keep the utility footer neutral so the illustrated map and profile art stay dominant.
+# Imagery and icons
 
-## Do's and Don'ts
+Use raised sheets and cards over immersive scenes; reward reveals may use stronger glow and depth.
+
+### Decorative Depth
+Use isometric roads, buildings, chests, rays, 3D items, and fantasy avatars.
+
+# States
+
+Show current level, completed milestones, attendance, reward balance, and program deadlines.
+
+# iOS adaptation
+
+### Touch Targets
+Keep map nodes, rewards, tasks, schedule, tabs, and close controls at least 44pt.
+
+### Collapsing Strategy
+Preserve program status, next workout, progress, and primary action; collapse decorative map context first.
+
+### Image Behavior
+Contain avatars and collectibles; scale map art without hiding the active route.
+
+On iPhone, respect top and bottom safe areas, use scrolling for content that does not fit, keep interactive targets at least 44 points, and preserve the visual reading order for VoiceOver. At larger Dynamic Type sizes, allow supporting text to wrap without collapsing the dominant hierarchy. Use native sheets and permission transitions while explicitly styling app-owned surfaces to match the reference.
+
+# Anti-generic checklist
+
+- Do not substitute the documented accent hierarchy with default iOS blue.
+- Do not collapse distinct surfaces into a uniform stack of generic white cards.
+- Do not use an unstyled `TabView`, `Form`, or arbitrary SF Symbols when they contradict the documented navigation and component language.
+- Do not flatten the documented typography into one body-text scale.
+- Do not remove compositionally important photography or illustration while assets are pending.
+- Do not apply one corner radius to every control and surface.
+
+Source-specific guardrails retained from the review:
 
 ### Do
 - Tie rewards to visible actions.
@@ -121,26 +144,8 @@ Keep the utility footer neutral so the illustrated map and profile art stay domi
 - Don't use dark reward styling on long forms.
 - Don't crop collectible objects.
 
-## Responsive Behavior
+# Known gaps
 
-### Breakpoints
-Use a full-bleed phone map, expanded side panels on tablet, and a capped utility column on wide screens.
-
-### Touch Targets
-Keep map nodes, rewards, tasks, schedule, tabs, and close controls at least 44px.
-
-### Collapsing Strategy
-Preserve program status, next workout, progress, and primary action; collapse decorative map context first.
-
-### Image Behavior
-Contain avatars and collectibles; scale map art without hiding the active route.
-
-## Iteration Guide
-1. Build program enrollment, detail, schedule, and progress.
-2. Add map levels, currencies, and rewards.
-3. Add profiles, reports, communities, and advanced game states.
-
-## Known Gaps
 - Tokens were inferred visually from sampled mobile screens.
 - Dumbbells, Enroll in the program, and Visiting calendar were image-reviewed.
 - Community and arena flows were not deeply sampled.

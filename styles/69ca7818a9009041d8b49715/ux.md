@@ -4,7 +4,7 @@ bushe combines food ordering with an editorial local-culture home feed. The inte
 
 # Navigation
 
-A dark floating tab bar links Home, Catalog, Loyalty, Basket, and Profile. Home presents intent-based routes rather than a conventional product grid. Catalog and Basket become more transactional while retaining the same navigation shell.
+A dark primary navigation links Home, Catalog, Loyalty, Basket, and Profile. Home presents intent-based routes rather than a conventional product collections. Catalog and Basket become more transactional while retaining the same navigation shell.
 
 # Core Flows
 
@@ -13,26 +13,32 @@ A dark floating tab bar links Home, Catalog, Loyalty, Basket, and Profile. Home 
 1. Register by phone or email, with an option to skip.
 2. Set an address for delivery context.
 3. Choose an intent such as eating, visiting places, finding events, promotions, or editorial projects.
-4. Enter stories and seasonal features from the same home canvas.
+4. Enter stories and seasonal features from the same Home context.
 
 ## Catalog and product
 
-1. Browse large photographic category tiles or search.
-2. Narrow a category with compact chips.
+1. Browse photographic category items or search.
+2. Narrow a category with chips.
 3. Open a product for details and options, then add it to the basket.
 
 ## Basket and checkout
 
-Review item quantities and delivery progress, choose delivery or pickup, add pickup location, promo code, and comment, then place the order. Order history supports repeat, rating, cancellation, and receipt access.
+1. Review item quantities and delivery progress, choose delivery or pickup, add pickup location, promo code, and comment, then place the order. Order history supports repeat, rating, cancellation, and receipt access.
 
 ## Loyalty and table ordering
 
-The loyalty tab shows level, progress, cashback, points, and a QR code. Table ordering introduces the flow, then reuses catalog, cart, checkout, tracking, and evaluation patterns.
+1. The loyalty tab shows level, progress, cashback, points, and a QR code. Table ordering introduces the flow, then reuses catalog, cart, checkout, tracking, and evaluation patterns.
 
 # Interaction Patterns
 
-- Use intent cards to connect commerce with editorial discovery.
-- Keep the floating tab bar visible through catalog and checkout.
-- Pair real food photography with concise price and weight metadata.
-- Use one dark full-width action for confirmation.
+- Keep the primary navigation visible through catalog and checkout.
+- Product browsing keeps price and weight information available before adding an item.
 - Separate delivery, pickup, and table contexts before final checkout.
+
+# System Access Timing
+
+No system-access request timing or denial recovery was documented in the reviewed source.
+
+# Known Gaps
+
+- Permission-denial recovery and unobserved secondary flows were not documented.

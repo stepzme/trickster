@@ -16,16 +16,28 @@ Russian Post uses friendly 3D service objects to explain delivery products and s
 - Use a low three-quarter view for parcels, vehicles, and service equipment.
 - Preserve generous negative space; illustrations should not compete with tracking or form data.
 
-# Color
+# Color and Materials
 
 - Use postal blue as the dominant colored material.
 - Use white and pale blue for large supporting surfaces.
 - Reserve yellow, green, and orange for small friendly details or service distinction.
 - Keep shadows neutral and low-opacity.
 
-# Usage
+# Variants and States
 
 - Use illustrations in onboarding, promotional service cards, empty states, and explanatory callouts.
 - Match each object directly to the service being introduced.
 - Keep operational rows and status histories mostly illustration-free.
 - Create original assets in this visual language; do not copy brand characters, logos, or existing scenes.
+
+# Production Requirements
+
+Exact export formats, aspect ratios, animation behavior, and appearance variants were not documented. Where imagery is compositionally important, temporary placeholders must preserve its documented scale, placement, crop, and visual weight until final art exists.
+
+# Avoid
+
+Do not introduce an unrelated illustration style or substitute decorative symbols for source-supported imagery.
+
+# Known Gaps
+
+Export specifications, animation rules, safe-crop measurements, and unobserved state variants were not available in the reviewed source.

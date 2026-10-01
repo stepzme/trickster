@@ -1,25 +1,32 @@
-# Role
+# Overview
 
-Illustration explains onboarding questions, empty discovery, chat guidance, premium benefits, and safety concepts that cannot be represented by member photography.
+No dedicated imagery overview was documented.
 
-# Visual Language
+# Visual Style
 
-- Thin black outlines paired with saturated violet blocks.
-- Soft pink, coral, pale yellow, and occasional blue accents.
-- Simple symbolic objects, hands, books, hearts, shields, and abstract people.
-- Clean white backgrounds with minimal texture.
+No medium, line, dimensionality, texture, lighting, or motif rules were documented.
 
 # Composition
 
 Use a horizontal object cluster above onboarding copy, or one large centered symbol above an empty-state action. Safety art may sit inside a pale violet banner.
 
-# Usage
+# Color and Materials
+
+No imagery-specific palette or material treatment was documented.
+
+# Variants and States
 
 Use for education, empty results, feature coaching, premium, and safety. Keep real member discovery, chat content, and profile photography illustration-free.
 
-# Guardrails
+# Production Requirements
 
-- Do not make fictional characters resemble real members.
-- Do not mix detailed portrait photography into illustration scenes.
-- Keep outline weight and violet dominance consistent.
-- If a new subject lacks a reference, use the same crisp line art, simple geometry, limited warm accents, and generous white space so it harmonizes with `ui.md`.
+Preserve the documented placement, crop, negative space, and visual weight in production exports. Before final art exists, placeholders must preserve those same compositional properties.
+
+# Avoid
+
+- Do not replace the observed imagery language with unrelated stock art or arbitrary symbols.
+- Do not change the documented crop, density, or relationship to nearby text.
+
+# Known Gaps
+
+Animation, export dimensions, safe-crop specifications, appearance variants, and unshown state treatments were not documented.

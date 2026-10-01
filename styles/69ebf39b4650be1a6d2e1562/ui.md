@@ -1,6 +1,7 @@
 <design-context>
 ---
-version: alpha
+version: 1
+platform: iOS
 name: 2GIS-design-analysis
 description: "A map-first mobile interface built from a pale detailed map, white floating sheets, and saturated green route actions. Compact system typography, blue spatial markers, transport icons, and persistent edge controls keep navigation legible while recommendation cards and vivid 3D onboarding scenes add personality."
 colors:
@@ -19,216 +20,154 @@ colors:
   semantic-warning: "#F4B323"
   semantic-overlay: "#000000"
 typography:
-  display-xl: { fontFamily: System Sans, fontSize: 36px, fontWeight: 700, lineHeight: 1.05, letterSpacing: -0.8px }
-  display-lg: { fontFamily: System Sans, fontSize: 30px, fontWeight: 700, lineHeight: 1.08, letterSpacing: -0.5px }
-  display-md: { fontFamily: System Sans, fontSize: 26px, fontWeight: 700, lineHeight: 1.12, letterSpacing: -0.3px }
-  headline: { fontFamily: System Sans, fontSize: 21px, fontWeight: 600, lineHeight: 1.18, letterSpacing: -0.1px }
-  card-title: { fontFamily: System Sans, fontSize: 16px, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: System Sans, fontSize: 16px, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
-  body-lg: { fontFamily: System Sans, fontSize: 16px, fontWeight: 400, lineHeight: 1.42, letterSpacing: 0 }
-  body: { fontFamily: System Sans, fontSize: 14px, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
-  body-sm: { fontFamily: System Sans, fontSize: 12px, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
-  caption: { fontFamily: System Sans, fontSize: 11px, fontWeight: 500, lineHeight: 1.25, letterSpacing: 0 }
-  button: { fontFamily: System Sans, fontSize: 15px, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0 }
-  eyebrow: { fontFamily: System Sans, fontSize: 11px, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0.2px }
-  mono: { fontFamily: System Mono, fontSize: 12px, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
-rounded: { xs: 6px, sm: 10px, md: 14px, lg: 18px, xl: 24px, xxl: 30px, pill: 9999px, full: 9999px }
-spacing: { xxs: 4px, xs: 8px, sm: 12px, md: 16px, lg: 24px, xl: 32px, xxl: 48px, section: 64px }
+  display-xl: { fontFamily: System Sans, fontSize: 36, fontWeight: 700, lineHeight: 1.05, letterSpacing: -0.8 }
+  display-lg: { fontFamily: System Sans, fontSize: 30, fontWeight: 700, lineHeight: 1.08, letterSpacing: -0.5 }
+  display-md: { fontFamily: System Sans, fontSize: 26, fontWeight: 700, lineHeight: 1.12, letterSpacing: -0.3 }
+  headline: { fontFamily: System Sans, fontSize: 21, fontWeight: 600, lineHeight: 1.18, letterSpacing: -0.1 }
+  card-title: { fontFamily: System Sans, fontSize: 16, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
+  subhead: { fontFamily: System Sans, fontSize: 16, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
+  body-lg: { fontFamily: System Sans, fontSize: 16, fontWeight: 400, lineHeight: 1.42, letterSpacing: 0 }
+  body: { fontFamily: System Sans, fontSize: 14, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
+  body-sm: { fontFamily: System Sans, fontSize: 12, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
+  caption: { fontFamily: System Sans, fontSize: 11, fontWeight: 500, lineHeight: 1.25, letterSpacing: 0 }
+  button: { fontFamily: System Sans, fontSize: 15, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0 }
+  eyebrow: { fontFamily: System Sans, fontSize: 11, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0.2 }
+  mono: { fontFamily: System Mono, fontSize: 12, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
+rounded: { xs: 6, sm: 10, md: 14, lg: 18, xl: 24, xxl: 30, pill: 9999, full: 9999 }
+spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
 components:
-  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.md}", padding: 14px 20px }
-  map-control: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 12px }
-  bottom-sheet: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xl}", padding: 16px }
-  place-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 14px }
-  route-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 14px }
-  top-nav: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.pill}", height: 48px }
-  footer: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: 20px 16px }
+  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.md}", padding: [14, 20]}
+  map-control: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 12 }
+  bottom-sheet: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xl}", padding: 16 }
+  place-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 14 }
+  route-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 14 }
+  navigation-bar: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.pill}", height: 48 }
+  footer: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: [20, 16]}
 ---
 
-## Overview
+# Overview
 
 2GIS keeps the map visible through discovery, routing, navigation, weather, traffic, friends, and recommendations. White controls and sheets float over dense cartography; green confirms progress while blue marks spatial information.
 
-**Key Characteristics:**
-- Persistent detailed map as the base surface.
-- White rounded controls and draggable bottom sheets.
-- Green primary route actions and blue map markers.
-- Dense but compact labels for time, distance, transfers, and place data.
-- Five bottom destinations plus a separate side menu.
-- Vivid 3D onboarding isolated from the operational map.
+# Non-negotiable visual invariants
 
-## Colors
+- The sampled screens consistently show Persistent detailed map as the base surface.
+- Preserve the map under every spatial task.
+- Pair icons with time, distance, or status labels.
+- Use green for the current primary action.
+- Keep map controls clustered at edges.
+- Move complex choices into sheets.
+- The map fills the viewport.
+- Sheets occupy the lower portion and may scroll.
 
-### Brand & Accent
+# Color and surfaces
+
 - **Green** ({colors.primary}): Route, confirmation, active progress, and selected state.
 - **Blue** ({colors.accent-blue}): Location, parking, transit, and current-position markers.
 - **Red** ({colors.accent-red}): Restrictions, incidents, and critical map symbols.
 
-### Surface
 - **Map Canvas** ({colors.canvas}): Pale geographic base.
 - **Surface 1** ({colors.surface-1}): Search, controls, cards, and sheets.
 - **Surface 2** ({colors.surface-2}): Nested rows and inactive chips.
 - **Dark Surface** ({colors.surface-dark}): Onboarding and night navigation.
 
-### Text
 - **Ink** ({colors.ink}): Place names, route metrics, and actions.
 - **Ink Muted** ({colors.ink-muted}): Addresses, timing detail, and descriptions.
 - **Ink Subtle** ({colors.ink-subtle}): Disabled and low-priority labels.
 
-### Semantic
 - **Warning** ({colors.semantic-warning}): Traffic, weather, and attention markers.
 - **Overlay** ({colors.semantic-overlay}): Scrim under modal sheets.
 
-## Typography
-
-### Font Family
+# Typography
 
 - **System Sans** — all map labels, sheets, metrics, menus, and controls.
 - **System Mono** — optional for coordinates or technical values only.
 
-### Hierarchy
-
-| Token | Size | Weight | Use |
-|---|---|---|---|
-| `{typography.display-lg}` | 30px | 700 | Onboarding statement |
-| `{typography.headline}` | 21px | 600 | Sheet heading |
-| `{typography.card-title}` | 16px | 600 | Place and route title |
-| `{typography.body}` | 14px | 400 | Default labels |
-| `{typography.caption}` | 11px | 500 | Map and transfer metadata |
-| `{typography.button}` | 15px | 600 | Primary action |
-
-### Principles
+- `{typography.display-lg}` — 30 points — 700 — Onboarding statement
+- `{typography.headline}` — 21 points — 600 — Sheet heading
+- `{typography.card-title}` — 16 points — 600 — Place and route title
+- `{typography.body}` — 14 points — 400 — Default labels
+- `{typography.caption}` — 11 points — 500 — Map and transfer metadata
+- `{typography.button}` — 15 points — 600 — Primary action
 
 - Put time, distance, and place names before explanation.
 - Keep map labels compact and avoid decorative type.
 - Use weight and spatial grouping before extra color.
 - Maintain legibility on both map and photo backgrounds.
 
-### Note on Font Substitutes
-
 Use **SF Pro**, **Inter**, or **Roboto** with compact mobile metrics and clear Cyrillic support.
 
-## Layout
+The hierarchy must remain legible with Dynamic Type: supporting text may wrap before the primary metric, title, or action loses its role.
 
-### Spacing System
+# Screen composition
 
-Use a 4px base. Map controls sit 8–12px from edges; sheets use 16px interiors; route cards use 12–14px gaps.
-
-### Grid & Container
+Use a 4 points base. Map controls sit 8–12 points from edges; sheets use 16 points interiors; route cards use 12–14 points gaps.
 
 The map fills the viewport. Sheets occupy the lower portion and may scroll. Route alternatives use horizontal cards; mode choices use a compact horizontal strip.
 
-### Whitespace Philosophy
-
 Whitespace belongs inside floating surfaces, not across the map. Keep the map readable by clustering controls at edges and limiting simultaneous cards.
-
-## Elevation & Depth
-
-| Level | Treatment | Use |
-|---|---|---|
-| 0 | Cartographic canvas | Base |
-| 1 | White control with soft shadow | Map tools and search |
-| 2 | Rounded white sheet | Results and route detail |
-| 3 | Dimmed map plus modal sheet | Privacy and bounded setup |
-
-### Decorative Depth
 
 Use soft shadows and sheet overlap. Reserve dramatic lighting and glossy depth for onboarding illustration.
 
-## Shapes
+Primary iPhone screens keep the documented content grouping and vertical rhythm inside a scroll container when content exceeds the viewport. Bottom-owned actions or navigation reserve the lower safe area rather than covering content.
 
-### Border Radius Scale
-
-| Token | Value | Use |
-|---|---|---|
-| `{rounded.sm}` | 10px | Markers and chips |
-| `{rounded.md}` | 14px | Controls and actions |
-| `{rounded.lg}` | 18px | Place and route cards |
-| `{rounded.xl}` | 24px | Bottom sheets |
-| `{rounded.pill}` | full | Search and mode selectors |
-
-### Photography & Illustration Geometry
-
-Place photos use rounded landscape crops. 3D onboarding objects remain centered and fully visible. Map markers use compact circles, pins, and speech-bubble forms.
-
-## Components
-
-### Buttons
-
-Primary actions are green rounded rectangles with white semibold labels. Secondary actions use white or pale gray. Circular map controls group one function per button.
-
-### Pricing Tabs
-
-No pricing controls were observed. Route modes use icon-and-time segments with a green selected outline.
-
-### Cards & Containers
-
-Place cards combine title, category, rating, address, and photo. Route cards prioritize duration, arrival time, transfers, and mode icons. Recommendation cards can include image or illustration.
-
-### Inputs & Forms
-
-Search uses a white rounded field with microphone. Destination forms keep start and end visible together. Sheets handle floors, entrances, final points, and privacy choices.
-
-### Status & Build Page
-
-Traffic, weather, route incidents, parking, and friend status use explicit labels plus icons. Selected route is reinforced by green line and action.
-
-### Navigation
+# Navigation appearance
 
 Search, Trips, Navigator, Friends, and Tips form the bottom bar. Edge controls handle layers, zoom, location, and menu. Navigation mode reduces chrome to driving essentials.
 
-### Footer
+This section governs appearance only; destinations and transitions are defined in `ux.md`.
 
-Side-menu and profile content ends with feedback, organization, advertising, and social links. Map tasks do not add a footer.
+# Components
 
-## Do's and Don'ts
+Primary actions are green rounded rectangles with white semibold labels. Secondary actions use white or pale gray. Circular map controls group one function per button.
 
-### Do
+Place cards combine title, category, rating, address, and photo. Route cards prioritize duration, arrival time, transfers, and mode icons. Recommendation cards can include image or illustration.
 
-- Preserve the map under every spatial task.
-- Pair icons with time, distance, or status labels.
-- Use green for the current primary action.
-- Keep map controls clustered at edges.
-- Move complex choices into sheets.
+Search uses a white rounded field with microphone. Destination forms keep start and end visible together. Sheets handle floors, entrances, final points, and privacy choices.
 
-### Don't
+Traffic, weather, route incidents, parking, and friend status use explicit labels plus icons. Selected route is reinforced by green line and action.
 
-- Don't obscure the route with oversized cards.
-- Don't use green for unrelated decorative content.
-- Don't rely on marker color alone.
-- Don't add dense text directly on the map.
-- Don't bring onboarding 3D effects into navigation controls.
+Controls retain at least a 44-point interactive area. Pressed and disabled treatments should stay within the documented palette and hierarchy; no unobserved state styling is prescribed.
 
-## Responsive Behavior
+# Imagery and icons
 
-### Breakpoints
-
-| Name | Width | Key Changes |
-|---|---|---|
-| Wide | 768px+ | Allow a side panel beside the map |
-| Compact | 390–767px | Default bottom-sheet composition |
-| Small | <390px | Stack route metrics and shorten mode labels |
-
-### Touch Targets
-
-Maintain 44px for map controls, markers, tabs, route modes, and sheet rows. Separate zoom, close, and recenter actions.
-
-### Collapsing Strategy
-
-Collapse route alternatives to horizontal paging before hiding metrics. Let sheets expand vertically. Reduce recommendation cards before shrinking map controls.
-
-### Image Behavior
+Place photos use rounded landscape crops. 3D onboarding objects remain centered and fully visible. Map markers use compact circles, pins, and speech-bubble forms.
 
 Map stays full bleed. Place photography uses cover with safe subject crops. 3D onboarding uses contain on a dark field.
 
-## Iteration Guide
+When imagery is part of the documented composition, it cannot be omitted while final assets are pending. A temporary asset must preserve its placement, crop, scale, and approximate visual weight.
 
-1. Establish map contrast and edge controls.
-2. Build search and one draggable result sheet.
-3. Add route comparison and navigation mode.
-4. Verify transport icons and spatial labels.
-5. Introduce recommendations and illustration last.
+# States
 
-## Known Gaps
+Traffic, weather, route incidents, parking, and friend status use explicit labels plus icons. Selected route is reinforced by green line and action.
+
+- **Warning** ({colors.semantic-warning}): Traffic, weather, and attention markers.
+- **Overlay** ({colors.semantic-overlay}): Scrim under modal sheets.
+
+Only the states documented above are specified; other states must preserve the same canvas, hierarchy, and component language without inventing a new visual system.
+
+# iOS adaptation
+
+- Extend the documented canvas through the iPhone safe areas while keeping readable content within appropriate insets.
+- Use a vertical `ScrollView` for content that does not fit compact heights; keep documented bottom actions and navigation clear of the home indicator.
+- Maintain 44 points for map controls, markers, tabs, route modes, and sheet rows. Separate zoom, close, and recenter actions.
+- Collapse route alternatives to horizontal paging before hiding metrics. Let sheets expand vertically. Reduce recommendation cards before shrinking map controls.
+- Present the keyboard and system permission UI natively, then return to the same visual context.
+- Preserve semantic reading order in VoiceOver and allow text to grow with Dynamic Type.
+- Do not infer an unobserved dark or light variant; use the appearance documented by the reference.
+
+# Anti-generic checklist
+
+- Do not obscure the route with oversized cards.
+- Do not use green for unrelated decorative content.
+- Do not rely on marker color alone.
+- Do not add dense text directly on the map.
+- Do not bring onboarding 3D effects into navigation controls.
+- Do not replace the documented canvas and surfaces with a generic grouped background and uniform white cards.
+- Do not use an unstyled `TabView`, default blue tint, or arbitrary SF Symbols when they contradict the reference.
+- Do not collapse every component to one corner radius or remove compositionally important imagery.
+
+# Known gaps
 
 - Exact map styling and font tokens were inferred visually.
 - Onboarding video motion was unavailable as a still preview.
@@ -236,5 +175,3 @@ Map stays full bleed. Place photography uses cover with safe subject crops. 3D o
 - Large-screen map behavior was not represented.
 
 </design-context>
-
-Use the design system above for all UI you generate.

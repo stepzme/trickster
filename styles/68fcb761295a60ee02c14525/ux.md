@@ -1,10 +1,10 @@
 # Overview
 
-Kupibilet is a flight-search and booking app that combines a dark branded search surface with light results, itinerary comparison, passenger forms, add-ons, payment, and order status.
+Kupibilet is a flight-search and booking app that combines itinerary comparison, passenger forms, add-ons, payment, and order status.
 
 # Navigation
 
-Five fixed destinations cover Search, Map, Chat, Orders, and Profile. Search begins on a compact route form; results and booking move into white screens with back navigation and the brand capsule centered in the status area.
+Five persistent destinations cover Search, Map, Chat, Orders, and Profile. Search begins with route entry; results and booking continue through focused screens with back navigation.
 
 # Core Flows
 
@@ -24,6 +24,11 @@ Five fixed destinations cover Search, Map, Chat, Orders, and Profile. Search beg
 # Interaction Patterns
 
 - Search and results keep price comparison close to dates and itinerary duration.
-- Bottom sheets handle calendars, route details, and payment without losing context.
-- Long booking forms are divided into white cards on a pale gray canvas.
-- Green outlines and buttons indicate selection and forward progress; warnings use warm tinted panels.
+
+# System Access Timing
+
+No system-access request timing or denial recovery was documented in the reviewed source.
+
+# Known Gaps
+
+- Permission-denial recovery and unobserved secondary flows were not documented.

@@ -4,7 +4,7 @@ Calculator provides immediate arithmetic through a fixed keypad and a single liv
 
 # Navigation
 
-There is no navigation hierarchy; every function is available from the primary surface.
+There is no navigation hierarchy; every function is available from the primary context.
 
 # Core Flows
 
@@ -18,12 +18,19 @@ There is no navigation hierarchy; every function is available from the primary s
 
 ## Copy result
 
-Long-press or select the result, then use the system Copy action.
+1. Long-press or select the result, then use the system Copy action.
 
 # Interaction Patterns
 
 - Keep key positions invariant.
-- Highlight the active operator.
 - Replace AC with C after entry.
 - Fit long results before truncation.
 - Respect locale decimal punctuation.
+
+# System Access Timing
+
+No system-access timing or denial-recovery path was documented in the reviewed source.
+
+# Known Gaps
+
+Unobserved flows, denial paths, cancellation behavior, and recovery states remain unspecified.

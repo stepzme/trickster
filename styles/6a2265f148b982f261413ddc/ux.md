@@ -4,7 +4,7 @@ Mycar.kz combines car discovery, financing, selling, vehicle records, service bo
 
 # Navigation
 
-Four bottom destinations connect Home, Services, Notifications, and Profile. Home starts with sell, buy, and owned-car entry points, then service shortcuts, campaigns, and a personalized vehicle grid.
+Four primary destinations connect Home, Services, Notifications, and Profile. Home starts with sell, buy, and owned-car entry points, then service shortcuts, campaigns, and a personalized vehicle results.
 
 # Core Flows
 
@@ -24,7 +24,12 @@ Four bottom destinations connect Home, Services, Notifications, and Profile. Hom
 
 # Interaction Patterns
 
-- Vehicle photography leads discovery and detail; blue actions carry calculation and progress.
 - Long seller forms expose one grouped decision at a time with visible step progress.
-- Services use a two-column icon grid with concise titles and descriptions.
-- Green contact buttons distinguish direct seller communication from platform actions.
+
+# System Access Timing
+
+No system-access timing or denial-recovery behavior was documented in the reviewed source.
+
+# Known Gaps
+
+System-permission denial paths, interrupted flows, and recovery behavior not described above were not available in the reviewed source.

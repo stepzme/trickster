@@ -4,17 +4,17 @@ Avtoelon.uz connects local buyers, sellers, dealers, parts, and services. Search
 
 # Navigation
 
-Home, Saved, Post, Chat, and Account persist in the bottom bar. Posting is emphasized in the center; details retain Chat and Call above the safe area.
+Home, Saved, Post, Chat, and Account persist in the primary navigation. Posting is available from primary navigation; details retain Chat and Call actions.
 
 # Core Flows
 
 ## Search and evaluate
 
-Choose category, region, make, model, filters, and sort. Listings expose price, year, mileage, fuel, and location; details add photos, average-price guidance, bargaining, seller chat, and reporting.
+1. Choose category, region, make, model, filters, and sort. Listings expose price, year, mileage, fuel, and location; details add photos, average-price guidance, bargaining, seller chat, and reporting.
 
 ## Dealer and services
 
-Official dealers support search, filters, vehicle cards, callbacks, loan calculation, and photo viewing. Parts and repair services keep their own filters and cards.
+1. Official dealers support search, filters, vehicle cards, callbacks, loan calculation, and media viewing. Parts and repair services keep their own filters and cards.
 
 ## Post and manage
 
@@ -24,7 +24,7 @@ Official dealers support search, filters, vehicle cards, callbacks, loan calcula
 
 ## Account and communication
 
-Chat supports seller contact and safety actions. Account groups balance, listings, settings, and top-up.
+1. Chat supports seller contact and safety actions. Account groups balance, listings, settings, and top-up.
 
 # Interaction Patterns
 
@@ -33,3 +33,11 @@ Chat supports seller contact and safety actions. Account groups balance, listing
 - Show average and recommended price without hiding seller price.
 - Make moderation and publication state explicit.
 - Separate listing creation from paid promotion.
+
+# System Access Timing
+
+No system-access timing or denial-recovery behavior was documented in the reviewed source.
+
+# Known Gaps
+
+System-permission denial paths, interrupted flows, and recovery behavior not described above were not available in the reviewed source.

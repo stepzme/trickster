@@ -1,8 +1,8 @@
-# Role
+# Overview
 
 Illustration is the progress system: each repetition advances a miniature world and turns consistency into a collectible journey.
 
-# Visual Language
+# Visual Style
 
 - Low-poly 3D objects and landscapes on a near-black stage.
 - Deep shadow with one yellow-orange key light.
@@ -13,13 +13,25 @@ Illustration is the progress system: each repetition advances a miniature world 
 
 Center one object with its shadow fully visible. Keep motivational copy above and the stage selector below; protect a large area of empty darkness.
 
-# Usage
+# Color and Materials
+
+Color and material rules are included in Visual Style; no additional palette relationship was documented.
+
+# Variants and States
 
 Use for onboarding, completion, milestones, achievements, skins, and recaps. Keep calendar editing, subscription terms, and account settings simpler.
 
-# Guardrails
+# Production Requirements
+
+Use only the formats and crops supported by the implemented placement. Where the documented imagery is compositionally important, temporary placeholders must preserve its placement, crop, scale, negative space, and approximate visual weight until final art exists. No unobserved light/dark variants or export ratios are prescribed.
+
+# Avoid
 
 - Do not mix flat cartoon art or photography into the journey.
 - Do not add multiple focal objects.
 - Preserve black, white, and warm yellow-orange contrast from `ui.md`.
 - For a new milestone, create one low-poly symbol with a strong silhouette, deep shadow, and the same theatrical warm light.
+
+# Known Gaps
+
+- Export aspect ratios, safe crop measurements, animation, and unobserved state variants were not documented.

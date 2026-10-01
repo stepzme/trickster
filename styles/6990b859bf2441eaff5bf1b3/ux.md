@@ -4,7 +4,7 @@ Optima24 is a dark banking super app for cards, accounts, transfers, payments, d
 
 # Navigation
 
-Home, Operations, a raised QR scanner, Services, and Menu form the bottom dock. Home combines stories, the selected card, a service shortcut grid, campaigns, and product tiles.
+Home, Operations, a raised QR scanner, Services, and Menu form primary navigation. Home combines stories, the selected card, a service shortcut collections, campaigns, and product items.
 
 # Core Flows
 
@@ -24,7 +24,12 @@ Home, Operations, a raised QR scanner, Services, and Menu form the bottom dock. 
 
 # Interaction Patterns
 
-- Near-black surfaces and red line icons frame dense service and product content.
-- Gold marks the selected card and milestone campaign; orange anchors QR.
 - Home is promotional and modular, while My Bank becomes calmer and list-based.
-- Payment amount remains large and close to source, recipient, fee, and confirmation.
+
+# System Access Timing
+
+No system-access request timing or denial recovery was documented in the reviewed source.
+
+# Known Gaps
+
+- Permission-denial recovery and unobserved secondary flows were not documented.

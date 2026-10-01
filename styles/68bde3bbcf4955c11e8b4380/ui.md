@@ -1,12 +1,12 @@
 <design-context>
 ---
-version: alpha
+version: 1
+platform: iOS
 name: Cofix-Club-design-analysis
 description: "A high-energy coffee loyalty and preorder app with a near-black shell, stark white wordmark, condensed display typography, saturated orange and purple campaign blocks, product photography on bold color fields, oversized numeric rewards, and a three-destination bottom bar."
 colors:
   primary: "#FF6B00"
   on-primary: "#FFFFFF"
-  primary-hover: "#E75D00"
   primary-soft: "#FFE0CA"
   accent: "#7650E8"
   accent-green: "#83C93A"
@@ -21,32 +21,31 @@ colors:
   semantic-danger: "#F05246"
   semantic-overlay: "#000000"
 typography:
-  display-xl: { fontFamily: Bebas Neue, fontSize: 52px, fontWeight: 400, lineHeight: 0.95, letterSpacing: 0.2px }
-  display-lg: { fontFamily: Bebas Neue, fontSize: 40px, fontWeight: 400, lineHeight: 1.00, letterSpacing: 0.2px }
-  display-md: { fontFamily: Bebas Neue, fontSize: 32px, fontWeight: 400, lineHeight: 1.05, letterSpacing: 0.2px }
-  headline: { fontFamily: Bebas Neue, fontSize: 26px, fontWeight: 400, lineHeight: 1.05, letterSpacing: 0.2px }
-  card-title: { fontFamily: Bebas Neue, fontSize: 22px, fontWeight: 400, lineHeight: 1.10, letterSpacing: 0.2px }
-  subhead: { fontFamily: SF Pro Text, fontSize: 16px, fontWeight: 600, lineHeight: 1.30, letterSpacing: 0 }
-  body-lg: { fontFamily: SF Pro Text, fontSize: 16px, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
-  body: { fontFamily: SF Pro Text, fontSize: 14px, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
-  body-sm: { fontFamily: SF Pro Text, fontSize: 12px, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
-  caption: { fontFamily: SF Pro Text, fontSize: 10px, fontWeight: 500, lineHeight: 1.20, letterSpacing: 0.2px }
-  button: { fontFamily: Bebas Neue, fontSize: 20px, fontWeight: 400, lineHeight: 1.10, letterSpacing: 0.3px }
-  eyebrow: { fontFamily: Bebas Neue, fontSize: 15px, fontWeight: 400, lineHeight: 1.10, letterSpacing: 0.4px }
-  mono: { fontFamily: SF Mono, fontSize: 12px, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
-rounded: { xs: 4px, sm: 8px, md: 12px, lg: 16px, xl: 20px, xxl: 28px, pill: 9999px, full: 9999px }
-spacing: { xxs: 4px, xs: 8px, sm: 12px, md: 16px, lg: 24px, xl: 32px, xxl: 48px, section: 64px }
+  display-xl: { fontFamily: Bebas Neue, fontSize: 52, fontWeight: 400, lineHeight: 0.95, letterSpacing: 0.2 }
+  display-lg: { fontFamily: Bebas Neue, fontSize: 40, fontWeight: 400, lineHeight: 1.00, letterSpacing: 0.2 }
+  display-md: { fontFamily: Bebas Neue, fontSize: 32, fontWeight: 400, lineHeight: 1.05, letterSpacing: 0.2 }
+  headline: { fontFamily: Bebas Neue, fontSize: 26, fontWeight: 400, lineHeight: 1.05, letterSpacing: 0.2 }
+  card-title: { fontFamily: Bebas Neue, fontSize: 22, fontWeight: 400, lineHeight: 1.10, letterSpacing: 0.2 }
+  subhead: { fontFamily: SF Pro Text, fontSize: 16, fontWeight: 600, lineHeight: 1.30, letterSpacing: 0 }
+  body-lg: { fontFamily: SF Pro Text, fontSize: 16, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
+  body: { fontFamily: SF Pro Text, fontSize: 14, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
+  body-sm: { fontFamily: SF Pro Text, fontSize: 12, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
+  caption: { fontFamily: SF Pro Text, fontSize: 10, fontWeight: 500, lineHeight: 1.20, letterSpacing: 0.2 }
+  button: { fontFamily: Bebas Neue, fontSize: 20, fontWeight: 400, lineHeight: 1.10, letterSpacing: 0.3 }
+  eyebrow: { fontFamily: Bebas Neue, fontSize: 15, fontWeight: 400, lineHeight: 1.10, letterSpacing: 0.4 }
+  mono: { fontFamily: SF Mono, fontSize: 12, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
+rounded: { xs: 4, sm: 8, md: 12, lg: 16, xl: 20, xxl: 28, pill: 9999, full: 9999 }
+spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
 components:
-  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.md}", padding: 12px 18px }
-  campaign-card: { backgroundColor: "{colors.accent}", textColor: "{colors.on-primary}", typography: "{typography.card-title}", rounded: "{rounded.md}", padding: 14px }
-  menu-tile: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.body-sm}", rounded: "{rounded.sm}", padding: 12px }
-  wallet-card: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 16px }
-  input: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: 12px }
-  top-nav: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xs}", height: 52px }
-  footer: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: 8px 10px }
+  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.md}", padding: [12, 18]}
+  campaign-card: { backgroundColor: "{colors.accent}", textColor: "{colors.on-primary}", typography: "{typography.card-title}", rounded: "{rounded.md}", padding: 14 }
+  menu-tile: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.body-sm}", rounded: "{rounded.sm}", padding: 12 }
+  wallet-card: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 16 }
+  input: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: 12 }
+  bottom navigation: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: [8, 10]}
 ---
 
-## Overview
+# Overview
 
 Cofix Club mixes a dark hospitality shell with loud retail campaigns, bright product grids, and a reward wallet. Condensed display type creates the distinct menu-board voice.
 
@@ -57,7 +56,15 @@ Cofix Club mixes a dark hospitality shell with loud retail campaigns, bright pro
 - Coffee photography isolated on flat color tiles.
 - Oversized reward figures and coupon sections.
 
-## Colors
+# Non-negotiable visual invariants
+
+- Navigation consistently uses near-black navigation shell and white wordmark.
+- The reference consistently shows saturated orange as loyalty and purchase anchor.
+- The reference consistently shows condensed all-caps display typography.
+- Sampled screens consistently use coffee photography isolated on flat color tiles.
+- The reference consistently shows oversized reward figures and coupon sections.
+
+# Color and surfaces
 
 ### Brand & Accent
 - **Primary** ({colors.primary}): Wallet, checkout, promotions, and dominant loyalty surfaces.
@@ -80,7 +87,7 @@ Cofix Club mixes a dark hospitality shell with loud retail campaigns, bright pro
 - **Danger** ({colors.semantic-danger}): Form error or destructive action.
 - **Overlay** ({colors.semantic-overlay}): Checkout and modal focus.
 
-## Typography
+# Typography
 
 ### Font Family
 - **Bebas Neue** — close substitute for tall condensed menu-board headings and CTAs.
@@ -88,7 +95,7 @@ Cofix Club mixes a dark hospitality shell with loud retail campaigns, bright pro
 - **SF Mono** — order identifiers and payment references.
 
 ### Hierarchy
-Use 52px condensed type for rewards and order numbers, 32px for section links, 22–26px for campaign cards, 14px body, and 10–12px metadata.
+Use 52 points condensed type for rewards and order numbers, 32 points for section links, 22–26 points for campaign cards, 14 points body, and 10–12 points metadata.
 
 ### Principles
 - Let condensed headlines carry brand energy.
@@ -99,95 +106,85 @@ Use 52px condensed type for rewards and order numbers, 32px for section links, 2
 ### Note on Font Substitutes
 Use **Bebas Neue** or **Oswald** for the display voice and the platform sans for body.
 
-## Layout
+# Screen composition
 
 ### Spacing System
-Use a 4px base, 8px between campaign tiles, 16px gutters, and 16px inside loyalty or order cards.
+Use a 4 points base, 8 points between campaign tiles, 16 points gutters, and 16 points inside loyalty or order cards.
 
 ### Grid & Container
-Home stacks barcode, hero carousel, two-up campaigns, large menu links, and a fixed three-way footer. Menu uses a two-column product grid.
+Home stacks barcode, hero carousel, two-up campaigns, large menu links, and a fixed three-way bottom navigation. Menu uses a two-column product grid.
 
 ### Whitespace Philosophy
 Favor bold filled blocks and tight retail rhythm; keep enough separation that campaigns, menu, and wallet remain distinct.
 
-## Elevation & Depth
+Surface hierarchy observed in the source:
+
 Use color contrast and photography rather than shadow. Sheets and checkout forms lift through darker grouped panels.
 
 ### Decorative Depth
 Campaigns use photographed products, branded partner images, and flat color fields; operational screens stay direct.
 
-## Shapes
+# Navigation appearance
 
-### Border Radius Scale
-Use 8px for controls, 12px for product and campaign tiles, 16px for wallet or order cards, and full circles for location and close controls.
+Keep Wallet, Location, and Menu for points in the bottom bar; profile and notifications remain in the header.
 
-### Photography & Illustration Geometry
-Cut out food and drink photography onto saturated rectangles. Preserve product silhouette, cup branding, and generous padding around the object.
-
-## Components
+# Components
 
 ### Buttons
+
 Use full-width high-contrast purchase and order-state buttons. Close, back, search, and filter remain icon-led but familiar.
 
-### Pricing Tabs
-Category chips and filter controls are compact pills; selected state uses stronger fill and white text.
-
 ### Cards & Containers
+
 Use campaign cards, product tiles, wallet panels, coupon tickets, order-status cards, and dark payment groups.
 
 ### Inputs & Forms
+
 Payment fields sit in a dark rounded group with underline-like divisions and an unmistakable disabled or enabled pay state.
 
-### Status & Build Page
+# Imagery and icons
+
+Campaigns use photographed products, branded partner images, and flat color fields; operational screens stay direct.
+
+Cut out food and drink photography onto saturated rectangles. Preserve product silhouette, cup branding, and generous padding around the object.
+
+If final imagery is not yet available, any placeholder must preserve the documented scale, placement, crop, and visual weight rather than removing that layer.
+
+# States
+
 Show order ready, order identifier, wallet points, cashback, coupon count, and campaign progress with oversized values and explicit labels.
 
-### Navigation
-Keep Wallet, Location, and Menu for points in the bottom bar; profile and notifications remain in the header.
+# iOS adaptation
 
-### Footer
-The three-destination footer uses the dark shell and lets orange indicate the current section.
+### Touch Targets
 
-## Do's and Don'ts
+Keep campaign cards, category chips, products, purchase buttons, and bottom navigation destinations at least 44 points.
 
-### Do
-- Keep the condensed brand voice prominent.
-- Use saturated blocks for retail campaigns.
-- Pair product images with price and volume.
-- Make order status impossible to miss.
+### Collapsing Strategy
 
-### Don't
+Preserve loyalty identity, menu access, active order, and checkout. Move lower-priority campaigns below the task content.
+
+### Image Behavior
+
+Contain cut-out products and crop campaign photography to its designed banner frame; never stretch cups or embedded copy.
+
+Apply these rules within current iPhone safe areas and scrolling containers. Keep interactive targets at least 44 points, preserve a logical VoiceOver order, and let Dynamic Type wrap supporting text without flattening the documented hierarchy. Do not infer an unobserved dark or light appearance.
+
+# Anti-generic checklist
+
 - Don't turn body or form text into condensed display type.
 - Don't layer photography directly on busy app chrome.
 - Don't soften the palette into muted pastels.
 - Don't hide wallet points behind generic account settings.
+- Do not replace the documented hierarchy with a generic stack of identical white cards or `Form` sections.
+- Do not use default blue tint, an unstyled `TabView`, arbitrary SF Symbols, or uniform corner radii when they contradict the recorded tokens and components.
+- Do not omit compositionally important imagery while final assets are pending; preserve its footprint with a faithful placeholder.
 
-## Responsive Behavior
+# Known gaps
 
-### Breakpoints
-Use a two-column product grid on phones, three columns from 768px, and a centered storefront layout with wider campaign modules above 1024px.
-
-### Touch Targets
-Keep campaign cards, category chips, products, purchase buttons, and footer destinations at least 44px.
-
-### Collapsing Strategy
-Preserve loyalty identity, menu access, active order, and checkout. Move lower-priority campaigns below the task content.
-
-### Image Behavior
-Contain cut-out products and crop campaign photography to its designed banner frame; never stretch cups or embedded copy.
-
-## Iteration Guide
-1. Build the dark shell and three destinations.
-2. Add loyalty barcode and wallet.
-3. Add menu browsing and product selection.
-4. Add preorder, payment, and order status.
-5. Add campaigns and coupons.
-
-## Known Gaps
 - Tokens were inferred visually from inspected mobile screens.
 - All 26 flow names were inventoried; Home, Making pre-order, and Wallet full were image-reviewed.
 - Campaign carousels and location edge cases were not exhaustively assessed.
 - Campaigns are photography-led, so no separate illustration specification was created.
 
 </design-context>
-
-Use the design system above for all UI you generate.

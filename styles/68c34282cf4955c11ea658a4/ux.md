@@ -1,11 +1,11 @@
 # Overview
 
-Wallet is a compact system utility for adding payment cards and collecting passes, tickets, keys, and merchant orders.
+Wallet is a system utility for adding payment cards and collecting passes, tickets, keys, and merchant orders.
 
 # Navigation
 
-- The main screen is a layered card stack with quick access to Orders and Add.
-- Add-card work moves through native sheets, camera capture, manual details, verification, and system alerts.
+- The main screen is a layered item stack with quick access to Orders and Add.
+- Add-item work moves through native sheets, camera capture, manual details, verification, and system alerts.
 - Search appears inside the relevant collection rather than as a persistent global destination.
 
 # Core Flows
@@ -20,7 +20,7 @@ Wallet is a compact system utility for adding payment cards and collecting passe
 
 1. Open Add and continue from the Apple Pay introduction.
 2. Scan the card or enter cardholder, number, expiry date, and security code manually.
-3. Review issuer support, verification, and progress feedback in the stacked sheet.
+3. Review issuer support, verification, and progress feedback before returning to the card.
 
 ## Find collected content
 
@@ -30,6 +30,13 @@ Wallet is a compact system utility for adding payment cards and collecting passe
 
 # Interaction Patterns
 
-- Stacked sheets preserve context during scanning, entry, alerts, and verification.
-- System blue links, native alerts, and grouped fields make sensitive setup familiar.
+- Scanning, entry, alerts, and verification return to the current card context.
 - The catalog contains 53 image screens but no flow sequences; navigation and step order are derived only from the available screen progression.
+
+# System Access Timing
+
+No system-access timing or denial-recovery path was documented in the reviewed source.
+
+# Known Gaps
+
+Unobserved flows, denial paths, cancellation behavior, and recovery states remain unspecified.

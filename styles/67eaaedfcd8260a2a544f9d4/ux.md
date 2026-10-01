@@ -4,9 +4,9 @@ Sutochno.ru supports accommodation search, comparison, booking, host chat, reser
 
 # Navigation
 
-- Five bottom destinations cover Search, Favorites, Reservations, Messages, and Profile.
+- Five primary destinations cover Search, Favorites, Reservations, Messages, and Profile.
 - Search begins with destination, dates, and guests, then continues to list or map results.
-- Property and checkout screens use back navigation and a sticky booking action.
+- Property and checkout screens use back navigation and a remains available booking action.
 
 # Core Flows
 
@@ -30,7 +30,12 @@ Sutochno.ru supports accommodation search, comparison, booking, host chat, reser
 
 # Interaction Patterns
 
-- Black sticky actions contrast with the pink brand accent.
-- Photography carries discovery; cards keep rating, price, and location close to the image.
-- Horizontal carousels support recent searches, destinations, and reviews.
 - Checkout exposes cost and conditions before commitment.
+
+# System Access Timing
+
+No system-access timing or denial-recovery path was documented in the reviewed source.
+
+# Known Gaps
+
+Unobserved flows, denial paths, cancellation behavior, and recovery states remain unspecified.

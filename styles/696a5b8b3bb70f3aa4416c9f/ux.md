@@ -4,7 +4,7 @@ EMIAS.INFO connects appointment booking, referrals, prescriptions, documents, me
 
 # Navigation
 
-Home, Medical record, and More stay in the bottom bar. Patient and policy context remain in the top identity bar.
+Home, Medical record, and More stay in primary navigation. Patient and policy context remain in contextual controls.
 
 # Core Flows
 
@@ -30,3 +30,11 @@ Home, Medical record, and More stay in the bottom bar. Patient and policy contex
 - Distinguish official records from user-entered data.
 - Keep no-data states specific.
 - Make access sharing and privacy reversible.
+
+# System Access Timing
+
+No system-access request timing or denial recovery was documented in the reviewed source.
+
+# Known Gaps
+
+- Permission-denial recovery and unobserved secondary flows were not documented.

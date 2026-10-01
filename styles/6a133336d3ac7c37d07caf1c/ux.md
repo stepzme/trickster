@@ -1,12 +1,12 @@
 # Overview
 
-Yandex Music combines an immersive dark listening surface with a lighter catalog and collection, using artwork and the fluorescent play control to maintain continuity.
+Yandex Music combines an immersive dark listening context with a lighter catalog and collection, using media and the fluorescent play control to maintain continuity.
 
 # Navigation
 
-- The bottom bar moves between Home, Trends, Collection, and Search.
+- The primary navigation moves between Home, Trends, Collection, and Search.
 - A persistent mini-player resumes the current track from browsing surfaces.
-- Full-screen player, queue, lyrics, and audio controls expand from the listening state.
+- Player, queue, lyrics, and audio controls expand from the listening state.
 
 # Core Flows
 
@@ -24,7 +24,13 @@ Yandex Music combines an immersive dark listening surface with a lighter catalog
 
 # Interaction Patterns
 
-- The current artwork supplies the player background color.
-- Yellow play actions remain the strongest signal across dark and light themes.
-- Horizontal rails support quick sampling; full lists handle focused browsing.
+- Browsing sections support quick sampling; full lists handle focused browsing.
 - Bottom sheets contain track actions, filters, device output, and subscription controls.
+
+# System Access Timing
+
+No system-access timing or denial-recovery behavior was documented in the reviewed source.
+
+# Known Gaps
+
+System-permission denial paths, interrupted flows, and recovery behavior not described above were not available in the reviewed source.

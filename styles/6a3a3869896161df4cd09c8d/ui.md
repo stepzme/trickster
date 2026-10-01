@@ -1,12 +1,12 @@
 <design-context>
 ---
-version: alpha
+version: 1
+platform: iOS
 name: Kuper-design-analysis
 description: "A dense multi-store delivery marketplace on white and cool-gray grouped surfaces, anchored by near-black pill controls and a sharp electric-green accent. Product cutouts, merchant logos, and compact horizontal rails carry discovery; checkout becomes a calm sequence of rounded white sections with persistent dark actions."
 colors:
   primary: "#171518"
   on-primary: "#FFFFFF"
-  primary-hover: "#302D31"
   primary-focus: "#090809"
   ink: "#19171A"
   ink-muted: "#747176"
@@ -28,52 +28,51 @@ colors:
   semantic-success: "#00EA80"
   semantic-overlay: "#171518"
 typography:
-  display-xl: {fontFamily: SF Pro Display, fontSize: 36px, fontWeight: 700, lineHeight: 1.06, letterSpacing: -0.9px}
-  display-lg: {fontFamily: SF Pro Display, fontSize: 30px, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.6px}
-  display-md: {fontFamily: SF Pro Display, fontSize: 24px, fontWeight: 700, lineHeight: 1.14, letterSpacing: -0.3px}
-  headline: {fontFamily: SF Pro Display, fontSize: 20px, fontWeight: 700, lineHeight: 1.20, letterSpacing: -0.2px}
-  card-title: {fontFamily: SF Pro Text, fontSize: 16px, fontWeight: 600, lineHeight: 1.24, letterSpacing: 0}
-  subhead: {fontFamily: SF Pro Text, fontSize: 15px, fontWeight: 600, lineHeight: 1.30, letterSpacing: 0}
-  body-lg: {fontFamily: SF Pro Text, fontSize: 15px, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0}
-  body: {fontFamily: SF Pro Text, fontSize: 13px, fontWeight: 400, lineHeight: 1.36, letterSpacing: 0}
-  body-sm: {fontFamily: SF Pro Text, fontSize: 11px, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0}
-  caption: {fontFamily: SF Pro Text, fontSize: 10px, fontWeight: 400, lineHeight: 1.25, letterSpacing: 0}
-  button: {fontFamily: SF Pro Text, fontSize: 14px, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0}
-  eyebrow: {fontFamily: SF Pro Text, fontSize: 10px, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0.1px}
-  mono: {fontFamily: SF Mono, fontSize: 11px, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0}
+  display-xl: {fontFamily: SF Pro Display, fontSize: 36, fontWeight: 700, lineHeight: 1.06, letterSpacing: -0.9}
+  display-lg: {fontFamily: SF Pro Display, fontSize: 30, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.6}
+  display-md: {fontFamily: SF Pro Display, fontSize: 24, fontWeight: 700, lineHeight: 1.14, letterSpacing: -0.3}
+  headline: {fontFamily: SF Pro Display, fontSize: 20, fontWeight: 700, lineHeight: 1.20, letterSpacing: -0.2}
+  card-title: {fontFamily: SF Pro Text, fontSize: 16, fontWeight: 600, lineHeight: 1.24, letterSpacing: 0}
+  subhead: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 600, lineHeight: 1.30, letterSpacing: 0}
+  body-lg: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0}
+  body: {fontFamily: SF Pro Text, fontSize: 13, fontWeight: 400, lineHeight: 1.36, letterSpacing: 0}
+  body-sm: {fontFamily: SF Pro Text, fontSize: 11, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0}
+  caption: {fontFamily: SF Pro Text, fontSize: 10, fontWeight: 400, lineHeight: 1.25, letterSpacing: 0}
+  button: {fontFamily: SF Pro Text, fontSize: 14, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0}
+  eyebrow: {fontFamily: SF Pro Text, fontSize: 10, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0.1}
+  mono: {fontFamily: SF Mono, fontSize: 11, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0}
 rounded:
-  xs: 6px
-  sm: 10px
-  md: 14px
-  lg: 18px
-  xl: 22px
-  xxl: 28px
-  pill: 9999px
-  full: 9999px
+  xs: 6
+  sm: 10
+  md: 14
+  lg: 18
+  xl: 22
+  xxl: 28
+  pill: 9999
+  full: 9999
 spacing:
-  xxs: 4px
-  xs: 8px
-  sm: 12px
-  md: 16px
-  lg: 20px
-  xl: 24px
-  xxl: 32px
-  section: 40px
+  xxs: 4
+  xs: 8
+  sm: 12
+  md: 16
+  lg: 20
+  xl: 24
+  xxl: 32
+  section: 40
 components:
-  button-primary: {backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: 14px 20px}
+  button-primary: {backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: [14, 20]}
   button-primary-pressed: {backgroundColor: "{colors.primary-focus}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.pill}"}
-  button-primary-hover: {backgroundColor: "{colors.primary-hover}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.pill}"}
-  button-secondary: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: 12px 18px}
-  button-tertiary: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: 10px 14px}
-  button-inverse: {backgroundColor: "{colors.semantic-success}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: 12px 18px}
-  merchant-card: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 12px}
-  department-tile: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.caption}", rounded: "{rounded.md}", padding: 8px}
-  search-field: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink-muted}", typography: "{typography.body}", rounded: "{rounded.pill}", padding: 11px 14px}
-  checkout-section: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 14px}
-  top-nav: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xs}", height: 50px}
-  bottom-nav: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink-subtle}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: 8px 10px}
+  button-secondary: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: [12, 18]}
+  button-tertiary: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: [10, 14]}
+  button-inverse: {backgroundColor: "{colors.semantic-success}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: [12, 18]}
+  merchant-card: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 12}
+  department-tile: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.caption}", rounded: "{rounded.md}", padding: 8}
+  search-field: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink-muted}", typography: "{typography.body}", rounded: "{rounded.pill}", padding: [11, 14]}
+  checkout-section: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 14}
+  bottom-nav: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink-subtle}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: [8, 10]}
 ---
-## Overview
+
+# Overview
 
 Kuper is a compact delivery marketplace with strong black controls, electric-green brand moments, and image-led departments across restaurants, groceries, and general goods.
 
@@ -84,7 +83,15 @@ Kuper is a compact delivery marketplace with strong black controls, electric-gre
 - Cool-gray grouped surfaces with rounded white sections.
 - Isolated product objects and merchant photography.
 
-## Colors
+# Non-negotiable visual invariants
+
+- The reviewed screens show this treatment: Address-first discovery.
+- The reviewed screens show this treatment: Dense horizontal rails and merchant lists.
+- The reviewed screens show this treatment: Dark pill controls and cart actions.
+- The reviewed screens show this treatment: Cool-gray grouped surfaces with rounded white sections.
+- The reviewed screens show this treatment: Isolated product objects and merchant photography.
+
+# Color and surfaces
 
 ### Brand & Accent
 
@@ -102,7 +109,7 @@ Near-black carries headings, prices, and actions. Mid-gray supports delivery ter
 
 Green marks favorable delivery, bonuses, selected positive states, and confirmation. Merchant campaign colors remain confined to their own assets.
 
-## Typography
+# Typography
 
 ### Font Family
 
@@ -112,11 +119,11 @@ Use SF Pro Display for headings and SF Pro Text for dense catalog, delivery, and
 
 | Token | Size | Weight | Use |
 |---|---:|---:|---|
-| display-lg | 30px | 700 | Empty-state or campaign claim |
-| headline | 20px | 700 | Store and checkout heading |
-| card-title | 16px | 600 | Merchant, product, or section title |
-| body | 13px | 400 | Terms and form values |
-| caption | 10px | 400 | Times, badges, and navigation |
+| display-lg | 30pt | 700 | Empty-state or campaign claim |
+| headline | 20pt | 700 | Store and checkout heading |
+| card-title | 16pt | 600 | Merchant, product, or section title |
+| body | 13pt | 400 | Terms and form values |
+| caption | 10pt | 400 | Times, badges, and navigation |
 
 ### Principles
 
@@ -128,11 +135,7 @@ Use SF Pro Display for headings and SF Pro Text for dense catalog, delivery, and
 
 Inter is a suitable cross-platform substitute; preserve dense numeral spacing and clear Cyrillic.
 
-## Layout
-
-### Spacing System
-
-Use a 4px base, 8–12px rail gaps, and 12–16px screen padding.
+# Screen composition
 
 ### Grid & Container
 
@@ -142,42 +145,15 @@ Home combines horizontal shortcut rails with vertical merchant lists. Checkout s
 
 Discovery is deliberately dense. Increase space only around checkout decisions, totals, and empty-state messages.
 
-## Elevation & Depth
+# Navigation appearance
 
-| Level | Treatment | Use |
-|---|---|---|
-| 0 | White canvas | Merchant and product content |
-| 1 | Pale grouped fill | Home modules and checkout background |
-| 2 | Floating dark pill | Cart and anchored actions |
-| 3 | White modal sheet over scrim | Feedback and focused selectors |
+Home navigation is shortcut-led; store pages use a dedicated five-item bottom bar. All native controls must inherit Kuper's black pills, rounded sections, and green accent.
 
-### Decorative Depth
-
-Use merchant photography, object cutouts, and soft shadows. Interface elevation remains subtle except for the floating cart.
-
-## Shapes
-
-### Border Radius Scale
-
-| Token | Value | Use |
-|---|---:|---|
-| rounded-xs | 6px | Small tags |
-| rounded-sm | 10px | Product rows and inputs |
-| rounded-md | 14px | Department and merchant tiles |
-| rounded-lg | 18px | Checkout sections |
-| rounded-pill | full | Buttons, segments, cart chip |
-
-### Photography & Illustration Geometry
-
-Departments use isolated product objects within pale rounded tiles. Merchant assets stay in their original rectangles; catalog items use contained pack shots.
-
-## Components
+# Components
 
 ### Buttons
 
 Primary actions are near-black full-width pills. White secondary pills use black labels; electric green is reserved for positive or branded actions.
-
-### Pricing Tabs
 
 Delivery and pickup use a wide two-segment control: selected is black with white type, default is pale with black type.
 
@@ -197,11 +173,49 @@ Delivery benefits and bonuses use green. Feedback uses a white bottom sheet with
 
 Home navigation is shortcut-led; store pages use a dedicated five-item bottom bar. All native controls must inherit Kuper's black pills, rounded sections, and green accent.
 
-### Footer
+# Imagery and icons
 
-No footer; bottom navigation or a persistent total/action row owns the lower safe area.
+| Level | Treatment | Use |
+|---|---|---|
+| 0 | White canvas | Merchant and product content |
+| 1 | Pale grouped fill | Home modules and checkout background |
+| 2 | Floating dark pill | Cart and anchored actions |
+| 3 | White modal sheet over scrim | Feedback and focused selectors |
 
-## Do's and Don'ts
+### Decorative Depth
+
+Use merchant photography, object cutouts, and soft shadows. Interface elevation remains subtle except for the floating cart.
+
+# States
+
+Delivery benefits and bonuses use green. Feedback uses a white bottom sheet with expressive emoji choices and a green response action.
+
+# iOS adaptation
+
+### Touch Targets
+
+Address, rails, quantity controls, cart, payment, and bottom navigation remain at least 44pt.
+
+### Collapsing Strategy
+
+Keep rails horizontally scrollable; stack checkout choices and preserve a full-width persistent action.
+
+### Image Behavior
+
+Contain products and category objects; aspect-fill merchant banners and promotional artwork while protecting embedded copy.
+
+On iPhone, respect top and bottom safe areas, use scrolling for content that does not fit, keep interactive targets at least 44 points, and preserve the visual reading order for VoiceOver. At larger Dynamic Type sizes, allow supporting text to wrap without collapsing the dominant hierarchy. Use native sheets and permission transitions while explicitly styling app-owned surfaces to match the reference.
+
+# Anti-generic checklist
+
+- Do not substitute the documented accent hierarchy with default iOS blue.
+- Do not collapse distinct surfaces into a uniform stack of generic white cards.
+- Do not use an unstyled `TabView`, `Form`, or arbitrary SF Symbols when they contradict the documented navigation and component language.
+- Do not flatten the documented typography into one body-text scale.
+- Do not remove compositionally important photography or illustration while assets are pending.
+- Do not apply one corner radius to every control and surface.
+
+Source-specific guardrails retained from the review:
 
 ### Do
 
@@ -219,38 +233,10 @@ No footer; bottom navigation or a persistent total/action row owns the lower saf
 - Don't mix cart decisions into discovery rails.
 - Don't leave segmented controls in generic native styling.
 
-## Responsive Behavior
-
-### Breakpoints
-
-| Name | Width | Key Changes |
-|---|---:|---|
-| Compact | 320–374px | Tighten rails and merchant details |
-| Standard | 375–430px | Default dense layout |
-| Wide | 431px+ | Expand merchant cards and checkout gutters |
-
-### Touch Targets
-
-Address, rails, quantity controls, cart, payment, and bottom navigation remain at least 44px.
-
-### Collapsing Strategy
-
-Keep rails horizontally scrollable; stack checkout choices and preserve a full-width persistent action.
-
-### Image Behavior
-
-Contain products and category objects; aspect-fill merchant banners and promotional artwork while protecting embedded copy.
-
-## Iteration Guide
-
-Tune merchant discoverability and cart clarity first, then checkout grouping, delivery facts, and green emphasis.
-
-## Known Gaps
+# Known gaps
 
 - Product-detail interactions were not sampled in this batch.
 - Live order tracking was not reviewed.
-- Tablet and landscape layouts were not represented.
+- iPad and landscape layouts were not represented.
 
 </design-context>
-
-Use the design system above for all UI you generate.

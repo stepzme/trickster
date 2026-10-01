@@ -4,8 +4,8 @@ WB Bank embeds a broad bank inside the Wildberries ecosystem: wallet, cards, pay
 
 # Navigation
 
-- The marketplace bottom bar remains visible, with the Bank destination highlighted in magenta.
-- Bank Home combines discount status, wallet balance, quick actions, promotion rail, and a two-column product grid.
+- The marketplace primary navigation remains visible, with the Bank destination highlighted in magenta.
+- Bank Home combines discount status, wallet balance, quick actions, promotion rail, and a product catalog.
 - Transfers, cards, savings, and settings branch into focused detail flows with local back navigation.
 
 # Core Flows
@@ -20,7 +20,7 @@ WB Bank embeds a broad bank inside the Wildberries ecosystem: wallet, cards, pay
 
 1. Open the card offer and choose physical, virtual, or sticker format.
 2. Review cashback, interest, service, and issuance terms before applying.
-3. Manage card details, limits, PIN, freeze, plan, or closure from the card surface.
+3. Manage card details, limits, PIN, freeze, plan, or closure from the card context.
 
 ## Save and manage the wallet
 
@@ -31,5 +31,12 @@ WB Bank embeds a broad bank inside the Wildberries ecosystem: wallet, cards, pay
 # Interaction Patterns
 
 - Discount level and wallet balance anchor the service before product discovery.
-- Amount-first screens use one dominant black confirmation button and explicit source/recipient cards.
 - Dense service breadth is grouped into short tiles, while consequential operations expand into linear forms.
+
+# System Access Timing
+
+No system-access timing or denial-recovery behavior was documented in the reviewed source.
+
+# Known Gaps
+
+System-permission denial paths, interrupted flows, and recovery behavior not described above were not available in the reviewed source.

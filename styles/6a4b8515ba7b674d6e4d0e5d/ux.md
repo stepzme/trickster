@@ -4,7 +4,7 @@ Green SM supports taxi discovery, address search, ride configuration, booking fo
 
 # Navigation
 
-A compact pill bar anchors Home, History, Notifications, and Profile. Once booking starts, the map and contextual bottom sheet replace global navigation.
+Primary navigation connects Home, History, Notifications, and Profile. Once booking starts, the booking context replaces global navigation.
 
 # Core Flows
 
@@ -19,3 +19,11 @@ A compact pill bar anchors Home, History, Notifications, and Profile. Once booki
 # Interaction Patterns
 
 The current decision lives in one bottom sheet, route state remains visible on the map, fare and payment persist across steps, and trip completion moves into structured illustrated feedback.
+
+# System Access Timing
+
+No system-access timing or denial-recovery behavior was documented in the reviewed source.
+
+# Known Gaps
+
+System-permission denial paths, interrupted flows, and recovery behavior not described above were not available in the reviewed source.

@@ -4,7 +4,7 @@ Messages is a native conversation system spanning contact discovery, new message
 
 # Navigation
 
-The conversation list leads into a single chat. Compose stays at the bottom; contact and call actions remain in the header; app and media tools expand from the composer.
+The conversation list leads into a single chat. Compose stays; contact and call actions remain in the header; app and media tools expand from the composer.
 
 # Core Flows
 
@@ -24,7 +24,12 @@ The conversation list leads into a single chat. Compose stays at the bottom; con
 
 # Interaction Patterns
 
-- Blue bubbles identify outgoing iMessage; gray bubbles identify incoming messages.
-- Lists and chrome remain native white with sparse blue actions.
-- Media preserves its own aspect ratio inside rounded message containers.
 - Effects temporarily take over the screen without changing the conversation model.
+
+# System Access Timing
+
+No system-access timing or denial-recovery path was documented in the reviewed source.
+
+# Known Gaps
+
+Unobserved flows, denial paths, cancellation behavior, and recovery states remain unspecified.

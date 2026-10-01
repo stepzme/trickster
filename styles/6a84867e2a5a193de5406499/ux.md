@@ -4,7 +4,7 @@ Open is an immersive breathwork, meditation, movement, and sound experience buil
 
 # Navigation
 
-A minimal bottom bar connects a global surface, Discover, practice or waveform, a location-like community destination, and Profile. Today is centered and combines the daily practice with Meditate, Breathe, Move, and Sound modes.
+Primary navigation connects a global context, Discover, practice or waveform, a location-like community destination, and Profile. Today combines the daily practice with Meditate, Breathe, Move, and Sound modes.
 
 # Core Flows
 
@@ -24,7 +24,10 @@ A minimal bottom bar connects a global surface, Discover, practice or waveform, 
 
 # Interaction Patterns
 
-- Full-bleed cinematic photography and warm blur create emotional context on a black canvas.
-- Fine white lines, widely spaced type, and small red details keep controls quiet.
-- Content lists stay almost borderless; image crops and typography create grouping.
-- Large outlined or white pill actions appear only at entry, paywall, or timer commitment.
+# System Access Timing
+
+No system-access timing or denial-recovery behavior was documented in the reviewed source.
+
+# Known Gaps
+
+System-permission denial paths, interrupted flows, and recovery behavior not described above were not available in the reviewed source.

@@ -4,8 +4,7 @@ Whoosh is a map-first scooter and bicycle rental service covering vehicle discov
 
 # Navigation
 
-- A dark map anchors the main experience; Menu, Map, and traffic-rules destinations sit at the bottom.
-- Selecting a vehicle raises a compact detail sheet with charge, tariff, insurance, payment, and start or reserve actions.
+- Selecting a vehicle opens its charge, tariff, insurance, payment, and start or reserve actions.
 - Account and commercial services are grouped in Menu, while an optional themed mode adds tasks and campaign content.
 
 # Core Flows
@@ -30,6 +29,12 @@ Whoosh is a map-first scooter and bicycle rental service covering vehicle discov
 
 # Interaction Patterns
 
-- The dark map stays visible under metallic translucent sheets.
-- Bright orange-red buttons mark Start, Finish, and parking verification; gray metal actions remain secondary.
 - Ride state replaces discovery controls instead of creating a separate dashboard.
+
+# System Access Timing
+
+No system-access timing or denial-recovery behavior was documented in the reviewed source.
+
+# Known Gaps
+
+System-permission denial paths, interrupted flows, and recovery behavior not described above were not available in the reviewed source.

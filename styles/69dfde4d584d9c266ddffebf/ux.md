@@ -4,7 +4,7 @@ PayPal reduces everyday payment tasks to balance, recent activity, send/request,
 
 # Navigation
 
-A three-item bottom bar anchors Home, Send/Request, and Wallet. The raised central action changes color with context and keeps money movement primary.
+A three-item primary navigation anchors Home, Send/Request, and Wallet.
 
 # Core Flows
 
@@ -18,4 +18,12 @@ A three-item bottom bar anchors Home, Send/Request, and Wallet. The raised centr
 
 # Interaction Patterns
 
-Segmented Send/Request controls move the main action between halves, large empty space reduces financial noise, and completion uses a focused confirmation screen with one black Done action.
+The sampled flows use direct actions, explicit completion, and return to the current context. No additional repeated interaction behavior was documented.
+
+# System Access Timing
+
+No system-access request timing or denial recovery was documented in the reviewed source.
+
+# Known Gaps
+
+- Permission-denial recovery and unobserved secondary flows were not documented.

@@ -1,10 +1,10 @@
 # Overview
 
-Kinopoisk is a dark media ecosystem for streaming, title research, ratings, personal collections, cinema tickets, and profile-based recommendations.
+Kinopoisk is a media ecosystem for streaming, title research, ratings, personal collections, cinema tickets, and profile-based recommendations.
 
 # Navigation
 
-Five fixed destinations cover Home, Media, My, Search, and Profile. Home adds content-mode tabs for personal cinema, children, sports, and channels; detail pages keep the bottom bar available.
+Five fixed destinations cover Home, Media, My, Search, and Profile. Home adds content-mode tabs for personal cinema, children, sports, and channels; detail pages keep the primary navigation available.
 
 # Core Flows
 
@@ -29,7 +29,12 @@ Five fixed destinations cover Home, Media, My, Search, and Profile. Home adds co
 
 # Interaction Patterns
 
-- Large hero art introduces each content mode; poster rails follow below.
-- Orange actions identify playback and active navigation.
-- Title detail is a long editorial page with compact media rails and factual modules.
-- Playback hides chrome until invoked, keeping the image primary.
+No behavior-only interaction pattern could be separated from the reviewed visual observations.
+
+# System Access Timing
+
+No system-access timing or denial-recovery path was documented in the reviewed source.
+
+# Known Gaps
+
+Unobserved flows, denial paths, cancellation behavior, and recovery states remain unspecified.

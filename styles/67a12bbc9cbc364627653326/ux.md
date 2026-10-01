@@ -4,7 +4,7 @@ hh job supports onboarding and resume creation, job search and filters, vacancy 
 
 # Navigation
 
-Five bottom destinations anchor Search, Favorites, Responses, Messages, and Profile. Search remains the default home and carries utility cards plus recommended vacancies.
+Five primary destinations anchor Search, Favorites, Responses, Messages, and Profile. Search remains the default home and carries utility items plus recommended vacancies.
 
 # Core Flows
 
@@ -18,4 +18,12 @@ Five bottom destinations anchor Search, Favorites, Responses, Messages, and Prof
 
 # Interaction Patterns
 
-Filters use focused sheets, results maintain a stable fact order, favorites are inline, the blue application action stays persistent, and empty states redirect to the next useful task.
+No behavior-only interaction pattern could be separated from the reviewed visual observations.
+
+# System Access Timing
+
+No system-access timing or denial-recovery path was documented in the reviewed source.
+
+# Known Gaps
+
+Unobserved flows, denial paths, cancellation behavior, and recovery states remain unspecified.

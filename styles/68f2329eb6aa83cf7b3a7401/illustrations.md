@@ -16,15 +16,27 @@ Simple mixes a plush purple mascot with friendly flat wellness illustrations. Th
 - Keep the mascot large enough to read emotionally.
 - Avoid placing illustration behind metrics or long copy.
 
-# Color
+# Color and Materials
 
 - Lead with violet and lavender.
 - Add teal, coral, orange, and green in flat editorial scenes.
 - Keep backgrounds compatible with the indigo shell.
 
-# Usage
+# Variants and States
 
 - Use for onboarding, educational content, empty states, and premium explanation.
 - Use photography for real exercises and recipes.
 - Keep Coach and Track cards mostly illustration-free.
 - Create original characters and scenes in the same friendly language.
+
+# Production Requirements
+
+Use only the formats and crops supported by the implemented placement. Where the documented imagery is compositionally important, temporary placeholders must preserve its placement, crop, scale, negative space, and approximate visual weight until final art exists. No unobserved light/dark variants or export ratios are prescribed.
+
+# Avoid
+
+- Do not replace the documented image language with unrelated stock art, arbitrary symbols, or a denser composition.
+
+# Known Gaps
+
+- Export aspect ratios, safe crop measurements, animation, and unobserved state variants were not documented.

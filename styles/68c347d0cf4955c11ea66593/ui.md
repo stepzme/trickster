@@ -1,12 +1,12 @@
 <design-context>
 ---
-version: alpha
+version: 1
+platform: iOS
 name: Files-design-analysis
 description: "A native iOS file utility with a white canvas, oversized black section titles, system blue actions, pale-gray search, familiar blue folder glyphs, sparse file rows, native menus and sheets, and a stable three-tab structure for Recents, Shared, and Browse."
 colors:
   primary: "#0A84FF"
   on-primary: "#FFFFFF"
-  primary-hover: "#0070DB"
   primary-soft: "#E7F2FF"
   ink: "#000000"
   ink-muted: "#6C6C70"
@@ -20,31 +20,30 @@ colors:
   semantic-danger: "#FF3B30"
   semantic-overlay: "#000000"
 typography:
-  display-xl: { fontFamily: SF Pro Display, fontSize: 40px, fontWeight: 700, lineHeight: 1.05, letterSpacing: -0.8px }
-  display-lg: { fontFamily: SF Pro Display, fontSize: 34px, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.5px }
-  display-md: { fontFamily: SF Pro Display, fontSize: 28px, fontWeight: 700, lineHeight: 1.15, letterSpacing: -0.3px }
-  headline: { fontFamily: SF Pro Display, fontSize: 22px, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0 }
-  card-title: { fontFamily: SF Pro Text, fontSize: 17px, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: SF Pro Text, fontSize: 16px, fontWeight: 500, lineHeight: 1.30, letterSpacing: 0 }
-  body-lg: { fontFamily: SF Pro Text, fontSize: 17px, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
-  body: { fontFamily: SF Pro Text, fontSize: 15px, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
-  body-sm: { fontFamily: SF Pro Text, fontSize: 13px, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
-  caption: { fontFamily: SF Pro Text, fontSize: 10px, fontWeight: 400, lineHeight: 1.20, letterSpacing: 0 }
-  button: { fontFamily: SF Pro Text, fontSize: 17px, fontWeight: 400, lineHeight: 1.20, letterSpacing: 0 }
-  eyebrow: { fontFamily: SF Pro Text, fontSize: 12px, fontWeight: 500, lineHeight: 1.20, letterSpacing: 0.2px }
-  mono: { fontFamily: SF Mono, fontSize: 12px, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
-rounded: { xs: 4px, sm: 8px, md: 10px, lg: 14px, xl: 18px, xxl: 24px, pill: 9999px, full: 9999px }
-spacing: { xxs: 4px, xs: 8px, sm: 12px, md: 16px, lg: 24px, xl: 32px, xxl: 48px, section: 64px }
+  display-xl: { fontFamily: SF Pro Display, fontSize: 40, fontWeight: 700, lineHeight: 1.05, letterSpacing: -0.8 }
+  display-lg: { fontFamily: SF Pro Display, fontSize: 34, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.5 }
+  display-md: { fontFamily: SF Pro Display, fontSize: 28, fontWeight: 700, lineHeight: 1.15, letterSpacing: -0.3 }
+  headline: { fontFamily: SF Pro Display, fontSize: 22, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0 }
+  card-title: { fontFamily: SF Pro Text, fontSize: 17, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
+  subhead: { fontFamily: SF Pro Text, fontSize: 16, fontWeight: 500, lineHeight: 1.30, letterSpacing: 0 }
+  body-lg: { fontFamily: SF Pro Text, fontSize: 17, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
+  body: { fontFamily: SF Pro Text, fontSize: 15, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
+  body-sm: { fontFamily: SF Pro Text, fontSize: 13, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
+  caption: { fontFamily: SF Pro Text, fontSize: 10, fontWeight: 400, lineHeight: 1.20, letterSpacing: 0 }
+  button: { fontFamily: SF Pro Text, fontSize: 17, fontWeight: 400, lineHeight: 1.20, letterSpacing: 0 }
+  eyebrow: { fontFamily: SF Pro Text, fontSize: 12, fontWeight: 500, lineHeight: 1.20, letterSpacing: 0.2 }
+  mono: { fontFamily: SF Mono, fontSize: 12, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
+rounded: { xs: 4, sm: 8, md: 10, lg: 14, xl: 18, xxl: 24, pill: 9999, full: 9999 }
+spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
 components:
-  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.md}", padding: 12px 16px }
-  file-row: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body-lg}", rounded: "{rounded.xs}", padding: 10px 16px }
-  context-menu: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body-lg}", rounded: "{rounded.md}", padding: 6px }
-  input: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: 8px 10px }
-  top-nav: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xs}", height: 44px }
-  footer: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: 8px 12px }
+  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.md}", padding: [12, 16]}
+  file-row: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body-lg}", rounded: "{rounded.xs}", padding: [10, 16]}
+  context-menu: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body-lg}", rounded: "{rounded.md}", padding: 6 }
+  input: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: [8, 10]}
+  bottom navigation: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: [8, 12]}
 ---
 
-## Overview
+# Overview
 
 Files is a sparse native document browser where hierarchy comes from large titles, system blue actions, file glyphs, and familiar menus rather than branded decoration.
 
@@ -55,7 +54,15 @@ Files is a sparse native document browser where hierarchy comes from large title
 - Pale search and native menus.
 - Stable Recents, Shared, and Browse tabs.
 
-## Colors
+# Non-negotiable visual invariants
+
+- Sampled screens consistently use white native canvas.
+- Navigation consistently uses large black navigation titles.
+- The reference consistently shows system-blue actions and folders.
+- The reference consistently shows pale search and native menus.
+- The reference consistently shows stable Recents, Shared, and Browse tabs.
+
+# Color and surfaces
 
 ### Brand & Accent
 - **Primary** ({colors.primary}): Navigation, selection, folders, share, and confirmation.
@@ -78,7 +85,7 @@ Files is a sparse native document browser where hierarchy comes from large title
 - **Danger** ({colors.semantic-danger}): Delete.
 - **Overlay** ({colors.semantic-overlay}): Preview and sheet focus.
 
-## Typography
+# Typography
 
 ### Font Family
 - **SF Pro Display** — large section titles.
@@ -86,7 +93,7 @@ Files is a sparse native document browser where hierarchy comes from large title
 - **SF Mono** — technical paths or identifiers when needed.
 
 ### Hierarchy
-Use 34–40px bold for sections, 17px for rows and actions, 15px body, 13px metadata, and 10px tab labels.
+Use 34–40 points bold for sections, 17 points for rows and actions, 15 points body, 13 points metadata, and 10 points tab labels.
 
 ### Principles
 - Preserve file names before metadata.
@@ -97,10 +104,10 @@ Use 34–40px bold for sections, 17px for rows and actions, 15px body, 13px meta
 ### Note on Font Substitutes
 Use the platform system sans. **Inter** is acceptable outside Apple platforms.
 
-## Layout
+# Screen composition
 
 ### Spacing System
-Use a 4px base, 16px gutters, 10px row rhythm, and native safe-area spacing.
+Use a 4 points base, 16 points gutters, 10 points row rhythm, and native safe-area spacing.
 
 ### Grid & Container
 Each tab is a full-height list or icon grid with search and display controls. Preview becomes a full-screen document canvas.
@@ -108,84 +115,74 @@ Each tab is a full-height list or icon grid with search and display controls. Pr
 ### Whitespace Philosophy
 Leave unused file-browser space empty; do not fill it with promotional modules.
 
-## Elevation & Depth
+Surface hierarchy observed in the source:
+
 Use native menus, sheets, preview stacks, and blur. The base file list remains flat.
 
 ### Decorative Depth
 File thumbnails, folder glyphs, and document previews provide the only visual texture.
 
-## Shapes
+# Navigation appearance
 
-### Border Radius Scale
-Use 8px for search, 10px for menus, 14px for sheets, and native folder or file silhouettes.
+Recents, Shared, and Browse stay in the tab bar; hierarchy uses back navigation and clear location titles.
 
-### Photography & Illustration Geometry
-Treat images and scans as file content. Preserve aspect ratio and never add decorative illustration.
-
-## Components
+# Components
 
 ### Buttons
+
 Use blue text actions for Done, Next, share, and navigation; destructive actions use red in menus.
 
-### Pricing Tabs
-Not a commerce pattern. Use native segmented or menu selection for view and sort options.
-
 ### Cards & Containers
+
 Use file rows, folder tiles, preview canvas, context menus, scan frame, tag sheet, and server form.
 
 ### Inputs & Forms
+
 Search, rename, tag, and server connection follow native field, keyboard, and validation patterns.
 
-### Status & Build Page
+# Imagery and icons
+
+File thumbnails, folder glyphs, and document previews provide the only visual texture.
+
+Treat images and scans as file content. Preserve aspect ratio and never add decorative illustration.
+
+If final imagery is not yet available, any placeholder must preserve the documented scale, placement, crop, and visual weight rather than removing that layer.
+
+# States
+
 Show local, shared, cloud-only, downloading, favorite, tagged, duplicate, and deleted states with icon and label.
 
-### Navigation
-Recents, Shared, and Browse stay in the tab bar; hierarchy uses back navigation and clear location titles.
+# iOS adaptation
 
-### Footer
-The tab bar remains white; document preview replaces it with contextual share or markup actions.
+### Touch Targets
 
-## Do's and Don'ts
+Keep rows, folders, tabs, menus, scan controls, tags, and context actions at least 44 points.
 
-### Do
-- Preserve native file-management conventions.
-- Keep location and selection state clear.
-- Confirm destructive actions.
-- Expose download and sharing status.
+### Collapsing Strategy
 
-### Don't
+Preserve location, search, file list, selection, and navigation. Move sort and view options into overflow.
+
+### Image Behavior
+
+Contain documents and images with aspect-fit; scans use a clear crop frame and preserve legibility.
+
+Apply these rules within current iPhone safe areas and scrolling containers. Keep interactive targets at least 44 points, preserve a logical VoiceOver order, and let Dynamic Type wrap supporting text without flattening the documented hierarchy. Do not infer an unobserved dark or light appearance.
+
+# Anti-generic checklist
+
 - Don't add decorative cards to empty folders.
 - Don't hide file extensions when relevant.
 - Don't invent nonstandard gestures for core actions.
 - Don't crop document previews.
+- Do not replace the documented hierarchy with a generic stack of identical white cards or `Form` sections.
+- Do not use default blue tint, an unstyled `TabView`, arbitrary SF Symbols, or uniform corner radii when they contradict the recorded tokens and components.
+- Do not omit compositionally important imagery while final assets are pending; preserve its footprint with a faithful placeholder.
 
-## Responsive Behavior
+# Known gaps
 
-### Breakpoints
-Use the phone list up to 767px, sidebar plus file browser on tablet, and multicolumn browser or preview above 1024px.
-
-### Touch Targets
-Keep rows, folders, tabs, menus, scan controls, tags, and context actions at least 44px.
-
-### Collapsing Strategy
-Preserve location, search, file list, selection, and navigation. Move sort and view options into overflow.
-
-### Image Behavior
-Contain documents and images with aspect-fit; scans use a clear crop frame and preserve legibility.
-
-## Iteration Guide
-1. Build tabs, search, and file browsing.
-2. Add preview, share, rename, move, and delete.
-3. Add tags, favorites, duplicate, and compress.
-4. Add scan and server connection.
-5. Add shared and cloud status.
-
-## Known Gaps
 - Tokens were inferred visually from 58 image screens.
 - The catalog exposed no formal flows, so review used the screen fallback across Recents, Shared, Browse, preview, scan, tags, server, and context menus.
 - Large-file progress and provider-specific behavior were not deeply sampled.
 - No tablet captures were present.
 
 </design-context>
-
-Use the design system above for all UI you generate.

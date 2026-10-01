@@ -4,9 +4,9 @@ SberBank Online organizes everyday balances, cards, transfers, payments, savings
 
 # Navigation
 
-- The five-item bottom bar separates Home, Savings, Lifestyle, Payments, and Loans.
+- The five primary destinations separates Home, Savings, Lifestyle, Payments, and Loans.
 - Wallet and History provide cross-product views from Home.
-- Search with GigaChat and profile remain available near the top of primary areas.
+- Search with GigaChat and profile remain available in the current context of primary areas.
 
 # Core Flows
 
@@ -25,14 +25,21 @@ SberBank Online organizes everyday balances, cards, transfers, payments, savings
 
 ## Manage financial products
 
-1. Open Savings or Loans from bottom navigation.
+1. Open Savings or Loans from primary navigation.
 2. Review current products and available offers.
 3. Open, configure, fund, repay, or close through a focused linear flow.
 
 # Interaction Patterns
 
 - Dashboard modules expose a small summary and one clear deeper path.
-- Horizontal product strips preserve quick comparison without lengthening Home.
-- Green anchored actions mark committed financial steps.
+- Product browsing sections preserve quick comparison without lengthening Home.
 - Filters and transaction history maintain context across products.
 - Receipts become shareable document views after successful operations.
+
+# System Access Timing
+
+No system-access timing or denial-recovery behavior was documented in the reviewed source.
+
+# Known Gaps
+
+System-permission denial paths, interrupted flows, and recovery behavior not described above were not available in the reviewed source.

@@ -5,7 +5,7 @@ Tips is a reference library of short Apple-product guides organized into collect
 # Navigation
 
 - Screen Gallery exposes no recorded flows; this description is based on all 37 inspected image screens.
-- The collection index is the primary browse surface, with search and saved tips available from the top-level navigation.
+- The collection index is the primary browse context, with search and saved tips available navigation.
 - Category pages lead to individual articles; back, share, and bookmark actions preserve the reading context.
 
 # Core Flows
@@ -18,19 +18,25 @@ Tips is a reference library of short Apple-product guides organized into collect
 
 ## Save and revisit
 
-1. Bookmark a useful article from its navigation bar.
-2. Open saved tips from the top-level library.
+1. Bookmark an useful article from its navigation bar.
+2. Open saved tips library.
 3. Return to the article without rebuilding the browse path.
 
 ## Learn from an article
 
 1. Read the short introduction and numbered steps.
-2. Use the embedded device or UI screenshots as visual confirmation.
+2. Use the embedded device or UI screenshots as confirmation.
 3. Continue to related tips or return to the collection.
 
 # Interaction Patterns
 
-- Grouped lists favor familiar scanning and large row targets.
 - Search narrows the library without changing its information hierarchy.
-- Articles alternate concise prose with screenshots and highlighted feature panels.
 - Exact transition order is unverified because Screen Gallery exposes no flow sequences for this app.
+
+# System Access Timing
+
+No system-access timing or denial-recovery path was documented in the reviewed source.
+
+# Known Gaps
+
+Unobserved flows, denial paths, cancellation behavior, and recovery states remain unspecified.

@@ -1,10 +1,10 @@
 # Overview
 
-DailyFin centers the selected product and exposes high-frequency banking tasks through card actions, quick access, and stable bottom navigation.
+DailyFin centers the selected product and exposes high-frequency banking tasks through card actions, quick access, and stable primary navigation.
 
 # Navigation
 
-My Bank, Payments, History, and More remain in the bottom bar. Card detail, settings, notifications, QR, and add-product controls sit in the top region.
+My Bank, Payments, History, and More remain in the primary navigation. Card detail, settings, notifications, QR, and add-product controls sit in the top region.
 
 # Core Flows
 
@@ -27,6 +27,13 @@ My Bank, Payments, History, and More remain in the bottom bar. Card detail, sett
 
 - Keep the source card visible or named throughout a transfer.
 - Separate card atmosphere from task content.
-- Pair transaction color with direction and amount sign.
 - Preserve quick routes without replacing full payment flows.
 - Require explicit review for transfers and applications.
+
+# System Access Timing
+
+No system-access timing or denial-recovery behavior was documented in the reviewed source.
+
+# Known Gaps
+
+System-permission denial paths, interrupted flows, and recovery behavior not described above were not available in the reviewed source.

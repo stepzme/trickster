@@ -1,22 +1,22 @@
 # Overview
 
-Joom is a promotion-heavy marketplace that keeps discovery fast through product grids, themed collections, rewards, and persistent access to search, cart, favorites, and profile.
+Joom is a promotion-heavy marketplace that keeps discovery fast through product collections, themed collections, rewards, and persistent access to search, cart, favorites, and profile.
 
 # Navigation
 
-A five-item bottom bar anchors Home, Discover, Cart, Favorites, and Profile. Search stays fixed at the top of shopping surfaces, with category tabs directly below it.
+A five-item primary navigation anchors Home, Discover, Cart, Favorites, and Profile. Search remains available , with category tabs directly below it.
 
 # Core Flows
 
 ## Start shopping
 
 1. Review short benefit screens and optional rewards.
-2. Enter the home grid with search, categories, and promotional collections.
+2. Enter the home collections with search, categories, and promotional collections.
 3. Scroll products or switch discovery tabs without losing navigation.
 
 ## Evaluate a product
 
-1. Open a product from the grid.
+1. Open a product from the collections.
 2. Inspect images, price, options, delivery, reviews, and seller information.
 3. Select required variants and add to cart from the persistent action.
 
@@ -29,7 +29,12 @@ A five-item bottom bar anchors Home, Discover, Cart, Favorites, and Profile. Sea
 
 # Interaction Patterns
 
-- Discounts, ratings, and order counts sit close to product imagery for rapid comparison.
-- Favorites are available directly on grid cards.
-- Long product pages keep the add-to-cart action anchored near the safe area.
-- Promotional rewards open in bottom sheets without replacing the shopping context.
+The sampled flows use direct actions, explicit completion, and return to the current context. No additional repeated interaction behavior was documented.
+
+# System Access Timing
+
+No system-access request timing or denial recovery was documented in the reviewed source.
+
+# Known Gaps
+
+- Permission-denial recovery and unobserved secondary flows were not documented.

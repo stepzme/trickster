@@ -1,16 +1,16 @@
 # Overview
 
-OZON Select turns marketplace browsing into a fashion storefront, emphasizing visual comparison, favorites, delivery timing, and a compact cart.
+OZON Select turns marketplace browsing into a fashion marketplace emphasizing comparison, favorites, delivery timing, and cart management.
 
 # Navigation
 
-A five-item bottom bar anchors Home, Search, Favorites, Cart, and Profile. Search and filter controls stay close to the top while product cards continue beneath them.
+A five primary destinations anchors Home, Search, Favorites, Cart, and Profile. Search and filter controls stay close to the top while products continue beneath them.
 
 # Core Flows
 
 ## Browse and discover
 
-1. Enter through editorial campaigns or category circles, scan two-column products, search and filter, then open a product.
+1. Enter through editorial campaigns or categories, scan products, search and filter, then open a product.
 
 ## Product and cart
 
@@ -18,4 +18,12 @@ A five-item bottom bar anchors Home, Search, Favorites, Cart, and Profile. Searc
 
 # Interaction Patterns
 
-Favorites are available directly on cards, filters appear as compact horizontal chips, delivery dates become button labels, and checkout remains a full-width sticky commitment.
+Favorites and filters are available during browsing, delivery dates are exposed before selection, and checkout remains available after changes.
+
+# System Access Timing
+
+No system-access timing or denial-recovery behavior was documented in the reviewed source.
+
+# Known Gaps
+
+System-permission denial paths, interrupted flows, and recovery behavior not described above were not available in the reviewed source.

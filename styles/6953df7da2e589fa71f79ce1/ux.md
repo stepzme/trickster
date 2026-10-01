@@ -4,7 +4,7 @@ Drinkit connects shop selection, editorial discovery, drink building, cart, paym
 
 # Navigation
 
-The selected shop and profile remain at the top. A horizontal taxonomy moves through the feed; cart and active order appear only when relevant.
+The selected shop and profile remain . A taxonomy moves through the feed; cart and active order appear only when relevant.
 
 # Core Flows
 
@@ -30,3 +30,11 @@ The selected shop and profile remain at the top. A horizontal taxonomy moves thr
 - Preserve builder choices when returning to a product.
 - Use character moments after core status is clear.
 - Make ingredients and allergens easy to reach.
+
+# System Access Timing
+
+No system-access request timing or denial recovery was documented in the reviewed source.
+
+# Known Gaps
+
+- Permission-denial recovery and unobserved secondary flows were not documented.

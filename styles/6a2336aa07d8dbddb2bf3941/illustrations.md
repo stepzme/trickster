@@ -1,12 +1,10 @@
-# Illustration Language
+# Overview
 
-Use polished 3D product metaphors with crisp geometry and premium materials. Safes, cards, coins, bags, percentages, microphones, portraits, and small architectural objects should feel like collectible banking miniatures.
+The reviewed source uses imagery in the product roles documented below.
 
-# Palette and Materials
+# Visual Style
 
-- Build from saturated VTB blue, cyan, violet, magenta, pale lilac, and selective gold.
-- Combine glossy plastic, metallic foil, translucent glass, and soft fabric with controlled studio light.
-- Use pale blue or violet gradient grounds and short contact shadows.
+No separate illustration medium was documented beyond the image treatment described in the source.
 
 # Composition
 
@@ -14,8 +12,22 @@ Use polished 3D product metaphors with crisp geometry and premium materials. Saf
 - Keep strong front-facing silhouettes legible at half-width mobile size.
 - Leave safe space for product names and rates outside the artwork.
 
-# Do and Don't
+# Color and Materials
 
-- Keep lighting, perspective, and material finish consistent.
-- Use a direct metaphor for each banking product.
-- Do not mix flat line cartoons, noisy photo collages, or photoreal people into the 3D product family.
+Use the palette relationships explicitly described in the visual language and `ui.md`; no additional material system was documented.
+
+# Variants and States
+
+No state-specific illustration variants were documented in the reviewed source.
+
+# Production Requirements
+
+Exact export formats, aspect ratios, animation behavior, and appearance variants were not documented. Where imagery is compositionally important, temporary placeholders must preserve its documented scale, placement, crop, and visual weight until final art exists.
+
+# Avoid
+
+Do not introduce an unrelated illustration style or substitute decorative symbols for source-supported imagery.
+
+# Known Gaps
+
+Export specifications, animation rules, safe-crop measurements, and unobserved state variants were not available in the reviewed source.

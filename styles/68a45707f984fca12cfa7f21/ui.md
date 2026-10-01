@@ -1,12 +1,12 @@
 <design-context>
 ---
-version: alpha
+version: 1
+platform: iOS
 name: Auto-ru-design-analysis
 description: "A dense automotive marketplace built from a white canvas, bold black utility type, vivid Auto.ru red, pale gray grouped surfaces, and vehicle photography. Search, listings, reports, selling, messages, and services share a compact card language; full-width black and green actions make high-consequence steps unmistakable."
 colors:
   primary: "#F20D0D"
   on-primary: "#FFFFFF"
-  primary-hover: "#D80C0C"
   primary-soft: "#FFE4E4"
   accent-green: "#31C55B"
   accent-blue: "#DCEEFF"
@@ -22,33 +22,32 @@ colors:
   semantic-danger: "#F20D0D"
   semantic-overlay: "#000000"
 typography:
-  display-xl: { fontFamily: YS Text, fontSize: 36px, fontWeight: 700, lineHeight: 1.05, letterSpacing: -0.7px }
-  display-lg: { fontFamily: YS Text, fontSize: 30px, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.5px }
-  display-md: { fontFamily: YS Text, fontSize: 26px, fontWeight: 700, lineHeight: 1.12, letterSpacing: -0.4px }
-  headline: { fontFamily: YS Text, fontSize: 21px, fontWeight: 700, lineHeight: 1.18, letterSpacing: -0.2px }
-  card-title: { fontFamily: YS Text, fontSize: 16px, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: YS Text, fontSize: 17px, fontWeight: 500, lineHeight: 1.35, letterSpacing: 0 }
-  body-lg: { fontFamily: YS Text, fontSize: 16px, fontWeight: 400, lineHeight: 1.45, letterSpacing: 0 }
-  body: { fontFamily: YS Text, fontSize: 14px, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
-  body-sm: { fontFamily: YS Text, fontSize: 12px, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
-  caption: { fontFamily: YS Text, fontSize: 10px, fontWeight: 400, lineHeight: 1.20, letterSpacing: 0 }
-  button: { fontFamily: YS Text, fontSize: 14px, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0 }
-  eyebrow: { fontFamily: YS Text, fontSize: 11px, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0.2px }
-  mono: { fontFamily: SF Mono, fontSize: 12px, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
-rounded: { xs: 6px, sm: 10px, md: 14px, lg: 18px, xl: 24px, xxl: 30px, pill: 9999px, full: 9999px }
-spacing: { xxs: 4px, xs: 8px, sm: 12px, md: 16px, lg: 24px, xl: 32px, xxl: 48px, section: 64px }
+  display-xl: { fontFamily: YS Text, fontSize: 36, fontWeight: 700, lineHeight: 1.05, letterSpacing: -0.7 }
+  display-lg: { fontFamily: YS Text, fontSize: 30, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.5 }
+  display-md: { fontFamily: YS Text, fontSize: 26, fontWeight: 700, lineHeight: 1.12, letterSpacing: -0.4 }
+  headline: { fontFamily: YS Text, fontSize: 21, fontWeight: 700, lineHeight: 1.18, letterSpacing: -0.2 }
+  card-title: { fontFamily: YS Text, fontSize: 16, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
+  subhead: { fontFamily: YS Text, fontSize: 17, fontWeight: 500, lineHeight: 1.35, letterSpacing: 0 }
+  body-lg: { fontFamily: YS Text, fontSize: 16, fontWeight: 400, lineHeight: 1.45, letterSpacing: 0 }
+  body: { fontFamily: YS Text, fontSize: 14, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
+  body-sm: { fontFamily: YS Text, fontSize: 12, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
+  caption: { fontFamily: YS Text, fontSize: 10, fontWeight: 400, lineHeight: 1.20, letterSpacing: 0 }
+  button: { fontFamily: YS Text, fontSize: 14, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0 }
+  eyebrow: { fontFamily: YS Text, fontSize: 11, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0.2 }
+  mono: { fontFamily: SF Mono, fontSize: 12, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
+rounded: { xs: 6, sm: 10, md: 14, lg: 18, xl: 24, xxl: 30, pill: 9999, full: 9999 }
+spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
 components:
-  button-primary: { backgroundColor: "{colors.ink}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.md}", padding: 14px 18px }
-  button-contact: { backgroundColor: "{colors.accent-green}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.md}", padding: 14px 18px }
+  button-primary: { backgroundColor: "{colors.ink}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.md}", padding: [14, 18]}
+  button-contact: { backgroundColor: "{colors.accent-green}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.md}", padding: [14, 18]}
   listing-card: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.sm}", padding: 0 }
-  filter-panel: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 12px }
-  service-tile: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 12px }
-  status-badge: { backgroundColor: "{colors.primary-soft}", textColor: "{colors.primary}", typography: "{typography.caption}", rounded: "{rounded.sm}", padding: 3px 6px }
-  top-nav: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xs}", height: 52px }
-  footer: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: 8px 12px }
+  filter-panel: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 12 }
+  service-tile: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 12 }
+  status-badge: { backgroundColor: "{colors.primary-soft}", textColor: "{colors.primary}", typography: "{typography.caption}", rounded: "{rounded.sm}", padding: [3, 6]}
+  bottom navigation: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: [8, 12]}
 ---
 
-## Overview
+# Overview
 
 Auto.ru is a task-dense marketplace where car photos, price, year, and mileage lead. Red carries identity, black advances forms, green initiates seller contact, and pale grouped surfaces organize extensive search and service tools.
 
@@ -59,7 +58,15 @@ Auto.ru is a task-dense marketplace where car photos, price, year, and mileage l
 - Deep filter and multistep selling forms.
 - Green seller-contact bar.
 
-## Colors
+# Non-negotiable visual invariants
+
+- Sampled screens consistently use white utility canvas with compact typography.
+- Imagery consistently uses photo-led two-column listing grid.
+- Red brand marks and selected emphasis.
+- The reference consistently shows deep filter and multistep selling forms.
+- The reference consistently shows green seller-contact bar.
+
+# Color and surfaces
 
 ### Brand & Accent
 - **Auto Red** ({colors.primary}): Wordmark, launch, and branded highlights.
@@ -83,7 +90,7 @@ Auto.ru is a task-dense marketplace where car photos, price, year, and mileage l
 - **Danger** ({colors.semantic-danger}): Brand and critical state.
 - **Overlay** ({colors.semantic-overlay}): Menus and sheets.
 
-## Typography
+# Typography
 
 ### Font Family
 
@@ -94,12 +101,12 @@ Auto.ru is a task-dense marketplace where car photos, price, year, and mileage l
 
 | Token | Size | Weight | Use |
 |---|---|---|---|
-| `{typography.display-xl}` | 36px | 700 | Launch statement |
-| `{typography.headline}` | 21px | 700 | Screen and form heading |
-| `{typography.card-title}` | 16px | 600 | Price or service title |
-| `{typography.body}` | 14px | 400 | Listing and form copy |
-| `{typography.caption}` | 10px | 400 | Badges and tab labels |
-| `{typography.button}` | 14px | 600 | Primary actions |
+| `{typography.display-xl}` | 36 points | 700 | Launch statement |
+| `{typography.headline}` | 21 points | 700 | Screen and form heading |
+| `{typography.card-title}` | 16 points | 600 | Price or service title |
+| `{typography.body}` | 14 points | 400 | Listing and form copy |
+| `{typography.caption}` | 10 points | 400 | Badges and tab labels |
+| `{typography.button}` | 14 points | 600 | Primary actions |
 
 ### Principles
 
@@ -112,11 +119,11 @@ Auto.ru is a task-dense marketplace where car photos, price, year, and mileage l
 
 Use **Inter** or the platform system sans when YS Text is unavailable.
 
-## Layout
+# Screen composition
 
 ### Spacing System
 
-Use a 4px base, 12px gutters, 8px listing gaps, 12–16px card padding, and 44px form rows.
+Use a 4 points base, 12 points gutters, 8 points listing gaps, 12–16 points card padding, and 44 points form rows.
 
 ### Grid & Container
 
@@ -126,7 +133,7 @@ Search results use a two-column image grid. Filters and selling use one-column f
 
 Favor information density, using pale grouped cards and strong section headings to prevent visual noise.
 
-## Elevation & Depth
+Surface hierarchy observed in the source:
 
 | Level | Treatment | Use |
 |---|---|---|
@@ -139,32 +146,15 @@ Favor information density, using pale grouped cards and strong section headings 
 
 Vehicle photography supplies depth. UI panels use little or no shadow.
 
-## Shapes
+# Navigation appearance
 
-### Border Radius Scale
+Search, Favorites, Place, Messages, and Logbook form the bottom bar. A separate menu sheet exposes account, reports, garage, insurance, credit, valuation, catalog, and settings.
 
-| Token | Value | Use |
-|---|---|---|
-| `{rounded.xs}` | 6px | Badges and compact fields |
-| `{rounded.sm}` | 10px | Listing photos |
-| `{rounded.md}` | 14px | Filters, buttons, and services |
-| `{rounded.lg}` | 18px | Menu sheet |
-| `{rounded.pill}` | full | Chips and owner selectors |
-| `{rounded.full}` | full | Favorite and profile controls |
-
-### Photography & Illustration Geometry
-
-Vehicle photos use landscape crops and rounded corners. Preserve the entire car where possible and avoid color treatments that distort condition.
-
-## Components
+# Components
 
 ### Buttons
 
 Black full-width buttons advance forms and filters. Green buttons contact sellers. Pale blue buttons manage existing listings; red is not the default CTA fill.
-
-### Pricing Tabs
-
-Filters use chips for owner type and feature flags. Selection becomes black with white text; unselected chips stay pale gray.
 
 ### Cards & Containers
 
@@ -174,49 +164,23 @@ Listing cards combine photo, badge, price, model, year, and mileage. Service til
 
 Forms are long, explicit, and step-numbered. Group related specs, retain a bottom Continue action, and show generated help without replacing editable input.
 
-### Status & Build Page
+# Imagery and icons
+
+Vehicle photography supplies depth. UI panels use little or no shadow.
+
+Vehicle photos use landscape crops and rounded corners. Preserve the entire car where possible and avoid color treatments that distort condition.
+
+If final imagery is not yet available, any placeholder must preserve the documented scale, placement, crop, and visual weight rather than removing that layer.
+
+# States
 
 Fair price, New, warranty, credit, report, views, calls, favorites, and listing age appear as compact status elements near the relevant content.
 
-### Navigation
-
-Search, Favorites, Place, Messages, and Logbook form the bottom bar. A separate menu sheet exposes account, reports, garage, insurance, credit, valuation, catalog, and settings.
-
-### Footer
-
-Detail pages pin Call and Chat; selling flows pin Continue. Keep these actions above safe area and keyboard.
-
-## Do's and Don'ts
-
-### Do
-
-- Keep price, model, year, and mileage scannable.
-- Use real vehicle photography.
-- Separate search, report, and selling tasks.
-- Pin the next high-value action.
-- Explain paid promotion clearly.
-
-### Don't
-
-- Don't use red for every action.
-- Don't hide ownership or report caveats.
-- Don't crop cars beyond recognition.
-- Don't collapse long filters into ambiguous icons.
-- Don't mix seller contact with purchase guarantees.
-
-## Responsive Behavior
-
-### Breakpoints
-
-| Name | Width | Key Changes |
-|---|---|---|
-| Wide | 768px+ | Add columns and optional split detail pane |
-| Compact | 390–767px | Two-column results and single-column forms |
-| Small | <390px | Tighten labels and reduce service columns |
+# iOS adaptation
 
 ### Touch Targets
 
-Keep chips, favorites, tabs, filter rows, form controls, Call, Chat, and Continue at least 44px.
+Keep chips, favorites, tabs, filter rows, form controls, Call, Chat, and Continue at least 44 points.
 
 ### Collapsing Strategy
 
@@ -226,15 +190,20 @@ Truncate listing model text before price or photo. Preserve one-column filters a
 
 Use consistent landscape cover crops in result grids and larger contained media on details. Never stretch or recolor vehicle photos.
 
-## Iteration Guide
+Apply these rules within current iPhone safe areas and scrolling containers. Keep interactive targets at least 44 points, preserve a logical VoiceOver order, and let Dynamic Type wrap supporting text without flattening the documented hierarchy. Do not infer an unobserved dark or light appearance.
 
-1. Establish listing grid and search header.
-2. Build vehicle detail and pinned contact.
-3. Add filters and saved search.
-4. Add the multistep selling flow.
-5. Add reports, garage, and service menu.
+# Anti-generic checklist
 
-## Known Gaps
+- Don't use red for every action.
+- Don't hide ownership or report caveats.
+- Don't crop cars beyond recognition.
+- Don't collapse long filters into ambiguous icons.
+- Don't mix seller contact with purchase guarantees.
+- Do not replace the documented hierarchy with a generic stack of identical white cards or `Form` sections.
+- Do not use default blue tint, an unstyled `TabView`, arbitrary SF Symbols, or uniform corner radii when they contradict the recorded tokens and components.
+- Do not omit compositionally important imagery while final assets are pending; preserve its footprint with a faithful placeholder.
+
+# Known gaps
 
 - Tokens were inferred visually from the inspected mobile screens.
 - All 51 flow names were inventoried; first launch, main, search, listing, selling, and menu flows were image-reviewed.
@@ -242,5 +211,3 @@ Use consistent landscape cover crops in result grids and larger contained media 
 - No tablet or desktop captures were present.
 
 </design-context>
-
-Use the design system above for all UI you generate.

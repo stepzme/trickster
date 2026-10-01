@@ -4,7 +4,7 @@ Ozon Fresh prioritizes rapid grocery discovery, basket building, delivery visibi
 
 # Navigation
 
-A five-item bottom bar anchors Products, Catalog, Ready-made food, Cart, and Profile. A persistent delivery header keeps address and ETA visible while search, categories, and recommendations scroll underneath.
+A five primary destinations anchors Products, Catalog, Ready-made food, Cart, and Profile. A persistent delivery header keeps address and ETA visible while search, categories, and recommendations scroll underneath.
 
 # Core Flows
 
@@ -18,4 +18,12 @@ A five-item bottom bar anchors Products, Catalog, Ready-made food, Cart, and Pro
 
 # Interaction Patterns
 
-Product quantity changes happen in place; sticky bottom actions preserve the next commitment; sheets and rounded overlays focus product details without losing the shopping context.
+Product quantity changes happen in place; the next commitment remains available; product-detail presentations focus the current item without losing the shopping context.
+
+# System Access Timing
+
+No system-access timing or denial-recovery behavior was documented in the reviewed source.
+
+# Known Gaps
+
+System-permission denial paths, interrupted flows, and recovery behavior not described above were not available in the reviewed source.

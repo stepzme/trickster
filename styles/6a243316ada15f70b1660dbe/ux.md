@@ -5,7 +5,7 @@ Stars Coffee centers loyalty, menu discovery, promotions, nearby cafés, purchas
 # Navigation
 
 - Home acts as the main hub for loyalty, news, location, and menu access.
-- Menu categories scroll horizontally above a two-column product grid.
+- Menu categories scroll horizontally above a product catalog.
 - Account, loyalty, store, and gifting tasks use focused drill-down screens.
 
 # Core Flows
@@ -13,8 +13,8 @@ Stars Coffee centers loyalty, menu discovery, promotions, nearby cafés, purchas
 ## Browse the menu
 
 1. Open the menu from Home.
-2. Switch between horizontal product categories.
-3. Scan photographed products, names, prices, and dietary labels.
+2. Switch between product browsing sections.
+3. Scan products, names, prices, and dietary labels.
 
 ## Use loyalty
 
@@ -30,7 +30,13 @@ Stars Coffee centers loyalty, menu discovery, promotions, nearby cafés, purchas
 
 # Interaction Patterns
 
-- Brown brand chrome frames white transactional content.
 - Turquoise marks loyalty, progress, and primary action.
-- Photography remains isolated on white menu cards.
 - Multi-step gifting shows explicit numbered progress.
+
+# System Access Timing
+
+No system-access timing or denial-recovery behavior was documented in the reviewed source.
+
+# Known Gaps
+
+System-permission denial paths, interrupted flows, and recovery behavior not described above were not available in the reviewed source.

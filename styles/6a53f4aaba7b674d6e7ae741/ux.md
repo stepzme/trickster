@@ -5,7 +5,7 @@ Samokat supports rapid grocery and goods discovery, search, favorites, repeat or
 # Navigation
 
 - Home exposes Catalog, Discounts, New, Ordered Before, and Saved as immediate shortcuts.
-- Search and category exploration lead into the same product grid and product detail model.
+- Search and category exploration lead into the same product catalog and product detail model.
 - Cart, checkout, and tracking become focused layers with a persistent next action.
 
 # Core Flows
@@ -13,7 +13,7 @@ Samokat supports rapid grocery and goods discovery, search, favorites, repeat or
 ## Find and order
 
 1. Browse a collection, catalog category, or search result.
-2. Add directly from the grid or open a product for details.
+2. Add directly from the catalog or open a product for details.
 3. Adjust quantity and review the cart.
 4. Confirm address, delivery preferences, discount, and payment.
 5. Track assembly and delivery, then review the order in history.
@@ -33,6 +33,14 @@ Samokat supports rapid grocery and goods discovery, search, favorites, repeat or
 
 - Direct add becomes a quantity control after selection.
 - Search, category filters, and curated shelves converge on one assortment model.
-- Checkout uses grouped sheets and keeps the payment action anchored.
+- Checkout groups decisions and keeps the payment action available.
 - Tracking preserves access to change, contact, cancel, and item summary.
 - Toasts confirm lightweight state changes without leaving the catalog.
+
+# System Access Timing
+
+No system-access timing or denial-recovery behavior was documented in the reviewed source.
+
+# Known Gaps
+
+System-permission denial paths, interrupted flows, and recovery behavior not described above were not available in the reviewed source.

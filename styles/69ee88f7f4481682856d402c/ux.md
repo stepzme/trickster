@@ -4,9 +4,9 @@ VK Video is a broad video platform for personalized feeds, long-form playback, c
 
 # Navigation
 
-- Five bottom destinations cover Home, Clips, Create, Subscriptions, and Profile.
-- Home adds horizontal content tabs such as For You, Kids, and Films & Series.
-- Video and channel pages open from large thumbnail cards while search stays available in the top bar.
+- Five primary destinations cover Home, Clips, Create, Subscriptions, and Profile.
+- Home adds content tabs such as For You, Kids, and Films & Series.
+- Video and channel pages open from thumbnail cards while search stays available in contextual controls.
 
 # Core Flows
 
@@ -30,7 +30,13 @@ VK Video is a broad video platform for personalized feeds, long-form playback, c
 
 # Interaction Patterns
 
-- Large thumbnail imagery and titles drive feed scanning.
-- Blue marks navigation and action; red belongs to the video brand and live state.
 - Continue Watching preserves progress on each thumbnail.
 - Kids content remains a distinct curated mode without changing the core navigation.
+
+# System Access Timing
+
+No system-access request timing or denial recovery was documented in the reviewed source.
+
+# Known Gaps
+
+- Permission-denial recovery and unobserved secondary flows were not documented.

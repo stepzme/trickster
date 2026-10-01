@@ -1,206 +1,150 @@
 <design-context>
 ---
-version: alpha
+version: 1
+platform: iOS
 name: Pillowtalk-design-analysis
 description: "A cinematic dark journaling interface with a pure-black canvas, lowercase white typography, acid-lime moments, oversized ambient photo-blur panels, translucent circular capture controls, and a sparse four-tab shell."
-colors: {primary: "#E5FF7C", on-primary: "#10110D", primary-hover: "#ECFF9B", primary-focus: "#C9E85C", ink: "#F5F5F2", ink-muted: "#C8C8C3", ink-subtle: "#8F918C", ink-tertiary: "#5F615D", canvas: "#050505", surface-1: "#111211", surface-2: "#1B1D1B", surface-3: "#282A27", surface-4: "#353834", hairline: "#292B29", hairline-strong: "#41443F", hairline-tertiary: "#565A53", inverse-canvas: "#F4F4F0", inverse-surface-1: "#E8E8E3", inverse-surface-2: "#DADBD4", inverse-ink: "#111210", brand-secure: "#D8F46A", semantic-success: "#DFFF72", semantic-overlay: "#000000"}
+colors: {primary: "#E5FF7C", on-primary: "#10110D", primary-focus: "#C9E85C", ink: "#F5F5F2", ink-muted: "#C8C8C3", ink-subtle: "#8F918C", ink-tertiary: "#5F615D", canvas: "#050505", surface-1: "#111211", surface-2: "#1B1D1B", surface-3: "#282A27", surface-4: "#353834", hairline: "#292B29", hairline-strong: "#41443F", hairline-tertiary: "#565A53", inverse-canvas: "#F4F4F0", inverse-surface-1: "#E8E8E3", inverse-surface-2: "#DADBD4", inverse-ink: "#111210", brand-secure: "#D8F46A", semantic-success: "#DFFF72", semantic-overlay: "#000000"}
 typography:
-  display-xl: {fontFamily: SF Pro Display, fontSize: 42px, fontWeight: 400, lineHeight: 1.04, letterSpacing: -1.1px}
-  display-lg: {fontFamily: SF Pro Display, fontSize: 34px, fontWeight: 400, lineHeight: 1.08, letterSpacing: -0.7px}
-  display-md: {fontFamily: SF Pro Display, fontSize: 28px, fontWeight: 400, lineHeight: 1.12, letterSpacing: -0.4px}
-  headline: {fontFamily: SF Pro Display, fontSize: 23px, fontWeight: 400, lineHeight: 1.18, letterSpacing: -0.2px}
-  card-title: {fontFamily: SF Pro Text, fontSize: 17px, fontWeight: 500, lineHeight: 1.25, letterSpacing: 0}
-  subhead: {fontFamily: SF Pro Text, fontSize: 15px, fontWeight: 500, lineHeight: 1.30, letterSpacing: 0}
-  body-lg: {fontFamily: SF Pro Text, fontSize: 17px, fontWeight: 400, lineHeight: 1.42, letterSpacing: 0}
-  body: {fontFamily: SF Pro Text, fontSize: 14px, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0}
-  body-sm: {fontFamily: SF Pro Text, fontSize: 12px, fontWeight: 400, lineHeight: 1.32, letterSpacing: 0}
-  caption: {fontFamily: SF Pro Text, fontSize: 10px, fontWeight: 400, lineHeight: 1.25, letterSpacing: 0}
-  button: {fontFamily: SF Pro Text, fontSize: 14px, fontWeight: 500, lineHeight: 1.20, letterSpacing: 0}
-  eyebrow: {fontFamily: SF Pro Text, fontSize: 10px, fontWeight: 500, lineHeight: 1.20, letterSpacing: 0.1px}
-  mono: {fontFamily: SF Mono, fontSize: 11px, fontWeight: 400, lineHeight: 1.38, letterSpacing: 0}
-rounded: {xs: 4px, sm: 8px, md: 12px, lg: 18px, xl: 28px, xxl: 36px, pill: 9999px, full: 9999px}
-spacing: {xxs: 4px, xs: 8px, sm: 12px, md: 16px, lg: 20px, xl: 24px, xxl: 32px, section: 48px}
+  display-xl: {fontFamily: SF Pro Display, fontSize: 42, fontWeight: 400, lineHeight: 1.04, letterSpacing: -1.1}
+  display-lg: {fontFamily: SF Pro Display, fontSize: 34, fontWeight: 400, lineHeight: 1.08, letterSpacing: -0.7}
+  display-md: {fontFamily: SF Pro Display, fontSize: 28, fontWeight: 400, lineHeight: 1.12, letterSpacing: -0.4}
+  headline: {fontFamily: SF Pro Display, fontSize: 23, fontWeight: 400, lineHeight: 1.18, letterSpacing: -0.2}
+  card-title: {fontFamily: SF Pro Text, fontSize: 17, fontWeight: 500, lineHeight: 1.25, letterSpacing: 0}
+  subhead: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 500, lineHeight: 1.30, letterSpacing: 0}
+  body-lg: {fontFamily: SF Pro Text, fontSize: 17, fontWeight: 400, lineHeight: 1.42, letterSpacing: 0}
+  body: {fontFamily: SF Pro Text, fontSize: 14, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0}
+  body-sm: {fontFamily: SF Pro Text, fontSize: 12, fontWeight: 400, lineHeight: 1.32, letterSpacing: 0}
+  caption: {fontFamily: SF Pro Text, fontSize: 10, fontWeight: 400, lineHeight: 1.25, letterSpacing: 0}
+  button: {fontFamily: SF Pro Text, fontSize: 14, fontWeight: 500, lineHeight: 1.20, letterSpacing: 0}
+  eyebrow: {fontFamily: SF Pro Text, fontSize: 10, fontWeight: 500, lineHeight: 1.20, letterSpacing: 0.1}
+  mono: {fontFamily: SF Mono, fontSize: 11, fontWeight: 400, lineHeight: 1.38, letterSpacing: 0}
+rounded: {xs: 4, sm: 8, md: 12, lg: 18, xl: 28, xxl: 36, pill: 9999, full: 9999}
+spacing: {xxs: 4, xs: 8, sm: 12, md: 16, lg: 20, xl: 24, xxl: 32, section: 48}
 components:
-  button-primary: {backgroundColor: "{colors.inverse-canvas}", textColor: "{colors.inverse-ink}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: 14px 20px}
+  button-primary: {backgroundColor: "{colors.inverse-canvas}", textColor: "{colors.inverse-ink}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: 14 20}
   button-primary-pressed: {backgroundColor: "{colors.inverse-surface-2}", textColor: "{colors.inverse-ink}", typography: "{typography.button}", rounded: "{rounded.pill}"}
-  button-primary-hover: {backgroundColor: "{colors.inverse-surface-1}", textColor: "{colors.inverse-ink}", typography: "{typography.button}", rounded: "{rounded.pill}"}
-  button-secondary: {backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.full}", padding: 12px 16px}
-  button-tertiary: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.full}", padding: 10px}
-  journal-card: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xl}", padding: 18px}
-  capture-panel: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.headline}", rounded: "{rounded.xl}", padding: 20px}
-  text-input: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 12px 14px}
-  status-badge: {backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.caption}", rounded: "{rounded.full}", padding: 4px 8px}
-  bottom-nav: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink-subtle}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: 8px 10px}
+  button-secondary: {backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.full}", padding: 12 16}
+  button-tertiary: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.full}", padding: 10}
+  journal-card: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xl}", padding: 18}
+  capture-panel: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.headline}", rounded: "{rounded.xl}", padding: 20}
+  text-input: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 12 14}
+  status-badge: {backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.caption}", rounded: "{rounded.full}", padding: 4 8}
+  bottom-nav: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink-subtle}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: 8 10}
 ---
-## Overview
+
+# Overview
 
 Pillowtalk is a moody voice-journal interface. Pure black creates a private space, large lowercase white type feels conversational, and acid lime appears as a brief reward or current-state signal rather than constant branding.
 
-**Key Characteristics:** black canvas, lowercase white type, blurred atmospheric capture panel, translucent controls, acid-lime rewards, compact calendar rail, floating white add action, and four quiet destinations.
+# Non-negotiable visual invariants
 
-## Colors
+- Primary screens use black canvas.
+- The typographic hierarchy uses lowercase white type.
+- Characteristic content and controls use blurred atmospheric capture panel.
+- Characteristic content and controls use translucent controls.
+- The sampled screens consistently show acid-lime rewards.
+- The sampled screens consistently show compact calendar rail.
+- The recurring color treatment uses floating white add action.
+- The sampled screens consistently show four quiet destinations.
 
-### Brand & Accent
+# Color and surfaces
 
 Acid lime marks unlocked insight, selected dates, and moments of progress. Most primary actions remain white or translucent so the accent stays rare.
 
-### Surface
-
 Black is continuous; charcoal panels and softly blurred imagery create capture and entry surfaces; white appears as the strongest inverse control.
-
-### Text
 
 White leads prompts and journal content, soft gray carries guidance and dates, and black is used on white or lime actions.
 
-### Semantic
-
 Lime indicates progress or insight; neutral white indicates capture or add; destructive states stay quiet until confirmation.
 
-## Typography
-
-### Font Family
+# Typography
 
 Use SF Pro Display and Text with light-to-medium weights, large lowercase prompts, and compact supporting labels.
 
-### Hierarchy
-
-| Token | Size | Weight | Use |
-|---|---:|---:|---|
-| display-xl | 42px | 400 | Date or reflective state |
-| display-lg | 34px | 400 | Capture prompt |
-| headline | 23px | 400 | Entry title |
-| body-lg | 17px | 400 | Reflection text |
-| caption | 10px | 400 | Tab or date meta |
-
-### Principles
+- display-xl — 42 points — 400 — Date or reflective state
+- display-lg — 34 points — 400 — Capture prompt
+- headline — 23 points — 400 — Entry title
+- body-lg — 17 points — 400 — Reflection text
+- caption — 10 points — 400 — Tab or date meta
 
 - Favor calm lowercase language and generous leading.
 - Let one prompt dominate each capture state.
 - Keep utility labels compact and secondary.
 
-### Note on Font Substitutes
-
 Use a clean humanist system sans with light weights; avoid condensed or aggressively geometric display faces.
 
-## Layout
+The hierarchy must remain legible with Dynamic Type: supporting text may wrap before the primary metric, title, or action loses its role.
 
-### Spacing System
+# Screen composition
 
-Use a 4px base, 16–20px card padding, 12px navigation rhythm, and large vertical breathing room around reflective content.
-
-### Grid & Container
+Use a 4 points base, 16–20 points card padding, 12 points navigation rhythm, and large vertical breathing room around reflective content.
 
 Today uses one oversized capture panel; Entries is a single calendar-led column; Patterns and Explore use stacked insight cards.
 
-### Whitespace Philosophy
-
 Dark empty space creates privacy and pacing. The interface should feel like one thought at a time, not a data dashboard.
-
-## Elevation & Depth
-
-| Level | Treatment | Use |
-|---|---|---|
-| 0 | Pure black | Private journal canvas |
-| 1 | Charcoal card | Entry and pattern |
-| 2 | Ambient photo blur | Voice capture |
-| 3 | Floating white circle | Add and confirm |
-
-### Decorative Depth
 
 Use soft photographic blur, translucency, and subtle glow; avoid crisp layered shadows or bright gradient chrome.
 
-## Shapes
+Primary iPhone screens keep the documented content grouping and vertical rhythm inside a scroll container when content exceeds the viewport. Bottom-owned actions or navigation reserve the lower safe area rather than covering content.
 
-### Border Radius Scale
-
-| Token | Value | Use |
-|---|---:|---|
-| rounded-xs | 4px | Tiny state |
-| rounded-sm | 8px | Date control |
-| rounded-md | 12px | Compact row |
-| rounded-xl | 28px | Capture and entry panel |
-| rounded-full | full | Add, mode, date controls |
-
-### Photography & Illustration Geometry
-
-Photography is enlarged and heavily blurred inside oversized rounded panels; organic brand marks stay small and isolated.
-
-## Components
-
-### Buttons
-
-Use white pills for decisive continuation, white circles for add, and translucent round controls for Type, Yap, and Transcribe.
-
-### Pricing Tabs
-
-Mode and time choices use circular or text selection; paywall plans should inherit black, white, and scarce lime emphasis.
-
-### Cards & Containers
-
-Capture and entry cards are oversized and atmospheric; insight and pattern cards remain sparse with large text and minimal chrome.
-
-### Inputs & Forms
-
-Typed entries use dark rounded fields; voice capture uses centered microphone controls; native inputs retain platform behavior but inherit this dark, airy styling.
-
-### Status & Build Page
-
-Expose recording, transcript, reminder, mood, analysis, and unlocked-pattern states beside the relevant journal entry.
-
-### Navigation
+# Navigation appearance
 
 Use a four-item bottom bar for Today, Explore, Entries, and Patterns, plus a floating white add control.
 
-### Footer
+This section governs appearance only; destinations and transitions are defined in `ux.md`.
 
-No footer; bottom navigation and the add or capture control own the safe area.
+# Components
 
-## Do's and Don'ts
+Use white pills for decisive continuation, white circles for add, and translucent round controls for Type, Yap, and Transcribe.
 
-### Do
+Capture and entry cards are oversized and atmospheric; insight and pattern cards remain sparse with large text and minimal chrome.
 
-- Preserve black space, oversized prompt, and atmospheric capture panel.
-- Keep lime scarce and meaningful.
-- Style native controls to inherit this visual system.
+Typed entries use dark rounded fields; voice capture uses centered microphone controls; native inputs retain platform behavior but inherit this dark, airy styling.
 
-### Don't
+Expose recording, transcript, reminder, mood, analysis, and unlocked-pattern states beside the relevant journal entry.
 
-- Don't turn reflection into dense analytics cards.
-- Don't use multiple saturated accents or glossy gradients.
-- Don't shrink the capture prompt beneath utility chrome.
+Controls retain at least a 44-point interactive area. Pressed and disabled treatments should stay within the documented palette and hierarchy; no unobserved state styling is prescribed.
 
-## Responsive Behavior
+# Imagery and icons
 
-### Breakpoints
-
-| Name | Width | Key Changes |
-|---|---:|---|
-| Compact | 320–374px | Tighten date rail and controls |
-| Standard | 375–430px | Default composition |
-| Wide | 431px+ | Increase panel and reading margins |
-
-### Touch Targets
-
-Capture modes, add, dates, tabs, entry rows, and pattern actions remain at least 44px.
-
-### Collapsing Strategy
-
-Preserve prompt, capture action, date, entry content, and current pattern; reduce secondary suggestions first.
-
-### Image Behavior
+Photography is enlarged and heavily blurred inside oversized rounded panels; organic brand marks stay small and isolated.
 
 Allow ambient imagery to crop and blur behind text, maintaining sufficient contrast and rounded panel edges.
 
-## Iteration Guide
+When imagery is part of the documented composition, it cannot be omitted while final assets are pending. A temporary asset must preserve its placement, crop, scale, and approximate visual weight.
 
-Tune Today and capture first, then transcript, Entries, Patterns, Explore, and settings.
+# States
 
-## Known Gaps
+Expose recording, transcript, reminder, mood, analysis, and unlocked-pattern states beside the relevant journal entry.
+
+Lime indicates progress or insight; neutral white indicates capture or add; destructive states stay quiet until confirmation.
+
+Only the states documented above are specified; other states must preserve the same canvas, hierarchy, and component language without inventing a new visual system.
+
+# iOS adaptation
+
+- Extend the documented canvas through the iPhone safe areas while keeping readable content within appropriate insets.
+- Use a vertical `ScrollView` for content that does not fit compact heights; keep documented bottom actions and navigation clear of the home indicator.
+- Capture modes, add, dates, tabs, entry rows, and pattern actions remain at least 44 points.
+- Preserve prompt, capture action, date, entry content, and current pattern; reduce secondary suggestions first.
+- Present the keyboard and system permission UI natively, then return to the same visual context.
+- Preserve semantic reading order in VoiceOver and allow text to grow with Dynamic Type.
+- Do not infer an unobserved dark or light variant; use the appearance documented by the reference.
+
+# Anti-generic checklist
+
+- Do not turn reflection into dense analytics cards.
+- Do not use multiple saturated accents or glossy gradients.
+- Do not shrink the capture prompt beneath utility chrome.
+- Do not replace the documented canvas and surfaces with a generic grouped background and uniform white cards.
+- Do not use an unstyled `TabView`, default blue tint, or arbitrary SF Symbols when they contradict the reference.
+- Do not collapse every component to one corner radius or remove compositionally important imagery.
+
+# Known gaps
 
 - Several available screens were video-only and had no still preview.
 - Subscription recovery and long-term pattern history were only partially reviewed.
 - Tablet and landscape layouts were not represented.
 
 </design-context>
-
-Use the design system above for all UI you generate.

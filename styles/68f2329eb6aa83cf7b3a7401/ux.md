@@ -4,8 +4,8 @@ Simple combines personalized planning, health tracking, AI coaching, fasting, wo
 
 # Navigation
 
-- Four bottom tabs lead to Home, Coach, Track, and Explore.
-- Profile and settings open from the top-right avatar.
+- Four primary navigation destinations lead to Home, Coach, Track, and Explore.
+- Profile and settings open from the avatar.
 - Explore groups workouts, recipes, fasting, psychology, and educational content.
 
 # Core Flows
@@ -30,8 +30,13 @@ Simple combines personalized planning, health tracking, AI coaching, fasting, wo
 
 # Interaction Patterns
 
-- Metric cards pair one goal with one direct action.
-- Violet indicates the next or premium action; green reflects achieved progress.
-- Coach keeps a persistent composer above navigation.
-- Explore uses media shelves and locked-state badges.
+- Coach keeps the composer available throughout the conversation.
 - Profile centralizes health, appearance, notifications, and subscription settings.
+
+# System Access Timing
+
+- Camera or Photos access follows the user choosing the documented capture, scan, or photo action. Denial recovery was not documented.
+
+# Known Gaps
+
+- Permission-denial recovery and unobserved secondary flows were not documented.

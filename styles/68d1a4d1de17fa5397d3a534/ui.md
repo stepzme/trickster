@@ -1,12 +1,12 @@
 <design-context>
 ---
-version: alpha
+version: 1
+platform: iOS
 name: Bolt-design-analysis
 description: "A map-first mobility interface built from quiet white sheets, pale-gray controls, near-black text, and restrained dark-green actions. Ride, delivery, scooter, and send services share the same direct task structure, while friendly 3D service icons and characters add recognition without competing with live maps, prices, or pickup decisions."
 colors:
   primary: "#2F8B57"
   on-primary: "#FFFFFF"
-  primary-hover: "#267548"
   primary-soft: "#E8F5EE"
   accent-lime: "#A8DDBA"
   accent-blue: "#2864DC"
@@ -21,32 +21,31 @@ colors:
   semantic-danger: "#D83B45"
   semantic-overlay: "#000000"
 typography:
-  display-xl: { fontFamily: SF Pro Display, fontSize: 36px, fontWeight: 700, lineHeight: 1.05, letterSpacing: -0.8px }
-  display-lg: { fontFamily: SF Pro Display, fontSize: 30px, fontWeight: 700, lineHeight: 1.08, letterSpacing: -0.5px }
-  display-md: { fontFamily: SF Pro Display, fontSize: 26px, fontWeight: 700, lineHeight: 1.12, letterSpacing: -0.3px }
-  headline: { fontFamily: SF Pro Display, fontSize: 22px, fontWeight: 700, lineHeight: 1.18, letterSpacing: -0.2px }
-  card-title: { fontFamily: SF Pro Text, fontSize: 16px, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: SF Pro Text, fontSize: 17px, fontWeight: 500, lineHeight: 1.35, letterSpacing: 0 }
-  body-lg: { fontFamily: SF Pro Text, fontSize: 16px, fontWeight: 400, lineHeight: 1.45, letterSpacing: 0 }
-  body: { fontFamily: SF Pro Text, fontSize: 14px, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
-  body-sm: { fontFamily: SF Pro Text, fontSize: 12px, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
-  caption: { fontFamily: SF Pro Text, fontSize: 10px, fontWeight: 400, lineHeight: 1.20, letterSpacing: 0 }
-  button: { fontFamily: SF Pro Text, fontSize: 16px, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0 }
-  eyebrow: { fontFamily: SF Pro Text, fontSize: 11px, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0.2px }
-  mono: { fontFamily: SF Mono, fontSize: 12px, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
-rounded: { xs: 8px, sm: 12px, md: 16px, lg: 20px, xl: 26px, xxl: 32px, pill: 9999px, full: 9999px }
-spacing: { xxs: 4px, xs: 8px, sm: 12px, md: 16px, lg: 24px, xl: 32px, xxl: 48px, section: 64px }
+  display-xl: { fontFamily: SF Pro Display, fontSize: 36, fontWeight: 700, lineHeight: 1.05, letterSpacing: -0.8 }
+  display-lg: { fontFamily: SF Pro Display, fontSize: 30, fontWeight: 700, lineHeight: 1.08, letterSpacing: -0.5 }
+  display-md: { fontFamily: SF Pro Display, fontSize: 26, fontWeight: 700, lineHeight: 1.12, letterSpacing: -0.3 }
+  headline: { fontFamily: SF Pro Display, fontSize: 22, fontWeight: 700, lineHeight: 1.18, letterSpacing: -0.2 }
+  card-title: { fontFamily: SF Pro Text, fontSize: 16, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
+  subhead: { fontFamily: SF Pro Text, fontSize: 17, fontWeight: 500, lineHeight: 1.35, letterSpacing: 0 }
+  body-lg: { fontFamily: SF Pro Text, fontSize: 16, fontWeight: 400, lineHeight: 1.45, letterSpacing: 0 }
+  body: { fontFamily: SF Pro Text, fontSize: 14, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
+  body-sm: { fontFamily: SF Pro Text, fontSize: 12, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
+  caption: { fontFamily: SF Pro Text, fontSize: 10, fontWeight: 400, lineHeight: 1.20, letterSpacing: 0 }
+  button: { fontFamily: SF Pro Text, fontSize: 16, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0 }
+  eyebrow: { fontFamily: SF Pro Text, fontSize: 11, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0.2 }
+  mono: { fontFamily: SF Mono, fontSize: 12, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
+rounded: { xs: 8, sm: 12, md: 16, lg: 20, xl: 26, xxl: 32, pill: 9999, full: 9999 }
+spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
 components:
-  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.md}", padding: 15px 18px }
-  location-field: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body-lg}", rounded: "{rounded.md}", padding: 14px 16px }
-  service-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.card-title}", rounded: "{rounded.lg}", padding: 12px }
-  ride-row: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 12px 16px }
-  map-sheet: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xl}", padding: 16px }
-  top-nav: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xs}", height: 52px }
-  footer: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: 8px 12px }
+  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.md}", padding: [15, 18]}
+  location-field: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body-lg}", rounded: "{rounded.md}", padding: [14, 16]}
+  service-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.card-title}", rounded: "{rounded.lg}", padding: 12 }
+  ride-row: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: [12, 16]}
+  map-sheet: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xl}", padding: 16 }
+  bottom navigation: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: [8, 12]}
 ---
 
-## Overview
+# Overview
 
 Bolt uses live maps as the operational layer and white sheets as the decision layer. Dark green marks the main commitment, while neutral surfaces keep pickup, destination, price, and service choice dominant.
 
@@ -57,7 +56,15 @@ Bolt uses live maps as the operational layer and white sheets as the decision la
 - Large destination and pickup fields.
 - Friendly 3D service imagery.
 
-## Colors
+# Non-negotiable visual invariants
+
+- The reference consistently shows map-first task context.
+- The reference consistently shows white rounded decision sheets.
+- The reference consistently shows restrained dark-green actions.
+- The reference consistently shows large destination and pickup fields.
+- Imagery consistently uses friendly 3D service imagery.
+
+# Color and surfaces
 
 ### Brand & Accent
 - **Bolt Green** ({colors.primary}): Booking, continuation, and active state.
@@ -80,7 +87,7 @@ Bolt uses live maps as the operational layer and white sheets as the decision la
 - **Danger** ({colors.semantic-danger}): Cancellation and blocking errors.
 - **Overlay** ({colors.semantic-overlay}): Modal focus over maps.
 
-## Typography
+# Typography
 
 ### Font Family
 
@@ -92,12 +99,12 @@ Bolt uses live maps as the operational layer and white sheets as the decision la
 
 | Token | Size | Weight | Use |
 |---|---|---|---|
-| `{typography.display-xl}` | 36px | 700 | Onboarding statement |
-| `{typography.headline}` | 22px | 700 | Task or sheet heading |
-| `{typography.card-title}` | 16px | 600 | Service and ride option |
-| `{typography.body}` | 14px | 400 | ETA and conditions |
-| `{typography.caption}` | 10px | 400 | Metadata |
-| `{typography.button}` | 16px | 600 | Booking action |
+| `{typography.display-xl}` | 36 points | 700 | Onboarding statement |
+| `{typography.headline}` | 22 points | 700 | Task or sheet heading |
+| `{typography.card-title}` | 16 points | 600 | Service and ride option |
+| `{typography.body}` | 14 points | 400 | ETA and conditions |
+| `{typography.caption}` | 10 points | 400 | Metadata |
+| `{typography.button}` | 16 points | 600 | Booking action |
 
 ### Principles
 
@@ -110,11 +117,11 @@ Bolt uses live maps as the operational layer and white sheets as the decision la
 
 Use **Inter** or the platform system sans when SF Pro is unavailable.
 
-## Layout
+# Screen composition
 
 ### Spacing System
 
-Use a 4px base, 16px sheet gutters, 12px option gaps, and 16px card padding.
+Use a 4 points base, 16 points sheet gutters, 12 points option gaps, and 16 points card padding.
 
 ### Grid & Container
 
@@ -124,7 +131,7 @@ Home pairs a destination field with service cards. Booking overlays pickup, rout
 
 Keep sheets compact enough to preserve map context, but give each decision row enough height for quick one-handed scanning.
 
-## Elevation & Depth
+Surface hierarchy observed in the source:
 
 | Level | Treatment | Use |
 |---|---|---|
@@ -137,32 +144,15 @@ Keep sheets compact enough to preserve map context, but give each decision row e
 
 Use elevation to separate controls from the map. Reserve modeled volume for service icons and onboarding characters.
 
-## Shapes
+# Navigation appearance
 
-### Border Radius Scale
+Home prioritizes services and destination entry. A side menu contains account, trips, payments, support, safety, and settings.
 
-| Token | Value | Use |
-|---|---|---|
-| `{rounded.xs}` | 8px | Map chips and tags |
-| `{rounded.sm}` | 12px | Fields and icon wells |
-| `{rounded.md}` | 16px | Ride rows and actions |
-| `{rounded.lg}` | 20px | Service cards |
-| `{rounded.pill}` | full | Filters and map controls |
-| `{rounded.full}` | full | Vehicle marker and avatar |
-
-### Photography & Illustration Geometry
-
-Service art uses isolated 3D vehicles, parcels, scooters, or characters. Maps, route lines, and real location data remain functional and unobstructed.
-
-## Components
+# Components
 
 ### Buttons
 
 Green full-width buttons commit booking or continuation. Secondary controls use gray surfaces; cancellation stays visually separated and red only when destructive.
-
-### Pricing Tabs
-
-Ride classes appear as selectable rows with vehicle, ETA, capacity, and price. Service modes use image-led cards.
 
 ### Cards & Containers
 
@@ -172,49 +162,23 @@ Home cards identify Ride, Send, and Scooters. Booking sheets group route summary
 
 Pickup and destination use large searchable fields, recent locations, and map selection. Parcel details and contact data follow a short single-column form.
 
-### Status & Build Page
+# Imagery and icons
+
+Use elevation to separate controls from the map. Reserve modeled volume for service icons and onboarding characters.
+
+Service art uses isolated 3D vehicles, parcels, scooters, or characters. Maps, route lines, and real location data remain functional and unobstructed.
+
+If final imagery is not yet available, any placeholder must preserve the documented scale, placement, crop, and visual weight rather than removing that layer.
+
+# States
 
 Show searching, driver assigned, ETA, pickup, in progress, delivered, completed, and cancelled with explicit labels and live context.
 
-### Navigation
-
-Home prioritizes services and destination entry. A side menu contains account, trips, payments, support, safety, and settings.
-
-### Footer
-
-Booking actions sit inside the bottom sheet above the safe area; menu and detail screens use a conventional bottom-safe action region.
-
-## Do's and Don'ts
-
-### Do
-
-- Preserve map context through each booking step.
-- Keep pickup and destination unambiguous.
-- Show ETA, capacity, and price together.
-- Use green for the single next action.
-- Use 3D art to distinguish service modes.
-
-### Don't
-
-- Don't cover the route with oversized decoration.
-- Don't hide price changes or cancellation terms.
-- Don't mix account navigation into the booking sheet.
-- Don't use map color as the only state cue.
-- Don't add multiple competing primary buttons.
-
-## Responsive Behavior
-
-### Breakpoints
-
-| Name | Width | Key Changes |
-|---|---|---|
-| Wide | 768px+ | Use side-by-side map and decision panel |
-| Compact | 390–767px | Default bottom-sheet composition |
-| Small | <390px | Shorten service labels and collapse metadata |
+# iOS adaptation
 
 ### Touch Targets
 
-Keep fields, ride rows, map controls, menu items, and primary actions at least 44px.
+Keep fields, ride rows, map controls, menu items, and primary actions at least 44 points.
 
 ### Collapsing Strategy
 
@@ -224,15 +188,20 @@ Reduce secondary ride metadata before shrinking price or ETA. Preserve map, rout
 
 Contain service objects inside cards. Let the map crop fluidly around the active route while keeping pickup, destination, and vehicle markers visible.
 
-## Iteration Guide
+Apply these rules within current iPhone safe areas and scrolling containers. Keep interactive targets at least 44 points, preserve a logical VoiceOver order, and let Dynamic Type wrap supporting text without flattening the documented hierarchy. Do not infer an unobserved dark or light appearance.
 
-1. Establish map, location fields, and service home.
-2. Build pickup and destination search.
-3. Add ride selection, price, and confirmation.
-4. Add Send, Scooters, and trip state.
-5. Add illustration and campaigns last.
+# Anti-generic checklist
 
-## Known Gaps
+- Don't cover the route with oversized decoration.
+- Don't hide price changes or cancellation terms.
+- Don't mix account navigation into the booking sheet.
+- Don't use map color as the only state cue.
+- Don't add multiple competing primary buttons.
+- Do not replace the documented hierarchy with a generic stack of identical white cards or `Form` sections.
+- Do not use default blue tint, an unstyled `TabView`, arbitrary SF Symbols, or uniform corner radii when they contradict the recorded tokens and components.
+- Do not omit compositionally important imagery while final assets are pending; preserve its footprint with a faithful placeholder.
+
+# Known gaps
 
 - Tokens were inferred visually from inspected mobile screens.
 - All 75 available flow names were inventoried; onboarding, home, ride booking, Bolt Send, scooters, and side navigation were image-reviewed.
@@ -240,5 +209,3 @@ Contain service objects inside cards. Let the map crop fluidly around the active
 - Some selected flow entries were video-only; static screens were used as visual evidence.
 
 </design-context>
-
-Use the design system above for all UI you generate.

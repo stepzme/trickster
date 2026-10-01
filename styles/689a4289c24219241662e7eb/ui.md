@@ -1,6 +1,7 @@
 <design-context>
 ---
-version: alpha
+version: 1
+platform: iOS
 name: VK-Dating-design-analysis
 description: "A photo-led dating interface that alternates between dark immersive profile cards and bright white discovery collections. Blue system actions, pink category labels, and red-purple-blue reaction controls create a familiar but energetic social aesthetic."
 
@@ -25,36 +26,46 @@ colors:
   semantic-overlay: "#000000"
 
 typography:
-  display-xl: { fontFamily: System Sans, fontSize: 38px, fontWeight: 750, lineHeight: 1.06, letterSpacing: -0.6px }
-  display-lg: { fontFamily: System Sans, fontSize: 30px, fontWeight: 700, lineHeight: 1.1, letterSpacing: -0.3px }
-  display-md: { fontFamily: System Sans, fontSize: 24px, fontWeight: 700, lineHeight: 1.15, letterSpacing: 0 }
-  headline: { fontFamily: System Sans, fontSize: 20px, fontWeight: 650, lineHeight: 1.2, letterSpacing: 0 }
-  card-title: { fontFamily: System Sans, fontSize: 17px, fontWeight: 650, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: System Sans, fontSize: 17px, fontWeight: 450, lineHeight: 1.35, letterSpacing: 0 }
-  body-lg: { fontFamily: System Sans, fontSize: 16px, fontWeight: 400, lineHeight: 1.42, letterSpacing: 0 }
-  body: { fontFamily: System Sans, fontSize: 14px, fontWeight: 400, lineHeight: 1.42, letterSpacing: 0 }
-  body-sm: { fontFamily: System Sans, fontSize: 12px, fontWeight: 400, lineHeight: 1.38, letterSpacing: 0 }
-  caption: { fontFamily: System Sans, fontSize: 10px, fontWeight: 500, lineHeight: 1.3, letterSpacing: 0 }
-  button: { fontFamily: System Sans, fontSize: 16px, fontWeight: 650, lineHeight: 1.2, letterSpacing: 0 }
-  eyebrow: { fontFamily: System Sans, fontSize: 11px, fontWeight: 650, lineHeight: 1.25, letterSpacing: 0.3px }
-  mono: { fontFamily: System Mono, fontSize: 12px, fontWeight: 400, lineHeight: 1.38, letterSpacing: 0 }
+  display-xl: { fontFamily: System Sans, fontSize: 38, fontWeight: 750, lineHeight: 1.06, letterSpacing: -0.6 }
+  display-lg: { fontFamily: System Sans, fontSize: 30, fontWeight: 700, lineHeight: 1.1, letterSpacing: -0.3 }
+  display-md: { fontFamily: System Sans, fontSize: 24, fontWeight: 700, lineHeight: 1.15, letterSpacing: 0 }
+  headline: { fontFamily: System Sans, fontSize: 20, fontWeight: 650, lineHeight: 1.2, letterSpacing: 0 }
+  card-title: { fontFamily: System Sans, fontSize: 17, fontWeight: 650, lineHeight: 1.25, letterSpacing: 0 }
+  subhead: { fontFamily: System Sans, fontSize: 17, fontWeight: 450, lineHeight: 1.35, letterSpacing: 0 }
+  body-lg: { fontFamily: System Sans, fontSize: 16, fontWeight: 400, lineHeight: 1.42, letterSpacing: 0 }
+  body: { fontFamily: System Sans, fontSize: 14, fontWeight: 400, lineHeight: 1.42, letterSpacing: 0 }
+  body-sm: { fontFamily: System Sans, fontSize: 12, fontWeight: 400, lineHeight: 1.38, letterSpacing: 0 }
+  caption: { fontFamily: System Sans, fontSize: 10, fontWeight: 500, lineHeight: 1.3, letterSpacing: 0 }
+  button: { fontFamily: System Sans, fontSize: 16, fontWeight: 650, lineHeight: 1.2, letterSpacing: 0 }
+  eyebrow: { fontFamily: System Sans, fontSize: 11, fontWeight: 650, lineHeight: 1.25, letterSpacing: 0.3 }
+  mono: { fontFamily: System Mono, fontSize: 12, fontWeight: 400, lineHeight: 1.38, letterSpacing: 0 }
 
-rounded: { xs: 4px, sm: 8px, md: 12px, lg: 18px, xl: 24px, xxl: 30px, pill: 9999px, full: 9999px }
-spacing: { xxs: 4px, xs: 8px, sm: 12px, md: 16px, lg: 24px, xl: 32px, xxl: 48px, section: 64px }
+rounded: { xs: 4, sm: 8, md: 12, lg: 18, xl: 24, xxl: 30, pill: 9999, full: 9999 }
+spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
 
 components:
-  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: 14px 20px }
+  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: [14, 20]}
   profile-card: { backgroundColor: "{colors.surface-dark}", textColor: "{colors.on-primary}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 0 }
-  reaction-button: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: 12px 20px }
+  reaction-button: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: [12, 20]}
   collection-card: { backgroundColor: "{colors.surface-2}", textColor: "{colors.on-primary}", typography: "{typography.card-title}", rounded: "{rounded.md}", padding: 0 }
-  bottom-nav: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.sm}", height: 58px }
+  bottom-nav: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.sm}", height: 58 }
 ---
 
-## Overview
+# Overview
 
 VK Dating balances immersive dark profile discovery with bright white collections and account surfaces. Photography carries identity while reaction colors keep decisions explicit.
 
-## Colors
+# Non-negotiable visual invariants
+
+- The reference consistently shows faces and identity central.
+- Sampled screens consistently use make reactions explicit beyond color.
+- The reference consistently shows real photography consistently.
+- The reference consistently shows preserve readable scrims over images.
+- Imagery consistently uses a photo-led dating interface that alternates between dark immersive profile cards and bright white discovery collections. Blue system actions.
+- The reference consistently shows pink category labels.
+- The reference consistently shows red-purple-blue reaction controls create a familiar but energetic social aesthetic.
+
+# Color and surfaces
 
 ### Brand & Accent
 
@@ -72,7 +83,7 @@ Near-black carries light-surface content; white overlays photography; gray carri
 
 Green confirms match or completion, amber warns, and red marks destructive action. The red dislike control needs an icon and label, not color alone.
 
-## Typography
+# Typography
 
 ### Font Family
 
@@ -80,7 +91,7 @@ Use a friendly system sans with strong Cyrillic support.
 
 ### Hierarchy
 
-Use 24–38px onboarding statements, 17–20px names and collection titles, 14–16px bios, and 10–12px metadata.
+Use 24–38 points onboarding statements, 17–20 points names and collection titles, 14–16 points bios, and 10–12 points metadata.
 
 ### Principles
 
@@ -90,11 +101,11 @@ Keep name, age, distance, activity, and intent easy to scan. Limit text overlays
 
 Use SF Pro or Inter with medium-to-bold profile headings and reliable Cyrillic metrics.
 
-## Layout
+# Screen composition
 
 ### Spacing System
 
-Use a 4px base, 8–12px discovery gutters, 12px card gaps, and 24px between collection sections.
+Use a 4 points base, 8–12 points discovery gutters, 12 points card gaps, and 24 points between collection sections.
 
 ### Grid & Container
 
@@ -104,7 +115,7 @@ Profiles use one tall media card. Collections use a two-column photo grid beneat
 
 Let photography fill discovery. On white surfaces, give collection headings and explanatory copy clear breathing room.
 
-## Elevation & Depth
+Surface hierarchy observed in the source:
 
 Use image scrims, card overlap, and slight reaction-button lift. Collection cards stay mostly flat.
 
@@ -112,25 +123,15 @@ Use image scrims, card overlap, and slight reaction-button lift. Collection card
 
 Photography and campaign media provide depth. UI uses small gradient fills only for reaction or promotional emphasis.
 
-## Shapes
+# Navigation appearance
 
-### Border Radius Scale
+Use five bottom destinations for Profiles, Collections, Likes, Chats, and Profile. Keep filter access in Profiles and Collections headers.
 
-Use 8px chips, 12px collection cards, 18px profile media, 24px sheets, and pill-shaped reactions.
-
-### Photography & Illustration Geometry
-
-Profile photography uses tall `cover` crops with face-safe placement. Collection imagery uses rounded portrait tiles; no separate illustration language is present.
-
-## Components
+# Components
 
 ### Buttons
 
 Profile reactions are wide colored pills with distinct symbols. Native controls must inherit blue focus and the current light or dark surface.
-
-### Pricing Tabs
-
-Collections, likes, and profile sections use underline tabs or compact chips with blue selected state.
 
 ### Cards & Containers
 
@@ -140,43 +141,23 @@ Profile cards layer activity, distance, name, age, and bio over a bottom scrim. 
 
 Onboarding uses large dark fields and multi-select interest chips. Chat uses a familiar light message composer.
 
-### Status & Build Page
+# Imagery and icons
+
+Photography and campaign media provide depth. UI uses small gradient fills only for reaction or promotional emphasis.
+
+Profile photography uses tall `cover` crops with face-safe placement. Collection imagery uses rounded portrait tiles; no separate illustration language is present.
+
+If final imagery is not yet available, any placeholder must preserve the documented scale, placement, crop, and visual weight rather than removing that layer.
+
+# States
 
 Online, recently active, verified, liked, priority, match, unread, and profile-completion states appear beside the related person or message.
 
-### Navigation
-
-Use five bottom destinations for Profiles, Collections, Likes, Chats, and Profile. Keep filter access in Profiles and Collections headers.
-
-### Footer
-
-There is no footer. Profile and account actions live inside the final navigation destination.
-
-## Do's and Don'ts
-
-### Do
-
-- Keep faces and identity central.
-- Make reactions explicit beyond color.
-- Use real photography consistently.
-- Preserve readable scrims over images.
-
-### Don't
-
-- Do not cover profile faces with controls.
-- Do not mix unrelated illustration styles.
-- Do not rely on swipe alone.
-- Do not expose default accent colors.
-
-## Responsive Behavior
-
-### Breakpoints
-
-Keep one profile card on phones. Wider screens may place detail beside media and expand collections to more columns.
+# iOS adaptation
 
 ### Touch Targets
 
-Reaction buttons, filters, collection cards, navigation, likes, and chat actions require at least 44px targets.
+Reaction buttons, filters, collection cards, navigation, likes, and chat actions require at least 44 points targets.
 
 ### Collapsing Strategy
 
@@ -186,14 +167,20 @@ Keep photo, name, activity, and reactions visible. Collapse full bio, interests,
 
 Use `cover` with face-aware positioning for profiles and collection photos; use `contain` for badges, logos, and small identity marks.
 
-## Iteration Guide
+Apply these rules within current iPhone safe areas and scrolling containers. Keep interactive targets at least 44 points, preserve a logical VoiceOver order, and let Dynamic Type wrap supporting text without flattening the documented hierarchy. Do not infer an unobserved dark or light appearance.
 
-Start with onboarding, interest selection, profile discovery, explicit reactions, collections, likes, and chat. Add campaigns, verification, premium priority, and advanced filters afterward.
+# Anti-generic checklist
 
-## Known Gaps
+- Do not cover profile faces with controls.
+- Do not mix unrelated illustration styles.
+- Do not rely on swipe alone.
+- Do not expose default accent colors.
+- Do not replace the documented hierarchy with a generic stack of identical white cards or `Form` sections.
+- Do not use default blue tint, an unstyled `TabView`, arbitrary SF Symbols, or uniform corner radii when they contradict the recorded tokens and components.
+- Do not omit compositionally important imagery while final assets are pending; preserve its footprint with a faithful placeholder.
+
+# Known gaps
 
 The inspected catalog documents 19 flows across signup, onboarding, profiles, collections, likes, chats, and profile management. Safety reporting and some match completion states are less represented.
 
 </design-context>
-
-Use the design system above for all UI you generate.

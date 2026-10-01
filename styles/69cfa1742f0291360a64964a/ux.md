@@ -4,7 +4,7 @@ Duolingo combines a guided learning path, varied lesson mechanics, streaks, reso
 
 # Navigation
 
-Bottom navigation moves among path, practice, leagues, social, profile, and more. Resource counters and the module banner remain above the path.
+primary navigation moves among path, practice, leagues, social, profile, and more. Resource counters and the module banner remain above the path.
 
 # Core Flows
 
@@ -29,3 +29,11 @@ Bottom navigation moves among path, practice, leagues, social, profile, and more
 - Explain errors without breaking momentum.
 - Preserve progress across interruptions.
 - Use celebration in proportion to achievement.
+
+# System Access Timing
+
+No system-access request timing or denial recovery was documented in the reviewed source.
+
+# Known Gaps
+
+- Permission-denial recovery and unobserved secondary flows were not documented.

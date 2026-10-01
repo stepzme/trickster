@@ -21,3 +21,11 @@ Home and Payments anchor the product; the central assistant is visually distinct
 - Validate payee details before continuation.
 - Separate AI assistance from final payment approval.
 - Offer a direct path back home after success.
+
+# System Access Timing
+
+No system-access request timing or denial recovery was documented in the reviewed source.
+
+# Known Gaps
+
+- Permission-denial recovery and unobserved secondary flows were not documented.

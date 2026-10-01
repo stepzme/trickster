@@ -17,7 +17,7 @@ Home, Search, Favorites, Messages, and Office form the base. Map, results, listi
 
 ## Publish a listing
 
-Enter location, property details, media, features, description, price, and terms; review placement options, pay when required, and publish or save a draft.
+1. Enter location, property details, media, features, description, price, and terms; review placement options, pay when required, and publish or save a draft.
 
 # Interaction Patterns
 
@@ -26,3 +26,11 @@ Enter location, property details, media, features, description, price, and terms
 - Make owner or agent contact explicit.
 - Confirm paid publication and deletion.
 - Separate buyer alerts from owner statistics.
+
+# System Access Timing
+
+No system-access request timing or denial recovery was documented in the reviewed source.
+
+# Known Gaps
+
+- Permission-denial recovery and unobserved secondary flows were not documented.

@@ -4,13 +4,13 @@ Pi frames AI conversation as an intimate ongoing dialogue, with text and voice i
 
 # Navigation
 
-The chat composer anchors the bottom of the screen. A compact side panel exposes New chat, Discover, history, Help, and Settings without turning the experience into a persistent tab shell.
+The composer remains available throughout a chat. A contextual panel exposes New chat, Discover, history, Help, and Settings without adding permanent destinations.
 
 # Core Flows
 
 ## Chat and call
 
-1. Continue an existing thread or start a new chat, enter text or voice, review the response, react or copy, and optionally move into a full-screen voice call.
+1. Continue an existing thread or start a new chat, enter text or voice, review the response, react or copy, and optionally move into a voice call.
 
 ## Discover and manage
 
@@ -18,4 +18,12 @@ The chat composer anchors the bottom of the screen. A compact side panel exposes
 
 # Interaction Patterns
 
-The composer remains available through long conversations, the green voice circle is the dominant action, contextual response tools stay quiet, and side-panel navigation preserves conversational continuity.
+The composer remains available through long conversations, voice recording remains available, contextual response tools remain secondary, and navigation preserves conversational continuity.
+
+# System Access Timing
+
+No system-access timing or denial-recovery behavior was documented in the reviewed source.
+
+# Known Gaps
+
+System-permission denial paths, interrupted flows, and recovery behavior not described above were not available in the reviewed source.

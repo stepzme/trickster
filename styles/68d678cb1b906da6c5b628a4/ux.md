@@ -1,11 +1,11 @@
 # Overview
 
-Yandex Books combines discovery, personal library, reading, listening, notes, and kids mode. Book covers remain the visual content while controls become quiet, compact, and contextual.
+Yandex Books combines discovery, personal library, reading, listening, notes, and kids mode. Reading and listening controls remain contextual to the current book.
 
 # Navigation
 
-- A three-item bottom bar separates My books, Library, and Search.
-- Library uses horizontal content modes for Main, Audio, Comics, and Kids plus genre chips.
+- A three-item primary navigation separates My books, Library, and Search.
+- Library uses content modes for Main, Audio, Comics, and Kids plus genre chips.
 - An active-book mini player persists above navigation for quick return to reading or listening.
 
 # Core Flows
@@ -24,7 +24,7 @@ Yandex Books combines discovery, personal library, reading, listening, notes, an
 
 ## Listen and resume
 
-1. Open an audiobook and use the large central play control.
+1. Open an audiobook and use the play control.
 2. Change speed, chapter, sleep timer, or seek interval.
 3. Switch between reading and listening while progress stays synchronized.
 
@@ -34,3 +34,11 @@ Yandex Books combines discovery, personal library, reading, listening, notes, an
 - Persistent progress and resume actions connect Library, My books, reader, and player.
 - Bottom sheets hold book actions, filters, and settings.
 - Kids mode is protected by an optional PIN and changes the catalog rather than the core navigation model.
+
+# System Access Timing
+
+No system-access timing or denial-recovery path was documented in the reviewed source.
+
+# Known Gaps
+
+Unobserved flows, denial paths, cancellation behavior, and recovery states remain unspecified.

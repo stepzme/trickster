@@ -1,12 +1,12 @@
 <design-context>
 ---
-version: alpha
+version: 1
+platform: iOS
 name: Claude-design-analysis
 description: "A warm, editorial conversational workspace with an off-white paper canvas, dark ink, restrained terracotta actions, serif headings, fine outline icons, neutral rounded composers, and compact blue system toggles. Chats, artifacts, image and file input, code, voice, capabilities, privacy, subscription, and settings remain calm and text-led."
 colors:
   primary: "#D97757"
   on-primary: "#FFFFFF"
-  primary-hover: "#BF6042"
   primary-soft: "#F7EAE5"
   accent: "#191714"
   accent-secondary: "#2F80ED"
@@ -21,32 +21,31 @@ colors:
   semantic-danger: "#C94A47"
   semantic-overlay: "#000000"
 typography:
-  display-xl: { fontFamily: Georgia, fontSize: 36px, fontWeight: 700, lineHeight: 1.05, letterSpacing: -0.7px }
-  display-lg: { fontFamily: Georgia, fontSize: 30px, fontWeight: 700, lineHeight: 1.08, letterSpacing: -0.5px }
-  display-md: { fontFamily: Georgia, fontSize: 26px, fontWeight: 700, lineHeight: 1.12, letterSpacing: -0.3px }
-  headline: { fontFamily: Georgia, fontSize: 22px, fontWeight: 700, lineHeight: 1.18, letterSpacing: -0.2px }
-  card-title: { fontFamily: SF Pro Text, fontSize: 16px, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: SF Pro Text, fontSize: 17px, fontWeight: 500, lineHeight: 1.35, letterSpacing: 0 }
-  body-lg: { fontFamily: SF Pro Text, fontSize: 16px, fontWeight: 400, lineHeight: 1.45, letterSpacing: 0 }
-  body: { fontFamily: SF Pro Text, fontSize: 14px, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
-  body-sm: { fontFamily: SF Pro Text, fontSize: 12px, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
-  caption: { fontFamily: SF Pro Text, fontSize: 10px, fontWeight: 400, lineHeight: 1.20, letterSpacing: 0 }
-  button: { fontFamily: SF Pro Text, fontSize: 15px, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0 }
-  eyebrow: { fontFamily: SF Pro Text, fontSize: 11px, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0.3px }
-  mono: { fontFamily: SF Mono, fontSize: 12px, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
-rounded: { xs: 8px, sm: 12px, md: 16px, lg: 20px, xl: 26px, xxl: 32px, pill: 9999px, full: 9999px }
-spacing: { xxs: 4px, xs: 8px, sm: 12px, md: 16px, lg: 24px, xl: 32px, xxl: 48px, section: 64px }
+  display-xl: { fontFamily: Georgia, fontSize: 36, fontWeight: 700, lineHeight: 1.05, letterSpacing: -0.7 }
+  display-lg: { fontFamily: Georgia, fontSize: 30, fontWeight: 700, lineHeight: 1.08, letterSpacing: -0.5 }
+  display-md: { fontFamily: Georgia, fontSize: 26, fontWeight: 700, lineHeight: 1.12, letterSpacing: -0.3 }
+  headline: { fontFamily: Georgia, fontSize: 22, fontWeight: 700, lineHeight: 1.18, letterSpacing: -0.2 }
+  card-title: { fontFamily: SF Pro Text, fontSize: 16, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
+  subhead: { fontFamily: SF Pro Text, fontSize: 17, fontWeight: 500, lineHeight: 1.35, letterSpacing: 0 }
+  body-lg: { fontFamily: SF Pro Text, fontSize: 16, fontWeight: 400, lineHeight: 1.45, letterSpacing: 0 }
+  body: { fontFamily: SF Pro Text, fontSize: 14, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
+  body-sm: { fontFamily: SF Pro Text, fontSize: 12, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
+  caption: { fontFamily: SF Pro Text, fontSize: 10, fontWeight: 400, lineHeight: 1.20, letterSpacing: 0 }
+  button: { fontFamily: SF Pro Text, fontSize: 15, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0 }
+  eyebrow: { fontFamily: SF Pro Text, fontSize: 11, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0.3 }
+  mono: { fontFamily: SF Mono, fontSize: 12, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
+rounded: { xs: 8, sm: 12, md: 16, lg: 20, xl: 26, xxl: 32, pill: 9999, full: 9999 }
+spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
 components:
-  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.md}", padding: 14px 18px }
-  feature-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 16px }
-  action-tile: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.md}", padding: 12px }
-  grouped-list: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 8px 16px }
-  input: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body-lg}", rounded: "{rounded.md}", padding: 14px 16px }
-  top-nav: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xs}", height: 52px }
-  footer: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: 8px 12px }
+  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.md}", padding: [14, 18]}
+  feature-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 16 }
+  action-tile: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.md}", padding: 12 }
+  grouped-list: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: [8, 16]}
+  input: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body-lg}", rounded: "{rounded.md}", padding: [14, 16]}
+  bottom navigation: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: [8, 12]}
 ---
 
-## Overview
+# Overview
 
 Claude treats chat like an editorial document. Warm paper tones, serif titles, modest terracotta actions, and a large rounded composer keep conversation, artifacts, and code approachable.
 
@@ -57,7 +56,15 @@ Claude treats chat like an editorial document. Warm paper tones, serif titles, m
 - Fine black outline icons.
 - Large rounded bottom composer.
 
-## Colors
+# Non-negotiable visual invariants
+
+- Sampled screens consistently use warm off-white paper canvas.
+- The reference consistently shows serif product and model headings.
+- The reference consistently shows terracotta primary actions.
+- The reference consistently shows fine black outline icons.
+- The reference consistently shows large rounded bottom composer.
+
+# Color and surfaces
 
 ### Brand & Accent
 - **Primary** ({colors.primary}): New chat, send, and selected product actions.
@@ -80,7 +87,7 @@ Claude treats chat like an editorial document. Warm paper tones, serif titles, m
 - **Danger** ({colors.semantic-danger}): Error and destructive state.
 - **Overlay** ({colors.semantic-overlay}): Modal focus.
 
-## Typography
+# Typography
 
 ### Font Family
 
@@ -90,7 +97,7 @@ Claude treats chat like an editorial document. Warm paper tones, serif titles, m
 
 ### Hierarchy
 
-Use 36px bold for major statements, 22px bold for screen headings, 16px semibold for cards, 14px regular for detail, and 15px semibold for primary actions.
+Use 36 points bold for major statements, 22 points bold for screen headings, 16 points semibold for cards, 14 points regular for detail, and 15 points semibold for primary actions.
 
 ### Principles
 
@@ -103,11 +110,11 @@ Use 36px bold for major statements, 22px bold for screen headings, 16px semibold
 
 Use **Inter** or the platform system sans when the reference display face is unavailable.
 
-## Layout
+# Screen composition
 
 ### Spacing System
 
-Use a 4px base, 16px edge gutters, 12px control gaps, and 16px card padding.
+Use a 4 points base, 16 points edge gutters, 12 points control gaps, and 16 points card padding.
 
 ### Grid & Container
 
@@ -117,7 +124,7 @@ Chat is a single readable column above a large composer. The drawer groups New c
 
 Use paper-like margins and generous breathing room around short responses; tighten only for code and structured output.
 
-## Elevation & Depth
+Surface hierarchy observed in the source:
 
 Keep the base flat, raise actionable cards slightly, and reserve overlays for confirmation or interruption.
 
@@ -125,25 +132,15 @@ Keep the base flat, raise actionable cards slightly, and reserve overlays for co
 
 Use nearly flat warm surfaces and light modal sheets. Content and typography create hierarchy.
 
-## Shapes
+# Navigation appearance
 
-### Border Radius Scale
+The drawer holds global chat and artifact destinations; settings opens as a focused native sheet.
 
-Use 8px for small controls, 12px for fields, 16px for actions, 20px for cards, and full pills or circles for compact selection.
-
-### Photography & Illustration Geometry
-
-User images and generated artifacts appear as content. Small ghost and capability icons are functional, not a separate illustration system.
-
-## Components
+# Components
 
 ### Buttons
 
 Terracotta circles send or start a new chat; black circular voice controls and neutral text actions handle secondary behavior.
-
-### Pricing Tabs
-
-Model and artifact state use compact menus; capabilities and privacy use native toggles.
 
 ### Cards & Containers
 
@@ -153,45 +150,23 @@ Composer, recent row, artifact chip, incognito notice, and settings sections use
 
 The composer supports text, image, file, voice, tools, and app connections with clear send state.
 
-### Status & Build Page
+# Imagery and icons
+
+Use nearly flat warm surfaces and light modal sheets. Content and typography create hierarchy.
+
+User images and generated artifacts appear as content. Small ghost and capability icons are functional, not a separate illustration system.
+
+If final imagery is not yet available, any placeholder must preserve the documented scale, placement, crop, and visual weight rather than removing that layer.
+
+# States
 
 Show incognito, generating, artifact created, connected app, upload, voice, error, and capability enabled through label plus icon.
 
-### Navigation
-
-The drawer holds global chat and artifact destinations; settings opens as a focused native sheet.
-
-### Footer
-
-The rounded composer stays above the safe area and keeps add, tools, voice, and send within reach.
-
-## Do's and Don'ts
-
-### Do
-
-- Preserve the warm paper feel.
-- Keep prose highly readable.
-- Use terracotta sparingly.
-- Separate artifacts from conversation.
-- Label privacy and capability state.
-
-### Don't
-
-- Don't add glossy gradients.
-- Don't use decorative illustrations in the shell.
-- Don't make every action terracotta.
-- Don't crowd the composer.
-- Don't render long code as body prose.
-
-## Responsive Behavior
-
-### Breakpoints
-
-Use a centered or split panel above 768px, the reference single column from 390–767px, and tighter labels below 390px.
+# iOS adaptation
 
 ### Touch Targets
 
-Keep every row, tab, selector, map control, and primary action at least 44px.
+Keep every row, tab, selector, map control, and primary action at least 44 points.
 
 ### Collapsing Strategy
 
@@ -201,15 +176,20 @@ Preserve model, content, composer, send or voice, and drawer access. Move second
 
 Contain uploaded images and artifacts as conversation content; never use them as page background or decoration.
 
-## Iteration Guide
+Apply these rules within current iPhone safe areas and scrolling containers. Keep interactive targets at least 44 points, preserve a logical VoiceOver order, and let Dynamic Type wrap supporting text without flattening the documented hierarchy. Do not infer an unobserved dark or light appearance.
 
-1. Build conversation and composer.
-2. Add drawer, chats, and recents.
-3. Add image, file, voice, and code.
-4. Add artifacts and app connections.
-5. Add capabilities, privacy, subscription, and settings.
+# Anti-generic checklist
 
-## Known Gaps
+- Don't add glossy gradients.
+- Don't use decorative illustrations in the shell.
+- Don't make every action terracotta.
+- Don't crowd the composer.
+- Don't render long code as body prose.
+- Do not replace the documented hierarchy with a generic stack of identical white cards or `Form` sections.
+- Do not use default blue tint, an unstyled `TabView`, arbitrary SF Symbols, or uniform corner radii when they contradict the recorded tokens and components.
+- Do not omit compositionally important imagery while final assets are pending; preserve its footprint with a faithful placeholder.
+
+# Known gaps
 
 - Tokens were inferred visually from inspected mobile screens.
 - All 11 available flow names were inventoried; home, code, image and file input, voice, capabilities, and settings were image-reviewed.
@@ -217,5 +197,3 @@ Contain uploaded images and artifacts as conversation content; never use them as
 - No tablet or desktop captures were present.
 
 </design-context>
-
-Use the design system above for all UI you generate.

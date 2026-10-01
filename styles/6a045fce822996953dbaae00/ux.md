@@ -4,7 +4,7 @@ Klarna combines merchant discovery, checkout, payment scheduling, purchase track
 
 # Navigation
 
-A floating four-item dock anchors Home, Payments, Wallet, and More. Search stays prominent across discovery; merchant checkout can open inside an embedded browser with a persistent Klarna payment bar.
+A four-item navigation anchors Home, Payments, Wallet, and More. Search stays across discovery; merchant checkout can open inside an embedded browser with a persistent Klarna payment bar.
 
 # Core Flows
 
@@ -29,7 +29,14 @@ A floating four-item dock anchors Home, Payments, Wallet, and More. Search stays
 
 # Interaction Patterns
 
-- Large financial totals lead payment screens; details follow in modular cards.
-- Merchant logos make store grids quickly scannable.
-- The floating dock uses translucent material over content.
+- Payment screens present the total before supporting details and confirmation.
+- Primary navigation remains available without interrupting the current task.
 - Klarna payment actions remain available inside merchant browsing context.
+
+# System Access Timing
+
+No system-access timing or denial-recovery behavior was documented in the reviewed source.
+
+# Known Gaps
+
+System-permission denial paths, interrupted flows, and recovery behavior not described above were not available in the reviewed source.

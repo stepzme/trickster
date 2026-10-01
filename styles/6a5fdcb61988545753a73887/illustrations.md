@@ -1,8 +1,8 @@
-# Role
+# Overview
 
 Illustration is an interactive teaching model, not decoration. It turns abstract math, science, logic, and code into objects the learner can inspect or manipulate.
 
-# Visual Language
+# Visual Style
 
 - Compact 3D forms with rounded edges and soft shadows.
 - Bright blue, teal, yellow, purple, and green assigned by concept.
@@ -13,13 +13,24 @@ Illustration is an interactive teaching model, not decoration. It turns abstract
 
 Center one complete model and keep its labels readable. Place the prompt above and answer or continuation below; preserve enough empty space for manipulation.
 
-# Usage
+# Color and Materials
+
+Use the palette relationships explicitly described in the visual language and `ui.md`; no additional material system was documented.
+
+# Variants and States
 
 Use for course identity, lesson questions, explanations, skill paths, and progress. Keep account, payment, support, and legal settings illustration-free.
 
-# Guardrails
+# Production Requirements
+
+Exact export formats, aspect ratios, animation behavior, and appearance variants were not documented. Where imagery is compositionally important, temporary placeholders must preserve its documented scale, placement, crop, and visual weight until final art exists.
+
+# Avoid
 
 - Every object must support the concept being taught.
 - Do not add decorative characters or scenery that competes with the model.
 - Preserve variable colors and contrast defined in `ui.md`.
-- For a new topic, create one simple rounded 3D metaphor with readable relationships, restrained shadow, and the same clean white stage.
+
+# Known Gaps
+
+Export specifications, animation rules, safe-crop measurements, and unobserved state variants were not available in the reviewed source.

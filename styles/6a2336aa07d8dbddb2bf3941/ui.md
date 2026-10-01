@@ -1,6 +1,7 @@
 <design-context>
 ---
-version: alpha
+version: 1
+platform: iOS
 name: VTB-design-analysis
 description: "A feature-rich banking interface built from vivid blue account headers, white rounded sheets, bold black monetary typography, pastel payment icons, multicolor gradients, and polished 3D product metaphors. It is broad, energetic, and conversion-oriented."
 
@@ -23,36 +24,44 @@ colors:
   semantic-overlay: "#000000"
 
 typography:
-  display-xl: { fontFamily: System Sans, fontSize: 40px, fontWeight: 750, lineHeight: 1.04, letterSpacing: -0.8px }
-  display-lg: { fontFamily: System Sans, fontSize: 32px, fontWeight: 700, lineHeight: 1.08, letterSpacing: -0.5px }
-  display-md: { fontFamily: System Sans, fontSize: 25px, fontWeight: 700, lineHeight: 1.15, letterSpacing: -0.2px }
-  headline: { fontFamily: System Sans, fontSize: 20px, fontWeight: 700, lineHeight: 1.2, letterSpacing: 0 }
-  card-title: { fontFamily: System Sans, fontSize: 16px, fontWeight: 650, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: System Sans, fontSize: 17px, fontWeight: 450, lineHeight: 1.35, letterSpacing: 0 }
-  body-lg: { fontFamily: System Sans, fontSize: 16px, fontWeight: 400, lineHeight: 1.42, letterSpacing: 0 }
-  body: { fontFamily: System Sans, fontSize: 14px, fontWeight: 400, lineHeight: 1.42, letterSpacing: 0 }
-  body-sm: { fontFamily: System Sans, fontSize: 12px, fontWeight: 400, lineHeight: 1.38, letterSpacing: 0 }
-  caption: { fontFamily: System Sans, fontSize: 10px, fontWeight: 500, lineHeight: 1.3, letterSpacing: 0 }
-  button: { fontFamily: System Sans, fontSize: 16px, fontWeight: 650, lineHeight: 1.2, letterSpacing: 0 }
-  eyebrow: { fontFamily: System Sans, fontSize: 10px, fontWeight: 700, lineHeight: 1.25, letterSpacing: 0.3px }
-  mono: { fontFamily: System Mono, fontSize: 12px, fontWeight: 450, lineHeight: 1.35, letterSpacing: 0 }
+  display-xl: { fontFamily: System Sans, fontSize: 40, fontWeight: 750, lineHeight: 1.04, letterSpacing: -0.8 }
+  display-lg: { fontFamily: System Sans, fontSize: 32, fontWeight: 700, lineHeight: 1.08, letterSpacing: -0.5 }
+  display-md: { fontFamily: System Sans, fontSize: 25, fontWeight: 700, lineHeight: 1.15, letterSpacing: -0.2 }
+  headline: { fontFamily: System Sans, fontSize: 20, fontWeight: 700, lineHeight: 1.2, letterSpacing: 0 }
+  card-title: { fontFamily: System Sans, fontSize: 16, fontWeight: 650, lineHeight: 1.25, letterSpacing: 0 }
+  subhead: { fontFamily: System Sans, fontSize: 17, fontWeight: 450, lineHeight: 1.35, letterSpacing: 0 }
+  body-lg: { fontFamily: System Sans, fontSize: 16, fontWeight: 400, lineHeight: 1.42, letterSpacing: 0 }
+  body: { fontFamily: System Sans, fontSize: 14, fontWeight: 400, lineHeight: 1.42, letterSpacing: 0 }
+  body-sm: { fontFamily: System Sans, fontSize: 12, fontWeight: 400, lineHeight: 1.38, letterSpacing: 0 }
+  caption: { fontFamily: System Sans, fontSize: 10, fontWeight: 500, lineHeight: 1.3, letterSpacing: 0 }
+  button: { fontFamily: System Sans, fontSize: 16, fontWeight: 650, lineHeight: 1.2, letterSpacing: 0 }
+  eyebrow: { fontFamily: System Sans, fontSize: 10, fontWeight: 700, lineHeight: 1.25, letterSpacing: 0.3 }
+  mono: { fontFamily: System Mono, fontSize: 12, fontWeight: 450, lineHeight: 1.35, letterSpacing: 0 }
 
-rounded: { xs: 4px, sm: 8px, md: 12px, lg: 18px, xl: 24px, xxl: 30px, pill: 9999px, full: 9999px }
-spacing: { xxs: 4px, xs: 8px, sm: 12px, md: 16px, lg: 24px, xl: 32px, xxl: 48px, section: 64px }
+rounded: { xs: 4, sm: 8, md: 12, lg: 18, xl: 24, xxl: 30, pill: 9999, full: 9999 }
+spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
 
 components:
-  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 14px 18px }
-  account-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 16px }
-  action-tile: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.md}", padding: 12px }
+  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [14, 18]}
+  account-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 16 }
+  action-tile: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.md}", padding: 12 }
   product-tile: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.card-title}", rounded: "{rounded.md}", padding: 0 }
-  bottom-nav: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.caption}", rounded: "{rounded.xl}", height: 60px }
+  bottom-nav: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.caption}", rounded: "{rounded.xl}", height: 60 }
 ---
 
-## Overview
+# Overview
 
 VTB layers white financial sheets over a vivid blue account header and uses polished 3D product art for discovery. Pastel category icons and clear monetary hierarchy tame a very broad feature set.
 
-## Colors
+# Non-negotiable visual invariants
+
+- The reviewed screens use this composition: A feature-rich banking interface built from vivid blue account headers, white rounded sheets, bold black monetary typography, pastel payment icons, multicolor gradients.
+- The dominant canvas token is #F4F6FA and the primary accent token is #1677FF.
+- The recorded display style is 40 points while the body style is 14 points.
+- Navigation uses five bottom destinations for Home, Payments, Products, History, and Chat.
+- The reviewed screens use this hierarchy: It is broad, energetic, and conversion-oriented.
+
+# Color and surfaces
 
 ### Brand & Accent
 
@@ -70,15 +79,11 @@ Near-black carries balances and titles; gray carries product labels and terms. W
 
 Green and red show financial result, amber warns, and blue remains brand action.
 
-## Typography
+# Typography
 
 ### Font Family
 
 Use a modern system sans with tabular figures for balances, rates, and payments.
-
-### Hierarchy
-
-Use 32–40px balances, 20–25px page and product headings, 14–17px rows, and 10–12px metadata.
 
 ### Principles
 
@@ -88,11 +93,7 @@ Keep amount, product, rate, and action distinct. Align numeric values and avoid 
 
 Use Inter or SF Pro with tabular figures and strong 700–750 display weights.
 
-## Layout
-
-### Spacing System
-
-Use a 4px base, 16px gutters, 10–12px card gaps, and 24px between major product groups.
+# Screen composition
 
 ### Grid & Container
 
@@ -102,31 +103,15 @@ Home stacks account header, quick-action grid, promotions, payments sheet, and p
 
 Give totals and primary actions open space. Dense payment categories should stay aligned in grids or lists.
 
-## Elevation & Depth
+# Navigation appearance
 
-Use rounded sheet overlap, soft card shadow, and layered gradient headers. Keep operation rows flat.
+Use five bottom destinations for Home, Payments, Products, History, and Chat. Keep product-specific settings local.
 
-### Decorative Depth
-
-Use glossy 3D product metaphors, spectral gradients, and subtle particles inside promotions. Avoid such decoration in transfers or confirmations.
-
-## Shapes
-
-### Border Radius Scale
-
-Use 8px fields, 12px action tiles, 18px account cards, 24px sheets, and round category icons.
-
-### Photography & Illustration Geometry
-
-Center 3D product objects on pastel gradient tiles with safe text space. Keep partner logos inside clean circles.
-
-## Components
+# Components
 
 ### Buttons
 
 Primary open, transfer, and support actions are blue rectangles or pills. Native controls must inherit blue focus and the rounded banking system.
-
-### Pricing Tabs
 
 Product types, payment modes, and rate options use compact segments, chips, or cards with blue selected state.
 
@@ -146,11 +131,46 @@ Privilege, card state, transfer status, savings goal, rate conditions, applicati
 
 Use five bottom destinations for Home, Payments, Products, History, and Chat. Keep product-specific settings local.
 
-### Footer
+# Imagery and icons
 
-There is no footer. Documents, legal, and support links live inside product or profile details.
+Use rounded sheet overlap, soft card shadow, and layered gradient headers. Keep operation rows flat.
 
-## Do's and Don'ts
+### Decorative Depth
+
+Use glossy 3D product metaphors, spectral gradients, and subtle particles inside promotions. Avoid such decoration in transfers or confirmations.
+
+# States
+
+Privilege, card state, transfer status, savings goal, rate conditions, application, unread chat, and history appear in context.
+
+# iOS adaptation
+
+Phones use one financial flow at a time. Wider screens may place account list, product detail, and history in adjacent panes.
+
+### Touch Targets
+
+Accounts, quick actions, payment categories, product tiles, navigation, and confirmation controls require at least 44pt targets.
+
+### Collapsing Strategy
+
+Keep balance, source, recipient, amount, fee, and next action visible. Collapse terms and secondary benefits into detail sections.
+
+### Image Behavior
+
+Use `contain` for 3D product metaphors, cards, and logos; use `cover` only for editorial campaign photography.
+
+On iPhone, respect top and bottom safe areas, use scrolling for content that does not fit, keep interactive targets at least 44 points, and preserve the visual reading order for VoiceOver. At larger Dynamic Type sizes, allow supporting text to wrap without collapsing the dominant hierarchy. Use native sheets and permission transitions while explicitly styling app-owned surfaces to match the reference.
+
+# Anti-generic checklist
+
+- Do not substitute the documented accent hierarchy with default iOS blue.
+- Do not collapse distinct surfaces into a uniform stack of generic white cards.
+- Do not use an unstyled `TabView`, `Form`, or arbitrary SF Symbols when they contradict the documented navigation and component language.
+- Do not flatten the documented typography into one body-text scale.
+- Do not remove compositionally important photography or illustration while assets are pending.
+- Do not apply one corner radius to every control and surface.
+
+Source-specific guardrails retained from the review:
 
 ### Do
 
@@ -166,32 +186,8 @@ There is no footer. Documents, legal, and support links live inside product or p
 - Do not crowd the home header.
 - Do not expose default native accents.
 
-## Responsive Behavior
-
-### Breakpoints
-
-Phones use one financial flow at a time. Wider screens may place account list, product detail, and history in adjacent panes.
-
-### Touch Targets
-
-Accounts, quick actions, payment categories, product tiles, navigation, and confirmation controls require at least 44px targets.
-
-### Collapsing Strategy
-
-Keep balance, source, recipient, amount, fee, and next action visible. Collapse terms and secondary benefits into detail sections.
-
-### Image Behavior
-
-Use `contain` for 3D product metaphors, cards, and logos; use `cover` only for editorial campaign photography.
-
-## Iteration Guide
-
-Start with login, Home balance, cards, Payments, transfer confirmation, Products, History, and Chat. Add deposits, credit, investments, rewards, and personalized discovery afterward.
-
-## Known Gaps
+# Known gaps
 
 The catalog contains 245 flows across core banking and product management. Representative complete scenarios were inspected; rare product branches and some video-only transition states are less visually verified.
 
 </design-context>
-
-Use the design system above for all UI you generate.

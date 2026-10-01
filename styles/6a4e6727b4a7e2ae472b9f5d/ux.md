@@ -4,7 +4,7 @@ Moy Auchan is a loyalty-led grocery journey spanning delivery or pickup location
 
 # Navigation
 
-Five fixed destinations connect Home, Catalog, Cart, Auchan Card, and Profile. Home keeps location, loyalty barcode, search, personal offers, and seasonal aisles in one scroll.
+Five destinations connect Home, Catalog, Cart, Auchan Card, and Profile. Home keeps location, loyalty barcode, search, personal offers, and seasonal aisles in one scroll.
 
 # Core Flows
 
@@ -12,7 +12,7 @@ Five fixed destinations connect Home, Catalog, Cart, Auchan Card, and Profile. H
 
 1. Select delivery address or pickup store so price and availability are valid.
 2. Search, scan, browse catalog, or enter a seasonal collection.
-3. Compare compact product cards and add directly from the grid.
+3. Compare products and add directly from the catalog.
 4. Review nutrition, availability, reviews, and quantity on detail when needed.
 
 ## Checkout an order
@@ -23,7 +23,12 @@ Five fixed destinations connect Home, Catalog, Cart, Auchan Card, and Profile. H
 
 # Interaction Patterns
 
-- Search and barcode scanning remain prominent across discovery.
-- Green buttons add items; quantity steppers replace the button after selection.
-- Red labels emphasize discounts and loyalty urgency without taking over navigation.
-- Sticky cart and checkout bars keep price, weight, and the next commitment visible.
+- Cart and checkout actions keep price, weight, and the next commitment visible.
+
+# System Access Timing
+
+No system-access timing or denial-recovery behavior was documented in the reviewed source.
+
+# Known Gaps
+
+System-permission denial paths, interrupted flows, and recovery behavior not described above were not available in the reviewed source.

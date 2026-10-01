@@ -10,10 +10,22 @@ Render one recognizable automotive object with soft studio light, slightly exagg
 
 Center a single object inside a square tile with generous white space. Completion art may layer a bright blue car card over thin gray document outlines.
 
-# Color
+# Color and Materials
 
 Use white and cool gray as the base, Mycar blue for platforms and accents, with small realistic object colors such as lime, red, or black. Avoid multicolor backgrounds.
 
-# Usage
+# Variants and States
 
 Use renders for service categories, document tools, insurance, maintenance, and empty or success states. Continue to use real photography for listings; new illustration should inherit the blue UI and rounded tile geometry.
+
+# Production Requirements
+
+Exact export formats, aspect ratios, animation behavior, and appearance variants were not documented. Where imagery is compositionally important, temporary placeholders must preserve its documented scale, placement, crop, and visual weight until final art exists.
+
+# Avoid
+
+Do not introduce an unrelated illustration style or substitute decorative symbols for source-supported imagery.
+
+# Known Gaps
+
+Export specifications, animation rules, safe-crop measurements, and unobserved state variants were not available in the reviewed source.

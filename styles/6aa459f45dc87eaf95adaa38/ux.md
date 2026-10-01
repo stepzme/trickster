@@ -4,7 +4,7 @@ Wabi combines a social feed, AI mini-app creation, personal collections, messagi
 
 # Navigation
 
-- A five-item bottom bar moves between Home, Search, Create, Messages, and Profile.
+- A five primary destinations moves between Home, Search, Create, Messages, and Profile.
 - Home separates personal boards from the broader feed; mini-app actions stay attached to each creation.
 - Creation opens a conversational agent first, then exposes draft preview, settings, publishing, and board placement.
 
@@ -30,6 +30,12 @@ Wabi combines a social feed, AI mini-app creation, personal collections, messagi
 
 # Interaction Patterns
 
-- The feed keeps creation, engagement, remix, and save controls around one embedded canvas.
 - Conversational creation reduces the initial form to a single prompt and reveals configuration later.
-- Floating glass-like controls and compact count badges preserve a playful object-like feel.
+
+# System Access Timing
+
+No system-access timing or denial-recovery behavior was documented in the reviewed source.
+
+# Known Gaps
+
+System-permission denial paths, interrupted flows, and recovery behavior not described above were not available in the reviewed source.

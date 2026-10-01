@@ -1,6 +1,7 @@
 <design-context>
 ---
-version: alpha
+version: 1
+platform: iOS
 name: TradingView-design-analysis
 description: "A professional dark market interface built from black canvases, fine graphite dividers, compact white data typography, teal and coral price movement, and tool-dense charts. The aesthetic is precise, utilitarian, and optimized for continuous monitoring."
 
@@ -22,36 +23,44 @@ colors:
   semantic-overlay: "#000000"
 
 typography:
-  display-xl: { fontFamily: System Sans, fontSize: 38px, fontWeight: 650, lineHeight: 1.05, letterSpacing: -0.6px }
-  display-lg: { fontFamily: System Sans, fontSize: 30px, fontWeight: 650, lineHeight: 1.1, letterSpacing: -0.3px }
-  display-md: { fontFamily: System Sans, fontSize: 24px, fontWeight: 650, lineHeight: 1.15, letterSpacing: -0.1px }
-  headline: { fontFamily: System Sans, fontSize: 20px, fontWeight: 650, lineHeight: 1.2, letterSpacing: 0 }
-  card-title: { fontFamily: System Sans, fontSize: 16px, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: System Sans, fontSize: 16px, fontWeight: 450, lineHeight: 1.35, letterSpacing: 0 }
-  body-lg: { fontFamily: System Sans, fontSize: 16px, fontWeight: 400, lineHeight: 1.38, letterSpacing: 0 }
-  body: { fontFamily: System Sans, fontSize: 14px, fontWeight: 400, lineHeight: 1.4, letterSpacing: 0 }
-  body-sm: { fontFamily: System Sans, fontSize: 12px, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
-  caption: { fontFamily: System Sans, fontSize: 10px, fontWeight: 500, lineHeight: 1.25, letterSpacing: 0 }
-  button: { fontFamily: System Sans, fontSize: 15px, fontWeight: 600, lineHeight: 1.2, letterSpacing: 0 }
-  eyebrow: { fontFamily: System Sans, fontSize: 10px, fontWeight: 650, lineHeight: 1.25, letterSpacing: 0.4px }
-  mono: { fontFamily: System Mono, fontSize: 12px, fontWeight: 450, lineHeight: 1.3, letterSpacing: 0 }
+  display-xl: { fontFamily: System Sans, fontSize: 38, fontWeight: 650, lineHeight: 1.05, letterSpacing: -0.6 }
+  display-lg: { fontFamily: System Sans, fontSize: 30, fontWeight: 650, lineHeight: 1.1, letterSpacing: -0.3 }
+  display-md: { fontFamily: System Sans, fontSize: 24, fontWeight: 650, lineHeight: 1.15, letterSpacing: -0.1 }
+  headline: { fontFamily: System Sans, fontSize: 20, fontWeight: 650, lineHeight: 1.2, letterSpacing: 0 }
+  card-title: { fontFamily: System Sans, fontSize: 16, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
+  subhead: { fontFamily: System Sans, fontSize: 16, fontWeight: 450, lineHeight: 1.35, letterSpacing: 0 }
+  body-lg: { fontFamily: System Sans, fontSize: 16, fontWeight: 400, lineHeight: 1.38, letterSpacing: 0 }
+  body: { fontFamily: System Sans, fontSize: 14, fontWeight: 400, lineHeight: 1.4, letterSpacing: 0 }
+  body-sm: { fontFamily: System Sans, fontSize: 12, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
+  caption: { fontFamily: System Sans, fontSize: 10, fontWeight: 500, lineHeight: 1.25, letterSpacing: 0 }
+  button: { fontFamily: System Sans, fontSize: 15, fontWeight: 600, lineHeight: 1.2, letterSpacing: 0 }
+  eyebrow: { fontFamily: System Sans, fontSize: 10, fontWeight: 650, lineHeight: 1.25, letterSpacing: 0.4 }
+  mono: { fontFamily: System Mono, fontSize: 12, fontWeight: 450, lineHeight: 1.3, letterSpacing: 0 }
 
-rounded: { xs: 3px, sm: 6px, md: 10px, lg: 14px, xl: 20px, xxl: 26px, pill: 9999px, full: 9999px }
-spacing: { xxs: 4px, xs: 8px, sm: 12px, md: 16px, lg: 24px, xl: 32px, xxl: 48px, section: 64px }
+rounded: { xs: 3, sm: 6, md: 10, lg: 14, xl: 20, xxl: 26, pill: 9999, full: 9999 }
+spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
 
 components:
-  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 13px 18px }
-  market-row: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xs}", padding: 8px 12px }
+  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [13, 18]}
+  market-row: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xs}", padding: [8, 12]}
   chart-panel: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.mono}", rounded: "{rounded.xs}", padding: 0 }
-  plan-card: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 14px }
-  bottom-nav: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", height: 58px }
+  plan-card: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 14 }
+  bottom-nav: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", height: 58 }
 ---
 
-## Overview
+# Overview
 
 TradingView uses a nearly black workspace, compact lists, and maximized chart area. Visual noise is controlled through precise alignment, fine dividers, and a small set of functional colors.
 
-## Colors
+# Non-negotiable visual invariants
+
+- The reviewed screens use this composition: A professional dark market interface built from black canvases, fine graphite dividers, compact white data typography, teal and coral price movement, and tool-dense charts.
+- The dominant canvas token is #000000 and the primary accent token is #2962FF.
+- The recorded display style is 38 points while the body style is 14 points.
+- Navigation uses five bottom destinations for Watchlist, Chart, Explore, Community, and Menu.
+- The reviewed screens use this hierarchy: The aesthetic is precise, utilitarian, and optimized for continuous monitoring.
+
+# Color and surfaces
 
 ### Brand & Accent
 
@@ -69,15 +78,11 @@ Off-white carries primary prices and labels; cool gray carries company names, ax
 
 Teal-green indicates positive movement and coral-red negative movement. Amber is limited to warnings or market timing.
 
-## Typography
+# Typography
 
 ### Font Family
 
 Use a compact system sans plus tabular or mono numerals for prices, axes, and timestamps.
-
-### Hierarchy
-
-Use 24–38px plan messaging, 16–20px section titles, 14–16px market values, and 10–12px chart metadata.
 
 ### Principles
 
@@ -87,11 +92,7 @@ Keep market rows scannable, align decimals, and avoid decorative typography. Dat
 
 Use Inter or SF Pro with tabular figures; use SF Mono or IBM Plex Mono for dense chart labels when needed.
 
-## Layout
-
-### Spacing System
-
-Use a 4px base, 12px gutters, 8px row spacing, and 16–24px between account or plan sections.
+# Screen composition
 
 ### Grid & Container
 
@@ -101,31 +102,15 @@ Watchlists use four aligned columns: symbol, description, price, and change. Cha
 
 Whitespace is functional and tight. Reserve larger gaps for mode changes, not between every data row.
 
-## Elevation & Depth
+# Navigation appearance
 
-Use tonal separation and hairlines instead of shadow. Modals and sheets may lift with a slightly lighter graphite surface.
+Use five bottom destinations for Watchlist, Chart, Explore, Community, and Menu. The chart uses local tool rails rather than nested pages.
 
-### Decorative Depth
-
-Only subscription marketing may use a faint cosmic texture or gradient. Charts and lists stay strictly functional.
-
-## Shapes
-
-### Border Radius Scale
-
-Use 3–6px for data controls, 10–14px for cards, and 20px for modal sheets. Avoid overly soft pills in dense tools.
-
-### Photography & Illustration Geometry
-
-Charts are edge-to-edge and preserve exact axes. Logos stay inside small circles; decorative media is confined to plan headers.
-
-## Components
+# Components
 
 ### Buttons
 
 Primary actions are blue or high-contrast white rectangles with modest rounding. Native controls must inherit the dark palette and compact tool geometry.
-
-### Pricing Tabs
 
 Subscription tiers use a horizontal selector; chart timeframes and display modes use compact text tabs with unmistakable active state.
 
@@ -145,11 +130,46 @@ Market open state, live connection, alerts, plan limits, and saved-chart status 
 
 Use five bottom destinations for Watchlist, Chart, Explore, Community, and Menu. The chart uses local tool rails rather than nested pages.
 
-### Footer
+# Imagery and icons
 
-There is no footer. Legal and plan information belongs inside account or purchase screens.
+Use tonal separation and hairlines instead of shadow. Modals and sheets may lift with a slightly lighter graphite surface.
 
-## Do's and Don'ts
+### Decorative Depth
+
+Only subscription marketing may use a faint cosmic texture or gradient. Charts and lists stay strictly functional.
+
+# States
+
+Market open state, live connection, alerts, plan limits, and saved-chart status appear beside the related symbol or tool.
+
+# iOS adaptation
+
+Phones prioritize one active watchlist or chart. Wider screens may show watchlist, chart, and instrument details in resizable columns.
+
+### Touch Targets
+
+Rows, bottom navigation, chart tools, timeframe controls, and overflow menus require at least 44pt hit regions even when icons stay compact.
+
+### Collapsing Strategy
+
+Keep current symbol, price, chart, and essential tools visible. Move secondary indicators and layout controls into drawers.
+
+### Image Behavior
+
+Scale charts responsively without raster blur. Use `contain` for logos and keep plan textures cropped behind readable foreground content.
+
+On iPhone, respect top and bottom safe areas, use scrolling for content that does not fit, keep interactive targets at least 44 points, and preserve the visual reading order for VoiceOver. At larger Dynamic Type sizes, allow supporting text to wrap without collapsing the dominant hierarchy. Use native sheets and permission transitions while explicitly styling app-owned surfaces to match the reference.
+
+# Anti-generic checklist
+
+- Do not substitute the documented accent hierarchy with default iOS blue.
+- Do not collapse distinct surfaces into a uniform stack of generic white cards.
+- Do not use an unstyled `TabView`, `Form`, or arbitrary SF Symbols when they contradict the documented navigation and component language.
+- Do not flatten the documented typography into one body-text scale.
+- Do not remove compositionally important photography or illustration while assets are pending.
+- Do not apply one corner radius to every control and surface.
+
+Source-specific guardrails retained from the review:
 
 ### Do
 
@@ -165,32 +185,8 @@ There is no footer. Legal and plan information belongs inside account or purchas
 - Do not enlarge controls at the expense of charts.
 - Do not expose light native controls.
 
-## Responsive Behavior
-
-### Breakpoints
-
-Phones prioritize one active watchlist or chart. Wider screens may show watchlist, chart, and instrument details in resizable columns.
-
-### Touch Targets
-
-Rows, bottom navigation, chart tools, timeframe controls, and overflow menus require at least 44px hit regions even when icons stay compact.
-
-### Collapsing Strategy
-
-Keep current symbol, price, chart, and essential tools visible. Move secondary indicators and layout controls into drawers.
-
-### Image Behavior
-
-Scale charts responsively without raster blur. Use `contain` for logos and keep plan textures cropped behind readable foreground content.
-
-## Iteration Guide
-
-Start with the dark watchlist, five-item navigation, full-screen chart, symbol search, and basic tool rail. Add community, advanced indicators, layouts, and subscription comparison afterward.
-
-## Known Gaps
+# Known gaps
 
 The catalog contains 154 flows but some entry and transition moments are video-only. Complete inspected flows establish onboarding, subscriptions, watchlists, charts, and account surfaces.
 
 </design-context>
-
-Use the design system above for all UI you generate.

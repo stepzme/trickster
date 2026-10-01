@@ -12,10 +12,22 @@ Build soft glass-like forms with rounded volume, internal refraction, and neon c
 - Let forms float in generous negative space or emerge from a blurred color field.
 - Keep edges soft and dimensional; avoid hard mechanical geometry.
 
-# Color
+# Color and Materials
 
 Use saturated spectral gradients against black for immersive listening and against white for catalog education. Preserve strong luminance contrast around text and controls.
 
-# Usage
+# Variants and States
 
 Use for mood selection, onboarding, catalog explanations, empty states, and branded transitions. Use authentic cover art for music content itself.
+
+# Production Requirements
+
+Exact export formats, aspect ratios, animation behavior, and appearance variants were not documented. Where imagery is compositionally important, temporary placeholders must preserve its documented scale, placement, crop, and visual weight until final art exists.
+
+# Avoid
+
+Do not introduce an unrelated illustration style or substitute decorative symbols for source-supported imagery.
+
+# Known Gaps
+
+Export specifications, animation rules, safe-crop measurements, and unobserved state variants were not available in the reviewed source.

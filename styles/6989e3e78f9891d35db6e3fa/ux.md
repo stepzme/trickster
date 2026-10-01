@@ -12,12 +12,18 @@ The journal or activity overview remains the base layer; selection, logging, cus
 
 1. Choose an activity category.
 2. Confirm date and add an optional comment.
-3. Set the rating with the large bottom control.
+3. Set the rating with the bottom control.
 4. Save and return to the updated timeline or statistics.
 
 # Interaction Patterns
 
-- Keep one primary action at the bottom.
-- Reuse category icon and color across logging and history.
 - Ask for health or media access only when relevant.
 - Preserve partial input when a picker or permission closes.
+
+# System Access Timing
+
+No system-access request timing or denial recovery was documented in the reviewed source.
+
+# Known Gaps
+
+- Permission-denial recovery and unobserved secondary flows were not documented.

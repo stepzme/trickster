@@ -1,12 +1,12 @@
 <design-context>
 ---
-version: alpha
+version: 1
+platform: iOS
 name: Joom-design-analysis
 description: "A fast, promotion-dense marketplace on a bright white canvas, organized by coral-red commerce actions, compact black type, rounded category thumbnails, two-column product grids, and playful 3D reward moments. Product photography carries browsing while hot coral, pink, violet, and deep blue promotional panels create momentum."
 colors:
   primary: "#FF3F4E"
   on-primary: "#FFFFFF"
-  primary-hover: "#FF6170"
   primary-focus: "#DB2F3D"
   ink: "#17171A"
   ink-muted: "#66666D"
@@ -28,231 +28,172 @@ colors:
   semantic-success: "#24B974"
   semantic-overlay: "#111114"
 typography:
-  display-xl: {fontFamily: SF Pro Display, fontSize: 38px, fontWeight: 700, lineHeight: 1.05, letterSpacing: -1.0px}
-  display-lg: {fontFamily: SF Pro Display, fontSize: 30px, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.7px}
-  display-md: {fontFamily: SF Pro Display, fontSize: 25px, fontWeight: 700, lineHeight: 1.14, letterSpacing: -0.4px}
-  headline: {fontFamily: SF Pro Display, fontSize: 21px, fontWeight: 700, lineHeight: 1.20, letterSpacing: -0.2px}
-  card-title: {fontFamily: SF Pro Text, fontSize: 16px, fontWeight: 600, lineHeight: 1.25, letterSpacing: -0.1px}
-  subhead: {fontFamily: SF Pro Text, fontSize: 15px, fontWeight: 600, lineHeight: 1.32, letterSpacing: 0}
-  body-lg: {fontFamily: SF Pro Text, fontSize: 15px, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0}
-  body: {fontFamily: SF Pro Text, fontSize: 13px, fontWeight: 400, lineHeight: 1.36, letterSpacing: 0}
-  body-sm: {fontFamily: SF Pro Text, fontSize: 11px, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0}
-  caption: {fontFamily: SF Pro Text, fontSize: 10px, fontWeight: 400, lineHeight: 1.25, letterSpacing: 0}
-  button: {fontFamily: SF Pro Text, fontSize: 14px, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0}
-  eyebrow: {fontFamily: SF Pro Text, fontSize: 10px, fontWeight: 700, lineHeight: 1.20, letterSpacing: 0.2px}
-  mono: {fontFamily: SF Mono, fontSize: 11px, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0}
+  display-xl: {fontFamily: SF Pro Display, fontSize: 38, fontWeight: 700, lineHeight: 1.05, letterSpacing: -1.0}
+  display-lg: {fontFamily: SF Pro Display, fontSize: 30, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.7}
+  display-md: {fontFamily: SF Pro Display, fontSize: 25, fontWeight: 700, lineHeight: 1.14, letterSpacing: -0.4}
+  headline: {fontFamily: SF Pro Display, fontSize: 21, fontWeight: 700, lineHeight: 1.20, letterSpacing: -0.2}
+  card-title: {fontFamily: SF Pro Text, fontSize: 16, fontWeight: 600, lineHeight: 1.25, letterSpacing: -0.1}
+  subhead: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 600, lineHeight: 1.32, letterSpacing: 0}
+  body-lg: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0}
+  body: {fontFamily: SF Pro Text, fontSize: 13, fontWeight: 400, lineHeight: 1.36, letterSpacing: 0}
+  body-sm: {fontFamily: SF Pro Text, fontSize: 11, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0}
+  caption: {fontFamily: SF Pro Text, fontSize: 10, fontWeight: 400, lineHeight: 1.25, letterSpacing: 0}
+  button: {fontFamily: SF Pro Text, fontSize: 14, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0}
+  eyebrow: {fontFamily: SF Pro Text, fontSize: 10, fontWeight: 700, lineHeight: 1.20, letterSpacing: 0.2}
+  mono: {fontFamily: SF Mono, fontSize: 11, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0}
 rounded:
-  xs: 4px
-  sm: 8px
-  md: 12px
-  lg: 16px
-  xl: 22px
-  xxl: 28px
-  pill: 9999px
-  full: 9999px
+  xs: 4
+  sm: 8
+  md: 12
+  lg: 16
+  xl: 22
+  xxl: 28
+  pill: 9999
+  full: 9999
 spacing:
-  xxs: 4px
-  xs: 8px
-  sm: 12px
-  md: 16px
-  lg: 20px
-  xl: 24px
-  xxl: 32px
-  section: 40px
+  xxs: 4
+  xs: 8
+  sm: 12
+  md: 16
+  lg: 20
+  xl: 24
+  xxl: 32
+  section: 40
 components:
-  button-primary: {backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 14px 20px}
+  button-primary: {backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 14 20}
   button-primary-pressed: {backgroundColor: "{colors.primary-focus}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}"}
-  button-primary-hover: {backgroundColor: "{colors.primary-hover}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}"}
-  button-secondary: {backgroundColor: "{colors.inverse-canvas}", textColor: "{colors.inverse-ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 12px 18px}
-  button-tertiary: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 10px 14px}
-  button-inverse: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 12px 18px}
+  button-secondary: {backgroundColor: "{colors.inverse-canvas}", textColor: "{colors.inverse-ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 12 18}
+  button-tertiary: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 10 14}
+  button-inverse: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 12 18}
   product-card: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.sm}", padding: 0}
   category-tile: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.caption}", rounded: "{rounded.lg}", padding: 0}
-  search-field: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink-muted}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: 10px 12px}
-  reward-sheet: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xxl}", padding: 20px}
-  status-badge: {backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: 3px 6px}
-  top-nav: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.xs}", height: 52px}
-  bottom-nav: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink-subtle}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: 8px 10px}
+  search-field: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink-muted}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: 10 12}
+  reward-sheet: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xxl}", padding: 20}
+  status-badge: {backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: 3 6}
+  navigation-bar: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.xs}", height: 52}
+  bottom-nav: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink-subtle}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: 8 10}
 ---
-## Overview
+
+# Overview
 
 Joom is a white, high-density marketplace that layers product photography with frequent promotional and reward moments. Coral actions keep purchase intent clear amid varied content.
 
-**Key Characteristics:**
-- Fixed search and shopping tabs.
-- Two-column product photography grid.
-- Compact prices, discounts, ratings, and favorite controls.
-- Coral purchase actions; black secondary rewards actions.
-- Rounded 3D art for onboarding and gamification.
+# Non-negotiable visual invariants
 
-## Colors
-
-### Brand & Accent
-- Coral-red drives cart, purchase, discount, and active promotional emphasis.
-- Pink, violet, and blue support bounded campaign artwork rather than general controls.
-
-### Surface
-- White is the default shopping canvas; pale gray separates inputs and checkout groups.
-- Saturated promotional panels remain self-contained.
-
-### Text
-- Near-black carries price and primary labels.
-- Neutral gray supports shipping, order volume, and secondary metadata.
-
-### Semantic
-- Green marks favorable delivery or price facts.
-- Red rating stars and discount labels share the commerce accent.
-
-## Typography
-
-### Font Family
-
-Use SF Pro Display for campaign headings and SF Pro Text for the dense catalog and checkout UI.
-
-### Hierarchy
-
-| Token | Size | Weight | Use |
-|---|---:|---:|---|
-| display-lg | 30px | 700 | Onboarding claim |
-| display-md | 25px | 700 | Reward message |
-| headline | 21px | 700 | Checkout or collection title |
-| card-title | 16px | 600 | Product and section title |
-| body | 13px | 400 | Detail copy |
-| caption | 10px | 400 | Grid metadata |
-
-### Principles
-
-- Give price and purchase status priority over prose.
-- Keep grid metadata compact but readable.
-- Use bold promotional type only inside campaign modules.
-
-### Note on Font Substitutes
-
-A neutral system sans is sufficient; preserve tight number metrics and strong price weight.
-
-## Layout
-
-### Spacing System
-
-Use a 4px base, 8–12px grid gaps, and 12–16px horizontal screen padding.
-
-### Grid & Container
-
-Products use two equal columns. Categories and campaigns use horizontal rails or two-column feature blocks.
-
-### Whitespace Philosophy
-
-Catalog density is intentional. Reserve wider space for checkout decisions and reward explanations.
-
-## Elevation & Depth
-
-| Level | Treatment | Use |
-|---|---|---|
-| 0 | White canvas | Catalog |
-| 1 | Pale grouped fill | Search and checkout |
-| 2 | Fixed white action bar | Cart and purchase |
-| 3 | Rounded bottom sheet | Rewards and selectors |
-
-### Decorative Depth
-
-Use 3D illustration shadows and subtle sheet separation; product cards themselves stay flat.
-
-## Shapes
-
-### Border Radius Scale
-
-| Token | Value | Use |
-|---|---:|---|
-| rounded-xs | 4px | Discount badge |
-| rounded-sm | 8px | Product imagery and buttons |
-| rounded-lg | 16px | Category thumbnails |
-| rounded-xxl | 28px | Reward sheets |
-| rounded-full | full | Favorite controls |
-
-### Photography & Illustration Geometry
-
-Product images use consistent near-square crops. Promotional illustration can crop beyond a white or saturated panel, never into catalog metadata.
-
-## Components
-
-### Buttons
-
-Primary cart and purchase buttons are full-width coral rectangles. Black buttons support claim, continue, or secondary promotional actions.
-
-### Pricing Tabs
-
-No subscription pricing tabs were observed. Product variants use compact selectors with a clear filled state.
-
-### Cards & Containers
-
-Product cards are image-first and largely borderless. Checkout uses full-width grouped rows with hairline or surface separation.
-
-### Inputs & Forms
-
-Search is a pale filled bar with image-search access. Address, delivery, and payment controls use radio rows and collapsible groups.
-
-### Status & Build Page
-
-Discounts, delivery promises, ratings, and order counts stay adjacent to their product. Success uses a single branded icon and direct next actions.
-
-### Navigation
-
-Keep five bottom destinations fixed, with black active icons and pale inactive lines. Preserve search above category tabs on catalog screens.
-
-### Footer
-
-No footer; anchored purchase bars and navigation own the bottom safe area.
-
-## Do's and Don'ts
-
-### Do
-
+- Navigation or control chrome uses Fixed search and shopping tabs.
 - Keep comparison facts close to imagery.
 - Preserve persistent purchase actions on long pages.
 - Use coral for commerce intent.
 - Separate reward art from product content.
 - Keep favorites accessible in the grid.
+- Products use two equal columns.
+- Categories and campaigns use horizontal rails or two-column feature blocks.
 
-### Don't
+# Color and surfaces
 
-- Don't wrap every product in a heavy card.
-- Don't use campaign colors for ordinary navigation.
-- Don't hide shipping and payment choices.
-- Don't overcrowd success states.
-- Don't replace real product imagery with illustration.
+- Coral-red drives cart, purchase, discount, and active promotional emphasis.
+- Pink, violet, and blue support bounded campaign artwork rather than general controls.
 
-## Responsive Behavior
+- White is the default shopping canvas; pale gray separates inputs and checkout groups.
+- Saturated promotional panels remain self-contained.
 
-### Breakpoints
+- Near-black carries price and primary labels.
+- Neutral gray supports shipping, order volume, and secondary metadata.
 
-| Name | Width | Key Changes |
-|---|---:|---|
-| Compact | 320–374px | Tighten product gaps and metadata |
-| Standard | 375–430px | Default two-column grid |
-| Wide | 431px+ | Increase image width and campaign padding |
+- Green marks favorable delivery or price facts.
+- Red rating stars and discount labels share the commerce accent.
 
-### Touch Targets
+# Typography
 
-Favorites, tabs, payment choices, and navigation retain at least 44px hit areas.
+Use SF Pro Display for campaign headings and SF Pro Text for the dense catalog and checkout UI.
 
-### Collapsing Strategy
+- display-lg — 30 points — 700 — Onboarding claim
+- display-md — 25 points — 700 — Reward message
+- headline — 21 points — 700 — Checkout or collection title
+- card-title — 16 points — 600 — Product and section title
+- body — 13 points — 400 — Detail copy
+- caption — 10 points — 400 — Grid metadata
 
-Category rails scroll horizontally. Product details and checkout expand vertically while the main action remains anchored.
+- Give price and purchase status priority over prose.
+- Keep grid metadata compact but readable.
+- Use bold promotional type only inside campaign modules.
 
-### Image Behavior
+A neutral system sans is sufficient; preserve tight number metrics and strong price weight.
+
+The hierarchy must remain legible with Dynamic Type: supporting text may wrap before the primary metric, title, or action loses its role.
+
+# Screen composition
+
+Use a 4 points base, 8–12 points grid gaps, and 12–16 points horizontal screen padding.
+
+Products use two equal columns. Categories and campaigns use horizontal rails or two-column feature blocks.
+
+Catalog density is intentional. Reserve wider space for checkout decisions and reward explanations.
+
+Use 3D illustration shadows and subtle sheet separation; product cards themselves stay flat.
+
+Primary iPhone screens keep the documented content grouping and vertical rhythm inside a scroll container when content exceeds the viewport. Bottom-owned actions or navigation reserve the lower safe area rather than covering content.
+
+# Navigation appearance
+
+Keep five bottom destinations fixed, with black active icons and pale inactive lines. Preserve search above category tabs on catalog screens.
+
+This section governs appearance only; destinations and transitions are defined in `ux.md`.
+
+# Components
+
+Primary cart and purchase buttons are full-width coral rectangles. Black buttons support claim, continue, or secondary promotional actions.
+
+Product cards are image-first and largely borderless. Checkout uses full-width grouped rows with hairline or surface separation.
+
+Search is a pale filled bar with image-search access. Address, delivery, and payment controls use radio rows and collapsible groups.
+
+Discounts, delivery promises, ratings, and order counts stay adjacent to their product. Success uses a single branded icon and direct next actions.
+
+Controls retain at least a 44-point interactive area. Pressed and disabled treatments should stay within the documented palette and hierarchy; no unobserved state styling is prescribed.
+
+# Imagery and icons
+
+Product images use consistent near-square crops. Promotional illustration can crop beyond a white or saturated panel, never into catalog metadata.
 
 Use aspect-fill for lifestyle photography and aspect-fit when product shape or packaging must remain complete.
 
-## Iteration Guide
+When imagery is part of the documented composition, it cannot be omitted while final assets are pending. A temporary asset must preserve its placement, crop, scale, and approximate visual weight.
 
-Tune product scan speed and price hierarchy first, then campaign saturation, grid spacing, and reward frequency.
+# States
 
-## Known Gaps
+Discounts, delivery promises, ratings, and order counts stay adjacent to their product. Success uses a single branded icon and direct next actions.
+
+- Green marks favorable delivery or price facts.
+- Red rating stars and discount labels share the commerce accent.
+
+Only the states documented above are specified; other states must preserve the same canvas, hierarchy, and component language without inventing a new visual system.
+
+# iOS adaptation
+
+- Extend the documented canvas through the iPhone safe areas while keeping readable content within appropriate insets.
+- Use a vertical `ScrollView` for content that does not fit compact heights; keep documented bottom actions and navigation clear of the home indicator.
+- Favorites, tabs, payment choices, and navigation retain at least 44 points hit areas.
+- Category rails scroll horizontally. Product details and checkout expand vertically while the main action remains anchored.
+- Present the keyboard and system permission UI natively, then return to the same visual context.
+- Preserve semantic reading order in VoiceOver and allow text to grow with Dynamic Type.
+- Do not infer an unobserved dark or light variant; use the appearance documented by the reference.
+
+# Anti-generic checklist
+
+- Do not wrap every product in a heavy card.
+- Do not use campaign colors for ordinary navigation.
+- Do not hide shipping and payment choices.
+- Do not overcrowd success states.
+- Do not replace real product imagery with illustration.
+- Do not replace the documented canvas and surfaces with a generic grouped background and uniform white cards.
+- Do not use an unstyled `TabView`, default blue tint, or arbitrary SF Symbols when they contradict the reference.
+- Do not collapse every component to one corner radius or remove compositionally important imagery.
+
+# Known gaps
 
 - Product variant animation was not measured.
 - Tablet and landscape behavior were not represented.
 - Delivery tracking after purchase was not deeply reviewed.
 
 </design-context>
-
-Use the design system above for all UI you generate.

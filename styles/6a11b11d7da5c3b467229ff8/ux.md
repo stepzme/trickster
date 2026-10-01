@@ -18,4 +18,12 @@ A minimal top shell switches Ask and Imagine and opens the main menu. The curren
 
 # Interaction Patterns
 
-Tool choices appear as horizontal pills, the composer expands for text, active generation exposes stop, answers remain unboxed, and media actions stay attached to their result.
+Tool choices appear as tool choices, the composer expands for text, active generation exposes stop, answers remain unboxed, and media actions stay attached to their result.
+
+# System Access Timing
+
+No system-access timing or denial-recovery behavior was documented in the reviewed source.
+
+# Known Gaps
+
+System-permission denial paths, interrupted flows, and recovery behavior not described above were not available in the reviewed source.

@@ -4,7 +4,7 @@ Oura turns continuous sensor data into a daily narrative. The main view combines
 
 # Navigation
 
-Today, Vitals, and My Health remain in a floating bottom bar. A persistent plus button records activity, tags, workouts, or advisor input. The side menu collects profile, device, settings, trends, reports, meals, experiments, integrations, and support.
+Today, Vitals, and My Health remain in primary navigation. A persistent plus button records activity, tags, workouts, or advisor input. The side menu collects profile, device, settings, trends, reports, meals, experiments, integrations, and support.
 
 # Core Flows
 
@@ -29,12 +29,20 @@ Today, Vitals, and My Health remain in a floating bottom bar. A persistent plus 
 
 ## My Health and logging
 
-My Health groups sleep, stress, and heart health into interpreted panels. The plus action logs activity, tags, workouts, advisor notes, and memories without replacing the main navigation.
+1. My Health groups sleep, stress, and heart health into interpreted panels. The plus action logs activity, tags, workouts, advisor notes, and memories without replacing the main navigation.
 
 # Interaction Patterns
 
 - Lead with an interpreted state before exposing raw charts.
 - Keep scores, status labels, and ranges visible together.
-- Use full-screen educational overlays for metric explanations.
+- Metric explanations open in context and return to the current dashboard.
 - Put frequent logging behind one persistent plus action.
 - Keep device and account administration in the side menu.
+
+# System Access Timing
+
+No system-access request timing or denial recovery was documented in the reviewed source.
+
+# Known Gaps
+
+- Permission-denial recovery and unobserved secondary flows were not documented.

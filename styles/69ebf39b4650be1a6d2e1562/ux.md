@@ -4,14 +4,14 @@
 
 # Navigation
 
-Search, Trips, Navigator, Friends, and Tips form the bottom navigation. Map controls remain at the edges. A side menu contains offline maps, route search, geolocation sharing, favorites, settings, business tools, and feedback.
+Search, Trips, Navigator, Friends, and Tips form primary navigation. Map controls remain at the edges. A side menu contains offline maps, route search, geolocation sharing, favorites, settings, business tools, and feedback.
 
 # Core Flows
 
 ## Search and place
 
 1. Search by name, category, or voice.
-2. Review results on the map and in a bottom sheet.
+2. Review results on the map and in a modals.
 3. Open a place for overview, photos, entrances, floors, reviews, contacts, services, and offers.
 
 ## Routes and navigation
@@ -22,12 +22,18 @@ Search, Trips, Navigator, Friends, and Tips form the bottom navigation. Map cont
 
 ## City context
 
-Toggle traffic and weather, save places, browse city guides and Tips, or use visual Lenses for nearby context. Friends adds location sharing, statuses, reviews, and privacy controls.
+1. Toggle traffic and weather, save places, browse city guides and Tips, or use Lenses for nearby context. Friends adds location sharing, statuses, reviews, and privacy controls.
 
 # Interaction Patterns
 
 - Keep map state visible beneath sheets.
-- Use green for the primary route or confirmation action.
-- Separate travel modes as horizontal choices.
-- Pair spatial icons with explicit time, distance, and transfer labels.
+- Separate travel modes as choices.
 - Expose privacy choices before enabling friend location sharing.
+
+# System Access Timing
+
+- Location access follows the user choosing the documented current-location or sharing action. Denial recovery was not documented.
+
+# Known Gaps
+
+- Permission-denial recovery and unobserved secondary flows were not documented.

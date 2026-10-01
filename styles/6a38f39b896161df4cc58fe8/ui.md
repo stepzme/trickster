@@ -1,13 +1,13 @@
 <design-context>
 ---
-version: alpha
+version: 1
+platform: iOS
 name: Rostics-design-analysis
 description: "A high-energy food-ordering interface built around bright red calls to action, clean white commerce surfaces, condensed black display type, and large appetite-led photography. Product cards stay visually light, while maps and checkout details arrive in white rounded sheets above muted gray context."
 
 colors:
   primary: "#E52B21"
   on-primary: "#FFFFFF"
-  primary-hover: "#F04439"
   primary-soft: "#FDE9E7"
   ink: "#171717"
   ink-muted: "#696969"
@@ -25,102 +25,102 @@ colors:
 typography:
   display-xl:
     fontFamily: Condensed Sans
-    fontSize: 42px
+    fontSize: 42
     fontWeight: 800
     lineHeight: 0.95
-    letterSpacing: -0.6px
+    letterSpacing: -0.6
   display-lg:
     fontFamily: Condensed Sans
-    fontSize: 34px
+    fontSize: 34
     fontWeight: 800
     lineHeight: 1.0
-    letterSpacing: -0.4px
+    letterSpacing: -0.4
   display-md:
     fontFamily: Condensed Sans
-    fontSize: 28px
+    fontSize: 28
     fontWeight: 800
     lineHeight: 1.05
-    letterSpacing: -0.2px
+    letterSpacing: -0.2
   headline:
     fontFamily: Condensed Sans
-    fontSize: 24px
+    fontSize: 24
     fontWeight: 800
     lineHeight: 1.10
     letterSpacing: 0
   card-title:
     fontFamily: System Sans
-    fontSize: 16px
+    fontSize: 16
     fontWeight: 600
     lineHeight: 1.25
     letterSpacing: 0
   subhead:
     fontFamily: System Sans
-    fontSize: 17px
+    fontSize: 17
     fontWeight: 600
     lineHeight: 1.30
     letterSpacing: 0
   body-lg:
     fontFamily: System Sans
-    fontSize: 16px
+    fontSize: 16
     fontWeight: 400
     lineHeight: 1.40
     letterSpacing: 0
   body:
     fontFamily: System Sans
-    fontSize: 14px
+    fontSize: 14
     fontWeight: 400
     lineHeight: 1.40
     letterSpacing: 0
   body-sm:
     fontFamily: System Sans
-    fontSize: 12px
+    fontSize: 12
     fontWeight: 400
     lineHeight: 1.35
     letterSpacing: 0
   caption:
     fontFamily: System Sans
-    fontSize: 11px
+    fontSize: 11
     fontWeight: 400
     lineHeight: 1.30
     letterSpacing: 0
   button:
     fontFamily: System Sans
-    fontSize: 15px
+    fontSize: 15
     fontWeight: 700
     lineHeight: 1.20
     letterSpacing: 0
   eyebrow:
     fontFamily: Condensed Sans
-    fontSize: 13px
+    fontSize: 13
     fontWeight: 800
     lineHeight: 1.15
-    letterSpacing: 0.2px
+    letterSpacing: 0.2
   mono:
     fontFamily: System Mono
-    fontSize: 12px
+    fontSize: 12
     fontWeight: 400
     lineHeight: 1.35
     letterSpacing: 0
 
 rounded:
-  xs: 4px
-  sm: 8px
-  md: 12px
-  lg: 18px
-  xl: 24px
-  xxl: 32px
-  pill: 9999px
-  full: 9999px
+  xs: 4
+  sm: 8
+  md: 12
+  lg: 18
+  xl: 24
+  xxl: 32
+  pill: 9999
+  full: 9999
 
 spacing:
-  xxs: 4px
-  xs: 8px
-  sm: 12px
-  md: 16px
-  lg: 24px
-  xl: 32px
-  xxl: 48px
-  section: 64px
+  xxs: 4
+  xs: 8
+  sm: 12
+  md: 16
+  lg: 24
+  xl: 32
+  xxl: 48
+  section: 64
 
 components:
   button-primary:
@@ -128,46 +128,46 @@ components:
     textColor: "{colors.on-primary}"
     typography: "{typography.button}"
     rounded: "{rounded.pill}"
-    padding: 15px 20px
+    padding: [15, 20]
   button-secondary:
     backgroundColor: "{colors.surface-1}"
     textColor: "{colors.ink}"
     typography: "{typography.button}"
     rounded: "{rounded.pill}"
-    padding: 13px 18px
+    padding: [13, 18]
   mode-toggle:
     backgroundColor: "{colors.surface-1}"
     textColor: "{colors.ink}"
     typography: "{typography.button}"
     rounded: "{rounded.pill}"
-    padding: 4px
+    padding: 4
   product-card:
     backgroundColor: "{colors.canvas}"
     textColor: "{colors.ink}"
     typography: "{typography.body}"
     rounded: "{rounded.md}"
-    padding: 8px
+    padding: 8
   price-control:
     backgroundColor: "{colors.surface-1}"
     textColor: "{colors.ink}"
     typography: "{typography.button}"
     rounded: "{rounded.pill}"
-    padding: 8px 12px
+    padding: [8, 12]
   checkout-sheet:
     backgroundColor: "{colors.canvas}"
     textColor: "{colors.ink}"
     typography: "{typography.body}"
     rounded: "{rounded.xl}"
-    padding: 20px
+    padding: 20
   bottom-nav:
     backgroundColor: "{colors.canvas}"
     textColor: "{colors.ink-subtle}"
     typography: "{typography.caption}"
     rounded: "{rounded.xs}"
-    height: 64px
+    height: 64
 ---
 
-## Overview
+# Overview
 
 Rostic's pairs a clean white ordering shell with loud red actions, heavy condensed headings, and large food photography. The interface stays sparse around products so the photography supplies most of the color and texture. Checkout, restaurant selection, and customization use rounded sheets and anchored actions.
 
@@ -178,7 +178,15 @@ Rostic's pairs a clean white ordering shell with loud red actions, heavy condens
 - Product grids use quiet price pills and circular add controls.
 - Maps and dense order details are covered by clean white sheets.
 
-## Colors
+# Non-negotiable visual invariants
+
+- The reviewed screens show this treatment: Bright red is reserved for primary actions, active navigation, and location markers.
+- The reviewed screens show this treatment: Condensed black display type gives campaigns and category headings a poster-like voice.
+- The reviewed screens show this treatment: Food photography is large, tightly cropped, and shown without ornamental frames.
+- The reviewed screens show this treatment: Product grids use quiet price pills and circular add controls.
+- The reviewed screens show this treatment: Maps and dense order details are covered by clean white sheets.
+
+# Color and surfaces
 
 ### Brand & Accent
 
@@ -202,7 +210,7 @@ Rostic's pairs a clean white ordering shell with loud red actions, heavy condens
 
 Success, warning, and danger colors appear only in order or validation states. The ordering shell should otherwise remain red, neutral, and photography-led.
 
-## Typography
+# Typography
 
 ### Font Family
 
@@ -212,13 +220,13 @@ Use a bold condensed sans for campaign and category display copy, with a neutral
 
 | Token | Size | Weight | Use |
 |---|---:|---:|---|
-| `{typography.display-xl}` | 42px | 800 | Full-bleed campaign headline |
-| `{typography.display-lg}` | 34px | 800 | Catalog section heading |
-| `{typography.display-md}` | 28px | 800 | Product or promotion title |
-| `{typography.headline}` | 24px | 800 | Sheet and checkout title |
-| `{typography.card-title}` | 16px | 600 | Product name |
-| `{typography.body}` | 14px | 400 | Description and order detail |
-| `{typography.caption}` | 11px | 400 | Metadata and navigation label |
+| `{typography.display-xl}` | 42pt | 800 | Full-bleed campaign headline |
+| `{typography.display-lg}` | 34pt | 800 | Catalog section heading |
+| `{typography.display-md}` | 28pt | 800 | Product or promotion title |
+| `{typography.headline}` | 24pt | 800 | Sheet and checkout title |
+| `{typography.card-title}` | 16pt | 600 | Product name |
+| `{typography.body}` | 14pt | 400 | Description and order detail |
+| `{typography.caption}` | 11pt | 400 | Metadata and navigation label |
 
 ### Principles
 
@@ -231,11 +239,7 @@ Use a bold condensed sans for campaign and category display copy, with a neutral
 
 Use a compact condensed grotesk such as Roboto Condensed for display and SF Pro or Inter for UI copy. Preserve the contrast between the two families.
 
-## Layout
-
-### Spacing System
-
-Use a 4px base with 16px screen gutters, 12px gaps inside grids, and 24px between catalog sections. Bottom actions keep 12–16px edge clearance above the safe area.
+# Screen composition
 
 ### Grid & Container
 
@@ -245,34 +249,15 @@ Catalog screens use a two-column product grid. Promotions and stories use horizo
 
 Leave generous white space around product photography and condensed headings. Dense order data belongs in grouped rows rather than filling the catalog canvas.
 
-## Elevation & Depth
+# Navigation appearance
 
-Use tonal separation and sheet overlap instead of heavy shadows. A faint shadow may separate the sticky CTA or sheet from scrolling content.
+Use a four-item bottom bar with red active state and gray inactive labels. Product and checkout pages rely on simple back and close controls while preserving the sticky purchase action.
 
-### Decorative Depth
-
-Create depth with food photography, soft promotional backgrounds, and white sheets over maps. Avoid gradients, glossy controls, and ornamental shadows.
-
-## Shapes
-
-### Border Radius Scale
-
-- Primary actions and price controls are pill-shaped.
-- Product cards use restrained 8–12px rounding.
-- Bottom sheets and promotional panels use 18–24px corners.
-- Quantity add controls may be circular.
-
-### Photography & Illustration Geometry
-
-Use high-key food photography with close crops and minimal framing. Photography may bleed to the edge of a campaign card; product thumbnails should remain isolated against white or warm neutral backgrounds.
-
-## Components
+# Components
 
 ### Buttons
 
 Primary actions are full-width red pills with white bold labels. Secondary actions use light-gray pills with dark text. Native controls may be used, but their styling must inherit the red accent, radii, and typography rather than exposing default platform styling.
-
-### Pricing Tabs
 
 Delivery and restaurant modes use a compact pill container with a clearly filled active segment. Category switching can use text tabs, but selection remains red and the number of parallel styles stays low.
 
@@ -292,11 +277,46 @@ Order tracking presents the current stage before supporting details and keeps th
 
 Use a four-item bottom bar with red active state and gray inactive labels. Product and checkout pages rely on simple back and close controls while preserving the sticky purchase action.
 
-### Footer
+# Imagery and icons
 
-There is no marketing footer in the mobile product. End screens with the bottom navigation or a safe-area-aware sticky CTA on the white canvas.
+Use tonal separation and sheet overlap instead of heavy shadows. A faint shadow may separate the sticky CTA or sheet from scrolling content.
 
-## Do's and Don'ts
+### Decorative Depth
+
+Create depth with food photography, soft promotional backgrounds, and white sheets over maps. Avoid gradients, glossy controls, and ornamental shadows.
+
+# States
+
+Order tracking presents the current stage before supporting details and keeps the active state red. Empty cart and history states should keep one clear recovery action without adding decorative chrome.
+
+# iOS adaptation
+
+Preserve the two-column product grid on standard phone widths; move to one column only when product imagery and labels no longer remain readable. Detail and checkout flows remain single-column.
+
+### Touch Targets
+
+Keep add, quantity, navigation, close, and address controls at least 44pt in both dimensions.
+
+### Collapsing Strategy
+
+Allow horizontal story and category rows to scroll. Keep the primary order CTA pinned while long product options and checkout sections scroll below the title.
+
+### Image Behavior
+
+Crop campaign photography with `cover`; keep isolated product photography proportional and centered. Never stretch food imagery or place text over a busy crop without contrast.
+
+On iPhone, respect top and bottom safe areas, use scrolling for content that does not fit, keep interactive targets at least 44 points, and preserve the visual reading order for VoiceOver. At larger Dynamic Type sizes, allow supporting text to wrap without collapsing the dominant hierarchy. Use native sheets and permission transitions while explicitly styling app-owned surfaces to match the reference.
+
+# Anti-generic checklist
+
+- Do not substitute the documented accent hierarchy with default iOS blue.
+- Do not collapse distinct surfaces into a uniform stack of generic white cards.
+- Do not use an unstyled `TabView`, `Form`, or arbitrary SF Symbols when they contradict the documented navigation and component language.
+- Do not flatten the documented typography into one body-text scale.
+- Do not remove compositionally important photography or illustration while assets are pending.
+- Do not apply one corner radius to every control and surface.
+
+Source-specific guardrails retained from the review:
 
 ### Do
 
@@ -314,28 +334,8 @@ There is no marketing footer in the mobile product. End screens with the bottom 
 - Do not mix multiple unrelated chip and button geometries.
 - Do not expose default blue iOS controls.
 
-## Responsive Behavior
+# Known gaps
 
-### Breakpoints
+The reviewed scenarios show iPhone ordering, promotions, account, and tracking states. iPad behavior, accessibility text scaling, dark mode, and rare payment failures were not visible.
 
-Preserve the two-column product grid on standard phone widths; move to one column only when product imagery and labels no longer remain readable. Detail and checkout flows remain single-column.
-
-### Touch Targets
-
-Keep add, quantity, navigation, close, and address controls at least 44px in both dimensions.
-
-### Collapsing Strategy
-
-Allow horizontal story and category rows to scroll. Keep the primary order CTA pinned while long product options and checkout sections scroll below the title.
-
-### Image Behavior
-
-Crop campaign photography with `cover`; keep isolated product photography proportional and centered. Never stretch food imagery or place text over a busy crop without contrast.
-
-## Iteration Guide
-
-Begin with the white canvas, red action system, condensed heading family, and product grid. Add promotional photography next, then sheets and order states. Judge every new component by whether it makes choosing and ordering food faster.
-
-## Known Gaps
-
-The reviewed scenarios show iPhone ordering, promotions, account, and tracking states. Tablet behavior, accessibility text scaling, dark mode, and rare payment failures were not visible.
+</design-context>

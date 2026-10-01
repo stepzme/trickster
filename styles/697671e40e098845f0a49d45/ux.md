@@ -4,9 +4,9 @@ t2 combines mobile-account management, tariff controls, security, data exchange,
 
 # Navigation
 
-- Five bottom destinations cover Connectivity, MiXX, Home, Finance, and More.
-- The main account surface combines number, balance, allowances, tariff, and service entry points.
-- Focused tasks use drill-down screens with persistent context in the top bar.
+- Five primary destinations cover Connectivity, MiXX, Home, Finance, and More.
+- The main account screen combines number, balance, allowances, tariff, and service entry points.
+- Focused tasks use drill-down screens with persistent context in contextual controls.
 
 # Core Flows
 
@@ -30,7 +30,13 @@ t2 combines mobile-account management, tariff controls, security, data exchange,
 
 # Interaction Patterns
 
-- Black headers frame white rounded content sheets.
-- Lime identifies the brand; magenta, cyan, and violet distinguish product families.
 - Dense modules use bold condensed headings and clear chevrons.
 - Playful 3D objects explain services without replacing prices or terms.
+
+# System Access Timing
+
+No system-access request timing or denial recovery was documented in the reviewed source.
+
+# Known Gaps
+
+- Permission-denial recovery and unobserved secondary flows were not documented.

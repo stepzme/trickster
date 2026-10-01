@@ -1,146 +1,136 @@
 <design-context>
 ---
-version: alpha
+version: 1
+platform: iOS
 name: Zopa-design-analysis
 description: "A calm UK banking interface built around deep forest green, white financial cards, mint accents, soft peach promotions, serif-led balances, and friendly botanical artwork. Transactional steps remain sparse and explicit, while hubs and offers add warmth without weakening trust."
-colors: { primary: "#063B32", on-primary: "#FFFFFF", primary-hover: "#002E27", primary-soft: "#DDFBEF", accent: "#67E0BC", ink: "#12221F", ink-muted: "#707A77", ink-subtle: "#ADB5B2", canvas: "#F3F1F7", surface-1: "#FFFFFF", surface-2: "#E9ECEB", hairline: "#DDE2E0", semantic-success: "#56D68A", semantic-warning: "#F2C65C", semantic-danger: "#B83D46", semantic-overlay: "#000000" }
+colors: { primary: "#063B32", on-primary: "#FFFFFF", primary-soft: "#DDFBEF", accent: "#67E0BC", ink: "#12221F", ink-muted: "#707A77", ink-subtle: "#ADB5B2", canvas: "#F3F1F7", surface-1: "#FFFFFF", surface-2: "#E9ECEB", hairline: "#DDE2E0", semantic-success: "#56D68A", semantic-warning: "#F2C65C", semantic-danger: "#B83D46", semantic-overlay: "#000000" }
 typography:
-  display-xl: { fontFamily: Georgia, fontSize: 42px, fontWeight: 500, lineHeight: 1.05, letterSpacing: -0.8px }
-  display-lg: { fontFamily: Georgia, fontSize: 34px, fontWeight: 500, lineHeight: 1.10, letterSpacing: -0.5px }
-  display-md: { fontFamily: Georgia, fontSize: 28px, fontWeight: 500, lineHeight: 1.15, letterSpacing: -0.3px }
-  headline: { fontFamily: Georgia, fontSize: 22px, fontWeight: 500, lineHeight: 1.20, letterSpacing: 0 }
-  card-title: { fontFamily: Arial, fontSize: 16px, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: Arial, fontSize: 16px, fontWeight: 500, lineHeight: 1.30, letterSpacing: 0 }
-  body-lg: { fontFamily: Arial, fontSize: 16px, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
-  body: { fontFamily: Arial, fontSize: 14px, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
-  body-sm: { fontFamily: Arial, fontSize: 12px, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
-  caption: { fontFamily: Arial, fontSize: 10px, fontWeight: 500, lineHeight: 1.20, letterSpacing: 0 }
-  button: { fontFamily: Arial, fontSize: 15px, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0 }
-  eyebrow: { fontFamily: Arial, fontSize: 11px, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0.2px }
-  mono: { fontFamily: SF Mono, fontSize: 12px, fontWeight: 500, lineHeight: 1.30, letterSpacing: 0 }
-rounded: { xs: 5px, sm: 9px, md: 13px, lg: 18px, xl: 24px, xxl: 30px, pill: 9999px, full: 9999px }
-spacing: { xxs: 4px, xs: 8px, sm: 12px, md: 16px, lg: 24px, xl: 32px, xxl: 48px, section: 64px }
+  display-xl: { fontFamily: Georgia, fontSize: 42, fontWeight: 500, lineHeight: 1.05, letterSpacing: -0.8 }
+  display-lg: { fontFamily: Georgia, fontSize: 34, fontWeight: 500, lineHeight: 1.10, letterSpacing: -0.5 }
+  display-md: { fontFamily: Georgia, fontSize: 28, fontWeight: 500, lineHeight: 1.15, letterSpacing: -0.3 }
+  headline: { fontFamily: Georgia, fontSize: 22, fontWeight: 500, lineHeight: 1.20, letterSpacing: 0 }
+  card-title: { fontFamily: Arial, fontSize: 16, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
+  subhead: { fontFamily: Arial, fontSize: 16, fontWeight: 500, lineHeight: 1.30, letterSpacing: 0 }
+  body-lg: { fontFamily: Arial, fontSize: 16, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
+  body: { fontFamily: Arial, fontSize: 14, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
+  body-sm: { fontFamily: Arial, fontSize: 12, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
+  caption: { fontFamily: Arial, fontSize: 10, fontWeight: 500, lineHeight: 1.20, letterSpacing: 0 }
+  button: { fontFamily: Arial, fontSize: 15, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0 }
+  eyebrow: { fontFamily: Arial, fontSize: 11, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0.2 }
+  mono: { fontFamily: SF Mono, fontSize: 12, fontWeight: 500, lineHeight: 1.30, letterSpacing: 0 }
+rounded: { xs: 5, sm: 9, md: 13, lg: 18, xl: 24, xxl: 30, pill: 9999, full: 9999 }
+spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
 components:
-  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.xs}", padding: 13px 18px }
-  finance-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 14px }
-  status-chip: { backgroundColor: "{colors.primary-soft}", textColor: "{colors.primary}", typography: "{typography.caption}", rounded: "{rounded.pill}", padding: 5px 9px }
-  input: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xs}", padding: 12px 14px }
-  top-nav: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.body}", rounded: "{rounded.xs}", height: 52px }
-  footer: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: 8px 10px }
+  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.xs}", padding: [13, 18]}
+  finance-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 14 }
+  status-chip: { backgroundColor: "{colors.primary-soft}", textColor: "{colors.primary}", typography: "{typography.caption}", rounded: "{rounded.pill}", padding: [5, 9]}
+  input: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xs}", padding: [12, 14]}
+  navigation-bar: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.body}", rounded: "{rounded.xs}", height: 52 }
+  footer: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: [8, 10]}
 ---
 
-## Overview
+# Overview
 
 Zopa combines reassuring traditional finance typography with modern mint accents, clear account cards, and direct payment flows.
 
-## Colors
+# Non-negotiable visual invariants
 
-### Brand & Accent
-Use forest green for trust and primary actions, mint for active highlights, and peach for promotional messages.
-
-### Surface
-Use a pale lavender-gray canvas with white cards and deep-green branded headers.
-
-### Text
-Use dark green-black for balances and titles, gray for metadata, and muted red for declined transactions.
-
-### Semantic
-Use mint for success, amber for savings prompts, red for declined state, and gray for disabled actions.
-
-## Typography
-
-### Font Family
-Use a restrained serif for greetings, balances, and major headings and a clear sans for controls and details.
-
-### Hierarchy
-Use 34–42px for balances, 22px for page titles, 16px for cards, 14px body, and 10–12px metadata.
-
-### Principles
-Make amount, available balance, interest, and payment state stronger than promotional content.
-
-### Note on Font Substitutes
-Use Georgia for display and the platform sans or Arial for interface text.
-
-## Layout
-
-### Spacing System
-Use a 4px base, 10–12px gutters, 10px card gaps, and 14px padding.
-
-### Grid & Container
-Home stacks account, savings, offers, and growth; payments and account detail use grouped cards above a five-tab footer.
-
-### Whitespace Philosophy
-Keep transfer forms sparse and allow dashboards to be moderately dense.
-
-## Elevation & Depth
-Use white cards with light borders and shadow; reserve overlays for consent and feedback.
-
-### Decorative Depth
-Use small botanical scenes and floating financial objects inside promotional cards.
-
-## Shapes
-
-### Border Radius Scale
-Use 9px for fields, 13px for cards, 18px for sheets, and circles for account actions.
-
-### Photography & Illustration Geometry
-Contain artwork inside offer cards and keep financial inputs free of decoration.
-
-## Components
-
-### Buttons
-Use forest-green filled buttons for review and confirm; outlined buttons provide secondary exits.
-
-### Pricing Tabs
-Use segmented choices for personal or business payees and compact status chips.
-
-### Cards & Containers
-Use account, savings, benefit, activity, payee, direct debit, offer, and consent cards.
-
-### Inputs & Forms
-Stack amount, source, destination, payee identity, sort code, and account number with visible validation.
-
-### Status & Build Page
-Show available balance, interest, active benefits, transfer progress, declined entries, and beta state.
-
-### Navigation
-Home, Payments, the central assistant, Apply, and Help remain in the bottom bar.
-
-### Footer
-Keep the footer white; use mint for the assistant and dark green for active destinations.
-
-## Do's and Don'ts
-
-### Do
 - Keep money and source visible before review.
 - Explain beta and AI limitations.
 - Confirm movement of money explicitly.
+- Home stacks account, savings, offers, and growth; payments and account detail use grouped cards above a five-tab footer.
+- Keep transfer forms sparse and allow dashboards to be moderately dense.
 
-### Don't
-- Don't let promotions outrank account state.
-- Don't hide declined transactions.
-- Don't pre-enable incomplete transfer forms.
+# Color and surfaces
 
-## Responsive Behavior
+Use forest green for trust and primary actions, mint for active highlights, and peach for promotional messages.
 
-### Breakpoints
-Use one column on phones, split account and activity on tablet, and a capped banking workspace on desktop.
+Use a pale lavender-gray canvas with white cards and deep-green branded headers.
 
-### Touch Targets
-Keep account actions, payees, fields, footer, and confirmation controls at least 44px.
+Use dark green-black for balances and titles, gray for metadata, and muted red for declined transactions.
 
-### Collapsing Strategy
-Preserve amount, source, destination, state, and primary action; move offers lower.
+Use mint for success, amber for savings prompts, red for declined state, and gray for disabled actions.
 
-### Image Behavior
+# Typography
+
+Use a restrained serif for greetings, balances, and major headings and a clear sans for controls and details.
+
+Use 34–42 points for balances, 22 points for page titles, 16 points for cards, 14 points body, and 10–12 points metadata.
+
+Make amount, available balance, interest, and payment state stronger than promotional content.
+
+Use Georgia for display and the platform sans or Arial for interface text.
+
+The hierarchy must remain legible with Dynamic Type: supporting text may wrap before the primary metric, title, or action loses its role.
+
+# Screen composition
+
+Use a 4 points base, 10–12 points gutters, 10 points card gaps, and 14 points padding.
+
+Home stacks account, savings, offers, and growth; payments and account detail use grouped cards above a five-tab footer.
+
+Keep transfer forms sparse and allow dashboards to be moderately dense.
+
+Use small botanical scenes and floating financial objects inside promotional cards.
+
+Primary iPhone screens keep the documented content grouping and vertical rhythm inside a scroll container when content exceeds the viewport. Bottom-owned actions or navigation reserve the lower safe area rather than covering content.
+
+# Navigation appearance
+
+Home, Payments, the central assistant, Apply, and Help remain in the bottom bar.
+
+This section governs appearance only; destinations and transitions are defined in `ux.md`.
+
+# Components
+
+Use forest-green filled buttons for review and confirm; outlined buttons provide secondary exits.
+
+Use account, savings, benefit, activity, payee, direct debit, offer, and consent cards.
+
+Stack amount, source, destination, payee identity, sort code, and account number with visible validation.
+
+Show available balance, interest, active benefits, transfer progress, declined entries, and beta state.
+
+Controls retain at least a 44-point interactive area. Pressed and disabled treatments should stay within the documented palette and hierarchy; no unobserved state styling is prescribed.
+
+# Imagery and icons
+
+Contain artwork inside offer cards and keep financial inputs free of decoration.
+
 Contain promo art without crop and keep it outside transactional fields.
 
-## Iteration Guide
-1. Build home, account detail, payments, and navigation.
-2. Add transfers, payees, savings, and benefits.
-3. Add assistant, offers, applications, and help.
+When imagery is part of the documented composition, it cannot be omitted while final assets are pending. A temporary asset must preserve its placement, crop, scale, and approximate visual weight.
 
-## Known Gaps
+# States
+
+Show available balance, interest, active benefits, transfer progress, declined entries, and beta state.
+
+Use mint for success, amber for savings prompts, red for declined state, and gray for disabled actions.
+
+Only the states documented above are specified; other states must preserve the same canvas, hierarchy, and component language without inventing a new visual system.
+
+# iOS adaptation
+
+- Extend the documented canvas through the iPhone safe areas while keeping readable content within appropriate insets.
+- Use a vertical `ScrollView` for content that does not fit compact heights; keep documented bottom actions and navigation clear of the home indicator.
+- Keep account actions, payees, fields, footer, and confirmation controls at least 44 points.
+- Preserve amount, source, destination, state, and primary action; move offers lower.
+- Present the keyboard and system permission UI natively, then return to the same visual context.
+- Preserve semantic reading order in VoiceOver and allow text to grow with Dynamic Type.
+- Do not infer an unobserved dark or light variant; use the appearance documented by the reference.
+
+# Anti-generic checklist
+
+- Do not let promotions outrank account state.
+- Do not hide declined transactions.
+- Do not pre-enable incomplete transfer forms.
+- Do not replace the documented canvas and surfaces with a generic grouped background and uniform white cards.
+- Do not use an unstyled `TabView`, default blue tint, or arbitrary SF Symbols when they contradict the reference.
+- Do not collapse every component to one corner radius or remove compositionally important imagery.
+
+# Known gaps
+
 - Tokens were inferred visually from sampled mobile screens.
 - Bank account, Add money instantly, Assistant, and Send money were image-reviewed.
 - Lending application and card-management edge cases were not deeply sampled.

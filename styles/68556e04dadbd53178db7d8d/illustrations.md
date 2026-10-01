@@ -1,12 +1,10 @@
-# Illustration Language
+# Overview
 
-Use clean editorial product collages rather than character scenes. Combine real cutout groceries and household objects with a few simple flat graphic shapes on warm pastel backgrounds.
+No dedicated imagery overview was documented.
 
-# Palette and Materials
+# Visual Style
 
-- Use cream, peach, pale yellow, mint, light blue, and lavender fields with VkusVill green accents.
-- Keep product photography evenly lit, color-accurate, and softly grounded with minimal shadow.
-- Add flat hearts, tags, gift boxes, percent marks, or utensils only when they clarify the category.
+No medium, line, dimensionality, texture, lighting, or motif rules were documented.
 
 # Composition
 
@@ -14,8 +12,23 @@ Use clean editorial product collages rather than character scenes. Combine real 
 - Keep one clear focal product and leave room for a short category title.
 - Use square or wide rounded tiles; avoid busy environmental backgrounds.
 
-# Do and Don't
+# Color and Materials
 
-- Keep collages fresh, domestic, and immediately recognizable.
-- Use consistent light direction and cutout quality.
-- Do not mix dark cinematic photography, glossy 3D mascots, or detailed line characters into the system.
+No imagery-specific palette or material treatment was documented.
+
+# Variants and States
+
+No state-specific illustration variants were documented.
+
+# Production Requirements
+
+Preserve the documented placement, crop, negative space, and visual weight in production exports. Before final art exists, placeholders must preserve those same compositional properties.
+
+# Avoid
+
+- Do not replace the observed imagery language with unrelated stock art or arbitrary symbols.
+- Do not change the documented crop, density, or relationship to nearby text.
+
+# Known Gaps
+
+Animation, export dimensions, safe-crop specifications, appearance variants, and unshown state treatments were not documented.

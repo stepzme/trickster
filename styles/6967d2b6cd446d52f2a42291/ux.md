@@ -4,7 +4,7 @@ Monese is a European everyday banking app spanning onboarding, account overview,
 
 # Navigation
 
-Five fixed destinations connect Home, Card, Pay, Invite, and Explore. Account and support actions live in the top corners or side menu.
+five persistent destinations connect Home, Card, Pay, Invite, and Explore. Account and support actions are available from the current context or side menu.
 
 # Core Flows
 
@@ -24,7 +24,12 @@ Five fixed destinations connect Home, Card, Pay, Invite, and Explore. Account an
 
 # Interaction Patterns
 
-- Bright blue anchors brand and active navigation.
-- White surfaces and pale blue gradients keep banking light.
-- Card imagery and large balances lead core decisions.
 - Confirmation and support use simple one-column sheets.
+
+# System Access Timing
+
+No system-access request timing or denial recovery was documented in the reviewed source.
+
+# Known Gaps
+
+- Permission-denial recovery and unobserved secondary flows were not documented.

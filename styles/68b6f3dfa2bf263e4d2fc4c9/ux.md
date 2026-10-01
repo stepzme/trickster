@@ -4,7 +4,7 @@ A playful city-discovery product that turns interests into routes. The experienc
 
 # Navigation
 
-A three-item bottom bar separates route discovery, Guides, and Profile. The route builder stays on the first tab; Guides uses horizontal themes and vertical editorial cards; place details drill into maps without adding a new global destination.
+A three-item primary navigation separates route discovery, Guides, and Profile. The route builder stays on the first tab; Guides uses themes and editorial items; place details drill into maps without adding a new global destination.
 
 # Core Flows
 
@@ -12,7 +12,7 @@ A three-item bottom bar separates route discovery, Guides, and Profile. The rout
 
 1. Choose a starting point.
 2. Tap one or more interest bubbles.
-3. Request a route from the fixed coral action.
+3. Request a route from the fixed action.
 4. Swipe route suggestions, skip one, or accept and begin.
 
 ## Explore a guide
@@ -23,8 +23,12 @@ A three-item bottom bar separates route discovery, Guides, and Profile. The rout
 
 # Interaction Patterns
 
-- Bubble size varies to create an exploratory selection field.
-- Selection gains a soft warm fill while unselected options remain outlined.
-- Large coral pills anchor forward actions near the bottom edge.
-- Rounded bottom sheets teach gestures in context.
-- Editorial tags use small black or pastel pills.
+No behavior-only interaction pattern could be separated from the reviewed visual observations.
+
+# System Access Timing
+
+No system-access timing or denial-recovery path was documented in the reviewed source.
+
+# Known Gaps
+
+Unobserved flows, denial paths, cancellation behavior, and recovery states remain unspecified.

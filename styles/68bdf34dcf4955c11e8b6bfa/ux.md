@@ -1,10 +1,10 @@
 # Overview
 
-Phone organizes calling around five stable destinations: Favorites, Recents, Contacts, Keypad, and Voicemail, with the active call becoming a dedicated full-screen mode.
+Phone organizes calling around five stable destinations: Favorites, Recents, Contacts, Keypad, and Voicemail, with the active call becoming a dedicated mode.
 
 # Navigation
 
-A five-item bottom tab bar keeps the primary destinations fixed. Lists use top-level segmented filters and edit actions, while contact detail uses grouped native rows.
+A five-item primary navigation keeps the primary destinations fixed. Lists use top-level segmented filters and edit actions, while contact detail uses grouped native rows.
 
 # Core Flows
 
@@ -18,4 +18,12 @@ A five-item bottom tab bar keeps the primary destinations fixed. Lists use top-l
 
 # Interaction Patterns
 
-System-blue links and selections reveal navigation state, swipe actions expose destructive history controls, and modal native forms handle contact creation without changing the tab context.
+No behavior-only interaction pattern could be separated from the reviewed visual observations.
+
+# System Access Timing
+
+No system-access timing or denial-recovery path was documented in the reviewed source.
+
+# Known Gaps
+
+Unobserved flows, denial paths, cancellation behavior, and recovery states remain unspecified.

@@ -1,6 +1,6 @@
 # Overview
 
-Le Chat is a dark AI workspace for quick questions, long conversations, research, voice, file and image input, image generation, projects, and subscription upgrades.
+Le Chat is an AI workspace for quick questions, long conversations, research, voice, file and image input, image generation, projects, and subscription upgrades.
 
 # Navigation
 
@@ -10,7 +10,7 @@ The home screen is composer-first. A slide-out sidebar contains search, projects
 
 ## Ask and continue
 
-1. Enter a prompt from the central composer and optionally select a mode or attachment.
+1. Enter a prompt from the composer and optionally select a mode or attachment.
 2. Follow response progress in the conversation.
 3. Review the answer, use feedback or utility actions, and continue in the same composer.
 
@@ -24,6 +24,11 @@ The home screen is composer-first. A slide-out sidebar contains search, projects
 # Interaction Patterns
 
 - The composer remains the primary anchor on home, chats, and projects.
-- Mode chips appear inside the composer instead of creating separate tool screens.
-- Orange marks creation and upgrade actions; cyan identifies Research.
-- Long outputs stay readable through simple text hierarchy and compact per-answer actions.
+
+# System Access Timing
+
+No system-access timing or denial-recovery path was documented in the reviewed source.
+
+# Known Gaps
+
+Unobserved flows, denial paths, cancellation behavior, and recovery states remain unspecified.

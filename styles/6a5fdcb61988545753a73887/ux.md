@@ -10,7 +10,7 @@ Home recommends the next lesson; Courses exposes the catalog; You contains profi
 
 ## Begin learning
 
-Onboarding captures level and goal, creates a profile, and recommends a starting skill without forcing the learner through the full catalog.
+1. Onboarding captures level and goal, creates a profile, and recommends a starting skill without forcing the learner through the full catalog.
 
 ## Complete a lesson
 
@@ -22,12 +22,19 @@ Onboarding captures level and goal, creates a profile, and recommends a starting
 
 ## Recover and progress
 
-Mistakes can be reviewed and skill checks retaken. Streak, leagues, and course paths support return without replacing learning content.
+1. Mistakes can be reviewed and skill checks retaken. Streak, leagues, and course paths support return without replacing learning content.
 
 # Interaction Patterns
 
 - Keep one concept and one action per screen.
-- Preserve variable color across question and explanation.
 - Explain why an answer failed.
 - Make progress visible but secondary.
 - Allow exit without disguising progress loss.
+
+# System Access Timing
+
+No system-access timing or denial-recovery behavior was documented in the reviewed source.
+
+# Known Gaps
+
+System-permission denial paths, interrupted flows, and recovery behavior not described above were not available in the reviewed source.

@@ -4,7 +4,7 @@ WB Taxi is a map-first ride service built around selecting pickup and destinatio
 
 # Navigation
 
-- The map is the primary workspace; pickup, destination, class, and order controls rise in bottom sheets.
+- The map is the primary workspace; pickup, destination, class, and order controls rise in modals.
 - Profile opens as a simple service list for support, history, payments, settings, and app information.
 - The active-trip sheet replaces discovery controls with driver-search, cancellation, and ride status.
 
@@ -30,6 +30,12 @@ WB Taxi is a map-first ride service built around selecting pickup and destinatio
 
 # Interaction Patterns
 
-- Map context remains visible beneath translucent sheets and compact location fields.
-- A bright violet gradient marks the single next action; black sheets communicate active search.
-- Ride class uses vehicle imagery and side-by-side cards instead of a long picker.
+The sampled flows use direct actions, explicit completion, and return to the current context. No additional repeated interaction behavior was documented.
+
+# System Access Timing
+
+No system-access request timing or denial recovery was documented in the reviewed source.
+
+# Known Gaps
+
+- Permission-denial recovery and unobserved secondary flows were not documented.

@@ -1,12 +1,12 @@
 <design-context>
 ---
-version: alpha
+version: 1
+platform: iOS
 name: Calculator-design-analysis
 description: "A pure black system calculator with a large right-aligned white result, circular dark-gray number keys, light-gray function keys, and a saturated orange operator column. The fixed four-column keypad emphasizes one-handed muscle memory and immediate state change without decoration."
 colors:
   primary: "#FF9F0A"
   on-primary: "#FFFFFF"
-  primary-hover: "#E58A00"
   primary-soft: "#3B2A10"
   accent: "#A5A5A5"
   accent-secondary: "#333333"
@@ -21,32 +21,31 @@ colors:
   semantic-danger: "#FF453A"
   semantic-overlay: "#000000"
 typography:
-  display-xl: { fontFamily: SF Pro Display, fontSize: 36px, fontWeight: 700, lineHeight: 1.05, letterSpacing: -0.7px }
-  display-lg: { fontFamily: SF Pro Display, fontSize: 30px, fontWeight: 700, lineHeight: 1.08, letterSpacing: -0.5px }
-  display-md: { fontFamily: SF Pro Display, fontSize: 26px, fontWeight: 700, lineHeight: 1.12, letterSpacing: -0.3px }
-  headline: { fontFamily: SF Pro Display, fontSize: 22px, fontWeight: 700, lineHeight: 1.18, letterSpacing: -0.2px }
-  card-title: { fontFamily: SF Pro Text, fontSize: 16px, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: SF Pro Text, fontSize: 17px, fontWeight: 500, lineHeight: 1.35, letterSpacing: 0 }
-  body-lg: { fontFamily: SF Pro Text, fontSize: 16px, fontWeight: 400, lineHeight: 1.45, letterSpacing: 0 }
-  body: { fontFamily: SF Pro Text, fontSize: 14px, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
-  body-sm: { fontFamily: SF Pro Text, fontSize: 12px, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
-  caption: { fontFamily: SF Pro Text, fontSize: 10px, fontWeight: 400, lineHeight: 1.20, letterSpacing: 0 }
-  button: { fontFamily: SF Pro Text, fontSize: 15px, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0 }
-  eyebrow: { fontFamily: SF Pro Text, fontSize: 11px, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0.3px }
-  mono: { fontFamily: SF Mono, fontSize: 12px, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
-rounded: { xs: 8px, sm: 12px, md: 16px, lg: 20px, xl: 26px, xxl: 32px, pill: 9999px, full: 9999px }
-spacing: { xxs: 4px, xs: 8px, sm: 12px, md: 16px, lg: 24px, xl: 32px, xxl: 48px, section: 64px }
+  display-xl: { fontFamily: SF Pro Display, fontSize: 36, fontWeight: 700, lineHeight: 1.05, letterSpacing: -0.7 }
+  display-lg: { fontFamily: SF Pro Display, fontSize: 30, fontWeight: 700, lineHeight: 1.08, letterSpacing: -0.5 }
+  display-md: { fontFamily: SF Pro Display, fontSize: 26, fontWeight: 700, lineHeight: 1.12, letterSpacing: -0.3 }
+  headline: { fontFamily: SF Pro Display, fontSize: 22, fontWeight: 700, lineHeight: 1.18, letterSpacing: -0.2 }
+  card-title: { fontFamily: SF Pro Text, fontSize: 16, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
+  subhead: { fontFamily: SF Pro Text, fontSize: 17, fontWeight: 500, lineHeight: 1.35, letterSpacing: 0 }
+  body-lg: { fontFamily: SF Pro Text, fontSize: 16, fontWeight: 400, lineHeight: 1.45, letterSpacing: 0 }
+  body: { fontFamily: SF Pro Text, fontSize: 14, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
+  body-sm: { fontFamily: SF Pro Text, fontSize: 12, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
+  caption: { fontFamily: SF Pro Text, fontSize: 10, fontWeight: 400, lineHeight: 1.20, letterSpacing: 0 }
+  button: { fontFamily: SF Pro Text, fontSize: 15, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0 }
+  eyebrow: { fontFamily: SF Pro Text, fontSize: 11, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0.3 }
+  mono: { fontFamily: SF Mono, fontSize: 12, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
+rounded: { xs: 8, sm: 12, md: 16, lg: 20, xl: 26, xxl: 32, pill: 9999, full: 9999 }
+spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
 components:
-  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.md}", padding: 14px 18px }
-  feature-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 16px }
-  action-tile: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.md}", padding: 12px }
-  grouped-list: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 8px 16px }
-  input: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body-lg}", rounded: "{rounded.md}", padding: 14px 16px }
-  top-nav: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xs}", height: 52px }
-  footer: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: 8px 12px }
+  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.md}", padding: [14, 18]}
+  feature-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 16 }
+  action-tile: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.md}", padding: 12 }
+  grouped-list: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: [8, 16]}
+  input: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body-lg}", rounded: "{rounded.md}", padding: [14, 16]}
+  bottom navigation: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: [8, 12]}
 ---
 
-## Overview
+# Overview
 
 Calculator is a single-purpose numeric surface: result above, keypad below, functions on the left, digits in the middle, and operators in a stable orange column.
 
@@ -57,7 +56,15 @@ Calculator is a single-purpose numeric surface: result above, keypad below, func
 - Orange operator column.
 - Light-gray function keys.
 
-## Colors
+# Non-negotiable visual invariants
+
+- Sampled screens consistently use pure black canvas.
+- The reference consistently shows large right-aligned result.
+- The reference consistently shows four-column circular keypad.
+- The reference consistently shows orange operator column.
+- The reference consistently shows light-gray function keys.
+
+# Color and surfaces
 
 ### Brand & Accent
 - **Primary** ({colors.primary}): Operators and active calculation state.
@@ -80,7 +87,7 @@ Calculator is a single-purpose numeric surface: result above, keypad below, func
 - **Danger** ({colors.semantic-danger}): Error and destructive state.
 - **Overlay** ({colors.semantic-overlay}): Modal focus.
 
-## Typography
+# Typography
 
 ### Font Family
 
@@ -90,7 +97,7 @@ Calculator is a single-purpose numeric surface: result above, keypad below, func
 
 ### Hierarchy
 
-Use 36px bold for major statements, 22px bold for screen headings, 16px semibold for cards, 14px regular for detail, and 15px semibold for primary actions.
+Use 36 points bold for major statements, 22 points bold for screen headings, 16 points semibold for cards, 14 points regular for detail, and 15 points semibold for primary actions.
 
 ### Principles
 
@@ -103,11 +110,11 @@ Use 36px bold for major statements, 22px bold for screen headings, 16px semibold
 
 Use **Inter** or the platform system sans when the reference display face is unavailable.
 
-## Layout
+# Screen composition
 
 ### Spacing System
 
-Use a 4px base, 16px edge gutters, 12px control gaps, and 16px card padding.
+Use a 4 points base, 16 points edge gutters, 12 points control gaps, and 16 points card padding.
 
 ### Grid & Container
 
@@ -117,7 +124,7 @@ A large flexible result region sits above a fixed 4×5 keypad. Zero spans two co
 
 Reserve open black space above the keypad so long results remain legible and calm.
 
-## Elevation & Depth
+Surface hierarchy observed in the source:
 
 Keep the base flat, raise actionable cards slightly, and reserve overlays for confirmation or interruption.
 
@@ -125,25 +132,15 @@ Keep the base flat, raise actionable cards slightly, and reserve overlays for co
 
 Use flat solid circles and immediate pressed-state changes; no shadows or decoration.
 
-## Shapes
+# Navigation appearance
 
-### Border Radius Scale
+No application navigation is present.
 
-Use 8px for small controls, 12px for fields, 16px for actions, 20px for cards, and full pills or circles for compact selection.
-
-### Photography & Illustration Geometry
-
-No photography or illustration. The interface is entirely type, color, and key geometry.
-
-## Components
+# Components
 
 ### Buttons
 
 Digits use dark-gray circles, functions light gray, and operators orange. Zero is a wide pill aligned to the grid.
-
-### Pricing Tabs
-
-There are no tabs; mode is communicated through key state and result.
 
 ### Cards & Containers
 
@@ -153,45 +150,23 @@ There are no cards or containers beyond the result selection overlay.
 
 All input comes from fixed keypad keys; the result supports system selection and copy.
 
-### Status & Build Page
+# Imagery and icons
+
+Use flat solid circles and immediate pressed-state changes; no shadows or decoration.
+
+No photography or illustration. The interface is entirely type, color, and key geometry.
+
+If final imagery is not yet available, any placeholder must preserve the documented scale, placement, crop, and visual weight rather than removing that layer.
+
+# States
 
 Show cleared, entering, operator selected, result, sign changed, percent, and overflow through result and key state.
 
-### Navigation
-
-No application navigation is present.
-
-### Footer
-
-The keypad ends above the safe-area home indicator.
-
-## Do's and Don'ts
-
-### Do
-
-- Keep the keypad stable.
-- Preserve orange operator semantics.
-- Right-align the result.
-- Use system copy behavior.
-- Support locale decimal punctuation.
-
-### Don't
-
-- Don't add a toolbar.
-- Don't decorate the black field.
-- Don't change key positions by state.
-- Don't mix operator and digit colors.
-- Don't shrink keys below comfortable touch size.
-
-## Responsive Behavior
-
-### Breakpoints
-
-Use a centered or split panel above 768px, the reference single column from 390–767px, and tighter labels below 390px.
+# iOS adaptation
 
 ### Touch Targets
 
-Keep every row, tab, selector, key, and primary action at least 44px.
+Keep every row, tab, selector, key, and primary action at least 44 points.
 
 ### Collapsing Strategy
 
@@ -201,15 +176,20 @@ Preserve all keys and the result; reduce result font dynamically before changing
 
 No images are used.
 
-## Iteration Guide
+Apply these rules within current iPhone safe areas and scrolling containers. Keep interactive targets at least 44 points, preserve a logical VoiceOver order, and let Dynamic Type wrap supporting text without flattening the documented hierarchy. Do not infer an unobserved dark or light appearance.
 
-1. Build the fixed keypad.
-2. Add numeric entry and clear.
-3. Add operators and active state.
-4. Add percent and sign.
-5. Add result selection and locale formatting.
+# Anti-generic checklist
 
-## Known Gaps
+- Don't add a toolbar.
+- Don't decorate the black field.
+- Don't change key positions by state.
+- Don't mix operator and digit colors.
+- Don't shrink keys below comfortable touch size.
+- Do not replace the documented hierarchy with a generic stack of identical white cards or `Form` sections.
+- Do not use default blue tint, an unstyled `TabView`, arbitrary SF Symbols, or uniform corner radii when they contradict the recorded tokens and components.
+- Do not omit compositionally important imagery while final assets are pending; preserve its footprint with a faithful placeholder.
+
+# Known gaps
 
 - Tokens were inferred visually from inspected mobile screens.
 - No flows are available; all 21 image screens were inventoried and representative input, sign, decimal, result, and copy states were reviewed through screens fallback.
@@ -217,5 +197,3 @@ No images are used.
 - No tablet or desktop captures were present.
 
 </design-context>
-
-Use the design system above for all UI you generate.

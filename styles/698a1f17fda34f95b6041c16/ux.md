@@ -4,7 +4,7 @@ MES Diary brings schedule, grades, assignments, school services, attendance, mea
 
 # Navigation
 
-Five fixed destinations cover Schedule, Grades, Tasks, School, and Accounts. A weekly date strip remains close to schedule context; profile and notifications sit in the top bar.
+five persistent destinations cover Schedule, Grades, Tasks, School, and Accounts. A weekly date strip remains close to schedule context; profile and notifications sit in contextual controls.
 
 # Core Flows
 
@@ -24,7 +24,13 @@ Five fixed destinations cover Schedule, Grades, Tasks, School, and Accounts. A w
 
 # Interaction Patterns
 
-- White cards sit on a pale lavender page with purple or blue emphasis.
-- Color-coded service icons aid scanning but do not replace labels.
 - Schedule hierarchy separates lessons, breaks, homework, and extracurricular events.
 - Errors and payment notices use clear inline banners close to the affected account.
+
+# System Access Timing
+
+No system-access request timing or denial recovery was documented in the reviewed source.
+
+# Known Gaps
+
+- Permission-denial recovery and unobserved secondary flows were not documented.

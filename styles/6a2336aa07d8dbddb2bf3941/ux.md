@@ -4,8 +4,8 @@ VTB is a full-service mobile bank covering accounts, cards, transfers, payments,
 
 # Navigation
 
-- Five bottom destinations cover Home, Payments, Products, History, and Chat.
-- Home combines account summary, product cards, quick actions, promotions, and a payments/transfer hub.
+- Five primary destinations cover Home, Payments, Products, History, and Chat.
+- Home combines account summary, products, quick actions, promotions, and a payments/transfer hub.
 - Product detail pages keep balance and primary actions above settings, benefits, and recent operations.
 
 # Core Flows
@@ -26,11 +26,18 @@ VTB is a full-service mobile bank covering accounts, cards, transfers, payments,
 
 1. Open Products and choose card, deposit, investment, or credit.
 2. Compare benefit, rate, term, and conditions.
-3. Complete the application and return to the new product card.
+3. Complete the application and return to the new products.
 
 # Interaction Patterns
 
-- Blue owns action and account identity; gradients distinguish campaigns and product groups.
-- Large monetary values precede operational controls.
-- Payment categories use memorable pastel icon circles.
+- Monetary values are reviewed before operational controls.
+- Payment categories lead directly into their corresponding entry flows.
 - Important reversibility, fees, and support are shown before or immediately after confirmation.
+
+# System Access Timing
+
+No system-access timing or denial-recovery behavior was documented in the reviewed source.
+
+# Known Gaps
+
+System-permission denial paths, interrupted flows, and recovery behavior not described above were not available in the reviewed source.

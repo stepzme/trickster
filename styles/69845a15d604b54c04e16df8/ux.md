@@ -4,7 +4,7 @@ SmartMed brings clinic booking, online care, pharmacy shopping, health services,
 
 # Navigation
 
-- Five bottom destinations cover Home, Pharmacy, Appointments, Medical record, and Profile.
+- Five primary destinations cover Home, Pharmacy, Appointments, Medical record, and Profile.
 - Home combines search, shortcuts, service hubs, tests, packages, and health programs.
 - Focused booking and purchase tasks use a linear drill-down with back navigation.
 
@@ -30,7 +30,14 @@ SmartMed brings clinic booking, online care, pharmacy shopping, health services,
 
 # Interaction Patterns
 
-- Horizontal carousels expose service families without leaving the current page.
-- Large rounded sheets separate account context from dense healthcare content.
+- carousels expose service families without leaving the current page.
 - Teal consistently marks active navigation and primary actions.
 - Lists use chevrons for drill-down; transactional actions stay explicit.
+
+# System Access Timing
+
+No system-access request timing or denial recovery was documented in the reviewed source.
+
+# Known Gaps
+
+- Permission-denial recovery and unobserved secondary flows were not documented.

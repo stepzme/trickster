@@ -1,17 +1,17 @@
 # Overview
 
-Love Republic is a fashion marketplace built around full-screen editorial campaigns, curated capsules, a minimal catalog, product detail, cart, loyalty, certificates, and multichannel fulfillment.
+Love Republic is a fashion marketplace built around editorial campaigns, curated capsules, catalog discovery, product detail, cart, loyalty, certificates, and multichannel fulfillment.
 
 # Navigation
 
-Five fixed destinations cover Home, Catalog, Cart, Favorites, and Profile. Home overlays navigation on campaign media; catalog and checkout return to white, focused screens.
+Five persistent destinations cover Home, Catalog, Cart, Favorites, and Profile. Home leads into product discovery; catalog and checkout continue through focused screens without changing the primary destinations.
 
 # Core Flows
 
 ## Discover and select
 
 1. Browse campaign video, Studio, capsules, beauty, and themed collections.
-2. Enter the catalog and filter a two-column product grid.
+2. Enter the catalog and filter the product collection.
 3. Open a product, inspect model imagery, color, description, store availability, and delivery.
 4. Add the chosen item to the cart or favorites.
 
@@ -24,7 +24,13 @@ Five fixed destinations cover Home, Catalog, Cart, Favorites, and Profile. Home 
 
 # Interaction Patterns
 
-- Campaign media leads Home; monochrome controls keep commerce quiet.
-- Product grids are image-dominant with minimal price and collection metadata.
-- Outlined black actions preserve the premium editorial tone.
+- Campaigns lead into their corresponding collections and products.
 - Checkout exposes one fulfillment choice before payment and benefits.
+
+# System Access Timing
+
+No system-access request timing or denial recovery was documented in the reviewed source.
+
+# Known Gaps
+
+- Permission-denial recovery and unobserved secondary flows were not documented.

@@ -10,7 +10,7 @@ Five persistent tabs cover Home, Bookings, Warehouses, Payments, and Courses. Pr
 
 ## Join and qualify
 
-1. Introduce flexible work with photography and a short benefit carousel.
+1. Introduce flexible work through a short benefit sequence.
 2. Sign in by phone or email and continue the profile questionnaire.
 3. Show what remains incomplete and return the user to the exact next step.
 
@@ -19,7 +19,7 @@ Five persistent tabs cover Home, Bookings, Warehouses, Payments, and Courses. Pr
 1. Search warehouses by name or address and narrow by service, date, time, tariff, or region.
 2. Compare cards using pay, duration, distance, rating, transport, meals, and promotion badges.
 3. Open a warehouse, inspect photos and services, select dates and shift length, then confirm a time in a bottom sheet.
-4. Surface booking details and cancellation as separate, explicit states.
+4. context booking details and cancellation as separate, explicit states.
 
 ## Work and payouts
 
@@ -29,12 +29,19 @@ Five persistent tabs cover Home, Bookings, Warehouses, Payments, and Courses. Pr
 
 ## Learning and profile
 
-Browse course groups, complete lessons, and repeat training. Profile groups rating, violations, partner benefits, trips, referrals, documents, feedback, knowledge, theme, and account actions.
+1. Browse course groups, complete lessons, and repeat training. Profile groups rating, violations, partner benefits, trips, referrals, documents, feedback, knowledge, theme, and account actions.
 
 # Interaction Patterns
 
-- Keep the blue primary action full-width and close to the decision it confirms.
-- Expose operational filters as compact chips before showing results.
+- Let users set operational filters before showing results.
 - Use bottom sheets for bounded choices such as time and duration.
 - Pair every amount with its status, period, or calculation context.
 - Preserve persistent tab navigation through dense informational screens.
+
+# System Access Timing
+
+No system-access timing or denial-recovery behavior was documented in the reviewed source.
+
+# Known Gaps
+
+System-permission denial paths, interrupted flows, and recovery behavior not described above were not available in the reviewed source.

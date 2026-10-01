@@ -4,7 +4,7 @@ Claude supports text, code, images, files, voice, artifacts, connected apps, and
 
 # Navigation
 
-The drawer contains New chat, Chats, Artifacts, recents, account, and settings. Chat top controls expose model and mode state.
+The drawer contains New chat, Chats, Artifacts, recents, account, and settings. Chat controls expose model and mode state.
 
 # Core Flows
 
@@ -18,7 +18,7 @@ The drawer contains New chat, Chats, Artifacts, recents, account, and settings. 
 
 ## Configure
 
-Settings exposes subscription, capabilities, privacy, account, logout, and deletion with explicit toggle or confirmation states.
+1. Settings exposes subscription, capabilities, privacy, account, logout, and deletion with explicit toggle or confirmation states.
 
 # Interaction Patterns
 
@@ -27,3 +27,11 @@ Settings exposes subscription, capabilities, privacy, account, logout, and delet
 - Preserve code formatting.
 - Show enabled capabilities before use.
 - Confirm logout and account deletion.
+
+# System Access Timing
+
+No system-access timing or denial-recovery path was documented in the reviewed source.
+
+# Known Gaps
+
+Unobserved flows, denial paths, cancellation behavior, and recovery states remain unspecified.

@@ -1,6 +1,7 @@
 <design-context>
 ---
-version: alpha
+version: 1
+platform: iOS
 name: Tinkoff-Journal-design-analysis
 description: "An editorial learning app built from white reading surfaces, oversized black headlines, vivid cobalt actions, image-led article cards, and expressive flat line illustrations on bold color fields. The interface balances magazine energy with highly readable course and calculator content."
 
@@ -23,36 +24,47 @@ colors:
   semantic-overlay: "#000000"
 
 typography:
-  display-xl: { fontFamily: System Sans, fontSize: 42px, fontWeight: 800, lineHeight: 1.0, letterSpacing: -1px }
-  display-lg: { fontFamily: System Sans, fontSize: 34px, fontWeight: 800, lineHeight: 1.06, letterSpacing: -0.6px }
-  display-md: { fontFamily: System Sans, fontSize: 28px, fontWeight: 800, lineHeight: 1.1, letterSpacing: -0.3px }
-  headline: { fontFamily: System Sans, fontSize: 22px, fontWeight: 700, lineHeight: 1.18, letterSpacing: 0 }
-  card-title: { fontFamily: System Sans, fontSize: 17px, fontWeight: 700, lineHeight: 1.2, letterSpacing: 0 }
-  subhead: { fontFamily: System Sans, fontSize: 18px, fontWeight: 500, lineHeight: 1.35, letterSpacing: 0 }
-  body-lg: { fontFamily: System Sans, fontSize: 17px, fontWeight: 400, lineHeight: 1.5, letterSpacing: 0 }
-  body: { fontFamily: System Sans, fontSize: 15px, fontWeight: 400, lineHeight: 1.48, letterSpacing: 0 }
-  body-sm: { fontFamily: System Sans, fontSize: 13px, fontWeight: 400, lineHeight: 1.4, letterSpacing: 0 }
-  caption: { fontFamily: System Sans, fontSize: 11px, fontWeight: 400, lineHeight: 1.3, letterSpacing: 0 }
-  button: { fontFamily: System Sans, fontSize: 15px, fontWeight: 600, lineHeight: 1.2, letterSpacing: 0 }
-  eyebrow: { fontFamily: System Sans, fontSize: 11px, fontWeight: 700, lineHeight: 1.25, letterSpacing: 0.3px }
-  mono: { fontFamily: System Mono, fontSize: 12px, fontWeight: 400, lineHeight: 1.4, letterSpacing: 0 }
+  display-xl: { fontFamily: System Sans, fontSize: 42, fontWeight: 800, lineHeight: 1.0, letterSpacing: -1 }
+  display-lg: { fontFamily: System Sans, fontSize: 34, fontWeight: 800, lineHeight: 1.06, letterSpacing: -0.6 }
+  display-md: { fontFamily: System Sans, fontSize: 28, fontWeight: 800, lineHeight: 1.1, letterSpacing: -0.3 }
+  headline: { fontFamily: System Sans, fontSize: 22, fontWeight: 700, lineHeight: 1.18, letterSpacing: 0 }
+  card-title: { fontFamily: System Sans, fontSize: 17, fontWeight: 700, lineHeight: 1.2, letterSpacing: 0 }
+  subhead: { fontFamily: System Sans, fontSize: 18, fontWeight: 500, lineHeight: 1.35, letterSpacing: 0 }
+  body-lg: { fontFamily: System Sans, fontSize: 17, fontWeight: 400, lineHeight: 1.5, letterSpacing: 0 }
+  body: { fontFamily: System Sans, fontSize: 15, fontWeight: 400, lineHeight: 1.48, letterSpacing: 0 }
+  body-sm: { fontFamily: System Sans, fontSize: 13, fontWeight: 400, lineHeight: 1.4, letterSpacing: 0 }
+  caption: { fontFamily: System Sans, fontSize: 11, fontWeight: 400, lineHeight: 1.3, letterSpacing: 0 }
+  button: { fontFamily: System Sans, fontSize: 15, fontWeight: 600, lineHeight: 1.2, letterSpacing: 0 }
+  eyebrow: { fontFamily: System Sans, fontSize: 11, fontWeight: 700, lineHeight: 1.25, letterSpacing: 0.3 }
+  mono: { fontFamily: System Mono, fontSize: 12, fontWeight: 400, lineHeight: 1.4, letterSpacing: 0 }
 
-rounded: { xs: 3px, sm: 7px, md: 11px, lg: 16px, xl: 22px, xxl: 28px, pill: 9999px, full: 9999px }
-spacing: { xxs: 4px, xs: 8px, sm: 12px, md: 16px, lg: 24px, xl: 32px, xxl: 48px, section: 64px }
+rounded: { xs: 3, sm: 7, md: 11, lg: 16, xl: 22, xxl: 28, pill: 9999, full: 9999 }
+spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
 
 components:
-  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 14px 20px }
+  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [14, 20]}
   article-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 0 }
   course-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.card-title}", rounded: "{rounded.md}", padding: 0 }
-  quiz-sheet: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xl}", padding: 16px }
-  bottom-nav: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.lg}", height: 60px }
+  quiz-sheet: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xl}", padding: 16 }
+  bottom-nav: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.lg}", height: 60 }
 ---
 
-## Overview
+# Overview
 
 Tinkoff Journal uses magazine-scale type, real photography, and bold illustrated explainers. White reading surfaces keep long-form content calm while cobalt actions and colorful course art add energy.
 
-## Colors
+# Non-negotiable visual invariants
+
+- The reference consistently shows bold editorial hierarchy.
+- The reference consistently shows long-form reading comfortable.
+- Imagery consistently uses reuse the flat illustration family.
+- The reference consistently shows separate learning from settings chrome.
+- The reference consistently shows an editorial learning app built from white reading surfaces.
+- The reference consistently shows oversized black headlines.
+- The reference consistently shows vivid cobalt actions.
+- The reference consistently shows image-led article cards.
+
+# Color and surfaces
 
 ### Brand & Accent
 
@@ -70,7 +82,7 @@ Near-black carries headlines and body; gray carries dates, categories, progress,
 
 Green confirms correct answers, amber warns, and red marks errors. Illustration colors never substitute for feedback.
 
-## Typography
+# Typography
 
 ### Font Family
 
@@ -78,7 +90,7 @@ Use a bold grotesk for editorial display and a neutral sans for long-form readin
 
 ### Hierarchy
 
-Use 28–42px article and course headlines, 17–22px card titles, 15–17px body, and 11–13px metadata.
+Use 28–42 points article and course headlines, 17–22 points card titles, 15–17 points body, and 11–13 points metadata.
 
 ### Principles
 
@@ -88,11 +100,11 @@ Let headlines be assertive, keep body line length comfortable, and make quiz val
 
 Use Inter, Arial, or SF Pro with strong 700–800 display weights.
 
-## Layout
+# Screen composition
 
 ### Spacing System
 
-Use a 4px base, 16px gutters, 12–16px card gaps, and 24–32px between editorial sections.
+Use a 4 points base, 16 points gutters, 12–16 points card gaps, and 24–32 points between editorial sections.
 
 ### Grid & Container
 
@@ -102,7 +114,7 @@ Journal uses stacked photo cards; Textbook uses large course covers. Lessons and
 
 Give headlines and body generous space. Let large images and illustrations form section boundaries.
 
-## Elevation & Depth
+Surface hierarchy observed in the source:
 
 Cards and lesson sheets use soft lift over gray or media. Most reading surfaces remain flat.
 
@@ -110,25 +122,15 @@ Cards and lesson sheets use soft lift over gray or media. Most reading surfaces 
 
 Use bold flat illustration, photography, and occasional colored course panels. Avoid UI gradients and heavy shadow.
 
-## Shapes
+# Navigation appearance
 
-### Border Radius Scale
+Use three bottom destinations for Textbook, Journal, and Calculators. Focused reading uses back and close actions.
 
-Article and course media use 16px, quiz sheets 22px, buttons 7–11px, and bottom navigation uses soft rounded corners.
-
-### Photography & Illustration Geometry
-
-Photography uses wide editorial crops; illustrations use poster-like rectangles with one central metaphor.
-
-## Components
+# Components
 
 ### Buttons
 
 Primary actions are cobalt rectangles with modest rounding. Native controls must inherit cobalt selection and editorial typography.
-
-### Pricing Tabs
-
-Course sections, answers, and calculator modes use compact segments with clear selected state.
 
 ### Cards & Containers
 
@@ -138,43 +140,23 @@ Article cards pair large media with date, headline, and engagement. Course cards
 
 Search and calculator inputs use pale fields. Quiz answers use outlined cards and visible result states.
 
-### Status & Build Page
+# Imagery and icons
+
+Use bold flat illustration, photography, and occasional colored course panels. Avoid UI gradients and heavy shadow.
+
+Photography uses wide editorial crops; illustrations use poster-like rectangles with one central metaphor.
+
+If final imagery is not yet available, any placeholder must preserve the documented scale, placement, crop, and visual weight rather than removing that layer.
+
+# States
 
 Lesson progress, score, answer correctness, notification state, and saved content appear beside the relevant item.
 
-### Navigation
-
-Use three bottom destinations for Textbook, Journal, and Calculators. Focused reading uses back and close actions.
-
-### Footer
-
-There is no footer. Articles and lessons end with related content or rating actions above navigation.
-
-## Do's and Don'ts
-
-### Do
-
-- Use bold editorial hierarchy.
-- Keep long-form reading comfortable.
-- Reuse the flat illustration family.
-- Separate learning from settings chrome.
-
-### Don't
-
-- Do not use tiny body text.
-- Do not mix unrelated illustration styles.
-- Do not overload course covers with UI.
-- Do not expose default blue controls.
-
-## Responsive Behavior
-
-### Breakpoints
-
-Keep lessons single-column on phones. Wider screens may center reading and place navigation or related content beside it.
+# iOS adaptation
 
 ### Touch Targets
 
-Article cards, answers, navigation, search, and lesson actions require at least 44px targets.
+Article cards, answers, navigation, search, and lesson actions require at least 44 points targets.
 
 ### Collapsing Strategy
 
@@ -184,14 +166,20 @@ Keep course progression linear. Move secondary topic filters into horizontal rai
 
 Use `cover` for editorial photography and `contain` for course illustration when the whole metaphor matters.
 
-## Iteration Guide
+Apply these rules within current iPhone safe areas and scrolling containers. Keep interactive targets at least 44 points, preserve a logical VoiceOver order, and let Dynamic Type wrap supporting text without flattening the documented hierarchy. Do not infer an unobserved dark or light appearance.
 
-Start with white reading canvas, oversized headlines, three-tab navigation, article cards, course covers, and lesson sheets. Add quizzes and calculators afterward.
+# Anti-generic checklist
 
-## Known Gaps
+- Do not use tiny body text.
+- Do not mix unrelated illustration styles.
+- Do not overload course covers with UI.
+- Do not expose default blue controls.
+- Do not replace the documented hierarchy with a generic stack of identical white cards or `Form` sections.
+- Do not use default blue tint, an unstyled `TabView`, arbitrary SF Symbols, or uniform corner radii when they contradict the recorded tokens and components.
+- Do not omit compositionally important imagery while final assets are pending; preserve its footprint with a faithful placeholder.
+
+# Known gaps
 
 Screen Gallery exposes 34 image screens but no flows. Journal, topic catalog, Textbook, lessons, quizzes, notifications, and settings are visually documented; exact transition order remains unverified.
 
 </design-context>
-
-Use the design system above for all UI you generate.

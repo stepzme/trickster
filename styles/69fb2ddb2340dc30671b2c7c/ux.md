@@ -4,8 +4,8 @@ Tiimo combines daily planning, routines, prioritized to-dos, timers, focus, mood
 
 # Navigation
 
-- A floating five-part bottom dock provides Today, To-do, Focus, Statistics, and an assistant/profile entry.
-- Today uses a horizontal date rail and time-of-day groups.
+- A five-part primary navigation provides Today, To-do, Focus, Statistics, and an assistant/profile entry.
+- Today uses a date rail and time-of-day groups.
 - Tasks open into focused timer and subtask screens without losing the plan.
 
 # Core Flows
@@ -19,7 +19,7 @@ Tiimo combines daily planning, routines, prioritized to-dos, timers, focus, mood
 ## Complete and focus
 
 1. Start a task from Today or To-do.
-2. Use the visual timer, pause, add time, or enter Focus.
+2. Use the timer, pause, add time, or enter Focus.
 3. Drag to complete and review streak or trophy feedback.
 
 ## Reflect and learn
@@ -30,7 +30,12 @@ Tiimo combines daily planning, routines, prioritized to-dos, timers, focus, mood
 
 # Interaction Patterns
 
-- Pastel category bands and small icons distinguish routines without heavy chrome.
 - Serif display headings make planning feel personal and editorial.
-- Floating pill controls keep creation and navigation lightweight.
-- Circular progress is the core timer and focus metaphor.
+
+# System Access Timing
+
+No system-access request timing or denial recovery was documented in the reviewed source.
+
+# Known Gaps
+
+- Permission-denial recovery and unobserved secondary flows were not documented.

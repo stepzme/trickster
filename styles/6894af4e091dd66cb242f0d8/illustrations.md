@@ -10,10 +10,23 @@ Draw animals as bold irregular silhouettes with simplified limbs and expressive 
 
 Use split-color full screens for brand moments and rounded collage cards for campaigns. Category icons place one black animal silhouette inside a saturated circular field.
 
-# Color
+# Color and Materials
 
 Use orange, pink, violet, cyan, mint, yellow, and black in high-contrast combinations. Keep commerce surfaces pale so the graphic colors remain clear.
 
-# Usage
+# Variants and States
 
 Use illustration for onboarding, categories, promotions, bonus communication, and empty states. Use real pet and product photography for profiles, products, clinics, and service providers.
+
+# Production Requirements
+
+Preserve the documented placement, crop, negative space, and visual weight in production exports. Before final art exists, placeholders must preserve those same compositional properties.
+
+# Avoid
+
+- Do not replace the observed imagery language with unrelated stock art or arbitrary symbols.
+- Do not change the documented crop, density, or relationship to nearby text.
+
+# Known Gaps
+
+Animation, export dimensions, safe-crop specifications, appearance variants, and unshown state treatments were not documented.

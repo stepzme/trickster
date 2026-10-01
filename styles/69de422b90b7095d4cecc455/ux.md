@@ -4,7 +4,7 @@ Coinbase keeps portfolio review, market discovery, payments, and transaction his
 
 # Navigation
 
-Home, Trade, Pay, and Transactions remain fixed in the bottom bar. Search and menu provide cross-product access; asset and transaction detail drill into focused screens.
+Home, Trade, Pay, and Transactions remain available in primary navigation. Search and menu provide cross-product access; asset and transaction detail drill into focused screens.
 
 # Core Flows
 
@@ -27,6 +27,12 @@ Home, Trade, Pay, and Transactions remain fixed in the bottom bar. Search and me
 
 - Require a review before irreversible financial actions.
 - Keep fees, risk, and funding source visible.
-- Pair color-coded performance with numbers and arrows.
 - Keep asset symbols and currency units explicit.
-- Preserve task state when dismissing a bottom sheet.
+
+# System Access Timing
+
+No system-access request timing or denial recovery was documented in the reviewed source.
+
+# Known Gaps
+
+- Permission-denial recovery and unobserved secondary flows were not documented.

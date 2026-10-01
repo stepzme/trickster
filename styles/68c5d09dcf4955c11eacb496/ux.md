@@ -31,3 +31,11 @@ The map remains the spatial anchor. A progressive bottom sheet handles ride type
 - Warn when the proposed price may delay matching.
 - Keep safety and driver contact available during a ride.
 - Confirm cancellation and explain its consequence.
+
+# System Access Timing
+
+No system-access timing or denial-recovery path was documented in the reviewed source.
+
+# Known Gaps
+
+Unobserved flows, denial paths, cancellation behavior, and recovery states remain unspecified.

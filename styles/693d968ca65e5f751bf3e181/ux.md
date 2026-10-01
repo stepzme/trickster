@@ -4,7 +4,7 @@ Amazon Shopping organizes a global catalogue around persistent search, delivery 
 
 # Navigation
 
-Home, Account, Basket, and Menu remain in the bottom bar; Rufus is a distinct assistant entry. Search and delivery location stay visible on commerce screens. Country selection changes both marketplace and content.
+Home, Account, Basket, and Menu remain in primary navigation; Rufus is a distinct assistant entry. Search and delivery location stay visible on commerce screens. Country selection changes both marketplace and content.
 
 # Core Flows
 
@@ -16,15 +16,15 @@ Home, Account, Basket, and Menu remain in the bottom bar; Rufus is a distinct as
 
 ## Product and basket
 
-Product detail exposes variants, price, stock, delivery, quantity, seller, returns, specifications, and reviews before Add to Basket or Buy Now. Basket supports quantity, delete, save for later, share, and recommendations.
+1. Product detail exposes variants, price, stock, delivery, quantity, seller, returns, specifications, and reviews before Add to Basket or Buy Now. Basket supports quantity, delete, save for later, share, and recommendations.
 
 ## Categories and Rufus
 
-Menu presents a large category grid plus account and support destinations. Rufus answers shopping questions, recommends products, and offers follow-up prompts without replacing product evidence.
+1. Menu presents a category collections plus account and support destinations. Rufus answers shopping questions, recommends products, and offers follow-up prompts without replacing product evidence.
 
 ## Account and region
 
-Account groups orders, buy again, lists, browsing history, gift cards, subscriptions, and support. Region switching uses an explicit country list with marketplace domains.
+1. Account groups orders, buy again, lists, browsing history, gift cards, subscriptions, and support. Region switching uses an explicit country list with marketplace domains.
 
 # Interaction Patterns
 
@@ -33,3 +33,11 @@ Account groups orders, buy again, lists, browsing history, gift cards, subscript
 - Keep basket editing inline.
 - Distinguish Rufus suggestions from verified product facts.
 - Treat country change as a marketplace-context switch.
+
+# System Access Timing
+
+- Camera or Photos access follows the user choosing the documented capture, scan, or photo action. Denial recovery was not documented.
+
+# Known Gaps
+
+- Permission-denial recovery and unobserved secondary flows were not documented.

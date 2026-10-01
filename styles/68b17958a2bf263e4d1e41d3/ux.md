@@ -1,10 +1,10 @@
 # Overview
 
-Yandex Metro is a dark map-first route planner where the network diagram remains the spatial anchor and route details rise from the bottom.
+Yandex Metro is a map-first route planner where the network diagram remains the spatial anchor and route details rise.
 
 # Navigation
 
-- The metro map is the default canvas.
+- The metro map is the default content context.
 - A bottom search control starts route planning; station taps open contextual sheets.
 - Settings and service messages sit behind lightweight secondary entry points.
 
@@ -24,7 +24,13 @@ Yandex Metro is a dark map-first route planner where the network diagram remains
 
 # Interaction Patterns
 
-- The map remains visible behind translucent route and station sheets.
-- Color carries line identity; bright green identifies the active route.
-- Large A/B markers make route endpoints unambiguous.
+- Route and station details open without discarding the current map context.
 - Dense transport detail is disclosed only after a route or station is selected.
+
+# System Access Timing
+
+No system-access timing or denial-recovery path was documented in the reviewed source.
+
+# Known Gaps
+
+Unobserved flows, denial paths, cancellation behavior, and recovery states remain unspecified.

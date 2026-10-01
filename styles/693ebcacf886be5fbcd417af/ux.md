@@ -4,7 +4,7 @@ Magnit unifies loyalty, store offers, grocery delivery, marketplace categories, 
 
 # Navigation
 
-Five fixed destinations connect Home, In Store, Delivery, Market, and Cosmetics. Search and loyalty remain prominent; cart appears as a red floating or anchored action.
+five persistent destinations connect Home, In Store, Delivery, Market, and Cosmetics. Search and loyalty remain available; cart remains available as an action.
 
 # Core Flows
 
@@ -24,7 +24,13 @@ Five fixed destinations connect Home, In Store, Delivery, Market, and Cosmetics.
 
 # Interaction Patterns
 
-- Red carries commerce; warm gradients and photography carry promotion.
-- Dense product cards keep price, discount, rating, and quantity together.
 - Sheets explain promo codes and focused fulfillment decisions.
-- Sticky totals maintain a clear path through checkout.
+- totals maintain a clear path through checkout.
+
+# System Access Timing
+
+No system-access request timing or denial recovery was documented in the reviewed source.
+
+# Known Gaps
+
+- Permission-denial recovery and unobserved secondary flows were not documented.

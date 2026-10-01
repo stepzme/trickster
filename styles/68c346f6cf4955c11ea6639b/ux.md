@@ -4,8 +4,8 @@ Translate is a focused language utility for typed, spoken, camera, and face-to-f
 
 # Navigation
 
-- Three bottom destinations cover Translation, Conversation, and Favorites.
-- Two language selectors stay pinned at the top of translation and conversation surfaces.
+- Three primary destinations cover Translation, Conversation, and Favorites.
+- Two language selectors stay pinned of translation and conversation surfaces.
 - Translation results expose listen, expand, favorite, and copy actions in context.
 
 # Core Flows
@@ -30,7 +30,14 @@ Translate is a focused language utility for typed, spoken, camera, and face-to-f
 
 # Interaction Patterns
 
-- Input and result cards remain visible together for quick correction.
 - Teal marks translation output, speech actions, and active destinations.
 - Language menus favor familiar checked lists over custom pickers.
 - Screen Gallery exposes 65 image screens but no recorded flow sequences, so exact transition order is unverified.
+
+# System Access Timing
+
+No system-access timing or denial-recovery path was documented in the reviewed source.
+
+# Known Gaps
+
+Unobserved flows, denial paths, cancellation behavior, and recovery states remain unspecified.

@@ -1,16 +1,16 @@
 # Overview
 
-Auto.ru supports buying, researching, selling, and owning a vehicle. Search prioritizes rapid comparison, details build trust through reports and specifications, and selling breaks a large data set into explicit steps.
+Auto.ru supports buying, researching, selling, and owning a vehicle. Search prioritizes rapid comparison, details build trust through reports and specifications, and selling breaks a data set into explicit steps.
 
 # Navigation
 
-Search, Favorites, Place, Messages, and Logbook persist at the bottom. The menu sheet exposes account and broader services without displacing the active marketplace context.
+Search, Favorites, Place, Messages, and Logbook persist. The menu sheet exposes account and broader services without displacing the active marketplace context.
 
 # Core Flows
 
 ## Search and compare
 
-Choose vehicle type, brand, model, region, radius, and detailed parameters. Results remain photo- and price-led, with sort, filters, favorites, and saved-search subscription close at hand.
+1. Choose vehicle type, brand, model, region, radius, and detailed parameters. Results remain photo- and price-led, with sort, filters, favorites, and saved-search subscription close at hand.
 
 ## Vehicle decision
 
@@ -20,16 +20,23 @@ Choose vehicle type, brand, model, region, radius, and detailed parameters. Resu
 
 ## Sell a vehicle
 
-The step-based form gathers vehicle identity, characteristics, media, price, contacts, and description. Completion leads to listing management, statistics, editing, withdrawal, and paid promotion.
+1. The step-based form gathers vehicle identity, characteristics, media, price, contacts, and description. Completion leads to listing management, statistics, editing, withdrawal, and paid promotion.
 
 ## Ownership and services
 
-Garage, insurance, credit, valuation, reports, catalog, editorial content, notifications, and help remain grouped by intent.
+1. Garage, insurance, credit, valuation, reports, catalog, editorial content, notifications, and help remain grouped by intent.
 
 # Interaction Patterns
 
 - Preserve search inputs when returning from a listing.
 - Show result count before applying deep filters.
 - Keep trust and report facts close to contact actions.
-- Make every selling step resumable and numbered.
 - Separate paid promotion from ordinary listing management.
+
+# System Access Timing
+
+No system-access timing or denial-recovery path was documented in the reviewed source.
+
+# Known Gaps
+
+Unobserved flows, denial paths, cancellation behavior, and recovery states remain unspecified.

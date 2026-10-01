@@ -1,12 +1,10 @@
-# Illustration Language
+# Overview
 
-Use friendly flat vector scenes built from the brand's dark green, orange, warm yellow, cream, and small red accents. Objects are simplified, slightly chunky, and food-service specific.
+No dedicated imagery overview was documented.
 
-# Forms and Characters
+# Visual Style
 
-- Construct icons from broad rounded shapes with minimal outlines.
-- Use hands, phones, cups, burgers, gifts, storefronts, scooters, and the circular brand mascot as recurring motifs.
-- Keep people partial and symbolic rather than detailed portraits.
+No medium, line, dimensionality, texture, lighting, or motif rules were documented.
 
 # Composition
 
@@ -14,8 +12,23 @@ Use friendly flat vector scenes built from the brand's dark green, orange, warm 
 - Promotional illustrations may combine several floating food or gift objects around a single large symbol.
 - Preserve clear empty space for headings and actions.
 
-# Do and Don't
+# Color and Materials
 
-- Keep the green-orange palette and consistent rounded geometry.
-- Use illustration for onboarding, empty states, loyalty explanation, and service entry points.
-- Do not replace real menu photography with drawings or mix in glossy 3D characters.
+No imagery-specific palette or material treatment was documented.
+
+# Variants and States
+
+No state-specific illustration variants were documented.
+
+# Production Requirements
+
+Preserve the documented placement, crop, negative space, and visual weight in production exports. Before final art exists, placeholders must preserve those same compositional properties.
+
+# Avoid
+
+- Do not replace the observed imagery language with unrelated stock art or arbitrary symbols.
+- Do not change the documented crop, density, or relationship to nearby text.
+
+# Known Gaps
+
+Animation, export dimensions, safe-crop specifications, appearance variants, and unshown state treatments were not documented.

@@ -1,6 +1,7 @@
 <design-context>
 ---
-version: alpha
+version: 1
+platform: iOS
 name: VkusVill-design-analysis
 description: "A bright grocery and loyalty interface built from fresh green actions, bold black headings, white commerce cards, yellow price highlights, pastel product collages, and dense but friendly catalog grids. It feels wholesome, practical, and personal."
 
@@ -23,36 +24,47 @@ colors:
   semantic-overlay: "#000000"
 
 typography:
-  display-xl: { fontFamily: System Sans, fontSize: 38px, fontWeight: 800, lineHeight: 1.05, letterSpacing: -0.7px }
-  display-lg: { fontFamily: System Sans, fontSize: 30px, fontWeight: 750, lineHeight: 1.1, letterSpacing: -0.4px }
-  display-md: { fontFamily: System Sans, fontSize: 24px, fontWeight: 700, lineHeight: 1.15, letterSpacing: -0.1px }
-  headline: { fontFamily: System Sans, fontSize: 20px, fontWeight: 700, lineHeight: 1.2, letterSpacing: 0 }
-  card-title: { fontFamily: System Sans, fontSize: 15px, fontWeight: 650, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: System Sans, fontSize: 17px, fontWeight: 450, lineHeight: 1.35, letterSpacing: 0 }
-  body-lg: { fontFamily: System Sans, fontSize: 16px, fontWeight: 400, lineHeight: 1.42, letterSpacing: 0 }
-  body: { fontFamily: System Sans, fontSize: 14px, fontWeight: 400, lineHeight: 1.42, letterSpacing: 0 }
-  body-sm: { fontFamily: System Sans, fontSize: 12px, fontWeight: 400, lineHeight: 1.38, letterSpacing: 0 }
-  caption: { fontFamily: System Sans, fontSize: 10px, fontWeight: 500, lineHeight: 1.3, letterSpacing: 0 }
-  button: { fontFamily: System Sans, fontSize: 15px, fontWeight: 650, lineHeight: 1.2, letterSpacing: 0 }
-  eyebrow: { fontFamily: System Sans, fontSize: 10px, fontWeight: 700, lineHeight: 1.25, letterSpacing: 0.3px }
-  mono: { fontFamily: System Mono, fontSize: 12px, fontWeight: 400, lineHeight: 1.38, letterSpacing: 0 }
+  display-xl: { fontFamily: System Sans, fontSize: 38, fontWeight: 800, lineHeight: 1.05, letterSpacing: -0.7 }
+  display-lg: { fontFamily: System Sans, fontSize: 30, fontWeight: 750, lineHeight: 1.1, letterSpacing: -0.4 }
+  display-md: { fontFamily: System Sans, fontSize: 24, fontWeight: 700, lineHeight: 1.15, letterSpacing: -0.1 }
+  headline: { fontFamily: System Sans, fontSize: 20, fontWeight: 700, lineHeight: 1.2, letterSpacing: 0 }
+  card-title: { fontFamily: System Sans, fontSize: 15, fontWeight: 650, lineHeight: 1.25, letterSpacing: 0 }
+  subhead: { fontFamily: System Sans, fontSize: 17, fontWeight: 450, lineHeight: 1.35, letterSpacing: 0 }
+  body-lg: { fontFamily: System Sans, fontSize: 16, fontWeight: 400, lineHeight: 1.42, letterSpacing: 0 }
+  body: { fontFamily: System Sans, fontSize: 14, fontWeight: 400, lineHeight: 1.42, letterSpacing: 0 }
+  body-sm: { fontFamily: System Sans, fontSize: 12, fontWeight: 400, lineHeight: 1.38, letterSpacing: 0 }
+  caption: { fontFamily: System Sans, fontSize: 10, fontWeight: 500, lineHeight: 1.3, letterSpacing: 0 }
+  button: { fontFamily: System Sans, fontSize: 15, fontWeight: 650, lineHeight: 1.2, letterSpacing: 0 }
+  eyebrow: { fontFamily: System Sans, fontSize: 10, fontWeight: 700, lineHeight: 1.25, letterSpacing: 0.3 }
+  mono: { fontFamily: System Mono, fontSize: 12, fontWeight: 400, lineHeight: 1.38, letterSpacing: 0 }
 
-rounded: { xs: 4px, sm: 8px, md: 12px, lg: 16px, xl: 22px, xxl: 28px, pill: 9999px, full: 9999px }
-spacing: { xxs: 4px, xs: 8px, sm: 12px, md: 16px, lg: 24px, xl: 32px, xxl: 48px, section: 64px }
+rounded: { xs: 4, sm: 8, md: 12, lg: 16, xl: 22, xxl: 28, pill: 9999, full: 9999 }
+spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
 
 components:
-  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 13px 18px }
-  product-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.sm}", padding: 8px }
-  loyalty-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 14px }
+  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [13, 18]}
+  product-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.sm}", padding: 8 }
+  loyalty-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 14 }
   category-tile: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.card-title}", rounded: "{rounded.md}", padding: 0 }
-  bottom-nav: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", height: 58px }
+  bottom-nav: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", height: 58 }
 ---
 
-## Overview
+# Overview
 
 VkusVill uses bright white shopping surfaces, confident green actions, yellow price emphasis, and pastel product collages. Dense catalog content stays approachable through clear card hierarchy.
 
-## Colors
+# Non-negotiable visual invariants
+
+- Sampled screens consistently use product photography color-accurate.
+- The reference consistently shows show unit and current price clearly.
+- The reference consistently shows preserve fulfillment context.
+- Imagery consistently uses reuse pastel collage art direction.
+- The reference consistently shows a bright grocery and loyalty interface built from fresh green actions.
+- The reference consistently shows bold black headings.
+- The reference consistently shows white commerce cards.
+- The reference consistently shows yellow price highlights.
+
+# Color and surfaces
 
 ### Brand & Accent
 
@@ -70,7 +82,7 @@ Near-black carries product names and totals; gray carries unit price, availabili
 
 Green confirms availability and success, amber warns, and red marks removal or failure. Yellow price highlights are not warnings.
 
-## Typography
+# Typography
 
 ### Font Family
 
@@ -78,7 +90,7 @@ Use a bold friendly system sans with tabular figures for prices and quantities.
 
 ### Hierarchy
 
-Use 24–38px campaign titles, 20px sections, 14–16px products and actions, and 10–12px rating or unit detail.
+Use 24–38 points campaign titles, 20 points sections, 14–16 points products and actions, and 10–12 points rating or unit detail.
 
 ### Principles
 
@@ -88,11 +100,11 @@ Keep product, quantity, current price, old price, and discount distinguishable. 
 
 Use Inter or SF Pro with tabular numerals and strong 700–800 page headings.
 
-## Layout
+# Screen composition
 
 ### Spacing System
 
-Use a 4px base, 12px gutters, 8–10px product gaps, and 20–24px between catalog sections.
+Use a 4 points base, 12 points gutters, 8–10 points product gaps, and 20–24 points between catalog sections.
 
 ### Grid & Container
 
@@ -102,7 +114,7 @@ Catalog uses horizontal product rails and a two-column category grid. Cart and c
 
 Use compact product cards but generous section boundaries. Keep checkout calmer than discovery.
 
-## Elevation & Depth
+Surface hierarchy observed in the source:
 
 Use soft card lift, large rounded sheets, and sticky delivery or checkout bars. Product cutouts provide subtle depth.
 
@@ -110,25 +122,15 @@ Use soft card lift, large rounded sheets, and sticky delivery or checkout bars. 
 
 Use pastel product collages, flat benefit symbols, and minimal soft shadow. Avoid glossy or cinematic effects.
 
-## Shapes
+# Navigation appearance
 
-### Border Radius Scale
+Use five bottom destinations for My Card, Catalog, Stores, Profile, and Support. Keep cart and fulfillment within shopping context.
 
-Use 8px product cards and fields, 12px category tiles, 16px loyalty cards, and 22px cart sheets.
-
-### Photography & Illustration Geometry
-
-Product images use clean `contain` cutouts. Category collages arrange real products on pastel tiles with safe text space.
-
-## Components
+# Components
 
 ### Buttons
 
 Add-to-cart and checkout actions are green rectangles; scan uses lavender. Native controls must inherit brand accents and compact commerce geometry.
-
-### Pricing Tabs
-
-Fulfillment, sort, filter, and benefit choices use light segments, chips, or rows with green selected state.
 
 ### Cards & Containers
 
@@ -138,43 +140,23 @@ Product cards pair image, rating, stock, name, price, discount, and add. Loyalty
 
 Search, address, recipient, and payment fields use pale fills with strong focus and clear validation.
 
-### Status & Build Page
+# Imagery and icons
+
+Use pastel product collages, flat benefit symbols, and minimal soft shadow. Avoid glossy or cinematic effects.
+
+Product images use clean `contain` cutouts. Category collages arrange real products on pastel tiles with safe text space.
+
+If final imagery is not yet available, any placeholder must preserve the documented scale, placement, crop, and visual weight rather than removing that layer.
+
+# States
 
 Availability, favorite, cart quantity, discount, delivery window, substitution, preparation, and courier state appear in context.
 
-### Navigation
-
-Use five bottom destinations for My Card, Catalog, Stores, Profile, and Support. Keep cart and fulfillment within shopping context.
-
-### Footer
-
-There is no footer. Sticky delivery value or checkout action closes shopping surfaces.
-
-## Do's and Don'ts
-
-### Do
-
-- Keep product photography color-accurate.
-- Show unit and current price clearly.
-- Preserve fulfillment context.
-- Reuse pastel collage art direction.
-
-### Don't
-
-- Do not crowd product cards with promotions.
-- Do not hide substitutions or stock.
-- Do not use yellow as an error.
-- Do not expose default native styling.
-
-## Responsive Behavior
-
-### Breakpoints
-
-Use two product columns on phones where readable. Wider screens may expand category and product grids while keeping cart in a side panel.
+# iOS adaptation
 
 ### Touch Targets
 
-Product cards, add controls, quantities, filters, benefits, navigation, and checkout require at least 44px targets.
+Product cards, add controls, quantities, filters, benefits, navigation, and checkout require at least 44 points targets.
 
 ### Collapsing Strategy
 
@@ -184,14 +166,20 @@ Keep product, price, quantity, fulfillment, and total visible. Collapse nutritio
 
 Use `contain` for product cutouts and category collages; use `cover` only for editorial lifestyle banners.
 
-## Iteration Guide
+Apply these rules within current iPhone safe areas and scrolling containers. Keep interactive targets at least 44 points, preserve a logical VoiceOver order, and let Dynamic Type wrap supporting text without flattening the documented hierarchy. Do not infer an unobserved dark or light appearance.
 
-Start with loyalty home, catalog search, category grid, product cards, cart, checkout, and tracking. Add personalized discounts, scanning, favorites, stores, and support afterward.
+# Anti-generic checklist
 
-## Known Gaps
+- Do not crowd product cards with promotions.
+- Do not hide substitutions or stock.
+- Do not use yellow as an error.
+- Do not expose default native styling.
+- Do not replace the documented hierarchy with a generic stack of identical white cards or `Form` sections.
+- Do not use default blue tint, an unstyled `TabView`, arbitrary SF Symbols, or uniform corner radii when they contradict the recorded tokens and components.
+- Do not invent decorative imagery or symbol treatments that are absent from the reference.
+
+# Known gaps
 
 The inspected catalog documents 41 flows across onboarding, home, favorites, catalog, checkout, tracking, and settings. Some substitution and failed-delivery branches are less represented.
 
 </design-context>
-
-Use the design system above for all UI you generate.

@@ -18,16 +18,23 @@ Home, Cards, Savings, Stocks, and Crypto are persistent. Profile contains person
 
 ## Manage products
 
-Accounts expose personalization, limits, and schedules. Cards expose number, CVC, daily limit, countries, statements, and protections. Savings shows expected and earned interest.
+1. Accounts expose personalization, limits, and schedules. Cards expose number, CVC, daily limit, countries, statements, and protections. Savings shows expected and earned interest.
 
 ## Invest and administer
 
-Stocks and crypto separate discovery, search, detail, and risk context. Profile groups support, accounting exports, identity, and account closure.
+1. Stocks and crypto separate discovery, search, detail, and risk context. Profile groups support, accounting exports, identity, and account closure.
 
 # Interaction Patterns
 
 - Keep net wealth and account totals explicit.
 - Show source account before amount.
 - Separate investments from spendable money.
-- Confirm card and account closure.
 - Preserve scheduled-payment visibility.
+
+# System Access Timing
+
+No system-access request timing or denial recovery was documented in the reviewed source.
+
+# Known Gaps
+
+- Permission-denial recovery and unobserved secondary flows were not documented.

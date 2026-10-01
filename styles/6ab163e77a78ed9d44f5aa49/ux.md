@@ -1,10 +1,10 @@
 # Overview
 
-KION is a dark streaming hub for movies, series, TV, downloads, profiles, and subscription benefits, built around poster-led discovery and uninterrupted playback.
+KION is a streaming hub for movies, series, TV, downloads, profiles, and subscription benefits, built around discovery and uninterrupted playback.
 
 # Navigation
 
-Five fixed destinations cover Home, TV, Movies, Series, and More. Search and filters remain in the header; detail pages preserve access to the tab bar until playback starts.
+Five primary destinations cover Home, TV, Movies, Series, and More. Search and filters remain available during discovery; detail pages preserve access to the primary navigation until playback starts.
 
 # Core Flows
 
@@ -28,7 +28,14 @@ Five fixed destinations cover Home, TV, Movies, Series, and More. Search and fil
 
 # Interaction Patterns
 
-- Artwork is the main discovery target; ratings and content labels stay compact.
-- Horizontal rails expose more titles without lengthening local sections.
+- Browsing sections expose more titles without lengthening local sections.
 - Episode downloads are available directly from the list.
-- Playback chrome disappears when idle to keep video primary.
+- Playback controls hide when idle and return on demand.
+
+# System Access Timing
+
+No system-access timing or denial-recovery behavior was documented in the reviewed source.
+
+# Known Gaps
+
+System-permission denial paths, interrupted flows, and recovery behavior not described above were not available in the reviewed source.

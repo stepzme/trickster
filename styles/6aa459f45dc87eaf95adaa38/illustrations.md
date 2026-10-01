@@ -14,13 +14,25 @@ Wabi uses glossy 3D bubbles and translucent object capsules as its visual signat
 - Use generous white or black negative space so the glass edges remain readable.
 - Crop individual spheres into cards as icons while preserving their front-facing circular silhouette.
 
-# Color
+# Color and Materials
 
 - Start from pearl white, smoke black, cyan glass, violet, warm yellow, and iridescent rainbow reflections.
 - Let embedded content provide color; avoid solid decorative backgrounds behind every object.
 
-# Usage
+# Variants and States
 
 - Use the sphere language for onboarding, mini-app icons, creator tools, credits, and empty-state moments.
 - Keep functional controls simple and let one or two 3D objects provide the emphasis.
 - Do not mix in unrelated flat mascot art or dense decorative scenes.
+
+# Production Requirements
+
+Exact export formats, aspect ratios, animation behavior, and appearance variants were not documented. Where imagery is compositionally important, temporary placeholders must preserve its documented scale, placement, crop, and visual weight until final art exists.
+
+# Avoid
+
+Do not introduce an unrelated illustration style or substitute decorative symbols for source-supported imagery.
+
+# Known Gaps
+
+Export specifications, animation rules, safe-crop measurements, and unobserved state variants were not available in the reviewed source.

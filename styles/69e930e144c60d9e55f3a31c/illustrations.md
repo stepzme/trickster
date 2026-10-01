@@ -16,15 +16,27 @@ Simbank uses small friendly finance cartoons and emoji-like objects inside savin
 - Use a compact object cluster only when explaining one concept.
 - Do not place illustration behind balances or transaction rows.
 
-# Color
+# Color and Materials
 
 - Pull from the current screen's pastel lime, peach, lilac, or sand atmosphere.
 - Use black outlines for coherence.
 - Keep yellow coin accents and small violet details controlled.
 
-# Usage
+# Variants and States
 
 - Use for savings education, onboarding, empty states, and lightweight feature explanation.
 - Keep transfers, payments, receipts, and forms mostly illustration-free.
 - Match the object directly to the financial concept.
 - Create original assets rather than copying branded characters.
+
+# Production Requirements
+
+Use only the formats and crops supported by the implemented placement. Where the documented imagery is compositionally important, temporary placeholders must preserve its placement, crop, scale, negative space, and approximate visual weight until final art exists. No unobserved light/dark variants or export ratios are prescribed.
+
+# Avoid
+
+- Do not replace the documented image language with unrelated stock art, arbitrary symbols, or a denser composition.
+
+# Known Gaps
+
+- Export aspect ratios, safe crop measurements, animation, and unobserved state variants were not documented.

@@ -19,6 +19,13 @@ Category shortcuts start lodging, apartments, flights, trains, and experiences; 
 # Interaction Patterns
 
 - Keep search state when returning from detail.
-- Show price and conditions before the sticky action.
-- Explain deferred payment as a timeline.
+- Show price and conditions before the remains available action.
 - Confirm cancellation with refund value and reason.
+
+# System Access Timing
+
+No system-access timing or denial-recovery path was documented in the reviewed source.
+
+# Known Gaps
+
+Unobserved flows, denial paths, cancellation behavior, and recovery states remain unspecified.

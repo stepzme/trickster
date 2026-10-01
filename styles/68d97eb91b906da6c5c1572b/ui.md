@@ -1,6 +1,7 @@
 <design-context>
 ---
-version: alpha
+version: 1
+platform: iOS
 name: yandex-disk-design-analysis
 description: "A dark, dense cloud-storage interface built from near-black canvas, charcoal panels, high-contrast white type, a yellow creation accent, and blue operational feedback. Media cards, file rows, storage meters, modal creation sheets, and a five-item bottom bar prioritize utility while onboarding adds neon space motifs."
 colors:
@@ -19,34 +20,34 @@ colors:
   semantic-danger: "#EA5454"
   semantic-overlay: "#000000"
 typography:
-  display-xl: { fontFamily: YS Text, fontSize: 34px, fontWeight: 700, lineHeight: 1.08, letterSpacing: -0.6px }
-  display-lg: { fontFamily: YS Text, fontSize: 28px, fontWeight: 700, lineHeight: 1.12, letterSpacing: -0.4px }
-  display-md: { fontFamily: YS Text, fontSize: 24px, fontWeight: 700, lineHeight: 1.16, letterSpacing: -0.2px }
-  headline: { fontFamily: YS Text, fontSize: 20px, fontWeight: 600, lineHeight: 1.20, letterSpacing: -0.1px }
-  card-title: { fontFamily: YS Text, fontSize: 17px, fontWeight: 600, lineHeight: 1.24, letterSpacing: 0 }
-  subhead: { fontFamily: YS Text, fontSize: 16px, fontWeight: 400, lineHeight: 1.36, letterSpacing: 0 }
-  body-lg: { fontFamily: YS Text, fontSize: 16px, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
-  body: { fontFamily: YS Text, fontSize: 14px, fontWeight: 400, lineHeight: 1.38, letterSpacing: 0 }
-  body-sm: { fontFamily: YS Text, fontSize: 12px, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
-  caption: { fontFamily: YS Text, fontSize: 11px, fontWeight: 400, lineHeight: 1.25, letterSpacing: 0 }
-  button: { fontFamily: YS Text, fontSize: 14px, fontWeight: 500, lineHeight: 1.20, letterSpacing: 0 }
-  eyebrow: { fontFamily: YS Text, fontSize: 11px, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0.2px }
-  mono: { fontFamily: System Mono, fontSize: 12px, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
-rounded: { xs: 5px, sm: 8px, md: 12px, lg: 16px, xl: 22px, xxl: 28px, pill: 9999px, full: 9999px }
-spacing: { xxs: 4px, xs: 8px, sm: 12px, md: 16px, lg: 24px, xl: 32px, xxl: 48px, section: 64px }
+  display-xl: { fontFamily: YS Text, fontSize: 34, fontWeight: 700, lineHeight: 1.08, letterSpacing: -0.6 }
+  display-lg: { fontFamily: YS Text, fontSize: 28, fontWeight: 700, lineHeight: 1.12, letterSpacing: -0.4 }
+  display-md: { fontFamily: YS Text, fontSize: 24, fontWeight: 700, lineHeight: 1.16, letterSpacing: -0.2 }
+  headline: { fontFamily: YS Text, fontSize: 20, fontWeight: 600, lineHeight: 1.20, letterSpacing: -0.1 }
+  card-title: { fontFamily: YS Text, fontSize: 17, fontWeight: 600, lineHeight: 1.24, letterSpacing: 0 }
+  subhead: { fontFamily: YS Text, fontSize: 16, fontWeight: 400, lineHeight: 1.36, letterSpacing: 0 }
+  body-lg: { fontFamily: YS Text, fontSize: 16, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
+  body: { fontFamily: YS Text, fontSize: 14, fontWeight: 400, lineHeight: 1.38, letterSpacing: 0 }
+  body-sm: { fontFamily: YS Text, fontSize: 12, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
+  caption: { fontFamily: YS Text, fontSize: 11, fontWeight: 400, lineHeight: 1.25, letterSpacing: 0 }
+  button: { fontFamily: YS Text, fontSize: 14, fontWeight: 500, lineHeight: 1.20, letterSpacing: 0 }
+  eyebrow: { fontFamily: YS Text, fontSize: 11, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0.2 }
+  mono: { fontFamily: System Mono, fontSize: 12, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
+rounded: { xs: 5, sm: 8, md: 12, lg: 16, xl: 22, xxl: 28, pill: 9999, full: 9999 }
+spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
 components:
-  action-button: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.md}", padding: 13px 18px }
-  floating-create: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.headline}", rounded: "{rounded.full}", size: 52px }
-  storage-meter: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.md}", padding: 10px 12px }
-  activity-card: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 12px }
-  file-row: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xs}", padding: 6px 12px }
-  creation-sheet: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.xl}", padding: 16px }
-  toast: { backgroundColor: "{colors.feedback}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.md}", padding: 10px 14px }
-  bottom-nav: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", height: 56px }
-  footer: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: 16px }
+  action-button: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.md}", padding: [13, 18]}
+  floating-create: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.headline}", rounded: "{rounded.full}", size: 52 }
+  storage-meter: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.md}", padding: [10, 12]}
+  activity-card: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 12 }
+  file-row: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xs}", padding: [6, 12]}
+  creation-sheet: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.xl}", padding: 16 }
+  toast: { backgroundColor: "{colors.feedback}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.md}", padding: [10, 14]}
+  bottom-nav: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", height: 56 }
+  bottom navigation: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: 16 }
 ---
 
-## Overview
+# Overview
 
 Yandex Disk is a nearly black file workspace with bright media, yellow creation controls, and blue operational feedback. Feed cards add visual richness; Files remains a compact, high-density list. Creation and account actions rise in charcoal sheets.
 
@@ -57,7 +58,15 @@ Yandex Disk is a nearly black file workspace with bright media, yellow creation 
 - Persistent storage meter.
 - Five-section bottom navigation.
 
-## Colors
+# Non-negotiable visual invariants
+
+- Sampled screens consistently use near-black canvas and charcoal hierarchy.
+- The reference consistently shows yellow floating create and purchase actions.
+- The reference consistently shows blue confirmation banners.
+- The reference consistently shows persistent storage meter.
+- Navigation consistently uses five-section bottom navigation.
+
+# Color and surfaces
 
 ### Brand & Accent
 - **Yellow** ({colors.primary}): Create, buy space, subscribe, and proceed.
@@ -79,7 +88,7 @@ Yandex Disk is a nearly black file workspace with bright media, yellow creation 
 - **Danger** ({colors.semantic-danger}): Destructive file actions.
 - **Overlay** ({colors.semantic-overlay}): Sheet and dialog dimming.
 
-## Typography
+# Typography
 
 ### Font Family
 
@@ -90,12 +99,12 @@ Yandex Disk is a nearly black file workspace with bright media, yellow creation 
 
 | Token | Size | Weight | Use |
 |---|---|---|---|
-| `{typography.display-xl}` | 34px | 700 | Onboarding headline |
-| `{typography.display-md}` | 24px | 700 | Major empty or upgrade state |
-| `{typography.headline}` | 20px | 600 | Screen or sheet heading |
-| `{typography.card-title}` | 17px | 600 | Activity summary |
-| `{typography.body}` | 14px | 400 | Filename and control |
-| `{typography.caption}` | 11px | 400 | Metadata and tab labels |
+| `{typography.display-xl}` | 34 points | 700 | Onboarding headline |
+| `{typography.display-md}` | 24 points | 700 | Major empty or upgrade state |
+| `{typography.headline}` | 20 points | 600 | Screen or sheet heading |
+| `{typography.card-title}` | 17 points | 600 | Activity summary |
+| `{typography.body}` | 14 points | 400 | Filename and control |
+| `{typography.caption}` | 11 points | 400 | Metadata and tab labels |
 
 ### Principles
 
@@ -108,11 +117,11 @@ Yandex Disk is a nearly black file workspace with bright media, yellow creation 
 
 Use **SF Pro** on iOS or **Inter** when YS Text is unavailable.
 
-## Layout
+# Screen composition
 
 ### Spacing System
 
-Use a 4px base. File rows use 6–8px vertical rhythm; cards use 12–16px; sheets use 16px gutters.
+Use a 4 points base. File rows use 6–8 points vertical rhythm; cards use 12–16 points; sheets use 16 points gutters.
 
 ### Grid & Container
 
@@ -122,7 +131,7 @@ Feed is a single card stream with media grids inside cards. Files is a single li
 
 Density communicates utility. Keep generous space only in onboarding, upgrade, and focused modal states.
 
-## Elevation & Depth
+Surface hierarchy observed in the source:
 
 | Level | Treatment | Use |
 |---|---|---|
@@ -135,31 +144,15 @@ Density communicates utility. Keep generous space only in onboarding, upgrade, a
 
 Media thumbnails create most depth. Use restrained shadow and strong surface contrast rather than glossy effects.
 
-## Shapes
+# Navigation appearance
 
-### Border Radius Scale
+Feed, Files, Photos, Albums, and More form the bottom bar. Active state is white; inactive state is gray.
 
-| Token | Value | Use |
-|---|---|---|
-| `{rounded.sm}` | 8px | Small thumbnails and chips |
-| `{rounded.md}` | 12px | Buttons and meters |
-| `{rounded.lg}` | 16px | Feed cards |
-| `{rounded.xl}` | 22px | Bottom sheets |
-| `{rounded.full}` | full | Floating create |
-
-### Photography & Illustration Geometry
-
-Uploaded media stays rectangular with small radii. Onboarding illustration is centered and compact on black.
-
-## Components
+# Components
 
 ### Buttons
 
 Primary purchase and creation buttons are yellow with dark text. Secondary actions are charcoal. The floating plus stays visible above navigation.
-
-### Pricing Tabs
-
-No pricing-plan tabs were observed. Storage upgrade is a compact inline control next to the quota meter.
 
 ### Cards & Containers
 
@@ -169,49 +162,23 @@ Activity cards combine date, summary, preview grid, and overflow menu. Account c
 
 Folder creation uses a centered dark dialog with a single field and blue text actions. Search is an icon entry in the top bar.
 
-### Status & Build Page
+# Imagery and icons
+
+Media thumbnails create most depth. Use restrained shadow and strong surface contrast rather than glossy effects.
+
+Uploaded media stays rectangular with small radii. Onboarding illustration is centered and compact on black.
+
+If final imagery is not yet available, any placeholder must preserve the documented scale, placement, crop, and visual weight rather than removing that layer.
+
+# States
 
 Quota uses a green progress bar and explicit capacity copy. Upload state appears inline; completed operations use a blue toast.
 
-### Navigation
-
-Feed, Files, Photos, Albums, and More form the bottom bar. Active state is white; inactive state is gray.
-
-### Footer
-
-There is no content footer. Bottom navigation and account utilities close the primary experience.
-
-## Do's and Don'ts
-
-### Do
-
-- Keep yellow reserved for creation and purchase.
-- Show storage capacity persistently.
-- Keep filenames and metadata aligned.
-- Use sheets for multi-option creation.
-- Confirm operations visibly.
-
-### Don't
-
-- Don't brighten the dark canvas with decorative gradients.
-- Don't enlarge file rows into cards.
-- Don't hide destructive actions near creation.
-- Don't use yellow for passive labels.
-- Don't crop document thumbnails as photography.
-
-## Responsive Behavior
-
-### Breakpoints
-
-| Name | Width | Key Changes |
-|---|---|---|
-| Wide | 768px+ | Add columns for media, retain file list density |
-| Compact | 390–767px | Default single-column app |
-| Small | <390px | Shorten metadata and sheet labels |
+# iOS adaptation
 
 ### Touch Targets
 
-Keep tabs, row menus, floating create, and sheet options at least 44px.
+Keep tabs, row menus, floating create, and sheet options at least 44 points.
 
 ### Collapsing Strategy
 
@@ -221,15 +188,20 @@ Truncate filenames before removing metadata. Let feed media reduce columns; keep
 
 Use cover for photos and video previews, contain for documents and folders, and preserve media aspect where practical.
 
-## Iteration Guide
+Apply these rules within current iPhone safe areas and scrolling containers. Keep interactive targets at least 44 points, preserve a logical VoiceOver order, and let Dynamic Type wrap supporting text without flattening the documented hierarchy. Do not infer an unobserved dark or light appearance.
 
-1. Establish dark surfaces and bottom navigation.
-2. Build storage meter and file rows.
-3. Add feed media cards.
-4. Add create sheet and confirmation toast.
-5. Apply onboarding illustration last.
+# Anti-generic checklist
 
-## Known Gaps
+- Don't brighten the dark canvas with decorative gradients.
+- Don't enlarge file rows into cards.
+- Don't hide destructive actions near creation.
+- Don't use yellow for passive labels.
+- Don't crop document thumbnails as photography.
+- Do not replace the documented hierarchy with a generic stack of identical white cards or `Form` sections.
+- Do not use default blue tint, an unstyled `TabView`, arbitrary SF Symbols, or uniform corner radii when they contradict the recorded tokens and components.
+- Do not omit compositionally important imagery while final assets are pending; preserve its footprint with a faithful placeholder.
+
+# Known gaps
 
 - Exact tokens and typeface metrics were inferred visually.
 - Photos and Settings flows had no member screens in the selected catalog snapshot.
@@ -237,5 +209,3 @@ Use cover for photos and video previews, contain for documents and folders, and 
 - Tablet layouts were not present.
 
 </design-context>
-
-Use the design system above for all UI you generate.

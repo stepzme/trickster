@@ -10,10 +10,23 @@ Build simplified recognizable buildings, map pins, keys, and utility objects wit
 
 Use one centered object or landmark on white, or place it in a rounded map crop with small factual badges. Keep the scene sparse.
 
-# Color
+# Color and Materials
 
 Use realistic muted object colors, white, pale gray, map green, and small red, blue, or yellow accents.
 
-# Usage
+# Variants and States
 
 Use illustration for onboarding, empty guidance, login, and map-feature education. Use real photos in place cards and functional cartography for navigation.
+
+# Production Requirements
+
+Preserve the documented placement, crop, negative space, and visual weight in production exports. Before final art exists, placeholders must preserve those same compositional properties.
+
+# Avoid
+
+- Do not replace the observed imagery language with unrelated stock art or arbitrary symbols.
+- Do not change the documented crop, density, or relationship to nearby text.
+
+# Known Gaps
+
+Animation, export dimensions, safe-crop specifications, appearance variants, and unshown state treatments were not documented.

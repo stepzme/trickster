@@ -1,12 +1,12 @@
 <design-context>
 ---
-version: alpha
+version: 1
+platform: iOS
 name: Magnifier-design-analysis
 description: "A high-contrast camera utility with a live full-screen view, translucent black control deck, bright white circular controls, yellow active states, and minimal accessibility-first typography."
 colors:
   primary: "#FFD83D"
   on-primary: "#111111"
-  primary-hover: "#FFE46A"
   primary-focus: "#E3B900"
   ink: "#FFFFFF"
   ink-muted: "#B8B8BC"
@@ -28,34 +28,34 @@ colors:
   semantic-success: "#34C759"
   semantic-overlay: "#000000"
 typography:
-  display-xl: {fontFamily: SF Pro Display, fontSize: 36px, fontWeight: 700, lineHeight: 1.06, letterSpacing: -0.8px}
-  display-lg: {fontFamily: SF Pro Display, fontSize: 30px, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.6px}
-  display-md: {fontFamily: SF Pro Display, fontSize: 24px, fontWeight: 700, lineHeight: 1.14, letterSpacing: -0.3px}
-  headline: {fontFamily: SF Pro Display, fontSize: 20px, fontWeight: 700, lineHeight: 1.20, letterSpacing: -0.2px}
-  card-title: {fontFamily: SF Pro Text, fontSize: 15px, fontWeight: 600, lineHeight: 1.24, letterSpacing: 0}
-  subhead: {fontFamily: SF Pro Text, fontSize: 14px, fontWeight: 600, lineHeight: 1.30, letterSpacing: 0}
-  body-lg: {fontFamily: SF Pro Text, fontSize: 14px, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0}
-  body: {fontFamily: SF Pro Text, fontSize: 12px, fontWeight: 400, lineHeight: 1.34, letterSpacing: 0}
-  body-sm: {fontFamily: SF Pro Text, fontSize: 10px, fontWeight: 400, lineHeight: 1.28, letterSpacing: 0}
-  caption: {fontFamily: SF Pro Text, fontSize: 9px, fontWeight: 500, lineHeight: 1.22, letterSpacing: 0}
-  button: {fontFamily: SF Pro Text, fontSize: 13px, fontWeight: 600, lineHeight: 1.18, letterSpacing: 0}
-  eyebrow: {fontFamily: SF Pro Text, fontSize: 9px, fontWeight: 700, lineHeight: 1.18, letterSpacing: 0.1px}
-  mono: {fontFamily: SF Mono, fontSize: 10px, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0}
-rounded: {xs: 4px, sm: 8px, md: 12px, lg: 16px, xl: 20px, xxl: 26px, pill: 9999px, full: 9999px}
-spacing: {xxs: 4px, xs: 8px, sm: 12px, md: 16px, lg: 20px, xl: 24px, xxl: 32px, section: 40px}
+  display-xl: {fontFamily: SF Pro Display, fontSize: 36, fontWeight: 700, lineHeight: 1.06, letterSpacing: -0.8}
+  display-lg: {fontFamily: SF Pro Display, fontSize: 30, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.6}
+  display-md: {fontFamily: SF Pro Display, fontSize: 24, fontWeight: 700, lineHeight: 1.14, letterSpacing: -0.3}
+  headline: {fontFamily: SF Pro Display, fontSize: 20, fontWeight: 700, lineHeight: 1.20, letterSpacing: -0.2}
+  card-title: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 600, lineHeight: 1.24, letterSpacing: 0}
+  subhead: {fontFamily: SF Pro Text, fontSize: 14, fontWeight: 600, lineHeight: 1.30, letterSpacing: 0}
+  body-lg: {fontFamily: SF Pro Text, fontSize: 14, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0}
+  body: {fontFamily: SF Pro Text, fontSize: 12, fontWeight: 400, lineHeight: 1.34, letterSpacing: 0}
+  body-sm: {fontFamily: SF Pro Text, fontSize: 10, fontWeight: 400, lineHeight: 1.28, letterSpacing: 0}
+  caption: {fontFamily: SF Pro Text, fontSize: 9, fontWeight: 500, lineHeight: 1.22, letterSpacing: 0}
+  button: {fontFamily: SF Pro Text, fontSize: 13, fontWeight: 600, lineHeight: 1.18, letterSpacing: 0}
+  eyebrow: {fontFamily: SF Pro Text, fontSize: 9, fontWeight: 700, lineHeight: 1.18, letterSpacing: 0.1}
+  mono: {fontFamily: SF Mono, fontSize: 10, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0}
+rounded: {xs: 4, sm: 8, md: 12, lg: 16, xl: 20, xxl: 26, pill: 9999, full: 9999}
+spacing: {xxs: 4, xs: 8, sm: 12, md: 16, lg: 20, xl: 24, xxl: 32, section: 40}
 components:
-  button-primary: {backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 13px 18px}
+  button-primary: {backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [13, 18]}
   button-primary-pressed: {backgroundColor: "{colors.primary-focus}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}"}
-  button-primary-hover: {backgroundColor: "{colors.primary-hover}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}"}
-  button-secondary: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.full}", padding: 12px}
-  button-tertiary: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 10px 14px}
-  button-inverse: {backgroundColor: "{colors.inverse-canvas}", textColor: "{colors.inverse-ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 12px 16px}
-  control-deck: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xl}", padding: 12px}
-  circular-control: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.caption}", rounded: "{rounded.full}", padding: 12px}
-  slider: {backgroundColor: "{colors.surface-3}", textColor: "{colors.primary}", typography: "{typography.caption}", rounded: "{rounded.pill}", padding: 8px 10px}
-  bottom-nav: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: 7px 8px}
+  button-secondary: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.full}", padding: 12}
+  button-tertiary: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [10, 14]}
+  button-inverse: {backgroundColor: "{colors.inverse-canvas}", textColor: "{colors.inverse-ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [12, 16]}
+  control-deck: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xl}", padding: 12}
+  circular-control: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.caption}", rounded: "{rounded.full}", padding: 12}
+  slider: {backgroundColor: "{colors.surface-3}", textColor: "{colors.primary}", typography: "{typography.caption}", rounded: "{rounded.pill}", padding: [8, 10]}
+  bottom-nav: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: [7, 8]}
 ---
-## Overview
+
+# Overview
 
 Magnifier is a low-vision camera tool where a dark expandable deck keeps large controls readable over changing live imagery.
 
@@ -66,7 +66,15 @@ Magnifier is a low-vision camera tool where a dark expandable deck keeps large c
 - Zoom, brightness, contrast, filter, focus, torch, and description controls.
 - Configurable activities and control order.
 
-## Colors
+# Non-negotiable visual invariants
+
+- The reference consistently shows full-screen camera context.
+- Sampled screens consistently use translucent black control deck.
+- The reference consistently shows white circular tools and yellow selection.
+- The reference consistently shows zoom, brightness, contrast, filter, focus, torch, and description controls.
+- Sampled screens consistently use configurable activities and control order.
+
+# Color and surfaces
 
 ### Brand & Accent
 
@@ -84,7 +92,7 @@ White is primary, gray secondary, and black is used only on yellow or white acti
 
 Yellow means current or selected; green success and red removal remain conventional.
 
-## Typography
+# Typography
 
 ### Font Family
 
@@ -94,11 +102,11 @@ Use SF Pro Display and SF Pro Text for maximum platform legibility.
 
 | Token | Size | Weight | Use |
 |---|---:|---:|---|
-| display-lg | 30px | 700 | Activity setup |
-| headline | 20px | 700 | Sheet title |
-| card-title | 15px | 600 | Control group |
-| body | 12px | 400 | Guidance |
-| caption | 9px | 500 | Control label |
+| display-lg | 30 points | 700 | Activity setup |
+| headline | 20 points | 700 | Sheet title |
+| card-title | 15 points | 600 | Control group |
+| body | 12 points | 400 | Guidance |
+| caption | 9 points | 500 | Control label |
 
 ### Principles
 
@@ -110,11 +118,11 @@ Use SF Pro Display and SF Pro Text for maximum platform legibility.
 
 Inter is suitable; preserve large targets and strong contrast.
 
-## Layout
+# Screen composition
 
 ### Spacing System
 
-Use a 4px base, 12px control gaps, and 16px sheet gutters.
+Use a 4 points base, 12 points control gaps, and 16 points sheet gutters.
 
 ### Grid & Container
 
@@ -124,7 +132,7 @@ The live view is full bleed; the control deck uses slider rows and a centered ci
 
 Keep separation generous enough for recognition and motor accuracy.
 
-## Elevation & Depth
+Surface hierarchy observed in the source:
 
 | Level | Treatment | Use |
 |---|---|---|
@@ -137,31 +145,15 @@ Keep separation generous enough for recognition and motor accuracy.
 
 No decorative depth; translucency preserves camera context.
 
-## Shapes
+# Navigation appearance
 
-### Border Radius Scale
+Keep live-view tools in reach; deeper settings return directly to the camera.
 
-| Token | Value | Use |
-|---|---:|---|
-| rounded-xs | 4px | Labels |
-| rounded-sm | 8px | Rows |
-| rounded-md | 12px | Lists |
-| rounded-xl | 20px | Control deck |
-| rounded-full | full | Tools and shutter |
-
-### Photography & Illustration Geometry
-
-Camera imagery stays uncropped; recognition labels float near detected content without obscuring it.
-
-## Components
+# Components
 
 ### Buttons
 
 Use large circular black or white tools; yellow filled actions confirm activity or view choices.
-
-### Pricing Tabs
-
-Filter and mode options use compact visual swatches with one yellow outline.
 
 ### Cards & Containers
 
@@ -171,47 +163,23 @@ The deck is one grouped container; customization uses dark rows with drag handle
 
 Activity naming uses a dark field and a wide yellow Done action styled into the system.
 
-### Status & Build Page
+# Imagery and icons
+
+No decorative depth; translucency preserves camera context.
+
+Camera imagery stays uncropped; recognition labels float near detected content without obscuring it.
+
+If final imagery is not yet available, any placeholder must preserve the documented scale, placement, crop, and visual weight rather than removing that layer.
+
+# States
 
 Recognition and selected mode appear as short high-contrast floating labels.
 
-### Navigation
-
-Keep live-view tools in reach; deeper settings return directly to the camera.
-
-### Footer
-
-No footer; the control deck owns the safe area.
-
-## Do's and Don'ts
-
-### Do
-
-- Preserve high contrast and large targets.
-- Keep the camera visible during adjustment.
-- Pair configurable icons with labels.
-- Respect accessibility settings.
-
-### Don't
-
-- Don't use thin low-contrast controls.
-- Don't hide the active mode.
-- Don't crowd the camera center.
-- Don't add decorative illustration.
-
-## Responsive Behavior
-
-### Breakpoints
-
-| Name | Width | Key Changes |
-|---|---:|---|
-| Compact | 320–374px | Reduce tool count per row |
-| Standard | 375–430px | Default control deck |
-| Wide | 431px+ | Expand spacing and label width |
+# iOS adaptation
 
 ### Touch Targets
 
-Every tool, slider end, drag handle, and confirmation remains at least 44px.
+Every tool, slider end, drag handle, and confirmation remains at least 44 points.
 
 ### Collapsing Strategy
 
@@ -221,16 +189,22 @@ Keep primary tools visible and move secondary tools into the expandable deck.
 
 Never resize or crop the live view independently of zoom intent.
 
-## Iteration Guide
+Apply these rules within current iPhone safe areas and scrolling containers. Keep interactive targets at least 44 points, preserve a logical VoiceOver order, and let Dynamic Type wrap supporting text without flattening the documented hierarchy. Do not infer an unobserved dark or light appearance.
 
-Tune target clarity first, then adjustment discoverability, customization, and saved activities.
+# Anti-generic checklist
 
-## Known Gaps
+- Don't use thin low-contrast controls.
+- Don't hide the active mode.
+- Don't crowd the camera center.
+- Don't add decorative illustration.
+- Do not replace the documented hierarchy with a generic stack of identical white cards or `Form` sections.
+- Do not use default blue tint, an unstyled `TabView`, arbitrary SF Symbols, or uniform corner radii when they contradict the recorded tokens and components.
+- Do not omit compositionally important imagery while final assets are pending; preserve its footprint with a faithful placeholder.
+
+# Known gaps
 
 - Image-description output was not fully sampled.
 - Saved-activity recall was not represented end to end.
 - Tablet and landscape layouts were not represented.
 
 </design-context>
-
-Use the design system above for all UI you generate.

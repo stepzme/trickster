@@ -4,7 +4,7 @@ Lenta combines grocery delivery, store shopping, loyalty, promotions, recipes, a
 
 # Navigation
 
-Five fixed destinations cover Home, Catalog, loyalty Card, Cart, and Profile. Address and delivery mode anchor Home; search and QR access remain near the top of shopping screens.
+five persistent destinations cover Home, Catalog, loyalty Card, Cart, and Profile. Address and delivery mode anchor Home; search and QR access remain .
 
 # Core Flows
 
@@ -24,7 +24,13 @@ Five fixed destinations cover Home, Catalog, loyalty Card, Cart, and Profile. Ad
 
 # Interaction Patterns
 
-- Deep blue carries purchase actions; red carries price and discount emphasis.
-- Ratings, weight, unit price, former price, and discount stay close to product imagery.
 - Checkout is a guided sequence with progress indicators and persistent Next actions.
-- A friendly cat mascot explains empty, success, and campaign states.
+- Empty, success, and campaign states provide contextual explanation.
+
+# System Access Timing
+
+No system-access request timing or denial recovery was documented in the reviewed source.
+
+# Known Gaps
+
+- Permission-denial recovery and unobserved secondary flows were not documented.

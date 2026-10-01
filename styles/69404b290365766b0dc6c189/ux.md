@@ -4,9 +4,9 @@ SUNLIGHT combines jewelry shopping, stores, discounts, trade-in services, loyalt
 
 # Navigation
 
-- Five bottom destinations cover Home, Catalog, Stores, Cart, and Profile.
-- Search and photo search remain prominent across discovery screens.
-- Product, cart, and profile tasks use direct drill-down with sticky black actions.
+- Five primary destinations cover Home, Catalog, Stores, Cart, and Profile.
+- Search and photo search remain across discovery screens.
+- Product, cart, and profile tasks use direct drill-down with persistent actions.
 
 # Core Flows
 
@@ -20,7 +20,7 @@ SUNLIGHT combines jewelry shopping, stores, discounts, trade-in services, loyalt
 
 1. Add an item to Cart and review selected products.
 2. Apply a promo or gift card and choose delivery details.
-3. Continue through the sticky black checkout action.
+3. Continue through the checkout action.
 
 ## Manage loyalty and purchases
 
@@ -30,7 +30,12 @@ SUNLIGHT combines jewelry shopping, stores, discounts, trade-in services, loyalt
 
 # Interaction Patterns
 
-- Red carries brand identity while black carries most transactional commitment.
-- Dense category rails and grids prioritize breadth over spaciousness.
-- Underlined text and outlined cells reinforce a retail-catalog tone.
-- Sticky bottom bars keep cart totals and purchase actions visible.
+- Catalog browsing preserves the current category while products are compared.
+
+# System Access Timing
+
+- Camera or Photos access follows the user choosing the documented capture, scan, or photo action. Denial recovery was not documented.
+
+# Known Gaps
+
+- Permission-denial recovery and unobserved secondary flows were not documented.

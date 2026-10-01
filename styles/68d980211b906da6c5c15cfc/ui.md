@@ -1,44 +1,55 @@
 <design-context>
 ---
-version: alpha
+version: 1
+platform: iOS
 name: OTP-Bank-design-analysis
 description: "A light modular banking system using neon lime brand actions, white cards on pale lavender-gray, black product type, colorful 3D finance objects, and restrained bottom navigation."
-colors: {primary: "#B6F52B", on-primary: "#17200E", primary-hover: "#C7FA55", primary-focus: "#95D30F", ink: "#1A1B1F", ink-muted: "#6B6D73", ink-subtle: "#9DA0A6", ink-tertiary: "#C5C7CC", canvas: "#F7F6FA", surface-1: "#FFFFFF", surface-2: "#EEEFF4", surface-3: "#E2E3E9", surface-4: "#D5D7DE", hairline: "#E4E5EA", hairline-strong: "#CCCED4", hairline-tertiary: "#B3B6BD", inverse-canvas: "#1A1B1F", inverse-surface-1: "#2B2C31", inverse-surface-2: "#3C3D44", inverse-ink: "#FFFFFF", brand-secure: "#173F4D", semantic-success: "#73C63C", semantic-overlay: "#17181C"}
+colors: {primary: "#B6F52B", on-primary: "#17200E", primary-focus: "#95D30F", ink: "#1A1B1F", ink-muted: "#6B6D73", ink-subtle: "#9DA0A6", ink-tertiary: "#C5C7CC", canvas: "#F7F6FA", surface-1: "#FFFFFF", surface-2: "#EEEFF4", surface-3: "#E2E3E9", surface-4: "#D5D7DE", hairline: "#E4E5EA", hairline-strong: "#CCCED4", hairline-tertiary: "#B3B6BD", inverse-canvas: "#1A1B1F", inverse-surface-1: "#2B2C31", inverse-surface-2: "#3C3D44", inverse-ink: "#FFFFFF", brand-secure: "#173F4D", semantic-success: "#73C63C", semantic-overlay: "#17181C"}
 typography:
-  display-xl: {fontFamily: SF Pro Display, fontSize: 36px, fontWeight: 700, lineHeight: 1.06, letterSpacing: -0.8px}
-  display-lg: {fontFamily: SF Pro Display, fontSize: 30px, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.5px}
-  display-md: {fontFamily: SF Pro Display, fontSize: 24px, fontWeight: 700, lineHeight: 1.14, letterSpacing: -0.3px}
-  headline: {fontFamily: SF Pro Display, fontSize: 21px, fontWeight: 700, lineHeight: 1.20, letterSpacing: -0.2px}
-  card-title: {fontFamily: SF Pro Text, fontSize: 16px, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0}
-  subhead: {fontFamily: SF Pro Text, fontSize: 15px, fontWeight: 600, lineHeight: 1.30, letterSpacing: 0}
-  body-lg: {fontFamily: SF Pro Text, fontSize: 15px, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0}
-  body: {fontFamily: SF Pro Text, fontSize: 13px, fontWeight: 400, lineHeight: 1.36, letterSpacing: 0}
-  body-sm: {fontFamily: SF Pro Text, fontSize: 11px, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0}
-  caption: {fontFamily: SF Pro Text, fontSize: 10px, fontWeight: 400, lineHeight: 1.25, letterSpacing: 0}
-  button: {fontFamily: SF Pro Text, fontSize: 14px, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0}
-  eyebrow: {fontFamily: SF Pro Text, fontSize: 10px, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0.2px}
-  mono: {fontFamily: SF Mono, fontSize: 11px, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0}
-rounded: {xs: 6px, sm: 10px, md: 16px, lg: 20px, xl: 26px, xxl: 30px, pill: 9999px, full: 9999px}
-spacing: {xxs: 4px, xs: 8px, sm: 12px, md: 16px, lg: 20px, xl: 24px, xxl: 32px, section: 40px}
+  display-xl: {fontFamily: SF Pro Display, fontSize: 36, fontWeight: 700, lineHeight: 1.06, letterSpacing: -0.8}
+  display-lg: {fontFamily: SF Pro Display, fontSize: 30, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.5}
+  display-md: {fontFamily: SF Pro Display, fontSize: 24, fontWeight: 700, lineHeight: 1.14, letterSpacing: -0.3}
+  headline: {fontFamily: SF Pro Display, fontSize: 21, fontWeight: 700, lineHeight: 1.20, letterSpacing: -0.2}
+  card-title: {fontFamily: SF Pro Text, fontSize: 16, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0}
+  subhead: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 600, lineHeight: 1.30, letterSpacing: 0}
+  body-lg: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0}
+  body: {fontFamily: SF Pro Text, fontSize: 13, fontWeight: 400, lineHeight: 1.36, letterSpacing: 0}
+  body-sm: {fontFamily: SF Pro Text, fontSize: 11, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0}
+  caption: {fontFamily: SF Pro Text, fontSize: 10, fontWeight: 400, lineHeight: 1.25, letterSpacing: 0}
+  button: {fontFamily: SF Pro Text, fontSize: 14, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0}
+  eyebrow: {fontFamily: SF Pro Text, fontSize: 10, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0.2}
+  mono: {fontFamily: SF Mono, fontSize: 11, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0}
+rounded: {xs: 6, sm: 10, md: 16, lg: 20, xl: 26, xxl: 30, pill: 9999, full: 9999}
+spacing: {xxs: 4, xs: 8, sm: 12, md: 16, lg: 20, xl: 24, xxl: 32, section: 40}
 components:
-  button-primary: {backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 14px 18px}
+  button-primary: {backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [14, 18]}
   button-primary-pressed: {backgroundColor: "{colors.primary-focus}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}"}
-  button-primary-hover: {backgroundColor: "{colors.primary-hover}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}"}
-  button-secondary: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 12px 16px}
-  button-tertiary: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 10px 14px}
-  content-card: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 14px}
-  feature-card: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 16px}
-  text-input: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: 12px 14px}
-  status-badge: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.pill}", padding: 3px 7px}
-  bottom-nav: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink-subtle}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: 8px 10px}
+  button-secondary: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [12, 16]}
+  button-tertiary: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [10, 14]}
+  content-card: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 14}
+  feature-card: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 16}
+  text-input: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: [12, 14]}
+  status-badge: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.pill}", padding: [3, 7]}
+  bottom-nav: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink-subtle}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: [8, 10]}
 ---
-## Overview
+
+# Overview
 
 OTP Bank places cards, exchange rates, transfers, payments, and product applications in bright white modules, using neon lime sparingly and friendly 3D objects to explain breadth.
 
 **Key Characteristics:** pale lavender-gray canvas, white rounded modules, neon lime brand, black type, story rail, 3D product objects, and line-icon navigation.
 
-## Colors
+# Non-negotiable visual invariants
+
+- Sampled screens consistently use pale lavender-gray canvas.
+- The reference consistently shows white rounded modules.
+- The reference consistently shows neon lime brand.
+- Typography consistently uses black type.
+- The reference consistently shows story rail.
+- The reference consistently shows 3D product objects.
+- Navigation consistently uses line-icon navigation.
+
+# Color and surfaces
 
 ### Brand & Accent
 
@@ -56,7 +67,7 @@ Near-black leads balances, products, and payments; gray supports rates, terms, a
 
 Lime signals brand or positive state, while blue, amber, and red retain conventional informational meanings.
 
-## Typography
+# Typography
 
 ### Font Family
 
@@ -66,11 +77,11 @@ Use SF Pro Display for banking and product headings and SF Pro Text for controls
 
 | Token | Size | Weight | Use |
 |---|---:|---:|---|
-| display-lg | 30px | 700 | Hero or state |
-| headline | 21px | 700 | Section title |
-| card-title | 16px | 600 | Primary item |
-| body | 13px | 400 | Detail |
-| caption | 10px | 400 | Metadata |
+| display-lg | 30 points | 700 | Hero or state |
+| headline | 21 points | 700 | Section title |
+| card-title | 16 points | 600 | Primary item |
+| body | 13 points | 400 | Detail |
+| caption | 10 points | 400 | Metadata |
 
 ### Principles
 
@@ -82,11 +93,11 @@ Use SF Pro Display for banking and product headings and SF Pro Text for controls
 
 Use the platform sans with tabular currency and sturdy compact Cyrillic.
 
-## Layout
+# Screen composition
 
 ### Spacing System
 
-Use a 4px base, 8–12px internal gaps, and 16px horizontal screen gutters.
+Use a 4 points base, 8–12 points internal gaps, and 16 points horizontal screen gutters.
 
 ### Grid & Container
 
@@ -96,7 +107,7 @@ My Bank stacks wide product modules; Payments uses a transfer panel plus two-col
 
 Keep financial lists compact but give application decisions and results clear breathing room.
 
-## Elevation & Depth
+Surface hierarchy observed in the source:
 
 | Level | Treatment | Use |
 |---|---|---|
@@ -109,31 +120,15 @@ Keep financial lists compact but give application decisions and results clear br
 
 Use soft surface separation and small 3D objects; promotional stories can be saturated but must stay bounded.
 
-## Shapes
+# Navigation appearance
 
-### Border Radius Scale
+Use five line-icon destinations on the pale canvas, with lime active icon and label.
 
-| Token | Value | Use |
-|---|---:|---|
-| rounded-xs | 6px | Badges |
-| rounded-sm | 10px | Buttons and fields |
-| rounded-md | 16px | Cards |
-| rounded-lg | 20px | Feature panels |
-| rounded-full | full | Circular controls |
-
-### Photography & Illustration Geometry
-
-3D objects sit to the right of wide product rows; result symbols center above amount; stories are rounded squares.
-
-## Components
+# Components
 
 ### Buttons
 
 Lime drives application and active selection; dark teal or charcoal may anchor calculation and return actions.
-
-### Pricing Tabs
-
-Navigation and product modes use lime selected state without heavy filled tab bars.
 
 ### Cards & Containers
 
@@ -143,45 +138,23 @@ White banking cards align product, amount, masked details, or exchange columns; 
 
 Transfer and application fields use pale rounded fills, lime focus or continuation, and precise validation.
 
-### Status & Build Page
+# Imagery and icons
+
+Use soft surface separation and small 3D objects; promotional stories can be saturated but must stay bounded.
+
+3D objects sit to the right of wide product rows; result symbols center above amount; stories are rounded squares.
+
+If final imagery is not yet available, any placeholder must preserve the documented scale, placement, crop, and visual weight rather than removing that layer.
+
+# States
 
 Keep application, transfer, fee, product, and chat state beside the affected card or action.
 
-### Navigation
-
-Use five line-icon destinations on the pale canvas, with lime active icon and label.
-
-### Footer
-
-No footer; persistent navigation or the current action owns the bottom safe area.
-
-## Do's and Don'ts
-
-### Do
-
-- Preserve selective neon-lime emphasis on a calm light base.
-- Keep the primary task and current state immediately legible.
-- Style native controls to inherit this visual system.
-
-### Don't
-
-- Don't use 3D decoration behind balances or dense financial forms.
-- Don't hide status, constraints, or secondary conditions.
-- Don't add heavy shadows around every container.
-
-## Responsive Behavior
-
-### Breakpoints
-
-| Name | Width | Key Changes |
-|---|---:|---|
-| Compact | 320–374px | Tighten secondary metadata |
-| Standard | 375–430px | Default mobile composition |
-| Wide | 431px+ | Expand media and gutters |
+# iOS adaptation
 
 ### Touch Targets
 
-Primary actions, navigation, cards, and contextual controls remain at least 44px.
+Primary actions, navigation, cards, and contextual controls remain at least 44 points.
 
 ### Collapsing Strategy
 
@@ -191,16 +164,21 @@ Preserve product, amount, destination, and action; reduce stories before operati
 
 Keep 3D objects contained in rows and promotional photography inside stories; protect financial copy.
 
-## Iteration Guide
+Apply these rules within current iPhone safe areas and scrolling containers. Keep interactive targets at least 44 points, preserve a logical VoiceOver order, and let Dynamic Type wrap supporting text without flattening the documented hierarchy. Do not infer an unobserved dark or light appearance.
 
-Tune the core task first, then state clarity, navigation rhythm, secondary tools, and edge cases.
+# Anti-generic checklist
 
-## Known Gaps
+- Don't use 3D decoration behind balances or dense financial forms.
+- Don't hide status, constraints, or secondary conditions.
+- Don't add heavy shadows around every container.
+- Do not replace the documented hierarchy with a generic stack of identical white cards or `Form` sections.
+- Do not use default blue tint, an unstyled `TabView`, arbitrary SF Symbols, or uniform corner radii when they contradict the recorded tokens and components.
+- Do not invent decorative imagery or symbol treatments that are absent from the reference.
+
+# Known gaps
 
 - Long-tail error recovery was not fully sampled.
 - Rare support and account states were not reviewed.
 - Tablet and landscape layouts were not represented.
 
 </design-context>
-
-Use the design system above for all UI you generate.

@@ -4,7 +4,7 @@ Russian Post brings tracking, sending, pickup, office search, queue booking, hel
 
 # Navigation
 
-- A five-item bottom bar separates the main service areas.
+- Five primary destinations separate the main service areas.
 - Home exposes tracking, office, sending, courier, and account shortcuts.
 - Deep operational tasks use a linear stack with back navigation and a persistent confirmation action.
 
@@ -32,8 +32,14 @@ Russian Post brings tracking, sending, pickup, office search, queue booking, hel
 
 # Interaction Patterns
 
-- White grouped cards break complex services into understandable steps.
 - Search, filter pills, and shortcuts reduce the distance to frequent tasks.
-- Blue indicates links, selected state, and the next committed action.
 - Tracking and pickup preserve parcel identity while changing the available action.
 - Promotional tiles stay secondary to operational information.
+
+# System Access Timing
+
+No system-access timing or denial-recovery behavior was documented in the reviewed source.
+
+# Known Gaps
+
+System-permission denial paths, interrupted flows, and recovery behavior not described above were not available in the reviewed source.

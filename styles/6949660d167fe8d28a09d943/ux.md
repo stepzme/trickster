@@ -5,7 +5,7 @@ Revolut is a modular financial hub for balances, cards, investing, payments, rew
 # Navigation
 
 - Four persistent tabs lead to Home, Invest, Payments, and RevPoints.
-- Search remains at the top of the main domains, beside contextual analytics or card controls.
+- Search remains , beside contextual analytics or card controls.
 - Home is a stack of configurable widgets for accounts, actions, transactions, spending, and watchlists.
 - Profile collects security, appearance, documents, notifications, plan, and invitations.
 
@@ -34,8 +34,13 @@ Revolut is a modular financial hub for balances, cards, investing, payments, rew
 # Interaction Patterns
 
 - Account context is selected before actions, reducing repeated source-account choices.
-- Large rounded cards behave as rearrangeable widgets rather than fixed dashboard sections.
-- Dark pill buttons carry decisive actions; translucent controls sit over gradient headers.
 - Sheets handle bounded choices such as funding method, account selection, and more actions.
-- Inline warnings appear as complete cards with one corrective action.
 - Appearance and plan settings change presentation without changing the navigation model.
+
+# System Access Timing
+
+No system-access request timing or denial recovery was documented in the reviewed source.
+
+# Known Gaps
+
+- Permission-denial recovery and unobserved secondary flows were not documented.

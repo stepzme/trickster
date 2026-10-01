@@ -22,3 +22,11 @@ Home, Collections, Self-pickup, Inbox, and Cabinet remain stable; search and add
 - Keep seller quality visible.
 - Confirm every optional cost.
 - Keep chat linked to the order.
+
+# System Access Timing
+
+No system-access timing or denial-recovery path was documented in the reviewed source.
+
+# Known Gaps
+
+Unobserved flows, denial paths, cancellation behavior, and recovery states remain unspecified.

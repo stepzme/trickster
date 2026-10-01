@@ -4,7 +4,7 @@ Yandex Weather gives a fast answer first, then lets users expand into time, loca
 
 # Navigation
 
-City search changes location; condition cards and map shortcuts open focused detail screens with timelines and layer controls.
+City search changes location; condition items and map shortcuts open focused detail screens with timelines and layer controls.
 
 # Core Flows
 
@@ -18,6 +18,12 @@ City search changes location; condition cards and map shortcuts open focused det
 # Interaction Patterns
 
 - Keep current location explicit.
-- Pair color with labels and units.
 - Synchronize map, timeline, and selected layer.
-- Surface warnings before secondary metrics.
+
+# System Access Timing
+
+No system-access timing or denial-recovery path was documented in the reviewed source.
+
+# Known Gaps
+
+Unobserved flows, denial paths, cancellation behavior, and recovery states remain unspecified.

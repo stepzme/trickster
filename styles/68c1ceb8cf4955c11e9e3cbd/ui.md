@@ -1,12 +1,12 @@
 <design-context>
 ---
-version: alpha
+version: 1
+platform: iOS
 name: Apple-Music-design-analysis
 description: "A content-led music interface built from white iOS surfaces, heavy black titles, Apple Music coral, and richly varied album artwork. A translucent mini-player and five-tab navigation remain persistent, while the full player derives its atmospheric color from the current cover."
 colors:
   primary: "#FA2D48"
   on-primary: "#FFFFFF"
-  primary-hover: "#E92740"
   primary-soft: "#FDE8EB"
   ink: "#111111"
   ink-muted: "#77777C"
@@ -19,32 +19,31 @@ colors:
   semantic-danger: "#FF3B30"
   semantic-overlay: "#000000"
 typography:
-  display-xl: { fontFamily: SF Pro Display, fontSize: 40px, fontWeight: 700, lineHeight: 1.00, letterSpacing: -0.8px }
-  display-lg: { fontFamily: SF Pro Display, fontSize: 34px, fontWeight: 700, lineHeight: 1.05, letterSpacing: -0.6px }
-  display-md: { fontFamily: SF Pro Display, fontSize: 28px, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.4px }
-  headline: { fontFamily: SF Pro Display, fontSize: 22px, fontWeight: 700, lineHeight: 1.18, letterSpacing: -0.2px }
-  card-title: { fontFamily: SF Pro Text, fontSize: 16px, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: SF Pro Text, fontSize: 17px, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
-  body-lg: { fontFamily: SF Pro Text, fontSize: 17px, fontWeight: 400, lineHeight: 1.45, letterSpacing: 0 }
-  body: { fontFamily: SF Pro Text, fontSize: 15px, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
-  body-sm: { fontFamily: SF Pro Text, fontSize: 13px, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
-  caption: { fontFamily: SF Pro Text, fontSize: 11px, fontWeight: 400, lineHeight: 1.20, letterSpacing: 0 }
-  button: { fontFamily: SF Pro Text, fontSize: 15px, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0 }
-  eyebrow: { fontFamily: SF Pro Text, fontSize: 11px, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0.3px }
-  mono: { fontFamily: SF Mono, fontSize: 12px, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
-rounded: { xs: 6px, sm: 10px, md: 14px, lg: 18px, xl: 24px, xxl: 30px, pill: 9999px, full: 9999px }
-spacing: { xxs: 4px, xs: 8px, sm: 12px, md: 16px, lg: 24px, xl: 32px, xxl: 48px, section: 64px }
+  display-xl: { fontFamily: SF Pro Display, fontSize: 40, fontWeight: 700, lineHeight: 1.00, letterSpacing: -0.8 }
+  display-lg: { fontFamily: SF Pro Display, fontSize: 34, fontWeight: 700, lineHeight: 1.05, letterSpacing: -0.6 }
+  display-md: { fontFamily: SF Pro Display, fontSize: 28, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.4 }
+  headline: { fontFamily: SF Pro Display, fontSize: 22, fontWeight: 700, lineHeight: 1.18, letterSpacing: -0.2 }
+  card-title: { fontFamily: SF Pro Text, fontSize: 16, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
+  subhead: { fontFamily: SF Pro Text, fontSize: 17, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
+  body-lg: { fontFamily: SF Pro Text, fontSize: 17, fontWeight: 400, lineHeight: 1.45, letterSpacing: 0 }
+  body: { fontFamily: SF Pro Text, fontSize: 15, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
+  body-sm: { fontFamily: SF Pro Text, fontSize: 13, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
+  caption: { fontFamily: SF Pro Text, fontSize: 11, fontWeight: 400, lineHeight: 1.20, letterSpacing: 0 }
+  button: { fontFamily: SF Pro Text, fontSize: 15, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0 }
+  eyebrow: { fontFamily: SF Pro Text, fontSize: 11, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0.3 }
+  mono: { fontFamily: SF Mono, fontSize: 12, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
+rounded: { xs: 6, sm: 10, md: 14, lg: 18, xl: 24, xxl: 30, pill: 9999, full: 9999 }
+spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
 components:
-  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 13px 18px }
+  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [13, 18]}
   media-card: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: 0 }
-  mini-player: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xs}", padding: 8px 16px }
-  context-menu: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 6px }
-  plan-card: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: 16px }
-  top-nav: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xs}", height: 52px }
-  footer: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: 8px 12px }
+  mini-player: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xs}", padding: [8, 16]}
+  context-menu: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 6 }
+  plan-card: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: 16 }
+  bottom navigation: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: [8, 12]}
 ---
 
-## Overview
+# Overview
 
 Apple Music keeps system chrome quiet so album covers, editorial art, and radio portraits dominate. Coral indicates active music actions; playback surfaces inherit color from the current artwork.
 
@@ -56,7 +55,16 @@ Apple Music keeps system chrome quiet so album covers, editorial art, and radio 
 - Full player with blurred cover-derived backdrop.
 - Native sheets, context menus, and purchase confirmation.
 
-## Colors
+# Non-negotiable visual invariants
+
+- Sampled screens consistently use white iOS canvas with bold titles.
+- The reference consistently shows coral active tabs, links, and subscription actions.
+- The reference consistently shows artwork-led horizontal rails and grids.
+- Navigation consistently uses persistent mini-player above navigation.
+- The reference consistently shows full player with blurred cover-derived backdrop.
+- The reference consistently shows native sheets, context menus, and purchase confirmation.
+
+# Color and surfaces
 
 ### Brand & Accent
 - **Apple Music Coral** ({colors.primary}): Active destination, links, subscription, and library icons.
@@ -79,7 +87,7 @@ Apple Music keeps system chrome quiet so album covers, editorial art, and radio 
 - **Danger** ({colors.semantic-danger}): Destructive account state.
 - **Overlay** ({colors.semantic-overlay}): Menu and player blur scrim.
 
-## Typography
+# Typography
 
 ### Font Family
 
@@ -91,13 +99,13 @@ Apple Music keeps system chrome quiet so album covers, editorial art, and radio 
 
 | Token | Size | Weight | Use |
 |---|---|---|---|
-| `{typography.display-xl}` | 40px | 700 | Destination heading |
-| `{typography.display-md}` | 28px | 700 | Player or plan heading |
-| `{typography.headline}` | 22px | 700 | Section heading |
-| `{typography.card-title}` | 16px | 600 | Track, station, or collection |
-| `{typography.body}` | 15px | 400 | Default metadata |
-| `{typography.caption}` | 11px | 400 | Tab and schedule metadata |
-| `{typography.button}` | 15px | 600 | Actions |
+| `{typography.display-xl}` | 40 points | 700 | Destination heading |
+| `{typography.display-md}` | 28 points | 700 | Player or plan heading |
+| `{typography.headline}` | 22 points | 700 | Section heading |
+| `{typography.card-title}` | 16 points | 600 | Track, station, or collection |
+| `{typography.body}` | 15 points | 400 | Default metadata |
+| `{typography.caption}` | 11 points | 400 | Tab and schedule metadata |
+| `{typography.button}` | 15 points | 600 | Actions |
 
 ### Principles
 
@@ -110,11 +118,11 @@ Apple Music keeps system chrome quiet so album covers, editorial art, and radio 
 
 Use **Inter** or a native system sans when SF Pro is unavailable.
 
-## Layout
+# Screen composition
 
 ### Spacing System
 
-Use a 4px base. Screen gutters are 16px, artwork gaps 8–12px, and list rows 12–16px.
+Use a 4 points base. Screen gutters are 16 points, artwork gaps 8–12 points, and list rows 12–16 points.
 
 ### Grid & Container
 
@@ -124,7 +132,7 @@ Listen Now and Browse use horizontal media rails and two-column grids. Library a
 
 Use open white space around media rails and lists. Never add decorative panels behind artwork unless it is an editorial card.
 
-## Elevation & Depth
+Surface hierarchy observed in the source:
 
 | Level | Treatment | Use |
 |---|---|---|
@@ -137,31 +145,15 @@ Use open white space around media rails and lists. Never add decorative panels b
 
 Use blurred artwork and translucency around playback. Avoid drop shadows on ordinary lists.
 
-## Shapes
+# Navigation appearance
 
-### Border Radius Scale
+Listen Now, Browse, Radio, Library, and Search form the bottom bar. Non-subscribers may see a reduced set. Mini-player remains above it.
 
-| Token | Value | Use |
-|---|---|---|
-| `{rounded.xs}` | 6px | Artwork and compact controls |
-| `{rounded.sm}` | 10px | Trial and plan cards |
-| `{rounded.md}` | 14px | Context menus and sheets |
-| `{rounded.lg}` | 18px | Editorial cards |
-| `{rounded.full}` | full | Profile and circular controls |
-
-### Photography & Illustration Geometry
-
-Album and playlist art remains square and uncropped. Radio portraits may fill wide cards. Profile imagery is circular.
-
-## Components
+# Components
 
 ### Buttons
 
 Primary subscription and redemption actions use coral. Playback controls are black or white depending on backdrop. Secondary actions use text or native list rows.
-
-### Pricing Tabs
-
-Plans use large bordered cards with a checkmark selection. Search switches between Apple Music and Your Library with a compact segmented control.
 
 ### Cards & Containers
 
@@ -171,49 +163,23 @@ Media cards pair square art with title and artist. Radio cards add schedule and 
 
 Search uses a soft gray field with Cancel while active. Playlist search and manual redemption use native inputs and clear keyboard-safe actions.
 
-### Status & Build Page
+# Imagery and icons
+
+Use blurred artwork and translucency around playback. Avoid drop shadows on ordinary lists.
+
+Album and playlist art remains square and uncropped. Radio portraits may fill wide cards. Profile imagery is circular.
+
+If final imagery is not yet available, any placeholder must preserve the documented scale, placement, crop, and visual weight rather than removing that layer.
+
+# States
 
 Playback state stays in the mini-player. Live radio and schedule are explicit. Downloaded and selected library states use icon plus label.
 
-### Navigation
-
-Listen Now, Browse, Radio, Library, and Search form the bottom bar. Non-subscribers may see a reduced set. Mini-player remains above it.
-
-### Footer
-
-Tab bar and mini-player form a stacked footer. Full player replaces both with transport, volume, lyrics, output, and queue.
-
-## Do's and Don'ts
-
-### Do
-
-- Keep current playback persistent.
-- Preserve square artwork.
-- Derive player atmosphere from the active cover.
-- Distinguish catalog and library search.
-- Use native sheets for account and menus.
-
-### Don't
-
-- Don't recolor discovery chrome per album.
-- Don't crop cover typography.
-- Don't hide player access during navigation.
-- Don't interrupt browsing with full-screen upsells.
-- Don't merge playback and subscription actions.
-
-## Responsive Behavior
-
-### Breakpoints
-
-| Name | Width | Key Changes |
-|---|---|---|
-| Wide | 768px+ | Expand media rails and center player |
-| Compact | 390–767px | Default mobile layout |
-| Small | <390px | Reduce grid columns and shorten metadata |
+# iOS adaptation
 
 ### Touch Targets
 
-Maintain 44px for tabs, transport, overflow, search segments, and plan selection.
+Maintain 44 points for tabs, transport, overflow, search segments, and plan selection.
 
 ### Collapsing Strategy
 
@@ -223,15 +189,20 @@ Reduce media-grid columns before artwork size. Keep the mini-player full width a
 
 Contain square art and preserve aspect ratio. Cover only wide editorial cards; use a blurred duplicate for player atmosphere.
 
-## Iteration Guide
+Apply these rules within current iPhone safe areas and scrolling containers. Keep interactive targets at least 44 points, preserve a logical VoiceOver order, and let Dynamic Type wrap supporting text without flattening the documented hierarchy. Do not infer an unobserved dark or light appearance.
 
-1. Establish tabs and mini-player.
-2. Build artwork-led media card and list row.
-3. Add full player and context menu.
-4. Add library, search, and account sheets.
-5. Add subscription states last.
+# Anti-generic checklist
 
-## Known Gaps
+- Don't recolor discovery chrome per album.
+- Don't crop cover typography.
+- Don't hide player access during navigation.
+- Don't interrupt browsing with full-screen upsells.
+- Don't merge playback and subscription actions.
+- Do not replace the documented hierarchy with a generic stack of identical white cards or `Form` sections.
+- Do not use default blue tint, an unstyled `TabView`, arbitrary SF Symbols, or uniform corner radii when they contradict the recorded tokens and components.
+- Do not omit compositionally important imagery while final assets are pending; preserve its footprint with a faithful placeholder.
+
+# Known gaps
 
 - Exact Apple Music tokens were inferred visually.
 - The 38-flow inventory was complete and all top-level flows were inspected.
@@ -239,5 +210,3 @@ Contain square art and preserve aspect ratio. Cover only wide editorial cards; u
 - No tablet or desktop screens were present.
 
 </design-context>
-
-Use the design system above for all UI you generate.

@@ -16,10 +16,23 @@ Rocketbank uses expressive character and lifestyle imagery as part of the produc
 - Lifestyle cards use one strong image with overlaid white display text.
 - Images may bleed under black floating controls, but essential faces and objects stay unobstructed.
 
-# Color
+# Color and Materials
 
 Favor electric cyan, pink, orange, acid yellow, and deep black inside imagery. Place these against the UI's pale blue-to-pink wash so the media feels vivid without making the surrounding chrome noisy.
 
-# Usage
+# Variants and States
 
 Use character and lifestyle visuals for onboarding, assistant identity, venue discovery, referrals, and personalization. Keep balances, transfer forms, settings, and confirmations mostly typographic.
+
+# Production Requirements
+
+Preserve the documented placement, crop, negative space, and visual weight in production exports. Before final art exists, placeholders must preserve those same compositional properties.
+
+# Avoid
+
+- Do not replace the observed imagery language with unrelated stock art or arbitrary symbols.
+- Do not change the documented crop, density, or relationship to nearby text.
+
+# Known Gaps
+
+Animation, export dimensions, safe-crop specifications, appearance variants, and unshown state treatments were not documented.

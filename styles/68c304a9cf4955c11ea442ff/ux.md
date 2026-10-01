@@ -1,10 +1,10 @@
 # Overview
 
-A finance super-app that exposes payments, banking, services, stories, and history from one modular home screen. Orange signals primary actions and the central QR entry point.
+A finance super-app that exposes payments, banking, services, stories, and history from one modular home screen. signals primary actions and the QR entry point.
 
 # Navigation
 
-A five-item bottom bar covers Home, Banking, QR, History, and More. Home adds horizontal modes and service groups; detailed payments move into focused screens while the bottom bar remains available.
+A five-item primary navigation covers Home, Banking, QR, History, and More. Home adds modes and service groups; detailed payments move into focused screens while the primary navigation remains available.
 
 # Core Flows
 
@@ -29,8 +29,12 @@ A five-item bottom bar covers Home, Banking, QR, History, and More. Home adds ho
 
 # Interaction Patterns
 
-- Small rounded cards form a dense, scrollable service grid.
-- Orange circular selectors identify the current service group.
-- Stories provide visual promotion above financial utilities.
-- Empty states keep the action at the bottom of the content.
-- Success is confirmed in a large bottom sheet with a green icon and action.
+- Empty states keep the action of the content.
+
+# System Access Timing
+
+No system-access timing or denial-recovery path was documented in the reviewed source.
+
+# Known Gaps
+
+Unobserved flows, denial paths, cancellation behavior, and recovery states remain unspecified.

@@ -4,8 +4,8 @@ Tutu is a multimodal travel marketplace covering flights, hotels, trains, buses,
 
 # Navigation
 
-- A five-item bottom bar covers Search, Orders, Jarvel, Favorites or Info, and Profile.
-- A horizontal service rail switches transport and lodging modes above the shared search form.
+- A five-item primary navigation covers Search, Orders, Jarvel, Favorites or Info, and Profile.
+- A service rail switches transport and lodging modes above the shared search form.
 - Results progress through filters, item details, fare selection, passenger details, and checkout.
 
 # Core Flows
@@ -31,6 +31,11 @@ Tutu is a multimodal travel marketplace covering flights, hotels, trains, buses,
 # Interaction Patterns
 
 - A single structured form adapts across travel products.
-- Purple owns search and purchase; green calls out cashback.
-- Sticky bottom actions preserve the current price and next step.
-- Editorial and promotional cards support discovery beneath the primary booking task.
+
+# System Access Timing
+
+No system-access request timing or denial recovery was documented in the reviewed source.
+
+# Known Gaps
+
+- Permission-denial recovery and unobserved secondary flows were not documented.

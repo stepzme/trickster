@@ -1,10 +1,10 @@
 # Overview
 
-Alfa-Bank turns a large banking product into five personal destinations: Home, Payments, Benefits, History, and Chats. It mixes direct finance controls with vivid offer cards, conversational guidance, and personalization.
+Alfa-Bank turns a banking product into five personal destinations: Home, Payments, Benefits, History, and Chats. It mixes direct finance controls with vivid offer cards, conversational guidance, and personalization.
 
 # Navigation
 
-The bottom bar remains visible across primary destinations. Profile opens from the avatar; search and QR stay near the active screen title. Home modules can be pinned, hidden, or reordered.
+primary navigation remains visible across primary destinations. Profile opens from the avatar; search and QR stay near the active screen title. Home modules can be pinned, hidden, or reordered.
 
 # Core Flows
 
@@ -16,20 +16,27 @@ The bottom bar remains visible across primary destinations. Profile opens from t
 
 ## Payments and transfers
 
-Choose a rail, select source and recipient, enter amount and message, then confirm. Completion becomes a receipt card with receipt, template, autopay, gift, and done actions.
+1. Choose a rail, select source and recipient, enter amount and message, then confirm. Completion becomes a receipt card with receipt, template, autopay, gift, and done actions.
 
 ## Benefits and history
 
-Benefits separates offers, cashback, recommendations, games, and services. History combines feed, filters, monthly expense categories, scheduled payments, and export.
+1. Benefits separates offers, cashback, recommendations, games, and services. History combines feed, filters, monthly expense categories, scheduled payments, and export.
 
 ## Chats and profile
 
-Chats combines tutorials, notifications, bank support, and channels. Profile groups personal data, family, appearance, security, notification, payment, and transfer settings.
+1. Chats combines tutorials, notifications, bank support, and channels. Profile groups personal data, family, appearance, security, notification, payment, and transfer settings.
 
 # Interaction Patterns
 
 - Keep five primary destinations stable.
-- Make money actions black and explicit; use color for content and offers.
 - Preserve receipt actions after every transfer.
 - Let users configure home without hiding core accounts.
 - Distinguish bank chat, notifications, and editorial channels.
+
+# System Access Timing
+
+No system-access request timing or denial recovery was documented in the reviewed source.
+
+# Known Gaps
+
+- Permission-denial recovery and unobserved secondary flows were not documented.

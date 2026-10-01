@@ -10,10 +10,23 @@ Figures and objects are drawn with thin charcoal outlines, simplified rounded an
 
 Use small isolated scenes in pale blue, pink, cream, or white panels, with generous empty space and no detailed background. Photography remains the hero on beneficiary cards.
 
-# Color
+# Color and Materials
 
 Pastel sky blue, blush pink, cream, orange, lavender, and lime accents sit beside charcoal linework and the app's blue interaction color.
 
-# Usage
+# Variants and States
 
 Use illustrations for project guidance, recurring-help prompts, empty or explanatory states, and finance education. Use real photography for beneficiaries, volunteers, and reporting evidence.
+
+# Production Requirements
+
+Preserve the documented placement, crop, negative space, and visual weight in production exports. Before final art exists, placeholders must preserve those same compositional properties.
+
+# Avoid
+
+- Do not replace the observed imagery language with unrelated stock art or arbitrary symbols.
+- Do not change the documented crop, density, or relationship to nearby text.
+
+# Known Gaps
+
+Animation, export dimensions, safe-crop specifications, appearance variants, and unshown state treatments were not documented.

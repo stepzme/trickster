@@ -1,12 +1,12 @@
 <design-context>
 ---
-version: alpha
+version: 1
+platform: iOS
 name: Arc-Search-design-analysis
 description: "A soft spatial browser interface built from luminous lavender-pink backgrounds, frosted white page cards, cobalt AI headings, and a thumb-centered bottom dock. Search, tabs, and page tools appear as layered sheets while live web content remains recognizable behind them."
 colors:
   primary: "#3438F2"
   on-primary: "#FFFFFF"
-  primary-hover: "#2529D8"
   primary-soft: "#E8E8FF"
   accent-purple: "#8A45E6"
   accent-pink: "#F2D9EE"
@@ -21,32 +21,30 @@ colors:
   semantic-danger: "#F04457"
   semantic-overlay: "#000000"
 typography:
-  display-xl: { fontFamily: System Sans, fontSize: 40px, fontWeight: 750, lineHeight: 1.00, letterSpacing: -1.0px }
-  display-lg: { fontFamily: System Sans, fontSize: 32px, fontWeight: 700, lineHeight: 1.05, letterSpacing: -0.6px }
-  display-md: { fontFamily: System Sans, fontSize: 26px, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.3px }
-  headline: { fontFamily: System Sans, fontSize: 22px, fontWeight: 700, lineHeight: 1.18, letterSpacing: -0.2px }
-  card-title: { fontFamily: System Sans, fontSize: 15px, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: System Sans, fontSize: 17px, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
-  body-lg: { fontFamily: System Sans, fontSize: 16px, fontWeight: 400, lineHeight: 1.50, letterSpacing: 0 }
-  body: { fontFamily: System Sans, fontSize: 14px, fontWeight: 400, lineHeight: 1.45, letterSpacing: 0 }
-  body-sm: { fontFamily: System Sans, fontSize: 12px, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
-  caption: { fontFamily: System Sans, fontSize: 10px, fontWeight: 400, lineHeight: 1.25, letterSpacing: 0 }
-  button: { fontFamily: System Sans, fontSize: 15px, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0 }
-  eyebrow: { fontFamily: System Sans, fontSize: 11px, fontWeight: 650, lineHeight: 1.20, letterSpacing: 0.3px }
-  mono: { fontFamily: System Mono, fontSize: 12px, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
-rounded: { xs: 8px, sm: 12px, md: 16px, lg: 22px, xl: 30px, xxl: 38px, pill: 9999px, full: 9999px }
-spacing: { xxs: 4px, xs: 8px, sm: 12px, md: 16px, lg: 24px, xl: 32px, xxl: 48px, section: 64px }
+  display-xl: { fontFamily: System Sans, fontSize: 40, fontWeight: 750, lineHeight: 1.00, letterSpacing: -1.0 }
+  display-lg: { fontFamily: System Sans, fontSize: 32, fontWeight: 700, lineHeight: 1.05, letterSpacing: -0.6 }
+  display-md: { fontFamily: System Sans, fontSize: 26, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.3 }
+  headline: { fontFamily: System Sans, fontSize: 22, fontWeight: 700, lineHeight: 1.18, letterSpacing: -0.2 }
+  card-title: { fontFamily: System Sans, fontSize: 15, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
+  subhead: { fontFamily: System Sans, fontSize: 17, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
+  body-lg: { fontFamily: System Sans, fontSize: 16, fontWeight: 400, lineHeight: 1.50, letterSpacing: 0 }
+  body: { fontFamily: System Sans, fontSize: 14, fontWeight: 400, lineHeight: 1.45, letterSpacing: 0 }
+  body-sm: { fontFamily: System Sans, fontSize: 12, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
+  caption: { fontFamily: System Sans, fontSize: 10, fontWeight: 400, lineHeight: 1.25, letterSpacing: 0 }
+  button: { fontFamily: System Sans, fontSize: 15, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0 }
+  eyebrow: { fontFamily: System Sans, fontSize: 11, fontWeight: 650, lineHeight: 1.20, letterSpacing: 0.3 }
+  mono: { fontFamily: System Mono, fontSize: 12, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
+rounded: { xs: 8, sm: 12, md: 16, lg: 22, xl: 30, xxl: 38, pill: 9999, full: 9999 }
+spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
 components:
-  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 14px 20px }
-  search-sheet: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xl}", padding: 16px }
-  tab-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 10px }
-  source-chip: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.caption}", rounded: "{rounded.sm}", padding: 8px }
-  page-menu: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.xl}", padding: 12px }
-  top-nav: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.pill}", height: 48px }
-  footer: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.caption}", rounded: "{rounded.pill}", padding: 10px 14px }
+  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [14, 20]}
+  search-sheet: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xl}", padding: 16 }
+  tab-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 10 }
+  source-chip: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.caption}", rounded: "{rounded.sm}", padding: 8 }
+  page-menu: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.xl}", padding: 12 }
 ---
 
-## Overview
+# Overview
 
 Arc Search treats browser pages as physical cards floating in a soft luminous field. Cobalt emphasizes generated answers, while source chips and web previews maintain traceability.
 
@@ -58,7 +56,16 @@ Arc Search treats browser pages as physical cards floating in a soft luminous fi
 - Layered spatial tab overview.
 - Source-backed Browse for Me summaries.
 
-## Colors
+# Non-negotiable visual invariants
+
+- The reviewed screens show this treatment: Lavender-pink atmospheric canvas.
+- The reviewed screens show this treatment: Frosted white cards and bottom sheets.
+- The reviewed screens show this treatment: Cobalt AI headings and primary actions.
+- The reviewed screens show this treatment: Central plus/search action.
+- The reviewed screens show this treatment: Layered spatial tab overview.
+- The reviewed screens show this treatment: Source-backed Browse for Me summaries.
+
+# Color and surfaces
 
 ### Brand & Accent
 - **Cobalt** ({colors.primary}): AI headings, primary action, and selected emphasis.
@@ -81,7 +88,7 @@ Arc Search treats browser pages as physical cards floating in a soft luminous fi
 - **Danger** ({colors.semantic-danger}): Data clearing and destructive state.
 - **Overlay** ({colors.semantic-overlay}): Page dimming behind sheets.
 
-## Typography
+# Typography
 
 ### Font Family
 
@@ -92,13 +99,13 @@ Arc Search treats browser pages as physical cards floating in a soft luminous fi
 
 | Token | Size | Weight | Use |
 |---|---|---|---|
-| `{typography.display-xl}` | 40px | 750 | Onboarding statement |
-| `{typography.display-md}` | 26px | 700 | Generated result heading |
-| `{typography.headline}` | 22px | 700 | Settings or page heading |
-| `{typography.card-title}` | 15px | 600 | Source or tab title |
-| `{typography.body}` | 14px | 400 | Summary and page tools |
-| `{typography.caption}` | 10px | 400 | Sources and settings metadata |
-| `{typography.button}` | 15px | 600 | Primary actions |
+| `{typography.display-xl}` | 40pt | 750 | Onboarding statement |
+| `{typography.display-md}` | 26pt | 700 | Generated result heading |
+| `{typography.headline}` | 22pt | 700 | Settings or page heading |
+| `{typography.card-title}` | 15pt | 600 | Source or tab title |
+| `{typography.body}` | 14pt | 400 | Summary and page tools |
+| `{typography.caption}` | 10pt | 400 | Sources and settings metadata |
+| `{typography.button}` | 15pt | 600 | Primary actions |
 
 ### Principles
 
@@ -111,11 +118,11 @@ Arc Search treats browser pages as physical cards floating in a soft luminous fi
 
 Use **SF Pro**, **Inter**, or **Helvetica Neue**.
 
-## Layout
+# Screen composition
 
 ### Spacing System
 
-Use a 4px base. Page gutters are 12px, generated sections 16px apart, and bottom sheets use 16px padding.
+Use a 4pt base. Page gutters are 12pt, generated sections 16pt apart, and bottom sheets use 16pt padding.
 
 ### Grid & Container
 
@@ -125,44 +132,15 @@ Browser content is one column. Browse for Me adds horizontal source chips and fu
 
 Keep generous space around generated sections and dock controls. Let live web pages retain their own density inside the card.
 
-## Elevation & Depth
+# Navigation appearance
 
-| Level | Treatment | Use |
-|---|---|---|
-| 0 | Luminous canvas | Browser environment |
-| 1 | White page card | Active tab |
-| 2 | Layered card stack | Tab overview |
-| 3 | Frosted bottom sheet | Search and page menu |
+The bottom dock exposes tab overview, central new search, and page/menu control. Browser navigation moves into the page sheet.
 
-### Decorative Depth
-
-Use subtle blur, colored glow, and offset card stacks. Avoid heavy material shadows or decorative imagery.
-
-## Shapes
-
-### Border Radius Scale
-
-| Token | Value | Use |
-|---|---|---|
-| `{rounded.xs}` | 8px | Source chips and settings icons |
-| `{rounded.sm}` | 12px | Search field and controls |
-| `{rounded.md}` | 16px | Tab cards |
-| `{rounded.xl}` | 30px | Bottom sheets and page silhouette |
-| `{rounded.pill}` | full | Dock and URL field |
-
-### Photography & Illustration Geometry
-
-Web images follow page content. Onboarding uses framed browser mockups rather than a separate illustration system. App icons remain small and square-rounded.
-
-## Components
+# Components
 
 ### Buttons
 
 Primary onboarding actions use cobalt. Browser dock actions use neutral translucent circles. Destructive settings remain text-led and explicit.
-
-### Pricing Tabs
-
-No pricing tabs were observed. Search mode and page display choices use compact segmented or grouped controls.
 
 ### Cards & Containers
 
@@ -180,11 +158,52 @@ Skeleton layouts show source scanning and page structure before generation. Scan
 
 The bottom dock exposes tab overview, central new search, and page/menu control. Browser navigation moves into the page sheet.
 
-### Footer
+# Imagery and icons
 
-The thumb-centered dock is the footer. Search and page menu temporarily expand upward while preserving the active page behind them.
+| Level | Treatment | Use |
+|---|---|---|
+| 0 | Luminous canvas | Browser environment |
+| 1 | White page card | Active tab |
+| 2 | Layered card stack | Tab overview |
+| 3 | Frosted bottom sheet | Search and page menu |
 
-## Do's and Don'ts
+### Decorative Depth
+
+Use subtle blur, colored glow, and offset card stacks. Avoid heavy material shadows or decorative imagery.
+
+# States
+
+Skeleton layouts show source scanning and page structure before generation. Scanned-page count and source list remain visible after completion.
+
+# iOS adaptation
+
+| Wide | 768pt+ | Center page card and widen summary |
+| Small | <390pt | Stack source chips and reduce tab offsets |
+
+### Touch Targets
+
+Maintain 44pt for dock actions, menu tiles, settings rows, tab cards, and search controls.
+
+### Collapsing Strategy
+
+Keep one-column browsing. Reduce tab stack offsets before shrinking previews; wrap source chips before truncating source identity.
+
+### Image Behavior
+
+Respect live-page media. Browser mockups and previews use contain; tab snapshots crop only at the viewport edge.
+
+On iPhone, respect top and bottom safe areas, use scrolling for content that does not fit, keep interactive targets at least 44 points, and preserve the visual reading order for VoiceOver. At larger Dynamic Type sizes, allow supporting text to wrap without collapsing the dominant hierarchy. Use native sheets and permission transitions while explicitly styling app-owned surfaces to match the reference.
+
+# Anti-generic checklist
+
+- Do not substitute the documented accent hierarchy with default iOS blue.
+- Do not collapse distinct surfaces into a uniform stack of generic white cards.
+- Do not use an unstyled `TabView`, `Form`, or arbitrary SF Symbols when they contradict the documented navigation and component language.
+- Do not flatten the documented typography into one body-text scale.
+- Do not remove compositionally important photography or illustration while assets are pending.
+- Do not apply one corner radius to every control and surface.
+
+Source-specific guardrails retained from the review:
 
 ### Do
 
@@ -202,43 +221,10 @@ The thumb-centered dock is the footer. Search and page menu temporarily expand u
 - Don't overuse gradient inside web content.
 - Don't hide native page access.
 
-## Responsive Behavior
-
-### Breakpoints
-
-| Name | Width | Key Changes |
-|---|---|---|
-| Wide | 768px+ | Center page card and widen summary |
-| Compact | 390–767px | Default mobile layout |
-| Small | <390px | Stack source chips and reduce tab offsets |
-
-### Touch Targets
-
-Maintain 44px for dock actions, menu tiles, settings rows, tab cards, and search controls.
-
-### Collapsing Strategy
-
-Keep one-column browsing. Reduce tab stack offsets before shrinking previews; wrap source chips before truncating source identity.
-
-### Image Behavior
-
-Respect live-page media. Browser mockups and previews use contain; tab snapshots crop only at the viewport edge.
-
-## Iteration Guide
-
-1. Establish page card and bottom dock.
-2. Build search sheet and normal browsing.
-3. Add source-backed Browse for Me.
-4. Implement spatial tabs and page menu.
-5. Add settings and luminous atmosphere last.
-
-## Known Gaps
+# Known gaps
 
 - Exact tokens and font names were inferred visually.
 - The 35-flow inventory was complete and all top-level flows were inspected.
 - Many preview transitions were video-only; motion was not assessed.
-- No tablet or desktop screens were present.
 
 </design-context>
-
-Use the design system above for all UI you generate.

@@ -4,7 +4,7 @@ Fix Price joins fulfillment choice, discovery, loyalty, cart, checkout, stores, 
 
 # Navigation
 
-Home, Catalog, Cart, Stores, and Profile stay fixed; search and fulfillment remain near the top.
+Home, Catalog, Cart, Stores, and Profile remain available; search and fulfillment remain .
 
 # Core Flows
 
@@ -22,3 +22,11 @@ Home, Catalog, Cart, Stores, and Profile stay fixed; search and fulfillment rema
 - Keep price and availability explicit.
 - Show pickup store or address throughout checkout.
 - Confirm cancellation.
+
+# System Access Timing
+
+No system-access request timing or denial recovery was documented in the reviewed source.
+
+# Known Gaps
+
+- Permission-denial recovery and unobserved secondary flows were not documented.

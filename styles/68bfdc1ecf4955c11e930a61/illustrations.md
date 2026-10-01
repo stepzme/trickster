@@ -1,6 +1,10 @@
-# Illustration Language
+# Overview
 
-Use a friendly polished 3D mascot world led by the blue Wolt deer. Characters have rounded toy-like anatomy, expressive faces, soft materials, and compact botanical or food props. Cyan, white, orange, green, and violet create an optimistic delivery universe.
+No dedicated imagery overview was documented.
+
+# Visual Style
+
+No medium, line, dimensionality, texture, lighting, or motif rules were documented.
 
 # Composition
 
@@ -8,9 +12,17 @@ Use a friendly polished 3D mascot world led by the blue Wolt deer. Characters ha
 - Keep silhouettes readable and lighting soft, with a small contact shadow.
 - Pair character scenes with large, plain text rather than dense decoration.
 
-# Usage
+# Color and Materials
+
+No imagery-specific palette or material treatment was documented.
+
+# Variants and States
 
 Use for onboarding, rewards, empty states, referral, gifting, and lightweight waiting moments. Use food photography—not illustration—for actual menu and restaurant content.
+
+# Production Requirements
+
+Preserve the documented placement, crop, negative space, and visual weight in production exports. Before final art exists, placeholders must preserve those same compositional properties.
 
 # Avoid
 
@@ -18,3 +30,7 @@ Use for onboarding, rewards, empty states, referral, gifting, and lightweight wa
 - Using 3D characters inside dense transactional rows.
 - Replacing food photos with synthetic art.
 - Heavy texture, hard shadows, or muted corporate palettes.
+
+# Known Gaps
+
+Animation, export dimensions, safe-crop specifications, appearance variants, and unshown state treatments were not documented.

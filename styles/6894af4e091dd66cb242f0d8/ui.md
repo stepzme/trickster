@@ -1,6 +1,7 @@
 <design-context>
 ---
-version: alpha
+version: 1
+platform: iOS
 name: 4-lapy-design-analysis
 description: "A playful pet-commerce interface built from pale blue-gray surfaces, white rounded cards, bold black actions, and a high-energy palette of orange, pink, violet, cyan, and yellow. Black animal silhouettes, sticker-like symbols, cropped pet photography, and campaign collage give the system a distinctive graphic voice while dense catalog and checkout screens remain conventional."
 colors:
@@ -22,32 +23,31 @@ colors:
   semantic-danger: "#DC4D5B"
   semantic-overlay: "#000000"
 typography:
-  display-xl: { fontFamily: Bold Grotesk, fontSize: 40px, fontWeight: 700, lineHeight: 1.00, letterSpacing: -1.0px }
-  display-lg: { fontFamily: Bold Grotesk, fontSize: 32px, fontWeight: 700, lineHeight: 1.05, letterSpacing: -0.6px }
-  display-md: { fontFamily: System Sans, fontSize: 26px, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.3px }
-  headline: { fontFamily: System Sans, fontSize: 22px, fontWeight: 700, lineHeight: 1.15, letterSpacing: -0.2px }
-  card-title: { fontFamily: System Sans, fontSize: 16px, fontWeight: 600, lineHeight: 1.22, letterSpacing: 0 }
-  subhead: { fontFamily: System Sans, fontSize: 16px, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
-  body-lg: { fontFamily: System Sans, fontSize: 16px, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
-  body: { fontFamily: System Sans, fontSize: 14px, fontWeight: 400, lineHeight: 1.38, letterSpacing: 0 }
-  body-sm: { fontFamily: System Sans, fontSize: 12px, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
-  caption: { fontFamily: System Sans, fontSize: 11px, fontWeight: 500, lineHeight: 1.25, letterSpacing: 0 }
-  button: { fontFamily: System Sans, fontSize: 15px, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0 }
-  eyebrow: { fontFamily: System Sans, fontSize: 11px, fontWeight: 700, lineHeight: 1.20, letterSpacing: 0.2px }
-  mono: { fontFamily: System Mono, fontSize: 12px, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
-rounded: { xs: 6px, sm: 10px, md: 14px, lg: 18px, xl: 24px, xxl: 30px, pill: 9999px, full: 9999px }
-spacing: { xxs: 4px, xs: 8px, sm: 12px, md: 16px, lg: 24px, xl: 32px, xxl: 48px, section: 64px }
+  display-xl: { fontFamily: Bold Grotesk, fontSize: 40, fontWeight: 700, lineHeight: 1.00, letterSpacing: -1.0 }
+  display-lg: { fontFamily: Bold Grotesk, fontSize: 32, fontWeight: 700, lineHeight: 1.05, letterSpacing: -0.6 }
+  display-md: { fontFamily: System Sans, fontSize: 26, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.3 }
+  headline: { fontFamily: System Sans, fontSize: 22, fontWeight: 700, lineHeight: 1.15, letterSpacing: -0.2 }
+  card-title: { fontFamily: System Sans, fontSize: 16, fontWeight: 600, lineHeight: 1.22, letterSpacing: 0 }
+  subhead: { fontFamily: System Sans, fontSize: 16, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
+  body-lg: { fontFamily: System Sans, fontSize: 16, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
+  body: { fontFamily: System Sans, fontSize: 14, fontWeight: 400, lineHeight: 1.38, letterSpacing: 0 }
+  body-sm: { fontFamily: System Sans, fontSize: 12, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
+  caption: { fontFamily: System Sans, fontSize: 11, fontWeight: 500, lineHeight: 1.25, letterSpacing: 0 }
+  button: { fontFamily: System Sans, fontSize: 15, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0 }
+  eyebrow: { fontFamily: System Sans, fontSize: 11, fontWeight: 700, lineHeight: 1.20, letterSpacing: 0.2 }
+  mono: { fontFamily: System Mono, fontSize: 12, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
+rounded: { xs: 6, sm: 10, md: 14, lg: 18, xl: 24, xxl: 30, pill: 9999, full: 9999 }
+spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
 components:
-  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: 14px 20px }
+  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: [14, 20]}
   promo-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 0 }
-  category-row: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.card-title}", rounded: "{rounded.lg}", padding: 14px }
-  cart-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 14px }
-  segmented-control: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.pill}", padding: 4px }
-  top-nav: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.headline}", rounded: "{rounded.xs}", height: 56px }
-  footer: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: 20px 16px }
+  category-row: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.card-title}", rounded: "{rounded.lg}", padding: 14 }
+  cart-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 14 }
+  segmented-control: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.pill}", padding: 4 }
+  bottom navigation: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: [20, 16]}
 ---
 
-## Overview
+# Overview
 
 4 lapy combines retail and pet care in a bright graphic system. Pale blue-gray canvas supports white commerce cards, while campaigns and categories use black animal silhouettes, pet photography, and saturated color blocks.
 
@@ -59,7 +59,16 @@ components:
 - Six-item bottom navigation.
 - Photo collage and sticker language for campaigns.
 
-## Colors
+# Non-negotiable visual invariants
+
+- Pale cool canvas with large white rounded groups.
+- Sampled screens consistently use black pill actions with strong contrast.
+- Imagery consistently uses orange, pink, violet, cyan, and yellow graphic accents.
+- The reference consistently shows silhouette-based animal categories.
+- Navigation consistently uses six-item bottom navigation.
+- Imagery consistently uses photo collage and sticker language for campaigns.
+
+# Color and surfaces
 
 ### Brand & Accent
 - **Black** ({colors.primary}): Primary actions, selected service segment, and strong text.
@@ -81,7 +90,7 @@ components:
 - **Danger** ({colors.semantic-danger}): Delete and error.
 - **Overlay** ({colors.semantic-overlay}): Onboarding and modal scrim.
 
-## Typography
+# Typography
 
 ### Font Family
 
@@ -93,13 +102,13 @@ components:
 
 | Token | Size | Weight | Use |
 |---|---|---|---|
-| `{typography.display-xl}` | 40px | 700 | Campaign statement |
-| `{typography.display-md}` | 26px | 700 | Screen title |
-| `{typography.headline}` | 22px | 700 | Section heading |
-| `{typography.card-title}` | 16px | 600 | Category and product |
-| `{typography.body}` | 14px | 400 | Default copy |
-| `{typography.caption}` | 11px | 500 | Tabs and bonuses |
-| `{typography.button}` | 15px | 600 | Primary action |
+| `{typography.display-xl}` | 40 points | 700 | Campaign statement |
+| `{typography.display-md}` | 26 points | 700 | Screen title |
+| `{typography.headline}` | 22 points | 700 | Section heading |
+| `{typography.card-title}` | 16 points | 600 | Category and product |
+| `{typography.body}` | 14 points | 400 | Default copy |
+| `{typography.caption}` | 11 points | 500 | Tabs and bonuses |
+| `{typography.button}` | 15 points | 600 | Primary action |
 
 ### Principles
 
@@ -112,11 +121,11 @@ components:
 
 Use **Arial Black** or **Archivo Black** for campaign display and **SF Pro / Inter** for system content.
 
-## Layout
+# Screen composition
 
 ### Spacing System
 
-Use a 4px base. Screen gutters are 8–12px, card interiors 14–16px, and campaign gaps 12px.
+Use a 4 points base. Screen gutters are 8–12 points, card interiors 14–16 points, and campaign gaps 12 points.
 
 ### Grid & Container
 
@@ -126,7 +135,7 @@ Home uses two-column utility tiles and large campaign cards. Catalog is a single
 
 Keep structural screens airy and card-led. Concentrate visual energy inside campaign artwork rather than coloring the entire canvas.
 
-## Elevation & Depth
+Surface hierarchy observed in the source:
 
 | Level | Treatment | Use |
 |---|---|---|
@@ -139,31 +148,15 @@ Keep structural screens airy and card-led. Concentrate visual energy inside camp
 
 Use slight card shadows, photo cutouts, flat shapes, and sticker overlap. Avoid glossy realism outside product imagery.
 
-## Shapes
+# Navigation appearance
 
-### Border Radius Scale
+Home, Catalog, Pets, Cart, Favorites, and Profile form the bottom bar. Selected state uses black while inactive items are blue-gray.
 
-| Token | Value | Use |
-|---|---|---|
-| `{rounded.sm}` | 10px | Icons and chips |
-| `{rounded.md}` | 14px | Buttons and fields |
-| `{rounded.lg}` | 18px | Cards and rows |
-| `{rounded.xl}` | 24px | Campaign frames |
-| `{rounded.pill}` | full | Primary actions and segments |
-
-### Photography & Illustration Geometry
-
-Pet and product photos use rounded crops or cutouts. Category silhouettes sit in saturated circles. Campaign collage may overlap photography, type, and flat shapes.
-
-## Components
+# Components
 
 ### Buttons
 
 Primary actions are full-width black pills with white text. Secondary controls use white or pale backgrounds. Quantity controls are compact circular minus and plus actions.
-
-### Pricing Tabs
-
-No pricing-plan tabs were observed. Pet Services and Pets use a bottom pill segment with black selected fill.
 
 ### Cards & Containers
 
@@ -173,49 +166,23 @@ Promo cards combine pets, people, text, and graphic shapes. Category rows pair s
 
 Search and delivery address stay at the top of commerce screens. Checkout uses stacked white groups for address, delivery, payment, and comment.
 
-### Status & Build Page
+# Imagery and icons
+
+Use slight card shadows, photo cutouts, flat shapes, and sticker overlap. Avoid glossy realism outside product imagery.
+
+Pet and product photos use rounded crops or cutouts. Category silhouettes sit in saturated circles. Campaign collage may overlap photography, type, and flat shapes.
+
+If final imagery is not yet available, any placeholder must preserve the documented scale, placement, crop, and visual weight rather than removing that layer.
+
+# States
 
 Discounts, bonuses, promo eligibility, order state, and service availability use explicit labels. Color reinforces but does not replace them.
 
-### Navigation
-
-Home, Catalog, Pets, Cart, Favorites, and Profile form the bottom bar. Selected state uses black while inactive items are blue-gray.
-
-### Footer
-
-Profile ends with support, information, and app details. Order completion uses a summary rather than a separate footer.
-
-## Do's and Don'ts
-
-### Do
-
-- Keep black actions consistent.
-- Use silhouettes to identify animal categories.
-- Separate service discovery from saved pet profiles.
-- Let campaigns carry the bright palette.
-- Preserve delivery and total context in cart.
-
-### Don't
-
-- Don't place every card on a saturated background.
-- Don't use playful display type in medical detail.
-- Don't replace real products or pets with drawings.
-- Don't hide bonus conditions.
-- Don't add more bottom destinations.
-
-## Responsive Behavior
-
-### Breakpoints
-
-| Name | Width | Key Changes |
-|---|---|---|
-| Wide | 768px+ | Center or use a two-column commerce grid |
-| Compact | 390–767px | Default cards and bottom bar |
-| Small | <390px | Stack home utility tiles |
+# iOS adaptation
 
 ### Touch Targets
 
-Keep bottom tabs, category rows, pet-service accordions, and quantity controls at least 44px.
+Keep bottom tabs, category rows, pet-service accordions, and quantity controls at least 44 points.
 
 ### Collapsing Strategy
 
@@ -225,15 +192,20 @@ Stack campaign and utility cards before shrinking labels. Pet categories remain 
 
 Use cover for campaign photography, contain for silhouettes and product packs, and circular crops for saved pets.
 
-## Iteration Guide
+Apply these rules within current iPhone safe areas and scrolling containers. Keep interactive targets at least 44 points, preserve a logical VoiceOver order, and let Dynamic Type wrap supporting text without flattening the documented hierarchy. Do not infer an unobserved dark or light appearance.
 
-1. Establish cool canvas and white cards.
-2. Build black action and bottom navigation.
-3. Add category silhouettes.
-4. Implement catalog, cart, and pet profile.
-5. Add campaign collage last.
+# Anti-generic checklist
 
-## Known Gaps
+- Don't place every card on a saturated background.
+- Don't use playful display type in medical detail.
+- Don't replace real products or pets with drawings.
+- Don't hide bonus conditions.
+- Don't add more bottom destinations.
+- Do not replace the documented hierarchy with a generic stack of identical white cards or `Form` sections.
+- Do not use default blue tint, an unstyled `TabView`, arbitrary SF Symbols, or uniform corner radii when they contradict the recorded tokens and components.
+- Do not omit compositionally important imagery while final assets are pending; preserve its footprint with a faithful placeholder.
+
+# Known gaps
 
 - Exact typefaces and tokens were inferred visually.
 - The 28-flow inventory was complete; long checkout states were sampled.
@@ -241,5 +213,3 @@ Use cover for campaign photography, contain for silhouettes and product packs, a
 - Motion in promotional stories was not evaluated.
 
 </design-context>
-
-Use the design system above for all UI you generate.

@@ -1,19 +1,19 @@
 # Overview
 
-A data-dense activity product that connects personal progress with a social feed and community groups. Bright orange identifies primary actions while most information stays black on white.
+An activity product that connects personal progress with a social feed and community groups. Primary actions remain distinct from supporting community information.
 
 # Navigation
 
-A five-item bottom bar separates Home, Maps, Record, Groups, and You. Record is visually centered and circular. Groups adds a second level of tabs for Active, Challenges, and Clubs; activity details use a focused top bar with save and overflow actions.
+Five primary destinations separate Home, Maps, Record, Groups, and You. Record is available from primary navigation. Groups adds a second level of tabs for Active, Challenges, and Clubs; activity details use a focused navigation context with save and overflow actions.
 
 # Core Flows
 
 ## Personalize onboarding
 
-1. Choose one or more activity types from a two-column grid.
-2. Review the immediate selected state as tiles invert from light gray to black.
-3. Continue through a full-width orange action.
-4. Finish on a photographic community message before entering the product.
+1. Choose one or more activity types from the available choices.
+2. Review the selected-state confirmation.
+3. Continue through a primary action.
+4. Finish on a community message before entering the product.
 
 ## Review an activity
 
@@ -25,14 +25,19 @@ A five-item bottom bar separates Home, Maps, Record, Groups, and You. Record is 
 ## Explore community
 
 1. Open Groups and switch between activity, challenge, and club tabs.
-2. Filter challenge types with horizontal activity chips.
+2. Filter challenge types with activity filters.
 3. Join a featured challenge or open a recommended one.
 4. Open Clubs to discover or create a community.
 
 # Interaction Patterns
 
-- Selected choices invert to black with white iconography.
-- Orange is reserved for continue, join, connect, and other forward actions.
-- Goal completion uses compact rings, progress bars, and green confirmation.
-- Dense metrics use strong numerals with small labels rather than card decoration.
+- Activity metrics expose values and supporting labels.
 - Contextual coach marks point to unfamiliar interactions without blocking the whole screen.
+
+# System Access Timing
+
+No system-access timing or denial-recovery behavior was documented in the reviewed source.
+
+# Known Gaps
+
+System-permission denial paths, interrupted flows, and recovery behavior not described above were not available in the reviewed source.

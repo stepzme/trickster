@@ -16,10 +16,22 @@ Raiffeisen uses friendly editorial illustrations to explain onboarding, security
 - Larger profile and product banners let the artwork bleed behind a white content sheet.
 - Keep one focal action or metaphor per image and leave clear space for adjacent copy.
 
-# Color
+# Color and Materials
 
 Use the yellow brand accent as the anchor, then add one or two soft supporting hues from the UI palette. Keep black outlines and avoid saturated full-spectrum scenes.
 
-# Usage
+# Variants and States
 
 Use illustrations for explanation, reassurance, and lightweight promotion. Do not use them behind transaction rows, numeric forms, account balances, or other data that needs immediate scanning.
+
+# Production Requirements
+
+Use only the formats and crops supported by the implemented placement. Where the documented imagery is compositionally important, temporary placeholders must preserve its placement, crop, scale, negative space, and approximate visual weight until final art exists. No unobserved light/dark variants or export ratios are prescribed.
+
+# Avoid
+
+- Do not replace the documented image language with unrelated stock art, arbitrary symbols, or a denser composition.
+
+# Known Gaps
+
+- Export aspect ratios, safe crop measurements, animation, and unobserved state variants were not documented.

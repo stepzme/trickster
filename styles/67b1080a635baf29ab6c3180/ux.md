@@ -10,7 +10,7 @@ Three fixed destinations connect Home, Explore, and Profile. The content viewer 
 
 ## Learn from a clip
 
-1. Open the vertical feed.
+1. Open the feed.
 2. Watch or read the phrase in context.
 3. Toggle captions, adjust speed, react, or share.
 4. Continue to the next clip or open a themed collection.
@@ -24,7 +24,12 @@ Three fixed destinations connect Home, Explore, and Profile. The content viewer 
 
 # Interaction Patterns
 
-- Content is full-screen and high-energy against black.
-- Acid green identifies the brand; collection cards use saturated clashing colors.
-- Controls sit in rounded black pills over media.
 - Humor and character expression provide the teaching context.
+
+# System Access Timing
+
+No system-access timing or denial-recovery path was documented in the reviewed source.
+
+# Known Gaps
+
+Unobserved flows, denial paths, cancellation behavior, and recovery states remain unspecified.

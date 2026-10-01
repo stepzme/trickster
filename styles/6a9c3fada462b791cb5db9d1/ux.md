@@ -4,7 +4,7 @@ Omio combines transport, stays, destination discovery, favorites, bookings, and 
 
 # Navigation
 
-A five-item bottom bar anchors Search, Explore, Favorites, Bookings, and Profile. Search switches between Travel and Stays; focused selection and booking steps use a navy header with a clear back path.
+A five primary destinations anchors Search, Explore, Favorites, Bookings, and Profile. Search switches between Travel and Stays; focused selection and booking steps use a navy header with a clear back path.
 
 # Core Flows
 
@@ -22,12 +22,20 @@ A five-item bottom bar anchors Search, Explore, Favorites, Bookings, and Profile
 
 ## Explore and manage
 
-Explore filters destination cards and exposes a map. Favorites retain saved options; Bookings opens journey, ticket, accommodation, support, change, and cancellation details. Profile manages passenger data, payment, currency, inbox, settings, and support.
+1. Explore filters destination cards and exposes a map. Favorites retain saved options; Bookings opens journey, ticket, accommodation, support, change, and cancellation details. Profile manages passenger data, payment, currency, inbox, settings, and support.
 
 # Interaction Patterns
 
-- Travel and Stays share the same stacked search rhythm with an explicit selected tab.
-- Result cards keep operator, time, duration, stops, passenger count, and price together.
-- Nearby dates, mode tabs, filter chips, and sort controls remain above the result list.
-- Favorites use a heart on result cards; maps are opened through a floating bottom action.
+- Travel and Stays share the same search sequence while preserving the selected product mode.
+- Results keep operator, time, duration, stops, passenger count, and price together.
+- Dates, modes, filters, and sorting remain available while reviewing results.
+- Favorites and maps are available from result items.
 - Booking sections expand progressively while the navy journey summary remains available above them.
+
+# System Access Timing
+
+No system-access timing or denial-recovery behavior was documented in the reviewed source.
+
+# Known Gaps
+
+System-permission denial paths, interrupted flows, and recovery behavior not described above were not available in the reviewed source.

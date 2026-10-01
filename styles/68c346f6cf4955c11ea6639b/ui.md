@@ -1,6 +1,7 @@
 <design-context>
 ---
-version: alpha
+version: 1
+platform: iOS
 name: Translate-design-analysis
 description: "A quiet translation utility built from pale-gray grouped canvas, large white input cards, black system typography, and a soft aqua-teal accent. Generous empty space and simple icon actions keep language exchange immediate and calm."
 
@@ -21,36 +22,47 @@ colors:
   semantic-overlay: "#000000"
 
 typography:
-  display-xl: { fontFamily: System Sans, fontSize: 34px, fontWeight: 700, lineHeight: 1.1, letterSpacing: -0.4px }
-  display-lg: { fontFamily: System Sans, fontSize: 28px, fontWeight: 700, lineHeight: 1.15, letterSpacing: -0.2px }
-  display-md: { fontFamily: System Sans, fontSize: 23px, fontWeight: 650, lineHeight: 1.18, letterSpacing: 0 }
-  headline: { fontFamily: System Sans, fontSize: 20px, fontWeight: 650, lineHeight: 1.22, letterSpacing: 0 }
-  card-title: { fontFamily: System Sans, fontSize: 17px, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: System Sans, fontSize: 17px, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
-  body-lg: { fontFamily: System Sans, fontSize: 17px, fontWeight: 400, lineHeight: 1.42, letterSpacing: 0 }
-  body: { fontFamily: System Sans, fontSize: 15px, fontWeight: 400, lineHeight: 1.42, letterSpacing: 0 }
-  body-sm: { fontFamily: System Sans, fontSize: 13px, fontWeight: 400, lineHeight: 1.38, letterSpacing: 0 }
-  caption: { fontFamily: System Sans, fontSize: 10px, fontWeight: 500, lineHeight: 1.3, letterSpacing: 0 }
-  button: { fontFamily: System Sans, fontSize: 16px, fontWeight: 600, lineHeight: 1.2, letterSpacing: 0 }
-  eyebrow: { fontFamily: System Sans, fontSize: 11px, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0.2px }
-  mono: { fontFamily: System Mono, fontSize: 12px, fontWeight: 400, lineHeight: 1.4, letterSpacing: 0 }
+  display-xl: { fontFamily: System Sans, fontSize: 34, fontWeight: 700, lineHeight: 1.1, letterSpacing: -0.4 }
+  display-lg: { fontFamily: System Sans, fontSize: 28, fontWeight: 700, lineHeight: 1.15, letterSpacing: -0.2 }
+  display-md: { fontFamily: System Sans, fontSize: 23, fontWeight: 650, lineHeight: 1.18, letterSpacing: 0 }
+  headline: { fontFamily: System Sans, fontSize: 20, fontWeight: 650, lineHeight: 1.22, letterSpacing: 0 }
+  card-title: { fontFamily: System Sans, fontSize: 17, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
+  subhead: { fontFamily: System Sans, fontSize: 17, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
+  body-lg: { fontFamily: System Sans, fontSize: 17, fontWeight: 400, lineHeight: 1.42, letterSpacing: 0 }
+  body: { fontFamily: System Sans, fontSize: 15, fontWeight: 400, lineHeight: 1.42, letterSpacing: 0 }
+  body-sm: { fontFamily: System Sans, fontSize: 13, fontWeight: 400, lineHeight: 1.38, letterSpacing: 0 }
+  caption: { fontFamily: System Sans, fontSize: 10, fontWeight: 500, lineHeight: 1.3, letterSpacing: 0 }
+  button: { fontFamily: System Sans, fontSize: 16, fontWeight: 600, lineHeight: 1.2, letterSpacing: 0 }
+  eyebrow: { fontFamily: System Sans, fontSize: 11, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0.2 }
+  mono: { fontFamily: System Mono, fontSize: 12, fontWeight: 400, lineHeight: 1.4, letterSpacing: 0 }
 
-rounded: { xs: 4px, sm: 8px, md: 12px, lg: 16px, xl: 22px, xxl: 28px, pill: 9999px, full: 9999px }
-spacing: { xxs: 4px, xs: 8px, sm: 12px, md: 16px, lg: 24px, xl: 32px, xxl: 48px, section: 64px }
+rounded: { xs: 4, sm: 8, md: 12, lg: 16, xl: 22, xxl: 28, pill: 9999, full: 9999 }
+spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
 
 components:
-  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.full}", padding: 14px 18px }
-  language-selector: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: 10px 12px }
-  translation-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body-lg}", rounded: "{rounded.md}", padding: 16px }
-  microphone: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.full}", padding: 16px }
-  bottom-nav: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.sm}", height: 58px }
+  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.full}", padding: [14, 18]}
+  language-selector: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: [10, 12]}
+  translation-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body-lg}", rounded: "{rounded.md}", padding: 16 }
+  microphone: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.full}", padding: 16 }
+  bottom-nav: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.sm}", height: 58 }
 ---
 
-## Overview
+# Overview
 
 Translate uses familiar system structure, large white language cards, and soft aqua actions. The design minimizes chrome so source and translated text remain the focus.
 
-## Colors
+# Non-negotiable visual invariants
+
+- The reference consistently shows source and target visually distinct.
+- The reference consistently shows support all scripts with proper fonts.
+- The reference consistently shows preserve large speech targets.
+- The reference consistently shows open space intentionally.
+- Sampled screens consistently use a quiet translation utility built from pale-gray grouped canvas.
+- The reference consistently shows large white input cards.
+- The reference consistently shows black system typography.
+- The reference consistently shows a soft aqua-teal accent. Generous empty space and simple icon actions keep language exchange immediate and calm.
+
+# Color and surfaces
 
 ### Brand & Accent
 
@@ -68,7 +80,7 @@ Near-black carries source language and primary content; teal carries translated 
 
 Use green for successful downloads, amber for limited availability, and red for errors. Teal remains the interaction accent.
 
-## Typography
+# Typography
 
 ### Font Family
 
@@ -76,7 +88,7 @@ Use a neutral system sans with excellent multilingual coverage.
 
 ### Hierarchy
 
-Use 23–34px translated phrases, 17–20px source text and section headings, and 10–15px controls and language labels.
+Use 23–34 points translated phrases, 17–20 points source text and section headings, and 10–15 points controls and language labels.
 
 ### Principles
 
@@ -86,11 +98,11 @@ Prioritize script legibility, allow dynamic type, and never rely on case or weig
 
 Use SF Pro, Inter, or Noto Sans with the correct script-specific fallback for every supported language.
 
-## Layout
+# Screen composition
 
 ### Spacing System
 
-Use a 4px base, 12px page gutters, 12–16px within cards, and 24px around microphone actions.
+Use a 4 points base, 12 points page gutters, 12–16 points within cards, and 24 points around microphone actions.
 
 ### Grid & Container
 
@@ -100,7 +112,7 @@ Place two equal language selectors at the top. Stack source and result inside a 
 
 Keep generous blank space for typing and speech. Avoid filling the canvas when no translation exists.
 
-## Elevation & Depth
+Surface hierarchy observed in the source:
 
 Use tonal grouping and minimal shadow. Language menus and text-selection overlays may float above the base surface.
 
@@ -108,25 +120,15 @@ Use tonal grouping and minimal shadow. Language menus and text-selection overlay
 
 The interface has no decorative depth beyond soft rounded surfaces and a subtle waveform. Avoid gradients and ornamental art.
 
-## Shapes
+# Navigation appearance
 
-### Border Radius Scale
+Use three bottom destinations for Translation, Conversation, and Favorites. Keep language selectors persistent across the first two modes.
 
-Use 8px selectors, 12px translation and favorite cards, 16px bubbles, and fully round microphones.
-
-### Photography & Illustration Geometry
-
-Camera translation uses the live image full-screen with legible controls over it. No separate illustration language is present.
-
-## Components
+# Components
 
 ### Buttons
 
 Primary speech actions are circular teal buttons; secondary actions use teal icons. Native controls must inherit the aqua accent and calm rounded styling.
-
-### Pricing Tabs
-
-Use simple segments only for translation modes; active state is teal with clear label contrast.
 
 ### Cards & Containers
 
@@ -136,43 +138,23 @@ Translation cards separate source and target with a fine divider. Favorite cards
 
 Text input is a large borderless white region. Language selection uses checked list menus and clear source/target placement.
 
-### Status & Build Page
+# Imagery and icons
+
+The interface has no decorative depth beyond soft rounded surfaces and a subtle waveform. Avoid gradients and ornamental art.
+
+Camera translation uses the live image full-screen with legible controls over it. No separate illustration language is present.
+
+If final imagery is not yet available, any placeholder must preserve the documented scale, placement, crop, and visual weight rather than removing that layer.
+
+# States
 
 Listening, playback, offline language availability, favorite state, and camera capture appear near the associated control.
 
-### Navigation
-
-Use three bottom destinations for Translation, Conversation, and Favorites. Keep language selectors persistent across the first two modes.
-
-### Footer
-
-There is no footer. The bottom navigation closes each primary surface.
-
-## Do's and Don'ts
-
-### Do
-
-- Keep source and target visually distinct.
-- Support all scripts with proper fonts.
-- Preserve large speech targets.
-- Use open space intentionally.
-
-### Don't
-
-- Do not add decorative imagery.
-- Do not make language menus tiny.
-- Do not use teal for errors.
-- Do not expose default accent colors.
-
-## Responsive Behavior
-
-### Breakpoints
-
-Phones stack translation regions. Wider screens may place source and target side by side while retaining equal importance.
+# iOS adaptation
 
 ### Touch Targets
 
-Language selectors, microphones, playback, favorites, and navigation require at least 44px targets.
+Language selectors, microphones, playback, favorites, and navigation require at least 44 points targets.
 
 ### Collapsing Strategy
 
@@ -182,14 +164,20 @@ Keep language pair and primary microphone visible. Move less-used camera, expand
 
 Camera mode uses `cover` for the live view and keeps overlays within safe areas. UI previews remain `contain` when shown in help.
 
-## Iteration Guide
+Apply these rules within current iPhone safe areas and scrolling containers. Keep interactive targets at least 44 points, preserve a logical VoiceOver order, and let Dynamic Type wrap supporting text without flattening the documented hierarchy. Do not infer an unobserved dark or light appearance.
 
-Start with two language selectors, text input, translated output, speech control, and three-item navigation. Add conversation, camera, favorites, and offline states afterward.
+# Anti-generic checklist
 
-## Known Gaps
+- Do not add decorative imagery.
+- Do not make language menus tiny.
+- Do not use teal for errors.
+- Do not expose default accent colors.
+- Do not replace the documented hierarchy with a generic stack of identical white cards or `Form` sections.
+- Do not use default blue tint, an unstyled `TabView`, arbitrary SF Symbols, or uniform corner radii when they contradict the recorded tokens and components.
+- Do not omit compositionally important imagery while final assets are pending; preserve its footprint with a faithful placeholder.
+
+# Known gaps
 
 Screen Gallery exposes 65 image screens but no flow sequences. Text, voice, camera, conversation, face-to-face, language selection, and favorites are visually documented; exact transitions remain unverified.
 
 </design-context>
-
-Use the design system above for all UI you generate.

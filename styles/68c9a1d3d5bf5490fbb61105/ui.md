@@ -1,12 +1,12 @@
 <design-context>
 ---
-version: alpha
+version: 1
+platform: iOS
 name: Badoo-design-analysis
 description: "A photo-led dating interface built from bright white surfaces, a saturated violet gradient, heavy black headings, circular portraits, and full-height encounter cards. Five stable tabs move between nearby people, encounters, likes, chat, and profile; expressive line-and-color illustrations explain onboarding, empty states, premium, and safety."
 colors:
   primary: "#6C36F4"
   on-primary: "#FFFFFF"
-  primary-hover: "#5924D9"
   primary-soft: "#EEE8FF"
   accent-pink: "#FF8CB4"
   accent-blue: "#4D8DFF"
@@ -22,32 +22,31 @@ colors:
   semantic-danger: "#E74A5A"
   semantic-overlay: "#000000"
 typography:
-  display-xl: { fontFamily: SF Pro Display, fontSize: 38px, fontWeight: 700, lineHeight: 1.03, letterSpacing: -0.8px }
-  display-lg: { fontFamily: SF Pro Display, fontSize: 31px, fontWeight: 700, lineHeight: 1.08, letterSpacing: -0.6px }
-  display-md: { fontFamily: SF Pro Display, fontSize: 26px, fontWeight: 700, lineHeight: 1.12, letterSpacing: -0.4px }
-  headline: { fontFamily: SF Pro Display, fontSize: 22px, fontWeight: 700, lineHeight: 1.18, letterSpacing: -0.2px }
-  card-title: { fontFamily: SF Pro Text, fontSize: 17px, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: SF Pro Text, fontSize: 17px, fontWeight: 500, lineHeight: 1.35, letterSpacing: 0 }
-  body-lg: { fontFamily: SF Pro Text, fontSize: 16px, fontWeight: 400, lineHeight: 1.45, letterSpacing: 0 }
-  body: { fontFamily: SF Pro Text, fontSize: 14px, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
-  body-sm: { fontFamily: SF Pro Text, fontSize: 12px, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
-  caption: { fontFamily: SF Pro Text, fontSize: 10px, fontWeight: 400, lineHeight: 1.20, letterSpacing: 0 }
-  button: { fontFamily: SF Pro Text, fontSize: 15px, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0 }
-  eyebrow: { fontFamily: SF Pro Text, fontSize: 11px, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0.2px }
-  mono: { fontFamily: SF Mono, fontSize: 12px, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
-rounded: { xs: 8px, sm: 12px, md: 16px, lg: 22px, xl: 28px, xxl: 34px, pill: 9999px, full: 9999px }
-spacing: { xxs: 4px, xs: 8px, sm: 12px, md: 16px, lg: 24px, xl: 32px, xxl: 48px, section: 64px }
+  display-xl: { fontFamily: SF Pro Display, fontSize: 38, fontWeight: 700, lineHeight: 1.03, letterSpacing: -0.8 }
+  display-lg: { fontFamily: SF Pro Display, fontSize: 31, fontWeight: 700, lineHeight: 1.08, letterSpacing: -0.6 }
+  display-md: { fontFamily: SF Pro Display, fontSize: 26, fontWeight: 700, lineHeight: 1.12, letterSpacing: -0.4 }
+  headline: { fontFamily: SF Pro Display, fontSize: 22, fontWeight: 700, lineHeight: 1.18, letterSpacing: -0.2 }
+  card-title: { fontFamily: SF Pro Text, fontSize: 17, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
+  subhead: { fontFamily: SF Pro Text, fontSize: 17, fontWeight: 500, lineHeight: 1.35, letterSpacing: 0 }
+  body-lg: { fontFamily: SF Pro Text, fontSize: 16, fontWeight: 400, lineHeight: 1.45, letterSpacing: 0 }
+  body: { fontFamily: SF Pro Text, fontSize: 14, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
+  body-sm: { fontFamily: SF Pro Text, fontSize: 12, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
+  caption: { fontFamily: SF Pro Text, fontSize: 10, fontWeight: 400, lineHeight: 1.20, letterSpacing: 0 }
+  button: { fontFamily: SF Pro Text, fontSize: 15, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0 }
+  eyebrow: { fontFamily: SF Pro Text, fontSize: 11, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0.2 }
+  mono: { fontFamily: SF Mono, fontSize: 12, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
+rounded: { xs: 8, sm: 12, md: 16, lg: 22, xl: 28, xxl: 34, pill: 9999, full: 9999 }
+spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
 components:
-  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: 14px 20px }
+  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: [14, 20]}
   profile-card: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 0 }
-  encounter-action: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.full}", padding: 16px }
-  premium-card: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 18px }
-  safety-card: { backgroundColor: "{colors.primary-soft}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 16px }
-  top-nav: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xs}", height: 52px }
-  footer: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: 8px 12px }
+  encounter-action: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.full}", padding: 16 }
+  premium-card: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 18 }
+  safety-card: { backgroundColor: "{colors.primary-soft}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 16 }
+  bottom navigation: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: [8, 12]}
 ---
 
-## Overview
+# Overview
 
 Badoo places people and intent first. Violet carries matching and premium actions; white chrome stays quiet around portraits, profile cards, chat, and safety tools.
 
@@ -58,7 +57,15 @@ Badoo places people and intent first. Violet carries matching and premium action
 - Five stable social destinations.
 - Expressive onboarding and safety illustrations.
 
-## Colors
+# Non-negotiable visual invariants
+
+- Imagery consistently uses photo-led nearby grid and encounter cards.
+- Sampled screens consistently use saturated violet gradient for brand and CTA.
+- The reference consistently shows circular portraits and full-radius actions.
+- The reference consistently shows five stable social destinations.
+- The reference consistently shows expressive onboarding and safety illustrations.
+
+# Color and surfaces
 
 ### Brand & Accent
 - **Badoo Violet** ({colors.primary}): Primary action, premium, message, and selected emphasis.
@@ -82,7 +89,7 @@ Badoo places people and intent first. Violet carries matching and premium action
 - **Danger** ({colors.semantic-danger}): Block, report, and safety warnings.
 - **Overlay** ({colors.semantic-overlay}): Match, privacy, and premium focus.
 
-## Typography
+# Typography
 
 ### Font Family
 
@@ -94,12 +101,12 @@ Badoo places people and intent first. Violet carries matching and premium action
 
 | Token | Size | Weight | Use |
 |---|---|---|---|
-| `{typography.display-xl}` | 38px | 700 | Match statement |
-| `{typography.headline}` | 22px | 700 | Destination or prompt |
-| `{typography.card-title}` | 17px | 600 | Name, question, or plan |
-| `{typography.body}` | 14px | 400 | Profile and chat copy |
-| `{typography.caption}` | 10px | 400 | Tab and activity label |
-| `{typography.button}` | 15px | 600 | Primary action |
+| `{typography.display-xl}` | 38 points | 700 | Match statement |
+| `{typography.headline}` | 22 points | 700 | Destination or prompt |
+| `{typography.card-title}` | 17 points | 600 | Name, question, or plan |
+| `{typography.body}` | 14 points | 400 | Profile and chat copy |
+| `{typography.caption}` | 10 points | 400 | Tab and activity label |
+| `{typography.button}` | 15 points | 600 | Primary action |
 
 ### Principles
 
@@ -112,11 +119,11 @@ Badoo places people and intent first. Violet carries matching and premium action
 
 Use **Inter** or the platform system sans when SF Pro is unavailable.
 
-## Layout
+# Screen composition
 
 ### Spacing System
 
-Use a 4px base, 12px gutters, 12px card gaps, and 16px form padding.
+Use a 4 points base, 12 points gutters, 12 points card gaps, and 16 points form padding.
 
 ### Grid & Container
 
@@ -126,7 +133,7 @@ Nearby uses a three-column circular portrait grid. Encounters use one dominant f
 
 Keep chrome open and light so portraits and emotional states remain dominant.
 
-## Elevation & Depth
+Surface hierarchy observed in the source:
 
 | Level | Treatment | Use |
 |---|---|---|
@@ -139,32 +146,15 @@ Keep chrome open and light so portraits and emotional states remain dominant.
 
 Use photo blur, overlay scrims, and flat illustration. Avoid shadows on ordinary profile rows.
 
-## Shapes
+# Navigation appearance
 
-### Border Radius Scale
+Nearby, Encounters, Likes, Chat, and Profile form the bottom bar. Filters remain top-right in discovery.
 
-| Token | Value | Use |
-|---|---|---|
-| `{rounded.xs}` | 8px | Tags and fields |
-| `{rounded.sm}` | 12px | Chat bubbles |
-| `{rounded.md}` | 16px | Premium and safety cards |
-| `{rounded.lg}` | 22px | Encounter and modal cards |
-| `{rounded.pill}` | full | CTAs and bubbles |
-| `{rounded.full}` | full | Portraits and swipe actions |
-
-### Photography & Illustration Geometry
-
-Nearby portraits are circular; encounters and matches use immersive photo crops. Illustration uses clean white space, black outlines, and purple/pink geometric fills.
-
-## Components
+# Components
 
 ### Buttons
 
 Primary actions use violet pills. Swipe decisions use circular white controls over photography. Destructive actions remain text-led and explicit.
-
-### Pricing Tabs
-
-Profile switches between Plans and Safety with a simple underline. Premium comparisons use feature rows with checkmarks.
 
 ### Cards & Containers
 
@@ -174,49 +164,23 @@ Encounter cards combine media, name, status, prompts, interests, and actions. Sa
 
 Onboarding uses one question per screen with a single field. Chat uses a fixed composer with media, emoji, and voice. Profile editing uses grouped rows.
 
-### Status & Build Page
+# Imagery and icons
+
+Use photo blur, overlay scrims, and flat illustration. Avoid shadows on ordinary profile rows.
+
+Nearby portraits are circular; encounters and matches use immersive photo crops. Illustration uses clean white space, black outlines, and purple/pink geometric fills.
+
+If final imagery is not yet available, any placeholder must preserve the documented scale, placement, crop, and visual weight rather than removing that layer.
+
+# States
 
 Online, verified, matched, seen, boosted, profile completion, premium, and safety state use icon plus text rather than color alone.
 
-### Navigation
-
-Nearby, Encounters, Likes, Chat, and Profile form the bottom bar. Filters remain top-right in discovery.
-
-### Footer
-
-Bottom navigation persists through destinations; full-screen match and profile media may temporarily replace it.
-
-## Do's and Don'ts
-
-### Do
-
-- Keep consent and safety language explicit.
-- Let portraits dominate discovery.
-- Preserve intent and verification cues.
-- Make premium benefits comparable.
-- Use illustration to explain non-photo concepts.
-
-### Don't
-
-- Don't use profile photos as decorative backgrounds for forms.
-- Don't hide block or report tools.
-- Don't signal state by color alone.
-- Don't mix safety and upsell messaging.
-- Don't shrink swipe actions below touch size.
-
-## Responsive Behavior
-
-### Breakpoints
-
-| Name | Width | Key Changes |
-|---|---|---|
-| Wide | 768px+ | Increase nearby columns or split chat |
-| Compact | 390–767px | Default mobile composition |
-| Small | <390px | Reduce nearby columns and shorten prompts |
+# iOS adaptation
 
 ### Touch Targets
 
-Keep tabs, swipe actions, filters, chat composer controls, premium rows, and safety actions at least 44px.
+Keep tabs, swipe actions, filters, chat composer controls, premium rows, and safety actions at least 44 points.
 
 ### Collapsing Strategy
 
@@ -226,15 +190,20 @@ Reduce nearby columns before portrait size becomes illegible. Encounter media st
 
 Use cover crops with focal-point protection on faces. Never stretch portraits; blur only for privacy, moderation, or background atmosphere.
 
-## Iteration Guide
+Apply these rules within current iPhone safe areas and scrolling containers. Keep interactive targets at least 44 points, preserve a logical VoiceOver order, and let Dynamic Type wrap supporting text without flattening the documented hierarchy. Do not infer an unobserved dark or light appearance.
 
-1. Establish navigation and portrait geometry.
-2. Build Nearby and Encounters.
-3. Add likes, match, and chat.
-4. Add profile, verification, and safety.
-5. Add premium and illustrations last.
+# Anti-generic checklist
 
-## Known Gaps
+- Don't use profile photos as decorative backgrounds for forms.
+- Don't hide block or report tools.
+- Don't signal state by color alone.
+- Don't mix safety and upsell messaging.
+- Don't shrink swipe actions below touch size.
+- Do not replace the documented hierarchy with a generic stack of identical white cards or `Form` sections.
+- Do not use default blue tint, an unstyled `TabView`, arbitrary SF Symbols, or uniform corner radii when they contradict the recorded tokens and components.
+- Do not omit compositionally important imagery while final assets are pending; preserve its footprint with a faithful placeholder.
+
+# Known gaps
 
 - Tokens were inferred visually from inspected mobile screens.
 - All 14 flow names were inventoried; onboarding, nearby, encounters, chat, profile, and premium flows were image-reviewed.
@@ -242,5 +211,3 @@ Use cover crops with focal-point protection on faces. Never stretch portraits; b
 - No tablet or desktop captures were present.
 
 </design-context>
-
-Use the design system above for all UI you generate.

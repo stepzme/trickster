@@ -1,12 +1,12 @@
 # Overview
 
-VK Calls is a dark calling utility for creating, scheduling, joining, sharing, and managing voice or video rooms, with call history, contacts, and settings.
+VK Calls is a calling utility for creating, scheduling, joining, sharing, and managing voice or video rooms, with call history, contacts, and settings.
 
 # Navigation
 
-- Four bottom destinations cover Home, History, Contacts, and Settings.
+- Four primary destinations cover Home, History, Contacts, and Settings.
 - Home presents Create Call, Schedule, and Join as equal top actions, followed by scheduled or active calls.
-- The active call becomes a full-screen room with a dedicated bottom control dock.
+- The active call becomes a room with a dedicated control primary navigation.
 
 # Core Flows
 
@@ -30,7 +30,12 @@ VK Calls is a dark calling utility for creating, scheduling, joining, sharing, a
 
 # Interaction Patterns
 
-- Blue means create or call, green means schedule, and red is reserved for hang up.
-- Active-call controls use large circles at the bottom edge.
 - Empty states explain the next action without adding decorative complexity.
-- Share and device handoff actions live in a compact bottom sheet.
+
+# System Access Timing
+
+No system-access timing or denial-recovery path was documented in the reviewed source.
+
+# Known Gaps
+
+Unobserved flows, denial paths, cancellation behavior, and recovery states remain unspecified.

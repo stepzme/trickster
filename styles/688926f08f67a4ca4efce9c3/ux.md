@@ -4,14 +4,14 @@ Mamba is a dating system spanning onboarding, profile setup, search grids, swipe
 
 # Navigation
 
-A dark five-item dock connects search, activity, swipes, chats, and profile. Discovery keeps filters in the top bar; profile actions remain close to identity and media.
+A five-item primary navigation connects search, activity, swipes, chats, and profile. Discovery keeps filters in the primary navigation; profile actions remain close to identity and media.
 
 # Core Flows
 
 ## Discover people
 
 1. Configure identity, interests, location, and desired matches.
-2. Browse a two-column search grid or full-screen swipe deck.
+2. Browse a search grid or swipe deck.
 3. Like, pass, message, or open a profile.
 4. Use filters or profile boost when the result set needs adjustment.
 
@@ -24,7 +24,12 @@ A dark five-item dock connects search, activity, swipes, chats, and profile. Dis
 
 # Interaction Patterns
 
-- Dark surfaces keep portrait photography dominant.
-- Orange-to-pink gradients mark brand, likes, and paid emphasis; cyan supports utility actions.
-- Full-screen cards prioritize one decision at a time.
 - Sheets handle filters, authentication methods, sharing, and purchase details.
+
+# System Access Timing
+
+No system-access timing or denial-recovery path was documented in the reviewed source.
+
+# Known Gaps
+
+Unobserved flows, denial paths, cancellation behavior, and recovery states remain unspecified.

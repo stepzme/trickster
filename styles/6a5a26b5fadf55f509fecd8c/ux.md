@@ -1,10 +1,10 @@
 # Overview
 
-Yandex Eats is a photo-led restaurant marketplace that keeps delivery state, cart value, and ordering actions visible while browsing.
+Yandex Eats is a restaurant marketplace that keeps delivery state, cart value, and ordering actions visible while browsing.
 
 # Navigation
 
-Home, Pickup, Eats AI, and Cart form the bottom bar. Address entry and category filters lead into restaurant lists, while restaurant pages use sticky section tabs and a persistent cart action.
+Home, Pickup, Eats AI, and Cart are the primary destinations. Address entry and category filters lead into restaurant lists, while restaurant pages use section tabs and a persistent cart action.
 
 # Core Flows
 
@@ -17,13 +17,19 @@ Home, Pickup, Eats AI, and Cart form the bottom bar. Address entry and category 
 ## Order
 
 1. Open a dish, review composition and nutrition, and add options.
-2. Adjust quantity while the yellow cart total remains visible.
+2. Adjust quantity while the cart total remains visible.
 3. Confirm address, delivery time, contact, payment, and handoff instructions.
 4. Track the order on a map and open order or address details.
 
 # Interaction Patterns
 
-- Lead with large food photography and compact factual metadata.
-- Use yellow for cart and purchase actions.
-- Keep delivery badges green and explicit.
+- Item selection keeps price, weight, and availability available before adding.
 - Present product details and recommendations in bottom sheets.
+
+# System Access Timing
+
+No system-access timing or denial-recovery behavior was documented in the reviewed source.
+
+# Known Gaps
+
+System-permission denial paths, interrupted flows, and recovery behavior not described above were not available in the reviewed source.

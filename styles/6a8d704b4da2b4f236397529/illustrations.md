@@ -16,16 +16,28 @@ Skyeng combines soft 3D blue characters with bright flat educational scenes. Cha
 - Leave space for title, duration, and status.
 - Use dark immersive backgrounds only for active speaking practice.
 
-# Color
+# Color and Materials
 
 - Lead 3D characters with cyan and sky blue.
 - Use violet, green, coral, yellow, and navy across topic cards.
 - Keep facial details simple and high contrast.
 - Match flat-scene backgrounds to the card category.
 
-# Usage
+# Variants and States
 
 - Use 3D characters for onboarding, AI teacher, and speaking roles.
 - Use flat illustrations for situations, vocabulary, course topics, and empty states.
 - Use photography for real tutors or video lessons.
 - Create original characters and scenes; do not copy branded source assets.
+
+# Production Requirements
+
+Exact export formats, aspect ratios, animation behavior, and appearance variants were not documented. Where imagery is compositionally important, temporary placeholders must preserve its documented scale, placement, crop, and visual weight until final art exists.
+
+# Avoid
+
+Do not introduce an unrelated illustration style or substitute decorative symbols for source-supported imagery.
+
+# Known Gaps
+
+Export specifications, animation rules, safe-crop measurements, and unobserved state variants were not available in the reviewed source.

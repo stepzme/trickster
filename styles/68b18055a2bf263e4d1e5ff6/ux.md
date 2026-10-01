@@ -4,14 +4,14 @@ Yandex Translate minimizes setup: choose languages, provide input, and immediate
 
 # Navigation
 
-Five bottom modes separate Favorites, Photo, Text, Sites, and Dialogue; history and settings remain secondary destinations.
+Five primary modes separate Favorites, Photo, Text, Sites, and Dialogue; history and settings remain secondary destinations.
 
 # Core Flows
 
 ## Translate and retain a phrase
 
 1. Choose source and target languages.
-2. Type, speak, photograph, or paste a URL.
+2. Type, speak, photograph, or paste an URL.
 3. Review and play the translation.
 4. Save it or practice it as a card.
 
@@ -21,3 +21,11 @@ Five bottom modes separate Favorites, Photo, Text, Sites, and Dialogue; history 
 - Preserve text when switching input methods.
 - Confirm bulk deletion.
 - Expose offline availability before travel use.
+
+# System Access Timing
+
+No system-access timing or denial-recovery path was documented in the reviewed source.
+
+# Known Gaps
+
+Unobserved flows, denial paths, cancellation behavior, and recovery states remain unspecified.

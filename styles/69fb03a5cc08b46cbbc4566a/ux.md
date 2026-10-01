@@ -4,7 +4,7 @@ Emma moves from a high-emotion dark onboarding into a bright financial dashboard
 
 # Navigation
 
-Feed, Save, Pay, Invest, and Credit remain in a persistent bottom bar. Each tab opens a domain overview before deeper tasks. Profile and notifications sit in the header; onboarding, subscription, and setup flows temporarily replace tab navigation with one bottom action.
+Feed, Save, Pay, Invest, and Credit remain in primary navigation. Each tab opens a domain overview before deeper tasks. Profile and notifications sit in the header; onboarding, subscription, and setup flows temporarily replace tab navigation with one primary action.
 
 # Core Flows
 
@@ -23,16 +23,23 @@ Feed, Save, Pay, Invest, and Credit remain in a persistent bottom bar. Each tab 
 
 ## Save, pay, invest, and credit
 
-Each domain starts with a summary and one clear next action: create a savings pot, pay or request money, set up an investment account, or choose a credit product. Secondary products are grouped into cards or top tabs rather than mixed into a single form.
+1. Each domain starts with a summary and one clear next action: create a savings pot, pay or request money, set up an investment account, or choose a credit product. Secondary products are grouped into separate groups or tabs rather than mixed into a single form.
 
 ## Profile and settings
 
-Profile combines membership, learning, quests, privacy tools, fraud detection, and preferences. Settings use direct rows and switches, including a dark theme.
+1. Profile combines membership, learning, quests, privacy tools, fraud detection, and preferences. Settings use direct rows and switches, including a dark theme.
 
 # Interaction Patterns
 
-- Use one full-width purple CTA at the bottom of focused flows.
 - Reveal financial complexity by domain, then by task.
 - Pair values with currency, status, and time context.
 - Keep recommendations dismissible and distinct from account facts.
 - Use inline validation and progress states instead of separate error screens.
+
+# System Access Timing
+
+No system-access request timing or denial recovery was documented in the reviewed source.
+
+# Known Gaps
+
+- Permission-denial recovery and unobserved secondary flows were not documented.

@@ -10,10 +10,22 @@ Combine soft 3D card stacks, rounded devices, small character objects, and clean
 
 Center one action or card relationship in open white space. Layer cards to show hierarchy; use hands only when the gesture itself needs explanation.
 
-# Color
+# Color and Materials
 
 Use ONAY yellow as the anchor, with lavender, cyan, lime, and soft pink for distinct card types. Keep outlines black and backgrounds white or lightly glowing.
 
-# Usage
+# Variants and States
 
 Use illustration for onboarding, linking cards, QR education, fare-product promotion, and empty states. New art should inherit the rounded UI geometry and yellow focus without becoming a full-screen cartoon.
+
+# Production Requirements
+
+Use only the formats and crops supported by the implemented placement. Where the documented imagery is compositionally important, temporary placeholders must preserve its placement, crop, scale, negative space, and approximate visual weight until final art exists. No unobserved light/dark variants or export ratios are prescribed.
+
+# Avoid
+
+- Do not replace the documented image language with unrelated stock art, arbitrary symbols, or a denser composition.
+
+# Known Gaps
+
+- Export aspect ratios, safe crop measurements, animation, and unobserved state variants were not documented.

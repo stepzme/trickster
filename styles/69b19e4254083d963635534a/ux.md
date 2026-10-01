@@ -4,7 +4,7 @@
 
 # Navigation
 
-Orders, Money, Chats, and Profile form the stable shell; during a trip, navigation yields to the route and bottom task sheet.
+Orders, Money, Chats, and Profile form the stable shell; during a trip, navigation yields to the route and task modal.
 
 # Core Flows
 
@@ -21,3 +21,11 @@ Orders, Money, Chats, and Profile form the stable shell; during a trip, navigati
 - Confirm cancellation separately from calling.
 - Explain gross income, fees, and deductions.
 - Preserve the selected earnings period and view.
+
+# System Access Timing
+
+No system-access request timing or denial recovery was documented in the reviewed source.
+
+# Known Gaps
+
+- Permission-denial recovery and unobserved secondary flows were not documented.

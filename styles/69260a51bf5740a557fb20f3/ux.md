@@ -4,7 +4,7 @@ Moonly combines a personalized lunar calendar with astrology, affirmations, taro
 
 # Navigation
 
-A dark translucent bottom bar links Calendar, Affirmations, Practice, Healing, and Learning. The avatar opens account tools; large editorial cards and compact shortcuts move into specific readings.
+primary navigation links Calendar, Affirmations, Practice, Healing, and Learning. The avatar opens account tools; editorial cards and shortcuts move into specific readings.
 
 # Core Flows
 
@@ -22,7 +22,13 @@ A dark translucent bottom bar links Calendar, Affirmations, Practice, Healing, a
 
 # Interaction Patterns
 
-- Large visual cards act as destinations, with small category labels and strong editorial titles.
 - Locked content remains visible with subdued copy and a clear upgrade cue.
 - Segments switch tarot modes and layouts without leaving Practice.
-- Personalized or time-sensitive content stays close to the moon strip at the top of Calendar.
+
+# System Access Timing
+
+No system-access request timing or denial recovery was documented in the reviewed source.
+
+# Known Gaps
+
+- Permission-denial recovery and unobserved secondary flows were not documented.

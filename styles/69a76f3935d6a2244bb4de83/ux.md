@@ -4,13 +4,13 @@ BakAi supports cards, accounts, deposits, loans, transfers, services, statements
 
 # Navigation
 
-Home, Payments, BakAi Chat, Services, and History persist at the bottom. Product tabs switch the home carousel; profile and support remain in the header.
+Home, Payments, BakAi Chat, Services, and History persist . Product tabs switch the home carousel; profile and support remain in the header.
 
 # Core Flows
 
 ## Card and account management
 
-Open a product to review balance, statement, settings, limits, PIN, blocking, top-up methods, Visa+, Apple Pay, and details without mixing unrelated products.
+1. Open a product to review balance, statement, settings, limits, PIN, blocking, top-up methods, Visa+, Apple Pay, and details without mixing unrelated products.
 
 ## Transfer and payment
 
@@ -20,16 +20,22 @@ Open a product to review balance, statement, settings, limits, PIN, blocking, to
 
 ## Open a product
 
-Choose card, account, credit, deposit, savings jar, application, or linked card. Each product exposes tariffs and a separate lifecycle through opening, details, and closure.
+1. Choose card, account, credit, deposit, savings jar, application, or linked card. Each product exposes tariffs and a separate lifecycle through opening, details, and closure.
 
 ## Services and profile
 
-Appointments, branches, news, exchange, widget controls, personal data, passport, verification, security, documentation, and finances remain grouped by intent.
+1. Appointments, branches, news, exchange, widget controls, personal data, passport, verification, security, documentation, and finances remain grouped by intent.
 
 # Interaction Patterns
 
-- Select a transfer rail before entering details.
 - Keep currency and fees visible.
 - Make product lifecycle state explicit.
 - Preserve downloadable statements and receipts.
-- Separate high-risk card controls from ordinary detail browsing.
+
+# System Access Timing
+
+No system-access request timing or denial recovery was documented in the reviewed source.
+
+# Known Gaps
+
+- Permission-denial recovery and unobserved secondary flows were not documented.

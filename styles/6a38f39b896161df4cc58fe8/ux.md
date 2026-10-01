@@ -4,7 +4,7 @@ Rostic's organizes restaurant selection, menu discovery, product customization, 
 
 # Navigation
 
-- A four-item bottom bar anchors Home, Menu, Promotions, and Profile.
+- A four-item primary navigation anchors Home, Menu, Promotions, and Profile.
 - Delivery or restaurant choice appears before ordering and remains accessible from the top of the experience.
 - Product details and checkout open as focused layers with a persistent bottom action.
 
@@ -32,8 +32,14 @@ Rostic's organizes restaurant selection, menu discovery, product customization, 
 
 # Interaction Patterns
 
-- Red sticky actions communicate the next committed step.
-- Product cards support direct add, while deeper customization opens the product sheet.
+- Products support direct add, while deeper customization opens the product sheet.
 - Quantity controls replace the add action after selection.
-- Restaurant, address, and checkout choices use rounded sheets over their current context.
 - Promotional content links back into the same catalog rather than creating a separate purchase model.
+
+# System Access Timing
+
+No system-access timing or denial-recovery behavior was documented in the reviewed source.
+
+# Known Gaps
+
+System-permission denial paths, interrupted flows, and recovery behavior not described above were not available in the reviewed source.

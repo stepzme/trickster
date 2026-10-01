@@ -4,7 +4,7 @@ Kompanion is a retail banking app for cards, wallets, payments, transfers, savin
 
 # Navigation
 
-Five bottom destinations cover Home, Payments, QR, History, and Menu. Home prioritizes cards and frequent transfers; search and notifications remain in the header.
+Five primary destinations cover Home, Payments, QR, History, and Menu. Home prioritizes cards and frequent transfers; search and notifications remain in the discovery context.
 
 # Core Flows
 
@@ -30,7 +30,12 @@ Five bottom destinations cover Home, Payments, QR, History, and Menu. Home prior
 
 # Interaction Patterns
 
-- Card imagery and balances lead the dashboard.
-- Frequent actions use compact white tiles with colored icons.
-- Blue full-width buttons confirm financial operations.
 - Success screens expose receipt, save, and repeat actions before returning home.
+
+# System Access Timing
+
+No system-access timing or denial-recovery behavior was documented in the reviewed source.
+
+# Known Gaps
+
+System-permission denial paths, interrupted flows, and recovery behavior not described above were not available in the reviewed source.

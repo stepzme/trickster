@@ -4,13 +4,13 @@ Balance Pay focuses on two financial products, simple transfers and top-ups, ope
 
 # Navigation
 
-Finance, Payments, History, and Support persist in the bottom bar. Notifications and settings are available from Finance; secure subflows use back navigation.
+Finance, Payments, History, and Support persist in the primary navigation. Notifications and settings are available from Finance; secure subflows use back navigation.
 
 # Core Flows
 
 ## Setup and finance
 
-Onboarding establishes a code and opens the wallet. Finance shows Wallet, WB Balance, certificates, limits, hidden products, and gift funds in separate groups.
+1. Onboarding establishes a code and opens the wallet. Finance shows Wallet, WB Balance, certificates, limits, hidden products, and gift funds in separate groups.
 
 ## Payments
 
@@ -20,11 +20,11 @@ Onboarding establishes a code and opens the wallet. Finance shows Wallet, WB Bal
 
 ## History and statistics
 
-Switch products, review income and expenses, filter by operation type and period, and keep empty history explanatory rather than promotional.
+1. Switch products, review income and expenses, filter by operation type and period, and keep empty history explanatory rather than promotional.
 
 ## Settings and support
 
-Settings cover security, biometrics, balance privacy, devices, personal data, legal documents, wallet blocking, and logout. Support preserves conversation context.
+1. Settings cover security, biometrics, balance privacy, devices, personal data, legal documents, wallet blocking, and logout. Support preserves conversation context.
 
 # Interaction Patterns
 
@@ -33,3 +33,11 @@ Settings cover security, biometrics, balance privacy, devices, personal data, le
 - Preserve explicit income and expense labels.
 - Confirm wallet blocking and logout.
 - Keep support reachable as a top-level destination.
+
+# System Access Timing
+
+No system-access timing or denial-recovery path was documented in the reviewed source.
+
+# Known Gaps
+
+Unobserved flows, denial paths, cancellation behavior, and recovery states remain unspecified.

@@ -18,13 +18,18 @@ The home screen centers one composer. A task list provides All, Favorites, and S
 ## Manage the workspace
 
 1. Open the task list to find recent, favorite, or scheduled work.
-2. Start a new task from the floating action.
+2. Start a new task from the action.
 3. Configure knowledge, skills, connectors, integrations, and browser access.
 4. Monitor credits and account preferences.
 
 # Interaction Patterns
 
-- The warm-gray canvas and serif prompts create a quiet editorial tone.
-- White rounded composers and task cards hold interactive content.
-- Black marks selection and submission; blue is reserved for links and guidance.
 - Progress remains embedded inside the conversation rather than a separate dashboard.
+
+# System Access Timing
+
+No system-access request timing or denial recovery was documented in the reviewed source.
+
+# Known Gaps
+
+- Permission-denial recovery and unobserved secondary flows were not documented.

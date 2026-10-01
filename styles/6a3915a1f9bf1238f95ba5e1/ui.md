@@ -1,6 +1,7 @@
 <design-context>
 ---
-version: alpha
+version: 1
+platform: iOS
 name: Temu-design-analysis
 description: "A maximalist discount marketplace built from white canvas, saturated orange commerce actions, green trust messaging, dense two-column product photography, compact black type, and constant urgency badges. Information density is intentional: price, rating, sales, stock, discount, and delivery remain visible together."
 
@@ -22,36 +23,44 @@ colors:
   semantic-overlay: "#000000"
 
 typography:
-  display-xl: { fontFamily: System Sans, fontSize: 38px, fontWeight: 700, lineHeight: 1.05, letterSpacing: -0.7px }
-  display-lg: { fontFamily: System Sans, fontSize: 32px, fontWeight: 700, lineHeight: 1.1, letterSpacing: -0.4px }
-  display-md: { fontFamily: System Sans, fontSize: 26px, fontWeight: 700, lineHeight: 1.15, letterSpacing: -0.2px }
-  headline: { fontFamily: System Sans, fontSize: 20px, fontWeight: 700, lineHeight: 1.2, letterSpacing: 0 }
-  card-title: { fontFamily: System Sans, fontSize: 13px, fontWeight: 500, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: System Sans, fontSize: 16px, fontWeight: 600, lineHeight: 1.3, letterSpacing: 0 }
-  body-lg: { fontFamily: System Sans, fontSize: 15px, fontWeight: 400, lineHeight: 1.4, letterSpacing: 0 }
-  body: { fontFamily: System Sans, fontSize: 13px, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
-  body-sm: { fontFamily: System Sans, fontSize: 11px, fontWeight: 400, lineHeight: 1.3, letterSpacing: 0 }
-  caption: { fontFamily: System Sans, fontSize: 9px, fontWeight: 400, lineHeight: 1.25, letterSpacing: 0 }
-  button: { fontFamily: System Sans, fontSize: 14px, fontWeight: 600, lineHeight: 1.2, letterSpacing: 0 }
-  eyebrow: { fontFamily: System Sans, fontSize: 10px, fontWeight: 700, lineHeight: 1.2, letterSpacing: 0.1px }
-  mono: { fontFamily: System Mono, fontSize: 11px, fontWeight: 400, lineHeight: 1.3, letterSpacing: 0 }
+  display-xl: { fontFamily: System Sans, fontSize: 38, fontWeight: 700, lineHeight: 1.05, letterSpacing: -0.7 }
+  display-lg: { fontFamily: System Sans, fontSize: 32, fontWeight: 700, lineHeight: 1.1, letterSpacing: -0.4 }
+  display-md: { fontFamily: System Sans, fontSize: 26, fontWeight: 700, lineHeight: 1.15, letterSpacing: -0.2 }
+  headline: { fontFamily: System Sans, fontSize: 20, fontWeight: 700, lineHeight: 1.2, letterSpacing: 0 }
+  card-title: { fontFamily: System Sans, fontSize: 13, fontWeight: 500, lineHeight: 1.25, letterSpacing: 0 }
+  subhead: { fontFamily: System Sans, fontSize: 16, fontWeight: 600, lineHeight: 1.3, letterSpacing: 0 }
+  body-lg: { fontFamily: System Sans, fontSize: 15, fontWeight: 400, lineHeight: 1.4, letterSpacing: 0 }
+  body: { fontFamily: System Sans, fontSize: 13, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
+  body-sm: { fontFamily: System Sans, fontSize: 11, fontWeight: 400, lineHeight: 1.3, letterSpacing: 0 }
+  caption: { fontFamily: System Sans, fontSize: 9, fontWeight: 400, lineHeight: 1.25, letterSpacing: 0 }
+  button: { fontFamily: System Sans, fontSize: 14, fontWeight: 600, lineHeight: 1.2, letterSpacing: 0 }
+  eyebrow: { fontFamily: System Sans, fontSize: 10, fontWeight: 700, lineHeight: 1.2, letterSpacing: 0.1 }
+  mono: { fontFamily: System Mono, fontSize: 11, fontWeight: 400, lineHeight: 1.3, letterSpacing: 0 }
 
-rounded: { xs: 2px, sm: 5px, md: 9px, lg: 12px, xl: 16px, xxl: 22px, pill: 9999px, full: 9999px }
-spacing: { xxs: 2px, xs: 6px, sm: 10px, md: 14px, lg: 20px, xl: 28px, xxl: 40px, section: 56px }
+rounded: { xs: 2, sm: 5, md: 9, lg: 12, xl: 16, xxl: 22, pill: 9999, full: 9999 }
+spacing: { xxs: 2, xs: 6, sm: 10, md: 14, lg: 20, xl: 28, xxl: 40, section: 56 }
 
 components:
-  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: 12px 18px }
-  product-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.xs}", padding: 4px }
-  trust-strip: { backgroundColor: "#EAF8EC", textColor: "{colors.trust}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: 6px }
-  search-field: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.pill}", padding: 9px 12px }
-  bottom-nav: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.caption}", rounded: "{rounded.xs}", height: 56px }
+  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: [12, 18]}
+  product-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.xs}", padding: 4 }
+  trust-strip: { backgroundColor: "#EAF8EC", textColor: "{colors.trust}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: 6 }
+  search-field: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.pill}", padding: [9, 12]}
+  bottom-nav: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.caption}", rounded: "{rounded.xs}", height: 56 }
 ---
 
-## Overview
+# Overview
 
 Temu deliberately maximizes commerce signals. Orange prices and actions, green trust strips, compact labels, and image-heavy grids keep deals and urgency continuously visible.
 
-## Colors
+# Non-negotiable visual invariants
+
+- The reviewed screens use this composition: A maximalist discount marketplace built from white canvas, saturated orange commerce actions, green trust messaging, dense two-column product photography.
+- The dominant canvas token is #FFFFFF and the primary accent token is #FF5A00.
+- The recorded display style is 38 points while the body style is 13 points.
+- Navigation uses five bottom destinations with orange active state.
+- The reviewed screens use this hierarchy: Information density is intentional: price, rating, sales, stock, discount, and delivery remain visible together.
+
+# Color and surfaces
 
 ### Brand & Accent
 
@@ -69,15 +78,11 @@ Black carries product and total data; gray supports seller, sales, crossed price
 
 Green confirms trust and free delivery, red flags scarcity, and amber marks ratings. Pair every color with text.
 
-## Typography
+# Typography
 
 ### Font Family
 
 Use a compact system sans with strong numerals and reliable multilingual support.
-
-### Hierarchy
-
-Use 20–26px page headings, 13–16px product titles, 13px body, and 9–11px dense marketplace metadata.
 
 ### Principles
 
@@ -87,11 +92,7 @@ Keep current price dominant, old price subordinate, and urgency readable without
 
 SF Pro or Inter work well. Use tabular numerals for prices, countdowns, and quantities.
 
-## Layout
-
-### Spacing System
-
-Use a 2px base, 8px gutters, 2–6px grid gaps, and 12–20px between commerce groups.
+# Screen composition
 
 ### Grid & Container
 
@@ -101,31 +102,15 @@ Discovery uses dense two-column image grids. Categories combine a narrow taxonom
 
 Density is the visual strategy. Preserve only enough whitespace to keep image ownership and price hierarchy clear.
 
-## Elevation & Depth
+# Navigation appearance
 
-Most cards are flat. Sticky orange actions, black payment bars, and sheets create task depth.
+Use five bottom destinations with orange active state. Detail and checkout tasks use simple back-led top bars.
 
-### Decorative Depth
-
-Photography, price badges, and promotion strips provide decoration. Avoid added illustration or atmospheric gradients.
-
-## Shapes
-
-### Border Radius Scale
-
-Product grids are nearly square; filters use 5–9px corners; search and purchase actions are pills.
-
-### Photography & Illustration Geometry
-
-Use high-coverage product photography with `cover` crops in grid cells and larger galleries on detail screens.
-
-## Components
+# Components
 
 ### Buttons
 
 Purchase actions are orange pills; final payment may use a black pill. Native controls must inherit the same commerce hierarchy.
-
-### Pricing Tabs
 
 Category, sorting, size, and color controls use compact text tabs or chips with black or orange selection.
 
@@ -145,11 +130,46 @@ Stock, last-day price, delivery, tracking, return, receipt, and order states sta
 
 Use five bottom destinations with orange active state. Detail and checkout tasks use simple back-led top bars.
 
-### Footer
+# Imagery and icons
 
-There is no footer. End commerce tasks with a sticky total and purchase or payment action.
+Most cards are flat. Sticky orange actions, black payment bars, and sheets create task depth.
 
-## Do's and Don'ts
+### Decorative Depth
+
+Photography, price badges, and promotion strips provide decoration. Avoid added illustration or atmospheric gradients.
+
+# States
+
+Stock, last-day price, delivery, tracking, return, receipt, and order states stay adjacent to the affected product.
+
+# iOS adaptation
+
+Keep cart and checkout single-column. Wider discovery layouts may add product columns while preserving card density.
+
+### Touch Targets
+
+Filters, variants, cart controls, bottom navigation, and sticky actions require at least 44pt hit areas.
+
+### Collapsing Strategy
+
+Allow category and filter rails to scroll horizontally. Keep cart total and payment action pinned.
+
+### Image Behavior
+
+Use `cover` for product photography and `contain` for isolated goods where scale matters. Preserve gallery ratios.
+
+On iPhone, respect top and bottom safe areas, use scrolling for content that does not fit, keep interactive targets at least 44 points, and preserve the visual reading order for VoiceOver. At larger Dynamic Type sizes, allow supporting text to wrap without collapsing the dominant hierarchy. Use native sheets and permission transitions while explicitly styling app-owned surfaces to match the reference.
+
+# Anti-generic checklist
+
+- Do not substitute the documented accent hierarchy with default iOS blue.
+- Do not turn the documented white canvas into a generic card stack; preserve the observed accent, density, imagery, and surface grouping.
+- Do not use an unstyled `TabView`, `Form`, or arbitrary SF Symbols when they contradict the documented navigation and component language.
+- Do not flatten the documented typography into one body-text scale.
+- Do not remove compositionally important photography or illustration while assets are pending.
+- Do not apply one corner radius to every control and surface.
+
+Source-specific guardrails retained from the review:
 
 ### Do
 
@@ -165,32 +185,8 @@ There is no footer. End commerce tasks with a sticky total and purchase or payme
 - Do not invent decorative illustration.
 - Do not crop products ambiguously.
 
-## Responsive Behavior
+# Known gaps
 
-### Breakpoints
-
-Keep cart and checkout single-column. Wider discovery layouts may add product columns while preserving card density.
-
-### Touch Targets
-
-Filters, variants, cart controls, bottom navigation, and sticky actions require at least 44px hit areas.
-
-### Collapsing Strategy
-
-Allow category and filter rails to scroll horizontally. Keep cart total and payment action pinned.
-
-### Image Behavior
-
-Use `cover` for product photography and `contain` for isolated goods where scale matters. Preserve gallery ratios.
-
-## Iteration Guide
-
-Start with search, trust strips, two-column products, orange prices, navigation, product detail, Cart, and checkout. Add rewards and profile utilities afterward.
-
-## Known Gaps
-
-All 90 flow records were surveyed; representative discovery, category, product, cart, checkout, order, and profile screens were inspected. Tablet behavior and every payment failure were not visible.
+All 90 flow records were surveyed; representative discovery, category, product, cart, checkout, order, and profile screens were inspected. iPad behavior and every payment failure were not visible.
 
 </design-context>
-
-Use the design system above for all UI you generate.

@@ -4,7 +4,7 @@ Ozon Travel organizes flights, stays, trains, and tours around a shared search s
 
 # Navigation
 
-A five-item bottom bar anchors Tickets, Stays, Orders, Support, and Profile. Large mode selectors at the top switch transport or accommodation products without changing the overall search rhythm.
+Five primary destinations anchor Tickets, Stays, Orders, Support, and Profile. Mode selection switches transport or accommodation products without changing the overall search sequence.
 
 # Core Flows
 
@@ -18,4 +18,12 @@ A five-item bottom bar anchors Tickets, Stays, Orders, Support, and Profile. Lar
 
 # Interaction Patterns
 
-Date and passenger choices use bottom sheets, mode switching is icon-led, search actions stay full width, and confirmed orders compress time, route, carriage, and ticket download into scannable cards.
+Date and passenger choices use focused sheets. Confirmed orders keep time, route, carriage, and ticket download together for follow-up.
+
+# System Access Timing
+
+No system-access timing or denial-recovery behavior was documented in the reviewed source.
+
+# Known Gaps
+
+System-permission denial paths, interrupted flows, and recovery behavior not described above were not available in the reviewed source.

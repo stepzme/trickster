@@ -4,7 +4,7 @@ krisha.kz is a property marketplace for buying, renting, and evaluating real est
 
 # Navigation
 
-Five fixed destinations cover Home, Favorites, Post, Messages, and Profile. Category entry points and filters sit near the top of browsing screens; listing details retain back, favorite, share, and contact actions.
+Five primary destinations cover Home, Favorites, Post, Messages, and Profile. Category entry points and filters sit in the current context of browsing screens; listing details retain back, favorite, share, and contact actions.
 
 # Core Flows
 
@@ -16,14 +16,20 @@ Five fixed destinations cover Home, Favorites, Post, Messages, and Profile. Cate
 
 ## Evaluate a property
 
-1. Scan price, dimensions, location, photography, and seller labels in the results.
+1. Scan price, dimensions, location, media, and seller information in the results.
 2. Open a listing and move through its photo gallery.
 3. Review verification, nearby places, specifications, seller, similar listings, and price analytics.
 4. Contact the seller with a persistent call or message action.
 
 # Interaction Patterns
 
-- Dense listing cards keep price and essential attributes above supporting metadata.
-- Yellow chips identify trusted sellers and verified supply without overwhelming the page.
+- Dense listings keep price and essential attributes above supporting metadata.
 - Filters, map access, and contact actions remain reachable during long browsing sessions.
-- Detail pages use stacked sections and a persistent green call action.
+
+# System Access Timing
+
+No system-access timing or denial-recovery behavior was documented in the reviewed source.
+
+# Known Gaps
+
+System-permission denial paths, interrupted flows, and recovery behavior not described above were not available in the reviewed source.

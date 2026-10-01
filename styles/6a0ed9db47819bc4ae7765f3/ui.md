@@ -1,12 +1,12 @@
 <design-context>
 ---
-version: alpha
+version: 1
+platform: iOS
 name: kolesa.kz-design-analysis
 description: "A utilitarian vehicle marketplace on white and very pale blue, structured by bright blue actions, yellow financing badges, green call buttons, dense listing cards, rectangular vehicle photography, and persistent seller contact controls. Information density is high but predictable, with price and core specifications always near the image."
 colors:
   primary: "#2486E3"
   on-primary: "#FFFFFF"
-  primary-hover: "#4A9CE9"
   primary-focus: "#176DBE"
   ink: "#202124"
   ink-muted: "#676A70"
@@ -28,39 +28,46 @@ colors:
   semantic-success: "#19B73B"
   semantic-overlay: "#202124"
 typography:
-  display-xl: {fontFamily: SF Pro Display, fontSize: 36px, fontWeight: 700, lineHeight: 1.05, letterSpacing: -0.9px}
-  display-lg: {fontFamily: SF Pro Display, fontSize: 29px, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.6px}
-  display-md: {fontFamily: SF Pro Display, fontSize: 24px, fontWeight: 700, lineHeight: 1.14, letterSpacing: -0.4px}
-  headline: {fontFamily: SF Pro Display, fontSize: 20px, fontWeight: 700, lineHeight: 1.20, letterSpacing: -0.2px}
-  card-title: {fontFamily: SF Pro Text, fontSize: 15px, fontWeight: 500, lineHeight: 1.25, letterSpacing: 0}
-  subhead: {fontFamily: SF Pro Text, fontSize: 14px, fontWeight: 600, lineHeight: 1.32, letterSpacing: 0}
-  body-lg: {fontFamily: SF Pro Text, fontSize: 15px, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0}
-  body: {fontFamily: SF Pro Text, fontSize: 13px, fontWeight: 400, lineHeight: 1.36, letterSpacing: 0}
-  body-sm: {fontFamily: SF Pro Text, fontSize: 11px, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0}
-  caption: {fontFamily: SF Pro Text, fontSize: 9px, fontWeight: 400, lineHeight: 1.25, letterSpacing: 0}
-  button: {fontFamily: SF Pro Text, fontSize: 14px, fontWeight: 500, lineHeight: 1.20, letterSpacing: 0}
-  eyebrow: {fontFamily: SF Pro Text, fontSize: 10px, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0.2px}
-  mono: {fontFamily: SF Mono, fontSize: 11px, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0}
-rounded: {xs: 3px, sm: 7px, md: 11px, lg: 15px, xl: 20px, xxl: 26px, pill: 9999px, full: 9999px}
-spacing: {xxs: 4px, xs: 8px, sm: 12px, md: 16px, lg: 20px, xl: 24px, xxl: 32px, section: 40px}
+  display-xl: {fontFamily: SF Pro Display, fontSize: 36, fontWeight: 700, lineHeight: 1.05, letterSpacing: -0.9}
+  display-lg: {fontFamily: SF Pro Display, fontSize: 29, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.6}
+  display-md: {fontFamily: SF Pro Display, fontSize: 24, fontWeight: 700, lineHeight: 1.14, letterSpacing: -0.4}
+  headline: {fontFamily: SF Pro Display, fontSize: 20, fontWeight: 700, lineHeight: 1.20, letterSpacing: -0.2}
+  card-title: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 500, lineHeight: 1.25, letterSpacing: 0}
+  subhead: {fontFamily: SF Pro Text, fontSize: 14, fontWeight: 600, lineHeight: 1.32, letterSpacing: 0}
+  body-lg: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0}
+  body: {fontFamily: SF Pro Text, fontSize: 13, fontWeight: 400, lineHeight: 1.36, letterSpacing: 0}
+  body-sm: {fontFamily: SF Pro Text, fontSize: 11, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0}
+  caption: {fontFamily: SF Pro Text, fontSize: 9, fontWeight: 400, lineHeight: 1.25, letterSpacing: 0}
+  button: {fontFamily: SF Pro Text, fontSize: 14, fontWeight: 500, lineHeight: 1.20, letterSpacing: 0}
+  eyebrow: {fontFamily: SF Pro Text, fontSize: 10, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0.2}
+  mono: {fontFamily: SF Mono, fontSize: 11, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0}
+rounded: {xs: 3, sm: 7, md: 11, lg: 15, xl: 20, xxl: 26, pill: 9999, full: 9999}
+spacing: {xxs: 4, xs: 8, sm: 12, md: 16, lg: 20, xl: 24, xxl: 32, section: 40}
 components:
-  button-primary: {backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 13px 18px}
+  button-primary: {backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [13, 18]}
   button-primary-pressed: {backgroundColor: "{colors.primary-focus}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}"}
-  button-primary-hover: {backgroundColor: "{colors.primary-hover}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}"}
-  button-secondary: {backgroundColor: "{colors.semantic-success}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 13px 18px}
-  button-tertiary: {backgroundColor: "{colors.canvas}", textColor: "{colors.primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 11px 16px}
-  button-inverse: {backgroundColor: "{colors.inverse-canvas}", textColor: "{colors.inverse-ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 12px 18px}
-  listing-card: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 12px}
-  category-tile: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.md}", padding: 10px}
-  finance-badge: {backgroundColor: "{colors.brand-secure}", textColor: "{colors.ink}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: 3px 6px}
-  top-nav: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.xs}", height: 50px}
-  bottom-nav: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink-subtle}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: 8px 10px}
+  button-secondary: {backgroundColor: "{colors.semantic-success}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [13, 18]}
+  button-tertiary: {backgroundColor: "{colors.canvas}", textColor: "{colors.primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [11, 16]}
+  button-inverse: {backgroundColor: "{colors.inverse-canvas}", textColor: "{colors.inverse-ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [12, 18]}
+  listing-card: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 12}
+  category-tile: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.md}", padding: 10}
+  finance-badge: {backgroundColor: "{colors.brand-secure}", textColor: "{colors.ink}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: [3, 6]}
+  bottom-nav: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink-subtle}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: [8, 10]}
 ---
-## Overview
+
+# Overview
 
 kolesa.kz is an information-dense vehicle marketplace with blue utility controls, yellow finance facts, green calls, and consistent photo-led listings.
 
-## Colors
+# Non-negotiable visual invariants
+
+- The reviewed screens use this composition: A utilitarian vehicle marketplace on white and very pale blue, structured by bright blue actions, yellow financing badges, green call buttons, dense listing cards.
+- The dominant canvas token is #FFFFFF and the primary accent token is #2486E3.
+- The recorded display style is 36 points while the body style is 13 points.
+- Navigation keeps five bottom destinations fixed with a prominent blue Post action.
+- The reviewed screens use this hierarchy: Information density is high but predictable, with price and core specifications always near the image.
+
+# Color and surfaces
 
 ### Brand & Accent
 - Blue marks navigation, filters, messages, and marketplace actions.
@@ -75,7 +82,7 @@ kolesa.kz is an information-dense vehicle marketplace with blue utility controls
 ### Semantic
 - Green indicates direct phone contact. Red is limited to alerts or promoted markers.
 
-## Typography
+# Typography
 
 ### Font Family
 
@@ -85,12 +92,12 @@ Use SF Pro Display for prices and page headings, SF Pro Text for dense listing d
 
 | Token | Size | Weight | Use |
 |---|---:|---:|---|
-| display-md | 24px | 700 | Listing price |
-| headline | 20px | 700 | Page heading |
-| card-title | 15px | 500 | Vehicle model |
-| subhead | 14px | 600 | Detail section |
-| body | 13px | 400 | Specifications |
-| caption | 9px | 400 | Views and date |
+| display-md | 24pt | 700 | Listing price |
+| headline | 20pt | 700 | Page heading |
+| card-title | 15pt | 500 | Vehicle model |
+| subhead | 14pt | 600 | Detail section |
+| body | 13pt | 400 | Specifications |
+| caption | 9pt | 400 | Views and date |
 
 ### Principles
 
@@ -102,11 +109,7 @@ Use SF Pro Display for prices and page headings, SF Pro Text for dense listing d
 
 Use a neutral system sans with clear numbers and Cyrillic.
 
-## Layout
-
-### Spacing System
-
-Use a 4px base, 10–12px card padding, and 10–12px screen gutters.
+# Screen composition
 
 ### Grid & Container
 
@@ -116,43 +119,15 @@ Home categories use a four-column grid; listings use one vertical column with im
 
 Favor comparison density in results; give detail modules and contact actions more breathing room.
 
-## Elevation & Depth
+# Navigation appearance
 
-| Level | Treatment | Use |
-|---|---|---|
-| 0 | White canvas | Navigation and detail |
-| 1 | Pale blue background | Results |
-| 2 | White rounded card | Listing |
-| 3 | Fixed contact bar | Seller actions |
+Keep five bottom destinations fixed with a prominent blue Post action. Filters and sorting remain in the result header.
 
-### Decorative Depth
-
-Use surface contrast and photography; avoid decorative shadows.
-
-## Shapes
-
-### Border Radius Scale
-
-| Token | Value | Use |
-|---|---:|---|
-| rounded-xs | 3px | Finance badges |
-| rounded-sm | 7px | Buttons and photos |
-| rounded-md | 11px | Listings and categories |
-| rounded-pill | full | Compact filters |
-
-### Photography & Illustration Geometry
-
-Vehicle photography uses landscape crops with the full vehicle visible. No expressive illustration language was observed.
-
-## Components
+# Components
 
 ### Buttons
 
 Blue buttons message or continue; green buttons call. Secondary actions are white with blue labels.
-
-### Pricing Tabs
-
-No pricing tabs were observed. Financing is shown as yellow badges beside the cash price.
 
 ### Cards & Containers
 
@@ -170,11 +145,49 @@ Use view, favorite, and date metadata quietly. Price reductions and search subsc
 
 Keep five bottom destinations fixed with a prominent blue Post action. Filters and sorting remain in the result header.
 
-### Footer
+# Imagery and icons
 
-No footer; contact actions and navigation occupy the bottom safe area.
+| Level | Treatment | Use |
+|---|---|---|
+| 0 | White canvas | Navigation and detail |
+| 1 | Pale blue background | Results |
+| 2 | White rounded card | Listing |
+| 3 | Fixed contact bar | Seller actions |
 
-## Do's and Don'ts
+### Decorative Depth
+
+Use surface contrast and photography; avoid decorative shadows.
+
+# States
+
+Use view, favorite, and date metadata quietly. Price reductions and search subscriptions receive concise banners.
+
+# iOS adaptation
+
+### Touch Targets
+
+Favorites, filters, seller contacts, and navigation retain at least 44pt hit areas.
+
+### Collapsing Strategy
+
+Category promos scroll horizontally; listings stay vertical; contact actions remain anchored.
+
+### Image Behavior
+
+Use aspect-fill only when the complete vehicle remains visible; prefer stable landscape ratios.
+
+On iPhone, respect top and bottom safe areas, use scrolling for content that does not fit, keep interactive targets at least 44 points, and preserve the visual reading order for VoiceOver. At larger Dynamic Type sizes, allow supporting text to wrap without collapsing the dominant hierarchy. Use native sheets and permission transitions while explicitly styling app-owned surfaces to match the reference.
+
+# Anti-generic checklist
+
+- Do not substitute the documented accent hierarchy with default iOS blue.
+- Do not collapse distinct surfaces into a uniform stack of generic white cards.
+- Do not use an unstyled `TabView`, `Form`, or arbitrary SF Symbols when they contradict the documented navigation and component language.
+- Do not flatten the documented typography into one body-text scale.
+- Do not remove compositionally important photography or illustration while assets are pending.
+- Do not apply one corner radius to every control and surface.
+
+Source-specific guardrails retained from the review:
 
 ### Do
 
@@ -192,38 +205,10 @@ No footer; contact actions and navigation occupy the bottom safe area.
 - Don't add decorative illustration.
 - Don't leave default iOS form styling.
 
-## Responsive Behavior
-
-### Breakpoints
-
-| Name | Width | Key Changes |
-|---|---:|---|
-| Compact | 320–374px | Tighten listing text and category labels |
-| Standard | 375–430px | Default card layout |
-| Wide | 431px+ | Enlarge vehicle photo and detail gutters |
-
-### Touch Targets
-
-Favorites, filters, seller contacts, and navigation retain at least 44px hit areas.
-
-### Collapsing Strategy
-
-Category promos scroll horizontally; listings stay vertical; contact actions remain anchored.
-
-### Image Behavior
-
-Use aspect-fill only when the complete vehicle remains visible; prefer stable landscape ratios.
-
-## Iteration Guide
-
-Tune price scan speed and listing consistency first, then badge density and surface contrast.
-
-## Known Gaps
+# Known gaps
 
 - Ad-publishing screens were cataloged but not visually sampled here.
-- Tablet layouts were not represented.
+- iPad layouts were not represented.
 - Map-based browsing was not reviewed.
 
 </design-context>
-
-Use the design system above for all UI you generate.

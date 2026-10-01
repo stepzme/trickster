@@ -4,7 +4,7 @@
 
 # Navigation
 
-The live scene is primary. A compact rail changes energy and presence; the vibe tile switches mode. Settings contains guide, achievements, icons, widgets, wallpapers, shop, support, and membership.
+The live scene is primary. A rail changes energy and presence; the vibe tile switches mode. Settings contains guide, achievements, icons, widgets, wallpapers, shop, support, and membership.
 
 # Core Flows
 
@@ -18,7 +18,7 @@ The live scene is primary. A compact rail changes energy and presence; the vibe 
 
 ## Personalize
 
-Settings exposes rhythm, icon, widget, wallpaper, and guide choices without changing the live-session control model.
+1. Settings exposes rhythm, icon, widget, wallpaper, and guide choices without changing the live-session control model.
 
 # Interaction Patterns
 
@@ -27,3 +27,11 @@ Settings exposes rhythm, icon, widget, wallpaper, and guide choices without chan
 - Show timer and selected mode without covering the world.
 - Preserve a quick exit from every session.
 - Explain premium before presenting system purchase confirmation.
+
+# System Access Timing
+
+No system-access request timing or denial recovery was documented in the reviewed source.
+
+# Known Gaps
+
+- Permission-denial recovery and unobserved secondary flows were not documented.

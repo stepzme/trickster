@@ -1,12 +1,12 @@
 <design-context>
 ---
-version: alpha
+version: 1
+platform: iOS
 name: ASOS-design-analysis
 description: "A fashion-first shopping interface built on bright white surfaces, black editorial type, restrained hot-pink sale accents, and edge-to-edge model photography. Dense two-column product grids lead into long product pages, while a floating translucent bottom bar keeps discovery, search, bag, saved items, and account continuously available."
 colors:
   primary: "#111111"
   on-primary: "#FFFFFF"
-  primary-hover: "#2B2B2B"
   primary-soft: "#F1F1F1"
   accent-sale: "#D41455"
   accent-buy: "#1FA866"
@@ -21,33 +21,31 @@ colors:
   semantic-danger: "#C70039"
   semantic-overlay: "#000000"
 typography:
-  display-xl: { fontFamily: Futura PT, fontSize: 36px, fontWeight: 700, lineHeight: 1.05, letterSpacing: 0.2px }
-  display-lg: { fontFamily: Futura PT, fontSize: 30px, fontWeight: 700, lineHeight: 1.10, letterSpacing: 0.2px }
-  display-md: { fontFamily: Futura PT, fontSize: 24px, fontWeight: 700, lineHeight: 1.15, letterSpacing: 0.1px }
-  headline: { fontFamily: Futura PT, fontSize: 20px, fontWeight: 700, lineHeight: 1.20, letterSpacing: 0.2px }
-  card-title: { fontFamily: Futura PT, fontSize: 14px, fontWeight: 500, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: Futura PT, fontSize: 17px, fontWeight: 500, lineHeight: 1.35, letterSpacing: 0 }
-  body-lg: { fontFamily: Futura PT, fontSize: 16px, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
-  body: { fontFamily: Futura PT, fontSize: 14px, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
-  body-sm: { fontFamily: Futura PT, fontSize: 12px, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
-  caption: { fontFamily: Futura PT, fontSize: 10px, fontWeight: 400, lineHeight: 1.25, letterSpacing: 0.1px }
-  button: { fontFamily: Futura PT, fontSize: 13px, fontWeight: 700, lineHeight: 1.20, letterSpacing: 0.3px }
-  eyebrow: { fontFamily: Futura PT, fontSize: 10px, fontWeight: 700, lineHeight: 1.20, letterSpacing: 0.5px }
-  mono: { fontFamily: SF Mono, fontSize: 12px, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
-rounded: { xs: 2px, sm: 6px, md: 10px, lg: 16px, xl: 24px, xxl: 30px, pill: 9999px, full: 9999px }
-spacing: { xxs: 4px, xs: 8px, sm: 12px, md: 16px, lg: 24px, xl: 32px, xxl: 48px, section: 64px }
+  display-xl: { fontFamily: Futura PT, fontSize: 36, fontWeight: 700, lineHeight: 1.05, letterSpacing: 0.2 }
+  display-lg: { fontFamily: Futura PT, fontSize: 30, fontWeight: 700, lineHeight: 1.10, letterSpacing: 0.2 }
+  display-md: { fontFamily: Futura PT, fontSize: 24, fontWeight: 700, lineHeight: 1.15, letterSpacing: 0.1 }
+  headline: { fontFamily: Futura PT, fontSize: 20, fontWeight: 700, lineHeight: 1.20, letterSpacing: 0.2 }
+  card-title: { fontFamily: Futura PT, fontSize: 14, fontWeight: 500, lineHeight: 1.25, letterSpacing: 0 }
+  subhead: { fontFamily: Futura PT, fontSize: 17, fontWeight: 500, lineHeight: 1.35, letterSpacing: 0 }
+  body-lg: { fontFamily: Futura PT, fontSize: 16, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
+  body: { fontFamily: Futura PT, fontSize: 14, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
+  body-sm: { fontFamily: Futura PT, fontSize: 12, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
+  caption: { fontFamily: Futura PT, fontSize: 10, fontWeight: 400, lineHeight: 1.25, letterSpacing: 0.1 }
+  button: { fontFamily: Futura PT, fontSize: 13, fontWeight: 700, lineHeight: 1.20, letterSpacing: 0.3 }
+  eyebrow: { fontFamily: Futura PT, fontSize: 10, fontWeight: 700, lineHeight: 1.20, letterSpacing: 0.5 }
+  mono: { fontFamily: SF Mono, fontSize: 12, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
+rounded: { xs: 2, sm: 6, md: 10, lg: 16, xl: 24, xxl: 30, pill: 9999, full: 9999 }
+spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
 components:
-  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: 14px 20px }
-  button-purchase: { backgroundColor: "{colors.accent-buy}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: 14px 20px }
+  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: [14, 20]}
+  button-purchase: { backgroundColor: "{colors.accent-buy}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: [14, 20]}
   product-card: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.xs}", padding: 0 }
-  filter-row: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xs}", padding: 14px 12px }
-  floating-tab-bar: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.caption}", rounded: "{rounded.pill}", padding: 8px 16px }
-  notice-banner: { backgroundColor: "{colors.semantic-info}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.xs}", padding: 10px 16px }
-  top-nav: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xs}", height: 56px }
-  footer: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: 8px 16px }
+  filter-row: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xs}", padding: [14, 12]}
+  floating-tab-bar: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.caption}", rounded: "{rounded.pill}", padding: [8, 16]}
+  notice-banner: { backgroundColor: "{colors.semantic-info}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.xs}", padding: [10, 16]}
 ---
 
-## Overview
+# Overview
 
 ASOS is an editorial storefront: white chrome stays nearly invisible while model photography and product imagery carry the experience. Black is the default action color; sale pink and purchase green are reserved for price and conversion moments.
 
@@ -58,7 +56,15 @@ ASOS is an editorial storefront: white chrome stays nearly invisible while model
 - Persistent floating five-item navigation.
 - Pill purchase actions pinned near the bottom.
 
-## Colors
+# Non-negotiable visual invariants
+
+- The reviewed screens show this treatment: White, image-dense fashion canvas.
+- The reviewed screens show this treatment: Two-column product grids with compact price-first metadata.
+- The reviewed screens show this treatment: Bold uppercase section and action labels.
+- The reviewed screens show this treatment: Persistent floating five-item navigation.
+- The reviewed screens show this treatment: Pill purchase actions pinned near the bottom.
+
+# Color and surfaces
 
 ### Brand & Accent
 - **Black** ({colors.primary}): Core actions, headers, and selection.
@@ -80,7 +86,7 @@ ASOS is an editorial storefront: white chrome stays nearly invisible while model
 - **Danger** ({colors.semantic-danger}): Error or destructive state.
 - **Overlay** ({colors.semantic-overlay}): Sheets and modal focus.
 
-## Typography
+# Typography
 
 ### Font Family
 
@@ -91,12 +97,12 @@ ASOS is an editorial storefront: white chrome stays nearly invisible while model
 
 | Token | Size | Weight | Use |
 |---|---|---|---|
-| `{typography.display-xl}` | 36px | 700 | Campaign headline |
-| `{typography.headline}` | 20px | 700 | Section or product heading |
-| `{typography.card-title}` | 14px | 500 | Product price and label |
-| `{typography.body}` | 14px | 400 | Details and forms |
-| `{typography.caption}` | 10px | 400 | Tags and metadata |
-| `{typography.button}` | 13px | 700 | Uppercase actions |
+| `{typography.display-xl}` | 36pt | 700 | Campaign headline |
+| `{typography.headline}` | 20pt | 700 | Section or product heading |
+| `{typography.card-title}` | 14pt | 500 | Product price and label |
+| `{typography.body}` | 14pt | 400 | Details and forms |
+| `{typography.caption}` | 10pt | 400 | Tags and metadata |
+| `{typography.button}` | 13pt | 700 | Uppercase actions |
 
 ### Principles
 
@@ -109,11 +115,7 @@ ASOS is an editorial storefront: white chrome stays nearly invisible while model
 
 Use **Montserrat** or **Avenir Next** when Futura PT is unavailable.
 
-## Layout
-
-### Spacing System
-
-Use a 4px base, 12px content gutters, 8px grid gaps, and 16–24px between product sections.
+# Screen composition
 
 ### Grid & Container
 
@@ -123,42 +125,15 @@ Discovery uses full-width campaign blocks and horizontal rails. Catalogs use a s
 
 Keep structural chrome white and compact so large photography owns the visual rhythm.
 
-## Elevation & Depth
+# Navigation appearance
 
-| Level | Treatment | Use |
-|---|---|---|
-| 0 | White canvas | Catalog and product pages |
-| 1 | Pale gray field | Search and filters |
-| 2 | Frosted white pill | Floating navigation |
-| 3 | Dark scrim | Sheets and modals |
+Search and notifications live at the top; Home, Search, Bag, Saved, and Account sit in a floating bottom pill.
 
-### Decorative Depth
-
-Use image scale, sticky chrome, and translucent navigation rather than shadows.
-
-## Shapes
-
-### Border Radius Scale
-
-| Token | Value | Use |
-|---|---|---|
-| `{rounded.xs}` | 2px | Product tiles and dividers |
-| `{rounded.sm}` | 6px | Search and compact controls |
-| `{rounded.md}` | 10px | Sheets and banners |
-| `{rounded.pill}` | full | Floating navigation and primary actions |
-| `{rounded.full}` | full | Icon buttons |
-
-### Photography & Illustration Geometry
-
-Model and product imagery is rectangular, tightly cropped, and usually edge-to-edge. Keep garments fully legible and preserve editorial framing.
-
-## Components
+# Components
 
 ### Buttons
 
 Black pills cover general progression; green pills are reserved for add-to-bag and checkout. Secondary actions are white with a fine border.
-
-### Pricing Tabs
 
 Sort and Filter share a flat split row. Size, color, and quantity choices appear as compact selectors rather than decorative pills.
 
@@ -178,11 +153,54 @@ Use compact badges for Deal, Selling Fast, Highly Rated, and More Colours. Statu
 
 Search and notifications live at the top; Home, Search, Bag, Saved, and Account sit in a floating bottom pill.
 
-### Footer
-
 The sticky action area holds Save and Add to Bag or checkout choices; it must not cover the last content row.
 
-## Do's and Don'ts
+# Imagery and icons
+
+| Level | Treatment | Use |
+|---|---|---|
+| 0 | White canvas | Catalog and product pages |
+| 1 | Pale gray field | Search and filters |
+| 2 | Frosted white pill | Floating navigation |
+| 3 | Dark scrim | Sheets and modals |
+
+### Decorative Depth
+
+Use image scale, sticky chrome, and translucent navigation rather than shadows.
+
+# States
+
+Use compact badges for Deal, Selling Fast, Highly Rated, and More Colours. Status never competes with the product image.
+
+# iOS adaptation
+
+| Wide | 768pt+ | Increase columns while retaining image ratio |
+| Small | <390pt | Tighten gutters and truncate descriptions |
+
+### Touch Targets
+
+Keep navigation, saved, sort, filter, size, and purchase targets at least 44pt.
+
+### Collapsing Strategy
+
+Reduce metadata before shrinking images. Keep two catalog columns on phones, then move to one only when product legibility fails.
+
+### Image Behavior
+
+Use cover crops in catalogs and contain detail-media when garment silhouette would otherwise be lost. Never distort photography.
+
+On iPhone, respect top and bottom safe areas, use scrolling for content that does not fit, keep interactive targets at least 44 points, and preserve the visual reading order for VoiceOver. At larger Dynamic Type sizes, allow supporting text to wrap without collapsing the dominant hierarchy. Use native sheets and permission transitions while explicitly styling app-owned surfaces to match the reference.
+
+# Anti-generic checklist
+
+- Do not substitute the documented accent hierarchy with default iOS blue.
+- Do not collapse distinct surfaces into a uniform stack of generic white cards.
+- Do not use an unstyled `TabView`, `Form`, or arbitrary SF Symbols when they contradict the documented navigation and component language.
+- Do not flatten the documented typography into one body-text scale.
+- Do not remove compositionally important photography or illustration while assets are pending.
+- Do not apply one corner radius to every control and surface.
+
+Source-specific guardrails retained from the review:
 
 ### Do
 
@@ -200,43 +218,10 @@ The sticky action area holds Save and Add to Bag or checkout choices; it must no
 - Don't overload cards with badges.
 - Don't use green outside conversion actions.
 
-## Responsive Behavior
-
-### Breakpoints
-
-| Name | Width | Key Changes |
-|---|---|---|
-| Wide | 768px+ | Increase columns while retaining image ratio |
-| Compact | 390–767px | Two-column catalog |
-| Small | <390px | Tighten gutters and truncate descriptions |
-
-### Touch Targets
-
-Keep navigation, saved, sort, filter, size, and purchase targets at least 44px.
-
-### Collapsing Strategy
-
-Reduce metadata before shrinking images. Keep two catalog columns on phones, then move to one only when product legibility fails.
-
-### Image Behavior
-
-Use cover crops in catalogs and contain detail-media when garment silhouette would otherwise be lost. Never distort photography.
-
-## Iteration Guide
-
-1. Establish catalog grid and floating navigation.
-2. Build the product detail with sticky actions.
-3. Add filters, saved items, and bag.
-4. Add checkout and account states.
-5. Layer campaign photography and sale treatments last.
-
-## Known Gaps
+# Known gaps
 
 - Tokens were inferred visually from the inspected mobile screens.
 - All 53 flow names were inventoried; representative onboarding, home, catalog, filter, product, and checkout flows were image-reviewed.
 - Motion, video behavior, and accessibility labels were not assessed.
-- No tablet or desktop captures were present.
 
 </design-context>
-
-Use the design system above for all UI you generate.

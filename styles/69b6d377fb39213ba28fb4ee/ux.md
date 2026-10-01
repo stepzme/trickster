@@ -4,8 +4,8 @@ Telegram supports chats, groups, channels, calls, contacts, stories, media editi
 
 # Navigation
 
-- A floating five-part bottom dock provides Contacts, Calls, Chats, Settings, and Search.
-- Chats remain the operational center; new conversation and edit actions sit in the top bar.
+- A five-part primary navigation provides Contacts, Calls, Chats, Settings, and Search.
+- Chats remain the operational center; new conversation and edit actions sit in contextual controls.
 - Focused conversations and settings use drill-down navigation, sheets, and contextual menus.
 
 # Core Flows
@@ -24,13 +24,19 @@ Telegram supports chats, groups, channels, calls, contacts, stories, media editi
 
 ## Configure the account
 
-1. Open Settings from the bottom dock.
+1. Open Settings from primary navigation.
 2. Choose profile, devices, folders, notifications, privacy, data, appearance, language, Premium, or business.
 3. Adjust the focused setting and return to the list.
 
 # Interaction Patterns
 
 - Chat rows favor speed and unread-state clarity.
-- Blue marks current navigation and direct actions; colorful icons distinguish settings domains.
 - Native-feeling sheets and menus expose dense contextual actions.
-- Light and dark themes preserve identical hierarchy and dock structure.
+
+# System Access Timing
+
+No system-access request timing or denial recovery was documented in the reviewed source.
+
+# Known Gaps
+
+- Permission-denial recovery and unobserved secondary flows were not documented.

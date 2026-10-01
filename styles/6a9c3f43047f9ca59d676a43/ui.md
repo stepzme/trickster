@@ -1,12 +1,12 @@
 <design-context>
 ---
-version: alpha
+version: 1
+platform: iOS
 name: Trainline-design-analysis
 description: "A rail-booking interface that pairs a deep indigo journey header with mint and teal commitment actions, white rounded search panels, dense timetable rows, and playful service illustrations. Expressive discovery stays near the home and onboarding surfaces; booking, fare conditions, tickets, and payment become compact, explicit, and highly structured."
 colors:
   primary: "#25008B"
   on-primary: "#FFFFFF"
-  primary-hover: "#3512A8"
   primary-focus: "#180064"
   ink: "#11131A"
   ink-muted: "#5F626B"
@@ -28,36 +28,45 @@ colors:
   semantic-success: "#08AD94"
   semantic-overlay: "#11131A"
 typography:
-  display-xl: {fontFamily: SF Pro Display, fontSize: 38px, fontWeight: 700, lineHeight: 1.04, letterSpacing: -1.0px}
-  display-lg: {fontFamily: SF Pro Display, fontSize: 30px, fontWeight: 700, lineHeight: 1.08, letterSpacing: -0.6px}
-  display-md: {fontFamily: SF Pro Display, fontSize: 25px, fontWeight: 700, lineHeight: 1.12, letterSpacing: -0.4px}
-  headline: {fontFamily: SF Pro Display, fontSize: 21px, fontWeight: 700, lineHeight: 1.18, letterSpacing: -0.2px}
-  card-title: {fontFamily: SF Pro Text, fontSize: 16px, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0}
-  subhead: {fontFamily: SF Pro Text, fontSize: 15px, fontWeight: 600, lineHeight: 1.30, letterSpacing: 0}
-  body-lg: {fontFamily: SF Pro Text, fontSize: 15px, fontWeight: 400, lineHeight: 1.42, letterSpacing: 0}
-  body: {fontFamily: SF Pro Text, fontSize: 13px, fontWeight: 400, lineHeight: 1.38, letterSpacing: 0}
-  body-sm: {fontFamily: SF Pro Text, fontSize: 11px, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0}
-  caption: {fontFamily: SF Pro Text, fontSize: 10px, fontWeight: 400, lineHeight: 1.25, letterSpacing: 0}
-  button: {fontFamily: SF Pro Text, fontSize: 15px, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0}
-  eyebrow: {fontFamily: SF Pro Text, fontSize: 10px, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0.2px}
-  mono: {fontFamily: SF Mono, fontSize: 11px, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0}
-rounded: {xs: 4px, sm: 8px, md: 12px, lg: 16px, xl: 22px, xxl: 28px, pill: 9999px, full: 9999px}
-spacing: {xxs: 4px, xs: 8px, sm: 12px, md: 16px, lg: 20px, xl: 24px, xxl: 32px, section: 44px}
+  display-xl: {fontFamily: SF Pro Display, fontSize: 38, fontWeight: 700, lineHeight: 1.04, letterSpacing: -1.0}
+  display-lg: {fontFamily: SF Pro Display, fontSize: 30, fontWeight: 700, lineHeight: 1.08, letterSpacing: -0.6}
+  display-md: {fontFamily: SF Pro Display, fontSize: 25, fontWeight: 700, lineHeight: 1.12, letterSpacing: -0.4}
+  headline: {fontFamily: SF Pro Display, fontSize: 21, fontWeight: 700, lineHeight: 1.18, letterSpacing: -0.2}
+  card-title: {fontFamily: SF Pro Text, fontSize: 16, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0}
+  subhead: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 600, lineHeight: 1.30, letterSpacing: 0}
+  body-lg: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 400, lineHeight: 1.42, letterSpacing: 0}
+  body: {fontFamily: SF Pro Text, fontSize: 13, fontWeight: 400, lineHeight: 1.38, letterSpacing: 0}
+  body-sm: {fontFamily: SF Pro Text, fontSize: 11, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0}
+  caption: {fontFamily: SF Pro Text, fontSize: 10, fontWeight: 400, lineHeight: 1.25, letterSpacing: 0}
+  button: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0}
+  eyebrow: {fontFamily: SF Pro Text, fontSize: 10, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0.2}
+  mono: {fontFamily: SF Mono, fontSize: 11, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0}
+rounded: {xs: 4, sm: 8, md: 12, lg: 16, xl: 22, xxl: 28, pill: 9999, full: 9999}
+spacing: {xxs: 4, xs: 8, sm: 12, md: 16, lg: 20, xl: 24, xxl: 32, section: 44}
 components:
-  button-primary: {backgroundColor: "{colors.brand-secure}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 14px 18px}
+  button-primary: {backgroundColor: "{colors.brand-secure}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [14, 18]}
   button-primary-pressed: {backgroundColor: "#078C79", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}"}
-  button-secondary: {backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 14px 18px}
-  search-panel: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 14px}
-  result-row: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xs}", padding: 12px}
-  option-card: {backgroundColor: "#F4F2FF", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: 14px}
-  ticket-card: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: 14px}
-  bottom-nav: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.pill}", padding: 8px 12px}
+  button-secondary: {backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [14, 18]}
+  search-panel: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 14}
+  result-row: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xs}", padding: 12}
+  option-card: {backgroundColor: "#F4F2FF", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: 14}
+  ticket-card: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: 14}
+  bottom-nav: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.pill}", padding: [8, 12]}
 ---
-## Overview
+
+# Overview
 
 Trainline separates expressive journey discovery from a dense booking utility. Indigo establishes the travel context, mint and teal move the purchase forward, and white panels keep fares, conditions, and ticket data readable.
 
-## Colors
+# Non-negotiable visual invariants
+
+- The reviewed screens use this composition: A rail-booking interface that pairs a deep indigo journey header with mint and teal commitment actions, white rounded search panels, dense timetable rows, and playful service illustrations.
+- The dominant canvas token is #F4F4F6 and the primary accent token is #25008B.
+- The recorded display style is 38 points while the body style is 13 points.
+- Navigation appears as follows: Search, My Tickets, and Account remain fixed during browsing.
+- The reviewed screens use this hierarchy: Expressive discovery stays near the home and onboarding surfaces; booking, fare conditions, tickets, and payment become compact, explicit, and highly structured.
+
+# Color and surfaces
 
 ### Brand & Accent
 - Deep indigo owns headers, selected tabs, focus outlines, and timetable context.
@@ -73,7 +82,7 @@ Trainline separates expressive journey discovery from a dense booking utility. I
 ### Semantic
 - Teal confirms available actions and included benefits. Indigo indicates selection; neutral gray carries unavailable or secondary content.
 
-## Typography
+# Typography
 
 ### Font Family
 
@@ -83,11 +92,11 @@ Use SF Pro Display for journey and section headings, SF Pro Text for forms, time
 
 | Token | Size | Weight | Use |
 |---|---:|---:|---|
-| display-lg | 30px | 700 | Onboarding statement |
-| headline | 21px | 700 | Search or booking section |
-| card-title | 16px | 600 | Fare, route, or ticket title |
-| body | 13px | 400 | Conditions and itinerary facts |
-| caption | 10px | 400 | Navigation and metadata |
+| display-lg | 30pt | 700 | Onboarding statement |
+| headline | 21pt | 700 | Search or booking section |
+| card-title | 16pt | 600 | Fare, route, or ticket title |
+| body | 13pt | 400 | Conditions and itinerary facts |
+| caption | 10pt | 400 | Navigation and metadata |
 
 ### Principles
 
@@ -99,11 +108,7 @@ Use SF Pro Display for journey and section headings, SF Pro Text for forms, time
 
 Use the platform system sans with tabular numerals and broad language coverage.
 
-## Layout
-
-### Spacing System
-
-Use a 4px base, 12px row gaps, 16px side margins, and 12–16px card padding.
+# Screen composition
 
 ### Grid & Container
 
@@ -113,42 +118,15 @@ Discovery uses a full-width header, hero card, and horizontal service tiles. Sea
 
 Give forms clear panel boundaries, but keep related timetable and fare facts compact enough for comparison.
 
-## Elevation & Depth
+# Navigation appearance
 
-| Level | Treatment | Use |
-|---|---|---|
-| 0 | Pale gray canvas | Search and purchase |
-| 1 | White card | Fields, options, tickets |
-| 2 | Sticky action area | Continue and total |
-| 3 | Sheet over scrim | Date, station, and focused choice |
+Search, My Tickets, and Account remain fixed during browsing. Purchase steps replace the tab bar with a focused header and continuation action.
 
-### Decorative Depth
-
-Use soft card shadows on discovery and tickets. Booking depth comes mainly from surface contrast and sticky action regions.
-
-## Shapes
-
-### Border Radius Scale
-
-| Token | Value | Use |
-|---|---:|---|
-| rounded-sm | 8px | Fields and fare options |
-| rounded-md | 12px | Controls and service tiles |
-| rounded-lg | 16px | Search panels |
-| rounded-xl | 22px | Hero and sheets |
-| rounded-full | full | Search bar and navigation selection |
-
-### Photography & Illustration Geometry
-
-Use broad journey photography in rounded rectangles and one centered line-art object inside each square service tile. Keep operational content outside imagery.
-
-## Components
+# Components
 
 ### Buttons
 
 Teal commits booking steps; indigo confirms sheet choices. Secondary controls stay white or neutral with explicit labels.
-
-### Pricing Tabs
 
 Ticket type, class, flexibility, sorting, and time choices use outlined cards, compact segments, or simple rows with one indigo selection.
 
@@ -168,11 +146,49 @@ Use text for fastest, direct, delayed, unavailable, included, refundable, and un
 
 Search, My Tickets, and Account remain fixed during browsing. Purchase steps replace the tab bar with a focused header and continuation action.
 
-### Footer
+# Imagery and icons
 
-No footer; reserve the safe area for the bottom bar or the current total and action.
+| Level | Treatment | Use |
+|---|---|---|
+| 0 | Pale gray canvas | Search and purchase |
+| 1 | White card | Fields, options, tickets |
+| 2 | Sticky action area | Continue and total |
+| 3 | Sheet over scrim | Date, station, and focused choice |
 
-## Do's and Don'ts
+### Decorative Depth
+
+Use soft card shadows on discovery and tickets. Booking depth comes mainly from surface contrast and sticky action regions.
+
+# States
+
+Use text for fastest, direct, delayed, unavailable, included, refundable, and unprotected states. Keep operator identity and total near the related decision.
+
+# iOS adaptation
+
+### Touch Targets
+
+Station rows, calendar dates, tabs, toggles, result rows, and actions keep at least 44pt hit areas.
+
+### Collapsing Strategy
+
+Preserve route, date, time, duration, changes, price, conditions, and action. Collapse service promotion and secondary explanation first.
+
+### Image Behavior
+
+Crop discovery photography around travelers and the journey environment. Keep service illustrations uncropped with clear internal padding.
+
+On iPhone, respect top and bottom safe areas, use scrolling for content that does not fit, keep interactive targets at least 44 points, and preserve the visual reading order for VoiceOver. At larger Dynamic Type sizes, allow supporting text to wrap without collapsing the dominant hierarchy. Use native sheets and permission transitions while explicitly styling app-owned surfaces to match the reference.
+
+# Anti-generic checklist
+
+- Do not substitute the documented accent hierarchy with default iOS blue.
+- Do not collapse distinct surfaces into a uniform stack of generic white cards.
+- Do not use an unstyled `TabView`, `Form`, or arbitrary SF Symbols when they contradict the documented navigation and component language.
+- Do not flatten the documented typography into one body-text scale.
+- Do not remove compositionally important photography or illustration while assets are pending.
+- Do not apply one corner radius to every control and surface.
+
+Source-specific guardrails retained from the review:
 
 ### Do
 
@@ -188,38 +204,10 @@ No footer; reserve the safe area for the bottom bar or the current total and act
 - Don't turn teal into a general background color.
 - Don't flatten multi-step booking into one undifferentiated form.
 
-## Responsive Behavior
-
-### Breakpoints
-
-| Name | Width | Key Changes |
-|---|---:|---|
-| Compact | 320–374px | Tighten labels and result columns |
-| Standard | 375–430px | Default mobile composition |
-| Wide | 431px+ | Widen panels without splitting the journey |
-
-### Touch Targets
-
-Station rows, calendar dates, tabs, toggles, result rows, and actions keep at least 44px hit areas.
-
-### Collapsing Strategy
-
-Preserve route, date, time, duration, changes, price, conditions, and action. Collapse service promotion and secondary explanation first.
-
-### Image Behavior
-
-Crop discovery photography around travelers and the journey environment. Keep service illustrations uncropped with clear internal padding.
-
-## Iteration Guide
-
-Tune station entry and result comparison first, then fare configuration, payment clarity, tickets, and account utilities.
-
-## Known Gaps
+# Known gaps
 
 - Tokens were inferred visually from reviewed mobile screens.
 - Live validation, payment completion, refund confirmation, and dynamic delay updates were not executed.
-- Tablet and landscape layouts were not represented.
+- iPad and landscape layouts were not represented.
 
 </design-context>
-
-Use the design system above for all UI you generate.

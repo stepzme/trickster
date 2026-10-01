@@ -1,12 +1,12 @@
 # Overview
 
-vc.ru is a dark editorial and social platform for reading feeds, following communities and authors, publishing posts, commenting, messaging, searching, and managing a professional profile.
+vc.ru is an editorial and social platform for reading feeds, following communities and authors, publishing posts, commenting, messaging, searching, and managing a professional profile.
 
 # Navigation
 
-- Five bottom destinations cover Feed, Search, Chats, Notifications, and Profile.
+- Five primary destinations cover Feed, Search, Chats, Notifications, and Profile.
 - Feed tabs switch Popular, Fresh, and personalized content.
-- Community and author pages open from post headers while the floating compose button starts publishing.
+- Community and author pages open from post headers while the compose button starts publishing.
 
 # Core Flows
 
@@ -30,7 +30,12 @@ vc.ru is a dark editorial and social platform for reading feeds, following commu
 
 # Interaction Patterns
 
-- Typography and content media dominate over decorative UI.
-- Blue marks links and actions; muted rose marks the active bottom destination.
 - Post overflow controls centralize feed tuning and reporting.
-- Compose remains available as a small floating action without covering reading.
+
+# System Access Timing
+
+No system-access timing or denial-recovery path was documented in the reviewed source.
+
+# Known Gaps
+
+Unobserved flows, denial paths, cancellation behavior, and recovery states remain unspecified.

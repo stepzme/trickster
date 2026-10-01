@@ -4,7 +4,7 @@ Bolt moves users from service choice to a confirmed mobility task while preservi
 
 # Navigation
 
-Home foregrounds destination entry and service cards. The side menu holds account, trips, payment, support, safety, and settings outside the active booking flow.
+Home foregrounds destination entry and service items. The side menu holds account, trips, payment, support, safety, and settings outside the active booking flow.
 
 # Core Flows
 
@@ -18,11 +18,11 @@ Home foregrounds destination entry and service cards. The side menu holds accoun
 
 ## Send
 
-Capture pickup, delivery destination, recipient, parcel details, and price before confirmation. Keep delivery status tied to the map.
+1. Capture pickup, delivery destination, recipient, parcel details, and price before confirmation. Keep delivery status tied to the map.
 
 ## Scooters
 
-Discover nearby scooters on the map, review eligibility and price, scan to unlock, then expose ride and parking completion states.
+1. Discover nearby scooters on the map, review eligibility and price, scan to unlock, then expose ride and parking completion states.
 
 # Interaction Patterns
 
@@ -31,3 +31,11 @@ Discover nearby scooters on the map, review eligibility and price, scan to unloc
 - Disclose cancellation or price changes before commitment.
 - Separate account settings from active trip actions.
 - Provide a clear recovery path when no vehicle is available.
+
+# System Access Timing
+
+No system-access timing or denial-recovery path was documented in the reviewed source.
+
+# Known Gaps
+
+Unobserved flows, denial paths, cancellation behavior, and recovery states remain unspecified.

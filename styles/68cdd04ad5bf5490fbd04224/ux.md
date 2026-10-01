@@ -1,12 +1,12 @@
 # Overview
 
-VK Music combines personalized discovery, adaptive mixes, podcasts, search, listening history, playlists, downloads, and subscription management in a dark audio player.
+VK Music combines personalized discovery, adaptive mixes, podcasts, search, listening history, playlists, downloads, and subscription management in an audio player.
 
 # Navigation
 
-- Five bottom destinations cover Main, Mix, Podcasts, Search, and My Music.
+- Five primary destinations cover Main, Mix, Podcasts, Search, and My Music.
 - A persistent mini-player sits above navigation and opens the full player.
-- Main uses horizontal shelves for mixes, recent listening, releases, and social recommendations.
+- Main uses shelves for mixes, recent listening, releases, and social recommendations.
 
 # Core Flows
 
@@ -30,7 +30,13 @@ VK Music combines personalized discovery, adaptive mixes, podcasts, search, list
 
 # Interaction Patterns
 
-- Album art and recommendation color supply most visual variety.
-- Blue and violet mark active playback, selection, and subscription.
 - The mini-player preserves context across every destination.
 - Social playlists expose taste match before play.
+
+# System Access Timing
+
+No system-access timing or denial-recovery path was documented in the reviewed source.
+
+# Known Gaps
+
+Unobserved flows, denial paths, cancellation behavior, and recovery states remain unspecified.

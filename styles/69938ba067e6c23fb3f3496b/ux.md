@@ -4,13 +4,13 @@ Avito supports finding, buying, selling, messaging, hiring, and managing orders 
 
 # Navigation
 
-Search, Favorites, Ads, Messages, and Profile persist in the bottom bar. Cart sits in commerce headers; back navigation retains filters and scroll position.
+Search, Favorites, Ads, Messages, and Profile persist in primary navigation. Cart sits in commerce headers; back navigation retains filters and scroll position.
 
 # Core Flows
 
 ## Search and evaluate
 
-Browse categories or search, then narrow by location, facets, sorting, and saved-search alerts. Listing details expose photos, price, seller trust, reviews, delivery, chat, and complaint tools.
+1. Browse categories or search, then narrow by location, facets, sorting, and saved-search alerts. Listing details expose photos, price, seller trust, reviews, delivery, chat, and complaint tools.
 
 ## Buy with delivery
 
@@ -20,11 +20,11 @@ Browse categories or search, then narrow by location, facets, sorting, and saved
 
 ## Sell and manage
 
-Ad placement collects category, photos, attributes, description, price, and contact details. Draft, review, publication, statistics, promotion, and withdrawal remain explicit states.
+1. Ad placement collects category, photos, attributes, description, price, and contact details. Draft, review, publication, statistics, promotion, and withdrawal remain explicit states.
 
 ## Messages and profile
 
-Messaging supports seller chat, unread state, media, review, and support. Profile groups finances, orders, addresses, business tools, job tools, and service level.
+1. Messaging supports seller chat, unread state, media, review, and support. Profile groups finances, orders, addresses, business tools, job tools, and service level.
 
 # Interaction Patterns
 
@@ -33,3 +33,11 @@ Messaging supports seller chat, unread state, media, review, and support. Profil
 - Show complete order arithmetic before payment.
 - Make ad lifecycle state explicit.
 - Separate platform chat, support, and review paths.
+
+# System Access Timing
+
+No system-access request timing or denial recovery was documented in the reviewed source.
+
+# Known Gaps
+
+- Permission-denial recovery and unobserved secondary flows were not documented.

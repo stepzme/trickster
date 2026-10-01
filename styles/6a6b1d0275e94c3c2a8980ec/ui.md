@@ -1,13 +1,13 @@
 <design-context>
 ---
-version: alpha
+version: 1
+platform: iOS
 name: SberBank-Online-design-analysis
 description: "A broad financial super-app built on misty mint gradients, white rounded modules, strong black hierarchy, and focused Sber green actions. Dense banking information is split into configurable cards, while friendly pastel 3D financial objects add identity to services without obscuring balances or transactions."
 
 colors:
   primary: "#10A63A"
   on-primary: "#FFFFFF"
-  primary-hover: "#20B64B"
   primary-soft: "#E4F6E8"
   ink: "#111315"
   ink-muted: "#666C70"
@@ -23,52 +23,52 @@ colors:
   semantic-overlay: "#000000"
 
 typography:
-  display-xl: { fontFamily: System Sans, fontSize: 36px, fontWeight: 700, lineHeight: 1.05, letterSpacing: -0.7px }
-  display-lg: { fontFamily: System Sans, fontSize: 30px, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.4px }
-  display-md: { fontFamily: System Sans, fontSize: 25px, fontWeight: 700, lineHeight: 1.15, letterSpacing: -0.2px }
-  headline: { fontFamily: System Sans, fontSize: 21px, fontWeight: 700, lineHeight: 1.20, letterSpacing: 0 }
-  card-title: { fontFamily: System Sans, fontSize: 16px, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: System Sans, fontSize: 17px, fontWeight: 600, lineHeight: 1.30, letterSpacing: 0 }
-  body-lg: { fontFamily: System Sans, fontSize: 16px, fontWeight: 400, lineHeight: 1.42, letterSpacing: 0 }
-  body: { fontFamily: System Sans, fontSize: 14px, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
-  body-sm: { fontFamily: System Sans, fontSize: 12px, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
-  caption: { fontFamily: System Sans, fontSize: 10px, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
-  button: { fontFamily: System Sans, fontSize: 15px, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0 }
-  eyebrow: { fontFamily: System Sans, fontSize: 12px, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0.1px }
-  mono: { fontFamily: System Mono, fontSize: 12px, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
+  display-xl: { fontFamily: System Sans, fontSize: 36, fontWeight: 700, lineHeight: 1.05, letterSpacing: -0.7 }
+  display-lg: { fontFamily: System Sans, fontSize: 30, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.4 }
+  display-md: { fontFamily: System Sans, fontSize: 25, fontWeight: 700, lineHeight: 1.15, letterSpacing: -0.2 }
+  headline: { fontFamily: System Sans, fontSize: 21, fontWeight: 700, lineHeight: 1.20, letterSpacing: 0 }
+  card-title: { fontFamily: System Sans, fontSize: 16, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
+  subhead: { fontFamily: System Sans, fontSize: 17, fontWeight: 600, lineHeight: 1.30, letterSpacing: 0 }
+  body-lg: { fontFamily: System Sans, fontSize: 16, fontWeight: 400, lineHeight: 1.42, letterSpacing: 0 }
+  body: { fontFamily: System Sans, fontSize: 14, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
+  body-sm: { fontFamily: System Sans, fontSize: 12, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
+  caption: { fontFamily: System Sans, fontSize: 10, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
+  button: { fontFamily: System Sans, fontSize: 15, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0 }
+  eyebrow: { fontFamily: System Sans, fontSize: 12, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0.1 }
+  mono: { fontFamily: System Mono, fontSize: 12, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
 
 rounded:
-  xs: 4px
-  sm: 8px
-  md: 12px
-  lg: 16px
-  xl: 22px
-  xxl: 28px
-  pill: 9999px
-  full: 9999px
+  xs: 4
+  sm: 8
+  md: 12
+  lg: 16
+  xl: 22
+  xxl: 28
+  pill: 9999
+  full: 9999
 
 spacing:
-  xxs: 4px
-  xs: 8px
-  sm: 12px
-  md: 16px
-  lg: 24px
-  xl: 32px
-  xxl: 48px
-  section: 64px
+  xxs: 4
+  xs: 8
+  sm: 12
+  md: 16
+  lg: 24
+  xl: 32
+  xxl: 48
+  section: 64
 
 components:
-  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.md}", padding: 14px 18px }
-  button-secondary: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.md}", padding: 13px 18px }
-  finance-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 16px }
-  product-tile: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.md}", padding: 12px }
-  search-field: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink-muted}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 10px 14px }
-  transaction-row: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xs}", padding: 10px 0 }
-  filter-chip: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.pill}", padding: 8px 12px }
-  bottom-nav: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink-subtle}", typography: "{typography.caption}", rounded: "{rounded.xs}", height: 62px }
+  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.md}", padding: [14, 18]}
+  button-secondary: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.md}", padding: [13, 18]}
+  finance-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 16 }
+  product-tile: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.md}", padding: 12 }
+  search-field: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink-muted}", typography: "{typography.body}", rounded: "{rounded.md}", padding: [10, 14]}
+  transaction-row: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xs}", padding: [10, 0]}
+  filter-chip: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.pill}", padding: [8, 12]}
+  bottom-nav: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink-subtle}", typography: "{typography.caption}", rounded: "{rounded.xs}", height: 62 }
 ---
 
-## Overview
+# Overview
 
 SberBank Online is a configurable financial dashboard on a pale mint atmosphere. White rounded modules organize wallet, history, transfers, spending, savings, loans, payments, and profile services. Sber green marks action and positive value; pastel 3D objects make secondary product areas recognizable.
 
@@ -79,7 +79,15 @@ SberBank Online is a configurable financial dashboard on a pale mint atmosphere.
 - Dense finance data broken into titled, configurable blocks.
 - Soft 3D financial objects inside service tiles.
 
-## Colors
+# Non-negotiable visual invariants
+
+- The reviewed screens show this treatment: Misty mint gradient around the top and navigation edges.
+- The reviewed screens show this treatment: White modular cards with medium rounding.
+- The reviewed screens show this treatment: Green actions, amounts, links, and active navigation.
+- The reviewed screens show this treatment: Dense finance data broken into titled, configurable blocks.
+- The reviewed screens show this treatment: Soft 3D financial objects inside service tiles.
+
+# Color and surfaces
 
 ### Brand & Accent
 
@@ -103,7 +111,7 @@ SberBank Online is a configurable financial dashboard on a pale mint atmosphere.
 
 Green doubles as brand and positive finance state. Orange and red remain strictly warning, error, or debt-related; use signs and labels so meaning does not rely on color alone.
 
-## Typography
+# Typography
 
 ### Font Family
 
@@ -113,13 +121,13 @@ Use a neutral system sans with clear numerals. The interface depends on readable
 
 | Token | Size | Weight | Use |
 |---|---:|---:|---|
-| `{typography.display-xl}` | 36px | 700 | Total balance |
-| `{typography.display-lg}` | 30px | 700 | Product balance or major title |
-| `{typography.display-md}` | 25px | 700 | Screen title |
-| `{typography.headline}` | 21px | 700 | Module heading |
-| `{typography.card-title}` | 16px | 600 | Product or service title |
-| `{typography.body}` | 14px | 400 | Transaction and form content |
-| `{typography.caption}` | 10px | 400 | Account, date, and fee metadata |
+| `{typography.display-xl}` | 36pt | 700 | Total balance |
+| `{typography.display-lg}` | 30pt | 700 | Product balance or major title |
+| `{typography.display-md}` | 25pt | 700 | Screen title |
+| `{typography.headline}` | 21pt | 700 | Module heading |
+| `{typography.card-title}` | 16pt | 600 | Product or service title |
+| `{typography.body}` | 14pt | 400 | Transaction and form content |
+| `{typography.caption}` | 10pt | 400 | Account, date, and fee metadata |
 
 ### Principles
 
@@ -132,11 +140,7 @@ Use a neutral system sans with clear numerals. The interface depends on readable
 
 Use SF Pro or Inter. Preserve tabular-looking numerals and compact finance density; avoid playful display fonts.
 
-## Layout
-
-### Spacing System
-
-Use a 4px base, 10–12px screen gutters, 8px gaps between dashboard cards, and 20–24px between major financial groups.
+# Screen composition
 
 ### Grid & Container
 
@@ -146,34 +150,15 @@ The home dashboard is a single vertical feed of modular cards with horizontal pr
 
 Whitespace separates modules without making the dashboard sparse. Keep related transactions tight inside one card and leave canvas between distinct financial domains.
 
-## Elevation & Depth
+# Navigation appearance
 
-Use white-on-mint contrast, shallow shadows, and ambient gradient rather than strong elevation. Product cards may overlap slightly within horizontal strips.
+Use a five-item bottom bar for Home, Savings, Lifestyle, Payments, and Loans. Search with GigaChat remains near the top; deep flows use back navigation and focused titles.
 
-### Decorative Depth
-
-Use mint atmosphere and pastel 3D objects for depth. Keep balance, transaction, and form surfaces flat and highly legible.
-
-## Shapes
-
-### Border Radius Scale
-
-- Dashboard and product cards use 16px corners.
-- Form fields and service tiles use 12px corners.
-- Filters and compact actions are pill-shaped.
-- Profile imagery may use rounded-square crops.
-
-### Photography & Illustration Geometry
-
-Place small 3D financial objects at the edge of service tiles, leaving copy unobstructed. User imagery remains rounded-square or circular and secondary to account data.
-
-## Components
+# Components
 
 ### Buttons
 
 Primary financial commitments use solid green with white labels. Secondary actions use pale gray with dark text. Native controls may be used, but must inherit the green tint, card radii, typography, and spacing.
-
-### Pricing Tabs
 
 History filters, payment categories, and product groups use chips or horizontal tabs. Active state is green text, soft green, or a white lifted segment; avoid ornamental underlines.
 
@@ -193,11 +178,46 @@ Transaction history prioritizes amount, counterparty, date, category, and status
 
 Use a five-item bottom bar for Home, Savings, Lifestyle, Payments, and Loans. Search with GigaChat remains near the top; deep flows use back navigation and focused titles.
 
-### Footer
+# Imagery and icons
 
-There is no marketing footer. Long financial flows end with a safe-area-aware confirmation action or the final informational group.
+Use white-on-mint contrast, shallow shadows, and ambient gradient rather than strong elevation. Product cards may overlap slightly within horizontal strips.
 
-## Do's and Don'ts
+### Decorative Depth
+
+Use mint atmosphere and pastel 3D objects for depth. Keep balance, transaction, and form surfaces flat and highly legible.
+
+# States
+
+Transaction history prioritizes amount, counterparty, date, category, and status. Receipts and confirmations become clean document-like surfaces with one save or share action.
+
+# iOS adaptation
+
+Keep transaction and application flows single-column. Dashboard service tiles can stay two-column while titles and values remain readable, otherwise stack.
+
+### Touch Targets
+
+Cards, filters, product strips, transfer recipients, and bottom navigation need at least 44pt targets.
+
+### Collapsing Strategy
+
+Allow product strips and filters to scroll horizontally. Keep the confirmation action pinned during long transfers or applications.
+
+### Image Behavior
+
+Scale 3D objects proportionally and keep them inside tile bounds. Do not crop away the object silhouette or place it behind critical amounts.
+
+On iPhone, respect top and bottom safe areas, use scrolling for content that does not fit, keep interactive targets at least 44 points, and preserve the visual reading order for VoiceOver. At larger Dynamic Type sizes, allow supporting text to wrap without collapsing the dominant hierarchy. Use native sheets and permission transitions while explicitly styling app-owned surfaces to match the reference.
+
+# Anti-generic checklist
+
+- Do not substitute the documented accent hierarchy with default iOS blue.
+- Do not collapse distinct surfaces into a uniform stack of generic white cards.
+- Do not use an unstyled `TabView`, `Form`, or arbitrary SF Symbols when they contradict the documented navigation and component language.
+- Do not flatten the documented typography into one body-text scale.
+- Do not remove compositionally important photography or illustration while assets are pending.
+- Do not apply one corner radius to every control and surface.
+
+Source-specific guardrails retained from the review:
 
 ### Do
 
@@ -215,28 +235,8 @@ There is no marketing footer. Long financial flows end with a safe-area-aware co
 - Do not let illustration obscure financial data.
 - Do not expose default blue platform controls.
 
-## Responsive Behavior
+# Known gaps
 
-### Breakpoints
+The reviewed scenarios cover onboarding, home, wallet, cards, history, transfers, payments, savings, loans, profile, and GigaChat. iPad behavior, accessibility scaling, dark mode, and every specialized banking product were not visually sampled.
 
-Keep transaction and application flows single-column. Dashboard service tiles can stay two-column while titles and values remain readable, otherwise stack.
-
-### Touch Targets
-
-Cards, filters, product strips, transfer recipients, and bottom navigation need at least 44px targets.
-
-### Collapsing Strategy
-
-Allow product strips and filters to scroll horizontally. Keep the confirmation action pinned during long transfers or applications.
-
-### Image Behavior
-
-Scale 3D objects proportionally and keep them inside tile bounds. Do not crop away the object silhouette or place it behind critical amounts.
-
-## Iteration Guide
-
-Start with the mint canvas, white module system, green actions, and bottom navigation. Add wallet, history, transfers, payments, savings, and loans before optional assistant or lifestyle modules.
-
-## Known Gaps
-
-The reviewed scenarios cover onboarding, home, wallet, cards, history, transfers, payments, savings, loans, profile, and GigaChat. Tablet behavior, accessibility scaling, dark mode, and every specialized banking product were not visually sampled.
+</design-context>

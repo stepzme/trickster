@@ -1,8 +1,8 @@
-# Role
+# Overview
 
 Use illustration to make transport and city services recognizable before reading. It supports onboarding and service discovery, not transactional forms.
 
-# Visual Language
+# Visual Style
 
 - Soft 3D objects with rounded, toy-like proportions.
 - Clean materials, gentle ambient shadows, and bright lime, cyan, blue, and teal accents.
@@ -13,13 +13,25 @@ Use illustration to make transport and city services recognizable before reading
 
 Onboarding uses one large vehicle scene above a white copy sheet. Service tiles use one isolated object centered with generous clearance and a short label below.
 
-# Usage
+# Color and Materials
+
+Use the palette relationships explicitly described in the visual language and `ui.md`; no additional material system was documented.
+
+# Variants and States
 
 Use buses, trains, scooters, cards, tickets, parking, and QR objects for service identity. Keep maps, balances, payment forms, and error states functional and illustration-free.
 
-# Guardrails
+# Production Requirements
+
+Exact export formats, aspect ratios, animation behavior, and appearance variants were not documented. Where imagery is compositionally important, temporary placeholders must preserve its documented scale, placement, crop, and visual weight until final art exists.
+
+# Avoid
 
 - Do not crop the defining silhouette of a vehicle.
 - Do not mix flat vector characters with the rendered 3D set.
 - Do not place labels inside the artwork.
 - If a new subject has no reference, match the same soft 3D material, camera angle, lighting, and saturated palette so it harmonizes with `ui.md`.
+
+# Known Gaps
+
+Export specifications, animation rules, safe-crop measurements, and unobserved state variants were not available in the reviewed source.

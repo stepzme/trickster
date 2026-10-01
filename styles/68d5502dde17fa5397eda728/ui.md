@@ -1,12 +1,12 @@
 <design-context>
 ---
-version: alpha
+version: 1
+platform: iOS
 name: ChatGPT-design-analysis
 description: "A nearly monochrome conversational workspace with a white canvas, black text, pale-gray user bubbles and composer, sparse outline icons, black circular voice controls, and a faint violet upgrade accent. Chat, projects, library, GPTs, multimodal input, research, image generation, and settings remain quiet and content-first."
 colors:
   primary: "#111111"
   on-primary: "#FFFFFF"
-  primary-hover: "#2B2B2B"
   primary-soft: "#F2F2F2"
   accent: "#6C63D9"
   accent-secondary: "#10A37F"
@@ -21,32 +21,31 @@ colors:
   semantic-danger: "#D84A4A"
   semantic-overlay: "#000000"
 typography:
-  display-xl: { fontFamily: SF Pro Display, fontSize: 36px, fontWeight: 700, lineHeight: 1.05, letterSpacing: -0.7px }
-  display-lg: { fontFamily: SF Pro Display, fontSize: 30px, fontWeight: 700, lineHeight: 1.08, letterSpacing: -0.5px }
-  display-md: { fontFamily: SF Pro Display, fontSize: 26px, fontWeight: 700, lineHeight: 1.12, letterSpacing: -0.3px }
-  headline: { fontFamily: SF Pro Display, fontSize: 22px, fontWeight: 700, lineHeight: 1.18, letterSpacing: -0.2px }
-  card-title: { fontFamily: SF Pro Text, fontSize: 16px, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: SF Pro Text, fontSize: 17px, fontWeight: 500, lineHeight: 1.35, letterSpacing: 0 }
-  body-lg: { fontFamily: SF Pro Text, fontSize: 16px, fontWeight: 400, lineHeight: 1.45, letterSpacing: 0 }
-  body: { fontFamily: SF Pro Text, fontSize: 14px, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
-  body-sm: { fontFamily: SF Pro Text, fontSize: 12px, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
-  caption: { fontFamily: SF Pro Text, fontSize: 10px, fontWeight: 400, lineHeight: 1.20, letterSpacing: 0 }
-  button: { fontFamily: SF Pro Text, fontSize: 15px, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0 }
-  eyebrow: { fontFamily: SF Pro Text, fontSize: 11px, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0.3px }
-  mono: { fontFamily: SF Mono, fontSize: 12px, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
-rounded: { xs: 8px, sm: 12px, md: 16px, lg: 20px, xl: 26px, xxl: 32px, pill: 9999px, full: 9999px }
-spacing: { xxs: 4px, xs: 8px, sm: 12px, md: 16px, lg: 24px, xl: 32px, xxl: 48px, section: 64px }
+  display-xl: { fontFamily: SF Pro Display, fontSize: 36, fontWeight: 700, lineHeight: 1.05, letterSpacing: -0.7 }
+  display-lg: { fontFamily: SF Pro Display, fontSize: 30, fontWeight: 700, lineHeight: 1.08, letterSpacing: -0.5 }
+  display-md: { fontFamily: SF Pro Display, fontSize: 26, fontWeight: 700, lineHeight: 1.12, letterSpacing: -0.3 }
+  headline: { fontFamily: SF Pro Display, fontSize: 22, fontWeight: 700, lineHeight: 1.18, letterSpacing: -0.2 }
+  card-title: { fontFamily: SF Pro Text, fontSize: 16, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
+  subhead: { fontFamily: SF Pro Text, fontSize: 17, fontWeight: 500, lineHeight: 1.35, letterSpacing: 0 }
+  body-lg: { fontFamily: SF Pro Text, fontSize: 16, fontWeight: 400, lineHeight: 1.45, letterSpacing: 0 }
+  body: { fontFamily: SF Pro Text, fontSize: 14, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
+  body-sm: { fontFamily: SF Pro Text, fontSize: 12, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
+  caption: { fontFamily: SF Pro Text, fontSize: 10, fontWeight: 400, lineHeight: 1.20, letterSpacing: 0 }
+  button: { fontFamily: SF Pro Text, fontSize: 15, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0 }
+  eyebrow: { fontFamily: SF Pro Text, fontSize: 11, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0.3 }
+  mono: { fontFamily: SF Mono, fontSize: 12, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
+rounded: { xs: 8, sm: 12, md: 16, lg: 20, xl: 26, xxl: 32, pill: 9999, full: 9999 }
+spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
 components:
-  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.md}", padding: 14px 18px }
-  feature-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 16px }
-  action-tile: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.md}", padding: 12px }
-  grouped-list: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 8px 16px }
-  input: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body-lg}", rounded: "{rounded.md}", padding: 14px 16px }
-  top-nav: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xs}", height: 52px }
-  footer: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: 8px 12px }
+  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.md}", padding: [14, 18]}
+  feature-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 16 }
+  action-tile: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.md}", padding: 12 }
+  grouped-list: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: [8, 16]}
+  input: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body-lg}", rounded: "{rounded.md}", padding: [14, 16]}
+  bottom navigation: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: [8, 12]}
 ---
 
-## Overview
+# Overview
 
 ChatGPT keeps the conversation and composer dominant. Tools, projects, library, model choice, voice, and settings stay one layer away in drawers or compact controls.
 
@@ -57,7 +56,15 @@ ChatGPT keeps the conversation and composer dominant. Tools, projects, library, 
 - Sparse outline iconography.
 - Subtle violet upgrade chip.
 
-## Colors
+# Non-negotiable visual invariants
+
+- Sampled screens consistently use white content-first canvas.
+- The reference consistently shows pale-gray message and suggestion surfaces.
+- The reference consistently shows black circular voice and stop controls.
+- The reference consistently shows sparse outline iconography.
+- Sampled screens consistently use subtle violet upgrade chip.
+
+# Color and surfaces
 
 ### Brand & Accent
 - **Primary** ({colors.primary}): Voice, stop, and high-commitment actions.
@@ -80,7 +87,7 @@ ChatGPT keeps the conversation and composer dominant. Tools, projects, library, 
 - **Danger** ({colors.semantic-danger}): Error and destructive state.
 - **Overlay** ({colors.semantic-overlay}): Modal focus.
 
-## Typography
+# Typography
 
 ### Font Family
 
@@ -90,7 +97,7 @@ ChatGPT keeps the conversation and composer dominant. Tools, projects, library, 
 
 ### Hierarchy
 
-Use 36px bold for major statements, 22px bold for screen headings, 16px semibold for cards, 14px regular for detail, and 15px semibold for primary actions.
+Use 36 points bold for major statements, 22 points bold for screen headings, 16 points semibold for cards, 14 points regular for detail, and 15 points semibold for primary actions.
 
 ### Principles
 
@@ -103,11 +110,11 @@ Use 36px bold for major statements, 22px bold for screen headings, 16px semibold
 
 Use **Inter** or the platform system sans when the reference display face is unavailable.
 
-## Layout
+# Screen composition
 
 ### Spacing System
 
-Use a 4px base, 16px edge gutters, 12px control gaps, and 16px card padding.
+Use a 4 points base, 16 points edge gutters, 12 points control gaps, and 16 points card padding.
 
 ### Grid & Container
 
@@ -117,7 +124,7 @@ Conversation is a single readable column with a bottom composer. The drawer grou
 
 Use generous open space around short prompts and compact vertical rhythm for long responses.
 
-## Elevation & Depth
+Surface hierarchy observed in the source:
 
 Keep the base flat, raise actionable cards slightly, and reserve overlays for confirmation or interruption.
 
@@ -125,25 +132,15 @@ Keep the base flat, raise actionable cards slightly, and reserve overlays for co
 
 Use only subtle surface tint and sheet separation. Generated media may be visually rich but does not redefine the shell.
 
-## Shapes
+# Navigation appearance
 
-### Border Radius Scale
+The side drawer holds global destinations; each chat keeps model, edit, and overflow actions at the top.
 
-Use 8px for small controls, 12px for fields, 16px for actions, 20px for cards, and full pills or circles for compact selection.
-
-### Photography & Illustration Geometry
-
-User or generated images appear as content with full-screen review. The product shell has no decorative illustration language.
-
-## Components
+# Components
 
 ### Buttons
 
 Black circular controls handle voice and stop. Text and outline icons handle copy, listen, feedback, share, and sources.
-
-### Pricing Tabs
-
-Model and tool choice use compact menus; the main product avoids persistent bottom tabs.
 
 ### Cards & Containers
 
@@ -153,45 +150,23 @@ Suggestion chips, user bubbles, processing cards, sources, and project rows use 
 
 The composer supports text, voice, image, file, and tool selection with a single clear send or stop state.
 
-### Status & Build Page
+# Imagery and icons
+
+Use only subtle surface tint and sheet separation. Generated media may be visually rich but does not redefine the shell.
+
+User or generated images appear as content with full-screen review. The product shell has no decorative illustration language.
+
+If final imagery is not yet available, any placeholder must preserve the documented scale, placement, crop, and visual weight rather than removing that layer.
+
+# States
 
 Show generating, researching, searching, listening, uploading, completed, failed, and saved through text plus control state.
 
-### Navigation
-
-The side drawer holds global destinations; each chat keeps model, edit, and overflow actions at the top.
-
-### Footer
-
-The composer stays above the safe area and expands with content without obscuring the latest response.
-
-## Do's and Don'ts
-
-### Do
-
-- Keep content hierarchy dominant.
-- Preserve a persistent composer.
-- Label model and tool state.
-- Separate sources from prose.
-- Keep generated media as content.
-
-### Don't
-
-- Don't add decorative backgrounds.
-- Don't use generated images as shell decoration.
-- Don't crowd the composer.
-- Don't hide stop or cancel.
-- Don't over-card long responses.
-
-## Responsive Behavior
-
-### Breakpoints
-
-Use a centered or split panel above 768px, the reference single column from 390–767px, and tighter labels below 390px.
+# iOS adaptation
 
 ### Touch Targets
 
-Keep every row, tab, selector, map control, and primary action at least 44px.
+Keep every row, tab, selector, map control, and primary action at least 44 points.
 
 ### Collapsing Strategy
 
@@ -201,15 +176,20 @@ Preserve chat title, latest content, composer, send or stop, and drawer access. 
 
 Contain generated images in the conversation, then open full screen with save, share, select, and edit actions.
 
-## Iteration Guide
+Apply these rules within current iPhone safe areas and scrolling containers. Keep interactive targets at least 44 points, preserve a logical VoiceOver order, and let Dynamic Type wrap supporting text without flattening the documented hierarchy. Do not infer an unobserved dark or light appearance.
 
-1. Build conversation and composer.
-2. Add drawer and history.
-3. Add multimodal input and voice.
-4. Add research, search, study, and image tools.
-5. Add projects, library, subscription, and settings.
+# Anti-generic checklist
 
-## Known Gaps
+- Don't add decorative backgrounds.
+- Don't use generated images as shell decoration.
+- Don't crowd the composer.
+- Don't hide stop or cancel.
+- Don't over-card long responses.
+- Do not replace the documented hierarchy with a generic stack of identical white cards or `Form` sections.
+- Do not use default blue tint, an unstyled `TabView`, arbitrary SF Symbols, or uniform corner radii when they contradict the recorded tokens and components.
+- Do not omit compositionally important imagery while final assets are pending; preserve its footprint with a faithful placeholder.
+
+# Known gaps
 
 - Tokens were inferred visually from inspected mobile screens.
 - All 30 available flow names were inventoried; home, text input, image generation, deep research, and settings were image-reviewed.
@@ -217,5 +197,3 @@ Contain generated images in the conversation, then open full screen with save, s
 - No tablet or desktop captures were present.
 
 </design-context>
-
-Use the design system above for all UI you generate.

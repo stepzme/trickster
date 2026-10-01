@@ -4,8 +4,8 @@ Wildberries is a dense marketplace covering personalized discovery, search, prod
 
 # Navigation
 
-- A five-item bottom bar covers Home/Search, Catalog, Wallet or services, Cart, and Profile.
-- Home and search use two-column product grids with persistent search and camera access.
+- A five-item primary navigation covers Home/Search, Catalog, Wallet or services, Cart, and Profile.
+- Home and search use product collections with persistent search and camera access.
 - Product, cart, checkout, and order pages progressively replace discovery density with focused action.
 
 # Core Flows
@@ -30,6 +30,12 @@ Wildberries is a dense marketplace covering personalized discovery, search, prod
 
 # Interaction Patterns
 
-- Product cards expose discount, current and previous price, rating, delivery date, and a direct cart action.
-- Magenta identifies marketplace navigation and cart actions; orange separates immediate checkout.
 - Recommendations continue through product, cart, processing, and tracking screens.
+
+# System Access Timing
+
+No system-access timing or denial-recovery path was documented in the reviewed source.
+
+# Known Gaps
+
+Unobserved flows, denial paths, cancellation behavior, and recovery states remain unspecified.

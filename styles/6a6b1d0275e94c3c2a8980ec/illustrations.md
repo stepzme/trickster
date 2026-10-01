@@ -16,16 +16,28 @@ SberBank Online uses soft pastel 3D objects to identify financial products and s
 - Prefer a three-quarter view and recognizable silhouette.
 - Keep generous negative space and avoid full narrative scenes.
 
-# Color
+# Color and Materials
 
 - Lead with green or mint on key product objects.
 - Use pale neutral materials for supporting mass.
 - Reserve brighter colors for small distinctions, never status meaning.
 - Keep shadows soft and compatible with the mint canvas.
 
-# Usage
+# Variants and States
 
 - Use in product discovery, profile benefits, loan types, payment services, and goals.
 - Keep transaction rows, receipts, and data-entry forms free of decorative objects.
 - Match each object directly to the service it represents.
 - Create original assets; do not copy logos, characters, or proprietary object models.
+
+# Production Requirements
+
+Exact export formats, aspect ratios, animation behavior, and appearance variants were not documented. Where imagery is compositionally important, temporary placeholders must preserve its documented scale, placement, crop, and visual weight until final art exists.
+
+# Avoid
+
+Do not introduce an unrelated illustration style or substitute decorative symbols for source-supported imagery.
+
+# Known Gaps
+
+Export specifications, animation rules, safe-crop measurements, and unobserved state variants were not available in the reviewed source.

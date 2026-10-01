@@ -4,7 +4,7 @@ My Viva is a telecom account app for balance, package allowances, payments, serv
 
 # Navigation
 
-Four bottom destinations connect Home, My Account, Special Offers, and More. Home keeps profile, stories, current balance, allowance meters, and service shortcuts in a single vertical path.
+Four primary destinations connect Home, My Account, Special Offers, and More. Home keeps profile, stories, current balance, allowance meters, and service shortcuts in a single path.
 
 # Core Flows
 
@@ -19,12 +19,17 @@ Four bottom destinations connect Home, My Account, Special Offers, and More. Hom
 
 1. Browse promotional cards from Home or Special Offers.
 2. Open an offer and review included services and conditions.
-3. Activate through the prominent red action.
+3. Activate through the primary action.
 4. Confirm the changed service state.
 
 # Interaction Patterns
 
-- Red marks active navigation, payment, and activation against a bright white canvas.
-- Allowances use slim blue progress bars and aligned numeric summaries.
-- Promotion cards remain image-led, while account cards remain restrained and factual.
-- Utilities are exposed as compact icon tiles rather than deep menus.
+The sampled flows use direct actions, explicit completion, and return to the current context. No additional repeated interaction behavior was documented.
+
+# System Access Timing
+
+No system-access request timing or denial recovery was documented in the reviewed source.
+
+# Known Gaps
+
+- Permission-denial recovery and unobserved secondary flows were not documented.

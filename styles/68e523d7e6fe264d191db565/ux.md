@@ -4,7 +4,7 @@ Lovi is an AI skincare companion that builds a personalized routine, tracks skin
 
 # Navigation
 
-Five fixed destinations cover Today, Products, New Scan, Insights, and Sunshine assistant. Premium and the smiling assistant remain accessible as floating controls above the tab bar.
+Five fixed destinations cover Today, Products, New Scan, Insights, and Sunshine assistant. Premium and the smiling assistant remain accessible as controls above the primary navigation.
 
 # Core Flows
 
@@ -23,7 +23,12 @@ Five fixed destinations cover Today, Products, New Scan, Insights, and Sunshine 
 
 # Interaction Patterns
 
-- Soft gradient haze and white glassy cards make dense personalization feel calm.
-- Green fit scores and checkmarks summarize suitability.
 - The smiling assistant opens contextual explanations without replacing the current screen.
-- Scan, favorite, assistant, and premium controls float above content with soft shadows.
+
+# System Access Timing
+
+No system-access timing or denial-recovery path was documented in the reviewed source.
+
+# Known Gaps
+
+Unobserved flows, denial paths, cancellation behavior, and recovery states remain unspecified.

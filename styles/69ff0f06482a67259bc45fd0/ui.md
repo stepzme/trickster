@@ -1,12 +1,12 @@
 <design-context>
 ---
-version: alpha
+version: 1
+platform: iOS
 name: Ivi-design-analysis
 description: "A cinematic near-black streaming interface driven by edge-to-edge artwork, deep burgundy surfaces, and a vivid pink-red action color. Rounded media panels, dense poster grids, bold white titles, restrained metadata, and a translucent dark bottom bar make the product feel immersive without obscuring navigation."
 colors:
   primary: "#FF1654"
   on-primary: "#FFFFFF"
-  primary-hover: "#FF3E70"
   primary-focus: "#D90F45"
   ink: "#FFFFFF"
   ink-muted: "#C8C1C8"
@@ -28,230 +28,171 @@ colors:
   semantic-success: "#27C88A"
   semantic-overlay: "#000000"
 typography:
-  display-xl: {fontFamily: SF Pro Display, fontSize: 40px, fontWeight: 700, lineHeight: 1.05, letterSpacing: -1.2px}
-  display-lg: {fontFamily: SF Pro Display, fontSize: 32px, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.8px}
-  display-md: {fontFamily: SF Pro Display, fontSize: 26px, fontWeight: 700, lineHeight: 1.14, letterSpacing: -0.5px}
-  headline: {fontFamily: SF Pro Display, fontSize: 22px, fontWeight: 700, lineHeight: 1.20, letterSpacing: -0.3px}
-  card-title: {fontFamily: SF Pro Text, fontSize: 18px, fontWeight: 600, lineHeight: 1.25, letterSpacing: -0.2px}
-  subhead: {fontFamily: SF Pro Text, fontSize: 16px, fontWeight: 600, lineHeight: 1.35, letterSpacing: 0}
-  body-lg: {fontFamily: SF Pro Text, fontSize: 16px, fontWeight: 400, lineHeight: 1.42, letterSpacing: 0}
-  body: {fontFamily: SF Pro Text, fontSize: 14px, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0}
-  body-sm: {fontFamily: SF Pro Text, fontSize: 12px, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0}
-  caption: {fontFamily: SF Pro Text, fontSize: 10px, fontWeight: 500, lineHeight: 1.25, letterSpacing: 0}
-  button: {fontFamily: SF Pro Text, fontSize: 15px, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0}
-  eyebrow: {fontFamily: SF Pro Text, fontSize: 11px, fontWeight: 700, lineHeight: 1.20, letterSpacing: 0.3px}
-  mono: {fontFamily: SF Mono, fontSize: 12px, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0}
+  display-xl: {fontFamily: SF Pro Display, fontSize: 40, fontWeight: 700, lineHeight: 1.05, letterSpacing: -1.2}
+  display-lg: {fontFamily: SF Pro Display, fontSize: 32, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.8}
+  display-md: {fontFamily: SF Pro Display, fontSize: 26, fontWeight: 700, lineHeight: 1.14, letterSpacing: -0.5}
+  headline: {fontFamily: SF Pro Display, fontSize: 22, fontWeight: 700, lineHeight: 1.20, letterSpacing: -0.3}
+  card-title: {fontFamily: SF Pro Text, fontSize: 18, fontWeight: 600, lineHeight: 1.25, letterSpacing: -0.2}
+  subhead: {fontFamily: SF Pro Text, fontSize: 16, fontWeight: 600, lineHeight: 1.35, letterSpacing: 0}
+  body-lg: {fontFamily: SF Pro Text, fontSize: 16, fontWeight: 400, lineHeight: 1.42, letterSpacing: 0}
+  body: {fontFamily: SF Pro Text, fontSize: 14, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0}
+  body-sm: {fontFamily: SF Pro Text, fontSize: 12, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0}
+  caption: {fontFamily: SF Pro Text, fontSize: 10, fontWeight: 500, lineHeight: 1.25, letterSpacing: 0}
+  button: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0}
+  eyebrow: {fontFamily: SF Pro Text, fontSize: 11, fontWeight: 700, lineHeight: 1.20, letterSpacing: 0.3}
+  mono: {fontFamily: SF Mono, fontSize: 12, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0}
 rounded:
-  xs: 4px
-  sm: 8px
-  md: 12px
-  lg: 16px
-  xl: 20px
-  xxl: 28px
-  pill: 9999px
-  full: 9999px
+  xs: 4
+  sm: 8
+  md: 12
+  lg: 16
+  xl: 20
+  xxl: 28
+  pill: 9999
+  full: 9999
 spacing:
-  xxs: 4px
-  xs: 8px
-  sm: 12px
-  md: 16px
-  lg: 20px
-  xl: 24px
-  xxl: 32px
-  section: 40px
+  xxs: 4
+  xs: 8
+  sm: 12
+  md: 16
+  lg: 20
+  xl: 24
+  xxl: 32
+  section: 40
 components:
-  button-primary: {backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.md}", padding: 14px 20px}
+  button-primary: {backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.md}", padding: 14 20}
   button-primary-pressed: {backgroundColor: "{colors.primary-focus}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.md}"}
-  button-primary-hover: {backgroundColor: "{colors.primary-hover}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.md}"}
-  button-secondary: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.md}", padding: 12px 18px}
-  button-tertiary: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.md}", padding: 10px 14px}
-  button-inverse: {backgroundColor: "{colors.inverse-canvas}", textColor: "{colors.inverse-ink}", typography: "{typography.button}", rounded: "{rounded.md}", padding: 12px 18px}
+  button-secondary: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.md}", padding: 12 18}
+  button-tertiary: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.md}", padding: 10 14}
+  button-inverse: {backgroundColor: "{colors.inverse-canvas}", textColor: "{colors.inverse-ink}", typography: "{typography.button}", rounded: "{rounded.md}", padding: 12 18}
   media-card: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 0}
   poster-card: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.caption}", rounded: "{rounded.sm}", padding: 0}
-  search-field: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink-muted}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 12px 14px}
-  filter-chip: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.sm}", padding: 8px 12px}
-  top-nav: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.xs}", height: 48px}
-  bottom-nav: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink-subtle}", typography: "{typography.caption}", rounded: "{rounded.xl}", padding: 8px 10px}
+  search-field: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink-muted}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 12 14}
+  filter-chip: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.sm}", padding: 8 12}
+  navigation-bar: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.xs}", height: 48}
+  bottom-nav: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink-subtle}", typography: "{typography.caption}", rounded: "{rounded.xl}", padding: 8 10}
 ---
-## Overview
+
+# Overview
 
 Ivi is a dark, artwork-first streaming system. Posters and cinematic stills define each screen; UI chrome is compact, rounded, and subordinate to content.
 
-**Key Characteristics:**
-- Near-black and burgundy surfaces.
-- White bold titles with quiet gray metadata.
-- Pink-red reserved for subscription and editorial labels.
-- Large landscape features plus dense portrait poster grids.
-- Five-item persistent bottom navigation.
+# Non-negotiable visual invariants
 
-## Colors
-
-### Brand & Accent
-- Hot pink-red marks subscription CTAs, promotional labels, and rare active emphasis.
-- Green and cyan appear only in ratings or source metadata.
-
-### Surface
-- Near-black is the default canvas; burgundy-black panels separate search and navigation.
-- Translucent dark overlays protect controls over moving imagery.
-
-### Text
-- White carries titles and primary actions.
-- Warm grays reduce synopsis, inactive navigation, and supporting facts.
-
-### Semantic
-- Green ratings indicate positive quality signals.
-- Black image scrims ensure readable text and playback controls.
-
-## Typography
-
-### Font Family
-
-Use SF Pro Display for cinematic headings and SF Pro Text for navigation, metadata, and controls.
-
-### Hierarchy
-
-| Token | Size | Weight | Use |
-|---|---:|---:|---|
-| display-lg | 32px | 700 | Subscription statement |
-| display-md | 26px | 700 | Title detail heading |
-| headline | 22px | 700 | Content section |
-| card-title | 18px | 600 | Featured title |
-| body | 14px | 400 | Synopsis |
-| caption | 10px | 500 | Navigation and badges |
-
-### Principles
-
-- Keep title lines short and decisive.
-- Let poster typography remain inside artwork rather than recreating it in UI text.
-- Set metadata compactly and group related facts on one line.
-
-### Note on Font Substitutes
-
-SF Pro is sufficient; use another neutral neo-grotesk only where unavailable.
-
-## Layout
-
-### Spacing System
-
-Use a 4px base, 12px gaps inside rails, and 16px screen gutters.
-
-### Grid & Container
-
-Feature cards use the full content width. Search uses a three-column portrait grid; related titles use horizontal rails.
-
-### Whitespace Philosophy
-
-Favor content density over empty space, but separate sections with 20–32px vertical rhythm.
-
-## Elevation & Depth
-
-| Level | Treatment | Use |
-|---|---|---|
-| 0 | Near-black canvas | Feed and search |
-| 1 | Burgundy panel | Inputs and navigation |
-| 2 | Dark gradient over image | Metadata and controls |
-| 3 | Full-screen video overlay | Playback |
-
-### Decorative Depth
-
-Use image gradients, blur, and translucent chrome. Avoid conventional drop shadows.
-
-## Shapes
-
-### Border Radius Scale
-
-| Token | Value | Use |
-|---|---:|---|
-| rounded-sm | 8px | Posters and chips |
-| rounded-md | 12px | Search and buttons |
-| rounded-lg | 16px | Feature cards |
-| rounded-xl | 20px | Navigation surface |
-| rounded-pill | full | Labels |
-
-### Photography & Illustration Geometry
-
-Landscape stills use wide rounded crops; portrait posters use consistent narrow cards. Preserve faces and title art.
-
-## Components
-
-### Buttons
-
-Primary subscription actions are full-width pink-red rectangles with medium radius. Media actions may use compact icon buttons over dark scrims.
-
-### Pricing Tabs
-
-No pricing tabs were observed. If required, use dark segmented pills and one pink-red selected state.
-
-### Cards & Containers
-
-Feature cards combine a wide image, two-line synopsis, metadata, and bookmark action. Poster cards are mostly image with minimal external text.
-
-### Inputs & Forms
-
-Search is a filled dark field paired with a square filter button. Keep forms rare and visually integrated into the dark surface.
-
-### Status & Build Page
-
-Use small colored badges over artwork and compact progress bars inside playback or continuing-content states.
-
-### Navigation
-
-Keep five destinations fixed. Use white for the current icon and muted gray elsewhere; preserve labels at all times.
-
-### Footer
-
-No footer; reserve bottom safe-area space below navigation.
-
-## Do's and Don'ts
-
-### Do
-
+- The recurring color treatment uses Near-black and burgundy surfaces.
 - Let artwork dominate the screen.
 - Keep metadata compact and factual.
 - Use the pink-red accent sparingly.
 - Preserve predictable poster proportions.
 - Maintain dark continuity between feed and detail.
+- Feature cards use the full content width.
+- Search uses a three-column portrait grid; related titles use horizontal rails.
 
-### Don't
+# Color and surfaces
 
-- Don't place bright panels behind every section.
-- Don't crop faces or title typography carelessly.
-- Don't replace poster grids with generic text cards.
-- Don't overuse shadows or borders.
-- Don't turn rating colors into general accents.
+- Hot pink-red marks subscription CTAs, promotional labels, and rare active emphasis.
+- Green and cyan appear only in ratings or source metadata.
 
-## Responsive Behavior
+- Near-black is the default canvas; burgundy-black panels separate search and navigation.
+- Translucent dark overlays protect controls over moving imagery.
 
-### Breakpoints
+- White carries titles and primary actions.
+- Warm grays reduce synopsis, inactive navigation, and supporting facts.
 
-| Name | Width | Key Changes |
-|---|---:|---|
-| Compact | 320–374px | Tighten gutters and poster gaps |
-| Standard | 375–430px | Default three-column grid |
-| Wide | 431px+ | Enlarge feature image and rail cards |
+- Green ratings indicate positive quality signals.
+- Black image scrims ensure readable text and playback controls.
 
-### Touch Targets
+# Typography
 
-Navigation, bookmarks, filters, and playback controls remain at least 44px even when the visible icon is smaller.
+Use SF Pro Display for cinematic headings and SF Pro Text for navigation, metadata, and controls.
 
-### Collapsing Strategy
+- display-lg — 32 points — 700 — Subscription statement
+- display-md — 26 points — 700 — Title detail heading
+- headline — 22 points — 700 — Content section
+- card-title — 18 points — 600 — Featured title
+- body — 14 points — 400 — Synopsis
+- caption — 10 points — 500 — Navigation and badges
 
-Horizontal rails scroll instead of wrapping. Synopsis expands vertically; bottom navigation stays fixed.
+- Keep title lines short and decisive.
+- Let poster typography remain inside artwork rather than recreating it in UI text.
+- Set metadata compactly and group related facts on one line.
 
-### Image Behavior
+SF Pro is sufficient; use another neutral neo-grotesk only where unavailable.
+
+The hierarchy must remain legible with Dynamic Type: supporting text may wrap before the primary metric, title, or action loses its role.
+
+# Screen composition
+
+Use a 4 points base, 12 points gaps inside rails, and 16 points screen gutters.
+
+Feature cards use the full content width. Search uses a three-column portrait grid; related titles use horizontal rails.
+
+Favor content density over empty space, but separate sections with 20–32 points vertical rhythm.
+
+Use image gradients, blur, and translucent chrome. Avoid conventional drop shadows.
+
+Primary iPhone screens keep the documented content grouping and vertical rhythm inside a scroll container when content exceeds the viewport. Bottom-owned actions or navigation reserve the lower safe area rather than covering content.
+
+# Navigation appearance
+
+Keep five destinations fixed. Use white for the current icon and muted gray elsewhere; preserve labels at all times.
+
+This section governs appearance only; destinations and transitions are defined in `ux.md`.
+
+# Components
+
+Primary subscription actions are full-width pink-red rectangles with medium radius. Media actions may use compact icon buttons over dark scrims.
+
+Feature cards combine a wide image, two-line synopsis, metadata, and bookmark action. Poster cards are mostly image with minimal external text.
+
+Search is a filled dark field paired with a square filter button. Keep forms rare and visually integrated into the dark surface.
+
+Use small colored badges over artwork and compact progress bars inside playback or continuing-content states.
+
+Controls retain at least a 44-point interactive area. Pressed and disabled treatments should stay within the documented palette and hierarchy; no unobserved state styling is prescribed.
+
+# Imagery and icons
+
+Landscape stills use wide rounded crops; portrait posters use consistent narrow cards. Preserve faces and title art.
 
 Use aspect-fill, keep focal faces within safe regions, and apply bottom gradients only when text overlaps.
 
-## Iteration Guide
+When imagery is part of the documented composition, it cannot be omitted while final assets are pending. A temporary asset must preserve its placement, crop, scale, and approximate visual weight.
 
-Tune artwork scale and dark surface continuity first, then metadata density, radius, and accent frequency.
+# States
 
-## Known Gaps
+Use small colored badges over artwork and compact progress bars inside playback or continuing-content states.
+
+- Green ratings indicate positive quality signals.
+- Black image scrims ensure readable text and playback controls.
+
+Only the states documented above are specified; other states must preserve the same canvas, hierarchy, and component language without inventing a new visual system.
+
+# iOS adaptation
+
+- Extend the documented canvas through the iPhone safe areas while keeping readable content within appropriate insets.
+- Use a vertical `ScrollView` for content that does not fit compact heights; keep documented bottom actions and navigation clear of the home indicator.
+- Navigation, bookmarks, filters, and playback controls remain at least 44 points even when the visible icon is smaller.
+- Horizontal rails scroll instead of wrapping. Synopsis expands vertically; bottom navigation stays fixed.
+- Present the keyboard and system permission UI natively, then return to the same visual context.
+- Preserve semantic reading order in VoiceOver and allow text to grow with Dynamic Type.
+- Do not infer an unobserved dark or light variant; use the appearance documented by the reference.
+
+# Anti-generic checklist
+
+- Do not place bright panels behind every section.
+- Do not crop faces or title typography carelessly.
+- Do not replace poster grids with generic text cards.
+- Do not overuse shadows or borders.
+- Do not turn rating colors into general accents.
+- Do not replace the documented canvas and surfaces with a generic grouped background and uniform white cards.
+- Do not use an unstyled `TabView`, default blue tint, or arbitrary SF Symbols when they contradict the reference.
+- Do not collapse every component to one corner radius or remove compositionally important imagery.
+
+# Known gaps
 
 - Playback gesture timing was available only as video, not measured.
 - Tablet and landscape catalog layouts were not represented.
 - Dynamic states for downloads and offline viewing were not reviewed.
 
 </design-context>
-
-Use the design system above for all UI you generate.

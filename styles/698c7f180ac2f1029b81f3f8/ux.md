@@ -4,9 +4,9 @@ Trading 212 combines investing, cash pots, watchlists, market research, social i
 
 # Navigation
 
-- A six-item bottom bar covers Home, Portfolio, Search, Card, Social, and Menu.
+- A six-item primary navigation covers Home, Portfolio, Search, Card, Social, and Menu.
 - The Home header switches account context and exposes notifications.
-- Instrument pages use close/back navigation while keeping Buy and Sell anchored at the bottom.
+- Instrument pages use close/back navigation and keep Buy and Sell available.
 
 # Core Flows
 
@@ -30,7 +30,12 @@ Trading 212 combines investing, cash pots, watchlists, market research, social i
 
 # Interaction Patterns
 
-- Summary cards compress account value and actions above a white content sheet.
-- Cyan consistently marks primary actions and active data.
-- Green and red communicate market movement only.
-- Dense research is chunked into horizontally browsable sections and expandable cards.
+The sampled flows use direct actions, explicit completion, and return to the current context. No additional repeated interaction behavior was documented.
+
+# System Access Timing
+
+No system-access request timing or denial recovery was documented in the reviewed source.
+
+# Known Gaps
+
+- Permission-denial recovery and unobserved secondary flows were not documented.

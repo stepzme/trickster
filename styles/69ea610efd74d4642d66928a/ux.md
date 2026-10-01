@@ -4,7 +4,7 @@ Pillowtalk turns journaling into a daily voice-first ritual, then organizes tran
 
 # Navigation
 
-A four-item bottom bar anchors Today, Explore, Entries, and Patterns. A floating white add button starts a new entry from multiple sections.
+A four-item primary navigation anchors Today, Explore, Entries, and Patterns. A add action starts a new entry from multiple sections.
 
 # Core Flows
 
@@ -18,4 +18,12 @@ A four-item bottom bar anchors Today, Explore, Entries, and Patterns. A floating
 
 # Interaction Patterns
 
-Voice entry is foregrounded in a large atmospheric panel, dates use a compact weekly rail, the plus action persists, and deeper AI interpretation stays downstream of the captured journal entry.
+The sampled flows use direct actions, explicit completion, and return to the current context. No additional repeated interaction behavior was documented.
+
+# System Access Timing
+
+- Speech Recognition follows the user choosing transcription. Denial recovery was not documented.
+
+# Known Gaps
+
+- Permission-denial recovery and unobserved secondary flows were not documented.

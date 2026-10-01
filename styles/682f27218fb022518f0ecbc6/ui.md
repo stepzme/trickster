@@ -1,39 +1,50 @@
 <design-context>
 ---
-version: alpha
+version: 1
+platform: iOS
 name: Flowwow-design-analysis
 description: "A premium local-gifting marketplace with a white canvas, black primary actions, mint bonus labels, product-first floral photography, editorial store grids, compact price and delivery metadata, and layered checkout sheets for gifts, postcards, timing, tips, and live tracking."
-colors: { primary: "#111111", on-primary: "#FFFFFF", primary-hover: "#2B2B2B", primary-soft: "#F1F1F1", accent: "#45C58B", ink: "#171717", ink-muted: "#747474", ink-subtle: "#B0B0B0", canvas: "#FFFFFF", surface-1: "#F6F6F6", surface-2: "#EEF9F3", hairline: "#E4E4E4", semantic-success: "#36AD72", semantic-warning: "#F3B61F", semantic-danger: "#D94C55", semantic-overlay: "#000000" }
+colors: { primary: "#111111", on-primary: "#FFFFFF", primary-soft: "#F1F1F1", accent: "#45C58B", ink: "#171717", ink-muted: "#747474", ink-subtle: "#B0B0B0", canvas: "#FFFFFF", surface-1: "#F6F6F6", surface-2: "#EEF9F3", hairline: "#E4E4E4", semantic-success: "#36AD72", semantic-warning: "#F3B61F", semantic-danger: "#D94C55", semantic-overlay: "#000000" }
 typography:
-  display-xl: { fontFamily: SF Pro Display, fontSize: 36px, fontWeight: 700, lineHeight: 1.05, letterSpacing: -0.7px }
-  display-lg: { fontFamily: SF Pro Display, fontSize: 30px, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.5px }
-  display-md: { fontFamily: SF Pro Display, fontSize: 26px, fontWeight: 700, lineHeight: 1.15, letterSpacing: -0.3px }
-  headline: { fontFamily: SF Pro Display, fontSize: 22px, fontWeight: 700, lineHeight: 1.20, letterSpacing: 0 }
-  card-title: { fontFamily: SF Pro Text, fontSize: 16px, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: SF Pro Text, fontSize: 16px, fontWeight: 600, lineHeight: 1.30, letterSpacing: 0 }
-  body-lg: { fontFamily: SF Pro Text, fontSize: 16px, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
-  body: { fontFamily: SF Pro Text, fontSize: 14px, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
-  body-sm: { fontFamily: SF Pro Text, fontSize: 12px, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
-  caption: { fontFamily: SF Pro Text, fontSize: 10px, fontWeight: 500, lineHeight: 1.20, letterSpacing: 0 }
-  button: { fontFamily: SF Pro Text, fontSize: 15px, fontWeight: 650, lineHeight: 1.20, letterSpacing: 0 }
-  eyebrow: { fontFamily: SF Pro Text, fontSize: 11px, fontWeight: 650, lineHeight: 1.20, letterSpacing: 0.2px }
-  mono: { fontFamily: SF Mono, fontSize: 12px, fontWeight: 500, lineHeight: 1.30, letterSpacing: 0 }
-rounded: { xs: 6px, sm: 10px, md: 14px, lg: 18px, xl: 24px, xxl: 30px, pill: 9999px, full: 9999px }
-spacing: { xxs: 4px, xs: 8px, sm: 12px, md: 16px, lg: 24px, xl: 32px, xxl: 48px, section: 64px }
+  display-xl: { fontFamily: SF Pro Display, fontSize: 36, fontWeight: 700, lineHeight: 1.05, letterSpacing: -0.7 }
+  display-lg: { fontFamily: SF Pro Display, fontSize: 30, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.5 }
+  display-md: { fontFamily: SF Pro Display, fontSize: 26, fontWeight: 700, lineHeight: 1.15, letterSpacing: -0.3 }
+  headline: { fontFamily: SF Pro Display, fontSize: 22, fontWeight: 700, lineHeight: 1.20, letterSpacing: 0 }
+  card-title: { fontFamily: SF Pro Text, fontSize: 16, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
+  subhead: { fontFamily: SF Pro Text, fontSize: 16, fontWeight: 600, lineHeight: 1.30, letterSpacing: 0 }
+  body-lg: { fontFamily: SF Pro Text, fontSize: 16, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
+  body: { fontFamily: SF Pro Text, fontSize: 14, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
+  body-sm: { fontFamily: SF Pro Text, fontSize: 12, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
+  caption: { fontFamily: SF Pro Text, fontSize: 10, fontWeight: 500, lineHeight: 1.20, letterSpacing: 0 }
+  button: { fontFamily: SF Pro Text, fontSize: 15, fontWeight: 650, lineHeight: 1.20, letterSpacing: 0 }
+  eyebrow: { fontFamily: SF Pro Text, fontSize: 11, fontWeight: 650, lineHeight: 1.20, letterSpacing: 0.2 }
+  mono: { fontFamily: SF Mono, fontSize: 12, fontWeight: 500, lineHeight: 1.30, letterSpacing: 0 }
+rounded: { xs: 6, sm: 10, md: 14, lg: 18, xl: 24, xxl: 30, pill: 9999, full: 9999 }
+spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
 components:
-  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 14px 18px }
-  product-card: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.sm}", padding: 8px }
-  store-card: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 10px }
-  input: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: 11px 13px }
-  top-nav: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xs}", height: 52px }
-  footer: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: 8px 10px }
+  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [14, 18]}
+  product-card: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.sm}", padding: 8 }
+  store-card: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 10 }
+  input: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: [11, 13]}
+  bottom navigation: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: [8, 10]}
 ---
 
-## Overview
+# Overview
 
 Flowwow is a photo-led gifting marketplace where black actions and mint bonus labels stay secondary to flowers, desserts, and store quality.
 
-## Colors
+# Non-negotiable visual invariants
+
+- The reference consistently shows seller and delivery confidence visible.
+- The reference consistently shows authentic product photography.
+- The reference consistently shows preserve gifting notes and timing.
+- Sampled screens consistently use a premium local-gifting marketplace with a white canvas.
+- The reference consistently shows black primary actions.
+- The reference consistently shows mint bonus labels.
+- The reference consistently shows product-first floral photography.
+- The reference consistently shows editorial store grids.
+
+# Color and surfaces
 
 ### Brand & Accent
 Use black for purchase and mint for bonuses, verified availability, and positive commerce cues.
@@ -47,13 +58,13 @@ Use black for product and price, gray for delivery and store metadata, and pale 
 ### Semantic
 Use green for confirmed, yellow for rating, and red for error or cancel.
 
-## Typography
+# Typography
 
 ### Font Family
 Use SF Pro Display for sections and SF Pro Text for products, stores, and checkout.
 
 ### Hierarchy
-Use 26–36px for major headings, 22px for sections, 16px for cards, 14px body, and 10–12px metadata.
+Use 26–36 points for major headings, 22 points for sections, 16 points for cards, 14 points body, and 10–12 points metadata.
 
 ### Principles
 Keep product name, price, delivery time, rating, and store readable without competing with photography.
@@ -61,10 +72,10 @@ Keep product name, price, delivery time, rating, and store readable without comp
 ### Note on Font Substitutes
 Use the platform sans or Inter with tabular prices.
 
-## Layout
+# Screen composition
 
 ### Spacing System
-Use a 4px base, 8px grid gaps, 16px gutters, and 16px checkout padding.
+Use a 4 points base, 8 points grid gaps, 16 points gutters, and 16 points checkout padding.
 
 ### Grid & Container
 Home stacks search, categories, stores, and product rails; store and product views use two-column image grids.
@@ -72,80 +83,73 @@ Home stacks search, categories, stores, and product rails; store and product vie
 ### Whitespace Philosophy
 Let photography breathe while keeping gifting configuration compact and sequential.
 
-## Elevation & Depth
+Surface hierarchy observed in the source:
+
 Use image depth and layered white sheets; avoid heavy shadow.
 
 ### Decorative Depth
 Flowers, desserts, packaging, and postcards provide all decorative richness.
 
-## Shapes
+# Navigation appearance
 
-### Border Radius Scale
-Use 10px for filters, 14px for product media, 18px for sheets, and full pills for labels.
+Home, Collections, Self-pickup, Inbox, and Cabinet remain in the bottom bar.
 
-### Photography & Illustration Geometry
-Use authentic product photography with consistent crops, true color, and visible scale where useful.
-
-## Components
+# Components
 
 ### Buttons
+
 Use full-width black purchase controls and neutral outline actions for edit, cancel, or contact.
 
-### Pricing Tabs
-Use horizontal chips for price, rating, discount, category, and delivery.
-
 ### Cards & Containers
+
 Use product cards, store mosaics, bonus labels, price-history chart, cart rows, add-on rails, and tracking sheets.
 
 ### Inputs & Forms
+
 Address, postcard, seller comment, delivery time, payment, tips, and recipient stay in separate steps.
 
-### Status & Build Page
+# Imagery and icons
+
+Flowers, desserts, packaging, and postcards provide all decorative richness.
+
+Use authentic product photography with consistent crops, true color, and visible scale where useful.
+
+If final imagery is not yet available, any placeholder must preserve the documented scale, placement, crop, and visual weight rather than removing that layer.
+
+# States
+
 Show confirmed availability, delivery estimate, bonus accrual, scheduled, courier, delivered, and canceled states.
 
-### Navigation
-Home, Collections, Self-pickup, Inbox, and Cabinet remain in the bottom bar.
-
-### Footer
-The white tab bar remains quiet while contextual black actions anchor product and checkout.
-
-## Do's and Don'ts
-
-### Do
-- Keep seller and delivery confidence visible.
-- Use authentic product photography.
-- Preserve gifting notes and timing.
-
-### Don't
-- Don't over-process flower colors.
-- Don't hide add-on or tip costs.
-- Don't add decorative illustration to the shell.
-
-## Responsive Behavior
-
-### Breakpoints
-Use two product columns on phones, three on tablet, and store plus cart summary above 1024px.
+# iOS adaptation
 
 ### Touch Targets
-Keep filters, products, favorite, quantity, add-ons, delivery, and contact at least 44px.
+
+Keep filters, products, favorite, quantity, add-ons, delivery, and contact at least 44 points.
 
 ### Collapsing Strategy
+
 Preserve address, product, price, timing, total, and order action; move discovery below the active gift task.
 
 ### Image Behavior
+
 Use consistent cover crops for product grids and aspect-fit for detail galleries when scale matters.
 
-## Iteration Guide
-1. Build search, categories, stores, and product grids.
-2. Add product detail, cart, add-ons, and checkout.
-3. Add tracking, chat, bonuses, and reviews.
+Apply these rules within current iPhone safe areas and scrolling containers. Keep interactive targets at least 44 points, preserve a logical VoiceOver order, and let Dynamic Type wrap supporting text without flattening the documented hierarchy. Do not infer an unobserved dark or light appearance.
 
-## Known Gaps
+# Anti-generic checklist
+
+- Don't over-process flower colors.
+- Don't hide add-on or tip costs.
+- Don't add decorative illustration to the shell.
+- Do not replace the documented hierarchy with a generic stack of identical white cards or `Form` sections.
+- Do not use default blue tint, an unstyled `TabView`, arbitrary SF Symbols, or uniform corner radii when they contradict the recorded tokens and components.
+- Do not omit compositionally important imagery while final assets are pending; preserve its footprint with a faithful placeholder.
+
+# Known gaps
+
 - Tokens were inferred visually from inspected mobile screens.
 - All 26 flows were inventoried; Home, Product selection, and Making an order were image-reviewed.
 - Courier communication and post-delivery branches were not deeply sampled.
 - The style is photography-led, so no illustration file was created.
 
 </design-context>
-
-Use the design system above for all UI you generate.

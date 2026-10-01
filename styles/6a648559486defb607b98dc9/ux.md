@@ -4,13 +4,13 @@ Bereke organizes accounts, cards, transfers, payments, and services around a sca
 
 # Navigation
 
-Bottom navigation anchors primary areas. Product detail and money movement use a focused top bar with an explicit back action.
+Primary navigation connects primary areas. Product detail and money movement provides an explicit back action.
 
 # Core Flows
 
 ## First launch and home
 
-Introduce the product briefly, authenticate, then reveal balances, cards, shortcuts, recent activity, and relevant products in that order.
+1. Introduce the product briefly, authenticate, then reveal balances, cards, shortcuts, recent activity, and relevant products in that order.
 
 ## Transfer and payment
 
@@ -21,7 +21,7 @@ Introduce the product briefly, authenticate, then reveal balances, cards, shortc
 
 ## Card and services
 
-Card detail keeps balance, identity, activity, and controls together. Services remain grouped by recognizable task rather than internal bank structure.
+1. Card detail keeps balance, identity, activity, and controls together. Services remain grouped by recognizable task rather than internal bank structure.
 
 # Interaction Patterns
 
@@ -30,3 +30,11 @@ Card detail keeps balance, identity, activity, and controls together. Services r
 - Retain recent recipients and payment favorites.
 - Use a dedicated result state for every financial operation.
 - Require confirmation for destructive card actions.
+
+# System Access Timing
+
+No system-access timing or denial-recovery behavior was documented in the reviewed source.
+
+# Known Gaps
+
+System-permission denial paths, interrupted flows, and recovery behavior not described above were not available in the reviewed source.

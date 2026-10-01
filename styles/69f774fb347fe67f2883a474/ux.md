@@ -4,13 +4,13 @@ BelkaCar guides a physical rental from eligibility and verification through car 
 
 # Navigation
 
-The map is the home surface. Floating tools handle radar, filters, zones, and guest mode; the hamburger opens account and support. The bottom sheet carries the live task.
+The map is the home screen. tools handle radar, filters, zones, and guest mode; the hamburger opens account and support. The modals carries the live task.
 
 # Core Flows
 
 ## Registration and verification
 
-Collect phone, driver's license, passport, selfie, and payment method in a staged flow with clear verification dependencies.
+1. Collect phone, driver's license, passport, selfie, and payment method in a staged flow with clear verification dependencies.
 
 ## Reserve and inspect
 
@@ -20,11 +20,11 @@ Collect phone, driver's license, passport, selfie, and payment method in a stage
 
 ## Drive and finish
 
-Active rental keeps route, time, current cost, pause, support, fuel, and car information visible. Completion checks parking zone, doors, lights, photos, and final cost before release.
+1. Active rental keeps route, time, current cost, pause, support, fuel, and car information visible. Completion checks parking zone, doors, lights, photos, and final cost before release.
 
 ## Account and support
 
-Menu groups bonus balance, rating, trip history, payment methods, support, insurance, promo codes, FAQ, agreements, business, notifications, and account settings.
+1. Menu groups bonus balance, rating, trip history, payment methods, support, insurance, promo codes, FAQ, agreements, business, notifications, and account settings.
 
 # Interaction Patterns
 
@@ -33,3 +33,11 @@ Menu groups bonus balance, rating, trip history, payment methods, support, insur
 - Gate driving and completion on physical checklists.
 - Separate pause from finish.
 - Keep support available during every rental state.
+
+# System Access Timing
+
+- Camera or Photos access follows the user choosing the documented capture, scan, or photo action. Denial recovery was not documented.
+
+# Known Gaps
+
+- Permission-denial recovery and unobserved secondary flows were not documented.

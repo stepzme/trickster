@@ -4,8 +4,8 @@ Wise organizes multi-currency money management around balances, cards, recipient
 
 # Navigation
 
-- A four-item bottom bar switches between Home, Cards, Recipients, and Payments.
-- Profile, referral, and account-level actions sit in the top area of Home.
+- A four-item primary navigation switches between Home, Cards, Recipients, and Payments.
+- Profile, referral, and account-level actions are available from Home.
 - Contextual account and card pages expose the most common actions first, then detailed management.
 
 # Core Flows
@@ -26,12 +26,18 @@ Wise organizes multi-currency money management around balances, cards, recipient
 ## Manage a card
 
 1. Open Cards and choose a digital or physical card.
-2. Reveal PIN/details only on demand; freeze remains a prominent safety action.
+2. Reveal PIN/details only on demand; freeze remains a safety action.
 3. Enter card controls for limits, replacement, edit, unblock, or deletion.
 
 # Interaction Patterns
 
 - Progressive disclosure keeps summaries calm while preserving full financial detail.
 - Review screens repeat amount, currency, source, fee, and timing before commitment.
-- Small chips perform local changes without restarting the whole flow.
-- Dark mode preserves the same information hierarchy and bright green action language.
+
+# System Access Timing
+
+No system-access request timing or denial recovery was documented in the reviewed source.
+
+# Known Gaps
+
+- Permission-denial recovery and unobserved secondary flows were not documented.

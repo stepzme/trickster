@@ -1,6 +1,7 @@
 <design-context>
 ---
-version: alpha
+version: 1
+platform: iOS
 name: Telcell-Wallet-design-analysis
 description: "A light multifunction wallet built from white surfaces, pale gray grouping, coral navigation accents, cyan balance actions, compact service grids, and glossy multicolor 3D promotional cards. The visual tone is airy and modern while finance, rewards, QR, and banking remain explicit."
 
@@ -22,36 +23,47 @@ colors:
   semantic-overlay: "#000000"
 
 typography:
-  display-xl: { fontFamily: System Sans, fontSize: 38px, fontWeight: 700, lineHeight: 1.05, letterSpacing: -0.7px }
-  display-lg: { fontFamily: System Sans, fontSize: 32px, fontWeight: 700, lineHeight: 1.1, letterSpacing: -0.4px }
-  display-md: { fontFamily: System Sans, fontSize: 27px, fontWeight: 700, lineHeight: 1.15, letterSpacing: -0.2px }
-  headline: { fontFamily: System Sans, fontSize: 21px, fontWeight: 700, lineHeight: 1.2, letterSpacing: 0 }
-  card-title: { fontFamily: System Sans, fontSize: 15px, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: System Sans, fontSize: 17px, fontWeight: 500, lineHeight: 1.3, letterSpacing: 0 }
-  body-lg: { fontFamily: System Sans, fontSize: 16px, fontWeight: 400, lineHeight: 1.4, letterSpacing: 0 }
-  body: { fontFamily: System Sans, fontSize: 14px, fontWeight: 400, lineHeight: 1.4, letterSpacing: 0 }
-  body-sm: { fontFamily: System Sans, fontSize: 12px, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
-  caption: { fontFamily: System Sans, fontSize: 10px, fontWeight: 400, lineHeight: 1.3, letterSpacing: 0 }
-  button: { fontFamily: System Sans, fontSize: 14px, fontWeight: 600, lineHeight: 1.2, letterSpacing: 0 }
-  eyebrow: { fontFamily: System Sans, fontSize: 11px, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0.2px }
-  mono: { fontFamily: System Mono, fontSize: 12px, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
+  display-xl: { fontFamily: System Sans, fontSize: 38, fontWeight: 700, lineHeight: 1.05, letterSpacing: -0.7 }
+  display-lg: { fontFamily: System Sans, fontSize: 32, fontWeight: 700, lineHeight: 1.1, letterSpacing: -0.4 }
+  display-md: { fontFamily: System Sans, fontSize: 27, fontWeight: 700, lineHeight: 1.15, letterSpacing: -0.2 }
+  headline: { fontFamily: System Sans, fontSize: 21, fontWeight: 700, lineHeight: 1.2, letterSpacing: 0 }
+  card-title: { fontFamily: System Sans, fontSize: 15, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
+  subhead: { fontFamily: System Sans, fontSize: 17, fontWeight: 500, lineHeight: 1.3, letterSpacing: 0 }
+  body-lg: { fontFamily: System Sans, fontSize: 16, fontWeight: 400, lineHeight: 1.4, letterSpacing: 0 }
+  body: { fontFamily: System Sans, fontSize: 14, fontWeight: 400, lineHeight: 1.4, letterSpacing: 0 }
+  body-sm: { fontFamily: System Sans, fontSize: 12, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
+  caption: { fontFamily: System Sans, fontSize: 10, fontWeight: 400, lineHeight: 1.3, letterSpacing: 0 }
+  button: { fontFamily: System Sans, fontSize: 14, fontWeight: 600, lineHeight: 1.2, letterSpacing: 0 }
+  eyebrow: { fontFamily: System Sans, fontSize: 11, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0.2 }
+  mono: { fontFamily: System Mono, fontSize: 12, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
 
-rounded: { xs: 4px, sm: 8px, md: 12px, lg: 16px, xl: 22px, xxl: 28px, pill: 9999px, full: 9999px }
-spacing: { xxs: 4px, xs: 8px, sm: 12px, md: 16px, lg: 24px, xl: 32px, xxl: 48px, section: 64px }
+rounded: { xs: 4, sm: 8, md: 12, lg: 16, xl: 22, xxl: 28, pill: 9999, full: 9999 }
+spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
 
 components:
-  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.md}", padding: 13px 18px }
-  wallet-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 14px }
+  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.md}", padding: [13, 18]}
+  wallet-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 14 }
   promo-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.on-primary}", typography: "{typography.card-title}", rounded: "{rounded.lg}", padding: 0 }
-  service-tile: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.md}", padding: 12px }
-  bottom-nav: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", height: 60px }
+  service-tile: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.md}", padding: 12 }
+  bottom-nav: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", height: 60 }
 ---
 
-## Overview
+# Overview
 
 Telcell Wallet is an airy finance utility with a colorful promotional layer. Coral and cyan guide action while white cards keep services, rewards, QR, and banking legible.
 
-## Colors
+# Non-negotiable visual invariants
+
+- The reference consistently shows white finance surfaces calm.
+- The reference consistently shows coral consistently for selection.
+- Imagery consistently uses contain 3D art inside promotions.
+- The reference consistently shows preserve currency and reward units.
+- The reference consistently shows a light multifunction wallet built from white surfaces.
+- The reference consistently shows pale gray grouping.
+- Navigation consistently uses coral navigation accents.
+- The reference consistently shows cyan balance actions.
+
+# Color and surfaces
 
 ### Brand & Accent
 
@@ -69,7 +81,7 @@ Dark gray carries titles and values; medium gray carries instructions, terms, an
 
 Green confirms success, amber warns, and red marks failure. Coral remains a brand accent and needs explicit destructive labels.
 
-## Typography
+# Typography
 
 ### Font Family
 
@@ -77,7 +89,7 @@ Use a neutral system sans with clear Latin, Armenian, and numerals.
 
 ### Hierarchy
 
-Use 21–27px page headings, 15–17px module titles, 14px body, and 10–12px balance or service metadata.
+Use 21–27 points page headings, 15–17 points module titles, 14 points body, and 10–12 points balance or service metadata.
 
 ### Principles
 
@@ -87,11 +99,11 @@ Keep balance, currency, limits, and reward cost explicit. Labels should remain s
 
 Use SF Pro or Inter with an Armenian-capable fallback such as Noto Sans Armenian.
 
-## Layout
+# Screen composition
 
 ### Spacing System
 
-Use a 4px base, 12px gutters, 10–12px card gaps, and 20–24px between wallet sections.
+Use a 4 points base, 12 points gutters, 10–12 points card gaps, and 20–24 points between wallet sections.
 
 ### Grid & Container
 
@@ -101,7 +113,7 @@ Home stacks paired balance cards, promo rails, service grid, and favorites. Bank
 
 Keep finance lists airy and simple; promo cards may be visually rich but remain contained.
 
-## Elevation & Depth
+Surface hierarchy observed in the source:
 
 White cards lift softly from gray. Promo objects add visual depth through material and lighting rather than shadowed chrome.
 
@@ -109,25 +121,15 @@ White cards lift softly from gray. Promo objects add visual depth through materi
 
 Use glossy 3D objects and soft gradients inside promo cards only. Keep QR and transaction surfaces flat.
 
-## Shapes
+# Navigation appearance
 
-### Border Radius Scale
+Four bottom destinations persist across Home, BON, QR, and Banking. Coral identifies the current section.
 
-Promo and wallet cards use 16px, service tiles and buttons 12px, modals 12px, and status badges are pills.
-
-### Photography & Illustration Geometry
-
-Center 3D objects in rounded cards; use clean card artwork for banking. QR codes remain square with ample quiet zone.
-
-## Components
+# Components
 
 ### Buttons
 
 Primary actions are coral with white text; add-money controls may be cyan circles. Native controls must inherit the same palette and geometry.
-
-### Pricing Tabs
-
-BON, QR, and service modes use compact text tabs with coral underline or active icon.
 
 ### Cards & Containers
 
@@ -137,43 +139,23 @@ Balance, pay-later, banking, reward, and profile cards each contain one clear do
 
 Payment and profile forms use pale fields with direct labels. Keep currency and limits adjacent to entered values.
 
-### Status & Build Page
+# Imagery and icons
+
+Use glossy 3D objects and soft gradients inside promo cards only. Keep QR and transaction surfaces flat.
+
+Center 3D objects in rounded cards; use clean card artwork for banking. QR codes remain square with ample quiet zone.
+
+If final imagery is not yet available, any placeholder must preserve the documented scale, placement, crop, and visual weight rather than removing that layer.
+
+# States
 
 BON progress, account status, card attachment, payment, and ticket availability appear inline with the affected item.
 
-### Navigation
-
-Four bottom destinations persist across Home, BON, QR, and Banking. Coral identifies the current section.
-
-### Footer
-
-There is no footer. End tasks with bottom navigation or a contextual primary action.
-
-## Do's and Don'ts
-
-### Do
-
-- Keep white finance surfaces calm.
-- Use coral consistently for selection.
-- Contain 3D art inside promotions.
-- Preserve currency and reward units.
-
-### Don't
-
-- Do not decorate QR screens.
-- Do not mix multiple gradients outside promos.
-- Do not hide financial limits.
-- Do not expose default blue controls.
-
-## Responsive Behavior
-
-### Breakpoints
-
-Keep payments and banking single-column. Wider home screens may expand service and promo grids.
+# iOS adaptation
 
 ### Touch Targets
 
-Service tiles, reward tabs, QR controls, banking rows, and bottom navigation require at least 44px targets.
+Service tiles, reward tabs, QR controls, banking rows, and bottom navigation require at least 44 points targets.
 
 ### Collapsing Strategy
 
@@ -183,14 +165,20 @@ Allow promo rails to scroll horizontally. Keep confirmation actions visible thro
 
 Use `contain` for 3D objects and bank cards; use `cover` only for promotional photography. Preserve QR quiet zones.
 
-## Iteration Guide
+Apply these rules within current iPhone safe areas and scrolling containers. Keep interactive targets at least 44 points, preserve a logical VoiceOver order, and let Dynamic Type wrap supporting text without flattening the documented hierarchy. Do not infer an unobserved dark or light appearance.
 
-Start with Home, balance cards, coral actions, four-tab navigation, services, QR, and Banking. Add BON, stories, partners, and profile utilities afterward.
+# Anti-generic checklist
 
-## Known Gaps
+- Do not decorate QR screens.
+- Do not mix multiple gradients outside promos.
+- Do not hide financial limits.
+- Do not expose default blue controls.
+- Do not replace the documented hierarchy with a generic stack of identical white cards or `Form` sections.
+- Do not use default blue tint, an unstyled `TabView`, arbitrary SF Symbols, or uniform corner radii when they contradict the recorded tokens and components.
+- Do not invent decorative imagery or symbol treatments that are absent from the reference.
+
+# Known gaps
 
 The reviewed scenarios cover Home, services, transfers, tickets, BON, QR, Banking, Profile, and settings. Tablet layouts and every payment failure were not visible.
 
 </design-context>
-
-Use the design system above for all UI you generate.

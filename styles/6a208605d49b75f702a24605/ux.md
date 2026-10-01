@@ -4,7 +4,7 @@ OneTwoTrip is a multi-product travel service for flights, hotels, trains, buses,
 
 # Navigation
 
-Home, Cashback, Orders, Chats, and Profile form the bottom bar. A travel-product switcher gives Air, Hotels, Train tickets, Buses, and Cars equal entry points near the top of Home.
+Home, Cashback, Orders, Chats, and Profile are the primary destinations. A travel-product switcher gives Air, Hotels, Train tickets, Buses, and Cars equal entry points in the current context of Home.
 
 # Core Flows
 
@@ -24,7 +24,13 @@ Home, Cashback, Orders, Chats, and Profile form the bottom bar. A travel-product
 
 # Interaction Patterns
 
-- Warm travel photography creates the Home atmosphere; yellow and purple carry product identity and action.
-- Search steps use calm white sheets and one prominent purple continuation.
-- Dense result cards align times, baggage, price, rating, and cashback for comparison.
-- Sticky filters remain near the thumb on long flight and hotel lists.
+- Dense results align times, baggage, price, rating, and cashback for comparison.
+- Filters remain available throughout long flight and hotel lists.
+
+# System Access Timing
+
+No system-access timing or denial-recovery behavior was documented in the reviewed source.
+
+# Known Gaps
+
+System-permission denial paths, interrupted flows, and recovery behavior not described above were not available in the reviewed source.

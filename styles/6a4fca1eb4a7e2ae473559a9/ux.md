@@ -4,7 +4,7 @@ Numo turns ADHD task support into a dark, energetic system of daily planning, vo
 
 # Navigation
 
-Five bottom destinations connect Do, Me, Teams, Tribe, and Hack. A floating microphone and blue add button stay above the bar on the daily task screen.
+Five primary destinations connect Do, Me, Teams, Tribe, and Hack. Voice input and task creation remain available on the daily task screen.
 
 # Core Flows
 
@@ -24,7 +24,12 @@ Five bottom destinations connect Do, Me, Teams, Tribe, and Hack. A floating micr
 
 # Interaction Patterns
 
-- Black canvas, condensed white type, hot orange-red, and electric blue create strong motivational contrast.
 - Date and task controls stay sparse so a short list never feels like an empty utility.
-- Story covers and community content provide the visual density rather than container chrome.
-- Voice and add actions float near the thumb and remain more prominent than secondary navigation.
+
+# System Access Timing
+
+No system-access timing or denial-recovery behavior was documented in the reviewed source.
+
+# Known Gaps
+
+System-permission denial paths, interrupted flows, and recovery behavior not described above were not available in the reviewed source.

@@ -10,7 +10,7 @@ Home, Stores, Search, Orders, and Account form the persistent base. Restaurant, 
 
 ## Discover and select
 
-Search or browse categories, compare rating, fee, ETA, and offers, then open a restaurant or store. Sticky categories keep long menus navigable.
+1. Search or browse categories, compare rating, fee, ETA, and offers, then open a restaurant or store. the category selector keep long menus navigable.
 
 ## Order
 
@@ -22,7 +22,7 @@ Search or browse categories, compare rating, fee, ETA, and offers, then open a r
 
 ## Track and complete
 
-A vertical timeline shows confirmation, preparation, courier assignment, pickup, and arrival. Chat and cancellation remain available when relevant; rating follows completion.
+1. A timeline shows confirmation, preparation, courier assignment, pickup, and arrival. Chat and cancellation remain available when relevant; rating follows completion.
 
 # Interaction Patterns
 
@@ -31,3 +31,11 @@ A vertical timeline shows confirmation, preparation, courier assignment, pickup,
 - Confirm address before payment.
 - Expose every fee before placing the order.
 - Preserve the order timeline when details expand.
+
+# System Access Timing
+
+No system-access request timing or denial recovery was documented in the reviewed source.
+
+# Known Gaps
+
+- Permission-denial recovery and unobserved secondary flows were not documented.

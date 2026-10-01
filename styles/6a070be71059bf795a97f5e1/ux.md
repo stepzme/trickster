@@ -4,7 +4,7 @@ Gosuslugi supports service discovery, applications, identity documents, payments
 
 # Navigation
 
-Five bottom destinations anchor Home, Services, assistant, Payments, and Documents. Search and the assistant provide cross-cutting entry points when the user does not know the agency or service name.
+Five primary destinations anchor Home, Services, assistant, Payments, and Documents. Search and the assistant provide cross-cutting entry points when the user does not know the agency or service name.
 
 # Core Flows
 
@@ -19,3 +19,11 @@ Five bottom destinations anchor Home, Services, assistant, Payments, and Documen
 # Interaction Patterns
 
 Long tasks are divided into named steps, personal data is reviewed before submission, warnings sit beside the affected field, and each screen exposes one clear next action.
+
+# System Access Timing
+
+No system-access timing or denial-recovery behavior was documented in the reviewed source.
+
+# Known Gaps
+
+System-permission denial paths, interrupted flows, and recovery behavior not described above were not available in the reviewed source.

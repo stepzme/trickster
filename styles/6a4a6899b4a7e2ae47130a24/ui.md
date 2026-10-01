@@ -1,12 +1,12 @@
 <design-context>
 ---
-version: alpha
+version: 1
+platform: iOS
 name: eGov-Mobile-design-analysis
 description: "A white civic-services super-app using royal blue service icons, pale-blue controls, compact document cards, multicolor institutional logos, bright informational banners, dense categorized lists, and a five-tab navigation spanning home, QR, services, messages, and profile."
 colors:
   primary: "#2E65D8"
   on-primary: "#FFFFFF"
-  primary-hover: "#2454B8"
   primary-soft: "#EAF1FF"
   accent: "#18B894"
   ink: "#191B20"
@@ -21,32 +21,30 @@ colors:
   semantic-danger: "#DF4D55"
   semantic-overlay: "#000000"
 typography:
-  display-xl: { fontFamily: SF Pro Display, fontSize: 36px, fontWeight: 700, lineHeight: 1.05, letterSpacing: -0.7px }
-  display-lg: { fontFamily: SF Pro Display, fontSize: 30px, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.5px }
-  display-md: { fontFamily: SF Pro Display, fontSize: 26px, fontWeight: 700, lineHeight: 1.15, letterSpacing: -0.3px }
-  headline: { fontFamily: SF Pro Display, fontSize: 22px, fontWeight: 700, lineHeight: 1.20, letterSpacing: -0.1px }
-  card-title: { fontFamily: SF Pro Text, fontSize: 16px, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: SF Pro Text, fontSize: 16px, fontWeight: 600, lineHeight: 1.30, letterSpacing: 0 }
-  body-lg: { fontFamily: SF Pro Text, fontSize: 16px, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
-  body: { fontFamily: SF Pro Text, fontSize: 14px, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
-  body-sm: { fontFamily: SF Pro Text, fontSize: 12px, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
-  caption: { fontFamily: SF Pro Text, fontSize: 10px, fontWeight: 500, lineHeight: 1.20, letterSpacing: 0 }
-  button: { fontFamily: SF Pro Text, fontSize: 15px, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0 }
-  eyebrow: { fontFamily: SF Pro Text, fontSize: 11px, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0.2px }
-  mono: { fontFamily: SF Mono, fontSize: 12px, fontWeight: 500, lineHeight: 1.30, letterSpacing: 0 }
-rounded: { xs: 6px, sm: 10px, md: 14px, lg: 18px, xl: 24px, xxl: 30px, pill: 9999px, full: 9999px }
-spacing: { xxs: 4px, xs: 8px, sm: 12px, md: 16px, lg: 24px, xl: 32px, xxl: 48px, section: 64px }
+  display-xl: { fontFamily: SF Pro Display, fontSize: 36, fontWeight: 700, lineHeight: 1.05, letterSpacing: -0.7 }
+  display-lg: { fontFamily: SF Pro Display, fontSize: 30, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.5 }
+  display-md: { fontFamily: SF Pro Display, fontSize: 26, fontWeight: 700, lineHeight: 1.15, letterSpacing: -0.3 }
+  headline: { fontFamily: SF Pro Display, fontSize: 22, fontWeight: 700, lineHeight: 1.20, letterSpacing: -0.1 }
+  card-title: { fontFamily: SF Pro Text, fontSize: 16, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
+  subhead: { fontFamily: SF Pro Text, fontSize: 16, fontWeight: 600, lineHeight: 1.30, letterSpacing: 0 }
+  body-lg: { fontFamily: SF Pro Text, fontSize: 16, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
+  body: { fontFamily: SF Pro Text, fontSize: 14, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
+  body-sm: { fontFamily: SF Pro Text, fontSize: 12, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
+  caption: { fontFamily: SF Pro Text, fontSize: 10, fontWeight: 500, lineHeight: 1.20, letterSpacing: 0 }
+  button: { fontFamily: SF Pro Text, fontSize: 15, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0 }
+  eyebrow: { fontFamily: SF Pro Text, fontSize: 11, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0.2 }
+  mono: { fontFamily: SF Mono, fontSize: 12, fontWeight: 500, lineHeight: 1.30, letterSpacing: 0 }
+rounded: { xs: 6, sm: 10, md: 14, lg: 18, xl: 24, xxl: 30, pill: 9999, full: 9999 }
+spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
 components:
-  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 13px 18px }
-  service-row: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xs}", padding: 12px 0 }
-  document-card: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.md}", padding: 12px }
-  info-banner: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.card-title}", rounded: "{rounded.sm}", padding: 14px }
-  input: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: 11px 13px }
-  top-nav: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xs}", height: 52px }
-  footer: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: 8px 10px }
+  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [13, 18]}
+  service-row: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xs}", padding: [12, 0]}
+  document-card: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.md}", padding: 12 }
+  info-banner: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.card-title}", rounded: "{rounded.sm}", padding: 14 }
+  input: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: [11, 13]}
 ---
 
-## Overview
+# Overview
 
 eGov Mobile condenses documents and public services into a white, icon-led utility. Blue communicates institutional action while documents, services, and request status remain highly structured.
 
@@ -57,7 +55,15 @@ eGov Mobile condenses documents and public services into a white, icon-led utili
 - Dense service lists and official partner logos.
 - Five stable destinations including QR and messages.
 
-## Colors
+# Non-negotiable visual invariants
+
+- The reviewed screens show this treatment: White civic-service canvas.
+- The reviewed screens show this treatment: Royal-blue category icons and actions.
+- The reviewed screens show this treatment: Document carousel with pale card surfaces.
+- The reviewed screens show this treatment: Dense service lists and official partner logos.
+- The reviewed screens show this treatment: Five stable destinations including QR and messages.
+
+# Color and surfaces
 
 ### Brand & Accent
 - **Primary** ({colors.primary}): Services, documents, links, and active navigation.
@@ -81,15 +87,12 @@ eGov Mobile condenses documents and public services into a white, icon-led utili
 - **Danger** ({colors.semantic-danger}): Rejected and destructive action.
 - **Overlay** ({colors.semantic-overlay}): Authentication and modal focus.
 
-## Typography
+# Typography
 
 ### Font Family
 - **SF Pro Display** — civic headings and large statuses.
 - **SF Pro Text** — services, documents, forms, and profile data.
 - **SF Mono** — request, document, and signature identifiers.
-
-### Hierarchy
-Use 26–36px for major headings, 22px for sections, 16px semibold for cards, 14px body, and 10–12px metadata.
 
 ### Principles
 - Prefer plain-language service names.
@@ -100,10 +103,10 @@ Use 26–36px for major headings, 22px for sections, 16px semibold for cards, 14
 ### Note on Font Substitutes
 Use the platform system sans or **Inter** with tabular identifiers.
 
-## Layout
+# Screen composition
 
 ### Spacing System
-Use a 4px base, 16px gutters, 12px list rhythm, 12px card padding, and 24px between service groups.
+Use a 4pt base, 16pt gutters, 12pt list rhythm, 12pt card padding, and 24pt between service groups.
 
 ### Grid & Container
 Home stacks search, banners, documents, institution shortcuts, information, and popular services above a five-tab bar.
@@ -111,26 +114,15 @@ Home stacks search, banners, documents, institution shortcuts, information, and 
 ### Whitespace Philosophy
 Keep administrative lists compact but clearly grouped; allow empty document states to remain calm and explicit.
 
-## Elevation & Depth
-Use pale cards, white sheets, and thin dividers. Authentication and document sharing gain modal elevation.
+# Navigation appearance
 
-### Decorative Depth
-Institutional banners and document previews provide visual variety; operational services remain flat.
+Home, eGov QR, Services, Messages, and Profile stay in the tab bar; nested services use back or close navigation.
 
-## Shapes
-
-### Border Radius Scale
-Use 10px for search, 14px for documents and banners, 18px for sheets, and full circles for category or helper icons.
-
-### Photography & Illustration Geometry
-Use real document facsimiles, official logos, and bounded banner graphics. Avoid decorative imagery within service forms.
-
-## Components
+# Components
 
 ### Buttons
 Use blue filled actions for service submission and pale-blue actions for refresh or help; secondary rows use chevrons.
 
-### Pricing Tabs
 Use tabs for personal versus family documents and compact chips for popular, recommended, and filter categories.
 
 ### Cards & Containers
@@ -145,10 +137,42 @@ Show current, approved, rejected, expired, shared, signed, submitted, and unavai
 ### Navigation
 Home, eGov QR, Services, Messages, and Profile stay in the tab bar; nested services use back or close navigation.
 
-### Footer
 The five-tab bar stays white and lets blue mark the active destination.
 
-## Do's and Don'ts
+# Imagery and icons
+
+Use pale cards, white sheets, and thin dividers. Authentication and document sharing gain modal elevation.
+
+### Decorative Depth
+Institutional banners and document previews provide visual variety; operational services remain flat.
+
+# States
+
+Show current, approved, rejected, expired, shared, signed, submitted, and unavailable states with label plus color or icon.
+
+# iOS adaptation
+
+### Touch Targets
+Keep search, documents, services, QR, tabs, form rows, signature, and authentication actions at least 44pt.
+
+### Collapsing Strategy
+Preserve identity, current service, status, documents, and navigation. Move banners and recommendations below active administrative tasks.
+
+### Image Behavior
+Contain official document and logo imagery without crop; crop banners only in their designed frames and preserve embedded copy.
+
+On iPhone, respect top and bottom safe areas, use scrolling for content that does not fit, keep interactive targets at least 44 points, and preserve the visual reading order for VoiceOver. At larger Dynamic Type sizes, allow supporting text to wrap without collapsing the dominant hierarchy. Use native sheets and permission transitions while explicitly styling app-owned surfaces to match the reference.
+
+# Anti-generic checklist
+
+- Do not substitute the documented accent hierarchy with default iOS blue.
+- Do not collapse distinct surfaces into a uniform stack of generic white cards.
+- Do not use an unstyled `TabView`, `Form`, or arbitrary SF Symbols when they contradict the documented navigation and component language.
+- Do not flatten the documented typography into one body-text scale.
+- Do not remove compositionally important photography or illustration while assets are pending.
+- Do not apply one corner radius to every control and surface.
+
+Source-specific guardrails retained from the review:
 
 ### Do
 - Keep documents and owner context explicit.
@@ -162,33 +186,11 @@ The five-tab bar stays white and lets blue mark the active destination.
 - Don't make service names icon-only.
 - Don't mix unrelated institutional accent colors in core navigation.
 
-## Responsive Behavior
+# Known gaps
 
-### Breakpoints
-Use the single-column reference up to 767px, document plus service columns on tablet, and persistent service navigation above 1024px.
-
-### Touch Targets
-Keep search, documents, services, QR, tabs, form rows, signature, and authentication actions at least 44px.
-
-### Collapsing Strategy
-Preserve identity, current service, status, documents, and navigation. Move banners and recommendations below active administrative tasks.
-
-### Image Behavior
-Contain official document and logo imagery without crop; crop banners only in their designed frames and preserve embedded copy.
-
-## Iteration Guide
-1. Build navigation, search, and service catalog.
-2. Add digital documents and sharing.
-3. Add service request, signature, and status.
-4. Add QR, messages, situations, and profile.
-5. Add assistant, institutional content, and settings.
-
-## Known Gaps
 - Tokens were inferred visually from inspected mobile screens.
 - All 64 flows were inventoried; Home, Digital documents, and Receiving a service were image-reviewed.
 - One reviewed document step was video-only; signatures and QR were not deeply sampled.
 - No separate expressive illustration system appeared in task screens.
 
 </design-context>
-
-Use the design system above for all UI you generate.

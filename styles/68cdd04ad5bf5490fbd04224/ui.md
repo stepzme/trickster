@@ -1,6 +1,7 @@
 <design-context>
 ---
-version: alpha
+version: 1
+platform: iOS
 name: VK-Music-design-analysis
 description: "A dark music interface built from black listening surfaces, vivid blue-violet gradients, album-art shelves, circular artist portraits, and a persistent compact player. It feels immersive, social, and recommendation-led."
 
@@ -23,36 +24,47 @@ colors:
   semantic-overlay: "#000000"
 
 typography:
-  display-xl: { fontFamily: System Sans, fontSize: 38px, fontWeight: 750, lineHeight: 1.06, letterSpacing: -0.6px }
-  display-lg: { fontFamily: System Sans, fontSize: 30px, fontWeight: 700, lineHeight: 1.1, letterSpacing: -0.3px }
-  display-md: { fontFamily: System Sans, fontSize: 24px, fontWeight: 700, lineHeight: 1.15, letterSpacing: 0 }
-  headline: { fontFamily: System Sans, fontSize: 20px, fontWeight: 650, lineHeight: 1.2, letterSpacing: 0 }
-  card-title: { fontFamily: System Sans, fontSize: 16px, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: System Sans, fontSize: 16px, fontWeight: 450, lineHeight: 1.35, letterSpacing: 0 }
-  body-lg: { fontFamily: System Sans, fontSize: 16px, fontWeight: 400, lineHeight: 1.4, letterSpacing: 0 }
-  body: { fontFamily: System Sans, fontSize: 14px, fontWeight: 400, lineHeight: 1.4, letterSpacing: 0 }
-  body-sm: { fontFamily: System Sans, fontSize: 12px, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
-  caption: { fontFamily: System Sans, fontSize: 10px, fontWeight: 500, lineHeight: 1.3, letterSpacing: 0 }
-  button: { fontFamily: System Sans, fontSize: 15px, fontWeight: 600, lineHeight: 1.2, letterSpacing: 0 }
-  eyebrow: { fontFamily: System Sans, fontSize: 10px, fontWeight: 650, lineHeight: 1.25, letterSpacing: 0.3px }
-  mono: { fontFamily: System Mono, fontSize: 12px, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
+  display-xl: { fontFamily: System Sans, fontSize: 38, fontWeight: 750, lineHeight: 1.06, letterSpacing: -0.6 }
+  display-lg: { fontFamily: System Sans, fontSize: 30, fontWeight: 700, lineHeight: 1.1, letterSpacing: -0.3 }
+  display-md: { fontFamily: System Sans, fontSize: 24, fontWeight: 700, lineHeight: 1.15, letterSpacing: 0 }
+  headline: { fontFamily: System Sans, fontSize: 20, fontWeight: 650, lineHeight: 1.2, letterSpacing: 0 }
+  card-title: { fontFamily: System Sans, fontSize: 16, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
+  subhead: { fontFamily: System Sans, fontSize: 16, fontWeight: 450, lineHeight: 1.35, letterSpacing: 0 }
+  body-lg: { fontFamily: System Sans, fontSize: 16, fontWeight: 400, lineHeight: 1.4, letterSpacing: 0 }
+  body: { fontFamily: System Sans, fontSize: 14, fontWeight: 400, lineHeight: 1.4, letterSpacing: 0 }
+  body-sm: { fontFamily: System Sans, fontSize: 12, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
+  caption: { fontFamily: System Sans, fontSize: 10, fontWeight: 500, lineHeight: 1.3, letterSpacing: 0 }
+  button: { fontFamily: System Sans, fontSize: 15, fontWeight: 600, lineHeight: 1.2, letterSpacing: 0 }
+  eyebrow: { fontFamily: System Sans, fontSize: 10, fontWeight: 650, lineHeight: 1.25, letterSpacing: 0.3 }
+  mono: { fontFamily: System Mono, fontSize: 12, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
 
-rounded: { xs: 4px, sm: 8px, md: 12px, lg: 16px, xl: 22px, xxl: 28px, pill: 9999px, full: 9999px }
-spacing: { xxs: 4px, xs: 8px, sm: 12px, md: 16px, lg: 24px, xl: 32px, xxl: 48px, section: 64px }
+rounded: { xs: 4, sm: 8, md: 12, lg: 16, xl: 22, xxl: 28, pill: 9999, full: 9999 }
+spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
 
 components:
-  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: 13px 20px }
+  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: [13, 20]}
   media-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 0 }
-  mix-card: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.card-title}", rounded: "{rounded.md}", padding: 16px }
-  mini-player: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.sm}", padding: 8px }
-  bottom-nav: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", height: 58px }
+  mix-card: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.card-title}", rounded: "{rounded.md}", padding: 16 }
+  mini-player: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.sm}", padding: 8 }
+  bottom-nav: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", height: 58 }
 ---
 
-## Overview
+# Overview
 
 VK Music places album art and personalized gradients on a black listening canvas. The persistent mini-player maintains continuity while compact shelves keep discovery fast.
 
-## Colors
+# Non-negotiable visual invariants
+
+- The reference consistently shows playback context persistent.
+- Imagery consistently uses let cover art drive variety.
+- The reference consistently shows blue for active audio.
+- The reference consistently shows track rows compact.
+- The reference consistently shows a dark music interface built from black listening surfaces.
+- The reference consistently shows vivid blue-violet gradients.
+- Imagery consistently uses album-art shelves.
+- The reference consistently shows circular artist portraits.
+
+# Color and surfaces
 
 ### Brand & Accent
 
@@ -70,7 +82,7 @@ White carries titles and tracks; gray carries artists, metadata, and inactive na
 
 Green confirms download or save, amber warns, and red marks unavailable or destructive actions. Playback remains blue.
 
-## Typography
+# Typography
 
 ### Font Family
 
@@ -78,7 +90,7 @@ Use a compact system sans with broad artist-name and multilingual support.
 
 ### Hierarchy
 
-Use 24–38px campaign statements, 20px shelf titles, 14–16px tracks, and 10–12px metadata.
+Use 24–38 points campaign statements, 20 points shelf titles, 14–16 points tracks, and 10–12 points metadata.
 
 ### Principles
 
@@ -88,11 +100,11 @@ Keep track and artist hierarchy stable, truncate predictably, and avoid placing 
 
 Use SF Pro or Inter with medium list weights and bold feature-card titles.
 
-## Layout
+# Screen composition
 
 ### Spacing System
 
-Use a 4px base, 12px gutters, 12px card gaps, and 24px between discovery shelves.
+Use a 4 points base, 12 points gutters, 12 points card gaps, and 24 points between discovery shelves.
 
 ### Grid & Container
 
@@ -102,7 +114,7 @@ Home and Mix stack horizontal rails. Track lists align art, title, artist, play 
 
 Let cover art create rhythm. Keep player controls open and avoid dense copy near transport controls.
 
-## Elevation & Depth
+Surface hierarchy observed in the source:
 
 Use cover-art contrast, gradient cards, and a lifted mini-player. Shadows remain subtle on black.
 
@@ -110,25 +122,15 @@ Use cover-art contrast, gradient cards, and a lifted mini-player. Shadows remain
 
 Use blue-violet gradients, blurred cover color, and simple waveform motifs. Album art supplies the rest.
 
-## Shapes
+# Navigation appearance
 
-### Border Radius Scale
+Use five bottom destinations for Main, Mix, Podcasts, Search, and My Music, with the mini-player directly above.
 
-Use 8px list art and mini-player, 12–16px mix cards, 22px sheets, and circular artists and play controls.
-
-### Photography & Illustration Geometry
-
-Album and podcast art uses square `cover`; artist portraits are circular. There is no separate illustration language beyond campaign assets.
-
-## Components
+# Components
 
 ### Buttons
 
 Play controls are circular high-contrast buttons; subscription actions are white or blue pills. Native controls must inherit the dark palette and blue focus.
-
-### Pricing Tabs
-
-Plan cadence, library sections, and recommendation modes use underline or compact segments with blue active state.
 
 ### Cards & Containers
 
@@ -138,43 +140,23 @@ Mix cards use one gradient, large title, and play action. Social playlist cards 
 
 Search uses a graphite full-width field. Playlist creation uses dark fields and clear visibility or collaboration settings.
 
-### Status & Build Page
+# Imagery and icons
+
+Use blue-violet gradients, blurred cover color, and simple waveform motifs. Album art supplies the rest.
+
+Album and podcast art uses square `cover`; artist portraits are circular. There is no separate illustration language beyond campaign assets.
+
+If final imagery is not yet available, any placeholder must preserve the documented scale, placement, crop, and visual weight rather than removing that layer.
+
+# States
 
 Playing, paused, queued, downloaded, explicit, unavailable, subscribed, and offline states appear beside the related audio.
 
-### Navigation
-
-Use five bottom destinations for Main, Mix, Podcasts, Search, and My Music, with the mini-player directly above.
-
-### Footer
-
-There is no footer. The mini-player and navigation persist across primary destinations.
-
-## Do's and Don'ts
-
-### Do
-
-- Keep playback context persistent.
-- Let cover art drive variety.
-- Use blue for active audio.
-- Keep track rows compact.
-
-### Don't
-
-- Do not decorate every shelf with gradients.
-- Do not hide download or queue state.
-- Do not overcrowd the mini-player.
-- Do not expose light native controls.
-
-## Responsive Behavior
-
-### Breakpoints
-
-Phones use horizontal shelves and one player. Wider screens may show library navigation, content, and queue in columns.
+# iOS adaptation
 
 ### Touch Targets
 
-Track rows, play actions, tabs, overflow menus, mini-player, and navigation require at least 44px hit regions.
+Track rows, play actions, tabs, overflow menus, mini-player, and navigation require at least 44 points hit regions.
 
 ### Collapsing Strategy
 
@@ -184,14 +166,20 @@ Keep current track, transport, and primary destinations visible. Move queue, dev
 
 Use `cover` for album and podcast art, circular crop for artists, and `contain` for service-import logos.
 
-## Iteration Guide
+Apply these rules within current iPhone safe areas and scrolling containers. Keep interactive targets at least 44 points, preserve a logical VoiceOver order, and let Dynamic Type wrap supporting text without flattening the documented hierarchy. Do not infer an unobserved dark or light appearance.
 
-Start with Main shelves, track list, mini-player, full player, search, and My Music. Add Mix, podcasts, social playlists, downloads, and subscription afterward.
+# Anti-generic checklist
 
-## Known Gaps
+- Do not decorate every shelf with gradients.
+- Do not hide download or queue state.
+- Do not overcrowd the mini-player.
+- Do not expose light native controls.
+- Do not replace the documented hierarchy with a generic stack of identical white cards or `Form` sections.
+- Do not use default blue tint, an unstyled `TabView`, arbitrary SF Symbols, or uniform corner radii when they contradict the recorded tokens and components.
+- Do not omit compositionally important imagery while final assets are pending; preserve its footprint with a faithful placeholder.
+
+# Known gaps
 
 The inspected catalog documents 21 flows across onboarding, discovery, subscription, mixes, podcasts, search, and library. Some full-player, queue, and offline error states are less represented.
 
 </design-context>
-
-Use the design system above for all UI you generate.

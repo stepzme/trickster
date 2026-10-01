@@ -4,8 +4,8 @@ Yandex Market is a dense commerce app that connects discovery, search, product c
 
 # Navigation
 
-- A five-item bottom bar keeps Home, Catalog, Cart, Orders, and Profile available.
-- Search stays near the top of discovery and listing screens.
+- A five-item primary navigation keeps Home, Catalog, Cart, Orders, and Profile available.
+- Search stays of discovery and listing screens.
 - Product and checkout steps use focused pages and bottom sheets, then return to the shopping context.
 
 # Core Flows
@@ -25,7 +25,12 @@ Yandex Market is a dense commerce app that connects discovery, search, product c
 
 # Interaction Patterns
 
-- Promotional modules and product rails lead into stable search and listing structures.
-- Yellow circular or full-width actions identify the primary commerce step.
-- Sticky actions preserve add-to-cart and checkout decisions on long pages.
-- Cards expose price, discount, rating, delivery, and seller information progressively.
+- remains available actions preserve add-to-cart and checkout decisions on long pages.
+
+# System Access Timing
+
+No system-access timing or denial-recovery path was documented in the reviewed source.
+
+# Known Gaps
+
+Unobserved flows, denial paths, cancellation behavior, and recovery states remain unspecified.

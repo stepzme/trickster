@@ -4,14 +4,14 @@ METRO is a grocery marketplace spanning deals, catalog and search, product compa
 
 # Navigation
 
-A floating five-item dock connects Promotions, Catalog, Home, Cart, and Profile. Search and barcode scanning remain persistent near the top of shopping surfaces.
+Five destinations connect Promotions, Catalog, Home, Cart, and Profile. Search and barcode scanning remain available throughout shopping.
 
 # Core Flows
 
 ## Build a grocery order
 
 1. Browse deal rails, category tiles, search, or scan a barcode.
-2. Compare product cards by image, unit price, discount, rating, and availability.
+2. Compare products by image, unit price, discount, rating, and availability.
 3. Open details and add or adjust quantity.
 4. Review cart totals and move to checkout.
 
@@ -24,7 +24,13 @@ A floating five-item dock connects Promotions, Catalog, Home, Cart, and Profile.
 
 # Interaction Patterns
 
-- Deep blue carries navigation and purchase actions; yellow marks METRO loyalty and highlights.
-- Red is limited to prices and discounts.
-- Product browsing stays dense with pack shots and compact metadata.
-- Checkout uses stacked decision rows and a persistent total/action area.
+- Product information remains available while browsing.
+- Checkout uses staged decisions with the total and next action available.
+
+# System Access Timing
+
+No system-access timing or denial-recovery behavior was documented in the reviewed source.
+
+# Known Gaps
+
+System-permission denial paths, interrupted flows, and recovery behavior not described above were not available in the reviewed source.

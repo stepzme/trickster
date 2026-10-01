@@ -1,6 +1,6 @@
 # Overview
 
-Stocks is a dark, list-led market utility for watchlists, quote details, charts, widgets, and financial news.
+Stocks is a, list-led market utility for watchlists, quote details, charts, widgets, and financial news.
 
 # Navigation
 
@@ -24,12 +24,17 @@ Stocks is a dark, list-led market utility for watchlists, quote details, charts,
 
 ## Use a widget
 
-1. Choose a compact quote, chart, or multi-symbol widget layout.
+1. Choose a quote, chart, or multi-symbol widget layout.
 2. Edit the widget's displayed symbols from its configuration surface.
 
 # Interaction Patterns
 
-- Green and red encode market movement; blue is reserved for actions and links.
-- Quote details open as a rounded dark sheet while ticker context remains visible.
-- Native alerts, keyboards, and menus are visually integrated with the dark theme.
 - Because no flow metadata exists, transition order beyond the visible screen relationships remains unverified.
+
+# System Access Timing
+
+No system-access timing or denial-recovery path was documented in the reviewed source.
+
+# Known Gaps
+
+Unobserved flows, denial paths, cancellation behavior, and recovery states remain unspecified.

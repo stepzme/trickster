@@ -4,7 +4,7 @@ MAX is a messenger organized around contacts, calls, chats, media sharing, invit
 
 # Navigation
 
-Four fixed destinations cover Contacts, Calls, Chats, and Settings. Conversation headers expose calling and overflow actions; creation uses compact black circular controls.
+Four fixed destinations cover Contacts, Calls, Chats, and Settings. Conversation headers expose calling and overflow actions; creation uses controls.
 
 # Core Flows
 
@@ -24,7 +24,12 @@ Four fixed destinations cover Contacts, Calls, Chats, and Settings. Conversation
 
 # Interaction Patterns
 
-- The everyday shell is neutral white with bright blue active controls.
-- Chats use pale blue message surfaces and compact delivery metadata.
-- Calls switch to a dark focused stage with a rounded control tray.
 - System sheets and permissions retain simple platform patterns but adopt MAX spacing and actions.
+
+# System Access Timing
+
+No system-access timing or denial-recovery path was documented in the reviewed source.
+
+# Known Gaps
+
+Unobserved flows, denial paths, cancellation behavior, and recovery states remain unspecified.

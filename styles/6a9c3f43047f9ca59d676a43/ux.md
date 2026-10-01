@@ -4,7 +4,7 @@ Trainline organizes international and local rail booking around a persistent sea
 
 # Navigation
 
-A three-item bottom bar anchors Search, My Tickets, and Account. Search opens a focused ticket form; purchase steps replace the bar with a single sticky continuation action.
+A three-item primary navigation anchors Search, My Tickets, and Account. Search opens a focused ticket form; purchase steps replace the bar with a single continuation action.
 
 # Core Flows
 
@@ -33,3 +33,11 @@ A three-item bottom bar anchors Search, My Tickets, and Account. Search opens a 
 - Result rows keep departure, arrival, duration, changes, operator, and price visible together.
 - Bottom actions remain full width or right aligned and repeat the current total near commitment.
 - Empty My Tickets teaches the ticket format and provides a direct Plan a trip action.
+
+# System Access Timing
+
+No system-access timing or denial-recovery behavior was documented in the reviewed source.
+
+# Known Gaps
+
+System-permission denial paths, interrupted flows, and recovery behavior not described above were not available in the reviewed source.

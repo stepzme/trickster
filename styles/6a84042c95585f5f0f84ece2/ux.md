@@ -4,7 +4,7 @@ Click SuperApp organizes finance and adjacent services around a configurable hom
 
 # Navigation
 
-The five-tab bar exposes Home, Payments, Transfers, Reports, and Mini Apps. Contextual detail screens use back navigation; the home search and QR entry points remain globally prominent.
+The five-primary navigation exposes Home, Payments, Transfers, Reports, and Mini Apps. Contextual detail screens use back navigation; the home search and QR entry points remain globally available.
 
 # Core Flows
 
@@ -13,7 +13,7 @@ The five-tab bar exposes Home, Payments, Transfers, Reports, and Mini Apps. Cont
 1. Open Home and review total or masked balance.
 2. Choose a wallet or card.
 3. Top up, pay, transfer, rename, or review reports.
-4. Surface account warnings next to the affected wallet.
+4. Show account warnings next to the affected wallet.
 
 ## Send money
 
@@ -33,5 +33,13 @@ The five-tab bar exposes Home, Payments, Transfers, Reports, and Mini Apps. Cont
 - Let users mask sensitive balances without losing account context.
 - Keep common actions visible on wallet detail.
 - Separate finance operations from promotional content.
-- Use horizontal scrolling only for optional services or campaigns.
+- Use progressive browsing only for optional services or campaigns.
 - Confirm destructive wallet actions explicitly.
+
+# System Access Timing
+
+No system-access timing or denial-recovery behavior was documented in the reviewed source.
+
+# Known Gaps
+
+System-permission denial paths, interrupted flows, and recovery behavior not described above were not available in the reviewed source.

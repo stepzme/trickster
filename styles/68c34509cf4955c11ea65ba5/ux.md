@@ -4,7 +4,7 @@ Find My supports consensual person sharing, device and item location, directions
 
 # Navigation
 
-People, Devices, Items, and Me remain in the bottom bar. The map persists while the active entity expands in a bottom sheet.
+People, Devices, Items, and Me remain in the primary navigation. The map persists while the active entity expands in a bottom sheet.
 
 # Core Flows
 
@@ -30,3 +30,11 @@ People, Devices, Items, and Me remain in the bottom bar. The map persists while 
 - Keep sharing reversible.
 - Confirm erase and removal.
 - Preserve selected entity while moving the map.
+
+# System Access Timing
+
+No system-access timing or denial-recovery path was documented in the reviewed source.
+
+# Known Gaps
+
+Unobserved flows, denial paths, cancellation behavior, and recovery states remain unspecified.

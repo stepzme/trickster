@@ -1,12 +1,12 @@
 <design-context>
 ---
-version: alpha
+version: 1
+platform: iOS
 name: METRO-design-analysis
 description: "A dense grocery marketplace on white, anchored by deep METRO blue, bright yellow loyalty accents, red prices and discounts, product pack shots, square category imagery, and a floating translucent bottom dock."
 colors:
   primary: "#17478F"
   on-primary: "#FFFFFF"
-  primary-hover: "#285DAA"
   primary-focus: "#0B3471"
   ink: "#1D1D22"
   ink-muted: "#75757C"
@@ -28,34 +28,34 @@ colors:
   semantic-success: "#35A968"
   semantic-overlay: "#1D1D22"
 typography:
-  display-xl: {fontFamily: SF Pro Display, fontSize: 36px, fontWeight: 700, lineHeight: 1.06, letterSpacing: -0.8px}
-  display-lg: {fontFamily: SF Pro Display, fontSize: 30px, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.6px}
-  display-md: {fontFamily: SF Pro Display, fontSize: 24px, fontWeight: 700, lineHeight: 1.14, letterSpacing: -0.3px}
-  headline: {fontFamily: SF Pro Display, fontSize: 20px, fontWeight: 700, lineHeight: 1.20, letterSpacing: -0.2px}
-  card-title: {fontFamily: SF Pro Text, fontSize: 15px, fontWeight: 600, lineHeight: 1.24, letterSpacing: 0}
-  subhead: {fontFamily: SF Pro Text, fontSize: 14px, fontWeight: 600, lineHeight: 1.30, letterSpacing: 0}
-  body-lg: {fontFamily: SF Pro Text, fontSize: 14px, fontWeight: 400, lineHeight: 1.38, letterSpacing: 0}
-  body: {fontFamily: SF Pro Text, fontSize: 12px, fontWeight: 400, lineHeight: 1.34, letterSpacing: 0}
-  body-sm: {fontFamily: SF Pro Text, fontSize: 10px, fontWeight: 400, lineHeight: 1.28, letterSpacing: 0}
-  caption: {fontFamily: SF Pro Text, fontSize: 9px, fontWeight: 400, lineHeight: 1.22, letterSpacing: 0}
-  button: {fontFamily: SF Pro Text, fontSize: 13px, fontWeight: 600, lineHeight: 1.18, letterSpacing: 0}
-  eyebrow: {fontFamily: SF Pro Text, fontSize: 9px, fontWeight: 600, lineHeight: 1.18, letterSpacing: 0.1px}
-  mono: {fontFamily: SF Mono, fontSize: 10px, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0}
-rounded: {xs: 4px, sm: 8px, md: 12px, lg: 16px, xl: 20px, xxl: 26px, pill: 9999px, full: 9999px}
-spacing: {xxs: 4px, xs: 8px, sm: 12px, md: 16px, lg: 20px, xl: 24px, xxl: 32px, section: 40px}
+  display-xl: {fontFamily: SF Pro Display, fontSize: 36, fontWeight: 700, lineHeight: 1.06, letterSpacing: -0.8}
+  display-lg: {fontFamily: SF Pro Display, fontSize: 30, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.6}
+  display-md: {fontFamily: SF Pro Display, fontSize: 24, fontWeight: 700, lineHeight: 1.14, letterSpacing: -0.3}
+  headline: {fontFamily: SF Pro Display, fontSize: 20, fontWeight: 700, lineHeight: 1.20, letterSpacing: -0.2}
+  card-title: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 600, lineHeight: 1.24, letterSpacing: 0}
+  subhead: {fontFamily: SF Pro Text, fontSize: 14, fontWeight: 600, lineHeight: 1.30, letterSpacing: 0}
+  body-lg: {fontFamily: SF Pro Text, fontSize: 14, fontWeight: 400, lineHeight: 1.38, letterSpacing: 0}
+  body: {fontFamily: SF Pro Text, fontSize: 12, fontWeight: 400, lineHeight: 1.34, letterSpacing: 0}
+  body-sm: {fontFamily: SF Pro Text, fontSize: 10, fontWeight: 400, lineHeight: 1.28, letterSpacing: 0}
+  caption: {fontFamily: SF Pro Text, fontSize: 9, fontWeight: 400, lineHeight: 1.22, letterSpacing: 0}
+  button: {fontFamily: SF Pro Text, fontSize: 13, fontWeight: 600, lineHeight: 1.18, letterSpacing: 0}
+  eyebrow: {fontFamily: SF Pro Text, fontSize: 9, fontWeight: 600, lineHeight: 1.18, letterSpacing: 0.1}
+  mono: {fontFamily: SF Mono, fontSize: 10, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0}
+rounded: {xs: 4, sm: 8, md: 12, lg: 16, xl: 20, xxl: 26, pill: 9999, full: 9999}
+spacing: {xxs: 4, xs: 8, sm: 12, md: 16, lg: 20, xl: 24, xxl: 32, section: 40}
 components:
-  button-primary: {backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 13px 18px}
+  button-primary: {backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [13, 18]}
   button-primary-pressed: {backgroundColor: "{colors.primary-focus}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}"}
-  button-primary-hover: {backgroundColor: "{colors.primary-hover}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}"}
-  button-secondary: {backgroundColor: "{colors.canvas}", textColor: "{colors.primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 12px 16px}
-  button-tertiary: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 10px 14px}
-  button-inverse: {backgroundColor: "{colors.brand-secure}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 12px 16px}
-  product-card: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: 8px}
-  category-tile: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: 6px}
-  search-field: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink-muted}", typography: "{typography.body}", rounded: "{rounded.pill}", padding: 10px 14px}
-  bottom-nav: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.caption}", rounded: "{rounded.xxl}", padding: 8px 10px}
+  button-secondary: {backgroundColor: "{colors.canvas}", textColor: "{colors.primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [12, 16]}
+  button-tertiary: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [10, 14]}
+  button-inverse: {backgroundColor: "{colors.brand-secure}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [12, 16]}
+  product-card: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: 8}
+  category-tile: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: 6}
+  search-field: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink-muted}", typography: "{typography.body}", rounded: "{rounded.pill}", padding: [10, 14]}
+  bottom-nav: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.caption}", rounded: "{rounded.xxl}", padding: [8, 10]}
 ---
-## Overview
+
+# Overview
 
 METRO is a high-density grocery storefront where deep blue drives purchase, yellow marks loyalty, and red keeps savings immediately visible.
 
@@ -66,7 +66,15 @@ METRO is a high-density grocery storefront where deep blue drives purchase, yell
 - Red price and discount emphasis.
 - Floating rounded bottom dock.
 
-## Colors
+# Non-negotiable visual invariants
+
+- The reviewed screens show this treatment: White product-heavy canvas.
+- The reviewed screens show this treatment: Deep blue cart and checkout actions.
+- The reviewed screens show this treatment: Yellow loyalty and selected Home mark.
+- The reviewed screens show this treatment: Red price and discount emphasis.
+- The reviewed screens show this treatment: Floating rounded bottom dock.
+
+# Color and surfaces
 
 ### Brand & Accent
 
@@ -84,7 +92,7 @@ Near-black carries product names and totals; gray carries unit, old price, and c
 
 Green is success, yellow attention or loyalty, red savings, and blue commitment.
 
-## Typography
+# Typography
 
 ### Font Family
 
@@ -94,11 +102,11 @@ Use SF Pro Display for section titles and SF Pro Text for compact catalog and ch
 
 | Token | Size | Weight | Use |
 |---|---:|---:|---|
-| display-lg | 30px | 700 | Order state |
-| headline | 20px | 700 | Catalog and checkout title |
-| card-title | 15px | 600 | Product and total |
-| body | 12px | 400 | Unit and fulfillment |
-| caption | 9px | 400 | Discount, rating, navigation |
+| display-lg | 30pt | 700 | Order state |
+| headline | 20pt | 700 | Catalog and checkout title |
+| card-title | 15pt | 600 | Product and total |
+| body | 12pt | 400 | Unit and fulfillment |
+| caption | 9pt | 400 | Discount, rating, navigation |
 
 ### Principles
 
@@ -110,11 +118,11 @@ Use SF Pro Display for section titles and SF Pro Text for compact catalog and ch
 
 Inter is suitable; preserve compact Cyrillic and tabular prices.
 
-## Layout
+# Screen composition
 
 ### Spacing System
 
-Use a 4px base, 8px product gaps, and 12px screen gutters.
+Use a 4pt base, 8pt product gaps, and 12pt screen gutters.
 
 ### Grid & Container
 
@@ -124,42 +132,15 @@ Home uses horizontal product rails; catalog uses three category columns; results
 
 Browsing is dense; checkout and address decisions use more separation.
 
-## Elevation & Depth
+# Navigation appearance
 
-| Level | Treatment | Use |
-|---|---|---|
-| 0 | White canvas | Catalog and detail |
-| 1 | Pale group fill | Checkout and fulfillment |
-| 2 | Floating dock | Navigation |
-| 3 | Sheet over scrim | Filters and substitutions |
+Keep five destinations in a floating translucent dock; Home receives the yellow-blue brand mark.
 
-### Decorative Depth
-
-Product and food photography supplies depth; UI shadows stay soft.
-
-## Shapes
-
-### Border Radius Scale
-
-| Token | Value | Use |
-|---|---:|---|
-| rounded-xs | 4px | Discount labels |
-| rounded-sm | 8px | Buttons and cards |
-| rounded-md | 12px | Loyalty and order panels |
-| rounded-lg | 16px | Sheets |
-| rounded-full | full | Search, favorite, and dock |
-
-### Photography & Illustration Geometry
-
-Contain package shots on white, aspect-fill food photography in categories, and preserve full product silhouettes.
-
-## Components
+# Components
 
 ### Buttons
 
 Primary actions are deep blue. Yellow is reserved for brand emphasis, not general confirmation.
-
-### Pricing Tabs
 
 Search categories and delivery modes use pale chips or segmented controls with blue selection.
 
@@ -179,11 +160,49 @@ Order progress uses compact stages and a visible add-on action. Errors stay near
 
 Keep five destinations in a floating translucent dock; Home receives the yellow-blue brand mark.
 
-### Footer
+# Imagery and icons
 
-No footer; the floating dock or sticky total owns the safe area.
+| Level | Treatment | Use |
+|---|---|---|
+| 0 | White canvas | Catalog and detail |
+| 1 | Pale group fill | Checkout and fulfillment |
+| 2 | Floating dock | Navigation |
+| 3 | Sheet over scrim | Filters and substitutions |
 
-## Do's and Don'ts
+### Decorative Depth
+
+Product and food photography supplies depth; UI shadows stay soft.
+
+# States
+
+Order progress uses compact stages and a visible add-on action. Errors stay near fulfillment or payment.
+
+# iOS adaptation
+
+### Touch Targets
+
+Search, scan, favorite, cart, quantity, fulfillment, and navigation remain at least 44pt.
+
+### Collapsing Strategy
+
+Keep two product columns, scroll rails horizontally, and stack checkout choices.
+
+### Image Behavior
+
+Contain packaging, aspect-fill food scenes, and keep consistent product image boxes.
+
+On iPhone, respect top and bottom safe areas, use scrolling for content that does not fit, keep interactive targets at least 44 points, and preserve the visual reading order for VoiceOver. At larger Dynamic Type sizes, allow supporting text to wrap without collapsing the dominant hierarchy. Use native sheets and permission transitions while explicitly styling app-owned surfaces to match the reference.
+
+# Anti-generic checklist
+
+- Do not substitute the documented accent hierarchy with default iOS blue.
+- Do not turn the documented white canvas into a generic card stack; preserve the observed accent, density, imagery, and surface grouping.
+- Do not use an unstyled `TabView`, `Form`, or arbitrary SF Symbols when they contradict the documented navigation and component language.
+- Do not flatten the documented typography into one body-text scale.
+- Do not remove compositionally important photography or illustration while assets are pending.
+- Do not apply one corner radius to every control and surface.
+
+Source-specific guardrails retained from the review:
 
 ### Do
 
@@ -199,38 +218,10 @@ No footer; the floating dock or sticky total owns the safe area.
 - Don't crop packaging.
 - Don't add heavy card shadows.
 
-## Responsive Behavior
-
-### Breakpoints
-
-| Name | Width | Key Changes |
-|---|---:|---|
-| Compact | 320–374px | Tighten product metadata and dock |
-| Standard | 375–430px | Default grids and rails |
-| Wide | 431px+ | Expand checkout and media gutters |
-
-### Touch Targets
-
-Search, scan, favorite, cart, quantity, fulfillment, and navigation remain at least 44px.
-
-### Collapsing Strategy
-
-Keep two product columns, scroll rails horizontally, and stack checkout choices.
-
-### Image Behavior
-
-Contain packaging, aspect-fill food scenes, and keep consistent product image boxes.
-
-## Iteration Guide
-
-Tune price comparison first, then quantity, substitutions, fulfillment, and loyalty clarity.
-
-## Known Gaps
+# Known gaps
 
 - Completed delivery tracking was not visually sampled.
 - Support and cancellation were not opened in detail.
-- Tablet and landscape layouts were not represented.
+- iPad and landscape layouts were not represented.
 
 </design-context>
-
-Use the design system above for all UI you generate.

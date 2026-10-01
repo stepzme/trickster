@@ -1,13 +1,13 @@
 <design-context>
 ---
-version: alpha
+version: 1
+platform: iOS
 name: Russian-Post-design-analysis
 description: "A service-dense utility interface built on a cool light-gray canvas, white rounded groups, and clear postal blue actions. Compact lists coexist with bright promotional tiles and a consistent family of soft 3D parcel, vehicle, and courier illustrations."
 
 colors:
   primary: "#1677E8"
   on-primary: "#FFFFFF"
-  primary-hover: "#338CF0"
   primary-soft: "#E8F3FF"
   ink: "#17191C"
   ink-muted: "#656B73"
@@ -25,102 +25,102 @@ colors:
 typography:
   display-xl:
     fontFamily: System Sans
-    fontSize: 34px
+    fontSize: 34
     fontWeight: 700
     lineHeight: 1.05
-    letterSpacing: -0.6px
+    letterSpacing: -0.6
   display-lg:
     fontFamily: System Sans
-    fontSize: 28px
+    fontSize: 28
     fontWeight: 700
     lineHeight: 1.10
-    letterSpacing: -0.4px
+    letterSpacing: -0.4
   display-md:
     fontFamily: System Sans
-    fontSize: 24px
+    fontSize: 24
     fontWeight: 700
     lineHeight: 1.15
-    letterSpacing: -0.2px
+    letterSpacing: -0.2
   headline:
     fontFamily: System Sans
-    fontSize: 21px
+    fontSize: 21
     fontWeight: 700
     lineHeight: 1.20
-    letterSpacing: -0.1px
+    letterSpacing: -0.1
   card-title:
     fontFamily: System Sans
-    fontSize: 16px
+    fontSize: 16
     fontWeight: 600
     lineHeight: 1.25
     letterSpacing: 0
   subhead:
     fontFamily: System Sans
-    fontSize: 17px
+    fontSize: 17
     fontWeight: 600
     lineHeight: 1.30
     letterSpacing: 0
   body-lg:
     fontFamily: System Sans
-    fontSize: 16px
+    fontSize: 16
     fontWeight: 400
     lineHeight: 1.45
     letterSpacing: 0
   body:
     fontFamily: System Sans
-    fontSize: 14px
+    fontSize: 14
     fontWeight: 400
     lineHeight: 1.42
     letterSpacing: 0
   body-sm:
     fontFamily: System Sans
-    fontSize: 12px
+    fontSize: 12
     fontWeight: 400
     lineHeight: 1.35
     letterSpacing: 0
   caption:
     fontFamily: System Sans
-    fontSize: 11px
+    fontSize: 11
     fontWeight: 400
     lineHeight: 1.30
     letterSpacing: 0
   button:
     fontFamily: System Sans
-    fontSize: 15px
+    fontSize: 15
     fontWeight: 600
     lineHeight: 1.20
     letterSpacing: 0
   eyebrow:
     fontFamily: System Sans
-    fontSize: 12px
+    fontSize: 12
     fontWeight: 600
     lineHeight: 1.25
-    letterSpacing: 0.1px
+    letterSpacing: 0.1
   mono:
     fontFamily: System Mono
-    fontSize: 12px
+    fontSize: 12
     fontWeight: 400
     lineHeight: 1.35
     letterSpacing: 0
 
 rounded:
-  xs: 4px
-  sm: 8px
-  md: 12px
-  lg: 16px
-  xl: 22px
-  xxl: 28px
-  pill: 9999px
-  full: 9999px
+  xs: 4
+  sm: 8
+  md: 12
+  lg: 16
+  xl: 22
+  xxl: 28
+  pill: 9999
+  full: 9999
 
 spacing:
-  xxs: 4px
-  xs: 8px
-  sm: 12px
-  md: 16px
-  lg: 24px
-  xl: 32px
-  xxl: 48px
-  section: 64px
+  xxs: 4
+  xs: 8
+  sm: 12
+  md: 16
+  lg: 24
+  xl: 32
+  xxl: 48
+  section: 64
 
 components:
   button-primary:
@@ -128,52 +128,52 @@ components:
     textColor: "{colors.on-primary}"
     typography: "{typography.button}"
     rounded: "{rounded.md}"
-    padding: 14px 18px
+    padding: [14, 18]
   button-secondary:
     backgroundColor: "{colors.primary-soft}"
     textColor: "{colors.primary}"
     typography: "{typography.button}"
     rounded: "{rounded.md}"
-    padding: 13px 18px
+    padding: [13, 18]
   service-card:
     backgroundColor: "{colors.surface-1}"
     textColor: "{colors.ink}"
     typography: "{typography.body}"
     rounded: "{rounded.lg}"
-    padding: 16px
+    padding: 16
   promo-card:
     backgroundColor: "{colors.primary}"
     textColor: "{colors.on-primary}"
     typography: "{typography.card-title}"
     rounded: "{rounded.lg}"
-    padding: 16px
+    padding: 16
   list-group:
     backgroundColor: "{colors.surface-1}"
     textColor: "{colors.ink}"
     typography: "{typography.body}"
     rounded: "{rounded.md}"
-    padding: 0 16px
+    padding: [0, 16]
   filter-chip:
     backgroundColor: "{colors.surface-1}"
     textColor: "{colors.ink}"
     typography: "{typography.body-sm}"
     rounded: "{rounded.pill}"
-    padding: 8px 12px
+    padding: [8, 12]
   search-field:
     backgroundColor: "{colors.surface-1}"
     textColor: "{colors.ink}"
     typography: "{typography.body}"
     rounded: "{rounded.md}"
-    padding: 12px 14px
+    padding: [12, 14]
   bottom-nav:
     backgroundColor: "{colors.surface-1}"
     textColor: "{colors.ink-subtle}"
     typography: "{typography.caption}"
     rounded: "{rounded.xs}"
-    height: 64px
+    height: 64
 ---
 
-## Overview
+# Overview
 
 Russian Post is a broad utility hub that makes dense shipping, tracking, pickup, office, help, and profile tasks approachable through white rounded groups and postal blue actions. Bright service banners and soft 3D objects keep a functional interface from feeling bureaucratic.
 
@@ -184,7 +184,15 @@ Russian Post is a broad utility hub that makes dense shipping, tracking, pickup,
 - Promotional areas combine saturated color blocks with friendly 3D objects.
 - Tracking, pickup, and sending preserve the same card-and-row grammar.
 
-## Colors
+# Non-negotiable visual invariants
+
+- The reviewed screens show this treatment: Cool light-gray page background with white grouped surfaces.
+- The reviewed screens show this treatment: Postal blue is the only persistent brand and action color.
+- The reviewed screens show this treatment: Dense service lists use clear hierarchy and generous row targets.
+- The reviewed screens show this treatment: Promotional areas combine saturated color blocks with friendly 3D objects.
+- The reviewed screens show this treatment: Tracking, pickup, and sending preserve the same card-and-row grammar.
+
+# Color and surfaces
 
 ### Brand & Accent
 
@@ -208,7 +216,7 @@ Russian Post is a broad utility hub that makes dense shipping, tracking, pickup,
 
 Use green for successful delivery or positive confirmation, orange for attention, and red for errors. Do not reuse those hues as general navigation accents.
 
-## Typography
+# Typography
 
 ### Font Family
 
@@ -218,13 +226,13 @@ Use a neutral system sans throughout. The visual identity comes from color, grou
 
 | Token | Size | Weight | Use |
 |---|---:|---:|---|
-| `{typography.display-xl}` | 34px | 700 | Major service or onboarding title |
-| `{typography.display-lg}` | 28px | 700 | Screen title |
-| `{typography.display-md}` | 24px | 700 | Sheet or campaign title |
-| `{typography.headline}` | 21px | 700 | Section title |
-| `{typography.card-title}` | 16px | 600 | Service and parcel title |
-| `{typography.body}` | 14px | 400 | Default service information |
-| `{typography.caption}` | 11px | 400 | Dates, states, and navigation label |
+| `{typography.display-xl}` | 34pt | 700 | Major service or onboarding title |
+| `{typography.display-lg}` | 28pt | 700 | Screen title |
+| `{typography.display-md}` | 24pt | 700 | Sheet or campaign title |
+| `{typography.headline}` | 21pt | 700 | Section title |
+| `{typography.card-title}` | 16pt | 600 | Service and parcel title |
+| `{typography.body}` | 14pt | 400 | Default service information |
+| `{typography.caption}` | 11pt | 400 | Dates, states, and navigation label |
 
 ### Principles
 
@@ -237,11 +245,7 @@ Use a neutral system sans throughout. The visual identity comes from color, grou
 
 Use SF Pro on iOS or Inter elsewhere. Preserve normal-width letterforms and the calm utility tone; avoid rounded display fonts.
 
-## Layout
-
-### Spacing System
-
-Use a 4px base, 16px screen gutters, 8–12px gaps between cards, and 24px between major service groups. Rows generally keep 14–16px vertical padding.
+# Screen composition
 
 ### Grid & Container
 
@@ -251,34 +255,15 @@ Home mixes full-width search and tracking modules with two-column service or pro
 
 Whitespace separates tasks rather than creating dramatic emptiness. Keep enough canvas visible between white groups to clarify boundaries without fragmenting a long workflow.
 
-## Elevation & Depth
+# Navigation appearance
 
-Cards lift mainly through white-on-gray contrast. Shadows stay soft and minimal; sheets, QR cards, and modal confirmations may use a shallow elevation.
+Use a five-item bottom bar for the main product areas. Keep blue for the active destination. Deep sending, pickup, and profile tasks use a back action and retain their current progress.
 
-### Decorative Depth
-
-Use 3D object illustrations and overlapping promotional content for depth. Functional cards should remain flat and legible.
-
-## Shapes
-
-### Border Radius Scale
-
-- Fields and list groups use 12px corners.
-- Service and promotional cards use 16px corners.
-- Chips and compact filters use pill geometry.
-- Icon containers can be circular or softly rounded.
-
-### Photography & Illustration Geometry
-
-Place 3D parcel, courier, vehicle, and service objects inside uncluttered cards with clear breathing room. Avoid arbitrary photographic crops inside operational lists.
-
-## Components
+# Components
 
 ### Buttons
 
 Primary actions use blue fill with white text; secondary actions use soft blue or white with blue labels. Native controls may remain under the hood, but must inherit the package colors, radii, type, and row spacing.
-
-### Pricing Tabs
 
 Use filter pills or simple segmented controls for mail type, status, and history ranges. The selected state is blue or soft blue; avoid adding a separate ornamental tab style.
 
@@ -298,11 +283,46 @@ Tracking surfaces the current parcel state first, followed by events and actions
 
 Use a five-item bottom bar for the main product areas. Keep blue for the active destination. Deep sending, pickup, and profile tasks use a back action and retain their current progress.
 
-### Footer
+# Imagery and icons
 
-There is no marketing footer. Finish with the persistent bottom navigation or a safe-area-aware action area on the gray canvas.
+Cards lift mainly through white-on-gray contrast. Shadows stay soft and minimal; sheets, QR cards, and modal confirmations may use a shallow elevation.
 
-## Do's and Don'ts
+### Decorative Depth
+
+Use 3D object illustrations and overlapping promotional content for depth. Functional cards should remain flat and legible.
+
+# States
+
+Tracking surfaces the current parcel state first, followed by events and actions. Pickup flows use a dedicated QR card; office and queue states pair practical details with the next action.
+
+# iOS adaptation
+
+Keep the operational flows one column across phone widths. Home can retain two compact columns when titles remain readable; otherwise promotional tiles stack.
+
+### Touch Targets
+
+Rows, switches, QR actions, filters, and bottom navigation items require at least 44pt targets.
+
+### Collapsing Strategy
+
+Allow filter rows to scroll horizontally. Keep the primary sending or pickup action pinned while the grouped form or tracking history scrolls.
+
+### Image Behavior
+
+Scale 3D objects proportionally and keep them within their card bounds. Never crop away the object that explains a service; use extra negative space before enlarging it.
+
+On iPhone, respect top and bottom safe areas, use scrolling for content that does not fit, keep interactive targets at least 44 points, and preserve the visual reading order for VoiceOver. At larger Dynamic Type sizes, allow supporting text to wrap without collapsing the dominant hierarchy. Use native sheets and permission transitions while explicitly styling app-owned surfaces to match the reference.
+
+# Anti-generic checklist
+
+- Do not substitute the documented accent hierarchy with default iOS blue.
+- Do not collapse distinct surfaces into a uniform stack of generic white cards.
+- Do not use an unstyled `TabView`, `Form`, or arbitrary SF Symbols when they contradict the documented navigation and component language.
+- Do not flatten the documented typography into one body-text scale.
+- Do not remove compositionally important photography or illustration while assets are pending.
+- Do not apply one corner radius to every control and surface.
+
+Source-specific guardrails retained from the review:
 
 ### Do
 
@@ -320,28 +340,8 @@ There is no marketing footer. Finish with the persistent bottom navigation or a 
 - Do not introduce multiple competing card radii.
 - Do not expose unstyled platform controls.
 
-## Responsive Behavior
+# Known gaps
 
-### Breakpoints
+The reviewed scenarios cover onboarding, home, sending, tracking, pickup, offices, help, jobs, and profile. iPad layouts, large accessibility sizes, and rare operational failures were not visible.
 
-Keep the operational flows one column across phone widths. Home can retain two compact columns when titles remain readable; otherwise promotional tiles stack.
-
-### Touch Targets
-
-Rows, switches, QR actions, filters, and bottom navigation items require at least 44px targets.
-
-### Collapsing Strategy
-
-Allow filter rows to scroll horizontally. Keep the primary sending or pickup action pinned while the grouped form or tracking history scrolls.
-
-### Image Behavior
-
-Scale 3D objects proportionally and keep them within their card bounds. Never crop away the object that explains a service; use extra negative space before enlarging it.
-
-## Iteration Guide
-
-Start with the gray canvas, white grouped cards, blue action system, and main navigation. Add sending and tracking states next, then the promotional 3D illustration layer. New features should reuse an existing card, row, or sheet pattern.
-
-## Known Gaps
-
-The reviewed scenarios cover onboarding, home, sending, tracking, pickup, offices, help, jobs, and profile. Tablet layouts, large accessibility sizes, and rare operational failures were not visible.
+</design-context>

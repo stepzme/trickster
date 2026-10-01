@@ -1,12 +1,12 @@
 <design-context>
 ---
-version: alpha
+version: 1
+platform: iOS
 name: Idoo-design-analysis
 description: "An airy editorial city-discovery interface built on white, thin black typography, organic bubble selectors, cloud-like section silhouettes, and a vivid coral-red action color. Expressive wide display lettering, fashion-sketch illustration, playful chips, and large place photography make route planning feel more like browsing a culture magazine than operating a map utility."
 colors:
   primary: "#FF3945"
   on-primary: "#FFFFFF"
-  primary-hover: "#FF5963"
   primary-focus: "#DD2632"
   ink: "#101014"
   ink-muted: "#4F4F55"
@@ -28,54 +28,53 @@ colors:
   semantic-success: "#74C88A"
   semantic-overlay: "#1A1A20"
 typography:
-  display-xl: {fontFamily: Unbounded, fontSize: 40px, fontWeight: 400, lineHeight: 1.02, letterSpacing: -1.4px}
-  display-lg: {fontFamily: Unbounded, fontSize: 32px, fontWeight: 400, lineHeight: 1.06, letterSpacing: -1.0px}
-  display-md: {fontFamily: Unbounded, fontSize: 26px, fontWeight: 400, lineHeight: 1.10, letterSpacing: -0.6px}
-  headline: {fontFamily: SF Pro Display, fontSize: 23px, fontWeight: 700, lineHeight: 1.20, letterSpacing: -0.3px}
-  card-title: {fontFamily: Unbounded, fontSize: 19px, fontWeight: 400, lineHeight: 1.15, letterSpacing: -0.3px}
-  subhead: {fontFamily: SF Pro Text, fontSize: 17px, fontWeight: 500, lineHeight: 1.35, letterSpacing: -0.1px}
-  body-lg: {fontFamily: SF Pro Text, fontSize: 16px, fontWeight: 400, lineHeight: 1.42, letterSpacing: 0}
-  body: {fontFamily: SF Pro Text, fontSize: 15px, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0}
-  body-sm: {fontFamily: SF Pro Text, fontSize: 13px, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0}
-  caption: {fontFamily: SF Pro Text, fontSize: 11px, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0}
-  button: {fontFamily: Unbounded, fontSize: 13px, fontWeight: 400, lineHeight: 1.20, letterSpacing: -0.1px}
-  eyebrow: {fontFamily: SF Pro Text, fontSize: 12px, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0.2px}
-  mono: {fontFamily: SF Mono, fontSize: 12px, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0}
+  display-xl: {fontFamily: Unbounded, fontSize: 40, fontWeight: 400, lineHeight: 1.02, letterSpacing: -1.4}
+  display-lg: {fontFamily: Unbounded, fontSize: 32, fontWeight: 400, lineHeight: 1.06, letterSpacing: -1.0}
+  display-md: {fontFamily: Unbounded, fontSize: 26, fontWeight: 400, lineHeight: 1.10, letterSpacing: -0.6}
+  headline: {fontFamily: SF Pro Display, fontSize: 23, fontWeight: 700, lineHeight: 1.20, letterSpacing: -0.3}
+  card-title: {fontFamily: Unbounded, fontSize: 19, fontWeight: 400, lineHeight: 1.15, letterSpacing: -0.3}
+  subhead: {fontFamily: SF Pro Text, fontSize: 17, fontWeight: 500, lineHeight: 1.35, letterSpacing: -0.1}
+  body-lg: {fontFamily: SF Pro Text, fontSize: 16, fontWeight: 400, lineHeight: 1.42, letterSpacing: 0}
+  body: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0}
+  body-sm: {fontFamily: SF Pro Text, fontSize: 13, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0}
+  caption: {fontFamily: SF Pro Text, fontSize: 11, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0}
+  button: {fontFamily: Unbounded, fontSize: 13, fontWeight: 400, lineHeight: 1.20, letterSpacing: -0.1}
+  eyebrow: {fontFamily: SF Pro Text, fontSize: 12, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0.2}
+  mono: {fontFamily: SF Mono, fontSize: 12, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0}
 rounded:
-  xs: 4px
-  sm: 8px
-  md: 14px
-  lg: 20px
-  xl: 28px
-  xxl: 36px
-  pill: 9999px
-  full: 9999px
+  xs: 4
+  sm: 8
+  md: 14
+  lg: 20
+  xl: 28
+  xxl: 36
+  pill: 9999
+  full: 9999
 spacing:
-  xxs: 4px
-  xs: 8px
-  sm: 12px
-  md: 16px
-  lg: 20px
-  xl: 24px
-  xxl: 32px
-  section: 48px
+  xxs: 4
+  xs: 8
+  sm: 12
+  md: 16
+  lg: 20
+  xl: 24
+  xxl: 32
+  section: 48
 components:
-  button-primary: {backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: 14px 24px}
+  button-primary: {backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: [14, 24]}
   button-primary-pressed: {backgroundColor: "{colors.primary-focus}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.pill}"}
-  button-primary-hover: {backgroundColor: "{colors.primary-hover}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.pill}"}
-  button-secondary: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: 12px 20px}
-  button-tertiary: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: 10px 16px}
-  button-inverse: {backgroundColor: "{colors.inverse-canvas}", textColor: "{colors.inverse-ink}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: 12px 20px}
-  interest-bubble: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.full}", padding: 12px}
-  interest-bubble-selected: {backgroundColor: "{colors.brand-secure}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.full}", padding: 12px}
-  guide-card: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xl}", padding: 20px}
-  tag-pill: {backgroundColor: "{colors.inverse-canvas}", textColor: "{colors.inverse-ink}", typography: "{typography.caption}", rounded: "{rounded.pill}", padding: 4px 8px}
-  coach-sheet: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xxl}", padding: 24px}
-  status-badge: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.caption}", rounded: "{rounded.pill}", padding: 4px 8px}
-  top-nav: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.xs}", height: 52px}
-  bottom-nav: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink-subtle}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: 8px 12px}
+  button-secondary: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: [12, 20]}
+  button-tertiary: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: [10, 16]}
+  button-inverse: {backgroundColor: "{colors.inverse-canvas}", textColor: "{colors.inverse-ink}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: [12, 20]}
+  interest-bubble: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.full}", padding: 12}
+  interest-bubble-selected: {backgroundColor: "{colors.brand-secure}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.full}", padding: 12}
+  guide-card: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xl}", padding: 20}
+  tag-pill: {backgroundColor: "{colors.inverse-canvas}", textColor: "{colors.inverse-ink}", typography: "{typography.caption}", rounded: "{rounded.pill}", padding: [4, 8]}
+  coach-sheet: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xxl}", padding: 24}
+  status-badge: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.caption}", rounded: "{rounded.pill}", padding: [4, 8]}
+  bottom-nav: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink-subtle}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: [8, 12]}
 ---
-## Overview
+
+# Overview
 
 Idoo is a white, editorial route finder with playful variable-size bubbles and oversized typographic personality. Coral actions, organic silhouettes, fashion sketches, and place photography keep the system expressive while navigation remains sparse.
 
@@ -87,7 +86,16 @@ Idoo is a white, editorial route finder with playful variable-size bubbles and o
 - Cloud-edged guide surfaces and large rounded photography.
 - Minimal three-item bottom navigation.
 
-## Colors
+# Non-negotiable visual invariants
+
+- Sampled screens consistently use white canvas and thin black line work.
+- Typography consistently uses wide geometric display type for identity and editorial titles.
+- The reference consistently shows interest choices expressed as loose circles rather than a rigid grid.
+- Sampled screens consistently use coral-red full-width action pills.
+- The reference consistently shows cloud-edged guide surfaces and large rounded photography.
+- Navigation consistently uses minimal three-item bottom navigation.
+
+# Color and surfaces
 
 ### Brand & Accent
 - Coral red marks the route action, accepted choice, and active destination.
@@ -105,7 +113,7 @@ Idoo is a white, editorial route finder with playful variable-size bubbles and o
 - Success stays muted and never competes with coral.
 - Dark overlays protect route text over place imagery.
 
-## Typography
+# Typography
 
 ### Font Family
 
@@ -117,13 +125,13 @@ Idoo is a white, editorial route finder with playful variable-size bubbles and o
 
 | Token | Size | Weight | Use |
 |---|---:|---:|---|
-| display-xl | 40px | 400 | Identity statement |
-| display-lg | 32px | 400 | Guide title |
-| display-md | 26px | 400 | Section opener |
-| headline | 23px | 700 | Sheet title |
-| card-title | 19px | 400 | Place title |
-| body | 15px | 400 | Editorial copy |
-| caption | 11px | 400 | Route facts and tabs |
+| display-xl | 40 points | 400 | Identity statement |
+| display-lg | 32 points | 400 | Guide title |
+| display-md | 26 points | 400 | Section opener |
+| headline | 23 points | 700 | Sheet title |
+| card-title | 19 points | 400 | Place title |
+| body | 15 points | 400 | Editorial copy |
+| caption | 11 points | 400 | Route facts and tabs |
 
 ### Principles
 
@@ -135,11 +143,11 @@ Idoo is a white, editorial route finder with playful variable-size bubbles and o
 
 Unbounded is an appropriate open substitute; use SF Pro for all utility text.
 
-## Layout
+# Screen composition
 
 ### Spacing System
 
-Use a 4px base with 16–24px content padding and 32–48px around identity moments.
+Use a 4 points base with 16–24 points content padding and 32–48 points around identity moments.
 
 ### Grid & Container
 
@@ -149,7 +157,7 @@ Interest bubbles form an irregular field. Guides and places use one vertical edi
 
 Generous white space is part of the playful composition. Do not align every bubble or card edge to a strict grid.
 
-## Elevation & Depth
+Surface hierarchy observed in the source:
 
 | Level | Treatment | Use |
 |---|---|---|
@@ -162,32 +170,15 @@ Generous white space is part of the playful composition. Do not align every bubb
 
 Use irregular silhouettes, light gradients, and overlapping illustration crops rather than shadows.
 
-## Shapes
+# Navigation appearance
 
-### Border Radius Scale
+Use three bottom destinations with a small expressive active icon. Search and history remain top-level contextual actions.
 
-| Token | Value | Use |
-|---|---:|---|
-| rounded-sm | 8px | Tags |
-| rounded-md | 14px | Compact surfaces |
-| rounded-lg | 20px | Sheets |
-| rounded-xl | 28px | Place images |
-| rounded-pill | full | CTAs and chips |
-| rounded-full | full | Interest bubbles |
-
-### Photography & Illustration Geometry
-
-Photography uses large rounded crops. Illustration can extend beyond the frame; organic cloud masks may separate content sections.
-
-## Components
+# Components
 
 ### Buttons
 
 Primary buttons are wide coral pills with white display labels. Route decisions may pair coral and dark outlined circles.
-
-### Pricing Tabs
-
-No pricing selector was observed. Use the same compact theme-chip language when segmented choice is needed.
 
 ### Cards & Containers
 
@@ -197,49 +188,23 @@ Guides combine an organic pale header, large editorial title, body copy, route f
 
 Most input is choice-based. Starting-point search appears as a pale rounded field; keep text entry visually secondary.
 
-### Status & Build Page
+# Imagery and icons
+
+Use irregular silhouettes, light gradients, and overlapping illustration crops rather than shadows.
+
+Photography uses large rounded crops. Illustration can extend beyond the frame; organic cloud masks may separate content sections.
+
+If final imagery is not yet available, any placeholder must preserve the documented scale, placement, crop, and visual weight rather than removing that layer.
+
+# States
 
 Progress uses thin segmented bars at the top of onboarding and route proposals. Selection appears through fill, not checkmarks.
 
-### Navigation
-
-Use three bottom destinations with a small expressive active icon. Search and history remain top-level contextual actions.
-
-### Footer
-
-No footer; preserve safe-area space below the bottom navigation.
-
-## Do's and Don'ts
-
-### Do
-
-- Keep the interest field loose and varied.
-- Use coral only for forward motion.
-- Pair factual place photography with expressive editorial type.
-- Teach unusual gestures with focused sheets.
-- Preserve generous negative space.
-
-### Don't
-
-- Don't force bubbles into equal cards.
-- Don't turn guides into a conventional map list.
-- Don't add heavy shadows or borders.
-- Don't use multiple saturated CTA colors.
-- Don't replace real places with illustration.
-
-## Responsive Behavior
-
-### Breakpoints
-
-| Name | Width | Key Changes |
-|---|---:|---|
-| Compact | 320–374px | Reduce bubble size and display scale |
-| Standard | 375–430px | Default composition |
-| Wide | 431px+ | Increase negative space and image width |
+# iOS adaptation
 
 ### Touch Targets
 
-Small bubbles retain enlarged invisible hit areas. CTAs and navigation remain at least 44px high.
+Small bubbles retain enlarged invisible hit areas. CTAs and navigation remain at least 44 points high.
 
 ### Collapsing Strategy
 
@@ -249,13 +214,23 @@ Theme chips scroll horizontally. Long guide copy expands vertically; route actio
 
 Use aspect-fill and preserve architectural or human focal points. Avoid narrow banner crops for place details.
 
-## Iteration Guide
+Apply these rules within current iPhone safe areas and scrolling containers. Keep interactive targets at least 44 points, preserve a logical VoiceOver order, and let Dynamic Type wrap supporting text without flattening the documented hierarchy. Do not infer an unobserved dark or light appearance.
 
-Tune type width and bubble rhythm first, then coral prominence and organic masks. If the design feels like a utility app, remove grid chrome.
+# Anti-generic checklist
 
-## Known Gaps
+- Don't force bubbles into equal cards.
+- Don't turn guides into a conventional map list.
+- Don't add heavy shadows or borders.
+- Don't use multiple saturated CTA colors.
+- Don't replace real places with illustration.
+- Do not replace the documented hierarchy with a generic stack of identical white cards or `Form` sections.
+- Do not use default blue tint, an unstyled `TabView`, arbitrary SF Symbols, or uniform corner radii when they contradict the recorded tokens and components.
+- Do not omit compositionally important imagery while final assets are pending; preserve its footprint with a faithful placeholder.
+
+# Known gaps
 
 - Motion timing for route swipes was not visible in stills.
 - Dark theme and tablet behavior were not present.
 - Map navigation after accepting a route was not fully represented.
+
 </design-context>

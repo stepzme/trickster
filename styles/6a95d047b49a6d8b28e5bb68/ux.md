@@ -4,7 +4,7 @@ WB Chat is a restrained messenger for contacts, private conversations, groups, c
 
 # Navigation
 
-- A three-item bottom dock switches between Contacts, Chats, and Settings/Profile.
+- A three-item primary navigation switches between Contacts, Chats, and Settings/Profile.
 - Chats can be filtered by All, Chats, Groups, and Channels before opening a thread.
 - Thread-level menus contain search, notifications, participant details, moderation, and destructive actions.
 
@@ -31,5 +31,11 @@ WB Chat is a restrained messenger for contacts, private conversations, groups, c
 # Interaction Patterns
 
 - Search and compose stay at the top; active conversation categories use a thin underline.
-- Empty states pair a direct explanation with one wide dark action.
-- Light and dark themes preserve the same monochrome structure; avatar color supplies most identity.
+
+# System Access Timing
+
+No system-access timing or denial-recovery behavior was documented in the reviewed source.
+
+# Known Gaps
+
+System-permission denial paths, interrupted flows, and recovery behavior not described above were not available in the reviewed source.

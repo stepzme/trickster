@@ -1,12 +1,12 @@
 <design-context>
 ---
-version: alpha
+version: 1
+platform: iOS
 name: 585-Gold-design-analysis
 description: "A promotion-driven jewelry marketplace on a soft white-gray canvas, using bright orange-red for conversion, black for value contrast, and polished product photography as the visual focus. Large campaign banners, compact shortcut chips, two-column product grids, explicit discount math, and a persistent five-icon bottom bar create a dense but familiar shopping experience."
 colors:
   primary: "#FF432D"
   on-primary: "#FFFFFF"
-  primary-hover: "#E93422"
   accent-black: "#101012"
   accent-gold: "#D5A63C"
   ink: "#151519"
@@ -20,32 +20,30 @@ colors:
   semantic-warning: "#FFC21C"
   semantic-overlay: "#000000"
 typography:
-  display-xl: { fontFamily: System Sans, fontSize: 42px, fontWeight: 800, lineHeight: 1.00, letterSpacing: -1.2px }
-  display-lg: { fontFamily: System Sans, fontSize: 34px, fontWeight: 700, lineHeight: 1.05, letterSpacing: -0.7px }
-  display-md: { fontFamily: System Sans, fontSize: 27px, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.4px }
-  headline: { fontFamily: System Sans, fontSize: 22px, fontWeight: 700, lineHeight: 1.15, letterSpacing: -0.2px }
-  card-title: { fontFamily: System Sans, fontSize: 15px, fontWeight: 500, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: System Sans, fontSize: 16px, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
-  body-lg: { fontFamily: System Sans, fontSize: 16px, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
-  body: { fontFamily: System Sans, fontSize: 14px, fontWeight: 400, lineHeight: 1.38, letterSpacing: 0 }
-  body-sm: { fontFamily: System Sans, fontSize: 12px, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
-  caption: { fontFamily: System Sans, fontSize: 11px, fontWeight: 500, lineHeight: 1.25, letterSpacing: 0 }
-  button: { fontFamily: System Sans, fontSize: 15px, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0 }
-  eyebrow: { fontFamily: System Sans, fontSize: 11px, fontWeight: 700, lineHeight: 1.20, letterSpacing: 0.2px }
-  mono: { fontFamily: System Mono, fontSize: 12px, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
-rounded: { xs: 6px, sm: 10px, md: 14px, lg: 18px, xl: 24px, xxl: 30px, pill: 9999px, full: 9999px }
-spacing: { xxs: 4px, xs: 8px, sm: 12px, md: 16px, lg: 24px, xl: 32px, xxl: 48px, section: 64px }
+  display-xl: { fontFamily: System Sans, fontSize: 42, fontWeight: 800, lineHeight: 1.00, letterSpacing: -1.2 }
+  display-lg: { fontFamily: System Sans, fontSize: 34, fontWeight: 700, lineHeight: 1.05, letterSpacing: -0.7 }
+  display-md: { fontFamily: System Sans, fontSize: 27, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.4 }
+  headline: { fontFamily: System Sans, fontSize: 22, fontWeight: 700, lineHeight: 1.15, letterSpacing: -0.2 }
+  card-title: { fontFamily: System Sans, fontSize: 15, fontWeight: 500, lineHeight: 1.25, letterSpacing: 0 }
+  subhead: { fontFamily: System Sans, fontSize: 16, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
+  body-lg: { fontFamily: System Sans, fontSize: 16, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
+  body: { fontFamily: System Sans, fontSize: 14, fontWeight: 400, lineHeight: 1.38, letterSpacing: 0 }
+  body-sm: { fontFamily: System Sans, fontSize: 12, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
+  caption: { fontFamily: System Sans, fontSize: 11, fontWeight: 500, lineHeight: 1.25, letterSpacing: 0 }
+  button: { fontFamily: System Sans, fontSize: 15, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0 }
+  eyebrow: { fontFamily: System Sans, fontSize: 11, fontWeight: 700, lineHeight: 1.20, letterSpacing: 0.2 }
+  mono: { fontFamily: System Mono, fontSize: 12, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
+rounded: { xs: 6, sm: 10, md: 14, lg: 18, xl: 24, xxl: 30, pill: 9999, full: 9999 }
+spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
 components:
-  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: 14px 20px }
+  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: [14, 20]}
   campaign-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 0 }
-  product-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 8px }
-  discount-banner: { backgroundColor: "{colors.accent-black}", textColor: "{colors.on-primary}", typography: "{typography.body-sm}", rounded: "{rounded.md}", padding: 8px 12px }
-  cart-group: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 14px }
-  top-nav: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.headline}", rounded: "{rounded.xs}", height: 52px }
-  footer: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: 20px 16px }
+  product-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 8 }
+  discount-banner: { backgroundColor: "{colors.accent-black}", textColor: "{colors.on-primary}", typography: "{typography.body-sm}", rounded: "{rounded.md}", padding: [8, 12]}
+  cart-group: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 14 }
 ---
 
-## Overview
+# Overview
 
 585 Gold places campaigns and discount value before brand restraint. Orange-red actions and black contrast panels sit around high-key jewelry photography, while the underlying browse, favorite, cart, and profile patterns remain familiar.
 
@@ -57,7 +55,16 @@ components:
 - Explicit old price, current price, and discount.
 - Five-icon bottom navigation.
 
-## Colors
+# Non-negotiable visual invariants
+
+- The reviewed screens show this treatment: Large sale banners and promotion carousels.
+- The reviewed screens show this treatment: Orange-red primary actions and selected navigation.
+- The reviewed screens show this treatment: White product cards on a soft gray-white canvas.
+- The reviewed screens show this treatment: Polished jewelry cutouts with little visual chrome.
+- The reviewed screens show this treatment: Explicit old price, current price, and discount.
+- The reviewed screens show this treatment: Five-icon bottom navigation.
+
+# Color and surfaces
 
 ### Brand & Accent
 - **Orange Red** ({colors.primary}): Purchase, checkout, active navigation, and sale emphasis.
@@ -80,7 +87,7 @@ components:
 - **Warning** ({colors.semantic-warning}): Rating and attention.
 - **Overlay** ({colors.semantic-overlay}): Gallery and modal scrim.
 
-## Typography
+# Typography
 
 ### Font Family
 
@@ -91,13 +98,13 @@ components:
 
 | Token | Size | Weight | Use |
 |---|---|---|---|
-| `{typography.display-xl}` | 42px | 800 | Campaign discount |
-| `{typography.display-md}` | 27px | 700 | Screen heading |
-| `{typography.headline}` | 22px | 700 | Category heading |
-| `{typography.card-title}` | 15px | 500 | Product name |
-| `{typography.body}` | 14px | 400 | Default content |
-| `{typography.caption}` | 11px | 500 | Discount and review |
-| `{typography.button}` | 15px | 600 | Purchase action |
+| `{typography.display-xl}` | 42pt | 800 | Campaign discount |
+| `{typography.display-md}` | 27pt | 700 | Screen heading |
+| `{typography.headline}` | 22pt | 700 | Category heading |
+| `{typography.card-title}` | 15pt | 500 | Product name |
+| `{typography.body}` | 14pt | 400 | Default content |
+| `{typography.caption}` | 11pt | 500 | Discount and review |
+| `{typography.button}` | 15pt | 600 | Purchase action |
 
 ### Principles
 
@@ -110,11 +117,7 @@ components:
 
 Use **SF Pro**, **Inter**, or **Manrope**. Preserve strong numeric weights and clear Cyrillic at small sizes.
 
-## Layout
-
-### Spacing System
-
-Use a 4px base. Browse gutters are 12px, product-card gaps 8px, and cart-group padding 14–16px.
+# Screen composition
 
 ### Grid & Container
 
@@ -124,43 +127,15 @@ Home uses full-width campaign cards and horizontal shortcuts. Explore uses a thr
 
 Leave jewelry photography on clean white. Concentrate promotion color in banners and buttons rather than the entire page.
 
-## Elevation & Depth
+# Navigation appearance
 
-| Level | Treatment | Use |
-|---|---|---|
-| 0 | Soft canvas | Base |
-| 1 | White rounded card | Products and cart |
-| 2 | Saturated campaign panel | Sale and exchange |
-| 3 | Fixed white action bar | Product purchase |
+Home, Explore, Favorites, Profile, and Cart form the bottom bar. Selected icon turns orange-red; notification counts sit above relevant icons.
 
-### Decorative Depth
-
-Use polished product rendering, campaign gradients, and limited shadow. Ordinary product cards remain flat.
-
-## Shapes
-
-### Border Radius Scale
-
-| Token | Value | Use |
-|---|---|---|
-| `{rounded.sm}` | 10px | Badges and chips |
-| `{rounded.md}` | 14px | Buttons and product cards |
-| `{rounded.lg}` | 18px | Campaign and cart cards |
-| `{rounded.pill}` | full | Primary action and filter |
-
-### Photography & Illustration Geometry
-
-Jewelry uses isolated high-resolution cutouts with generous white space. Campaigns may place jewelry over gradient or fabric photography. No consistent standalone illustration system was observed.
-
-## Components
+# Components
 
 ### Buttons
 
 Primary actions are full-width orange-red pills with white text. Secondary actions use white or pale gray. Heart and bag actions remain compact icon controls.
-
-### Pricing Tabs
-
-No pricing-plan tabs were observed. Filters and shortcut categories use small outlined or white chips.
 
 ### Cards & Containers
 
@@ -178,11 +153,54 @@ Hit, discount, rating, review count, bonus, and delivery state use explicit labe
 
 Home, Explore, Favorites, Profile, and Cart form the bottom bar. Selected icon turns orange-red; notification counts sit above relevant icons.
 
-### Footer
-
 Product detail uses a fixed price-and-purchase bar. Profile and service pages end with account and legal rows.
 
-## Do's and Don'ts
+# Imagery and icons
+
+| Level | Treatment | Use |
+|---|---|---|
+| 0 | Soft canvas | Base |
+| 1 | White rounded card | Products and cart |
+| 2 | Saturated campaign panel | Sale and exchange |
+| 3 | Fixed white action bar | Product purchase |
+
+### Decorative Depth
+
+Use polished product rendering, campaign gradients, and limited shadow. Ordinary product cards remain flat.
+
+# States
+
+Hit, discount, rating, review count, bonus, and delivery state use explicit labels. Favorite and cart counts appear on bottom navigation.
+
+# iOS adaptation
+
+| Wide | 768pt+ | Expand product grid to three columns |
+| Small | <390pt | One-column product cards when prices wrap |
+
+### Touch Targets
+
+Maintain 44pt for bottom navigation, filters, hearts, bag actions, and checkout.
+
+### Collapsing Strategy
+
+Reduce category and product columns before shrinking jewelry imagery. Stack price breakdown when necessary. Keep purchase action full width.
+
+### Image Behavior
+
+Use contain for jewelry cutouts and cover for campaign photography. Never crop product clasps, stones, or full silhouettes.
+
+On iPhone, respect top and bottom safe areas, use scrolling for content that does not fit, keep interactive targets at least 44 points, and preserve the visual reading order for VoiceOver. At larger Dynamic Type sizes, allow supporting text to wrap without collapsing the dominant hierarchy. Use native sheets and permission transitions while explicitly styling app-owned surfaces to match the reference.
+
+# Anti-generic checklist
+
+- Do not substitute the documented accent hierarchy with default iOS blue.
+- Do not turn the documented white canvas into a generic card stack; preserve the observed accent, density, imagery, and surface grouping.
+- Do not use an unstyled `TabView`, `Form`, or arbitrary SF Symbols when they contradict the documented navigation and component language.
+- Do not flatten the documented typography into one body-text scale.
+- Do not remove compositionally important photography or illustration while assets are pending.
+- Do not apply one corner radius to every control and surface.
+
+Source-specific guardrails retained from the review:
 
 ### Do
 
@@ -200,43 +218,11 @@ Product detail uses a fixed price-and-purchase bar. Profile and service pages en
 - Don't use decorative icons as product evidence.
 - Don't crowd the bottom bar with labels.
 
-## Responsive Behavior
-
-### Breakpoints
-
-| Name | Width | Key Changes |
-|---|---|---|
-| Wide | 768px+ | Expand product grid to three columns |
-| Compact | 390–767px | Default two-column grid |
-| Small | <390px | One-column product cards when prices wrap |
-
-### Touch Targets
-
-Maintain 44px for bottom navigation, filters, hearts, bag actions, and checkout.
-
-### Collapsing Strategy
-
-Reduce category and product columns before shrinking jewelry imagery. Stack price breakdown when necessary. Keep purchase action full width.
-
-### Image Behavior
-
-Use contain for jewelry cutouts and cover for campaign photography. Never crop product clasps, stones, or full silhouettes.
-
-## Iteration Guide
-
-1. Establish product image and price hierarchy.
-2. Build the two-column product card.
-3. Add campaign banners and shortcuts.
-4. Implement detail, favorite, and cart.
-5. Verify discount consistency across surfaces.
-
-## Known Gaps
+# Known gaps
 
 - Exact tokens and fonts were inferred visually.
 - Onboarding video motion was not available as a still.
 - The 44-flow inventory was complete; representative product and checkout states were sampled.
-- Tablet layouts were not present.
+- iPad layouts were not present.
 
 </design-context>
-
-Use the design system above for all UI you generate.

@@ -4,7 +4,7 @@ setka connects professional feeds, questions, channels, communities, chats, care
 
 # Navigation
 
-- Bottom navigation switches among Feed, Communities, Create, Chats, and Profile.
+- Navigation switches among Feed, Communities, Create, Chats, and Profile.
 - Feed filters separate recommendations, colleagues, questions, posts, and subscriptions.
 - Search spans posts, people, networks, and communities.
 
@@ -30,8 +30,13 @@ setka connects professional feeds, questions, channels, communities, chats, care
 
 # Interaction Patterns
 
-- White selected chips make feed scope explicit.
-- Feed cards preserve author, community, and engagement context.
 - Composer and chat keep keyboard tools close to the active text.
-- Follow actions appear consistently on community and profile surfaces.
 - Unread badges stay attached to chat or subscription destinations.
+
+# System Access Timing
+
+No system-access timing or denial-recovery path was documented in the reviewed source.
+
+# Known Gaps
+
+Unobserved flows, denial paths, cancellation behavior, and recovery states remain unspecified.

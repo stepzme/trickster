@@ -1,10 +1,10 @@
 # Overview
 
-Yandex Lavka is a rapid-grocery storefront built around product imagery, short delivery promises, dense category discovery, and a sticky yellow checkout action.
+Yandex Lavka is a rapid-grocery storefront built around product media, short delivery promises, dense category discovery, and a persistent checkout action.
 
 # Navigation
 
-Home, Catalog, prepared food, Cart, and Profile form the bottom bar. Address, store mode, search, and assistant stay at the top; delivery status stays just above navigation.
+Home, Catalog, prepared food, Cart, and Profile are the primary destinations. Address, store mode, search, and assistant stay in the current context; delivery status stays just from the current task.
 
 # Core Flows
 
@@ -19,12 +19,18 @@ Home, Catalog, prepared food, Cart, and Profile form the bottom bar. Address, st
 
 1. Review cart recommendations, promos, time, and total.
 2. Confirm address, payment, tips, promo codes, and donation rounding.
-3. Pay with the sticky yellow action.
+3. Pay with the checkout action.
 4. Track order progress and contact courier or support.
 
 # Interaction Patterns
 
 - Keep delivery time and price persistent near the bottom.
-- Use yellow only for primary checkout actions.
-- Use product photography on clean white cards.
-- Organize dense catalogs with pastel photographic category tiles.
+- Categories keep the catalog navigable as its scope grows.
+
+# System Access Timing
+
+No system-access timing or denial-recovery behavior was documented in the reviewed source.
+
+# Known Gaps
+
+System-permission denial paths, interrupted flows, and recovery behavior not described above were not available in the reviewed source.

@@ -1,6 +1,7 @@
 <design-context>
 ---
-version: alpha
+version: 1
+platform: iOS
 name: SOKOLOV-design-analysis
 description: "A bright jewelry marketplace built from white surfaces, saturated electric-blue actions, compact product grids, rounded promotional banners, and crisp editorial photography. Loyalty modules add controlled blue-to-red gradients while the shopping chrome stays neutral and information-dense."
 
@@ -23,36 +24,44 @@ colors:
   semantic-overlay: "#000000"
 
 typography:
-  display-xl: { fontFamily: System Sans, fontSize: 38px, fontWeight: 700, lineHeight: 1.05, letterSpacing: -0.7px }
-  display-lg: { fontFamily: System Sans, fontSize: 32px, fontWeight: 700, lineHeight: 1.1, letterSpacing: -0.4px }
-  display-md: { fontFamily: System Sans, fontSize: 26px, fontWeight: 700, lineHeight: 1.15, letterSpacing: -0.2px }
-  headline: { fontFamily: System Sans, fontSize: 21px, fontWeight: 700, lineHeight: 1.2, letterSpacing: 0 }
-  card-title: { fontFamily: System Sans, fontSize: 15px, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: System Sans, fontSize: 17px, fontWeight: 500, lineHeight: 1.3, letterSpacing: 0 }
-  body-lg: { fontFamily: System Sans, fontSize: 16px, fontWeight: 400, lineHeight: 1.4, letterSpacing: 0 }
-  body: { fontFamily: System Sans, fontSize: 14px, fontWeight: 400, lineHeight: 1.4, letterSpacing: 0 }
-  body-sm: { fontFamily: System Sans, fontSize: 12px, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
-  caption: { fontFamily: System Sans, fontSize: 10px, fontWeight: 400, lineHeight: 1.3, letterSpacing: 0 }
-  button: { fontFamily: System Sans, fontSize: 14px, fontWeight: 500, lineHeight: 1.2, letterSpacing: 0 }
-  eyebrow: { fontFamily: System Sans, fontSize: 11px, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0.2px }
-  mono: { fontFamily: System Mono, fontSize: 12px, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
+  display-xl: { fontFamily: System Sans, fontSize: 38, fontWeight: 700, lineHeight: 1.05, letterSpacing: -0.7 }
+  display-lg: { fontFamily: System Sans, fontSize: 32, fontWeight: 700, lineHeight: 1.1, letterSpacing: -0.4 }
+  display-md: { fontFamily: System Sans, fontSize: 26, fontWeight: 700, lineHeight: 1.15, letterSpacing: -0.2 }
+  headline: { fontFamily: System Sans, fontSize: 21, fontWeight: 700, lineHeight: 1.2, letterSpacing: 0 }
+  card-title: { fontFamily: System Sans, fontSize: 15, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
+  subhead: { fontFamily: System Sans, fontSize: 17, fontWeight: 500, lineHeight: 1.3, letterSpacing: 0 }
+  body-lg: { fontFamily: System Sans, fontSize: 16, fontWeight: 400, lineHeight: 1.4, letterSpacing: 0 }
+  body: { fontFamily: System Sans, fontSize: 14, fontWeight: 400, lineHeight: 1.4, letterSpacing: 0 }
+  body-sm: { fontFamily: System Sans, fontSize: 12, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
+  caption: { fontFamily: System Sans, fontSize: 10, fontWeight: 400, lineHeight: 1.3, letterSpacing: 0 }
+  button: { fontFamily: System Sans, fontSize: 14, fontWeight: 500, lineHeight: 1.2, letterSpacing: 0 }
+  eyebrow: { fontFamily: System Sans, fontSize: 11, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0.2 }
+  mono: { fontFamily: System Mono, fontSize: 12, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
 
-rounded: { xs: 3px, sm: 7px, md: 11px, lg: 16px, xl: 20px, xxl: 28px, pill: 9999px, full: 9999px }
-spacing: { xxs: 4px, xs: 8px, sm: 12px, md: 16px, lg: 24px, xl: 32px, xxl: 48px, section: 64px }
+rounded: { xs: 3, sm: 7, md: 11, lg: 16, xl: 20, xxl: 28, pill: 9999, full: 9999 }
+spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
 
 components:
-  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 13px 18px }
-  product-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.md}", padding: 8px }
+  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [13, 18]}
+  product-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.md}", padding: 8 }
   promo-banner: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.card-title}", rounded: "{rounded.lg}", padding: 0 }
-  search-field: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 11px }
-  bottom-nav: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", height: 58px }
+  search-field: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 11 }
+  bottom-nav: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", height: 58 }
 ---
 
-## Overview
+# Overview
 
 SOKOLOV uses bright marketplace density without losing a premium jewelry tone. White product space, blue interaction color, high-key cutouts, and editorial campaigns carry the system; loyalty gradients stay confined to membership modules.
 
-## Colors
+# Non-negotiable visual invariants
+
+- The reviewed screens use this composition: A bright jewelry marketplace built from white surfaces, saturated electric-blue actions, compact product grids, rounded promotional banners, and crisp editorial photography.
+- The dominant canvas token is #F5F5F7 and the primary accent token is #1688F4.
+- The recorded display style is 38 points while the body style is 14 points.
+- Navigation appears as follows: A six-item bottom bar supports shopping destinations.
+- The reviewed screens use this hierarchy: Loyalty modules add controlled blue-to-red gradients while the shopping chrome stays neutral and information-dense.
+
+# Color and surfaces
 
 ### Brand & Accent
 
@@ -70,15 +79,11 @@ Near-black carries names and prices; gray carries specifications, old prices, an
 
 Yellow is reserved for ratings, red for discounts or destructive actions, and green for success. Do not substitute campaign gradients for status.
 
-## Typography
+# Typography
 
 ### Font Family
 
 Use a neutral system sans. Product copy is compact; campaign typography may be bolder inside imagery.
-
-### Hierarchy
-
-Use 21px headings, 15–16px module titles, 14px body, and 10–12px catalog metadata. Prices use medium or bold weight.
 
 ### Principles
 
@@ -88,11 +93,7 @@ Keep product names readable, align old and current prices, and use uppercase spa
 
 SF Pro or Inter work well. Preserve compact line height in product grids and clear Cyrillic rendering.
 
-## Layout
-
-### Spacing System
-
-Use a 4px base, 12px page gutters, 8px grid gaps, and 16–24px between major promotional modules.
+# Screen composition
 
 ### Grid & Container
 
@@ -102,31 +103,15 @@ Home stacks full-width banners, story circles, shortcut tiles, and collection mo
 
 Keep jewelry imagery airy within each product cell while allowing home discovery to remain visually rich.
 
-## Elevation & Depth
+# Navigation appearance
 
-Depth comes from soft card shadows, light-gray grouping, and sheets lifted over a dimmed product screen.
+A six-item bottom bar supports shopping destinations. The active icon is blue; drill-down screens use back, share, and favorite actions in the top bar.
 
-### Decorative Depth
-
-Use photographic color fields, soft bokeh, and controlled loyalty gradients. Avoid ornamental shadows around individual products.
-
-## Shapes
-
-### Border Radius Scale
-
-Promotional cards use 16px, utility cards 11px, buttons 7–11px, and story avatars are circular.
-
-### Photography & Illustration Geometry
-
-Use clean jewelry cutouts on white for commerce, rectangular editorial crops for campaigns, and circular crops for stories. Preserve product scale and detail.
-
-## Components
+# Components
 
 ### Buttons
 
 Primary purchase actions are blue with white text. Secondary controls are white or light gray; native controls must inherit this blue accent and package geometry.
-
-### Pricing Tabs
 
 Filters use compact blue selected chips and neutral inactive chips. Counts may sit in small dark badges.
 
@@ -146,11 +131,46 @@ Order status, bonus expiration, discounts, and review ratings stay adjacent to t
 
 A six-item bottom bar supports shopping destinations. The active icon is blue; drill-down screens use back, share, and favorite actions in the top bar.
 
-### Footer
+# Imagery and icons
 
-There is no footer. Use the persistent navigation or a sticky blue checkout action above the safe area.
+Depth comes from soft card shadows, light-gray grouping, and sheets lifted over a dimmed product screen.
 
-## Do's and Don'ts
+### Decorative Depth
+
+Use photographic color fields, soft bokeh, and controlled loyalty gradients. Avoid ornamental shadows around individual products.
+
+# States
+
+Order status, bonus expiration, discounts, and review ratings stay adjacent to the affected item and use concise labels.
+
+# iOS adaptation
+
+Keep checkout and account flows single-column. Wider catalog layouts may add columns while keeping the same card anatomy.
+
+### Touch Targets
+
+Favorites, cart controls, filter chips, story circles, and bottom navigation require at least 44pt targets.
+
+### Collapsing Strategy
+
+Allow stories, quick filters, and collections to scroll horizontally. Keep checkout totals and the primary action sticky.
+
+### Image Behavior
+
+Use `contain` for jewelry cutouts and `cover` for editorial banners. Do not distort product aspect ratios.
+
+On iPhone, respect top and bottom safe areas, use scrolling for content that does not fit, keep interactive targets at least 44 points, and preserve the visual reading order for VoiceOver. At larger Dynamic Type sizes, allow supporting text to wrap without collapsing the dominant hierarchy. Use native sheets and permission transitions while explicitly styling app-owned surfaces to match the reference.
+
+# Anti-generic checklist
+
+- Do not substitute the documented accent hierarchy with default iOS blue.
+- Do not turn the documented white canvas into a generic card stack; preserve the observed accent, density, imagery, and surface grouping.
+- Do not use an unstyled `TabView`, `Form`, or arbitrary SF Symbols when they contradict the documented navigation and component language.
+- Do not flatten the documented typography into one body-text scale.
+- Do not remove compositionally important photography or illustration while assets are pending.
+- Do not apply one corner radius to every control and surface.
+
+Source-specific guardrails retained from the review:
 
 ### Do
 
@@ -166,32 +186,8 @@ There is no footer. Use the persistent navigation or a sticky blue checkout acti
 - Do not hide specifications behind decorative content.
 - Do not expose default platform-blue controls that differ from the brand blue.
 
-## Responsive Behavior
+# Known gaps
 
-### Breakpoints
-
-Keep checkout and account flows single-column. Wider catalog layouts may add columns while keeping the same card anatomy.
-
-### Touch Targets
-
-Favorites, cart controls, filter chips, story circles, and bottom navigation require at least 44px targets.
-
-### Collapsing Strategy
-
-Allow stories, quick filters, and collections to scroll horizontally. Keep checkout totals and the primary action sticky.
-
-### Image Behavior
-
-Use `contain` for jewelry cutouts and `cover` for editorial banners. Do not distort product aspect ratios.
-
-## Iteration Guide
-
-Start with white surfaces, blue actions, search, bottom navigation, and the product-card grid. Add loyalty, campaigns, stores, and gifting after the shopping flow is stable.
-
-## Known Gaps
-
-The reviewed scenarios cover Home, Catalog, Search and filters, product details, reviews, Cart, checkout structure, Favorites, stores, gifting, and Profile. Tablet layouts and every error state were not visible.
+The reviewed scenarios cover Home, Catalog, Search and filters, product details, reviews, Cart, checkout structure, Favorites, stores, gifting, and Profile. iPad layouts and every error state were not visible.
 
 </design-context>
-
-Use the design system above for all UI you generate.

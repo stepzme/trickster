@@ -1,12 +1,12 @@
 <design-context>
 ---
-version: alpha
+version: 1
+platform: iOS
 name: Click-SuperApp-design-analysis
 description: "A bright finance super-app built on an ice-blue canvas, white rounded service tiles, saturated azure actions, dense promotional banners, compact icon grids, and a persistent five-item tab bar. Financial values stay prominent while payments, transfers, mini apps, and location services remain one tap away."
 colors:
   primary: "#078AF0"
   on-primary: "#FFFFFF"
-  primary-hover: "#0076D4"
   primary-soft: "#DFF2FF"
   ink: "#111318"
   ink-muted: "#737987"
@@ -20,32 +20,30 @@ colors:
   semantic-danger: "#E75B4E"
   semantic-overlay: "#000000"
 typography:
-  display-xl: { fontFamily: SF Pro Display, fontSize: 34px, fontWeight: 700, lineHeight: 1.05, letterSpacing: -0.7px }
-  display-lg: { fontFamily: SF Pro Display, fontSize: 28px, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.4px }
-  display-md: { fontFamily: SF Pro Display, fontSize: 24px, fontWeight: 700, lineHeight: 1.15, letterSpacing: -0.2px }
-  headline: { fontFamily: SF Pro Display, fontSize: 20px, fontWeight: 700, lineHeight: 1.20, letterSpacing: 0 }
-  card-title: { fontFamily: SF Pro Text, fontSize: 16px, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: SF Pro Text, fontSize: 15px, fontWeight: 600, lineHeight: 1.30, letterSpacing: 0 }
-  body-lg: { fontFamily: SF Pro Text, fontSize: 16px, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
-  body: { fontFamily: SF Pro Text, fontSize: 14px, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
-  body-sm: { fontFamily: SF Pro Text, fontSize: 12px, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
-  caption: { fontFamily: SF Pro Text, fontSize: 10px, fontWeight: 400, lineHeight: 1.20, letterSpacing: 0 }
-  button: { fontFamily: SF Pro Text, fontSize: 15px, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0 }
-  eyebrow: { fontFamily: SF Pro Text, fontSize: 11px, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0.2px }
-  mono: { fontFamily: SF Mono, fontSize: 12px, fontWeight: 500, lineHeight: 1.30, letterSpacing: 0 }
-rounded: { xs: 6px, sm: 10px, md: 14px, lg: 18px, xl: 22px, xxl: 28px, pill: 9999px, full: 9999px }
-spacing: { xxs: 4px, xs: 8px, sm: 12px, md: 16px, lg: 24px, xl: 32px, xxl: 48px, section: 64px }
+  display-xl: { fontFamily: SF Pro Display, fontSize: 34, fontWeight: 700, lineHeight: 1.05, letterSpacing: -0.7 }
+  display-lg: { fontFamily: SF Pro Display, fontSize: 28, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.4 }
+  display-md: { fontFamily: SF Pro Display, fontSize: 24, fontWeight: 700, lineHeight: 1.15, letterSpacing: -0.2 }
+  headline: { fontFamily: SF Pro Display, fontSize: 20, fontWeight: 700, lineHeight: 1.20, letterSpacing: 0 }
+  card-title: { fontFamily: SF Pro Text, fontSize: 16, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
+  subhead: { fontFamily: SF Pro Text, fontSize: 15, fontWeight: 600, lineHeight: 1.30, letterSpacing: 0 }
+  body-lg: { fontFamily: SF Pro Text, fontSize: 16, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
+  body: { fontFamily: SF Pro Text, fontSize: 14, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
+  body-sm: { fontFamily: SF Pro Text, fontSize: 12, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
+  caption: { fontFamily: SF Pro Text, fontSize: 10, fontWeight: 400, lineHeight: 1.20, letterSpacing: 0 }
+  button: { fontFamily: SF Pro Text, fontSize: 15, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0 }
+  eyebrow: { fontFamily: SF Pro Text, fontSize: 11, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0.2 }
+  mono: { fontFamily: SF Mono, fontSize: 12, fontWeight: 500, lineHeight: 1.30, letterSpacing: 0 }
+rounded: { xs: 6, sm: 10, md: 14, lg: 18, xl: 22, xxl: 28, pill: 9999, full: 9999 }
+spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
 components:
-  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 13px 16px }
-  service-tile: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.md}", padding: 14px 8px }
-  wallet-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 16px }
-  promo-banner: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.card-title}", rounded: "{rounded.md}", padding: 12px }
-  input: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: 12px 14px }
-  top-nav: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xs}", height: 52px }
-  footer: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: 8px 10px }
+  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [13, 16]}
+  service-tile: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.md}", padding: [14, 8]}
+  wallet-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 16 }
+  promo-banner: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.card-title}", rounded: "{rounded.md}", padding: 12 }
+  input: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: [12, 14]}
 ---
 
-## Overview
+# Overview
 
 Click SuperApp combines a wallet dashboard with a service launcher. The shell is cool and airy; high-frequency finance actions sit in white cards while azure identifies active navigation and primary actions.
 
@@ -56,7 +54,15 @@ Click SuperApp combines a wallet dashboard with a service launcher. The shell is
 - Large balance figures with optional privacy masking.
 - Promotional photography stays inside bounded banners.
 
-## Colors
+# Non-negotiable visual invariants
+
+- The reviewed screens show this treatment: Ice-blue page canvas with white floating groups.
+- The reviewed screens show this treatment: Saturated azure for primary actions and selected navigation.
+- The reviewed screens show this treatment: Dense square service launchers and horizontal carousels.
+- The reviewed screens show this treatment: Large balance figures with optional privacy masking.
+- The reviewed screens show this treatment: Promotional photography stays inside bounded banners.
+
+# Color and surfaces
 
 ### Brand & Accent
 - **Primary** ({colors.primary}): Main actions, active tabs, links, and finance icons.
@@ -79,15 +85,12 @@ Click SuperApp combines a wallet dashboard with a service launcher. The shell is
 - **Danger** ({colors.semantic-danger}): Errors and closing a wallet.
 - **Overlay** ({colors.semantic-overlay}): Modal focus.
 
-## Typography
+# Typography
 
 ### Font Family
 - **SF Pro Display** — balances and section titles.
 - **SF Pro Text** — controls, tiles, and transaction metadata.
 - **SF Mono** — card, account, and reference values when fixed width helps.
-
-### Hierarchy
-Use 34px bold for key balances, 20px bold for major screen sections, 16px semibold for cards, 14px regular for body, and 10–12px for tab and service labels.
 
 ### Principles
 - Put the financial value before explanation.
@@ -98,10 +101,10 @@ Use 34px bold for key balances, 20px bold for major screen sections, 16px semibo
 ### Note on Font Substitutes
 Use the platform system sans or **Inter** with tabular numerals when SF Pro is unavailable.
 
-## Layout
+# Screen composition
 
 ### Spacing System
-Use a 4px base, 12px gaps between tiles, 16px screen gutters, and 16px card padding.
+Use a 4pt base, 12pt gaps between tiles, 16pt screen gutters, and 16pt card padding.
 
 ### Grid & Container
 The home screen stacks balance, quick actions, banners, mini-app grids, and nearby services above a fixed five-tab bar.
@@ -109,26 +112,15 @@ The home screen stacks balance, quick actions, banners, mini-app grids, and near
 ### Whitespace Philosophy
 Keep groups visibly separate but compact; empty space should clarify finance clusters rather than create a sparse editorial page.
 
-## Elevation & Depth
-Use surface contrast and light edge separation. Reserve stronger elevation for sheets, floating utilities, and the bottom navigation.
+# Navigation appearance
 
-### Decorative Depth
-Use photographs and branded campaign graphics only inside promotional banners; the operational shell remains flat.
+Keep Home, Payments, Transfers, Reports, and Mini Apps in the persistent tab bar; contextual screens use a back action and centered title.
 
-## Shapes
-
-### Border Radius Scale
-Use 10px for fields, 14px for service tiles and banners, 18px for wallet cards, and full circles for icon controls.
-
-### Photography & Illustration Geometry
-Crop promotional media to wide rounded rectangles. Keep service symbols simple and centered in consistent icon frames.
-
-## Components
+# Components
 
 ### Buttons
 Primary actions are full-width azure rectangles; secondary actions are white or text-only with an azure icon.
 
-### Pricing Tabs
 Use compact pills or segmented rows for switching account, report, or offer filters; selected state uses azure or a soft azure fill.
 
 ### Cards & Containers
@@ -143,10 +135,40 @@ Express masked balance, document expiry, subscription monitoring, new offers, an
 ### Navigation
 Keep Home, Payments, Transfers, Reports, and Mini Apps in the persistent tab bar; contextual screens use a back action and centered title.
 
-### Footer
-The safe-area tab bar is the footer and keeps its five destinations stable across dashboard screens.
+# Imagery and icons
 
-## Do's and Don'ts
+Use surface contrast and light edge separation. Reserve stronger elevation for sheets, floating utilities, and the bottom navigation.
+
+### Decorative Depth
+Use photographs and branded campaign graphics only inside promotional banners; the operational shell remains flat.
+
+# States
+
+Express masked balance, document expiry, subscription monitoring, new offers, and transfer state with label plus icon or color.
+
+# iOS adaptation
+
+### Touch Targets
+Keep tabs, service tiles, scan controls, transfer routes, and wallet actions at least 44pt.
+
+### Collapsing Strategy
+Preserve balance, primary money actions, recent activity, and the five destinations; move low-priority mini apps and campaigns below the fold.
+
+### Image Behavior
+Crop banners consistently without obscuring embedded copy; contain service marks rather than stretching them.
+
+On iPhone, respect top and bottom safe areas, use scrolling for content that does not fit, keep interactive targets at least 44 points, and preserve the visual reading order for VoiceOver. At larger Dynamic Type sizes, allow supporting text to wrap without collapsing the dominant hierarchy. Use native sheets and permission transitions while explicitly styling app-owned surfaces to match the reference.
+
+# Anti-generic checklist
+
+- Do not substitute the documented accent hierarchy with default iOS blue.
+- Do not collapse distinct surfaces into a uniform stack of generic white cards.
+- Do not use an unstyled `TabView`, `Form`, or arbitrary SF Symbols when they contradict the documented navigation and component language.
+- Do not flatten the documented typography into one body-text scale.
+- Do not remove compositionally important photography or illustration while assets are pending.
+- Do not apply one corner radius to every control and surface.
+
+Source-specific guardrails retained from the review:
 
 ### Do
 - Keep balance and account privacy controls adjacent.
@@ -160,33 +182,10 @@ The safe-area tab bar is the footer and keeps its five destinations stable acros
 - Don't crowd a tile with more than one primary task.
 - Don't flatten wallet, services, and campaigns into one list.
 
-## Responsive Behavior
+# Known gaps
 
-### Breakpoints
-Use the reference single-column layout up to 767px, a centered 560–680px phone canvas on tablet, and a wider two-column dashboard only above 1024px.
-
-### Touch Targets
-Keep tabs, service tiles, scan controls, transfer routes, and wallet actions at least 44px.
-
-### Collapsing Strategy
-Preserve balance, primary money actions, recent activity, and the five destinations; move low-priority mini apps and campaigns below the fold.
-
-### Image Behavior
-Crop banners consistently without obscuring embedded copy; contain service marks rather than stretching them.
-
-## Iteration Guide
-1. Build balance, privacy, and wallet actions.
-2. Add payment and transfer launchers.
-3. Add recent activity and reports.
-4. Add mini apps and configurable home sections.
-5. Add promotional banners last.
-
-## Known Gaps
 - Tokens were inferred visually from inspected mobile screens.
 - All 76 flow names were inventoried; Home, Wallet, and Transfers were image-reviewed.
 - Motion inside promotional media and the complete customization flow were not assessed.
-- No tablet or desktop captures were present.
 
 </design-context>
-
-Use the design system above for all UI you generate.

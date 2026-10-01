@@ -1,12 +1,12 @@
 <design-context>
 ---
-version: alpha
+version: 1
+platform: iOS
 name: Mamba-design-analysis
 description: "A dark, portrait-first dating system with coral-to-pink brand gradients, cyan utilities, rounded full-screen discovery cards, compact profile grids, and playful flat promotion symbols."
 colors:
   primary: "#FF5A2A"
   on-primary: "#FFFFFF"
-  primary-hover: "#FF7248"
   primary-focus: "#DF3F13"
   ink: "#F7F5F8"
   ink-muted: "#AAA5AF"
@@ -28,34 +28,34 @@ colors:
   semantic-success: "#35D47B"
   semantic-overlay: "#000000"
 typography:
-  display-xl: {fontFamily: SF Pro Display, fontSize: 36px, fontWeight: 700, lineHeight: 1.06, letterSpacing: -0.8px}
-  display-lg: {fontFamily: SF Pro Display, fontSize: 30px, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.6px}
-  display-md: {fontFamily: SF Pro Display, fontSize: 24px, fontWeight: 700, lineHeight: 1.14, letterSpacing: -0.3px}
-  headline: {fontFamily: SF Pro Display, fontSize: 20px, fontWeight: 700, lineHeight: 1.20, letterSpacing: -0.2px}
-  card-title: {fontFamily: SF Pro Text, fontSize: 15px, fontWeight: 600, lineHeight: 1.24, letterSpacing: 0}
-  subhead: {fontFamily: SF Pro Text, fontSize: 14px, fontWeight: 600, lineHeight: 1.30, letterSpacing: 0}
-  body-lg: {fontFamily: SF Pro Text, fontSize: 14px, fontWeight: 400, lineHeight: 1.38, letterSpacing: 0}
-  body: {fontFamily: SF Pro Text, fontSize: 12px, fontWeight: 400, lineHeight: 1.34, letterSpacing: 0}
-  body-sm: {fontFamily: SF Pro Text, fontSize: 10px, fontWeight: 400, lineHeight: 1.28, letterSpacing: 0}
-  caption: {fontFamily: SF Pro Text, fontSize: 9px, fontWeight: 400, lineHeight: 1.22, letterSpacing: 0}
-  button: {fontFamily: SF Pro Text, fontSize: 13px, fontWeight: 600, lineHeight: 1.18, letterSpacing: 0}
-  eyebrow: {fontFamily: SF Pro Text, fontSize: 9px, fontWeight: 600, lineHeight: 1.18, letterSpacing: 0.1px}
-  mono: {fontFamily: SF Mono, fontSize: 10px, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0}
-rounded: {xs: 4px, sm: 10px, md: 16px, lg: 20px, xl: 24px, xxl: 30px, pill: 9999px, full: 9999px}
-spacing: {xxs: 4px, xs: 8px, sm: 12px, md: 16px, lg: 20px, xl: 24px, xxl: 32px, section: 40px}
+  display-xl: {fontFamily: SF Pro Display, fontSize: 36, fontWeight: 700, lineHeight: 1.06, letterSpacing: -0.8}
+  display-lg: {fontFamily: SF Pro Display, fontSize: 30, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.6}
+  display-md: {fontFamily: SF Pro Display, fontSize: 24, fontWeight: 700, lineHeight: 1.14, letterSpacing: -0.3}
+  headline: {fontFamily: SF Pro Display, fontSize: 20, fontWeight: 700, lineHeight: 1.20, letterSpacing: -0.2}
+  card-title: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 600, lineHeight: 1.24, letterSpacing: 0}
+  subhead: {fontFamily: SF Pro Text, fontSize: 14, fontWeight: 600, lineHeight: 1.30, letterSpacing: 0}
+  body-lg: {fontFamily: SF Pro Text, fontSize: 14, fontWeight: 400, lineHeight: 1.38, letterSpacing: 0}
+  body: {fontFamily: SF Pro Text, fontSize: 12, fontWeight: 400, lineHeight: 1.34, letterSpacing: 0}
+  body-sm: {fontFamily: SF Pro Text, fontSize: 10, fontWeight: 400, lineHeight: 1.28, letterSpacing: 0}
+  caption: {fontFamily: SF Pro Text, fontSize: 9, fontWeight: 400, lineHeight: 1.22, letterSpacing: 0}
+  button: {fontFamily: SF Pro Text, fontSize: 13, fontWeight: 600, lineHeight: 1.18, letterSpacing: 0}
+  eyebrow: {fontFamily: SF Pro Text, fontSize: 9, fontWeight: 600, lineHeight: 1.18, letterSpacing: 0.1}
+  mono: {fontFamily: SF Mono, fontSize: 10, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0}
+rounded: {xs: 4, sm: 10, md: 16, lg: 20, xl: 24, xxl: 30, pill: 9999, full: 9999}
+spacing: {xxs: 4, xs: 8, sm: 12, md: 16, lg: 20, xl: 24, xxl: 32, section: 40}
 components:
-  button-primary: {backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 14px 18px}
+  button-primary: {backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [14, 18]}
   button-primary-pressed: {backgroundColor: "{colors.primary-focus}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}"}
-  button-primary-hover: {backgroundColor: "{colors.primary-hover}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}"}
-  button-secondary: {backgroundColor: "{colors.inverse-canvas}", textColor: "{colors.inverse-ink}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: 11px 16px}
-  button-tertiary: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 10px 14px}
-  button-inverse: {backgroundColor: "{colors.inverse-canvas}", textColor: "{colors.inverse-ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 12px 16px}
+  button-secondary: {backgroundColor: "{colors.inverse-canvas}", textColor: "{colors.inverse-ink}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: [11, 16]}
+  button-tertiary: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [10, 14]}
+  button-inverse: {backgroundColor: "{colors.inverse-canvas}", textColor: "{colors.inverse-ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [12, 16]}
   profile-card: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 0}
   swipe-card: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xl}", padding: 0}
-  promo-card: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 14px}
-  bottom-nav: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink-subtle}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: 7px 8px}
+  promo-card: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 14}
+  bottom-nav: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink-subtle}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: [7, 8]}
 ---
-## Overview
+
+# Overview
 
 Mamba is a dark dating interface where portrait photography dominates and coral gradients signal attraction, visibility, and paid emphasis.
 
@@ -66,7 +66,15 @@ Mamba is a dark dating interface where portrait photography dominates and coral 
 - Cyan utility actions and green online status.
 - Flat playful promotion symbols.
 
-## Colors
+# Non-negotiable visual invariants
+
+- Sampled screens consistently use black immersive canvas.
+- The reference consistently shows rounded portrait grids and swipe cards.
+- The reference consistently shows coral, pink, and orange brand emphasis.
+- The reference consistently shows cyan utility actions and green online status.
+- The reference consistently shows flat playful promotion symbols.
+
+# Color and surfaces
 
 ### Brand & Accent
 
@@ -84,7 +92,7 @@ White carries names and actions; cool gray carries metadata and inactive navigat
 
 Green means online, blue verification, coral attraction or purchase, and red destructive actions.
 
-## Typography
+# Typography
 
 ### Font Family
 
@@ -94,11 +102,11 @@ Use SF Pro Display for profile statements and SF Pro Text for chat, filters, and
 
 | Token | Size | Weight | Use |
 |---|---:|---:|---|
-| display-lg | 30px | 700 | Onboarding claim |
-| headline | 20px | 700 | Profile and purchase title |
-| card-title | 15px | 600 | Name and age |
-| body | 12px | 400 | Bio and message preview |
-| caption | 9px | 400 | Presence and navigation |
+| display-lg | 30 points | 700 | Onboarding claim |
+| headline | 20 points | 700 | Profile and purchase title |
+| card-title | 15 points | 600 | Name and age |
+| body | 12 points | 400 | Bio and message preview |
+| caption | 9 points | 400 | Presence and navigation |
 
 ### Principles
 
@@ -110,11 +118,11 @@ Use SF Pro Display for profile statements and SF Pro Text for chat, filters, and
 
 Inter is suitable; retain strong contrast on dark surfaces.
 
-## Layout
+# Screen composition
 
 ### Spacing System
 
-Use a 4px base, 10px grid gaps, and 12px screen gutters.
+Use a 4 points base, 10 points grid gaps, and 12 points screen gutters.
 
 ### Grid & Container
 
@@ -124,7 +132,7 @@ Search uses two portrait columns; swipes use one large card; chat and profile us
 
 Discovery is image-dense while purchases and profile editing receive more separation.
 
-## Elevation & Depth
+Surface hierarchy observed in the source:
 
 | Level | Treatment | Use |
 |---|---|---|
@@ -137,31 +145,15 @@ Discovery is image-dense while purchases and profile editing receive more separa
 
 Portrait photography and gradients supply depth; controls remain flat.
 
-## Shapes
+# Navigation appearance
 
-### Border Radius Scale
+Keep five dark destinations fixed; brighten only the active icon and essential badges.
 
-| Token | Value | Use |
-|---|---:|---|
-| rounded-xs | 4px | Badges |
-| rounded-sm | 10px | Buttons and fields |
-| rounded-md | 16px | Promo tiles |
-| rounded-xl | 24px | Portrait and swipe cards |
-| rounded-full | full | Likes and avatars |
-
-### Photography & Illustration Geometry
-
-Use portrait aspect-fill with safe facial crops. Keep flat symbols isolated from member photography.
-
-## Components
+# Components
 
 ### Buttons
 
 Primary purchase uses coral; key discovery actions use circular white, coral, or cyan controls.
-
-### Pricing Tabs
-
-Filters and subscription options use dark segmented controls with coral selection.
 
 ### Cards & Containers
 
@@ -171,47 +163,23 @@ Profile cards prioritize portrait, name, age, status, and verification; promotio
 
 Dark inputs use light text and cyan or coral focus; sheets must inherit the same geometry.
 
-### Status & Build Page
+# Imagery and icons
+
+Portrait photography and gradients supply depth; controls remain flat.
+
+Use portrait aspect-fill with safe facial crops. Keep flat symbols isolated from member photography.
+
+If final imagery is not yet available, any placeholder must preserve the documented scale, placement, crop, and visual weight rather than removing that layer.
+
+# States
 
 Online, verification, VIP, and unread states use compact colored markers close to identity.
 
-### Navigation
-
-Keep five dark destinations fixed; brighten only the active icon and essential badges.
-
-### Footer
-
-No footer; bottom navigation or swipe actions own the safe area.
-
-## Do's and Don'ts
-
-### Do
-
-- Keep portraits dominant.
-- Preserve dark immersion.
-- Explain paid visibility clearly.
-- Restyle native sheets and forms.
-
-### Don't
-
-- Don't put long copy over faces.
-- Don't use coral for neutral metadata.
-- Don't overdecorate chat rows.
-- Don't mix light marketplace cards into discovery.
-
-## Responsive Behavior
-
-### Breakpoints
-
-| Name | Width | Key Changes |
-|---|---:|---|
-| Compact | 320–374px | Tighten names and grid gaps |
-| Standard | 375–430px | Default two-column search |
-| Wide | 431px+ | Expand swipe card gutters |
+# iOS adaptation
 
 ### Touch Targets
 
-Profiles, likes, passes, filters, chat, edit, and navigation remain at least 44px.
+Profiles, likes, passes, filters, chat, edit, and navigation remain at least 44 points.
 
 ### Collapsing Strategy
 
@@ -221,16 +189,22 @@ Keep two columns until labels fail; stack purchase and edit controls.
 
 Aspect-fill portraits with face-aware crop; never stretch or tint member media.
 
-## Iteration Guide
+Apply these rules within current iPhone safe areas and scrolling containers. Keep interactive targets at least 44 points, preserve a logical VoiceOver order, and let Dynamic Type wrap supporting text without flattening the documented hierarchy. Do not infer an unobserved dark or light appearance.
 
-Tune portrait legibility first, then discovery actions, chat scanning, profile completeness, and purchase clarity.
+# Anti-generic checklist
 
-## Known Gaps
+- Don't put long copy over faces.
+- Don't use coral for neutral metadata.
+- Don't overdecorate chat rows.
+- Don't mix light marketplace cards into discovery.
+- Do not replace the documented hierarchy with a generic stack of identical white cards or `Form` sections.
+- Do not use default blue tint, an unstyled `TabView`, arbitrary SF Symbols, or uniform corner radii when they contradict the recorded tokens and components.
+- Do not omit compositionally important imagery while final assets are pending; preserve its footprint with a faithful placeholder.
+
+# Known gaps
 
 - Match confirmation was not visually sampled.
 - Safety reporting was not opened in detail.
 - Tablet and landscape layouts were not represented.
 
 </design-context>
-
-Use the design system above for all UI you generate.

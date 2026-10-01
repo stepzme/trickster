@@ -4,7 +4,7 @@ Poizon blends a social media feed, short-form product content, marketplace searc
 
 # Navigation
 
-A four-item bottom bar anchors Dewu, Shopping, Discover, and Me. Home-level horizontal tabs switch social topics, while Shopping adds search, category, sorting, and filter controls.
+A four-item primary navigation anchors Dewu, Shopping, Discover, and Me. Home-level tabs switch social topics, while Shopping adds search, category, sorting, and filter controls.
 
 # Core Flows
 
@@ -18,4 +18,12 @@ A four-item bottom bar anchors Dewu, Shopping, Discover, and Me. Home-level hori
 
 # Interaction Patterns
 
-Media and product grids support rapid scanning, turquoise Buy now remains sticky, card-level likes and follows connect social and commerce, and dense product detail is segmented by horizontal sub-navigation.
+The sampled flows use direct actions, explicit completion, and return to the current context. No additional repeated interaction behavior was documented.
+
+# System Access Timing
+
+No system-access request timing or denial recovery was documented in the reviewed source.
+
+# Known Gaps
+
+- Permission-denial recovery and unobserved secondary flows were not documented.

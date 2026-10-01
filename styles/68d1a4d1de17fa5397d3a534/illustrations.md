@@ -1,25 +1,32 @@
-# Role
+# Overview
 
-Illustration gives each mobility service an immediate identity and makes onboarding friendly without obscuring live operational data.
+No dedicated imagery overview was documented.
 
-# Visual Language
+# Visual Style
 
-- Rounded 3D vehicles, parcels, scooters, and human characters.
-- Soft modeled forms, gentle studio light, and minimal texture.
-- White or pale neutral grounds with controlled Bolt-green accents.
-- Friendly proportions and simple readable silhouettes.
+No medium, line, dimensionality, texture, lighting, or motif rules were documented.
 
 # Composition
 
 Use one centered service object or compact character scene with generous negative space. Keep location fields, prices, and CTAs outside the artwork.
 
-# Usage
+# Color and Materials
+
+No imagery-specific palette or material treatment was documented.
+
+# Variants and States
 
 Use for onboarding, service cards, empty states, and safety education. Keep live maps, route selection, ride options, trip tracking, and payment screens mostly illustration-free.
 
-# Guardrails
+# Production Requirements
 
-- Never cover pickup, destination, route, price, or vehicle position.
-- Avoid photorealism, dense scenery, or unrelated accent colors.
-- Keep green restrained and consistent with `ui.md`.
-- For a new service, use a single rounded 3D object or friendly character scene on a pale ground so it harmonizes with `ui.md`.
+Preserve the documented placement, crop, negative space, and visual weight in production exports. Before final art exists, placeholders must preserve those same compositional properties.
+
+# Avoid
+
+- Do not replace the observed imagery language with unrelated stock art or arbitrary symbols.
+- Do not change the documented crop, density, or relationship to nearby text.
+
+# Known Gaps
+
+Animation, export dimensions, safe-crop specifications, appearance variants, and unshown state treatments were not documented.

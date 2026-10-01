@@ -1,11 +1,10 @@
 # Overview
 
-TradingView is a market-monitoring and charting workspace organized around watchlists, full-screen charts, discovery, community ideas, and account tools.
+TradingView is a market-monitoring and charting workspace organized around watchlists, interactive charts, discovery, community ideas, and account tools.
 
 # Navigation
 
-- A five-item bottom bar covers Watchlist, Chart, Explore, Community, and Menu.
-- Watchlist rows open instrument details; Chart shifts into a tool-heavy canvas.
+- A five primary destinations covers Watchlist, Chart, Explore, Community, and Menu.
 - Top actions add symbols, change lists, open menus, and expose account or messaging controls.
 
 # Core Flows
@@ -31,6 +30,12 @@ TradingView is a market-monitoring and charting workspace organized around watch
 # Interaction Patterns
 
 - Dense tables preserve stable alignment and prioritize current price and change.
-- The chart canvas maximizes data area while tools stay on compact rails.
-- Green and red are reserved for market direction.
 - Subscription comparison keeps the selected tier and billing cadence continuously visible.
+
+# System Access Timing
+
+No system-access timing or denial-recovery behavior was documented in the reviewed source.
+
+# Known Gaps
+
+System-permission denial paths, interrupted flows, and recovery behavior not described above were not available in the reviewed source.

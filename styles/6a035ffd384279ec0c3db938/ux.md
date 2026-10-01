@@ -4,7 +4,7 @@ Kino.kz is an event discovery and ticketing app spanning cinema, concerts, theat
 
 # Navigation
 
-Four bottom destinations cover Events, Places, My Tickets, and Profile. City, language, search, and notifications remain in the top bar; category and date filters sit close to listings.
+Four primary destinations cover Events, Places, My Tickets, and Profile. City, language, search, and notifications remain in the navigation context; category and date filters sit close to listings.
 
 # Core Flows
 
@@ -18,7 +18,7 @@ Four bottom destinations cover Events, Places, My Tickets, and Profile. City, la
 ## Buy a cinema ticket
 
 1. Review film details and select a session.
-2. Choose seats from the visual hall map.
+2. Choose seats from the seat map.
 3. Confirm ticket type, price, and order.
 4. Access the ticket from My Tickets.
 
@@ -30,7 +30,13 @@ Four bottom destinations cover Events, Places, My Tickets, and Profile. City, la
 
 # Interaction Patterns
 
-- Poster rails provide fast visual browsing, with price and age badges on the image.
-- Filters use outlined violet pills and horizontal scrolling.
+- Filters use progressive browsing.
 - Seat selection combines a zoomable map with a fixed price summary and next action.
-- Tickets use a familiar perforated-paper composition and a prominent order code.
+
+# System Access Timing
+
+No system-access timing or denial-recovery behavior was documented in the reviewed source.
+
+# Known Gaps
+
+System-permission denial paths, interrupted flows, and recovery behavior not described above were not available in the reviewed source.

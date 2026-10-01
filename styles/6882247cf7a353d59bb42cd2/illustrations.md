@@ -10,10 +10,23 @@ Render vehicles, groceries, food, parcels, and utility objects as compact soft-e
 
 Place one or two objects inside a pale rounded tile. Keep the object centered, slightly oversized, and readable at tab-icon scale.
 
-# Color
+# Color and Materials
 
 Use yellow as the binding accent with black, white, orange, blue, and realistic object colors. Background tiles stay pale gray.
 
-# Usage
+# Variants and States
 
 Use miniature illustrations for service entry points, educational prompts, and ride feedback. Keep maps, driver data, and live trip state functional.
+
+# Production Requirements
+
+Preserve the documented placement, crop, negative space, and visual weight in production exports. Before final art exists, placeholders must preserve those same compositional properties.
+
+# Avoid
+
+- Do not replace the observed imagery language with unrelated stock art or arbitrary symbols.
+- Do not change the documented crop, density, or relationship to nearby text.
+
+# Known Gaps
+
+Animation, export dimensions, safe-crop specifications, appearance variants, and unshown state treatments were not documented.

@@ -4,13 +4,13 @@ Avtobys combines transit fare payment, a wallet, route discovery, tickets, trans
 
 # Navigation
 
-Avtobys, Routes, QR, Notifications, and Menu persist at the bottom. The central QR action opens payment directly; focused subflows use back navigation.
+Avtobys, Routes, QR, Notifications, and Menu persist in the current context. The QR action opens payment directly; focused subflows use back navigation.
 
 # Core Flows
 
 ## Wallet and payment
 
-Open the wallet to review balance and history, then pay, transfer, or top up. QR, Bluetooth, and vehicle-number payment remain separate, with explicit success, rating, and failure states.
+1. Open the wallet to review balance and history, then pay, transfer, or top up. QR, Bluetooth, and vehicle-number payment remain separate, with explicit success, rating, and failure states.
 
 ## Routes
 
@@ -20,11 +20,11 @@ Open the wallet to review balance and history, then pay, transfer, or top up. QR
 
 ## Tickets and services
 
-Tickets, intercity, service payments, offers, and promotional banners are distinct dashboard entries rather than hidden wallet modes.
+1. Tickets, intercity, service payments, offers, and promotional banners are distinct dashboard entries rather than hidden wallet modes.
 
 ## Account and support
 
-Menu groups settings, city, language, bank cards, app information, support, notifications, sharing, and secure logout.
+1. Menu groups settings, city, language, bank cards, app information, support, notifications, sharing, and secure logout.
 
 # Interaction Patterns
 
@@ -32,4 +32,11 @@ Menu groups settings, city, language, bank cards, app information, support, noti
 - Keep payment modes distinct and recoverable.
 - Preserve the map while route details expand.
 - Keep transaction search and filters close to history.
-- Surface failure with a direct retry path.
+
+# System Access Timing
+
+No system-access timing or denial-recovery behavior was documented in the reviewed source.
+
+# Known Gaps
+
+System-permission denial paths, interrupted flows, and recovery behavior not described above were not available in the reviewed source.

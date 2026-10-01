@@ -4,7 +4,7 @@ Globus combines loyalty and promotions with grocery discovery, catalog search, p
 
 # Navigation
 
-A five-item bottom bar anchors the main destinations. Home and Catalog keep selected store or fulfillment, search, and utility actions close to product discovery.
+A five primary destinations anchors the main destinations. Home and Catalog keep selected store or fulfillment, search, and utility actions close to product discovery.
 
 # Core Flows
 
@@ -18,4 +18,12 @@ A five-item bottom bar anchors the main destinations. Home and Catalog keep sele
 
 # Interaction Patterns
 
-Promotions and products use horizontal rails, quantity changes happen inline, catalog context persists near search, and checkout groups one fulfillment decision per section.
+Promotions and products use browsing sections, quantity changes happen inline, catalog context persists near search, and checkout groups one fulfillment decision per section.
+
+# System Access Timing
+
+No system-access timing or denial-recovery behavior was documented in the reviewed source.
+
+# Known Gaps
+
+System-permission denial paths, interrupted flows, and recovery behavior not described above were not available in the reviewed source.

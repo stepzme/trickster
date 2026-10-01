@@ -1,41 +1,54 @@
 <design-context>
 ---
-version: alpha
+version: 1
+platform: iOS
 name: gg-design-analysis
 description: "A map-first mobility interface with pale cartography, crisp white bottom sheets, near-black actions, restrained blue links, and friendly illustrated service icons. Large rounded panels and compact type keep location, vehicle, fare, and driver states calm and legible."
-colors: {primary: "#111214", on-primary: "#FFFFFF", primary-hover: "#292B2E", primary-focus: "#000000", ink: "#15171A", ink-muted: "#656A70", ink-subtle: "#969BA1", ink-tertiary: "#C2C6CA", canvas: "#F3F4F2", surface-1: "#FFFFFF", surface-2: "#F4F5F5", surface-3: "#EAECED", surface-4: "#DDE1E3", hairline: "#E2E5E7", hairline-strong: "#C8CDD1", hairline-tertiary: "#AEB5BA", inverse-canvas: "#111214", inverse-surface-1: "#232529", inverse-surface-2: "#35383D", inverse-ink: "#FFFFFF", brand-secure: "#2F7EF7", semantic-success: "#2AAA64", semantic-overlay: "#111214"}
+colors: {primary: "#111214", on-primary: "#FFFFFF", primary-focus: "#000000", ink: "#15171A", ink-muted: "#656A70", ink-subtle: "#969BA1", ink-tertiary: "#C2C6CA", canvas: "#F3F4F2", surface-1: "#FFFFFF", surface-2: "#F4F5F5", surface-3: "#EAECED", surface-4: "#DDE1E3", hairline: "#E2E5E7", hairline-strong: "#C8CDD1", hairline-tertiary: "#AEB5BA", inverse-canvas: "#111214", inverse-surface-1: "#232529", inverse-surface-2: "#35383D", inverse-ink: "#FFFFFF", brand-secure: "#2F7EF7", semantic-success: "#2AAA64", semantic-overlay: "#111214"}
 typography:
-  display-xl: {fontFamily: SF Pro Display, fontSize: 34px, fontWeight: 700, lineHeight: 1.08, letterSpacing: -0.7px}
-  display-lg: {fontFamily: SF Pro Display, fontSize: 28px, fontWeight: 700, lineHeight: 1.12, letterSpacing: -0.4px}
-  display-md: {fontFamily: SF Pro Display, fontSize: 24px, fontWeight: 700, lineHeight: 1.16, letterSpacing: -0.2px}
-  headline: {fontFamily: SF Pro Display, fontSize: 20px, fontWeight: 700, lineHeight: 1.22, letterSpacing: -0.1px}
-  card-title: {fontFamily: SF Pro Text, fontSize: 16px, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0}
-  subhead: {fontFamily: SF Pro Text, fontSize: 15px, fontWeight: 600, lineHeight: 1.30, letterSpacing: 0}
-  body-lg: {fontFamily: SF Pro Text, fontSize: 15px, fontWeight: 400, lineHeight: 1.42, letterSpacing: 0}
-  body: {fontFamily: SF Pro Text, fontSize: 14px, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0}
-  body-sm: {fontFamily: SF Pro Text, fontSize: 12px, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0}
-  caption: {fontFamily: SF Pro Text, fontSize: 10px, fontWeight: 400, lineHeight: 1.25, letterSpacing: 0}
-  button: {fontFamily: SF Pro Text, fontSize: 15px, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0}
-  eyebrow: {fontFamily: SF Pro Text, fontSize: 11px, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0.1px}
-  mono: {fontFamily: SF Mono, fontSize: 11px, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0}
-rounded: {xs: 4px, sm: 8px, md: 12px, lg: 18px, xl: 24px, xxl: 30px, pill: 9999px, full: 9999px}
-spacing: {xxs: 4px, xs: 8px, sm: 12px, md: 16px, lg: 20px, xl: 24px, xxl: 32px, section: 40px}
+  display-xl: {fontFamily: SF Pro Display, fontSize: 34, fontWeight: 700, lineHeight: 1.08, letterSpacing: -0.7}
+  display-lg: {fontFamily: SF Pro Display, fontSize: 28, fontWeight: 700, lineHeight: 1.12, letterSpacing: -0.4}
+  display-md: {fontFamily: SF Pro Display, fontSize: 24, fontWeight: 700, lineHeight: 1.16, letterSpacing: -0.2}
+  headline: {fontFamily: SF Pro Display, fontSize: 20, fontWeight: 700, lineHeight: 1.22, letterSpacing: -0.1}
+  card-title: {fontFamily: SF Pro Text, fontSize: 16, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0}
+  subhead: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 600, lineHeight: 1.30, letterSpacing: 0}
+  body-lg: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 400, lineHeight: 1.42, letterSpacing: 0}
+  body: {fontFamily: SF Pro Text, fontSize: 14, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0}
+  body-sm: {fontFamily: SF Pro Text, fontSize: 12, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0}
+  caption: {fontFamily: SF Pro Text, fontSize: 10, fontWeight: 400, lineHeight: 1.25, letterSpacing: 0}
+  button: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0}
+  eyebrow: {fontFamily: SF Pro Text, fontSize: 11, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0.1}
+  mono: {fontFamily: SF Mono, fontSize: 11, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0}
+rounded: {xs: 4, sm: 8, md: 12, lg: 18, xl: 24, xxl: 30, pill: 9999, full: 9999}
+spacing: {xxs: 4, xs: 8, sm: 12, md: 16, lg: 20, xl: 24, xxl: 32, section: 40}
 components:
-  button-primary: {backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.md}", padding: 14px 18px}
-  button-secondary: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.md}", padding: 12px 16px}
-  bottom-sheet: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xl}", padding: 20px}
-  service-card: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.md}", padding: 10px}
-  text-input: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 13px 14px}
-  status-badge: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.pill}", padding: 4px 8px}
-  map-pin: {backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.caption}", rounded: "{rounded.full}", padding: 8px}
+  button-primary: {backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.md}", padding: [14, 18]}
+  button-secondary: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.md}", padding: [12, 16]}
+  bottom-sheet: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xl}", padding: 20}
+  service-card: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.md}", padding: 10}
+  text-input: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: [13, 14]}
+  status-badge: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.pill}", padding: [4, 8]}
+  map-pin: {backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.caption}", rounded: "{rounded.full}", padding: 8}
 ---
-## Overview
+
+# Overview
 
 gg is a restrained map-first mobility system. Pale maps supply context while large white sheets, black controls, compact blue links, and illustrated service shortcuts guide the next decision.
 
 **Key Characteristics:** pale cartography, white floating sheets, black primary actions, sparse blue links, large corner radii, compact service cards, clear vehicle and fare hierarchy, and friendly transport icons.
 
-## Colors
+# Non-negotiable visual invariants
+
+- The reference consistently shows pale cartography.
+- The reference consistently shows white floating sheets.
+- The reference consistently shows black primary actions.
+- The reference consistently shows sparse blue links.
+- The reference consistently shows large corner radii.
+- The reference consistently shows compact service cards.
+- The reference consistently shows clear vehicle and fare hierarchy.
+- The reference consistently shows friendly transport icons.
+
+# Color and surfaces
 
 ### Brand & Accent
 
@@ -53,7 +66,7 @@ Near-black carries destinations, prices, and titles. Mid-gray handles labels and
 
 Green confirms successful trip states, blue marks optional interaction, and black indicates the committed action. Keep warnings localized and high contrast.
 
-## Typography
+# Typography
 
 ### Font Family
 
@@ -63,11 +76,11 @@ Use SF Pro Display for large route or state headings and SF Pro Text for address
 
 | Token | Size | Weight | Use |
 |---|---:|---:|---|
-| display-lg | 28px | 700 | Major trip state |
-| headline | 20px | 700 | Sheet title or fare |
-| card-title | 16px | 600 | Destination or service |
-| body | 14px | 400 | Address and trip detail |
-| caption | 10px | 400 | ETA and helper meta |
+| display-lg | 28 points | 700 | Major trip state |
+| headline | 20 points | 700 | Sheet title or fare |
+| card-title | 16 points | 600 | Destination or service |
+| body | 14 points | 400 | Address and trip detail |
+| caption | 10 points | 400 | ETA and helper meta |
 
 ### Principles
 
@@ -79,11 +92,11 @@ Use SF Pro Display for large route or state headings and SF Pro Text for address
 
 Use the platform sans with excellent map-label contrast and tabular numerals.
 
-## Layout
+# Screen composition
 
 ### Spacing System
 
-Use a 4px base, 12–16px control gaps, 20px sheet padding, and generous separation between route decisions.
+Use a 4 points base, 12–16 points control gaps, 20 points sheet padding, and generous separation between route decisions.
 
 ### Grid & Container
 
@@ -93,7 +106,7 @@ The map fills the viewport. A single bottom sheet holds search, service choice, 
 
 Let the map breathe above the sheet; keep the decision area compact and avoid stacking unrelated controls.
 
-## Elevation & Depth
+Surface hierarchy observed in the source:
 
 | Level | Treatment | Use |
 |---|---|---|
@@ -106,31 +119,15 @@ Let the map breathe above the sheet; keep the decision area compact and avoid st
 
 Use map texture, route geometry, small illustrated service objects, and restrained sheet shadow. Do not add ornamental gradients.
 
-## Shapes
+# Navigation appearance
 
-### Border Radius Scale
+Primary navigation is contextual: the map and bottom sheet stay persistent while menu and support open as focused overlays.
 
-| Token | Value | Use |
-|---|---:|---|
-| rounded-sm | 8px | Compact icon control |
-| rounded-md | 12px | Input and service tile |
-| rounded-lg | 18px | Fare or driver card |
-| rounded-xl | 24px | Bottom sheet |
-| rounded-full | full | Pin, avatar, rating |
-
-### Photography & Illustration Geometry
-
-Keep vehicles and service illustrations isolated inside soft square or circular fields; maps and route lines remain full bleed beneath the sheet.
-
-## Components
+# Components
 
 ### Buttons
 
 Primary actions are near-black with white labels and moderate rounding. Secondary actions use white or pale gray; optional links may use blue text.
-
-### Pricing Tabs
-
-Vehicle classes and service modes use horizontally scrollable cards with a clear black selection state, visible price, and ETA.
 
 ### Cards & Containers
 
@@ -140,45 +137,23 @@ Use one dominant sheet per state. Nested cards are pale, lightly separated, and 
 
 Pickup and destination inputs use pale fills, leading location marks, and clear focus. Native controls may remain native in code but must inherit these colors, radii, type, and spacing.
 
-### Status & Build Page
+# Imagery and icons
+
+Use map texture, route geometry, small illustrated service objects, and restrained sheet shadow. Do not add ornamental gradients.
+
+Keep vehicles and service illustrations isolated inside soft square or circular fields; maps and route lines remain full bleed beneath the sheet.
+
+If final imagery is not yet available, any placeholder must preserve the documented scale, placement, crop, and visual weight rather than removing that layer.
+
+# States
 
 Keep arrival time, driver identity, vehicle, fare, pickup point, cancellation, and rating state near the current action.
 
-### Navigation
-
-Primary navigation is contextual: the map and bottom sheet stay persistent while menu and support open as focused overlays.
-
-### Footer
-
-No footer; the active trip sheet and safe-area action close the viewport.
-
-## Do's and Don'ts
-
-### Do
-
-- Preserve the map-first composition and one active sheet.
-- Use black for commitment and blue only for optional interaction.
-- Make destination, ETA, price, and driver state immediately scannable.
-
-### Don't
-
-- Don't cover most of the map before a decision requires it.
-- Don't add competing brand colors or decorative gradients.
-- Don't let illustrated shortcuts overpower route information.
-
-## Responsive Behavior
-
-### Breakpoints
-
-| Name | Width | Key Changes |
-|---|---:|---|
-| Compact | 320–374px | Tighten service-card width |
-| Standard | 375–430px | Default map and sheet |
-| Wide | 431px+ | Expand sheet gutters and map controls |
+# iOS adaptation
 
 ### Touch Targets
 
-Map controls, service cards, destination rows, rating stars, and primary actions remain at least 44px.
+Map controls, service cards, destination rows, rating stars, and primary actions remain at least 44 points.
 
 ### Collapsing Strategy
 
@@ -188,15 +163,20 @@ Preserve destination, pickup, ETA, fare, driver, and primary action; collapse ti
 
 Keep map labels readable, crop vehicle art as isolated objects, and preserve a clear text-safe area in every service tile.
 
-## Iteration Guide
+Apply these rules within current iPhone safe areas and scrolling containers. Keep interactive targets at least 44 points, preserve a logical VoiceOver order, and let Dynamic Type wrap supporting text without flattening the documented hierarchy. Do not infer an unobserved dark or light appearance.
 
-Tune map plus search first, then service selection, fare choice, driver state, trip progress, rating, menu, and support.
+# Anti-generic checklist
 
-## Known Gaps
+- Don't cover most of the map before a decision requires it.
+- Don't add competing brand colors or decorative gradients.
+- Don't let illustrated shortcuts overpower route information.
+- Do not replace the documented hierarchy with a generic stack of identical white cards or `Form` sections.
+- Do not use default blue tint, an unstyled `TabView`, arbitrary SF Symbols, or uniform corner radii when they contradict the recorded tokens and components.
+- Do not omit compositionally important imagery while final assets are pending; preserve its footprint with a faithful placeholder.
+
+# Known gaps
 
 - Payment-method setup and cancellation recovery were not fully sampled.
 - Most evaluated layouts were portrait phone screens.
 
 </design-context>
-
-Use the design system above for all UI you generate.

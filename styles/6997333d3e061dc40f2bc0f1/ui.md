@@ -1,12 +1,12 @@
 <design-context>
 ---
-version: alpha
+version: 1
+platform: iOS
 name: ChallengeUp-design-analysis
 description: "A bold challenge tracker built on pure black with oversized geometric actions, heavy extended display type, saturated yellow, mint, salmon, mustard, purple, and blue blocks, plus expressive flat editorial characters. Challenge choice, daily completion, progress, sharing, editing, and completion stay graphic and immediate."
 colors:
   primary: "#FFC400"
   on-primary: "#080808"
-  primary-hover: "#E0AD00"
   primary-soft: "#3A3010"
   accent: "#57D6A3"
   accent-secondary: "#E98572"
@@ -21,195 +21,152 @@ colors:
   semantic-danger: "#E3482C"
   semantic-overlay: "#000000"
 typography:
-  display-xl: { fontFamily: Arial Black, fontSize: 36px, fontWeight: 700, lineHeight: 1.05, letterSpacing: -0.7px }
-  display-lg: { fontFamily: Arial Black, fontSize: 30px, fontWeight: 700, lineHeight: 1.08, letterSpacing: -0.5px }
-  display-md: { fontFamily: Arial Black, fontSize: 26px, fontWeight: 700, lineHeight: 1.12, letterSpacing: -0.3px }
-  headline: { fontFamily: Arial Black, fontSize: 22px, fontWeight: 700, lineHeight: 1.18, letterSpacing: -0.2px }
-  card-title: { fontFamily: SF Pro Text, fontSize: 16px, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: SF Pro Text, fontSize: 17px, fontWeight: 500, lineHeight: 1.35, letterSpacing: 0 }
-  body-lg: { fontFamily: SF Pro Text, fontSize: 16px, fontWeight: 400, lineHeight: 1.45, letterSpacing: 0 }
-  body: { fontFamily: SF Pro Text, fontSize: 14px, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
-  body-sm: { fontFamily: SF Pro Text, fontSize: 12px, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
-  caption: { fontFamily: SF Pro Text, fontSize: 10px, fontWeight: 400, lineHeight: 1.20, letterSpacing: 0 }
-  button: { fontFamily: SF Pro Text, fontSize: 15px, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0 }
-  eyebrow: { fontFamily: SF Pro Text, fontSize: 11px, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0.3px }
-  mono: { fontFamily: SF Mono, fontSize: 12px, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
-rounded: { xs: 8px, sm: 12px, md: 16px, lg: 20px, xl: 26px, xxl: 32px, pill: 9999px, full: 9999px }
-spacing: { xxs: 4px, xs: 8px, sm: 12px, md: 16px, lg: 24px, xl: 32px, xxl: 48px, section: 64px }
+  display-xl: { fontFamily: Arial Black, fontSize: 36, fontWeight: 700, lineHeight: 1.05, letterSpacing: -0.7 }
+  display-lg: { fontFamily: Arial Black, fontSize: 30, fontWeight: 700, lineHeight: 1.08, letterSpacing: -0.5 }
+  display-md: { fontFamily: Arial Black, fontSize: 26, fontWeight: 700, lineHeight: 1.12, letterSpacing: -0.3 }
+  headline: { fontFamily: Arial Black, fontSize: 22, fontWeight: 700, lineHeight: 1.18, letterSpacing: -0.2 }
+  card-title: { fontFamily: SF Pro Text, fontSize: 16, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
+  subhead: { fontFamily: SF Pro Text, fontSize: 17, fontWeight: 500, lineHeight: 1.35, letterSpacing: 0 }
+  body-lg: { fontFamily: SF Pro Text, fontSize: 16, fontWeight: 400, lineHeight: 1.45, letterSpacing: 0 }
+  body: { fontFamily: SF Pro Text, fontSize: 14, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
+  body-sm: { fontFamily: SF Pro Text, fontSize: 12, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
+  caption: { fontFamily: SF Pro Text, fontSize: 10, fontWeight: 400, lineHeight: 1.20, letterSpacing: 0 }
+  button: { fontFamily: SF Pro Text, fontSize: 15, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0 }
+  eyebrow: { fontFamily: SF Pro Text, fontSize: 11, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0.3 }
+  mono: { fontFamily: SF Mono, fontSize: 12, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
+rounded: { xs: 8, sm: 12, md: 16, lg: 20, xl: 26, xxl: 32, pill: 9999, full: 9999 }
+spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
 components:
-  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.md}", padding: 14px 18px }
-  feature-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 16px }
-  action-tile: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.md}", padding: 12px }
-  grouped-list: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 8px 16px }
-  input: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body-lg}", rounded: "{rounded.md}", padding: 14px 16px }
-  top-nav: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xs}", height: 52px }
-  footer: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: 8px 12px }
+  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.md}", padding: [14, 18]}
+  feature-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 16 }
+  action-tile: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.md}", padding: 12 }
+  grouped-list: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: [8, 16]}
+  input: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body-lg}", rounded: "{rounded.md}", padding: [14, 16]}
+  navigation-bar: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xs}", height: 52 }
+  footer: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: [8, 12]}
 ---
 
-## Overview
+# Overview
 
 ChallengeUp treats goals as bold graphic posters. Creation begins with an enormous yellow circle, templates use illustrated color cards, and active challenges become large status blocks with completion gestures.
 
-**Key Characteristics:**
-- Pure black foundation.
-- Oversized yellow circular action.
-- Heavy extended uppercase type.
-- Saturated full-card color fields.
-- Flat editorial people and activity scenes.
+# Non-negotiable visual invariants
 
-## Colors
+- The recurring color treatment uses Pure black foundation.
+- Keep the black stage dominant.
+- Use one saturated color per challenge.
+- Make daily completion immediate.
+- Preserve large counters.
+- Use editorial illustration on templates.
+- Empty state centers one giant circle.
+- Template browsing uses horizontally paged two-column cards; active challenges stack full-width colored blocks.
 
-### Brand & Accent
+# Color and surfaces
+
 - **Primary** ({colors.primary}): Creation, primary progression, and high-attention CTA.
 - **Accent** ({colors.accent}): Active challenge and positive category fields.
 - **Secondary Accent** ({colors.accent-secondary}): Progress detail and lifestyle category fields.
 
-### Surface
 - **Canvas** ({colors.canvas}): Challenge dashboard and template browsing.
 - **Surface 1** ({colors.surface-1}): Main cards and sheets.
 - **Surface 2** ({colors.surface-2}): Secondary controls and grouped fields.
 - **Hairline** ({colors.hairline}): Quiet separation.
 
-### Text
 - **Ink** ({colors.ink}): Headings and primary values.
 - **Ink Muted** ({colors.ink-muted}): Supporting detail.
 - **Ink Subtle** ({colors.ink-subtle}): Placeholder and inactive state.
 
-### Semantic
 - **Success** ({colors.semantic-success}): Completed or positive state.
 - **Danger** ({colors.semantic-danger}): Error and destructive state.
 - **Overlay** ({colors.semantic-overlay}): Modal focus.
 
-## Typography
-
-### Font Family
+# Typography
 
 - **Arial Black** — challenge titles, counters, and calls to action.
 - **SF Pro Text** — controls, forms, and explanations.
 - **SF Mono** — codes and compact numeric data.
 
-### Hierarchy
-
-Use 36px bold for major statements, 22px bold for screen headings, 16px semibold for cards, 14px regular for detail, and 15px semibold for primary actions.
-
-### Principles
+Use 36 points bold for major statements, 22 points bold for screen headings, 16 points semibold for cards, 14 points regular for detail, and 15 points semibold for primary actions.
 
 - Keep titles short and forceful.
 - Let one geometric action dominate.
 - Use one color field per challenge.
 - Keep progress numbers large and spare.
 
-### Note on Font Substitutes
-
 Use **Inter** or the platform system sans when the reference display face is unavailable.
 
-## Layout
+The hierarchy must remain legible with Dynamic Type: supporting text may wrap before the primary metric, title, or action loses its role.
 
-### Spacing System
+# Screen composition
 
-Use a 4px base, 16px edge gutters, 12px control gaps, and 16px card padding.
-
-### Grid & Container
+Use a 4 points base, 16 points edge gutters, 12 points control gaps, and 16 points card padding.
 
 Empty state centers one giant circle. Template browsing uses horizontally paged two-column cards; active challenges stack full-width colored blocks.
 
-### Whitespace Philosophy
-
 Use large black gaps to separate graphic objects and avoid conventional dashboard density.
-
-## Elevation & Depth
-
-Keep the base flat, raise actionable cards slightly, and reserve overlays for confirmation or interruption.
-
-### Decorative Depth
 
 Remain flat and poster-like. Layer only circles, outlined counters, and small completion tokens.
 
-## Shapes
+Primary iPhone screens keep the documented content grouping and vertical rhythm inside a scroll container when content exceeds the viewport. Bottom-owned actions or navigation reserve the lower safe area rather than covering content.
 
-### Border Radius Scale
-
-Use 8px for small controls, 12px for fields, 16px for actions, 20px for cards, and full pills or circles for compact selection.
-
-### Photography & Illustration Geometry
-
-Use flat editorial figures with angular shapes, limited texture, and bold contrasting skin and clothing colors inside solid category cards.
-
-## Components
-
-### Buttons
-
-The giant circle creates; bottom yellow bars create custom challenges; black circles mark done; blue bars share progress.
-
-### Pricing Tabs
-
-Categories page horizontally; challenge state is expressed by card color and circular completion control rather than tabs.
-
-### Cards & Containers
-
-Template cards pair a large uppercase title with one editorial scene. Active cards show title, day count, schedule, and a dominant done circle.
-
-### Inputs & Forms
-
-Challenge setup uses large choices, short fields, schedule, duration, and notification configuration.
-
-### Status & Build Page
-
-Show upcoming, ready, done today, paused, completed, reset, shared, and deleted explicitly through label plus graphic token.
-
-### Navigation
+# Navigation appearance
 
 Menu and add remain at the top. Other contains guidance, profile questions, feedback, and language.
 
-### Footer
+This section governs appearance only; destinations and transitions are defined in `ux.md`.
 
-Contextual create or share bars sit above the safe area; the main list has no persistent tab bar.
+# Components
 
-## Do's and Don'ts
+The giant circle creates; bottom yellow bars create custom challenges; black circles mark done; blue bars share progress.
 
-### Do
+Template cards pair a large uppercase title with one editorial scene. Active cards show title, day count, schedule, and a dominant done circle.
 
-- Keep the black stage dominant.
-- Use one saturated color per challenge.
-- Make daily completion immediate.
-- Preserve large counters.
-- Use editorial illustration on templates.
+Challenge setup uses large choices, short fields, schedule, duration, and notification configuration.
 
-### Don't
+Show upcoming, ready, done today, paused, completed, reset, shared, and deleted explicitly through label plus graphic token.
 
-- Don't turn progress into small charts.
-- Don't introduce gradients or soft shadows.
-- Don't mix photography into template cards.
-- Don't use thin generic typography for titles.
-- Don't crowd a card with secondary actions.
+Controls retain at least a 44-point interactive area. Pressed and disabled treatments should stay within the documented palette and hierarchy; no unobserved state styling is prescribed.
 
-## Responsive Behavior
+# Imagery and icons
 
-### Breakpoints
-
-Use a centered or split panel above 768px, the reference single column from 390–767px, and tighter labels below 390px.
-
-### Touch Targets
-
-Keep every row, tab, selector, key, and primary action at least 44px.
-
-### Collapsing Strategy
-
-Preserve challenge title, day count, completion control, and next date. Move edit actions into detail before shrinking the card.
-
-### Image Behavior
+Use flat editorial figures with angular shapes, limited texture, and bold contrasting skin and clothing colors inside solid category cards.
 
 Contain editorial figures inside their color card and preserve intentional cropping. Never place progress controls over faces or key gestures.
 
-## Iteration Guide
+When imagery is part of the documented composition, it cannot be omitted while final assets are pending. A temporary asset must preserve its placement, crop, scale, and approximate visual weight.
 
-1. Build empty state and creation.
-2. Add template selection and custom setup.
-3. Add active challenge cards and daily completion.
-4. Add detail, edit, pause, and reset.
-5. Add completion, sharing, and settings.
+# States
 
-## Known Gaps
+Show upcoming, ready, done today, paused, completed, reset, shared, and deleted explicitly through label plus graphic token.
+
+- **Success** ({colors.semantic-success}): Completed or positive state.
+- **Danger** ({colors.semantic-danger}): Error and destructive state.
+- **Overlay** ({colors.semantic-overlay}): Modal focus.
+
+Only the states documented above are specified; other states must preserve the same canvas, hierarchy, and component language without inventing a new visual system.
+
+# iOS adaptation
+
+- Extend the documented canvas through the iPhone safe areas while keeping readable content within appropriate insets.
+- Use a vertical `ScrollView` for content that does not fit compact heights; keep documented bottom actions and navigation clear of the home indicator.
+- Keep every row, tab, selector, key, and primary action at least 44 points.
+- Preserve challenge title, day count, completion control, and next date. Move edit actions into detail before shrinking the card.
+- Present the keyboard and system permission UI natively, then return to the same visual context.
+- Preserve semantic reading order in VoiceOver and allow text to grow with Dynamic Type.
+- Do not infer an unobserved dark or light variant; use the appearance documented by the reference.
+
+# Anti-generic checklist
+
+- Do not turn progress into small charts.
+- Do not introduce gradients or soft shadows.
+- Do not mix photography into template cards.
+- Do not use thin generic typography for titles.
+- Do not crowd a card with secondary actions.
+- Do not replace the documented canvas and surfaces with a generic grouped background and uniform white cards.
+- Do not use an unstyled `TabView`, default blue tint, or arbitrary SF Symbols when they contradict the reference.
+- Do not collapse every component to one corner radius or remove compositionally important imagery.
+
+# Known gaps
 
 - Tokens were inferred visually from inspected mobile screens.
 - All 20 available flow names were inventoried; new challenge, my challenges, daily completion, and completed challenge were image-reviewed.
@@ -217,5 +174,3 @@ Contain editorial figures inside their color card and preserve intentional cropp
 - No tablet or desktop captures were present.
 
 </design-context>
-
-Use the design system above for all UI you generate.

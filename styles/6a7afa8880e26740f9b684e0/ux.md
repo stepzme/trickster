@@ -10,7 +10,7 @@ Search, Saved, Bookings, and My account are stable. Stays, Flights, Car rental, 
 
 ## Search and compare
 
-Set destination, dates, and party, then sort, filter, or switch to map. Compare price, rating, distance, availability, and benefits without losing search context.
+1. Set destination, dates, and party, then sort, filter, or switch to map. Compare price, rating, distance, availability, and benefits without losing search context.
 
 ## Book
 
@@ -22,7 +22,7 @@ Set destination, dates, and party, then sort, filter, or switch to map. Compare 
 
 ## Manage
 
-Bookings groups itinerary, reservation detail, date changes, cancellation, messages, and map context.
+1. Bookings groups itinerary, reservation detail, date changes, cancellation, messages, and map context.
 
 # Interaction Patterns
 
@@ -31,3 +31,11 @@ Bookings groups itinerary, reservation detail, date changes, cancellation, messa
 - Preserve Saved across list, map, and detail.
 - Separate promotional benefits from contractual terms.
 - Confirm destructive reservation changes.
+
+# System Access Timing
+
+No system-access timing or denial-recovery behavior was documented in the reviewed source.
+
+# Known Gaps
+
+System-permission denial paths, interrupted flows, and recovery behavior not described above were not available in the reviewed source.

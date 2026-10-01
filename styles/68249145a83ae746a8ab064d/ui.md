@@ -1,12 +1,12 @@
 <design-context>
 ---
-version: alpha
+version: 1
+platform: iOS
 name: Dodo-Pizza-design-analysis
 description: "A photo-led food ordering interface with a white canvas, vivid orange purchase actions, black editorial product names, soft pink and orange food backdrops, oversized dish photography, horizontal category strips, stacked checkout sheets, and playful map markers for live order tracking."
 colors:
   primary: "#FF6900"
   on-primary: "#FFFFFF"
-  primary-hover: "#E85E00"
   primary-soft: "#FFF0E7"
   accent: "#F05BA6"
   ink: "#171717"
@@ -20,32 +20,31 @@ colors:
   semantic-danger: "#E44D4D"
   semantic-overlay: "#000000"
 typography:
-  display-xl: { fontFamily: SF Pro Display, fontSize: 38px, fontWeight: 800, lineHeight: 1.05, letterSpacing: -0.8px }
-  display-lg: { fontFamily: SF Pro Display, fontSize: 32px, fontWeight: 750, lineHeight: 1.10, letterSpacing: -0.5px }
-  display-md: { fontFamily: SF Pro Display, fontSize: 27px, fontWeight: 700, lineHeight: 1.15, letterSpacing: -0.3px }
-  headline: { fontFamily: SF Pro Display, fontSize: 22px, fontWeight: 700, lineHeight: 1.20, letterSpacing: -0.1px }
-  card-title: { fontFamily: SF Pro Text, fontSize: 18px, fontWeight: 650, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: SF Pro Text, fontSize: 16px, fontWeight: 600, lineHeight: 1.30, letterSpacing: 0 }
-  body-lg: { fontFamily: SF Pro Text, fontSize: 16px, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
-  body: { fontFamily: SF Pro Text, fontSize: 14px, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
-  body-sm: { fontFamily: SF Pro Text, fontSize: 12px, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
-  caption: { fontFamily: SF Pro Text, fontSize: 10px, fontWeight: 500, lineHeight: 1.20, letterSpacing: 0 }
-  button: { fontFamily: SF Pro Text, fontSize: 15px, fontWeight: 650, lineHeight: 1.20, letterSpacing: 0 }
-  eyebrow: { fontFamily: SF Pro Text, fontSize: 11px, fontWeight: 650, lineHeight: 1.20, letterSpacing: 0.2px }
-  mono: { fontFamily: SF Mono, fontSize: 12px, fontWeight: 500, lineHeight: 1.30, letterSpacing: 0 }
-rounded: { xs: 6px, sm: 10px, md: 14px, lg: 18px, xl: 24px, xxl: 30px, pill: 9999px, full: 9999px }
-spacing: { xxs: 4px, xs: 8px, sm: 12px, md: 16px, lg: 24px, xl: 32px, xxl: 48px, section: 64px }
+  display-xl: { fontFamily: SF Pro Display, fontSize: 38, fontWeight: 800, lineHeight: 1.05, letterSpacing: -0.8 }
+  display-lg: { fontFamily: SF Pro Display, fontSize: 32, fontWeight: 750, lineHeight: 1.10, letterSpacing: -0.5 }
+  display-md: { fontFamily: SF Pro Display, fontSize: 27, fontWeight: 700, lineHeight: 1.15, letterSpacing: -0.3 }
+  headline: { fontFamily: SF Pro Display, fontSize: 22, fontWeight: 700, lineHeight: 1.20, letterSpacing: -0.1 }
+  card-title: { fontFamily: SF Pro Text, fontSize: 18, fontWeight: 650, lineHeight: 1.25, letterSpacing: 0 }
+  subhead: { fontFamily: SF Pro Text, fontSize: 16, fontWeight: 600, lineHeight: 1.30, letterSpacing: 0 }
+  body-lg: { fontFamily: SF Pro Text, fontSize: 16, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
+  body: { fontFamily: SF Pro Text, fontSize: 14, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
+  body-sm: { fontFamily: SF Pro Text, fontSize: 12, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
+  caption: { fontFamily: SF Pro Text, fontSize: 10, fontWeight: 500, lineHeight: 1.20, letterSpacing: 0 }
+  button: { fontFamily: SF Pro Text, fontSize: 15, fontWeight: 650, lineHeight: 1.20, letterSpacing: 0 }
+  eyebrow: { fontFamily: SF Pro Text, fontSize: 11, fontWeight: 650, lineHeight: 1.20, letterSpacing: 0.2 }
+  mono: { fontFamily: SF Mono, fontSize: 12, fontWeight: 500, lineHeight: 1.30, letterSpacing: 0 }
+rounded: { xs: 6, sm: 10, md: 14, lg: 18, xl: 24, xxl: 30, pill: 9999, full: 9999 }
+spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
 components:
-  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: 14px 20px }
-  product-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 12px }
-  story-tile: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.caption}", rounded: "{rounded.md}", padding: 8px }
-  order-sheet: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xl}", padding: 16px }
-  input: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: 12px 14px }
-  top-nav: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xs}", height: 52px }
-  footer: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: 8px 12px }
+  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: [14, 20]}
+  product-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 12 }
+  story-tile: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.caption}", rounded: "{rounded.md}", padding: 8 }
+  order-sheet: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xl}", padding: 16 }
+  input: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: [12, 14]}
+  bottom navigation: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: [8, 12]}
 ---
 
-## Overview
+# Overview
 
 Dodo Pizza makes food photography the interface. Large dishes sit on clean white or softly colored fields, while orange consistently marks add, order, and configuration actions.
 
@@ -56,7 +55,15 @@ Dodo Pizza makes food photography the interface. Large dishes sit on clean white
 - Horizontal story and category navigation.
 - Layered white sheets for cart and delivery.
 
-## Colors
+# Non-negotiable visual invariants
+
+- Imagery consistently uses white photo-led ordering canvas.
+- The reference consistently shows orange purchase and configuration actions.
+- The reference consistently shows large isolated dish photography.
+- Navigation consistently uses horizontal story and category navigation.
+- The reference consistently shows layered white sheets for cart and delivery.
+
+# Color and surfaces
 
 ### Brand & Accent
 - **Primary** ({colors.primary}): Add, order, customize, and active state.
@@ -79,7 +86,7 @@ Dodo Pizza makes food photography the interface. Large dishes sit on clean white
 - **Danger** ({colors.semantic-danger}): Removal, error, and cancel state.
 - **Overlay** ({colors.semantic-overlay}): Product and checkout sheets.
 
-## Typography
+# Typography
 
 ### Font Family
 - **SF Pro Display** — campaign and product headings.
@@ -87,7 +94,7 @@ Dodo Pizza makes food photography the interface. Large dishes sit on clean white
 - **SF Mono** — order number and verification code.
 
 ### Hierarchy
-Use 32–38px heavy for campaign statements, 22px for sheet titles, 18px for product names, 14px body, and 10–12px metadata.
+Use 32–38 points heavy for campaign statements, 22 points for sheet titles, 18 points for product names, 14 points body, and 10–12 points metadata.
 
 ### Principles
 - Let dish name and price follow the image.
@@ -98,10 +105,10 @@ Use 32–38px heavy for campaign statements, 22px for sheet titles, 18px for pro
 ### Note on Font Substitutes
 Use the platform system sans or **Inter** with strong display weights and tabular prices.
 
-## Layout
+# Screen composition
 
 ### Spacing System
-Use a 4px base, 16px gutters, 12px product gaps, 16px sheet padding, and 24px between menu categories.
+Use a 4 points base, 16 points gutters, 12 points product gaps, 16 points sheet padding, and 24 points between menu categories.
 
 ### Grid & Container
 Home stacks address, stories, category rails, and large product cards. Product detail becomes immersive media; checkout stacks sliding sheets.
@@ -109,84 +116,74 @@ Home stacks address, stories, category rails, and large product cards. Product d
 ### Whitespace Philosophy
 Give each dish enough open space to feel appetizing; use denser grouping only in cart, add-ons, and checkout.
 
-## Elevation & Depth
+Surface hierarchy observed in the source:
+
 Use large photography and layered sheets rather than card shadows. Tracking gains depth through map markers and a white status panel.
 
 ### Decorative Depth
 Food photography, colored studio backdrops, and occasional map miniatures carry the visual depth.
 
-## Shapes
+# Navigation appearance
 
-### Border Radius Scale
-Use 10px for controls, 14px for stories, 18px for product cards, 24px for sheets, and full pills for add or price actions.
+Menu category navigation stays near the top; profile and order status remain reachable without obscuring the menu.
 
-### Photography & Illustration Geometry
-Shoot or render food as an isolated hero on soft colored fields. Preserve natural proportions, texture, and generous negative space.
-
-## Components
+# Components
 
 ### Buttons
+
 Use orange filled pills for adding, ordering, and configuring; white or neutral controls handle close, address, and secondary choice.
 
-### Pricing Tabs
-Use horizontal category labels and compact chips for size, dough, ingredients, delivery time, or payment choice.
-
 ### Cards & Containers
+
 Use story tiles, hero product cards, immersive product detail, cart rows, add-on rails, and layered checkout sheets.
 
 ### Inputs & Forms
+
 Address, delivery time, payment, promo code, and recipient settings live in separate readable rows or sheets.
 
-### Status & Build Page
+# Imagery and icons
+
+Food photography, colored studio backdrops, and occasional map miniatures carry the visual depth.
+
+Shoot or render food as an isolated hero on soft colored fields. Preserve natural proportions, texture, and generous negative space.
+
+If final imagery is not yet available, any placeholder must preserve the documented scale, placement, crop, and visual weight rather than removing that layer.
+
+# States
+
 Show minimum order, accepted, cooking, courier, delivered, bonus, promo, and verification state with explicit labels.
 
-### Navigation
-Menu category navigation stays near the top; profile and order status remain reachable without obscuring the menu.
+# iOS adaptation
 
-### Footer
-Contextual sticky orange actions replace a heavy persistent tab bar during product and checkout tasks.
+### Touch Targets
 
-## Do's and Don'ts
+Keep address, stories, categories, products, modifiers, quantity, checkout, and tracking actions at least 44 points.
 
-### Do
-- Make food the visual protagonist.
-- Keep orange consistent for purchase action.
-- Show address before ordering.
-- Separate add-ons from the current cart.
+### Collapsing Strategy
 
-### Don't
+Preserve address, active category, current product, cart total, and primary order action. Move stories and promotions below the menu task.
+
+### Image Behavior
+
+Use cover only for designed full-bleed product scenes; otherwise contain dishes and preserve plate or packaging boundaries.
+
+Apply these rules within current iPhone safe areas and scrolling containers. Keep interactive targets at least 44 points, preserve a logical VoiceOver order, and let Dynamic Type wrap supporting text without flattening the documented hierarchy. Do not infer an unobserved dark or light appearance.
+
+# Anti-generic checklist
+
 - Don't crop dishes so aggressively that portions are unclear.
 - Don't cover food with long text.
 - Don't hide minimum order or final total.
 - Don't turn every food background orange.
+- Do not replace the documented hierarchy with a generic stack of identical white cards or `Form` sections.
+- Do not use default blue tint, an unstyled `TabView`, arbitrary SF Symbols, or uniform corner radii when they contradict the recorded tokens and components.
+- Do not omit compositionally important imagery while final assets are pending; preserve its footprint with a faithful placeholder.
 
-## Responsive Behavior
+# Known gaps
 
-### Breakpoints
-Use one large product column on phones, two columns from 768px, and a menu plus sticky cart summary above 1024px.
-
-### Touch Targets
-Keep address, stories, categories, products, modifiers, quantity, checkout, and tracking actions at least 44px.
-
-### Collapsing Strategy
-Preserve address, active category, current product, cart total, and primary order action. Move stories and promotions below the menu task.
-
-### Image Behavior
-Use cover only for designed full-bleed product scenes; otherwise contain dishes and preserve plate or packaging boundaries.
-
-## Iteration Guide
-1. Build address and menu browsing.
-2. Add product detail and modifiers.
-3. Add cart, add-ons, promo, and checkout.
-4. Add tracking, rating, and order history.
-5. Add stories, games, bonuses, and profile.
-
-## Known Gaps
 - Tokens were inferred visually from inspected mobile screens.
 - All 23 flow names were inventoried; Home, Product details, and Checking out were image-reviewed.
 - Games, support, widgets, and secret-order verification were not deeply sampled.
 - Product photography dominates; no separate broad illustration specification was warranted.
 
 </design-context>
-
-Use the design system above for all UI you generate.

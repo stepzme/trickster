@@ -1,10 +1,10 @@
 # Overview
 
-Airba pay is a loan-management app organized around verification, active loans, a new-loan calculator, partner offers, support, and profile controls. The experience keeps financial actions explicit and uses a compact four-item tab bar.
+Airba pay is a loan-management app organized around verification, active loans, a new-loan calculator, partner offers, support, and profile controls. The experience keeps financial actions explicit and uses four primary destinations.
 
 # Navigation
 
-Home, My loans, New loan, and Support remain in the bottom bar. Notifications and profile sit in the header. Profile edits and verification open as focused subflows with an obvious close or back action.
+Home, My loans, New loan, and Support remain in the primary navigation. Notifications and profile sit in the discovery context. Profile edits and verification open as focused subflows with an obvious close or back action.
 
 # Core Flows
 
@@ -22,7 +22,7 @@ Home, My loans, New loan, and Support remain in the bottom bar. Notifications an
 
 ## Profile and support
 
-Edit email, address, password, access code, language, and Face ID from one profile. Support and feedback remain reachable from the tab bar.
+1. Edit email, address, password, access code, language, and Face ID from one profile. Support and feedback remain reachable from primary navigation.
 
 # Interaction Patterns
 
@@ -31,3 +31,11 @@ Edit email, address, password, access code, language, and Face ID from one profi
 - Separate Airba loan products from external partner catalogues.
 - Use one clear action on success and empty states.
 - Preserve active/history tabs inside My loans.
+
+# System Access Timing
+
+No system-access timing or denial-recovery behavior was documented in the reviewed source.
+
+# Known Gaps
+
+System-permission denial paths, interrupted flows, and recovery behavior not described above were not available in the reviewed source.
