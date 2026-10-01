@@ -8,6 +8,8 @@ Objects are simplified and chunky, with rounded silhouettes, clear frontal or th
 
 This document governs product graphics, not ordinary interface controls. Back, close, disclosure, settings, search, sharing, and similar conventional actions may use coherent system icons. A product-specific concept such as a goal, reward, benefit, category, weather condition, or campaign is authored imagery and must not be represented by a convenient generic system symbol.
 
+When the design calls for product illustration, generate it with the available image-generation model and integrate the resulting image asset into the interface. Do not recreate the illustration programmatically in SwiftUI. A screen that requires illustration is not ready for design approval until the generated image asset is integrated.
+
 The art often combines one recognisable object with an abstract brand token: coins and a case for credit, a translucent safe or wallet for savings, gift and Plus marks for rewards, or oversized merchant/product imagery for shopping. Small utility art remains readable at icon scale; campaign and onboarding scenes can layer several objects into a more theatrical composition.
 
 # Composition
