@@ -13,7 +13,7 @@ These rules apply across Research, Planning, Design, Dev, and Publish. Apply eac
 | UX-07 | Mandatory system access and capabilities | Each real system request follows a contextual user action and explains its immediate value. Denial, restriction, cancellation, and unavailable hardware or service leave a clear path. Post-access behavior follows the approved Research. |
 | UX-08 | All interactive screens | Controls are tappable and unobstructed; safe areas and supported screen sizes are respected. |
 | UX-09 | Text and controls | System text enlargement preserves access to functionality; VoiceOver has meaningful labels and a logical order; meaning is not communicated by color alone. |
-| UX-10 | Content | Long strings, real names, units, images, and supported locales are tested; demo text does not conceal layout problems. |
+| UX-10 | Content | Use only text required by the product. Do not create copy to fill space or establish mood, and do not restate context already communicated by the screen, navigation, data, state, or controls. Long strings, real names, units, images, and supported locales are tested; demo text does not conceal layout problems. |
 | UX-11 | Animation | Motion helps explain a change and does not delay a required action; Reduce Motion is respected when significant animation is present. |
 | UX-12 | State persistence | Data the product promises to retain survives backgrounding, force termination, and restarting. Broken file references fail safely. |
 
