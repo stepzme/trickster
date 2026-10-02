@@ -3,190 +3,119 @@
 version: 1
 platform: iOS
 name: Shop-design-analysis
-description: "A visual shopping interface built from soft off-white space, frosted floating navigation, large rounded brand canvases, and a saturated violet purchase accent. Brand photography tints whole sections, while product tiles, chips, and checkout remain clean, compact, and highly rounded."
-
+description: "An image-led commerce interface where large product photography and softly tinted merchant canvases sit above a neutral off-white system, with saturated violet actions, dense rounded controls, and a frosted floating navigation pill."
 colors:
-  primary: "#5B2AF2"
-  on-primary: "#FFFFFF"
-  primary-soft: "#E7DEFF"
-  ink: "#111113"
-  ink-muted: "#6C6C72"
-  ink-subtle: "#A1A1A7"
-  canvas: "#FBF9FC"
-  surface-1: "#FFFFFF"
-  surface-2: "#F0EDF2"
-  surface-dark: "#19151B"
-  glass: "#F7F5F8"
-  hairline: "#E2DEE5"
-  semantic-success: "#32B767"
-  semantic-warning: "#E9A42A"
-  semantic-danger: "#E14850"
-  semantic-overlay: "#000000"
-
+  canvas: "#FAF9FB"
+  surface-primary: "#FFFFFF"
+  surface-secondary: "#F0EDF2"
+  accent-primary: "#5A2DF4"
+  accent-secondary: "#D8CAFF"
+  text-primary: "#111111"
+  text-secondary: "#8F8F98"
+  divider: "#E2DEE5"
+  destructive: "#E14850"
 typography:
-  display-xl: { fontFamily: System Sans, fontSize: 40, fontWeight: 700, lineHeight: 1.02, letterSpacing: -1.0 }
-  display-lg: { fontFamily: System Sans, fontSize: 32, fontWeight: 700, lineHeight: 1.08, letterSpacing: -0.6 }
-  display-md: { fontFamily: System Sans, fontSize: 26, fontWeight: 700, lineHeight: 1.12, letterSpacing: -0.3 }
-  headline: { fontFamily: System Sans, fontSize: 22, fontWeight: 700, lineHeight: 1.20, letterSpacing: 0 }
-  card-title: { fontFamily: System Sans, fontSize: 16, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: System Sans, fontSize: 17, fontWeight: 600, lineHeight: 1.30, letterSpacing: 0 }
-  body-lg: { fontFamily: System Sans, fontSize: 16, fontWeight: 400, lineHeight: 1.42, letterSpacing: 0 }
-  body: { fontFamily: System Sans, fontSize: 14, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
-  body-sm: { fontFamily: System Sans, fontSize: 12, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
-  caption: { fontFamily: System Sans, fontSize: 10, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
-  button: { fontFamily: System Sans, fontSize: 15, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0 }
-  eyebrow: { fontFamily: System Sans, fontSize: 12, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0.1 }
-  mono: { fontFamily: System Mono, fontSize: 12, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
-
-rounded:
-  xs: 4
-  sm: 8
-  md: 12
-  lg: 18
-  xl: 24
-  xxl: 30
-  pill: 9999
-  full: 9999
-
+  hero: {fontFamily: "SF Pro Display", fontSize: 40, fontWeight: 700, lineHeight: 44}
+  title: {fontFamily: "SF Pro Display", fontSize: 28, fontWeight: 700, lineHeight: 34}
+  section: {fontFamily: "SF Pro Text", fontSize: 20, fontWeight: 600, lineHeight: 25}
+  body: {fontFamily: "SF Pro Text", fontSize: 17, fontWeight: 400, lineHeight: 22}
+  label: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 600, lineHeight: 20}
+  caption: {fontFamily: "SF Pro Text", fontSize: 13, fontWeight: 400, lineHeight: 18}
 spacing:
-  xxs: 4
-  xs: 8
-  sm: 12
-  md: 16
-  lg: 24
-  xl: 32
-  xxl: 48
-  section: 64
-
+  screen-horizontal: 16
+  section-gap: 24
+  card-padding: 12
+  control-gap: 8
+rounded:
+  control: 12
+  card: 24
+  sheet: 28
+  pill: 999
 components:
-  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: [14, 20]}
-  button-secondary: { backgroundColor: "{colors.surface-dark}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: [14, 20]}
-  product-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 8 }
-  brand-canvas: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.card-title}", rounded: "{rounded.xl}", padding: 12 }
-  filter-chip: { backgroundColor: "{colors.glass}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.pill}", padding: [8, 12]}
-  cart-sheet: { backgroundColor: "{colors.surface-dark}", textColor: "{colors.on-primary}", typography: "{typography.body}", rounded: "{rounded.xl}", padding: 16 }
-  checkout-section: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 12 }
-  floating-nav: { backgroundColor: "{colors.glass}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.pill}", height: 54 }
+  primary-action: {background: "#5A2DF4", foreground: "#FFFFFF", radius: 999, minHeight: 52}
+  secondary-action: {background: "#151015", foreground: "#FFFFFF", radius: 999, minHeight: 52}
+  primary-card: {background: "#FFFFFF", radius: 24, padding: 12}
+  navigation: {background: "translucent off-white material", radius: 999, height: 56}
 ---
 
 # Overview
 
-Shop is an image-first marketplace that lets each merchant's photography tint the browsing environment while keeping the shared interface neutral. Large rounded brand canvases, white product tiles, frosted floating navigation, and violet purchase actions create a fluid editorial-commerce feel.
+Shop is led by merchandise rather than interface chrome. Large product and campaign imagery supplies much of the changing color, while the shared layer stays off-white, black, and violet. Broad rounded image canvases, compact two-column product grids, pill controls, and a detached frosted navigation capsule distinguish it from a generic white SwiftUI card stack.
 
 # Non-negotiable visual invariants
 
-- The recurring color treatment uses Saturated violet is the shared purchase and saved-state accent.
-- Let merchant photography shape each browsing area.
-- Keep shared actions violet and consistent.
-- Maintain readable glass contrast over imagery.
-- Switch cart and checkout into focused transaction modes.
-- Keep product grids image-led and compact.
-- Home uses a vertical feed of large brand canvases with horizontal product strips.
-- Brand shops and saved views use two-column grids.
+- Product or campaign imagery is the dominant visual mass on browsing and detail screens; it is never replaced by decorative symbols or text-only cards.
+- Saturated violet is reserved for shared purchase, saved, selected, and progress emphasis, regardless of the merchant imagery around it.
+- Browsing alternates broad rounded photographic canvases with compact product rows or two-column grids rather than a uniform vertical list.
+- The persistent navigation appears as a floating translucent pill with clear edge clearance, not an edge-to-edge stock tab bar.
+- Cards use visibly varied geometry: broad merchant canvases are around 24 points, fields around 12 points, and actions are full pills.
+- Transaction-focused screens reduce atmospheric imagery and use clean white rows, while the cart may invert into a near-black sheet.
+- Dense metadata remains subordinate to product name, image, and price through small gray type and tight spacing.
 
 # Color and surfaces
 
-- **Shop Violet** ({colors.primary}) marks add-to-cart, purchase, cart count, and saved state.
-- **Soft Violet** ({colors.primary-soft}) supports disabled or secondary purchase states.
+The base canvas is a warm off-white, with true white for checkout, forms, and product tiles. Secondary neutral surfaces are faint gray-lilac rather than the default grouped-system gray. `#5A2DF4` is the unmistakable active accent; pale lavender supports disabled or low-emphasis actions without looking selected. Near-black is used for primary text and the focused cart surface. Merchant photography may cast a local tint across a large collection canvas, but must not redefine action color or text semantics.
 
-- **Canvas** ({colors.canvas}) is the shared marketplace background.
-- **Surface 1** ({colors.surface-1}) carries products, checkout, and account sections.
-- **Surface 2** ({colors.surface-2}) supports neutral brand collections.
-- **Dark Surface** ({colors.surface-dark}) carries the cart sheet.
-- **Glass** ({colors.glass}) defines floating navigation and chips.
-
-- **Ink** ({colors.ink}) carries brand, product, price, and total.
-- **Muted** ({colors.ink-muted}) carries reviews and descriptions.
-- **Subtle** ({colors.ink-subtle}) is limited to placeholders and inactive controls.
-
-Use green, amber, and red only for delivery, warning, and error states. Merchant colors may enter imagery and background sampling but must not replace shared action semantics.
+Dividers are quiet and limited to dense transactional groups. Destructive and delivery-error feedback uses red on a pale red support surface. Default iOS blue, indiscriminate gray cards, and a page-wide purple gradient would visibly break the reference.
 
 # Typography
 
-Use a neutral system sans with bold editorial headings and clear price numerals. Merchant logos remain supplied imagery, not substitute interface type.
+Use SF Pro Display for the few large collection or screen titles and SF Pro Text elsewhere. The hierarchy is compact: bold 28-point titles, 20-point section headings, medium 15-point product labels, and 13-point metadata. Price numerals may become oversized at checkout, but normal product-grid prices stay close to label scale. Headings are sentence case, left aligned, and use weight and whitespace rather than letter spacing or all caps.
 
-- `{typography.display-xl}` — 40 points — 700 — Brand shop title
-- `{typography.display-lg}` — 32 points — 700 — Home or collection title
-- `{typography.display-md}` — 26 points — 700 — Product or saved title
-- `{typography.headline}` — 22 points — 700 — Section heading
-- `{typography.card-title}` — 16 points — 600 — Merchant or product title
-- `{typography.body}` — 14 points — 400 — Price, options, and details
-- `{typography.caption}` — 10 points — 400 — Ratings, discounts, and metadata
-
-- Let brand names and product imagery lead.
-- Keep price and option labels compact.
-- Use bold large type sparingly over merchant hero imagery.
-- Keep checkout typography neutral and transaction-focused.
-
-Use SF Pro or Inter. Preserve clear numerals and compact product metadata; avoid decorative store-specific fonts in shared controls.
-
-The hierarchy must remain legible with Dynamic Type: supporting text may wrap before the primary metric, title, or action loses its role.
+Dynamic Type should allow product names and supporting metadata to wrap while preserving the image area, price, and primary action as the first scan targets. Avoid letting every text tier drift to a similar 16–18-point size.
 
 # Screen composition
 
-Use a 4 points base, 12 points screen gutters, 8–12 points product gaps, and 20–24 points between merchant collections. Floating navigation needs at least 12 points edge clearance.
+Typical screens use 12–16-point edge insets, 8–12-point gaps inside grids, and 20–24 points between major collections. Content scrolls behind or above a floating lower navigation capsule with reserved safe-area clearance.
 
-Home uses a vertical feed of large brand canvases with horizontal product strips. Brand shops and saved views use two-column grids. Product detail and checkout use one column.
+Observed archetypes include:
 
-Use generous breathing room around merchant imagery and compact spacing inside product grids. Checkout removes most atmospheric styling to reduce transaction noise.
+- An immersive launch or onboarding composition with a saturated violet field or white field and floating product cutouts.
+- A vertical commerce feed of wide rounded merchant or campaign canvases, each paired with horizontally arranged product content.
+- A dense two-column product grid where photography occupies most of each cell and metadata sits below without a heavy outer card.
+- A product detail screen with a large hero image, compact option chips, swatches, price, and a strong bottom purchase action.
+- A focused near-black cart sheet that rises over browsing content and concentrates quantity and checkout actions.
+- Clean one-column checkout, review, payment, and account forms built from grouped rows and restrained separators.
 
-Sample color from merchant photography, blur it behind content, and layer white product tiles above it. Use violet glow only around purchase actions, not as a page-wide effect.
-
-Primary iPhone screens keep the documented content grouping and vertical rhythm inside a scroll container when content exceeds the viewport. Bottom-owned actions or navigation reserve the lower safe area rather than covering content.
+Primary imagery normally owns at least half of a product card and often the majority of the upper viewport. Supporting controls cluster close to the content they change rather than forming separate dashboard cards.
 
 # Navigation appearance
 
-Use a floating pill for back, home, search, bag, and overflow. Top chips expose profile, notifications, Following, Minis, and Saved. Maintain readable contrast over changing merchant backgrounds.
-
-This section governs appearance only; product behavior and information architecture come from the approved Research and Planning artifacts.
+The principal browsing navigation is a detached frosted off-white pill with icon-led destinations, a strong violet selected state, soft shadow or blur, and 12–16 points of side and bottom clearance. Local categories and filters appear as horizontally scrolling chips. Modal and focused transactional screens use simple close or back controls without creating another decorative header. This specifies appearance only; destinations and routing come from the approved product artifacts.
 
 # Components
 
-Primary purchase actions use violet pills; Buy Now may use black. Secondary actions use translucent or white pills. Native controls must inherit these colors, blur, geometry, and typography.
+Primary actions are saturated violet, full-width where transactional, at least 52 points high, and either pill-shaped or strongly rounded. Disabled actions retain the same geometry in pale lavender. A black pill is an observed high-contrast secondary purchase treatment.
 
-Brand canvases combine merchant identity, product carousel, and Shop All. Product cards show image, price, rating, discount, and heart. Saved collections group products without introducing a new card language.
+Product cells are image-led and light on chrome: large rounded media, a compact title and price block, small rating or discount metadata, and a circular heart control. Wide merchant canvases use a larger radius and allow photography to color the surrounding field. Filter and size controls are small pills; selected options use violet or a clear filled state. Color options are material swatches rather than text-only buttons. Quantity controls are compact steppers.
 
-Search is the main discovery field. Product options use chips and swatches. Checkout groups shipping, delivery, payment, discount, total, and marketing consent into clean white rows.
-
-Delivery cards show merchant, state, and small product preview. Order progress and maps stay practical. Loading uses the violet mark without adding an ornamental full-screen state.
-
-Controls retain at least a 44-point interactive area. Pressed and disabled treatments should stay within the documented palette and hierarchy.
+Form fields and checkout rows use white fills, roughly 12-point radii, quiet dividers, and no ornamental shadows. Review controls combine a simple star row with a large rounded text area. Pressed states deepen violet or reduce opacity; loading preserves the underlying geometry instead of changing the page structure.
 
 # Imagery and icons
 
-Use merchant and product photography as the dominant visual language. Isolated products sit on white tiles; campaign imagery may fill a rounded canvas and tint its background.
+Real product photography, isolated product renders, and merchant campaign images provide the visual identity. Isolated products use contain-style framing with breathing room; campaign art can cover a broad rounded canvas. Decorative floating product cutouts are appropriate only where the source uses them, such as onboarding. Brand marks remain supplied assets.
 
-Use `contain` for isolated products and `cover` for merchant hero or campaign imagery. Sample backgrounds from imagery without reducing text contrast.
-
-When imagery is part of the documented composition, it cannot be omitted while final assets are pending. A temporary asset must preserve its placement, crop, scale, and approximate visual weight.
+Functional icons are compact, consistent, and subordinate to merchandise. Do not substitute arbitrary SF Symbols for product imagery. The observed screens do not establish a reusable authored illustration system, so no separate illustration language should be invented.
 
 # States
 
-Delivery cards show merchant, state, and small product preview. Order progress and maps stay practical. Loading uses the violet mark without adding an ornamental full-screen state.
-
-Use green, amber, and red only for delivery, warning, and error states. Merchant colors may enter imagery and background sampling but must not replace shared action semantics.
-
-Only the states documented above are specified; other states must preserve the same canvas, hierarchy, and component language without inventing a new visual system.
+Populated browsing preserves image dominance and the floating navigation capsule. Loading uses restrained violet progress without a new decorative screen. An empty cart keeps the same neutral surfaces and clear hierarchy rather than adding unrelated artwork. A non-deliverable state uses a pale red surface and red semantic emphasis while retaining the product context. Selected sizes, swatches, saved hearts, and payment rows use the same violet accent. Review and card-entry forms preserve the white transaction surface and rounded control system.
 
 # iOS adaptation
 
-- Extend the documented canvas through the iPhone safe areas while keeping readable content within appropriate insets.
-- Use a vertical `ScrollView` for content that does not fit compact heights; keep documented bottom actions and navigation clear of the home indicator.
-- Navigation, hearts, swatches, size chips, quantity controls, and purchase actions require at least 44 points targets.
-- Allow brand and product carousels to scroll horizontally. Keep floating navigation and active cart access visible while browsing.
-- Present the keyboard and system permission UI natively, then return to the same visual context.
-- Preserve semantic reading order in VoiceOver and allow text to grow with Dynamic Type.
-- Preserve the documented appearance instead of introducing an unrelated light or dark palette.
+Extend the off-white or locally tinted canvas through the safe areas, while keeping grid content inside 12–16-point insets. Use vertical `ScrollView` containers for feeds and details and horizontal scrolling for filter chips and product strips. Reserve the lower safe area for the floating navigation or purchase action so neither covers product metadata.
+
+Maintain at least 44-point hit targets for hearts, chips, swatches, steppers, close controls, and navigation icons even when their visible shapes are smaller. Keyboard presentation should move focused checkout fields and preserve the active action. VoiceOver order follows image description, product name, price, metadata, then actions. Dynamic Type may expand rows and wrap labels rather than shrinking type. Only introduce a dark appearance where the source explicitly uses the dark cart surface; do not invert the complete app speculatively.
 
 # Anti-generic checklist
 
-- Do not force every merchant into one background color.
-- Do not let sampled colors replace action semantics.
-- Do not overload floating navigation with labels.
-- Do not carry atmospheric blur into dense checkout rows.
-- Do not expose default blue platform controls.
-- Do not replace the documented canvas and surfaces with a generic grouped background and uniform white cards.
-- Do not use an unstyled `TabView`, default blue tint, or arbitrary SF Symbols when they contradict the reference.
-- Do not collapse every component to one corner radius or remove compositionally important imagery.
+- Do not replace the merchant canvases and image-heavy grids with uniform white cards.
+- Do not use default blue tint or an unstyled `TabView`.
+- Do not make every surface, field, and action share one corner radius.
+- Do not omit product imagery while waiting for final assets.
+- Do not turn checkout into a frosted or image-tinted promotional composition.
+- Do not use arbitrary SF Symbols as merchandise, brand marks, or decorative content.
+- Do not inflate metadata until it competes with product image, name, or price.
+- Do not apply the violet accent as a full-app monochrome wash.
 
 </design-context>

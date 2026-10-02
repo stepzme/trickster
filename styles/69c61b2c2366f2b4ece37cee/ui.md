@@ -3,174 +3,116 @@
 version: 1
 platform: iOS
 name: Alfa-Bank-design-analysis
-description: "A personalized banking interface where quiet off-white finance surfaces and black controls frame an exuberant layer of colorful 3D offer cards. Five persistent destinations, dense modular content, and a recurring heart motif keep a broad financial product recognizable."
+description: "A soft light financial dashboard built from pale-gray fields, large rounded white modules, compact system typography, black transactional actions, a distinctive glossy red-heart center tab, and highly varied promotional artwork kept inside bounded feed cards."
 colors:
-  primary: "#171619"
-  on-primary: "#FFFFFF"
-  brand-red: "#EE1C25"
-  accent-cyan: "#49D8E4"
-  accent-lime: "#8EEB2E"
-  accent-violet: "#9B58EE"
-  accent-orange: "#FF9B3D"
-  ink: "#171619"
-  ink-muted: "#75757B"
-  ink-subtle: "#A9A9AE"
-  canvas: "#F5F5F7"
-  surface-1: "#FFFFFF"
-  surface-2: "#ECECEF"
-  hairline: "#E1E1E5"
-  semantic-success: "#1FB66B"
-  semantic-danger: "#E8393F"
-  semantic-overlay: "#000000"
+  canvas: "#F3F3F4"
+  surface-primary: "#FFFFFF"
+  surface-secondary: "#EAEAEC"
+  accent-primary: "#111113"
+  accent-secondary: "#EF3124"
+  text-primary: "#171719"
+  text-secondary: "#74747A"
+  divider: "#E1E1E4"
+  destructive: "#D63D45"
 typography:
-  display-xl: { fontFamily: System Sans, fontSize: 42, fontWeight: 800, lineHeight: 0.98, letterSpacing: -1.2 }
-  display-lg: { fontFamily: System Sans, fontSize: 34, fontWeight: 750, lineHeight: 1.05, letterSpacing: -0.7 }
-  display-md: { fontFamily: System Sans, fontSize: 27, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.4 }
-  headline: { fontFamily: System Sans, fontSize: 22, fontWeight: 700, lineHeight: 1.18, letterSpacing: -0.2 }
-  card-title: { fontFamily: System Sans, fontSize: 15, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: System Sans, fontSize: 17, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
-  body-lg: { fontFamily: System Sans, fontSize: 16, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
-  body: { fontFamily: System Sans, fontSize: 14, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
-  body-sm: { fontFamily: System Sans, fontSize: 12, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
-  caption: { fontFamily: System Sans, fontSize: 10, fontWeight: 400, lineHeight: 1.20, letterSpacing: 0 }
-  button: { fontFamily: System Sans, fontSize: 15, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0 }
-  eyebrow: { fontFamily: System Sans, fontSize: 11, fontWeight: 650, lineHeight: 1.20, letterSpacing: 0.2 }
-  mono: { fontFamily: System Mono, fontSize: 13, fontWeight: 500, lineHeight: 1.30, letterSpacing: 0 }
-rounded: { xs: 6, sm: 10, md: 14, lg: 20, xl: 28, xxl: 34, pill: 9999, full: 9999 }
-spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
+  hero: {fontFamily: "SF Pro Display", fontSize: 36, fontWeight: 700, lineHeight: 42}
+  title: {fontFamily: "SF Pro Display", fontSize: 28, fontWeight: 700, lineHeight: 34}
+  section: {fontFamily: "SF Pro Text", fontSize: 20, fontWeight: 700, lineHeight: 25}
+  body: {fontFamily: "SF Pro Text", fontSize: 16, fontWeight: 400, lineHeight: 22}
+  label: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 600, lineHeight: 20}
+  caption: {fontFamily: "SF Pro Text", fontSize: 12, fontWeight: 400, lineHeight: 16}
+spacing:
+  screen-horizontal: 16
+  section-gap: 24
+  card-padding: 16
+  control-gap: 10
+rounded:
+  control: 14
+  card: 22
+  sheet: 30
+  pill: 999
 components:
-  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [14, 20]}
-  account-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 14 }
-  offer-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.card-title}", rounded: "{rounded.md}", padding: 14 }
-  payment-form: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 16 }
-  receipt-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 20 }
-  navigation-bar: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xs}", height: 52 }
-  footer: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: [12, 16]}
+  primary-action: {fill: "{colors.accent-primary}", text: "#FFFFFF", cornerRadius: 14, minHeight: 50}
+  finance-card: {fill: "{colors.surface-primary}", text: "{colors.text-primary}", cornerRadius: 22, padding: 16}
+  selection-row: {fill: "{colors.surface-primary}", text: "{colors.text-primary}", cornerRadius: 16, padding: 14}
+  navigation: {fill: "{colors.surface-primary}", selected: "{colors.accent-primary}", unselected: "{colors.text-secondary}", minHeight: 62}
 ---
 
 # Overview
 
-Alfa-Bank separates serious finance from playful discovery. Off-white screens, white modules, and black actions carry transactions; saturated 3D cards make offers, benefits, and tutorials unmistakable.
+Alfa Bank places serious financial information on a soft, low-contrast foundation. White account, settings, form, and history modules float on very pale gray with large rounded corners and minimal borders. Black buttons and selected controls carry transactional authority. Brand red is visible but selective, most notably in a glossy oversized heart at the center of the persistent bottom bar. Colorful campaign cards interrupt the neutral dashboard, yet their graphics remain bounded content rather than a global illustration language.
 
 # Non-negotiable visual invariants
 
-- Primary screens use Off-white canvas with white rounded modules.
-- Keep transaction actions black and explicit.
-- Use color to distinguish content, not financial state alone.
-- Preserve receipt follow-up actions.
-- Keep user personalization visible.
-- Let offer art be expressive inside bounded cards.
-- Home combines horizontal story cards, quick contacts, and stacked finance modules.
-- Benefits uses one- and two-column offer grids.
+- The operational canvas is white or very pale cool gray, with large rounded white modules and subtle tonal separation rather than strong borders.
+- Primary transactional actions are near-black rounded rectangles with white labels; ordinary selection does not default to red.
+- The persistent five-item bottom bar has a conspicuous glossy red heart in the central selected position and smaller gray or black surrounding items.
+- Financial detail screens place the balance, product, or card hero above two compact black actions and grouped white lists.
+- Home is a vertically scrolling personalized dashboard mixing account summary, horizontal people or offer rails, and stacked finance/service modules.
+- Sheets use a high rounded top, grabber, and dimmed background while retaining the same white-card language inside.
+- Promotional graphics may be loud and colorful, but remain contained within their own card boundaries and never restyle transaction forms.
 
 # Color and surfaces
 
-- **Black** ({colors.primary}): Primary actions, selected segments, and structural emphasis.
-- **Alfa Red** ({colors.brand-red}): Brand and heart emphasis.
-- **Cyan, Lime, Violet, Orange**: Promotional fields and category accents.
+White and very pale cool gray form the dominant masses. White modules sit on the gray field with little or no shadow; subtle gray dividers and grouped gutters define their edges. Disabled and loading surfaces fade toward near-white, producing deliberately low contrast. Overlays dim the whole composition with a gray-black scrim.
 
-- **Canvas** ({colors.canvas}): Default page background.
-- **Surface 1** ({colors.surface-1}): Accounts, lists, forms, and receipts.
-- **Surface 2** ({colors.surface-2}): Search, input, and grouped settings.
-- **Hairline** ({colors.hairline}): Sparse separators.
-
-- **Ink** ({colors.ink}): Balances, headings, and actions.
-- **Ink Muted** ({colors.ink-muted}): Metadata and descriptions.
-- **Ink Subtle** ({colors.ink-subtle}): Placeholder and disabled states.
-
-- **Success** ({colors.semantic-success}): Positive amounts and completed actions.
-- **Danger** ({colors.semantic-danger}): Errors and logout.
-- **Overlay** ({colors.semantic-overlay}): Receipt and context-menu scrims.
+Near-black carries titles, values, selected segments, and primary actions. Alfa red marks brand identity and the center heart but is not the default action fill. Green appears in successful transfers, positive values, cashback, and toggles. Purple, cyan, mint, orange, lilac, and other pastels belong to campaign and product cards. Default system blue or blanket red tinting would break the observed black-action and contextual-color hierarchy.
 
 # Typography
 
-- **System Sans** — all finance, navigation, chat, and settings UI.
-- **System Mono** — account fragments, codes, and aligned amounts.
+The interface uses SF-like system typography throughout. Titles are compact and bold; body and list labels are regular; secondary metadata is smaller and gray. Balances, amounts, and central product values receive the largest bold treatment. Dense history and settings rows rely on weight and alignment rather than decorative type.
 
-- `{typography.display-xl}` — 42 points — 800 — Promotional numeral
-- `{typography.display-md}` — 27 points — 700 — Balance or receipt amount
-- `{typography.headline}` — 22 points — 700 — Screen heading
-- `{typography.card-title}` — 15 points — 600 — Offer or account title
-- `{typography.body}` — 14 points — 400 — Default content
-- `{typography.caption}` — 10 points — 400 — Navigation and metadata
-- `{typography.button}` — 15 points — 600 — Actions
-
-- Keep finance copy compact and direct.
-- Let promotional art carry expressive typography.
-- Align amounts and dates for fast scanning.
-- Use black selection before adding color.
-
-Use **SF Pro**, **Inter**, or **Roboto**. Promotional art may use a custom heavy display face.
-
-The hierarchy must remain legible with Dynamic Type: supporting text may wrap before the primary metric, title, or action loses its role.
+Use SF Pro Display for balances and major headings and SF Pro Text for all operational copy. Promotional artwork may contain its own display lettering, but that does not define the app typography. Under Dynamic Type, let rows, cards, and explanations expand vertically while preserving the prominence and alignment of balance, amount, state, and main action.
 
 # Screen composition
 
-Use a 4 points base. Screen gutters are 12–16 points, card gaps 8–12 points, and dense lists use 12–14 points row padding.
+Home extends pale gray through the safe areas and begins with a compact personalized header and utilities. The vertical scroll proceeds through account or search controls, a promotional carousel, contact or transfer rail, benefit and service modules, cashback or investment cards, upcoming payments, rate and map content, and lower settings access. White modules nearly fill the width inside 12-16 point insets, with 8-12 point local gaps and larger section breaks.
 
-Home combines horizontal story cards, quick contacts, and stacked finance modules. Benefits uses one- and two-column offer grids. Transactions, chat, and settings use one column.
+Account and card detail pages place a large balance or literal product render in the upper portion, then pair two black actions before stacked grouped rows. Payments use an icon or category catalog followed by service lists. Transfer forms use one column of recipient, source, amount, suggestions, and a keyboard-safe bottom action. History combines summary cards, compact transaction rows, and filters.
 
-Keep transactional areas calm and open. Allow promotional cards to be dense internally, but separate them with generous neutral gutters.
-
-Use shadows sparingly on chrome. Let 3D objects, cropped type, and color fields provide depth in promotional content.
-
-Primary iPhone screens keep the documented content grouping and vertical rhythm inside a scroll container when content exceeds the viewport. Bottom-owned actions or navigation reserve the lower safe area rather than covering content.
+Search may use a frosted or blurred backdrop with a compact informational card. QR payment becomes a full-bleed camera surface with a rounded scanner frame and white corners. Success uses a darkened context with a centered white rounded confirmation card. Profile and settings use long grouped lists on the pale canvas.
 
 # Navigation appearance
 
-Home, Payments, Benefits, History, and Chats form the bottom bar. The active destination turns black; Home may retain the red heart motif.
+Root screens use a persistent white five-item bottom bar above the home indicator. Surrounding destinations use small gray or black line icons and labels; the selected center uses a much larger glossy red heart, creating an intentional scale break. Detail flows use a small back chevron and compact centered title without a heavy colored bar.
 
-This section governs appearance only; product behavior and information architecture come from the approved Research and Planning artifacts.
+Root top areas may show avatar, title, and small action cluster. Sheets rise from the bottom with a large white rounded top edge and centered grabber over a dim scrim. Recipient selectors and filters use compact white rows and pills inside the sheet. Native system alerts remain small centered panels over a blurred or dimmed screen.
 
 # Components
 
-Primary actions use black fill and white text. Secondary actions sit on gray or white. Color-filled actions are reserved for promotional content.
+Primary actions are near-black rounded rectangles around 50 points high with white semibold text. Disabled actions become gray but retain size and position. Finance cards use large corners, white fill, clear title or balance hierarchy, and compact local actions. Form fields and selectors use pale grouped surfaces or white rows with persistent labels and restrained icons.
 
-Account cards show balance and concise controls. Offer cards combine one claim with one visual. Receipt cards center amount and expose three follow-up actions.
+Account and history lists use icon-left rows, short primary text, optional secondary value or status, and minimal separators. Recipient and contact rails use circular avatars with short names. Payment catalogs use compact icons and labels. Filters use pills, segmented controls, or sheet rows with clear black selected emphasis.
 
-Payment inputs use pale grouped fields, source/recipient selectors, amount entry, suggestions, and a keyboard-safe submit action.
-
-Positive amounts use green. Transaction analytics combines color and text. Tutorials use illustrated cards, while system states use plain labels.
-
-Controls retain at least a 44-point interactive area. Pressed and disabled treatments should stay within the documented palette and hierarchy.
+Loading uses skeleton blocks or small circular spinners without a new surface language. Success cards center a green check, amount, and follow-up actions. The QR scanner uses a rounded overlay frame over live camera imagery. All visible compact controls retain at least 44-point hit areas.
 
 # Imagery and icons
 
-Avatar and contact photos are circular. Card art may crop a dominant 3D object, while literal payment-card renders preserve their full rounded rectangle.
+Literal bank-card renders, avatar photos, provider logos, and camera imagery preserve their recognizable form and proportions. Promotional cards vary widely: 3D numerals, flags, coins, wallets, gradients, logos, and typographic graphics. These are campaign assets, not one authored illustration system, and should remain bounded to their cards.
 
-Cover promotional card fields while preserving the dominant object. Contain literal card renders, merchant marks, and receipt evidence.
-
-When imagery is part of the documented composition, it cannot be omitted while final assets are pending. A temporary asset must preserve its placement, crop, scale, and approximate visual weight.
+Functional icons are simple monochrome gray or black glyphs. The glossy red heart is a distinctive navigation asset. Charts use restrained rings, segments, and summaries. When a sampled composition includes card art, campaign imagery, contacts, or camera content, preserve its crop, scale, and approximate color mass with a temporary raster asset rather than replacing it with arbitrary SF Symbols.
 
 # States
 
-Positive amounts use green. Transaction analytics combines color and text. Tutorials use illustrated cards, while system states use plain labels.
+Loading preserves the pale-gray and white structure while replacing content with near-white skeletons or compact red-gray spinners. Completed transfers, QR payments, and opened products use a centered white overlay card with green success mark over a dimmed context. Disabled actions turn gray without changing geometry.
 
-- **Success** ({colors.semantic-success}): Positive amounts and completed actions.
-- **Danger** ({colors.semantic-danger}): Errors and logout.
-- **Overlay** ({colors.semantic-overlay}): Receipt and context-menu scrims.
-
-Only the states documented above are specified; other states must preserve the same canvas, hierarchy, and component language without inventing a new visual system.
+Filters and recipient selection use rounded sheets. Search warnings and logout or account-change confirmation use modal panels over a scrim. QR uses a live camera state with fixed scanner frame. Populated account, transaction, and benefit states keep the same card hierarchy. No explicit empty, network-error, or native permission prompt was observed, so do not invent an unrelated decorative treatment.
 
 # iOS adaptation
 
-- Extend the documented canvas through the iPhone safe areas while keeping readable content within appropriate insets.
-- Use a vertical `ScrollView` for content that does not fit compact heights; keep documented bottom actions and navigation clear of the home indicator.
-- Maintain 44 points for navigation, contacts, payment rails, category pills, and settings rows.
-- Keep finance flows single-column. Collapse offer grids before reducing artwork legibility; horizontal category lists should scroll.
-- Present the keyboard and system permission UI natively, then return to the same visual context.
-- Preserve semantic reading order in VoiceOver and allow text to grow with Dynamic Type.
-- Preserve the documented appearance instead of introducing an unrelated light or dark palette.
+Extend pale gray, white, camera, or overlay fields through their relevant safe areas. Dashboard, accounts, history, payments, benefits, profile, and settings require vertical scrolling; reserve bottom inset for the persistent bar or sticky action. Keep literal card proportions and QR scanner geometry stable across compact and tall devices.
+
+Navigation, card actions, recipients, fields, filters, and list rows require 44-point targets. Keep the active field and black submit action reachable above the keyboard. On compact widths, collapse two-column promotional grids or stack secondary metadata before shrinking core financial values. Preserve VoiceOver order from title and balance through actions, rows, and primary CTA. The observed system is light; do not invent a dark theme without separate design evidence.
 
 # Anti-generic checklist
 
-- Do not turn every finance module into a promotional card.
-- Do not use red for ordinary selection.
-- Do not mix chat types without labels.
-- Do not hide home customization behind drag gestures alone.
-- Do not crop literal payment-card evidence.
-- Do not replace the documented canvas and surfaces with a generic grouped background and uniform white cards.
-- Do not use an unstyled `TabView`, default blue tint, or arbitrary SF Symbols when they contradict the reference.
-- Do not collapse every component to one corner radius or remove compositionally important imagery.
+- Do not replace the pale-gray dashboard and large rounded modules with a default grouped form.
+- Do not use red as the universal button or selected-control color.
+- Do not render the bottom navigation as an unstyled tab view or reduce the central glossy heart to a generic icon.
+- Do not turn every finance module into a colorful promotional card.
+- Do not apply campaign gradients, 3D graphics, or display lettering to transfer and settings surfaces.
+- Do not collapse balance, product identity, and black actions into an undifferentiated white card list.
+- Do not replace literal card art, contact photos, QR camera content, or campaign imagery with arbitrary SF Symbols.
+- Do not infer one illustration system from heterogeneous campaign cards and isolated splash artwork.
 
 </design-context>

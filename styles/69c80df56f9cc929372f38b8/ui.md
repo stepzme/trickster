@@ -3,142 +3,117 @@
 version: 1
 platform: iOS
 name: Opal-design-analysis
-description: "An immersive black focus system with translucent glass controls, mint creation accents, electric-blue permission guidance, iridescent imagery, soft neon edges, and stable thumb-level timer actions."
-colors: {primary: "#B9FFD0", on-primary: "#102018", primary-focus: "#8CE8AC", ink: "#F7F8F8", ink-muted: "#B0B2B5", ink-subtle: "#797B80", ink-tertiary: "#515359", canvas: "#000000", surface-1: "#171719", surface-2: "#242529", surface-3: "#323338", surface-4: "#404147", hairline: "#2A2B2F", hairline-strong: "#42444A", hairline-tertiary: "#585A61", inverse-canvas: "#FFFFFF", inverse-surface-1: "#F1F1F3", inverse-surface-2: "#E3E3E6", inverse-ink: "#121316", brand-secure: "#147BFF", semantic-success: "#B9FFD0", semantic-overlay: "#000000"}
+description: "An immersive near-black focus interface built from atmospheric full-screen media, translucent blurred glass panels, luminous collectible gem objects, white pill actions, compact sans-serif hierarchy, custom outline navigation, and shifting cyan-violet-mint accents emitted by content rather than a flat brand tint."
+colors:
+  canvas: "#050506"
+  surface-primary: "#191A1D"
+  surface-secondary: "#292A2F"
+  accent-primary: "#B9FFD0"
+  accent-secondary: "#5AB8FF"
+  text-primary: "#F7F8F8"
+  text-secondary: "#AEB0B5"
+  divider: "#3C3D43"
+  destructive: "#F0646A"
 typography:
-  display-xl: {fontFamily: SF Pro Display, fontSize: 36, fontWeight: 700, lineHeight: 1.06, letterSpacing: -0.8}
-  display-lg: {fontFamily: SF Pro Display, fontSize: 30, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.5}
-  display-md: {fontFamily: SF Pro Display, fontSize: 24, fontWeight: 700, lineHeight: 1.14, letterSpacing: -0.3}
-  headline: {fontFamily: SF Pro Display, fontSize: 21, fontWeight: 700, lineHeight: 1.20, letterSpacing: -0.2}
-  card-title: {fontFamily: SF Pro Text, fontSize: 16, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0}
-  subhead: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 600, lineHeight: 1.30, letterSpacing: 0}
-  body-lg: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0}
-  body: {fontFamily: SF Pro Text, fontSize: 13, fontWeight: 400, lineHeight: 1.36, letterSpacing: 0}
-  body-sm: {fontFamily: SF Pro Text, fontSize: 11, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0}
-  caption: {fontFamily: SF Pro Text, fontSize: 10, fontWeight: 400, lineHeight: 1.25, letterSpacing: 0}
-  button: {fontFamily: SF Pro Text, fontSize: 14, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0}
-  eyebrow: {fontFamily: SF Pro Text, fontSize: 10, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0.2}
-  mono: {fontFamily: SF Mono, fontSize: 11, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0}
-rounded: {xs: 8, sm: 12, md: 18, lg: 24, xl: 30, xxl: 34, pill: 9999, full: 9999}
-spacing: {xxs: 4, xs: 8, sm: 12, md: 16, lg: 20, xl: 24, xxl: 32, section: 40}
+  hero: {fontFamily: "SF Pro Display", fontSize: 38, fontWeight: 700, lineHeight: 43}
+  title: {fontFamily: "SF Pro Display", fontSize: 30, fontWeight: 700, lineHeight: 36}
+  section: {fontFamily: "SF Pro Text", fontSize: 21, fontWeight: 700, lineHeight: 26}
+  body: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 400, lineHeight: 21}
+  label: {fontFamily: "SF Pro Text", fontSize: 14, fontWeight: 600, lineHeight: 19}
+  caption: {fontFamily: "SF Pro Text", fontSize: 12, fontWeight: 400, lineHeight: 16}
+spacing:
+  screen-horizontal: 16
+  section-gap: 24
+  card-padding: 16
+  control-gap: 10
+rounded:
+  control: 18
+  card: 26
+  sheet: 30
+  pill: 999
 components:
-  button-primary: {backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: 14 18}
-  button-primary-pressed: {backgroundColor: "{colors.primary-focus}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.pill}"}
-  button-secondary: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: 12 16}
-  button-tertiary: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: 10 14}
-  content-card: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 14}
-  feature-card: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 16}
-  text-input: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: 12 14}
-  status-badge: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.pill}", padding: 3 7}
-  bottom-nav: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink-subtle}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: 8 10}
+  primary-action: {fill: "#F7F8F8", text: "#111214", cornerRadius: 999, minHeight: 52}
+  glass-panel: {fill: "translucent-charcoal", text: "{colors.text-primary}", cornerRadius: 26, padding: 16}
+  gem-card: {fill: "{colors.surface-primary}", text: "{colors.text-primary}", cornerRadius: 24, padding: 16}
+  navigation: {fill: "translucent-black", selected: "#FFFFFF", unselected: "{colors.text-secondary}", minHeight: 62}
 ---
 
 # Overview
 
-Opal frames focus as a premium immersive state through black glass, glowing atmospheric cards, stable duration controls, and restrained mint or blue emphasis.
+Opal presents focus as an immersive environment rather than a utility dashboard. Near-black, smoky gradients, cinematic moon or weather imagery, and subtle vignettes extend edge to edge. Controls float above those fields in translucent charcoal glass. Large glowing gem objects provide identity and progress, while white type and pill actions establish hierarchy. Accent color shifts with the active gem, session, badge, or media surface instead of behaving as one universal flat tint.
 
 # Non-negotiable visual invariants
 
-- The recurring color treatment uses black glass.
-- The principal image treatment uses soft neon imagery.
-- Characteristic content and controls use mint add controls.
-- The recurring color treatment uses blue instructional arrows.
-- Characteristic content and controls use translucent pills.
-- Characteristic content and controls use rounded preset cards.
-- Navigation or control chrome uses an icon-only dock.
-- Preserve the premium dark atmosphere and selective luminous emphasis.
+- Near-black or cinematic imagery fills the entire screen through both safe areas; opaque light canvases are exceptional setup states, not the default.
+- Primary cards and controls use translucent blurred charcoal glass with subtle strokes and large radii rather than flat gray rectangles.
+- A single luminous gem, mineral, milestone object, or atmospheric image often occupies the upper or central visual mass.
+- Primary actions are high-contrast white or pale-mint pills while supporting actions remain dark glass.
+- Custom bottom navigation and timer controls float over content with thin outline icons and bright-white selected emphasis.
+- Accent colors arise as emitted cyan, violet, mint, blue, amber, or pink light from objects, progress, and media rather than broad flat fills.
+- Session screens preserve large negative space and group timing, pause, break, or stop controls in the bottom third.
+- Dense setup and settings screens retain glass surfaces, rounded pills, and dark atmospheric context despite higher information density.
 
 # Color and surfaces
 
-Mint identifies creation, positive focus, and primary start states. Electric blue is used for system permission guidance and instructional emphasis.
+Black and near-black are the dominant masses, frequently modified by vertical banding, smoky blur, low-contrast vignette, or full-bleed cinematic media. Primary panels are translucent dark glass with background blur, a faint light stroke, and little conventional shadow. Some onboarding and permission choices become white or pale selected cards against the dark field.
 
-Use black as the canvas, translucent charcoal for controls, and blurred dark imagery behind focus modules.
-
-White carries timer and preset titles; cool gray supports schedules, descriptions, and inactive tools.
-
-Mint marks constructive state, blue guides setup, and amber flame indicates streak without competing with primary action.
+White carries titles, selected navigation, and primary actions. Mint or pale green communicates constructive focus and start actions. Electric blue supports setup and permission guidance. Gems and media introduce cyan, violet, magenta, lime, amber, and coral as controlled emitted light. Destructive actions use coral red. Default iOS blue applied globally, opaque gray card stacks, or broad flat accent fields would break the atmospheric system.
 
 # Typography
 
-Use SF Pro Display for focus and timer headings and SF Pro Text for controls, content, and metadata.
+Typography is a compact, confident SF-like sans. Hero and state headings are bold, centered, and approximately 30-38 points. Section titles are 21 points and semibold or bold. Body and settings copy is smaller, light gray, and often centered in onboarding but left-aligned in forms and lists. Gem and milestone labels may use short display-like uppercase treatment.
 
-- display-lg — 30 points — 700 — Hero or state
-- headline — 21 points — 700 — Section title
-- card-title — 16 points — 600 — Primary item
-- body — 13 points — 400 — Detail
-- caption — 10 points — 400 — Metadata
-
-- Lead with duration, blocked scope, schedule, or focus state.
-- Keep repeated metadata aligned and visually quieter.
-- Reserve high contrast and weight for real decisions.
-
-Use the platform sans with calm proportions and legible small schedule metadata.
-
-The hierarchy must remain legible with Dynamic Type: supporting text may wrap before the primary metric, title, or action loses its role.
+Use SF Pro Display for hero, timer, and state headings and SF Pro Text for controls, schedules, settings, and metadata. Numeric durations and streaks should use tabular figures. Under Dynamic Type, explanatory text and schedule metadata wrap before the timer, focus score, gem title, or primary action loses prominence; glass panels grow vertically instead of clipping.
 
 # Screen composition
 
-Use a 4 points base, 8–12 points internal gaps, and 16 points horizontal screen gutters.
+Onboarding stages a small top mark or step context, a bold centered heading, stacked choices or one luminous object, and a broad bottom CTA. Permission and subscription surfaces keep the same vertical pacing, with selected cards or benefit content in the middle and action at the lower safe area.
 
-Home uses horizontal preset rails and two-column soundscapes; Blocks uses a single vertical schedule list.
+Home is a long vertical composition: a large glowing gem in the upper half, progress or score copy below, horizontal rails of gem or focus cards, additional atmospheric modules, and persistent bottom navigation or timer control. The hero object and surrounding negative space establish the initial viewport; later sections become denser without losing the dark atmospheric field.
 
-Allow dark negative space around score and timer state, while preset libraries can become visually dense.
-
-Use translucent glass, blur, emitted light, and restrained neon borders; avoid conventional opaque card shadows.
-
-Primary iPhone screens keep the documented content grouping and vertical rhythm inside a scroll container when content exceeds the viewport. Bottom-owned actions or navigation reserve the lower safe area rather than covering content.
+Active sessions become full-bleed cinematic screens with timer or state in the upper-middle and glass controls grouped in the lower third. Setup, template, sleep, profile, achievement, and settings screens use stacked glass rows, section labels, pills, toggles, mini charts, and gem grids. Sheets rise over a full-screen dark overlay with a grabber and rounded top.
 
 # Navigation appearance
 
-Use five line icons on black with a subtle white glow for the active destination.
+Navigation is custom and visually light. Top controls are small circular glass buttons containing close, down, share, edit, or menu glyphs; headings may sit directly on the background without a bar container. Modal and setup screens use a compact back or close affordance at the safe-area edge.
 
-This section governs appearance only; product behavior and information architecture come from the approved Research and Planning artifacts.
+The persistent bottom bar floats over content as a translucent black-glass surface with thin outline icons. Active state is bright white, while inactive items are subdued gray. Timer actions may occupy a separate docked pill cluster. Sheets use a dark overlay and rounded glass or charcoal panel rather than an opaque system-white card, except native permission UI where observed.
 
 # Components
 
-Start Timer uses a wide translucent mint-tinted pill; Add uses compact dark pills and mint circular creation.
+Primary actions are wide white or pale-mint pills about 52 points high with dark semibold labels. Secondary actions are dark translucent pills with white or gray text. Glass panels use 24-30 point radii, background blur, faint borders, and generous but not oversized padding.
 
-Preset cards combine atmospheric art, title, benefit, schedule, and one Add action; block rows remain plain and dark.
+Home gem cards combine a glowing collectible object, short label, progress or ownership state, and compact action. Focus or session cards combine atmospheric image, title, schedule or benefit, and one local pill action. Template and setup rows use dark fields, toggles, selection chips, and section labels while retaining glass material.
 
-System permission and block selection controls should inherit glass surfaces, blue guidance, and rounded geometry.
-
-Keep loading, active timer, next start, streak, and blocked scope close to the relevant focus control.
-
-Controls retain at least a 44-point interactive area. Pressed and disabled treatments should stay within the documented palette and hierarchy.
+Profile and achievement areas use compact stat cards, mini charts, badges, and repeated gem states. Session controls use stable circular or pill buttons for pause, break, edit, and stop. Loading keeps the same glass geometry with spinner or progress label; selected choices become white or strongly outlined rather than default-blue rows.
 
 # Imagery and icons
 
-Preset imagery sits in rounded portrait cards; soundscapes use wide rounded thumbnails; primary controls are pills.
+Cinematic moon, space, mist, rain, thunder, observatory, and soundscape imagery creates session atmosphere. These are media or content art, not the stable illustration family. Crop them cover-style through the screen or rounded card, preserving a dark region for white labels and controls.
 
-Preserve luminous subjects and horizons inside rounded crops, with enough dark area for labels.
-
-When imagery is part of the documented composition, it cannot be omitted while final assets are pending. A temporary asset must preserve its placement, crop, scale, and approximate visual weight.
+A separate authored 3D gem and milestone system supplies luminous collectible objects, unlocked and locked progress states, and hero focal points. Follow illustrations.md for generation and asset integration. Functional icons are thin monochrome symbols attached to rows, tabs, pills, and circular glass buttons. Charts remain sparse line, bar, or grid data graphics. Compositionally important imagery and gems must keep their scale and light mass while final assets are pending.
 
 # States
 
-Keep loading, active timer, next start, streak, and blocked scope close to the relevant focus control.
+Loading appears as a spinner over a subscription surface or a progress message within the Home composition. Active session, break, and early-end states retain the cinematic background while changing lower control clusters and state copy. Selected onboarding or setup choices become white or strongly highlighted cards on dark.
 
-Mint marks constructive state, blue guides setup, and amber flame indicates streak without competing with primary action.
-
-Only the states documented above are specified; other states must preserve the same canvas, hierarchy, and component language without inventing a new visual system.
+Screen Time and Face ID access use native iOS permission UI or setup panels without imitation. Empty or lightweight states such as a new list, single-person leaderboard, or initial support conversation preserve glass surfaces and broad dark space. Sheets and edit panels keep the underlying context visible through dimming. No explicit error state was observed.
 
 # iOS adaptation
 
-- Extend the documented canvas through the iPhone safe areas while keeping readable content within appropriate insets.
-- Use a vertical `ScrollView` for content that does not fit compact heights; keep documented bottom actions and navigation clear of the home indicator.
-- Primary actions, navigation, cards, and contextual controls remain at least 44 points.
-- Keep timer duration, block scope, and Start fixed; reduce descriptive copy and preset previews first.
-- Present the keyboard and system permission UI natively, then return to the same visual context.
-- Preserve semantic reading order in VoiceOver and allow text to grow with Dynamic Type.
-- Preserve the documented appearance instead of introducing an unrelated light or dark palette.
+Extend black, atmospheric media, and vignette through both safe areas. Use vertical scrolling for Home, gem browsing, templates, profile, achievements, settings, and support; reserve bottom inset for floating navigation and timer docks. Active session imagery should remain full-bleed with controls protected above the home indicator.
+
+Pills, circular glass buttons, tabs, session controls, rows, and gem cards need 44-point targets. On compact widths, reduce secondary copy and grid columns before shrinking the hero gem, timer, or primary action. Preserve VoiceOver order from state and duration through controls, constraints, and next action. Dynamic Type should expand glass panels. The observed system is dark; do not substitute a generic light appearance.
 
 # Anti-generic checklist
 
-- Do not flatten atmospheric imagery into generic gradient cards.
-- Do not hide status, constraints, or secondary conditions.
-- Do not add heavy shadows around every container.
-- Do not replace the documented canvas and surfaces with a generic grouped background and uniform white cards.
-- Do not use an unstyled `TabView`, default blue tint, or arbitrary SF Symbols when they contradict the reference.
-- Do not collapse every component to one corner radius or remove compositionally important imagery.
+- Do not replace the atmospheric black field with a plain grouped background.
+- Do not flatten glass panels into opaque uniform gray cards or add heavy conventional shadows.
+- Do not use a single flat accent color where the reference relies on emitted gem and media light.
+- Do not render the bottom navigation or timer dock as an unstyled tab view or toolbar.
+- Do not replace cinematic session media or luminous gem heroes with gradients, SF Symbols, emoji, or SwiftUI shape drawings.
+- Do not mix locked stones, unlocked gems, photography, charts, and functional icons into one asset family.
+- Do not remove the large negative space surrounding timer, focus score, or hero object.
+- Do not let dense settings forms abandon the rounded glass geometry and dark context.
 
 </design-context>

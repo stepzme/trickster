@@ -3,306 +3,107 @@
 version: 1
 platform: iOS
 name: bushe-design-analysis
-description: "An editorial food-and-culture interface that combines warm white space, oversized serif headlines, compact rounded sans-serif controls, and a charcoal floating tab bar. Real food photography drives the catalog, while hand-drawn pastel characters and collage-like story cards make the home, loyalty, and table-ordering experiences feel like an independent city magazine rather than a standard delivery app."
-
+description: "A white, photography-led food commerce interface with distinctive rounded lowercase type, flat text-led lists, charcoal actions, a floating dark pill tab bar with a white inset selection, and warm custom mascot art reserved for brand, empty, rating, and modal moments."
 colors:
-  primary: "#2D2B2D"
-  on-primary: "#FFFFFF"
-  primary-soft: "#ECEAEC"
-  ink: "#242124"
-  ink-muted: "#777277"
-  ink-subtle: "#AAA5AA"
-  canvas: "#FBFAF8"
-  surface-1: "#F3F1F2"
-  surface-2: "#E8E5E7"
-  surface-dark: "#302E31"
-  hairline: "#DEDADC"
-  accent-orange: "#FF965F"
-  accent-pink: "#E9A5B5"
-  accent-lavender: "#B7B9F2"
-  accent-yellow: "#F4E89A"
-  semantic-success: "#67BD62"
-  semantic-danger: "#A83D4C"
-  semantic-overlay: "#000000"
-
+  canvas: "#FFFFFF"
+  surface-primary: "#FFFFFF"
+  surface-secondary: "#F7F6F4"
+  accent-primary: "#2B2B2B"
+  accent-secondary: "#FF8A45"
+  text-primary: "#202020"
+  text-secondary: "#777277"
+  divider: "#EDEDED"
+  destructive: "#9B3345"
 typography:
-  display-xl:
-    fontFamily: Editorial Serif
-    fontSize: 44
-    fontWeight: 400
-    lineHeight: 0.98
-    letterSpacing: -1.2
-  display-lg:
-    fontFamily: Editorial Serif
-    fontSize: 36
-    fontWeight: 400
-    lineHeight: 1.02
-    letterSpacing: -0.8
-  display-md:
-    fontFamily: Rounded Sans
-    fontSize: 28
-    fontWeight: 500
-    lineHeight: 1.10
-    letterSpacing: -0.4
-  headline:
-    fontFamily: Rounded Sans
-    fontSize: 23
-    fontWeight: 500
-    lineHeight: 1.15
-    letterSpacing: -0.2
-  card-title:
-    fontFamily: Rounded Sans
-    fontSize: 17
-    fontWeight: 500
-    lineHeight: 1.22
-    letterSpacing: 0
-  subhead:
-    fontFamily: Rounded Sans
-    fontSize: 17
-    fontWeight: 400
-    lineHeight: 1.32
-    letterSpacing: 0
-  body-lg:
-    fontFamily: Rounded Sans
-    fontSize: 16
-    fontWeight: 400
-    lineHeight: 1.42
-    letterSpacing: 0
-  body:
-    fontFamily: Rounded Sans
-    fontSize: 14
-    fontWeight: 400
-    lineHeight: 1.40
-    letterSpacing: 0
-  body-sm:
-    fontFamily: Rounded Sans
-    fontSize: 12
-    fontWeight: 400
-    lineHeight: 1.32
-    letterSpacing: 0
-  caption:
-    fontFamily: Rounded Sans
-    fontSize: 11
-    fontWeight: 400
-    lineHeight: 1.25
-    letterSpacing: 0
-  button:
-    fontFamily: Rounded Sans
-    fontSize: 15
-    fontWeight: 500
-    lineHeight: 1.20
-    letterSpacing: 0
-  eyebrow:
-    fontFamily: Rounded Sans
-    fontSize: 12
-    fontWeight: 500
-    lineHeight: 1.25
-    letterSpacing: 0.2
-  mono:
-    fontFamily: System Mono
-    fontSize: 12
-    fontWeight: 400
-    lineHeight: 1.35
-    letterSpacing: 0
-
-rounded:
-  xs: 6
-  sm: 10
-  md: 14
-  lg: 18
-  xl: 24
-  xxl: 30
-  pill: 9999
-  full: 9999
-
+  hero: {fontFamily: "SF Pro Rounded", fontSize: 36, fontWeight: 600, lineHeight: 41}
+  title: {fontFamily: "SF Pro Rounded", fontSize: 29, fontWeight: 600, lineHeight: 34}
+  section: {fontFamily: "SF Pro Rounded", fontSize: 21, fontWeight: 600, lineHeight: 26}
+  body: {fontFamily: "SF Pro Rounded", fontSize: 15, fontWeight: 400, lineHeight: 21}
+  label: {fontFamily: "SF Pro Rounded", fontSize: 15, fontWeight: 600, lineHeight: 20}
+  caption: {fontFamily: "SF Pro Rounded", fontSize: 12, fontWeight: 400, lineHeight: 16}
 spacing:
-  xxs: 4
-  xs: 8
-  sm: 12
-  md: 16
-  lg: 24
-  xl: 32
-  xxl: 48
-  section: 64
-
+  screen-horizontal: 16
+  section-gap: 24
+  card-padding: 14
+  control-gap: 10
+rounded:
+  control: 8
+  card: 12
+  sheet: 28
+  pill: 999
 components:
-  button-primary:
-    backgroundColor: "{colors.primary}"
-    textColor: "{colors.on-primary}"
-    typography: "{typography.button}"
-    rounded: "{rounded.md}"
-    padding: [14, 20]
-  intent-card:
-    backgroundColor: "{colors.surface-1}"
-    textColor: "{colors.ink}"
-    typography: "{typography.card-title}"
-    rounded: "{rounded.sm}"
-    padding: 16
-  product-card:
-    backgroundColor: "{colors.canvas}"
-    textColor: "{colors.ink}"
-    typography: "{typography.body}"
-    rounded: "{rounded.md}"
-    padding: 0
-  bottom-nav:
-    backgroundColor: "{colors.surface-dark}"
-    textColor: "{colors.on-primary}"
-    typography: "{typography.caption}"
-    rounded: "{rounded.lg}"
-    padding: 6
-  loyalty-card:
-    backgroundColor: "{colors.surface-1}"
-    textColor: "{colors.ink}"
-    typography: "{typography.body}"
-    rounded: "{rounded.md}"
-    padding: 16
-  text-input:
-    backgroundColor: "{colors.canvas}"
-    textColor: "{colors.ink}"
-    typography: "{typography.body}"
-    rounded: "{rounded.sm}"
-    padding: 12
-  navigation-bar:
-    backgroundColor: "{colors.canvas}"
-    textColor: "{colors.ink}"
-    typography: "{typography.body}"
-    rounded: "{rounded.xs}"
-    height: 52
-  footer:
-    backgroundColor: "{colors.canvas}"
-    textColor: "{colors.ink-muted}"
-    typography: "{typography.caption}"
-    rounded: "{rounded.xs}"
-    padding: [24, 16]
+  product-card: {fill: "white", image: "rounded food crop", hierarchy: "name then price", radius: 12}
+  primary-action: {fill: "charcoal", text: "white medium", radius: 8, minHeight: 50}
+  quantity-stepper: {fill: "light gray", controls: "minus count plus", radius: 8}
+  floating-navigation: {fill: "dark charcoal pill", selected: "white inset chip", center: "outlined cart with badge"}
 ---
 
 # Overview
 
-bushe merges commerce with an editorial home feed. The catalog is practical and photograph-led, while Home, Loyalty, stories, projects, and table ordering use oversized type, pastel illustration, and collage. A charcoal floating tab bar provides continuity between these modes.
+bushe is primarily a white, flat food-commerce interface. Real food photography drives catalog and product detail, while distinctive rounded lowercase type gives headings and prices a recognizable voice. Charcoal buttons and a prominent floating dark navigation pill provide the strongest UI mass. Warm orange mascot and character art appears selectively in brand, empty, rating, logout, and decorative home moments rather than replacing product evidence.
 
 # Non-negotiable visual invariants
 
-- Primary screens use Warm off-white canvas and charcoal primary controls.
-- Keep commerce practical and editorial discovery expressive.
-- Let real food photography lead catalog and basket.
-- Use serif for home and story statements.
-- Keep the charcoal tab bar consistent across core flows.
-- Reuse the pastel hand-drawn character language for guidance and loyalty.
-- Home combines a wide hero, one wide intent card, and two-column intent tiles.
-- Catalog uses a three-column category grid followed by a two-column product grid.
+- Keep white or warm off-white as the dominant page field, with color supplied mainly by food photography and selective mascot art.
+- Preserve the rounded lowercase type character and large loose headings; do not substitute an editorial serif hierarchy.
+- Let real food photography lead catalog cards and product detail, with prices immediately scannable.
+- Use charcoal for primary actions instead of a bright accent color.
+- Preserve the floating dark pill tab bar with a white inset selected item and emphasized central cart control.
+- Keep lists flat, text-led, and separated by thin pale dividers rather than nested cards.
+- Present ratings, logout, and related decisions in large-radius bottom sheets over a dim backdrop.
+- Use custom mascot/character art for sparse brand and empty moments, not throughout dense commerce screens.
 
 # Color and surfaces
 
-- **Charcoal** ({colors.primary}): Main actions, selected chips, and navigation shell.
-- **Soft Charcoal** ({colors.primary-soft}): Quiet selected and disabled surfaces.
-- **Orange** ({colors.accent-orange}): Home mascot and profile identity.
-- **Pink**, **Lavender**, and **Yellow**: Editorial illustration and seasonal feature palette.
+White is the dominant canvas; a warm near-white and pale gray support fields, secondary buttons, checkout grouping, and subtle selected areas. Charcoal fills the primary action and floating navigation shell. Warm orange identifies mascot and brand moments, while green communicates successful order progress, muted red destructive actions, and subdued gold rating emphasis.
 
-- **Canvas** ({colors.canvas}): Default warm-white page.
-- **Surface 1** ({colors.surface-1}): Intent cards, fields, basket groups, and loyalty details.
-- **Surface 2** ({colors.surface-2}): Nested controls and disabled states.
-- **Dark Surface** ({colors.surface-dark}): Floating navigation and dark-theme groups.
-- **Hairline** ({colors.hairline}): Dividers in checkout and profile.
-
-- **Ink** ({colors.ink}): Headlines, product names, amounts, and primary labels.
-- **Ink Muted** ({colors.ink-muted}): Delivery context, weight, and supporting copy.
-- **Ink Subtle** ({colors.ink-subtle}): Placeholder and disabled labels.
-
-- **Success** ({colors.semantic-success}): Delivery progress and confirmed states.
-- **Danger** ({colors.semantic-danger}): Logout, deletion, and cancellation.
-- **Overlay** ({colors.semantic-overlay}): Scrim below instructions and dialogs.
+Near-black carries headings, prices, and primary labels; medium gray carries weights, descriptions, and timestamps. Thin pale-gray dividers structure rows without creating cards. Bright generic accent buttons, glossy gradients, or tinted page backgrounds would disrupt the restrained photographic system.
 
 # Typography
 
-- **Editorial Serif** — home greeting, stories, campaign statements, and culture features.
-- **Rounded Sans** — catalog, basket, profile, actions, metadata, and navigation.
-- **System Mono** — only for receipt or technical identifiers.
+Typography is a distinctive rounded sans with open counters, high x-height, and frequent lowercase Russian headings. Major home or profile titles use roughly 29–36 points with moderate weight and generous spacing; sections use about 21 points; product names, prices, and actions use 15–17 points; metadata uses 12–13 points. Price is heavier than weight or description.
 
-- `{typography.display-xl}` — 44 points — 400 — Editorial story title
-- `{typography.display-lg}` — 36 points — 400 — Home greeting question
-- `{typography.display-md}` — 28 points — 500 — Catalog and profile title
-- `{typography.headline}` — 23 points — 500 — Checkout section
-- `{typography.card-title}` — 17 points — 500 — Intent and product title
-- `{typography.body}` — 14 points — 400 — Default interface copy
-- `{typography.caption}` — 11 points — 400 — Weight, time, and tab labels
-- `{typography.button}` — 15 points — 500 — Primary action
-
-- Use serif to create editorial pauses, not inside transactional controls.
-- Keep product metadata compact and left aligned.
-- Let title scale vary more on stories than in catalog.
-- Prefer lowercase and sentence case; avoid corporate all-caps styling.
-
-Use **Cormorant Garamond** or **Bodoni Moda** for editorial display and **Manrope**, **Onest**, or **SF Pro Rounded** for UI. Preserve open counters and moderate sans weights.
-
-The hierarchy must remain legible with Dynamic Type: supporting text may wrap before the primary metric, title, or action loses its role.
+Use SF Pro Rounded as an iOS-safe fallback. Preserve sentence case and lowercase voice rather than all caps. Under Dynamic Type, let product names, checkout labels, and menu rows wrap and grow vertically; keep price and primary action prominent. Reduce catalog columns before making text or images too small.
 
 # Screen composition
 
-Use a 4 points base. Screen gutters are 12–16 points, catalog-card gaps 6–10 points, form groups 16 points, and editorial sections 24–32 points. Floating navigation sits 12 points from side and safe-area edges.
+The home screen uses open white space, banners, and compact action tiles above the floating navigation. Catalog screens use a dense photo grid with 12–16 point outer gutters. Product detail leads with a large rounded food photograph, then name, description, options, and a sticky price/action. Checkout and profile use a single vertical column of flat rows or pale groups. Bottom sheets cover the lower portion of the screen for rating, logout, or selection.
 
-Home combines a wide hero, one wide intent card, and two-column intent tiles. Catalog uses a three-column category grid followed by a two-column product grid. Checkout and profile return to a single vertical column.
-
-Warm white space is part of the editorial voice. Keep large pauses around the home question and culture stories; use denser spacing only in catalog and basket where comparison matters.
-
-Use photographic depth, hand-drawn overlap, subtle paper-like tonal shifts, and very soft shadow. Avoid glossy surfaces and bright digital gradients.
-
-Primary iPhone screens keep the documented content grouping and vertical rhythm inside a scroll container when content exceeds the viewport. Bottom-owned actions or navigation reserve the lower safe area rather than covering content.
+Observed archetypes include logo splash, home dashboard, photo catalog and search with keyboard, product detail, checkout list/form, payment-card form, profile menu, store or address list, order receipt and status tracking, rating sheet, destructive logout/delete sheet, and a sparse empty notifications state. The floating bar and sticky actions reserve the lower safe area.
 
 # Navigation appearance
 
-Home, Catalog, Loyalty, Basket, and Profile sit inside a charcoal floating bar. The selected tab rises on a light rounded tile. Counts appear on Basket without changing tab width.
-
-This section governs appearance only; product behavior and information architecture come from the approved Research and Planning artifacts.
+The persistent navigation is a dark charcoal floating pill inset from the screen edges. Five items sit inside it; the selected item appears on a white rounded inset chip. The center cart action has a stronger circular outline and may carry a count badge. Deeper screens use compact back controls and minimal top chrome. Sheets have large rounded upper corners and a dimmed backdrop.
 
 # Components
 
-Primary actions use charcoal fill, white rounded-sans labels, and 14 points corners. Secondary actions are pale or outlined. Quantity uses a compact horizontal minus/count/plus control.
+Primary actions are full-width charcoal buttons with white medium-weight labels, approximately 8-point radii, and at least 50-point height. Secondary actions and fields use light gray fill. Product cards are visually led by rounded food photography, followed by short name and heavier price. Search uses a pale field and native keyboard context.
 
-Intent cards range from one wide illustrated banner to compact text-only tiles. Product cards lead with food photography, then name, weight, tags, and price. Loyalty uses an illustrated hero plus a white privilege card.
-
-Search is an open field with a simple icon and minimal container. Checkout groups delivery method, pickup location, promo code, and comment using pale rounded rows and clear section headings.
-
-Delivery progress uses a green vehicle marker and labeled threshold bar. Loyalty level uses explicit number, percentage, cashback, points, and progress. Order state remains textual in history and tracking.
-
-Controls retain at least a 44-point interactive area. Pressed and disabled treatments should stay within the documented palette and hierarchy.
+Delivery/self-pickup selection uses a compact segmented control. Basket quantity uses a horizontal minus/count/plus stepper. Promo entry combines a field and inline apply action. Checkout rows, payment fields, store lists, and profile menu rows remain flat with thin dividers. Rating controls appear inside a large-radius sheet; completed and awaiting-payment states use explicit text and restrained green or warning accents.
 
 # Imagery and icons
 
-Food photography fills rounded category and product tiles with subject-safe crop. Illustrations remain flat and fully visible inside pale banners or large sheets. Editorial collage may overlap images and type while preserving a clear reading column.
-
-Use cover for food cards and contain for illustrated characters. Editorial story photography may crop vertically but should retain dish and headline focal areas. Dark theme should not dim product images.
-
-When imagery is part of the documented composition, it cannot be omitted while final assets are pending. A temporary asset must preserve its placement, crop, scale, and approximate visual weight.
+Food photography is essential and must preserve honest subject-safe crops in catalog and detail. Authored mascot and character art appears in branded home cards, empty notifications, rating flowers, logout, and similar modal moments. The typographic logo remains distinct. Interface icons are thin line glyphs. Do not replace product photography with illustration or use arbitrary symbols as substitutes for the custom character assets.
 
 # States
 
-Delivery progress uses a green vehicle marker and labeled threshold bar. Loyalty level uses explicit number, percentage, cashback, points, and progress. Order state remains textual in history and tracking.
-
-- **Success** ({colors.semantic-success}): Delivery progress and confirmed states.
-- **Danger** ({colors.semantic-danger}): Logout, deletion, and cancellation.
-- **Overlay** ({colors.semantic-overlay}): Scrim below instructions and dialogs.
-
-Only the states documented above are specified; other states must preserve the same canvas, hierarchy, and component language without inventing a new visual system.
+Search exposes keyboard and filtered content without changing the white canvas. Cart and checkout show quantities, promo application, and explicit totals. Orders distinguish awaiting payment, active tracking, completion, and evaluation with text plus restrained semantic color. Empty notifications use a large centered custom character and sparse copy. Rating, logout, and deletion appear in rounded bottom sheets over a dimmed context.
 
 # iOS adaptation
 
-- Extend the documented canvas through the iPhone safe areas while keeping readable content within appropriate insets.
-- Use a vertical `ScrollView` for content that does not fit compact heights; keep documented bottom actions and navigation clear of the home indicator.
-- Keep tabs, category cards, filters, quantity controls, and checkout rows at least 44 points. Separate basket delete from quantity adjustment and primary checkout action.
-- Reduce catalog columns before shrinking text or food imagery. Stack delivery choices when labels wrap. Keep the floating tab bar as a single row and shorten low-priority labels only if unavoidable.
-- Present the keyboard and system permission UI natively, then return to the same visual context.
-- Preserve semantic reading order in VoiceOver and allow text to grow with Dynamic Type.
-- Preserve the documented appearance instead of introducing an unrelated light or dark palette.
+Extend the white or warm-white canvas through safe areas. Place catalog, checkout, profile, addresses, and order history in vertical scroll containers; inset the last content for the floating bar or sticky CTA. Keep product photography at useful aspect ratios and reduce grid columns on compact widths. Keyboard avoidance must preserve active search, promo, payment, and form controls.
+
+All tab items, product cards, quantity controls, segments, menu rows, and CTAs need at least 44-point targets. VoiceOver should announce product image description, name, price, then actions; checkout rows should expose label and value together. Dynamic Type should expand rows and bottom sheets. Do not invent an unrelated dark page theme; the dark navigation remains a contained control.
 
 # Anti-generic checklist
 
-- Do not put decorative serif inside prices or form controls.
-- Do not replace product photos with illustration.
-- Do not turn pastel accents into competing action colors.
-- Do not add glossy 3D art or heavy shadows.
-- Do not overfill editorial pages with product cards.
-- Do not replace the documented canvas and surfaces with a generic grouped background and uniform white cards.
-- Do not use an unstyled `TabView`, default blue tint, or arbitrary SF Symbols when they contradict the reference.
-- Do not collapse every component to one corner radius or remove compositionally important imagery.
+- Do not replace the floating charcoal pill with a standard full-width `TabView` bar.
+- Do not use default blue or orange for primary commerce actions; keep them charcoal.
+- Do not replace real food photos with illustrations, icons, or placeholders in visual review.
+- Do not introduce serif display type or corporate all-caps styling.
+- Do not turn flat divided lists into stacks of identical rounded cards.
+- Do not fill dense catalog and checkout screens with mascot decoration.
+- Do not substitute the mascot with emoji, SF Symbols, or SwiftUI shapes.
+- Do not add glossy gradients, heavy shadows, or oversized corner radii to every control.
 
 </design-context>

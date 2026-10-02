@@ -3,190 +3,116 @@
 version: 1
 platform: iOS
 name: Kaspi-design-analysis
-description: "A pragmatic white financial super-app defined by vivid Kaspi red outline icons, compact service grids, pale gray banking groups, full-width blue transaction actions, and commerce banners embedded directly into utility flows. The visual system favors recognition, density, and directness over decorative hierarchy."
+description: "A dense white iOS service hub organized by compact red line-icon grids, pale-gray grouped lists, restrained system typography, persistent red-selected navigation, blue transactional actions, gold account headers, and product photography that becomes dominant only inside commerce surfaces."
 colors:
-  primary: "#F14645"
-  on-primary: "#FFFFFF"
-  primary-focus: "#CE3837"
-  ink: "#222224"
-  ink-muted: "#68686D"
-  ink-subtle: "#A0A0A6"
-  ink-tertiary: "#C0C0C5"
   canvas: "#FFFFFF"
-  surface-1: "#F7F7F7"
-  surface-2: "#F0F0F1"
-  surface-3: "#E6E6E8"
-  surface-4: "#DADADD"
-  hairline: "#E8E8EA"
-  hairline-strong: "#D2D2D5"
-  hairline-tertiary: "#B7B7BC"
-  inverse-canvas: "#222224"
-  inverse-surface-1: "#343438"
-  inverse-surface-2: "#47474D"
-  inverse-ink: "#FFFFFF"
-  brand-secure: "#1188D7"
-  semantic-success: "#08B92C"
-  semantic-overlay: "#222224"
+  surface-primary: "#FFFFFF"
+  surface-secondary: "#F2F2F3"
+  accent-primary: "#F14645"
+  accent-secondary: "#1688D8"
+  text-primary: "#222224"
+  text-secondary: "#747479"
+  divider: "#E6E6E8"
+  destructive: "#D83C3C"
 typography:
-  display-xl: {fontFamily: SF Pro Display, fontSize: 36, fontWeight: 700, lineHeight: 1.05, letterSpacing: -0.9}
-  display-lg: {fontFamily: SF Pro Display, fontSize: 29, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.6}
-  display-md: {fontFamily: SF Pro Display, fontSize: 24, fontWeight: 700, lineHeight: 1.14, letterSpacing: -0.4}
-  headline: {fontFamily: SF Pro Display, fontSize: 20, fontWeight: 700, lineHeight: 1.20, letterSpacing: -0.2}
-  card-title: {fontFamily: SF Pro Text, fontSize: 16, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0}
-  subhead: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 600, lineHeight: 1.32, letterSpacing: 0}
-  body-lg: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0}
-  body: {fontFamily: SF Pro Text, fontSize: 13, fontWeight: 400, lineHeight: 1.36, letterSpacing: 0}
-  body-sm: {fontFamily: SF Pro Text, fontSize: 11, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0}
-  caption: {fontFamily: SF Pro Text, fontSize: 9, fontWeight: 400, lineHeight: 1.25, letterSpacing: 0}
-  button: {fontFamily: SF Pro Text, fontSize: 14, fontWeight: 500, lineHeight: 1.20, letterSpacing: 0}
-  eyebrow: {fontFamily: SF Pro Text, fontSize: 10, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0.2}
-  mono: {fontFamily: SF Mono, fontSize: 11, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0}
-rounded:
-  xs: 3
-  sm: 6
-  md: 10
-  lg: 14
-  xl: 18
-  xxl: 24
-  pill: 9999
-  full: 9999
+  hero: {fontFamily: "SF Pro Display", fontSize: 34, fontWeight: 700, lineHeight: 40}
+  title: {fontFamily: "SF Pro Display", fontSize: 26, fontWeight: 700, lineHeight: 32}
+  section: {fontFamily: "SF Pro Text", fontSize: 20, fontWeight: 700, lineHeight: 25}
+  body: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 400, lineHeight: 21}
+  label: {fontFamily: "SF Pro Text", fontSize: 14, fontWeight: 600, lineHeight: 19}
+  caption: {fontFamily: "SF Pro Text", fontSize: 11, fontWeight: 400, lineHeight: 15}
 spacing:
-  xxs: 4
-  xs: 8
-  sm: 12
-  md: 16
-  lg: 20
-  xl: 24
-  xxl: 32
-  section: 40
+  screen-horizontal: 16
+  section-gap: 20
+  card-padding: 14
+  control-gap: 8
+rounded:
+  control: 10
+  card: 14
+  sheet: 28
+  pill: 999
 components:
-  button-primary: {backgroundColor: "{colors.brand-secure}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 14 20}
-  button-primary-pressed: {backgroundColor: "#0874BA", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}"}
-  button-secondary: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 12 18}
-  button-tertiary: {backgroundColor: "{colors.canvas}", textColor: "{colors.primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 10 14}
-  button-inverse: {backgroundColor: "{colors.inverse-canvas}", textColor: "{colors.inverse-ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 12 18}
-  service-tile: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.sm}", padding: 8 4}
-  account-card: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 14}
-  transaction-field: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 14}
-  status-badge: {backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: 3 6}
-  navigation-bar: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.xs}", height: 50}
-  bottom-nav: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink-subtle}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: 8 10}
+  primary-action: {fill: "{colors.accent-secondary}", text: "#FFFFFF", cornerRadius: 10, minHeight: 48}
+  service-tile: {fill: "{colors.surface-primary}", text: "{colors.text-primary}", cornerRadius: 8, padding: 8}
+  account-panel: {fill: "{colors.surface-primary}", text: "{colors.text-primary}", cornerRadius: 14, padding: 16}
+  navigation: {fill: "{colors.surface-primary}", selected: "{colors.accent-primary}", unselected: "#A5A5AA", minHeight: 58}
 ---
 
 # Overview
 
-Kaspi is a dense service hub where red outline iconography provides identity and fast recognition. Banking screens shift to pale grouped forms with blue transactional actions.
+Kaspi is a high-density utility interface whose identity comes from a red line-icon language and repeated compact grouping rather than expressive typography. Home and service surfaces are predominantly white, with dense icon grids, short labels, banners, and direct rows. Financial contexts introduce pale-gray grouping, blue commit actions, and occasional gold/tan account headers. Commerce contexts become image-led, but product photography and merchant campaigns remain contained within catalog, product, order, and promotional modules.
 
 # Non-negotiable visual invariants
 
-- Primary screens use White canvas and compact four-column service grids.
-- Keep service icons consistent and recognizable.
-- Distinguish financial actions from discovery content.
-- Put amount and recipient before optional message.
-- Show clear transaction outcomes.
-- Restyle native controls to match the UI.
-- Core services use four equal columns.
-- Banking details and transfers switch to one stacked column.
+- White is the dominant full-screen mass; pale gray groups sections, search fields, lists, and forms without turning every item into a card.
+- Compact red line icons repeat across service tiles, actions, and active navigation and carry more identity than typography.
+- Dense service surfaces use regular multi-column icon grids with short labels and narrow gaps.
+- Red marks brand, category, badge, toggle, and selected-navigation emphasis; blue is reserved for primary transactional or continuation actions.
+- Financial screens transition from account summary or colored header into stacked white and pale-gray operational content.
+- Commerce screens let product photography, price, installment labels, and sticky purchase actions dominate rather than forcing the service-grid composition.
+- Bottom navigation stays visually light and persistent above the safe area, using gray inactive items and red active emphasis.
 
 # Color and surfaces
 
-- Kaspi red identifies services, tabs, labels, and marketplace emphasis.
-- Blue is reserved for committed financial actions and linked account operations.
+Most screens are white edge to edge. Very light gray creates search fields, list backgrounds, segmented controls, inactive areas, and gutters between grouped sections. White cards and sheets sit above those gray fields with subtle dividers and little or no shadow. A warm gold/tan field appears behind account summary content, with white cards rising into it.
 
-- White dominates home and services.
-- Pale gray creates form fields, transfer groups, and bank background sections.
-
-- Dark gray carries services, amounts, and headings.
-- Mid gray supports explanations and unavailable content.
-
-- Green confirms transfer success and positive repayment progress.
-- Red notification dots remain small and distinct from service icons.
+Kaspi red is the strongest recurring accent in line icons, selected tabs, badges, toggles, and small labels. Bright blue fills the main action in authentication, permissions, transfer, cart, and checkout contexts. Green is used for positive or issued state and commerce availability; yellow and green price labels belong to retail information. Destructive meaning uses darker red. Default iOS blue applied to navigation or service icons would erase the observed red/blue division.
 
 # Typography
 
-Use SF Pro throughout. Identity comes from iconography and color rather than expressive type.
+Typography is utilitarian SF-like sans throughout. Navigation titles are compact, centered, and semibold or bold. Section headings are left-aligned and heavier than the dense list and grid copy. Amounts, balances, prices, and transaction outcomes use the largest bold numeric treatment; metadata, seller details, subtitles, and tab labels are markedly smaller and gray.
 
-- display-lg — 29 points — 700 — Transaction outcome
-- display-md — 24 points — 700 — Amount or authorization step
-- headline — 20 points — 700 — Page heading
-- card-title — 16 points — 600 — Account or product title
-- body — 13 points — 400 — Form and service copy
-- caption — 9 points — 400 — Bottom navigation
-
-- Keep amounts and operation names prominent.
-- Use compact labels under service icons.
-- Keep explanatory copy short and operational.
-
-Any neutral system sans must preserve numeric clarity and compact Cyrillic metrics.
-
-The hierarchy must remain legible with Dynamic Type: supporting text may wrap before the primary metric, title, or action loses its role.
+Use SF Pro Display for large amounts and outcomes and SF Pro Text for the operational layer. Tabular figures should support price and balance comparison. Under Dynamic Type, let service labels wrap to two lines, list rows grow, and secondary commerce details move below; preserve the prominence and alignment of amount, total, price, account state, and primary action.
 
 # Screen composition
 
-Use a 4 points base, 8–12 points service spacing, and 12 points screen gutters on dense home surfaces.
+Home and services begin with compact top-safe-area chrome, then a search or context row, dense three- or four-column service grids, banners, and grouped utility modules. Content uses approximately 12-16 point side insets and tight 8-12 point gaps. Large narrative whitespace is absent; hierarchy is created by grouping and recognition.
 
-Core services use four equal columns. Banking details and transfers switch to one stacked column.
+Financial screens often use a strong account header or balance summary high in the viewport, followed by segmented controls, compact action rows, fields, and vertically stacked lists on pale gray. Transfer and payment forms become one-column compositions with amount, account or recipient, optional details, and a wide blue action above the lower safe area.
 
-Favor operational density on Home; add more space around confirmation, amount entry, and account state.
-
-Use slight tonal grouping and minimal shadow. Promotional imagery may be richer but stays inside banners.
-
-Primary iPhone screens keep the documented content grouping and vertical rhythm inside a scroll container when content exceeds the viewport. Bottom-owned actions or navigation reserve the lower safe area rather than covering content.
+Commerce catalog screens use dense image grids or horizontal rails. Product detail places a large product image across much of the upper viewport, followed by price/installment labels, seller or option controls, and persistent purchase actions. Orders and cart use compact thumbnail rows and totals. Maps make the map the dominant full-screen surface with a rounded category or result panel above the lower edge.
 
 # Navigation appearance
 
-Keep Home, QR, Messages, and Services fixed. Active state uses red; inactive icons and labels stay light gray.
+Top bars use a centered bold title with a small back chevron at left and occasional language, city, share, close, or export action at right. Search states replace the title with a wide pale-gray rounded search field. Bars are white and visually merge with the canvas rather than becoming colored headers.
 
-This section governs appearance only; product behavior and information architecture come from the approved Research and Planning artifacts.
+The persistent bottom bar is white with compact icon-label items. Inactive icons and labels are light gray; active state is red. Some commerce areas show their own visually similar five-item bar, but the appearance remains consistent. Segmented controls are shallow rounded containers with white or gray selection. Bottom sheets rise as white panels with large top corners over a dim layer; system alerts remain centered white cards.
 
 # Components
 
-Financial confirmation uses wide blue rectangles. Red is usually icon or label emphasis rather than the transaction button fill.
+Service tiles often sit directly on the white canvas rather than inside individual cards. Each uses a small red outline pictogram above or beside a short dark label; grids stay geometrically regular. List rows use a left red icon, one or two lines of text, optional value, and right chevron separated by hairlines.
 
-Home services often sit directly on white. Bank accounts and loans use white rounded cards on a pale gray canvas.
+Search fields are pale-gray rounded rectangles with a leading search glyph and compact text. Primary transaction and continuation actions are full-width blue rectangles about 48 points high with white semibold text and moderate rounding. Red controls are used for brand or local selection, not interchangeably with the blue commit action.
 
-Use filled pale-gray rows for recipient, amount, and message. Native controls must inherit Kaspi's compact radius, spacing, and clear blue action hierarchy.
-
-Success centers a green check and operation summary, followed by receipt and save options. Progress uses thin green bars within loan rows.
-
-Controls retain at least a 44-point interactive area. Pressed and disabled treatments should stay within the documented palette and hierarchy.
+Account panels are compact white cards with balance, product identity, actions, and state. Commerce components include photo tiles, price and installment badges, seller rows, chips, option selectors, quantity steppers, and sticky bottom totals/actions. Sheets and dialogs retain native proportions but follow the white, gray, red, and blue hierarchy.
 
 # Imagery and icons
 
-Product and partner photography use compact rectangular banners or cards. No expressive illustration language was observed.
+Product photography supplies most of the visual mass in marketplace grids, product detail, orders, and cart. Use cover crops for catalog and campaign imagery and contain crops where a product cutout must remain complete. Merchant logos, campaign banners, map tiles, and POI marks are separate content families and should not be combined into an invented illustration style.
 
-Use aspect-fill for campaign imagery and aspect-fit for product cutouts. Preserve embedded price and offer text safe areas.
-
-When imagery is part of the documented composition, it cannot be omitted while final assets are pending. A temporary asset must preserve its placement, crop, scale, and approximate visual weight.
+The stable icon system uses thin red line pictograms with simple recognizable metaphors. Bottom navigation and secondary utilities use related gray/red glyphs. The circular red brand mark may appear in splash, headers, or account decoration. When commerce imagery is part of a sampled composition, preserve its size, crop, and price-safe area with a temporary raster image rather than replacing it with arbitrary symbols.
 
 # States
 
-Success centers a green check and operation summary, followed by receipt and save options. Progress uses thin green bars within loan rows.
+Search focus can expose a large empty pale-gray result field, while populated search uses grouped results and tabs without changing the surrounding chrome. Selected tabs, service choices, and active switches use red. Primary enabled transactional actions use blue; disabled forms reduce contrast while keeping geometry.
 
-- Green confirms transfer success and positive repayment progress.
-- Red notification dots remain small and distinct from service icons.
-
-Only the states documented above are specified; other states must preserve the same canvas, hierarchy, and component language without inventing a new visual system.
+Observed permission explanation stays on a clean white field with direct CTA. Face ID and destructive cart confirmation use native centered alerts over a dimmed screen. Language and seller choices use rounded sheets. Order state appears locally in red for canceled and green for issued. No explicit network-error composition was observed, so do not invent an unrelated visual treatment.
 
 # iOS adaptation
 
-- Extend the documented canvas through the iPhone safe areas while keeping readable content within appropriate insets.
-- Use a vertical `ScrollView` for content that does not fit compact heights; keep documented bottom actions and navigation clear of the home indicator.
-- Service tiles, account rows, QR access, and bottom navigation retain at least 44 points hit areas.
-- Product rails scroll horizontally. Financial forms scroll vertically while the main action remains above the safe area.
-- Present the keyboard and system permission UI natively, then return to the same visual context.
-- Preserve semantic reading order in VoiceOver and allow text to grow with Dynamic Type.
-- Preserve the documented appearance instead of introducing an unrelated light or dark palette.
+Extend white, pale gray, map, or account header fields through their relevant safe areas. Dense grids, lists, catalog, products, orders, and forms require vertical scrolling; reserve lower inset for the persistent bar or sticky action. Horizontal product rails remain horizontal, while compact widths reduce columns before compressing labels or imagery beyond readability.
+
+Service tiles, rows, controls, chips, product options, and bottom items need 44-point targets even when their visible glyph is smaller. Keep the active input and blue action reachable above the keyboard. Preserve VoiceOver order from title through grouped services or financial values to actions. Dynamic Type should grow rows and grid tiles. The observed system is light; do not introduce a dark appearance without a separately designed variant.
 
 # Anti-generic checklist
 
-- Do not turn every home module into a card.
-- Do not use red and blue interchangeably.
-- Do not hide critical totals inside banners.
-- Do not add decorative illustration to banking flows.
-- Do not leave default iOS form styling unchanged.
-- Do not replace the documented canvas and surfaces with a generic grouped background and uniform white cards.
-- Do not use an unstyled `TabView`, default blue tint, or arbitrary SF Symbols when they contradict the reference.
-- Do not collapse every component to one corner radius or remove compositionally important imagery.
+- Do not wrap every service or home item in an identical white card.
+- Do not replace the repeated red line-icon system with arbitrary SF Symbols or multicolor glyphs.
+- Do not use red and blue interchangeably; preserve red identity/selection and blue transaction commitment.
+- Do not enlarge typography and spacing until the service grids lose their operational density.
+- Do not implement financial forms as default grouped forms with system-blue focus and unrelated radii.
+- Do not shrink commerce photography into decorative thumbnails on a generic utility screen.
+- Do not render the persistent bottom bar as an unstyled tab view with default tint.
+- Do not merge product photos, merchant logos, campaign banners, maps, and brand marks into a fictional illustration language.
 
 </design-context>

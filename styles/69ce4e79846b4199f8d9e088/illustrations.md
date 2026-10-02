@@ -1,29 +1,28 @@
 # Overview
 
-The illustration is the product surface: a changing low-poly world embodies focus, relaxation, movement, and energy.
+Illustration is the primary product surface: authored low-poly worlds and isolated 3D objects embody atmosphere, energy, focus, progress, and collectible states. The imagery must be created with an image-generation model, visually approved before implementation, and integrated as the approved raster asset.
 
 # Visual Style
 
-- Full-screen low-poly forests, rocks, fields, clouds, and paths.
-- Atmospheric fog, soft parallax layers, and directional sunlight.
-- Mode-specific palettes from muted forest green to luminous pink, gold, and cyan.
-- Simple geometry with cinematic depth rather than texture detail.
+Use soft low-poly 3D rendering with simplified chunky geometry, gentle faceting, atmospheric haze, and selective rim or directional light. Recurring motifs include stylized forest clusters, desert rocks, water basins, paths, watchtower-like landmarks, clouds, sun and moon discs, animal or avatar marks, orbit dots, and sculpted achievement badges. Detail comes from silhouette, depth, light, and material color rather than fine texture or line art.
 
 # Composition
 
-Maintain a readable horizon and one visual route or landmark. Reserve stable edge zones for controls and a lower corner for the active vibe tile.
+Active environments fill the complete viewport and establish a readable horizon or central landmark, while leaving stable negative-space zones at the edges for the HUD. Crop peripheral terrain, not the focal landmark. On black onboarding or achievement surfaces, isolate one authored object or badge near the center with ample darkness around it. Mode tiles use compact square crops of the same world, color, or sculpted motif.
 
 # Color and Materials
 
-Color and material rules are included in Visual Style; no additional palette relationship was documented.
+The stable shell is black or charcoal with white chrome and yellow-gold active marks. Each environment may introduce one coherent atmospheric palette: pale cyan sky, peach-pink desert, moss and olive forest, watery green, purple, or salmon. Materials are matte or softly faceted, with restrained gradients, fog, rim light, and occasional glow; avoid noisy texture and photorealistic surface detail.
 
 # Variants and States
 
-Use for every active vibe, onboarding, wallpapers, and mode previews. Conventional settings and subscription details may use plain surfaces.
+Onboarding uses isolated objects or small environmental tableaux on black. Active modes expand the same language into full-screen worlds with distinct palette and lighting. Focused, distant, interstellar, boost, normal, and rise-like states alter environment, central display word, or light without changing the illustration family. Timer overlays soften the world behind a sheet. Achievements and locked states reduce the language to sculpted badge silhouettes; wallpapers reuse full environmental compositions.
 
 # Avoid
 
-- Do not overlay large opaque panels on the world.
-- Do not mix photorealistic assets or unrelated illustration styles.
-- Preserve mode palette and edge contrast defined in `ui.md`.
-- For a new vibe, build one coherent low-poly environment with a clear horizon, restrained geometry, atmospheric depth, and a distinct but harmonious palette.
+- Generate every new illustration with an image-generation model, obtain explicit visual approval of the result, and only then integrate the approved raster asset.
+- Do not draw or approximate the illustration with SwiftUI shapes, `Canvas`, programmatic vectors, SF Symbols, or emoji.
+- Do not use stock photography, photorealistic scenery, flat cartoon art, or unrelated illustration styles.
+- Do not place multiple competing landmarks in one scene or remove the readable horizon and atmospheric depth.
+- Do not crop the focal object, cover it with opaque UI, or fill its control-safe negative space.
+- Do not reuse one palette for all modes or let texture detail overpower the large low-poly forms.

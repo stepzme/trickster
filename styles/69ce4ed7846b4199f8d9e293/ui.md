@@ -3,172 +3,121 @@
 version: 1
 platform: iOS
 name: Not-Boring-Habits-design-analysis
-description: "An immersive dark habit tracker where one central tactile object, a seven-day strip, and a 60-step visual journey turn repetition into a collectible ritual. Heavy white type, charcoal stages, and sharp yellow-orange illumination keep the interface dramatic while secondary chrome nearly disappears."
+description: "A theatrical near-black interface centered on one large tactile 3D habit object, with white and yellow-orange hierarchy, sparse floating controls, condensed technical labels, and collectible material skins that turn each screen into a dark stage."
 colors:
-  primary: "#F5B500"
-  on-primary: "#141215"
-  primary-soft: "#332B16"
-  accent: "#FF7A00"
-  accent-secondary: "#F6F6F3"
-  ink: "#F7F5F3"
-  ink-muted: "#9A969C"
-  ink-subtle: "#625F65"
-  canvas: "#1D1B1E"
-  surface-1: "#242126"
-  surface-2: "#111012"
-  hairline: "#39363B"
-  semantic-success: "#F4F4F0"
-  semantic-danger: "#EF5B5B"
-  semantic-overlay: "#000000"
+  canvas: "#000000"
+  surface-primary: "#1F1D21"
+  surface-secondary: "#2B292E"
+  accent-primary: "#FFB300"
+  accent-secondary: "#5DD9E5"
+  text-primary: "#FFFFFF"
+  text-secondary: "#8D8A91"
+  divider: "#3D3A40"
+  destructive: "#E92735"
 typography:
-  display-xl: { fontFamily: SF Pro Rounded, fontSize: 36, fontWeight: 700, lineHeight: 1.05, letterSpacing: -0.7 }
-  display-lg: { fontFamily: SF Pro Rounded, fontSize: 30, fontWeight: 700, lineHeight: 1.08, letterSpacing: -0.5 }
-  display-md: { fontFamily: SF Pro Rounded, fontSize: 26, fontWeight: 700, lineHeight: 1.12, letterSpacing: -0.3 }
-  headline: { fontFamily: SF Pro Rounded, fontSize: 22, fontWeight: 700, lineHeight: 1.18, letterSpacing: -0.2 }
-  card-title: { fontFamily: SF Pro Text, fontSize: 16, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: SF Pro Text, fontSize: 17, fontWeight: 500, lineHeight: 1.35, letterSpacing: 0 }
-  body-lg: { fontFamily: SF Pro Text, fontSize: 16, fontWeight: 400, lineHeight: 1.45, letterSpacing: 0 }
-  body: { fontFamily: SF Pro Text, fontSize: 14, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
-  body-sm: { fontFamily: SF Pro Text, fontSize: 12, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
-  caption: { fontFamily: SF Pro Text, fontSize: 10, fontWeight: 400, lineHeight: 1.20, letterSpacing: 0 }
-  button: { fontFamily: SF Pro Text, fontSize: 15, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0 }
-  eyebrow: { fontFamily: DIN Condensed, fontSize: 11, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0.4 }
-  mono: { fontFamily: SF Mono, fontSize: 12, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
-rounded: { xs: 8, sm: 12, md: 16, lg: 20, xl: 26, xxl: 32, pill: 9999, full: 9999 }
-spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
+  hero: {fontFamily: "SF Pro Rounded", fontSize: 40, fontWeight: 700, lineHeight: 44}
+  title: {fontFamily: "SF Pro Rounded", fontSize: 30, fontWeight: 700, lineHeight: 35}
+  section: {fontFamily: "Avenir Next Condensed", fontSize: 22, fontWeight: 700, lineHeight: 25}
+  body: {fontFamily: "SF Pro Text", fontSize: 16, fontWeight: 400, lineHeight: 22}
+  label: {fontFamily: "SF Pro Text", fontSize: 14, fontWeight: 600, lineHeight: 18}
+  caption: {fontFamily: "SF Mono", fontSize: 11, fontWeight: 500, lineHeight: 15}
+spacing:
+  screen-horizontal: 16
+  section-gap: 32
+  card-padding: 16
+  control-gap: 12
+rounded:
+  control: 16
+  card: 18
+  sheet: 28
+  pill: 999
 components:
-  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.md}", padding: [14, 18]}
-  feature-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 16 }
-  action-tile: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.md}", padding: 12 }
-  grouped-list: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: [8, 16]}
-  input: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body-lg}", rounded: "{rounded.md}", padding: [14, 16]}
-  navigation-bar: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xs}", height: 52 }
-  footer: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: [8, 12]}
+  primary-action: {background: "#FFB300", foreground: "#000000", radius: 999, minHeight: 56}
+  secondary-action: {background: "#FFFFFF", foreground: "#000000", radius: 999, minHeight: 52}
+  primary-card: {background: "#1F1D21", radius: 18, padding: 16}
+  navigation: {background: "transparent or charcoal circular controls", radius: 999, minTarget: 44}
 ---
 
 # Overview
 
-(Not Boring) Habits reduces daily tracking to a theatrical ritual: one habit fills the screen, one large object receives the check, and a 60-step journey rewards continuity.
+(Not Boring) Habits stages one habit or milestone at a time against near-black. A large rendered sphere, object, or miniature world normally occupies the center, while a few circular controls and a compact lower date rail frame it. White type and yellow-orange selection provide clarity; collectible graphite, glass, opal, cyan, rainbow, and industrial materials provide visual variety without changing the dark shell.
 
 # Non-negotiable visual invariants
 
-- Primary screens use Near-black immersive canvas.
-- Center one habit ritual.
-- Make progress visible as a journey.
-- Use low-poly rewards consistently.
-- Preserve the dark stage.
-- Keep the daily action immediate.
-- The main habit screen is a vertical stage: utility controls above, the object centered, and the week strip anchored low.
-- Profile, achievements, skins, and recaps use focused single-column views.
+- One authored 3D object or sphere occupies roughly 55–70% of the screen width and remains the primary focal point.
+- The near-black stage extends through the safe areas and preserves large areas of negative space around the object.
+- Yellow-orange marks the current day, active toggle, selected option, progress, or premium emphasis; default blue is absent.
+- Home-like screens use sparse floating circular controls and a compact bottom date rail rather than a conventional tab bar.
+- Typography combines large rounded statements with narrow condensed or monospaced technical labels; these roles do not collapse into one generic system style.
+- Completion, progress, skin, and achievement states change the authored object or material while keeping the surrounding shell stable.
+- Utility, premium, and account content may use dark rounded cards or sheets, but the central ritual remains an open stage.
 
 # Color and surfaces
 
-- **Journey Yellow** ({colors.primary}): Progress, selected day, and reward illumination.
-- **Fire Orange** ({colors.accent}): Milestones and dramatic depth.
-- **Stage White** ({colors.accent-secondary}): Completion control and high-contrast type.
+Black is the dominant full-screen canvas, with charcoal `#1F1D21` and `#2B292E` for sheets, cards, and recessed controls. White carries primary type and high-contrast completion marks; gray subordinates metadata. Yellow-orange from `#FFB300` to `#FFC400` provides the consistent active and selected signal. Red is reserved for destructive account actions.
 
-- **Canvas** ({colors.canvas}): Full-screen habit stage.
-- **Surface 1** ({colors.surface-1}): Sheets, premium, and profile areas.
-- **Surface 2** ({colors.surface-2}): Central ritual object and recessed controls.
-- **Hairline** ({colors.hairline}): Quiet separation.
-
-- **Ink** ({colors.ink}): Headings and primary values.
-- **Ink Muted** ({colors.ink-muted}): Supporting information.
-- **Ink Subtle** ({colors.ink-subtle}): Placeholder and inactive state.
-
-- **Success** ({colors.semantic-success}): Completed or positive state.
-- **Danger** ({colors.semantic-danger}): Error and destructive state.
-- **Overlay** ({colors.semantic-overlay}): Modal focus.
+Collectible imagery introduces local material palettes: graphite gray, bright cyan, opal pink-blue, saturated rainbow magenta/cyan/blue, and industrial orange. These colors belong to the 3D object or poster-like skin, not to generic interface chrome. Dividers are quiet charcoal. Default light grouped surfaces, system blue, or indiscriminate gradients would visibly break the reference.
 
 # Typography
 
-- **SF Pro Rounded** — motivational statements and milestones.
-- **SF Pro Text** — controls and explanatory copy.
-- **DIN Condensed** — compact labels and authored emphasis.
+Large rounded SF Pro Rounded text carries onboarding statements, habit names, and major numeric feedback. Avenir Next Condensed is an iOS-safe substitute for narrow all-caps titles, skin names, steps, and compact technical labels. SF Pro Text carries utility copy, while SF Mono suits tiny metadata. Numbers in daily progress and statistics are large, isolated, and tabular.
 
-- {typography.display-xl} — 36 points — 700 — Motivational statement
-- {typography.headline} — 22 points — 700 — Screen heading
-- {typography.card-title} — 16 points — 600 — Habit, achievement, or skin title
-- {typography.body} — 14 points — 400 — Details and forms
-- {typography.caption} — 10 points — 400 — Metadata
-- {typography.button} — 15 points — 600 — Primary action
-
-- Use one sentence as the emotional focus.
-- Keep utility labels compact and subordinate.
-- Pair a large bold statement with a narrow technical label.
-- Never crowd the central habit object.
-
-Use **Inter** or the platform system sans when the reference fonts are unavailable; preserve relative weight and scale.
-
-The hierarchy must remain legible with Dynamic Type: supporting text may wrap before the primary metric, title, or action loses its role.
+Hierarchy is created through substantial scale contrast and vertical isolation: one 30–40-point statement or number, then 14–16-point utility copy, then 11-point metadata. Dynamic Type should expand cards and sheets and wrap explanatory copy while protecting the central object, active value, and bottom date rail from overlap.
 
 # Screen composition
 
-Use a 4 points base, 16 points edge gutters, 12 points control gaps, and 16 points card padding.
+The principal composition is a vertical dark stage: two sparse circular controls near the top corners, a centered title, one large object in the middle, and a compact horizontal date rail near the bottom safe area. The object owns most of the visible width, with 16-point edge insets for chrome and generous vertical breathing room.
 
-The main habit screen is a vertical stage: utility controls above, the object centered, and the week strip anchored low. Profile, achievements, skins, and recaps use focused single-column views.
+Observed archetypes include:
 
-Treat empty dark space as part of the experience. One object or statement should dominate each state.
+- Centered onboarding statements or a single object on black, with one low pill action.
+- A main dark stage with a large habit sphere or sculpted object, sparse top controls, and a bottom date rail.
+- A completion state that preserves the stage but changes the sphere into a glassy checked object.
+- A story or step screen with a title and short paragraph above one low-poly object and a compact lower step strip.
+- A sparse calendar view made from a year label and dot matrix rather than a white calendar card.
+- Dark one-column profile or settings screens composed from restrained grouped cards.
+- A premium sheet with stacked rounded pricing choices and a persistent pill action.
+- A full-bleed poster-like skin showcase with a lower carousel of alternative material thumbnails.
 
-Use hard-edged low-poly volume, deep shadows, and a single warm key light. Functional controls remain flat and quiet.
-
-Primary iPhone screens keep the documented content grouping and vertical rhythm inside a scroll container when content exceeds the viewport. Bottom-owned actions or navigation reserve the lower safe area rather than covering content.
+Dense utility content scrolls, but the central habit stage remains fixed and compositionally open.
 
 # Navigation appearance
 
-Plus and profile sit quietly at the top; habit, calendar, journey, achievements, skins, and recaps remain shallow destinations.
-
-This section governs appearance only; product behavior and information architecture come from the approved Research and Planning artifacts.
+No conventional tab bar was observed. Primary chrome consists of a floating plus circle at the upper-left, a profile or settings circle at the upper-right, a centered title, a compact lower date rail, and a vertical-ellipsis control near the lower-right. Detail screens use a circular back control. Sheets have broad rounded tops; skin selection uses a low horizontal carousel. Selected dates and options use yellow-orange emphasis. This section defines appearance only.
 
 # Components
 
-The main check is a large circular object rather than a conventional button. Secondary actions use outlined circles or a single high-contrast white pill.
+The central habit control is a large authored sphere or object, not a conventional rectangular button. Its unchecked and completed forms preserve size and position while changing material, checkmark, light, or internal treatment. Visible supporting controls are circular with quiet charcoal fills or outlines and at least 44-point targets.
 
-Avoid conventional dashboards. Premium and profile information may use contained sheets, but the daily habit remains an open stage.
+The date rail uses evenly spaced compact day labels and circular date or check states, with yellow-orange marking the current or selected item. Daily progress appears in a dark rounded sheet with a very large central number and symmetric minus/plus controls. Achievement content uses dark square cards with authored silhouettes, rings, and reduced-contrast locked states.
 
-Keep setup and history edits linear, with large choices and minimal keyboard exposure.
-
-Show checked, missed, current repetition, milestone, locked skin, and premium state through label plus object change.
-
-Controls retain at least a 44-point interactive area. Pressed and disabled treatments should stay within the documented palette and hierarchy.
+Premium choices are stacked 16-point-radius dark cards; selection is expressed with a yellow outline or fill, not layout movement. Primary actions are 52–60-point pills. Settings toggles use yellow for on. Skin thumbnails form a compact carousel and preserve stable dimensions while the central poster changes.
 
 # Imagery and icons
 
-Place one low-poly object or miniature landscape on a dark stage with clear silhouette and strong bottom lighting. Keep text outside its visual core.
+Authored 3D objects are indispensable: faceted quest objects, glassy checked spheres, collectible material skins, sculpted badges, and achievement silhouettes create the product's main hierarchy. Central objects are contained with their silhouette, shadow, and specular or rim light intact. Poster-like skin art may fill the screen, but still leaves the lower selector legible.
 
-Contain the full 3D object and its shadow. Never crop the milestone silhouette or place controls over it.
-
-When imagery is part of the documented composition, it cannot be omitted while final assets are pending. A temporary asset must preserve its placement, crop, scale, and approximate visual weight.
+The imagery cannot be omitted while final assets are pending. A temporary or generated asset must preserve the object's 55–70% width, dark-stage contrast, lighting direction, material character, and full shadow. Functional icons remain small and quiet; SF Symbols are not substitutes for the central object, skin, or badge artwork.
 
 # States
 
-Show checked, missed, current repetition, milestone, locked skin, and premium state through label plus object change.
-
-- **Success** ({colors.semantic-success}): Completed or positive state.
-- **Danger** ({colors.semantic-danger}): Error and destructive state.
-- **Overlay** ({colors.semantic-overlay}): Modal focus.
-
-Only the states documented above are specified; other states must preserve the same canvas, hierarchy, and component language without inventing a new visual system.
+The unchecked and completed habit states preserve composition while changing the central sphere, checkmark, and illumination. A daily-progress modal introduces a large numeric value with minus/plus controls. The current date uses yellow-orange; completed dates use concise check states. Calendar history retains the sparse dot matrix. Locked achievements reduce silhouette contrast and show progress rings. Selected premium options gain a yellow outline. Skin selection changes the central material or full-screen poster while keeping the lower carousel stable. Native purchase and keyboard sheets may overlay the app temporarily.
 
 # iOS adaptation
 
-- Extend the documented canvas through the iPhone safe areas while keeping readable content within appropriate insets.
-- Use a vertical `ScrollView` for content that does not fit compact heights; keep documented bottom actions and navigation clear of the home indicator.
-- Keep every interactive control at least 44 points while preserving the reference density.
-- Preserve the central object, current habit, and today marker. Move secondary journey details into a sheet before shrinking the ritual.
-- Present the keyboard and system permission UI natively, then return to the same visual context.
-- Preserve semantic reading order in VoiceOver and allow text to grow with Dynamic Type.
-- Preserve the documented appearance instead of introducing an unrelated light or dark palette.
+Extend black through the safe areas. Keep top circular controls below the status region and the date rail above the home indicator. On smaller iPhones, preserve the central object's silhouette and primary action; reduce surrounding gaps or move secondary detail into a sheet before shrinking the object into insignificance.
+
+Use internal scrolling for profile, premium, achievements, and settings when Dynamic Type grows. Every small circular, date, carousel, stepper, and back control needs a 44-point hit area. VoiceOver should announce the habit or object state, current date, progress, then available actions. System purchase, permission, and keyboard UI remain native. Preserve the dark appearance; do not invent a light version. Reduce Motion may simplify object transitions but must retain the authored raster states.
 
 # Anti-generic checklist
 
-- Do not turn the home screen into a metric dashboard.
-- Do not introduce unrelated bright colors.
-- Do not place long copy over the central object.
-- Do not hide missed-day editing.
-- Do not use generic flat illustrations.
-- Do not replace the documented canvas and surfaces with a generic grouped background and uniform white cards.
-- Do not use an unstyled `TabView`, default blue tint, or arbitrary SF Symbols when they contradict the reference.
-- Do not collapse every component to one corner radius or remove compositionally important imagery.
+- Do not replace the central authored object with a generic progress ring, checkmark button, or emoji.
+- Do not turn the dark stage into a dashboard of metric cards.
+- Do not introduce default blue tint, a stock `TabView`, or a light grouped `Form`.
+- Do not crop the sphere, quest object, shadow, or material focal point.
+- Do not use arbitrary SF Symbols for skins, achievements, or central states.
+- Do not flatten rounded display type, condensed labels, and monospaced metadata into one hierarchy.
+- Do not fill the stage with explanatory prose or mood copy.
+- Do not apply collectible skin colors to all surrounding interface chrome.
 
 </design-context>

@@ -3,142 +3,116 @@
 version: 1
 platform: iOS
 name: Manus-AI-design-analysis
-description: "A quiet editorial AI workspace on warm gray, combining elegant serif prompts, neutral sans-serif controls, white rounded composers and task cards, black selected states, sparse blue guidance, and embedded artifact previews."
-colors: {primary: "#151515", on-primary: "#FFFFFF", primary-focus: "#000000", ink: "#1B1A1C", ink-muted: "#77747A", ink-subtle: "#A7A3AA", ink-tertiary: "#CBC7CD", canvas: "#F2F0F3", surface-1: "#FFFFFF", surface-2: "#EAE7EC", surface-3: "#E0DCE2", surface-4: "#D4CFD6", hairline: "#E2DEE4", hairline-strong: "#CCC7CE", hairline-tertiary: "#B4AEB7", inverse-canvas: "#171617", inverse-surface-1: "#29272A", inverse-surface-2: "#3B393D", inverse-ink: "#FFFFFF", brand-secure: "#078DEA", semantic-success: "#3BA66D", semantic-overlay: "#1B1A1C"}
+description: "A quiet editorial AI workspace built on a warm pale-gray field, sparse serif prompts, compact sans-serif task logs, a large white bottom composer, minimal black and blue controls, native iOS sheets, and generated artifacts that supply nearly all visual color."
+colors:
+  canvas: "#F4F2F3"
+  surface-primary: "#FFFFFF"
+  surface-secondary: "#EAE7EA"
+  accent-primary: "#171719"
+  accent-secondary: "#1787E8"
+  text-primary: "#1B1A1C"
+  text-secondary: "#77747A"
+  divider: "#DFDCE1"
+  destructive: "#C64D55"
 typography:
-  display-xl: {fontFamily: Georgia, fontSize: 36, fontWeight: 400, lineHeight: 1.06, letterSpacing: -0.8}
-  display-lg: {fontFamily: Georgia, fontSize: 30, fontWeight: 400, lineHeight: 1.10, letterSpacing: -0.6}
-  display-md: {fontFamily: Georgia, fontSize: 24, fontWeight: 400, lineHeight: 1.14, letterSpacing: -0.3}
-  headline: {fontFamily: Georgia, fontSize: 20, fontWeight: 400, lineHeight: 1.20, letterSpacing: -0.2}
-  card-title: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 600, lineHeight: 1.24, letterSpacing: 0}
-  subhead: {fontFamily: SF Pro Text, fontSize: 14, fontWeight: 600, lineHeight: 1.30, letterSpacing: 0}
-  body-lg: {fontFamily: SF Pro Text, fontSize: 14, fontWeight: 400, lineHeight: 1.42, letterSpacing: 0}
-  body: {fontFamily: SF Pro Text, fontSize: 12, fontWeight: 400, lineHeight: 1.36, letterSpacing: 0}
-  body-sm: {fontFamily: SF Pro Text, fontSize: 10, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0}
-  caption: {fontFamily: SF Pro Text, fontSize: 9, fontWeight: 400, lineHeight: 1.24, letterSpacing: 0}
-  button: {fontFamily: SF Pro Text, fontSize: 13, fontWeight: 500, lineHeight: 1.18, letterSpacing: 0}
-  eyebrow: {fontFamily: SF Pro Text, fontSize: 9, fontWeight: 600, lineHeight: 1.18, letterSpacing: 0.1}
-  mono: {fontFamily: SF Mono, fontSize: 10, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0}
-rounded: {xs: 4, sm: 8, md: 12, lg: 16, xl: 20, xxl: 26, pill: 9999, full: 9999}
-spacing: {xxs: 4, xs: 8, sm: 12, md: 16, lg: 20, xl: 24, xxl: 32, section: 40}
+  hero: {fontFamily: "Georgia", fontSize: 36, fontWeight: 400, lineHeight: 42}
+  title: {fontFamily: "Georgia", fontSize: 28, fontWeight: 400, lineHeight: 34}
+  section: {fontFamily: "SF Pro Text", fontSize: 20, fontWeight: 600, lineHeight: 25}
+  body: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 400, lineHeight: 21}
+  label: {fontFamily: "SF Pro Text", fontSize: 14, fontWeight: 600, lineHeight: 19}
+  caption: {fontFamily: "SF Pro Text", fontSize: 12, fontWeight: 400, lineHeight: 16}
+spacing:
+  screen-horizontal: 16
+  section-gap: 24
+  card-padding: 14
+  control-gap: 8
+rounded:
+  control: 12
+  card: 16
+  sheet: 28
+  pill: 999
 components:
-  button-primary: {backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.full}", padding: 13 18}
-  button-primary-pressed: {backgroundColor: "{colors.primary-focus}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.full}"}
-  button-secondary: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 12 16}
-  button-tertiary: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 10 14}
-  button-inverse: {backgroundColor: "{colors.inverse-canvas}", textColor: "{colors.inverse-ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 12 16}
-  composer: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 12}
-  task-row: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: 10 12}
-  artifact-card: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 10}
-  bottom-nav: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: 7 8}
+  primary-action: {fill: "{colors.accent-primary}", text: "#FFFFFF", cornerRadius: 999, minHeight: 44}
+  composer: {fill: "{colors.surface-primary}", text: "{colors.text-primary}", cornerRadius: 18, padding: 12}
+  task-step: {fill: "{colors.surface-secondary}", text: "{colors.text-primary}", cornerRadius: 10, padding: 12}
+  artifact-card: {fill: "{colors.surface-primary}", text: "{colors.text-primary}", cornerRadius: 14, padding: 12}
 ---
 
 # Overview
 
-Manus is an editorial AI workspace where one calm composer grows into a visible chain of thinking, tasks, and artifacts.
+Manus is defined by restraint rather than decoration. Before a task begins, a warm pale-gray canvas and large areas of empty space frame one editorial serif prompt and a substantial white composer at the bottom. As work progresses, the middle fills with compact chronological steps, status pills, tool output, and artifact previews while the composer remains the stable lower anchor. Generated websites, slides, images, and documents introduce their own colors inside clearly bounded content surfaces; the surrounding app chrome stays neutral.
 
 # Non-negotiable visual invariants
 
-- Primary screens use warm-gray canvas; serif prompts; white rounded composer; black selection; embedded artifact previews.
-- Keep task state visible.
-- Let generated artifacts lead.
-- Preserve the serif/sans contrast.
-- Style native controls into the system.
-- Home uses one centered prompt and bottom composer; task history is a list; results stack messages and artifacts.
-- Reserve large open areas before a task begins; compress only as progress and output accumulate.
+- The pre-task screen preserves a large quiet central void; it is not filled with cards, marketing copy, or decoration.
+- A high-contrast serif is reserved for the main prompt and occasional major headings, while dense controls, logs, and metadata use a compact system sans.
+- The white rounded composer is the dominant bottom-owned control and remains visually separate from the pale-gray canvas.
+- Black controls communicate primary submission, publication, or selected state; blue is limited to guidance, active work, credits, links, and focused selection.
+- Task execution grows as a chronological vertical transcript of compact steps and artifacts rather than a collection of oversized chat bubbles.
+- Generated artifacts keep their own palettes and proportions inside bounded previews; their colors do not leak into the global app chrome.
+- Native iOS alerts, document pickers, keyboards, and sheets remain visually native around the restrained workspace.
 
 # Color and surfaces
 
-Black carries selection and submission. Blue is limited to links, upgrade, guidance, and active progress.
+The main field is a warm, nearly white gray extending through the safe areas. White isolates the composer, floating suggestion cards, task cards, and artifact previews. Soft secondary gray differentiates nested steps and passive controls; thin cool-gray dividers and borders define structure without heavy shadows.
 
-Warm gray is the workspace; white isolates composer, task, artifact, and account cards.
-
-Near-black carries prompts and output; gray carries time, status, credits, and helper text.
-
-Blue means guidance or active work, green success, and red destructive account action.
+Near-black carries headings, primary text, send/stop controls, publishing actions, and selected filters. Blue appears in small, functional moments such as credits, upgrade links, active progress, focused tools, and selected theme outlines. Green is confined to completion. Red is destructive. Generated content may be colorful, but it remains content rather than a source of global UI tokens. Default system blue used everywhere would destroy the deliberately neutral hierarchy.
 
 # Typography
 
-Use a restrained serif for prompts and brand titles; use SF Pro Text for controls and task data.
+The principal prompt uses a calm editorial serif with regular weight and generous line spacing. Georgia is a suitable iOS-safe substitute. Everything operational uses SF Pro Text: compact task titles, progress labels, settings rows, timestamps, credit values, and transcript text. The contrast between a 28-36 point serif prompt and 12-15 point sans-serif interface copy is essential.
 
-- display-lg — 30 points — 400 — Central prompt
-- headline — 20 points — 400 — Task claim
-- card-title — 15 points — 600 — Task and artifact title
-- body — 12 points — 400 — Output and metadata
-- caption — 9 points — 400 — Progress and credits
-
-- Give the current question visual priority.
-- Keep progress plain and chronological.
-- Use serif sparingly outside prompts.
-
-Use Georgia for editorial display and Inter for interface text.
-
-The hierarchy must remain legible with Dynamic Type: supporting text may wrap before the primary metric, title, or action loses its role.
+Task output remains readable but dense, with semibold labels marking step and artifact boundaries. Numeric credits, durations, and small state labels use tabular figures where helpful. Under Dynamic Type, transcript rows and settings cells grow vertically; metadata wraps or moves below before the prompt, task title, or composer action loses prominence.
 
 # Screen composition
 
-Use a 4 points base, 12 points card gaps, and 12 points screen gutters.
+The empty or initial workspace places minimal controls near the top, a centered serif prompt in the upper-middle, and a large composer immediately above the keyboard or bottom safe area. The central area may remain mostly blank. Suggestion cards form a compact horizontal rail near the composer rather than occupying the whole viewport.
 
-Home uses one centered prompt and bottom composer; task history is a list; results stack messages and artifacts.
+Execution screens retain a light top bar and bottom composer while the center becomes a vertical scroll of user input, assistant text, nested gray task steps, timing, checks, and artifact cards. Spacing becomes tighter as information accumulates. Result and artifact screens may transition into a webview-like composition with a compact top bar and a full-page preview.
 
-Reserve large open areas before a task begins; compress only as progress and output accumulate.
-
-Use stacked sheets and subtle borders, not shadows or gradients.
-
-Primary iPhone screens keep the documented content grouping and vertical rhythm inside a scroll container when content exceeds the viewport. Bottom-owned actions or navigation reserve the lower safe area rather than covering content.
+History and settings use compact lists with small icons, excerpts, times, values, and chevrons. Tool/computer screens place a large preview high in the viewport, a short status/progress area below, and controls near the bottom. Profile and notification content appears in tall rounded sheets over a dark scrim; the underlying screen remains visible at the edges.
 
 # Navigation appearance
 
-Keep model and credits at top, composer at bottom, and task history one step away.
+Top chrome is compact and transparent to the current canvas: small back or close controls, a short task or model title, a credit pill, and occasional share or more icons. It does not resemble a large colored navigation bar. History uses a centered wordmark treatment with small account and utility controls at the sides and compact filters below.
 
-This section governs appearance only; product behavior and information architecture come from the approved Research and Planning artifacts.
+There is no dominant conventional tab bar in the observed core workspace. Local mode changes use compact pills, icon tabs, or sheets. Bottom sheets use a dark scrim, white rounded-top surface, grabber, and plain icon rows. Artifact previews use a webview-like back/title/share bar. Selected controls are black or blue rather than default iOS-blue throughout.
 
 # Components
 
-Primary actions are black circles or pills; secondary actions are white or gray with black text.
+The composer is a white rounded dock with multiline text, optional attachment chips, plus/tool controls, microphone, and a black circular send or stop action. It grows with content but keeps a compact internal rhythm. Suggestion cards pair a small thumbnail or icon with a short title and explanation in a horizontally scrolling row.
 
-Task rows pair a small glyph with title, excerpt, time, and status; artifacts show name, progress, and preview.
+Task steps are light-gray rounded rows with compact glyphs, labels, checks, nested actions, and elapsed-time details. They appear chronologically inside the transcript. Artifact cards use a white surface, small colored type icon, title and status, then compact black or neutral actions for preview, publish, dashboard, or settings.
 
-The composer is a white rounded field with add, tools, voice, and submit controls.
-
-Thinking, substeps, duration, and completion stay embedded chronologically in the conversation.
-
-Controls retain at least a 44-point interactive area. Pressed and disabled treatments should stay within the documented palette and hierarchy.
+Credit controls are small pills combining a sparkle mark, numeric balance, and blue action text. Settings and history rows use thin dividers or subtle cards, left icons, short primary text, muted secondary text, and a right value or chevron. Buttons remain at least 44 points tappable even when their visible circle or label is visually smaller.
 
 # Imagery and icons
 
-Generated media preserves its native aspect ratio inside rounded artifact frames; avoid unrelated illustration.
+The stable chrome uses restrained monochrome line icons and a black hand-like brand mark. Generated websites, slides, posters, images, document thumbnails, and campaign videos are content-specific and may vary widely; they are not an illustration system and must not be used to infer a single decorative style.
 
-Contain generated artifacts and preserve document or slide ratios.
-
-When imagery is part of the documented composition, it cannot be omitted while final assets are pending. A temporary asset must preserve its placement, crop, scale, and approximate visual weight.
+Artifact previews preserve document, website, slide, or image proportions inside rounded frames or full-page viewers. When a sampled screen depends on a preview, retain its placement, aspect, and approximate color mass with a temporary raster asset until the real output exists. Do not replace artifact imagery with decorative SwiftUI shapes or unrelated symbols.
 
 # States
 
-Thinking, substeps, duration, and completion stay embedded chronologically in the conversation.
+Loading appears as a small centered HUD, a spinner on an otherwise blank artifact surface, a blue thinking indicator, or compact in-transcript progress rows. Completion uses a green check and keeps the finished artifact adjacent to the status. Selected themes, filters, and publish controls use a black or blue treatment without changing the underlying neutral surfaces.
 
-Blue means guidance or active work, green success, and red destructive account action.
-
-Only the states documented above are specified; other states must preserve the same canvas, hierarchy, and component language without inventing a new visual system.
+The empty search and home states remain intentionally sparse. Sheets and native pickers dim or cover the workspace while preserving standard iOS appearance. Observed access-related UI includes native sign-in and document/photo surfaces; it is not custom-redrawn. No explicit hard error screen was observed, so error treatment should preserve the same neutral canvas and component geometry rather than invent a decorative state.
 
 # iOS adaptation
 
-- Extend the documented canvas through the iPhone safe areas while keeping readable content within appropriate insets.
-- Use a vertical `ScrollView` for content that does not fit compact heights; keep documented bottom actions and navigation clear of the home indicator.
-- Composer tools, submit, filters, artifacts, and settings remain at least 44 points.
-- Collapse tool labels before icons and stack artifact controls under previews.
-- Present the keyboard and system permission UI natively, then return to the same visual context.
-- Preserve semantic reading order in VoiceOver and allow text to grow with Dynamic Type.
-- Preserve the documented appearance instead of introducing an unrelated light or dark palette.
+Extend the warm-gray canvas through both safe areas. Keep the composer above the keyboard or home indicator and add scroll inset equal to its occupied height. Execution transcripts, history, profile, settings, and artifacts require vertical scrolling; initial empty states should not gain filler merely because a taller device provides more space.
+
+Maintain 44-point targets for composer tools, send/stop, task rows, filters, artifact actions, and sheet choices. On compact widths, collapse secondary tool labels before shrinking icons or primary actions, and move artifact buttons beneath the preview. Preserve VoiceOver order from top context through transcript and artifact to the composer. Let Dynamic Type grow rows and composer height. The observed system is light; do not invent a dark workspace without a separately defined appearance.
 
 # Anti-generic checklist
 
-- Do not fill empty space with decoration.
-- Do not hide credit cost or progress.
-- Do not over-card every message.
-- Do not make blue the dominant surface color.
-- Do not replace the documented canvas and surfaces with a generic grouped background and uniform white cards.
-- Do not use an unstyled `TabView`, default blue tint, or arbitrary SF Symbols when they contradict the reference.
-- Do not collapse every component to one corner radius or remove compositionally important imagery.
+- Do not fill the pre-task empty space with welcome prose, metric cards, or decorative imagery.
+- Do not replace the serif prompt with the same system-sans style used by controls.
+- Do not turn every transcript item into an equally prominent white chat bubble.
+- Do not make blue the dominant canvas, button, or card color.
+- Do not use an unstyled text editor, form, or generic message composer.
+- Do not flatten task steps, elapsed time, and artifact state into one undifferentiated response block.
+- Do not replace generated artifact previews with arbitrary SF Symbols or omit their visual mass.
+- Do not add a generic persistent tab bar where the observed composition uses task-local top chrome and sheets.
 
 </design-context>

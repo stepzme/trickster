@@ -1735,7 +1735,7 @@
       "AI",
       "Lifestyle"
     ],
-    "uiSummary": "A quiet editorial AI workspace on warm gray, combining elegant serif prompts, neutral sans-serif controls, white rounded composers and task cards, black selected states, sparse blue guidance, and embedded artifact previews.",
+    "uiSummary": "A quiet editorial AI workspace built on a warm pale-gray field, sparse serif prompts, compact sans-serif task logs, a large white bottom composer, minimal black and blue controls, native iOS sheets, and generated artifacts that supply nearly all visual color.",
     "illustrationSummary": null
   },
   {
@@ -1746,8 +1746,8 @@
     "categories": [
       "Social Networking"
     ],
-    "uiSummary": "A dark dating interface built from charcoal surfaces, immersive profile photography, vivid violet controls, lime compatibility signals, pink match celebrations, and bold flat relationship illustrations. It feels energetic, candid, and game-like without losing profile clarity.",
-    "illustrationSummary": "Use bold flat vector scenes with simplified human forms, cropped body parts, and symbolic relationship objects. Shapes are chunky and graphic, with minimal facial detail and playful impossible color."
+    "uiSummary": "A media-first social interface that alternates full-screen violet acquisition moments with charcoal runtime surfaces, oversized rounded profile photography, white pill actions, purple controls, lime compatibility signals, compact five-item navigation, and selective soft 3D relationship objects.",
+    "illustrationSummary": "Twinby uses a stable family of soft-volume relationship and feature objects across onboarding, tests, the profile hub, premium surfaces, and boost screens. The family includes paired butterfly or wing forms, intertwined heart loops, a wrapped document, suitcase, lightning bolt, and flame-like action objects. These images support emotional framing and feature recognition; user photography, functional line icons, provider marks, city photos, and campaign screenshots are separate visual categories. Every new illustration must be created with an image-generation model from a prompt derived from this document. The generated image requires separate visual approval before interface integration. After approval, integrate the exported raster asset into the interface. Do not recreate or approximate this authored art with SwiftUI shapes, SF Symbols, emoji, text glyphs, or programmatic gradients."
   },
   {
     "appId": "69c3b2443a50dfe0cb112782",
@@ -1757,7 +1757,7 @@
     "categories": [
       "Finance"
     ],
-    "uiSummary": "A pragmatic white financial super-app defined by vivid Kaspi red outline icons, compact service grids, pale gray banking groups, full-width blue transaction actions, and commerce banners embedded directly into utility flows. The visual system favors recognition, density, and directness over decorative hierarchy.",
+    "uiSummary": "A dense white iOS service hub organized by compact red line-icon grids, pale-gray grouped lists, restrained system typography, persistent red-selected navigation, blue transactional actions, gold account headers, and product photography that becomes dominant only inside commerce surfaces.",
     "illustrationSummary": null
   },
   {
@@ -1768,8 +1768,8 @@
     "categories": [
       "Lifestyle"
     ],
-    "uiSummary": "A black, editorial mobile interface that turns emotional tracking into a vivid four-color system. Warm white serif headlines and compact neutral sans-serif controls sit on an almost pure black canvas. Yellow, green, blue, and red represent the app's energy-and-pleasantness quadrants and recur as dimensional emotion symbols, progress rings, tool tiles, friend cards, and analytical charts. Large rounded rectangles, soft organic blobs, outlined controls, and generous negative space give the system a calm but expressive character.",
-    "illustrationSummary": "The illustration system turns emotions into friendly abstract characters and tactile geometric symbols. It is playful and humane, but stays visually integrated with the black interface and the four-color emotional model."
+    "uiSummary": "A black editorial wellbeing interface where large serif reflection prompts, quiet sans-serif controls, oversized rounded dark cards, sparse white pill actions, and luminous yellow-green-blue-red emotional geometry dominate a minimal icon-led navigation shell.",
+    "illustrationSummary": "How We Feel has a limited but coherent authored illustration family used in onboarding and selected supportive or educational surfaces. Abstract emotional characters, a book and wand, a body/cloud/lock metaphor, an outlined hand with a colored form, and dotted breathing imagery share luminous colored bodies, fine white line details, and generous black space. This family is separate from central emotion glyphs, brand marks, functional icons, charts, photography, and decorative color fields. Create any new illustration with an image-generation model using a prompt derived from this document. The generated image must receive separate visual approval before it is added to the interface. Integrate the approved output as a raster asset. Do not recreate the art with SwiftUI shapes, SF Symbols, emoji, text glyphs, Canvas drawing, or programmatic gradients."
   },
   {
     "appId": "69c61b2c2366f2b4ece37cee",
@@ -1779,8 +1779,8 @@
     "categories": [
       "Finance"
     ],
-    "uiSummary": "A personalized banking interface where quiet off-white finance surfaces and black controls frame an exuberant layer of colorful 3D offer cards. Five persistent destinations, dense modular content, and a recurring heart motif keep a broad financial product recognizable.",
-    "illustrationSummary": "Alfa-Bank uses bold 3D promotional objects, oversized type, stickers, and playful finance metaphors as the main discovery language for offers, cashback, games, and tutorials."
+    "uiSummary": "A soft light financial dashboard built from pale-gray fields, large rounded white modules, compact system typography, black transactional actions, a distinctive glossy red-heart center tab, and highly varied promotional artwork kept inside bounded feed cards.",
+    "illustrationSummary": null
   },
   {
     "appId": "69c80df56f9cc929372f38b8",
@@ -1791,8 +1791,8 @@
       "Productivity",
       "Utilities"
     ],
-    "uiSummary": "An immersive black focus system with translucent glass controls, mint creation accents, electric-blue permission guidance, iridescent imagery, soft neon edges, and stable thumb-level timer actions.",
-    "illustrationSummary": "Opal uses surreal luminous imagery to make focus states feel tangible: glowing glass orbs, misty gradients, laser-like perspective fields, dream silhouettes, rain, waves, and abstract light landscapes."
+    "uiSummary": "An immersive near-black focus interface built from atmospheric full-screen media, translucent blurred glass panels, luminous collectible gem objects, white pill actions, compact sans-serif hierarchy, custom outline navigation, and shifting cyan-violet-mint accents emitted by content rather than a flat brand tint.",
+    "illustrationSummary": "Opal uses a stable authored system of collectible 3D gems and milestone objects to make focus progress tangible. Glowing translucent minerals appear as the Home hero, detail collectibles, profile progress, and achievement-grid states; gray stones communicate locked milestones. Cinematic moon, weather, and soundscape imagery, brand marks, functional icons, charts, campaign collages, and decorative gradients are separate asset families. Generate every new gem or milestone illustration with an image-generation model from a prompt derived from this document. The result requires separate visual approval before interface integration. Integrate only the approved raster asset. Do not recreate gems with SwiftUI shapes, SF Symbols, emoji, text glyphs, Canvas drawing, shader shortcuts, or stacked programmatic gradients."
   },
   {
     "appId": "69c979a7abf76e19f2674f60",
@@ -1802,8 +1802,8 @@
     "categories": [
       "Lifestyle"
     ],
-    "uiSummary": "A warm meditation interface that pairs white content surfaces with saturated yellow, orange, purple, and pink illustration fields. Friendly editorial cards, soft curves, and oversized playback controls make wellness content feel approachable rather than clinical.",
-    "illustrationSummary": "Headspace uses expressive flat illustration as the primary emotional layer across discovery and playback."
+    "uiSummary": "A friendly wellness interface on white, animated by large warm orange-yellow illustration fields, occasional deep-purple sleep gradients, rounded pale cards, heavy conversational type, quiet three-item navigation, and blue action controls.",
+    "illustrationSummary": "Headspace uses a stable authored illustration language as the main emotional layer across onboarding, discovery, playback, checks, results, breathing, profile statistics, empty states, and modal moments. New imagery must be generated with the available image-generation model, visually approved before integration, and inserted as the approved raster asset. Do not reproduce the language with SwiftUI shapes, `Canvas`, programmatic vectors, SF Symbols, or emoji."
   },
   {
     "appId": "69ca7818a9009041d8b49715",
@@ -1813,8 +1813,8 @@
     "categories": [
       "Food and Drinks"
     ],
-    "uiSummary": "An editorial food-and-culture interface that combines warm white space, oversized serif headlines, compact rounded sans-serif controls, and a charcoal floating tab bar. Real food photography drives the catalog, while hand-drawn pastel characters and collage-like story cards make the home, loyalty, and table-ordering experiences feel like an independent city magazine rather than a standard delivery app.",
-    "illustrationSummary": "bushe uses hand-drawn characters and editorial collage to make food ordering feel like a local culture magazine. Illustration appears in intent cards, loyalty, onboarding, table ordering, projects, and seasonal features."
+    "uiSummary": "A white, photography-led food commerce interface with distinctive rounded lowercase type, flat text-led lists, charcoal actions, a floating dark pill tab bar with a white inset selection, and warm custom mascot art reserved for brand, empty, rating, and modal moments.",
+    "illustrationSummary": "bushe uses a repeatable authored mascot and character language for brand moments, empty states, ratings, logout, and selected decorative home cards. It remains secondary to real food photography in commerce. New character art must be generated with the available image-generation model, visually approved before integration, and inserted as the approved raster asset. Do not reconstruct it with SwiftUI shapes, `Canvas`, programmatic vectors, SF Symbols, or emoji."
   },
   {
     "appId": "69ca8368a325277c0456c841",
@@ -1824,7 +1824,7 @@
     "categories": [
       "Shopping, Listings & Marketplaces"
     ],
-    "uiSummary": "A visual shopping interface built from soft off-white space, frosted floating navigation, large rounded brand canvases, and a saturated violet purchase accent. Brand photography tints whole sections, while product tiles, chips, and checkout remain clean, compact, and highly rounded.",
+    "uiSummary": "An image-led commerce interface where large product photography and softly tinted merchant canvases sit above a neutral off-white system, with saturated violet actions, dense rounded controls, and a frosted floating navigation pill.",
     "illustrationSummary": null
   },
   {
@@ -1835,7 +1835,7 @@
     "categories": [
       "Travel & Transportation"
     ],
-    "uiSummary": "A map-first ride interface built from a bright violet-to-magenta action gradient, translucent white route sheets, soft lavender canvas, black active-trip panels, compact vehicle cards, and minimal list-based account screens. Map context remains visible while each next decision rises from the bottom.",
+    "uiSummary": "A map-first ride interface that layers compact white bottom sheets and floating address controls over full-screen cartography, using a vivid violet-to-magenta action gradient, bold fare hierarchy, and sparse vehicle imagery.",
     "illustrationSummary": null
   },
   {
@@ -1846,8 +1846,8 @@
     "categories": [
       "Lifestyle"
     ],
-    "uiSummary": "An immersive focus and sound interface presented as a navigable low-poly world. Full-screen landscapes shift from misty forests to luminous pastel fields, while sparse translucent controls, condensed display type, and tiny status marks keep attention on atmosphere rather than app chrome.",
-    "illustrationSummary": "The illustration is the product surface: a changing low-poly world embodies focus, relaxation, movement, and energy."
+    "uiSummary": "An immersive dark interface where full-screen low-poly worlds provide the dominant color and depth, sparse floating HUD controls frame the edges, condensed display type names each atmosphere, and yellow-gold accents punctuate otherwise minimal chrome.",
+    "illustrationSummary": "Illustration is the primary product surface: authored low-poly worlds and isolated 3D objects embody atmosphere, energy, focus, progress, and collectible states. The imagery must be created with an image-generation model, visually approved before implementation, and integrated as the approved raster asset."
   },
   {
     "appId": "69ce4ed7846b4199f8d9e293",
@@ -1857,8 +1857,8 @@
     "categories": [
       "Lifestyle"
     ],
-    "uiSummary": "An immersive dark habit tracker where one central tactile object, a seven-day strip, and a 60-step visual journey turn repetition into a collectible ritual. Heavy white type, charcoal stages, and sharp yellow-orange illumination keep the interface dramatic while secondary chrome nearly disappears.",
-    "illustrationSummary": "Illustration is the progress system: each repetition advances a miniature world and turns consistency into a collectible journey."
+    "uiSummary": "A theatrical near-black interface centered on one large tactile 3D habit object, with white and yellow-orange hierarchy, sparse floating controls, condensed technical labels, and collectible material skins that turn each screen into a dark stage.",
+    "illustrationSummary": "Illustration is the central state and reward language: a large tactile sphere, low-poly quest object, achievement badge, or collectible material skin turns each dark screen into a focused stage. Every new image must be created with an image-generation model, visually approved before implementation, and integrated as the approved raster asset."
   },
   {
     "appId": "69cfa1742f0291360a64964a",

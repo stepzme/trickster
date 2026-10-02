@@ -3,155 +3,120 @@
 version: 1
 platform: iOS
 name: WB-Taxi-design-analysis
-description: "A map-first ride interface built from a bright violet-to-magenta action gradient, translucent white route sheets, soft lavender canvas, black active-trip panels, compact vehicle cards, and minimal list-based account screens. Map context remains visible while each next decision rises from the bottom."
-
+description: "A map-first ride interface that layers compact white bottom sheets and floating address controls over full-screen cartography, using a vivid violet-to-magenta action gradient, bold fare hierarchy, and sparse vehicle imagery."
 colors:
-  primary: "#A91DFF"
-  on-primary: "#FFFFFF"
-  primary-start: "#7F25FF"
-  primary-end: "#E410F2"
-  primary-pressed: "#8A17D6"
-  ink: "#151518"
-  ink-muted: "#73737A"
-  ink-subtle: "#A7A7AE"
-  canvas: "#F4F2F8"
-  surface-1: "#FFFFFF"
-  surface-2: "#F7F6FA"
-  active-surface: "#08080A"
-  active-panel: "#222225"
-  hairline: "#E7E4EB"
-  semantic-success: "#27956A"
-  semantic-warning: "#E2A23B"
-  semantic-danger: "#E05259"
-  semantic-overlay: "#000000"
-
+  canvas: "#F4F3F8"
+  surface-primary: "#FFFFFF"
+  surface-secondary: "#EEEAF2"
+  accent-primary: "#8E24D6"
+  accent-secondary: "#B51CF2"
+  text-primary: "#151518"
+  text-secondary: "#8E8E93"
+  divider: "#E7E4EB"
+  destructive: "#EF2323"
 typography:
-  display-xl: { fontFamily: System Sans, fontSize: 38, fontWeight: 700, lineHeight: 1.05, letterSpacing: -0.7 }
-  display-lg: { fontFamily: System Sans, fontSize: 30, fontWeight: 700, lineHeight: 1.1, letterSpacing: -0.4 }
-  display-md: { fontFamily: System Sans, fontSize: 24, fontWeight: 650, lineHeight: 1.15, letterSpacing: -0.2 }
-  headline: { fontFamily: System Sans, fontSize: 19, fontWeight: 650, lineHeight: 1.22, letterSpacing: 0 }
-  card-title: { fontFamily: System Sans, fontSize: 15, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: System Sans, fontSize: 16, fontWeight: 450, lineHeight: 1.35, letterSpacing: 0 }
-  body-lg: { fontFamily: System Sans, fontSize: 16, fontWeight: 400, lineHeight: 1.42, letterSpacing: 0 }
-  body: { fontFamily: System Sans, fontSize: 14, fontWeight: 400, lineHeight: 1.4, letterSpacing: 0 }
-  body-sm: { fontFamily: System Sans, fontSize: 12, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
-  caption: { fontFamily: System Sans, fontSize: 10, fontWeight: 450, lineHeight: 1.3, letterSpacing: 0 }
-  button: { fontFamily: System Sans, fontSize: 15, fontWeight: 550, lineHeight: 1.2, letterSpacing: 0 }
-  eyebrow: { fontFamily: System Sans, fontSize: 11, fontWeight: 650, lineHeight: 1.25, letterSpacing: 0.1 }
-  mono: { fontFamily: System Mono, fontSize: 12, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
-
-rounded: { xs: 5, sm: 9, md: 13, lg: 18, xl: 24, xxl: 30, pill: 9999, full: 9999 }
-spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
-
+  hero: {fontFamily: "SF Pro Display", fontSize: 38, fontWeight: 700, lineHeight: 42}
+  title: {fontFamily: "SF Pro Display", fontSize: 28, fontWeight: 700, lineHeight: 34}
+  section: {fontFamily: "SF Pro Text", fontSize: 20, fontWeight: 600, lineHeight: 25}
+  body: {fontFamily: "SF Pro Text", fontSize: 17, fontWeight: 400, lineHeight: 22}
+  label: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 600, lineHeight: 20}
+  caption: {fontFamily: "SF Pro Text", fontSize: 13, fontWeight: 400, lineHeight: 18}
+spacing:
+  screen-horizontal: 16
+  section-gap: 24
+  card-padding: 16
+  control-gap: 12
+rounded:
+  control: 14
+  card: 16
+  sheet: 24
+  pill: 999
 components:
-  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.md}", padding: [14, 18]}
-  route-field: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: [12, 14]}
-  ride-class-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.card-title}", rounded: "{rounded.md}", padding: 12 }
-  trip-sheet: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xl}", padding: 16 }
-  active-trip-sheet: { backgroundColor: "{colors.active-surface}", textColor: "{colors.on-primary}", typography: "{typography.body}", rounded: "{rounded.xl}", padding: 16 }
+  primary-action: {background: "linear gradient #B51CF2 to #7B16DA", foreground: "#FFFFFF", radius: 16, minHeight: 54}
+  secondary-action: {background: "#FFFFFF", foreground: "#151518", radius: 14, minHeight: 48}
+  primary-card: {background: "#FFFFFF", radius: 16, padding: 16}
+  navigation: {background: "#FFFFFF", radius: 14, height: 52}
 ---
 
 # Overview
 
-WB Taxi keeps map context primary and turns each ride decision into a compact bottom sheet. Violet gradient action, translucent white layers, and a black driver-search state form the core rhythm.
+WB Taxi lets the map remain the largest surface and moves each decision into a compact white overlay. The recognisable rhythm is full-screen cartography, a floating address or search control, a rounded bottom sheet, and one vivid violet-to-magenta action. Bold fares, sparse vehicle cutouts, and functional route marks keep the interface focused rather than card-heavy.
 
 # Non-negotiable visual invariants
 
-- Keep the map visible through the ordering flow.
-- Show only the current ride decision in each sheet.
-- Use gradient for the single next action.
-- Make active search visibly distinct in black.
-- The map fills the screen.
-- Route fields sit at top or bottom; class selection uses two columns; Profile becomes a one-column service sheet.
-- Let the map provide visual space.
-- Sheets should contain only the current decision and avoid carrying unrelated account content.
+- On ride-related screens, the map fills the viewport behind controls and remains visibly legible around the active sheet.
+- The current decision is concentrated in one white bottom sheet with a 20–24-point top radius, not distributed across dashboard cards.
+- A violet-to-magenta treatment marks the single primary action; secondary controls remain neutral.
+- Pickup pins, destination marks, and route lines use the same purple family and read clearly over map tiles.
+- Address controls float near the top edge while fare or confirmation content is anchored to the bottom safe area.
+- Ride options are compact cards with a strong fare and small contained vehicle image rather than large lifestyle photography.
+- Account, payment, and support surfaces stay pale and list-like, retaining the same rounded control geometry without imitating the map composition.
 
 # Color and surfaces
 
-Use a violet-to-magenta gradient for Order, Continue, and active pickup labels. Keep secondary controls black, white, or neutral gray.
+Map tiles form the base on ride screens. White is the primary overlay surface for route fields, fare cards, and sheets; pale lavender-gray is the canvas for non-map utility screens. The main accent moves between route purple `#8E24D6` and a brighter magenta-violet gradient from approximately `#B51CF2` to `#7B16DA`. Use that color mass for the principal action, selected payment, route marks, and focused controls, not for every row.
 
-Use the map as the base, translucent white route fields and sheets above it, pale lavender for profile screens, and black for active driver search.
-
-Use near-black for addresses and ride details, medium gray for hints, and white on gradient or black active-trip surfaces.
-
-Use green for successful payment or location confirmation, amber for delayed matching, red for cancellation or route failure, and violet for neutral progress.
+Near-black carries addresses, fares, and headings; medium gray carries placeholders and helper text. Hairlines are faint and mainly separate service rows. Red is reserved for destructive account and cancellation states. Dimmed black scrims support modal sheets. Default iOS blue or an opaque full-screen purple background would break the observed system.
 
 # Typography
 
-Use a modern system sans with clear Cyrillic address forms and tabular prices.
+Use SF Pro with bold 28-point screen titles, 20-point sheet headings, 15–17-point address and action text, and 13-point metadata. Fares can scale toward 28–38 points and use tabular numerals, creating a clear numeric focal point. Labels remain sentence case and left aligned. Supporting instructions are lighter and wrap beneath the relevant field rather than forming standalone prose blocks.
 
-Use 24–30 points onboarding headings, 19 points sheet headings, 14–16 points addresses and actions, and 10–12 points class or route metadata.
-
-Prioritize pickup, destination, class, price, and next action. Keep map labels and secondary explanations lighter.
-
-Use SF Pro or Inter with 600–700 headings and regular body weights.
-
-The hierarchy must remain legible with Dynamic Type: supporting text may wrap before the primary metric, title, or action loses its role.
+Dynamic Type should expand sheet height and wrap address details before reducing map labels, fare prominence, or the primary action. Preserve visible contrast between the fare or title, row label, and helper text.
 
 # Screen composition
 
-Use a 4 points base, 12–16 points sheet padding, 8 points gaps between route rows, and 12 points between ride-class cards.
+Map screens are full bleed. Floating controls keep roughly 12–16 points from the horizontal edges and safe-area top. The active bottom sheet uses 16-point internal padding, 8–12-point row gaps, and a 20–24-point top radius. Content outside map contexts uses a pale full-screen canvas with a single column of white rows or a focused form.
 
-The map fills the screen. Route fields sit at top or bottom; class selection uses two columns; Profile becomes a one-column service sheet.
+Observed archetypes include:
 
-Let the map provide visual space. Sheets should contain only the current decision and avoid carrying unrelated account content.
+- A clean login or account form with broad rounded fields and one gradient completion action.
+- A full-screen map with a floating top address/search pill, profile control, route pin, and low bottom sheet.
+- An address search overlay with stacked pickup and destination fields followed by plain result rows.
+- A selection sheet with compact fare cards, small contained car images, and a full-width bottom action.
+- Focused payment, cancellation, settings, and delete-confirmation sheets over a dimmed or retained context.
+- A tall support-chat surface with a sparse message area and anchored composer.
+- Isolated branded launch or mandatory-update artwork on an otherwise simple centered screen.
 
-Use a single glossy matching bubble or light bloom around the pickup pin during driver search. Keep all other depth functional.
-
-Primary iPhone screens keep the documented content grouping and vertical rhythm inside a scroll container when content exceeds the viewport. Bottom-owned actions or navigation reserve the lower safe area rather than covering content.
+The map remains the primary visual mass; sheets normally occupy only the lower portion until a task requires a focused, taller modal.
 
 # Navigation appearance
 
-There is no persistent tab bar. A profile shortcut on the map opens history, payment, settings, support, and app information.
-
-This section governs appearance only; product behavior and information architecture come from the approved Research and Planning artifacts.
+No persistent tab bar was observed. Map navigation is composed from a floating top address control, a compact circular profile button, and bottom-sheet actions. Back and close controls are simple, high-contrast icons placed within the current surface. Sheets use a small centered drag handle and rounded top corners. This defines visual appearance only; routes and destinations belong to the approved product artifacts.
 
 # Components
 
-The primary action is a full-width violet gradient rectangle with rounded corners. Secondary close or cancel controls are white, gray, or charcoal. Native controls must inherit the gradient, radius, and type hierarchy.
+The primary button is a full-width rounded rectangle, about 54 points high, with a left-to-right magenta-violet gradient, white semibold label, and 14–18-point radius. Pressed state may deepen or compress the gradient; disabled state lowers saturation while preserving geometry. Secondary buttons use white, pale gray, or charcoal fills.
 
-Route details use one white rounded sheet. Profile uses grouped full-width rows with light dividers and no promotional card grid.
+Address fields are broad white rounded rows with compact leading location marks and clear primary/secondary text. Fare cards use white surfaces, approximately 16-point radii, a bold price, a compact service label, and a small side-view vehicle image. Selected cards receive a purple border, tint, or mark without changing their size.
 
-Pickup and destination are large rounded rows over the map. Payment and driver note open focused sheets with one clear completion action.
-
-Use map pins, pickup label, route-building feedback, driver-search bubble, cancellation state, payment selection, and support status in direct context.
-
-Controls retain at least a 44-point interactive area. Pressed and disabled treatments should stay within the documented palette and hierarchy.
+Payment and cancellation choices use full-width rows with radio or check states. Settings and profile screens use quiet grouped rows and thin separators rather than nested cards. Destructive confirmation uses red only for the destructive action. Map controls remain compact visually but keep 44-point hit regions.
 
 # Imagery and icons
 
-Vehicle images are isolated side views inside white cards. Maps remain uncropped beneath sheets; onboarding graphics stay in a single wide banner.
+Native-looking map tiles, route lines, and location pins carry most of the visual information. Vehicle imagery is small, isolated, and contained within fare cards. Decorative branded artwork appears on a few launch or update screens but does not form a repeatable authored illustration system. Functional symbols should be restrained and consistent; arbitrary icon decoration would compete with the map.
 
-Maps fill with native zoom and pan. Use `contain` for vehicle cutouts and `cover` only for a rare onboarding or regional banner.
-
-When imagery is part of the documented composition, it cannot be omitted while final assets are pending. A temporary asset must preserve its placement, crop, scale, and approximate visual weight.
+Do not omit the map, car cutouts, or route marks when they define the sampled composition. Use realistic placeholder assets with the same crop and scale if final imagery is unavailable.
 
 # States
 
-Use map pins, pickup label, route-building feedback, driver-search bubble, cancellation state, payment selection, and support status in direct context.
-
-Use green for successful payment or location confirmation, amber for delayed matching, red for cancellation or route failure, and violet for neutral progress.
-
-Only the states documented above are specified; other states must preserve the same canvas, hierarchy, and component language without inventing a new visual system.
+The base ordering state shows an unobstructed map with floating controls. Route-building and selected-location states add purple pins and a clear polyline while retaining the same overlays. Selected fare and payment rows use purple emphasis. Cancellation uses a focused radio-list sheet. Card-binding failure appears as concise feedback without replacing the entire screen. Destructive profile deletion uses a dimmed scrim and red action. Empty support chat remains deliberately sparse. Mandatory update is a centered branded-art state with one clear action.
 
 # iOS adaptation
 
-- Extend the documented canvas through the iPhone safe areas while keeping readable content within appropriate insets.
-- Use a vertical `ScrollView` for content that does not fit compact heights; keep documented bottom actions and navigation clear of the home indicator.
-- Map pins, location fields, ride-class cards, profile shortcut, payment, note, order, and cancellation controls require at least 44 points targets.
-- Keep pickup, destination, selected class, price, and order action visible. Collapse payment, note, support, and settings into dedicated sheets.
-- Present the keyboard and system permission UI natively, then return to the same visual context.
-- Preserve semantic reading order in VoiceOver and allow text to grow with Dynamic Type.
-- Preserve the documented appearance instead of introducing an unrelated light or dark palette.
+Allow the map to extend beneath both safe areas, but keep interactive controls clear of the status bar and home indicator. Anchor sheets with detents or content-driven height so smaller iPhones retain visible map context whenever the task allows. Use scroll containers inside tall sheets and utility screens; never let a sheet exceed compact height without internal scrolling.
+
+All pins, close controls, fare cards, payment rows, and actions require at least 44-point targets. Move focused address and chat inputs above the keyboard without losing the current selection. VoiceOver should read current address, destination, fare choice, price, and primary action in that order. Dynamic Type expands rows and sheets. Preserve the observed light appearance; the dimmed modal scrim is not evidence for a complete dark mode.
 
 # Anti-generic checklist
 
-- Do not cover the map with a full dashboard before booking.
-- Do not use multiple competing gradient buttons.
-- Do not overdecorate route and payment forms.
-- Do not retain default native blue accents.
-- Do not replace the documented canvas and surfaces with a generic grouped background and uniform white cards.
-- Do not use an unstyled `TabView`, default blue tint, or arbitrary SF Symbols when they contradict the reference.
-- Do not collapse every component to one corner radius or remove compositionally important imagery.
+- Do not replace the map-first composition with a generic list or dashboard.
+- Do not cover most of the map with stacked white cards before a focused choice requires it.
+- Do not use default blue tint or an unstyled `TabView`.
+- Do not place several competing gradient buttons on one screen.
+- Do not enlarge decorative artwork until it competes with route context.
+- Do not replace vehicle images with arbitrary SF Symbols or emoji.
+- Do not turn settings and payment rows into a promotional card grid.
+- Do not use one uniform radius for fields, cards, sheets, and pills.
 
 </design-context>
