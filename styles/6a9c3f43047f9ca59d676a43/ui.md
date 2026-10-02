@@ -3,7 +3,7 @@
 version: 1
 platform: iOS
 name: Trainline-design-analysis
-description: "A rail-booking interface that pairs a deep indigo journey header with mint and teal commitment actions, white rounded search panels, dense timetable rows, and playful service illustrations. Expressive discovery stays near the home and onboarding surfaces; booking, fare conditions, tickets, and payment become compact, explicit, and highly structured."
+description: "A rail-travel interface style that combines deep teal and deep indigo fields, bright mint actions, white rounded search panels, dense timetable-like rows, large photographic discovery cards, and flat service illustrations. Expressive surfaces are image-led and colorful; transactional surfaces are compact, white, gridded, and text-forward."
 colors:
   primary: "#25008B"
   on-primary: "#FFFFFF"
@@ -19,189 +19,200 @@ colors:
   surface-4: "#D8DBDF"
   hairline: "#E0E2E5"
   hairline-strong: "#C8CCD1"
-  hairline-tertiary: "#AEB3BA"
   inverse-canvas: "#003B39"
+  inverse-canvas-2: "#00563F"
   inverse-surface-1: "#79D477"
   inverse-surface-2: "#A8F79B"
   inverse-ink: "#FFFFFF"
-  brand-secure: "#08AD94"
+  brand-mint: "#91FF83"
+  brand-teal: "#08AD94"
+  accent-cyan: "#B8F4FF"
+  accent-lime: "#A8F79B"
+  accent-purple: "#25008B"
   semantic-success: "#08AD94"
   semantic-overlay: "#11131A"
 typography:
-  display-xl: {fontFamily: SF Pro Display, fontSize: 38, fontWeight: 700, lineHeight: 1.04, letterSpacing: -1.0}
-  display-lg: {fontFamily: SF Pro Display, fontSize: 30, fontWeight: 700, lineHeight: 1.08, letterSpacing: -0.6}
-  display-md: {fontFamily: SF Pro Display, fontSize: 25, fontWeight: 700, lineHeight: 1.12, letterSpacing: -0.4}
-  headline: {fontFamily: SF Pro Display, fontSize: 21, fontWeight: 700, lineHeight: 1.18, letterSpacing: -0.2}
-  card-title: {fontFamily: SF Pro Text, fontSize: 16, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0}
-  subhead: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 600, lineHeight: 1.30, letterSpacing: 0}
-  body-lg: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 400, lineHeight: 1.42, letterSpacing: 0}
-  body: {fontFamily: SF Pro Text, fontSize: 13, fontWeight: 400, lineHeight: 1.38, letterSpacing: 0}
-  body-sm: {fontFamily: SF Pro Text, fontSize: 11, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0}
-  caption: {fontFamily: SF Pro Text, fontSize: 10, fontWeight: 400, lineHeight: 1.25, letterSpacing: 0}
-  button: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0}
-  eyebrow: {fontFamily: SF Pro Text, fontSize: 10, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0.2}
-  mono: {fontFamily: SF Mono, fontSize: 11, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0}
-rounded: {xs: 4, sm: 8, md: 12, lg: 16, xl: 22, xxl: 28, pill: 9999, full: 9999}
-spacing: {xxs: 4, xs: 8, sm: 12, md: 16, lg: 20, xl: 24, xxl: 32, section: 44}
+  display-xl: { fontFamily: SF Pro Display, fontSize: 38, fontWeight: 700, lineHeight: 1.04, letterSpacing: -0.8 }
+  display-lg: { fontFamily: SF Pro Display, fontSize: 30, fontWeight: 700, lineHeight: 1.08, letterSpacing: -0.5 }
+  display-md: { fontFamily: SF Pro Display, fontSize: 25, fontWeight: 700, lineHeight: 1.12, letterSpacing: -0.3 }
+  headline: { fontFamily: SF Pro Display, fontSize: 21, fontWeight: 700, lineHeight: 1.18, letterSpacing: -0.2 }
+  card-title: { fontFamily: SF Pro Text, fontSize: 16, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
+  subhead: { fontFamily: SF Pro Text, fontSize: 15, fontWeight: 600, lineHeight: 1.30, letterSpacing: 0 }
+  body-lg: { fontFamily: SF Pro Text, fontSize: 15, fontWeight: 400, lineHeight: 1.42, letterSpacing: 0 }
+  body: { fontFamily: SF Pro Text, fontSize: 13, fontWeight: 400, lineHeight: 1.38, letterSpacing: 0 }
+  body-sm: { fontFamily: SF Pro Text, fontSize: 11, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
+  caption: { fontFamily: SF Pro Text, fontSize: 10, fontWeight: 400, lineHeight: 1.25, letterSpacing: 0 }
+  button: { fontFamily: SF Pro Text, fontSize: 15, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0 }
+  eyebrow: { fontFamily: SF Pro Text, fontSize: 10, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0.2 }
+  mono: { fontFamily: SF Mono, fontSize: 11, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
+rounded: { xs: 4, sm: 8, md: 12, lg: 16, xl: 22, xxl: 28, pill: 9999, full: 9999 }
+spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 20, xl: 24, xxl: 32, section: 44 }
 components:
-  button-primary: {backgroundColor: "{colors.brand-secure}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [14, 18]}
-  button-primary-pressed: {backgroundColor: "#078C79", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}"}
-  button-secondary: {backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [14, 18]}
-  search-panel: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 14}
-  result-row: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xs}", padding: 12}
-  option-card: {backgroundColor: "#F4F2FF", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: 14}
-  ticket-card: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: 14}
-  bottom-nav: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.pill}", padding: [8, 12]}
+  button-primary: { backgroundColor: "{colors.brand-mint}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: [14, 18] }
+  button-secondary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [14, 18] }
+  search-panel: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 14 }
+  result-row: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xs}", padding: 12 }
+  option-card: { backgroundColor: "#F4F2FF", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: 14 }
+  ticket-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: 14 }
+  bottom-nav: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.pill}", padding: [8, 12] }
 ---
 
 # Overview
 
-Trainline separates expressive journey discovery from a dense booking utility. Indigo establishes the travel context, mint and teal move the purchase forward, and white panels keep fares, conditions, and ticket data readable.
+Trainline's observed style alternates between expressive travel discovery and compact transactional surfaces. Dark teal and indigo fields establish brand weight, bright mint actions create momentum, and white rounded panels keep route, time, price, and account details legible.
 
 # Non-negotiable visual invariants
 
-- The reviewed screens use this composition: A rail-booking interface that pairs a deep indigo journey header with mint and teal commitment actions, white rounded search panels, dense timetable rows, and playful service illustrations.
-- The dominant canvas token is #F4F4F6 and the primary accent token is #25008B.
-- The recorded display style is 38 points while the body style is 13 points.
-- Navigation appears as follows: Search, My Tickets, and Account remain fixed during browsing.
-- The reviewed screens use this hierarchy: Expressive discovery stays near the home and onboarding surfaces; booking, fare conditions, tickets, and payment become compact, explicit, and highly structured.
+- Deep teal or indigo fields must carry the strongest brand areas; white panels sit on top as rounded functional surfaces.
+- Mint is the dominant positive action color and should stay bright, rounded, and high-contrast.
+- Discovery images are real cropped travel photography inside large rounded rectangles, not abstract gradients.
+- Service illustrations are flat, colorful, tile-based raster assets with dark outlines and simple object silhouettes.
+- Transactional rows are compact and gridded, with route/time/price facts aligned for comparison.
+- Bottom shell controls use small labels and glyphs on a white rounded bar, with purple or teal selected emphasis.
+- Native web or permission overlays may appear, but app-owned surfaces around them keep the Trainline palette.
 
 # Color and surfaces
 
 ### Brand & Accent
-- Deep indigo owns headers, selected tabs, focus outlines, and timetable context.
-- Mint and teal mark primary continuation, completion, and reassuring service states.
+
+Use deep indigo for selected shell emphasis, headers, and focused controls. Use dark teal for inverse brand fields and onboarding-like brand surfaces. Use mint for the most important visible action surfaces.
 
 ### Surface
-- White cards sit on pale gray booking canvases.
-- Very pale lavender differentiates selected fare and flexibility options.
+
+Use white cards and panels on pale gray canvases for dense information. Use dark teal with mint or white text for expressive brand surfaces. Use very pale lavender only for selected or highlighted option regions.
 
 ### Text
-- Near-black leads times, prices, destinations, and actions; cool gray supports conditions and labels.
+
+Use near-black for route facts, titles, prices, and actions on light surfaces. Use white on dark brand fields. Use cool gray for helper text, metadata, disabled content, and legal copy.
 
 ### Semantic
-- Teal confirms available actions and included benefits. Indigo indicates selection; neutral gray carries unavailable or secondary content.
+
+Use teal for success and reassurance, indigo for selection, mint for forward action, and neutral gray for unavailable or secondary states. Keep semantic color tied to text or controls rather than decorative backgrounds.
 
 # Typography
 
 ### Font Family
 
-Use SF Pro Display for journey and section headings, SF Pro Text for forms, timetables, fares, and account rows.
+Use SF Pro Display for large brand statements and section headings. Use SF Pro Text for fields, rows, cards, legal copy, and tab labels.
 
 ### Hierarchy
 
 | Token | Size | Weight | Use |
 |---|---:|---:|---|
-| display-lg | 30pt | 700 | Onboarding statement |
-| headline | 21pt | 700 | Search or booking section |
-| card-title | 16pt | 600 | Fare, route, or ticket title |
-| body | 13pt | 400 | Conditions and itinerary facts |
-| caption | 10pt | 400 | Navigation and metadata |
+| display-xl | 38pt | 700 | Oversized brand statement |
+| display-lg | 30pt | 700 | Large travel/discovery heading |
+| headline | 21pt | 700 | Section and panel heading |
+| card-title | 16pt | 600 | Card title or row emphasis |
+| body | 13pt | 400 | Dense facts, labels, and conditions |
+| caption | 10pt | 400 | Navigation labels and metadata |
 
 ### Principles
 
-- Make departure, arrival, duration, changes, and total scannable as a group.
-- Keep contractual conditions in plain sentence case.
-- Use compact bold labels rather than decorative type.
+Make numbers, route names, prices, and compact labels easy to scan. Use bold only for primary facts or section identity. Keep longer explanatory text sentence-case and tightly line-spaced.
 
 ### Note on Font Substitutes
 
-Use the platform system sans with tabular numerals and broad language coverage.
+Use a system sans with tabular numerals and strong bold weights. Avoid decorative travel fonts or condensed display faces.
 
 # Screen composition
 
 ### Grid & Container
 
-Discovery uses a full-width header, hero card, and horizontal service tiles. Search and purchase use one stacked column; result rows align time, route, operator, and price on a strict grid.
+Brand/discovery surfaces use a full-width colored header, rounded white search capsule, large image cards, and horizontally clipped tiles. Dense surfaces use one stacked column of white panels with aligned facts, small dividers, and sticky-looking action regions.
 
 ### Whitespace Philosophy
 
-Give forms clear panel boundaries, but keep related timetable and fare facts compact enough for comparison.
+Allow generous space around hero photography and onboarding copy. Compress related timetable, fare, ticket, and account facts so each row can be compared without excessive scrolling.
 
 # Navigation appearance
 
-Search, My Tickets, and Account remain fixed during browsing. Purchase steps replace the tab bar with a focused header and continuation action.
+Navigation visuals are small, labeled, and subordinate. The selected item uses purple or teal emphasis; inactive items use gray. Avoid oversized icon-only navigation and avoid default blue selected states.
 
 # Components
 
 ### Buttons
 
-Teal commits booking steps; indigo confirms sheet choices. Secondary controls stay white or neutral with explicit labels.
+Primary actions are mint rounded pills or rounded rectangles with dark text. Secondary commitment buttons may use indigo with white text. Inline choices use white, outlined, or pale-lavender selected cards.
 
-Ticket type, class, flexibility, sorting, and time choices use outlined cards, compact segments, or simple rows with one indigo selection.
+Ticket type, class, flexibility, sorting, and time-like choices use compact rows, outlined cards, segmented controls, or small chips. Keep selected states explicit through border, tint, and text weight.
 
 ### Cards & Containers
 
-Search panels group where, when, and passengers. Result rows keep route and price aligned; ticket cards visualize the journey with a simple vertical line.
+Search panels are large white rounded capsules or stacked rounded panels. Discovery cards use rounded photography with overlaid white type where observed. Transactional cards use white surfaces, small radii, thin separators, and structured internal alignment.
 
 ### Inputs & Forms
 
-Station fields open a rounded focused sheet with saved places and suggestions. Dates, passengers, railcards, seating, and payment remain labeled and editable.
+Fields use clear labels, rounded white surfaces, gray helper text, and focused states with indigo or dark outline emphasis. Suggestion rows, date controls, passenger controls, and payment-like rows stay compact and text-led.
 
 ### Status & Build Page
 
-Use text for fastest, direct, delayed, unavailable, included, refundable, and unprotected states. Keep operator identity and total near the related decision.
+Use concise text and small labels for direct, fastest, delayed, unavailable, selected, included, refundable, total, protected, or unprotected states. Place status near the related route, option, or price fact.
 
 ### Navigation
 
-Search, My Tickets, and Account remain fixed during browsing. Purchase steps replace the tab bar with a focused header and continuation action.
+Use consistent line glyphs and small labels. Keep the selected mark color-matched to the current brand surface. Do not combine arbitrary SF Symbols with mismatched stroke weights.
 
 # Imagery and icons
 
+Photography and illustration are source-proven parts of this style. Photography shows travelers and journey environments in rounded crops. Service illustrations use simple object art, thick dark outlines, mint/cyan/lime/purple fills, and generous padding inside tiles.
+
 | Level | Treatment | Use |
 |---|---|---|
-| 0 | Pale gray canvas | Search and purchase |
-| 1 | White card | Fields, options, tickets |
-| 2 | Sticky action area | Continue and total |
-| 3 | Sheet over scrim | Date, station, and focused choice |
+| 0 | Pale gray canvas | Dense transactional screens |
+| 1 | White card or capsule | Search, ticket, account, and option surfaces |
+| 2 | Sticky or bottom action region | Continue, total, confirmation controls |
+| 3 | Sheet or browser overlay over scrim | Focused choice, sign-in, permission-like surfaces |
 
 ### Decorative Depth
 
-Use soft card shadows on discovery and tickets. Booking depth comes mainly from surface contrast and sticky action regions.
+Use soft shadows on image cards, ticket cards, and raised sheets. On dense surfaces, prefer contrast, borders, and sticky regions over heavy shadows. Do not add decorative blobs or gradients.
 
 # States
 
-Use text for fastest, direct, delayed, unavailable, included, refundable, and unprotected states. Keep operator identity and total near the related decision.
+Represent selected, inactive, focused, disabled, unavailable, fastest, direct, delayed, included, refundable, total, signed-in overlay, browser overlay, and bottom-sheet states with the color, typography, and container treatments above.
 
 # iOS adaptation
 
+On iPhone, respect top and bottom safe areas, use scrolling for content that does not fit, keep interactive targets at least 44 points, and preserve visual reading order for VoiceOver. At larger Dynamic Type sizes, allow route, price, and status text to wrap without losing the alignment of primary facts. Restyle native sheets, controls, and browser-adjacent surfaces so app-owned UI remains visibly Trainline.
+
 ### Touch Targets
 
-Station rows, calendar dates, tabs, toggles, result rows, and actions keep at least 44pt hit areas.
+Search capsules, station rows, date cells, option cards, bottom bar items, result rows, and primary actions must retain at least 44pt hit areas.
 
 ### Collapsing Strategy
 
-Preserve route, date, time, duration, changes, price, conditions, and action. Collapse service promotion and secondary explanation first.
+Preserve primary route facts, time facts, price facts, selected option, and primary action first. Collapse promotional tiles, secondary explanations, and repeated helper text before reducing row readability.
 
 ### Image Behavior
 
-Crop discovery photography around travelers and the journey environment. Keep service illustrations uncropped with clear internal padding.
-
-On iPhone, respect top and bottom safe areas, use scrolling for content that does not fit, keep interactive targets at least 44 points, and preserve the visual reading order for VoiceOver. At larger Dynamic Type sizes, allow supporting text to wrap without collapsing the dominant hierarchy. Use native sheets and permission transitions while explicitly styling app-owned surfaces to match the reference.
+Use `cover` for travel photography and preserve the observed rounded crop. Use `contain` for service illustrations, keeping generous internal padding and preventing object silhouettes from touching tile edges.
 
 # Anti-generic checklist
 
-- Do not substitute the documented accent hierarchy with default iOS blue.
-- Do not collapse distinct surfaces into a uniform stack of generic white cards.
-- Do not use an unstyled `TabView`, `Form`, or arbitrary SF Symbols when they contradict the documented navigation and component language.
-- Do not flatten the documented typography into one body-text scale.
-- Do not remove compositionally important photography or illustration while assets are pending.
-- Do not apply one corner radius to every control and surface.
+- Do not replace Trainline indigo, teal, and mint with default iOS blue.
+- Do not use abstract gradients instead of source-observed photography or service art.
+- Do not turn dense rows into oversized generic cards.
+- Do not omit service illustrations where a tile or educational surface depends on their visual mass.
+- Do not draw required illustrations with SwiftUI shapes, SF Symbols, emoji, programmatic paths, or icon-font substitutes.
+- Do not integrate generated art before explicit user visual approval and raster asset integration.
+- Do not flatten route, time, price, and status hierarchy into one body-text scale.
 
 Source-specific guardrails retained from the review:
 
 ### Do
 
-- Keep timetable comparison dense and aligned.
-- Repeat the current total at commitment points.
-- Expose fare and refund conditions before payment.
-- Use mint illustration for reassurance, not decoration inside forms.
+- Keep brand surfaces dark and actions mint.
+- Keep route and price facts gridded and compact.
+- Use real travel photography for discovery cards.
+- Use approved raster service illustrations for illustrated tiles and education surfaces.
+- Keep legal and helper copy readable without making it visually dominant.
 
 ### Don't
 
-- Don't hide changes, operators, or unavailable states.
-- Don't use promotional photography behind booking text.
-- Don't turn teal into a general background color.
-- Don't flatten multi-step booking into one undifferentiated form.
+- Do not use promotional photography behind dense transactional text.
+- Do not use teal or mint as a generic full-screen background for every surface.
+- Do not substitute source-proven illustrations with arbitrary symbols.
+- Do not mix unrelated illustration styles in the same tile system.
+- Do not hide unavailable, selected, or included states behind color alone.
 
 </design-context>

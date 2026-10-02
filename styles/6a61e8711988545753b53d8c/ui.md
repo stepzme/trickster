@@ -3,227 +3,123 @@
 version: 1
 platform: iOS
 name: ATTO-design-analysis
-description: "A bright transit super-app that combines a teal-to-blue shell, white rounded content sheets, high-saturation action tiles, map surfaces, and polished 3D transport objects. Payment cards and route maps anchor the signed-in experience; friendly rendered buses, trains, tickets, and city services make onboarding and the service hub immediately legible."
+description: "ATTO uses a bright teal service shell, white rounded sheets, deep indigo transport cards, green and blue payment tiles, compact bold SF typography, and soft 3D transport objects on onboarding and service surfaces."
 colors:
-  primary: "#22B8A7"
-  on-primary: "#FFFFFF"
-  primary-soft: "#DDF7F2"
-  accent-blue: "#3478F6"
-  accent-violet: "#5B4EE8"
-  accent-green: "#24BE69"
-  ink: "#0C1630"
-  ink-muted: "#687184"
-  ink-subtle: "#9CA4B2"
-  canvas: "#F4F7FA"
-  surface-1: "#FFFFFF"
-  surface-2: "#EEF2F6"
-  hairline: "#DDE3EA"
-  semantic-success: "#25C46A"
-  semantic-danger: "#E74B55"
-  semantic-overlay: "#000000"
+  canvas: "#F3F6FA"
+  surface-primary: "#FFFFFF"
+  surface-secondary: "#EAF0F6"
+  accent-primary: "#28B86B"
+  accent-secondary: "#302A8F"
+  text-primary: "#07132E"
+  text-secondary: "#697386"
+  divider: "#E2E7EE"
+  destructive: "#EF3F4E"
 typography:
-  display-xl: { fontFamily: SF Pro Display, fontSize: 36, fontWeight: 700, lineHeight: 1.05, letterSpacing: -0.7 }
-  display-lg: { fontFamily: SF Pro Display, fontSize: 30, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.5 }
-  display-md: { fontFamily: SF Pro Display, fontSize: 24, fontWeight: 700, lineHeight: 1.15, letterSpacing: -0.3 }
-  headline: { fontFamily: SF Pro Display, fontSize: 21, fontWeight: 700, lineHeight: 1.20, letterSpacing: -0.2 }
-  card-title: { fontFamily: SF Pro Text, fontSize: 16, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: SF Pro Text, fontSize: 17, fontWeight: 500, lineHeight: 1.35, letterSpacing: 0 }
-  body-lg: { fontFamily: SF Pro Text, fontSize: 16, fontWeight: 400, lineHeight: 1.45, letterSpacing: 0 }
-  body: { fontFamily: SF Pro Text, fontSize: 14, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
-  body-sm: { fontFamily: SF Pro Text, fontSize: 12, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
-  caption: { fontFamily: SF Pro Text, fontSize: 10, fontWeight: 400, lineHeight: 1.20, letterSpacing: 0 }
-  button: { fontFamily: SF Pro Text, fontSize: 14, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0 }
-  eyebrow: { fontFamily: SF Pro Text, fontSize: 11, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0.2 }
-  mono: { fontFamily: SF Mono, fontSize: 12, fontWeight: 500, lineHeight: 1.30, letterSpacing: 0 }
-rounded: { xs: 8, sm: 12, md: 16, lg: 22, xl: 28, xxl: 34, pill: 9999, full: 9999 }
-spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
+  hero: {fontFamily: "SF Pro Display", fontSize: 32, fontWeight: 800, lineHeight: 36}
+  title: {fontFamily: "SF Pro Display", fontSize: 24, fontWeight: 700, lineHeight: 30}
+  section: {fontFamily: "SF Pro Text", fontSize: 20, fontWeight: 700, lineHeight: 25}
+  body: {fontFamily: "SF Pro Text", fontSize: 16, fontWeight: 400, lineHeight: 22}
+  label: {fontFamily: "SF Pro Text", fontSize: 14, fontWeight: 600, lineHeight: 18}
+  caption: {fontFamily: "SF Pro Text", fontSize: 12, fontWeight: 400, lineHeight: 16}
+spacing:
+  screen-horizontal: 12
+  section-gap: 24
+  card-padding: 14
+  control-gap: 12
+rounded:
+  control: 14
+  card: 18
+  sheet: 28
+  pill: 999
 components:
-  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.md}", padding: [14, 18]}
-  transport-card: { backgroundColor: "{colors.accent-violet}", textColor: "{colors.on-primary}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 16 }
-  service-tile: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.md}", padding: 12 }
-  action-tile: { backgroundColor: "{colors.accent-blue}", textColor: "{colors.on-primary}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 16 }
-  map-control: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.pill}", padding: [12, 16]}
-  bottom-sheet: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 16 }
+  primary-action: {backgroundColor: "{colors.accent-primary}", textColor: "{colors.surface-primary}", typography: "{typography.label}", rounded: "{rounded.control}"}
+  secondary-action: {backgroundColor: "{colors.surface-primary}", textColor: "{colors.text-primary}", typography: "{typography.label}", rounded: "{rounded.control}"}
+  primary-card: {backgroundColor: "{colors.accent-secondary}", textColor: "{colors.surface-primary}", typography: "{typography.body}", rounded: "{rounded.card}"}
+  navigation: {backgroundColor: "{colors.surface-primary}", textColor: "{colors.text-secondary}", selectedColor: "{colors.accent-secondary}", typography: "{typography.caption}"}
 ---
 
 # Overview
 
-ATTO combines payments, transport, routes, and city services inside a cheerful card system. Teal gradients frame white content, while blue, violet, and green action blocks clearly separate payment modes.
+ATTO alternates between two visible visual environments. The public service surfaces use a teal-to-blue gradient header behind a large white rounded sheet filled with soft 3D transport and city-service objects. The signed-in transport surfaces switch to a pale blue-gray canvas, deep indigo virtual-card panels, white action cards, and saturated green, blue, and violet payment tiles.
 
-**Key Characteristics:**
-- Teal gradient shell with large white sheets.
-- Rounded financial cards and square service tiles.
-- Bright, semantic action colors.
-- Map-first route and metro tools.
-- Friendly 3D transport imagery.
+The reference does not look like a plain grouped SwiftUI app: the largest visible objects are rendered vehicles, a dark virtual card, map panes, or payment result amounts. Text is compact and bold, controls are heavily rounded, and most screens avoid borders in favor of shadows, soft fills, and clear color blocks.
 
 # Non-negotiable visual invariants
 
-- The reviewed screens show this treatment: Teal gradient shell with large white sheets.
-- The reviewed screens show this treatment: Rounded financial cards and square service tiles.
-- The reviewed screens show this treatment: Bright, semantic action colors.
-- The reviewed screens show this treatment: Map-first route and metro tools.
-- The reviewed screens show this treatment: Friendly 3D transport imagery.
+- A teal-blue gradient shell appears on onboarding and the public service hub, with a white rounded sheet rising from the lower portion of the screen.
+- Onboarding pairs one large soft 3D transport or city object above a white copy panel with oversized dark navy headline text.
+- Signed-in transport screens use a pale gray-blue canvas with a dark indigo virtual card near the top and a two-column grid of payment tiles below it.
+- Primary payment success screens use a saturated green curved header, a centered white check mark disk, and one huge numeric amount on a pale canvas.
+- Map screens are full-screen map or diagram surfaces with floating white pill controls and small circular shadowed buttons, not card stacks.
+- Bottom sheets are white, high-radius panels over a dark scrim, with a small drag handle, bold title, and large rounded rows or actions.
+- Selected bottom navigation states use a dark violet icon/indicator while inactive items stay muted gray.
 
 # Color and surfaces
 
-### Brand & Accent
-- **ATTO Teal** ({colors.primary}): Brand shell and primary progression.
-- **Blue** ({colors.accent-blue}): NFC and transit utilities.
-- **Violet** ({colors.accent-violet}): Card and top-up actions.
-- **Green** ({colors.accent-green}): Fare purchase and success.
+The public shell is a vertical teal-to-blue gradient that remains visible above and around the rounded white service sheet. White is the dominant foreground surface for onboarding copy panels, service grids, menu sheets, bottom sheets, map controls, and modal cards. Signed-in transport screens replace the gradient with a very pale blue-gray canvas that lets the indigo card and colored actions stand forward.
 
-### Surface
-- **Canvas** ({colors.canvas}): Neutral transport workspace.
-- **Surface 1** ({colors.surface-1}): Service tiles, sheets, and controls.
-- **Surface 2** ({colors.surface-2}): Grouped settings and disabled regions.
-- **Hairline** ({colors.hairline}): Quiet separators.
+The strongest recurring color block is the deep indigo transport card, sometimes with faint geometric linework. Green marks purchase, top-up success, positive actions, and some 3D vehicle bodies. Bright blue appears on NFC actions and map-adjacent controls. Violet/indigo anchors virtual cards, selected navigation, small icons, and some top-up/payment surfaces. Dividers are very light gray and used sparingly; the app more often separates rows with whitespace and surface changes. Destructive or error states appear as red alert/toast surfaces with white error marks.
 
-### Text
-- **Ink** ({colors.ink}): Headings, balances, and actions.
-- **Ink Muted** ({colors.ink-muted}): Supporting route and payment text.
-- **Ink Subtle** ({colors.ink-subtle}): Disabled navigation and hints.
-
-### Semantic
-- **Success** ({colors.semantic-success}): Completed payments and enabled state.
-- **Danger** ({colors.semantic-danger}): Errors and destructive account actions.
-- **Overlay** ({colors.semantic-overlay}): Bottom-sheet scrim.
+Generic iOS blue as the only accent would break the reference because ATTO visibly depends on separated green purchase states, blue NFC/map states, and dark indigo card/navigation states.
 
 # Typography
 
-### Font Family
+Typography is system-like but heavier than default. Onboarding headlines use large, tightly stacked SF Pro Display in dark navy, usually occupying the upper half of the white copy panel. Screen titles use centered or left-aligned bold SF Pro Text/Display around 20 to 24 points. Tile labels are short, dark, and semibold; captions are small gray text.
 
-- **SF Pro Display** — onboarding and destination headings.
-- **SF Pro Text** — cards, routes, maps, and settings.
-- **SF Mono** — card identifiers where needed.
-
-### Hierarchy
-
-| Token | Size | Weight | Use |
-|---|---|---|---|
-| `{typography.display-xl}` | 36pt | 700 | Onboarding statement |
-| `{typography.headline}` | 21pt | 700 | Screen heading |
-| `{typography.card-title}` | 16pt | 600 | Tile and balance title |
-| `{typography.body}` | 14pt | 400 | Route and payment copy |
-| `{typography.caption}` | 10pt | 400 | Tab and map metadata |
-| `{typography.button}` | 14pt | 600 | Actions |
-
-### Principles
-
-- Use bold, compact headings with plain supporting copy.
-- Keep money and card numbers visually distinct.
-- Keep map labels native to the map layer.
-- Pair each service icon with a short noun label.
-
-### Note on Font Substitutes
-
-Use **Inter** or the platform system sans when SF Pro is unavailable.
+Numbers receive strong emphasis: balances on cards are large and white, top-up and tariff success amounts are huge dark navy figures, and monetary units remain small and close to the number. Menu rows and sheet choices use compact body text with single-line labels where possible. At larger Dynamic Type sizes, the visual hierarchy should preserve big numeric/payment emphasis first, then card title or sheet title, then supporting copy.
 
 # Screen composition
 
-### Spacing System
+Onboarding uses a full-height illustration field on top, a white rounded sheet on the lower half, then small pill controls near the bottom safe area. The home/service hub keeps the gradient header and puts a large white sheet below it; inside, a large transport tile occupies the left column while smaller object tiles, a QR strip, and service tiles create a dense rounded grid.
 
-Use a 4pt base, 12pt gutters, 12pt tile gaps, and 16pt card padding.
+The signed-in transport hub uses a top navigation title, a horizontally paged indigo card, small biometric enable pills, and a two-column payment grid. Later transport states extend the same screen downward with tariff cards while retaining the bottom tab bar. Menu screens use a sparse two-column grid of white cards on the same pale canvas. Card detail screens place the virtual card high, then three compact action tiles and list rows.
 
-### Grid & Container
-
-The service hub uses a two- and three-column bento grid. Transport uses a full-width card carousel over a 2×2 action grid. Route tools layer pill controls over maps.
-
-### Whitespace Philosophy
-
-White rounded sheets create calm zones inside the energetic gradient and multicolor service system.
+Map screens are not framed by app cards: the map or metro diagram fills almost the entire viewport, with controls floating above it and a bottom search strip or pill row near the safe area. Bottom sheets rise from the lower edge with a large radius and often cover half to two-thirds of the screen.
 
 # Navigation appearance
 
-The hub uses menu and support in the header. Signed-in transport uses Main, Trip history, Transport, and Menu in the bottom bar.
+The public home screen shows a hamburger button on the left, centered ATTO wordmark, and a white support/chat icon on the right over the gradient. Signed-in transport screens use a simple iOS-style back chevron and centered bold title on the pale canvas.
+
+The bottom tab bar is white and low-contrast with four compact icon+caption items. The selected item is dark violet with a short top stroke or filled icon emphasis plus a small green dot below; inactive items are gray. Map screens replace the bottom tab bar with floating map controls and bottom pill choices. Sheets use close buttons as pale circular controls with a dark x.
 
 # Components
 
-### Buttons
+Transport card: a wide rounded rectangle, deep indigo fill, white name/balance/card number, ATTO virtual mark, occasional AV badge, and subtle geometric pattern. It sits close to the top and defines the signed-in transport visual language.
 
-Primary progression uses teal or the action tile's semantic color. Map and sheet actions use white pill controls with high-contrast icons.
+Payment tiles: two-column rounded cards with soft shadows. Top-up is violet, buy tariff is green, NFC is bright blue, and QR is white with a blue QR icon and gray subtitle. Text sits low-left with generous internal padding.
 
-Route, stop, fare, and mode choices use paired pills or large sheet rows. Selected states rely on color and icon together.
+Service tiles: rounded white or very pale gray tiles with isolated 3D objects centered above a short label. The primary transport tile is larger and cropped tighter than the smaller ticket, scooter, card, cinema, parking, green ticket, and eSIM tiles.
 
-### Cards & Containers
+Bottom sheets and modals: white panels with a small gray handle, bold title, dark body text, rounded rows, and green or blue primary buttons. Confirmation dialogs sit inside the sheet as rounded white cards over a dimmed background.
 
-Transport cards expose balance and number first. Service tiles combine one large object with a short label. Action tiles use icon, title, and contextual subtitle.
-
-### Inputs & Forms
-
-Authentication and payment forms use white fields on neutral sheets. Keep phone, card, PIN, and amount inputs grouped and explicit.
-
-### Status & Build Page
-
-Show card state, balance, auto-renewal, transaction state, and payment result close to the initiating control.
-
-### Navigation
-
-The hub uses menu and support in the header. Signed-in transport uses Main, Trip history, Transport, and Menu in the bottom bar.
-
-Bottom navigation remains on card surfaces; map flows replace it with anchored route and station controls.
+Map controls: white floating pills and circles with subtle shadows, dark icons, and compact labels. The metro map uses a clean white field, colored route lines, and zoom buttons stacked on the right.
 
 # Imagery and icons
 
-| Level | Treatment | Use |
-|---|---|---|
-| 0 | Pale canvas or map | Base workspace |
-| 1 | White rounded tile | Services and controls |
-| 2 | Colored card with soft shadow | Payment action |
-| 3 | Scrim plus white sheet | Modal choice |
+Imagery is central on onboarding and service discovery screens. The visible style is soft 3D rendering with smooth plastic-like surfaces, gentle shadows, and bright transport colors. Large vehicles and city objects are cropped by their tile or screen edge, but the defining silhouette remains readable.
 
-### Decorative Depth
-
-Use softly rendered 3D objects and light shadows. Do not add glossy effects to text or forms.
+Icons in functional screens are simple outline symbols, often dark violet or blue, with minimal decorative detail. Payment and navigation icons are small relative to labels, while onboarding and service imagery can dominate a quarter to half of the visible screen. Map imagery stays as map content; decorative 3D objects do not appear over map labels or transport diagrams.
 
 # States
 
-Show card state, balance, auto-renewal, transaction state, and payment result close to the initiating control.
+Observed signed-out access uses a dim scrim over the menu and a white bottom modal with card imagery, green register action, and blue login action. Observed selection states use colored tabs, small checkmarks, highlighted virtual cards, and selected segmented controls.
+
+Observed success states use a green curved header, centered check mark, huge amount, pale background, and one green bottom action. Observed error states include a red toast-style banner over an NFC/payment screen. Observed dark appearance uses a very dark canvas, dark cards, cyan/blue selected outlines, and retains the same rounded card proportions.
 
 # iOS adaptation
 
-| Wide | 768pt+ | Expand tile grid and map pane |
-| Small | <390pt | Reduce tile columns and shorten labels |
+Preserve the iPhone-safe-area composition: status bar floats over the top visual field, bottom controls sit above the home indicator, and sheets maintain the large rounded top corners visible in the reference. Use scroll containers where the service grid, tariff grid, or menu rows exceed the viewport; the visual priority should remain top card or hero object first, then primary action tiles, then supporting rows.
 
-### Touch Targets
-
-Keep all payment tiles, map controls, tabs, menu rows, and bottom-sheet choices at least 44pt.
-
-### Collapsing Strategy
-
-Move minor service tiles to horizontal scroll before reducing object size. Keep payment actions in two columns until labels no longer fit.
-
-### Image Behavior
-
-Contain rendered objects with breathing room; never crop vehicle identity. Maps crop naturally to viewport and keep user controls inset.
-
-On iPhone, respect top and bottom safe areas, use scrolling for content that does not fit, keep interactive targets at least 44 points, and preserve the visual reading order for VoiceOver. At larger Dynamic Type sizes, allow supporting text to wrap without collapsing the dominant hierarchy. Use native sheets and permission transitions while explicitly styling app-owned surfaces to match the reference.
+Controls should keep iOS-sized touch targets while preserving the observed compact labels and rounded geometry. Dynamic Type can wrap supporting labels, but the main transport card, large payment amount, sheet title, and selected navigation state should remain visually dominant. Light appearance is the default across most screens; dark appearance is visible only as an app theme surface with darker cards and high-contrast selected outlines.
 
 # Anti-generic checklist
 
-- Do not substitute the documented accent hierarchy with default iOS blue.
-- Do not collapse distinct surfaces into a uniform stack of generic white cards.
-- Do not use an unstyled `TabView`, `Form`, or arbitrary SF Symbols when they contradict the documented navigation and component language.
-- Do not flatten the documented typography into one body-text scale.
-- Do not remove compositionally important photography or illustration while assets are pending.
-- Do not apply one corner radius to every control and surface.
-
-Source-specific guardrails retained from the review:
-
-### Do
-
-- Give each payment mode a stable color.
-- Keep map actions reachable above the safe area.
-- Pair 3D service objects with plain labels.
-- Show current balance before payment.
-- Use sheets for mode selection.
-
-### Don't
-
-- Don't place decorative objects over map labels.
-- Don't reuse action colors arbitrarily.
-- Don't hide fare or card state.
-- Don't shrink map controls below touch size.
-- Don't mix photographic and rendered object styles in one tile.
+- Do not replace the teal public shell and white rounded service sheet with a plain white home screen.
+- Do not turn the signed-in transport hub into a default `Form` or a uniform list of system rows.
+- Do not flatten the dark indigo virtual card into a generic bank-card rectangle without pattern, ATTO mark, or large balance.
+- Do not recolor all actions with default iOS blue; keep green, blue, violet, and indigo roles visually distinct.
+- Do not use an unstyled `TabView`; selected tabs need the dark violet emphasis and inactive gray treatment.
+- Do not substitute onboarding and service 3D objects with arbitrary SF Symbols or flat monochrome icons.
+- Do not remove the green curved success header or the oversized numeric amount from payment result screens.
 
 </design-context>

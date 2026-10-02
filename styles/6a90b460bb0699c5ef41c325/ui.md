@@ -3,349 +3,126 @@
 version: 1
 platform: iOS
 name: Ozon-Job-design-analysis
-description: "A bright operational mobile UI built from white rounded groups, pale gray page surfaces, and saturated Ozon blue actions. Dense workplace facts are broken into cards, chips, bottom sheets, and five persistent task tabs. Bold system-sans headings, concise monetary labels, documentary warehouse photography, and colorful 3D promotional scenes create a practical interface with energetic brand moments."
-
+description: "A practical iOS work app style with white rounded task groups on a pale gray canvas, Ozon-blue primary actions and selected tabs, dense warehouse/payment cards, bold system typography, documentary photos, and bright raster promotional artwork."
 colors:
-  primary: "#006EF5"
-  on-primary: "#FFFFFF"
-  primary-soft: "#E5F4FF"
-  cyan: "#19B8F2"
-  ink: "#111318"
-  ink-muted: "#70747C"
-  ink-subtle: "#9AA0A8"
   canvas: "#F3F5F7"
-  surface-1: "#FFFFFF"
-  surface-2: "#ECEFF2"
-  surface-dark: "#111214"
-  hairline: "#E3E6E9"
-  semantic-success: "#20B969"
-  semantic-warning: "#F0A400"
-  semantic-danger: "#E84A5F"
-  semantic-overlay: "#000000"
-
+  surface-primary: "#FFFFFF"
+  surface-secondary: "#EEF2F6"
+  accent-primary: "#005BFF"
+  accent-secondary: "#E8F6FF"
+  text-primary: "#111318"
+  text-secondary: "#6F747C"
+  divider: "#E5E9EF"
+  destructive: "#E84A5F"
 typography:
-  display-xl:
-    fontFamily: System Sans
-    fontSize: 34
-    fontWeight: 700
-    lineHeight: 1.05
-    letterSpacing: -0.8
-  display-lg:
-    fontFamily: System Sans
-    fontSize: 30
-    fontWeight: 700
-    lineHeight: 1.08
-    letterSpacing: -0.6
-  display-md:
-    fontFamily: System Sans
-    fontSize: 26
-    fontWeight: 700
-    lineHeight: 1.10
-    letterSpacing: -0.4
-  headline:
-    fontFamily: System Sans
-    fontSize: 22
-    fontWeight: 700
-    lineHeight: 1.15
-    letterSpacing: -0.2
-  card-title:
-    fontFamily: System Sans
-    fontSize: 17
-    fontWeight: 600
-    lineHeight: 1.20
-    letterSpacing: 0
-  subhead:
-    fontFamily: System Sans
-    fontSize: 16
-    fontWeight: 600
-    lineHeight: 1.25
-    letterSpacing: 0
-  body-lg:
-    fontFamily: System Sans
-    fontSize: 16
-    fontWeight: 400
-    lineHeight: 1.35
-    letterSpacing: 0
-  body:
-    fontFamily: System Sans
-    fontSize: 14
-    fontWeight: 400
-    lineHeight: 1.35
-    letterSpacing: 0
-  body-sm:
-    fontFamily: System Sans
-    fontSize: 12
-    fontWeight: 400
-    lineHeight: 1.30
-    letterSpacing: 0
-  caption:
-    fontFamily: System Sans
-    fontSize: 11
-    fontWeight: 400
-    lineHeight: 1.25
-    letterSpacing: 0
-  button:
-    fontFamily: System Sans
-    fontSize: 16
-    fontWeight: 600
-    lineHeight: 1.20
-    letterSpacing: 0
-  eyebrow:
-    fontFamily: System Sans
-    fontSize: 12
-    fontWeight: 600
-    lineHeight: 1.20
-    letterSpacing: 0
-  mono:
-    fontFamily: System Mono
-    fontSize: 12
-    fontWeight: 500
-    lineHeight: 1.30
-    letterSpacing: 0
-
-rounded:
-  xs: 6
-  sm: 10
-  md: 14
-  lg: 18
-  xl: 24
-  xxl: 30
-  pill: 9999
-  full: 9999
-
+  hero: {fontFamily: "SF Pro Display", fontSize: 40, fontWeight: 700, lineHeight: 44}
+  title: {fontFamily: "SF Pro Display", fontSize: 28, fontWeight: 700, lineHeight: 34}
+  section: {fontFamily: "SF Pro Text", fontSize: 20, fontWeight: 700, lineHeight: 25}
+  body: {fontFamily: "SF Pro Text", fontSize: 17, fontWeight: 400, lineHeight: 22}
+  label: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 600, lineHeight: 20}
+  caption: {fontFamily: "SF Pro Text", fontSize: 13, fontWeight: 400, lineHeight: 18}
 spacing:
-  xxs: 4
-  xs: 8
-  sm: 12
-  md: 16
-  lg: 24
-  xl: 32
-  xxl: 48
-  section: 64
-
+  screen-horizontal: 16
+  section-gap: 24
+  card-padding: 12
+  control-gap: 10
+rounded:
+  control: 12
+  card: 18
+  sheet: 28
+  pill: 999
 components:
-  button-primary:
-    backgroundColor: "{colors.primary}"
-    textColor: "{colors.on-primary}"
-    typography: "{typography.button}"
-    rounded: "{rounded.md}"
-    padding: [14, 20]
-  filter-chip:
-    backgroundColor: "{colors.surface-1}"
-    textColor: "{colors.ink}"
-    typography: "{typography.body-sm}"
-    rounded: "{rounded.pill}"
-    padding: [8, 12]
-  warehouse-card:
-    backgroundColor: "{colors.surface-1}"
-    textColor: "{colors.ink}"
-    typography: "{typography.body}"
-    rounded: "{rounded.lg}"
-    padding: 12
-  info-group:
-    backgroundColor: "{colors.surface-1}"
-    textColor: "{colors.ink}"
-    typography: "{typography.body}"
-    rounded: "{rounded.lg}"
-    padding: 12
-  bottom-sheet:
-    backgroundColor: "{colors.surface-1}"
-    textColor: "{colors.ink}"
-    typography: "{typography.body}"
-    rounded: "{rounded.xxl}"
-    padding: [20, 12]
-  status-badge:
-    backgroundColor: "{colors.primary-soft}"
-    textColor: "{colors.primary}"
-    typography: "{typography.caption}"
-    rounded: "{rounded.pill}"
-    padding: [4, 8]
-    backgroundColor: "{colors.surface-1}"
-    textColor: "{colors.ink}"
-    typography: "{typography.card-title}"
-    rounded: "{rounded.xs}"
-    height: 56
-    backgroundColor: "{colors.surface-1}"
-    textColor: "{colors.ink-muted}"
-    typography: "{typography.caption}"
-    rounded: "{rounded.xs}"
-    padding: [20, 12]
+  primary-action: {backgroundColor: "#005BFF", textColor: "#FFFFFF", cornerRadius: 12, minHeight: 48}
+  secondary-action: {backgroundColor: "#F1F4F8", textColor: "#111318", cornerRadius: 12, minHeight: 44}
+  primary-card: {backgroundColor: "#FFFFFF", textColor: "#111318", cornerRadius: 18, padding: 12}
+  navigation: {backgroundColor: "#FFFFFF", selectedColor: "#005BFF", unselectedColor: "#111318"}
 ---
 
 # Overview
 
-Ozon Job presents a high volume of operational information without abandoning a clear action hierarchy. Pale gray canvas bands separate white rounded groups; bright blue marks the next action and current tab. Photos, 3D promos, and colored banners are concentrated at discovery moments, while money and account screens remain restrained.
+Ozon Job's current iOS screens are utilitarian and information-dense. The sampled Screen Gallery screens include launch, photo-led onboarding, Ozon ID login, home, warehouse search, warehouse details, payouts, profile, and courses.
 
-**Key Characteristics:**
-- Strong Ozon blue reserved for primary actions and selected navigation.
-- White rounded groups stacked on a cool gray canvas.
-- Bold system-sans headings with compact supporting text.
-- Filter chips and bottom sheets for bounded choices.
-- Real warehouse photography paired with high-saturation 3D promotional graphics.
-- Full dark theme built from near-black canvas and charcoal groups.
+The visual language is built from a pale gray page canvas, white rounded groups, saturated Ozon-blue actions, compact chips, dense cards, bottom tabs, documentary warehouse photography, and bright raster promotional/course artwork. It should feel like an operational worker app, not a marketing landing page or a generic SwiftUI list.
 
 # Non-negotiable visual invariants
 
-- The reviewed screens show this treatment: Strong Ozon blue reserved for primary actions and selected navigation.
-- The reviewed screens show this treatment: White rounded groups stacked on a cool gray canvas.
-- The reviewed screens show this treatment: Bold system-sans headings with compact supporting text.
-- The reviewed screens show this treatment: Filter chips and bottom sheets for bounded choices.
-- The reviewed screens show this treatment: Real warehouse photography paired with high-saturation 3D promotional graphics.
-- The reviewed screens show this treatment: Full dark theme built from near-black canvas and charcoal groups.
+- The page background is pale gray, with white rounded groups creating most content surfaces.
+- Ozon blue is reserved for primary buttons, selected tabs, active outlines, links, and high-priority promo banners.
+- Warehouse cards use real workplace photography as the top visual mass, followed by bold location and rate text.
+- Dense screens are divided by rounded white groups rather than thin full-width separators.
+- Filter chips are compact pills near the top of warehouse search and similar selection screens.
+- Bottom navigation has five destinations and a blue rounded selected background or blue selected icon treatment.
+- Course and promo areas use bright raster thumbnails, often with gradients or 3D operational objects.
 
 # Color and surfaces
 
-### Brand & Accent
-- **Ozon Blue** ({colors.primary}): Primary buttons, selected tabs, links, and active outlines.
-- **Soft Blue** ({colors.primary-soft}): Selected icon backgrounds and quiet information.
-- **Cyan** ({colors.cyan}): Secondary banners and supporting brand energy.
+The main canvas is a cool pale gray visible between stacked groups. Primary content surfaces are white, rounded, and lightly separated by the canvas rather than by hard borders. Nested neutral surfaces use very pale blue-gray for disabled actions, secondary buttons, and icon tiles.
 
-### Surface
-- **Canvas** ({colors.canvas}): Gaps between groups and page background.
-- **Surface 1** ({colors.surface-1}): Cards, headers, sheets, and navigation.
-- **Surface 2** ({colors.surface-2}): Skeleton, disabled, and nested neutral surfaces.
-- **Dark Surface** ({colors.surface-dark}): Dark theme base; groups lift with slightly lighter charcoal.
-- **Hairline** ({colors.hairline}): Dividers and chart axes.
+Ozon blue is the only dominant action color. It appears in join/book/withdraw actions, selected tabs, focused login outlines, and active labels. Green marks available dates or positive pay/rate cues; purple appears in rate amounts and promotional banners; red/pink appears in favorites and warnings. Generic system blue, strong shadows, or a pure white full-page canvas would weaken the reference.
 
-### Text
-- **Ink** ({colors.ink}): Headings, amounts, warehouse names, action labels.
-- **Ink Muted** ({colors.ink-muted}): Explanations, locations, hourly equivalents.
-- **Ink Subtle** ({colors.ink-subtle}): Disabled and low-priority metadata.
-
-### Semantic
-- **Success** ({colors.semantic-success}): Confirmed instantly, available dates, positive status.
-- **Warning** ({colors.semantic-warning}): Deadlines and limited-time promotions.
-- **Danger** ({colors.semantic-danger}): Cancellation, errors, debts, and violations.
-- **Overlay** ({colors.semantic-overlay}): Scrim below bottom sheets.
+Text is near-black for titles, rates, names, and labels. Gray supports locations, explanations, time equivalents, and disabled metadata. Dividers are usually implicit through spacing and rounded group boundaries.
 
 # Typography
 
-### Font Family
+The typography uses SF Pro-style system text with bold section heads and compact supporting copy. Screen titles in the navigation area are centered and modest. Section titles such as training blocks and feedback headers are bold and left-aligned. Warehouse names, payout amounts, and course names use semibold to bold text.
 
-- **System Sans** — one family for headings, body, amounts, tabs, and controls.
-- **System Mono** — optional for receipt or identifier strings only.
+Rates and balances are prominent, often with colored amount text. Metadata such as distance, dates, rating, time, and hourly equivalents is smaller and tightly placed near the related title. Onboarding uses a large bold centered statement over a white lower panel.
 
-### Hierarchy
-
-| Token | Size | Weight | Use |
-|---|---|---|---|
-| `{typography.display-xl}` | 34pt | 700 | Large payout or promo figure |
-| `{typography.display-lg}` | 30pt | 700 | Major onboarding statement |
-| `{typography.display-md}` | 26pt | 700 | Section opener |
-| `{typography.headline}` | 22pt | 700 | Screen and major card heading |
-| `{typography.card-title}` | 17pt | 600 | Warehouse, payment, course title |
-| `{typography.body}` | 14pt | 400 | Default explanatory text |
-| `{typography.caption}` | 11pt | 400 | Distance, hourly rate, dates |
-| `{typography.button}` | 16pt | 600 | Primary action |
-
-### Principles
-
-- Make amounts, dates, and location names scannable before descriptions.
-- Use weight and spacing before color to establish hierarchy.
-- Keep secondary metadata compact but never ambiguous.
-- Avoid decorative type; illustration and photography carry brand character.
-
-### Note on Font Substitutes
-
-Use **SF Pro Text** on iOS or **Inter** cross-platform. Preserve heavier 600–700 weights for headings and amounts, with regular 400 for explanations.
+At larger Dynamic Type sizes, preserve scan order by letting secondary descriptions wrap and by keeping amount/rate, primary button, and selected tab labels visible.
 
 # Screen composition
 
-### Grid & Container
+Launch is a full Ozon-blue field with a large white tilted Ozon Job wordmark. Onboarding uses a full-width workplace photo in the upper portion and a rounded white lower sheet containing pager dots, a bold centered headline, and a full-width blue button.
 
-The interface is a single mobile column. Horizontal carousels hold stories, promotions, and neighboring warehouse cards. Two-column tiles are used for balances, rating, and benefits; course cards may scroll horizontally.
+Login mirrors Ozon ID style: logo upper left, bold title, explanatory text, phone input, blue focus outline, disabled or enabled full-width action, and secondary links below.
 
-### Whitespace Philosophy
+Home uses a white top area over pale gray, a compact profile/status header, horizontal story cards, rounded debt/promo/status cards, and a bottom tab bar. Warehouse search uses a centered title, horizontal filter chips, stacked cards with large photos, badges over photos, bold city/rate rows, date chips, and blue primary actions.
 
-Whitespace exists between functional groups rather than inside them. Keep cards information-dense, then use canvas bands and rounded corners to restore scan rhythm.
+Payments use white rounded groups for balance, withdraw action, history rows, chart area, and menu rows. Profile uses a centered title, account row, two-column feature tiles, and grouped list rows. Courses use large section titles and horizontal course cards with raster thumbnails.
 
 # Navigation appearance
 
-Five tabs persist at the bottom: Home, Bookings, Warehouses, Payments, Courses. The selected icon receives blue emphasis. Deeper screens use a back button and centered title; chat stays a compact header action.
+Navigation bars are white with centered titles, small back chevrons on detail pages, and optional compact chat or location icons. Large product navigation does not move to a desktop-style top bar.
+
+The bottom tab bar is a white rounded surface above the home indicator. It contains five compact items. The selected item is blue and often sits on a pale blue rounded highlight; inactive items use dark or gray icons with short black labels.
 
 # Components
 
-### Buttons
+Primary buttons are solid Ozon blue with white semibold labels and 12 point corners. In warehouse cards, the primary booking button sits next to a light secondary button and a favorite heart control.
 
-Primary actions are saturated blue rectangles with 14pt corners and white semibold text. Secondary actions use white or pale-blue fills with blue labels. Favorite is a separate compact heart control.
+Filter chips are short rounded pills with black labels on white or very light surfaces. Active or important chips can use stronger fill or blue emphasis when shown.
 
-### Cards & Containers
+Warehouse cards combine a rounded photo, small badges laid over the image, a bold location name, colored pay/rate amount, compact metadata, blue link text, date chips, and action buttons. Card corners are large enough to create grouped blocks but not decorative blobs.
 
-Warehouse cards combine photo, badges, title, pay, duration, metadata, date chips, and actions. Payments use grouped amount tiles and charts. Profile and settings stack white row groups with leading icons and chevrons.
-
-### Inputs & Forms
-
-Search appears as a pale rounded field. Filters remain visible as chips above results. Structured choices move into bottom sheets with one full-width confirmation button.
-
-### Status & Build Page
-
-Use small pills for promotions, transport, meals, confirmation speed, and deadlines. Payout state and booking availability must remain textual; color only reinforces the label.
-
-### Navigation
-
-Five tabs persist at the bottom: Home, Bookings, Warehouses, Payments, Courses. The selected icon receives blue emphasis. Deeper screens use a back button and centered title; chat stays a compact header action.
+Payments and profile rows use left icon tiles, one or two text lines, and a right chevron. Balance tiles and rating/benefit tiles use two-column white cards with compact labels and bold values.
 
 # Imagery and icons
 
-| Level | Treatment | Use |
-|---|---|---|
-| 0 | Pale gray canvas | Page background |
-| 1 | White rounded group | Most cards and rows |
-| 2 | White sheet plus scrim | Time, date, and filter decisions |
-| 3 | Fixed white navigation with soft top shadow | Persistent tabs |
+Imagery is essential on onboarding, warehouse discovery, home promos, and courses. Photography is documentary and workplace-specific: warehouses, workers, parcels, interiors, entrances, and transport. Course and promo thumbnails use bright raster graphics with 3D objects, parcels, vehicles, screens, or gradient panels.
 
-### Decorative Depth
-
-Use minimal card shadow; separation comes from canvas contrast. Reserve stronger material depth for 3D promotional illustrations and photography.
+Icons are compact and functional. They appear in bottom tabs, profile rows, service chips, badges, and menu rows. Use custom or asset-backed icons where the source shows a branded pictogram; arbitrary SF Symbols are not a substitute when the source icon has a distinct filled, rounded, or branded look.
 
 # States
 
-Use small pills for promotions, transport, meals, confirmation speed, and deadlines. Payout state and booking availability must remain textual; color only reinforces the label.
+Observed states include launch, onboarding, focused phone login, disabled login action, populated home, warehouse search list, warehouse detail, payouts overview, payouts menu list, profile, and courses. Shared constants are white rounded groups, pale gray canvas, compact chips, blue actions, bold rates/amounts, and photo or raster-art emphasis where the sampled screens show it.
+
+The sampled current screens do not verify dark mode, empty search, permission prompts, destructive confirmations, or error sheets. Do not claim or design those as source-specific without additional approved evidence.
 
 # iOS adaptation
 
-| Wide | 768pt+ | Center a bounded mobile column |
-| Small | <390pt | Wrap metadata, reduce carousel card width |
+Use native iOS scroll views, text fields, sheets, keyboard handling, safe-area handling, VoiceOver order, and 44 point minimum targets, while restyling visible controls to match the observed surfaces. Keep bottom tabs above the home indicator and preserve the white rounded tab container.
 
-### Touch Targets
+On compact iPhones, stack groups vertically, keep warehouse photos full card width, let long locations wrap, and preserve the rate/action row hierarchy. For Dynamic Type, prioritize visible titles, rates, primary actions, and selected navigation labels before secondary metadata.
 
-Keep buttons, rows, chips, and tab items at least 44pt high. Provide extra separation between booking and favorite controls and between destructive and confirm actions.
-
-### Collapsing Strategy
-
-Wrap chips across rows before truncating their labels. Stack balance tiles when amounts cannot fit. Bottom-sheet option groups can move from horizontal segments to vertical rows on very narrow screens.
-
-### Image Behavior
-
-Warehouse photos crop to a shallow landscape frame with subject-safe positioning. 3D banners may crop background color but not the primary object or text. Course thumbnails retain their landscape ratio.
-
-On iPhone, respect top and bottom safe areas, use scrolling for content that does not fit, keep interactive targets at least 44 points, and preserve the visual reading order for VoiceOver. At larger Dynamic Type sizes, allow supporting text to wrap without collapsing the dominant hierarchy. Use native sheets and permission transitions while explicitly styling app-owned surfaces to match the reference.
+Only implement appearances supported by current approved screens. Do not add desktop hover states, web breakpoints, footers, marketing pricing cards, or pointer-only interaction.
 
 # Anti-generic checklist
 
-- Do not substitute the documented accent hierarchy with default iOS blue.
-- Do not collapse distinct surfaces into a uniform stack of generic white cards.
-- Do not use an unstyled `TabView`, `Form`, or arbitrary SF Symbols when they contradict the documented navigation and component language.
-- Do not flatten the documented typography into one body-text scale.
-- Do not remove compositionally important photography or illustration while assets are pending.
-- Do not apply one corner radius to every control and surface.
-
-Source-specific guardrails retained from the review:
-
-### Do
-
-- Lead every decision with the operational fact that matters: pay, time, place, or status.
-- Use blue for the one primary action and active navigation.
-- Keep filters visible and compact.
-- Separate dense groups with canvas bands and rounded surfaces.
-- Pair photography with real-work discovery and 3D art with promotions or instruction.
-
-### Don't
-
-- Don't rely on color alone for booking or payment status.
-- Don't hide pay context behind a detail tap.
-- Don't stack multiple competing blue buttons in one group.
-- Don't add heavy shadows to every white card.
-- Don't use promotional illustration inside dense financial history rows.
-
+- Do not replace the pale gray canvas plus white groups with a plain full-white `Form`.
+- Do not use default iOS blue if it differs from Ozon blue.
+- Do not omit warehouse photography from search/detail cards.
+- Do not replace course/promo raster artwork with SwiftUI shapes, SF Symbols, emoji, or gradient-only placeholders.
+- Do not use an unstyled `TabView`; selected tab treatment must be visibly custom.
+- Do not invent dark mode, error, empty, or permission visuals from unrelated sources.
+- Do not turn warehouse cards into sparse marketing cards; keep the dense operational metadata.
 </design-context>

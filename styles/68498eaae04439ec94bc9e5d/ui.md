@@ -3,134 +3,137 @@
 version: 1
 platform: iOS
 name: yandex-maps-design-analysis
-description: "A cartography-first interface with a detailed live map, white floating controls, layered bottom sheets, blue route actions, compact information density, and map-derived onboarding scenes."
+description: "A cartography-first iOS visual system with a full-screen map canvas, compact white floating controls, layered rounded bottom sheets, blue route emphasis, dense list rows, and functional photography or service marks."
 colors:
-  map-land: "#EEF0EB"
-  map-park: "#D9F0D7"
+  canvas: "#F3F4F1"
+  surface-primary: "#FFFFFF"
+  surface-secondary: "#F2F3F5"
+  surface-tertiary: "#E8EAED"
   map-water: "#BFE5F4"
-  map-road: "#FFFFFF"
-  canvas: "#FFFFFF"
-  surface-soft: "#F2F2F3"
-  surface-muted: "#E8E8EA"
+  map-park: "#D9F0D7"
+  accent-primary: "#2F78F6"
+  accent-secondary: "#4BC142"
+  accent-purple: "#7448E8"
+  accent-yellow: "#FFD33D"
   text-primary: "#171719"
   text-secondary: "#73757A"
   text-tertiary: "#A6A8AC"
-  route-blue: "#2F78F6"
-  route-green: "#4BC142"
-  route-red: "#F04A3C"
-  alice-purple: "#7448E8"
-  rating-yellow: "#FFD33D"
   divider: "#E5E6E8"
-  overlay: "#000000"
+  destructive: "#F04A3C"
 typography:
-  display: { fontFamily: "YS Text", fontSize: 28, fontWeight: 700, lineHeight: 33, letterSpacing: -0.3 }
-  title: { fontFamily: "YS Text", fontSize: 22, fontWeight: 700, lineHeight: 27, letterSpacing: -0.2 }
-  headline: { fontFamily: "YS Text", fontSize: 18, fontWeight: 600, lineHeight: 23, letterSpacing: 0 }
-  section: { fontFamily: "YS Text", fontSize: 16, fontWeight: 600, lineHeight: 21, letterSpacing: 0 }
-  body: { fontFamily: "YS Text", fontSize: 14, fontWeight: 400, lineHeight: 19, letterSpacing: 0 }
-  body-compact: { fontFamily: "YS Text", fontSize: 12, fontWeight: 400, lineHeight: 16, letterSpacing: 0 }
-  caption: { fontFamily: "YS Text", fontSize: 10, fontWeight: 400, lineHeight: 13, letterSpacing: 0 }
-  action: { fontFamily: "YS Text", fontSize: 15, fontWeight: 500, lineHeight: 19, letterSpacing: 0 }
+  hero: {fontFamily: "SF Pro Display", fontSize: 28, fontWeight: 700, lineHeight: 34}
+  title: {fontFamily: "SF Pro Display", fontSize: 22, fontWeight: 700, lineHeight: 27}
+  section: {fontFamily: "SF Pro Text", fontSize: 17, fontWeight: 600, lineHeight: 22}
+  body: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 400, lineHeight: 20}
+  label: {fontFamily: "SF Pro Text", fontSize: 14, fontWeight: 600, lineHeight: 18}
+  caption: {fontFamily: "SF Pro Text", fontSize: 12, fontWeight: 400, lineHeight: 16}
 spacing:
   screen-horizontal: 12
-  compact-gap: 6
-  control-gap: 8
   section-gap: 20
-  sheet-padding: 16
+  card-padding: 16
+  control-gap: 8
 rounded:
   control: 12
-  search: 16
   card: 14
   sheet: 22
   pill: 999
 components:
-  search-dock: { minHeight: 48, fill: "#FFFFFF", radius: 16, horizontalPadding: 12 }
-  map-control: { size: 44, fill: "#FFFFFF", radius: 12 }
-  primary-route-action: { height: 48, fill: "#2F78F6", foreground: "#FFFFFF", radius: 12 }
-  contextual-action: { height: 48, fill: "#4BC142", foreground: "#FFFFFF", radius: 12 }
-  place-sheet: { fill: "#FFFFFF", radius: 22, padding: 16 }
-  category-chip: { minHeight: 36, fill: "#F2F2F3", radius: 12, horizontalPadding: 12 }
+  search-dock: {height: 48, fill: "#FFFFFF", radius: 16, horizontalPadding: 12}
+  map-control: {size: 44, fill: "#FFFFFF", radius: 12}
+  primary-action: {height: 48, fill: "#2F78F6", foreground: "#FFFFFF", radius: 12}
+  secondary-action: {height: 44, fill: "#F2F3F5", foreground: "#171719", radius: 12}
+  place-sheet: {fill: "#FFFFFF", radius: 22, padding: 16}
+  segmented-control: {height: 36, fill: "#F2F3F5", selectedFill: "#FFFFFF", radius: 12}
+  bottom-action-bar: {height: 56, fill: "#FFFFFF", radius: 0}
 ---
 
 # Overview
 
-Yandex Maps keeps the map as the primary working surface. Search, categories, location controls, place facts, routes, transport, and account tools are layered over it as floating controls and bottom sheets. The interface is information-dense but physically compact: controls protect map visibility, sheets grow only as the task needs more detail, and blue consistently identifies route-building and navigation actions.
+Yandex Maps is visually anchored by a detailed live map that fills the iPhone screen and stays visible behind compact floating controls. White rounded search fields, control stacks, and bottom sheets sit above cartographic land, water, roads, labels, markers, and route lines. The recognisable character comes from the contrast between busy map detail and restrained white interface chrome: small controls, dense factual rows, blue route emphasis, occasional green commercial actions, and real place imagery.
 
 # Non-negotiable visual invariants
 
-- The detailed map remains visible as the base of discovery, place selection, and route planning.
-- Search and category access sit in a white bottom dock or sheet instead of a conventional full-width tab bar.
-- Zoom, location, orientation, layers, and 3D controls are separate white floating buttons aligned along map edges.
-- Place details rise from the bottom and can expand from a compact summary into a full information surface while retaining task actions.
-- Route alternatives remain visible on the map and are paired with compact mode, time, disruption, and price choices below.
-- Blue marks route and navigation commitment; green is reserved for contextual offers or selected commercial actions.
-- Photos, ratings, address facts, hours, transport access, reviews, and actions use compact section hierarchy rather than equal decorative cards.
+- The map occupies the full viewport whenever map context is visible; controls float above it instead of enclosing it in a page frame.
+- Search, place details, route options, permission education, and profile/menu surfaces use white rounded bottom sheets with a small centered grabber.
+- Map controls are separate 44-point white buttons along the trailing edge, with zoom controls stacked and unrelated controls kept visually distinct.
+- Blue is the dominant commitment and selected-route color; purple is limited to the Alice/search assistant mark and green to contextual partner or transit accents.
+- Place cards combine a darkened or real-photo media header, a white information sheet, compact tabs, star rating, metadata rows, and a sticky bottom action strip.
+- Route screens keep colored paths and markers on the map while the lower sheet uses compact mode chips, duration tiles, price chips, and one broad blue action.
+- Menu and settings abandon the map canvas but keep the same flat density: white background, pale gray row groups, monochrome icons, and thin separators.
 
 # Color and surfaces
 
-The cartographic palette supplies most of the screen color: pale neutral land, green parks, blue water, white roads, colored transit symbols, and dark labels. UI surfaces are white with faint neutral fills and dividers. Floating controls use soft ambient lift only where needed to separate them from map detail.
+The largest color mass is usually cartography: pale gray-beige land, white roads, light blue water, soft green parks, dark place labels, blue transit icons, colored service markers, and red or green route signals. Interface surfaces are mostly pure white with very light gray secondary fills. They rely on rounded geometry and faint shadow or scrim separation rather than heavy elevation.
 
-Route blue is the stable action and selection color. Route lines may use blue, green, red, or darker alternatives to distinguish mode and traffic context. Purple belongs to the Alice search entry. Yellow communicates ratings. Green actions are contextual to offers or partner tasks and do not replace blue navigation actions globally.
+Blue identifies route selection, primary action, active underlines, and important links. Green appears in contextual partner actions, transit badges, and positive route details. Purple appears as the assistant/search mark and should not spread through generic controls. Yellow is reserved for ratings and a few brand/service marks. Red is seen in location pins, traffic disruption, and destructive or blocked map signals; it should remain small and semantic.
+
+Generic iOS system blue used everywhere would flatten the hierarchy, and large saturated brand fields would fight the map. Dark surfaces belong mainly to photo overlays, scrims, or live map content, not to ordinary settings and list screens.
 
 # Typography
 
-Use YS Text when available and SF Pro as the iOS substitute. Place names, route durations, and onboarding statements carry the strongest weight. Most map-adjacent information uses 12–16-point text so it can coexist with labels already embedded in the map. Secondary facts, counts, distances, and prices use compact lines but remain readable.
+The hierarchy is compact and factual. Place names, route durations, sheet titles, and onboarding questions use the strongest weight. Most rows, labels, distances, counts, prices, and metadata sit in the 12-17 point range so that map labels and dense lists remain legible together. Text is primarily left-aligned in sheets and rows, with centered text used for empty states, permission education, and some broad actions.
 
-Use 22–28-point text only for major onboarding or task statements, 18-point text for place and route titles, 14–16-point text for actions and section labels, and 10–12-point text for dense metadata. Preserve tabular clarity for time, distance, ratings, and prices. Dynamic Type should expand sheet content and actions while leaving map labels under the cartographic renderer's control.
+Use SF Pro as the iOS-safe face; the observed product reads as a neutral rounded sans with tight but readable rhythm. Preserve numeric clarity for ratings, review counts, times, route durations, distances, prices, and transport badges. Dynamic Type should expand sheets and rows vertically, while route chips and category grids may scroll horizontally rather than compressing labels below readability.
 
 # Screen composition
 
-The live map fills the viewport. A vertical cluster of map controls sits at the trailing edge; location and route shortcuts occupy the lower corners. The bottom dock contains search, Alice, category shortcuts, and service destinations without turning the map into a small viewport surrounded by chrome.
+Map-first screens place live cartography edge to edge through the safe areas. A white search dock or compact bottom panel sits near the lower safe area, service/category shortcuts sit below or above it, and a trailing vertical stack holds layers, orientation, 3D, zoom, and location controls. Selected pins or route endpoints remain visually central, while bottom sheets cover only the lower portion unless a detail state needs more vertical space.
 
-Search expands into a bottom surface with the query field first, category/history switching below it, and either a category grid, search history, or result list. Place selection combines a map marker, optional image preview, and a sheet that begins with title, category, rating, hours, and immediate actions. Expanding the place sheet reveals sectioned facts, contacts, transport access, media, reviews, and corrections while keeping a sticky action row available.
+Search composition shifts into a white bottom sheet over a dimmed map. The query field remains first, segmented category/history selection sits beneath it, and content becomes either a grid of circular category entries, an empty centered message, or a tight suggestion list with icons, names, secondary address text, and right-aligned distance.
 
-Route planning keeps the map above a bottom route surface. Origin and destination, transport modes, alternatives, duration, disruptions, and price compete for limited space through horizontal choices rather than stacked full-width cards. Time selection and other refinements replace or overlay only the lower task surface.
+Place composition combines map context, a marker, optional photography, and a white sheet. The compact sheet opens with title, category, rating, hours, distance, and primary actions. Expanded sections use full-width rows, faint dividers, small icons, blue links, panorama crops, photo mosaics, and a bottom action strip that remains visually pinned.
 
-Menu, profile, settings, bookmarks, and offline maps may use full-height content because map manipulation is no longer the immediate task. Even there, grouped rows remain flat and compact rather than becoming a stack of elevated cards.
+Route composition keeps the map above and the choices below. Colored route lines, incident marks, stops, and live transport badges stay on the map. The bottom area uses origin/destination fields, horizontal mode choices, compact alternative cards, a wide blue action, and occasional picker sheets that rise over the lower part of the map.
+
+Menu, profile, and settings use full white or pale gray pages with grouped row blocks. They keep the same 12-point horizontal edge discipline, compact icons, and shallow row heights rather than turning into large cards.
 
 # Navigation appearance
 
-Primary navigation is task-based: the map remains the base, search and categories open from the bottom dock, route building opens from a destination or route shortcut, and menu/profile lead to account utilities. There is no conventional persistent tab bar competing with the map.
+Navigation is visually expressed through floating search controls, bottom sheets, compact title bars, segmented controls, and active underlines. There is no persistent full-width tab bar in the sampled screens. When a sheet is active, the map behind it is dimmed or partially visible, the sheet has a rounded top and centered grabber, and close controls are small gray circular buttons.
 
-Bottom sheets use a small drag indicator, a close action when appropriate, and tabs or segmented choices inside the sheet. Place sections use a short underline for the active destination. Drill-down settings use back navigation and compact titles. Floating map controls remain visible only when they apply to the current map state.
+Active states are marked by blue fill, blue underline, selected white segment over a pale segmented track, or a highlighted route line. Back and close controls remain visually quiet: gray circles, chevrons, or small text buttons placed at sheet or title-bar edges. Settings and detail screens use centered titles or left-leading titles with simple monochrome row disclosures.
 
 # Components
 
-The search dock is a white rounded container with account identity at the leading edge, query text in the center, and Alice at the trailing edge. A short category/service row may attach below it. Expanded search adds a keyboard-aware query row, categories/history selection, and results in the same task surface.
+Search docks are white rounded rectangles with a small leading identity or search icon, muted placeholder text, and the purple assistant mark at the trailing edge. Expanded search fields sit inside a sheet, remain horizontally compact, and pair with a blue text or filled action when the keyboard is present.
 
-Map controls are isolated 44-point white buttons with one dark symbol. Related zoom actions may stack, but unrelated controls remain separate. Their shadows and corner radii are just strong enough to maintain legibility over changing map content.
+Map controls are white rounded squares or short capsules with monochrome symbols. They appear in vertical stacks with small gaps; zoom buttons share one stacked control, while layer, orientation, 3D, and location remain separate. Their visual weight is intentionally lighter than place sheets and route panels.
 
-The place sheet starts with title, classification, rating, review count, opening state, distance, and one or two priority actions. Information below is divided by whitespace and faint separators. Media uses a compact mosaic or wide crop. The bottom action row may include route, taxi, phone, share, or contextual commerce while keeping the route action first.
+Bottom sheets have 22-point top corners, white fill, a small gray grabber, compact headers, and minimal dividers. Place sheets use tabs with black labels and a short blue active underline. Dense sections use pale row icons, black primary text, gray metadata, and blue link text.
 
-Route alternatives combine a mode selector with duration and service information. A selected option is filled blue; alternatives remain pale. Primary route or tariff actions span most of the sheet width. Route lines, pins, stops, incidents, and live transport markers must remain distinguishable from UI buttons.
+Primary actions are broad blue rounded rectangles with white semibold labels. Secondary actions are pale gray or white controls with black text, or small square icon buttons in the sticky action row. Contextual green actions are broad and rounded but appear only when the visible context uses green.
 
-Category entries use either familiar monochrome symbols on pale circular fields or actual service marks where brand recognition matters. They are functional shortcuts, not illustrations.
+Category grids use circular pale gray icon fields, compact captions, and occasional recognizable service logos. Settings rows are flat, with a monochrome leading icon, one-line title, optional muted secondary value, and a faint trailing disclosure.
 
 # Imagery and icons
 
-Cartography is the primary image system. Preserve vector labels, transit symbols, road hierarchy, building footprints, parks, water, traffic, route lines, selected pins, and 3D landmarks as functional map content. Do not flatten the map into a decorative background texture.
+Cartography is the main imagery layer. It must retain road hierarchy, water and park fields, map labels, transit marks, selected pins, route lines, traffic coloring, building footprints, and 3D or panorama cues where visible. Treat the map as functional image content, not as a decorative backdrop.
 
-Place photography uses real wide crops, panoramas, and compact mosaics. Familiar map and navigation actions use coherent functional symbols. Partner or service logos remain distinct where recognition is necessary. Onboarding scenes derived from the map follow the separate illustration guidance; ordinary place photos and category icons do not.
+Place photography appears as real wide crops, darkened media headers, panoramas, compact mosaics, and thumbnails. These images are tightly cropped and paired with factual labels or play/camera counters. Service logos and partner marks appear only where recognition is part of the visible component.
+
+The sampled screens show some one-off educational objects and map-derived graphics, but they are not consistent enough to define a standalone illustration system. Functional icons should stay simple, monochrome, and map-adjacent; do not replace map controls, place photos, service marks, transport badges, or rating stars with arbitrary decorative symbols.
 
 # States
 
-Observed states include initial location search, permission prompts, current-location resolution, standard and 3D map views, search categories, empty history, typed suggestions, selected place, collapsed and expanded place details, photo browsing, route mode selection, route alternatives, time refinement, transport and taxi choices, menu, profile, and settings.
+Observed states include splash, location permission, location acquisition, base map, zoomed map, 3D map, expanded search, empty search history, typed suggestions, selected place, expanded place details, photo-heavy place sections, route alternatives, public transport step detail, time picker sheets, menu, profile entry, settings, and educational transport/taxi sheets.
 
-Selection is explicit through an active map marker, highlighted route, selected mode, or active section. Loading preserves the map when possible. Empty history and unavailable content explain the state and retain a next action. System location and notification prompts remain native. Failed or denied location access must leave manual search and map movement available.
+The visual constants are the white sheet surface, compact typography, blue selected or primary action, pale gray secondary fill, and map visibility whenever map context exists. Empty states are sparse and centered. Picker states use native wheel geometry inside a white rounded sheet while preserving the app's blue done/action control. Permission prompts can remain native, but surrounding app surfaces keep the map-derived context and white/blue palette.
 
 # iOS adaptation
 
-Keep map controls, search, route modes, sheet actions, category shortcuts, and close controls at least 44 points even when their visible symbol is smaller. Respect safe areas while allowing the map and place imagery to extend edge-to-edge. Ensure bottom sheets and sticky action rows do not cover the selected marker or the final scroll item.
+Preserve safe-area behavior by allowing the map and media to extend behind the status area while keeping controls and sheet actions clear of the home indicator. Keep visible tap targets at least 44 points for map controls, close buttons, route choices, category entries, and sticky action buttons. Bottom sheets should grow with content and keyboard changes instead of covering selected map markers unnecessarily.
 
-Expose map, selected place, sheet content, and actions as separate VoiceOver regions. Announce route duration together with mode and disruptions, and expose map controls by function rather than symbol name. At large Dynamic Type sizes, expand the sheet, wrap facts, and horizontally scroll route alternatives instead of shrinking text or covering the map with fixed controls.
+For Dynamic Type, let sheet rows, result lists, settings rows, and place metadata wrap and expand. Keep route alternatives and category shortcuts horizontally scrollable when compact width cannot fit them. VoiceOver order should separate map content, floating controls, sheet title, sheet sections, and sticky actions so the dense layout remains navigable without changing its visual hierarchy.
+
+The reference is a light-mode system in the sampled screens. A dark adaptation should be treated as a separate visual decision, because the observed look depends on pale cartography, white sheets, black text, and blue route emphasis.
 
 # Anti-generic checklist
 
-- Do not replace the map with a pale placeholder behind generic cards.
-- Do not turn search, place, route, menu, and settings into one repeated sheet template.
-- Do not use purple as the default route or navigation action color.
-- Do not hide distinct route alternatives, disruptions, prices, and transport modes inside one summary value.
-- Do not replace functional cartographic symbols or service marks with arbitrary SF Symbols.
-- Do not use heavy shadows, oversized chrome, or a conventional tab bar that consumes the working map area.
+- Do not replace the live map with a static pale placeholder behind generic cards.
+- Do not use a default `TabView`, default `Form` sections, or a standard large-title navigation stack for map, place, or route surfaces.
+- Do not make every screen a uniform white card stack; map controls, place sheets, route panels, and settings rows have distinct visual density.
+- Do not recolor primary route actions purple or green; blue is the route and selected-action anchor.
+- Do not substitute arbitrary SF Symbols for service logos, transport badges, rating stars, map pins, or photographic place media.
+- Do not add heavy shadows, large hero typography, decorative gradients, or oversized rounded cards that reduce the visible map area.
 
 </design-context>

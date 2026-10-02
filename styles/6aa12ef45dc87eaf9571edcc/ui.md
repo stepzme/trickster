@@ -3,352 +3,115 @@
 version: 1
 platform: iOS
 name: Pool-design-analysis
-description: "A playful screenshot-organizer interface built on airy white space, fluid cyan controls, and tactile 3D brand objects. Editorial serif headings give the library character while a neutral system sans keeps actions legible. Screenshot mosaics are the primary content; frosted edge controls, rounded cards, and a yellow duck mascot create a soft, spatial layer above them."
-
+description: "Pool uses an airy white iOS screenshot library with editorial serif titles, floating cyan glass controls, large rounded onboarding sheets, tactile duck artwork, and screenshot mosaics as the dominant content."
 colors:
-  primary: "#63BCF5"
-  on-primary: "#FFFFFF"
-  primary-strong: "#2D8FE8"
-  primary-soft: "#DDF3FF"
-  ink: "#15151B"
-  ink-muted: "#77777D"
-  ink-subtle: "#AAAAB0"
   canvas: "#FFFFFF"
-  surface-1: "#F6F6F5"
-  surface-2: "#EEEEED"
-  surface-dark: "#171719"
-  hairline: "#E2E2E0"
-  glass: "#F7F7F2CC"
-  mascot-yellow: "#FFC21C"
-  accent-pink: "#FF5DA8"
-  semantic-success: "#1EAF62"
-  semantic-danger: "#E84855"
-  semantic-overlay: "#000000"
-
+  surface-primary: "#FFFFFF"
+  surface-secondary: "#F2F2F1"
+  accent-primary: "#8BD6FF"
+  accent-secondary: "#FFC21C"
+  text-primary: "#202027"
+  text-secondary: "#7A7A82"
+  divider: "#E5E5E2"
+  destructive: "#E84855"
 typography:
-  display-xl:
-    fontFamily: Editorial Serif
-    fontSize: 40
-    fontWeight: 500
-    lineHeight: 1.05
-    letterSpacing: -0.8
-  display-lg:
-    fontFamily: Editorial Serif
-    fontSize: 34
-    fontWeight: 500
-    lineHeight: 1.08
-    letterSpacing: -0.6
-  display-md:
-    fontFamily: Editorial Serif
-    fontSize: 28
-    fontWeight: 500
-    lineHeight: 1.12
-    letterSpacing: -0.4
-  headline:
-    fontFamily: Editorial Serif
-    fontSize: 24
-    fontWeight: 500
-    lineHeight: 1.15
-    letterSpacing: -0.2
-  card-title:
-    fontFamily: System Sans
-    fontSize: 17
-    fontWeight: 600
-    lineHeight: 1.25
-    letterSpacing: 0
-  subhead:
-    fontFamily: System Sans
-    fontSize: 17
-    fontWeight: 400
-    lineHeight: 1.35
-    letterSpacing: 0
-  body-lg:
-    fontFamily: System Sans
-    fontSize: 16
-    fontWeight: 400
-    lineHeight: 1.40
-    letterSpacing: 0
-  body:
-    fontFamily: System Sans
-    fontSize: 15
-    fontWeight: 400
-    lineHeight: 1.40
-    letterSpacing: 0
-  body-sm:
-    fontFamily: System Sans
-    fontSize: 13
-    fontWeight: 400
-    lineHeight: 1.35
-    letterSpacing: 0
-  caption:
-    fontFamily: System Sans
-    fontSize: 11
-    fontWeight: 400
-    lineHeight: 1.30
-    letterSpacing: 0
-  button:
-    fontFamily: System Sans
-    fontSize: 15
-    fontWeight: 500
-    lineHeight: 1.20
-    letterSpacing: 0
-  eyebrow:
-    fontFamily: System Sans
-    fontSize: 12
-    fontWeight: 600
-    lineHeight: 1.25
-    letterSpacing: 0.2
-  mono:
-    fontFamily: System Mono
-    fontSize: 12
-    fontWeight: 400
-    lineHeight: 1.40
-    letterSpacing: 0
-
-rounded:
-  xs: 6
-  sm: 10
-  md: 14
-  lg: 20
-  xl: 28
-  xxl: 36
-  pill: 9999
-  full: 9999
-
+  hero: {fontFamily: "New York", fontSize: 40, fontWeight: 500, lineHeight: 44}
+  title: {fontFamily: "New York", fontSize: 30, fontWeight: 500, lineHeight: 35}
+  section: {fontFamily: "SF Pro Text", fontSize: 18, fontWeight: 600, lineHeight: 24}
+  body: {fontFamily: "SF Pro Text", fontSize: 16, fontWeight: 400, lineHeight: 22}
+  label: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 500, lineHeight: 20}
+  caption: {fontFamily: "SF Pro Text", fontSize: 12, fontWeight: 400, lineHeight: 16}
 spacing:
-  xxs: 4
-  xs: 8
-  sm: 12
-  md: 16
-  lg: 24
-  xl: 32
-  xxl: 48
-  section: 72
-
+  screen-horizontal: 16
+  section-gap: 32
+  card-padding: 20
+  control-gap: 12
+rounded:
+  control: 24
+  card: 28
+  sheet: 32
+  pill: 999
 components:
-  button-primary:
-    backgroundColor: "{colors.primary}"
-    textColor: "{colors.on-primary}"
-    typography: "{typography.button}"
-    rounded: "{rounded.pill}"
-    padding: [14, 20]
-  floating-control:
-    backgroundColor: "{colors.glass}"
-    textColor: "{colors.ink}"
-    typography: "{typography.body}"
-    rounded: "{rounded.pill}"
-    padding: [12, 16]
-  onboarding-sheet:
-    backgroundColor: "{colors.canvas}"
-    textColor: "{colors.ink}"
-    typography: "{typography.body}"
-    rounded: "{rounded.xxl}"
-    padding: 24
-  pool-card:
-    backgroundColor: "{colors.surface-1}"
-    textColor: "{colors.ink}"
-    typography: "{typography.body}"
-    rounded: "{rounded.lg}"
-    padding: 12
-  settings-group:
-    backgroundColor: "{colors.surface-1}"
-    textColor: "{colors.ink}"
-    typography: "{typography.body}"
-    rounded: "{rounded.lg}"
-    padding: [4, 12]
-  text-input:
-    backgroundColor: "{colors.surface-1}"
-    textColor: "{colors.ink}"
-    typography: "{typography.body}"
-    rounded: "{rounded.lg}"
-    padding: 16
-    backgroundColor: "{colors.canvas}"
-    textColor: "{colors.ink}"
-    typography: "{typography.eyebrow}"
-    rounded: "{rounded.xs}"
-    height: 48
-    backgroundColor: "{colors.canvas}"
-    textColor: "{colors.ink-muted}"
-    typography: "{typography.caption}"
-    rounded: "{rounded.xs}"
-    padding: [24, 16]
+  primary-action: {fill: "#8BD6FF", foreground: "#FFFFFF", cornerRadius: 999, height: 54}
+  secondary-action: {fill: "#F2F2F1", foreground: "#202027", cornerRadius: 999, height: 48}
+  primary-card: {fill: "#FFFFFF", foreground: "#202027", cornerRadius: 32, shadow: "soft"}
+  navigation: {fill: "#BDEAFFCC", selected: "#FFFFFF", unselected: "#FFFFFF"}
 ---
 
 # Overview
 
-Pool makes user screenshots the visual material of the interface. White library screens stay intentionally sparse, while screenshot grids, small 3D objects, and translucent blue controls carry the identity. Onboarding inverts the balance: an atmospheric blue field sits behind one large white question sheet.
-
-**Key Characteristics:**
-- Dense screenshot mosaics on an open white canvas.
-- Editorial serif for titles; compact system sans for all actions and metadata.
-- Cyan-blue pill controls with soft blur and glow.
-- Oversized white sheets with rounded corners for sequential setup.
-- Yellow duck, pink number, and other tactile objects as navigation landmarks.
-- A true dark theme using charcoal grouped surfaces.
+Pool is visually led by the user's screenshot collection on a sparse white canvas. The app identity comes from an editorial serif title voice, cyan floating glass controls, rounded oversized setup sheets, a small yellow duck mascot, and tactile 3D/painted objects that sit above or around the content without replacing it.
 
 # Non-negotiable visual invariants
 
-- The reviewed screens show this treatment: Dense screenshot mosaics on an open white canvas.
-- The reviewed screens show this treatment: Editorial serif for titles; compact system sans for all actions and metadata.
-- The reviewed screens show this treatment: Cyan-blue pill controls with soft blur and glow.
-- The reviewed screens show this treatment: Oversized white sheets with rounded corners for sequential setup.
-- The reviewed screens show this treatment: Yellow duck, pink number, and other tactile objects as navigation landmarks.
-- The reviewed screens show this treatment: A true dark theme using charcoal grouped surfaces.
+- Screenshot thumbnails are the dominant working content and appear as airy mosaics with large white gaps.
+- Page titles such as Pool and Pools use an editorial serif, while controls and settings rows use system sans.
+- The yellow duck mascot is a persistent brand object on entry, onboarding, and library screens.
+- Floating controls use soft cyan or frosted white fills, pill geometry, blur, glow, and very light shadows.
+- Onboarding sits on a blue watercolor-like background with a large white rounded sheet in the lower portion.
+- Pool covers are pale rounded containers holding small clustered screenshots, not generic folder icons.
+- Settings rows use soft grouped gray surfaces with line icons, right chevrons, toggles, and segmented controls.
+- Destructive actions are red text/icons inside the same calm grouped settings language.
 
 # Color and surfaces
 
-### Brand & Accent
-- **Pool Blue** ({colors.primary}): Primary actions, selected tabs, add and search controls.
-- **Strong Blue** ({colors.primary-strong}): Active emphasis and compact links.
-- **Soft Blue** ({colors.primary-soft}): Quiet selected and informational surfaces.
-- **Mascot Yellow** ({colors.mascot-yellow}) and **Accent Pink** ({colors.accent-pink}): Reserved for the duck and 3D brand objects.
-
-### Surface
-- **Canvas** ({colors.canvas}): Main library and settings background.
-- **Surface 1** ({colors.surface-1}): Settings groups, text areas, empty pool covers.
-- **Surface 2** ({colors.surface-2}): Pressed or nested neutral controls.
-- **Glass** ({colors.glass}): Floating navigation and edge controls over content.
-- **Dark Surface** ({colors.surface-dark}): Dark-mode canvas and grouped rows.
-
-### Text
-- **Ink** ({colors.ink}): Titles, counts, primary labels.
-- **Ink Muted** ({colors.ink-muted}): Supporting copy and row descriptions.
-- **Ink Subtle** ({colors.ink-subtle}): Placeholders and disabled controls.
-
-### Semantic
-- **Success** ({colors.semantic-success}): Granted permissions and positive confirmation.
-- **Danger** ({colors.semantic-danger}): Delete account, trash, and destructive actions.
-- **Overlay** ({colors.semantic-overlay}): Dimmed content under sheets.
+The primary working canvas is pure white. Secondary surfaces are warm light gray groups, empty pool covers, text areas, and settings rows. The main accent is a soft cyan-blue used for search, add, selected navigation, and continue controls. A yellow-orange duck and pink inflated number provide brand accents. Text is near-black for titles and labels, with gray secondary copy. Dividers are extremely light. The observed dark treatment is limited to content thumbnails and referenced media; the app's visible settings and library baseline are light.
 
 # Typography
 
-### Font Family
-
-- **Editorial Serif** — app titles, onboarding questions, recaps, and pool headings.
-- **System Sans** — buttons, rows, metadata, forms, and screenshot labels.
-- **System Mono** — only if source metadata requires fixed-width text.
-
-### Hierarchy
-
-| Token | Size | Weight | Use |
-|---|---|---|---|
-| `{typography.display-xl}` | 40pt | 500 | Recap emphasis |
-| `{typography.display-lg}` | 34pt | 500 | Onboarding question |
-| `{typography.display-md}` | 28pt | 500 | Primary page title |
-| `{typography.headline}` | 24pt | 500 | Sheet heading |
-| `{typography.card-title}` | 17pt | 600 | Group and card title |
-| `{typography.body}` | 15pt | 400 | Default copy |
-| `{typography.caption}` | 11pt | 400 | Counts and hints |
-| `{typography.button}` | 15pt | 500 | Actions |
-
-### Principles
-
-- Let serif titles feel expressive without increasing density.
-- Keep labels short and neutral; the image grid remains dominant.
-- Use centered type for onboarding and page titles, left alignment for settings and forms.
-- Avoid all-caps except the small POOL.DAY wordmark.
-
-### Note on Font Substitutes
-
-Use **DM Serif Display** or **Fraunces** for the editorial role and **SF Pro / Inter** for system sans. Preserve the restrained serif weight and compact mobile proportions.
+Use an iOS-safe editorial serif such as New York for the visible display role: large centered Pool/Pools titles and onboarding questions. Use SF Pro Text for buttons, metadata, settings rows, counts, hints, and screenshot labels. The serif should remain moderate weight, not bold display advertising. Onboarding copy is centered; settings and controls are left aligned. The small POOL.DAY wordmark appears in uppercase at the status-bar level. Dynamic Type should preserve the contrast between expressive serif headings and compact sans controls.
 
 # Screen composition
 
-### Grid & Container
+Home and library screens use a full white canvas with top safe-area wordmark, a small duck at upper left, a centered serif title, a pink 3D count at upper right, and a grid of screenshots below. Bottom navigation floats over content as a cyan translucent pill, with a separate round search or add control near the lower right.
 
-The home library uses a user-selectable 2-, 3-, or 4-column image grid. Pools use asymmetrical cover sizes but align to the same horizontal gutters. Focused screens keep one centered mobile column.
+Onboarding uses a full-screen blue watercolor field. A duck floats near the top and a large white sheet with 32 point corners holds the question, step indicator, optional object artwork, chips or input area, and a bottom pill action.
 
-### Whitespace Philosophy
+Detail screens center a screenshot preview in the viewport, with translucent round edge controls for close, share, menu, add, delete, and related actions. Search uses a bottom sheet above the keyboard with suggested category chips and a cyan search field. Pools screens use large rounded empty or populated cover tiles and sparse labels underneath. Settings screens scroll vertically through grouped gray row clusters.
 
-Empty white space is functional: it separates image clusters and gives floating controls room to remain visible. Do not fill sparse pool or settings screens with decoration.
+Main visible archetypes are entry/login, onboarding/personalization sheet, screenshot mosaic library, screenshot detail viewer, search sheet, pools grid, and settings/profile list.
 
 # Navigation appearance
 
-The top bar centers POOL.DAY and places tactile brand objects at the edges. A floating bottom bar switches Home and Pools, with adjacent search or add controls. Detail screens use a top-left close and top-right contextual actions.
+Navigation is mostly floating and object-like. The bottom switcher is a wide translucent cyan pill with two labels, a stronger selected capsule, and soft glow. Search and add appear as separate circular cyan glass buttons. Close/back/share/menu controls are pale frosted circles or pills placed near screen edges. Settings use a close circle at upper left and keep the POOL.DAY wordmark centered above the content.
 
 # Components
 
-### Buttons
+Primary actions are large cyan gradient-like pills with white centered labels. Secondary onboarding options are rounded light gray pills in a two-column grid; selected chips gain a subtle gray selected fill and a checkmark.
 
-Primary actions are wide cyan pills with white text and a diffuse blue shadow. Secondary actions are white or frosted pills. Circular close, add, share, and delete controls use the same floating treatment.
+Onboarding cards are white sheets with very large corner radii, centered serif headings, tiny progress marks, soft circular close/back controls, and abundant internal whitespace.
 
-### Cards & Containers
+Screenshot thumbnails are small raster images with native aspect ratio, arranged in 3 or 4 columns with open gutters. They should not be boxed into uniform cards unless the source image itself has a device frame.
 
-Pool covers are pale rounded fields containing miniature screenshot collages. Settings groups stack rows inside one rounded gray container. Onboarding places all choices inside one oversized white sheet.
+Pool cards are rounded pale covers, sometimes wide and sometimes square, containing small overlapping screenshot clusters. Empty covers remain pale and lightly textured rather than outlined.
 
-### Inputs & Forms
+Settings rows are grouped rounded rectangles with light gray fill, left icon capsule, label, optional description, trailing chevron or toggle, and thin internal dividers. Segmented controls for appearance and columns sit inside the same grouped section.
 
-Text entry uses large pale rounded areas with understated placeholders. Keyboard states keep the primary Continue button visible above the keyboard when space permits.
-
-### Status & Build Page
-
-Permission state is shown inline with a green circled check. Counts sit directly under pool names; progress in onboarding uses short horizontal marks rather than numeric steps.
-
-### Navigation
-
-The top bar centers POOL.DAY and places tactile brand objects at the edges. A floating bottom bar switches Home and Pools, with adjacent search or add controls. Detail screens use a top-left close and top-right contextual actions.
+Detail controls are frosted circular buttons with muted glyphs and soft shadow; the central screenshot remains the visual anchor.
 
 # Imagery and icons
 
-| Level | Treatment | Use |
-|---|---|---|
-| 0 | White or charcoal canvas | Base screens |
-| 1 | Pale rounded group | Settings and form clusters |
-| 2 | Translucent blur with soft shadow | Bottom navigation and edge controls |
-| 3 | White oversized sheet over blue field | Onboarding |
-
-### Decorative Depth
-
-Use blur, broad low-opacity shadow, and translucent fills. Tactile 3D symbols add depth; borders should remain faint and secondary.
+User screenshots are the main imagery and must remain unmodified in color. Authored brand imagery includes the yellow duck, pink inflated count, blue watercolor background, small rendered motifs such as a globe or flame, and product mockups inside onboarding. Icons are simple line glyphs in neutral gray or white inside glass controls. The duck and rendered objects are not interchangeable with flat symbols; they provide the product's tactile layer.
 
 # States
 
-Permission state is shown inline with a green circled check. Counts sit directly under pool names; progress in onboarding uses short horizontal marks rather than numeric steps.
+Observed states include login entry, onboarding choices, iOS photo permission prompt over the blue illustrated setup screen, populated screenshot grid, scrolled grid, screenshot detail viewer, search sheet with keyboard, pools overview, settings toggles/segmented controls, and destructive account rows. Across states, the light canvas, editorial title, duck/3D landmarks, cyan glass controls, and soft rounded groups remain stable.
 
 # iOS adaptation
 
-| Wide | 768pt+ | Center the mobile canvas; allow wider gutters |
-| Small | <390pt | Reduce sheet padding and serif scale |
+Respect top and bottom safe areas while keeping the wordmark, duck, title, and floating bottom controls in the same visual zones. Grids must adapt by changing column count and spacing rather than stretching thumbnails. Keep floating controls at least 44 points and maintain sufficient hit area around translucent buttons. VoiceOver order should prioritize close/navigation controls, title, primary content, then floating actions. Dynamic Type may expand settings rows and onboarding text, but it must not crowd the duck, step indicator, or bottom action. Keyboard-driven search should keep the rounded sheet above the keyboard with the cyan search field visible.
 
-### Touch Targets
-
-Maintain at least 44pt for floating icons, segmented options, and rows. Keep the bottom controls above the safe area and avoid narrow hit regions between translucent pills.
-
-### Collapsing Strategy
-
-Reduce screenshot columns before shrinking individual items below useful recognition. Let option grids collapse from two columns to one only when labels wrap. Keep the dominant bottom action full width.
-
-### Image Behavior
-
-Screenshot thumbnails preserve aspect ratio and may vary in height. Detail views fit the full capture without destructive crop. Pool collages may overlap or fan thumbnails but should retain recognizable edges.
-
-On iPhone, respect top and bottom safe areas, use scrolling for content that does not fit, keep interactive targets at least 44 points, and preserve the visual reading order for VoiceOver. At larger Dynamic Type sizes, allow supporting text to wrap without collapsing the dominant hierarchy. Use native sheets and permission transitions while explicitly styling app-owned surfaces to match the reference.
+Do not introduce desktop hover states, web breakpoints, top navigation, footers, marketing pricing cards, or pointer-only behavior unless they genuinely appear in the iOS reference.
 
 # Anti-generic checklist
 
-- Do not substitute the documented accent hierarchy with default iOS blue.
-- Do not turn the documented white canvas into a generic card stack; preserve the observed accent, density, imagery, and surface grouping.
-- Do not use an unstyled `TabView`, `Form`, or arbitrary SF Symbols when they contradict the documented navigation and component language.
-- Do not flatten the documented typography into one body-text scale.
-- Do not remove compositionally important photography or illustration while assets are pending.
-- Do not apply one corner radius to every control and surface.
-
-Source-specific guardrails retained from the review:
-
-### Do
-
-- Let screenshots dominate the library.
-- Keep primary controls cyan, rounded, and spatially detached from content.
-- Pair expressive serif headings with neutral sans labels.
-- Preserve generous white space around sparse collections.
-- Use 3D brand objects only as purposeful landmarks.
-
-### Don't
-
-- Don't place heavy borders around every screenshot.
-- Don't introduce dense toolbars over the grid.
-- Don't turn the mascot palette into a general multicolor UI.
-- Don't flatten onboarding into a conventional settings form.
-- Don't use strong shadows on ordinary grouped rows.
+- Do not replace the editorial serif titles with plain SF Pro headings.
+- Do not turn the screenshot grid into uniform white cards or a standard photo picker.
+- Do not replace cyan glass navigation with an unstyled `TabView`.
+- Do not remove the duck, pink count, or authored objects from screens where they are part of the composition.
+- Do not substitute SF Symbols, emoji, or SwiftUI shapes for authored brand art.
+- Do not use default iOS blue instead of the soft cyan control system.
+- Do not make onboarding a generic full-screen form; it needs the blue painted background and oversized rounded white sheet.
+- Do not recolor or blur the user's screenshots except where the source screen itself shows blur under overlays.
 
 </design-context>

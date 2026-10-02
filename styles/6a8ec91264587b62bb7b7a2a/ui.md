@@ -3,188 +3,126 @@
 version: 1
 platform: iOS
 name: Ozon-Bank-design-analysis
-description: "A bright banking system built around saturated blue account stages, white modular finance cards, soft cyan actions, pastel benefit notices, bold numeric type, and polished 3D product art."
-colors: {primary: "#006DFF", on-primary: "#FFFFFF", primary-focus: "#0056CD", ink: "#17191C", ink-muted: "#686B71", ink-subtle: "#9A9DA3", ink-tertiary: "#C2C6CB", canvas: "#FFFFFF", surface-1: "#F4F8FC", surface-2: "#E8F2FA", surface-3: "#DCE8F1", surface-4: "#CFDCE6", hairline: "#E1E7EC", hairline-strong: "#C8D1D9", hairline-tertiary: "#AFBAC3", inverse-canvas: "#1A1B1F", inverse-surface-1: "#2B2C31", inverse-surface-2: "#3C3D44", inverse-ink: "#FFFFFF", brand-secure: "#7854EE", semantic-success: "#35BF7A", semantic-overlay: "#17181C"}
+description: "A bright iOS banking style with saturated Ozon-blue brand fields, white financial work areas, pale blue action groups, bold black balance typography, rounded product modules, bottom tabs, and glossy 3D card imagery."
+colors:
+  canvas: "#FFFFFF"
+  surface-primary: "#FFFFFF"
+  surface-secondary: "#F2F6FA"
+  accent-primary: "#005BFF"
+  accent-secondary: "#E8F6FF"
+  text-primary: "#111318"
+  text-secondary: "#6F747C"
+  divider: "#E5E9EF"
+  destructive: "#E84A5F"
 typography:
-  display-xl: {fontFamily: SF Pro Display, fontSize: 36, fontWeight: 700, lineHeight: 1.06, letterSpacing: -0.8}
-  display-lg: {fontFamily: SF Pro Display, fontSize: 30, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.5}
-  display-md: {fontFamily: SF Pro Display, fontSize: 24, fontWeight: 700, lineHeight: 1.14, letterSpacing: -0.3}
-  headline: {fontFamily: SF Pro Display, fontSize: 21, fontWeight: 700, lineHeight: 1.20, letterSpacing: -0.2}
-  card-title: {fontFamily: SF Pro Text, fontSize: 16, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0}
-  subhead: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 600, lineHeight: 1.30, letterSpacing: 0}
-  body-lg: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0}
-  body: {fontFamily: SF Pro Text, fontSize: 13, fontWeight: 400, lineHeight: 1.36, letterSpacing: 0}
-  body-sm: {fontFamily: SF Pro Text, fontSize: 11, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0}
-  caption: {fontFamily: SF Pro Text, fontSize: 10, fontWeight: 400, lineHeight: 1.25, letterSpacing: 0}
-  button: {fontFamily: SF Pro Text, fontSize: 14, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0}
-  eyebrow: {fontFamily: SF Pro Text, fontSize: 10, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0.2}
-  mono: {fontFamily: SF Mono, fontSize: 11, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0}
-rounded: {xs: 6, sm: 10, md: 16, lg: 22, xl: 28, xxl: 32, pill: 9999, full: 9999}
-spacing: {xxs: 4, xs: 8, sm: 12, md: 16, lg: 20, xl: 24, xxl: 32, section: 40}
+  hero: {fontFamily: "SF Pro Display", fontSize: 40, fontWeight: 700, lineHeight: 44}
+  title: {fontFamily: "SF Pro Display", fontSize: 28, fontWeight: 700, lineHeight: 34}
+  section: {fontFamily: "SF Pro Text", fontSize: 20, fontWeight: 700, lineHeight: 25}
+  body: {fontFamily: "SF Pro Text", fontSize: 17, fontWeight: 400, lineHeight: 22}
+  label: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 600, lineHeight: 20}
+  caption: {fontFamily: "SF Pro Text", fontSize: 13, fontWeight: 400, lineHeight: 18}
+spacing:
+  screen-horizontal: 16
+  section-gap: 24
+  card-padding: 16
+  control-gap: 12
+rounded:
+  control: 12
+  card: 20
+  sheet: 28
+  pill: 999
 components:
-  button-primary: {backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [14, 18]}
-  button-primary-pressed: {backgroundColor: "{colors.primary-focus}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}"}
-  button-secondary: {backgroundColor: "{colors.surface-1}", textColor: "{colors.primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [12, 16]}
-  button-tertiary: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [10, 14]}
-  content-card: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 14}
-  feature-card: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 16}
-  text-input: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: [12, 14]}
-  status-badge: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.pill}", padding: [3, 7]}
-  bottom-nav: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink-subtle}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: [8, 10]}
+  primary-action: {backgroundColor: "#005BFF", textColor: "#FFFFFF", cornerRadius: 12, minHeight: 48}
+  secondary-action: {backgroundColor: "#E8F6FF", textColor: "#005BFF", cornerRadius: 12, minHeight: 44}
+  primary-card: {backgroundColor: "#FFFFFF", textColor: "#111318", cornerRadius: 20, padding: 16}
+  navigation: {backgroundColor: "#FFFFFF", selectedColor: "#005BFF", unselectedColor: "#8E949C"}
 ---
 
 # Overview
 
-Ozon Bank combines a saturated blue account carousel with clean white operational modules, pastel benefit panels, bold balances, and polished product art.
+Ozon Bank's current iOS screens use a high-contrast finance layout: full Ozon-blue moments for launch and account context, white operational pages, pale blue grouped money actions, and heavy black numeric balances. The sampled current Screen Gallery screens include onboarding, Ozon ID login, the home account carousel, account details, payment entry, and the product catalog.
 
-**Key Characteristics:** blue account stage, white finance modules, cyan quick actions, pastel benefit bands, bold balances, 3D cards and gifts, and compact operation lists.
+The style is recognisable through the blue brand capsule in the status/navigation area, large rounded financial modules, prominent balances, compact service rows, and glossy 3D product artwork inside onboarding and catalog cards. It should not read like a default SwiftUI banking app with plain lists and system tint.
 
 # Non-negotiable visual invariants
 
-- The reviewed screens show this treatment: blue account stage.
-- The reviewed screens show this treatment: white finance modules.
-- The reviewed screens show this treatment: cyan quick actions.
-- The reviewed screens show this treatment: pastel benefit bands.
-- The reviewed screens show this treatment: bold balances.
-- The reviewed screens show this treatment: 3D cards and gifts.
-- The reviewed screens show this treatment: compact operation lists.
+- Ozon blue appears as a large brand field on launch and as the dominant account-stage background on the home screen.
+- Financial pages use white canvas and white rounded modules, with pale blue reserved for grouped money actions and quiet secondary controls.
+- Current balance and product amounts are bold, black, centered or strongly left-led, and visually heavier than descriptions.
+- Primary buttons are solid Ozon blue with white text; secondary actions are pale blue or white with blue labels.
+- Product catalog and promotional areas rely on glossy 3D card, piggy-bank, currency, or abstract object imagery.
+- Bottom navigation uses five compact destinations with blue selected state and gray inactive labels/icons.
+- Dense account settings and product lists use soft grouped rows with chevrons and minimal dividers.
 
 # Color and surfaces
 
-### Brand & Accent
+The canvas is predominantly white. Large Ozon-blue fields are reserved for launch, onboarding brand emphasis, and the top account zone on home. Account detail pages pull the blue back into small card thumbnails, buttons, and action icons.
 
-Ozon blue drives primary banking action and active navigation. Violet supports credit products; pastel green and yellow communicate benefit or guidance.
+Primary surfaces are white rounded modules. Secondary surfaces are pale blue or very light gray-blue groups used for quick actions, analytics tiles, catalog cells, and disabled login buttons. Pale green appears in benefit/status bands, while yellow appears as a guidance strip. Purple and magenta appear in credit and promo artwork, not as the main app tint.
 
-### Surface
-
-Use white for operations and pale blue for grouped actions, analytics, and account details; blue gradient is reserved for product context.
-
-### Text
-
-Near-black leads balances and signed amounts; gray supports category, description, and terms.
-
-### Semantic
-
-Green indicates income or success, red indicates expense or failure, yellow offers guidance, and blue remains action.
+Text is near-black for titles, amounts, tab labels, and row names. Secondary text is gray for explanations, conditions, locations, and legal/helper copy. Generic iOS blue, plain gray grouped forms, or broad monochrome gray cards would visibly break the reference.
 
 # Typography
 
-### Font Family
+The screens use SF Pro-style system typography with strong weight contrast. Amounts such as balances and catalog rates are large, bold, and use tabular numeric treatment. Screen titles and section titles are bold but smaller than money values. Supporting text is compact, gray, and allowed to wrap across two to three short lines.
 
-Use SF Pro Display for balances and product headings and SF Pro Text for controls, content, and metadata.
+Buttons use medium-to-semibold labels centered in fixed-height rounded rectangles. Catalog chips and row labels use compact text with no decorative letter spacing. If the exact brand logotype is unavailable, use a raster or supplied logo asset; do not approximate it with a generic text wordmark.
 
-### Hierarchy
-
-| Token | Size | Weight | Use |
-|---|---:|---:|---|
-| display-lg | 30pt | 700 | Hero or state |
-| headline | 21pt | 700 | Section title |
-| card-title | 16pt | 600 | Primary item |
-| body | 13pt | 400 | Detail |
-| caption | 10pt | 400 | Metadata |
-
-### Principles
-
-- Lead with account, balance, signed amount, or next money action.
-- Keep repeated metadata aligned and visually quieter.
-- Reserve high contrast and weight for real decisions.
-
-### Note on Font Substitutes
-
-Use the platform sans with tabular numerals and clear compact history rows.
+For Dynamic Type, preserve the hierarchy by letting secondary descriptions wrap first, keeping balances, section titles, and primary actions visible before lower-priority rows.
 
 # Screen composition
 
-### Grid & Container
+Launch is a full blue field with a centered white brand word or greeting and no card container. Onboarding places a large 3D product composition in the upper half, then a white lower block with a bold heading, explanatory text, pager dots, and two bottom actions.
 
-Home stacks product carousel, quick actions, reward modules, and operations; account detail uses one wide column.
+Login screens are sparse: Ozon ID branding near the upper left, a bold title, short helper text, one phone input row, a full-width action, and secondary text links lower on the page. When the keyboard is visible, the focused input keeps a blue outline and the main action stays above the keyboard.
 
-### Whitespace Philosophy
+The home screen begins with a blue rounded account area occupying the top third, containing a horizontal product carousel and a pale-blue quick-action strip. Below it, white promotional, cashback, credit, and status modules stack in a single scroll. Account detail pages use a centered title, centered balance, horizontal card thumbnails, then grouped action rows and tiles.
 
-Give balances and primary actions room, then keep history and settings rows compact.
+The product catalog uses a white page with top back/search controls, short horizontal recommendation tiles, section titles, horizontal card carousels, and full-width product rows. Typical horizontal inset is tight, around 12 to 16 points, with 8 to 12 point gaps inside dense groups.
 
 # Navigation appearance
 
-Use five bottom destinations with blue active icon and quiet gray inactive icons.
+Navigation bars are visually light: a centered screen title, a small back chevron on detail/catalog pages, and optional search or close controls. The home status/navigation area includes a small blue brand capsule under the system status bar.
+
+The bottom tab bar is white and compact. The selected destination uses blue icon and label; inactive destinations are gray. Badges may be small red dots or counters. Tab styling must be explicit, because an unstyled default `TabView` would not match the rounded, compact reference.
 
 # Components
 
-### Buttons
+Primary action buttons are solid Ozon blue, approximately full-width on forms or fixed-width inside account modules, with 12 point corners and centered white semibold labels. Disabled actions become very pale blue-gray with muted gray text.
 
-Primary actions use solid blue; quick money actions use pale blue groups; success completion stays blue with green status.
+Secondary actions use pale blue fills or white cells with blue labels. Quick money actions appear as three evenly spaced items in a pale blue rounded strip, each with a blue icon above a compact label.
 
-History periods, accounts, and filters use compact blue chips or simple labeled segments.
+Account/product cards use rounded rectangles, blue gradients or white fills, short labels, balances, and optional close affordances. Catalog cards often combine a white or pale surface with cropped 3D artwork that occupies the right side or lower-right corner.
 
-### Cards & Containers
-
-Product cards combine account type, balance, term, and close affordance; operational modules group one finance purpose.
-
-### Inputs & Forms
-
-Transfer and payment forms use pale fields, blue focus, and clear source, destination, amount, and fee hierarchy.
-
-### Status & Build Page
-
-Keep cashback, application, account, transfer, analytics, and receipt state close to the relevant module.
-
-### Navigation
-
-Use five bottom destinations with blue active icon and quiet gray inactive icons.
+Inputs are rounded white fields on white pages with a subtle gray border at rest and a saturated blue outline when focused. Row groups use white or very pale surfaces, left icon tiles, text stacks, and right chevrons without heavy separators.
 
 # Imagery and icons
 
-| Level | Treatment | Use |
-|---|---|---|
-| 0 | Base canvas | Primary context |
-| 1 | Grouped surface | Cards and sections |
-| 2 | Sticky or floating action | Commitment |
-| 3 | Sheet over scrim | Focused choice |
+Imagery is compositionally important in onboarding, the home promotions, and product catalog. The observed language uses glossy 3D bank cards, piggy banks, currency symbols, abstract folded shapes, and colorful object clusters. These assets sit inside rounded cards or large upper visual stages and cannot be omitted while waiting for final assets.
 
-### Decorative Depth
-
-Use gradient product stages, broad rounded modules, and polished 3D promo art; avoid shadow on transaction lists.
+Icons are small, filled or rounded-line Ozon-style symbols in blue, gray, green, or product colors. Do not replace source-specific icons with arbitrary SF Symbols when the source shows custom pictograms or branded card art.
 
 # States
 
-Keep cashback, application, account, transfer, analytics, and receipt state close to the relevant module.
+Observed states include launch, onboarding, default and focused phone login, disabled and enabled login action, populated home/account overview, account detail, payment entry, catalog overview, and selected catalog filter. Constant properties across these states are white work surfaces, saturated blue for action and focus, rounded modules, bold financial values, and compact gray support text.
+
+The sampled screens do not verify dark mode, error banners, permission prompts, empty account history, or destructive confirmation sheets for this source. Do not invent those appearances from unrelated apps.
 
 # iOS adaptation
 
-### Touch Targets
+Use SwiftUI or UIKit native controls for accessibility, focus, keyboard, safe areas, scroll inertia, sheets, and VoiceOver order, but restyle visible surfaces to match these screens. Keep all primary controls at least 44 points tall, preserve the top safe area brand treatment, and keep the bottom tab bar clear of the home indicator.
 
-Primary actions, navigation, cards, and contextual controls remain at least 44pt.
+Use vertical scroll containers for home, account details, and catalog pages. On compact iPhones, allow promotional text and catalog labels to wrap, but keep balances, primary actions, and card artwork framed. If a keyboard is present, keep the active input and main login button visible above it.
 
-### Collapsing Strategy
-
-Preserve account, balance, and money actions; stack benefits and reduce promotional cards before history.
-
-### Image Behavior
-
-Contain 3D product art in dedicated panels and keep transaction information on stable light surfaces.
-
-On iPhone, respect top and bottom safe areas, use scrolling for content that does not fit, keep interactive targets at least 44 points, and preserve the visual reading order for VoiceOver. At larger Dynamic Type sizes, allow supporting text to wrap without collapsing the dominant hierarchy. Use native sheets and permission transitions while explicitly styling app-owned surfaces to match the reference.
+Only implement light appearance unless a current Ozon Bank screen in the approved source shows a dark appearance. Do not add desktop hover states, web breakpoints, top navigation, footers, or marketing pricing layouts.
 
 # Anti-generic checklist
 
-- Do not substitute the documented accent hierarchy with default iOS blue.
-- Do not collapse distinct surfaces into a uniform stack of generic white cards.
-- Do not use an unstyled `TabView`, `Form`, or arbitrary SF Symbols when they contradict the documented navigation and component language.
-- Do not flatten the documented typography into one body-text scale.
-- Do not remove compositionally important photography or illustration while assets are pending.
-- Do not apply one corner radius to every control and surface.
-
-Source-specific guardrails retained from the review:
-
-### Do
-
-- Preserve the blue account context and clean white operational hierarchy.
-- Keep the primary task and current state immediately legible.
-- Style native controls to inherit this visual system.
-
-### Don't
-
-- Don't extend promotional gradients behind dense history or settings.
-- Don't hide status, constraints, or secondary conditions.
-- Don't add heavy shadows around every container.
-
+- Do not replace Ozon blue with default system blue.
+- Do not turn account, catalog, and settings surfaces into a generic `Form` or uniform white card stack.
+- Do not use an unstyled `TabView`; selected and inactive tab states must match the observed blue/gray treatment.
+- Do not omit 3D product imagery from onboarding, promotions, or catalog cards.
+- Do not use arbitrary SF Symbols for branded card, cashback, finance, or product pictograms.
+- Do not make every radius identical; account zones, cards, buttons, and sheets use different rounded scales.
+- Do not add unverified dark mode, error, permission, or unrelated state visuals.
 </design-context>

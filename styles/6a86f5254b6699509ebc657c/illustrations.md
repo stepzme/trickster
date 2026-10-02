@@ -1,25 +1,28 @@
 # Overview
 
-The reviewed source uses imagery in the product roles documented below.
+Tolan uses a coherent authored 3D cartoon world: a blue alien companion, pastel terrain, starfields, cosmic haze, and repeatable character variants. All production scenes and character assets must be created with an image-generation model, receive explicit visual approval, and be integrated only as approved raster assets.
 
 # Visual Style
 
-No separate illustration medium was documented beyond the image treatment described in the source.
+The language is soft 3D/cartoon rather than flat vector art. Forms are rounded and toy-like, with expressive but simple character features, diffuse spatial lighting, gentle bloom, shallow material texture, and saturated color. Cosmic backgrounds add depth without photorealism.
 
 # Composition
 
-- Show the character at small-to-medium scale inside a navigable landscape.
-- Reserve the upper-middle area for activity cards and keep bottom action zones unobstructed.
-- Product thumbnails may isolate clothes or decorations on pale neutral tiles.
+The character or world occupies most of the viewport and is the primary focal mass. Keep the face, pose, and terrain landmark clear while reserving quiet space for short prompts and edge controls. Onboarding may center the character; active scenes may place it lower or deeper in the landscape. Accessory variants preserve the same body proportions and camera language.
 
 # Color and Materials
 
-Use the palette relationships explicitly described in the visual language and `ui.md`; no additional material system was documented.
+Deep navy-purple skies contrast with saturated blue character skin and teal, pink, yellow, and green terrain or clothing. Materials are soft, matte-to-satin, and gently luminous. Warm-white UI surfaces should remain visually distinct from the rendered world.
 
 # Variants and States
 
-No state-specific illustration variants were documented in the reviewed source.
+Intro and active-world states show the companion clearly. Loading or communication states may use starfields, glow, blur, or an ethereal figure. Permission cards can use a small character pose. Clothing and accessory variants change wardrobe without changing anatomy, rendering, palette behavior, or lighting.
 
 # Avoid
 
-Do not introduce an unrelated illustration style or substitute decorative symbols for source-supported imagery.
+- Do not create production art with SwiftUI `Shape`, `Canvas`, programmatic vectors, procedural gradients, or assembled primitives.
+- Do not replace the companion or environment with SF Symbols, emoji, icon fonts, or UI glyphs.
+- Do not integrate generated imagery before explicit visual approval; ship only the approved raster result.
+- Avoid flat stock vectors, photoreal aliens, hard-edged sci-fi rendering, glossy plastic, unrelated mascot anatomy, or generic gradient space.
+- Do not crop away the face, defining pose, or main terrain landmark.
+- Do not cover most of the world with cards or scatter dense decorative particles behind text.

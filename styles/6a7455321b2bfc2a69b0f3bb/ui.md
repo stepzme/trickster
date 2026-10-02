@@ -3,235 +3,94 @@
 version: 1
 platform: iOS
 name: Jomo-design-analysis
-description: "An optimistic digital-wellbeing interface that pairs a white utility layer with immersive blue-sky photography, airy blue gradients, oversized rounded sheets, black pill actions, and a friendly app-shaped mascot. Data, blocking controls, and system permissions remain clear while the visual language feels restorative rather than punitive."
+description: "A friendly screen-time interface built from bright sky-blue fields, white rounded cards, bold black type, compact colorful chips, centered onboarding, and recurring authored mascot spot illustrations."
 colors:
-  primary: "#2F91F3"
-  on-primary: "#FFFFFF"
-  primary-focus: "#2478D0"
-  ink: "#171719"
-  ink-muted: "#67676E"
-  ink-subtle: "#9B9BA3"
-  ink-tertiary: "#C3C3CA"
-  canvas: "#F9FAFC"
-  surface-1: "#FFFFFF"
-  surface-2: "#F0F2F6"
-  surface-3: "#E4E8EF"
-  surface-4: "#D6DDE8"
-  hairline: "#E7E9EE"
-  hairline-strong: "#D1D5DD"
-  hairline-tertiary: "#B5BBC6"
-  inverse-canvas: "#171719"
-  inverse-surface-1: "#29292D"
-  inverse-surface-2: "#3A3A40"
-  inverse-ink: "#FFFFFF"
-  brand-secure: "#8BD2FF"
-  semantic-success: "#51C978"
-  semantic-overlay: "#171719"
+  canvas: "#2F8FF3"
+  surface-primary: "#FFFFFF"
+  surface-secondary: "#EEF4FA"
+  accent-primary: "#1686F0"
+  accent-secondary: "#DCEEFF"
+  text-primary: "#111317"
+  text-secondary: "#6F757C"
+  divider: "#E2E8ED"
+  destructive: "#E6545F"
 typography:
-  display-xl: {fontFamily: SF Pro Display, fontSize: 40, fontWeight: 700, lineHeight: 1.04, letterSpacing: -1.2}
-  display-lg: {fontFamily: SF Pro Display, fontSize: 32, fontWeight: 700, lineHeight: 1.08, letterSpacing: -0.8}
-  display-md: {fontFamily: SF Pro Display, fontSize: 26, fontWeight: 700, lineHeight: 1.12, letterSpacing: -0.5}
-  headline: {fontFamily: SF Pro Display, fontSize: 22, fontWeight: 700, lineHeight: 1.18, letterSpacing: -0.3}
-  card-title: {fontFamily: SF Pro Text, fontSize: 17, fontWeight: 600, lineHeight: 1.25, letterSpacing: -0.1}
-  subhead: {fontFamily: SF Pro Text, fontSize: 16, fontWeight: 600, lineHeight: 1.32, letterSpacing: 0}
-  body-lg: {fontFamily: SF Pro Text, fontSize: 16, fontWeight: 400, lineHeight: 1.42, letterSpacing: 0}
-  body: {fontFamily: SF Pro Text, fontSize: 14, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0}
-  body-sm: {fontFamily: SF Pro Text, fontSize: 12, fontWeight: 400, lineHeight: 1.32, letterSpacing: 0}
-  caption: {fontFamily: SF Pro Text, fontSize: 10, fontWeight: 500, lineHeight: 1.25, letterSpacing: 0}
-  button: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0}
-  eyebrow: {fontFamily: SF Pro Text, fontSize: 11, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0.2}
-  mono: {fontFamily: SF Mono, fontSize: 12, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0}
-rounded:
-  xs: 4
-  sm: 8
-  md: 12
-  lg: 18
-  xl: 24
-  xxl: 32
-  pill: 9999
-  full: 9999
+  hero: {fontFamily: "SF Pro Rounded", fontSize: 38, fontWeight: 700, lineHeight: 43}
+  title: {fontFamily: "SF Pro Rounded", fontSize: 28, fontWeight: 700, lineHeight: 34}
+  section: {fontFamily: "SF Pro Rounded", fontSize: 20, fontWeight: 700, lineHeight: 25}
+  body: {fontFamily: "SF Pro Text", fontSize: 17, fontWeight: 400, lineHeight: 23}
+  label: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 600, lineHeight: 20}
+  caption: {fontFamily: "SF Pro Text", fontSize: 13, fontWeight: 400, lineHeight: 18}
 spacing:
-  xxs: 4
-  xs: 8
-  sm: 12
-  md: 16
-  lg: 20
-  xl: 24
-  xxl: 32
-  section: 48
+  screen-horizontal: 20
+  section-gap: 28
+  card-padding: 18
+  control-gap: 12
+rounded:
+  control: 14
+  card: 22
+  sheet: 28
+  pill: 999
 components:
-  button-primary: {backgroundColor: "{colors.inverse-canvas}", textColor: "{colors.inverse-ink}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: [15, 22]}
-  button-primary-pressed: {backgroundColor: "{colors.inverse-surface-2}", textColor: "{colors.inverse-ink}", typography: "{typography.button}", rounded: "{rounded.pill}"}
-  button-secondary: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: [14, 20]}
-  button-tertiary: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: [10, 16]}
-  button-inverse: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: [14, 20]}
-  gradient-action: {backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: [15, 22]}
-  progress-card: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xl}", padding: 20}
-  rule-card: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.lg}", padding: 0}
-  modal-sheet: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xxl}", padding: 20}
-  bottom-nav: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xl}", padding: [10, 12]}
+  primary-action: {fill: "black", text: "white semibold", shape: "pill"}
+  secondary-action: {fill: "white or pale blue", text: "black or blue semibold", shape: "pill"}
+  primary-card: {fill: "white", content: "short prompt, control, optional mascot art", shape: "large rounded"}
+  navigation: {fill: "white", selected: "sky blue", accessory: "rounded icon and label"}
 ---
 
 # Overview
 
-Jomo combines restorative blue-sky atmosphere with clear white utility surfaces. Rounded geometry, bold black actions, blue gradient blocking controls, and a small mascot keep restrictive tasks encouraging.
-
-**Key Characteristics:**
-- Sky photography or gradients behind the progress experience.
-- Large white rounded panels over atmospheric backgrounds.
-- Black pill buttons in onboarding; blue gradient actions in the product.
-- Compact usage bars and recognizable app icons.
-- Friendly mascot for loading and empty states.
+Jomo feels airy, direct, and playful. Bright blue fills large regions, while white rounded cards contain short prompts, app controls, rules, templates, and statistics. Bold rounded headings and authored mascot spots keep utilitarian controls from becoming generic.
 
 # Non-negotiable visual invariants
 
-- The reviewed screens show this treatment: Sky photography or gradients behind the progress experience.
-- The reviewed screens show this treatment: Large white rounded panels over atmospheric backgrounds.
-- The reviewed screens show this treatment: Black pill buttons in onboarding; blue gradient actions in the product.
-- The reviewed screens show this treatment: Compact usage bars and recognizable app icons.
-- The reviewed screens show this treatment: Friendly mascot for loading and empty states.
+- Sky blue forms a large background field, not a tiny accent.
+- White cards are broad, softly rounded, and separated by generous blue or white breathing space.
+- Major headings are bold, rounded, and clearly larger than explanatory text.
+- Primary commitment uses a high-contrast black pill.
+- Chips and selected controls introduce small, distinct color accents without replacing the blue field.
+- Onboarding centers a short prompt and one clear action rather than dense prose.
+- Mascot spot art appears at meaningful product moments and must not be replaced by interface symbols.
 
 # Color and surfaces
 
-### Brand & Accent
-- Sky blue anchors blocking, progress, and brand identity.
-- Pale cyan extends the gradient without adding a second competing accent.
-
-### Surface
-- White sheets carry controls and data.
-- Light gray separates system-permission groups; sky imagery can fill the home background.
-
-### Text
-- Near-black carries headings and actions.
-- Mid gray supports explanations; white text is reserved for sky or dark overlays.
-
-### Semantic
-
-- Green supports healthy progress and positive outcomes.
-- Black provides decisive onboarding actions without implying danger.
+The dominant field is saturated sky blue, balanced by white primary surfaces and pale blue secondary controls. Black carries decisive type and primary actions; gray carries explanations. Colorful chips may use green, yellow, pink, or purple in small doses. Error red remains semantic. Avoid default iOS blue on a white-only canvas: the recognizable effect comes from the proportion of the blue field.
 
 # Typography
 
-### Font Family
-
-Use SF Pro Display for goals and outcomes, SF Pro Text for data, settings, and navigation.
-
-### Hierarchy
-
-| Token | Size | Weight | Use |
-|---|---:|---:|---|
-| display-xl | 40pt | 700 | Goal value |
-| display-lg | 32pt | 700 | Onboarding claim |
-| display-md | 26pt | 700 | Setup question |
-| headline | 22pt | 700 | Section title |
-| card-title | 17pt | 600 | Rule or app name |
-| body | 14pt | 400 | Explanation |
-| caption | 10pt | 500 | Navigation and metrics |
-
-### Principles
-
-- Use bold, friendly statements during setup.
-- Keep data labels compact and aligned with their bars.
-- Let system permission copy remain plain and readable.
-
-### Note on Font Substitutes
-
-A neutral system sans is appropriate; preserve bold heading proportions and open counters.
+Use SF Pro Rounded for hero, title, and section roles, and SF Pro Text for body and controls. The contrast between bold 28-38 point prompts and 13-17 point support copy is important. Keep writing concise and allow large headings to wrap naturally. Dynamic Type expands cards and steps without flattening the hierarchy.
 
 # Screen composition
 
-### Grid & Container
-
-Home is one vertical data column over an atmospheric background. Rule templates use a horizontal card rail; setup sheets use a single column.
-
-### Whitespace Philosophy
-
-Maintain calm space around goals and mascot states. Dense app lists can tighten vertically but should not feel compressed.
+Onboarding screens center a title, short support copy, illustration or phone preview, and a bottom action. Home screens use a blue canvas with stacked white cards and a light bottom bar. Rule creation uses focused white sheets with steppers, pickers, app lists, segmented controls, and a pinned action. Profile screens are light, list-led, and punctuated by templates, article thumbnails, or statistics. Respect both safe areas and preserve generous vertical gaps.
 
 # Navigation appearance
 
-Keep four destinations fixed in a frosted white capsule. Active state is black; inactive icons remain simple outlines.
+Bottom navigation is white and softly separated from the blue canvas; selected icons and labels are blue. Top controls are compact circles or plain back/close symbols. Sheets are white with broad top corners and a dim scrim. The visual appearance is reusable without copying the source navigation map.
 
 # Components
 
-### Buttons
-
-Onboarding uses full-width black pills. In-product blocking uses a wide blue-to-cyan pill; secondary choices remain white or pale gray.
-
-### Cards & Containers
-
-Progress cards are large white rounded rectangles. Template cards may use full-bleed atmospheric imagery with high-contrast overlaid text.
-
-### Inputs & Forms
-
-Text fields are outlined pills with sparse decoration. Complex app and website selection uses nested rounded sheets; native controls must be visually restyled to match Jomo's radius, spacing, and colors.
-
-### Status & Build Page
-
-Use thin blue usage bars, concise time values, and mascot-backed empty states. Loading copy stays short and reassuring.
-
-### Navigation
-
-Keep four destinations fixed in a frosted white capsule. Active state is black; inactive icons remain simple outlines.
+Primary buttons are black pills with white semibold labels. Secondary buttons are white or pale blue pills. Cards use white fill, 22-point corners, and 18-point padding with minimal shadow. Steppers, segmented controls, app rows, and toggles remain compact and friendly; selected states use blue or a colored chip. Disabled states reduce contrast without changing size. Article and template cards may combine a short label with authored art or photography.
 
 # Imagery and icons
 
-| Level | Treatment | Use |
-|---|---|---|
-| 0 | Sky or pale canvas | Home background |
-| 1 | White rounded card | Progress and empty states |
-| 2 | Frosted navigation | Bottom bar |
-| 3 | Large modal sheet | Blocking configuration |
-
-### Decorative Depth
-
-Use natural cloud depth, soft blur, and very light shadows. Avoid glossy artificial card effects.
+Recurring mascot spot illustrations, occasional sky photography, phone mockups, and article thumbnails have distinct roles. Mascot art is compositionally important in onboarding and selected cards and cannot be omitted pending final assets. Icons are simple and rounded; they support controls but never substitute for mascot scenes.
 
 # States
 
-Use thin blue usage bars, concise time values, and mascot-backed empty states. Loading copy stays short and reassuring.
+Observed states include onboarding, populated home, rule creation with selected and unselected controls, app selection, templates, statistics, and profile content. Blue/white proportion, bold rounded hierarchy, black primary action, and friendly control geometry stay consistent.
 
 # iOS adaptation
 
-### Touch Targets
-
-Blocking, app selection, rules, and navigation controls remain at least 44pt high.
-
-### Collapsing Strategy
-
-Template rails scroll horizontally. App lists scroll vertically while the blocking action remains anchored above navigation.
-
-### Image Behavior
-
-Sky images use aspect-fill and preserve a calm center region. Rule art may crop boldly but must retain readable overlaid text.
-
-On iPhone, respect top and bottom safe areas, use scrolling for content that does not fit, keep interactive targets at least 44 points, and preserve the visual reading order for VoiceOver. At larger Dynamic Type sizes, allow supporting text to wrap without collapsing the dominant hierarchy. Use native sheets and permission transitions while explicitly styling app-owned surfaces to match the reference.
+Use safe-area-aware scroll views and keyboard avoidance for rule inputs. Maintain 44-point targets, expand cards for Dynamic Type, and stack segmented or chip content when compact width cannot fit it. VoiceOver order follows prompt, state, control, then action. Native pickers, sheets, and permission transitions remain native in behavior but inherit the blue, white, black, and rounded visual system.
 
 # Anti-generic checklist
 
-- Do not substitute the documented accent hierarchy with default iOS blue.
-- Do not collapse distinct surfaces into a uniform stack of generic white cards.
-- Do not use an unstyled `TabView`, `Form`, or arbitrary SF Symbols when they contradict the documented navigation and component language.
-- Do not flatten the documented typography into one body-text scale.
-- Do not remove compositionally important photography or illustration while assets are pending.
-- Do not apply one corner radius to every control and surface.
-
-Source-specific guardrails retained from the review:
-
-### Do
-
-- Keep restrictive actions emotionally positive.
-- Use sky atmosphere behind progress, not behind dense settings.
-- Make the blocking action persistent and obvious.
-- Restyle native controls to inherit the Jomo system.
-- Use the mascot only when it adds reassurance.
-
-### Don't
-
-- Don't turn the app into a warning-heavy utility.
-- Don't place dense data directly over clouds.
-- Don't use several competing gradient colors.
-- Don't leave system sheets visually disconnected.
-- Don't overdecorate active usage lists.
-
+- No white-only generic settings screen.
+- No default blue button replacing the black primary pill.
+- No tiny blue accent where a full blue field is required.
+- No uniform card radius applied to pills, sheets, and cards.
+- No long mood-setting copy filling open space.
+- No arbitrary SF Symbols replacing mascot imagery.
+- No omission of authored art from illustration-led moments.
 </design-context>

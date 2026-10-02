@@ -3,189 +3,118 @@
 version: 1
 platform: iOS
 name: Wabi-design-analysis
-description: "A playful AI-creator network alternating clean pearl-white workspaces with immersive black mini-app feeds. The interface is restrained and object-led: black pill controls, large rounded canvases, glassy 3D bubbles, sparse typography, and a five-item dock make generated experiences feel like collectible social objects."
-
+description: "Wabi alternates pearl-white creator workspaces with a black immersive feed, using sparse SF typography, rounded collectible object cards, glossy generated spheres, black pill actions, and a floating five-icon dock."
 colors:
-  primary: "#151515"
-  on-primary: "#FFFFFF"
-  primary-pressed: "#303030"
-  ink: "#111111"
-  ink-muted: "#6D6D6D"
-  ink-subtle: "#A5A5A5"
   canvas: "#F8F8F6"
-  surface-1: "#FFFFFF"
-  surface-2: "#F0F0EE"
-  inverse-canvas: "#050505"
-  inverse-surface: "#121212"
-  inverse-ink: "#FFFFFF"
-  accent-cyan: "#32B8D8"
-  accent-violet: "#7A63FF"
-  hairline: "#DEDEDA"
-  semantic-success: "#2FA56F"
-  semantic-danger: "#E45B64"
-  semantic-overlay: "#000000"
-
+  surface-primary: "#FFFFFF"
+  surface-secondary: "#F0F0EE"
+  accent-primary: "#111111"
+  accent-secondary: "#27B8E6"
+  text-primary: "#111111"
+  text-secondary: "#777777"
+  divider: "#E4E4E1"
+  destructive: "#E05A64"
 typography:
-  display-xl: { fontFamily: System Sans, fontSize: 40, fontWeight: 700, lineHeight: 1.06, letterSpacing: -1.1 }
-  display-lg: { fontFamily: System Sans, fontSize: 32, fontWeight: 700, lineHeight: 1.1, letterSpacing: -0.7 }
-  display-md: { fontFamily: System Sans, fontSize: 26, fontWeight: 650, lineHeight: 1.15, letterSpacing: -0.4 }
-  headline: { fontFamily: System Sans, fontSize: 21, fontWeight: 650, lineHeight: 1.2, letterSpacing: -0.2 }
-  card-title: { fontFamily: System Sans, fontSize: 16, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: System Sans, fontSize: 17, fontWeight: 450, lineHeight: 1.35, letterSpacing: 0 }
-  body-lg: { fontFamily: System Sans, fontSize: 16, fontWeight: 400, lineHeight: 1.45, letterSpacing: 0 }
-  body: { fontFamily: System Sans, fontSize: 14, fontWeight: 400, lineHeight: 1.42, letterSpacing: 0 }
-  body-sm: { fontFamily: System Sans, fontSize: 12, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
-  caption: { fontFamily: System Sans, fontSize: 11, fontWeight: 450, lineHeight: 1.3, letterSpacing: 0 }
-  button: { fontFamily: System Sans, fontSize: 14, fontWeight: 550, lineHeight: 1.2, letterSpacing: 0 }
-  eyebrow: { fontFamily: System Sans, fontSize: 11, fontWeight: 650, lineHeight: 1.25, letterSpacing: 0.15 }
-  mono: { fontFamily: System Mono, fontSize: 12, fontWeight: 400, lineHeight: 1.4, letterSpacing: 0 }
-
-rounded: { xs: 6, sm: 10, md: 16, lg: 22, xl: 30, xxl: 40, pill: 9999, full: 9999 }
-spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
-
+  hero: {fontFamily: "SF Pro Display", fontSize: 34, fontWeight: 700, lineHeight: 39}
+  title: {fontFamily: "SF Pro Display", fontSize: 28, fontWeight: 700, lineHeight: 34}
+  section: {fontFamily: "SF Pro Text", fontSize: 20, fontWeight: 600, lineHeight: 25}
+  body: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 400, lineHeight: 21}
+  label: {fontFamily: "SF Pro Text", fontSize: 14, fontWeight: 600, lineHeight: 19}
+  caption: {fontFamily: "SF Pro Text", fontSize: 12, fontWeight: 400, lineHeight: 16}
+spacing:
+  screen-horizontal: 16
+  section-gap: 28
+  card-padding: 14
+  control-gap: 10
+rounded:
+  control: 16
+  card: 24
+  sheet: 30
+  pill: 999
 components:
-  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: [14, 22]}
-  mini-app-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xl}", padding: 0 }
-  board-tile: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.card-title}", rounded: "{rounded.lg}", padding: 14 }
-  prompt-composer: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body-lg}", rounded: "{rounded.lg}", padding: [14, 16]}
-  bottom-nav: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.caption}", rounded: "{rounded.pill}", height: 52 }
+  primary-action: {fill: "#111111", text: "#FFFFFF", radius: 999, height: 56}
+  secondary-action: {fill: "#FFFFFF", text: "#111111", border: "#E4E4E1", radius: 999, height: 44}
+  primary-card: {fill: "#FFFFFF", radius: 24, shadow: "soft"}
+  navigation: {fill: "#FFFFFF", selected: "#111111", inactive: "#111111", radius: 999, height: 56}
 ---
 
 # Overview
 
-Wabi pairs a monochrome social shell with expressive generated objects. White creation and profile spaces feel airy and tactile, while the feed becomes a black stage around one large interactive canvas.
+The observed Wabi iOS screens use two distinct but connected visual modes. Onboarding, creation, messages, and profile screens are quiet pearl-white workspaces with generous empty space, black text, black pill actions, soft-shadow white cards, and glossy generated object thumbnails. The feed switches to a near-black stage where one large rounded mini-app canvas dominates the viewport and the surrounding controls become thin white outlines, compact labels, and a floating dock.
 
 # Non-negotiable visual invariants
 
-- The reviewed screens use this composition: A playful AI-creator network alternating clean pearl-white workspaces with immersive black mini-app feeds.
-- The dominant canvas token is #F8F8F6 and the primary accent token is #151515.
-- The recorded display style is 40 points while the body style is 14 points.
-- Navigation uses a floating five-item dock for Home, Search, Create, Messages, and Profile.
-- The reviewed screens use this hierarchy: The interface is restrained and object-led: black pill controls, large rounded canvases, glassy 3D bubbles, sparse typography.
+- Light workspaces use a warm off-white canvas with white elevated controls and black decisive actions.
+- The immersive feed uses a black canvas with one large rounded media or game surface occupying most of the screen width.
+- Generated glossy spheres or object thumbnails provide the main color, not persistent chrome or tinted system bars.
+- Primary actions are black full-width pills on light screens and white or outlined pill controls on black feed screens.
+- The bottom navigation is a floating five-icon dock; selected state is a filled black icon or black circular center action.
+- Mini-app and profile grids use large white rounded tiles with one centered circular object preview and very little metadata.
+- Sheets dim the underlying screen and keep rounded white or charcoal panels with a visible grabber or strong top radius.
 
 # Color and surfaces
 
-### Brand & Accent
+Wabi's light canvas is a warm pearl white rather than pure iOS white. Cards, search fields, phone fields, and sheets sit on top as white surfaces with soft ambient shadows. The inverse feed is nearly black, with the mini-app canvas clipped into a tall rounded rectangle and separated by subtle outline or shadow.
 
-Black and white are the product identity. Cyan, violet, yellow, and iridescent highlights come from generated 3D objects rather than persistent chrome.
+Black is the stable brand accent: it fills primary buttons, selected chips, selected dock icons, and key labels. Cyan appears as small badges and credit indicators, while violet, yellow, orange, and teal come from generated objects inside thumbnails or onboarding bubbles. Generic iOS blue would visibly break the reference except inside system permission alerts that remain native.
 
-### Surface
-
-Use warm off-white for workspaces, pure white for tiles and composers, and near-black for the immersive feed. Keep nested cards only slightly separated.
-
-### Text
-
-Use near-black on light surfaces and white on the feed. Medium gray carries counts, timestamps, and supporting copy.
-
-### Semantic
-
-Use green for successful connection or publish state and soft red for report or delete. Do not repurpose object colors as status.
+Text is near-black on light screens, white on dark screens, and medium gray for helper copy, timestamps, subtitles, and inactive chips. Dividers are minimal; separation mostly comes from whitespace, rounded surfaces, and shadow. Destructive states were only indirectly visible through report/delete flows in the catalog, so keep destructive color restrained and do not let it become a brand accent.
 
 # Typography
 
-### Font Family
+The hierarchy uses SF-style rounded system typography with bold compact titles and plain body copy. Onboarding headlines are centered, large, and sentence-case, while workspace titles such as "Create" and "Messages" are left-aligned, heavy, and close to the safe area. Feed captions, counts, and interaction labels are small and dense so the generated canvas remains dominant.
 
-Use a neutral modern system sans with compact metrics and clear lowercase forms.
-
-### Principles
-
-Keep labels short and conversational. Let mini-app titles and prompts lead without competing display decoration.
-
-### Note on Font Substitutes
-
-Use SF Pro or Inter with 600–700 headings and regular body weights.
+Numeric content is compact: phone input digits, verification boxes, credit counts, likes, comments, and save counts sit in small labels or badges. Keep tab and chip labels short; selected labels may use semibold text on a black pill. At Dynamic Type sizes, let secondary labels wrap or truncate before reducing the primary object thumbnail, feed canvas, or main title hierarchy.
 
 # Screen composition
 
-### Grid & Container
+Light screens use approximately 12-16 point side insets, a top title or logo row, and large vertical gaps. Onboarding centers a cluster of glossy bubbles above a centered headline and pins the primary action near the lower third above the keyboard or home indicator. Phone verification places a single frosted input row or verification boxes in the upper half and keeps the number keyboard native below.
 
-The feed uses one full-width rounded canvas. Home and Profile use two-column mini-app tiles; creation uses one conversational column.
+Home and Create use a sparse two-column card grid. Each tile is about half the screen width, with a large circular rendered object near the top and a short label underneath. Messages use a white search field, small segmented chips, and a vertical list with circular thumbnails and tight metadata. Profile centers the avatar and handle, then returns to the same two-column mini-app grid.
 
-### Whitespace Philosophy
-
-Preserve broad empty fields around the agent, profile, and object tiles. The feed may be dense only around engagement controls.
+The feed composition is inverted: a black full-screen stage, small top account/header controls, one tall rounded mini-app canvas, engagement controls below the canvas, and a floating dock above the bottom safe area. Bottom sheets cover the lower portion with a large rounded panel and dimmed backdrop; permission alerts remain native iOS alerts over the Wabi screen.
 
 # Navigation appearance
 
-Use a floating five-item dock for Home, Search, Create, Messages, and Profile. Create is emphasized with a dark circular button and optional unread badge.
+The bottom navigation is visually a floating white pill on light screens and a translucent or outlined dark pill on black feed screens. It contains five equally spaced icon-only items, with the middle create item often shown as a dark circular control and small blue notification badges. The selected tab is a filled black glyph or black circular item; inactive items are outline glyphs without text emphasis.
+
+Back controls are circular or pill-like with soft shadow on light screens and dark translucent circles on black screens. Top utility controls such as notification, settings, share, search, and expand are small icon buttons with little or no label. Sheets use a centered grabber and large rounded top corners.
 
 # Components
 
-### Buttons
+Primary buttons are tall black pills with white semibold labels and no decorative outline. Disabled buttons turn pale gray with muted text. Secondary and utility buttons are white or frosted pills on light screens, and outlined or translucent rounded pills on the black feed.
 
-Primary actions are black full-width pills on light screens. Feed actions are outlined dark pills with white icons. Native controls must inherit these fills, radii, and restrained contrast.
+Mini-app tiles are white rounded rectangles with very soft shadow, a centered circular generated thumbnail, a compact title, and occasional tiny frosted labels such as draft or count badges over the thumbnail. Empty tile placeholders keep the same rounded shape and subtle shadow but omit content.
 
-Boards, content modes, and creation options use underlined text tabs or compact chips; selected state is black and unselected state is gray.
+Search fields are white rounded capsules with a leading magnifier and muted placeholder. Segmented filters are compact pills; selected state is black fill with white text, unselected state is light gray or transparent with gray text. Credit panels and action sheets use large rounded white cards over a dimmed background, with internal progress bars or app-extension share rows.
 
-### Cards & Containers
-
-Mini-app cards feature one large object preview, a short title, and minimal status. Draft labels sit as tiny frosted chips over the object.
-
-### Inputs & Forms
-
-The creation composer is a rounded white conversational card with prompt text, attachment or Max option, and a black circular send action.
-
-### Status & Build Page
-
-Use compact Draft, credit, unread, count, save, and publish indicators. Generation progress remains inside the agent conversation or preview.
-
-### Navigation
-
-Use a floating five-item dock for Home, Search, Create, Messages, and Profile. Create is emphasized with a dark circular button and optional unread badge.
+Feed engagement controls are low-contrast but legible: outline hearts, comment bubbles, share icons, remix and save pills, tiny count bubbles, and circular in-canvas controls. Native permission alerts can stay native, but app-owned panels, chips, cards, and docks must match the observed fills, radii, and shadows.
 
 # Imagery and icons
 
-Use soft ambient shadow under white tiles and docks. Contrast between black stage and light canvas does most of the layering.
+Imagery is compositionally important. Wabi's recognisable visual system depends on glossy, generated, orb-like objects: onboarding bubbles, mini-app thumbnails, draft icons, profile object cards, and in-feed game canvases. These objects should be treated as authored raster assets or generated images, not replaced by plain SF Symbols.
 
-### Decorative Depth
-
-Use refractive bubbles, frosted controls, iridescent highlights, and small contact shadows. Keep them tied to content objects, not generic backgrounds.
+Photos appear as rounded avatars or embedded inside circular thumbnails. Interactive/game canvases use large screenshots or rendered scenes with rounded clipping and preserved aspect ratio. App icons are simple line-style glyphs with rounded strokes; avoid arbitrary symbol sets that introduce mismatched weight or filled system-blue accents.
 
 # States
 
-Use compact Draft, credit, unread, count, save, and publish indicators. Generation progress remains inside the agent conversation or preview.
+Observed states include onboarding, phone number entry, verification with empty code boxes, disabled Next button, native paste permission alert, populated home/create grids, messages filter selection, profile credit bottom sheet, share sheet, black feed save tooltip, and profile-photo edit view. Across these states, the same rules persist: pearl or black canvas, pill controls, large rounded surfaces, sparse typography, and object-led imagery.
+
+Selected filters turn black with white text. Disabled actions are gray and low-contrast. Modal states dim the background and preserve the underlying layout enough to keep spatial context. The photo edit state is an all-black utility surface with a large rounded-square crop and minimal bottom actions.
 
 # iOS adaptation
 
-Phones show one feed canvas or one creation flow at a time. Wider screens may pair boards or conversation with live preview while preserving the single-object focus.
+Preserve safe-area spacing at the top and bottom; the floating dock must clear the home indicator and should not collide with feed engagement controls. Use `ScrollView` or UIKit scroll containers for light grids and message lists, while keeping the primary feed canvas visually dominant on compact iPhones. Keyboard states should keep the main input and primary action visible above the native keyboard.
 
-### Touch Targets
-
-Navigation, engagement, remix, save, send, board, and mini-app controls require at least 44pt targets.
-
-### Collapsing Strategy
-
-Keep canvas, title, primary interaction, and remix/save actions visible. Collapse comments, counts, details, and configuration into secondary panels.
-
-### Image Behavior
-
-Use `contain` for 3D objects and `cover` for user photos. Interactive canvases retain their authored aspect ratio inside rounded clipping.
-
-On iPhone, respect top and bottom safe areas, use scrolling for content that does not fit, keep interactive targets at least 44 points, and preserve the visual reading order for VoiceOver. At larger Dynamic Type sizes, allow supporting text to wrap without collapsing the dominant hierarchy. Use native sheets and permission transitions while explicitly styling app-owned surfaces to match the reference.
+Use at least 44-point touch targets for dock icons, chips, back controls, share/save/remix controls, and sheet actions. VoiceOver order should follow the visual order: title or logo, primary object/card content, controls, then navigation. Let Dynamic Type expand titles and helper copy, but keep object thumbnails, feed canvases, and bottom navigation stable. The observed reference is light for workspaces and dark for feed; do not invent a generic automatic dark-mode inversion that removes this contrast.
 
 # Anti-generic checklist
 
-- Do not substitute the documented accent hierarchy with default iOS blue.
-- Do not collapse distinct surfaces into a uniform stack of generic white cards.
-- Do not use an unstyled `TabView`, `Form`, or arbitrary SF Symbols when they contradict the documented navigation and component language.
-- Do not flatten the documented typography into one body-text scale.
-- Do not remove compositionally important photography or illustration while assets are pending.
-- Do not apply one corner radius to every control and surface.
-
-Source-specific guardrails retained from the review:
-
-### Do
-
-- Alternate quiet light workspaces with an immersive black feed.
-- Give one generated object or canvas visual priority.
-- Keep social actions close to the mini app.
-- Use black pills consistently for decisive actions.
-
-### Don't
-
-- Do not tint every system surface with rainbow color.
-- Do not shrink interactive mini apps into ordinary feed thumbnails.
-- Do not add heavy shadows to every tile.
-- Do not leave default native blue on controls.
+- Do not replace generated glossy objects with arbitrary SF Symbols, emoji, flat blobs, or empty placeholders.
+- Do not turn light Wabi workspaces into a generic white `Form` or dense settings list.
+- Do not use default iOS blue for buttons, selected states, verification controls, or tab selection.
+- Do not flatten the black feed into ordinary white cards; it must remain an immersive stage around one large canvas.
+- Do not use an unstyled `TabView`; the dock must look like the observed floating pill with icon-only items.
+- Do not apply one uniform radius to every surface; pills, cards, sheets, avatars, and feed canvases have visibly different rounding.
 
 </design-context>

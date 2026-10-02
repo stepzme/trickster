@@ -3,188 +3,94 @@
 version: 1
 platform: iOS
 name: Open-design-analysis
-description: "A cinematic wellbeing system built on pure black, full-bleed warm photography, widely spaced white type, hairline geometry, tiny red signals, and sparse outlined or white pill actions."
-colors: {primary: "#F5F3EE", on-primary: "#111111", primary-focus: "#DCD9D2", ink: "#F7F6F3", ink-muted: "#A7A6A4", ink-subtle: "#747473", ink-tertiary: "#50504F", canvas: "#000000", surface-1: "#121313", surface-2: "#202121", surface-3: "#2E2F2F", surface-4: "#3C3D3D", hairline: "#2A2B2B", hairline-strong: "#424343", hairline-tertiary: "#585959", inverse-canvas: "#FFFFFF", inverse-surface-1: "#F1F1F3", inverse-surface-2: "#E3E3E6", inverse-ink: "#121316", brand-secure: "#D1483F", semantic-success: "#BFD6B8", semantic-overlay: "#000000"}
+description: "A sparse black onboarding interface pairing full-bleed close-up human photography with widely spaced white branding, understated form typography, hairline inputs, and a floating white circular next control."
+colors:
+  canvas: "#000000"
+  surface-primary: "#111213"
+  surface-secondary: "#252627"
+  accent-primary: "#FFFFFF"
+  accent-secondary: "#B9D8D2"
+  text-primary: "#F7F7F5"
+  text-secondary: "#A5A6A4"
+  divider: "#424342"
+  destructive: "#D55252"
 typography:
-  display-xl: {fontFamily: SF Pro Display, fontSize: 36, fontWeight: 700, lineHeight: 1.06, letterSpacing: -0.8}
-  display-lg: {fontFamily: SF Pro Display, fontSize: 30, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.5}
-  display-md: {fontFamily: SF Pro Display, fontSize: 24, fontWeight: 700, lineHeight: 1.14, letterSpacing: -0.3}
-  headline: {fontFamily: SF Pro Display, fontSize: 21, fontWeight: 700, lineHeight: 1.20, letterSpacing: -0.2}
-  card-title: {fontFamily: SF Pro Text, fontSize: 16, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0}
-  subhead: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 600, lineHeight: 1.30, letterSpacing: 0}
-  body-lg: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0}
-  body: {fontFamily: SF Pro Text, fontSize: 13, fontWeight: 400, lineHeight: 1.36, letterSpacing: 0}
-  body-sm: {fontFamily: SF Pro Text, fontSize: 11, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0}
-  caption: {fontFamily: SF Pro Text, fontSize: 10, fontWeight: 400, lineHeight: 1.25, letterSpacing: 0}
-  button: {fontFamily: SF Pro Text, fontSize: 14, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0}
-  eyebrow: {fontFamily: SF Pro Text, fontSize: 10, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0.2}
-  mono: {fontFamily: SF Mono, fontSize: 11, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0}
-rounded: {xs: 4, sm: 10, md: 16, lg: 22, xl: 28, xxl: 32, pill: 9999, full: 9999}
-spacing: {xxs: 4, xs: 8, sm: 12, md: 16, lg: 20, xl: 24, xxl: 32, section: 40}
+  hero: {fontFamily: "SF Pro Display", fontSize: 38, fontWeight: 600, lineHeight: 44}
+  title: {fontFamily: "SF Pro Display", fontSize: 28, fontWeight: 600, lineHeight: 34}
+  section: {fontFamily: "SF Pro Text", fontSize: 20, fontWeight: 600, lineHeight: 25}
+  body: {fontFamily: "SF Pro Text", fontSize: 16, fontWeight: 400, lineHeight: 22}
+  label: {fontFamily: "SF Pro Text", fontSize: 14, fontWeight: 500, lineHeight: 19}
+  caption: {fontFamily: "SF Pro Text", fontSize: 11, fontWeight: 500, lineHeight: 15}
+spacing:
+  screen-horizontal: 24
+  section-gap: 32
+  card-padding: 16
+  control-gap: 14
+rounded:
+  control: 16
+  card: 22
+  sheet: 28
+  pill: 999
 components:
-  button-primary: {backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: [14, 18]}
-  button-primary-pressed: {backgroundColor: "{colors.primary-focus}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.pill}"}
-  button-secondary: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: [12, 16]}
-  button-tertiary: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: [10, 14]}
-  content-card: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 14}
-  feature-card: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 16}
-  text-input: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: [12, 14]}
-  status-badge: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.pill}", padding: [3, 7]}
-  bottom-nav: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink-subtle}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: [8, 10]}
+  primary-action: {fill: "white", text: "black", shape: "circle or pill"}
+  secondary-action: {fill: "black", text: "white", shape: "thin outlined pill"}
+  primary-card: {fill: "black", content: "single prompt or sparse form", shape: "unframed"}
+  navigation: {fill: "black or transparent over photo", selected: "white", accessory: "minimal back or close icon"}
 ---
 
 # Overview
 
-Open makes daily wellbeing feel cinematic and contemplative by placing minimal white controls over warm blurred photography and highly restrained black content lists.
-
-**Key Characteristics:** pure black canvas, warm cinematic photography, widely spaced wordmark, thin white outlines, sparse red detail, minimal navigation, and large quiet type.
+Open's inspected onboarding is cinematic and extremely sparse. Near-black form screens alternate with full-bleed close-up human imagery. Widely spaced branding, thin rules, modest white type, and one floating circular next control create the identity.
 
 # Non-negotiable visual invariants
 
-- The reviewed screens show this treatment: pure black canvas.
-- The reviewed screens show this treatment: warm cinematic photography.
-- The reviewed screens show this treatment: widely spaced wordmark.
-- The reviewed screens show this treatment: thin white outlines.
-- The reviewed screens show this treatment: sparse red detail.
-- The reviewed screens show this treatment: minimal navigation.
-- The reviewed screens show this treatment: large quiet type.
+- Black fills form screens edge to edge.
+- Opening imagery is full-bleed, close, and human rather than contained in a card.
+- The wordmark uses large white type with visibly wide spacing over imagery.
+- Forms leave substantial empty black space around one prompt.
+- Text inputs are underline-led or nearly unframed.
+- Progression uses a floating white circular control near the lower trailing edge.
+- Helper labels remain small and quiet; they never compete with the prompt.
 
 # Color and surfaces
 
-### Brand & Accent
-
-Warm white is the primary interface color. Tiny muted red signals are reserved for notification or studio status, not general action.
-
-### Surface
-
-Black carries nearly every screen; imagery can fill the background, while content sections remain borderless or separated by hairlines.
-
-### Text
-
-Warm white leads practice titles; gray supports teacher, duration, intent, and secondary modes.
-
-### Semantic
-
-Use muted red for attention, soft green only for completion, and keep ordinary navigation monochrome.
+Use pure black for the canvas, nearly black for the few grouped controls, white for primary text and actions, and medium gray for secondary copy and rules. A soft blue-green avatar gradient may appear as an isolated placeholder, not a recurring decoration. Error red remains semantic. Bright default blue and light card surfaces would break the reference.
 
 # Typography
 
-### Font Family
-
-Use SF Pro Display for practice and program titles and SF Pro Text for controls, content, and metadata.
-
-### Hierarchy
-
-| Token | Size | Weight | Use |
-|---|---:|---:|---|
-| display-lg | 30pt | 700 | Hero or state |
-| headline | 21pt | 700 | Section title |
-| card-title | 16pt | 600 | Primary item |
-| body | 13pt | 400 | Detail |
-| caption | 10pt | 400 | Metadata |
-
-### Principles
-
-- Lead with the practice, teacher, duration, or felt intent.
-- Keep repeated metadata aligned and visually quieter.
-- Reserve high contrast and weight for real decisions.
-
-### Note on Font Substitutes
-
-Use a refined neutral grotesk with light display weights; preserve wide tracking in the wordmark and mode labels.
+Use SF Pro with regular or light form copy and restrained bolding. The photographic wordmark is large and widely spaced; form titles are smaller than a conventional hero and stay left aligned. Compact uppercase helper labels may punctuate fields. Dynamic Type expands the sparse vertical layout and wraps prompts without filling the intentional empty space with extra copy.
 
 # Screen composition
 
-### Grid & Container
-
-Today uses one full-screen feature; programs use cinematic cards; Discover uses a sparse list and horizontal media rail.
-
-### Whitespace Philosophy
-
-Large dark fields and slow visual rhythm are essential; avoid filling space around a single daily practice.
+Photo-led opening screens use edge-to-edge face imagery with branding and limited actions overlaid. Form screens place a back or close control at top, one prompt and underline input in the upper-middle, large empty black space, and a circular next control near the lower trailing region. Keyboard-active layouts compress vertically but retain the same left edge and bottom progression. Choice screens use a small number of outlined pills or rows.
 
 # Navigation appearance
 
-Use small monochrome symbols with Today centered; the active destination is bright white and others remain subdued.
+Navigation is nearly invisible: a white back arrow or close symbol on black or photography, plus the isolated circular next control. There is no evidence for a persistent tab bar in the inspected set. Native permission dialogs remain visually native. The appearance does not imply a product navigation structure.
 
 # Components
 
-### Buttons
-
-Use outlined pills for exploration and a warm-white filled pill for trial or decisive commitment.
-
-Meditate, Breathe, Move, and Sound use quiet text labels; selection is shown by contrast rather than filled chips.
-
-### Cards & Containers
-
-Program and practice cards rely on photography and type, with almost no visible container chrome.
-
-### Inputs & Forms
-
-Search is a thin outlined field on black; onboarding fields use sparse typography and minimal circular progression.
-
-### Status & Build Page
-
-Keep offline, life score, streak, trial, playback, and completion close to the active practice.
-
-### Navigation
-
-Use small monochrome symbols with Today centered; the active destination is bright white and others remain subdued.
+Primary progression is a white circle with a black arrow; broader commitments may use white pills with black labels. Secondary actions are black with thin white or gray outlines. Text fields use a baseline, small label, and validation check rather than a filled card. Multi-select choices use restrained outlined pills. Disabled or loading next controls remain circular and reduce contrast.
 
 # Imagery and icons
 
-| Level | Treatment | Use |
-|---|---|---|
-| 0 | Base canvas | Primary context |
-| 1 | Grouped surface | Cards and sections |
-| 2 | Sticky or floating action | Commitment |
-| 3 | Sheet over scrim | Focused choice |
-
-### Decorative Depth
-
-Use moving photography, blur, glowing play ring, and subtle dark overlays rather than card elevation.
+Full-bleed close-up human photography is compositionally essential on the opening screens and cannot be omitted pending final assets. Profile photography appears later. The wordmark, functional icons, and the isolated gradient avatar are separate elements; none establishes an authored illustration system.
 
 # States
 
-Keep offline, life score, streak, trial, playback, and completion close to the active practice.
+Observed states include photographic introduction, sign-in and account creation choices, empty and filled inputs, validation success, loading, disabled progression, selected choices, profile image, and native notification permission. Black canvas, sparse copy, and minimal white controls remain constant.
 
 # iOS adaptation
 
-### Touch Targets
-
-Primary actions, navigation, cards, and contextual controls remain at least 44pt.
-
-### Collapsing Strategy
-
-Preserve the daily practice, play action, and mode; reduce program previews and supporting prose first.
-
-### Image Behavior
-
-Allow full-bleed crop and motion blur, protect faces and gestures, and use dark overlays only for legibility.
-
-On iPhone, respect top and bottom safe areas, use scrolling for content that does not fit, keep interactive targets at least 44 points, and preserve the visual reading order for VoiceOver. At larger Dynamic Type sizes, allow supporting text to wrap without collapsing the dominant hierarchy. Use native sheets and permission transitions while explicitly styling app-owned surfaces to match the reference.
+Crop full-bleed photography to protect faces across iPhone aspect ratios. Use safe-area-aware overlays and keyboard avoidance while keeping the progression control reachable and at least 44 points. Dynamic Type grows prompt blocks upward and expands choice rows. VoiceOver reads prompt, field state, helper, then next action. Native permission prompts remain untouched; app-owned fields preserve the dark styling.
 
 # Anti-generic checklist
 
-- Do not substitute the documented accent hierarchy with default iOS blue.
-- Do not collapse distinct surfaces into a uniform stack of generic white cards.
-- Do not use an unstyled `TabView`, `Form`, or arbitrary SF Symbols when they contradict the documented navigation and component language.
-- Do not flatten the documented typography into one body-text scale.
-- Do not remove compositionally important photography or illustration while assets are pending.
-- Do not apply one corner radius to every control and surface.
-
-Source-specific guardrails retained from the review:
-
-### Do
-
-- Preserve cinematic negative space and minimal monochrome control language.
-- Keep the primary task and current state immediately legible.
-- Style native controls to inherit this visual system.
-
-### Don't
-
-- Don't introduce bright app-style cards or dense utility chrome.
-- Don't hide status, constraints, or secondary conditions.
-- Don't add heavy shadows around every container.
-
+- No white card stack on a gray background.
+- No default blue buttons or links.
+- No dense onboarding prose.
+- No large filled text fields replacing hairline inputs.
+- No generic bottom tab bar invented from absent evidence.
+- No decorative gradients beyond the isolated observed avatar treatment.
+- No replacement of full-bleed human photography with illustration.
 </design-context>

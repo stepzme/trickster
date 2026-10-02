@@ -3,219 +3,135 @@
 version: 1
 platform: iOS
 name: Amie-design-analysis
-description: "A radically sparse productivity workspace that stacks a white calendar pane over a white todo pane, joined by a black navigation strip. Fine gray grid lines, restrained pink selection, and soft event pastels create hierarchy without conventional tab chrome."
+description: "A stark productivity workspace where white calendar and todo panes are separated by black floating chrome, with thin gray grid lines, restrained pink time accents, compact system typography, and almost no decorative imagery."
 colors:
-  primary: "#EF5B82"
-  on-primary: "#FFFFFF"
-  primary-soft: "#FCE8EE"
-  ink: "#1D1D1F"
-  ink-muted: "#77777A"
-  ink-subtle: "#B5B5B8"
-  canvas: "#F1F1F1"
-  surface-1: "#FFFFFF"
-  surface-2: "#F5F5F5"
-  chrome: "#050505"
-  hairline: "#E7E7E8"
-  event-blue: "#C9F2F7"
-  event-yellow: "#FFF1A8"
-  event-orange: "#FFE2BF"
-  semantic-success: "#7A7A7A"
-  semantic-danger: "#E45561"
-  semantic-overlay: "#000000"
+  canvas: "#F4F4F4"
+  surface-primary: "#FFFFFF"
+  surface-secondary: "#F7F7F7"
+  accent-primary: "#EF5B82"
+  accent-secondary: "#14B8C8"
+  text-primary: "#111111"
+  text-secondary: "#77777A"
+  divider: "#E5E5E7"
+  destructive: "#E44855"
 typography:
-  display-xl: { fontFamily: System Sans, fontSize: 38, fontWeight: 700, lineHeight: 1.00, letterSpacing: -0.8 }
-  display-lg: { fontFamily: System Sans, fontSize: 30, fontWeight: 700, lineHeight: 1.05, letterSpacing: -0.5 }
-  display-md: { fontFamily: System Sans, fontSize: 24, fontWeight: 650, lineHeight: 1.10, letterSpacing: -0.3 }
-  headline: { fontFamily: System Sans, fontSize: 20, fontWeight: 650, lineHeight: 1.20, letterSpacing: -0.2 }
-  card-title: { fontFamily: System Sans, fontSize: 15, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: System Sans, fontSize: 16, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
-  body-lg: { fontFamily: System Sans, fontSize: 16, fontWeight: 400, lineHeight: 1.45, letterSpacing: 0 }
-  body: { fontFamily: System Sans, fontSize: 14, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
-  body-sm: { fontFamily: System Sans, fontSize: 12, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
-  caption: { fontFamily: System Sans, fontSize: 10, fontWeight: 400, lineHeight: 1.20, letterSpacing: 0 }
-  button: { fontFamily: System Sans, fontSize: 14, fontWeight: 500, lineHeight: 1.20, letterSpacing: 0 }
-  eyebrow: { fontFamily: System Sans, fontSize: 10, fontWeight: 700, lineHeight: 1.20, letterSpacing: 0.4 }
-  mono: { fontFamily: System Mono, fontSize: 12, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
-rounded: { xs: 6, sm: 10, md: 14, lg: 20, xl: 28, xxl: 34, pill: 9999, full: 9999 }
-spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
+  hero: {fontFamily: "SF Pro Display", fontSize: 34, fontWeight: 700, lineHeight: 38}
+  title: {fontFamily: "SF Pro Display", fontSize: 24, fontWeight: 700, lineHeight: 30}
+  section: {fontFamily: "SF Pro Text", fontSize: 18, fontWeight: 600, lineHeight: 24}
+  body: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 400, lineHeight: 21}
+  label: {fontFamily: "SF Pro Text", fontSize: 13, fontWeight: 600, lineHeight: 18}
+  caption: {fontFamily: "SF Pro Text", fontSize: 11, fontWeight: 400, lineHeight: 14}
+spacing:
+  screen-horizontal: 14
+  section-gap: 24
+  card-padding: 16
+  control-gap: 8
+rounded:
+  control: 12
+  card: 18
+  sheet: 28
+  pill: 999
 components:
-  button-primary: { backgroundColor: "{colors.chrome}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [14, 20]}
-  calendar-pane: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.lg}", padding: 14 }
-  todo-pane: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 16 }
-  control-strip: { backgroundColor: "{colors.chrome}", textColor: "{colors.on-primary}", typography: "{typography.caption}", rounded: "{rounded.pill}", padding: [8, 12]}
-  settings-row: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: 12 }
+  primary-action: {backgroundColor: "{colors.text-primary}", textColor: "{colors.surface-primary}", cornerRadius: "{rounded.control}"}
+  secondary-action: {backgroundColor: "{colors.surface-secondary}", textColor: "{colors.text-primary}", cornerRadius: "{rounded.control}"}
+  primary-card: {backgroundColor: "{colors.surface-primary}", textColor: "{colors.text-primary}", cornerRadius: "{rounded.card}"}
+  navigation: {backgroundColor: "{colors.text-primary}", textColor: "{colors.surface-primary}", cornerRadius: "{rounded.pill}"}
 ---
 
 # Overview
 
-Amie turns calendar and todos into one physical workspace. The black divider is both navigation and structural contrast; everything else stays white, fine-lined, and deliberately quiet.
+Amie's current iOS screens are defined by an almost colorless calendar/todo workspace. The recognizable elements are the vertical split between panes, black floating controls, a fine calendar grid, pink current-day/time accents, and pastel event bars used sparingly against large white space.
 
-**Key Characteristics:**
-- Vertically split calendar and todo panes.
-- Black central control strip and divider.
-- Pink current-day and timeline accent.
-- Pastel event blocks.
-- Large areas of untouched white space.
-- Rounded full-screen sheets without tab chrome.
+The source app card reviewed was the current `amie` Screen Gallery card dated 2026-08-24, with latest set to `null`. Freshly inspected screens included onboarding, home, todo creation, todo details, calendar, todo list, profile/settings, and dark appearance.
 
 # Non-negotiable visual invariants
 
-- The reviewed screens show this treatment: Vertically split calendar and todo panes.
-- The reviewed screens show this treatment: Black central control strip and divider.
-- The reviewed screens show this treatment: Pink current-day and timeline accent.
-- The reviewed screens show this treatment: Pastel event blocks.
-- The reviewed screens show this treatment: Large areas of untouched white space.
-- The reviewed screens show this treatment: Rounded full-screen sheets without tab chrome.
+- White is the dominant viewport mass; gray appears mainly as hairlines, disabled controls, and subtle shadows.
+- Calendar and todo areas behave visually like two rounded white panes separated by black chrome rather than a standard app page.
+- The center/bottom navigation chrome is black, pill-shaped, compact, and icon-led; it must not become a conventional iOS tab bar.
+- The current date and time indicator use a narrow saturated pink accent; do not replace it with default iOS blue.
+- Calendar content uses thin grid lines and lightly tinted event blocks, not heavy cards.
+- Todo rows are text-first, with small square checks, faint metadata, and extensive empty space.
+- Full-screen editing sheets have large white surfaces, black surrounding gutters, and compact bottom action strips.
+- Dark mode keeps the same geometry, but changes the canvas to near-black and preserves restrained accent use.
 
 # Color and surfaces
 
-### Brand & Accent
-- **Pink** ({colors.primary}): Current date, timeline, and small brand emphasis.
-- **Black** ({colors.chrome}): Structural divider, navigation, and primary action.
-- **Event Pastels**: Calendar differentiation without saturation.
+Use white as the primary surface for calendar grids, todo lists, onboarding questions, profile rows, and edit sheets. Use a very pale gray canvas only where the app exposes the space around floating panes or grouped controls.
 
-### Surface
-- **Canvas** ({colors.canvas}): Gap and background around floating panes.
-- **Surface 1** ({colors.surface-1}): Calendar, todos, and settings.
-- **Surface 2** ({colors.surface-2}): Selected row and quiet group.
-- **Hairline** ({colors.hairline}): Calendar grid and separators.
+Black is structural. It appears as the pane divider, floating navigation pill, modal gutters, and primary onboarding action. It should read as app chrome, not merely text color.
 
-### Text
-- **Ink** ({colors.ink}): Todos, dates, headings, and actions.
-- **Ink Muted** ({colors.ink-muted}): Times, metadata, and secondary labels.
-- **Ink Subtle** ({colors.ink-subtle}): Completed and disabled content.
+Pink is narrowly scoped to current-day chips, current-time rules, and small brand emphasis. Cyan/turquoise appears as individual event or calendar color, not as a global CTA system. Event colors are quiet pastels: pale cyan, pale yellow, pale peach, and light red.
 
-### Semantic
-- **Success** ({colors.semantic-success}): Completed todo check and de-emphasis.
-- **Danger** ({colors.semantic-danger}): Logout or destructive action.
-- **Overlay** ({colors.semantic-overlay}): Search blur and modal scrim.
+Dividers are thin and low contrast. Avoid heavy borders, shadows, saturated gradients, and broad colored backgrounds in ordinary workspace screens.
 
 # Typography
 
-### Font Family
+Use SF Pro as the iOS-safe system substitute. The workspace typography is compact and functional: small captions for times and weekday labels, medium-weight todo titles, and muted microcopy for secondary details.
 
-- **System Sans** — calendar, todos, onboarding, search, and settings.
+Onboarding uses larger bold type for the product statement, but most app screens avoid hero typography. Settings titles are centered or top-aligned with a modest bold title scale. Calendar labels and times stay small and should never compete with todo titles or event names.
 
-### Hierarchy
-
-| Token | Size | Weight | Use |
-|---|---|---|---|
-| `{typography.display-xl}` | 38pt | 700 | Onboarding statement |
-| `{typography.display-md}` | 24pt | 650 | Settings heading |
-| `{typography.headline}` | 20pt | 650 | Sheet heading |
-| `{typography.card-title}` | 15pt | 600 | Todo and setting title |
-| `{typography.body}` | 14pt | 400 | Default content |
-| `{typography.caption}` | 10pt | 400 | Time and calendar metadata |
-| `{typography.button}` | 14pt | 500 | Actions |
-
-### Principles
-
-- Keep date and time metadata light.
-- Let todo titles carry the primary reading weight.
-- Use uppercase only for small onboarding eyebrows.
-- Avoid oversized headings inside the workspace.
-
-### Note on Font Substitutes
-
-Use **SF Pro**, **Inter**, or **Helvetica Neue**.
+Dynamic Type should wrap row labels and descriptions while preserving compact metadata. Do not use negative letter spacing. Keep uppercase limited to small labels such as onboarding survey/category labels when visible in the source.
 
 # Screen composition
 
-### Grid & Container
+The main workspace is a vertical composition: a top calendar pane, a black control strip/divider, and a bottom todo pane. The ratio can vary by state, but both panes retain rounded white edges and a single-column mobile layout.
 
-The upper pane is a day or week timeline. The lower pane is a task list. A resizable divider changes their ratio; both remain one-column on mobile.
+Calendar screens allocate most space to a sparse time grid. Todo-list screens shift visual weight to the lower pane, leaving the upper pane clipped or reduced. Populated calendars use horizontal event bars aligned to the grid; populated todo screens remain list-like with no decorative fill.
 
-### Whitespace Philosophy
+Creation and detail screens use a large rounded white sheet over black gutters. The text input/editor area occupies the upper portion; compact controls and keyboard or action strips sit at the bottom. Settings and profile screens are full-height white lists with colored circular row icons and a black Pro banner.
 
-Whitespace is the dominant organization tool. Avoid filling empty time or task areas with decorative content.
+Typical horizontal inset is tight, around 12-18 points. Large empty regions are intentional and should not be filled with recommendations, decoration, or explanatory copy.
 
 # Navigation appearance
 
-Profile, search, calendar label, pane grabber, and creation live in the black central strip. No conventional bottom tabs are used.
+Navigation is visually embedded in the black floating strip. The visible elements are small person/search symbols, a centered label pill such as Calendar or Todos, a short grab handle, and a compact plus action. Selected state is expressed through white text/icons on black and sometimes a small dot.
+
+Back controls in sheets are minimal text or simple glyph controls on white. Settings rows use a right chevron, but the list should not become a default `Form` with grouped gray sections.
 
 # Components
 
-### Buttons
+Primary actions are black rounded rectangles with white centered text. Disabled actions become gray with muted text. Secondary workspace actions are compact black or white pills depending on surrounding surface.
 
-Primary onboarding and Pro actions use black. Workspace actions are compact icon controls in the central strip; destructive actions use text labels.
+Todo rows use a small square checkbox, a primary line, optional description/date metadata, and occasional tiny colored indicators. Completed rows use checked boxes, muted gray text, and remain visible in context.
 
-### Cards & Containers
+Calendar event blocks are flat pastel rectangles aligned to the time grid, often with a stronger colored leading edge and tiny duration/status metadata. The current-time rule is a hairline pink stroke spanning the calendar.
 
-Calendar and todo panes are the primary containers. Event blocks use pastel fill and a stronger leading edge. Settings rows use icon, label, and chevron.
+Selection controls in onboarding and settings are full-width rounded white rows with subtle dividers or borders. Selected rows use a faint gray fill or a compact checkmark/indicator rather than large custom decoration.
 
-### Inputs & Forms
-
-Search sits at the bottom above the keyboard and filters both data types. Onboarding forms use full-width rows and black continuation actions.
-
-### Status & Build Page
-
-Completion uses a check plus muted text and a collapsible Done group. Current time uses a fine pink rule across the calendar.
-
-### Navigation
-
-Profile, search, calendar label, pane grabber, and creation live in the black central strip. No conventional bottom tabs are used.
+Modals and bottom sheets use black outer gutters, large white rounded panels, compact segmented actions, and clear destructive red only for delete/logout.
 
 # Imagery and icons
 
-| Level | Treatment | Use |
-|---|---|---|
-| 0 | Light gray canvas | App background |
-| 1 | White rounded pane | Calendar and todos |
-| 2 | Black divider strip | Navigation and resize boundary |
-| 3 | Blurred overlay | Search and modal state |
+Imagery is not a dominant Amie system. The inspected onboarding contains product/task-card imagery and a small avatar-style invite card, but repeated authored illustration language was not independently proven across app states. Do not invent a mascot or broad illustration set for this style.
 
-### Decorative Depth
-
-Use rounded pane silhouettes and subtle shadow only at their edges. Avoid gradients and decorative illustrations.
+Icons are minimal line or filled symbols: checkboxes, search, person, plus, calendar, lock, repeat, trash, chevrons, and colored settings row glyphs. Use the source geometry and weight; arbitrary SF Symbols are acceptable only after being styled to match size, stroke, fill, and color.
 
 # States
 
-Completion uses a check plus muted text and a collapsible Done group. Current time uses a fine pink rule across the calendar.
+Observed empty states leave space empty: an empty schedule shows only grid/time labels and a small "Nothing upcoming" style message; empty todo areas show list headers and create-list affordances without illustration.
+
+Populated states add pastel event blocks and text rows without changing the basic pane structure. Completed states use muted checked rows and a "done" grouping. Selected states use small filled dots, checkmarks, or thin colored outlines.
+
+Permission and system prompts appear over dimmed app content. Dark appearance preserves the same pane layout and control strip while moving surfaces to charcoal/black and keeping event colors subdued.
 
 # iOS adaptation
 
-| Wide | 768pt+ | Place panes side by side if useful |
-| Small | <390pt | Increase minimum pane height and wrap metadata |
+Preserve safe-area spacing around the status bar and home indicator. The black control strip must remain reachable and visually separate from the panes. Touch targets for checkboxes, plus controls, profile/search icons, settings rows, and bottom sheet actions must be at least 44 points even when the visible glyph is smaller.
 
-### Touch Targets
+Use scroll containers for long settings lists and editable detail sheets. With keyboard visible, keep the bottom action strip and current input visible while retaining the black gutter/sheet relationship. At larger Dynamic Type sizes, wrap todo titles and settings labels before increasing chrome height.
 
-Maintain 44pt for checkboxes, divider controls, search, creation, and settings rows.
-
-### Collapsing Strategy
-
-Preserve both panes and allow resizing. Collapse event metadata before hiding todo context; keep the control strip usable.
-
-### Image Behavior
-
-No content imagery is required. Avatars use cover; symbolic empty-state glyphs remain centered and faint.
-
-On iPhone, respect top and bottom safe areas, use scrolling for content that does not fit, keep interactive targets at least 44 points, and preserve the visual reading order for VoiceOver. At larger Dynamic Type sizes, allow supporting text to wrap without collapsing the dominant hierarchy. Use native sheets and permission transitions while explicitly styling app-owned surfaces to match the reference.
+Use native permission transitions only for system prompts; app-owned sheets and controls must be explicitly styled to match the observed white/black Amie language. Do not add desktop hover states, top web navigation, marketing cards, or unverified animation behavior.
 
 # Anti-generic checklist
 
-- Do not substitute the documented accent hierarchy with default iOS blue.
-- Do not collapse distinct surfaces into a uniform stack of generic white cards.
-- Do not use an unstyled `TabView`, `Form`, or arbitrary SF Symbols when they contradict the documented navigation and component language.
-- Do not flatten the documented typography into one body-text scale.
-- Do not remove compositionally important photography or illustration while assets are pending.
-- Do not apply one corner radius to every control and surface.
-
-Source-specific guardrails retained from the review:
-
-### Do
-
-- Keep calendar and todos visible together.
-- Make the divider clearly draggable.
-- Use fine grid lines and restrained pastels.
-- Preserve completed tasks in context.
-- Leave empty schedule space empty.
-
-### Don't
-
-- Don't add a conventional tab bar.
-- Don't saturate event colors.
-- Don't fill blank time with recommendations.
-- Don't hide the current-time rule.
-- Don't separate search by data type.
+- Do not replace pink current-time/current-day accents with default iOS blue.
+- Do not use a standard `TabView` bottom bar.
+- Do not render the workspace as a generic stack of white cards; preserve the split pane and black control strip.
+- Do not fill empty calendar or todo space with decorative artwork.
+- Do not make every component share one uniform corner radius.
+- Do not use `Form` section chrome for settings.
+- Do not add broad gradients, stock imagery, emoji, or mascot art.
+- Do not describe or implement product navigation scenarios from this style document; this file only defines visual treatment.
 
 </design-context>

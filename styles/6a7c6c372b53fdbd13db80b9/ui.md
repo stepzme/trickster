@@ -3,187 +3,94 @@
 version: 1
 platform: iOS
 name: Craft-design-analysis
-description: "A calm document workspace on a misty white-gray canvas with soft translucent chrome, black typography, pale cyan selection, rounded floating navigation, miniature document previews, sparse line icons, and a small multicolor assistant accent. Content stays dominant while organization and creation controls hover lightly around it."
+description: "An airy document workspace using white and very light gray surfaces, crisp black editorial type, saturated blue actions, document thumbnails, minimal circular controls, and translucent floating toolbars."
 colors:
-  primary: "#22A8E8"
-  on-primary: "#FFFFFF"
-  primary-soft: "#DDF4FF"
-  accent: "#EF4EC4"
-  ink: "#17181B"
-  ink-muted: "#74777F"
-  ink-subtle: "#A9ADB5"
-  canvas: "#F8F8FB"
-  surface-1: "#FFFFFF"
-  surface-2: "#F0F1F5"
-  hairline: "#E4E5EA"
-  semantic-success: "#27B89A"
-  semantic-warning: "#F0C419"
-  semantic-danger: "#D94B4B"
-  semantic-overlay: "#000000"
+  canvas: "#F7F7F8"
+  surface-primary: "#FFFFFF"
+  surface-secondary: "#EEF0F3"
+  accent-primary: "#2775F5"
+  accent-secondary: "#DCE9FF"
+  text-primary: "#17181A"
+  text-secondary: "#74777C"
+  divider: "#E5E6E8"
+  destructive: "#D84C55"
 typography:
-  display-xl: { fontFamily: SF Pro Display, fontSize: 36, fontWeight: 700, lineHeight: 1.05, letterSpacing: -0.7 }
-  display-lg: { fontFamily: SF Pro Display, fontSize: 30, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.5 }
-  display-md: { fontFamily: SF Pro Display, fontSize: 26, fontWeight: 700, lineHeight: 1.15, letterSpacing: -0.3 }
-  headline: { fontFamily: SF Pro Display, fontSize: 22, fontWeight: 700, lineHeight: 1.20, letterSpacing: -0.1 }
-  card-title: { fontFamily: SF Pro Text, fontSize: 16, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: SF Pro Text, fontSize: 16, fontWeight: 500, lineHeight: 1.35, letterSpacing: 0 }
-  body-lg: { fontFamily: SF Pro Text, fontSize: 17, fontWeight: 400, lineHeight: 1.50, letterSpacing: 0 }
-  body: { fontFamily: SF Pro Text, fontSize: 14, fontWeight: 400, lineHeight: 1.45, letterSpacing: 0 }
-  body-sm: { fontFamily: SF Pro Text, fontSize: 12, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
-  caption: { fontFamily: SF Pro Text, fontSize: 10, fontWeight: 400, lineHeight: 1.20, letterSpacing: 0 }
-  button: { fontFamily: SF Pro Text, fontSize: 15, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0 }
-  eyebrow: { fontFamily: SF Pro Text, fontSize: 11, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0.2 }
-  mono: { fontFamily: SF Mono, fontSize: 12, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
-rounded: { xs: 6, sm: 10, md: 14, lg: 18, xl: 24, xxl: 30, pill: 9999, full: 9999 }
-spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
+  hero: {fontFamily: "SF Pro Display", fontSize: 36, fontWeight: 700, lineHeight: 42}
+  title: {fontFamily: "SF Pro Display", fontSize: 28, fontWeight: 700, lineHeight: 34}
+  section: {fontFamily: "SF Pro Text", fontSize: 20, fontWeight: 600, lineHeight: 25}
+  body: {fontFamily: "New York", fontSize: 17, fontWeight: 400, lineHeight: 25}
+  label: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 600, lineHeight: 20}
+  caption: {fontFamily: "SF Pro Text", fontSize: 12, fontWeight: 400, lineHeight: 16}
+spacing:
+  screen-horizontal: 20
+  section-gap: 28
+  card-padding: 16
+  control-gap: 10
+rounded:
+  control: 12
+  card: 16
+  sheet: 28
+  pill: 999
 components:
-  button-primary: { backgroundColor: "{colors.ink}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.full}", padding: [12, 16]}
-  document-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.sm}", padding: 8 }
-  grouped-list: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: [8, 0]}
-  floating-nav: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.caption}", rounded: "{rounded.pill}", padding: [8, 12]}
-  input: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: [10, 12]}
+  primary-action: {fill: "saturated blue", text: "white semibold", shape: "rounded rectangle or circle"}
+  secondary-action: {fill: "translucent light gray", text: "near-black", shape: "pill or circle"}
+  primary-card: {fill: "white", content: "document preview and compact metadata", shape: "medium rounded"}
+  navigation: {fill: "white or frosted", selected: "blue", accessory: "minimal circular controls"}
 ---
 
 # Overview
 
-Craft keeps documents and tasks central while navigation floats in soft white capsules. A quiet gray-white canvas, black type, cyan selection, and miniature page previews make a spacious productivity shell.
-
-**Key Characteristics:**
-- Misty white-gray canvas with nearly borderless groups.
-- Floating rounded bottom controls.
-- Cyan selection and small multicolor assistant accent.
-- Document thumbnails as the primary visual content.
-- Calm line icons and generous editable space.
+Craft is an airy document workspace in which the page or document preview is the main visual surface. Navigation and creation tools float lightly around it, using white, pale gray, saturated blue, and restrained translucency.
 
 # Non-negotiable visual invariants
 
-- The reviewed screens show this treatment: Misty white-gray canvas with nearly borderless groups.
-- The reviewed screens show this treatment: Floating rounded bottom controls.
-- The reviewed screens show this treatment: Cyan selection and small multicolor assistant accent.
-- The reviewed screens show this treatment: Document thumbnails as the primary visual content.
-- The reviewed screens show this treatment: Calm line icons and generous editable space.
+- White document space or previews dominate the viewport.
+- Large areas of intentional whitespace separate content and controls.
+- Saturated blue is reserved for selection and decisive creation actions.
+- Navigation chrome is minimal, often circular or floating.
+- Home combines document preview rails with quieter vertical sections.
+- Editor toolbars float near the bottom without looking like heavy cards.
+- Document typography remains readable and editorial, distinct from compact UI labels.
 
 # Color and surfaces
 
-### Brand & Accent
-- **Primary** ({colors.primary}): Selected navigation, active folder, and contextual emphasis.
-- **Primary Soft** ({colors.primary-soft}): Selection halos and focused document outlines.
-- **Accent** ({colors.accent}): One edge of the multicolor assistant control.
-
-### Surface
-- **Canvas** ({colors.canvas}): Home, task lists, and navigation background.
-- **Surface 1** ({colors.surface-1}): Floating controls and document previews.
-- **Surface 2** ({colors.surface-2}): Search and secondary selection.
-- **Hairline** ({colors.hairline}): Minimal list separation.
-
-### Text
-- **Ink** ({colors.ink}): Screen headings, document titles, and task labels.
-- **Ink Muted** ({colors.ink-muted}): Secondary metadata.
-- **Ink Subtle** ({colors.ink-subtle}): Empty-state guidance.
-
-### Semantic
-- **Success** ({colors.semantic-success}): Completed task or connected state.
-- **Warning** ({colors.semantic-warning}): Starred and reminder emphasis.
-- **Danger** ({colors.semantic-danger}): Destructive actions.
-- **Overlay** ({colors.semantic-overlay}): Modal focus.
+Use white for documents and primary cards, very light gray for the app canvas, and pale gray for secondary controls. Black carries document content and titles; gray carries metadata. Saturated blue marks primary actions, selected tabs, and text selection. Translucent or frosted surfaces are limited to floating controls. Destructive red stays semantic.
 
 # Typography
 
-### Font Family
-- **SF Pro Display** — screen and document headings.
-- **SF Pro Text** — navigation, tasks, folders, and document body.
-- **SF Mono** — code blocks and technical content inside documents.
-
-### Principles
-- Let authored content define its own hierarchy.
-- Keep shell labels compact and quiet.
-- Use strong black only for current context.
-- Preserve comfortable reading line height.
-
-### Note on Font Substitutes
-Use the platform system sans or **Inter**. Use **JetBrains Mono** for code when SF Mono is unavailable.
+Use SF Pro for chrome and an iOS-safe editorial reading face such as New York for document body where appropriate. Titles are compact and bold; document text has more line height. UI labels remain smaller than editable content. Dynamic Type expands menus and metadata independently from the document's authored text scale.
 
 # Screen composition
 
-### Spacing System
-Use a 4pt base, 16pt screen gutters, 12pt row rhythm, 16pt card gaps, and large open writing areas.
-
-### Grid & Container
-Home stacks search, horizontally scrolling recent documents, structured groups, and floating navigation. Document view becomes a mostly empty editable canvas.
-
-### Whitespace Philosophy
-Whitespace is functional writing space. Avoid filling empty document or task states with decorative panels.
+Onboarding uses centered cards and blue actions with generous whitespace. Home places a search/header region above a horizontal document-preview rail and vertical sections. Editor screens give most of the viewport to a blank or populated page, with compact top controls and a floating bottom toolbar above the keyboard. Detail or AI sheets rise over the document while preserving its context.
 
 # Navigation appearance
 
-Home, Tasks, and Calendar live in the left floating capsule; assistant and create actions occupy a separate right capsule.
+Top navigation uses sparse back, search, overflow, and circular utility buttons. Home selection is blue within a light tab treatment; creation may use a floating circular plus. Bottom editor controls are translucent pills or compact bars. Sheets are white and broadly rounded. Visual styling does not imply the source document structure or routes.
 
 # Components
 
-### Buttons
-Use black circular create controls, white floating icon groups, and cyan selected icons. Text buttons remain understated.
-
-Task views and filters use soft pill segments with a cyan active state; subscription choices may reuse the same selection logic.
-
-### Cards & Containers
-Use document previews, folder rows, task groups, empty placeholders, and floating control capsules.
-
-### Inputs & Forms
-Search uses a pale field with a keyword selector. Document editing keeps the canvas clear and moves formatting into contextual tools.
-
-### Status & Build Page
-Show starred, shared, connected, due, completed, reminder, sync, and download state with icon plus concise metadata.
-
-### Navigation
-Home, Tasks, and Calendar live in the left floating capsule; assistant and create actions occupy a separate right capsule.
-
-Floating navigation remains above the safe area and never covers editable content or the current task.
+Primary actions use saturated blue fill and white semibold labels. Secondary controls are white or frosted with black line icons. Document cards use medium rounding, subtle shadow, and a visible page thumbnail. Search is a light filled field. Tool chips and formatting controls are compact and fixed-height. Selected text uses blue highlight; disabled creation controls reduce contrast without moving.
 
 # Imagery and icons
 
-Use soft surface contrast and restrained blur for floating navigation, menus, and controls; avoid pronounced shadows.
-
-### Decorative Depth
-Document previews and subtle translucent chrome create depth. The shell does not need atmospheric imagery.
+Document thumbnails and UI previews are the primary imagery. Small line icons and the colorful assistant ring are functional or branded assets, not a reusable illustration language. Do not replace real document previews with decorative art; preserve legible page-like proportions and content density.
 
 # States
 
-Show starred, shared, connected, due, completed, reminder, sync, and download state with icon plus concise metadata.
+Observed states include onboarding, populated home, empty starred or tag sections, active document editing, text selection, keyboard-visible composition, create composer states, document details, and AI assistant sheet. Whitespace, document dominance, and blue selection remain consistent.
 
 # iOS adaptation
 
-### Touch Targets
-Keep navigation, preview cards, folder rows, task checks, overflow, and creation controls at least 44pt.
-
-### Collapsing Strategy
-Preserve current document or task, create, search, and navigation. Move organization controls into a sidebar or sheet as width changes.
-
-### Image Behavior
-Contain document thumbnails and inline media with readable aspect ratios; avoid decorative cropping of authored content.
-
-On iPhone, respect top and bottom safe areas, use scrolling for content that does not fit, keep interactive targets at least 44 points, and preserve the visual reading order for VoiceOver. At larger Dynamic Type sizes, allow supporting text to wrap without collapsing the dominant hierarchy. Use native sheets and permission transitions while explicitly styling app-owned surfaces to match the reference.
+Keep document and editor surfaces safe-area aware, move floating controls above the keyboard, and maintain 44-point hit regions around small circular icons. Preview rails may scroll horizontally. At large Dynamic Type, expand chrome and metadata without changing the authored document zoom unexpectedly. VoiceOver follows title, document preview, metadata, then actions. Native text behavior may remain native while chrome is explicitly styled.
 
 # Anti-generic checklist
 
-- Do not substitute the documented accent hierarchy with default iOS blue.
-- Do not turn the documented white canvas into a generic card stack; preserve the observed accent, density, imagery, and surface grouping.
-- Do not use an unstyled `TabView`, `Form`, or arbitrary SF Symbols when they contradict the documented navigation and component language.
-- Do not flatten the documented typography into one body-text scale.
-- Do not remove compositionally important photography or illustration while assets are pending.
-- Do not apply one corner radius to every control and surface.
-
-Source-specific guardrails retained from the review:
-
-### Do
-- Keep content visually dominant.
-- Use soft floating controls around the canvas.
-- Make document and task state explicit.
-- Preserve generous writing space.
-
-### Don't
-- Don't wrap every row in a card.
-- Don't use strong gradients across the workspace.
-- Don't turn the assistant accent into a page background.
-- Don't cover document content with persistent controls.
-
+- No card-heavy dashboard that reduces the document canvas.
+- No default tab bar detached from floating creation controls.
+- No blue applied to all text and icons.
+- No heavy borders around the editor page.
+- No generic body font hierarchy for both document and chrome.
+- No decorative illustration replacing document previews.
+- No oversized bottom toolbar obscuring the page.
 </design-context>

@@ -3,185 +3,94 @@
 version: 1
 platform: iOS
 name: Suno-design-analysis
-description: "A dark AI-music product built from near-black chrome, translucent charcoal creation panels, artwork-derived gradients, white rounded playback controls, and a hot pink-to-orange creative accent. Dense social music feeds coexist with a focused studio form and persistent mini-player."
-
+description: "A near-black music interface where full-bleed cover art and video provide most color, warm pink-orange gradients mark creation, compact white type carries dense track metadata, and a persistent mini-player sits above dark bottom navigation."
 colors:
-  primary: "#F93479"
-  on-primary: "#FFFFFF"
-  primary-alt: "#FF8A22"
-  ink: "#F7F7F8"
-  ink-muted: "#A9A7AC"
-  ink-subtle: "#6F6D72"
-  canvas: "#101011"
-  surface-1: "#1D1A1D"
-  surface-2: "#292529"
-  hairline: "#383238"
-  semantic-success: "#36C27C"
-  semantic-warning: "#F5B33A"
-  semantic-danger: "#E95761"
-  semantic-overlay: "#000000"
-
+  canvas: "#0B0B0C"
+  surface-primary: "#171719"
+  surface-secondary: "#252527"
+  accent-primary: "#F43F74"
+  accent-secondary: "#FF9A35"
+  text-primary: "#FFFFFF"
+  text-secondary: "#A7A7AC"
+  divider: "#343438"
+  destructive: "#E85C67"
 typography:
-  display-xl: { fontFamily: System Sans, fontSize: 40, fontWeight: 700, lineHeight: 1.02, letterSpacing: -0.8 }
-  display-lg: { fontFamily: System Sans, fontSize: 34, fontWeight: 700, lineHeight: 1.08, letterSpacing: -0.5 }
-  display-md: { fontFamily: System Sans, fontSize: 28, fontWeight: 700, lineHeight: 1.12, letterSpacing: -0.3 }
-  headline: { fontFamily: System Sans, fontSize: 22, fontWeight: 700, lineHeight: 1.2, letterSpacing: 0 }
-  card-title: { fontFamily: System Sans, fontSize: 15, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: System Sans, fontSize: 17, fontWeight: 500, lineHeight: 1.3, letterSpacing: 0 }
-  body-lg: { fontFamily: System Sans, fontSize: 16, fontWeight: 400, lineHeight: 1.4, letterSpacing: 0 }
-  body: { fontFamily: System Sans, fontSize: 14, fontWeight: 400, lineHeight: 1.4, letterSpacing: 0 }
-  body-sm: { fontFamily: System Sans, fontSize: 12, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
-  caption: { fontFamily: System Sans, fontSize: 10, fontWeight: 400, lineHeight: 1.3, letterSpacing: 0 }
-  button: { fontFamily: System Sans, fontSize: 14, fontWeight: 600, lineHeight: 1.2, letterSpacing: 0 }
-  eyebrow: { fontFamily: System Sans, fontSize: 11, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0.2 }
-  mono: { fontFamily: System Mono, fontSize: 12, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
-
-rounded: { xs: 4, sm: 8, md: 12, lg: 16, xl: 22, xxl: 28, pill: 9999, full: 9999 }
-spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
-
+  hero: {fontFamily: "SF Pro Display", fontSize: 40, fontWeight: 700, lineHeight: 44}
+  title: {fontFamily: "SF Pro Display", fontSize: 28, fontWeight: 700, lineHeight: 34}
+  section: {fontFamily: "SF Pro Text", fontSize: 20, fontWeight: 700, lineHeight: 25}
+  body: {fontFamily: "SF Pro Text", fontSize: 16, fontWeight: 400, lineHeight: 22}
+  label: {fontFamily: "SF Pro Text", fontSize: 14, fontWeight: 600, lineHeight: 19}
+  caption: {fontFamily: "SF Pro Text", fontSize: 12, fontWeight: 400, lineHeight: 16}
+spacing:
+  screen-horizontal: 16
+  section-gap: 28
+  card-padding: 16
+  control-gap: 10
+rounded:
+  control: 12
+  card: 18
+  sheet: 28
+  pill: 999
 components:
-  button-primary: { backgroundColor: "{colors.ink}", textColor: "{colors.canvas}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: [13, 20]}
-  create-action: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: [14, 24]}
-  studio-panel: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 16 }
-  media-row: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.sm}", padding: 8 }
-  bottom-nav: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", height: 62 }
+  primary-action: {fill: "warm pink-orange gradient", text: "white semibold", shape: "pill"}
+  secondary-action: {fill: "white", text: "near-black semibold", shape: "pill or circle"}
+  primary-card: {fill: "charcoal", content: "artwork, title, creator, compact metadata", shape: "medium rounded"}
+  navigation: {fill: "near-black", selected: "white or warm accent", accessory: "mini-player above tabs"}
 ---
 
 # Overview
 
-Suno is a dark content-led music system where artwork and warm creative gradients animate otherwise restrained chrome. Creation panels are soft and translucent; playback remains bold and direct.
+Suno is a dark, media-led music interface. Cover art, video, and artwork-derived color fields dominate discovery and playback; charcoal creation panels and compact metadata keep the surrounding chrome restrained.
 
 # Non-negotiable visual invariants
 
-- The reviewed screens use this composition: A dark AI-music product built from near-black chrome, translucent charcoal creation panels, artwork-derived gradients, white rounded playback controls, and a hot pink-to-orange creative accent.
-- The dominant canvas token is #101011 and the primary accent token is #F93479.
-- The recorded display style is 40 points while the body style is 14 points.
-- Navigation appears as follows: Five bottom destinations persist, with Create centered as a gradient pill.
-- The reviewed screens use this hierarchy: Dense social music feeds coexist with a focused studio form and persistent mini-player.
+- Near-black fills the full viewport rather than appearing only behind isolated cards.
+- Cover art or video is a primary visual mass on discovery and playback screens.
+- Pink-to-orange color is reserved for creative emphasis, not spread across ordinary controls.
+- Track lists remain dense: artwork, identity, metrics, and overflow actions share one compact row.
+- Creation controls are grouped into layered charcoal panels, never a default white form.
+- The mini-player remains visually attached to the bottom navigation when playback is active.
+- White playback controls are higher contrast than secondary creation and metadata controls.
 
 # Color and surfaces
 
-### Brand & Accent
-
-Pink-to-orange identifies creation, selected profile accents, and special creative state. White remains the primary playback action.
-
-### Surface
-
-Use near-black canvas with layered charcoal panels. Artwork-derived blur may sit behind the player or studio.
-
-### Text
-
-White carries titles and actions; cool gray carries prompts, styles, counts, and timestamps.
-
-### Semantic
-
-Green confirms completion, amber warns about credits, and red marks destructive actions. Do not use the creative gradient as status.
+The canvas is almost black, with two visible charcoal steps for panels and inputs. White leads titles and playback; cool gray carries creators, counts, durations, and prompts. The warm pink-orange gradient identifies creation and selected creative states. Green, amber, and red are limited to success, warning, and destructive meanings. Artwork may cast a sampled blur behind the player, but unrelated colored glows would break the system.
 
 # Typography
 
-### Font Family
-
-Use a neutral system sans with strong display weight and compact social metadata.
-
-### Principles
-
-Keep track title and creator distinct, make prompts readable, and truncate style tags predictably.
-
-### Note on Font Substitutes
-
-SF Pro or Inter are appropriate. Preserve clear Cyrillic and compact metadata.
+Large authentication or feature statements use a bold display scale; section titles are compact and strong; track metadata is notably smaller and quieter. Titles may truncate, while prompts and creation fields wrap. Use SF Pro as the iOS-safe face and preserve the contrast between display text, 16-point reading text, and 12-point metadata as Dynamic Type grows.
 
 # Screen composition
 
-### Grid & Container
-
-Explore uses horizontal art rails and vertical track lists. Studio uses stacked rounded panels; player is immersive and single-column.
-
-### Whitespace Philosophy
-
-Keep discovery dense but preserve breathing room around cover art, studio groups, and the central playback button.
+Discovery screens combine edge-to-edge dark chrome, horizontal artwork shelves, and vertical track rows. Creation screens stack a small number of wide charcoal panels with a high-contrast action near the bottom. Playback screens give artwork or video most of the upper viewport, then place track identity and large controls below. Library and profile screens remain list-led but retain strong media thumbnails. Respect the top safe area; scrolling content clears both mini-player and bottom safe area.
 
 # Navigation appearance
 
-Five bottom destinations persist, with Create centered as a gradient pill. Mini-player sits immediately above the bar.
+Bottom navigation is dark, compact, and visually subordinate to content. Selected destinations brighten to white or receive a restrained warm accent. Circular top utilities are monochrome. Deep screens use minimal back controls, and sheets rise as dark rounded surfaces. Product routes and tab labels are not part of this reference.
 
 # Components
 
-### Buttons
-
-Primary playback uses white pills or circles. Creative actions use the warm gradient; native controls must inherit dark surfaces and typography.
-
-Mode and model selectors use compact dark pills. Selected state gains brighter text or a restrained warm accent.
-
-### Cards & Containers
-
-Track rows combine cover, duration, title, creator, plays, and overflow. Studio panels isolate lyrics, style, audio, and advanced options.
-
-### Inputs & Forms
-
-Prompts and titles live inside dark rounded fields. Keep generation credits and advanced values visible before commitment.
-
-### Status & Build Page
-
-Generation progress, published state, likes, plays, comments, and model version appear beside the relevant song.
-
-### Navigation
-
-Five bottom destinations persist, with Create centered as a gradient pill. Mini-player sits immediately above the bar.
+Primary creative actions are warm gradient pills with white semibold labels. Playback actions are white circles or pills with near-black symbols. Creation panels use charcoal fill, medium rounding, 16-point insets, and grouped inputs. Track rows pair square rounded artwork with a two-line identity block, compact metrics, and a trailing overflow control. Disabled actions lose contrast without changing geometry; selected pills brighten text or receive a restrained accent fill.
 
 # Imagery and icons
 
-Depth comes from artwork blur, dark surface steps, and the mini-player above navigation rather than strong shadow.
-
-### Decorative Depth
-
-Use sampled artwork color and subtle translucent panels. Avoid unrelated glow, illustration, or glass overload.
+Album covers, video stills, and profile media supply most chromatic variety and cannot be omitted while assets are pending. Use full-bleed crop for playback media and consistent square crops in rows. Icons are compact, filled or plainly stroked, and monochrome except for explicit creative emphasis; arbitrary decorative symbols do not replace real media.
 
 # States
 
-Generation progress, published state, likes, plays, comments, and model version appear beside the relevant song.
+Observed states include authentication, populated discovery, generation in progress, active playback, library content, and profile content. Progress and publication status stay close to the relevant track. Across states, the black canvas, compact metadata, media prominence, and warm creative accent remain constant.
 
 # iOS adaptation
 
-Keep creation and playback single-column on phones. Wider layouts may pair library lists with a persistent player.
-
-### Touch Targets
-
-Playback, tags, overflow, create, and navigation controls require at least 44pt targets.
-
-### Collapsing Strategy
-
-Allow shelves and tags to scroll horizontally. Keep Create or playback visible during long content.
-
-### Image Behavior
-
-Use `cover` for artwork and video. Sample artwork colors for background blur while maintaining text contrast.
-
-On iPhone, respect top and bottom safe areas, use scrolling for content that does not fit, keep interactive targets at least 44 points, and preserve the visual reading order for VoiceOver. At larger Dynamic Type sizes, allow supporting text to wrap without collapsing the dominant hierarchy. Use native sheets and permission transitions while explicitly styling app-owned surfaces to match the reference.
+Keep creation and playback single-column at compact width. Use vertical scrolling beneath safe-area-aware bars, horizontal scrolling for shelves and chips, 44-point hit regions around compact icons, and native keyboard avoidance for prompts. At large Dynamic Type, wrap supporting copy and expand rows before shrinking artwork or hiding status. VoiceOver order follows artwork, title, creator, status, then actions. App-owned sheets and controls stay dark even when native behavior is used.
 
 # Anti-generic checklist
 
-- Do not substitute the documented accent hierarchy with default iOS blue.
-- Do not collapse distinct surfaces into a uniform stack of generic white cards.
-- Do not use an unstyled `TabView`, `Form`, or arbitrary SF Symbols when they contradict the documented navigation and component language.
-- Do not flatten the documented typography into one body-text scale.
-- Do not remove compositionally important photography or illustration while assets are pending.
-- Do not apply one corner radius to every control and surface.
-
-Source-specific guardrails retained from the review:
-
-### Do
-
-- Let artwork supply most color.
-- Reserve gradients for creative state.
-- Keep generation controls grouped.
-- Preserve listening context.
-
-### Don't
-
-- Do not brighten every dark card.
-- Do not hide credits or model choices.
-- Do not use unrelated decorative illustration.
-- Do not expose light native controls.
-
+- No default blue tint or white `Form` surfaces.
+- No generic card stack detached from the black canvas.
+- No unstyled `TabView` without the mini-player relationship.
+- No removal of cover art or video from media-led layouts.
+- No gradient on every button, card, or status.
+- No uniform type size for titles, track identity, and metadata.
+- No arbitrary SF Symbols used as decorative artwork.
 </design-context>

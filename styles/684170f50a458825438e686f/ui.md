@@ -6,126 +6,117 @@ name: Wildberries-design-analysis
 description: "A high-density marketplace interface built from a white canvas, purple search and navigation chrome, two-column merchandise grids, image-led promotion, compact price metadata, and orange checkout commitment."
 colors:
   canvas: "#FFFFFF"
-  surface-soft: "#F7F5F8"
-  surface-search: "#F6EAFE"
-  surface-control: "#F2EFF4"
-  brand-purple: "#A91CDB"
-  brand-violet: "#7D1CB8"
-  action-magenta: "#C51EF0"
-  action-orange: "#FF8617"
+  surface-primary: "#FFFFFF"
+  surface-secondary: "#F7F3F8"
+  accent-primary: "#A91CDB"
+  accent-secondary: "#FF8617"
   text-primary: "#171419"
   text-secondary: "#767078"
-  text-tertiary: "#AAA4AC"
   divider: "#ECE8ED"
-  discount: "#E91E8D"
-  positive: "#13A66E"
-  warning: "#F19A17"
+  destructive: "#D91D54"
 typography:
-  page-title: {fontFamily: "SF Pro Display", fontSize: 24, fontWeight: 700, lineHeight: 29, letterSpacing: -0.3}
-  section-title: {fontFamily: "SF Pro Display", fontSize: 19, fontWeight: 700, lineHeight: 23, letterSpacing: -0.1}
-  price-large: {fontFamily: "SF Pro Display", fontSize: 18, fontWeight: 700, lineHeight: 22, letterSpacing: -0.2}
-  title: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 600, lineHeight: 19, letterSpacing: 0}
-  body: {fontFamily: "SF Pro Text", fontSize: 14, fontWeight: 400, lineHeight: 18, letterSpacing: 0}
-  product: {fontFamily: "SF Pro Text", fontSize: 12, fontWeight: 400, lineHeight: 15, letterSpacing: 0}
-  metadata: {fontFamily: "SF Pro Text", fontSize: 11, fontWeight: 400, lineHeight: 14, letterSpacing: 0}
-  badge: {fontFamily: "SF Pro Text", fontSize: 9, fontWeight: 600, lineHeight: 11, letterSpacing: 0}
-  button: {fontFamily: "SF Pro Text", fontSize: 14, fontWeight: 600, lineHeight: 18, letterSpacing: 0}
+  hero: {fontFamily: "SF Pro Display", fontSize: 32, fontWeight: 700, lineHeight: 38}
+  title: {fontFamily: "SF Pro Display", fontSize: 24, fontWeight: 700, lineHeight: 29}
+  section: {fontFamily: "SF Pro Text", fontSize: 19, fontWeight: 700, lineHeight: 24}
+  body: {fontFamily: "SF Pro Text", fontSize: 14, fontWeight: 400, lineHeight: 18}
+  label: {fontFamily: "SF Pro Text", fontSize: 14, fontWeight: 600, lineHeight: 18}
+  caption: {fontFamily: "SF Pro Text", fontSize: 11, fontWeight: 400, lineHeight: 14}
 spacing:
-  grid: 4
-  compact: 8
-  control: 12
   screen-horizontal: 12
-  section: 20
-  major: 28
+  section-gap: 20
+  card-padding: 12
+  control-gap: 8
 rounded:
-  badge: 4
   control: 10
-  product-image: 12
-  search: 18
-  banner: 16
+  card: 16
   sheet: 24
   pill: 999
 components:
-  search-field: {height: 48, fill: "#F6EAFE", foreground: "#7D1CB8", radius: 18}
-  product-card: {fill: "#FFFFFF", imageRadius: 12, columnGap: 6, rowGap: 4}
-  add-to-cart: {height: 36, fill: "#C51EF0", foreground: "#FFFFFF", radius: 10}
-  buy-now: {height: 48, fill: "#FF8617", foreground: "#FFFFFF", radius: 12}
-  bottom-navigation: {height: 58, fill: "#FFFFFF", selected: "#A91CDB", unselected: "#B7B1B9"}
+  primary-action: {height: 48, fill: "#FF8617", foreground: "#FFFFFF", radius: 12}
+  secondary-action: {height: 44, fill: "#C51EF0", foreground: "#FFFFFF", radius: 12}
+  primary-card: {fill: "#FFFFFF", imageRadius: 12, columnGap: 6, metadataGap: 4}
+  navigation: {height: 58, fill: "#FFFFFF", selected: "#A91CDB", unselected: "#B7B1B9"}
 ---
 
 # Overview
 
-Wildberries is visually optimized for scanning many offers quickly. Product photography occupies most of each card; discount, wallet price, previous price, seller, truncated title, rating, review count, delivery date, and cart action form a compact stack beneath it. Purple owns navigation and routine commerce actions, while orange marks the step that commits the order.
+Wildberries uses a compact commerce visual system: white screens, lilac search fields, purple brand chrome, magenta purchase controls, orange checkout buttons, and image-heavy merchandise cells. The first viewport is rarely empty; it is filled by a search surface, carousel or product media, and a dense stack of prices, discounts, ratings, delivery labels, and small action icons. The recognizable character comes from high information density around real product photography rather than from spacious native iOS lists.
 
 # Non-negotiable visual invariants
 
-- Merchandise browsing uses a two-column grid with narrow gutters and consistent rounded image frames.
-- Every product card keeps price, discount context, identity, rating, delivery timing, and purchase action close to its image.
-- Search is a prominent rounded control near the top and includes a camera entry action.
-- Purple-to-magenta chrome identifies navigation, filters, and adding to cart; orange is reserved for immediate purchase and checkout commitment.
-- Promotional banners may be saturated and image-heavy, but transactional rows remain white or very lightly grouped.
-- Product detail gives the media gallery most of the first viewport and pins two contrasting purchase actions at the bottom.
-- Bottom navigation stays visible through browsing, cart, order processing, and delivery contexts.
+- Browsing screens keep a two-column merchandise grid with narrow gutters, rounded product-photo frames, and metadata directly below each image.
+- A pale lilac rounded search field with a camera affordance anchors discovery surfaces, while deeper search screens use a saturated purple top region.
+- Purple and magenta identify navigation, filters, add-to-cart actions, selected states, badges, and small commerce links.
+- Orange is reserved for checkout commitment and immediate purchase; it must not be blended with the magenta cart action.
+- Product detail gives the first viewport to large product media and pins paired orange and magenta purchase controls above the bottom safe area.
+- Cart, checkout, delivery, and profile surfaces remain mostly white with light grouped rows, compact thumbnails, and purple accents instead of large decorative panels.
+- Promotional and merchandise imagery can be saturated and text-heavy, but it stays inside banners, product photos, or modal artwork rather than becoming a background system.
 
 # Color and surfaces
 
-The base canvas is white. Search, quantity controls, grouped order rows, and inactive controls use pale lilac or neutral gray fills. Dividers are faint; separation comes mainly from spacing, image boundaries, and occasional light grouping rather than elevated cards.
+The dominant field is white. Secondary surfaces are very pale lilac or warm gray, used for search fields, grouped order rows, disabled controls, input backgrounds, and quantity controls. Dividers are faint and low contrast; separation mostly comes from spacing, card edges, image crops, and localized grouped panels rather than heavy outlines or shadows.
 
-The upper browsing chrome moves between violet and magenta, including full-width header fields on search results. Current wallet-linked prices and discount labels use saturated pink. Orange appears on `Купить сейчас` and `К оформлению`, making final commitment distinct from the magenta `В корзину` and per-card cart buttons. Green is local to savings or positive delivery information, while star ratings use warm orange.
+Purple spans several roles: the launch gradient moves through pink, magenta, and violet; search-result headers use saturated violet; selected navigation, link-like actions, plus controls, notification affordances, and cart buttons use purple or magenta. Orange appears on `Купить сейчас`, `К оформлению`, and similar commitment bars. Pink price and discount marks sit near product metadata. Green is local to savings or positive delivery notes, and warm orange stars mark ratings.
+
+Default iOS blue, grouped-gray form slabs, heavy separators, or broad dark surfaces would visibly break this reference. Campaign banners may use their own saturated palettes, but address, payment, delivery, quantity, and account rows stay quiet and white-led.
 
 # Typography
 
-Use SF Pro Display for compact page and section headings and SF Pro Text for products, controls, and metadata. Price figures use bold weight and tabular numerals. Product titles and seller names are smaller and may truncate; old prices are quieter and struck through. Delivery timing remains small but high enough in contrast to scan below the product identity.
+The hierarchy is compressed. Page titles and section labels are bold but not oversized; product data relies on small SF Pro Text sizes with strong weight changes instead of large type. Prices use bold numerals and compact ruble marks; old prices are gray and struck through; discount and promotion tags are tiny uppercase or all-caps badges attached to the image or price stack.
 
-The hierarchy is intentionally compressed: 24/29-point page titles, 19/23-point section titles, 18/22-point prominent prices, 14/18-point body and actions, 12/15-point product copy, 11/14-point metadata, and 9/11-point offer badges. Do not enlarge every label into a card title or loosen line spacing until cards stop reading as a marketplace grid.
+Product names, seller names, delivery dates, ratings, review counts, payment details, and address snippets are small and often truncated. The system should preserve scan density under Dynamic Type: text can wrap and lengthen the cell, but price, discount context, rating, delivery timing, and action must remain visually attached to the same product image. Do not inflate every label into a card title.
 
 # Screen composition
 
-Browsing screens use 12-point outer insets, about 6 points between product columns, and 4–8-point internal card gaps. A location or title row and the search field anchor the top; promotional banners or contextual filter controls follow; the two-column feed occupies the remaining scroll.
+Home and listing screens use 12-point side insets, a top safe-area logo or location row, a wide rounded search field, horizontal banners or filter chips, and then a two-column feed. Product cards are borderless; the image frame is the largest element, followed by a tight metadata stack and a full-width magenta action. The bottom tab bar remains white with small outline icons and count badges.
 
-Product detail begins with an edge-to-edge square or tall media region. Price and offer strips sit directly below it, variant thumbnails continue the gallery language, and the bottom action region splits orange immediate purchase from magenta cart addition. Cart and order screens switch to a single-column task structure: item summary first, recommendations second, and a wide commitment action near the bottom safe area. Processing and delivery screens retain recommendations below the primary status instead of converting the whole page into a sparse confirmation screen.
+Product detail starts with a nearly full-width media gallery that can be still image or video. Price, wallet discount, previous price, variant thumbnails, rating blocks, delivery notes, and item details are packed below the media. A sticky bottom action area splits orange purchase and magenta cart controls.
+
+Cart, checkout, delivery, and profile screens shift to single-column composition. They use compact item thumbnails, rounded white or pale lilac rows, wide bottom commitment bars, purple toggles or pills, and occasional recommendation grids below the primary task area. Map screens are full-screen map fields with purple point markers, white floating controls, and a bottom search panel. Permission and notification prompts use centered system alerts or rounded bottom sheets over a dimmed product screen.
 
 # Navigation appearance
 
-The five-item bottom bar uses thin outline symbols and very small labels on white. The active item turns purple; cart or delivery counts appear as small circular badges. Search results can use a saturated purple top region with back, title, sorting, and filtering actions. Deeper task screens use a simple back action and centered short title without introducing a second branded header style.
+The bottom navigation is a white bar with five small outline icons and minimal labels. The active item turns purple; inactive icons and labels are light gray. Cart, delivery, and profile states can show small circular magenta count badges. The bar sits above the home indicator without a raised card look.
+
+Top navigation alternates between a minimal white safe-area header and a saturated purple header. White headers use a centered small Wildberries pill, thin back chevrons, favorite/share/search icons, and short centered titles. Purple headers contain white titles and controls, with the search field inset below or inside the region. Sheets have large top corners, a dim scrim when modal, and clear row separation without decorative chrome.
 
 # Components
 
-Product cards are borderless. The image frame carries favorite and visual-search controls in its upper corners; offer labels can overlap the lower image edge. The metadata stack aligns predictably below the image, followed by a full-width magenta cart button whose label may be the delivery day.
+Product cells use rounded image frames, upper-corner favorite and visual-search controls, tiny overlapping offer labels, bold pink current price, gray struck-through old price, seller or wallet context, short title, orange star rating, review count, delivery date, and a magenta add-to-cart button. The skeleton stays the same whether a product has a missing rating, low-stock copy, or alternate delivery date.
 
-Search fields are wide rounded rectangles with leading search and trailing camera actions. Filter and sorting controls form compact text rows or chips rather than large cards. Quantity controls use a small pale grouped control with minus, count, and purple plus. Cart items use a compact thumbnail beside product and delivery information. Commitment bars use a single wide orange control, while product detail uses paired orange and magenta controls.
+Search fields are wide rounded rectangles with pale lilac fill, purple-tinted icons, placeholder text, and a trailing camera action. Search results add compact query chips, sorting, and filter icons in the purple top region. Quantity controls are short pale grouped capsules with gray minus, centered count, and purple plus. Toggles appear as compact iOS switches placed in pale rows, sometimes with a purple or campaign-tinted backing strip.
 
-Sheets and focused selectors should keep large top corners, white surfaces, clear selection rows, and one primary action. Native inputs may provide editing behavior, keyboard support, focus, and accessibility, but their fills, spacing, type, and tint must match this system.
+Checkout and cart commitment bars are wide orange buttons at the bottom safe area with centered white semibold labels and optional amount text. Product detail uses paired buttons: orange on the left for immediate purchase and magenta on the right for cart. System permission alerts keep native behavior, but surrounding app-owned sheets use the Wildberries colors, rounded white surface, and magenta primary action.
 
 # Imagery and icons
 
-Product photography is the main visual material. Keep stable crop ratios within a grid, preserve the full selling silhouette when the listing relies on pack photography, and allow advertising typography already embedded in merchandise images to remain legible. Promotional banners mix campaign text with product, character, or 3D object imagery, but their campaign-specific art must not become a generic illustration layer on transactional screens.
+Real product and campaign imagery is the main visual mass. Product photos and seller graphics must remain legible inside consistent rounded frames; many listing images include embedded sale typography that is part of the observed marketplace look. Promotional banners use saturated gradients, product cutouts, travel or seasonal visuals, and occasional character or 3D-like campaign objects, but these are campaign media rather than a stable standalone authored illustration system.
 
-Interface icons are compact, mostly outlined, and conventional: search, camera, filter, favorite, share, cart, profile, disclosure, and back. Do not replace product media, campaign content, or seller marks with symbols.
+The observed custom notification sheet contains a single cheerful shopping illustration, while other screens rely on product photos, ad banners, maps, QR codes, thumbnails, and small utility glyphs. This isolated image does not establish a reusable illustration language. Preserve the dominant role, crop, and density of product and promotional photography instead of replacing it with generic symbols.
 
-## Visual Style
-
-When an adapted product genuinely needs reference-defining campaign or merchandise imagery, generate the required raster asset with an image-generation tool and add the result to the Xcode asset catalog. Do not draw that imagery in SwiftUI, do not replace it with a symbol, and do not pause for approval before integrating the generated asset into the running build. If the final asset is unavailable, preserve its intended footprint, crop, and color mass with a temporary raster asset.
+Interface icons stay compact, mostly outline-based, and functional: search, camera, filter, favorite, share, cart, profile, notification, QR, disclosure, close, and back. They support the commerce layout and should not replace product media, campaign banners, seller marks, or map pins.
 
 # States
 
-Selected navigation and filters use purple. A product can show discount, wallet price, previous price, low-stock copy, rating, missing rating, and a delivery-date action without changing the card skeleton. Cart state adds quantity editing and count badges. Checkout and delivery expose address, payment, processing, payment-due, cancellation, pickup, courier, and rating states inside the affected task rather than through a global status color.
+Visible states include first-launch gradient, country selection, tracking permission, notification permission, populated feed, active search with keyboard, search suggestions, product listing, media playback, full-screen video, cart quantity editing, phone login, SMS code entry, checkout without address, pickup-map selection, checkout with address, delivery tracking, profile/account panels, count badges, and rating or order-action surfaces.
 
-Disabled controls use pale fills and muted text while keeping their size. Loading should preserve image and metadata geometry. Empty or failed results keep the search query and relevant filters available so the user can revise the request.
+Across states, the constants are white or purple top chrome, small SF Pro type, compact rows, pale lilac control fills, purple selected states, and clear orange commitment. Disabled or unavailable controls become pale and low contrast but keep their geometry. Modal and permission states dim the underlying screen while preserving enough context to show the product-grid or checkout surface beneath.
 
 # iOS adaptation
 
-Implement the dense grid with explicit custom cells rather than default `List` or `Form` styling. Keep the search/header region and bottom navigation inside safe areas, and reserve enough bottom inset for persistent purchase actions. Make compact visible icons part of at least a 44-point hit area without visually enlarging them.
+Use custom SwiftUI or UIKit cells for the dense merchandise grid; default `List`, `Form`, unstyled `TabView`, and standard blue-tint controls will not match the reference. Keep search/header regions inside the top safe area and reserve bottom inset for tab bars or sticky purchase controls. Icons may remain visually small, but their tap targets need to be at least 44 points.
 
-Dynamic Type may increase card height and wrap delivery or product copy, but price and primary action must stay adjacent to the product they affect. On narrow screens preserve two columns while the product text remains legible; switch to one column only when an accessibility size makes the card hierarchy unusable. VoiceOver should read product identity, current price, previous price or discount, rating, delivery timing, and action as a coherent sequence.
+On compact iPhone widths, preserve two product columns unless an accessibility text size makes product identity and action unreadable. Dynamic Type can increase card height, wrap product titles, and move delivery metadata to an extra line, but price, discount, rating, delivery timing, and purchase action must remain grouped with the relevant image. Keyboard-driven search should retain the purple or lilac header appearance and the compact suggestion list above the keyboard.
+
+VoiceOver order should follow the visible commerce stack: product image or title, current price, previous price or discount, seller or wallet context, rating, delivery timing, and action. Light appearance is the observed base; do not invent a dark theme unless the target product separately defines one.
 
 # Anti-generic checklist
 
-- Do not rebuild the feed as a loose one-column collection of elevated cards.
-- Do not remove discount, previous-price, delivery, rating, or wallet-price information to make a card look cleaner.
-- Do not use the same color for adding to cart and committing checkout.
-- Do not place campaign art, gradients, or 3D objects behind address, payment, quantity, or delivery controls.
-- Do not use default blue tint, an unstyled `TabView`, or arbitrary SF Symbols as the product identity.
-- Do not vary product-image ratios or metadata order from card to card.
+- Do not replace the two-column feed with a one-column stack of roomy elevated cards.
+- Do not remove wallet price, old price, discount tags, rating, review count, delivery date, or seller context to make cells cleaner.
+- Do not make add-to-cart and checkout commitment the same color.
+- Do not use default iOS blue tint, generic SF Symbol placeholders, or unstyled native tab/form/list appearances.
+- Do not turn campaign banners or product media into decorative full-screen backgrounds for checkout, address, payment, or profile rows.
+- Do not create `illustrations.md` from one-off campaign graphics, product photos, emoji-like marks, or a single permission-sheet drawing.
 
 </design-context>

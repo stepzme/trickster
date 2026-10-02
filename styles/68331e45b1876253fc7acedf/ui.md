@@ -50,114 +50,77 @@ components:
 
 # Overview
 
-MTS Music is a flat black listening environment in which music imagery provides nearly all color. Discovery screens combine large left-aligned headings, square personalized mixes, album and genre art, and compact track rows. The player becomes a separate atmospheric mode: one large square cover sits above the title and transport controls while a blurred, darkened color field derived from that cover replaces the plain black canvas. Red is concentrated in selection, shuffle, subscription, and other commitment actions rather than spread across the shell.
+MTS Music is a black, media-first iOS interface where album covers, artist portraits, and promotional tiles supply nearly all color. The dominant screens use edge-to-edge black with left-aligned white headings, dense horizontal shelves, compact track rows, and a persistent dark playback/navigation layer at the bottom. Red appears as a focused commitment and selection color, while full-player and collection-detail screens shift into cover-derived atmospheric color fields without abandoning the dark shell.
 
 # Non-negotiable visual invariants
 
-- Browse, search, favorites, and profile screens use an uninterrupted black canvas rather than a stack of dark cards.
-- Square cover art is the dominant discovery unit; circular crops are reserved for artists and identity.
-- Track lists remain compact, borderless rows with small artwork, quiet metadata, and trailing favorite or overflow actions.
-- The full player derives its background atmosphere from the current cover while keeping one large, uncropped square cover central.
-- MTS red is a focused action and selection color; ordinary navigation and playback controls remain white or gray.
-- A mini player preserves the current track immediately above the four-item bottom navigation when playback is active.
-- Collection headers transition from an artwork-derived color field into the black track-list surface.
+- The main canvas is uninterrupted black; charcoal is limited to controls, sheets, mini player, and subscription cards.
+- Square cover art dominates discovery, detail, and player screens; circular crops are reserved for artists and identity avatars.
+- Track rows are compact, borderless, and dark, with small leading artwork or rank numbers and trailing favorite or overflow icons.
+- Red is reserved for selected items, wide primary actions, recognition/error strips, and subscription commitment controls.
+- The full player uses a darkened color atmosphere sampled from the current cover behind one large centered square cover.
+- The bottom area stays layered: mini player above a compact four-item tab bar when playback is active.
+- Collection detail headers fade from artwork-derived color into a black track-list surface.
 
 # Color and surfaces
 
-Pure black is the default canvas and the space between content. Charcoal appears only where a control needs containment: search, mini player, modal sheet, compact chip, or disabled action. Lists and rails do not receive enclosing card surfaces or shadows. Thin dividers are uncommon; spacing and alignment do most of the grouping.
+Pure black is the default canvas across browse, search, profile, settings, payment, and list screens. Charcoal appears as containment for search fields, disabled buttons, the mini player, bottom navigation, sheets, profile-card rows, and subscription cards. Lists and content rails are not wrapped in large cards; their grouping comes from spacing, left alignment, and changes in artwork scale.
 
-Red marks selected artists and favorites, wide shuffle or continue actions, subscription commitment, and destructive confirmation. It should not become a red navigation bar or a general link tint. White carries headings, active controls, and current media; cool gray carries creators, dates, durations, inactive navigation, and secondary conditions. Green is limited to affirmative status such as an active subscription or a completed add action.
+MTS red is saturated and high contrast. It appears on login and continue buttons, selected artist rings and hearts, shuffle actions, recognition/error strips, subscription CTAs, and destructive choices. It is not used as a persistent navigation tint. White carries headings, active symbols, and current media labels; cool gray carries metadata, inactive navigation, placeholders, disabled text, and secondary icons. Green is limited to positive status badges and isolated confirmation details.
 
-Collection detail may begin with violet, brown, or another cover-derived field and fade into black below the header. The full player uses a heavily darkened, blurred sample from the active cover, not a fixed brand gradient. Native permission alerts retain their system surface.
+Collection detail and full-player backgrounds use blurred, darkened color pulled from the active cover, often violet, brown, blue, or gray. Subscription screens introduce lavender and purple gradients inside cards and CTAs, but the surrounding shell remains black. Native iOS permission alerts keep the system light-gray modal surface over the dark app screen.
 
 # Typography
 
-Use SF Pro Display for 24–28 point page and media titles and SF Pro Text for the rest. Page titles are bold, left-aligned, and close to the top controls. Section headings use 20/25 semibold or bold. Track names use 15/20 regular; artist, source, duration, and update metadata use 12/16 regular. Bottom navigation uses compact 10/13 labels.
+Typography is dense and native. Page titles are 28-point bold SF Pro Display, left aligned near the top safe area. Media titles and player titles sit around 24 points, usually bold, with player titles centered and browsing titles left aligned. Section headings are 20-point bold or semibold. Track names use 15-point regular SF Pro Text; artist, source, update, price, duration, and helper metadata use 12-13 point gray text. Bottom navigation labels are compact 10-point text beneath thin line icons.
 
-The hierarchy is intentionally compressed: large display type does not repeat inside every rail. Player titles may use 24/29 bold and center alignment, while track lists keep all textual baselines aligned. Cyrillic and Latin titles use the same scale. With Dynamic Type, allow names and metadata to wrap before reducing artwork; move trailing actions to a stable column and preserve the relationship between a title and its creator.
+The hierarchy is compressed rather than editorially oversized. Large type appears at page starts and major media headers, while rails, rows, cards, and controls remain compact. Cyrillic and Latin titles share the same scale and weight. Long track or artist names wrap inside the text column before artwork or trailing icons shrink.
 
 # Screen composition
 
-Use 16-point horizontal insets on browsing screens and 24–28 points between major sections. The upper row carries the page title plus history and profile actions. Discovery then alternates horizontal square-art rails, a compact playlist row, and larger two-column genre or editorial tiles. Content scrolls behind the persistent playback and navigation region, so the final section needs matching bottom inset.
+Most screens use 16-point horizontal insets and 24-28 points between major sections. Browse and search screens start with a page title, a compact top action cluster, then alternate horizontal square-art rails, dense media rows, and larger image tiles. Shelves expose partial neighboring cards at the right edge. The bottom safe area is occupied by a dark mini player and tab bar, so scroll content needs enough bottom inset to keep the final rows visible.
 
-## Discovery
-
-The page title anchors the upper left. Personalized mix tiles form a horizontal rail, followed by a labeled playlist whose tracks use small leading covers and trailing actions. Later sections repeat artwork-led rails or larger genre tiles without adding container backgrounds.
-
-## Collection detail
-
-A back row and share, favorite, and overflow actions sit above one centered square cover. Title, creator or update metadata, and a wide red shuffle action complete the header. The background color fades to black where the compact track list begins.
-
-## Full player
-
-The active cover occupies most of the upper half inside a modestly rounded square. Centered title and creator follow, then a thin progress track and one row of transport controls with an oversized white play/pause circle. Utility actions form a quiet bottom row. The entire background is a subdued color atmosphere sampled from the cover.
-
-## Search and favorites
-
-Search starts with a dark full-width field, colorful suggestion tiles, genre artwork, and a floating recognition entry above navigation. Active search replaces discovery with the keyboard and dense results. Favorites uses direct media lists and playlist management rather than a decorative empty dashboard.
-
-## Profile and modal tasks
-
-Profile is a plain black list with identity and status first, then disclosure rows. Destructive confirmation uses one charcoal sheet near the bottom with a red primary decision and a separate neutral cancellation action. Playlist editing may use a taller charcoal sheet over the current collection.
+Collection detail screens place a compact top control row above one centered square cover, then a title, metadata, and a wide red action before transitioning into a black list. Full-player screens are more vertical and centered: a large square cover fills much of the upper half, title and artist sit below, a thin progress track spans the width, and transport controls sit in one balanced row. Search uses a full-width charcoal search field, colorful suggestion tiles, genre cards, and a floating recognition pill near the lower center. Profile and settings are plain black disclosure lists; the MTS profile subpage switches to a white card-based surface, which is an observed exception rather than the dominant app shell.
 
 # Navigation appearance
 
-The observed primary navigation is a compact four-item dark bar with line icons and short labels. White indicates the selected destination and gray recedes the others; red is not the persistent selected-tab color. When audio is active, the mini player forms a distinct strip directly above the bar.
+The primary navigation is a compact four-item dark bottom bar with thin line icons and short labels. White marks the selected tab and muted gray marks inactive tabs; red does not mark persistent tab selection. When playback is active, a separate mini-player strip sits immediately above the tab bar with cover art, one-line media text, favorite, and play/pause controls.
 
-Drill-down screens use a small white back chevron and quiet white share, favorite, and overflow controls. The full player uses a downward dismissal control. Task sheets rise over dimmed content with large upper corners and dark charcoal fill. Use these treatments only for the adapted product's real hierarchy; do not copy the source destinations mechanically.
+Drill-down screens use small white back chevrons and quiet share, favorite, queue, or overflow controls. The full player replaces the back chevron with a downward dismissal mark. Sheets rise over dimmed content with large upper corners, charcoal fill, and centered or left-aligned titles depending on density. Native iOS alerts appear unchanged when permissions are requested.
 
 # Components
 
-## Mix and editorial tile
+Square media tiles use 14-point rounding, saturated cover artwork, and tight labels below or over protected lower areas. Personalized mix tiles often use softly dimensional abstract cover art in violet, mint, yellow, or pink; editorial, genre, podcast, and artist tiles use supplied photography or collage. Circular artist chips use image crops with optional red selection rings and heart markers.
 
-A square image with 14-point rounding leads the component. Personalized mixes use saturated, softly dimensional abstract cover art; editorial and genre tiles use supplied photography or collage. Title and one or two short metadata lines sit below or inside a protected lower area. Neighboring cards remain partially visible to signal horizontal scrolling.
-
-## Track row
-
-A 44–56 point row contains a 40-point square cover, title, creator or source, then favorite and overflow actions. Track numbers may replace the cover in ordered lists. The row is unboxed; playing, favorited, downloaded, or added state is attached to the affected track and never communicated by color alone.
-
-## Primary action
-
-A wide red control around 52 points high uses white bold text and 12-point rounding. Pressed state darkens the red. Disabled state becomes charcoal with low-contrast text while retaining its footprint. Do not reuse it for passive navigation.
-
-## Search field
-
-The inactive field is a 40-point charcoal rounded rectangle with a leading search symbol and muted prompt. Active search keeps Cancel outside the field and uses the native keyboard. Query clearing stays inside the field.
-
-## Playback controls
-
-The main play/pause control is a white circle at least 56 points across with a dark symbol. Previous, next, repeat, and shuffle remain unfilled white or gray controls with 44-point hit areas. The progress slider is a thin light track with elapsed and remaining time below.
-
-## Mini player and sheets
-
-The mini player uses compact cover art, one line of track context, favorite, and play/pause. Sheets use charcoal rather than black, a small drag indicator, a clear title row, and either dense media choices or two full-width decisions. Native permission alerts remain system-owned.
+Track rows are 44-56 points tall with a 40-point square cover or a rank number at the leading edge, a two-line title/metadata stack, and trailing favorite plus overflow controls. Rows are unboxed and rarely divided. Wide primary actions are about 52 points tall, red, white, bold, and 12-point rounded; disabled actions keep the same footprint but turn charcoal with low-contrast text. Search fields are 40-point charcoal rounded rectangles with a leading search icon, muted placeholder, and internal clear control when active. Playback controls use one oversized white circular play/pause button, unfilled secondary transport icons, and a thin progress slider. Subscription benefit cards use rounded charcoal or purple-gradient panels with mixed icon/photo artwork and short white text.
 
 # Imagery and icons
 
-Album, playlist, podcast, and artist imagery is content, not decoration. Keep album covers square and aspect-fit in the full player; use rounded-square crops in lists and rails. Artist portraits use circular crops. Genre and editorial tiles may crop photography more assertively, but titles need protected contrast.
+Album, playlist, podcast, and artist imagery is structural content. Album covers remain square and aspect-fit in the full player; rounded-square crops appear in lists and rails; artist portraits use circles. Genre and editorial tiles can crop photography more assertively, but titles sit on high-contrast protected areas. The interface should not substitute real media art with generic symbols.
 
-The recurring abstract mix covers are polished embossed forms in saturated violet, mint, yellow, and pink. They are authored cover artwork rather than interface symbols. Photography, artist portraits, album covers, and podcast art remain supplied catalog assets, not a reusable illustration system.
+The recurring abstract mix covers are polished embossed forms in saturated colors, but they function as cover artwork rather than a reusable standalone illustration system. Subscription cards combine gradient panels, app/service icons, photos, and object renders; these are card-specific promotional images, not a stable general illustration language. App-owned icons are thin, simple, and mostly white or gray, with familiar shapes for back, share, heart, overflow, search, queue, playback, profile, and tab items.
 
-Use a coherent thin icon family for back, share, favorite, overflow, search, queue, playback, and navigation. Preserve familiar system meaning, but match the observed stroke weight and circular control treatment. Do not replace artist, album, genre, or mix artwork with SF Symbols.
+Do not use arbitrary SF Symbols as replacements for album covers, artist portraits, genre cards, mix artwork, subscription artwork, or payment branding. Symbols are acceptable only for interface controls that are already icon-only in the reference.
 
 # States
 
-Observed states include initial loading, phone entry, artist selection below and above its minimum, loading after preference confirmation, inactive and active search with keyboard, populated suggestions and results, favorited and unfavorited media, active playback, paused playback, player guidance, notification permission, playlist editing with selected additions, active subscription status, and destructive sign-out confirmation.
+Observed visual states include splash, phone login, SMS code input, artist selection below and above the minimum threshold, recommendation loading, populated browse shelves, collection detail, full playback, subscription upsell, inactive and active search, keyboard search results, microphone permission, recognition progress, recognition failure, payment form, active subscription badge, profile/settings lists, and dark modal sheets.
 
-Selection adds an explicit heart, outline, check, label, or changed control state. Disabled actions retain their dimensions. Loading stays local to the pending screen or control. Player state preserves the cover, title, and timeline. System permission remains visually native over the current collection instead of being redrawn as app content.
+Selection is visualized with red rings, hearts, checkmarks, labels, or changed button states. Disabled states keep their geometry while lowering contrast. Recognition progress and failure use a bright red lower strip over the current search screen. Payment fields use charcoal rounded inputs with gray placeholders. System permission remains native and overlays the current dark screen instead of being redrawn as custom app content.
 
 # iOS adaptation
 
-Build browse and detail layouts from custom scroll containers and rows; remove default `List`, `Form`, and `TabView` styling when it conflicts with the flat black composition. Keep the mini player and bottom navigation within the bottom safe area and reserve enough content inset that neither covers the last track. The full player may extend its cover-derived field edge to edge while keeping controls inside safe areas.
+Build browse, detail, profile, and search views with custom dark scroll containers rather than default grouped `List` or `Form` styling. Keep the mini player and bottom navigation inside the bottom safe area and add matching scroll inset so rows and cards are not hidden. Full-player and collection-detail color fields may extend edge to edge, but covers, labels, and controls must remain inside safe areas.
 
-Use native keyboard, permission, audio route, and media controls for behavior, but style app-owned search, sheets, and playback surfaces to match the reference. Every icon action needs at least a 44-point hit target. VoiceOver should group cover, title, creator, and playback state before exposing actions; announce favorited, playing, selected, and disabled state explicitly. At large Dynamic Type, preserve the main cover and transport controls, allow metadata to wrap, widen track rows vertically, and reduce the number of visible rail cards before shrinking essential text.
+Use the native keyboard and native permission alert surfaces, but keep app-owned search fields, playback controls, sheets, and subscription cards visually aligned to the reference. Icon-only controls need 44-point hit targets even when the visible glyph is small. At larger Dynamic Type sizes, preserve the main cover and transport controls, let metadata wrap, allow track rows to become taller, and reduce visible rail density before shrinking readable text.
 
 # Anti-generic checklist
 
 - Do not replace the black catalog with inset grouped forms or repeated charcoal cards.
-- Do not use a fixed violet or red gradient behind every screen; only detail and player atmosphere derive from active artwork.
+- Do not use a fixed violet or red gradient behind every screen; only detail and player atmosphere derive from media artwork.
 - Do not tint the selected tab red when the observed persistent selection is white.
 - Do not omit the mini player when playback must persist across destinations.
 - Do not turn track rows into oversized cards or separate every row with heavy rules.
-- Do not replace covers, artist portraits, genre imagery, or abstract mix assets with arbitrary SF Symbols.
+- Do not replace covers, artist portraits, genre imagery, or abstract mix artwork with arbitrary SF Symbols.
+- Do not flatten subscription cards into plain text blocks without their observed rounded panels and promotional imagery.
 </design-context>

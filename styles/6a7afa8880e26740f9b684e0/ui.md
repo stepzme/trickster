@@ -3,209 +3,94 @@
 version: 1
 platform: iOS
 name: Booking-design-analysis
-description: "A dense, utility-first travel marketplace organized around a royal-blue header, bright-blue actions, yellow focus frames, white information cards, green deal signals, and destination photography. Search parameters, comparison data, policies, and totals remain explicit through every travel category."
+description: "A photo-led travel interface combining royal-blue navigation bands, white transactional surfaces, bright-blue actions, yellow search emphasis, dense property cards, and sticky price or booking controls."
 colors:
-  primary: "#003B95"
-  on-primary: "#FFFFFF"
-  primary-soft: "#EAF3FF"
-  accent: "#0071C2"
-  accent-secondary: "#FEBB02"
-  ink: "#1A1A1A"
-  ink-muted: "#5D6268"
-  ink-subtle: "#9CA1A6"
-  canvas: "#FFFFFF"
-  surface-1: "#FFFFFF"
-  surface-2: "#F2F4F6"
-  hairline: "#DDE1E5"
-  semantic-success: "#008234"
-  semantic-danger: "#D4111E"
-  semantic-overlay: "#000000"
+  canvas: "#F4F5F7"
+  surface-primary: "#FFFFFF"
+  surface-secondary: "#EEF1F4"
+  accent-primary: "#006CE4"
+  accent-secondary: "#FFB700"
+  text-primary: "#1A1A1A"
+  text-secondary: "#6B6F75"
+  divider: "#E0E3E6"
+  destructive: "#D84A4A"
 typography:
-  display-xl: { fontFamily: SF Pro Display, fontSize: 36, fontWeight: 700, lineHeight: 1.05, letterSpacing: -0.7 }
-  display-lg: { fontFamily: SF Pro Display, fontSize: 30, fontWeight: 700, lineHeight: 1.08, letterSpacing: -0.5 }
-  display-md: { fontFamily: SF Pro Display, fontSize: 26, fontWeight: 700, lineHeight: 1.12, letterSpacing: -0.3 }
-  headline: { fontFamily: SF Pro Display, fontSize: 22, fontWeight: 700, lineHeight: 1.18, letterSpacing: -0.2 }
-  card-title: { fontFamily: SF Pro Text, fontSize: 16, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: SF Pro Text, fontSize: 17, fontWeight: 500, lineHeight: 1.35, letterSpacing: 0 }
-  body-lg: { fontFamily: SF Pro Text, fontSize: 16, fontWeight: 400, lineHeight: 1.45, letterSpacing: 0 }
-  body: { fontFamily: SF Pro Text, fontSize: 14, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
-  body-sm: { fontFamily: SF Pro Text, fontSize: 12, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
-  caption: { fontFamily: SF Pro Text, fontSize: 10, fontWeight: 400, lineHeight: 1.20, letterSpacing: 0 }
-  button: { fontFamily: SF Pro Text, fontSize: 15, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0 }
-  eyebrow: { fontFamily: SF Pro Text, fontSize: 11, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0.3 }
-  mono: { fontFamily: SF Mono, fontSize: 12, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
-rounded: { xs: 8, sm: 12, md: 16, lg: 20, xl: 26, xxl: 32, pill: 9999, full: 9999 }
-spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
+  hero: {fontFamily: "SF Pro Display", fontSize: 36, fontWeight: 700, lineHeight: 42}
+  title: {fontFamily: "SF Pro Display", fontSize: 28, fontWeight: 700, lineHeight: 34}
+  section: {fontFamily: "SF Pro Text", fontSize: 20, fontWeight: 700, lineHeight: 25}
+  body: {fontFamily: "SF Pro Text", fontSize: 16, fontWeight: 400, lineHeight: 22}
+  label: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 600, lineHeight: 20}
+  caption: {fontFamily: "SF Pro Text", fontSize: 12, fontWeight: 400, lineHeight: 16}
+spacing:
+  screen-horizontal: 16
+  section-gap: 24
+  card-padding: 16
+  control-gap: 10
+rounded:
+  control: 10
+  card: 14
+  sheet: 26
+  pill: 999
 components:
-  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.md}", padding: [14, 18]}
-  feature-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 16 }
-  action-tile: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.md}", padding: 12 }
-  grouped-list: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: [8, 16]}
-  input: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body-lg}", rounded: "{rounded.md}", padding: [14, 16]}
+  primary-action: {fill: "Booking blue", text: "white semibold", shape: "rounded rectangle"}
+  secondary-action: {fill: "white", text: "Booking blue semibold", shape: "bordered rounded rectangle"}
+  primary-card: {fill: "white", content: "large property photo, identity, rating, price", shape: "small-medium rounded"}
+  navigation: {fill: "royal blue or white", selected: "blue and high contrast", accessory: "compact icon and label"}
 ---
 
 # Overview
 
-Booking unifies stays, flights, cars, taxis, and attractions through a shared search-first shell. Dense results remain comparable because dates, party, location, price, policy, and rating are kept close.
-
-**Key Characteristics:**
-- Royal-blue product header.
-- Yellow-framed search module.
-- Photo-led result cards.
-- Green deal and cancellation labels.
-- Persistent Search, Saved, Bookings, and Account navigation.
+Booking is a photo-led transactional travel interface. Royal-blue bars establish brand and navigation; white lists and forms carry dense information; property photography and sticky price/action regions dominate decision screens.
 
 # Non-negotiable visual invariants
 
-- The reviewed screens show this treatment: Royal-blue product header.
-- The reviewed screens show this treatment: Yellow-framed search module.
-- The reviewed screens show this treatment: Photo-led result cards.
-- The reviewed screens show this treatment: Green deal and cancellation labels.
-- The reviewed screens show this treatment: Persistent Search, Saved, Bookings, and Account navigation.
+- Royal blue occupies substantial header or navigation regions.
+- Real destination and property photography is the main visual mass in discovery and detail.
+- Search controls receive strong yellow outline or emphasis against blue.
+- Property cards keep photo, rating, identity, and price in one scannable unit.
+- Checkout becomes denser and more form-like without losing the blue action hierarchy.
+- A sticky bottom price/action bar anchors decisive booking steps.
+- Green is reserved for positive availability or cancellation information.
 
 # Color and surfaces
 
-### Brand & Accent
-- **Primary** ({colors.primary}): Header, brand context, and selected service.
-- **Accent** ({colors.accent}): Search, select, and linked actions.
-- **Secondary Accent** ({colors.accent-secondary}): Search-frame focus and rating emphasis.
-
-### Surface
-- **Canvas** ({colors.canvas}): Results, details, and checkout.
-- **Surface 1** ({colors.surface-1}): Main cards and sheets.
-- **Surface 2** ({colors.surface-2}): Secondary fields and controls.
-- **Hairline** ({colors.hairline}): Quiet grouping.
-
-### Text
-- **Ink** ({colors.ink}): Headings and primary values.
-- **Ink Muted** ({colors.ink-muted}): Supporting detail.
-- **Ink Subtle** ({colors.ink-subtle}): Placeholder and inactive state.
-
-### Semantic
-- **Success** ({colors.semantic-success}): Completed or positive state.
-- **Danger** ({colors.semantic-danger}): Error and destructive state.
-- **Overlay** ({colors.semantic-overlay}): Modal focus.
+Use royal blue for brand bars, bright blue for primary actions, white for cards and forms, and pale gray for the surrounding canvas. Yellow is a focused search accent, not a general decorative color. Black and gray carry dense travel details; green carries positive policies or success; red is destructive or error-specific. Dark blue may identify bounded loyalty content.
 
 # Typography
 
-### Font Family
-
-- **SF Pro Display** — destination and booking headings.
-- **SF Pro Text** — controls, forms, and explanations.
-- **SF Mono** — codes and compact numeric data.
-
-### Hierarchy
-
-Use 36pt bold for major statements, 22pt bold for screen headings, 16pt semibold for cards, 14pt regular for detail, and 15pt semibold for primary actions.
-
-### Principles
-
-- Lead with destination, date, and party.
-- Keep total price and cancellation visible.
-- Use green only for verified benefits.
-- Let photography identify place, not state.
-
-### Note on Font Substitutes
-
-Use **Inter** or the platform system sans when SF Pro is unavailable.
+Use SF Pro with bold page and property titles, semibold prices and actions, regular body text, and compact labels for policies and metadata. Hierarchy comes from weight more than dramatic scale. At larger Dynamic Type, wrap amenities and policies and expand cards without allowing price or action labels to truncate.
 
 # Screen composition
 
-### Spacing System
-
-Use a 4pt base, 16pt edge gutters, 12pt control gaps, and 16pt card padding.
-
-### Grid & Container
-
-The header holds horizontally scrollable travel modes and a stacked search form. Results use one-column photo cards; detail and checkout use dense grouped sections.
-
-### Whitespace Philosophy
-
-Separate major decisions clearly, but keep related comparison data tightly grouped.
+Home and search screens place a blue header above search controls and photo-led results. Property lists use vertically stacked full-width cards. Detail screens combine a wide image region, title/rating block, information sections, and sticky action. Booking screens use dense one-column fields, accordions, payment selection, and a persistent bottom summary. Modal loading uses a centered white dialog over a dimmed screen.
 
 # Navigation appearance
 
-Search, Saved, Bookings, and My account anchor the app; category work stays in the Search branch.
+Primary navigation may use a blue top bar or a light bottom tab bar with blue selection. Deep screens use compact back, share, and help icons. Sheets and loading dialogs are white with restrained rounding. Tabs and segmented travel controls show clear blue selection. The style does not prescribe the source routing.
 
 # Components
 
-### Buttons
-
-Bright blue commits search, room selection, and final booking. Text links reveal policies, reviews, and detail.
-
-Travel modes, filters, sort, map, and room choices show an explicit selected state without competing with the main CTA.
-
-### Cards & Containers
-
-Result cards combine photo, rating, distance, benefit labels, availability, and total. Booking cards group room, conditions, and included amenities.
-
-### Inputs & Forms
-
-Destination, dates, party, traveler, and payment fields remain stacked, labeled, and editable before commitment.
-
-### Status & Build Page
-
-Expose limited availability, mobile price, Genius benefit, free cancellation, no prepayment, pending, confirmed, and cancelled in text.
-
-### Navigation
-
-Search, Saved, Bookings, and My account anchor the app; category work stays in the Search branch.
-
-Bottom navigation persists in browsing; booking steps replace it with a focused continuation action.
+Primary actions are bright-blue rounded rectangles with white semibold text. Secondary actions are white with blue text or border. Search modules group several fields inside a yellow-emphasized container. Property cards use medium corners, a large photo, compact information, and little shadow. Form fields use pale borders, validation checks, checkboxes, accordions, and payment rows. Disabled or loading states preserve geometry and reduce contrast.
 
 # Imagery and icons
 
-Keep the base flat, raise actionable cards slightly, and reserve overlays for confirmation or interruption.
-
-### Decorative Depth
-
-Use slight shadows on search, result, and confirmation cards. Real photography supplies visual richness.
+Real property and destination photos are essential and cannot be omitted pending final assets. Use consistent aspect ratios, edge-to-edge card crops, and protected focal architecture. Icons are thin and utilitarian. Loyalty and survey spot art are isolated promotional assets, not a repeatable illustration system.
 
 # States
 
-Expose limited availability, mobile price, Genius benefit, free cancellation, no prepayment, pending, confirmed, and cancelled in text.
+Observed states include onboarding permission, populated home, search, property results, property detail, validated booking forms, payment selection, loading overlay, and rating prompt. Blue actions, white transactional surfaces, and photo prominence persist.
 
 # iOS adaptation
 
-### Touch Targets
-
-Keep every row, tab, selector, and primary action at least 44pt.
-
-### Collapsing Strategy
-
-Preserve destination, dates, total, policy, and main action. Collapse secondary facilities and promotions first.
-
-### Image Behavior
-
-Crop around the property or destination while retaining a useful overview. Keep badges and booking data outside the photo.
-
-On iPhone, respect top and bottom safe areas, use scrolling for content that does not fit, keep interactive targets at least 44 points, and preserve the visual reading order for VoiceOver. At larger Dynamic Type sizes, allow supporting text to wrap without collapsing the dominant hierarchy. Use native sheets and permission transitions while explicitly styling app-owned surfaces to match the reference.
+Use safe-area-aware scrolling and reserve space for sticky bottom summaries and actions. Keep photo aspect ratios stable, give controls 44-point targets, and use keyboard avoidance for checkout fields. Dynamic Type expands rows and accordions; VoiceOver reads property identity and price before secondary amenities. Native permissions remain native, while app-owned sheets and validation use the reference palette.
 
 # Anti-generic checklist
 
-- Do not substitute the documented accent hierarchy with default iOS blue.
-- Do not collapse distinct surfaces into a uniform stack of generic white cards.
-- Do not use an unstyled `TabView`, `Form`, or arbitrary SF Symbols when they contradict the documented navigation and component language.
-- Do not flatten the documented typography into one body-text scale.
-- Do not remove compositionally important photography or illustration while assets are pending.
-- Do not apply one corner radius to every control and surface.
-
-Source-specific guardrails retained from the review:
-
-### Do
-
-- Keep price terms explicit.
-- Preserve search context on results.
-- Show policy before commitment.
-- Use real travel photography.
-- Support map and list comparison.
-
-### Don't
-
-- Don't hide taxes or cancellation.
-- Don't replace property photos with illustration.
-- Don't overload the blue header with actions.
-- Don't bury traveler edits.
-- Don't use yellow as a second primary button.
-
+- No removal or shrinking of property photography.
+- No default blue-only search field without yellow emphasis.
+- No generic equal-weight card list missing rating and price hierarchy.
+- No floating glass navigation.
+- No oversized corner radii on transactional fields.
+- No unstyled form or tab bar.
+- No illustration system inferred from isolated loyalty art.
 </design-context>

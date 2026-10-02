@@ -3,139 +3,94 @@
 version: 1
 platform: iOS
 name: ForteApp-design-analysis
-description: "A broad mobile bank using a coral-to-magenta identity gradient, burgundy primary actions, white product panels, thin rose line icons, cyan informational cards, compact account tabs, dense financial rows, and a five-tab shell for chat, history, home, transfers, and payments."
-colors: { primary: "#B50057", on-primary: "#FFFFFF", primary-soft: "#FBE6F0", accent: "#E86573", accent-cyan: "#4CC6D4", ink: "#17181B", ink-muted: "#747982", ink-subtle: "#ADB2B9", canvas: "#FFFFFF", surface-1: "#F6F6F8", surface-2: "#EAF8FB", hairline: "#E2E4E8", semantic-success: "#24AA62", semantic-warning: "#F3B824", semantic-danger: "#D84C58", semantic-overlay: "#000000" }
+description: "A light finance interface distinguished by raspberry-magenta actions, coral-pink gradient headers and cards, white modular surfaces, black financial type, and selective teal-blue chart accents."
+colors:
+  canvas: "#F5F5F7"
+  surface-primary: "#FFFFFF"
+  surface-secondary: "#EFEFF2"
+  accent-primary: "#C51B6E"
+  accent-secondary: "#FF746E"
+  text-primary: "#161619"
+  text-secondary: "#77777E"
+  divider: "#E3E3E7"
+  destructive: "#D84852"
 typography:
-  display-xl: { fontFamily: SF Pro Display, fontSize: 38, fontWeight: 700, lineHeight: 1.05, letterSpacing: -0.8 }
-  display-lg: { fontFamily: SF Pro Display, fontSize: 32, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.5 }
-  display-md: { fontFamily: SF Pro Display, fontSize: 27, fontWeight: 700, lineHeight: 1.15, letterSpacing: -0.3 }
-  headline: { fontFamily: SF Pro Display, fontSize: 22, fontWeight: 700, lineHeight: 1.20, letterSpacing: 0 }
-  card-title: { fontFamily: SF Pro Text, fontSize: 16, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: SF Pro Text, fontSize: 16, fontWeight: 600, lineHeight: 1.30, letterSpacing: 0 }
-  body-lg: { fontFamily: SF Pro Text, fontSize: 16, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
-  body: { fontFamily: SF Pro Text, fontSize: 14, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
-  body-sm: { fontFamily: SF Pro Text, fontSize: 12, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
-  caption: { fontFamily: SF Pro Text, fontSize: 10, fontWeight: 500, lineHeight: 1.20, letterSpacing: 0 }
-  button: { fontFamily: SF Pro Text, fontSize: 15, fontWeight: 650, lineHeight: 1.20, letterSpacing: 0 }
-  eyebrow: { fontFamily: SF Pro Text, fontSize: 11, fontWeight: 650, lineHeight: 1.20, letterSpacing: 0.2 }
-  mono: { fontFamily: SF Mono, fontSize: 12, fontWeight: 500, lineHeight: 1.30, letterSpacing: 0 }
-rounded: { xs: 6, sm: 10, md: 14, lg: 18, xl: 24, xxl: 30, pill: 9999, full: 9999 }
-spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
+  hero: {fontFamily: "SF Pro Display", fontSize: 36, fontWeight: 700, lineHeight: 42}
+  title: {fontFamily: "SF Pro Display", fontSize: 28, fontWeight: 700, lineHeight: 34}
+  section: {fontFamily: "SF Pro Text", fontSize: 20, fontWeight: 700, lineHeight: 25}
+  body: {fontFamily: "SF Pro Text", fontSize: 16, fontWeight: 400, lineHeight: 22}
+  label: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 600, lineHeight: 20}
+  caption: {fontFamily: "SF Pro Text", fontSize: 12, fontWeight: 400, lineHeight: 16}
+spacing:
+  screen-horizontal: 16
+  section-gap: 24
+  card-padding: 16
+  control-gap: 12
+rounded:
+  control: 12
+  card: 18
+  sheet: 28
+  pill: 999
 components:
-  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [14, 18]}
-  product-row: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: 12 }
-  service-tile: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.caption}", rounded: "{rounded.sm}", padding: 10 }
-  input: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: 12 }
+  primary-action: {fill: "raspberry magenta", text: "white semibold", shape: "rounded rectangle"}
+  secondary-action: {fill: "light gray", text: "near-black semibold", shape: "rounded rectangle"}
+  primary-card: {fill: "white or coral-pink gradient", content: "balance, product or chart", shape: "medium rounded"}
+  navigation: {fill: "white", selected: "raspberry magenta", accessory: "compact icon and label"}
 ---
 
 # Overview
 
-ForteApp combines everyday banking, marketplace services, documents, forex, products, transfers, and payments in a white modular shell under a coral identity gradient.
+ForteApp combines conventional light banking structure with a recognizable raspberry and coral-pink identity. White cards carry account and history detail; gradients concentrate in headers, product art, and promotion, while teal and blue are reserved for charts and exchange information.
 
 # Non-negotiable visual invariants
 
-- The reviewed screens use this composition: A broad mobile bank using a coral-to-magenta identity gradient, burgundy primary actions, white product panels, thin rose line icons, cyan informational cards.
-- The source records this color relationship: Use burgundy for primary action, coral for identity, cyan for advice, and rose line icons for services.
-- The recorded display style is 38 points while the body style is 14 points.
-- Navigation appears as follows: Chats, History, Home, Transfers, and Payments remain in the bottom bar.
-- The reviewed screens use this hierarchy: ForteApp combines everyday banking, marketplace services, documents, forex, products, transfers, and payments in a white modular shell under a coral identity gradient.
+- A coral-pink or raspberry mass marks the top or principal product region.
+- White finance cards sit on a quiet light-gray canvas.
+- Raspberry magenta is the decisive action and selected-state color.
+- Black balances and titles remain more prominent than gradient decoration.
+- Service shortcuts form a compact icon grid.
+- Charts and exchange modules use teal-blue accents rather than magenta-only data encoding.
+- Promotional imagery remains bounded in carousel cards.
 
 # Color and surfaces
 
-### Brand & Accent
-Use burgundy for primary action, coral for identity, cyan for advice, and rose line icons for services.
-
-### Surface
-Keep finance surfaces white, product rows pale gray, and advice panels light cyan.
-
-### Text
-Use black for balances and actions, gray for metadata, and pale gray for disabled state.
-
-### Semantic
-Use green for incoming and accepted, yellow for attention, and red for expense or destructive state.
+Use light gray around white primary cards and slightly darker secondary controls. Raspberry is the primary action color; coral-pink gradients may occupy headers or major product surfaces. Black and medium gray carry hierarchy. Teal or blue supports quantitative charts and exchange values; cyan may mark advisory content. Red remains destructive or error-specific.
 
 # Typography
 
-### Font Family
-Use SF Pro Display for balances and SF Pro Text for products, transfers, and legal copy.
-
-### Principles
-Keep amount, currency, product, source, and destination explicit and align numeric columns.
-
-### Note on Font Substitutes
-Use the platform sans or Inter with tabular numerals.
+Use SF Pro with bold major balances and screen titles, semibold module headings, regular form and history text, and quiet captions. Financial numerals need clear alignment. Gradient regions still use strong contrast. At larger Dynamic Type, allow labels to wrap and modules to grow without reducing the distinction between amounts and metadata.
 
 # Screen composition
 
-### Spacing System
-Use a 4pt base, 16pt gutters, 12pt module gaps, and 12pt row padding.
-
-### Whitespace Philosophy
-Keep modules compact but separate product, market, advice, and transaction context.
+Home screens place a colored header or product summary above a white vertical dashboard containing promo rails, shortcut grids, and compact modules. Product screens lead with card art or balance, then actions and history. History is a dense list; transfer screens are focused forms. Exchange screens combine compact rates and chart areas. Bottom content clears the safe area and persistent tab bar.
 
 # Navigation appearance
 
-Chats, History, Home, Transfers, and Payments remain in the bottom bar.
+The bottom bar is white with a raspberry selected state. Top navigation is minimal over both white and gradient regions, using back controls and utility icons with sufficient contrast. Sheets are white with generous top rounding. The visual treatment can be reused without copying the source app's routes.
 
 # Components
 
-### Buttons
-Use full-width burgundy continue and confirm actions; secondary actions use pale gray or cyan text.
-
-Cards, loans, deposits, and accounts use compact underline tabs; transfer types use icon grids.
-
-### Cards & Containers
-Use service tiles, product rows, advice cards, rate charts, transfer grids, history rows, and status panels.
-
-### Inputs & Forms
-Transfers and products group source, destination, amount, conditions, consents, and review.
-
-### Status & Build Page
-Show hidden balance, incoming, expense, pending, accepted, blocked, closed, favorite, and refund state explicitly.
-
-### Navigation
-Chats, History, Home, Transfers, and Payments remain in the bottom bar.
+Primary buttons are raspberry rounded rectangles with white labels. Secondary controls are pale gray with dark text. Cards use medium rounding and restrained elevation. Shortcut tiles pair small colored icons with concise labels. Transaction rows align identity and amount. Charts are clean, thin, and teal-blue. Disabled controls become gray; selected chips gain magenta text or a pale pink fill.
 
 # Imagery and icons
 
-Use white cards, colored bands, and light sheets with minimal shadow.
-
-### Decorative Depth
-Campaign photography and product-card art provide depth; finance forms remain flat.
+Use photography inside promo banners, branded card art on product surfaces, and flags or charts for exchange content. Functional icons are compact and colorful but consistently sized. These are media, branding, and icon assets rather than evidence of a stable authored illustration system.
 
 # States
 
-Show hidden balance, incoming, expense, pending, accepted, blocked, closed, favorite, and refund state explicitly.
+Observed states include first launch, populated home, debit-card details, transaction history, transfers, and foreign-exchange data. Across states, the light modular base, magenta actions, black hierarchy, and selective gradient remain constant.
 
 # iOS adaptation
 
-### Collapsing Strategy
-Preserve balance, product, primary task, form state, and navigation; move campaigns below operations.
-
-### Image Behavior
-Crop campaign media within banners and contain product marks; never stretch charts.
-
-On iPhone, respect top and bottom safe areas, use scrolling for content that does not fit, keep interactive targets at least 44 points, and preserve the visual reading order for VoiceOver. At larger Dynamic Type sizes, allow supporting text to wrap without collapsing the dominant hierarchy. Use native sheets and permission transitions while explicitly styling app-owned surfaces to match the reference.
+Use safe-area-aware scroll views, single-column forms, horizontal promo rails, and two-column service grids only where labels remain readable. Keep 44-point hit regions, keyboard avoidance, and VoiceOver order from summary to actions to detail. Dynamic Type increases card and row height; charts retain a minimum readable plot area. Native controls receive explicit magenta tint and surface styling.
 
 # Anti-generic checklist
 
-- Do not substitute the documented accent hierarchy with default iOS blue.
-- Do not turn the documented white canvas into a generic card stack; preserve the observed accent, density, imagery, and surface grouping.
-- Do not use an unstyled `TabView`, `Form`, or arbitrary SF Symbols when they contradict the documented navigation and component language.
-- Do not flatten the documented typography into one body-text scale.
-- Do not remove compositionally important photography or illustration while assets are pending.
-- Do not apply one corner radius to every control and surface.
-
-Source-specific guardrails retained from the review:
-
-### Do
-- Keep product and currency explicit.
-- Show fees and limits before confirmation.
-- Separate marketing from forms.
-
-### Don't
-- Don't use the gradient behind dense data.
-- Don't rely on red or green alone.
-- Don't hide consent or eligibility.
-
+- No default blue primary actions.
+- No magenta wash across every surface.
+- No loss of the coral-pink top or product color mass.
+- No generic white card stack without shortcut and data hierarchy.
+- No decorative chart colors unrelated to teal-blue data accents.
+- No unstyled tab bar, form, or progress control.
+- No invented illustration system from promo photography or card art.
 </design-context>

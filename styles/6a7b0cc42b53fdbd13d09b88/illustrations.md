@@ -1,35 +1,28 @@
 # Overview
 
-Russian Post uses friendly 3D service objects to explain delivery products and soften dense utility screens. The illustration language is functional: parcels, vehicles, couriers, buildings, and small tools represent a concrete service rather than decorating empty space.
+Russian Post uses a recurring authored family of parcel, letter, courier, vehicle, bag, and delivery objects to identify services and operational choices. Create new production art with an image-generation model, obtain explicit visual approval, then integrate only the approved raster asset.
 
 # Visual Style
 
-- Soft 3D forms with rounded edges and matte or lightly glossy materials.
-- Simplified recognizable objects rather than realistic scenes.
-- Blue carries brand identity, supported by white, warm yellow, green, and orange details.
-- Lighting is diffuse, with shallow shadows and no dramatic contrast.
+Objects use simplified soft 3D or polished vector-like rendering, rounded geometry, clean silhouettes, shallow depth, and friendly commercial lighting. Human figures remain simplified and service-oriented rather than photoreal. The recurring postal subject matter and material treatment make the language recognizable.
 
 # Composition
 
-- Place one main object or a compact object group on a clean card.
-- Keep the subject to one side when the card also contains title and action copy.
-- Use a low three-quarter view for parcels, vehicles, and service equipment.
-- Preserve generous negative space; illustrations should not compete with tracking or form data.
+Service art commonly occupies a side or lower region of a white or dark-blue card, leaving a clear text block and control area. Use one focal object or a small related cluster, preserve the full parcel or vehicle silhouette, and keep the art large enough to be read as an object rather than an icon.
 
 # Color and Materials
 
-- Use postal blue as the dominant colored material.
-- Use white and pale blue for large supporting surfaces.
-- Reserve yellow, green, and orange for small friendly details or service distinction.
-- Keep shadows neutral and low-opacity.
+Postal blue and bright yellow anchor the palette, supported by white, cyan, and restrained warm neutrals. Surfaces feel smooth, softly shaded, and slightly toy-like. Contrast must work on both white service cards and dark-blue promotional banners without changing the core object construction.
 
 # Variants and States
 
-- Use illustrations in onboarding, promotional service cards, empty states, and explanatory callouts.
-- Match each object directly to the service being introduced.
-- Keep operational rows and status histories mostly illustration-free.
-- Create original assets in this visual language; do not copy brand characters, logos, or existing scenes.
+Sending and service choices use isolated parcel, bag, letter, courier, or vehicle objects. Promotional cards may add a simple environment or several objects. Progress or completed states may adjust pose and status detail while retaining the same palette, lighting, proportions, and material softness.
 
 # Avoid
 
-Do not introduce an unrelated illustration style or substitute decorative symbols for source-supported imagery.
+- Do not create production art with SwiftUI `Shape`, `Canvas`, programmatic vectors, or procedural gradients.
+- Do not substitute SF Symbols, emoji, icon fonts, or assembled UI glyphs for the authored objects.
+- Do not integrate generated art before explicit visual approval; use only the approved raster result.
+- Avoid stock vector packs, photoreal logistics photography, harsh glossy 3D, sketchy line art, or unrelated mascot styles.
+- Do not shrink illustrations to icon size or crop away the identifying parcel, vehicle, or human gesture.
+- Do not let decorative scenes obscure prices, status, or shipment controls.

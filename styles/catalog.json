@@ -244,7 +244,7 @@
       "AI",
       "Entertainment"
     ],
-    "uiSummary": "A black-first streaming interface structured by cinematic key art, portrait poster rails, heavy white editorial headings, compact charcoal controls, and a violet subscription gradient.",
+    "uiSummary": "A black-first iOS streaming visual system built from cinematic artwork, heavy white editorial hierarchy, charcoal grouped surfaces, compact outline navigation, violet conversion controls, and media assets as the dominant imagery.",
     "illustrationSummary": null
   },
   {
@@ -257,7 +257,7 @@
       "Lifestyle",
       "Utilities"
     ],
-    "uiSummary": "A white search shell with a centered universal query field, coral-red identity, dense vertical result modes, dark commitment actions, and a separate purple-blue Alice workspace.",
+    "uiSummary": "A sparse white iOS search shell with a coral Yandex mark, soft gray rounded controls, compact black navigation, near-black commitment buttons, content-adaptive result surfaces, and a purple assistant accent.",
     "illustrationSummary": null
   },
   {
@@ -268,8 +268,8 @@
     "categories": [
       "Maps & Navigation"
     ],
-    "uiSummary": "A cartography-first interface with a detailed live map, white floating controls, layered bottom sheets, blue route actions, compact information density, and map-derived onboarding scenes.",
-    "illustrationSummary": "Yandex Maps uses an authored map-derived illustration system for onboarding and feature education. The recurring scene is a simplified cartographic crop containing one recognizable landmark, route, marker, transport signal, or notification object. This system is separate from live map rendering, place photography, partner logos, and ordinary interface icons."
+    "uiSummary": "A cartography-first iOS visual system with a full-screen map canvas, compact white floating controls, layered rounded bottom sheets, blue route emphasis, dense list rows, and functional photography or service marks.",
+    "illustrationSummary": null
   },
   {
     "appId": "68556e04dadbd53178db7d8d",
@@ -1643,8 +1643,8 @@
       "Finance",
       "Lifestyle"
     ],
-    "uiSummary": "A modular super-app dashboard on pale gray, built from white rounded cards, emerald finance actions, a yellow central QR control, vivid multicolor service tiles, dense campaign rails, and compact aligned financial data.",
-    "illustrationSummary": "MBANK uses colorful dimensional service scenes and campaign miniatures to distinguish lifestyle products inside its modular banking dashboard."
+    "uiSummary": "MBANK is a pale-gray iOS finance super-app style with white rounded modules, emerald selection and finance controls, a yellow central QR control, compact data rows, vivid service tiles, and occasional full-bleed promotional media.",
+    "illustrationSummary": null
   },
   {
     "appId": "69a0a540c774bbc44ed084ca",
@@ -1655,7 +1655,7 @@
       "Finance",
       "Telecom & Connectivity"
     ],
-    "uiSummary": "A dense super-app system of pale gray background, bright white service modules, hot magenta ecosystem accents, cyan utility links, product imagery, and a floating translucent dock.",
+    "uiSummary": "A dense Kyrgyz finance-and-telecom super-app on a pale gray iOS canvas, using bright white operational cards, hot-magenta ecosystem markers, lime-green payment actions, compact black financial typography, floating rounded navigation, and product or campaign imagery inside bounded cards.",
     "illustrationSummary": null
   },
   {
@@ -2843,7 +2843,7 @@
       "AI",
       "Utilities"
     ],
-    "uiSummary": "A soft spatial browser interface built from luminous lavender-pink backgrounds, frosted white page cards, cobalt AI headings, and a thumb-centered bottom dock. Search, tabs, and page tools appear as layered sheets while live web content remains recognizable behind them.",
+    "uiSummary": "A rounded iOS browser style that alternates between vivid blue-purple-pink gradient onboarding, pale frosted browser canvases, cobalt AI emphasis, translucent bottom sheets, compact floating docks, and recognizable web-page screenshots.",
     "illustrationSummary": null
   },
   {
@@ -2854,8 +2854,8 @@
     "categories": [
       "Travel & Transportation"
     ],
-    "uiSummary": "A bright transit super-app that combines a teal-to-blue shell, white rounded content sheets, high-saturation action tiles, map surfaces, and polished 3D transport objects. Payment cards and route maps anchor the signed-in experience; friendly rendered buses, trains, tickets, and city services make onboarding and the service hub immediately legible.",
-    "illustrationSummary": "Use illustration to make transport and city services recognizable before reading. It supports onboarding and service discovery, not transactional forms."
+    "uiSummary": "ATTO uses a bright teal service shell, white rounded sheets, deep indigo transport cards, green and blue payment tiles, compact bold SF typography, and soft 3D transport objects on onboarding and service surfaces.",
+    "illustrationSummary": "ATTO has a stable standalone illustration system: soft 3D transport and city-service objects are visible across onboarding and service discovery screens. The system makes buses, trains, cars, tickets, parking, cards, SIMs, and QR/payment services recognizable before the user reads the label."
   },
   {
     "appId": "6a648559486defb607b98dc9",
@@ -2865,7 +2865,7 @@
     "categories": [
       "Finance"
     ],
-    "uiSummary": "A bright retail-banking interface that combines clean white cards, pale cool-gray canvases, saturated green actions, and electric-blue highlights. Dense money tasks stay legible through large totals, compact shortcuts, and rounded grouped lists, while polished 3D objects distinguish promotional products.",
+    "uiSummary": "A bright retail-banking interface built from pale gray canvases, white rounded financial groups, saturated green actions, electric-blue campaign blocks, dense SF typography, a persistent rounded tab bar, and authored 3D product objects.",
     "illustrationSummary": "Illustration differentiates product discovery from routine banking and makes abstract offers feel tangible."
   },
   {
@@ -2876,8 +2876,8 @@
     "categories": [
       "Finance"
     ],
-    "uiSummary": "A dense ecosystem bank mixing Wildberries hot magenta, dark green wallet panels, pale lilac canvas, white service tiles, bold black financial typography, and glossy 3D product art. The home screen behaves like a modular marketplace dashboard, while transfers and applications simplify into bright linear forms with one charcoal confirmation action.",
-    "illustrationSummary": "WB Bank uses glossy 3D banking objects and product miniatures to distinguish offers inside a dense financial dashboard."
+    "uiSummary": "WB Bank is a high-density iOS finance surface with hot magenta ecosystem chrome, pale lavender dashboard canvas, dark green money panels, white rounded product tiles, large black numeric type, charcoal confirmation controls, and recurring glossy 3D banking objects.",
+    "illustrationSummary": "WB Bank has an independently visible illustration system: glossy 3D banking objects recur across the home dashboard, card opening, savings, loans, installments, and support/product tiles."
   },
   {
     "appId": "6a672d8c7589dad90c49b0b6",
@@ -2888,7 +2888,7 @@
       "AI",
       "Music & Audio"
     ],
-    "uiSummary": "A dark AI-music product built from near-black chrome, translucent charcoal creation panels, artwork-derived gradients, white rounded playback controls, and a hot pink-to-orange creative accent. Dense social music feeds coexist with a focused studio form and persistent mini-player.",
+    "uiSummary": "A near-black music interface where full-bleed cover art and video provide most color, warm pink-orange gradients mark creation, compact white type carries dense track metadata, and a persistent mini-player sits above dark bottom navigation.",
     "illustrationSummary": null
   },
   {
@@ -2899,8 +2899,8 @@
     "categories": [
       "Finance"
     ],
-    "uiSummary": "A broad financial super-app built on misty mint gradients, white rounded modules, strong black hierarchy, and focused Sber green actions. Dense banking information is split into configurable cards, while friendly pastel 3D financial objects add identity to services without obscuring balances or transactions.",
-    "illustrationSummary": "SberBank Online uses soft pastel 3D objects to identify financial products and service categories. The objects support navigation and promotion while balances, transactions, and forms remain illustration-free."
+    "uiSummary": "A light financial interface built from pale gray and mint atmosphere, modular white cards, strong black numeric hierarchy, restrained green actions, compact transaction rows, and occasional promotional imagery.",
+    "illustrationSummary": null
   },
   {
     "appId": "6a709f405f36214e808ea960",
@@ -2910,7 +2910,7 @@
     "categories": [
       "Finance"
     ],
-    "uiSummary": "A pale blue-white retail banking interface centered on saturated royal-blue cards and actions, rounded white service tiles, colorful circular story badges, soft promotional banners, and a prominent QR tab. Financial screens are orderly and spacious, with blue line icons and green confirmation states.",
+    "uiSummary": "A bright banking dashboard on an off-white canvas, using vivid royal blue actions, rounded white account cards, pale-blue icon containers, compact financial rows, promotional photography, and a light labeled tab bar.",
     "illustrationSummary": null
   },
   {
@@ -2921,7 +2921,7 @@
     "categories": [
       "Finance"
     ],
-    "uiSummary": "A broad mobile bank using a coral-to-magenta identity gradient, burgundy primary actions, white product panels, thin rose line icons, cyan informational cards, compact account tabs, dense financial rows, and a five-tab shell for chat, history, home, transfers, and payments.",
+    "uiSummary": "A light finance interface distinguished by raspberry-magenta actions, coral-pink gradient headers and cards, white modular surfaces, black financial type, and selective teal-blue chart accents.",
     "illustrationSummary": null
   },
   {
@@ -2932,8 +2932,8 @@
     "categories": [
       "Productivity"
     ],
-    "uiSummary": "An optimistic digital-wellbeing interface that pairs a white utility layer with immersive blue-sky photography, airy blue gradients, oversized rounded sheets, black pill actions, and a friendly app-shaped mascot. Data, blocking controls, and system permissions remain clear while the visual language feels restorative rather than punitive.",
-    "illustrationSummary": "Jomo uses a cheerful blue app-shaped mascot and small nature scenes to soften digital-wellbeing and restriction tasks."
+    "uiSummary": "A friendly screen-time interface built from bright sky-blue fields, white rounded cards, bold black type, compact colorful chips, centered onboarding, and recurring authored mascot spot illustrations.",
+    "illustrationSummary": "Jomo uses recurring authored mascot spot illustrations to make onboarding, guidance, templates, and selected product cards feel friendly without turning the whole interface into a scene. Production artwork must be created with an image-generation model, reviewed visually, and approved before it is integrated as a raster asset."
   },
   {
     "appId": "6a796f9a9a15224814bb3bbd",
@@ -2943,7 +2943,7 @@
     "categories": [
       "Finance"
     ],
-    "uiSummary": "A professional dark market interface built from black canvases, fine graphite dividers, compact white data typography, teal and coral price movement, and tool-dense charts. The aesthetic is precise, utilitarian, and optimized for continuous monitoring.",
+    "uiSummary": "A dense dark market interface using black and charcoal data surfaces, compact white numeric type, red-green price semantics, restrained blue-teal selection, full-screen charts, and highly economical navigation chrome.",
     "illustrationSummary": null
   },
   {
@@ -2954,7 +2954,7 @@
     "categories": [
       "Travel & Transportation"
     ],
-    "uiSummary": "A dense, utility-first travel marketplace organized around a royal-blue header, bright-blue actions, yellow focus frames, white information cards, green deal signals, and destination photography. Search parameters, comparison data, policies, and totals remain explicit through every travel category.",
+    "uiSummary": "A photo-led travel interface combining royal-blue navigation bands, white transactional surfaces, bright-blue actions, yellow search emphasis, dense property cards, and sticky price or booking controls.",
     "illustrationSummary": null
   },
   {
@@ -2965,8 +2965,8 @@
     "categories": [
       "Utilities"
     ],
-    "uiSummary": "A service-dense utility interface built on a cool light-gray canvas, white rounded groups, and clear postal blue actions. Compact lists coexist with bright promotional tiles and a consistent family of soft 3D parcel, vehicle, and courier illustrations.",
-    "illustrationSummary": "Russian Post uses friendly 3D service objects to explain delivery products and soften dense utility screens. The illustration language is functional: parcels, vehicles, couriers, buildings, and small tools represent a concrete service rather than decorating empty space."
+    "uiSummary": "A light logistics dashboard using cool gray canvas, rounded white modules, strong postal blue, cyan actions, dense service grids, map-and-list compositions, tracking timelines, and recurring blue-yellow postal-object illustrations.",
+    "illustrationSummary": "Russian Post uses a recurring authored family of parcel, letter, courier, vehicle, bag, and delivery objects to identify services and operational choices. Create new production art with an image-generation model, obtain explicit visual approval, then integrate only the approved raster asset."
   },
   {
     "appId": "6a7c6c372b53fdbd13db80b9",
@@ -2976,7 +2976,7 @@
     "categories": [
       "Productivity"
     ],
-    "uiSummary": "A calm document workspace on a misty white-gray canvas with soft translucent chrome, black typography, pale cyan selection, rounded floating navigation, miniature document previews, sparse line icons, and a small multicolor assistant accent. Content stays dominant while organization and creation controls hover lightly around it.",
+    "uiSummary": "An airy document workspace using white and very light gray surfaces, crisp black editorial type, saturated blue actions, document thumbnails, minimal circular controls, and translucent floating toolbars.",
     "illustrationSummary": null
   },
   {
@@ -2987,7 +2987,7 @@
     "categories": [
       "Finance"
     ],
-    "uiSummary": "A bright finance super-app built on an ice-blue canvas, white rounded service tiles, saturated azure actions, dense promotional banners, compact icon grids, and a persistent five-item tab bar. Financial values stay prominent while payments, transfers, mini apps, and location services remain one tap away.",
+    "uiSummary": "A dense light financial super-app using pale blue-gray canvas, bright blue actions, white card modules, compact service-icon grids, promotional banners, structured forms, and a labeled bottom tab bar.",
     "illustrationSummary": null
   },
   {
@@ -2998,7 +2998,7 @@
     "categories": [
       "Lifestyle"
     ],
-    "uiSummary": "A cinematic wellbeing system built on pure black, full-bleed warm photography, widely spaced white type, hairline geometry, tiny red signals, and sparse outlined or white pill actions.",
+    "uiSummary": "A sparse black onboarding interface pairing full-bleed close-up human photography with widely spaced white branding, understated form typography, hairline inputs, and a floating white circular next control.",
     "illustrationSummary": null
   },
   {
@@ -3010,8 +3010,8 @@
       "AI",
       "Lifestyle"
     ],
-    "uiSummary": "An immersive AI-companion interface built around a softly rendered alien world, deep indigo skies, expressive 3D character animation, cream utility surfaces, and compact pill controls. The UI feels intimate, playful, and gently game-like.",
-    "illustrationSummary": "The reviewed source uses imagery in the product roles documented below."
+    "uiSummary": "An immersive companion interface built around a full-screen 3D cartoon alien world, deep navy-purple skies, saturated character color, white rounded onboarding controls, and sparse floating utilities over the scene.",
+    "illustrationSummary": "Tolan uses a coherent authored 3D cartoon world: a blue alien companion, pastel terrain, starfields, cosmic haze, and repeatable character variants. All production scenes and character assets must be created with an image-generation model, receive explicit visual approval, and be integrated only as approved raster assets."
   },
   {
     "appId": "6a8c0115e7ffdbb3abcc8b12",
@@ -3021,7 +3021,7 @@
     "categories": [
       "Productivity"
     ],
-    "uiSummary": "A radically sparse productivity workspace that stacks a white calendar pane over a white todo pane, joined by a black navigation strip. Fine gray grid lines, restrained pink selection, and soft event pastels create hierarchy without conventional tab chrome.",
+    "uiSummary": "A stark productivity workspace where white calendar and todo panes are separated by black floating chrome, with thin gray grid lines, restrained pink time accents, compact system typography, and almost no decorative imagery.",
     "illustrationSummary": null
   },
   {
@@ -3032,8 +3032,8 @@
     "categories": [
       "Education"
     ],
-    "uiSummary": "A bright modular language-learning interface built on white space, saturated cyan actions, violet practice states, coral and green learning cards, and a mixed illustration system of soft 3D characters and flat educational scenes. Dense course variety stays approachable through rounded cards and a persistent five-tab shell.",
-    "illustrationSummary": "Skyeng combines soft 3D blue characters with bright flat educational scenes. Characters humanize AI speaking and onboarding, while flat art explains topics, situations, vocabulary, and course categories."
+    "uiSummary": "A bright language-learning interface on a white canvas with saturated cyan actions, gray bottom navigation, rounded learning cards, photo/course banners, and a repeated illustration language of soft 3D blue characters plus flat educational scenes.",
+    "illustrationSummary": "Skyeng has an independently proven authored illustration system. Fresh Screen Gallery evidence shows repeated soft 3D blue characters across onboarding, home/practice cards, AI teacher, speaking practice, and empty/supporting states, plus flat educational scenes for situations, vocabulary, homework, schedule, and promotions. New assets must follow this pipeline: generate candidate raster images with the approved generation model, show them to the user for explicit visual approval, then integrate the approved raster assets into the app. Do not ship temporary programmatic substitutes."
   },
   {
     "appId": "6a8ec91264587b62bb7b7a2a",
@@ -3043,8 +3043,8 @@
     "categories": [
       "Finance"
     ],
-    "uiSummary": "A bright banking system built around saturated blue account stages, white modular finance cards, soft cyan actions, pastel benefit notices, bold numeric type, and polished 3D product art.",
-    "illustrationSummary": "Ozon Bank uses polished 3D cards, gifts, bubbles, arrows, ribbons, and ticket-like receipts to make products, cashback, credit, and payment results feel tangible."
+    "uiSummary": "A bright iOS banking style with saturated Ozon-blue brand fields, white financial work areas, pale blue action groups, bold black balance typography, rounded product modules, bottom tabs, and glossy 3D card imagery.",
+    "illustrationSummary": "Ozon Bank's current iOS screens use illustration as product evidence and promotional emphasis, not as a generic decorative layer. The observed artwork includes glossy 3D bank cards, piggy-bank savings objects, currency symbols, abstract folded shapes, cashback/product tiles, and soft object clusters in onboarding, home promotions, and catalog cards. Retain this illustration source only when the implementation will generate or import raster artwork. The illustration gate is independent: choose a named generation model or supplied raster source, obtain explicit user visual approval of the generated/imported assets, and integrate the approved raster assets into the app bundle before claiming the visual language is implemented."
   },
   {
     "appId": "6a90b460bb0699c5ef41c325",
@@ -3054,8 +3054,8 @@
     "categories": [
       "Job & Recruitment"
     ],
-    "uiSummary": "A bright operational mobile UI built from white rounded groups, pale gray page surfaces, and saturated Ozon blue actions. Dense workplace facts are broken into cards, chips, bottom sheets, and five persistent task tabs. Bold system-sans headings, concise monetary labels, documentary warehouse photography, and colorful 3D promotional scenes create a practical interface with energetic brand moments.",
-    "illustrationSummary": "Ozon Job mixes documentary workplace photography with bright 3D editorial graphics. The graphics explain promotions, safety, training, and progress while photography establishes real work environments."
+    "uiSummary": "A practical iOS work app style with white rounded task groups on a pale gray canvas, Ozon-blue primary actions and selected tabs, dense warehouse/payment cards, bold system typography, documentary photos, and bright raster promotional artwork.",
+    "illustrationSummary": "Ozon Job uses two image families in the sampled current screens: documentary workplace photography and bright raster illustration for promos, courses, and branded training content. Photography establishes real warehouse and delivery context; illustration adds product energy to banners, stories, and learning cards. Retain this illustration source only when the implementation will generate or import raster artwork. The illustration gate is independent: choose a named generation model or supplied raster source, obtain explicit user visual approval of the generated/imported assets, and integrate the approved raster assets into the app bundle before claiming the visual language is implemented."
   },
   {
     "appId": "6a95d047b49a6d8b28e5bb68",
@@ -3066,7 +3066,7 @@
       "Communication",
       "Social Networking"
     ],
-    "uiSummary": "A quiet monochrome messenger built from white space, charcoal actions, pale search fields, hairline-separated lists, rounded bottom docks, and restrained avatar color. Both light and dark themes keep the same low-decoration structure, letting conversation content provide identity.",
+    "uiSummary": "A quiet monochrome messenger style built from white canvas, charcoal controls, pale gray input surfaces, thin separators, small circular avatars, compact text tabs, and a soft floating bottom dock. Visual identity stays restrained; color appears mainly through avatars, message content, online dots, and semantic feedback.",
     "illustrationSummary": null
   },
   {
@@ -3077,8 +3077,8 @@
     "categories": [
       "Travel & Transportation"
     ],
-    "uiSummary": "A rail-booking interface that pairs a deep indigo journey header with mint and teal commitment actions, white rounded search panels, dense timetable rows, and playful service illustrations. Expressive discovery stays near the home and onboarding surfaces; booking, fare conditions, tickets, and payment become compact, explicit, and highly structured.",
-    "illustrationSummary": "Trainline combines travel photography with a compact service-illustration system used for reassurance, education, and onboarding."
+    "uiSummary": "A rail-travel interface style that combines deep teal and deep indigo fields, bright mint actions, white rounded search panels, dense timetable-like rows, large photographic discovery cards, and flat service illustrations. Expressive surfaces are image-led and colorful; transactional surfaces are compact, white, gridded, and text-forward.",
+    "illustrationSummary": "Trainline has an independently proven illustration layer in the sampled Screen Gallery surfaces: rounded service tiles and onboarding-like education surfaces use flat object artwork alongside real travel photography."
   },
   {
     "appId": "6a9c3fada462b791cb5db9d1",
@@ -3088,8 +3088,8 @@
     "categories": [
       "Travel & Transportation"
     ],
-    "uiSummary": "A multimodal travel marketplace built from navy headers, coral commitment actions, pale gray form rows, white comparison cards, and pastel blue-pink journey collages. Search remains welcoming and image-led, while transport results, hotel listings, passenger data, extras, and payment use a dense but calm operational grid.",
-    "illustrationSummary": "Omio uses a recognizable pastel travel-collage language across splash, onboarding, home search, promotions, and payment progress."
+    "uiSummary": "Omio uses a navy and coral iOS travel interface with illustrated blue-pink journey headers, white rounded cards, pale gray input rows, dense comparison lists, and photo-led hotel surfaces.",
+    "illustrationSummary": "Omio has an independently confirmed authored illustration system across splash, onboarding, home search, and promotional states. It is a soft travel-collage language used to establish destination mood before the app switches to dense functional booking surfaces. Production contract: generate new artwork with an image-generation model, obtain explicit visual approval from the user, then integrate approved raster assets. Do not replace authored artwork with SwiftUI shapes, SF Symbols, emoji, icon-only placeholders, or any programmatic substitutes."
   },
   {
     "appId": "6aa12ef45dc87eaf9571edcc",
@@ -3099,8 +3099,8 @@
     "categories": [
       "Productivity"
     ],
-    "uiSummary": "A playful screenshot-organizer interface built on airy white space, fluid cyan controls, and tactile 3D brand objects. Editorial serif headings give the library character while a neutral system sans keeps actions legible. Screenshot mosaics are the primary content; frosted edge controls, rounded cards, and a yellow duck mascot create a soft, spatial layer above them.",
-    "illustrationSummary": "Pool combines tactile 3D symbols with a recurring yellow duck mascot. The illustration language makes a utilitarian screenshot library feel playful without competing with the user's own images."
+    "uiSummary": "Pool uses an airy white iOS screenshot library with editorial serif titles, floating cyan glass controls, large rounded onboarding sheets, tactile duck artwork, and screenshot mosaics as the dominant content.",
+    "illustrationSummary": "Pool has an independently confirmed authored illustration system. It combines a recurring yellow duck mascot, a blue watercolor-like entry/onboarding background, tactile rendered objects, product mockups, and the pink inflated screenshot count. Production contract: generate new artwork with an image-generation model, obtain explicit visual approval from the user, then integrate approved raster assets. Do not replace authored artwork with SwiftUI shapes, SF Symbols, emoji, icon-only placeholders, or any programmatic substitutes."
   },
   {
     "appId": "6aa459f45dc87eaf95adaa38",
@@ -3111,8 +3111,8 @@
       "AI",
       "Social Networking"
     ],
-    "uiSummary": "A playful AI-creator network alternating clean pearl-white workspaces with immersive black mini-app feeds. The interface is restrained and object-led: black pill controls, large rounded canvases, glassy 3D bubbles, sparse typography, and a five-item dock make generated experiences feel like collectible social objects.",
-    "illustrationSummary": "Wabi uses glossy 3D bubbles and translucent object capsules as its visual signature. Tiny photographs, avatars, tools, and surreal objects appear suspended inside glassy spheres."
+    "uiSummary": "Wabi alternates pearl-white creator workspaces with a black immersive feed, using sparse SF typography, rounded collectible object cards, glossy generated spheres, black pill actions, and a floating five-icon dock.",
+    "illustrationSummary": "Fresh Screen Gallery research independently confirms a stable authored Wabi image system: glossy translucent spheres, orb-contained photos, rendered mini objects, and toy-like 3D thumbnails recur in onboarding, create grids, profile grids, and feed mini-app previews. These assets are part of the product's recognisable surface language, not optional decoration. Production contract: final artwork must be produced with an image-generation model, reviewed as raster imagery, explicitly approved by the user visually, and only then integrated as raster assets into the app."
   },
   {
     "appId": "6ab163e77a78ed9d44f5aa49",
@@ -3123,7 +3123,7 @@
       "AI",
       "Entertainment"
     ],
-    "uiSummary": "A black streaming interface driven by cinematic posters, white condensed-feeling headings, electric cyan links, a blue gradient subscription action, and a translucent dark tab bar. Content rails are dense and image-first; utility controls stay thin, outlined, and subordinate to media.",
+    "uiSummary": "KION is a black image-first streaming interface with dense poster rails, full-bleed cinematic hero art, white compact typography, cyan utility accents, magenta profile highlights, and dark rounded sheets.",
     "illustrationSummary": null
   }
 ]

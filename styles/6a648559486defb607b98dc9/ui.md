@@ -3,224 +3,112 @@
 version: 1
 platform: iOS
 name: Bereke-design-analysis
-description: "A bright retail-banking interface that combines clean white cards, pale cool-gray canvases, saturated green actions, and electric-blue highlights. Dense money tasks stay legible through large totals, compact shortcuts, and rounded grouped lists, while polished 3D objects distinguish promotional products."
+description: "A bright retail-banking interface built from pale gray canvases, white rounded financial groups, saturated green actions, electric-blue campaign blocks, dense SF typography, a persistent rounded tab bar, and authored 3D product objects."
 colors:
-  primary: "#10A95B"
-  on-primary: "#FFFFFF"
-  primary-soft: "#EAF8F0"
-  accent-blue: "#1268E8"
-  accent-cyan: "#DFF5FF"
-  ink: "#17191C"
-  ink-muted: "#777C84"
-  ink-subtle: "#A9ADB3"
   canvas: "#F3F5F6"
-  surface-1: "#FFFFFF"
-  surface-2: "#E9ECEF"
-  hairline: "#E1E4E7"
-  semantic-success: "#10A95B"
-  semantic-danger: "#E5484D"
-  semantic-overlay: "#000000"
+  surface-primary: "#FFFFFF"
+  surface-secondary: "#EEF1F3"
+  accent-primary: "#06BF4F"
+  accent-secondary: "#0648F5"
+  text-primary: "#15171A"
+  text-secondary: "#73777D"
+  divider: "#E2E5E8"
+  destructive: "#E5484D"
 typography:
-  display-xl: { fontFamily: SF Pro Display, fontSize: 36, fontWeight: 700, lineHeight: 1.05, letterSpacing: -0.8 }
-  display-lg: { fontFamily: SF Pro Display, fontSize: 30, fontWeight: 700, lineHeight: 1.08, letterSpacing: -0.5 }
-  display-md: { fontFamily: SF Pro Display, fontSize: 26, fontWeight: 700, lineHeight: 1.12, letterSpacing: -0.3 }
-  headline: { fontFamily: SF Pro Display, fontSize: 22, fontWeight: 700, lineHeight: 1.18, letterSpacing: -0.2 }
-  card-title: { fontFamily: SF Pro Text, fontSize: 16, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: SF Pro Text, fontSize: 17, fontWeight: 500, lineHeight: 1.35, letterSpacing: 0 }
-  body-lg: { fontFamily: SF Pro Text, fontSize: 16, fontWeight: 400, lineHeight: 1.45, letterSpacing: 0 }
-  body: { fontFamily: SF Pro Text, fontSize: 14, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
-  body-sm: { fontFamily: SF Pro Text, fontSize: 12, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
-  caption: { fontFamily: SF Pro Text, fontSize: 10, fontWeight: 400, lineHeight: 1.20, letterSpacing: 0 }
-  button: { fontFamily: SF Pro Text, fontSize: 15, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0 }
-  eyebrow: { fontFamily: SF Pro Text, fontSize: 11, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0.2 }
-  mono: { fontFamily: SF Mono, fontSize: 12, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
-rounded: { xs: 8, sm: 12, md: 16, lg: 20, xl: 26, xxl: 32, pill: 9999, full: 9999 }
-spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
+  hero: {fontFamily: "SF Pro Display", fontSize: 36, fontWeight: 700, lineHeight: 40}
+  title: {fontFamily: "SF Pro Display", fontSize: 24, fontWeight: 700, lineHeight: 30}
+  section: {fontFamily: "SF Pro Text", fontSize: 18, fontWeight: 700, lineHeight: 24}
+  body: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 400, lineHeight: 21}
+  label: {fontFamily: "SF Pro Text", fontSize: 14, fontWeight: 600, lineHeight: 19}
+  caption: {fontFamily: "SF Pro Text", fontSize: 12, fontWeight: 400, lineHeight: 16}
+spacing:
+  screen-horizontal: 16
+  section-gap: 18
+  card-padding: 16
+  control-gap: 10
+rounded:
+  control: 14
+  card: 18
+  sheet: 24
+  pill: 999
 components:
-  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.md}", padding: [14, 18]}
-  account-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 16 }
-  action-tile: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.md}", padding: 12 }
-  grouped-list: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: [8, 16]}
-  input: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body-lg}", rounded: "{rounded.md}", padding: [14, 16]}
+  primary-action: {backgroundColor: "{colors.accent-primary}", textColor: "{colors.surface-primary}", typography: "{typography.label}", rounded: "{rounded.control}"}
+  secondary-action: {backgroundColor: "{colors.surface-secondary}", textColor: "{colors.text-primary}", typography: "{typography.label}", rounded: "{rounded.control}"}
+  primary-card: {backgroundColor: "{colors.surface-primary}", textColor: "{colors.text-primary}", typography: "{typography.body}", rounded: "{rounded.card}"}
+  navigation: {backgroundColor: "{colors.surface-primary}", activeColor: "{colors.accent-primary}", inactiveColor: "{colors.text-secondary}", typography: "{typography.caption}", rounded: "{rounded.sheet}"}
 ---
 
 # Overview
 
-Bereke presents everyday banking as a sequence of clear white modules over a cool-gray canvas. Green commits actions, blue adds product emphasis, and 3D campaign objects are reserved for discovery.
-
-**Key Characteristics:**
-- Bright white grouped surfaces.
-- Green transactional actions.
-- Blue secondary product accents.
-- Large balances with compact shortcuts.
-- Glossy 3D promotional objects.
+Bereke uses a quiet light banking shell with most screens on a pale cool-gray canvas and content grouped into white rounded blocks. Green is the only recurring committed-action color, while electric blue appears on promotional banking panels and selected product imagery. The app feels denser than a generic SwiftUI starter because each screen combines compact financial rows, rounded category modules, small line icons, and occasional authored 3D objects inside product or onboarding surfaces.
 
 # Non-negotiable visual invariants
 
-- The reviewed screens show this treatment: Bright white grouped surfaces.
-- The reviewed screens show this treatment: Green transactional actions.
-- The reviewed screens show this treatment: Blue secondary product accents.
-- The reviewed screens show this treatment: Large balances with compact shortcuts.
-- The reviewed screens show this treatment: Glossy 3D promotional objects.
+- Most task screens sit on a pale gray canvas with full-width white cards, lists, or form fields inset by roughly 10-16 points.
+- Primary commit controls are saturated green rounded rectangles near the bottom edge or inside product cards.
+- Promotional and discovery areas use strong blue or turquoise panels with isolated 3D finance objects, not flat illustrations alone.
+- Dense finance rows keep black primary labels, gray secondary captions, thin dividers, and small green outline icons aligned at the leading edge.
+- The main sections use a white rounded bottom tab bar with green active icons and gray inactive labels.
+- Amounts, rates, and balances are large bold SF numerals, while supporting conditions stay compact and gray.
+- Modal sheets dim the underlying screen and present a white rounded top sheet with a small centered grab handle.
 
 # Color and surfaces
 
-### Brand & Accent
-- **Bereke Green** ({colors.primary}): Primary actions, active state, and success.
-- **Electric Blue** ({colors.accent-blue}): Product emphasis and selected utilities.
-- **Soft Cyan** ({colors.accent-cyan}): Supporting promotional fields.
+The base color mass is light: a cool gray canvas surrounds white grouped lists, white cards, white input fields, and white modal sheets. Saturated green marks primary buttons, selected tab icons, checked states, active chips, and positive success marks. Electric blue is reserved for promotional product cards and some authored product objects, so using blue as the default action tint would visibly confuse the hierarchy.
 
-### Surface
-- **Canvas** ({colors.canvas}): Main page background.
-- **Surface 1** ({colors.surface-1}): Cards, forms, and grouped lists.
-- **Surface 2** ({colors.surface-2}): Secondary controls and inactive fields.
-- **Hairline** ({colors.hairline}): Row separation.
-
-### Text
-- **Ink** ({colors.ink}): Balances, headings, and primary labels.
-- **Ink Muted** ({colors.ink-muted}): Details, dates, and conditions.
-- **Ink Subtle** ({colors.ink-subtle}): Placeholder and unavailable state.
-
-### Semantic
-- **Success** ({colors.semantic-success}): Completed operation and positive state.
-- **Danger** ({colors.semantic-danger}): Errors and destructive controls.
-- **Overlay** ({colors.semantic-overlay}): Modal focus.
+Secondary controls and inactive segmented areas are light gray, close to the canvas but slightly raised through contrast. Dividers are thin pale gray lines inside long lists. Text is near-black for labels and numbers, medium gray for explanations, timestamps, placeholders, and card conditions. Destructive or warning visuals appear sparingly as red symbols or red text inside otherwise neutral rows.
 
 # Typography
 
-### Font Family
+The type system is SF-based and compact. Screen titles are small, centered, and bold in the navigation area; section headings inside content are bolder and left-aligned. Product rows use 14-16 point semibold labels with smaller gray captions underneath. Large financial figures and rates use bold display numerals, often taking the first readable position inside a card.
 
-- **SF Pro Display** — balances and screen headings.
-- **SF Pro Text** — transactions, controls, and forms.
-- **SF Mono** — card suffixes and codes.
-
-### Hierarchy
-
-| Token | Size | Weight | Use |
-|---|---|---|---|
-| `{typography.display-xl}` | 36pt | 700 | Total balance |
-| `{typography.headline}` | 22pt | 700 | Screen heading |
-| `{typography.card-title}` | 16pt | 600 | Product or payment row |
-| `{typography.body}` | 14pt | 400 | Details and forms |
-| `{typography.caption}` | 10pt | 400 | Navigation and metadata |
-| `{typography.button}` | 15pt | 600 | Main action |
-
-### Principles
-
-- Put amount and recipient ahead of secondary details.
-- Keep row labels short and scannable.
-- Use strong weight for totals and section titles only.
-- Keep authored campaign lettering inside imagery.
-
-### Note on Font Substitutes
-
-Use **Inter** or the platform system sans when SF Pro is unavailable.
+Labels are sentence case, not all caps. Numeric content is set tightly and plainly with currency symbols close to the amount. On compact screens, the hierarchy survives by wrapping secondary captions before reducing the visual size of amounts, rates, primary labels, or bottom actions.
 
 # Screen composition
 
-### Spacing System
+The recurring composition is a status-bar-safe top area, a short navigation title or back control, a vertically scrolling content field, and either a fixed bottom tab bar or a fixed bottom primary button. Main dashboard screens are denser: a blue promotional card spans nearly the full width near the top, a horizontal shortcut strip follows, then white tiles and product cards stack down the canvas.
 
-Use a 4pt base, 16pt side gutters, 12pt gaps, and 16pt card padding.
-
-### Grid & Container
-
-Home stacks balance and product cards above shortcuts and activity. Transfers, payments, and services move from compact category grids into one-column forms.
-
-### Whitespace Philosophy
-
-Separate task groups with canvas space; keep information dense within a clearly bounded card.
+Directory screens for transfers, payments, services, and settings are mostly single-column lists. Each row has a small leading icon, two-line text when needed, a trailing chevron or control, and thin internal dividers. Product discovery screens use larger white cards with an illustration on the right and a green or gray action chip near the left. Bottom sheets occupy the lower half to two-thirds of the screen and preserve the rounded white card language over a dimmed background.
 
 # Navigation appearance
 
-Persistent bottom navigation anchors the main areas. Deep money tasks switch to a focused top bar and back action.
+The main navigation is a white bottom bar with five evenly spaced icon-and-label items, rounded into the bottom safe area. The selected item turns green and the inactive items remain gray. Main screens show a centered title, a small circular profile mark at the upper left, and a green outline notification icon at the upper right.
+
+Deeper screens remove the tab bar and use a minimal top bar with a green or dark back chevron, centered title, and occasional right-side text or icon action. Segmented tabs are light gray rounded tracks with a white selected segment and green selected text when the section state is active.
 
 # Components
 
-### Buttons
+Primary buttons are full-width green rounded rectangles with white centered semibold labels. Smaller green buttons appear inside product cards as rounded pills. Secondary buttons are white or pale gray pills with dark text; disabled-looking fields remain pale gray with subdued text.
 
-Green filled buttons commit transfers, payments, and applications. Secondary actions use white or soft-gray rows; destructive actions remain red.
+Cards use white fills, large rounded corners, and little or no shadow. Product cards may be tall horizontal banners, two-column tiles, or stacked half-height rows, but they keep the same white surface and rounded corners. List rows are compact and separated by hairlines; icons are mostly green outline symbols inside soft green circular or square containers.
 
-Products and payment categories use compact tabs or chips with a green active state.
-
-### Cards & Containers
-
-Account cards show balance, card identity, and shortcuts. Grouped lists handle beneficiaries, payment categories, services, and settings.
-
-### Inputs & Forms
-
-Use large single-column amount and recipient fields, contextual numeric keyboards, and a review step before confirmation.
-
-### Status & Build Page
-
-Expose available balance, card state, transfer fee, limit, processing, success, and failure as text plus semantic color.
-
-### Navigation
-
-Persistent bottom navigation anchors the main areas. Deep money tasks switch to a focused top bar and back action.
-
-Keep bottom navigation above the safe area. Focused forms replace it with a full-width continuation action.
+Inputs appear as pale-gray rounded rectangles or underline-style fields depending on the flow. Clear controls are small gray x marks. Toggles use the native pill shape but appear muted gray when off. Success states center a green circular check mark above bold result text.
 
 # Imagery and icons
 
-| Level | Treatment | Use |
-|---|---|---|
-| 0 | Cool-gray canvas | Screen base |
-| 1 | White rounded group | Accounts and directories |
-| 2 | Colored campaign card | Product discovery |
-| 3 | Sheet over dimmed content | Confirmation |
+Imagery appears in two stable treatments. The first is polished 3D finance artwork in blue, green, white, and gray: cards, coins, percent signs, safes, calculators, and document-like objects. These objects usually sit on the right side of product cards or above onboarding text and cast soft shadows on white or blue surfaces.
 
-### Decorative Depth
-
-Use soft shadows sparingly. Reserve reflective volume and directional light for promotional 3D objects.
+The second treatment is thin line art for identity and instructions, such as a smiling phone or verification drawing. Routine financial lists rely on simple green outline icons rather than large imagery. Icons stay small, rounded, and pictographic; arbitrary filled SF Symbols would look heavier than the observed system.
 
 # States
 
-Expose available balance, card state, transfer fee, limit, processing, success, and failure as text plus semantic color.
+Observed states keep the same light shell. Empty favorites areas use a white card with a green outline star and gray explanatory text. Completed operations use a centered green check icon, bold success title, and a green bottom action. Form-filled states add clear x controls at the trailing edge of fields and keep the green bottom action.
+
+Modal explanation states dim the full screen and present a white bottom sheet with a rounded top edge and short handle. Selected tabs, chips, and bottom navigation states consistently use green, while inactive choices stay gray or white.
 
 # iOS adaptation
 
-| Wide | 768pt+ | Add two-column dashboard groups |
-| Small | <390pt | Stack shortcuts and shorten labels |
+On current iPhone sizes, preserve the top status-bar spacing, the bottom safe-area tab bar or bottom action, and the 16-point horizontal rhythm. Scroll long lists instead of shrinking row height; the reference prefers dense but readable vertical stacks over compressed typography. Large rates and balances should remain visually dominant, with captions wrapping below them.
 
-### Touch Targets
-
-Keep navigation, service cells, list rows, chips, and form actions at least 44pt.
-
-### Collapsing Strategy
-
-Stack shortcut groups before reducing type. Keep current balance, primary account, and next action above campaigns.
-
-### Image Behavior
-
-Contain 3D objects with clear copy-safe space. Never crop account identifiers, QR codes, or transaction evidence.
-
-On iPhone, respect top and bottom safe areas, use scrolling for content that does not fit, keep interactive targets at least 44 points, and preserve the visual reading order for VoiceOver. At larger Dynamic Type sizes, allow supporting text to wrap without collapsing the dominant hierarchy. Use native sheets and permission transitions while explicitly styling app-owned surfaces to match the reference.
+Native sheets can be used when their visible result matches the observed white rounded sheet over a dim overlay. Forms should keep full-width bottom actions above the safe area. Light appearance is the observed baseline; a dark theme should not be inferred from these screens.
 
 # Anti-generic checklist
 
-- Do not substitute the documented accent hierarchy with default iOS blue.
-- Do not turn the documented white canvas into a generic card stack; preserve the observed accent, density, imagery, and surface grouping.
-- Do not use an unstyled `TabView`, `Form`, or arbitrary SF Symbols when they contradict the documented navigation and component language.
-- Do not flatten the documented typography into one body-text scale.
-- Do not remove compositionally important photography or illustration while assets are pending.
-- Do not apply one corner radius to every control and surface.
-
-Source-specific guardrails retained from the review:
-
-### Do
-
-- Keep balances and fees explicit.
-- Use green for committed progress.
-- Group dense directories by task.
-- Preserve generous separation between modules.
-- Restrict 3D art to product discovery.
-
-### Don't
-
-- Don't hide the transfer review step.
-- Don't place campaign art behind financial data.
-- Don't use blue and green as competing primary actions.
-- Don't compress touch rows below comfortable height.
-- Don't rely on icon color alone for status.
+- Do not replace Bereke green actions and selected states with default iOS blue.
+- Do not use a plain `Form` look with grouped system gray headers; the reference uses custom white cards, compact rows, and green outline icons.
+- Do not flatten product discovery into text-only lists; blue and white cards with right-side 3D objects are a visible part of the style.
+- Do not remove the rounded white bottom tab bar on main sections.
+- Do not apply one radius to every surface; buttons, cards, sheets, and small icon containers have visibly different roundness.
+- Do not use oversized marketing typography on routine banking screens; most headings are compact and financial numbers carry the scale.
 
 </design-context>

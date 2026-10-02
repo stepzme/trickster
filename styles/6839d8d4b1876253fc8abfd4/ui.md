@@ -5,173 +5,110 @@ platform: iOS
 name: mts-urent-design-analysis
 description: "A map-first rental interface with a pale 2GIS canvas, charcoal mobility pins, a violet scan action, and white bottom sheets that stage vehicle choice, tariff, ride, and completion."
 colors:
-  map-canvas: "#F2F2F4"
-  canvas: "#FFFFFF"
+  canvas: "#F4F4F6"
   surface-primary: "#FFFFFF"
   surface-secondary: "#F6F3F8"
-  surface-muted: "#ECE9EF"
   accent-primary: "#7B3FF2"
-  accent-secondary: "#A789FF"
+  accent-secondary: "#BCA4FF"
   text-primary: "#17171A"
   text-secondary: "#6E6B73"
-  text-tertiary: "#A5A1AA"
-  marker: "#44414B"
-  success: "#24D58E"
-  warning: "#FF4965"
   divider: "#E7E3EA"
-  overlay: "#17151C"
+  destructive: "#FF4965"
 typography:
-  campaign: {fontFamily: "SF Pro Display", fontSize: 30, fontWeight: 800, lineHeight: 34}
-  page-title: {fontFamily: "SF Pro Display", fontSize: 24, fontWeight: 700, lineHeight: 29}
-  sheet-title: {fontFamily: "SF Pro Text", fontSize: 20, fontWeight: 700, lineHeight: 25}
-  vehicle-title: {fontFamily: "SF Pro Text", fontSize: 17, fontWeight: 600, lineHeight: 22}
-  body: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 400, lineHeight: 20}
-  label: {fontFamily: "SF Pro Text", fontSize: 13, fontWeight: 500, lineHeight: 17}
-  metadata: {fontFamily: "SF Pro Text", fontSize: 11, fontWeight: 400, lineHeight: 15}
-  button: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 600, lineHeight: 19}
+  hero: {fontFamily: "SF Pro Display", fontSize: 40, fontWeight: 800, lineHeight: 44}
+  title: {fontFamily: "SF Pro Display", fontSize: 28, fontWeight: 700, lineHeight: 34}
+  section: {fontFamily: "SF Pro Text", fontSize: 20, fontWeight: 700, lineHeight: 25}
+  body: {fontFamily: "SF Pro Text", fontSize: 17, fontWeight: 400, lineHeight: 22}
+  label: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 600, lineHeight: 20}
+  caption: {fontFamily: "SF Pro Text", fontSize: 13, fontWeight: 400, lineHeight: 18}
 spacing:
   screen-horizontal: 16
-  sheet-padding: 16
-  section-gap: 20
-  card-gap: 8
+  section-gap: 24
+  card-padding: 16
   control-gap: 12
 rounded:
-  compact: 10
   control: 14
   card: 18
   sheet: 24
-  circle: 999
+  pill: 999
 components:
-  scan-action: {height: 64, fill: "#7B3FF2", foreground: "#FFFFFF", radius: 32}
   primary-action: {height: 54, fill: "#7B3FF2", foreground: "#FFFFFF", radius: 14}
-  map-control: {height: 48, fill: "#FFFFFF", foreground: "#17171A", radius: 24}
-  vehicle-marker: {minHeight: 32, fill: "#44414B", foreground: "#FFFFFF", radius: 16}
-  task-sheet: {minHeight: 180, fill: "#FFFFFF", foreground: "#17171A", radius: 24}
-  option-tile: {minHeight: 88, fill: "#F6F3F8", foreground: "#17171A", radius: 16}
+  secondary-action: {height: 54, fill: "#F6F3F8", foreground: "#17171A", radius: 14}
+  primary-card: {fill: "#FFFFFF", foreground: "#17171A", radius: 18}
+  navigation: {mapControls: "white circular controls over map", sheetHandle: "small gray centered capsule"}
 ---
 
 # Overview
 
-MTS Urent keeps a live 2GIS map visible through most discovery and ride states. Dark vehicle markers, dashed parking boundaries, a central violet scan action, and small white map controls form the persistent shell. Information rises from the bottom only when a decision is needed: vehicle selection, tariff, payment, active ride, help, parking proof, or feedback. Full white pages are reserved for focused account and form tasks; saturated gradients are limited to subscription and campaign moments.
+MTS Urent is visually led by an edge-to-edge pale 2GIS map rather than by a static dashboard. The recognizable layer is a set of small white floating controls, dense charcoal scooter and bike markers, dashed parking boundaries, a saturated violet scan control near the bottom center, and white bottom sheets with large top corners. Full white pages appear for focused account, payment, phone, wallet, and verification screens; black is reserved for camera scanning; violet gradient campaign screens are visually separate from the normal rental surfaces.
 
 # Non-negotiable visual invariants
 
-- The map is the primary canvas for discovery and active rides; it is not reduced to a thumbnail above a dashboard.
-- Available vehicles use compact charcoal map pins with a small vehicle pictogram and a mint availability or battery accent.
-- The scan action remains the strongest persistent map control and sits near the bottom center in violet.
-- Vehicle, tariff, ride, and support information rises in white sheets while enough map remains visible to preserve location context.
-- Primary rental actions use violet; success and battery readiness use mint, while blocking restrictions use explicit warning treatment.
-- Controls around the map are small white circles or compact pills with restrained separation rather than heavy card shadows.
-- Account and legal tasks move to calm white pages with grouped pale surfaces and compact black text.
+- The map remains the dominant visual field on discovery and active-rental screens, with app controls floating above it instead of sitting in a conventional header or tab shell.
+- Vehicle and parking data uses compact charcoal, violet, mint, and red map objects that remain visually distinct from the light gray 2GIS geography.
+- The QR scan action is the strongest persistent control: centered low in the viewport, violet, rounded, and larger than the surrounding white map controls.
+- Contextual information appears in white sheets with 24-point top corners and a small handle, leaving meaningful map context visible when the sheet is not full-screen.
+- Primary commitment actions use saturated violet; success and battery status use mint/green; restrictions and destructive ride-ending signals use red or dark charcoal with a red stop mark.
+- Operational pages are quiet white surfaces with pale grouped rows, compact black text, and minimal shadows, not decorative gradient pages.
+- Campaign and recap artwork may be large and glossy, but it stays in promotional surfaces and does not replace normal markers, icons, or empty states.
 
 # Color and surfaces
 
-The base map is pale gray with quiet streets, green parks, blue water, and legible route or boundary lines. App chrome must not repaint the geography. Vehicle pins are charcoal so dense clusters remain readable; a selected vehicle changes to violet and may gain a label. Parking counts use dark compact pills, prohibited or restricted areas use outlined red marks, and mint communicates battery or positive readiness.
+The largest normal color mass is the pale map canvas: cool light gray streets, soft green parks, blue water, and thin dashed or dotted boundaries. App surfaces stay white so map content remains legible. Bottom sheets, account panels, wallet blocks, form fields, menu tiles, and payment rows use white or very pale lavender-gray fills with subtle separation and restrained shadows.
 
-White sheets, floating circles, and account pages form the main app surface. Pale lavender-gray groups separate tariff choices, profile sections, and form rows. Violet runs from approximately `#7B3FF2` to lighter lavender in primary controls, selected tariffs, premium badges, and subscription fields. Use red-pink only for restrictions, destructive actions, or stop/end markers. Do not substitute default iOS blue for rental commitment.
-
-Depth is shallow: a soft edge or subtle shadow lifts controls from the map, while adjacent groups on white pages rely on spacing and pale fills. A dim scrim appears only when a sheet requires focus. Camera scanning is near-black because it exposes the live camera feed, not because the product has a dark theme.
+Violet is concentrated in the scan control, primary buttons, selected markers, premium badges, tariff cards, toggles, bonus currency, and active underline states. Lighter lavender appears as gradient support in promotional cards and subscription chips. Charcoal anchors dense vehicle markers and active ride ending controls. Mint green communicates battery and successful confirmation. Red-pink marks restrictions, stop/end details, notification dots, and warning symbols. Default iOS blue would visibly break the system except inside external payment or system-owned pages.
 
 # Typography
 
-Use SF Pro Display for 24/29 page titles and 30/34 campaign statements; use SF Pro Text elsewhere. Sheet titles use 20/25 bold, vehicle names and major ride status use 17/22 semibold, body text uses 15/20 regular, labels use 13/17 medium, and map or tariff metadata uses 11/15 regular.
+The operational UI uses SF Pro with compact, high-contrast hierarchy. Full page titles sit around 20-24 points with bold weight; bottom sheet headings are around 20 points; normal body and row labels sit around 15-17 points; helper, metadata, timer notes, legal copy, and map-adjacent labels sit around 11-13 points. Text is mostly sentence case and left-aligned on operational screens.
 
-Prices, elapsed time, distance, battery, vehicle number, and tariff terms align as compact numeric facts. Use tabular numerals for timers, costs, and distances. Campaign type may be uppercase and heavy, but operational screens remain sentence case. With Dynamic Type, allow sheets to grow and scroll, keep numeric summaries grouped with their labels, and never shrink map actions or tariff terms below legibility.
+Numbers are prominent where the user sees balance, bonus points, vehicle number, timer, cost, distance, battery, parking count, or tariff price. Use tabular numerals for timers, currency, and distances. Campaign stories are the exception: they use uppercase, extra-bold white display type over violet gradients, with very large numeric metrics occupying the lower half. With Dynamic Type, sheets and full pages should grow vertically and scroll; map controls and marker labels should not shrink below tappable or readable size.
 
 # Screen composition
 
-The default frame is edge-to-edge map. A premium badge occupies the upper left; zoom and layers form a vertical group on the right; menu and location sit near the lower corners; the scan action anchors the bottom center. Vehicle and parking markers occupy the map itself. Selecting an object raises a bottom sheet between roughly one quarter and one half of the viewport.
+The repeated map composition is full-bleed: system status bar over the map, a small premium or bonus pill near the upper left, zoom and layers stacked on the right, menu near the lower left, current-location near the lower right, and the violet scan control centered above the home indicator. Vehicle markers and parking zones are embedded in the geography; the app avoids placing a persistent title bar over the map.
 
-## Map discovery
-
-The map remains unobstructed through most of the viewport. Marker density changes with zoom, while parking areas and restrictions remain spatially attached. The scan action sits above the home indicator with menu and location controls balanced to either side.
-
-## Vehicle and station sheet
-
-A compact handle introduces the sheet. Vehicle or station identity, number, battery or availability, and local address appear first. Tariff options form a horizontal rail or compact row near the bottom. The primary action remains full width and close to the safe area without covering facts.
-
-## Scanner and rental setup
-
-The scanner uses a live camera field with a large four-corner target, a short instruction above, and close, light, and manual-entry controls near the bottom. After recognition, a vehicle summary and tariff rail rise over the camera or map. Tariff review expands into a white task sheet with one large violet plan block, costs, payment, insurance, promo code, and a bottom commitment action.
-
-## Active ride
-
-The map stays visible above a persistent ride sheet. Cost, time, and distance form a single summary row, followed by vehicle state and battery. Help and lock controls occupy paired tiles; pause and end actions sit at the bottom, with end visually distinct from the primary violet actions.
-
-## Completion and proof
-
-Parking proof becomes a full-screen camera with a large central shutter and a short instruction attached near the target. Review and feedback return to white sheets over the map, using direct totals, problem choices, and one completion action. Loading or vehicle checking may temporarily become a sparse full-screen white state.
-
-## Menu and account tasks
-
-The menu is a tall white sheet over the map. Identity and account-linking appear first, followed by a premium banner and a two-column matrix of wallet, discounts, help, rules test, history, and payment destinations. Profile, history, promo code, payment, and legal pages use full-screen white composition with pale grouped sections.
-
-## Campaign surfaces
-
-Subscription and age-verification offers may use a violet-to-sky gradient, one large scooter or benefit composition, and a white information panel anchored at the bottom. These are focused campaign exceptions, not the default styling for rental operations.
+Selected vehicles, zones, filters, tariff decisions, restrictions, and ride states rise as bottom sheets. These sheets use a centered gray handle, 16-point horizontal padding, rounded top corners, and enough height to contain the immediate object or decision without turning the map into a small thumbnail. Full-screen white pages use a compact back control, centered title, wide empty margins, and grouped rows with soft fills. Camera scanning switches to a black or live-camera full screen with a large white QR-corner target and bottom-aligned round controls. Promotional and yearly recap screens are full-bleed violet gradients with large centered 3D assets and white display text.
 
 # Navigation appearance
 
-There is no persistent tab bar. Map controls act as the primary visual navigation: menu, scanner, location, layers, zoom, markers, and selected-object sheets. Controls are circular or short pills with white fill; the scanner is the single large violet exception.
+There is no visible persistent tab bar. The map state relies on floating controls: circular white buttons, a vertical zoom group, compact pills, selected map pins, and sheet handles. Selected marker state turns violet and can extend into a short label; dense clusters stay charcoal. Navigation bars on white pages are minimal, usually a plain back arrow on the left and a centered title, with generous white space below.
 
-Full-screen account tasks use a compact back control and centered or left-aligned title. Sheets use a small drag handle and large top corners; focused scanner and campaign modes use Close. The adapted product should preserve this map-and-sheet hierarchy only when spatial context is real, and should not add a conventional tab bar to imitate a generic app shell.
+Sheets visually communicate level through height, dimming, and the drag handle rather than through a separate navigation chrome. Modal confirmations and system permissions keep the background dimmed and preserve the underlying pending screen. Close buttons in scanner, campaign, and story screens are simple circular or textless controls near safe-area edges.
 
 # Components
 
-## Vehicle marker
+Primary actions are 54-point rounded violet rectangles with white semibold text and a subtle vertical gradient or saturated fill. Secondary actions use pale fills with black text, while destructive or ride-ending actions use dark charcoal paired with a small red stop mark. Disabled controls are pale, low-contrast versions that keep the same footprint.
 
-A charcoal rounded pin contains a white scooter or bike symbol and a narrow mint status line. Selected state changes the body to violet and may extend into a short label with vehicle number. Cluster or parking counts use compact dark pills. Markers must remain distinct from native map labels at every supported zoom.
+Map controls are 44-48 point white circles or compact pills with simple dark symbols and soft elevation. The scan control is a larger violet circle or pill with a QR-corner glyph. Vehicle markers are dark rounded pins containing a white scooter or bike pictogram and a mint battery strip; selected markers become violet and may show the vehicle number. Parking count markers are dark compact pills; restricted areas use red outlined signs.
 
-## Scan action
-
-The map version is a violet circle around 64 points with a centered QR-corner symbol. In later captures it may widen into a violet pill with an explicit scan label, but it remains centered and dominant. Pressed state deepens the violet; disabled or loading state keeps the same position and announces status.
-
-## Map control
-
-Menu, current location, layers, light, and close controls use 44–48 point white circles with dark simple symbols. Zoom uses two stacked square-ended controls inside one white vertical group. Notifications may attach as a small red dot without changing the symbol.
-
-## Task sheet
-
-The white sheet has 24-point upper corners, 16-point side padding, a centered handle, and compact internal groups. It can collapse for a vehicle preview and expand for tariffs, support, or feedback. Avoid nested shadows; separate decisions with pale grouped surfaces and 8–12 point gaps.
-
-## Tariff choice and primary action
-
-Tariffs use a horizontal set of colored compact cards or one large violet plan header followed by aligned price facts. Selection needs a clear outline or fill plus text. The primary action is a 54-point violet rounded rectangle with white semibold text. Disabled state uses a pale neutral surface; progress preserves the control footprint.
-
-## Ride summary
-
-Cost, timer, and distance share one horizontal row with equal visual weight. Vehicle status below includes identity and battery. Pause is a light secondary action; End uses dark charcoal with a small red stop mark. Both retain explicit labels.
-
-## Form and feedback controls
-
-Phone, code, promo, and profile fields use pale fills, clear labels, and native keyboards. Option tiles, toggles, and problem chips expose selected state with violet outline, fill, or check. Success may use a centered violet check or a short mint banner; loading uses a local activity indicator and explanatory status.
+Bottom sheets use white fill, 24-point top corners, a small gray handle, compact title/body hierarchy, and 8-12 point gaps between grouped rows. Menu tiles form a two-column grid with pale cards, violet circular icons, and black labels. Wallet and history rows combine violet bonus icons, bold numeric balance, segmented chips, date headings, thin dividers, and right-aligned amounts. Toggle rows use violet active switches and pale inactive tracks.
 
 # Imagery and icons
 
-The 2GIS map is functional imagery and must remain readable beneath app controls. Vehicle photos and small scooter renders identify a selected asset; station photos provide factual location context. Use contain or restrained crop so vehicle type and station remain recognisable. Ride-ending camera imagery is user-captured proof, not decoration.
+The 2GIS map is functional imagery and must remain visually readable; app overlays should not tint it into a branded background. Vehicle thumbnails are small product cutouts used beside names and numbers in sheets. Camera screens display live camera imagery as task content, with white scan brackets and bottom controls above it.
 
-Campaigns may contain polished scooter renders, benefit objects, photography, or metallic recap badges, but the viewed campaigns do not establish one reusable illustration system across the operational product. Treat them as supplied campaign assets. Do not extrapolate their style into map markers, account icons, or routine empty states.
-
-Use coherent simple symbols for QR scan, menu, location, layers, zoom, help, lock, payment, history, and disclosure. Vehicle markers and branded service marks are custom assets; do not replace them with arbitrary SF Symbols.
+Promotional visuals include realistic scooter renders on violet backgrounds, Mos ID and payment-service graphics, premium banners, and yearly recap stories with chrome-and-purple 3D medals or a furry purple mascot. These are campaign assets, not a consistent icon system for ordinary UI. Routine icons are simple filled or line symbols inside violet or white circles, but branded marks and vehicle markers need custom artwork rather than arbitrary SF Symbols.
 
 # States
 
-Observed states include empty and dense map areas, normal and selected vehicles, parking and restricted zones, layer toggles, scanner before and after camera acquisition, recognized vehicle, tariff options, promo entry, payment handoff, applied discount, vehicle checking, active ride, support overlay, pause or lock actions, parking-photo capture, ride feedback, cost breakdown, phone verification, notification permission, account linking, profile update success, and subscription selection.
+Observed visual states include loading map overlays, sparse and dense map marker states, selected vehicle labels, speed-control zone notices, map layer toggles, phone and SMS verification, native notification permission prompt, account-link confirmation sheet, empty and populated wallet, payment method selection, payment success, black scanner before camera content, live scanner with recognized vehicle sheet, active ride summary sheet, expanded ride controls, completion confirmation banner, profile menu sheet, and full-screen recap stories.
 
-Map state remains visible through selection and active ride. Loading preserves the current task and names what is being checked. Success uses a check, status text, or short confirmation banner. Restriction warnings identify the blocking requirement and route to resolution. Camera and permission states use native system behavior while returning to the pending rental task.
+Across these states the system keeps the same visual anchors: white surfaces for information, violet for the next committed action, charcoal for markers and heavy controls, mint for positive readiness, and red for restrictions or stopping. Loading overlays are local and compact. Empty states are sparse, centered, pale, and icon-light rather than illustrated scenes.
 
 # iOS adaptation
 
-Use a native map integration for geography, camera APIs for scanning and parking proof, and custom app overlays for markers, controls, and sheets. Respect the top safe area without moving map content into an artificial header. Let the map extend under controls and the home indicator; sheets and primary actions must respect bottom safe-area insets. Use detents only when each height preserves required facts and the map context.
+On current iPhones, let the map extend under the status bar and around the home indicator while keeping controls and sheets inside safe areas. Maintain 16-point horizontal sheet padding, 44-point minimum hit targets, and enough bottom inset for the violet scan or primary action to clear the home indicator. Compact widths should keep the map-control constellation intact; if text grows, expand or scroll sheets rather than shrinking markers, scan controls, or action buttons.
 
-Keep every map control, chip, marker action, tariff, and sheet action at least 44 points tappable. VoiceOver should expose map controls first, then nearby or selected vehicles in a predictable list, followed by the active sheet; announce vehicle type, number, battery, distance, tariff, ride state, and restrictions without relying on color. At large Dynamic Type, allow task sheets to expand or scroll, stack the ride summary if necessary, and preserve the scan and end actions. Keyboard presentation must not hide promo, phone, or verification completion.
+Use native map and camera primitives for the underlying image fields, then style the overlays to match the observed controls. Native system permission and keyboard presentations are acceptable, but the surrounding app screen must keep the same typography, colors, and spacing. Dark appearance is not a global theme in the observed screens; only scanner/camera and dimmed modal backdrops are dark. VoiceOver order should follow the visible stack: map controls, selected or nearby vehicles, then the active sheet content.
 
 # Anti-generic checklist
 
-- Do not replace the live map with a white dashboard of nearby-vehicle cards.
-- Do not add a conventional bottom tab bar to the observed map-and-sheet hierarchy.
-- Do not color every sheet violet; operational facts live on white and violet stays concentrated in selection and commitment.
-- Do not use generic map pins for scooters, bikes, stations, parking counts, and restrictions.
-- Do not cover the map with a full-height sheet before the task requires focused detail.
-- Do not reuse one-off subscription or recap artwork as the product-wide illustration language.
+- Do not replace the map-first composition with a generic white dashboard, card list, or tab bar.
+- Do not use default iOS blue tint for primary actions, toggles, selected states, or links inside app-owned UI.
+- Do not use standard map pins for scooters, bikes, parking, restrictions, and selected vehicles.
+- Do not turn every promotional gradient or story asset into a product-wide illustration language.
+- Do not build sheets as default `Form` sections with square grouped cells.
+- Do not cover the map with a full-height panel when a partial sheet preserves the observed spatial composition.
+- Do not substitute arbitrary SF Symbols for custom vehicle markers, QR scan glyphs, branded service marks, or bonus currency.
 </design-context>

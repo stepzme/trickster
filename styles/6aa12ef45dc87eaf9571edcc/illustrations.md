@@ -1,23 +1,25 @@
 # Overview
 
-Pool combines tactile 3D symbols with a recurring yellow duck mascot. The illustration language makes a utilitarian screenshot library feel playful without competing with the user's own images.
+Pool has an independently confirmed authored illustration system. It combines a recurring yellow duck mascot, a blue watercolor-like entry/onboarding background, tactile rendered objects, product mockups, and the pink inflated screenshot count.
+
+Production contract: generate new artwork with an image-generation model, obtain explicit visual approval from the user, then integrate approved raster assets. Do not replace authored artwork with SwiftUI shapes, SF Symbols, emoji, icon-only placeholders, or any programmatic substitutes.
 
 # Visual Style
 
-Use small, softly lit 3D objects with rounded silhouettes, glossy or clay-like materials, and gentle shadows. The duck is simple and expressive; supporting symbols such as a globe, flame, and inflated number can be more literal but share the same toy-like finish.
+The language is tactile and soft. The duck is a small rounded yellow character with simple facial expression and warm orange shading. Secondary objects are toy-like or softly rendered: inflated pink numbers, a painted globe, a flame, and phone mockups. The blue background is painterly and watery, with blurred strokes and no hard geometric pattern.
 
 # Composition
 
-Keep one object centered above a question or parked at a screen edge. On blue onboarding screens, let the object float in open space; on white library screens, use it as a small navigation landmark rather than a hero.
+The duck usually floats near the top edge or sits as a small navigation landmark on white library screens. Onboarding uses open blue space above a large rounded white sheet; one object sits above the question as the focal marker. Product mockups are centered inside the sheet and cropped like a preview, while the user's screenshots dominate working library screens.
 
 # Color and Materials
 
-Anchor the mascot in warm yellow-orange. Use saturated pink, cyan, and blue for secondary objects, with white highlights and restrained soft shadow. Do not recolor the user's screenshot content.
+Use warm yellow-orange for the duck, saturated pink for the count object, bright cyan-blue for background and controls, and white highlights for soft dimensionality. Materials should feel matte-plush, inflatable, or lightly glossy, with subtle shadows. Do not recolor the user's screenshot thumbnails.
 
 # Variants and States
 
-Use the duck for entry, profile, and moments of encouragement; use one-off 3D symbols to clarify onboarding questions or milestones. If new illustrations are required, extend this tactile object family rather than substituting flat vectors or generic photography.
+Observed variants include entry/login, onboarding explanations, personalization questions, permission prompt background, home/library landmarks, pools count object, and settings/profile branding. Use new illustrations only for these authored brand roles; screenshot grids and detail views should remain content-led.
 
 # Avoid
 
-Do not introduce an unrelated illustration style or substitute decorative symbols for source-supported imagery.
+Do not use flat vector icons, SF Symbols, emoji, SwiftUI circles/blobs, generic rubber-duck clip art, stock photos, hard outlined cartoons, or dense decorative scenes that compete with screenshots. New assets must follow the production contract: image-generation model -> explicit visual approval from the user -> approved raster asset integration.

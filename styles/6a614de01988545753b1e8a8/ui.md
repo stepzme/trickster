@@ -3,222 +3,146 @@
 version: 1
 platform: iOS
 name: Arc-Search-design-analysis
-description: "A soft spatial browser interface built from luminous lavender-pink backgrounds, frosted white page cards, cobalt AI headings, and a thumb-centered bottom dock. Search, tabs, and page tools appear as layered sheets while live web content remains recognizable behind them."
+description: "A rounded iOS browser style that alternates between vivid blue-purple-pink gradient onboarding, pale frosted browser canvases, cobalt AI emphasis, translucent bottom sheets, compact floating docks, and recognizable web-page screenshots."
 colors:
-  primary: "#3438F2"
-  on-primary: "#FFFFFF"
-  primary-soft: "#E8E8FF"
-  accent-purple: "#8A45E6"
-  accent-pink: "#F2D9EE"
-  ink: "#17171B"
-  ink-muted: "#74747B"
-  ink-subtle: "#AAABB2"
-  canvas: "#F0EFF8"
-  surface-1: "#FFFFFF"
-  surface-2: "#E6E6EA"
-  hairline: "#DADAE0"
-  semantic-success: "#31C46D"
-  semantic-danger: "#F04457"
-  semantic-overlay: "#000000"
+  canvas: "#F4F3FA"
+  canvas-gradient-blue: "#2038FF"
+  canvas-gradient-purple: "#4B05C9"
+  canvas-gradient-pink: "#FF4B85"
+  surface-primary: "#FFFFFF"
+  surface-secondary: "#E9E9EE"
+  surface-translucent: "#F4F4F7"
+  accent-primary: "#2F35FF"
+  accent-purple: "#5D20D6"
+  accent-lavender: "#EEE9FF"
+  text-primary: "#17171B"
+  text-secondary: "#6F7078"
+  text-on-color: "#FFFFFF"
+  divider: "#D8D8DE"
+  destructive: "#FF3B55"
 typography:
-  display-xl: { fontFamily: System Sans, fontSize: 40, fontWeight: 750, lineHeight: 1.00, letterSpacing: -1.0 }
-  display-lg: { fontFamily: System Sans, fontSize: 32, fontWeight: 700, lineHeight: 1.05, letterSpacing: -0.6 }
-  display-md: { fontFamily: System Sans, fontSize: 26, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.3 }
-  headline: { fontFamily: System Sans, fontSize: 22, fontWeight: 700, lineHeight: 1.18, letterSpacing: -0.2 }
-  card-title: { fontFamily: System Sans, fontSize: 15, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: System Sans, fontSize: 17, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
-  body-lg: { fontFamily: System Sans, fontSize: 16, fontWeight: 400, lineHeight: 1.50, letterSpacing: 0 }
-  body: { fontFamily: System Sans, fontSize: 14, fontWeight: 400, lineHeight: 1.45, letterSpacing: 0 }
-  body-sm: { fontFamily: System Sans, fontSize: 12, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
-  caption: { fontFamily: System Sans, fontSize: 10, fontWeight: 400, lineHeight: 1.25, letterSpacing: 0 }
-  button: { fontFamily: System Sans, fontSize: 15, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0 }
-  eyebrow: { fontFamily: System Sans, fontSize: 11, fontWeight: 650, lineHeight: 1.20, letterSpacing: 0.3 }
-  mono: { fontFamily: System Mono, fontSize: 12, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
-rounded: { xs: 8, sm: 12, md: 16, lg: 22, xl: 30, xxl: 38, pill: 9999, full: 9999 }
-spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
+  hero: {fontFamily: "SF Pro Display", fontSize: 32, fontWeight: 800, lineHeight: 36}
+  title: {fontFamily: "SF Pro Display", fontSize: 25, fontWeight: 800, lineHeight: 29}
+  section: {fontFamily: "SF Pro Text", fontSize: 20, fontWeight: 700, lineHeight: 24}
+  body: {fontFamily: "SF Pro Text", fontSize: 16, fontWeight: 400, lineHeight: 22}
+  label: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 600, lineHeight: 20}
+  caption: {fontFamily: "SF Pro Text", fontSize: 12, fontWeight: 400, lineHeight: 16}
+  small: {fontFamily: "SF Pro Text", fontSize: 10, fontWeight: 400, lineHeight: 13}
+spacing:
+  screen-horizontal: 16
+  section-gap: 28
+  card-padding: 16
+  control-gap: 12
+rounded:
+  control: 14
+  card: 20
+  sheet: 28
+  pill: 999
 components:
-  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [14, 20]}
-  search-sheet: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xl}", padding: 16 }
-  tab-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 10 }
-  source-chip: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.caption}", rounded: "{rounded.sm}", padding: 8 }
-  page-menu: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.xl}", padding: 12 }
+  primary-action: {backgroundColor: "{colors.accent-primary}", textColor: "{colors.text-on-color}", typography: "{typography.label}", rounded: "{rounded.control}", padding: [14, 20]}
+  floating-dock: {backgroundColor: "{colors.surface-translucent}", textColor: "{colors.text-primary}", typography: "{typography.label}", rounded: "{rounded.pill}", padding: [8, 14]}
+  browser-sheet: {backgroundColor: "{colors.surface-translucent}", textColor: "{colors.text-primary}", typography: "{typography.body}", rounded: "{rounded.sheet}", padding: 12}
+  settings-group: {backgroundColor: "{colors.surface-secondary}", textColor: "{colors.text-primary}", typography: "{typography.body}", rounded: "{rounded.control}", padding: 12}
+  source-chip: {backgroundColor: "{colors.accent-lavender}", textColor: "{colors.accent-purple}", typography: "{typography.label}", rounded: "{rounded.pill}", padding: [8, 12]}
 ---
 
 # Overview
 
-Arc Search treats browser pages as physical cards floating in a soft luminous field. Cobalt emphasizes generated answers, while source chips and web previews maintain traceability.
+Arc Search's visible iOS style is split between high-saturation onboarding and a quiet browser surface. Onboarding fills the screen with blurred blue, purple, and pink gradients, oversized white or cobalt headlines, large logo/app-icon objects, and a full-width cobalt action near the bottom safe area. Browser screens are mostly pale gray-white, with live web pages or AI-generated text occupying the full viewport and a compact floating dock pinned above the home indicator.
 
-**Key Characteristics:**
-- Lavender-pink atmospheric canvas.
-- Frosted white cards and bottom sheets.
-- Cobalt AI headings and primary actions.
-- Central plus/search action.
-- Layered spatial tab overview.
-- Source-backed Browse for Me summaries.
+The app's most recognizable visual move is layering: web pages dim behind frosted sheets, search fields sit inside rounded panels, tab previews appear as offset cards on a lavender field, and AI generation briefly returns to the gradient environment with tiny page snapshots in the center.
 
 # Non-negotiable visual invariants
 
-- The reviewed screens show this treatment: Lavender-pink atmospheric canvas.
-- The reviewed screens show this treatment: Frosted white cards and bottom sheets.
-- The reviewed screens show this treatment: Cobalt AI headings and primary actions.
-- The reviewed screens show this treatment: Central plus/search action.
-- The reviewed screens show this treatment: Layered spatial tab overview.
-- The reviewed screens show this treatment: Source-backed Browse for Me summaries.
+- Onboarding and promotional setup screens use a full-screen soft gradient field, with blue and purple on one side and pink glow on the other.
+- Primary actions are cobalt rounded rectangles spanning most of the screen width near the bottom safe area, with centered white semibold text.
+- Browser views keep a pale gray-white canvas, visible web content, and a floating bottom dock with a centered gray plus pill.
+- AI answer screens use saturated purple headings and lavender chips while keeping source cards, web skeletons, or page text visible in the same scroll.
+- Page tools appear as frosted bottom sheets over a dimmed web page, with a pill URL row above square icon tiles and gray list rows.
+- Settings use grouped rounded gray rows on a white sheet, colorful square icons at the row leading edge, and iOS-green toggles when enabled.
+- Tab overview uses overlapping rounded page snapshots on a faint lavender-pink background, not a plain list of titles.
 
 # Color and surfaces
 
-### Brand & Accent
-- **Cobalt** ({colors.primary}): AI headings, primary action, and selected emphasis.
-- **Purple** ({colors.accent-purple}): Assistant and brand support.
-- **Pink** ({colors.accent-pink}): Atmospheric gradient support.
+The most saturated color mass is the onboarding and generated-progress gradient: electric blue, deep violet, magenta, and warm pink blur into each other without hard edges. White text and cobalt buttons sit directly on this color field.
 
-### Surface
-- **Canvas** ({colors.canvas}): Browser spatial background.
-- **Surface 1** ({colors.surface-1}): Page cards, search, menus, and settings.
-- **Surface 2** ({colors.surface-2}): Disabled or nested controls.
-- **Hairline** ({colors.hairline}): Card and settings separation.
+The browser canvas is much quieter. It is an off-white or pale lavender-gray viewport, often occupied by a real page screenshot. Bottom controls use translucent, milky surfaces that let the page tint show through. Disabled or secondary rows are soft gray rather than bordered white cards.
 
-### Text
-- **Ink** ({colors.ink}): Browser content, settings, and actions.
-- **Ink Muted** ({colors.ink-muted}): Source metadata and secondary copy.
-- **Ink Subtle** ({colors.ink-subtle}): Skeleton and disabled content.
+Cobalt is the primary app accent: it appears in big onboarding CTAs, generated headings, sync/sign-in buttons, selected chips, and rating prompts. Lavender is used for AI category chips and blurred loading bands. Destructive moments are red/pink only when the underlying iOS alert or clearing action needs emphasis.
 
-### Semantic
-- **Success** ({colors.semantic-success}): Enabled settings and completion.
-- **Danger** ({colors.semantic-danger}): Data clearing and destructive state.
-- **Overlay** ({colors.semantic-overlay}): Page dimming behind sheets.
+Default iOS blue would visibly break the reference when used for the main brand accent; default grouped-table white would break settings and page tools by removing the soft gray row mass and translucent layering.
 
 # Typography
 
-### Font Family
+The type is system-based, heavy, and rounded-feeling through weight and scale rather than through a custom font. Onboarding headlines are large, white or cobalt, centered, and tightly stacked, with selected words sometimes italicized for emphasis. Browser AI headings are bold purple and can wrap into two lines while staying smaller than the onboarding hero scale.
 
-- **System Sans** — browser, AI summary, menus, onboarding, and settings.
-- **System Mono** — URLs or technical values when needed.
+Body text in AI answers is compact and readable, often black with emoji-like leading markers. Source labels and domains are much smaller and muted. Settings rows use regular iOS list scale with semibold titles, small gray secondary values, and blue Done/Edit actions in the navigation area.
 
-### Hierarchy
-
-| Token | Size | Weight | Use |
-|---|---|---|---|
-| `{typography.display-xl}` | 40pt | 750 | Onboarding statement |
-| `{typography.display-md}` | 26pt | 700 | Generated result heading |
-| `{typography.headline}` | 22pt | 700 | Settings or page heading |
-| `{typography.card-title}` | 15pt | 600 | Source or tab title |
-| `{typography.body}` | 14pt | 400 | Summary and page tools |
-| `{typography.caption}` | 10pt | 400 | Sources and settings metadata |
-| `{typography.button}` | 15pt | 600 | Primary actions |
-
-### Principles
-
-- Make generated headings clear but not larger than page identity.
-- Keep long summaries readable with generous line height.
-- Use source names and domains at compact sizes.
-- Preserve native page typography inside web content.
-
-### Note on Font Substitutes
-
-Use **SF Pro**, **Inter**, or **Helvetica Neue**.
+Dynamic Type should preserve the contrast between hero/title, section heading, row label, and source caption. Long browser or generated text can wrap vertically; headline weight and cobalt/purple color are more important than fitting every line into a fixed height.
 
 # Screen composition
 
-### Spacing System
+Onboarding screens place status bar content over the gradient, then reserve the upper or middle area for the Arc mark, icon grid, or a product screenshot. The main headline sits around the vertical middle or lower-middle, and the primary button aligns close to the bottom with wide horizontal margins.
 
-Use a 4pt base. Page gutters are 12pt, generated sections 16pt apart, and bottom sheets use 16pt padding.
+Browser result screens are full-bleed page views: the top search field or webpage header stays near the status area, content scrolls underneath, and the bottom dock floats above a subtle translucent band. AI results use a one-column reading flow with source chips, purple headings, compact paragraphs, and occasional lavender segmented chips.
 
-### Grid & Container
+Bottom sheets occupy the lower half to lower two-thirds of the screen. They have large top corner radii, a bright pill URL/search field at the top, icon tiles in the middle, and full-width gray list rows below. The web page behind remains readable but dimmed.
 
-Browser content is one column. Browse for Me adds horizontal source chips and full-width generated sections. Tab overview layers narrow page cards with spatial offsets.
-
-### Whitespace Philosophy
-
-Keep generous space around generated sections and dock controls. Let live web pages retain their own density inside the card.
+Settings screens are presented as a white rounded sheet under a black safe-area cap. Content is grouped in inset gray rounded rectangles with generous vertical gaps between groups. Promotional rows, such as the friend invite gradient, are full-width within the settings inset and reuse the blue-purple-pink palette.
 
 # Navigation appearance
 
-The bottom dock exposes tab overview, central new search, and page/menu control. Browser navigation moves into the page sheet.
+The persistent browser navigation is a compact bottom dock rather than a standard tab bar. Its center is a gray pill with a black plus; side controls are small translucent circular or pill buttons. The active search/assistant pill can show a purple Arc icon next to a Google mark inside a white rounded capsule.
+
+Top navigation is minimal and contextual: browser pages mostly show webpage chrome or a search field, while settings sheets use a centered title with blue Done/Edit text actions. Modal prompts use native alert geometry over the app's blurred or dimmed background.
+
+Selected states are visible through filled cobalt buttons, lavender selected chips, blue/purple marks, green switches, or a tiny blue selection dot under an app icon. Unavailable states are pale gray and lower contrast, as seen in page menu rows.
 
 # Components
 
-### Buttons
+Primary buttons are cobalt, nearly full-width, medium height, and softly rounded. Secondary actions can be plain centered text beneath the primary button, often cobalt on white or gradient backgrounds.
 
-Primary onboarding actions use cobalt. Browser dock actions use neutral translucent circles. Destructive settings remain text-led and explicit.
+Search fields are white or very pale rounded pills with a leading magnifier and optional mic/camera controls. In sheet states they can sit inside a larger frosted panel; with the keyboard visible they align tightly above the keyboard and keep their rounded capsule shape.
 
-### Cards & Containers
+AI source chips are compact lavender pills with purple text. Source cards are small white rectangles with favicon, title, and domain, arranged horizontally above generated headings. Rating prompts appear as cobalt rounded bars with thumb icons in separate rounded segments.
 
-Tab cards show recognizable page previews. Source chips combine favicon, title, and domain. Generated summaries use emoji-led text sections without heavy containers.
+Page menu controls use a frosted sheet with a URL capsule, four square gray icon tiles, and stacked gray list rows. Tile icons are thin black line symbols, with labels at a very small caption size below each tile.
 
-### Inputs & Forms
-
-Search opens as a rounded bottom sheet with voice and mode controls. URL editing remains inside the page menu field.
-
-### Status & Build Page
-
-Skeleton layouts show source scanning and page structure before generation. Scanned-page count and source list remain visible after completion.
-
-### Navigation
-
-The bottom dock exposes tab overview, central new search, and page/menu control. Browser navigation moves into the page sheet.
+Settings rows are grouped gray rounded bands. Each row has a colorful square icon, black title, optional gray value, and a light chevron or toggle. Toggle-on states use native green, not the app's cobalt.
 
 # Imagery and icons
 
-| Level | Treatment | Use |
-|---|---|---|
-| 0 | Luminous canvas | Browser environment |
-| 1 | White page card | Active tab |
-| 2 | Layered card stack | Tab overview |
-| 3 | Frosted bottom sheet | Search and page menu |
+The main imagery is interface-native: Arc logos, app icon variants, widget previews, web-page screenshots, source favicons, and live webpage media. These objects are treated as product surfaces, often enlarged and floated over gradient or pale fields.
 
-### Decorative Depth
+The Arc mark has a white outline and overlapping blue-to-pink ribbon shapes. App icon selection screens show this mark inside multiple rounded-square icon treatments. Widget and sync screens use small centered product renderings or logos with large surrounding whitespace.
 
-Use subtle blur, colored glow, and offset card stacks. Avoid heavy material shadows or decorative imagery.
+No stable standalone illustration language appears in the reviewed still screens. The visible image language is made from product marks, UI miniatures, screenshots, favicons, and webpage content rather than reusable characters or authored narrative illustrations.
 
 # States
 
-Skeleton layouts show source scanning and page structure before generation. Scanned-page count and source list remain visible after completion.
+Loading and generation states use blurred skeleton blocks, fading source names, or a centered page snapshot on a gradient background. The bottom dock usually remains visible unless a modal or keyboard takes over the lower screen.
+
+Empty/new-tab states simplify to a pale gradient field with a large translucent Arc mark centered above the dock. Settings and history states remain list-like, with the same rounded gray grouping even when the list is short.
+
+Modal states use iOS alert or sheet geometry while retaining Arc's backdrop treatment: the page behind is dimmed and blurred, and the active surface stays rounded and bright. Permission/confirmation prompts use centered white alert cards with blue action text.
 
 # iOS adaptation
 
-| Wide | 768pt+ | Center page card and widen summary |
-| Small | <390pt | Stack source chips and reduce tab offsets |
+Preserve top and bottom safe areas as visible composition zones: the status bar sits directly over gradients or pale page backgrounds, and bottom controls float above the home indicator with a translucent base. Use vertical scrolling for AI answers, web pages, settings groups, and histories instead of compressing text or rows.
 
-### Touch Targets
+Maintain 44-point minimum targets for dock buttons, icon tiles, settings rows, search fields, and primary actions. When the keyboard appears, keep the search or find field pinned above it and allow the background page to remain visible in the upper area.
 
-Maintain 44pt for dock actions, menu tiles, settings rows, tab cards, and search controls.
+For compact widths, keep the one-column browser and settings layouts. Source chips may wrap or horizontally scroll, tab previews may reduce their offset, and onboarding headlines may wrap, but the large gradient field, cobalt CTA, and floating dock proportions should remain recognizable.
 
-### Collapsing Strategy
-
-Keep one-column browsing. Reduce tab stack offsets before shrinking previews; wrap source chips before truncating source identity.
-
-### Image Behavior
-
-Respect live-page media. Browser mockups and previews use contain; tab snapshots crop only at the viewport edge.
-
-On iPhone, respect top and bottom safe areas, use scrolling for content that does not fit, keep interactive targets at least 44 points, and preserve the visual reading order for VoiceOver. At larger Dynamic Type sizes, allow supporting text to wrap without collapsing the dominant hierarchy. Use native sheets and permission transitions while explicitly styling app-owned surfaces to match the reference.
+Support light appearance as the observed base. If a dark system context surrounds a sheet, keep Arc-owned cards, rows, and controls in the same pale frosted language visible in the reference rather than converting them into a generic dark grouped form.
 
 # Anti-generic checklist
 
-- Do not substitute the documented accent hierarchy with default iOS blue.
-- Do not collapse distinct surfaces into a uniform stack of generic white cards.
-- Do not use an unstyled `TabView`, `Form`, or arbitrary SF Symbols when they contradict the documented navigation and component language.
-- Do not flatten the documented typography into one body-text scale.
-- Do not remove compositionally important photography or illustration while assets are pending.
-- Do not apply one corner radius to every control and surface.
-
-Source-specific guardrails retained from the review:
-
-### Do
-
-- Keep search thumb-reachable.
-- Show sources for generated summaries.
-- Preserve page context behind sheets.
-- Use spatial tabs for recognition.
-- Group settings by browser scope.
-
-### Don't
-
-- Don't present AI output without source access.
-- Don't cover the whole page for simple tools.
-- Don't flatten tabs into indistinguishable rows.
-- Don't overuse gradient inside web content.
-- Don't hide native page access.
-
+- Do not replace the blue-purple-pink gradient onboarding screens with plain white onboarding cards.
+- Do not use default iOS blue for Arc's main CTA, generated headings, chips, or rating prompt.
+- Do not turn the floating bottom dock into a standard `TabView` bar with equal labels.
+- Do not present page tools as a generic `Form`; preserve the frosted sheet, URL capsule, icon tiles, and gray rows.
+- Do not flatten tab overview into a text list; keep overlapping rounded page snapshots on a pale tinted field.
+- Do not remove visible webpage screenshots, favicons, UI miniatures, or Arc marks and substitute decorative illustration.
+- Do not apply one radius to every surface; pills, icon tiles, sheets, grouped rows, and app icons have distinct rounding.
 </design-context>

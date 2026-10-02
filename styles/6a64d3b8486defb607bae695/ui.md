@@ -3,190 +3,116 @@
 version: 1
 platform: iOS
 name: WB-Bank-design-analysis
-description: "A dense ecosystem bank mixing Wildberries hot magenta, dark green wallet panels, pale lilac canvas, white service tiles, bold black financial typography, and glossy 3D product art. The home screen behaves like a modular marketplace dashboard, while transfers and applications simplify into bright linear forms with one charcoal confirmation action."
-
+description: "WB Bank is a high-density iOS finance surface with hot magenta ecosystem chrome, pale lavender dashboard canvas, dark green money panels, white rounded product tiles, large black numeric type, charcoal confirmation controls, and recurring glossy 3D banking objects."
 colors:
-  primary: "#E500C8"
-  on-primary: "#FFFFFF"
-  primary-pressed: "#BF00A9"
-  secondary: "#25302D"
-  secondary-pressed: "#151A19"
-  ink: "#171719"
-  ink-muted: "#6E6E75"
-  ink-subtle: "#A3A3AA"
   canvas: "#F2EFF8"
-  surface-1: "#FFFFFF"
-  surface-2: "#F7F7F9"
-  wallet-green: "#078552"
-  mint: "#DFF5EC"
-  lavender: "#F1DFFF"
-  hairline: "#E6E3EA"
-  semantic-success: "#159266"
-  semantic-warning: "#E7A73A"
-  semantic-danger: "#D94F59"
-  semantic-overlay: "#000000"
-
+  surface-primary: "#FFFFFF"
+  surface-secondary: "#F6F5F8"
+  accent-primary: "#E500C8"
+  accent-secondary: "#007A4D"
+  action-primary: "#292832"
+  text-primary: "#171719"
+  text-secondary: "#6E6E75"
+  text-tertiary: "#A3A3AA"
+  divider: "#E6E3EA"
+  success: "#159266"
+  warning: "#E7A73A"
+  destructive: "#D94F59"
+  overlay: "#000000"
 typography:
-  display-xl: { fontFamily: System Sans, fontSize: 40, fontWeight: 700, lineHeight: 1.04, letterSpacing: -0.8 }
-  display-lg: { fontFamily: System Sans, fontSize: 32, fontWeight: 700, lineHeight: 1.08, letterSpacing: -0.5 }
-  display-md: { fontFamily: System Sans, fontSize: 26, fontWeight: 700, lineHeight: 1.14, letterSpacing: -0.3 }
-  headline: { fontFamily: System Sans, fontSize: 20, fontWeight: 700, lineHeight: 1.2, letterSpacing: 0 }
-  card-title: { fontFamily: System Sans, fontSize: 15, fontWeight: 650, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: System Sans, fontSize: 17, fontWeight: 450, lineHeight: 1.35, letterSpacing: 0 }
-  body-lg: { fontFamily: System Sans, fontSize: 16, fontWeight: 400, lineHeight: 1.42, letterSpacing: 0 }
-  body: { fontFamily: System Sans, fontSize: 14, fontWeight: 400, lineHeight: 1.4, letterSpacing: 0 }
-  body-sm: { fontFamily: System Sans, fontSize: 12, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
-  caption: { fontFamily: System Sans, fontSize: 10, fontWeight: 450, lineHeight: 1.3, letterSpacing: 0 }
-  button: { fontFamily: System Sans, fontSize: 15, fontWeight: 600, lineHeight: 1.2, letterSpacing: 0 }
-  eyebrow: { fontFamily: System Sans, fontSize: 10, fontWeight: 700, lineHeight: 1.25, letterSpacing: 0.2 }
-  mono: { fontFamily: System Mono, fontSize: 12, fontWeight: 450, lineHeight: 1.35, letterSpacing: 0 }
-
-rounded: { xs: 5, sm: 9, md: 13, lg: 18, xl: 24, xxl: 30, pill: 9999, full: 9999 }
-spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
-
+  hero: {fontFamily: "SF Pro Display", fontSize: 40, fontWeight: 700, lineHeight: 44, letterSpacing: 0}
+  amount: {fontFamily: "SF Pro Display", fontSize: 34, fontWeight: 400, lineHeight: 40, letterSpacing: 0}
+  title: {fontFamily: "SF Pro Text", fontSize: 22, fontWeight: 700, lineHeight: 28, letterSpacing: 0}
+  section: {fontFamily: "SF Pro Text", fontSize: 17, fontWeight: 700, lineHeight: 22, letterSpacing: 0}
+  body: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 400, lineHeight: 20, letterSpacing: 0}
+  label: {fontFamily: "SF Pro Text", fontSize: 13, fontWeight: 600, lineHeight: 17, letterSpacing: 0}
+  caption: {fontFamily: "SF Pro Text", fontSize: 11, fontWeight: 400, lineHeight: 14, letterSpacing: 0}
+spacing:
+  screen-horizontal: 12
+  section-gap: 20
+  card-padding: 12
+  control-gap: 8
+rounded:
+  control: 12
+  card: 14
+  sheet: 18
+  pill: 999
 components:
-  button-primary: { backgroundColor: "{colors.secondary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.md}", padding: [14, 18]}
-  wallet-card: { backgroundColor: "{colors.wallet-green}", textColor: "{colors.on-primary}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 16 }
-  service-tile: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.md}", padding: 12 }
-  promo-banner: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 14 }
-  bottom-nav: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", height: 54 }
+  primary-action: {backgroundColor: "{colors.action-primary}", textColor: "{colors.surface-primary}", typography: "{typography.body}", rounded: "{rounded.control}", padding: [15, 18]}
+  dashboard-tile: {backgroundColor: "{colors.surface-primary}", textColor: "{colors.text-primary}", typography: "{typography.label}", rounded: "{rounded.card}", padding: 12}
+  wallet-panel: {backgroundColor: "{colors.accent-secondary}", textColor: "{colors.surface-primary}", typography: "{typography.amount}", rounded: "{rounded.card}", padding: 16}
+  bottom-navigation: {backgroundColor: "{colors.surface-primary}", selectedColor: "{colors.accent-primary}", textColor: "{colors.text-tertiary}", typography: "{typography.caption}"}
 ---
 
 # Overview
 
-WB Bank is a colorful but structured financial dashboard. Hot magenta establishes ecosystem identity, dark green anchors money, and white modular tiles organize a very broad product catalog.
+WB Bank appears as the bank section inside a Wildberries iOS shell. The first-launch surfaces are saturated magenta and purple, while the bank home shifts to a pale lavender canvas filled with compact white modules. Money balances use dark green panels or large black numerals, and most transactional screens become sparse white pages with a centered amount, pale form rows, a custom numeric keypad, and one charcoal rounded action button.
 
 # Non-negotiable visual invariants
 
-- The reviewed screens use this composition: A dense ecosystem bank mixing Wildberries hot magenta, dark green wallet panels, pale lilac canvas, white service tiles, bold black financial typography, and glossy 3D product art.
-- The dominant canvas token is #F2EFF8 and the primary accent token is #E500C8.
-- The recorded display style is 40 points while the body style is 14 points.
-- Navigation retains the five-item marketplace dock with Bank highlighted in a magenta capsule.
-- The reviewed screens use this hierarchy: The home screen behaves like a modular marketplace dashboard, while transfers and applications simplify into bright linear forms with one charcoal confirmation action.
+- A small magenta Wildberries capsule remains centered in the iOS status/navigation chrome on most observed screens.
+- The Bank tab is selected with a bright magenta pill in a five-item bottom bar; inactive tab icons are light gray.
+- The bank home uses a pale lavender canvas with a dense two-column grid of white rounded tiles below discount, tariff, transfer, and wallet modules.
+- Wallet and savings balances occupy prominent top panels: dark green for wallet value, green gradient for savings, and large black numerals on white task screens.
+- Product discovery tiles frequently include one glossy 3D banking object, usually clipped to a tile edge or hero panel.
+- Transfers, payments, applications, and settings screens reduce the dashboard density into white full-screen forms with thin dividers and charcoal bottom actions.
+- Magenta is reserved for ecosystem branding, selected navigation, discount progress, and small badges; it is not used as success, error, or the primary transaction button color.
 
 # Color and surfaces
 
-### Brand & Accent
+The dashboard background is a cool pale lavender field. White cards sit directly on it with soft separation, low contrast shadows, and rounded corners. The login and permission path uses a full-bleed magenta-to-violet gradient, including a magenta search area visible behind the iOS tracking permission sheet.
 
-Use hot magenta for brand, selected Bank navigation, discount progress, and promotional highlights. Dark charcoal owns decisive financial actions; green owns wallet value.
-
-### Surface
-
-Use pale lilac-gray canvas, white service tiles, green wallet cards, and soft pink or blue campaign panels.
-
-### Text
-
-Use near-black for amounts and titles, gray for terms and product detail, and white on green, magenta, or charcoal.
-
-### Semantic
-
-Use green for successful transfer and available value, red for debt or failure, amber for attention, and magenta only for brand or selection.
+Green is the observed money color: wallet cards are deep green with white text, savings headers use a vertical green gradient, and positive states use small green checks or status fills. Charcoal appears as the decisive action fill on transfer, card, loan, notification, and application screens. Text is near-black for amounts and section titles, medium gray for explanatory lines, and very pale gray for disabled or secondary iconography.
 
 # Typography
 
-### Font Family
+The visual hierarchy is numeric first. Amounts such as wallet balance, transfer value, available installments, and savings totals use large, open SF-style numerals with ample white space. Titles are compact, bold, and centered on task screens; dashboard tile labels are smaller and heavier than their descriptions. Supporting copy is regular-weight gray text, often two lines inside tiles or list rows.
 
-Use a modern system sans with tabular figures for balances, rates, and payment amounts.
-
-### Principles
-
-Keep discount, wallet balance, product rate, and next action visually distinct. Do not bold every service name equally.
-
-### Note on Font Substitutes
-
-Use SF Pro or Inter with 650–700 headings and tabular numeric figures.
+The bank home compresses many labels into small type without making every tile equally bold. Transaction screens instead isolate a single amount in the upper half and keep fee, account, recipient, and comment labels visibly subordinate.
 
 # Screen composition
 
-### Grid & Container
+The home composition is modular and dense: top chrome, a discount card paired with tariff/quick-action blocks, a wide green wallet panel, a horizontal promo banner, and a two-column grid of product tiles. The first screen often shows only the start of lower tiles, making vertical scrolling part of the visual rhythm.
 
-Home uses a discount/action grid, one wide wallet card, horizontal promotion rail, and two-column product tiles. Transaction screens reduce to one vertical form.
+Financial task screens use a top back control, centered page title, and large empty white zones. Transfer amount entry places the amount high, the source/recipient block below it, preset amounts and custom keypad in the lower half, and the charcoal action button above the home indicator. Settings and detail pages use stacked full-width rows with subtle dividers and small line icons.
 
-### Whitespace Philosophy
-
-Home is intentionally dense but each tile contains one idea. Amount entry and confirmation screens should regain broad open space.
+Bottom sheets appear as white panels with rounded top corners over a dimmed page. They keep left-aligned labels and end with the same full-width charcoal confirmation button.
 
 # Navigation appearance
 
-Retain the five-item marketplace dock with Bank highlighted in a magenta capsule. Keep bank-product settings local to their detail page.
+The persistent bottom bar is white and visually light. It uses five small glyphs, gray inactive labels/icons, magenta notification badges, and a bright magenta rounded capsule for the selected Bank tab. Page-level navigation is minimal: a thin back chevron at top left, centered title, and occasional compact right-side glyphs. Dashboard overflow and notification icons are black outline glyphs in the top right.
 
 # Components
 
-### Buttons
+Dashboard tiles are white rounded rectangles with one main label, one supporting value or sentence, and occasional small colored product marks. The larger wallet panel is a deep green rounded card with balance text at the left and compact top-up/card controls at the right. Promo banners are pale cyan, pink, or white strips with a single glossy object on one side.
 
-Primary transaction buttons are wide charcoal rounded rectangles. Promotional links may be magenta or green. Native controls must inherit this hierarchy and the WB radius system.
-
-Card formats, plans, product modes, and rate choices use compact tabs or segmented labels with magenta or dark selected state.
-
-### Cards & Containers
-
-Wallet cards lead with balance and top-up. Service tiles contain one product name, one value or benefit, and at most one small icon or 3D object.
-
-### Inputs & Forms
-
-Transfer forms show amount first, then source, recipient, fee, comment, and quick amounts. Use pale filled rows and a persistent charcoal next action.
-
-### Status & Build Page
-
-Use clear discount level, wallet tier, card state, transfer result, savings rate, statement progress, unread count, and cashback status.
-
-### Navigation
-
-Retain the five-item marketplace dock with Bank highlighted in a magenta capsule. Keep bank-product settings local to their detail page.
+Inputs and selectable rows are pale filled rounded rectangles with thin borders or dividers. Phone transfer selection shows bank logos in a vertical list; account and recipient rows inside amount entry are stacked in a single light container. Primary buttons are wide charcoal rectangles with medium corner radius and centered white text. Toggles use the iOS switch silhouette but sit inside custom white list rows.
 
 # Imagery and icons
 
-Use soft shadow and color separation for modular tiles. Forms and receipts stay mostly flat against white.
+Imagery is promotional rather than decorative background. The observed system repeats glossy 3D cards, wallets, coins, calculators, gift-like objects, and small product miniatures. They sit inside product tiles, green or pastel hero panels, and banners, usually occupying the right or lower portion while text remains readable.
 
-### Decorative Depth
-
-Use glossy 3D product objects, magenta-violet gradients, and occasional spectral glow inside promotions. Keep money-entry controls undecorated.
+Operational screens become flatter: transfer forms, settings, confirmation receipts, and permission sheets use icons, bank logos, small status marks, and plain typography instead of large art. The receipt screen keeps only a small app/bank icon above the amount, with a faint pink-lavender glow near the bottom edge.
 
 # States
 
-Use clear discount level, wallet tier, card state, transfer result, savings rate, statement progress, unread count, and cashback status.
+Observed states include iOS tracking permission over a magenta marketplace screen, contact permission over the bank list, SMS entry with six pale code boxes, empty installment history, virtual card processing, transfer confirmation sheet, transfer receipt, connected notifications, settings toggles, and a support-topic bottom sheet.
+
+The same visual constants hold across these states: white sheets over dimmed content, charcoal confirmation buttons, magenta brand capsule in the top chrome, pale filled rows, restrained gray secondary copy, and large centered numerals for money outcomes.
 
 # iOS adaptation
 
-Phones show the modular dashboard and one financial task at a time. Wider screens may pair product list with detail while keeping forms narrow.
+The reference is optimized for a narrow iPhone viewport with content under the status bar and a persistent bottom bar above the home indicator. Dashboard pages can scroll through dense cards, but amount entry, receipts, and application pages keep a single primary task centered vertically with the action fixed low in the visible screen.
 
-### Touch Targets
-
-Tiles, quick actions, product cards, navigation, amount presets, selectors, and confirmation controls require at least 44pt targets.
-
-### Collapsing Strategy
-
-Keep amount, source, recipient, rate or fee, and next action visible. Collapse documents, explanations, and secondary benefits into details.
-
-### Image Behavior
-
-Use `contain` for product renders, cards, icons, and partner marks. Use `cover` only for editorial campaign photography.
-
-On iPhone, respect top and bottom safe areas, use scrolling for content that does not fit, keep interactive targets at least 44 points, and preserve the visual reading order for VoiceOver. At larger Dynamic Type sizes, allow supporting text to wrap without collapsing the dominant hierarchy. Use native sheets and permission transitions while explicitly styling app-owned surfaces to match the reference.
+Compact-width adaptation should preserve the observed proportions: full-width financial forms, two-column dashboard tiles, wide green money panels, and bottom sheets that rise from the safe area. Larger text can wrap in supporting copy, while amounts, page titles, and action buttons should remain visually dominant and uncluttered.
 
 # Anti-generic checklist
 
-- Do not substitute the documented accent hierarchy with default iOS blue.
-- Do not collapse distinct surfaces into a uniform stack of generic white cards.
-- Do not use an unstyled `TabView`, `Form`, or arbitrary SF Symbols when they contradict the documented navigation and component language.
-- Do not flatten the documented typography into one body-text scale.
-- Do not remove compositionally important photography or illustration while assets are pending.
-- Do not apply one corner radius to every control and surface.
-
-Source-specific guardrails retained from the review:
-
-### Do
-
-- Anchor Home with discount and wallet value.
-- Separate discovery tiles from transaction forms.
-- Keep amount and fee hierarchy explicit.
-- Use one product object per promotion.
-
-### Don't
-
-- Do not use magenta as success or error.
-- Do not crowd a tile with multiple financial offers.
-- Do not carry 3D art into receipts.
-- Do not leave native blue controls in the interface.
+- Do not replace WB magenta selection and branding with default iOS blue.
+- Do not turn the home screen into a plain white `Form` or uniform card list.
+- Do not remove the green wallet/savings panels or flatten them into neutral white cards.
+- Do not use a stock unstyled `TabView`; the Bank tab must read as a magenta selected pill in a light marketplace bar.
+- Do not substitute generic SF Symbols for observed bank logos, colored product marks, or glossy product objects.
+- Do not carry large 3D art into transfer confirmations, settings rows, or receipts where the reference is mostly flat.
 
 </design-context>
