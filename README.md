@@ -1,63 +1,50 @@
 # Trickster
 
-Trickster is a project-local workflow for building native iOS apps with AI roles. Its priority is simple: approve the product, prove the design in a running app, then extend that exact build in reviewable blocks.
+Trickster is a project-local workflow for building native iOS apps with AI roles. It turns a product idea into an approved product definition, a running design, a complete implementation, and final publication materials.
 
-## Install
+[Русская версия](README.ru.md)
 
-Run from an existing Git or Xcode project:
+## Versions
+
+| Version | Edition | Status | Difference |
+|---|---|---|---|
+| `1.0.2` | Complex | Published on npm | The detailed workflow: five specialist roles and separate documents for scope, assets, app icon, store screenshots, implementation, verification, acceptance, and delivery. |
+| `1.1.0` | Lite | In development; not published yet | The streamlined workflow: four roles, six stages, fewer handoffs, and one Designer responsible for references, the running MVP, graphics, and publication materials. |
+
+Install the published Complex edition from an existing Git or Xcode project:
 
 ```sh
-npx @sgx22/trickster init
+npx @sgx22/trickster@1.0.2 init
 ```
 
-Trickster is not intended for global installation. Use `trickster doctor` to verify the local kit.
+After `1.1.0` is published, the Lite edition will be available with:
 
-## Six stages
+```sh
+npx @sgx22/trickster@1.1.0 init
+```
 
-| Stage | Owner | Result |
-|---|---|---|
-| Research | Product Researcher | Complete product description with all eleven iOS capabilities, explicitly approved by the user |
-| Planning | Product Researcher | Approved design MVP and ordered Full Scope blocks |
-| Design | Designer | Approved references followed by a running, user-approved Simulator MVP |
-| Dev | Implementation Owner | Full Scope implemented and approved one large block at a time |
-| Polish | Acceptance Reviewer | Independent review, concrete defect cycles, and an approved completed app |
-| Publish | Designer | Final app icon, store screenshots, publication exports, and controlled cleanup |
+Trickster does not support global installation. Run `trickster doctor` after initialization to check the local setup.
 
-The master coordinates these four specialist roles and is the only participant that communicates with the user. Planning and Design reference research may run in parallel after Research approval; app-code ownership remains sequential.
+## Lite workflow
 
-## Design sources
+`Research → Planning → Design → Dev → Polish → Publish`
 
-Trickster's repository contains a catalog built from real iOS products. Designer shortlists up to three apps and recommends:
+- **Research:** define the complete product and decide all eleven iOS capabilities.
+- **Planning:** split the approved product into a design MVP and ordered Full Scope blocks.
+- **Design:** approve references, build the MVP in Xcode, and approve the running app in Simulator.
+- **Dev:** extend that same build to Full Scope, one approved block at a time.
+- **Polish:** independently review the completed app and run focused correction cycles.
+- **Publish:** prepare the final app icon, store screenshots, and publication exports.
 
-- one `ui.md` source for appearance;
-- an optional `illustrations.md` source for imagery.
+The product behavior comes from approved Research and Planning. The visual direction comes from one approved `ui.md` and, when needed, one `illustrations.md` selected from the design catalog. A successful build alone is not design approval—the user approves the real running app.
 
-The approved files are copied unchanged into the project. Product navigation and interaction come from the approved Research and Planning artifacts plus shared workflow criteria, not from the reference app. Trickster does not synthesize a generalized project `ui.md`, composition report, or provenance narrative. The actual running MVP is the design evidence. A build that compiles but visually falls back to generic cards, default controls, or missing imagery is not ready for design approval.
-
-## Mandatory capabilities
-
-Every app keeps this exact order:
-
-1. Bluetooth
-2. Downloading Photos
-3. Adding Photos
-4. Using the Camera
-5. Face ID
-6. Microphone Access
-7. Speech Recognition Access
-8. Contacts Access
-9. Calendar Access
-10. Location Access
-11. CallKit
-
-The first ten invoke real Apple system access or authentication. Bluetooth peripherals/data, microphone processing, and speech output may be mocked. Saving an image, selecting a device photo, using a camera capture, Face ID, Contacts, Calendar, and Location follow real-result requirements. CallKit is the sole exception because it has no permission prompt; it must remain honest about the absence of a calling service.
-
-## Installed structure
+## Installed into the project
 
 ```text
 trickster/
 ├── AGENTS.md
 ├── HARNESS
+├── VERSION
 ├── adapters/
 ├── roles/
 ├── workflow/
@@ -66,14 +53,8 @@ trickster/
 └── artifacts/
 ```
 
-The npm package does not include the full style library. Designer reads the catalog and downloads documents only for the shortlist.
+The full design catalog is not included in the npm package. Only documents selected for the current project are downloaded. Re-initialization updates managed workflow files while preserving `design/` and `artifacts/`.
 
-## Requirements
-
-- macOS and Xcode;
-- a suitable iOS Simulator runtime;
-- physical iPhone access for final checks that Simulator cannot reproduce;
-- Node.js 20 or later;
-- an agent harness capable of loading the installed instructions and operating the project tools.
+Requirements: macOS, Xcode, Node.js 20+, a suitable iOS Simulator runtime, and an agent harness that can use the installed instructions. Some final checks require a physical iPhone.
 
 License: MIT.

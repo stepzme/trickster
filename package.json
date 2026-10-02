@@ -17,9 +17,7 @@
     "templates",
     "workflow",
     "README.md",
-    "README.ru.md",
-    "README.es.md",
-    "README.zh-CN.md"
+    "README.ru.md"
   ],
   "keywords": [
     "ios",

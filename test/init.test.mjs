@@ -172,6 +172,10 @@ test("npm package contains the simplified workflow and excludes repository-only 
 
   assert.equal(paths.some((path) => path.startsWith("styles/")), false);
   assert.equal(paths.some((path) => path.startsWith("site/")), false);
+  assert.equal(paths.includes("README.md"), true);
+  assert.equal(paths.includes("README.ru.md"), true);
+  assert.equal(paths.includes("README.es.md"), false);
+  assert.equal(paths.includes("README.zh-CN.md"), false);
   for (const path of [
     "roles/designer.md",
     "roles/product-researcher.md",
