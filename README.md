@@ -12,7 +12,7 @@ npx @sgx22/trickster init
 
 Trickster is not intended for global installation. Use `trickster doctor` to verify the local kit.
 
-## Five stages
+## Six stages
 
 | Stage | Owner | Result |
 |---|---|---|
@@ -20,7 +20,8 @@ Trickster is not intended for global installation. Use `trickster doctor` to ver
 | Planning | Product Researcher | Approved design MVP and ordered Full Scope blocks |
 | Design | Designer | Approved references followed by a running, user-approved Simulator MVP |
 | Dev | Implementation Owner | Full Scope implemented and approved one large block at a time |
-| Publish | Acceptance Reviewer | Independent final review, final visuals, and controlled cleanup |
+| Polish | Acceptance Reviewer | Independent review, concrete defect cycles, and an approved completed app |
+| Publish | Designer | Final app icon, store screenshots, publication exports, and controlled cleanup |
 
 The master coordinates these four specialist roles and is the only participant that communicates with the user. Planning and Design reference research may run in parallel after Research approval; app-code ownership remains sequential.
 

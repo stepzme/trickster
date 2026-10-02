@@ -6,7 +6,7 @@ Trickster 是一个项目本地的原生 iOS 应用开发流程。它先让用�
 npx @sgx22/trickster init
 ```
 
-流程只有五个阶段：Research、Planning、Design、Dev、Publish。master 协调 Product Researcher、Designer、Implementation Owner 和 Acceptance Reviewer。
+流程包含六个阶段：Research、Planning、Design、Dev、Polish、Publish。Polish 独立验证完整应用，Publish 创建最终图标、商店截图与发布素材。master 协调 Product Researcher、Designer、Implementation Owner 和 Acceptance Reviewer。
 
 Designer 从真实 iOS 产品库中选择最多三个候选，推荐一个 `ui.md` 和可选的 `illustrations.md`。导航和交互来自已批准的 Research、Planning 与共享工作流准则，而不是参考应用。批准后的源文件原样复制，不再合成新的通用项目设计文档。设计证据是实际运行的 MVP，而不是文字报告或成功编译。
 

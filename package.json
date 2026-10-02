@@ -1,7 +1,7 @@
 {
   "name": "@sgx22/trickster",
   "version": "1.1.0",
-  "description": "Five-stage reference-driven workflow for native iOS apps with explicit product, design, development, and acceptance approvals",
+  "description": "Six-stage reference-driven workflow for native iOS apps from product definition through polished publication materials",
   "license": "MIT",
   "type": "module",
   "bin": {

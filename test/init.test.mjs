@@ -57,7 +57,7 @@ test("uses Trickster colors only in supported terminals", () => {
   assert.equal(createTerminalStyle({ isTTY: false }, {}).error("Failed"), "Failed");
 });
 
-test("installs the five-stage project-local toolkit", async () => {
+test("installs the six-stage project-local toolkit", async () => {
   const project = await createProject();
   await initializeProject({ target: project, yes: true, quiet: true });
 
@@ -65,7 +65,7 @@ test("installs the five-stage project-local toolkit", async () => {
   assert.equal(await readFile(join(project, "trickster", "VERSION"), "utf8"), "1.1.0\n");
   assert.equal(await readFile(join(project, "trickster", "HARNESS"), "utf8"), "codex\n");
 
-  for (const stage of ["research", "planning", "design", "dev", "publish"]) {
+  for (const stage of ["research", "planning", "design", "dev", "polish", "publish"]) {
     assert.notEqual(
       await readFile(join(project, "trickster", "workflow", `${stage}.md`), "utf8"),
       "",
@@ -84,6 +84,10 @@ test("installs the five-stage project-local toolkit", async () => {
   );
   assert.equal(
     await readFile(join(project, "trickster", "workflow", "implementation-core.md"), "utf8").catch(() => ""),
+    "",
+  );
+  assert.equal(
+    await readFile(join(project, "trickster", "workflow", "launch-screen.md"), "utf8").catch(() => ""),
     "",
   );
   assert.equal(
@@ -119,10 +123,10 @@ test("doctor checks the simplified workflow", async () => {
   await initializeProject({ target: project, harness: "generic", yes: true, quiet: true });
   assert.equal((await doctorProject(project, { quiet: true })).ready, true);
 
-  await rm(join(project, "trickster", "workflow", "design.md"));
+  await rm(join(project, "trickster", "workflow", "polish.md"));
   const result = await doctorProject(project, { quiet: true });
   assert.equal(result.ready, false);
-  assert.deepEqual(result.checks.find(([name]) => name === "Design workflow"), ["Design workflow", false]);
+  assert.deepEqual(result.checks.find(([name]) => name === "Polish workflow"), ["Polish workflow", false]);
 });
 
 test("generic harness installs without Codex project files", async () => {
@@ -175,9 +179,11 @@ test("npm package contains the simplified workflow and excludes repository-only 
     "workflow/planning.md",
     "workflow/design.md",
     "workflow/dev.md",
+    "workflow/polish.md",
     "workflow/publish.md",
     "templates/research.md",
     "templates/plan.md",
+    "templates/publish.md",
     "templates/review.md",
   ]) {
     assert.equal(paths.includes(path), true, path);
@@ -185,6 +191,7 @@ test("npm package contains the simplified workflow and excludes repository-only 
   for (const path of [
     "roles/visual-producer.md",
     "roles/design-planner.md",
+    "workflow/launch-screen.md",
     "workflow/implementation-core.md",
     "templates/run-state.json",
     "scripts/analyze-token-usage.mjs",

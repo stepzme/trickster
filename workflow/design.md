@@ -56,4 +56,4 @@ If an image is not final, use a clear temporary asset with the correct size, pla
 
 The master compares the running MVP directly with the approved UI source, not with a prose summary. Compilation and functional correctness are insufficient. Continue with the same Designer until the user explicitly approves the running design revision.
 
-After design approval, Designer may create the app icon. Designer may create store screenshots only from screens that already exist; otherwise return after Dev and final verification. Generated visuals require user approval before integration when they materially define the product appearance.
+After design approval, transfer app-code ownership to the Implementation Owner. The Designer returns during Publish to create the final app icon and store screenshots from the polished app. Generated visuals require user approval before integration when they materially define the product appearance.

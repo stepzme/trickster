@@ -2,29 +2,27 @@
 
 ## Goal
 
-Independently verify the completed app, prepare final visual outputs, and leave a clean project.
+Create the final publication materials from the polished app and leave a complete, reviewable export set.
 
-## Acceptance review
+## Start gate
 
-The Acceptance Reviewer first verifies that the current revisions have explicit Research, Planning, Design, and Dev-block approvals. Missing approval blocks publication.
+Designer verifies explicit Polish approval for the current app revision. Final materials must represent that revision and its real product behavior.
 
-Then independently:
+## Final materials
 
-- build, install, and launch the final app;
-- exercise the primary flows and each completed Full Scope block;
-- compare the live screens with the approved UI source and approved MVP;
-- verify navigation and interaction against the approved Research and Planning artifacts and the shared workflow criteria;
-- verify every capability decision recorded in the approved Research;
-- verify denial, unavailable, and retry behavior that the app claims to support;
-- inspect launch behavior, accessibility, supported compact size, persistence promised by the product, and the installed app icon;
-- record concrete failures and evidence in `trickster/artifacts/<run-id>/review.md`.
+Designer:
 
-The reviewer does not fix code. Defects return as one concrete batch to the Implementation Owner, then the reviewer retests the changed build.
+- creates one original final app icon in the approved visual direction and integrates it into the app;
+- verifies the installed icon on a current build rather than only in the asset catalog;
+- prepares a store-screenshot storyboard from real polished screens;
+- creates one final store-screenshot set without fabricating features or states;
+- preserves editable sources and exports at the exact required dimensions;
+- records source screens, app revision, output paths, and the user's actual approvals in `trickster/artifacts/<run-id>/publish.md` using `trickster/templates/publish.md`.
 
-## Final visuals
+The user approves the app icon, screenshot storyboard, and final set. Per-frame approval is optional unless requested.
 
-If store screenshots were not possible during Design, the Designer returns after the relevant screens pass review. Screenshots must use real screens from the reviewed build. The user approves the storyboard and final set; per-frame approval is optional unless the user asks for it.
+If icon integration or another publication change modifies the app bundle, rerun the affected Polish checks before final confirmation.
 
-## Cleanup
+## Completion and cleanup
 
-After the user confirms the complete result, remove only recorded temporary downloads, derived build output, and disposable test media. Preserve source code, approved design source documents, review evidence, icon sources, and final store exports.
+The master presents the complete publication materials with the polished app. After explicit user confirmation, remove only recorded temporary downloads, derived build output, and disposable test media. Preserve source code, approved design sources, Polish evidence, editable icon and screenshot sources, and final exports.

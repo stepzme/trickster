@@ -12,13 +12,14 @@ Use the adapter named in `trickster/HARNESS`. When delegation exists, use one ag
 |---|---|---|
 | Research | Product Researcher | `trickster/artifacts/<run-id>/research.md` |
 | Planning | Product Researcher | `trickster/artifacts/<run-id>/plan.md` |
-| Design | Designer | `trickster/design/`, app code for the MVP, design assets, icon and screenshot outputs |
+| Design | Designer | `trickster/design/`, app code for the MVP, and design assets |
 | Dev | Implementation Owner | app code and Xcode project after design approval |
-| Publish | Acceptance Reviewer | review evidence and recorded cleanup only; never app code |
+| Polish | Acceptance Reviewer | review evidence only; never app code |
+| Publish | Designer | final app icon, store screenshots, export files, and `trickster/artifacts/<run-id>/publish.md` |
 
 The master records user approvals in the corresponding artifact. Roles do not ask the user directly and do not approve their own work.
 
-Only one role may write app code or operate a Simulator at a time. Designer owns the Xcode project through design approval, then transfers it to the Implementation Owner. Store screenshots return to Designer only after the required final screens exist.
+Only one role may write app code or operate a Simulator at a time. Designer owns the Xcode project through design approval, then transfers it to the Implementation Owner. Polish transfers final-material ownership back to Designer only after the app is approved.
 
 ## Parallel work
 
@@ -44,4 +45,4 @@ Do not rotate agents merely to save context. Do not create administrative artifa
 
 ## Corrections
 
-User feedback stays with the role that owns the open stage. Acceptance defects return to the Implementation Owner as one concrete batch and then go back to the Acceptance Reviewer. A design defect returns to Designer even if discovered later.
+User feedback stays with the role that owns the open stage. Polish defects return to the Implementation Owner as one concrete batch and then go back to the Acceptance Reviewer. A design defect returns to Designer even if discovered later. If Publish changes the app bundle, rerun the affected Polish checks before final confirmation.

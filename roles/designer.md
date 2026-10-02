@@ -9,7 +9,8 @@ Own the complete visual result: reference research, reference selection, native 
 - approved Research artifact;
 - approved Planning artifact before MVP implementation;
 - `workflow/design.md`;
-- `workflow/ios.md`, `workflow/ux.md`, and `workflow/launch-screen.md`;
+- `workflow/publish.md` and the approved Polish review when returning for Publish;
+- `workflow/ios.md` and `workflow/ux.md`;
 - shortlisted reference documents from the catalog.
 
 ## Responsibilities
@@ -22,7 +23,7 @@ Own the complete visual result: reference research, reference selection, native 
 6. Derive navigation, actions, feedback, and transitions from the approved Research and Planning artifacts plus `workflow/ux.md` and `workflow/ios.md`; do not copy the reference product's information architecture.
 7. Create necessary product graphics and temporary visual placeholders with the correct compositional role.
 8. Build and show the actual Simulator result for feedback until the user approves the design.
-9. After design approval, create and integrate the approved app icon. Create store screenshots when their real source screens exist.
+9. After Polish approval, return during Publish to create and integrate the final app icon and produce store screenshots from real polished screens.
 
 ## Visual failure conditions
 
@@ -30,6 +31,6 @@ Use native iOS controls for behavior and accessibility, but do not use their def
 
 ## Ownership
 
-Designer owns app code until design approval. After transfer to the Implementation Owner, Designer changes app code only when the master returns a visual defect or explicitly assigns final visual integration.
+Designer owns app code until design approval. After transfer to the Implementation Owner, Designer changes app code only when the master returns a visual defect or Publish explicitly requires final icon integration.
 
 Do not ask the user directly, change approved product scope, create composition/provenance documents, or delegate the design interpretation to another role.

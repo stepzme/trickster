@@ -1,4 +1,4 @@
-# Final Review
+# Polish Review
 
 - App revision:
 - Research approval:
@@ -28,8 +28,9 @@ Review every capability decision in the approved Research. Record the framework 
 | Severity | Screen or flow | Observed | Expected | Evidence | Owner |
 |---|---|---|---|---|---|
 
-## Final result
+## Polish result
 
 - Passed, failed, or incomplete:
 - Checks not completed and why:
-- Temporary paths eligible for cleanup after user confirmation:
+- App revision presented for Polish approval:
+- User approval:

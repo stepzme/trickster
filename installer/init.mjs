@@ -190,7 +190,7 @@ function agentsBlock() {
   return `## Trickster iOS pipeline
 
 Before creating or substantially changing the iOS app, read and follow \`trickster/AGENTS.md\`.
-The five-stage workflow, approved design sources, product artifacts, and final review are under \`trickster/\`.`;
+The six-stage workflow, approved design sources, product artifacts, Polish review, and publication materials are under \`trickster/\`.`;
 }
 
 async function copyKit(target, harness) {
@@ -264,7 +264,7 @@ export async function initializeProject({
     console.log(`\n${outputStyle.accent("Next:")}`);
     if (selectedHarness === "codex") {
       console.log("1. Restart Codex if project instructions were already loaded in the current session.");
-      console.log("2. Start the task; Trickster will define the complete product, plan the work, prove the design in Simulator, then build and review it in approved blocks.");
+      console.log("2. Start the task; Trickster will define the complete product, prove the design in Simulator, build it in approved blocks, polish the app, and create publication materials.");
     } else {
       console.log("1. Read trickster/adapters/generic.md and map the orchestration operations to your harness.");
       console.log("2. Verify shell, Xcode, Simulator, physical-device access, UI interaction and image viewing.");
@@ -293,8 +293,8 @@ export async function doctorProject(target = process.cwd(), { quiet = false, har
     ["Planning workflow", existsSync(resolve(project, "trickster", "workflow", "planning.md"))],
     ["Design workflow", existsSync(resolve(project, "trickster", "workflow", "design.md"))],
     ["Dev workflow", existsSync(resolve(project, "trickster", "workflow", "dev.md"))],
+    ["Polish workflow", existsSync(resolve(project, "trickster", "workflow", "polish.md"))],
     ["Publish workflow", existsSync(resolve(project, "trickster", "workflow", "publish.md"))],
-    ["Launch-screen workflow", existsSync(resolve(project, "trickster", "workflow", "launch-screen.md"))],
   ];
   if (selectedHarness === "codex") {
     checks.unshift(["Codex CLI", commandExists("codex")]);
@@ -326,6 +326,9 @@ export async function doctorProject(target = process.cwd(), { quiet = false, har
     );
     console.log(
       `${outputStyle.accent("DESIGN")}  The Designer proves the approved source direction in a running Simulator MVP before Dev begins`,
+    );
+    console.log(
+      `${outputStyle.accent("FINISH")}  Polish verifies the completed app before Publish creates the final icon and store screenshots`,
     );
     const conclusion = ready
       ? outputStyle.accent("Local installation is ready to use.")
