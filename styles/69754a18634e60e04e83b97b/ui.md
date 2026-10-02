@@ -3,167 +3,114 @@
 version: 1
 platform: iOS
 name: Chizhik-design-analysis
-description: "A high-energy grocery interface with a vivid yellow brand field, heavy black display type, hot-pink promotion cards, white catalog surfaces, product cutouts, and a recurring red-black bird mascot. Home, catalog, scanner, cart, checkout, stores, promotions, and profile use bold rounded cards and a compact four-item navigation."
+description: "A bold yellow-white-black grocery interface with oversized slanted headings, speech-bubble panels, a recurring black bird mascot, dense packshot product cards, yellow actions and selected navigation, and branded map pins."
 colors:
-  primary: "#FFDD00"
-  on-primary: "#111111"
-  primary-soft: "#FFF7BF"
-  accent: "#F23694"
+  canvas: "#F7F7F7"
+  surface-primary: "#FFFFFF"
+  surface-secondary: "#EFEFEF"
+  accent-primary: "#FFDD00"
   accent-secondary: "#111111"
-  ink: "#171717"
-  ink-muted: "#747474"
-  ink-subtle: "#AAAAAA"
-  canvas: "#F8F9FA"
-  surface-1: "#FFFFFF"
-  surface-2: "#F1F2F4"
-  hairline: "#E1E3E5"
-  semantic-success: "#32A852"
-  semantic-danger: "#D9343A"
-  semantic-overlay: "#000000"
+  text-primary: "#171717"
+  text-secondary: "#747474"
+  divider: "#E1E3E5"
+  destructive: "#D9343A"
 typography:
-  display-xl: { fontFamily: Arial Black, fontSize: 36, fontWeight: 700, lineHeight: 1.05, letterSpacing: -0.7 }
-  display-lg: { fontFamily: Arial Black, fontSize: 30, fontWeight: 700, lineHeight: 1.08, letterSpacing: -0.5 }
-  display-md: { fontFamily: Arial Black, fontSize: 26, fontWeight: 700, lineHeight: 1.12, letterSpacing: -0.3 }
-  headline: { fontFamily: Arial Black, fontSize: 22, fontWeight: 700, lineHeight: 1.18, letterSpacing: -0.2 }
-  card-title: { fontFamily: SF Pro Text, fontSize: 16, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: SF Pro Text, fontSize: 17, fontWeight: 500, lineHeight: 1.35, letterSpacing: 0 }
-  body-lg: { fontFamily: SF Pro Text, fontSize: 16, fontWeight: 400, lineHeight: 1.45, letterSpacing: 0 }
-  body: { fontFamily: SF Pro Text, fontSize: 14, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
-  body-sm: { fontFamily: SF Pro Text, fontSize: 12, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
-  caption: { fontFamily: SF Pro Text, fontSize: 10, fontWeight: 400, lineHeight: 1.20, letterSpacing: 0 }
-  button: { fontFamily: SF Pro Text, fontSize: 15, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0 }
-  eyebrow: { fontFamily: SF Pro Text, fontSize: 11, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0.3 }
-  mono: { fontFamily: SF Mono, fontSize: 12, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
-rounded: { xs: 8, sm: 12, md: 16, lg: 20, xl: 26, xxl: 32, pill: 9999, full: 9999 }
-spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
+  hero: {fontFamily: "Arial Black", fontSize: 38, fontWeight: 900, lineHeight: 40}
+  title: {fontFamily: "Arial Black", fontSize: 30, fontWeight: 900, lineHeight: 33}
+  section: {fontFamily: "SF Pro Display", fontSize: 22, fontWeight: 700, lineHeight: 26}
+  body: {fontFamily: "SF Pro Text", fontSize: 16, fontWeight: 400, lineHeight: 22}
+  label: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 600, lineHeight: 20}
+  caption: {fontFamily: "SF Pro Text", fontSize: 12, fontWeight: 400, lineHeight: 17}
+spacing:
+  screen-horizontal: 16
+  section-gap: 28
+  card-padding: 16
+  control-gap: 12
+rounded:
+  control: 14
+  card: 20
+  sheet: 28
+  pill: 999
 components:
-  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.md}", padding: [14, 18]}
-  feature-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 16 }
-  action-tile: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.md}", padding: 12 }
-  grouped-list: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: [8, 16]}
-  input: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body-lg}", rounded: "{rounded.md}", padding: [14, 16]}
-  navigation-bar: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xs}", height: 52 }
-  footer: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: [8, 12]}
+  primary-action: {fill: "{colors.accent-primary}", text: "{colors.text-primary}", height: 52, radius: "{rounded.control}"}
+  secondary-action: {fill: "{colors.accent-secondary}", text: "#FFFFFF", height: 50, radius: "{rounded.pill}"}
+  primary-card: {fill: "{colors.surface-primary}", radius: "{rounded.card}", border: "none"}
+  navigation: {fill: "#FFFFFF", activeFill: "{colors.accent-primary}", inactive: "{colors.text-secondary}"}
+  speech-panel: {fill: "#FFFFFF", shape: "large rounded speech bubble", text: "{colors.text-primary}"}
+  product-tile: {fill: "#FFFFFF", columns: 2, addFill: "{colors.accent-primary}", radius: "{rounded.card}"}
 ---
 
 # Overview
 
-Chizhik combines promotional discovery, local store context, grocery catalog, scanner, and delivery ordering under a bold yellow-black retail identity.
+Chizhik uses yellow, white, and black as large graphic masses rather than small accents. A recurring black bird mascot, white speech-bubble panels, and heavy slanted display type make home, onboarding, stores, and empty states unmistakably branded. Product and checkout areas become denser and more utilitarian, but retain yellow controls, large price numerals, rounded white cards, and the same bold hierarchy.
 
 # Non-negotiable visual invariants
 
-- The recurring color treatment uses Vivid yellow brand areas.
-- Keep yellow as the main retail signal.
-- Show the selected store.
-- Make price large.
-- Use the mascot in branded moments.
-- Keep basket total persistent.
-- Home stacks hero stories, promos, store context, and shortcuts.
-- Catalog uses two-column product grids; product and checkout switch to focused single-column layouts.
+- Preserve saturated yellow as a full-screen or large-section brand field, not merely a small button color.
+- Pair yellow with high-contrast black type, black controls, and broad white speech-bubble/card surfaces.
+- Use heavy, slanted, uppercase display headings for short branded statements.
+- Keep the black bird mascot recurring across launch, home, store, map, onboarding, and empty/status moments.
+- Reuse speech-bubble geometry for prominent hero, onboarding, and modal-like branded panels.
+- Build product grids from large contained packshots, oversized price numerals, and small yellow add controls.
+- Keep the bottom navigation white with a yellow selected pill/icon treatment and gray inactive items.
+- Blend store/map views with branded bird-shaped or mascot-derived pins rather than generic map markers alone.
 
 # Color and surfaces
 
-- **Primary** ({colors.primary}): Add, basket, checkout, and selected navigation.
-- **Accent** ({colors.accent}): Urgent promotional campaigns.
-- **Secondary Accent** ({colors.accent-secondary}): Headline, CTA, and strong contrast.
-
-- **Canvas** ({colors.canvas}): Catalog, search, checkout, and profile.
-- **Surface 1** ({colors.surface-1}): Main cards and sheets.
-- **Surface 2** ({colors.surface-2}): Secondary controls and grouped fields.
-- **Hairline** ({colors.hairline}): Quiet separation.
-
-- **Ink** ({colors.ink}): Headings and primary values.
-- **Ink Muted** ({colors.ink-muted}): Supporting detail.
-- **Ink Subtle** ({colors.ink-subtle}): Placeholder and inactive state.
-
-- **Success** ({colors.semantic-success}): Completed or positive state.
-- **Danger** ({colors.semantic-danger}): Error and destructive state.
-- **Overlay** ({colors.semantic-overlay}): Modal focus.
+Yellow is the dominant brand field and the fill for primary actions, toggles, add controls, and selected navigation. Black provides display type, mascot mass, strong secondary buttons, and maximum contrast. White forms speech bubbles, product cards, sheets, and most dense commerce surfaces. Pale gray supports catalog, form, and utility backdrops without competing with yellow. Red is reserved for destructive/error meaning and small mascot or promotional accents. Success may use green locally but does not replace yellow as the brand color. Default iOS blue, pastel gradients, or a uniformly white/gray interface would visibly erase the reference.
 
 # Typography
 
-- **Arial Black** — campaigns, category headings, and prices.
-- **SF Pro Text** — controls, forms, and explanatory copy.
-- **SF Mono** — code, identifiers, or compact numeric data.
-
-Use 36 points bold for major statements, 22 points bold for screen headings, 16 points semibold for cards, 14 points regular for detail, and 15 points semibold for primary actions.
-
-- Make price and product unmistakable.
-- Use heavy display type in short bursts.
-- Keep availability tied to the selected store.
-- Separate promotional color from status.
-
-Use **Inter** or the platform system sans when the reference display face is unavailable.
-
-The hierarchy must remain legible with Dynamic Type: supporting text may wrap before the primary metric, title, or action loses its role.
+The key hierarchy pairs expressive heavy, slightly slanted uppercase display lettering with a neutral SF Pro system sans for forms, lists, and product facts. Use the shipped display face when available; Arial Black with an optical skew is an iOS-safe approximation, while SF Pro Text handles operational content. Branded headings are short and occupy a large share of their panel. Product prices use large bold numerals, with title and unit metadata much smaller. Under Dynamic Type, operational copy and product names wrap before price or action loses priority; speech-bubble headlines may reflow across more lines while preserving their strong scale and safe margins.
 
 # Screen composition
 
-Use a 4 points base, 16 points edge gutters, 12 points control gaps, and 16 points card padding.
+Screens use about 16-point side insets, 12-point internal gaps, and 24–32 points between major groups. Brand-led screens often begin with a yellow safe-area field and mascot/logo, followed by a very large white speech-bubble panel or bold graphic card. Dense shopping screens use a pale canvas with white product cards and a persistent bottom bar. Bottom-owned actions or basket totals sit above the home indicator.
 
-Home stacks hero stories, promos, store context, and shortcuts. Catalog uses two-column product grids; product and checkout switch to focused single-column layouts.
+The observed visual archetypes are:
 
-Use large graphic blocks on home and tighter product density inside the catalog.
+- Brand home: yellow upper field with mascot/logo, oversized white speech-bubble hero, promotional carousel or graphic card, rounded utility/store blocks, and persistent navigation.
+- Onboarding/permission: full yellow or yellow-framed screen, large bird character and speech panel, short heavy headline, then a yellow or black pill action.
+- Product catalog: compact title/search/filter region above a two-column grid of contained packshots, large price values, short labels, and yellow add controls.
+- Product focus: large packshot on white above a strong price/action cluster, followed by flat information and related items.
+- Basket/checkout: pale canvas with stacked white item or form sections, explicit totals, yellow selections/toggles, and a sticky yellow continuation action.
+- Store/map: map or store information as the central field, augmented with yellow/black branded controls and mascot-derived pins or cards.
+- Profile/utility: large title followed by rounded white row groups and restrained gray metadata.
+- Empty/cancelled/status: one bird or heart/bird illustration, concise explicit text, and a clear yellow or black action in open space.
 
-Use minimal shadow, large color fields, and isolated product cutouts. Mascot and promo art stay flat and graphic.
-
-Primary iPhone screens keep the documented content grouping and vertical rhythm inside a scroll container when content exceeds the viewport. Bottom-owned actions or navigation reserve the lower safe area rather than covering content.
+Long catalogs, store information, profiles, and checkout forms scroll vertically. Fixed navigation and actions reserve enough bottom inset for the final card.
 
 # Navigation appearance
 
-Home, Catalog, Scanner, and Profile remain stable outside focused product, cart, and checkout screens.
-
-This section governs appearance only; product behavior and information architecture come from the approved Research and Planning artifacts.
+Primary screens use a white four-item bottom bar with compact gray inactive icons and a yellow active capsule, icon, or label emphasis; one item may use a mascot-derived profile mark. Top navigation alternates between a yellow branded cap and a simple light bar with black back/title controls. Focused product, basket, and checkout screens may replace tabs with a fixed action. Bottom sheets are white with large rounded top corners over a dark neutral scrim. This section defines only visual treatment, not product destinations.
 
 # Components
 
-Yellow full-width actions add to basket or continue checkout; compact yellow plus and minus controls sit on product cards.
+Primary actions are full-width yellow rounded rectangles about 52 points high with bold black labels. Strong secondary actions may be black pills with white text. Speech panels are oversized white rounded bubbles with a pointed/tail detail, large black display type, and generous negative space around the mascot or message.
 
-Product cards pair cutout, title, price, favorite, and add. Checkout groups address, residence details, comments, timing, and payment.
-
-Search, address, home details, courier notes, delivery slot, and card payment use clear labeled fields.
-
-Show store selected, age required, minimum reached, processing, cancelled, ready, and delivered through text plus state.
-
-Controls retain at least a 44-point interactive area. Pressed and disabled treatments should stay within the documented palette and hierarchy.
+Product tiles use white rounded cards with a large contained packshot, compact product label, prominent black price, and small yellow add/quantity control. Search and form fields are pale rounded rectangles with black labels and gray placeholders. Toggles and selected chips use yellow. Map controls and pins combine white, yellow, black, and mascot shapes. Pressed states deepen yellow or black; disabled states mute contrast while preserving geometry. All targets remain at least 44 points.
 
 # Imagery and icons
 
-Products use real cutouts. Promotional cards use bold geometric fields, mascot moments, and simple vector scenes.
-
-Contain product cutouts on white; crop promotional artwork only inside authored cards and preserve mascot silhouette.
-
-When imagery is part of the documented composition, it cannot be omitted while final assets are pending. A temporary asset must preserve its placement, crop, scale, and approximate visual weight.
+Product shopping relies on real packshots and promotional product photography, kept distinct from the authored mascot system. The black bird character and related heart/bird, map-pin, and speech-bubble graphics are major brand imagery on launch, home, store, onboarding, and empty/status screens. Product packshots use contain behavior on white; promotional imagery may crop inside a bounded graphic card. Icons are simplified black/gray navigation or utility aids. Both product imagery and mascot art are compositionally required where observed; temporary assets must preserve their relative scale, crop, silhouette, and visual weight.
 
 # States
 
-Show store selected, age required, minimum reached, processing, cancelled, ready, and delivered through text plus state.
-
-- **Success** ({colors.semantic-success}): Completed or positive state.
-- **Danger** ({colors.semantic-danger}): Error and destructive state.
-- **Overlay** ({colors.semantic-overlay}): Modal focus.
-
-Only the states documented above are specified; other states must preserve the same canvas, hierarchy, and component language without inventing a new visual system.
+Selected navigation, toggles, chips, and primary actions use yellow with black content. Populated product states retain white tile geometry and price emphasis. Empty, cancelled, and branded status screens use the bird or heart/bird motif with explicit text rather than color alone. Modal/permission states may combine a speech bubble or native iOS surface with the yellow context behind it. Destructive actions are red and isolated. System permission sheets can remain native. No separate dark appearance was established in the inspected screens.
 
 # iOS adaptation
 
-- Extend the documented canvas through the iPhone safe areas while keeping readable content within appropriate insets.
-- Use a vertical `ScrollView` for content that does not fit compact heights; keep documented bottom actions and navigation clear of the home indicator.
-- Keep every row, tab, selector, map control, and primary action at least 44 points.
-- Preserve store, product, price, quantity, basket total, and checkout action. Collapse stories and campaigns first.
-- Present the keyboard and system permission UI natively, then return to the same visual context.
-- Preserve semantic reading order in VoiceOver and allow text to grow with Dynamic Type.
-- Preserve the documented appearance instead of introducing an unrelated light or dark palette.
+Extend yellow brand fields, pale commerce canvases, or map content through the appropriate safe areas while keeping readable panels inside 16-point insets. Use lazy grids for catalogs and vertical scroll containers for home, profile, store, and checkout content. Reflow product grids to one column before Dynamic Type makes prices, labels, or add controls collide. Add bottom inset for the four-item bar or sticky action and lift focused fields above the keyboard. Native permission transitions may interrupt, then return to the same yellow/white/black visual context. Maintain 44-point targets for tabs, map controls, toggles, and add buttons. VoiceOver order should identify mascot art as decorative or meaningful as appropriate, then read heading, content, value, and action.
 
 # Anti-generic checklist
 
-- Do not use pink for functional status.
-- Do not replace product photos with illustration.
-- Do not hide minimum order.
-- Do not overload cards with promo badges.
-- Do not detach availability from store.
-- Do not replace the documented canvas and surfaces with a generic grouped background and uniform white cards.
-- Do not use an unstyled `TabView`, default blue tint, or arbitrary SF Symbols when they contradict the reference.
-- Do not collapse every component to one corner radius or remove compositionally important imagery.
+- Do not reduce yellow to a minor accent on a generic white card stack.
+- Do not replace the heavy slanted display hierarchy with a standard navigation title.
+- Do not substitute emoji, arbitrary SF Symbols, or generic map pins for the authored bird imagery.
+- Do not render the selected navigation state as default iOS blue or an unstyled `TabView`.
+- Do not replace product packshots with illustration or hide the large price hierarchy.
+- Do not remove speech-bubble geometry from branded hero and onboarding compositions.
+- Do not spread red or green across normal controls; yellow and black remain primary.
+- Do not collapse speech panels, product cards, sheets, pills, and circular add controls to one radius.
 
 </design-context>

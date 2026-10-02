@@ -3,130 +3,126 @@
 version: 1
 platform: iOS
 name: Fix-Price-design-analysis
-description: "A value-retail marketplace led by vivid lime green, white commerce surfaces, blue informational accents, dense product rails, bold campaign banners, and a friendly lime hedgehog mascot used for loyalty, seasonal discovery, and order confirmation."
-colors: { primary: "#7BC52B", on-primary: "#FFFFFF", primary-soft: "#EBFFD7", accent: "#2E7AD9", ink: "#202124", ink-muted: "#74777D", ink-subtle: "#ADB1B7", canvas: "#FFFFFF", surface-1: "#F5F5F5", surface-2: "#EFF8E7", hairline: "#E1E3E6", semantic-success: "#4AAE38", semantic-warning: "#F2B423", semantic-danger: "#DF4B4B", semantic-overlay: "#000000" }
+description: "A dense discount-retail interface with lime-green navigation and actions, white commerce surfaces, saturated-blue informational accents, compact product photography, seasonal campaign bands, and a recurring mascot in branded moments."
+colors:
+  canvas: "#FFFFFF"
+  surface-primary: "#FFFFFF"
+  surface-secondary: "#F4F5F6"
+  accent-primary: "#7BC52B"
+  accent-secondary: "#2E7AD9"
+  text-primary: "#202124"
+  text-secondary: "#74777D"
+  divider: "#E1E3E6"
+  destructive: "#DF3F4B"
 typography:
-  display-xl: { fontFamily: SF Pro Display, fontSize: 38, fontWeight: 800, lineHeight: 1.05, letterSpacing: -0.8 }
-  display-lg: { fontFamily: SF Pro Display, fontSize: 32, fontWeight: 750, lineHeight: 1.10, letterSpacing: -0.5 }
-  display-md: { fontFamily: SF Pro Display, fontSize: 27, fontWeight: 700, lineHeight: 1.15, letterSpacing: -0.3 }
-  headline: { fontFamily: SF Pro Display, fontSize: 22, fontWeight: 700, lineHeight: 1.20, letterSpacing: 0 }
-  card-title: { fontFamily: SF Pro Text, fontSize: 16, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: SF Pro Text, fontSize: 16, fontWeight: 600, lineHeight: 1.30, letterSpacing: 0 }
-  body-lg: { fontFamily: SF Pro Text, fontSize: 16, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
-  body: { fontFamily: SF Pro Text, fontSize: 14, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
-  body-sm: { fontFamily: SF Pro Text, fontSize: 12, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
-  caption: { fontFamily: SF Pro Text, fontSize: 10, fontWeight: 500, lineHeight: 1.20, letterSpacing: 0 }
-  button: { fontFamily: SF Pro Text, fontSize: 15, fontWeight: 650, lineHeight: 1.20, letterSpacing: 0 }
-  eyebrow: { fontFamily: SF Pro Text, fontSize: 11, fontWeight: 650, lineHeight: 1.20, letterSpacing: 0.2 }
-  mono: { fontFamily: SF Mono, fontSize: 12, fontWeight: 500, lineHeight: 1.30, letterSpacing: 0 }
-rounded: { xs: 6, sm: 10, md: 14, lg: 18, xl: 24, xxl: 30, pill: 9999, full: 9999 }
-spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
+  hero: {fontFamily: "SF Pro Display", fontSize: 32, fontWeight: 800, lineHeight: 38}
+  title: {fontFamily: "SF Pro Display", fontSize: 26, fontWeight: 700, lineHeight: 32}
+  section: {fontFamily: "SF Pro Text", fontSize: 20, fontWeight: 700, lineHeight: 25}
+  body: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 400, lineHeight: 21}
+  label: {fontFamily: "SF Pro Text", fontSize: 14, fontWeight: 600, lineHeight: 19}
+  caption: {fontFamily: "SF Pro Text", fontSize: 12, fontWeight: 400, lineHeight: 17}
+spacing:
+  screen-horizontal: 16
+  section-gap: 24
+  card-padding: 12
+  control-gap: 10
+rounded:
+  control: 12
+  card: 16
+  sheet: 28
+  pill: 999
 components:
-  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [13, 18]}
-  product-card: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.sm}", padding: 10 }
-  promo-banner: { backgroundColor: "{colors.primary-soft}", textColor: "{colors.ink}", typography: "{typography.card-title}", rounded: "{rounded.md}", padding: 14 }
-  input: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: [11, 13]}
-  navigation-bar: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.body}", rounded: "{rounded.xs}", height: 52 }
-  footer: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: [8, 10]}
+  primary-action: {background: "#7BC52B", foreground: "#FFFFFF", minHeight: 52, cornerRadius: 12}
+  secondary-action: {background: "#FFFFFF", foreground: "#2E7AD9", minHeight: 48, cornerRadius: 12}
+  primary-card: {background: "#FFFFFF", foreground: "#202124", cornerRadius: 16, padding: 12}
+  navigation: {background: "#FFFFFF", selected: "#7BC52B", unselected: "#9B9FA5"}
 ---
 
 # Overview
 
-Fix Price combines dense value shopping with a bright lime identity and a friendly mascot that carries loyalty and order moments.
+Fix Price combines a dense value-shopping layout with an unmistakable lime-and-blue brand shell. White product surfaces and compact typography carry most retail content; lime owns global navigation and commitment actions; blue supports loyalty, information, selection, and product-page utility. Product photography dominates commerce, while seasonal campaign art and a recurring lime mascot appear in onboarding, promotions, and success moments.
 
 # Non-negotiable visual invariants
 
-- Keep fulfillment and price visible.
-- Use the mascot for guidance and celebration.
-- Preserve search and cart state.
-- Home stacks fulfillment, banners, categories, product rails, loyalty, and a five-tab footer; catalog becomes a compact list or grid.
-- Maintain retail density while separating discovery, product, and checkout into clear bands.
+- Bright lime green fills the global top bar or primary actions and identifies selected bottom navigation.
+- White remains the main commerce surface, with pale gray limited to search, grouped lists, and disabled states.
+- Saturated blue is a secondary system for informational banners, loyalty surfaces, selected filter chips, links, and product-page utility icons.
+- Product name, price, availability, and cart action remain immediately visible in dense cards or rows.
+- Home is a vertical sequence of fulfillment strip, broad campaign imagery, category rail, feature modules, and product sections.
+- Product and category screens preserve compact 12–16-point gutters and tight retail rhythm.
+- Sticky totals and lime order actions sit above the home indicator in cart and checkout.
+- Mascot and campaign graphics remain bounded branded moments rather than replacing routine product photography or forms.
 
 # Color and surfaces
 
-Use lime for primary shopping actions and blue for informational links or secondary emphasis.
+White dominates catalog, product detail, cart, checkout, profile, and settings. Light gray fills search, secondary group backgrounds, disabled actions, and separators. Lime is the main color mass in splash, top bars, primary CTAs, selected navigation, pins, and some campaign scenes.
 
-Keep the canvas white, search and forms pale gray, and category modules lightly tinted.
-
-Use near-black for product and price, gray for metadata, and pale gray for disabled state.
-
-Use green for success, yellow for attention, and red for errors or destructive action.
+Blue carries brand identity, informational cards, loyalty/card surfaces, selected filter chips, links, and outline utilities. Seasonal banners may introduce pink, lavender, mint, orange, or deeper blue within their own bounds. Near-black carries product names and prices; gray carries metadata and inactive navigation. Red appears only in destructive cancellation and badges; green/lime indicates positive or primary state. Generic iOS blue used as the main purchase color would reverse the observed lime-first hierarchy.
 
 # Typography
 
-Use SF Pro Display for campaigns and SF Pro Text for products, forms, and checkout.
+Use SF Pro as the iOS-safe typeface. Onboarding and campaign headings are roughly 24–32 points and bold or extra-bold. Working page titles are 16–20 points; product and section labels 14–17 points; body and metadata 12–14 points. Prices are heavier and larger than product copy.
 
-Use 32–38 points heavy for campaigns, 22 points for sections, 16 points for cards, 14 points body, and 10–12 points metadata.
-
-Keep current price strongest, old price secondary, and product names readable within dense rails.
-
-Use the platform sans or Inter with tabular prices.
-
-The hierarchy must remain legible with Dynamic Type: supporting text may wrap before the primary metric, title, or action loses its role.
+Top-bar titles are centered and compact. Product names truncate or wrap within dense rows; availability and loyalty benefit remain close to price and action. With Dynamic Type, product rows grow vertically and metadata wraps before price, cart action, order total, or primary CTA loses hierarchy. Horizontal rails may reduce visible cards rather than compressing text.
 
 # Screen composition
 
-Use a 4 points base, 16 points gutters, 12 points module gaps, and 10 points card padding.
+Use approximately 12–16-point side margins, 8–12-point local gaps, and 20–28 points between major modules. Main commerce surfaces scroll vertically above a persistent tab bar.
 
-Home stacks fulfillment, banners, categories, product rails, loyalty, and a five-tab footer; catalog becomes a compact list or grid.
+Observed archetypes:
 
-Maintain retail density while separating discovery, product, and checkout into clear bands.
+- Onboarding: pale atmospheric scene with large centered mascot or 3D object, bold centered heading, short copy, and a broad lime action near the bottom.
+- Home feed: lime header, fulfillment strip, large campaign banner, rounded category rail, feature tiles, then dense product sections.
+- Catalog entry: two-column image category grid; product results become compact rows with thumbnail, name, price, bookmark, and lime cart action.
+- Product detail: large image carousel on white, title and price, availability, lime CTA, blue utility actions, description, and specification rows.
+- Loyalty content: long white page with blue cards, barcode or benefit surfaces, rounded informational blocks, and graphic panels.
+- Cart and checkout: grouped rows, quantity controls, comment and offer modules, sticky summary, and strong lime order action.
+- Map/store locator: full map with pins and clustered counters, plus a bottom list or provider sheet.
+- Order outcome: branded mascot splash followed by a structured white order summary.
 
-Product photography, campaign props, and mascot scenes create depth.
-
-Primary iPhone screens keep the documented content grouping and vertical rhythm inside a scroll container when content exceeds the viewport. Bottom-owned actions or navigation reserve the lower safe area rather than covering content.
+Sheets have rounded tops and dimmed context; safe areas remain clear.
 
 # Navigation appearance
 
-Home, Catalog, Cart, Stores, and Profile remain in the bottom bar.
+The primary shell often uses a lime top/status bar above a white page. The persistent bottom tab bar is white with five simple icon-and-label items in the observed sample; selected state turns lime and inactive items stay gray. Red circular badges may appear on cart, profile, or notification controls.
 
-This section governs appearance only; product behavior and information architecture come from the approved Research and Planning artifacts.
+Inner pages use either a lime or white navigation bar with a back chevron. Product detail uses blue back, share, and bookmark controls over a white image area. Bottom sheets have a grab handle, rounded white top, dimmed background, and color-coded primary action. These observations define appearance only, not routes.
 
 # Components
 
-Use lime filled Add to cart and checkout controls; secondary actions remain white, outlined, or blue text.
+Primary buttons are lime rounded rectangles around 48–52 points high with white semibold type. Pressed state deepens lime; disabled state uses light gray. Secondary controls are white, outlined, or blue text.
 
-Use product cards, campaign banners, category rails, loyalty blocks, cart rows, and checkout groups.
+Product cards and rows combine a contained photo, truncated name, strong price, availability or loyalty note, lime cart action, and blue bookmark or detail controls. Added state may show a quantity stepper. Category modules use rounded image tiles or compact horizontal cards.
 
-Search, recipient, payment, promo, loyalty, and fulfillment fields stay clearly grouped and labeled.
-
-Show availability, discount, cart count, placed, assembling, canceled, and loyalty status explicitly.
-
-Controls retain at least a 44-point interactive area. Pressed and disabled treatments should stay within the documented palette and hierarchy.
+Search uses a pale-gray rounded field with recent/popular queries and chips. Filters use pills with blue selected state; sorting appears in a compact bottom sheet with a checkmark. Cart rows include selection, delete, quantity, comments, and add-on rail. Checkout groups address, payment, promo, loyalty, and fulfillment in labeled rounded blocks with sticky total/action. Loyalty uses blue card surfaces, barcode, benefit tiles, and explanatory text. Compact controls retain at least a 44-point target.
 
 # Imagery and icons
 
-Contain product photography and place the mascot in rounded banners with generous negative space.
+SKU photography is structural in catalog, detail, cart, and order history; use contain and preserve the full package. Campaign banners mix product photography, bold embedded copy, seasonal colors, and branded 3D props. A lime character with blue spikes recurs in onboarding, some home campaigns, and order success, but the sampled system does not show a comprehensive standalone illustration family for every state.
 
-Contain products without crop and keep mascot campaign copy unobstructed.
-
-When imagery is part of the documented composition, it cannot be omitted while final assets are pending. A temporary asset must preserve its placement, crop, scale, and approximate visual weight.
+Functional icons are simple line glyphs or native map/system marks. Keep active/informational icons blue or lime according to context and avoid arbitrary mixed symbol weights. Campaign or product imagery cannot be omitted while final assets are pending; temporary assets must preserve crop, scale, negative space, and overall color mass.
 
 # States
 
-Show availability, discount, cart count, placed, assembling, canceled, and loyalty status explicitly.
+Observed states include onboarding, delivery/store selection, populated home and catalog, search with keyboard, selected sorting/filter chips, product detail, cart, checkout, order placed, order summary, destructive order-cancellation sheet, loyalty/card information, profile, settings, store map/list, permission alerts, and dimmed loading overlay with a green-active three-dot spinner.
 
-Use green for success, yellow for attention, and red for errors or destructive action.
-
-Only the states documented above are specified; other states must preserve the same canvas, hierarchy, and component language without inventing a new visual system.
+Order success introduces a full-screen mascot scene before returning to structured white details. Cancellation uses a rounded modal sheet with red destructive CTA. Loading retains existing layout under a gray dim layer. Explicit full empty and network-error screens were not visible; adaptations should remain local and semantic rather than inventing a new illustration family.
 
 # iOS adaptation
 
-- Extend the documented canvas through the iPhone safe areas while keeping readable content within appropriate insets.
-- Use a vertical `ScrollView` for content that does not fit compact heights; keep documented bottom actions and navigation clear of the home indicator.
-- Keep product, favorite, quantity, fulfillment, payment, and tabs at least 44 points.
-- Preserve search, fulfillment, product, cart, total, and checkout; move banners below the shopping task.
-- Present the keyboard and system permission UI natively, then return to the same visual context.
-- Preserve semantic reading order in VoiceOver and allow text to grow with Dynamic Type.
-- Preserve the documented appearance instead of introducing an unrelated light or dark palette.
+Extend the active lime, pale campaign, white, or map field through safe areas while keeping controls inset. Use vertical scrolling for home, loyalty, detail, cart, checkout, profile, and settings; reserve the lower safe area for tab, cart summary, or primary action.
+
+Let categories and product rails scroll horizontally. Under Dynamic Type or compact widths, let rows and groups grow rather than shrinking price or availability. Present keyboard, permissions, map providers, and system sheets natively, then return to the same visual context. VoiceOver should announce product, price, availability or benefit, quantity, and cart state in order. The observed system is light-first.
 
 # Anti-generic checklist
 
-- Do not let campaign color enter checkout forms.
-- Do not obscure unit or availability.
-- Do not mix mascot art into dense product cards.
-- Do not replace the documented canvas and surfaces with a generic grouped background and uniform white cards.
-- Do not use an unstyled `TabView`, default blue tint, or arbitrary SF Symbols when they contradict the reference.
-- Do not collapse every component to one corner radius or remove compositionally important imagery.
+- Do not replace lime purchase controls with default blue buttons.
+- Do not use mascot scenes inside routine product rows, filters, or checkout fields.
+- Do not hide price, availability, loyalty benefit, quantity, or total.
+- Do not crop package photography or replace it with generic decorative art.
+- Do not let seasonal campaign colors spill across operational screens.
+- Do not replace the lime/gray selected tab treatment with an unstyled `TabView`.
+- Do not use generic `Form` sections for cart, checkout, loyalty, or profile.
+- Do not collapse product cards, filters, top bars, and sheets to one radius.
 
 </design-context>

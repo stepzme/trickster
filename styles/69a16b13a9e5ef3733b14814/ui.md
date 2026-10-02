@@ -3,152 +3,114 @@
 version: 1
 platform: iOS
 name: Tutu-design-analysis
-description: "A lively travel marketplace built from a deep-indigo search header, bright violet actions, white booking sheets, pale-lavender cards, green cashback cues, and colorful photo-led discovery content. It balances dense comparison with a playful consumer tone."
-
+description: "A dense travel marketplace framed by a deep-indigo booking field, saturated violet actions, compact white comparison cards, a distinctive oversized central tab symbol, and a photo-led discovery feed below the transactional core."
 colors:
-  primary: "#6D55F5"
-  on-primary: "#FFFFFF"
-  primary-pressed: "#5740D9"
-  brand-dark: "#140A73"
-  ink: "#17171C"
-  ink-muted: "#676870"
-  ink-subtle: "#A3A4AB"
-  canvas: "#F3F2F8"
-  surface-1: "#FFFFFF"
-  surface-2: "#EEECF8"
-  hairline: "#DEDEE5"
-  semantic-success: "#36A52D"
-  semantic-warning: "#F4A62A"
-  semantic-danger: "#DA4758"
-  semantic-overlay: "#000000"
-
+  canvas: "#F4F2F8"
+  surface-primary: "#FFFFFF"
+  surface-secondary: "#EEEBF7"
+  accent-primary: "#7054F6"
+  accent-secondary: "#1B0B73"
+  text-primary: "#17161C"
+  text-secondary: "#6F6D77"
+  divider: "#E0DDE7"
+  destructive: "#D84A57"
 typography:
-  display-xl: { fontFamily: System Sans, fontSize: 36, fontWeight: 750, lineHeight: 1.06, letterSpacing: -0.6 }
-  display-lg: { fontFamily: System Sans, fontSize: 30, fontWeight: 700, lineHeight: 1.1, letterSpacing: -0.3 }
-  display-md: { fontFamily: System Sans, fontSize: 24, fontWeight: 700, lineHeight: 1.15, letterSpacing: -0.1 }
-  headline: { fontFamily: System Sans, fontSize: 20, fontWeight: 700, lineHeight: 1.2, letterSpacing: 0 }
-  card-title: { fontFamily: System Sans, fontSize: 16, fontWeight: 650, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: System Sans, fontSize: 17, fontWeight: 450, lineHeight: 1.35, letterSpacing: 0 }
-  body-lg: { fontFamily: System Sans, fontSize: 16, fontWeight: 400, lineHeight: 1.42, letterSpacing: 0 }
-  body: { fontFamily: System Sans, fontSize: 14, fontWeight: 400, lineHeight: 1.42, letterSpacing: 0 }
-  body-sm: { fontFamily: System Sans, fontSize: 12, fontWeight: 400, lineHeight: 1.38, letterSpacing: 0 }
-  caption: { fontFamily: System Sans, fontSize: 10, fontWeight: 500, lineHeight: 1.3, letterSpacing: 0 }
-  button: { fontFamily: System Sans, fontSize: 16, fontWeight: 650, lineHeight: 1.2, letterSpacing: 0 }
-  eyebrow: { fontFamily: System Sans, fontSize: 11, fontWeight: 650, lineHeight: 1.25, letterSpacing: 0.3 }
-  mono: { fontFamily: System Mono, fontSize: 12, fontWeight: 400, lineHeight: 1.38, letterSpacing: 0 }
-
-rounded: { xs: 4, sm: 8, md: 12, lg: 16, xl: 22, xxl: 28, pill: 9999, full: 9999 }
-spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
-
+  hero: {fontFamily: "SF Pro Display", fontSize: 36, fontWeight: 700, lineHeight: 40}
+  title: {fontFamily: "SF Pro Display", fontSize: 28, fontWeight: 700, lineHeight: 34}
+  section: {fontFamily: "SF Pro Text", fontSize: 20, fontWeight: 700, lineHeight: 25}
+  body: {fontFamily: "SF Pro Text", fontSize: 16, fontWeight: 400, lineHeight: 22}
+  label: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 600, lineHeight: 20}
+  caption: {fontFamily: "SF Pro Text", fontSize: 12, fontWeight: 400, lineHeight: 16}
+spacing:
+  screen-horizontal: 16
+  section-gap: 24
+  card-padding: 16
+  control-gap: 8
+rounded:
+  control: 12
+  card: 18
+  sheet: 28
+  pill: 999
 components:
-  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [14, 18]}
-  search-panel: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body-lg}", rounded: "{rounded.md}", padding: 14 }
-  fare-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 14 }
-  promo-card: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.card-title}", rounded: "{rounded.md}", padding: 10 }
-  bottom-nav: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.sm}", height: 60 }
+  primary-action: {fill: "{colors.accent-primary}", text: "#FFFFFF", cornerRadius: 12, minHeight: 48}
+  search-panel: {fill: "{colors.surface-primary}", text: "{colors.text-primary}", cornerRadius: 16, padding: 14}
+  comparison-card: {fill: "{colors.surface-primary}", text: "{colors.text-primary}", cornerRadius: 18, padding: 16}
+  navigation: {fill: "{colors.surface-primary}", selected: "{colors.accent-primary}", unselected: "{colors.text-secondary}", minHeight: 60}
 ---
 
 # Overview
 
-Tutu combines a dark-indigo booking header with bright violet conversion actions and soft white comparison surfaces. Colorful discovery cards make a broad travel catalog feel friendly rather than infrastructural.
+Tutu is recognisable by the contrast between a large deep-indigo booking zone and a long, colorful travel feed. The upper viewport is dense and task-oriented: category controls, origin and destination, dates, travelers, and a violet action are grouped into one dominant search composition. Results and checkout shift onto pale canvases with compact white cards, while photography and promotional color return below the transactional core. This alternation of branded color mass, dense comparison, and image-led discovery is more important than any single token.
 
 # Non-negotiable visual invariants
 
-- Keep price and conditions together.
-- Reserve green for cashback and success.
-- Use sticky purchase actions.
-- Preserve the indigo-to-white hierarchy.
-- The home screen stacks service rail, search form, filter chips, promos, and discovery.
-- Checkout uses single-column cards with a sticky action.
-- Keep primary forms compact but separate booking decisions into distinct cards.
-- Allow media-led discovery more breathing room.
+- The booking area is a dominant deep-indigo color field, not a white form placed under a small colored header.
+- Saturated violet is reserved for primary actions, selected controls, and active navigation; it remains visually distinct from semantic green, orange, and red.
+- Search inputs read as one compact compound white panel with clear internal grouping rather than a loose stack of unrelated fields.
+- Result screens combine a compact search summary and filter row with vertically stacked white comparison cards containing times, price, conditions, and state together.
+- The home composition changes from dense booking controls above to visibly photo-led discovery modules below; imagery cannot be removed from that lower half.
+- The persistent bottom bar is white and compact, with a conspicuously enlarged violet flower/star-like central action and smaller surrounding tabs.
+- Detail and form screens keep their next action anchored above the lower safe area while the content remains vertically scrollable.
 
 # Color and surfaces
 
-Violet is the primary action and selection color; deep indigo anchors the search header. Green belongs to cashback and wallet value.
+The largest branded mass is a deep navy-indigo search field spanning the top portion of booking screens. White compound forms sit inside it, and bright violet carries conversion actions and selected states. The rest of the product uses a very pale lavender-gray canvas with white cards; separation comes from surface contrast, spacing, and occasional hairlines rather than heavy shadows.
 
-Use white for forms and detail cards, pale lavender-gray for page canvas and secondary containers, and indigo only for the high-priority search area.
-
-Near-black carries prices and titles; gray carries schedules, policies, and secondary facts. White is used on indigo and violet.
-
-Green confirms cashback or success, orange highlights urgency, and red marks errors. Violet remains action rather than semantic state.
+Primary text is near-black. Schedules, policies, review counts, and secondary facts use medium gray. Green appears in cashback, positive value, or success cues; orange and yellow mark warnings or promotional urgency; red is restricted to errors, unavailable inventory, or destructive meaning. Replacing violet with default iOS blue or turning the indigo field into a generic navigation bar would visibly break the reference.
 
 # Typography
 
-Use a friendly geometric system sans with tabular figures for fares and times.
+The interface uses a compact system-sans hierarchy. Large page or promotional titles are bold and left aligned, but most transactional screens depend on smaller text with strong weight contrast. Route times, fares, and primary names are heavier and larger than conditions, amenities, and review metadata. Numeric information should use tabular figures where comparison matters.
 
-Use 24–36 points page and campaign titles, 16–20 points product headings, 14–16 points form content, and 10–12 points metadata.
-
-Keep fare, route, date, and restriction easy to compare. Promotional copy may be lively but must not overpower the booking form.
-
-Use Inter or SF Pro with tabular numerals for prices, dates, and schedules.
-
-The hierarchy must remain legible with Dynamic Type: supporting text may wrap before the primary metric, title, or action loses its role.
+Map the hierarchy to SF Pro Display for large titles and SF Pro Text for interface copy. Preserve the relative priority of price, time, route, and action under Dynamic Type: supporting metadata may wrap or move below, while the principal value remains visually dominant. Avoid making neighboring title, body, and caption styles nearly identical; the reference relies on distinct bold anchors within dense cards.
 
 # Screen composition
 
-Use a 4 points base, 12 points gutters, 8–12 points dense comparison gaps, and 20–24 points between sections.
+Booking screens begin at the top safe area with a deep-indigo field occupying roughly the upper third to half of the initial viewport. Within 16-point side insets, category controls lead into a full-width compound search panel and one full-width violet action. Below, the canvas changes to pale lavender-gray and continues as a vertical scroll of promotional rails, photo cards, editorial tiles, and utility blocks with 16-24 point section gaps.
 
-The home screen stacks service rail, search form, filter chips, promos, and discovery. Checkout uses single-column cards with a sticky action.
+Results screens keep a compact route or search summary near the top, followed by horizontally scrollable mode, price, and filter controls. Comparison cards fill almost the full width, use 14-16 point internal padding, and repeat at tight 8-12 point intervals. Important warnings remain adjacent to the affected results.
 
-Keep primary forms compact but separate booking decisions into distinct cards. Allow media-led discovery more breathing room.
-
-Use soft violet gradients, photography, and occasional glossy 3D promotional symbols. Keep comparison and checkout surfaces flat.
-
-Primary iPhone screens keep the documented content grouping and vertical rhythm inside a scroll container when content exceeds the viewport. Bottom-owned actions or navigation reserve the lower safe area rather than covering content.
+Detail screens use a long single-column scroll. A media block or image carousel can occupy a substantial top portion, followed by rating, facts, conditions, maps, and supporting media; a purchase or selection action remains fixed above the home indicator. Forms use one column of grouped fields with the keyboard or bottom action owning the lower viewport. Selection sheets rise from a dim overlay with a large rounded top edge and compact row choices.
 
 # Navigation appearance
 
-Use five bottom destinations for search, orders, Jarvel, favorites or information, and profile. Keep product switching in the horizontal service rail.
-
-This section governs appearance only; product behavior and information architecture come from the approved Research and Planning artifacts.
+The status bar remains visible over the current screen field. Top bars are visually light: a small back or close control, a compact centered title or search summary, and occasional favorite or menu actions without a heavy navigation-bar container. The bottom bar is a white full-width surface above the home indicator with small icon-label pairs; selected items use violet while inactive items are gray. Its center action is oversized, saturated violet, and flower/star-like, producing a deliberate interruption in the otherwise regular tab rhythm. Sheets use a dimmed backdrop and a white rounded-top panel.
 
 # Components
 
-Primary search and purchase actions are filled violet rectangles with modest rounding. Native controls must inherit violet focus, friendly typography, and card geometry.
+The compound search panel is a white rounded rectangle containing stacked route, date, traveler, and category rows. Internal dividers and small transport pictograms clarify grouping; the swap control is compact and visually attached to the route fields. The primary action is a wide saturated-violet rectangle, about 48 points high, with white semibold text and moderate rather than pill-like rounding.
 
-Fare cards prioritize price, baggage, exchange, and refund. Editorial cards pair a strong image with a short travel title.
+Comparison cards use white fill, roughly 18-point corners, compact padding, and a dense hierarchy: departure and arrival times, route or property name, duration and conditions, ratings, availability, and price remain in one surface. Cashback, warning, and unavailable labels sit directly beside the value they qualify. Filter controls are compact pills or chips with light neutral fill and violet selected emphasis.
 
-Route, date, and traveler fields form one white compound panel. Passenger details use outlined fields and visible consent.
-
-Cashback, favorite state, sold-out inventory, booking progress, and order status appear beside the relevant option.
-
-Controls retain at least a 44-point interactive area. Pressed and disabled treatments should stay within the documented palette and hierarchy.
+Media cards clip photography into rounded rectangles or occasional organic masks and pair it with short bold copy. Favorite buttons float over image corners. Seat selection uses a compact grid with clear available, selected, and unavailable differentiation. Account or passenger forms use visibly styled fields, persistent labels, validation, and a bottom-owned action rather than default `Form` rows.
 
 # Imagery and icons
 
-Travel photos use rounded portrait or landscape crops. Promotional symbols stay centered on soft gradient tiles and never obstruct prices or rules.
+Photography is a major structural material on the home feed and accommodation detail: destination scenes, hotels, trains, travelers, landmarks, and editorial topics appear in rounded portrait and landscape crops. Use cover crops with a clear focal subject, and keep imagery large enough to remain a color mass rather than a thumbnail. Embedded maps are functional tiles within rounded content blocks.
 
-Use `cover` for destination and editorial photography, and `contain` for service symbols or promotional 3D assets.
-
-When imagery is part of the documented composition, it cannot be omitted while final assets are pending. A temporary asset must preserve its placement, crop, scale, and approximate visual weight.
+Functional icons are simple transport and utility pictograms in violet, gray, or white: plane, train, bus, bed, car, swap, filter, heart, profile, and information. Promotional art varies between photography, campaign graphics, and occasional glossy objects, so it should not be normalized into one invented illustration system. When a sampled composition includes imagery, a temporary asset must preserve its placement, crop, scale, and approximate visual weight until final media exists.
 
 # States
 
-Cashback, favorite state, sold-out inventory, booking progress, and order status appear beside the relevant option.
+Observed states keep the same indigo, violet, white, and pale-lavender structure. Selected service tabs, filter chips, favorite controls, and bottom tabs use violet emphasis. Sold-out or absent inventory is stated inside the affected result card; warning banners use warm color without replacing the surrounding card system. Signed-out profile surfaces retain the same composition but substitute a clear authentication prompt for account data.
 
-Green confirms cashback or success, orange highlights urgency, and red marks errors. Violet remains action rather than semantic state.
-
-Only the states documented above are specified; other states must preserve the same canvas, hierarchy, and component language without inventing a new visual system.
+Disabled actions reduce contrast while preserving geometry. Empty-like constraints such as a missing vehicle plan or unavailable seats remain concise and local to the component. Native tracking and microphone permission alerts appear over the branded screen without custom imitation. Bottom sheets dim the underlying context but keep it visible enough to explain the selection.
 
 # iOS adaptation
 
-- Extend the documented canvas through the iPhone safe areas while keeping readable content within appropriate insets.
-- Use a vertical `ScrollView` for content that does not fit compact heights; keep documented bottom actions and navigation clear of the home indicator.
-- Service icons, fields, filter chips, fare choices, favorites, and sticky actions require at least 44 points targets.
-- Keep route, date, travelers, price, and next action visible. Collapse secondary policies, reviews, and discovery into expandable sections.
-- Present the keyboard and system permission UI natively, then return to the same visual context.
-- Preserve semantic reading order in VoiceOver and allow text to grow with Dynamic Type.
-- Preserve the documented appearance instead of introducing an unrelated light or dark palette.
+Extend the indigo or pale canvas through the top safe area and keep interactive content inside readable horizontal insets. Long booking, results, detail, and discovery compositions belong in vertical scroll containers; reserve bottom content inset equal to any persistent tab bar or sticky action so cards are never hidden behind the home indicator.
+
+Keep fields, chips, result rows, favorites, seat controls, and navigation targets at least 44 points. On compact widths, allow secondary metadata to wrap beneath its primary value instead of shrinking price, time, or route labels. Preserve semantic VoiceOver order from search context through results and next action. Present keyboard and system permission transitions natively, then return to the same styled context. The observed package is light in appearance; do not invent an unrelated dark palette without product requirements.
 
 # Anti-generic checklist
 
-- Do not mix promo styling into checkout fields.
-- Do not hide baggage or refund rules.
-- Do not make every card a gradient.
-- Do not expose unstyled native controls.
-- Do not replace the documented canvas and surfaces with a generic grouped background and uniform white cards.
-- Do not use an unstyled `TabView`, default blue tint, or arbitrary SF Symbols when they contradict the reference.
-- Do not collapse every component to one corner radius or remove compositionally important imagery.
+- Do not replace the deep-indigo booking field with a white `Form` under a standard navigation bar.
+- Do not use default blue tint for primary actions, selected tabs, or chips.
+- Do not render the bottom navigation as an unstyled `TabView`; preserve the enlarged violet central symbol and compact surrounding items.
+- Do not flatten route, date, and traveler inputs into unrelated generic rounded rectangles.
+- Do not make every result a spacious uniform card that separates price from its route and conditions.
+- Do not omit the photo-led discovery portion or reduce its imagery to small icons.
+- Do not apply one corner radius to controls, comparison cards, media cards, and sheets.
+- Do not substitute arbitrary SF Symbols where transport-specific pictograms or the central branded geometry carry the visual identity.
 
 </design-context>

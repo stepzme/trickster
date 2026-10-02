@@ -3,308 +3,123 @@
 version: 1
 platform: iOS
 name: Oura-design-analysis
-description: "A cinematic dark health interface that layers white metrics, translucent data cards, and delicate charts over immersive nature photography. Elegant serif status statements sit beside compact neutral sans-serif labels. Cool blue, teal, and violet glows distinguish health domains without turning the interface into a dashboard of bright colors; a frosted floating navigation bar keeps Today, Vitals, My Health, and logging within reach."
-
+description: "A cinematic dark health interface that combines full-bleed landscape photography, serif daily narratives, oversized white scores, translucent rounded metric cards, delicate blue-teal-violet data accents, and a floating three-item navigation pill with a separate circular add action."
 colors:
-  primary: "#DDF5FF"
-  on-primary: "#0A0B0E"
-  accent-blue: "#78CFEA"
-  accent-teal: "#63D7C4"
-  accent-violet: "#A796D7"
-  accent-rose: "#D37C9A"
-  ink: "#FFFFFF"
-  ink-muted: "#C8C9CF"
-  ink-subtle: "#8F929B"
   canvas: "#07080B"
-  surface-1: "#15171D"
-  surface-2: "#20232B"
-  surface-glass: "#25262BCC"
-  hairline: "#383A42"
-  inverse-canvas: "#FFFFFF"
-  inverse-ink: "#101116"
-  semantic-success: "#6AD1A9"
-  semantic-warning: "#E2C070"
-  semantic-overlay: "#000000"
-
+  surface-primary: "#15171D"
+  surface-secondary: "#20232B"
+  accent-primary: "#78CFEA"
+  accent-secondary: "#63D7C4"
+  text-primary: "#FFFFFF"
+  text-secondary: "#C8C9CF"
+  divider: "#383A42"
+  destructive: "#D75A68"
 typography:
-  display-xl:
-    fontFamily: Editorial Serif
-    fontSize: 44
-    fontWeight: 400
-    lineHeight: 1.02
-    letterSpacing: -1.0
-  display-lg:
-    fontFamily: Editorial Serif
-    fontSize: 36
-    fontWeight: 400
-    lineHeight: 1.06
-    letterSpacing: -0.7
-  display-md:
-    fontFamily: Editorial Serif
-    fontSize: 30
-    fontWeight: 400
-    lineHeight: 1.10
-    letterSpacing: -0.4
-  headline:
-    fontFamily: System Sans
-    fontSize: 22
-    fontWeight: 600
-    lineHeight: 1.18
-    letterSpacing: -0.2
-  card-title:
-    fontFamily: System Sans
-    fontSize: 17
-    fontWeight: 500
-    lineHeight: 1.25
-    letterSpacing: 0
-  subhead:
-    fontFamily: System Sans
-    fontSize: 17
-    fontWeight: 400
-    lineHeight: 1.35
-    letterSpacing: 0
-  body-lg:
-    fontFamily: System Sans
-    fontSize: 16
-    fontWeight: 400
-    lineHeight: 1.45
-    letterSpacing: 0
-  body:
-    fontFamily: System Sans
-    fontSize: 14
-    fontWeight: 400
-    lineHeight: 1.42
-    letterSpacing: 0
-  body-sm:
-    fontFamily: System Sans
-    fontSize: 12
-    fontWeight: 400
-    lineHeight: 1.35
-    letterSpacing: 0
-  caption:
-    fontFamily: System Sans
-    fontSize: 11
-    fontWeight: 500
-    lineHeight: 1.25
-    letterSpacing: 0.3
-  button:
-    fontFamily: System Sans
-    fontSize: 15
-    fontWeight: 600
-    lineHeight: 1.20
-    letterSpacing: 0
-  eyebrow:
-    fontFamily: System Sans
-    fontSize: 11
-    fontWeight: 600
-    lineHeight: 1.25
-    letterSpacing: 0.7
-  mono:
-    fontFamily: System Mono
-    fontSize: 12
-    fontWeight: 400
-    lineHeight: 1.35
-    letterSpacing: 0
-
-rounded:
-  xs: 6
-  sm: 10
-  md: 14
-  lg: 20
-  xl: 26
-  xxl: 32
-  pill: 9999
-  full: 9999
-
+  hero: {fontFamily: "New York", fontSize: 42, fontWeight: 400, lineHeight: 45}
+  title: {fontFamily: "New York", fontSize: 32, fontWeight: 400, lineHeight: 36}
+  section: {fontFamily: "SF Pro Display", fontSize: 22, fontWeight: 600, lineHeight: 27}
+  body: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 400, lineHeight: 22}
+  label: {fontFamily: "SF Pro Text", fontSize: 14, fontWeight: 600, lineHeight: 19}
+  caption: {fontFamily: "SF Pro Text", fontSize: 12, fontWeight: 400, lineHeight: 16}
 spacing:
-  xxs: 4
-  xs: 8
-  sm: 12
-  md: 16
-  lg: 24
-  xl: 32
-  xxl: 48
-  section: 64
-
+  screen-horizontal: 16
+  section-gap: 28
+  card-padding: 16
+  control-gap: 12
+rounded:
+  control: 14
+  card: 22
+  sheet: 28
+  pill: 999
 components:
-  button-primary:
-    backgroundColor: "{colors.inverse-canvas}"
-    textColor: "{colors.inverse-ink}"
-    typography: "{typography.button}"
-    rounded: "{rounded.pill}"
-    padding: [14, 20]
-  metric-card:
-    backgroundColor: "{colors.surface-glass}"
-    textColor: "{colors.ink}"
-    typography: "{typography.body}"
-    rounded: "{rounded.lg}"
-    padding: 16
-  health-panel:
-    backgroundColor: "{colors.surface-1}"
-    textColor: "{colors.ink}"
-    typography: "{typography.body}"
-    rounded: "{rounded.lg}"
-    padding: 16
-  bottom-nav:
-    backgroundColor: "{colors.surface-glass}"
-    textColor: "{colors.ink}"
-    typography: "{typography.caption}"
-    rounded: "{rounded.pill}"
-    padding: [8, 12]
-  text-input:
-    backgroundColor: "{colors.surface-1}"
-    textColor: "{colors.ink}"
-    typography: "{typography.body}"
-    rounded: "{rounded.sm}"
-    padding: 12
-  status-badge:
-    backgroundColor: "{colors.surface-2}"
-    textColor: "{colors.accent-blue}"
-    typography: "{typography.eyebrow}"
-    rounded: "{rounded.pill}"
-    padding: [4, 8]
-  navigation-bar:
-    backgroundColor: "{colors.canvas}"
-    textColor: "{colors.ink}"
-    typography: "{typography.card-title}"
-    rounded: "{rounded.xs}"
-    height: 52
-  footer:
-    backgroundColor: "{colors.canvas}"
-    textColor: "{colors.ink-subtle}"
-    typography: "{typography.caption}"
-    rounded: "{rounded.xs}"
-    padding: [24, 16]
+  primary-action: {fill: "white", text: "near-black semibold", height: 52, radius: 999}
+  metric-card: {fill: "dark translucent", padding: 16, radius: 22, content: "large score, state label, range or chart"}
+  score-chip: {fill: "dark or colored translucent", diameter: 52, content: "tabular score and status arc"}
+  navigation: {fill: "frosted dark pill", selected: "white icon and label", unselected: "muted gray"}
 ---
 
 # Overview
 
-Oura presents health as an interpreted daily story. Full-screen landscapes and night skies establish emotional context; scores, arcs, charts, and short explanations float above them in dark translucent layers. Dense longitudinal data moves into dedicated Vitals, Trends, Reports, and My Health screens.
+Oura presents health information as a cinematic daily narrative. Near-black and dark navy dominate, while full-bleed landscapes, mountain photography, product renders, and restrained health-color glows provide atmosphere. Large white scores and editorial serif statements float above imagery or sit inside translucent rounded cards. Dense longitudinal metrics move into stacked dark panels with fine charts and compact sans-serif labels. A frosted three-item bottom pill and separate circular add action keep navigation visually light over the dark field.
 
 # Non-negotiable visual invariants
 
-- Primary screens use Near-black canvas with immersive nature photography.
-- Lead with one interpreted health story.
-- Keep metrics readable over photography with controlled gradients.
-- Pair every score with status and range context.
-- Reserve serif for narrative emphasis.
-- Move complex education to dedicated black overlays.
-- The interface is one mobile column.
-- Today uses full-width scenic heroes and stacked cards.
+- Near-black or dark navy fills the full viewport; light grouped backgrounds and white cards are absent from in-product health surfaces.
+- A single interpreted score or serif status statement dominates the upper portion of narrative screens.
+- Landscape photography or a controlled health-gradient field occupies a substantial background mass and cannot be omitted where observed.
+- Metric cards use translucent or tonal dark surfaces, large white values, compact state labels, and delicate charts or ranges.
+- Blue, teal, violet, rose, green, and yellow remain restrained domain or status accents rather than equal-brightness tile colors.
+- The bottom navigation is a floating frosted pill with three items; a separate circular add control remains visually distinct.
+- Editorial serif type is reserved for narrative statements and major values, while labels, charts, forms, and utility content remain sans-serif.
+- Status is always expressed with text or numeric context in addition to color, arc, dot, or range position.
 
 # Color and surfaces
 
-- **Pale Blue** ({colors.primary}): High-emphasis line work and quiet selected states.
-- **Blue** ({colors.accent-blue}): Readiness and stress-related status.
-- **Teal** ({colors.accent-teal}): Positive health and recovery.
-- **Violet** ({colors.accent-violet}) and **Rose** ({colors.accent-rose}): Sleep and stress atmosphere.
+The canvas is a near-black field with subtle navy variation. Primary panels use dark charcoal; secondary controls and selected surfaces use a slightly lighter charcoal. Cards over photography may be translucent or gradient-backed, but text contrast stays high. Dividers and chart guides are quiet gray lines.
 
-- **Canvas** ({colors.canvas}): Default black health canvas.
-- **Surface 1** ({colors.surface-1}): Menus, forms, and education panels.
-- **Surface 2** ({colors.surface-2}): Nested controls and selected states.
-- **Glass** ({colors.surface-glass}): Cards and floating navigation over imagery.
-- **Inverse Canvas** ({colors.inverse-canvas}): Primary onboarding buttons.
-
-- **Ink** ({colors.ink}): Scores, titles, charts, and primary copy.
-- **Ink Muted** ({colors.ink-muted}): Explanations and timestamps.
-- **Ink Subtle** ({colors.ink-subtle}): Inactive navigation and low-priority metadata.
-- **Inverse Ink** ({colors.inverse-ink}): Text on white actions.
-
-- **Success** ({colors.semantic-success}): Optimal, thriving, and looking-good states.
-- **Warning** ({colors.semantic-warning}): Attention and approaching limits.
-- **Overlay** ({colors.semantic-overlay}): Full-screen educational overlays.
+Pale blue and cyan mark readiness, stress, or other health-domain emphasis; teal supports positive recovery; violet and rose create sleep or stress atmosphere. White carries primary scores, titles, charts, and controls; cool gray carries explanations, timestamps, and inactive navigation. Green confirms positive state, yellow or warm gold signals attention, and red is reserved for destructive or adverse state. Default iOS blue, bright card borders, white grouped forms, and rainbow dashboards would break the reference.
 
 # Typography
 
-- **Editorial Serif** — daily narrative, bedtime ranges, major progress statements.
-- **System Sans** — metrics, charts, navigation, settings, and explanatory text.
-- **System Mono** — only for identifiers or technical device information.
+Use New York as the iOS-safe editorial serif for primary daily statements, bedtime-like ranges, and selected hero values. Use SF Pro Display/Text for section headings, scores inside dense cards, chart labels, forms, and navigation. Hero statements sit around 32–42 points, section headings around 20–24, metric values around 26–36, body text around 14–16, and chart or timestamp labels around 11–13.
 
-- `{typography.display-xl}` — 44 points — 400 — Primary health number
-- `{typography.display-lg}` — 36 points — 400 — Daily state statement
-- `{typography.display-md}` — 30 points — 400 — Bedtime range
-- `{typography.headline}` — 22 points — 600 — Screen heading
-- `{typography.card-title}` — 17 points — 500 — Metric title
-- `{typography.body}` — 14 points — 400 — Default explanation
-- `{typography.caption}` — 11 points — 500 — Time and chart labels
-- `{typography.button}` — 15 points — 600 — Primary action
-
-- Use serif only for the human interpretation, not every data label.
-- Pair each score with a status word and scale or range.
-- Keep chart labels compact and high contrast.
-- Center hero narratives; left-align cards, reports, and settings.
-
-Use **New York** or **Cormorant Garamond** for the editorial role and **SF Pro / Inter** for system sans. Keep serif weight regular and avoid ornate contrast at small sizes.
-
-The hierarchy must remain legible with Dynamic Type: supporting text may wrap before the primary metric, title, or action loses its role.
+Hero narratives are often centered; cards, reports, settings, and lists are left-aligned. Serif remains regular rather than heavy, while numeric values use clear tabular figures. With Dynamic Type, cards and ranges stack, supporting explanations wrap, and centered hero groups gain height before imagery or controls are cropped.
 
 # Screen composition
 
-Use a 4 points base. Screen gutters are 16 points, metric-card gaps 12 points, card interiors 16 points, and hero text groups 20–24 points. Floating navigation stays 12–16 points above the safe area.
+Screens typically use 16-point horizontal insets, 12-point gaps between cards, 16 points inside panels, and 24–32 points between major groups. Dark or photographic fields extend through the top safe area. Narrative and health feeds scroll vertically; the floating navigation stays 12–16 points above the home indicator and reserves enough space below the last card.
 
-The interface is one mobile column. Today uses full-width scenic heroes and stacked cards. Vitals uses a vertical card list; scores inside cards use a split layout between the value and horizontal range.
+Observed archetypes include:
 
-Photography supplies visual space. Keep overlays sparse enough that the landscape remains legible. Dense articles and reports move onto flat black rather than stacking over imagery.
-
-Use photography, dark vertical gradients, restrained blur, and subtle colored edge glow. Avoid bright drop shadows and glossy card borders.
-
-Primary iPhone screens keep the documented content grouping and vertical rhythm inside a scroll container when content exceeds the viewport. Bottom-owned actions or navigation reserve the lower safe area rather than covering content.
+- Scenic narrative composition: full-width landscape or atmospheric health image fills much of the upper viewport, with centered serif status, large score, concise explanation, and dark gradient protection.
+- Vitals composition: one-column stack of dark rounded cards, each pairing a strong score or value with state text, compact range, chart, or progress scale.
+- Health-panel composition: dark flat background with large serif interpretation, restrained colored edge glow, supporting sans-serif explanation, and one compact action.
+- Product setup composition: centered ring or charger render on black with generous negative space, concise title and body copy, and a white pill action near the bottom.
+- Form and selection composition: dark rectangular fields, radio rows, toggles, searchable lists, and one high-contrast lower action, with native keyboard when needed.
+- Drawer composition: dark side panel overlays the current screen and presents tall monochrome rows, profile context, and clear close or back controls.
+- Modal composition: dark rounded card, bottom sheet, or informational overlay appears over a dimmed health or photographic context.
 
 # Navigation appearance
 
-Today, Vitals, and My Health sit in a frosted bottom pill. A separate circular plus action opens logging. The top bar provides side menu, centered Oura mark, share, and ring/device status.
-
-This section governs appearance only; product behavior and information architecture come from the approved Research and Planning artifacts.
+The primary bottom navigation is a frosted dark pill containing three evenly spaced icon-and-label items. The selected item is white and higher contrast; inactive items remain gray. A separate circular add button sits adjacent or above the pill and uses a clear white symbol. Top controls are compact circular or icon-only buttons for menu, sharing, and device/status context. Detail screens use white back labels or chevrons and close controls on black. Sheets retain dark surfaces and large top corners.
 
 # Components
 
-Primary onboarding actions are full-width white pills with dark labels. In-product secondary actions are translucent dark pills. Confirm and Edit share one compact detected-activity panel.
-
-Metric cards use dark translucent gradients, large scores, status labels, horizontal ranges, and a chevron. My Health panels add one colored atmospheric glow and a compact interpretation badge.
-
-Onboarding fields sit on near-black rectangular surfaces with small leading icons. Validation uses an inline check. Forms keep one white bottom action and minimal decoration.
-
-States such as Optimal, Thriving, Looking Good, and Making Progress remain textual. Thin arcs, crowns, dots, and range markers reinforce the status without replacing it.
-
-Controls retain at least a 44-point interactive area. Pressed and disabled treatments should stay within the documented palette and hierarchy.
+- Primary action: 50–54 points tall, full or near-full width, white fill, pill radius, and centered near-black semibold label. Disabled or loading state reduces contrast while preserving geometry.
+- Metric card: dark translucent or tonal fill, 20–24 point radius, 16-point padding, large white tabular score, textual state, and a delicate range, chart, or chevron.
+- Score chip: circular or near-circular dark surface with score, thin colored arc or mark, and small status context. Color does not replace the label.
+- Health panel: large dark card with one serif interpretation, subtle blue/teal/violet/rose glow, supporting explanation, and minimal chrome.
+- Floating navigation: frosted dark pill with three compact items and strong white selected state; the add button remains a separate circle.
+- Selection row: dark surface with white label, muted description, and trailing radio, toggle, or disclosure. Selected state uses a restrained pale accent.
+- Product render stage: centered ring or charger, `contain` crop, black field, and ample empty space around the object.
 
 # Imagery and icons
 
-Landscape photography fills the hero and fades into black under text. Ring and charger renders remain centered, fully visible, and surrounded by black space. No distinct decorative illustration system was observed.
+Landscape and mountain photography is compositionally important on narrative surfaces and should retain a clear horizon or focal terrain behind the main score. Dark vertical gradients protect white type without erasing the scene. Ring and charger renders are centered, fully visible, and surrounded by black negative space. Some health surfaces use abstract dark gradients or atmospheric glows instead of photography.
 
-Use cover behavior for landscape heroes with the focal terrain kept behind the primary metric. Product renders use contain. Dark gradient overlays must maintain text contrast without obscuring the scene.
-
-When imagery is part of the documented composition, it cannot be omitted while final assets are pending. A temporary asset must preserve its placement, crop, scale, and approximate visual weight.
+The sample does not establish a recurring standalone authored illustration family. Visual identity comes from photography, product renders, gradients, fine data graphics, and white outline icons. Icons are delicate and mostly monochrome, with domain color used sparingly. Temporary media must preserve the observed focal crop, darkness, scale, and visual weight.
 
 # States
 
-States such as Optimal, Thriving, Looking Good, and Making Progress remain textual. Thin arcs, crowns, dots, and range markers reinforce the status without replacing it.
+Observed states include selected radio rows, enabled toggles, disabled or loading actions, overlay modals, open side drawer, active bottom tabs, expanded add menu, dense populated metrics, and sparse setup or informational surfaces. These states retain the dark canvas, high-contrast white hierarchy, rounded panels, and restrained accent colors.
 
-- **Success** ({colors.semantic-success}): Optimal, thriving, and looking-good states.
-- **Warning** ({colors.semantic-warning}): Attention and approaching limits.
-- **Overlay** ({colors.semantic-overlay}): Full-screen educational overlays.
-
-Only the states documented above are specified; other states must preserve the same canvas, hierarchy, and component language without inventing a new visual system.
+Positive, attention, and adverse states use green, yellow, or red alongside explicit words, scores, ranges, or markers. Loading does not introduce a new palette. Educational overlays flatten imagery into black when dense reading is required. Modal focus dims the underlying photographic or data context.
 
 # iOS adaptation
 
-- Extend the documented canvas through the iPhone safe areas while keeping readable content within appropriate insets.
-- Use a vertical `ScrollView` for content that does not fit compact heights; keep documented bottom actions and navigation clear of the home indicator.
-- Keep navigation, plus, metric cards, share, and side-menu controls at least 44 points. Educational-overlay close and previous/next controls need distinct safe-area spacing.
-- Stack score and range when horizontal space becomes insufficient. Keep the hero statement centered and reduce type before cropping it. Side-menu rows remain a single scrollable column.
-- Present the keyboard and system permission UI natively, then return to the same visual context.
-- Preserve semantic reading order in VoiceOver and allow text to grow with Dynamic Type.
-- Preserve the documented appearance instead of introducing an unrelated light or dark palette.
+Extend near-black, landscape imagery, or the active health gradient through the safe areas. Use vertical scroll containers for narratives, vitals, reports, forms, and drawers; keep the final content clear of the floating navigation and add control. Scenic crops should preserve the focal terrain behind text on compact heights.
+
+All navigation items, circular icons, score cards, toggles, and close controls need at least 44-point targets. VoiceOver should announce the health metric, score, unit, textual state, range context, and action in that order; decorative gradients and landscape details should not become separate elements. Preserve native keyboards, health permission, device pairing, payment, and sheets. With Dynamic Type or compact widths, stack score and range layouts before reducing type. Maintain the observed dark appearance rather than introducing generic light panels.
 
 # Anti-generic checklist
 
-- Do not show all health metrics as equally bright tiles.
-- Do not use scenic photography behind dense reports.
-- Do not make status color the only carrier of meaning.
-- Do not add playful illustration to clinical data.
-- Do not crowd the floating navigation with secondary actions.
-- Do not replace the documented canvas and surfaces with a generic grouped background and uniform white cards.
-- Do not use an unstyled `TabView`, default blue tint, or arbitrary SF Symbols when they contradict the reference.
-- Do not collapse every component to one corner radius or remove compositionally important imagery.
+- Do not replace the cinematic dark canvas with a light grouped dashboard.
+- Do not display every health metric as an equally bright colored tile.
+- Do not omit landscape photography or product renders where they define the composition.
+- Do not use serif type for small data labels, controls, or dense explanatory copy.
+- Do not make color the only indicator of health state.
+- Do not ship an unstyled `TabView`; preserve the frosted three-item pill and separate circular add action.
+- Do not use arbitrary SF Symbols with inconsistent stroke weight in place of the delicate icon system.
+- Do not give metric cards, sheets, pills, score chips, and floating controls one uniform radius.
 
 </design-context>

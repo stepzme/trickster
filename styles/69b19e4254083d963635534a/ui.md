@@ -3,130 +3,107 @@
 version: 1
 platform: iOS
 name: Yandex-Pro-design-analysis
-description: "A driver operations interface built around live maps, bright yellow trip actions, black-and-white task controls, green payment status, and blue financial analysis. The system keeps location, route, timer, payment method, and earnings visible under time pressure."
-colors: { primary: "#FFDD00", on-primary: "#181818", primary-soft: "#FFF4A3", accent: "#416BEA", ink: "#171719", ink-muted: "#73767B", ink-subtle: "#B0B3B7", canvas: "#FFFFFF", surface-1: "#F3F3F4", surface-2: "#E9EAEC", hairline: "#DDE0E3", semantic-success: "#45B97A", semantic-warning: "#FFDD00", semantic-danger: "#EF4F45", semantic-overlay: "#000000" }
+description: "A map-first operational interface where live geography fills most of the viewport, white rounded command sheets carry work controls, yellow dominates actions and selected states, purple marks order acceptance, and sparse white analytics screens use heavy numeric type and blue charts."
+colors:
+  canvas: "#FFFFFF"
+  surface-primary: "#FFFFFF"
+  surface-secondary: "#F5F5F6"
+  accent-primary: "#FFD600"
+  accent-secondary: "#C000FF"
+  text-primary: "#1F1F1F"
+  text-secondary: "#8E8E93"
+  divider: "#E7E7EA"
+  destructive: "#E53935"
 typography:
-  display-xl: { fontFamily: Yandex Sans, fontSize: 42, fontWeight: 700, lineHeight: 1.00, letterSpacing: -0.9 }
-  display-lg: { fontFamily: Yandex Sans, fontSize: 34, fontWeight: 700, lineHeight: 1.08, letterSpacing: -0.6 }
-  display-md: { fontFamily: Yandex Sans, fontSize: 28, fontWeight: 700, lineHeight: 1.15, letterSpacing: -0.3 }
-  headline: { fontFamily: Yandex Sans, fontSize: 22, fontWeight: 700, lineHeight: 1.20, letterSpacing: 0 }
-  card-title: { fontFamily: Yandex Sans, fontSize: 16, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: Yandex Sans, fontSize: 16, fontWeight: 500, lineHeight: 1.30, letterSpacing: 0 }
-  body-lg: { fontFamily: Yandex Sans, fontSize: 16, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
-  body: { fontFamily: Yandex Sans, fontSize: 14, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
-  body-sm: { fontFamily: Yandex Sans, fontSize: 12, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
-  caption: { fontFamily: Yandex Sans, fontSize: 10, fontWeight: 500, lineHeight: 1.20, letterSpacing: 0 }
-  button: { fontFamily: Yandex Sans, fontSize: 16, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0 }
-  eyebrow: { fontFamily: Yandex Sans, fontSize: 11, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0.2 }
-  mono: { fontFamily: SF Mono, fontSize: 12, fontWeight: 500, lineHeight: 1.30, letterSpacing: 0 }
-rounded: { xs: 6, sm: 10, md: 14, lg: 20, xl: 28, xxl: 34, pill: 9999, full: 9999 }
-spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
+  hero: {fontFamily: "SF Pro Display", fontSize: 32, fontWeight: 700, lineHeight: 37}
+  title: {fontFamily: "SF Pro Display", fontSize: 26, fontWeight: 700, lineHeight: 31}
+  section: {fontFamily: "SF Pro Text", fontSize: 20, fontWeight: 600, lineHeight: 25}
+  body: {fontFamily: "SF Pro Text", fontSize: 17, fontWeight: 400, lineHeight: 22}
+  label: {fontFamily: "SF Pro Text", fontSize: 16, fontWeight: 600, lineHeight: 21}
+  caption: {fontFamily: "SF Pro Text", fontSize: 12, fontWeight: 400, lineHeight: 16}
+spacing:
+  screen-horizontal: 16
+  section-gap: 24
+  card-padding: 16
+  control-gap: 10
+rounded:
+  control: 14
+  card: 16
+  sheet: 24
+  pill: 999
 components:
-  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: [15, 20]}
-  trip-sheet: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 14 }
-  status-chip: { backgroundColor: "#DDF7EA", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.pill}", padding: [7, 10]}
-  input: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: [12, 14]}
-  navigation-bar: { backgroundColor: "transparent", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xs}", height: 52 }
-  footer: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: [8, 10]}
+  operational-sheet: {fill: "white", topRadius: 24, padding: 16, placement: "over map bottom edge"}
+  primary-action: {fill: "yellow", text: "near-black semibold", radius: 999, minHeight: 52}
+  accept-slider: {fill: "purple", trailing: "black cap", radius: 999}
+  analytics-chart: {bars: "blue and gray", surface: "white", numbers: "large bold"}
 ---
 
 # Overview
 
-Яндекс Про supports time-critical driver work with a live route, prominent trip state, payment visibility, and transparent earnings detail.
+Yandex Pro is operational and map-first. On work screens, live geography occupies roughly two thirds of the viewport while a white rounded sheet anchors immediate controls at the bottom. Yellow marks the main action and most selected states; a vivid purple slider is reserved for accepting work. Outside the map, the interface becomes sparse and white, using generous rows, low-contrast metadata, heavy numeric earnings, and blue charts.
 
 # Non-negotiable visual invariants
 
-- Keep pickup and payment visible.
-- Separate gross income from deductions.
-- Make cancellation explicit and red.
-- The active trip uses a full map with a bottom task sheet; earnings use a summary chart above dated order rows.
-- Keep trip screens compact and glanceable while allowing financial analysis more vertical space.
+- Let functional map imagery occupy roughly 60–75% of operational screens rather than reducing it to a card.
+- Place task controls in a white bottom sheet with large rounded top corners over the map.
+- Use bright yellow for the dominant action and selected toggles, radios, checks, and pills.
+- Preserve the purple accept slider with its high-contrast dark trailing cap when an equivalent commitment control is needed.
+- Keep navigation and settings visually restrained: generous row height, thin dividers, black labels, and gray metadata.
+- Give financial values 24–32 point heavy emphasis and pair them with blue/gray charts on open white pages.
+- Mirror structure in the observed dark appearance instead of redesigning layout or hierarchy.
+- Keep authored illustration sparse and task-specific; maps, photos, icons, and charts carry most visual meaning.
 
 # Color and surfaces
 
-Use yellow for the primary trip action, blue for navigation and income analysis, and green for confirmed payment state.
+Operational screens use the map as the largest color field, with white sheets and floating controls above it. Non-map screens use white as the continuous canvas and pale gray for grouped cards, fields, and inactive controls. Bright yellow is the repeated primary accent and can occupy wide pill actions or small selected marks. Purple is isolated to the high-commitment acceptance control, while blue belongs to earnings charts and some navigation or informational panels.
 
-Let the map fill the canvas and place white sheets or cards over it; use pale gray for secondary action groups.
-
-Use near-black for route and earnings, gray for metadata, and white on strong navigation blue.
-
-Use green for paid or ready state, red for cancellation and deductions, yellow for action, and blue for earnings.
+Near-black carries route, row, and financial labels; medium gray carries metadata; pale gray dividers keep long lists structured. Green supports payment, support, or success feedback, and red belongs to cancellation, destructive confirmation, or warnings. Dark mode uses black canvas and dark-gray surfaces while keeping yellow and semantic colors intact. Generic system blue as the primary CTA would visibly break the reference.
 
 # Typography
 
-Use Yandex Sans for route, task, and financial information.
+The typography is system-like and optimized for rapid scanning. Major financial values and operational numbers use 24–32 point bold display type; page titles sit around 24–26 points; row labels and primary controls use 16–17 points; metadata uses 13–14 points; captions use 11–12 points. The main distance, timer, amount, or status must remain visually stronger than explanatory text.
 
-Use 34–42 points for earnings, 22 points for page titles, 16 points for primary actions, 14 points body, and 10–12 points metadata.
-
-Make maneuver, distance, timer, pickup, payment, and net income readable at a glance.
-
-Use the platform sans or Inter with tabular time and money.
-
-The hierarchy must remain legible with Dynamic Type: supporting text may wrap before the primary metric, title, or action loses its role.
+Use SF Pro Display and SF Pro Text as the iOS-safe substitute. Prefer stable numeric alignment for time and money. Under Dynamic Type, move metadata and secondary actions onto additional lines while preserving the primary number and action. Bottom sheets should grow or scroll without covering the map entirely, and list rows should expand vertically rather than truncate essential state.
 
 # Screen composition
 
-Use a 4 points base, 8–12 points gutters, 10 points gaps, and 14 points sheet padding.
+Map-led screens extend functional geography through the safe areas. Floating map controls sit near the edges, while the bottom 25–40% is occupied by a white command sheet with one primary action. Route and navigation states add compact overlays without covering the main path. Non-map screens begin with a minimal top bar and use vertical white lists, grouped profile cards, or analytics content with generous whitespace.
 
-The active trip uses a full map with a bottom task sheet; earnings use a summary chart above dated order rows.
-
-Keep trip screens compact and glanceable while allowing financial analysis more vertical space.
-
-Map geometry, route color, and charts provide depth; avoid decoration unrelated to the task.
-
-Primary iPhone screens keep the documented content grouping and vertical rhythm inside a scroll container when content exceeds the viewport. Bottom-owned actions or navigation reserve the lower safe area rather than covering content.
+Observed archetypes include a map with demand zones and a bottom online control; a route map with navigation overlays; an order sheet with a purple accept slider; a white earnings page with a large value, segmented control, blue/gray chart, and dated rows; a grouped profile dashboard; a plain settings list; a keyboard form sheet; a dimmed bottom picker with radio selection; a centered destructive confirmation card; a chat screen with bubbles and pinned input; and sparse empty or task-instruction states.
 
 # Navigation appearance
 
-Orders, Money, Chats, and Profile remain in the bottom bar; active navigation takes priority during a trip.
-
-This section governs appearance only; product behavior and information architecture come from the approved Research and Planning artifacts.
+The persistent bottom bar uses icon-and-label items on a light or dark surface. Inactive items are muted gray, the selected item is dark or high contrast, and small red badges may mark counts. Operational map states reduce competing navigation chrome. Top bars are minimal, with a small back arrow, centered title, and occasional right action. Bottom sheets use large rounded top corners; destructive confirmation appears as a compact centered white card over a dimmed backdrop.
 
 # Components
 
-Use a wide yellow pill for Start trip and compact gray or red rows for call and cancel.
+Primary actions are wide yellow pills with near-black semibold labels and, when observed, a left circular arrow or confirmation mark. The accept control is a purple full-width slider with a black trailing cap and high-contrast white label. Operational sheets are white, have roughly 20–24 point top radii, and use about 16 points of padding.
 
-Use navigation cards, trip sheets, route rows, payment chips, earnings summaries, and dated order lists.
-
-Keep order actions and financial filters short, explicit, and suitable for one-handed use.
-
-Show waiting, cash payment, route progress, timer, cancellation, orders, bonuses, tips, commissions, and net income.
-
-Controls retain at least a 44-point interactive area. Pressed and disabled treatments should stay within the documented palette and hierarchy.
+Rows are tall, flat, and separated by thin pale dividers. Toggles use yellow on and pale gray off. Radio lists in sheets use a yellow selected check. Payment and status chips are compact pills. Statistics use segmented controls, large numeric summaries, and blue/gray bar charts. Chat bubbles use pale gray and cyan-tinted fills. Pressed and disabled states adjust opacity or tone while preserving shape and semantic color.
 
 # Imagery and icons
 
-Use map, route, vehicle, and chart symbols only; do not introduce ornamental scenes.
-
-Keep maps fluid, route contrast strong, and charts fully visible without horizontal crop.
-
-When imagery is part of the documented composition, it cannot be omitted while final assets are pending. A temporary asset must preserve its placement, crop, scale, and approximate visual weight.
+Maps are essential functional imagery and cannot be replaced with a neutral placeholder in a visual evaluation; route contrast, zone overlays, and controls must remain legible. Profile screens may use a blurred real avatar and vehicle photo or render. Logos appear in authentication and small service contexts. Icons are mostly simple black outline glyphs, with colored circular icons in chat or service lists. Charts are data visualization, not illustration. The observed selfie guidance and empty-state art are isolated task assets rather than evidence of a stable illustration system.
 
 # States
 
-Show waiting, cash payment, route progress, timer, cancellation, orders, bonuses, tips, commissions, and net income.
-
-Use green for paid or ready state, red for cancellation and deductions, yellow for action, and blue for earnings.
-
-Only the states documented above are specified; other states must preserve the same canvas, hierarchy, and component language without inventing a new visual system.
+Observed online, route, order, and selected map states retain the map plus white sheet structure. Selected radio, toggle, and checkbox states use yellow; acceptance uses purple. Analytics move between segmented periods without changing the white page and chart hierarchy. Dark appearance mirrors the same sheets, rows, and controls on black and dark gray. Empty earnings and selfie-instruction states introduce sparse task-specific art. Destructive confirmation stays centered above a dim backdrop, and chat maintains pinned input above the keyboard.
 
 # iOS adaptation
 
-- Extend the documented canvas through the iPhone safe areas while keeping readable content within appropriate insets.
-- Use a vertical `ScrollView` for content that does not fit compact heights; keep documented bottom actions and navigation clear of the home indicator.
-- Keep Start, call, cancel, route rows, tabs, calendar, and footer actions at least 44 points.
-- Preserve maneuver, route, timer, payment, and primary action; collapse secondary chat and history first.
-- Present the keyboard and system permission UI natively, then return to the same visual context.
-- Preserve semantic reading order in VoiceOver and allow text to grow with Dynamic Type.
-- Preserve the documented appearance instead of introducing an unrelated light or dark palette.
+Allow the live map to extend under the status bar and behind floating controls, while keeping operational labels within readable safe-area insets. Anchor command sheets and actions above the home indicator, with interactive sheet heights that preserve meaningful map context. Place analytics, profile, settings, and chat content in vertical scroll containers. Keyboard avoidance must keep active fields or chat input visible.
+
+All map controls, tabs, list rows, toggles, radio choices, sliders, and actions need at least 44-point targets. VoiceOver should announce operational status, key distance or amount, then the primary action before secondary details. Dynamic Type should expand sheets and rows while preserving the large metric. On compact widths, stack supporting metadata and reduce secondary map overlays before shrinking the primary control. Preserve both observed light and dark relationships.
 
 # Anti-generic checklist
 
-- Do not cover the active route with secondary content.
-- Do not rely on tiny chart labels.
-- Do not mix trip and earnings actions.
-- Do not replace the documented canvas and surfaces with a generic grouped background and uniform white cards.
-- Do not use an unstyled `TabView`, default blue tint, or arbitrary SF Symbols when they contradict the reference.
-- Do not collapse every component to one corner radius or remove compositionally important imagery.
+- Do not put the map inside a decorative card or cover most of it with secondary content.
+- Do not replace yellow actions and selection with default blue tint.
+- Do not turn every screen into the same white card stack; map, analytics, lists, and sheets have distinct compositions.
+- Do not ship an unstyled `TabView` or generic `Form` where the reference uses flat tall rows and custom selection.
+- Do not replace the purple acceptance slider with an ordinary rectangular button.
+- Do not shrink financial values or charts into low-priority cards.
+- Do not use arbitrary multicolor icons or decorative scenes on operational screens.
+- Do not infer a pervasive illustration system from isolated empty and instruction art.
 
 </design-context>

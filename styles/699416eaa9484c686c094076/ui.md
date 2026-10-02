@@ -3,167 +3,123 @@
 version: 1
 platform: iOS
 name: Cian-design-analysis
-description: "A map- and photography-led real-estate marketplace with white surfaces, vivid blue actions, pale-blue service panels, cyan header gradients, compact green trust labels, and dense listing data. Search, filters, map, property detail, favorites, messages, listing creation, wallet, and office tools stay utilitarian and comparable."
+description: "A bright real-estate marketplace combining white utility surfaces, saturated blue actions, map overlays, dense black property data, large photo evidence, a five-item tab bar, and selective glossy blue-purple 3D service imagery."
 colors:
-  primary: "#087BEE"
-  on-primary: "#FFFFFF"
-  primary-soft: "#EAF4FF"
-  accent: "#35B8F3"
-  accent-secondary: "#2FAF63"
-  ink: "#17191C"
-  ink-muted: "#6F7479"
-  ink-subtle: "#A7ACB1"
   canvas: "#FFFFFF"
-  surface-1: "#FFFFFF"
-  surface-2: "#F2F5F8"
-  hairline: "#DFE4E8"
-  semantic-success: "#2FAF63"
-  semantic-danger: "#D83A4A"
-  semantic-overlay: "#000000"
+  surface-primary: "#FFFFFF"
+  surface-secondary: "#F2F5F8"
+  accent-primary: "#087BEE"
+  accent-secondary: "#35B8F3"
+  text-primary: "#17191C"
+  text-secondary: "#6F7479"
+  divider: "#DFE4E8"
+  destructive: "#D83A4A"
 typography:
-  display-xl: { fontFamily: SF Pro Display, fontSize: 36, fontWeight: 700, lineHeight: 1.05, letterSpacing: -0.7 }
-  display-lg: { fontFamily: SF Pro Display, fontSize: 30, fontWeight: 700, lineHeight: 1.08, letterSpacing: -0.5 }
-  display-md: { fontFamily: SF Pro Display, fontSize: 26, fontWeight: 700, lineHeight: 1.12, letterSpacing: -0.3 }
-  headline: { fontFamily: SF Pro Display, fontSize: 22, fontWeight: 700, lineHeight: 1.18, letterSpacing: -0.2 }
-  card-title: { fontFamily: SF Pro Text, fontSize: 16, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: SF Pro Text, fontSize: 17, fontWeight: 500, lineHeight: 1.35, letterSpacing: 0 }
-  body-lg: { fontFamily: SF Pro Text, fontSize: 16, fontWeight: 400, lineHeight: 1.45, letterSpacing: 0 }
-  body: { fontFamily: SF Pro Text, fontSize: 14, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
-  body-sm: { fontFamily: SF Pro Text, fontSize: 12, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
-  caption: { fontFamily: SF Pro Text, fontSize: 10, fontWeight: 400, lineHeight: 1.20, letterSpacing: 0 }
-  button: { fontFamily: SF Pro Text, fontSize: 15, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0 }
-  eyebrow: { fontFamily: SF Pro Text, fontSize: 11, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0.3 }
-  mono: { fontFamily: SF Mono, fontSize: 12, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
-rounded: { xs: 8, sm: 12, md: 16, lg: 20, xl: 26, xxl: 32, pill: 9999, full: 9999 }
-spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
+  hero: {fontFamily: "SF Pro Display", fontSize: 34, fontWeight: 700, lineHeight: 39}
+  title: {fontFamily: "SF Pro Display", fontSize: 28, fontWeight: 700, lineHeight: 34}
+  section: {fontFamily: "SF Pro Display", fontSize: 21, fontWeight: 700, lineHeight: 26}
+  body: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 400, lineHeight: 21}
+  label: {fontFamily: "SF Pro Text", fontSize: 14, fontWeight: 600, lineHeight: 19}
+  caption: {fontFamily: "SF Pro Text", fontSize: 12, fontWeight: 400, lineHeight: 16}
+spacing:
+  screen-horizontal: 16
+  section-gap: 24
+  card-padding: 16
+  control-gap: 12
+rounded:
+  control: 14
+  card: 18
+  sheet: 28
+  pill: 999
 components:
-  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.md}", padding: [14, 18]}
-  feature-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 16 }
-  action-tile: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.md}", padding: 12 }
-  grouped-list: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: [8, 16]}
-  input: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body-lg}", rounded: "{rounded.md}", padding: [14, 16]}
-  navigation-bar: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xs}", height: 52 }
-  footer: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: [8, 12]}
+  primary-action: {fill: "Cian blue", text: "white semibold", height: 52, radius: 14}
+  listing-card: {fill: "white", image: "large property crop", padding: 12, radius: 18, content: "price, attributes, location, status"}
+  map-pin: {fill: "blue or white", text: "compact dark or white value", radius: 999}
+  navigation: {fill: "white", selected: "blue icon and label", unselected: "muted gray"}
 ---
 
 # Overview
 
-Cian prioritizes geographic search, comparable listing data, and direct contact. Secondary tools support saved searches, property management, listing creation, messaging, and wallet administration.
+Cian is a bright, utilitarian real-estate interface where maps and property photography provide spatial evidence while dense black text supports comparison. White fills most list, detail, creation, message, and account surfaces; pale gray separates inputs and grouped tools. Saturated Cian blue marks primary actions, selected tabs, pins, and links. A selective authored layer of glossy blue-purple-cyan 3D pictograms appears in service tiles, onboarding, empty states, and wallet contexts without replacing real property imagery.
 
 # Non-negotiable visual invariants
 
-- The sampled screens consistently show Map-first search surface.
-- Preserve search context.
-- Keep price and area comparable.
-- Use real photos.
-- Make contact obvious.
-- Show listing state.
-- Search overlays filters on a map and raises a listing sheet from below.
-- Detail uses a photo gallery followed by dense sections; creation uses a linear form.
+- White remains the dominant utility canvas; pale gray groups fields and secondary tools without creating a decorative card stack.
+- Real property, room, building, and neighborhood photography is the primary evidence on listing and detail surfaces and cannot be omitted.
+- Saturated blue owns primary actions, selected navigation, links, map pins, and active filters.
+- Prices and core property attributes use bold tabular hierarchy and stay visually adjacent to location and status context.
+- Map screens preserve visible geographic context beneath compact filters, controls, price pins, and a raised white result sheet.
+- The primary bottom bar contains five compact items, with a blue selected state and muted inactive items.
+- Glossy blue-purple-cyan 3D pictograms are reserved for service, onboarding, wallet, and empty-state surfaces rather than inserted into listing evidence.
+- Rounded bottom sheets use visibly larger top corners than ordinary cards, chips, and fields.
 
 # Color and surfaces
 
-- **Primary** ({colors.primary}): Search, save, call, publish, and continuation.
-- **Accent** ({colors.accent}): Header atmosphere and service emphasis.
-- **Secondary Accent** ({colors.accent-secondary}): Trust, new, super-agent, and positive labels.
+The canvas and primary surfaces are white. Cool pale gray fills inputs, grouped settings, secondary controls, and disabled states. Thin gray dividers organize dense rows. Real map tiles retain their native pale geographic palette, while dimmed modal overlays use translucent black.
 
-- **Canvas** ({colors.canvas}): Results, listing, creation, favorites, and office.
-- **Surface 1** ({colors.surface-1}): Main cards and sheets.
-- **Surface 2** ({colors.surface-2}): Secondary controls and grouped fields.
-- **Hairline** ({colors.hairline}): Quiet separation.
-
-- **Ink** ({colors.ink}): Headings and primary values.
-- **Ink Muted** ({colors.ink-muted}): Supporting detail.
-- **Ink Subtle** ({colors.ink-subtle}): Placeholder and inactive state.
-
-- **Success** ({colors.semantic-success}): Completed or positive state.
-- **Danger** ({colors.semantic-danger}): Error and destructive state.
-- **Overlay** ({colors.semantic-overlay}): Modal focus.
+Cian blue is the decisive accent and may fill a wide action, selected tab, chip, icon, or map pin. Lighter cyan supports service emphasis and authored imagery. Near-black carries price, titles, and core facts; medium gray carries address, transport, terms, dates, and inactive state. Green marks trust or positive verification, while red marks destructive actions, unread count, or error. Default iOS blue used inconsistently, bright gradients on ordinary fields, and many competing accent colors would break the reference.
 
 # Typography
 
-- **SF Pro Display** — prices and section headings.
-- **SF Pro Text** — controls, forms, and explanatory copy.
-- **SF Mono** — code, identifiers, or compact numeric data.
+Use SF Pro Display for prices, major titles, and section headings and SF Pro Text for listing facts, filters, forms, messages, and metadata. Hero statements sit around 30–34 points, page titles around 26–28, section headings around 20–22, listing titles and prices around 15–18, body text around 14–16, and metadata around 11–13.
 
-Use 36 points bold for major statements, 22 points bold for screen headings, 16 points semibold for cards, 14 points regular for detail, and 15 points semibold for primary actions.
-
-- Keep location and price dominant.
-- Show property attributes in consistent order.
-- Use photos for evidence, not decoration.
-- Keep contact action persistent.
-
-Use **Inter** or the platform system sans when the reference display face is unavailable.
-
-The hierarchy must remain legible with Dynamic Type: supporting text may wrap before the primary metric, title, or action loses its role.
+Content is mostly left-aligned, while compact navigation titles and the centered Cian mark may sit in the top bar. Prices, areas, counts, and dates use tabular figures. Dense attributes are grouped with spacing and weight rather than decorative color. With Dynamic Type, metadata stacks below titles and prices, chips wrap or scroll, and listing cards grow vertically before property facts are truncated.
 
 # Screen composition
 
-Use a 4 points base, 16 points edge gutters, 12 points control gaps, and 16 points card padding.
+Most utility surfaces use 16-point screen insets, 10–12 point control gaps, 12–16 points inside cards, and 20–28 points between major groups. White or map content extends through the safe areas according to context. Long result, detail, form, message, and office surfaces scroll vertically; the five-item tab bar or a lower blue action reserves the bottom safe area.
 
-Search overlays filters on a map and raises a listing sheet from below. Detail uses a photo gallery followed by dense sections; creation uses a linear form.
+Observed archetypes include:
 
-Allow map and photos to breathe, while keeping comparable listing metadata tightly grouped.
-
-Use sheets over maps, subtle cards, and mild blue gradient only on home. Photography provides most depth.
-
-Primary iPhone screens keep the documented content grouping and vertical rhythm inside a scroll container when content exceeds the viewport. Bottom-owned actions or navigation reserve the lower safe area rather than covering content.
+- Map composition: real map fills most of the viewport, with compact search, filter chips, location controls, price pins, and a white rounded result sheet raised from the bottom.
+- Listing-feed composition: search and filter controls lead into a one-column stack of photo-led cards with bold price, compact attributes, address context, labels, and favorite state.
+- Detail composition: large photo carousel dominates the upper region, followed by price and facts, dense white sections, trust or status labels, and clear blue contact actions.
+- Creation composition: centered or leading title over a linear series of pale grouped fields, photo controls, selectors, and one wide blue continuation action.
+- Utility-list composition: white grouped rows with compact leading icons, black labels, gray secondary values, badges, chevrons, or switches.
+- Service or wallet composition: rounded pale or white cards use concise copy and a contained glossy 3D pictogram; empty variants open more white space around the art.
+- Modal composition: large-radius white bottom sheet over a dimmed map, photo, or list context, with compact choices and one blue action.
 
 # Navigation appearance
 
-Home, Search, Favorites, Messages, and Office form the base; map and listing preserve search context.
-
-This section governs appearance only; product behavior and information architecture come from the approved Research and Planning artifacts.
+The primary bottom bar is white and contains five evenly spaced icon-and-label items. The selected item turns blue; inactive items remain gray. Red count badges may attach to a relevant item. Many top bars use a centered compact Cian mark, leading back chevron, and trailing share, ellipsis, favorite, or close controls. Sheets use white surfaces, large top corners, and a subtle drag indicator. Filters and segmented tabs use white or pale fills with blue selected state.
 
 # Components
 
-Blue full-width actions save search, call, create, publish, and continue. Favorite uses a separate heart state.
-
-Listing cards pair photo, price, core attributes, location, transport time, labels, and contact. Similar listings use a compact photo grid.
-
-Location, parameters, photos, features, description, price, terms, and payment use stepwise labeled controls.
-
-Show new, advertisement, verified, super-agent, price changed, draft, published, paid, archived, and deleted as text labels.
-
-Controls retain at least a 44-point interactive area. Pressed and disabled treatments should stay within the documented palette and hierarchy.
+- Primary action: approximately 52 points tall, full or near-full width, Cian-blue fill, 14–16 point radius, and centered white semibold label. Disabled state becomes pale gray.
+- Listing card: large property photograph, 16–20 point radius, compact white metadata region, bold price, short attribute row, gray location context, optional trust label, and separate favorite control.
+- Map pin: blue or white compact pill with short price or count value, strong contrast, and a subtle selected elevation. It does not obscure surrounding geography.
+- Filter chip: 34–40 points tall, white or pale-blue fill, pill radius, compact label, and blue selected state.
+- Grouped field: pale-gray rounded rectangle with explicit label or placeholder, dark value, and optional trailing selector or disclosure.
+- Service tile: pale or white rounded surface with short title, compact action, and one contained glossy 3D pictogram occupying meaningful but secondary space.
+- Message or notification row: leading avatar or icon, dark title, gray preview or timestamp, optional unread dot or badge, and thin divider or spacing.
 
 # Imagery and icons
 
-Use real property, room, building, and neighborhood photos. Small service icons stay functional and secondary.
+Real property photography is essential and uses wide or portrait crops that preserve room geometry, building context, or neighborhood evidence. Photo carousels may fill the upper detail region; thumbnails and cards keep price, attributes, labels, and actions outside busy image areas. Maps remain functional imagery rather than decorative texture.
 
-Crop property photos consistently but preserve spatial context. Keep price, attributes, trust labels, and CTA outside the image.
-
-When imagery is part of the documented composition, it cannot be omitted while final assets are pending. A temporary asset must preserve its placement, crop, scale, and approximate visual weight.
+The authored secondary imagery uses glossy blue, purple, and cyan 3D pictograms with simple rounded forms and soft shadows. These objects appear in onboarding, services, messaging empty states, and wallet surfaces. Utility icons remain compact blue, black, or gray line and filled glyphs. Temporary media must preserve the observed crop, subject scale, palette density, and hierarchy.
 
 # States
 
-Show new, advertisement, verified, super-agent, price changed, draft, published, paid, archived, and deleted as text labels.
+Observed states include selected filters and tabs, unread dots or badges, empty message or wallet surfaces, favorite heart selection, modal sheets over dimmed maps, scroll-position indicators, populated photo cards, and form or account states. These retain the white canvas, blue active color, rounded geometry, and dense black/gray hierarchy.
 
-- **Success** ({colors.semantic-success}): Completed or positive state.
-- **Danger** ({colors.semantic-danger}): Error and destructive state.
-- **Overlay** ({colors.semantic-overlay}): Modal focus.
-
-Only the states documented above are specified; other states must preserve the same canvas, hierarchy, and component language without inventing a new visual system.
+Trust or positive state uses green labels; unread, destructive, or error state uses red. Empty states may introduce the glossy authored pictogram while property evidence surfaces remain photo-led. Modal focus dims the underlying context without changing the sheet's blue action hierarchy.
 
 # iOS adaptation
 
-- Extend the documented canvas through the iPhone safe areas while keeping readable content within appropriate insets.
-- Use a vertical `ScrollView` for content that does not fit compact heights; keep documented bottom actions and navigation clear of the home indicator.
-- Keep every row, tab, selector, map control, and primary action at least 44 points.
-- Preserve location, filters, listing summary, price, and contact. Collapse secondary services before property evidence.
-- Present the keyboard and system permission UI natively, then return to the same visual context.
-- Preserve semantic reading order in VoiceOver and allow text to grow with Dynamic Type.
-- Preserve the documented appearance instead of introducing an unrelated light or dark palette.
+Extend white, map, or the active photo carousel through the appropriate safe areas and reserve the lower inset for the tab bar or blue action. Use vertical scroll containers for result lists, details, forms, messages, and account tools. Floating map controls and result sheets must avoid the status bar, home indicator, and each other.
+
+All chips, pins, icon controls, favorite buttons, list rows, and tabs need at least 44-point targets. VoiceOver should announce price, property type or core attributes, location, status, and action in that order; decorative pictogram pieces should not become separate elements. Preserve native keyboard, camera/photo picker, map, payment, and sheet transitions. With Dynamic Type or compact widths, stack attributes and expand cards before shrinking type. Maintain the observed light-first system.
 
 # Anti-generic checklist
 
-- Do not hide filters behind opaque imagery.
-- Do not use illustration instead of property evidence.
-- Do not bury price history.
-- Do not mix owner tools into buyer search.
-- Do not rely on map dots without list access.
-- Do not replace the documented canvas and surfaces with a generic grouped background and uniform white cards.
-- Do not use an unstyled `TabView`, default blue tint, or arbitrary SF Symbols when they contradict the reference.
-- Do not collapse every component to one corner radius or remove compositionally important imagery.
+- Do not replace real property photography or map evidence with generic illustrations.
+- Do not use default blue inconsistently; preserve the saturated Cian-blue action and selected-state hierarchy.
+- Do not hide price, location, or core property attributes behind disclosure or imagery.
+- Do not turn every list group into an oversized floating card.
+- Do not ship an unstyled `TabView`; preserve the five-item white bar and blue selected state.
+- Do not replace the glossy service pictograms with arbitrary SF Symbols where the authored art is compositional.
+- Do not give map pins, chips, listing cards, fields, and sheets one uniform radius.
+- Do not cover map context with opaque controls or overlapping sheets.
 
 </design-context>

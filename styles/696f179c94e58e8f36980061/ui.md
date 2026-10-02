@@ -3,184 +3,125 @@
 version: 1
 platform: iOS
 name: Lenta-design-analysis
-description: "A dense grocery-delivery system on white, anchored by deep Lenta blue, price red, sunny yellow ratings, and green fulfillment messages. Product pack shots, compact two-column cards, promotion banners, and a friendly orange cat mascot make shopping energetic while checkout remains structured and direct."
+description: "A dense grocery-commerce interface on white, organized by deep-blue actions, yellow brand cues, red price emphasis, green fulfillment messages, compact SKU photography, rounded product modules, and a five-item edge-integrated tab bar."
 colors:
-  primary: "#064CA8"
-  on-primary: "#FFFFFF"
-  primary-focus: "#003B85"
-  ink: "#17171A"
-  ink-muted: "#74747A"
-  ink-subtle: "#A6A6AC"
-  ink-tertiary: "#C7C7CC"
   canvas: "#FFFFFF"
-  surface-1: "#F6F7F8"
-  surface-2: "#EEF1F4"
-  surface-3: "#E3E7EB"
-  surface-4: "#D6DCE1"
-  hairline: "#E5E8EB"
-  hairline-strong: "#CFD5DA"
-  hairline-tertiary: "#B6BDC4"
-  inverse-canvas: "#063D85"
-  inverse-surface-1: "#052F67"
-  inverse-surface-2: "#04244E"
-  inverse-ink: "#FFFFFF"
-  brand-secure: "#F7C900"
-  semantic-success: "#20B878"
-  semantic-overlay: "#17171A"
+  surface-primary: "#FFFFFF"
+  surface-secondary: "#F2F5F8"
+  accent-primary: "#064CA8"
+  accent-secondary: "#F7C900"
+  text-primary: "#17171A"
+  text-secondary: "#74747A"
+  divider: "#E5E8EB"
+  destructive: "#D93446"
 typography:
-  display-xl: {fontFamily: SF Pro Display, fontSize: 36, fontWeight: 700, lineHeight: 1.06, letterSpacing: -0.8}
-  display-lg: {fontFamily: SF Pro Display, fontSize: 30, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.6}
-  display-md: {fontFamily: SF Pro Display, fontSize: 24, fontWeight: 700, lineHeight: 1.14, letterSpacing: -0.3}
-  headline: {fontFamily: SF Pro Display, fontSize: 20, fontWeight: 700, lineHeight: 1.20, letterSpacing: -0.2}
-  card-title: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 600, lineHeight: 1.24, letterSpacing: 0}
-  subhead: {fontFamily: SF Pro Text, fontSize: 14, fontWeight: 600, lineHeight: 1.30, letterSpacing: 0}
-  body-lg: {fontFamily: SF Pro Text, fontSize: 14, fontWeight: 400, lineHeight: 1.38, letterSpacing: 0}
-  body: {fontFamily: SF Pro Text, fontSize: 12, fontWeight: 400, lineHeight: 1.34, letterSpacing: 0}
-  body-sm: {fontFamily: SF Pro Text, fontSize: 10, fontWeight: 400, lineHeight: 1.28, letterSpacing: 0}
-  caption: {fontFamily: SF Pro Text, fontSize: 9, fontWeight: 400, lineHeight: 1.22, letterSpacing: 0}
-  button: {fontFamily: SF Pro Text, fontSize: 13, fontWeight: 600, lineHeight: 1.18, letterSpacing: 0}
-  eyebrow: {fontFamily: SF Pro Text, fontSize: 9, fontWeight: 700, lineHeight: 1.18, letterSpacing: 0.1}
-  mono: {fontFamily: SF Mono, fontSize: 10, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0}
-rounded:
-  xs: 4
-  sm: 8
-  md: 12
-  lg: 16
-  xl: 20
-  xxl: 26
-  pill: 9999
-  full: 9999
+  hero: {fontFamily: "SF Pro Display", fontSize: 32, fontWeight: 700, lineHeight: 38}
+  title: {fontFamily: "SF Pro Display", fontSize: 26, fontWeight: 700, lineHeight: 32}
+  section: {fontFamily: "SF Pro Text", fontSize: 20, fontWeight: 700, lineHeight: 25}
+  body: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 400, lineHeight: 21}
+  label: {fontFamily: "SF Pro Text", fontSize: 14, fontWeight: 600, lineHeight: 19}
+  caption: {fontFamily: "SF Pro Text", fontSize: 12, fontWeight: 400, lineHeight: 17}
 spacing:
-  xxs: 4
-  xs: 8
-  sm: 12
-  md: 16
-  lg: 20
-  xl: 24
-  xxl: 32
-  section: 40
+  screen-horizontal: 12
+  section-gap: 24
+  card-padding: 12
+  control-gap: 8
+rounded:
+  control: 12
+  card: 16
+  sheet: 28
+  pill: 999
 components:
-  button-primary: {backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 13 18}
-  button-primary-pressed: {backgroundColor: "{colors.primary-focus}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}"}
-  button-secondary: {backgroundColor: "{colors.canvas}", textColor: "{colors.primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 12 16}
-  button-tertiary: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 10 14}
-  button-inverse: {backgroundColor: "{colors.brand-secure}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 12 16}
-  product-card: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 8}
-  category-tile: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.caption}", rounded: "{rounded.md}", padding: 6}
-  search-field: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink-muted}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: 10 12}
-  discount-badge: {backgroundColor: "#ED3446", textColor: "{colors.on-primary}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: 3 6}
-  navigation-bar: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xs}", height: 50}
-  bottom-nav: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink-subtle}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: 7 8}
+  primary-action: {background: "#064CA8", foreground: "#FFFFFF", minHeight: 52, cornerRadius: 12}
+  secondary-action: {background: "#FFFFFF", foreground: "#064CA8", minHeight: 48, cornerRadius: 12}
+  primary-card: {background: "#FFFFFF", foreground: "#17171A", cornerRadius: 16, padding: 12}
+  navigation: {background: "#FFFFFF", selected: "#064CA8", unselected: "#A0A4AA"}
 ---
 
 # Overview
 
-Lenta is a dense grocery storefront where blue actions, red pricing, product imagery, and mascot-led feedback create a fast everyday rhythm.
+Lenta is a compact, photo-led grocery storefront. White carries a long modular commerce feed, deep blue anchors selection and commitment, red or pink makes prices and discounts immediately visible, and yellow plus green provide brand and fulfillment cues. The interface stays dense through small product cards and rails while checkout, profile, and state messaging become more spacious and vertically structured.
 
 # Non-negotiable visual invariants
 
-- The sampled screens consistently show Address and mode-first Home.
-- Keep price, weight, and discount adjacent.
-- Use blue for commitment.
-- Show fulfillment constraints early.
-- Keep replacement preferences explicit.
-- Use the mascot for state communication.
-- Products and categories use two columns or horizontal rails.
-- Checkout uses one column with a bottom action pair.
+- White is the dominant canvas; pale blue-gray is limited to search, secondary panels, and grouped controls.
+- Deep Lenta blue owns primary CTAs, cart controls, active navigation, selected radios, and important links.
+- Current price and discount receive red or pink emphasis, while old price and unit metadata remain gray.
+- Product cards keep SKU photo, rating, favorite, name, unit, current/old price, discount, and cart control visibly separate.
+- Home remains a dense vertical feed of campaign modules and horizontal product rails rather than a generic two-column dashboard.
+- Active bottom navigation combines blue with small yellow brand cues; inactive items are light gray.
+- Green fulfillment or benefit strips appear near the affected order context, not as a general decorative accent.
+- Sticky cart, total, filter, and checkout controls sit above the home indicator and preserve the last content row.
 
 # Color and surfaces
 
-Deep blue is the primary action and navigation color. Yellow supports brand, ratings, and loyalty; red highlights pricing and discounts.
+The app uses a clean white field for shopping, product detail, cart, and profile. Pale blue or cool gray fills search fields, secondary modules, disabled actions, and dividers. Shadows are soft and sparse.
 
-White carries shopping. Cool pale gray separates search, checkout steps, replacement settings, and information panels.
-
-Near-black carries product names and decisions. Gray supports weight, former price, and conditions; red gives price priority.
-
-Green marks free delivery and successful conditions. Blue radios and progress indicate active checkout decisions.
+Deep blue is the primary action and selected-state color. Warm yellow or orange identifies brand, ratings, loyalty details, and occasional campaign accents. Red or hot pink leads current prices, discount pills, and promotional stories. Green marks free delivery, savings, cashback, eco, or other positive fulfillment conditions. Near-black carries product names, totals, and decisions; gray supports weight, address, unit price, old price, and helper copy. Generic iOS blue that ignores the yellow/red/green role separation would make the system visually flatter.
 
 # Typography
 
-Use SF Pro Display for section titles and SF Pro Text for compact product, price, and checkout data.
+Use SF Pro as the iOS-safe typeface. Page titles and major state headings are approximately 24–28 points and bold. Section headings are about 18–20 points; product and control labels 13–15 points; weights, addresses, old prices, and metadata 11–13 points.
 
-- display-lg — 30 points — 700 — Empty or success claim
-- headline — 20 points — 700 — Catalog and checkout title
-- card-title — 15 points — 600 — Product and section title
-- body — 12 points — 400 — Weight, composition, conditions
-- caption — 9 points — 400 — Rating, discount, unit price
-
-- Price and quantity lead repeated cards.
-- Keep product names to a few readable lines.
-- Use bold for decisions and totals.
-
-Inter works well; preserve compact Cyrillic and tabular price figures.
-
-The hierarchy must remain legible with Dynamic Type: supporting text may wrap before the primary metric, title, or action loses its role.
+Product names are compact and may wrap to two lines. Current prices use stronger weight and red emphasis; old prices are gray and struck through; unit or pack information is quieter. Checkout totals and decisions use bold black type. With Dynamic Type, metadata wraps or moves below the main row before price, quantity, order status, or primary action loses hierarchy; dense grids may reduce columns.
 
 # Screen composition
 
-Use a 4 points base, 8 points product gaps, and 12 points screen padding.
+Use about 12-point page gutters, 8–12-point gaps between product cards, and 20–28 points between major feed modules. Primary content scrolls vertically above an edge-integrated tab bar or sticky bottom strip.
 
-Products and categories use two columns or horizontal rails. Checkout uses one column with a bottom action pair.
+Observed archetypes:
 
-Shopping stays dense. Use larger gaps only for state messaging and checkout decisions.
+- Grocery home feed: address and fulfillment selector, pale search field, campaign carousel, repeated horizontal product rails, occasional full-width banners or recipe imagery, and persistent cart or delivery-status strip.
+- Catalog grid: search above rounded category tiles with product or food imagery.
+- Product listing: title and compact chips above a two-column grid, with floating filter/sort controls above the tab bar.
+- Product detail: large centered package photo on white, rating and review marker, title and article metadata, related product rail, and sticky purchase controls.
+- Cart and checkout: one-column rows with delivery/address information, progress or benefit strip, item steppers, comments and promo controls, summary, radio choices, and fixed total/actions.
+- Profile and loyalty: promotional/summary cards followed by settings-style rows with left icons, right chevrons, and occasional badges.
+- Empty state: centered character or small illustration, bold short title, restrained explanation, and a single blue recovery action.
 
-Use product pack shots and mascot renders. Ordinary catalog cards remain nearly flat.
-
-Primary iPhone screens keep the documented content grouping and vertical rhythm inside a scroll container when content exceeds the viewport. Bottom-owned actions or navigation reserve the lower safe area rather than covering content.
+The camera scanner intentionally switches to a dark full-screen surface. Other screens preserve clear iOS safe areas.
 
 # Navigation appearance
 
-Keep five bottom destinations fixed. Active state combines blue and yellow; cart count and profile rewards use compact badges.
+The persistent bottom tab bar is a white edge-integrated surface with five observed icon-and-label positions. Selected items use blue with small yellow details; inactive icons and labels are light gray. Badges remain compact.
 
-This section governs appearance only; product behavior and information architecture come from the approved Research and Planning artifacts.
+Top bars are minimal, with a centered title, back chevron on the left, and square or circular icon actions where needed. Search, scan, favorite, and contextual controls remain visually compact. Bottom sheets use dimmed background, white rounded top corners, a grab handle, and blue primary action. These properties describe appearance only, not navigation structure.
 
 # Components
 
-Primary actions are blue with white type. Secondary actions use white with blue labels; yellow is reserved for loyalty and select brand moments.
+Primary actions are deep-blue rounded rectangles around 48–52 points high with white semibold text. Pressed state deepens blue; disabled state uses a pale lavender-gray fill. Secondary actions are white or pale gray with blue labels.
 
-Product cards include rating, favorite, pack shot, title, weight, current and former price, discount, and blue cart button.
+Product cards are dense photo-first modules: rating and favorite near the top, centered package image, compact name and unit, current and former price, discount or benefit label, and a square blue cart button. Added state replaces the button with a clear minus/quantity/plus stepper.
 
-Search is a white field with QR access. Checkout comments and preferences use sheets, radios, and blue focus outlines.
-
-Minimum-order and delivery conditions appear as tinted strips. Success uses the mascot with delivery facts and a single blue acknowledgment action.
-
-Controls retain at least a 44-point interactive area. Pressed and disabled treatments should stay within the documented palette and hierarchy.
+Search uses a pale-blue rounded field with search and optional scan access. Filter chips and radios show explicit blue selection. Cart rows include SKU thumbnail, price, quantity stepper, and relevant fulfillment state. Checkout uses row groups, step indicators, radio choices, and paired or single bottom actions. Loyalty surfaces include barcode, points or chips cards, and compact progress. All compact controls retain at least a 44-point target.
 
 # Imagery and icons
 
-Pack shots are contained on white. Category food uses clipped still life; mascot scenes sit centered with generous white space.
+Product packaging photography is structural and should be aspect-fit on white. Category tiles may use cropped food still lifes, while recipe/editorial modules use real food photography with deliberate cover crops. Campaign stories and banners combine photos, commercial graphics, bold embedded type, and occasional mascot imagery; they remain bounded campaign assets.
 
-Contain product packaging and aspect-fill food category crops; mascot art scales proportionally without edge cropping.
-
-When imagery is part of the documented composition, it cannot be omitted while final assets are pending. A temporary asset must preserve its placement, crop, scale, and approximate visual weight.
+An orange cat recurs in empty cart, empty notifications, and some loyalty or promotional contexts, but the sampled breadth is insufficient to define a complete standalone illustration system. Do not extrapolate it into ordinary product cards or every status. Functional icons are simple filled or outlined glyphs with blue selected and gray inactive treatment. Missing final imagery must be replaced by a temporary asset that preserves crop, scale, color mass, and text-safe area.
 
 # States
 
-Minimum-order and delivery conditions appear as tinted strips. Success uses the mascot with delivery facts and a single blue acknowledgment action.
+Observed states include onboarding, delivery/store selection, populated home and catalog, search with keyboard and suggestions, barcode scanner and loading, full-screen campaign story, selected filter/sort controls, product detail, favorite, added-to-cart quantity state, empty and filled cart, checkout with payment selection, order placed and courier status, authenticated and unauthenticated profile, loyalty barcode and progress, purchase history, payment methods, and empty notifications.
 
-Green marks free delivery and successful conditions. Blue radios and progress indicate active checkout decisions.
-
-Only the states documented above are specified; other states must preserve the same canvas, hierarchy, and component language without inventing a new visual system.
+Empty cart and notifications use the orange cat centered above concise text. Filled and selected states retain the white canvas and introduce blue controls close to the affected item. Order status uses compact bottom toast or pill treatment rather than a new full-screen visual language. Broad error coverage was not visible; any error adaptation should stay local and use semantic color without replacing the brand hierarchy.
 
 # iOS adaptation
 
-- Extend the documented canvas through the iPhone safe areas while keeping readable content within appropriate insets.
-- Use a vertical `ScrollView` for content that does not fit compact heights; keep documented bottom actions and navigation clear of the home indicator.
-- Search, QR, favorite, cart, quantity, payment, and navigation remain at least 44 points.
-- Keep two columns on phones; scroll rails horizontally and stack checkout choices.
-- Present the keyboard and system permission UI natively, then return to the same visual context.
-- Preserve semantic reading order in VoiceOver and allow text to grow with Dynamic Type.
-- Preserve the documented appearance instead of introducing an unrelated light or dark palette.
+Extend the active white, camera, or campaign field through safe areas while keeping readable controls inset. Use vertical scrolling for home, lists, detail, cart, checkout, loyalty, and profile. Reserve the lower safe area for the tab bar, filter controls, cart strip, or checkout actions.
+
+Keep product rails and campaigns horizontally scrollable. Dense two-column grids may become one column under large Dynamic Type rather than shrinking labels and prices. Present keyboard, camera/barcode, notification, and other system permission transitions natively, then restore the same context. VoiceOver should announce SKU, rating, name, quantity/unit, current and old price, discount, and cart state in order. The observed package is light-first, with dark appearance limited to the scanner.
 
 # Anti-generic checklist
 
-- Do not use red for primary actions.
-- Do not hide unit price or minimum order.
-- Do not add heavy card shadows.
-- Do not put mascot art inside ordinary product cards.
-- Do not leave checkout radios in generic native styling.
-- Do not replace the documented canvas and surfaces with a generic grouped background and uniform white cards.
-- Do not use an unstyled `TabView`, default blue tint, or arbitrary SF Symbols when they contradict the reference.
-- Do not collapse every component to one corner radius or remove compositionally important imagery.
+- Do not use red as the primary action color; red belongs to price and promotion.
+- Do not replace dense SKU rails with a loose stack of oversized cards.
+- Do not hide unit, quantity, old price, discount, or fulfillment conditions.
+- Do not omit package photography or use aspect-fill crops that cut off the product.
+- Do not place the cat mascot inside ordinary product cards or every state.
+- Do not replace the selected blue/yellow tab treatment with default blue `TabView` styling.
+- Do not use generic `Form` chrome for checkout, filters, or profile rows.
+- Do not collapse product cards, controls, state panels, and sheets to one corner radius.
 
 </design-context>

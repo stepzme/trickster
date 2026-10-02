@@ -3,173 +3,113 @@
 version: 1
 platform: iOS
 name: Airba-fresh-design-analysis
-description: "A dense grocery marketplace anchored by vivid fresh green, white commerce surfaces, compact product cards, and a cheerful avocado mascot. High-energy promotional banners coexist with practical category tiles, barcode search, unit pricing, delivery-service switching, and a fixed green checkout action."
+description: "A dense white grocery marketplace energized by fresh-green actions, compact photo-heavy product grids, blue reward bands, clean sans-serif type, a green-selected tab bar, and a cheerful avocado mascot for service states."
 colors:
-  primary: "#62CB32"
-  on-primary: "#FFFFFF"
-  primary-soft: "#EAF8DF"
-  accent-blue: "#58A7EF"
-  accent-yellow: "#FFD43A"
-  accent-orange: "#F59B2F"
-  ink: "#171A18"
-  ink-muted: "#747A75"
-  ink-subtle: "#A5AAA6"
   canvas: "#FFFFFF"
-  surface-1: "#F5F7F5"
-  surface-2: "#EEF2EE"
-  hairline: "#E2E7E2"
-  semantic-success: "#45B82E"
-  semantic-danger: "#E64F4F"
-  semantic-overlay: "#000000"
+  surface-primary: "#F5F7F5"
+  surface-secondary: "#EEF2EE"
+  accent-primary: "#62CB32"
+  accent-secondary: "#58A7EF"
+  text-primary: "#171A18"
+  text-secondary: "#747A75"
+  divider: "#E2E7E2"
+  destructive: "#E64F4F"
 typography:
-  display-xl: { fontFamily: System Sans, fontSize: 40, fontWeight: 800, lineHeight: 1.00, letterSpacing: -1.0 }
-  display-lg: { fontFamily: System Sans, fontSize: 32, fontWeight: 800, lineHeight: 1.05, letterSpacing: -0.6 }
-  display-md: { fontFamily: System Sans, fontSize: 26, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.3 }
-  headline: { fontFamily: System Sans, fontSize: 21, fontWeight: 700, lineHeight: 1.15, letterSpacing: -0.2 }
-  card-title: { fontFamily: System Sans, fontSize: 14, fontWeight: 500, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: System Sans, fontSize: 16, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
-  body-lg: { fontFamily: System Sans, fontSize: 16, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
-  body: { fontFamily: System Sans, fontSize: 13, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
-  body-sm: { fontFamily: System Sans, fontSize: 11, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
-  caption: { fontFamily: System Sans, fontSize: 10, fontWeight: 500, lineHeight: 1.20, letterSpacing: 0 }
-  button: { fontFamily: System Sans, fontSize: 15, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0 }
-  eyebrow: { fontFamily: System Sans, fontSize: 10, fontWeight: 700, lineHeight: 1.20, letterSpacing: 0.2 }
-  mono: { fontFamily: System Mono, fontSize: 12, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
-rounded: { xs: 6, sm: 10, md: 14, lg: 18, xl: 24, xxl: 30, pill: 9999, full: 9999 }
-spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
+  hero: {fontFamily: "SF Pro Display", fontSize: 36, fontWeight: 800, lineHeight: 40}
+  title: {fontFamily: "SF Pro Display", fontSize: 28, fontWeight: 700, lineHeight: 34}
+  section: {fontFamily: "SF Pro Text", fontSize: 20, fontWeight: 700, lineHeight: 25}
+  body: {fontFamily: "SF Pro Text", fontSize: 16, fontWeight: 400, lineHeight: 22}
+  label: {fontFamily: "SF Pro Text", fontSize: 14, fontWeight: 600, lineHeight: 19}
+  caption: {fontFamily: "SF Pro Text", fontSize: 12, fontWeight: 400, lineHeight: 16}
+spacing:
+  screen-horizontal: 12
+  section-gap: 24
+  card-padding: 12
+  control-gap: 8
+rounded:
+  control: 12
+  card: 16
+  sheet: 28
+  pill: 999
 components:
-  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [14, 20]}
-  product-card: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: 6 }
-  category-tile: { backgroundColor: "{colors.primary-soft}", textColor: "{colors.ink}", typography: "{typography.card-title}", rounded: "{rounded.sm}", padding: 8 }
-  service-switch: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.sm}", padding: 4 }
-  cart-row: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: 10 }
-  navigation-bar: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xs}", height: 52 }
-  footer: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: [20, 16]}
+  primary-action: {fill: "{colors.accent-primary}", text: "#FFFFFF", height: 52, radius: "{rounded.control}"}
+  secondary-action: {fill: "{colors.accent-secondary}", text: "#FFFFFF", height: 48, radius: "{rounded.control}"}
+  primary-card: {fill: "#FFFFFF", radius: "{rounded.card}", imagery: "contained product packshot"}
+  navigation: {fill: "#FFFFFF", active: "{colors.accent-primary}", inactive: "{colors.text-secondary}", badge: "{colors.destructive}"}
+  product-tile: {fill: "#FFFFFF", columns: 2, radius: "{rounded.card}", addFill: "{colors.accent-primary}"}
+  service-segment: {fill: "{colors.surface-primary}", selectedFill: "#FFFFFF", radius: "{rounded.control}"}
 ---
 
 # Overview
 
-Airba fresh prioritizes range, promotion, and delivery context. White dense commerce surfaces are held together by fresh green actions and selected navigation, while the avocado mascot handles empty, loyalty, and promotional moments.
+Airba fresh is a compact, product-dense grocery interface on a predominantly white canvas. Saturated fresh green connects primary actions, add controls, and selected navigation; blue appears in reward or secondary action surfaces. Product photography and packshots dominate shopping screens, while a rounded avocado mascot gives empty, success, and assistance states a friendlier authored layer.
 
 # Non-negotiable visual invariants
 
-- The recurring color treatment uses Vivid green brand and conversion color.
-- Keep delivery address and timing visible.
-- Show complete unit and discount context.
-- Use green for conversion and selected state.
-- Use mascot art for recovery and loyalty.
-- Preserve dense but aligned product grids.
-- Home stacks horizontal product rails and three-column promo tiles.
-- Catalog uses two- or three-column category tiles.
+- Keep the commerce canvas white or very light, with green as the dominant action and selection color.
+- Preserve high product-photo density and compact two-column product grids.
+- Show product image, current price, supporting unit/discount context, and add control as one tight visual unit.
+- Use a persistent white bottom tab bar with thin icons, green selected state, and a red cart badge when present.
+- Keep search fields, service selectors, cards, and modal sheets rounded but visually light.
+- Use wide green bottom-owned actions for cart, checkout, or other decisive steps.
+- Reserve blue for reward bands and secondary recovery/action emphasis.
+- Use the avocado mascot only in authored empty, success, onboarding, reward, or support moments; shopping evidence remains photographic.
 
 # Color and surfaces
 
-- **Fresh Green** ({colors.primary}): Cart, checkout, selection, and loyalty.
-- **Blue** ({colors.accent-blue}): Secondary information and recovery action.
-- **Yellow** and **Orange**: Bonuses, ratings, promotions, and mascot props.
-
-- **Canvas** ({colors.canvas}): Product and profile base.
-- **Surface 1** ({colors.surface-1}): Search, cart rows, and grouped controls.
-- **Surface 2** ({colors.surface-2}): Disabled and nested surfaces.
-- **Soft Green** ({colors.primary-soft}): Category and success emphasis.
-
-- **Ink** ({colors.ink}): Products, prices, headings, and actions.
-- **Ink Muted** ({colors.ink-muted}): Weight, unit price, timing, and support text.
-- **Ink Subtle** ({colors.ink-subtle}): Placeholders and disabled metadata.
-
-- **Success** ({colors.semantic-success}): Free delivery and confirmed state.
-- **Danger** ({colors.semantic-danger}): Removal and error.
-- **Overlay** ({colors.semantic-overlay}): Modal scrim.
+White occupies most of the screen and supports dense product imagery. Very pale green-gray separates search, segmented controls, grouped form areas, and disabled states without turning every unit into a shadowed card. Fresh green is the conversion and selected-state color across add controls, primary buttons, progress, and tab emphasis. Blue forms occasional larger reward bands or secondary CTAs. Near-black carries product titles, prices, and headings; gray carries weights, unit values, timing, and helper text. Red marks destructive controls and small count badges. Generic iOS blue as the global tint or a gray grouped-form canvas would break the reference.
 
 # Typography
 
-- **System Sans** — all commerce, promotion, forms, and navigation.
-- **System Mono** — order or barcode identifiers only.
-
-- `{typography.display-xl}` — 40 points — 800 — Launch campaign
-- `{typography.display-md}` — 26 points — 700 — Screen heading
-- `{typography.headline}` — 21 points — 700 — Category heading
-- `{typography.card-title}` — 14 points — 500 — Product title
-- `{typography.body}` — 13 points — 400 — Default details
-- `{typography.caption}` — 10 points — 500 — Unit and bonus metadata
-- `{typography.button}` — 15 points — 600 — Cart and checkout
-
-- Keep product facts compact but complete.
-- Make final price stronger than old price and unit metadata.
-- Use heavy type only in launch and promotion banners.
-- Keep category labels readable over food imagery.
-
-Use **SF Pro**, **Inter**, or **Roboto** with strong Cyrillic and compact numerals.
-
-The hierarchy must remain legible with Dynamic Type: supporting text may wrap before the primary metric, title, or action loses its role.
+Use a clean system sans: SF Pro Display for larger promotional or screen titles and SF Pro Text for product, form, and navigation content. Most copy is compact and regular; section titles and current prices gain stronger weight. Product names may wrap to two lines, while unit price, weight, old price, and other metadata remain smaller and gray. Hero weight appears only in launch or promotional regions. With Dynamic Type, reduce grid columns before truncating product names or hiding purchase-relevant metadata; price and add controls must remain visually paired.
 
 # Screen composition
 
-Use a 4 points base. Screen gutters are 8–12 points, product gaps 6 points, and cart-row padding 10–12 points.
+Commerce screens use tight 8–12 point horizontal and inter-card spacing, with about 20–24 points between larger sections. A compact address/title line and rounded search field occupy the top. The middle alternates between promotional banners, icon category tiles, horizontal product rails, or dense two-column product grids. The bottom contains a white tab bar or a sticky green total/action region.
 
-Home stacks horizontal product rails and three-column promo tiles. Catalog uses two- or three-column category tiles. Product card is a single detail column; cart uses dense vertical rows.
+The observed visual archetypes are:
 
-Use white space to separate product groups, not individual metadata. Keep promotional artwork bounded so shopping remains scannable.
+- Commerce home: compact location and search controls, a wide promotional banner, category icon grid, several product or promotion rows, then a persistent tab bar.
+- Product grid: short title/filter region above two compact columns of contained packshots, concise facts, strong price, and small green add control.
+- Product focus: large contained packshot on white, title and price cluster, supporting labels, quantity/add action, then vertically stacked detail and recommendation content.
+- Basket/checkout: dense vertical rows and long white or pale grouped form sections, service segments near the top, then a sticky full-width green total/payment action.
+- Profile/utility: large title above simple flat row groups, compact icons, muted detail, and restrained separators.
+- Empty/status: generous open white space around a centered avocado character, concise text, and at most one strong green or blue action.
+- Modal choice: full-width white sheet with large rounded top corners over a dimmed screen.
 
-Use product photography, soft card separation, glossy reward icons, and lightly shaded mascot art. Avoid heavy shadows.
-
-Primary iPhone screens keep the documented content grouping and vertical rhythm inside a scroll container when content exceeds the viewport. Bottom-owned actions or navigation reserve the lower safe area rather than covering content.
+Long grids and checkout groups scroll vertically. Sticky actions and tabs reserve bottom inset so the final row remains visible.
 
 # Navigation appearance
 
-Home, Catalog, At Home, Cart, and Profile form the bottom bar. Selected state turns green; cart shows a count badge.
-
-This section governs appearance only; product behavior and information architecture come from the approved Research and Planning artifacts.
+Primary commerce screens use a white five-item tab bar with thin outlined icons, gray inactive labels, a green selected state, and a small red count badge where needed. Top bars are lightweight and mainly consist of a title/address, back control, or small icon actions on white. Focused screens may replace tabs with a sticky green bottom action. Modal content appears in a rounded white bottom sheet over a neutral scrim. This section defines appearance, not product destinations.
 
 # Components
 
-Primary cart and checkout actions use green fill with white text. Secondary recovery actions may use blue. Product cards use compact plus controls beside price.
+Primary actions are wide fresh-green rounded rectangles about 52 points high with white semibold labels. Blue filled buttons are secondary and appear in reward or recovery contexts. Product tiles use contained packshots as the largest area, followed by compact title, price, unit/discount metadata, and a small green add or quantity control. Product and promo badges remain local and do not cover package evidence.
 
-Product cards combine image, discount, rating, bonus, old price, current price, unit price, and add control. Category tiles use food imagery and concise labels. Profile uses simple row groups.
-
-Search supports text and barcode. Checkout groups address, time, substitution, payment, and contact. Fixed actions retain total or unit context.
-
-Discount, rating, dietary tags, bonus accrual, weight, free-delivery progress, and stock state use explicit labels plus color.
-
-Controls retain at least a 44-point interactive area. Pressed and disabled treatments should stay within the documented palette and hierarchy.
+Search is a pale rounded field with a small leading icon and optional scan affordance. Service choices use a compact segmented surface with a white selected segment. Reward information may appear as a saturated blue horizontal band. Basket and checkout rows are flat or lightly grouped, with clear dividers and a sticky total/action. Pressed states deepen existing fills; disabled states reduce saturation without changing geometry. Interactive targets remain at least 44 points.
 
 # Imagery and icons
 
-Product packs use contain; category food photos use cover. The avocado mascot stays fully visible in open white or pale-green space.
-
-Use contain for product packs and mascot, cover for category food and campaign photography. Never crop package labels when they are purchase evidence.
-
-When imagery is part of the documented composition, it cannot be omitted while final assets are pending. A temporary asset must preserve its placement, crop, scale, and approximate visual weight.
+Shopping decisions are led by real product packshots and food photography. Packshots use contain behavior on white so labels and package silhouettes remain visible; category and promotional photography may use cover crops within rounded tiles. The avocado mascot is a separate authored illustration layer for non-shopping states and must remain fully visible in open white or pale-green space. Navigation and utility icons are thin, simple, and subordinate. Imagery is compositionally mandatory: temporary assets must preserve the correct occupied area, crop mode, scale, and approximate color weight.
 
 # States
 
-Discount, rating, dietary tags, bonus accrual, weight, free-delivery progress, and stock state use explicit labels plus color.
-
-- **Success** ({colors.semantic-success}): Free delivery and confirmed state.
-- **Danger** ({colors.semantic-danger}): Removal and error.
-- **Overlay** ({colors.semantic-overlay}): Modal scrim.
-
-Only the states documented above are specified; other states must preserve the same canvas, hierarchy, and component language without inventing a new visual system.
+Populated commerce states maintain the same grid and card geometry as loading or empty variants. Selected tabs, segments, and add controls use green; cart count uses a small red badge. Empty, assistance, and selected success states may center the avocado mascot with concise copy. Modal decisions retain a white rounded sheet and dark scrim. Native share, keyboard, and payment surfaces may appear without being restyled. Destructive removal is red and explicit. No separate dark appearance was established in the inspected screens.
 
 # iOS adaptation
 
-- Extend the documented canvas through the iPhone safe areas while keeping readable content within appropriate insets.
-- Use a vertical `ScrollView` for content that does not fit compact heights; keep documented bottom actions and navigation clear of the home indicator.
-- Maintain 44 points for navigation, add controls, service switch, barcode, and checkout.
-- Reduce grid columns before truncating product names. Stack price and unit metadata when narrow. Keep checkout full width.
-- Present the keyboard and system permission UI natively, then return to the same visual context.
-- Preserve semantic reading order in VoiceOver and allow text to grow with Dynamic Type.
-- Preserve the documented appearance instead of introducing an unrelated light or dark palette.
+Extend white or pale surfaces through the safe areas while keeping dense grids within 8–12 point compact-width insets. Use lazy grids and vertical scroll containers for product feeds, detail content, profile rows, and checkout forms. Reflow two columns to one before Dynamic Type makes names, values, or add controls collide. Add bottom content inset for the tab bar or sticky action and lift focused fields above the keyboard. Preserve native share, payment, and permission transitions, then return to the same white/green context. Maintain 44-point hit areas even when the visible add icon is smaller. VoiceOver order follows image description, product name, current price, supporting value, then add/quantity action.
 
 # Anti-generic checklist
 
-- Do not use mascot art instead of product evidence.
-- Do not hide service choice in cart.
-- Do not make every promotion full-screen.
-- Do not rely on discount color alone.
-- Do not remove unit-price context.
-- Do not replace the documented canvas and surfaces with a generic grouped background and uniform white cards.
-- Do not use an unstyled `TabView`, default blue tint, or arbitrary SF Symbols when they contradict the reference.
-- Do not collapse every component to one corner radius or remove compositionally important imagery.
+- Do not replace contained product packshots with arbitrary symbols or decorative illustration.
+- Do not turn the white commerce field into a generic grouped-gray `Form`.
+- Do not use default blue tint; green is the primary action and selected-state color.
+- Do not render the bottom bar as an unstyled `TabView`.
+- Do not hide unit, weight, discount, total, or delivery context to simplify cards.
+- Do not spread mascot art across ordinary product tiles or checkout data.
+- Do not apply heavy shadows or one uniform radius to every surface.
+- Do not omit the sticky green action on screens where it is the main composition anchor.
 
 </design-context>

@@ -3,197 +3,121 @@
 version: 1
 platform: iOS
 name: InDrive-design-analysis
-description: "A map-first mobility interface with white layered sheets, bold black type, simple gray dividers, and an unmistakable acid-lime action color. Live location and route context stay visible behind large rounded planning panels. Safety, driver contact, and price negotiation receive equal visual weight, supported by black-and-white character illustration and compact 3D transport scenes."
+description: "A map-first mobility interface built from pale geographic fields, large white layered sheets, bold black typography, acid-lime action blocks, compact floating controls, factual vehicle imagery, and authored black-line illustrations set against irregular lime shapes."
 colors:
-  primary: "#B9F600"
-  on-primary: "#111111"
-  primary-focus: "#9FD600"
-  ink: "#161616"
-  ink-muted: "#535357"
-  ink-subtle: "#85858B"
-  ink-tertiary: "#B0B0B6"
   canvas: "#FFFFFF"
-  surface-1: "#F7F7F8"
-  surface-2: "#EFEFF1"
-  surface-3: "#E3E3E6"
-  surface-4: "#D6D6DA"
-  hairline: "#E0E0E3"
-  hairline-strong: "#C5C5CA"
-  hairline-tertiary: "#AAAAAF"
-  inverse-canvas: "#151515"
-  inverse-surface-1: "#292929"
-  inverse-surface-2: "#3B3B3B"
-  inverse-ink: "#FFFFFF"
-  brand-secure: "#89AFFF"
-  semantic-success: "#20C987"
-  semantic-overlay: "#000000"
+  surface-primary: "#F7F7F8"
+  surface-secondary: "#EFEFF1"
+  accent-primary: "#B9F600"
+  accent-secondary: "#89AFFF"
+  text-primary: "#161616"
+  text-secondary: "#535357"
+  divider: "#E0E0E3"
+  destructive: "#E3483E"
 typography:
-  display-xl: {fontFamily: SF Pro Display, fontSize: 42, fontWeight: 800, lineHeight: 1.04, letterSpacing: -1.3}
-  display-lg: {fontFamily: SF Pro Display, fontSize: 34, fontWeight: 800, lineHeight: 1.08, letterSpacing: -0.9}
-  display-md: {fontFamily: SF Pro Display, fontSize: 27, fontWeight: 700, lineHeight: 1.14, letterSpacing: -0.5}
-  headline: {fontFamily: SF Pro Display, fontSize: 22, fontWeight: 700, lineHeight: 1.20, letterSpacing: -0.3}
-  card-title: {fontFamily: SF Pro Text, fontSize: 17, fontWeight: 600, lineHeight: 1.25, letterSpacing: -0.1}
-  subhead: {fontFamily: SF Pro Text, fontSize: 16, fontWeight: 500, lineHeight: 1.35, letterSpacing: 0}
-  body-lg: {fontFamily: SF Pro Text, fontSize: 16, fontWeight: 400, lineHeight: 1.42, letterSpacing: 0}
-  body: {fontFamily: SF Pro Text, fontSize: 14, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0}
-  body-sm: {fontFamily: SF Pro Text, fontSize: 12, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0}
-  caption: {fontFamily: SF Pro Text, fontSize: 10, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0}
-  button: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0}
-  eyebrow: {fontFamily: SF Pro Text, fontSize: 11, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0.2}
-  mono: {fontFamily: SF Mono, fontSize: 13, fontWeight: 500, lineHeight: 1.35, letterSpacing: 0}
-rounded:
-  xs: 4
-  sm: 8
-  md: 12
-  lg: 18
-  xl: 24
-  xxl: 30
-  pill: 9999
-  full: 9999
+  hero: {fontFamily: "SF Pro Display", fontSize: 40, fontWeight: 800, lineHeight: 44}
+  title: {fontFamily: "SF Pro Display", fontSize: 28, fontWeight: 700, lineHeight: 34}
+  section: {fontFamily: "SF Pro Text", fontSize: 22, fontWeight: 700, lineHeight: 27}
+  body: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 400, lineHeight: 21}
+  label: {fontFamily: "SF Pro Text", fontSize: 14, fontWeight: 600, lineHeight: 19}
+  caption: {fontFamily: "SF Pro Text", fontSize: 12, fontWeight: 400, lineHeight: 16}
 spacing:
-  xxs: 4
-  xs: 8
-  sm: 12
-  md: 16
-  lg: 20
-  xl: 24
-  xxl: 32
-  section: 44
+  screen-horizontal: 16
+  section-gap: 24
+  card-padding: 16
+  control-gap: 12
+rounded:
+  control: 12
+  card: 20
+  sheet: 28
+  pill: 999
 components:
-  button-primary: {backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 14 20}
-  button-primary-pressed: {backgroundColor: "{colors.primary-focus}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}"}
-  button-secondary: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 12 18}
-  button-tertiary: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 10 14}
-  button-inverse: {backgroundColor: "{colors.inverse-canvas}", textColor: "{colors.inverse-ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 12 18}
-  map-sheet: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xl}", padding: 16}
-  location-field: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 14 16}
-  service-tile: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.caption}", rounded: "{rounded.md}", padding: 10}
-  driver-action: {backgroundColor: "{colors.primary}", textColor: "{colors.ink}", typography: "{typography.caption}", rounded: "{rounded.full}", padding: 12}
-  price-stepper: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.mono}", rounded: "{rounded.md}", padding: 12}
-  status-badge: {backgroundColor: "{colors.primary}", textColor: "{colors.ink}", typography: "{typography.caption}", rounded: "{rounded.pill}", padding: 4 8}
-  navigation-bar: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.xs}", height: 52}
-  bottom-nav: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: 8 12}
+  primary-action: {fill: "#B9F600", text: "#161616", radius: 12, minHeight: 52}
+  secondary-action: {fill: "#F7F7F8", text: "#161616", radius: 12, minHeight: 48}
+  primary-card: {fill: "#FFFFFF", text: "#161616", radius: 20, padding: 16}
+  navigation: {fill: "#FFFFFF", active: "#161616", inactive: "#535357", height: 52}
 ---
 
 # Overview
 
-InDrive keeps the map as persistent spatial context while white rounded sheets carry planning, offers, driver details, and safety. Acid lime makes key actions instantly recognizable without coloring the whole interface.
+InDrive places geographic context or a single decision surface ahead of decorative chrome. Map screens are dominated by a pale, functional map with one large white bottom sheet; form, onboarding, guide, and safety screens use the same white and light-gray base with bold black headings and acid-lime actions. Irregular lime shapes behind black-line authored illustrations form the recognisable expressive layer.
 
 # Non-negotiable visual invariants
 
-- Characteristic content and controls use Map-first composition with layered white sheets.
-- Preserve visible map context.
-- Make price negotiation explicit.
-- Keep safety reachable throughout the ride.
-- Reserve lime for action and trust.
-- Group driver contact choices together.
-- The map occupies the viewport.
-- Planning content uses one large bottom sheet; service options use a compact grid inside it.
+- Map-based screens keep a meaningful portion of the map visible behind or above one dominant white sheet.
+- Acid lime is reserved for primary actions, selected controls, and brand emphasis; it is not used as a generic page background.
+- Primary decisions live in one coherent sheet or panel rather than being split across many floating cards.
+- Headings and important values use bold near-black type with strong scale contrast against compact gray guidance.
+- Location, amount, service, and status controls use pale neutral fills, modest radii, and minimal borders.
+- Floating map controls are few, compact, and visually separate from the primary sheet.
+- Authored explanatory art uses black linework over one irregular lime block on an otherwise sparse field.
+- Red appears only for destructive, offline, cancellation, or emergency emphasis and never competes with lime as a general accent.
 
 # Color and surfaces
 
-- Acid lime marks primary actions, safe-state controls, and brand moments.
-- Blue is limited to current location on the map.
+White is the dominant sheet and form canvas. Pale grays distinguish input rows, secondary panels, disabled areas, and grouped information without heavy outlines. Maps remain muted beige-gray so route, location, and controls remain readable. Near-black carries headings, values, and core actions; medium gray carries descriptions and secondary metadata.
 
-- White sheets and controls float over a pale neutral map.
-- Light gray groups fields, steppers, and service tiles.
-- Black appears in launch branding and high-contrast illustration.
-
-- Near-black carries destination, price, and driver data.
-- Mid-gray handles guidance and secondary route facts.
-- Red is reserved for cancellation and emergency.
-
-- Lime communicates proactive safety and action, not success alone.
-- Green confirms completion where needed.
+Acid lime creates the strongest controlled color mass in primary buttons, selected states, and illustration backdrops. It should not be replaced with system green or used across every neutral surface. Blue is secondary and limited to map/location or trust-related accents where observed. Red is narrowly reserved for destructive or urgent states. Heavy gradients, glass effects, or card shadows would contradict the flat, direct material treatment.
 
 # Typography
 
-- SF Pro Display for destination, offer price, and arrival time.
-- SF Pro Text for forms, route details, and safety copy.
-- SF Mono for countdowns, codes, and price increments.
+The hierarchy is blunt and legible: 28–40-point heavy titles or important values, 22-point section headings, 15-point body copy, and compact 12–14-point labels or metadata. Large amounts, arrival information, or decisive prompts use SF Pro Display with heavy weight; forms, guidance, and control labels use SF Pro Text.
 
-- display-xl — 42 points — 800 — Offered price
-- display-lg — 34 points — 800 — Arrival or status
-- display-md — 27 points — 700 — Sheet title
-- headline — 22 points — 700 — Destination prompt
-- card-title — 17 points — 600 — Driver or service
-- body — 14 points — 400 — Route and safety copy
-- caption — 10 points — 400 — Service labels
-
-- Keep price and time visually dominant.
-- Use short labels beneath circular actions.
-- Avoid condensed typography on map labels or safety content.
-
-Use Apple system fonts for consistent map and form rendering.
-
-The hierarchy must remain legible with Dynamic Type: supporting text may wrap before the primary metric, title, or action loses its role.
+Alignment is predominantly leading, with centered treatment reserved for isolated onboarding or explanatory states. Labels use normal casing and short phrases. Dynamic Type should allow guidance and secondary facts to wrap before reducing the dominance of the primary title, value, or action. On map sheets, growing text increases sheet height or internal scroll rather than covering the action or collapsing the visible geographic context entirely.
 
 # Screen composition
 
-Use a 4 points base with 12–16 points inside controls and 20–24 points between major sheet groups.
+Typical map screens fill the viewport with muted geographic context, place a small number of circular controls near safe-area edges, and anchor one large white sheet to the bottom. The sheet uses 16-point horizontal padding, 12-point control gaps, and 24-point separation between major content groups. Its top corners are markedly larger than the radii of fields and buttons.
 
-The map occupies the viewport. Planning content uses one large bottom sheet; service options use a compact grid inside it.
+The observed archetypes are:
 
-White space must keep location and price decisions legible. Avoid filling the map with independent floating controls.
+- Map and sheet: map as the background field, sparse floating controls above it, and one white planning, status, or detail sheet occupying the lower portion.
+- Form or setup: white canvas, compact top control, bold leading title, stacked pale input rows, and a full-width lime action near the lower content edge.
+- Status panel: bold value or state first, supporting route or person information beneath, grouped compact actions, and a persistent primary action.
+- Safety or guide surface: sparse white or pale-gray field, black-line/lime illustration as a substantial focal mass, short text, and restrained actions.
+- Driver or service list: repeated neutral rows or tiles with factual thumbnails, primary values, secondary metadata, and localized status emphasis.
 
-Use soft sheet separation and compact 3D service scenes. Do not add heavy shadows to every row.
-
-Primary iPhone screens keep the documented content grouping and vertical rhythm inside a scroll container when content exceeds the viewport. Bottom-owned actions or navigation reserve the lower safe area rather than covering content.
+Scrolling remains vertical and sectional. Bottom actions and sheets respect the home indicator; forms do not pad the screen with mood-setting copy or decorative cards.
 
 # Navigation appearance
 
-Use a floating menu button over the map. Contextual back, close, and recenter controls are circular and remain separated from the main sheet.
-
-This section governs appearance only; product behavior and information architecture come from the approved Research and Planning artifacts.
+Map contexts use compact floating circular menu, back, close, or recenter controls with white or dark fills and simple black or white glyphs. Form and guide screens use a restrained top bar with a single back or close control and no oversized decorative navigation. Large sheets have pronounced top corners and may include a subtle grabber. Where local segmented or tab controls appear, selection relies on contrast and lime emphasis rather than a generic iOS blue. These rules govern appearance only; routes and information architecture come from approved product artifacts.
 
 # Components
 
-Primary buttons are full-width lime rectangles with dark labels. Secondary actions use light gray or white. Cancellation uses red text without filling the whole panel.
-
-Planning and ride state live in one continuous sheet. Promotional services use small image-led tiles; safety information uses simple rows and circular actions.
-
-Location fields are large pale rows. Price negotiation uses a central bold amount with decrement and increment controls.
-
-Search progress combines a countdown, number of drivers viewing, and an optional automatic-accept toggle. Arrival state promotes driver and vehicle information.
-
-Controls retain at least a 44-point interactive area. Pressed and disabled treatments should stay within the documented palette and hierarchy.
+- Primary action: full-width acid-lime rectangle with dark semibold label, 12-point radius, and at least 52-point height. Pressed state slightly darkens the lime; disabled state reduces saturation and text contrast without changing geometry.
+- Secondary action: white or pale-gray control with dark label, modest radius, and minimal or no border. Destructive actions use red text or a restrained red treatment.
+- Map sheet: white surface with 28-point top corners, clear internal grouping, little or no shadow, and enough exposed map to preserve context.
+- Location or input row: pale-gray fill, 12-point radius, leading functional icon or marker, one- or two-line text stack, and optional compact trailing control.
+- Amount or stepper control: bold central numeric value with clearly separated decrement and increment targets on the same neutral surface.
+- Service or driver row: factual image or avatar, concise title/value stack, secondary metadata, and a localized action or status; avoid turning every row into a promotional card.
+- Floating control: compact circular white or black surface with high-contrast glyph and a 44-point minimum target.
 
 # Imagery and icons
 
-Character illustrations use angular lime backdrops. Service vehicles are small 3D scenes. Avatars remain circular; map and route graphics stay factual.
+Maps, route marks, avatars, vehicle photographs or thumbnails, and service objects are factual content and should retain their functional clarity. Keep vehicles and people recognisable, use contained or source-appropriate crops, and avoid stylizing live geographic information as decoration. Icons are simple, dark, and compact; lime is applied through selection or backing surfaces rather than arbitrary symbol coloring.
 
-Keep illustrations contained without clipping hands or vehicles. Map content remains fully interactive behind the sheet.
-
-When imagery is part of the documented composition, it cannot be omitted while final assets are pending. A temporary asset must preserve its placement, crop, scale, and approximate visual weight.
+The independent authored illustration language uses black outlined people or objects over irregular acid-lime geometric blocks. It appears at meaningful scale in onboarding, location education, passenger selection, guide, and safety contexts. This art cannot be dropped while waiting for final assets: use an approved generated image that preserves line weight, lime mass, negative space, and crop instead of rebuilding it from SwiftUI shapes or SF Symbols.
 
 # States
 
-Search progress combines a countdown, number of drivers viewing, and an optional automatic-accept toggle. Arrival state promotes driver and vehicle information.
-
-- Lime communicates proactive safety and action, not success alone.
-- Green confirms completion where needed.
-
-Only the states documented above are specified; other states must preserve the same canvas, hierarchy, and component language without inventing a new visual system.
+Observed states include empty or initial forms, completed fields, selected service or option, map-based planning, active or ongoing status, permission and geolocation education, safety guidance, modal confirmation, offline or unavailable conditions, and destructive or emergency actions. Selection and readiness rely on lime and dark contrast; disabled or incomplete controls reduce saturation; urgent states use red sparingly. Across states, the same white/gray surfaces, bold leading hierarchy, modest field radii, and single dominant action remain constant.
 
 # iOS adaptation
 
-- Extend the documented canvas through the iPhone safe areas while keeping readable content within appropriate insets.
-- Use a vertical `ScrollView` for content that does not fit compact heights; keep documented bottom actions and navigation clear of the home indicator.
-- Map controls, location rows, driver actions, and steppers retain at least 44 points hit areas.
-- The sheet scrolls internally when ride detail grows. Service grids reduce columns before labels shrink.
-- Present the keyboard and system permission UI natively, then return to the same visual context.
-- Preserve semantic reading order in VoiceOver and allow text to grow with Dynamic Type.
-- Preserve the documented appearance instead of introducing an unrelated light or dark palette.
+Let the map or white canvas extend through safe areas as appropriate, while keeping floating controls clear of the status bar and bottom sheet clear of the home indicator. Use a map container behind a height-adaptive sheet; when content grows, scroll inside the sheet before eliminating all map context. Standard form screens use a vertical scroll container and keep the primary action reachable above the keyboard.
+
+All compact map, stepper, close, back, and row actions retain at least 44-point targets. VoiceOver order should read the current context, primary title or value, fields and supporting details, primary action, then secondary controls. Announce changing status and map-related selections without requiring visual color recognition. Dynamic Type may expand sheets, rows, and buttons; never shrink the lime action label or critical value below legibility. Compact widths reduce grid columns or stack metadata before truncating location, safety, or price information.
 
 # Anti-generic checklist
 
-- Do not cover the entire map before destination selection.
-- Do not use lime as a large text background repeatedly.
-- Do not bury safety in settings.
-- Do not separate price and timer.
-- Do not add a conventional five-tab bottom bar.
-- Do not replace the documented canvas and surfaces with a generic grouped background and uniform white cards.
-- Do not use an unstyled `TabView`, default blue tint, or arbitrary SF Symbols when they contradict the reference.
-- Do not collapse every component to one corner radius or remove compositionally important imagery.
+- Do not replace the map-and-sheet composition with a generic white card dashboard.
+- Do not use system blue as the primary tint or system green as a substitute for acid lime.
+- Do not add a conventional five-tab bar when the reference uses contextual map and top controls.
+- Do not ship unstyled `Form`, `List`, `ProgressView`, sheets, or text fields.
+- Do not scatter many independent floating cards across the map.
+- Do not apply the sheet radius to every field, row, and button.
+- Do not substitute arbitrary SF Symbols or SwiftUI drawings for the authored black-line/lime illustrations.
+- Do not add gradients, glass materials, heavy shadows, or decorative copy that competes with decisions and geographic context.
 
 </design-context>

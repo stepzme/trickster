@@ -3,167 +3,123 @@
 version: 1
 platform: iOS
 name: ChallengeUp-design-analysis
-description: "A bold challenge tracker built on pure black with oversized geometric actions, heavy extended display type, saturated yellow, mint, salmon, mustard, purple, and blue blocks, plus expressive flat editorial characters. Challenge choice, daily completion, progress, sharing, editing, and completion stay graphic and immediate."
+description: "A poster-like challenge tracker built on pure black, oversized circular actions, ultra-bold rounded display type, full-screen saturated color fields, geometric progress tokens, and flat-vector human scenes inside vivid template cards."
 colors:
-  primary: "#FFC400"
-  on-primary: "#080808"
-  primary-soft: "#3A3010"
-  accent: "#57D6A3"
-  accent-secondary: "#E98572"
-  ink: "#FFFFFF"
-  ink-muted: "#9D9D9D"
-  ink-subtle: "#5E5E5E"
   canvas: "#000000"
-  surface-1: "#171717"
-  surface-2: "#292929"
-  hairline: "#3A3A3A"
-  semantic-success: "#20C997"
-  semantic-danger: "#E3482C"
-  semantic-overlay: "#000000"
+  surface-primary: "#171717"
+  surface-secondary: "#292929"
+  accent-primary: "#FFC400"
+  accent-secondary: "#57D6A3"
+  text-primary: "#FFFFFF"
+  text-secondary: "#9D9D9D"
+  divider: "#3A3A3A"
+  destructive: "#E3482C"
 typography:
-  display-xl: { fontFamily: Arial Black, fontSize: 36, fontWeight: 700, lineHeight: 1.05, letterSpacing: -0.7 }
-  display-lg: { fontFamily: Arial Black, fontSize: 30, fontWeight: 700, lineHeight: 1.08, letterSpacing: -0.5 }
-  display-md: { fontFamily: Arial Black, fontSize: 26, fontWeight: 700, lineHeight: 1.12, letterSpacing: -0.3 }
-  headline: { fontFamily: Arial Black, fontSize: 22, fontWeight: 700, lineHeight: 1.18, letterSpacing: -0.2 }
-  card-title: { fontFamily: SF Pro Text, fontSize: 16, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: SF Pro Text, fontSize: 17, fontWeight: 500, lineHeight: 1.35, letterSpacing: 0 }
-  body-lg: { fontFamily: SF Pro Text, fontSize: 16, fontWeight: 400, lineHeight: 1.45, letterSpacing: 0 }
-  body: { fontFamily: SF Pro Text, fontSize: 14, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
-  body-sm: { fontFamily: SF Pro Text, fontSize: 12, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
-  caption: { fontFamily: SF Pro Text, fontSize: 10, fontWeight: 400, lineHeight: 1.20, letterSpacing: 0 }
-  button: { fontFamily: SF Pro Text, fontSize: 15, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0 }
-  eyebrow: { fontFamily: SF Pro Text, fontSize: 11, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0.3 }
-  mono: { fontFamily: SF Mono, fontSize: 12, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
-rounded: { xs: 8, sm: 12, md: 16, lg: 20, xl: 26, xxl: 32, pill: 9999, full: 9999 }
-spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
+  hero: {fontFamily: "Arial Black", fontSize: 36, fontWeight: 700, lineHeight: 39}
+  title: {fontFamily: "Arial Black", fontSize: 30, fontWeight: 700, lineHeight: 34}
+  section: {fontFamily: "Arial Black", fontSize: 22, fontWeight: 700, lineHeight: 27}
+  body: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 400, lineHeight: 21}
+  label: {fontFamily: "SF Pro Text", fontSize: 14, fontWeight: 600, lineHeight: 19}
+  caption: {fontFamily: "SF Pro Text", fontSize: 12, fontWeight: 400, lineHeight: 16}
+spacing:
+  screen-horizontal: 16
+  section-gap: 28
+  card-padding: 16
+  control-gap: 12
+rounded:
+  control: 16
+  card: 22
+  sheet: 28
+  pill: 999
 components:
-  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.md}", padding: [14, 18]}
-  feature-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 16 }
-  action-tile: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.md}", padding: 12 }
-  grouped-list: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: [8, 16]}
-  input: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body-lg}", rounded: "{rounded.md}", padding: [14, 16]}
-  navigation-bar: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xs}", height: 52 }
-  footer: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: [8, 12]}
+  primary-action: {fill: "single challenge color", text: "near-black or white bold", height: 54, radius: 16}
+  template-card: {fill: "saturated flat field", padding: 16, radius: 22, content: "heavy title and editorial figure"}
+  progress-token: {fill: "black or challenge color", shape: "circle", content: "large number, check, pause, or play"}
+  navigation: {fill: "black", selected: "white or challenge-color icon", unselected: "muted gray"}
 ---
 
 # Overview
 
-ChallengeUp treats goals as bold graphic posters. Creation begins with an enormous yellow circle, templates use illustrated color cards, and active challenges become large status blocks with completion gestures.
+ChallengeUp treats goals as bold graphic posters rather than a conventional productivity dashboard. Pure black is the stage; giant circles, full-width saturated blocks, ultra-bold rounded titles, numbered grids, and large status tokens carry the interface. Yellow, mint, coral, purple, blue, green, pink, and gray are assigned one at a time to individual challenges or actions. Flat-vector human scenes give template cards an editorial identity, while active progress, forms, settings, and completion states remain geometric and type-led.
 
 # Non-negotiable visual invariants
 
-- The recurring color treatment uses Pure black foundation.
-- Keep the black stage dominant.
-- Use one saturated color per challenge.
-- Make daily completion immediate.
-- Preserve large counters.
-- Use editorial illustration on templates.
-- Empty state centers one giant circle.
-- Template browsing uses horizontally paged two-column cards; active challenges stack full-width colored blocks.
+- Pure black fills the full viewport and remains visible as generous negative space between large graphic objects.
+- Each challenge or primary state uses one dominant saturated color field rather than mixing several accents in one composition.
+- Ultra-bold rounded or extended display type dominates titles, counters, and major calls to action; body and settings text remain neutral sans-serif.
+- Empty and creation states center one oversized circular action instead of presenting a conventional card stack.
+- Template cards combine a heavy title, one flat-vector human or activity scene, and a saturated flat background.
+- Active progress uses large circles, numbered grids, checkmarks, play or pause overlays, and explicit labels rather than small charts.
+- Forms and modal sheets use charcoal rows over black while retaining the current challenge color for selection or completion.
+- Illustration is confined to template and category browsing; detailed progress and settings remain geometric and data-led.
 
 # Color and surfaces
 
-- **Primary** ({colors.primary}): Creation, primary progression, and high-attention CTA.
-- **Accent** ({colors.accent}): Active challenge and positive category fields.
-- **Secondary Accent** ({colors.accent-secondary}): Progress detail and lifestyle category fields.
+The canvas is pure black. Charcoal primary and secondary surfaces hold form rows, settings groups, accordion content, modal sheets, and disabled controls. Dividers are dark gray and subordinate to spacing. Saturated challenge fields may occupy an entire card or most of a detail screen.
 
-- **Canvas** ({colors.canvas}): Challenge dashboard and template browsing.
-- **Surface 1** ({colors.surface-1}): Main cards and sheets.
-- **Surface 2** ({colors.surface-2}): Secondary controls and grouped fields.
-- **Hairline** ({colors.hairline}): Quiet separation.
-
-- **Ink** ({colors.ink}): Headings and primary values.
-- **Ink Muted** ({colors.ink-muted}): Supporting detail.
-- **Ink Subtle** ({colors.ink-subtle}): Placeholder and inactive state.
-
-- **Success** ({colors.semantic-success}): Completed or positive state.
-- **Danger** ({colors.semantic-danger}): Error and destructive state.
-- **Overlay** ({colors.semantic-overlay}): Modal focus.
+Yellow is a recurring high-attention creation and progression accent, while mint, coral, mustard, purple, blue, green, pink, and gray identify individual challenge contexts. White carries primary text on black; near-black carries type on yellow or light color fields. Gray carries supporting and inactive state. Green or mint confirms completion, while red-orange marks destructive actions. Default blue tint, gradients, soft shadows, and multicolor surfaces would break the flat poster language.
 
 # Typography
 
-- **Arial Black** — challenge titles, counters, and calls to action.
-- **SF Pro Text** — controls, forms, and explanations.
-- **SF Mono** — codes and compact numeric data.
+Use Arial Black as the iOS-safe approximation for the heavy rounded display face and SF Pro Text for forms, settings, explanations, and metadata. Hero titles and counters sit around 30–36 points, section headings around 20–24, buttons and card titles around 15–18, body copy around 14–16, and metadata around 11–13.
 
-Use 36 points bold for major statements, 22 points bold for screen headings, 16 points semibold for cards, 14 points regular for detail, and 15 points semibold for primary actions.
-
-- Keep titles short and forceful.
-- Let one geometric action dominate.
-- Use one color field per challenge.
-- Keep progress numbers large and spare.
-
-Use **Inter** or the platform system sans when the reference display face is unavailable.
-
-The hierarchy must remain legible with Dynamic Type: supporting text may wrap before the primary metric, title, or action loses its role.
+Display titles are often uppercase, short, and tightly composed inside color fields. Large numeric day counts and progress values use tabular figures. Body text is left-aligned and more restrained; poster titles may center or align strongly to a card edge. With Dynamic Type, template titles and forms gain height, progress grids reduce columns, and supporting text wraps before circles, counters, or actions are clipped.
 
 # Screen composition
 
-Use a 4 points base, 16 points edge gutters, 12 points control gaps, and 16 points card padding.
+Screens generally use 16-point edge insets, 12-point control gaps, 16 points inside cards, and 28–40 points between major graphic objects. Black extends through both safe areas. Long template galleries, active challenge lists, forms, and settings scroll vertically; fixed lower action bars reserve the home-indicator region.
 
-Empty state centers one giant circle. Template browsing uses horizontally paged two-column cards; active challenges stack full-width colored blocks.
+Observed archetypes include:
 
-Use large black gaps to separate graphic objects and avoid conventional dashboard density.
-
-Remain flat and poster-like. Layer only circles, outlined counters, and small completion tokens.
-
-Primary iPhone screens keep the documented content grouping and vertical rhythm inside a scroll container when content exceeds the viewport. Bottom-owned actions or navigation reserve the lower safe area rather than covering content.
+- Creation composition: sparse black field with hamburger and add controls near the top, one giant colored circle centered in the viewport, and minimal supporting text.
+- Template composition: horizontally paged or grid-arranged saturated cards, each with oversized title and a contained flat-vector activity scene.
+- Active-challenge composition: full-width saturated block with heavy title, day or schedule context, and one dominant circular completion control or progress grid.
+- Detail composition: large challenge-color field leads, followed by bold counter, numbered circle grid, explicit status, and compact share, edit, pause, or completion controls.
+- Form composition: black canvas with stacked rounded charcoal rows, color swatches, date or time selectors, switches, native keyboard, and one saturated lower action.
+- Advice composition: long-form white text and accordion panels on black, using color sparingly for current context.
+- Modal composition: rounded charcoal bottom sheet or system alert over a dimmed black or saturated challenge field.
 
 # Navigation appearance
 
-Menu and add remain at the top. Other contains guidance, profile questions, feedback, and language.
-
-This section governs appearance only; product behavior and information architecture come from the approved Research and Planning artifacts.
+Navigation is visually sparse and sits directly on black. Top controls use simple white hamburger, plus, back, close, gear, or share icons with generous touch regions. No persistent light navigation bar dominates the composition. Bottom action regions use a full-width challenge color or black/charcoal surface. Sheets have dark surfaces, large top corners, and a subtle drag indicator. Selected swatches, tabs, or states use the current challenge color with explicit marks.
 
 # Components
 
-The giant circle creates; bottom yellow bars create custom challenges; black circles mark done; blue bars share progress.
-
-Template cards pair a large uppercase title with one editorial scene. Active cards show title, day count, schedule, and a dominant done circle.
-
-Challenge setup uses large choices, short fields, schedule, duration, and notification configuration.
-
-Show upcoming, ready, done today, paused, completed, reset, shared, and deleted explicitly through label plus graphic token.
-
-Controls retain at least a 44-point interactive area. Pressed and disabled treatments should stay within the documented palette and hierarchy.
+- Giant action circle: large saturated circle centered on black, with bold near-black or white icon/text and enough negative space to remain the sole focal control.
+- Template card: saturated flat field, 20–24 point radius, heavy black or white title, and one contained editorial figure or activity scene. Artwork and title share the card without overlapping key gestures.
+- Progress token: large circle containing a number, checkmark, play, pause, or completion mark. Its state is also written in nearby text.
+- Challenge block: full-width colored rectangle or rounded card with large title, day count, schedule context, and one dominant action.
+- Form row: charcoal rounded field, white entered text, gray placeholder or label, and trailing selector, switch, or disclosure. Selected color appears in a bounded control.
+- Color swatch: clear circular sample with explicit selected outline or checkmark; selection does not rely on hue alone.
+- Modal action: dark rounded sheet with concise title, short explanation, and visually separated confirm/cancel actions; destructive confirmation uses red-orange.
 
 # Imagery and icons
 
-Use flat editorial figures with angular shapes, limited texture, and bold contrasting skin and clothing colors inside solid category cards.
+Template imagery uses flat-vector human figures and simple activity objects. Figures are angular and expressive, with stylized skin and clothing colors, minimal line detail, and no gradients or volume. The saturated card background acts as part of the illustration. Each scene preserves a clear gesture and one dominant activity; proportions and crop remain consistent across templates.
 
-Contain editorial figures inside their color card and preserve intentional cropping. Never place progress controls over faces or key gestures.
-
-When imagery is part of the documented composition, it cannot be omitted while final assets are pending. A temporary asset must preserve its placement, crop, scale, and approximate visual weight.
+Progress and form surfaces rely on geometric circles, checks, badges, and simple white icons rather than illustration. System screens may introduce native settings or permission visuals without redefining the style. The template illustration is compositionally important and cannot be omitted. Temporary art must preserve the flat medium, human scale, gesture, saturated field, and text-safe zone.
 
 # States
 
-Show upcoming, ready, done today, paused, completed, reset, shared, and deleted explicitly through label plus graphic token.
+Observed states include ready, started, done-today, paused, completed, reset, shared, and deleted challenges; selected color swatches; disabled save actions; expanded accordion panels; numbered progress; destructive confirmation; native permission alerts; and external settings surfaces. These retain the black stage, one challenge color, heavy type, and large graphic tokens.
 
-- **Success** ({colors.semantic-success}): Completed or positive state.
-- **Danger** ({colors.semantic-danger}): Error and destructive state.
-- **Overlay** ({colors.semantic-overlay}): Modal focus.
-
-Only the states documented above are specified; other states must preserve the same canvas, hierarchy, and component language without inventing a new visual system.
+Completion uses checkmarks, filled circles, explicit labels, or green/mint emphasis. Paused state uses a clear pause mark and text. Destructive actions use red-orange and remain confined to confirmation. Disabled actions become gray without changing geometry. System sheets may retain native styling but return to the same black graphic context.
 
 # iOS adaptation
 
-- Extend the documented canvas through the iPhone safe areas while keeping readable content within appropriate insets.
-- Use a vertical `ScrollView` for content that does not fit compact heights; keep documented bottom actions and navigation clear of the home indicator.
-- Keep every row, tab, selector, key, and primary action at least 44 points.
-- Preserve challenge title, day count, completion control, and next date. Move edit actions into detail before shrinking the card.
-- Present the keyboard and system permission UI natively, then return to the same visual context.
-- Preserve semantic reading order in VoiceOver and allow text to grow with Dynamic Type.
-- Preserve the documented appearance instead of introducing an unrelated light or dark palette.
+Extend black or the active challenge field through the safe areas and reserve the lower inset for the documented action region. Use vertical scroll containers for galleries, details, forms, and advice; keep circles and bottom actions clear of the home indicator and keyboard. On compact widths, reduce grid columns rather than shrinking progress tokens below readability.
+
+All top icons, circles, swatches, switches, rows, and action bars need at least 44-point targets. VoiceOver should announce challenge title, day or schedule, state, progress value, and action in that order; decorative illustration fragments should not become separate elements. Preserve native keyboard, date/time picker, notification permission, system settings, and sheets. With Dynamic Type, maintain the dominant title/action relationship and allow cards to grow. The sampled product is dark-first; do not introduce white grouped screens except for unavoidable system transitions.
 
 # Anti-generic checklist
 
-- Do not turn progress into small charts.
-- Do not introduce gradients or soft shadows.
-- Do not mix photography into template cards.
-- Do not use thin generic typography for titles.
-- Do not crowd a card with secondary actions.
-- Do not replace the documented canvas and surfaces with a generic grouped background and uniform white cards.
-- Do not use an unstyled `TabView`, default blue tint, or arbitrary SF Symbols when they contradict the reference.
-- Do not collapse every component to one corner radius or remove compositionally important imagery.
+- Do not replace the pure-black stage with a standard grouped background or stacked white cards.
+- Do not convert large progress circles and counters into small dashboard charts.
+- Do not mix several challenge colors or introduce gradients and soft shadows in one composition.
+- Do not replace heavy display titles with thin generic typography.
+- Do not replace template illustrations with photography, SF Symbols, emoji, or glossy 3D assets.
+- Do not crowd template cards or challenge blocks with secondary actions.
+- Do not give circles, poster cards, form rows, sheets, and bottom bars one uniform radius.
+- Do not make color the only indicator of selection, completion, pause, or destructive state.
 
 </design-context>

@@ -3,167 +3,126 @@
 version: 1
 platform: iOS
 name: bunq-design-analysis
-description: "A colorful modular banking dashboard built from white and pale-lavender groups, strong black totals, mint acquisition cards, bright blue links, and small color-coded action pills. Accounts, cards, savings, stocks, crypto, and profile utilities remain dense but scannable through consistent grouped rows."
+description: "A colorful modular banking interface that shifts from dark rainbow-led onboarding to white and pale-lavender finance dashboards with bold totals, blue navigation, and color-coded action pills."
 colors:
-  primary: "#149FF2"
-  on-primary: "#FFFFFF"
-  primary-soft: "#E8F6FE"
-  accent: "#38D8A0"
-  accent-secondary: "#C34AD9"
-  ink: "#101113"
-  ink-muted: "#73777D"
-  ink-subtle: "#A8ABB0"
   canvas: "#FFFFFF"
-  surface-1: "#F8F7FC"
-  surface-2: "#EEEFF5"
-  hairline: "#E0E1E7"
-  semantic-success: "#2FC28A"
-  semantic-danger: "#E23C62"
-  semantic-overlay: "#000000"
+  surface-primary: "#F8F7FC"
+  surface-secondary: "#EEEFF5"
+  accent-primary: "#149FF2"
+  accent-secondary: "#38D8A0"
+  text-primary: "#101113"
+  text-secondary: "#73777D"
+  divider: "#E0E1E7"
+  destructive: "#E23C62"
 typography:
-  display-xl: { fontFamily: SF Pro Display, fontSize: 36, fontWeight: 700, lineHeight: 1.05, letterSpacing: -0.7 }
-  display-lg: { fontFamily: SF Pro Display, fontSize: 30, fontWeight: 700, lineHeight: 1.08, letterSpacing: -0.5 }
-  display-md: { fontFamily: SF Pro Display, fontSize: 26, fontWeight: 700, lineHeight: 1.12, letterSpacing: -0.3 }
-  headline: { fontFamily: SF Pro Display, fontSize: 22, fontWeight: 700, lineHeight: 1.18, letterSpacing: -0.2 }
-  card-title: { fontFamily: SF Pro Text, fontSize: 16, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: SF Pro Text, fontSize: 17, fontWeight: 500, lineHeight: 1.35, letterSpacing: 0 }
-  body-lg: { fontFamily: SF Pro Text, fontSize: 16, fontWeight: 400, lineHeight: 1.45, letterSpacing: 0 }
-  body: { fontFamily: SF Pro Text, fontSize: 14, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
-  body-sm: { fontFamily: SF Pro Text, fontSize: 12, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
-  caption: { fontFamily: SF Pro Text, fontSize: 10, fontWeight: 400, lineHeight: 1.20, letterSpacing: 0 }
-  button: { fontFamily: SF Pro Text, fontSize: 15, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0 }
-  eyebrow: { fontFamily: SF Pro Text, fontSize: 11, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0.3 }
-  mono: { fontFamily: SF Mono, fontSize: 12, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
-rounded: { xs: 8, sm: 12, md: 16, lg: 20, xl: 26, xxl: 32, pill: 9999, full: 9999 }
-spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
+  hero: {fontFamily: "SF Pro Display", fontSize: 34, fontWeight: 700, lineHeight: 40}
+  title: {fontFamily: "SF Pro Display", fontSize: 29, fontWeight: 700, lineHeight: 35}
+  section: {fontFamily: "SF Pro Text", fontSize: 20, fontWeight: 700, lineHeight: 25}
+  body: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 400, lineHeight: 21}
+  label: {fontFamily: "SF Pro Text", fontSize: 14, fontWeight: 600, lineHeight: 19}
+  caption: {fontFamily: "SF Pro Text", fontSize: 12, fontWeight: 400, lineHeight: 17}
+spacing:
+  screen-horizontal: 16
+  section-gap: 24
+  card-padding: 16
+  control-gap: 12
+rounded:
+  control: 16
+  card: 20
+  sheet: 28
+  pill: 999
 components:
-  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.md}", padding: [14, 18]}
-  feature-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 16 }
-  action-tile: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.md}", padding: 12 }
-  grouped-list: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: [8, 16]}
-  input: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body-lg}", rounded: "{rounded.md}", padding: [14, 16]}
-  navigation-bar: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.body}", rounded: "{rounded.xs}", height: 52 }
-  footer: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: [8, 12]}
+  primary-action: {background: "#149FF2", foreground: "#FFFFFF", minHeight: 52, cornerRadius: 16}
+  secondary-action: {background: "#EEEFF5", foreground: "#101113", minHeight: 48, cornerRadius: 16}
+  primary-card: {background: "#F8F7FC", foreground: "#101113", cornerRadius: 20, padding: 16}
+  navigation: {background: "#FFFFFF", selected: "#149FF2", unselected: "#92969C"}
 ---
 
 # Overview
 
-bunq combines daily banking, savings, cards, investments, and lifestyle benefits in one colorful modular shell. Large totals and consistent rows stabilize the otherwise broad product range.
+bunq uses two sharply different but coordinated visual modes. Entry and authentication are dark, high-contrast, and rainbow-branded; authenticated banking becomes white and pale lavender with bold black totals, rounded finance modules, blue navigation, and deliberately color-coded money actions. Dense product breadth stays scannable through repeated rows, pastel icon tiles, and compact card groups.
 
 # Non-negotiable visual invariants
 
-- The recurring color treatment uses White and pale-lavender grouped modules.
-- Keep totals dominant.
-- Separate banking and investment risk.
-- Use consistent action colors.
-- Show limits before payment.
-- Keep account rows comparable.
-- Home stacks acquisition, net wealth, quick actions, accounts, transactions, and extras.
-- Cards, savings, stocks, and crypto use dedicated vertical sections with grouped rows.
+- Entry screens use black or black-purple fields, white type, bright blue actions, and concentrated rainbow brand moments.
+- Authenticated pages return to white with pale lavender/blue-tinted rounded modules and minimal borders.
+- Major balances and money-entry amounts are large, bold, and visually isolated from metadata.
+- Blue owns primary commitment and active navigation, while orange, purple, green, and pink distinguish specific financial actions.
+- Account and transaction rows align icon, title, secondary text, balance or amount, and status consistently.
+- Bottom navigation is white with five observed gray items and blue selected icon/label.
+- Sheets use rounded white panels over dark or dimmed surroundings, with compact centered titles and iOS-style back/cancel actions.
+- Financial status is never communicated by icon color alone; amount, state, or warning remains explicit in text.
 
 # Color and surfaces
 
-- **Primary** ({colors.primary}): Links, selected navigation, and important utility actions.
-- **Accent** ({colors.accent}): Funding, positive change, and acquisition.
-- **Secondary Accent** ({colors.accent-secondary}): Request and secondary money actions.
+Dark charcoal and black dominate onboarding and some form screens, often with purple gradient or rainbow decoration. Day-to-day finance surfaces are white, with very pale lavender and blue-gray cards, inputs, and grouped rows.
 
-- **Canvas** ({colors.canvas}): Primary dashboard and product sections.
-- **Surface 1** ({colors.surface-1}): Main cards and sheets.
-- **Surface 2** ({colors.surface-2}): Secondary fields and controls.
-- **Hairline** ({colors.hairline}): Quiet grouping.
-
-- **Ink** ({colors.ink}): Headings and primary values.
-- **Ink Muted** ({colors.ink-muted}): Supporting detail.
-- **Ink Subtle** ({colors.ink-subtle}): Placeholder and inactive state.
-
-- **Success** ({colors.semantic-success}): Completed or positive state.
-- **Danger** ({colors.semantic-danger}): Error and destructive state.
-- **Overlay** ({colors.semantic-overlay}): Modal focus.
+Bright blue drives primary CTAs, selected navigation, links, send controls, and modal confirmation. Green marks positive funding, savings, and enabled toggles. Orange emphasizes pay and amount flows; purple or magenta supports request, add-money, transfer, savings, card, or crypto contexts. Near-black carries totals and titles; gray carries metadata and inactive states. Red is reserved for destructive or failed outcomes. A single universal accent would erase the observed action coding.
 
 # Typography
 
-- **SF Pro Display** — balances and product headings.
-- **SF Pro Text** — controls, forms, and explanations.
-- **SF Mono** — codes and compact numeric data.
+Use SF Pro with tabular figures. Page titles are roughly 28–32 points and bold; section and modal titles 17–22 points; row labels 14–16 points; body and secondary data 12–15 points. Amount-entry screens use large centered bold values.
 
-Use 36 points bold for major statements, 22 points bold for screen headings, 16 points semibold for cards, 14 points regular for detail, and 15 points semibold for primary actions.
-
-- Lead with available amount and account.
-- Keep each action color consistent.
-- Use bold labels for totals, not long copy.
-- Separate banking state from benefits.
-
-Use **Inter** or the platform system sans when SF Pro is unavailable.
-
-The hierarchy must remain legible with Dynamic Type: supporting text may wrap before the primary metric, title, or action loses its role.
+Balances, transaction amounts, and total values receive the strongest weight. Transaction amounts align right and use text plus semantic treatment for direction or failure. With Dynamic Type, supporting descriptions and benefit copy wrap before totals, account identity, status, or primary action lose hierarchy; grouped rows may grow vertically.
 
 # Screen composition
 
-Use a 4 points base, 16 points edge gutters, 12 points control gaps, and 16 points card padding.
+Use about 16-point edge insets, 12-point control gaps, and 16-point module padding. Long authenticated pages scroll above a persistent tab bar.
 
-Home stacks acquisition, net wealth, quick actions, accounts, transactions, and extras. Cards, savings, stocks, and crypto use dedicated vertical sections with grouped rows.
+Observed archetypes:
 
-Use space between modules to offset dense product breadth; keep related rows compact inside each group.
+- Entry/auth: dark full-screen hero or form, progress line, centered title, rounded fields, bottom CTA, and native keyboard.
+- Finance dashboard: large title and actions, promotional or summary card, grouped accounts and transactions, then additional finance modules.
+- Amount flow: source and destination identities, large centered amount, optional description or schedule row, and bottom action.
+- Product/account list: repeated rounded rows with pastel icon tile, name, balance/status, and disclosure.
+- Settings/profile: sectioned white lists with pastel category icons, titles, chevrons, and secondary data.
+- Transfer detail: saturated purple field with large financial icon, white detail card, selected destination strip, and share/dismiss controls.
+- Support: centered empty/help art above a fixed composer and blue circular send action.
+- Modal confirmation: rounded card or sheet over a dimmed background with explicit primary and secondary choices.
 
-Use soft tinted backgrounds and subtle shadows. Glossy icons identify products but should not overpower balances.
-
-Primary iPhone screens keep the documented content grouping and vertical rhythm inside a scroll container when content exceeds the viewport. Bottom-owned actions or navigation reserve the lower safe area rather than covering content.
+All bottom controls remain above the home indicator.
 
 # Navigation appearance
 
-The five product tabs stay stable; profile holds support, settings, personal data, accounting, eSIM, and lifestyle benefits.
+Authenticated top-level screens use a white edge-integrated tab bar with five observed icon-and-label items. Active state is blue; inactive items are gray. Home headers may use a profile/avatar on the left and small actions on the right.
 
-This section governs appearance only; product behavior and information architecture come from the approved Research and Planning artifacts.
+Sheets use blue back/cancel text or chevron on light surfaces and white controls on dark forms. Profile and support may use a close icon. App-owned sheets have rounded white geometry over dark safe-area or dimmed context. These rules define appearance only.
 
 # Components
 
-Bright pills distinguish Pay, Request, and Add Money. Full-width blue or mint buttons commit setup and product actions.
+Primary buttons are bright-blue rounded rectangles or pills around 48–52 points high. Pressed states deepen blue; disabled controls become pale and low contrast. Color-coded action pills distinguish pay, request, and add-money rather than using one undifferentiated style.
 
-Modules group net wealth, accounts, transactions, benefits, market assets, and card data with consistent padding and row height.
+Account rows use rounded square icons, title, balance, and optional status dot. Transaction rows add merchant/account subtitle and right-aligned amount/status. Summary cards pair net value with change and disclosure. Method lists pair icon, title, description, fee, and chevron.
 
-Money flows use amount-first entry, visible source and destination, and review. Security and identity forms remain single-column.
-
-Show funded, pending, scheduled, interest earned, market change, card limit, country access, and closed state as text plus color.
-
-Controls retain at least a 44-point interactive area. Pressed and disabled treatments should stay within the documented palette and hierarchy.
+Money-entry controls prioritize the amount and selected source/destination. Confirmation modals use a white rounded card with concise copy and blue primary action. Settings use pastel icon tiles and thin dividers inside broad groups. All compact rows and icon controls retain at least a 44-point target.
 
 # Imagery and icons
 
-Use compact glossy product icons and real card renders inside stable wells. Keep money values and security controls outside imagery.
+Brand imagery includes rainbow stripes, bunq logo, polished card renders, and blurred symbolic campaign objects. Support empty art and simple success checks are isolated state graphics, not a stable standalone illustration system. No recurring character family was observed.
 
-Contain glossy icons and card renders. Never crop card security data, charts, or account totals into imagery.
-
-When imagery is part of the documented composition, it cannot be omitted while final assets are pending. A temporary asset must preserve its placement, crop, scale, and approximate visual weight.
+Functional imagery is dominated by pastel account/category icons, bank and payment marks, card renders, QR code, and compact tab icons. Use contain for card and account imagery and never obscure values or security controls. When these assets are compositionally present, temporary substitutes must preserve scale, crop, color weight, and surrounding negative space.
 
 # States
 
-Show funded, pending, scheduled, interest earned, market change, card limit, country access, and closed state as text plus color.
+Observed states include dark onboarding and account setup, keyboard entry, populated home and accounts, no-transactions placeholder, add-money methods, payment amount and confirmation, transfer details, transaction history including failed state, card selection, savings and investment availability, disabled withdraw/done actions, support empty and chat states, security-code confirmation, settings, and destructive account-closure controls.
 
-- **Success** ({colors.semantic-success}): Completed or positive state.
-- **Danger** ({colors.semantic-danger}): Error and destructive state.
-- **Overlay** ({colors.semantic-overlay}): Modal focus.
-
-Only the states documented above are specified; other states must preserve the same canvas, hierarchy, and component language without inventing a new visual system.
+Across states, totals and status remain text-led, blue retains primary commitment, and destructive actions use red. Empty and unavailable states stay inside the same rounded module system rather than becoming full-screen decorative scenes.
 
 # iOS adaptation
 
-- Extend the documented canvas through the iPhone safe areas while keeping readable content within appropriate insets.
-- Use a vertical `ScrollView` for content that does not fit compact heights; keep documented bottom actions and navigation clear of the home indicator.
-- Keep every row, tab, selector, and primary action at least 44 points.
-- Preserve total, selected product, next action, and status. Collapse benefits and promotional extras before financial data.
-- Present the keyboard and system permission UI natively, then return to the same visual context.
-- Preserve semantic reading order in VoiceOver and allow text to grow with Dynamic Type.
-- Preserve the documented appearance instead of introducing an unrelated light or dark palette.
+Extend the active dark, rainbow, purple, or white field through safe areas while keeping controls inset. Use vertical scrolling for dashboard, products, history, profile, settings, and support; reserve bottom space for tab, keyboard, composer, or CTA.
+
+Present native keyboard, share, payment, and system sheets without restyling, then restore the bunq context. VoiceOver should announce account or merchant, balance/amount, currency, status, and action in order. Dynamic Type may increase row height and wrap descriptions; totals and primary actions remain visible. Preserve the observed dark entry and light authenticated modes instead of imposing one global appearance.
 
 # Anti-generic checklist
 
-- Do not let benefits outrank balances.
-- Do not use icon color alone for state.
-- Do not merge card and account controls.
-- Do not hide fees or market movement.
-- Do not overload one module with every product.
-- Do not replace the documented canvas and surfaces with a generic grouped background and uniform white cards.
-- Do not use an unstyled `TabView`, default blue tint, or arbitrary SF Symbols when they contradict the reference.
-- Do not collapse every component to one corner radius or remove compositionally important imagery.
+- Do not flatten dark rainbow onboarding and light authenticated banking into one generic palette.
+- Do not recolor all financial actions blue; preserve the observed action-specific color coding.
+- Do not let benefits or promotional banners outrank balances and account status.
+- Do not hide fees, failed state, limits, or availability behind icon color.
+- Do not replace grouped account and transaction rows with identical floating cards.
+- Do not use an unstyled `TabView`, generic `Form`, or arbitrary symbol mix.
+- Do not extend rainbow decoration or card renders into routine settings and transfer rows.
+- Do not collapse fields, action pills, account groups, and sheets to one radius.
 
 </design-context>

@@ -3,130 +3,105 @@
 version: 1
 platform: iOS
 name: Haptic-design-analysis
-description: "A lightweight activity journal built from bright white surfaces, a saturated violet gradient, softly blurred backdrops, rounded bottom sheets, colorful category icons, and sparse statistics. Logging is kept fast through large action bars, icon grids, and minimal text."
-colors: { primary: "#713CFA", on-primary: "#FFFFFF", primary-soft: "#EEE7FF", accent: "#FF4F59", ink: "#171719", ink-muted: "#7D7D84", ink-subtle: "#B9BBC0", canvas: "#FFFFFF", surface-1: "#F7F7F8", surface-2: "#EFEFF2", hairline: "#E4E4E7", semantic-success: "#47B56C", semantic-warning: "#F3B546", semantic-danger: "#E1515C", semantic-overlay: "#000000" }
+description: "An airy white activity journal with oversized rounded cards, saturated violet actions, colorful category glyphs, sparse heavy type, focused bottom sheets, and a minimal bottom bar built around a central circular action."
+colors:
+  canvas: "#FFFFFF"
+  surface-primary: "#FFFFFF"
+  surface-secondary: "#F4F4F6"
+  accent-primary: "#7445F5"
+  accent-secondary: "#EEE8FF"
+  text-primary: "#171719"
+  text-secondary: "#85858C"
+  divider: "#E7E7EA"
+  destructive: "#E45460"
 typography:
-  display-xl: { fontFamily: SF Pro Display, fontSize: 38, fontWeight: 700, lineHeight: 1.05, letterSpacing: -0.8 }
-  display-lg: { fontFamily: SF Pro Display, fontSize: 32, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.5 }
-  display-md: { fontFamily: SF Pro Display, fontSize: 27, fontWeight: 700, lineHeight: 1.15, letterSpacing: -0.3 }
-  headline: { fontFamily: SF Pro Display, fontSize: 22, fontWeight: 700, lineHeight: 1.20, letterSpacing: 0 }
-  card-title: { fontFamily: SF Pro Text, fontSize: 16, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: SF Pro Text, fontSize: 16, fontWeight: 500, lineHeight: 1.30, letterSpacing: 0 }
-  body-lg: { fontFamily: SF Pro Text, fontSize: 16, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
-  body: { fontFamily: SF Pro Text, fontSize: 14, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
-  body-sm: { fontFamily: SF Pro Text, fontSize: 12, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
-  caption: { fontFamily: SF Pro Text, fontSize: 10, fontWeight: 500, lineHeight: 1.20, letterSpacing: 0 }
-  button: { fontFamily: SF Pro Text, fontSize: 15, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0 }
-  eyebrow: { fontFamily: SF Pro Text, fontSize: 10, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0.5 }
-  mono: { fontFamily: SF Mono, fontSize: 12, fontWeight: 500, lineHeight: 1.30, letterSpacing: 0 }
-rounded: { xs: 6, sm: 10, md: 14, lg: 20, xl: 28, xxl: 34, pill: 9999, full: 9999 }
-spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
+  hero: {fontFamily: "SF Pro Display", fontSize: 38, fontWeight: 700, lineHeight: 42}
+  title: {fontFamily: "SF Pro Display", fontSize: 30, fontWeight: 700, lineHeight: 35}
+  section: {fontFamily: "SF Pro Display", fontSize: 22, fontWeight: 700, lineHeight: 27}
+  body: {fontFamily: "SF Pro Text", fontSize: 16, fontWeight: 400, lineHeight: 22}
+  label: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 600, lineHeight: 20}
+  caption: {fontFamily: "SF Pro Text", fontSize: 11, fontWeight: 500, lineHeight: 15}
+spacing:
+  screen-horizontal: 16
+  section-gap: 32
+  card-padding: 16
+  control-gap: 12
+rounded:
+  control: 14
+  card: 22
+  sheet: 30
+  pill: 999
 components:
-  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.md}", padding: [14, 18]}
-  activity-card: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 14 }
-  icon-tile: { backgroundColor: "{colors.primary-soft}", textColor: "{colors.primary}", typography: "{typography.caption}", rounded: "{rounded.sm}", padding: 12 }
-  input: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: [12, 14]}
-  navigation-bar: { backgroundColor: "transparent", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xs}", height: 52 }
-  footer: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: [8, 10]}
+  violet-action: {fill: "solid or softly graded violet", text: "white semibold", minHeight: 52, radius: 14}
+  activity-card: {fill: "white", shadow: "very soft diffuse", radius: 22, padding: 16}
+  category-tile: {fill: "category-tinted", icon: "small high-contrast glyph", radius: 12}
+  central-action-navigation: {bar: "minimal white", action: "raised violet circle", inactive: "muted gray"}
 ---
 
 # Overview
 
-Haptic is a fast activity journal that turns life events into colorful icons, ratings, streaks, and simple timelines.
+Haptic is visually sparse and tactile: broad white space, heavy display type, and large rounded surfaces carry more weight than decoration. Saturated violet appears as the decisive brand mass in onboarding, primary controls, toggles, selected navigation, and the raised central action. Small colorful category glyphs punctuate otherwise neutral screens. The combination of generous breathing room, low-contrast secondary UI, and task-focused bottom sheets distinguishes it from a default SwiftUI card list.
 
 # Non-negotiable visual invariants
 
-- Make logging possible in one focused sheet.
-- Keep category color consistent.
-- Show streak and rating near the activity.
-- Use full-screen timelines and statistics with rounded bottom sheets for choosing, logging, or editing an activity.
-- Leave generous blank space around the current logging task and keep dense icon grids visually even.
+- Keep the viewport predominantly white or near-white, with violet reserved for the strongest action and selected state.
+- Preserve conspicuous empty space around titles, primary values, and single-purpose forms.
+- Use large rounded activity surfaces with barely visible, diffuse separation rather than borders or hard shadows.
+- Present focused creation and editing surfaces as high-radius bottom sheets with a visible drag handle.
+- Keep category identity compact: a colored rounded tile, a simple glyph, and a short label rather than a large illustration.
+- Preserve a minimal bottom bar whose strongest element is a raised circular violet action at the center.
+- Use large, heavy titles against much smaller pale-gray metadata; do not flatten the scale contrast.
 
 # Color and surfaces
 
-Use a violet-to-purple gradient for primary logging actions; assign bright colors to activity categories.
+White is the continuous canvas and the dominant viewport mass. Primary cards remain white and separate from the canvas through spacing and an extremely soft shadow; pale neutral gray is reserved for input fields, inactive controls, disabled choices, and supporting panels. Violet is the sole repeated brand accent and may expand into a full onboarding field or wide action, while category colors remain small local signals.
 
-Keep main screens white and use pale gray for search, disabled controls, and secondary cards.
-
-Use near-black for titles and values, gray for metadata, and very light gray for unavailable choices.
-
-Use green for granted or completed state, red for destructive or denied state, and system blue for permission actions.
+Near-black is used for titles and important values, medium gray for metadata, and very pale gray for low-priority or unavailable UI. Completion may use restrained green, warnings warm amber, and destructive actions muted red. Default iOS blue would break the system when used for ordinary product actions; native system dialogs may retain system coloring.
 
 # Typography
 
-Use SF Pro Display for onboarding and activity titles and SF Pro Text for controls, notes, and statistics.
+The hierarchy is SF-like, bold, and deliberately sparse. Onboarding statements and key headings use 30–38 point heavy display type; screen titles sit around 30 points; section heads use roughly 22 points; controls and body copy use 15–16 points; dates, statistics labels, and uppercase micro-labels sit around 11 points. Large values and titles are the first scan target, with pale metadata clearly subordinate.
 
-Use 27–32 points for onboarding statements, 22 points for screen titles, 16 points for activities, 14 points body, and 10–12 points labels.
-
-Keep activity name, date, rating, and streak instantly scannable; avoid long instructional copy after onboarding.
-
-Use the platform sans or Inter.
-
-The hierarchy must remain legible with Dynamic Type: supporting text may wrap before the primary metric, title, or action loses its role.
+Use SF Pro Display and SF Pro Text as the iOS-safe family. Allow supporting labels and metadata to wrap before shrinking primary values. With Dynamic Type, preserve the visual jump between title, body, and caption, move secondary rows vertically, and let icon grids reduce their column count rather than compressing labels illegibly.
 
 # Screen composition
 
-Use a 4 points base, 16 points gutters, 12 points grid gaps, and 16 points sheet padding.
+Screens generally begin below the top safe area with a large title or isolated prompt, followed by one dominant task or a vertical stack of broad cards. Horizontal insets are compact at about 16 points, but vertical gaps are generous, commonly 24–32 points. Cards approach the available width and use substantial internal padding. Long timelines and statistics scroll vertically; short forms remain centered with large surrounding negative space.
 
-Use full-screen timelines and statistics with rounded bottom sheets for choosing, logging, or editing an activity.
-
-Leave generous blank space around the current logging task and keep dense icon grids visually even.
-
-Use translucent violet gradients and blurred activity color rather than illustration or texture.
-
-Primary iPhone screens keep the documented content grouping and vertical rhythm inside a scroll container when content exceeds the viewport. Bottom-owned actions or navigation reserve the lower safe area rather than covering content.
+The visible archetypes are: a full-field onboarding page with one dominant statement and action; an airy activity overview made of stacked wide cards; an icon-grid chooser with evenly spaced category tiles; a centered single-purpose creation form; a statistics view combining calendar-like panels and compact charts; a profile/settings surface with restrained rows; and a rounded bottom sheet for logging, selecting, or editing. Bottom navigation and fixed actions reserve the lower safe area instead of covering scroll content.
 
 # Navigation appearance
 
-Use the timeline or activity overview as the stable base; open logging and editing in sheets.
-
-This section governs appearance only; product behavior and information architecture come from the approved Research and Planning artifacts.
+The primary bottom bar is visually light, white, and minimally divided from the canvas. Inactive destinations use small muted-gray symbols and labels; the selected state turns violet. A prominent circular violet action rises from the bar's center and is visually stronger than surrounding destinations. Deeper screens use compact back controls and restrained top actions. Modal tasks appear as high-radius bottom sheets with a centered drag handle and white surface.
 
 # Components
 
-Use wide violet gradient actions for Save or rating submission and pale circular confirmation controls.
+Primary actions are wide violet controls with white semibold labels, a roughly 14-point radius, and at least a 52-point height. Some observed brand surfaces soften the violet with a subtle gradient, but the control remains a single coherent color mass. Disabled actions become pale gray rather than outlined.
 
-Use activity rows, icon tiles, statistic cards, timeline entries, and rounded editing sheets.
-
-Keep search, rename, comments, rating, date, icon, and color editing inside focused sheets.
-
-Show today, weekly, monthly, yearly, streak, best streak, permission, and saved state explicitly.
-
-Controls retain at least a 44-point interactive area. Pressed and disabled treatments should stay within the documented palette and hierarchy.
+Activity cards are broad white rounded rectangles with 16-point padding, restrained metadata, and extremely soft elevation. Category tiles are compact colored squares with small symbolic glyphs and short labels; their color varies by category while their geometry stays consistent. Toggles use violet in the on state and neutral gray off. Text-entry fields sit on pale-gray rounded surfaces. Pricing selectors, calendar/stat panels, and compact charts reuse the same low-border rounded language. Pressed states should darken or reduce opacity within the established color rather than introducing a new tint.
 
 # Imagery and icons
 
-Contain album art and activity symbols inside small rounded squares; do not introduce decorative scenes.
-
-Contain album art and system icons without crop; allow gradient backgrounds to scale fluidly.
-
-When imagery is part of the documented composition, it cannot be omitted while final assets are pending. A temporary asset must preserve its placement, crop, scale, and approximate visual weight.
+Imagery is subordinate to layout and data. Category glyphs are small, simple, and contained in tinted rounded squares; occasional cover art may use the same compact container. Gradients and blurred color fields function as brand decoration, not as a standalone illustration language. Charts are sparse and use thin marks or small filled regions. Avoid large decorative scenes, stock photography, or arbitrary oversized SF Symbols that would compete with the negative space and typography.
 
 # States
 
-Show today, weekly, monthly, yearly, streak, best streak, permission, and saved state explicitly.
-
-Use green for granted or completed state, red for destructive or denied state, and system blue for permission actions.
-
-Only the states documented above are specified; other states must preserve the same canvas, hierarchy, and component language without inventing a new visual system.
+Observed populated views preserve the white canvas, violet selection, rounded surfaces, and muted metadata. Selected categories and controls become violet or category-colored while unselected options stay pale. Disabled choices recede to very light gray. Completed or saved feedback may use restrained green; destructive actions use muted red. Paywall selection, action sheets, keyboard entry, and bottom-sheet editing keep the same large-radius geometry and sparse hierarchy rather than switching to an unrelated native form appearance.
 
 # iOS adaptation
 
-- Extend the documented canvas through the iPhone safe areas while keeping readable content within appropriate insets.
-- Use a vertical `ScrollView` for content that does not fit compact heights; keep documented bottom actions and navigation clear of the home indicator.
-- Keep icons, ratings, dates, segmented controls, save, and confirmation actions at least 44 points.
-- Preserve activity, date, rating, note, and save; collapse secondary statistics and symbol choices first.
-- Present the keyboard and system permission UI natively, then return to the same visual context.
-- Preserve semantic reading order in VoiceOver and allow text to grow with Dynamic Type.
-- Preserve the documented appearance instead of introducing an unrelated light or dark palette.
+Extend white or branded onboarding fields through both safe areas while keeping readable content inside 16-point horizontal insets. Use vertical scrolling for card stacks, timelines, statistics, and icon grids; inset content so the bottom bar and raised action never obscure the last item. Present task sheets with native interactive dismissal and keyboard avoidance while retaining the observed radius, handle, and padding.
+
+All symbols, tiles, toggles, and controls need at least 44-point targets. VoiceOver should read the large title or primary value before supporting metadata, then actions in visual order. Dynamic Type should reflow card contents and reduce grid columns rather than truncate meaningful labels. The sampled reference is light-led; do not invent a dark palette without product requirements. On compact widths, preserve card width, violet action prominence, and generous vertical spacing before retaining extra columns.
 
 # Anti-generic checklist
 
-- Do not decorate blank space unnecessarily.
-- Do not mix multiple gradients in one action.
-- Do not hide permission requirements until save.
-- Do not replace the documented canvas and surfaces with a generic grouped background and uniform white cards.
-- Do not use an unstyled `TabView`, default blue tint, or arbitrary SF Symbols when they contradict the reference.
-- Do not collapse every component to one corner radius or remove compositionally important imagery.
+- Do not replace the white field and sparse rhythm with a gray grouped `Form` or a dense universal card stack.
+- Do not use default blue tint for primary actions, toggles, or selected navigation.
+- Do not ship an unstyled `TabView`; preserve the muted bar and raised central violet action.
+- Do not give every icon a random SF Symbol treatment or remove the consistent colored category containers.
+- Do not replace focused bottom sheets with full-screen generic forms.
+- Do not add hard borders, strong drop shadows, or equal emphasis to every card.
+- Do not fill deliberate negative space with decorative copy, imagery, or extra metrics.
 
 </design-context>

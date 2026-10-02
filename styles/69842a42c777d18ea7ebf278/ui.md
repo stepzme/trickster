@@ -3,184 +3,123 @@
 version: 1
 platform: iOS
 name: Love-Republic-design-analysis
-description: "A restrained fashion-commerce system built around full-bleed editorial photography, high-contrast black and white controls, compact product grids, and sparse typography. The interface stays quiet so campaign imagery, silhouettes, material, and price define the experience."
+description: "A restrained fashion-commerce interface where white space, sharp black controls, thin rules, compact uppercase sans-serif type, minimal corner rounding, and full-bleed editorial or product photography keep attention on silhouette, material, and price."
 colors:
-  primary: "#141414"
-  on-primary: "#FFFFFF"
-  primary-focus: "#000000"
-  ink: "#141414"
-  ink-muted: "#707070"
-  ink-subtle: "#A1A1A1"
-  ink-tertiary: "#C8C8C8"
   canvas: "#FFFFFF"
-  surface-1: "#F7F7F7"
-  surface-2: "#EFEFEF"
-  surface-3: "#E5E5E5"
-  surface-4: "#D9D9D9"
-  hairline: "#E6E6E6"
-  hairline-strong: "#CECECE"
-  hairline-tertiary: "#B5B5B5"
-  inverse-canvas: "#141414"
-  inverse-surface-1: "#262626"
-  inverse-surface-2: "#383838"
-  inverse-ink: "#FFFFFF"
-  brand-secure: "#A72E3A"
-  semantic-success: "#4B8D63"
-  semantic-overlay: "#141414"
+  surface-primary: "#FFFFFF"
+  surface-secondary: "#F7F7F7"
+  accent-primary: "#141414"
+  accent-secondary: "#A72E3A"
+  text-primary: "#141414"
+  text-secondary: "#707070"
+  divider: "#E6E6E6"
+  destructive: "#C43F4B"
 typography:
-  display-xl: {fontFamily: Helvetica Neue, fontSize: 36, fontWeight: 500, lineHeight: 1.06, letterSpacing: -0.8}
-  display-lg: {fontFamily: Helvetica Neue, fontSize: 30, fontWeight: 500, lineHeight: 1.10, letterSpacing: -0.5}
-  display-md: {fontFamily: Helvetica Neue, fontSize: 24, fontWeight: 500, lineHeight: 1.14, letterSpacing: -0.3}
-  headline: {fontFamily: Helvetica Neue, fontSize: 20, fontWeight: 500, lineHeight: 1.20, letterSpacing: -0.2}
-  card-title: {fontFamily: Helvetica Neue, fontSize: 15, fontWeight: 500, lineHeight: 1.24, letterSpacing: 0}
-  subhead: {fontFamily: Helvetica Neue, fontSize: 14, fontWeight: 500, lineHeight: 1.30, letterSpacing: 0}
-  body-lg: {fontFamily: Helvetica Neue, fontSize: 14, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0}
-  body: {fontFamily: Helvetica Neue, fontSize: 12, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0}
-  body-sm: {fontFamily: Helvetica Neue, fontSize: 10, fontWeight: 400, lineHeight: 1.28, letterSpacing: 0}
-  caption: {fontFamily: Helvetica Neue, fontSize: 9, fontWeight: 400, lineHeight: 1.22, letterSpacing: 0.1}
-  button: {fontFamily: Helvetica Neue, fontSize: 12, fontWeight: 500, lineHeight: 1.18, letterSpacing: 0.2}
-  eyebrow: {fontFamily: Helvetica Neue, fontSize: 9, fontWeight: 500, lineHeight: 1.18, letterSpacing: 0.8}
-  mono: {fontFamily: SF Mono, fontSize: 10, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0}
-rounded:
-  xs: 0
-  sm: 2
-  md: 4
-  lg: 6
-  xl: 10
-  xxl: 14
-  pill: 9999
-  full: 9999
+  hero: {fontFamily: "Helvetica Neue", fontSize: 34, fontWeight: 500, lineHeight: 39}
+  title: {fontFamily: "Helvetica Neue", fontSize: 28, fontWeight: 500, lineHeight: 34}
+  section: {fontFamily: "Helvetica Neue", fontSize: 20, fontWeight: 500, lineHeight: 25}
+  body: {fontFamily: "Helvetica Neue", fontSize: 14, fontWeight: 400, lineHeight: 20}
+  label: {fontFamily: "Helvetica Neue", fontSize: 13, fontWeight: 500, lineHeight: 18}
+  caption: {fontFamily: "Helvetica Neue", fontSize: 11, fontWeight: 400, lineHeight: 15}
 spacing:
-  xxs: 4
-  xs: 8
-  sm: 12
-  md: 16
-  lg: 20
-  xl: 24
-  xxl: 32
-  section: 48
+  screen-horizontal: 16
+  section-gap: 28
+  card-padding: 12
+  control-gap: 10
+rounded:
+  control: 2
+  card: 4
+  sheet: 20
+  pill: 999
 components:
-  button-primary: {backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.xs}", padding: 14 18}
-  button-primary-pressed: {backgroundColor: "{colors.primary-focus}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.xs}"}
-  button-secondary: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.xs}", padding: 13 17}
-  button-tertiary: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.xs}", padding: 10 14}
-  button-inverse: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.xs}", padding: 12 16}
-  product-card: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xs}", padding: 0}
-  editorial-hero: {backgroundColor: "{colors.inverse-canvas}", textColor: "{colors.inverse-ink}", typography: "{typography.display-md}", rounded: "{rounded.xs}", padding: 0}
-  filter-control: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: 10 12}
-  size-selector: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xs}", padding: 12}
-  navigation-bar: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xs}", height: 50}
-  bottom-nav: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink-subtle}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: 7 8}
+  primary-action: {fill: "black", text: "white medium", height: 50, radius: 0}
+  product-card: {fill: "white", image: "dominant portrait crop", radius: 0, metadata: "compact black and gray"}
+  filter-control: {fill: "white", border: "thin gray or black", height: 44, radius: 0}
+  navigation: {fill: "white or transparent over imagery", selected: "solid black icon", unselected: "thin gray line icon"}
 ---
 
 # Overview
 
-Love Republic is an editorial fashion storefront where full-bleed campaign photography and minimal monochrome controls keep attention on styling, product form, and material.
+Love Republic is a quiet, photography-led fashion interface. White and light gray dominate commerce surfaces, while full-bleed campaign images, model photography, and consistent garment crops provide nearly all visual depth and color. Black text, sharp rectangular actions, thin rules, minimal rounding, and small uppercase labels keep the chrome precise. The visual hierarchy depends on silhouette, fabric, image scale, and deliberate white space rather than decorative cards or expressive UI color.
 
 # Non-negotiable visual invariants
 
-- The principal image treatment uses Full-screen campaign imagery on Home.
-- Let editorial and product photography dominate.
-- Keep controls monochrome and sharp.
-- Show size and delivery before commitment.
-- Preserve consistent product crops.
-- Style native controls to match the fashion system.
-- Home uses full-width editorial panels.
-- Catalog uses two columns; product, basket, and checkout use a single structured column.
+- Editorial and product photography is the primary visual mass and cannot be omitted from campaign, catalog, or detail compositions.
+- White is the dominant commerce canvas; black provides primary text, icon, rule, and action contrast.
+- Controls, fields, and cards remain sharp or only minimally rounded; pill-heavy marketplace styling is absent.
+- Catalog imagery uses a dense two-column portrait grid with consistent garment and model crops.
+- Product, basket, checkout, and account surfaces use a single structured column with thin dividers and generous vertical white space.
+- Typography stays neutral and restrained, using medium rather than heavy weights and compact uppercase labels where observed.
+- Sale or promotional red and availability green remain small semantic accents and never become navigation colors.
+- Bottom navigation and top bars use thin monochrome line icons; selected state becomes solid black without a colored capsule.
 
 # Color and surfaces
 
-Black is the primary brand and action color. Burgundy-red is reserved for sale pricing and promotional emphasis, not general navigation.
+The canvas and primary surfaces are clean white. Very light gray separates filters, disabled controls, checkout groups, and secondary information. Thin cool-gray rules provide most grouping. Dark inverse fields appear only where black controls or campaign contrast requires them; shadows and gradients are largely absent from interface chrome.
 
-White carries catalog and commerce. Light neutral gray separates filters, size information, delivery rows, and checkout groups.
-
-Black carries product names, prices, and actions. Cool gray supports color, collection, fulfillment, and former-price metadata.
-
-Muted green can mark delivery availability. Red identifies markdowns; validation should remain concise and avoid decorative color.
+Black is the primary action, icon, and text color. White text appears on black controls or over suitably dark photography. Medium gray carries color names, former prices, delivery notes, and secondary account data. Muted burgundy or red marks sale pricing, promotion, validation, or destructive actions; muted green may indicate availability. Default iOS blue, colorful marketplace cards, broad gradients, and heavy surface tint would break the reference.
 
 # Typography
 
-Use Helvetica Neue or a similarly neutral grotesk across editorial, product, and transaction surfaces.
+Use Helvetica Neue as observed, with SF Pro or another neutral grotesk as an iOS-safe fallback. Hero and campaign text sits around 28–34 points, page titles around 24–28, section headings around 18–21, product names and prices around 13–16, body copy around 13–15, and metadata around 10–12. Weight stays regular to medium rather than heavily bold.
 
-- display-lg — 30 points — 500 — Campaign statement
-- headline — 20 points — 500 — Catalog and checkout title
-- card-title — 15 points — 500 — Product name and price
-- body — 12 points — 400 — Color, size, and delivery detail
-- eyebrow — 9 points — 500 — Collection and promotion label
-
-- Keep copy short and visually secondary to imagery.
-- Use medium weight instead of heavy bold.
-- Preserve generous tracking for small uppercase campaign labels.
-
-Arial or Inter may substitute; keep weights restrained and do not introduce expressive display type.
-
-The hierarchy must remain legible with Dynamic Type: supporting text may wrap before the primary metric, title, or action loses its role.
+Campaign labels and selected controls may use uppercase with controlled tracking. Page titles often center; product names, prices, forms, and fulfillment details are left-aligned. Price and former-price values remain visually adjacent. With Dynamic Type, catalog metadata wraps under the image, two-column grids become one column when needed, and checkout rows grow before type is reduced.
 
 # Screen composition
 
-Use a 4 points base, 8 points grid gutters, and 16 points screen margins.
+Commerce surfaces usually use 16-point screen insets, 8–12 point internal gaps, fine dividers, and 24–32 points between larger groups. Campaign imagery may extend edge to edge through the top safe area; catalog and utility screens remain white. Long catalog, detail, basket, checkout, and account surfaces scroll vertically. Bottom navigation or a primary commerce action reserves the lower safe area.
 
-Home uses full-width editorial panels. Catalog uses two columns; product, basket, and checkout use a single structured column.
+Observed archetypes include:
 
-Campaign screens are image-rich, while commerce screens use deliberate white space and fine dividers rather than decorative panels.
-
-Lighting, fabric texture, and model photography create depth. Interface layers stay flat and precise.
-
-Primary iPhone screens keep the documented content grouping and vertical rhythm inside a scroll container when content exceeds the viewport. Bottom-owned actions or navigation reserve the lower safe area rather than covering content.
+- Editorial composition: full-width or full-bleed model photography dominates the viewport, with short high-contrast copy and sparse monochrome controls placed in safe image areas.
+- Catalog composition: compact title, search or filter row, then a dense two-column grid of portrait product photographs with short name, color, current price, and optional sale price below.
+- Product-detail composition: large vertical image gallery leads, followed by compact product identity and price, sharp selectors, delivery or availability rows, and one black lower action.
+- Basket composition: one-column product rows preserve thumbnail, name, color or size, quantity, price, and delete control with thin separators and open white space.
+- Checkout composition: centered title over rectangular fields, segmented or selection rows, maps or pickup context where visible, explicit price or status groups, and a black full-width action.
+- Account-list composition: white screen with centered title, tall monochrome rows, gray secondary values, toggles, chevrons, and restrained status text.
+- Modal composition: white rounded-top sheet or simple confirmation panel over a dimmed product, map, or account context.
 
 # Navigation appearance
 
-Use compact icon-led navigation and minimal labels. Active state is black; overlays adapt to campaign contrast without changing geometry.
-
-This section governs appearance only; product behavior and information architecture come from the approved Research and Planning artifacts.
+The primary bottom bar is white with thin monochrome icons and compact labels. Selected items become solid black; inactive items remain light gray or outlined. Campaign overlays may invert icons to white while preserving their geometry. Detail screens use centered black titles, leading chevrons, and compact trailing actions. Bottom sheets have white surfaces and modest top rounding rather than oversized floating cards. Segmented tabs and filter controls rely on thin rules, underlines, or black selected text.
 
 # Components
 
-Primary commerce actions are solid black. Secondary actions are white with black borders; image overlays may invert to white on dark photography.
-
-Product cards are image-first with name, color, current price, and sale price beneath. Basket rows preserve the same quiet metadata hierarchy.
-
-Checkout fields are white, rectangular, and divider-led. Focus and validation must adopt the monochrome system rather than default platform styling.
-
-Stock, delivery, and promotion states appear as short text close to the decision. Empty states remain typographic and restrained.
-
-Controls retain at least a 44-point interactive area. Pressed and disabled treatments should stay within the documented palette and hierarchy.
+- Primary action: approximately 50 points tall, full or near-full width, black rectangular fill, square or nearly square corners, and centered white medium-weight label. Disabled state becomes pale gray.
+- Secondary action: white fill, black one-pixel border, sharp corners, and compact black label; image-overlay versions may invert to white.
+- Product card: dominant portrait image with minimal or no radius, followed by compact black product name and price plus gray color or collection metadata. Sale price uses restrained red.
+- Filter or segment: at least 44 points tall, white or light-gray fill, thin border or divider, small uppercase or medium label, and clear black selected state.
+- Size or option row: sharp white cells or list rows with thin rules, black label, gray availability state, and no decorative fill.
+- Checkout field: rectangular white or pale-gray field, thin divider or border, black entered text, gray placeholder, and monochrome focus treatment.
+- Status badge: compact text or minimal outlined mark near the relevant product or fulfillment detail; it does not become a colorful floating pill.
 
 # Imagery and icons
 
-Campaign photography is full-bleed and portrait-led. Product shots use consistent vertical crops on neutral backgrounds; never add unrelated illustration.
+Photography is essential. Campaign images are full-bleed, editorial, and model-led, with lighting, pose, silhouette, and fabric texture carrying the brand. Catalog and product imagery use consistent vertical crops on neutral backgrounds and keep the full garment or key silhouette visible. Product-on-model views and editorial recommendations remain large enough to judge fit and styling.
 
-Use aspect-fill for campaigns and consistent portrait product crops. Keep focal faces and full garments within safe areas.
-
-When imagery is part of the documented composition, it cannot be omitted while final assets are pending. A temporary asset must preserve its placement, crop, scale, and approximate visual weight.
+The sample does not establish a coherent standalone illustration system. Isolated certificate, customization, or campaign graphics remain part of the broader retail art direction. Utility icons are thin monochrome lines for navigation, favorites, barcode, search, filters, sharing, and disclosure. Temporary photography must preserve the documented aspect ratio, focal model or garment, neutral background, and visual weight.
 
 # States
 
-Stock, delivery, and promotion states appear as short text close to the decision. Empty states remain typographic and restrained.
+Observed states include selected and inactive navigation, favorite and cart selection, available or unavailable options, muted disabled controls, active and expired order status, empty lists, toggles, segmented tabs, modal sheets, QR or barcode surfaces, and form editing. These preserve the white canvas, thin rules, monochrome hierarchy, and photography-led composition.
 
-Muted green can mark delivery availability. Red identifies markdowns; validation should remain concise and avoid decorative color.
-
-Only the states documented above are specified; other states must preserve the same canvas, hierarchy, and component language without inventing a new visual system.
+Sale or promotion uses muted red close to the price; availability may use green text; destructive confirmation uses red sparingly. Disabled controls become pale gray. Empty states remain typographic or use a restrained icon rather than introducing decorative illustration.
 
 # iOS adaptation
 
-- Extend the documented canvas through the iPhone safe areas while keeping readable content within appropriate insets.
-- Use a vertical `ScrollView` for content that does not fit compact heights; keep documented bottom actions and navigation clear of the home indicator.
-- Menu, favorite, filter, size, purchase, checkout, and navigation controls remain at least 44 points.
-- Keep two product columns while names remain readable; stack size, delivery, and checkout decisions in one column.
-- Present the keyboard and system permission UI natively, then return to the same visual context.
-- Preserve semantic reading order in VoiceOver and allow text to grow with Dynamic Type.
-- Preserve the documented appearance instead of introducing an unrelated light or dark palette.
+Extend campaign photography or white canvas through the appropriate safe area and reserve the lower inset for the tab bar or purchase action. Use vertical scroll containers for editorial panels, catalog, image galleries, basket, checkout, and account lists. Keep pinned actions from covering the last row or keyboard-focused field.
+
+All navigation icons, favorite controls, filters, size selectors, checkout rows, and purchase actions need at least 44-point targets despite their visually thin treatment. VoiceOver should announce product name, color, size or availability, price, sale state, and action in that order. Preserve native keyboard, camera/barcode, map, payment, and sheet transitions. On compact widths or large Dynamic Type, move the product grid to one column before shrinking text or cropping silhouettes. Maintain the observed light-first monochrome system.
 
 # Anti-generic checklist
 
-- Do not add rounded colorful marketplace cards.
-- Do not overlay long copy on campaign imagery.
-- Do not use heavy shadows or gradients on controls.
-- Do not crop away garment silhouettes.
-- Do not make sale red the primary navigation color.
-- Do not replace the documented canvas and surfaces with a generic grouped background and uniform white cards.
-- Do not use an unstyled `TabView`, default blue tint, or arbitrary SF Symbols when they contradict the reference.
-- Do not collapse every component to one corner radius or remove compositionally important imagery.
+- Do not replace editorial and product photography with colorful generic cards or illustrations.
+- Do not add large corner radii, pills, gradients, or heavy shadows to ordinary commerce controls.
+- Do not use default blue tint where the reference requires black-and-white interaction.
+- Do not crop away garment silhouettes, model faces, or material detail.
+- Do not make sale red the primary navigation or action color.
+- Do not ship an unstyled `TabView`; preserve thin monochrome icons and solid-black selected state.
+- Do not give images, fields, buttons, sheets, and badges one uniform radius.
+- Do not overlay long copy or dense controls on busy campaign photography.
 
 </design-context>

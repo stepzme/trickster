@@ -3,142 +3,107 @@
 version: 1
 platform: iOS
 name: Optima24-design-analysis
-description: "A dark banking super-app combining near-black stacked modules, hot red line icons, gold card accents, orange QR, saturated 3D service tiles, and dense promotional panels."
-colors: {primary: "#E9293A", on-primary: "#FFFFFF", primary-focus: "#C31C2C", ink: "#F5F5F6", ink-muted: "#A2A2A8", ink-subtle: "#707077", ink-tertiary: "#4E4F55", canvas: "#0D0E10", surface-1: "#1B1C1F", surface-2: "#27282C", surface-3: "#34353A", surface-4: "#414249", hairline: "#2B2C30", hairline-strong: "#43444A", hairline-tertiary: "#595A62", inverse-canvas: "#FFFFFF", inverse-surface-1: "#F1F1F3", inverse-surface-2: "#E3E3E6", inverse-ink: "#151619", brand-secure: "#F0A91B", semantic-success: "#3BC274", semantic-overlay: "#17181C"}
+description: "A near-black mobile bank with layered charcoal cards, compact white financial type, decisive red controls, a dark five-item dock with a raised amber scanner action, and promotional imagery contained away from restrained transactional forms."
+colors:
+  canvas: "#0B0B0D"
+  surface-primary: "#171719"
+  surface-secondary: "#242329"
+  accent-primary: "#DF1621"
+  accent-secondary: "#D48A18"
+  text-primary: "#F5F5F6"
+  text-secondary: "#8C8C92"
+  divider: "#303035"
+  destructive: "#E5484D"
 typography:
-  display-xl: {fontFamily: SF Pro Display, fontSize: 36, fontWeight: 700, lineHeight: 1.06, letterSpacing: -0.8}
-  display-lg: {fontFamily: SF Pro Display, fontSize: 30, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.5}
-  display-md: {fontFamily: SF Pro Display, fontSize: 24, fontWeight: 700, lineHeight: 1.14, letterSpacing: -0.3}
-  headline: {fontFamily: SF Pro Display, fontSize: 21, fontWeight: 700, lineHeight: 1.20, letterSpacing: -0.2}
-  card-title: {fontFamily: SF Pro Text, fontSize: 16, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0}
-  subhead: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 600, lineHeight: 1.30, letterSpacing: 0}
-  body-lg: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0}
-  body: {fontFamily: SF Pro Text, fontSize: 13, fontWeight: 400, lineHeight: 1.36, letterSpacing: 0}
-  body-sm: {fontFamily: SF Pro Text, fontSize: 11, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0}
-  caption: {fontFamily: SF Pro Text, fontSize: 10, fontWeight: 400, lineHeight: 1.25, letterSpacing: 0}
-  button: {fontFamily: SF Pro Text, fontSize: 14, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0}
-  eyebrow: {fontFamily: SF Pro Text, fontSize: 10, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0.2}
-  mono: {fontFamily: SF Mono, fontSize: 11, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0}
-rounded: {xs: 6, sm: 10, md: 14, lg: 18, xl: 24, xxl: 28, pill: 9999, full: 9999}
-spacing: {xxs: 4, xs: 8, sm: 12, md: 16, lg: 20, xl: 24, xxl: 32, section: 40}
+  hero: {fontFamily: "SF Pro Display", fontSize: 34, fontWeight: 700, lineHeight: 39}
+  title: {fontFamily: "SF Pro Display", fontSize: 24, fontWeight: 700, lineHeight: 29}
+  section: {fontFamily: "SF Pro Text", fontSize: 18, fontWeight: 600, lineHeight: 23}
+  body: {fontFamily: "SF Pro Text", fontSize: 14, fontWeight: 400, lineHeight: 19}
+  label: {fontFamily: "SF Pro Text", fontSize: 14, fontWeight: 600, lineHeight: 19}
+  caption: {fontFamily: "SF Pro Text", fontSize: 11, fontWeight: 400, lineHeight: 15}
+spacing:
+  screen-horizontal: 16
+  section-gap: 24
+  card-padding: 14
+  control-gap: 12
+rounded:
+  control: 10
+  card: 14
+  sheet: 24
+  pill: 999
 components:
-  button-primary: {backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 14 18}
-  button-primary-pressed: {backgroundColor: "{colors.primary-focus}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}"}
-  button-secondary: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 12 16}
-  button-tertiary: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 10 14}
-  content-card: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 14}
-  feature-card: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 16}
-  text-input: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: 12 14}
-  status-badge: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.pill}", padding: 3 7}
-  bottom-nav: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink-subtle}", typography: "{typography.caption}", rounded: "{rounded.lg}", padding: 8 10}
+  financial-card: {fill: "charcoal", radius: 14, padding: 14, separation: "tonal"}
+  primary-action: {fill: "red", text: "white semibold", minHeight: 52, radius: 10}
+  financial-field: {fill: "deep gray", text: "white", metadata: "muted gray", radius: 10}
+  scanner-navigation: {bar: "dark rounded dock", selection: "red", center: "raised amber circle"}
 ---
 
 # Overview
 
-Optima24 uses a black modular dashboard, red service glyphs, gold product cues, and saturated campaigns to make a broad banking and partner-service range feel energetic.
+Optima24 is dark by default: near-black fills the full viewport, charcoal modules establish depth, and compact white financial data leads the scan. Red is concentrated in primary actions, active navigation, and brand emphasis; an amber circular scanner control anchors the bottom dock. Promotional banners and card artwork add isolated color, while core forms remain controlled, dense, and nearly monochrome.
 
 # Non-negotiable visual invariants
 
-- Primary screens use near-black canvas.
-- Characteristic content and controls use charcoal cards.
-- The recurring color treatment uses red line icons.
-- The sampled screens consistently show gold selected product.
-- The recurring color treatment uses orange scanner.
-- The recurring color treatment uses colorful service renders.
-- The sampled screens consistently show dense promotional modules.
-- Preserve the dark red-gold banking hierarchy.
+- Keep near-black as the continuous full-screen field, including safe areas.
+- Build depth through two or three charcoal tones, not white cards or visible drop shadows.
+- Reserve saturated red for primary actions, active states, and limited brand emphasis.
+- Preserve a dark rounded bottom dock with muted inactive items, red selection, and a raised amber central action.
+- Use dense 12–16 point gutters and compact financial typography while keeping controls at least 44 points tall.
+- Keep transfer and payment forms single-column with stacked full-width fields and a visually anchored bottom action.
+- Center result states around a large status mark, primary amount, and a short row of follow-up actions.
+- Confine promotional imagery to rounded modules so transaction data remains visually calm.
 
 # Color and surfaces
 
-Red drives active navigation, payment, and service icons. Gold identifies premium card and milestone value; orange belongs to the scanner.
+The canvas is almost black. Primary cards use a slightly lighter charcoal and fields or selected subpanels step up one more dark tone; separation is tonal, with quiet dividers instead of shadows. Red is the strongest repeated accent and should occupy buttons, selected labels, and decisive controls rather than entire informational screens. Amber or gold belongs to the raised scanner action and occasional card/product emphasis.
 
-Use near-black for the canvas and layered charcoal for grouped banking cards, lists, and dock.
-
-White leads balances and headings; gray supports masked products, descriptions, and metadata.
-
-Green confirms product or money state; gold signals premium value; red should not replace warning semantics without context.
+White carries balances, amounts, and titles; muted gray carries descriptions, masked values, and inactive navigation. Green confirms successful money states, dark blue may support isolated informational panels, and destructive red should remain distinguishable from ordinary brand red through context and placement. Default light grouped backgrounds and default blue controls visibly break the reference.
 
 # Typography
 
-Use SF Pro Display for balances and banking headings and SF Pro Text for controls, content, and metadata.
+Type is compact, high-contrast, and numeric-first. Major amounts or result values may use 28–34 point bold display type; page titles use about 24 points; section heads 18 points; form labels and controls 14 points; metadata and tab labels 10–12 points. Currency values use stable tabular-looking alignment and keep the number stronger than the currency or explanatory label.
 
-- display-lg — 30 points — 700 — Hero or state
-- headline — 21 points — 700 — Section title
-- card-title — 16 points — 600 — Primary item
-- body — 13 points — 400 — Detail
-- caption — 10 points — 400 — Metadata
-
-- Lead with balance, product, recipient, or payment amount.
-- Keep repeated metadata aligned and visually quieter.
-- Reserve high contrast and weight for real decisions.
-
-Use the platform sans with clear Cyrillic and stable currency numerals.
-
-The hierarchy must remain legible with Dynamic Type: supporting text may wrap before the primary metric, title, or action loses its role.
+Use SF Pro Display and SF Pro Text. Under Dynamic Type, supporting detail wraps or moves below the amount before core values shrink. Keep the contrast between a bold financial value and quiet gray metadata. Forms should grow vertically, not compress labels or place multiple editable values into an unreadable row.
 
 # Screen composition
 
-Use a 4 points base, 8–12 points internal gaps, and 16 points horizontal screen gutters.
+The top safe area typically leads into a compact title or account summary. The middle is a vertical stack of rounded modules, full-width financial rows, or a focused form. Sixteen-point outer gutters and 12–16 point internal gaps create a dense rhythm. Long dashboards and menus scroll vertically; transactional screens reduce visual noise and keep one primary task per column. Bottom actions and the navigation dock reserve the lower safe area.
 
-Home mixes icon grids and two-column product tiles; My Bank uses a single stacked product list; Services uses asymmetrical colored tiles.
-
-Dense Home content is intentional, but focused payment and product screens should simplify sharply.
-
-Use layered charcoal, colored tiles, and 3D objects; avoid light shadows that disappear on black.
-
-Primary iPhone screens keep the documented content grouping and vertical rhythm inside a scroll container when content exceeds the viewport. Bottom-owned actions or navigation reserve the lower safe area rather than covering content.
+Observed archetypes include a dark dashboard mixing account modules and bounded promo banners; a menu made from repeated rows with circular left icons and right chevrons; a single-column payment or transfer form with selectors, fields, keyboard state, and fixed action; a card/settings view with segmented controls and toggles; a sparse centered empty state; and a receipt/result page with a large check, amount, and compact action shortcuts. Modal feedback appears over a dim or blurred dark context.
 
 # Navigation appearance
 
-Use a floating dark five-item dock with a raised orange QR control and red active destination.
-
-This section governs appearance only; product behavior and information architecture come from the approved Research and Planning artifacts.
+The persistent bottom navigation is a rounded dark dock rather than a plain system bar. Inactive symbols and labels are gray, the active destination is red, and the middle scanner action is a raised amber circle with the strongest silhouette. Top bars are minimal: a compact back chevron, short title, and small contextual actions. Sheets and dialogs preserve dark surfaces, rounded upper corners, and high-contrast controls.
 
 # Components
 
-Red drives payment and primary banking actions; secondary actions stay charcoal, while QR uses orange.
+Financial cards use charcoal fill, approximately 14-point radii, compact padding, and little or no shadow. Menu rows pair a circular colored or red-line icon with a white label, optional muted detail, and a right chevron. Primary actions are full-width red buttons with white semibold text; disabled actions become neutral gray without changing geometry.
 
-Bank cards group balance and status; service tiles pair label with a distinct rendered object; campaigns remain bounded.
-
-Dark amount and recipient forms use styled gray keypad or fields, red action, and clear source details.
-
-Keep fee, product state, operation result, notification, and balance impact beside the relevant action.
-
-Controls retain at least a 44-point interactive area. Pressed and disabled treatments should stay within the documented palette and hierarchy.
+Fields and account selectors use deep-gray fill, white entered value, gray hint or metadata, and a roughly 10-point radius. Segmented controls and chips use dark tonal selection with red emphasis. Toggles retain the dark palette. Success pages use a large centered check or confirmation symbol, prominent amount, and small rounded follow-up actions. Pressed states deepen the existing fill; do not introduce glow or light elevation.
 
 # Imagery and icons
 
-Service renders live in rounded colored tiles; cards and campaigns use wide rectangles with cropped art.
-
-Contain promotional and service art in rounded modules; keep transaction data on calm dark surfaces.
-
-When imagery is part of the documented composition, it cannot be omitted while final assets are pending. A temporary asset must preserve its placement, crop, scale, and approximate visual weight.
+Core banking UI relies on pictograms, card artwork, and restrained status symbols. Promotional banners and product art can carry saturated photography or rendered objects, but remain cropped inside rounded modules. Icons are compact and often sit in circular containers; red line icons recur in menus. The inspected screens do not establish a stable standalone authored illustration system, so do not invent decorative scenes or treat isolated campaign art as a reusable illustration language.
 
 # States
 
-Keep fee, product state, operation result, notification, and balance impact beside the relevant action.
-
-Green confirms product or money state; gold signals premium value; red should not replace warning semantics without context.
-
-Only the states documented above are specified; other states must preserve the same canvas, hierarchy, and component language without inventing a new visual system.
+Observed forms distinguish disabled gray and enabled red actions while preserving the same stacked geometry. Keyboard entry keeps the form on the dark canvas. Empty states are sparse and centered. Success or receipt states use green confirmation, a large amount, and compact actions. Rating/feedback is presented modally above the dark context. Selected cards, segments, toggles, and navigation retain red, amber, or tonal emphasis without changing the surface hierarchy.
 
 # iOS adaptation
 
-- Extend the documented canvas through the iPhone safe areas while keeping readable content within appropriate insets.
-- Use a vertical `ScrollView` for content that does not fit compact heights; keep documented bottom actions and navigation clear of the home indicator.
-- Primary actions, navigation, cards, and contextual controls remain at least 44 points.
-- Keep product, balance, and primary action first; reduce campaigns and partner offers before core banking.
-- Present the keyboard and system permission UI natively, then return to the same visual context.
-- Preserve semantic reading order in VoiceOver and allow text to grow with Dynamic Type.
-- Preserve the documented appearance instead of introducing an unrelated light or dark palette.
+Extend the near-black canvas behind the status bar and home indicator. Use vertical scrolling for dashboards, menus, settings, and forms, with enough bottom inset for the dock or fixed action. Keyboard avoidance must keep the active field and red CTA reachable. Present native system permissions when needed, then return to the same dark context.
+
+All navigation items, circular icons, segmented options, fields, and action shortcuts need at least 44-point targets. VoiceOver should announce title, account or amount, supporting detail, then action. Dynamic Type should expand cards and stack metadata. Compact widths should reduce promotional density before squeezing core financial data. Preserve the observed dark-led appearance rather than generating a light variant from system defaults.
 
 # Anti-generic checklist
 
-- Do not use every campaign color for ordinary transactional controls.
-- Do not hide status, constraints, or secondary conditions.
-- Do not add heavy shadows around every container.
-- Do not replace the documented canvas and surfaces with a generic grouped background and uniform white cards.
-- Do not use an unstyled `TabView`, default blue tint, or arbitrary SF Symbols when they contradict the reference.
-- Do not collapse every component to one corner radius or remove compositionally important imagery.
+- Do not replace the black field with a white or grouped-gray banking template.
+- Do not use default blue tint for primary actions or active navigation.
+- Do not ship an unstyled `TabView`; preserve the rounded dock and raised amber center action.
+- Do not add bright campaign colors to ordinary financial fields and rows.
+- Do not use white cards, heavy shadows, glass effects, or broad gradients for core transaction surfaces.
+- Do not flatten amount, account source, fee, and status into equal-weight text.
+- Do not replace the focused stacked forms with generic `Form` sections.
+- Do not infer a general illustration system from isolated card and campaign artwork.
 
 </design-context>

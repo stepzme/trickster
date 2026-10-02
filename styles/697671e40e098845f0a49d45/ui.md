@@ -3,154 +3,123 @@
 version: 1
 platform: iOS
 name: t2-design-analysis
-description: "A bold telecom ecosystem built from black header fields, white rounded sheets, an electric-lime identity accent, condensed uppercase headings, and bright magenta, cyan, violet, and pastel 3D service objects. Dense account data stays modular and strongly labeled."
-
+description: "A bold telecom ecosystem that alternates black header fields and pale utility canvases, using electric lime identity marks, heavy rounded type, modular white sheets, a five-item tab bar, saturated data accents, and neon glossy service imagery."
 colors:
-  primary: "#B7FF00"
-  on-primary: "#101010"
-  primary-pressed: "#9DE000"
-  accent-magenta: "#F42C91"
-  accent-cyan: "#18C9E8"
-  accent-violet: "#5D29C7"
-  ink: "#111113"
-  ink-muted: "#73757A"
-  ink-subtle: "#AAADB1"
   canvas: "#F3F3F5"
-  surface-1: "#FFFFFF"
-  surface-2: "#ECEDEF"
-  dark: "#050505"
-  hairline: "#E1E2E5"
-  semantic-success: "#27B567"
-  semantic-warning: "#EBAE25"
-  semantic-danger: "#E64E59"
-  semantic-overlay: "#000000"
-
+  surface-primary: "#FFFFFF"
+  surface-secondary: "#ECEDEF"
+  accent-primary: "#B7FF00"
+  accent-secondary: "#F42C91"
+  text-primary: "#111113"
+  text-secondary: "#73757A"
+  divider: "#E1E2E5"
+  destructive: "#E64E59"
 typography:
-  display-xl: { fontFamily: System Sans, fontSize: 40, fontWeight: 800, lineHeight: 1.0, letterSpacing: -0.8 }
-  display-lg: { fontFamily: System Sans, fontSize: 34, fontWeight: 800, lineHeight: 1.05, letterSpacing: -0.5 }
-  display-md: { fontFamily: System Sans, fontSize: 28, fontWeight: 800, lineHeight: 1.1, letterSpacing: -0.3 }
-  headline: { fontFamily: System Sans, fontSize: 22, fontWeight: 800, lineHeight: 1.18, letterSpacing: -0.1 }
-  card-title: { fontFamily: System Sans, fontSize: 15, fontWeight: 700, lineHeight: 1.2, letterSpacing: 0 }
-  subhead: { fontFamily: System Sans, fontSize: 17, fontWeight: 600, lineHeight: 1.3, letterSpacing: 0 }
-  body-lg: { fontFamily: System Sans, fontSize: 16, fontWeight: 400, lineHeight: 1.4, letterSpacing: 0 }
-  body: { fontFamily: System Sans, fontSize: 14, fontWeight: 400, lineHeight: 1.4, letterSpacing: 0 }
-  body-sm: { fontFamily: System Sans, fontSize: 12, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
-  caption: { fontFamily: System Sans, fontSize: 10, fontWeight: 400, lineHeight: 1.3, letterSpacing: 0 }
-  button: { fontFamily: System Sans, fontSize: 14, fontWeight: 700, lineHeight: 1.2, letterSpacing: 0 }
-  eyebrow: { fontFamily: System Sans, fontSize: 11, fontWeight: 800, lineHeight: 1.25, letterSpacing: 0.4 }
-  mono: { fontFamily: System Mono, fontSize: 12, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
-
-rounded: { xs: 4, sm: 8, md: 12, lg: 18, xl: 24, xxl: 30, pill: 9999, full: 9999 }
-spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
-
+  hero: {fontFamily: "SF Pro Display", fontSize: 38, fontWeight: 800, lineHeight: 41}
+  title: {fontFamily: "SF Pro Display", fontSize: 28, fontWeight: 800, lineHeight: 33}
+  section: {fontFamily: "SF Pro Display", fontSize: 22, fontWeight: 700, lineHeight: 27}
+  body: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 400, lineHeight: 21}
+  label: {fontFamily: "SF Pro Text", fontSize: 14, fontWeight: 700, lineHeight: 19}
+  caption: {fontFamily: "SF Pro Text", fontSize: 12, fontWeight: 400, lineHeight: 16}
+spacing:
+  screen-horizontal: 16
+  section-gap: 24
+  card-padding: 16
+  control-gap: 12
+rounded:
+  control: 12
+  card: 20
+  sheet: 28
+  pill: 999
 components:
-  button-primary: { backgroundColor: "{colors.dark}", textColor: "#FFFFFF", typography: "{typography.button}", rounded: "{rounded.md}", padding: [13, 18]}
-  account-sheet: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xl}", padding: 16 }
-  service-tile: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.lg}", padding: 12 }
-  input-field: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 12 }
-  bottom-nav: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", height: 60 }
+  primary-action: {fill: "near-black or deep violet", text: "white semibold", height: 52, radius: 12}
+  account-sheet: {fill: "white", padding: 16, radius: 24, content: "large value, allowances, compact actions"}
+  service-tile: {fill: "white or saturated category field", padding: 14, radius: 20, imagery: "contained authored object"}
+  navigation: {fill: "white", selected: "near-black icon and label", unselected: "muted gray"}
 ---
 
 # Overview
 
-t2 pairs assertive black-and-lime branding with modular white account sheets. Bright service colors and 3D objects make a wide telecom ecosystem feel energetic without weakening data hierarchy.
+t2 is a high-energy telecom interface built from black, white, electric lime, and a controlled set of saturated service colors. Root and branded surfaces often place white rounded account sheets over black header fields; utility screens move onto a pale gray canvas. Heavy rounded headings and large numeric values carry account hierarchy, while modular cards, long lists, product grids, and five-item navigation organize dense content. Neon outlined icons and glossy toy-like 3D objects give service and promotional surfaces a recognizable visual identity.
 
 # Non-negotiable visual invariants
 
-- Keep black and lime as anchors.
-- Use one bright hue per category.
-- Preserve explicit telecom data.
-- Reuse the same 3D object family.
-- The account screen stacks paired summary cards and full-width lists.
-- More uses a colorful tile grid; finance uses long service cards.
-- Keep dense account data compact, but give service objects and offers generous card space.
+- Black and white form the main structural contrast; electric lime appears as a sharp identity or selected-state accent rather than a full-screen fill.
+- White account sheets overlap or follow black header fields and use large top corners with compact internal data modules.
+- Heavy rounded headings and large tabular values visibly outrank compact gray metadata.
+- A five-item bottom bar remains white and flat, with a dark selected item and muted inactive items.
+- Saturated magenta, cyan, blue, violet, and green distinguish service imagery or focused data without replacing semantic status colors.
+- Dense account values, allowances, and states remain textually explicit even when a card includes authored imagery.
+- Glossy 3D service objects and neon outline illustrations occupy real card space and cannot be replaced by arbitrary symbols.
+- Loading states may use the recurring compact magenta square form while preserving the surrounding black/white hierarchy.
 
 # Color and surfaces
 
-Electric lime carries identity and small highlights. Magenta, cyan, and violet distinguish services; black anchors actions and headers.
+The utility canvas is a cool pale gray. White primary surfaces create account sheets, cards, grouped rows, inputs, and bottom navigation; light gray secondary surfaces separate nested controls and disabled states. Black fills branded headers, selected hero areas, and some subscription, financial, or home-product surfaces. White type is used on black.
 
-White rounded sheets sit on pale gray or black header fields. Light gray groups inputs and secondary modules.
-
-Near-black carries data and headings; gray carries terms, dates, and inactive states. White is used on black chrome.
-
-Green confirms service state, amber warns about balance, and red marks errors. Bright category colors never replace semantics.
+Electric lime identifies the brand, selected emphasis, and a limited set of actions or marks. Magenta is the strongest supporting accent and appears in authored art, loading, and category emphasis; cyan, saturated blue, and violet distinguish other product families and chart states. Near-black carries primary text and actions on light surfaces; gray carries metadata and inactive navigation. Green confirms success, amber warns, and red marks failure or destructive action. Default iOS blue, a whole lime screen, or several unrelated gradients in one card would break the reference.
 
 # Typography
 
-Use a bold condensed-feeling grotesk for headings and a neutral system sans for body and data.
+Use SF Pro Display at heavy weights as the iOS-safe match for the bold rounded or condensed-feeling headings, and SF Pro Text for body, rows, and metadata. Hero numerals and titles sit around 32–38 points, page titles around 26–30, section headings around 20–24, module titles around 15–17, and metadata around 11–13.
 
-Use 22–28 points bold headings, 15–17 points module titles, 14 points body, and 10–12 points allowance metadata.
-
-Keep tariff, balance, allowance, and price visually distinct. Uppercase is appropriate for short section labels only.
-
-Use Inter or SF Pro, with an optional condensed sans for display headings. Preserve heavy weights and clear numerals.
-
-The hierarchy must remain legible with Dynamic Type: supporting text may wrap before the primary metric, title, or action loses its role.
+Large balances, remaining values, prices, and percentages use bold tabular figures. Short labels may use uppercase, but longer body text remains sentence case. Content is primarily left-aligned inside cards; navigation titles may center. With Dynamic Type, paired metrics stack, rows grow, and supporting copy wraps before primary values or actions are truncated.
 
 # Screen composition
 
-Use a 4 points base, 12 points gutters, 8–12 points module gaps, and 20–24 points between account groups.
+Screens generally use 16-point edge insets, 8–12 point module gaps, 16 points inside cards, and 20–28 points between larger groups. Black or pale canvas extends through the top safe area. White sheets may begin below or overlap a dark header region. Long account, service, expense, offer, and settings surfaces scroll vertically; the five-item tab bar or a lower action reserves the bottom safe area.
 
-The account screen stacks paired summary cards and full-width lists. More uses a colorful tile grid; finance uses long service cards.
+Observed archetypes include:
 
-Keep dense account data compact, but give service objects and offers generous card space.
-
-Use metallic toy-like objects on pastel platforms and occasional magenta or cyan gradients. Keep transaction forms flat.
-
-Primary iPhone screens keep the documented content grouping and vertical rhythm inside a scroll container when content exceeds the viewport. Bottom-owned actions or navigation reserve the lower safe area rather than covering content.
+- Account composition: dark upper field with compact identity controls, large value or allowance, then a high-radius white sheet containing paired summary cards, progress, direct actions, and full-width lists.
+- Data composition: bold title above blue or multicolor progress bars, tabular values, and grouped white rows on a pale canvas.
+- Service-grid composition: compact heading and chips lead into a two-column grid of rounded tiles, each pairing a strong label with a contained authored object or neon category icon.
+- Long-card composition: one-column white or dark product cards combine title, status, compact terms, object imagery, and one clear action.
+- Utility-list composition: centered or leading title, search or segmented controls, then tall rows with icons, secondary gray values, badges, radios, or chevrons.
+- Form composition: pale rounded fields, explicit number or amount labels, native keyboard or scanner transition, and one lower black or violet action.
+- Modal composition: rounded white bottom sheet or native permission alert over a dimmed black, map, or pale utility context.
 
 # Navigation appearance
 
-Five bottom destinations persist across Connectivity, MiXX, Home, Finance, and More. Active state uses black emphasis.
-
-This section governs appearance only; product behavior and information architecture come from the approved Research and Planning artifacts.
+The primary bottom bar is white and contains five evenly spaced icon-and-label items. The selected item is near-black and visually stronger; inactive items are muted gray. Detail screens use a centered dark title, leading back chevron, and compact close or trailing actions. Dark hero surfaces invert these controls to white. Horizontal chips and segmented tabs use strong label contrast, with selection indicated by fill or underline from the current product palette. Sheets have large white top corners and a subtle drag indicator where observed.
 
 # Components
 
-Primary actions are black or deep violet with white text; lime highlights selection. Native controls must inherit the package palette and weight.
-
-Account sheets foreground number, balance, allowances, and direct actions. Service cards pair strong labels with one object.
-
-Top-up, SIM, and service forms use pale rounded fields and explicit amount or number labels.
-
-Connected, remaining, transferred, blocked, subscribed, and payment states appear next to the relevant product with explicit text.
-
-Controls retain at least a 44-point interactive area. Pressed and disabled treatments should stay within the documented palette and hierarchy.
+- Primary action: 50–54 points tall, full or near-full width, near-black or deep-violet fill, 12–14 point radius, and centered white semibold label. Disabled state becomes gray.
+- Account sheet: white fill, 24–28 point top radius, 16-point padding, large tabular value, compact allowance or status modules, and little visible shadow.
+- Service tile: white, black, or controlled category-color field with 18–22 point radius, 12–16 point padding, strong label, and contained authored object or outline icon occupying a meaningful portion of the tile.
+- Progress module: bold value, explicit unit or label, and saturated blue/cyan progress bar on a neutral card. Adjacent metrics align their values.
+- Dense row: leading icon, dark label, optional gray subtitle or value, and trailing radio, switch, badge, or chevron. Active state remains explicit in text.
+- Search or selector: at least 44 points tall, white or pale-gray fill, 12–14 point radius, compact icon, and strong selected contrast.
+- Loading mark: compact magenta square or block form centered in otherwise sparse space, without additional decorative animation inferred.
 
 # Imagery and icons
 
-Use centered 3D objects for services and rectangular photography for editorial offers. Avatars and assistants remain circular.
+The authored visual system combines glossy 3D objects and neon outline category illustrations. The 3D objects are chunky, simplified, and toy-like, using chrome, translucent, or saturated materials in lime, magenta, cyan, violet, and blue. They sit on quiet or pastel fields with soft grounding shadows. Outline illustrations use the same neon palette and simplified symbolic subjects. Both modes keep one clear focal object and a clean label zone.
 
-Use `contain` for 3D service objects and `cover` for editorial offers. Preserve readable labels over media.
-
-When imagery is part of the documented composition, it cannot be omitted while final assets are pending. A temporary asset must preserve its placement, crop, scale, and approximate visual weight.
+Editorial offer imagery and external brand marks may appear in bounded cards but do not replace the core authored system. Utility icons remain compact gray or black glyphs; assistants and profile images may be circular. Use `contain` for authored objects and preserve their silhouette; use `cover` only for photographic promotional content. When final art is unavailable, placeholders must preserve placement, scale, palette weight, and negative space.
 
 # States
 
-Connected, remaining, transferred, blocked, subscribed, and payment states appear next to the relevant product with explicit text.
+Observed states include loading and skeleton surfaces, selected and inactive tabs, active radios and toggles, connected or subscribed products, remaining or transferred allowances, blocked states, empty search results, native permissions, keyboard-open forms, and dimmed bottom sheets. These preserve the same black/white structure, heavy value hierarchy, and explicit labels.
 
-Green confirms service state, amber warns about balance, and red marks errors. Bright category colors never replace semantics.
-
-Only the states documented above are specified; other states must preserve the same canvas, hierarchy, and component language without inventing a new visual system.
+Green confirms active or successful state; amber draws attention to balance or review; red marks errors or destructive actions. Bright category colors never replace those semantic meanings. Loading uses neutral skeletons or the magenta mark. Dark product surfaces invert text while retaining card radius and action hierarchy.
 
 # iOS adaptation
 
-- Extend the documented canvas through the iPhone safe areas while keeping readable content within appropriate insets.
-- Use a vertical `ScrollView` for content that does not fit compact heights; keep documented bottom actions and navigation clear of the home indicator.
-- Tabs, service rows, allowance controls, and bottom navigation require at least 44 points targets.
-- Allow stories and offers to scroll horizontally. Keep top-up and activation actions visible through long forms.
-- Present the keyboard and system permission UI natively, then return to the same visual context.
-- Preserve semantic reading order in VoiceOver and allow text to grow with Dynamic Type.
-- Preserve the documented appearance instead of introducing an unrelated light or dark palette.
+Extend the black, pale-gray, or current product field through the safe areas and reserve the lower inset for the five-item tab bar or primary action. Use vertical scroll containers for account sheets, service grids, lists, and forms. Horizontal story, offer, or chip rails may retain partial neighboring items, but must not cover primary content.
+
+All tab items, service tiles, radios, segmented controls, and compact icons need at least 44-point targets. VoiceOver should announce the primary value, unit, product label, state, and action in that order; decorative object parts should not become separate elements. Preserve native keyboard, scanner, SIM, system permission, and sheet transitions. With Dynamic Type or compact widths, stack paired metrics and service tiles before shrinking text. Preserve the observed light and bounded dark contexts rather than forcing one palette everywhere.
 
 # Anti-generic checklist
 
-- Do not make whole screens lime.
-- Do not hide tariff terms behind art.
-- Do not mix several gradients in one card.
-- Do not expose default blue controls.
-- Do not replace the documented canvas and surfaces with a generic grouped background and uniform white cards.
-- Do not use an unstyled `TabView`, default blue tint, or arbitrary SF Symbols when they contradict the reference.
-- Do not collapse every component to one corner radius or remove compositionally important imagery.
+- Do not replace the black-header/white-sheet structure with a generic grouped card stack.
+- Do not make entire screens electric lime or use several competing gradients in one card.
+- Do not use default blue controls where black, violet, or product-specific emphasis is documented.
+- Do not hide balances, allowances, price, or state behind decorative imagery.
+- Do not replace glossy objects and neon outline art with arbitrary SF Symbols or stock illustrations.
+- Do not ship an unstyled `TabView`; preserve the five-item white bar and dark selected state.
+- Do not give account sheets, service tiles, fields, pills, and bottom sheets one uniform radius.
+- Do not add heavy shadows that weaken the flat black/white contrast.
 
 </design-context>

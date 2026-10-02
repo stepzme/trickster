@@ -3,151 +3,123 @@
 version: 1
 platform: iOS
 name: Spotify-design-analysis
-description: "A near-black media interface where album and podcast artwork provides nearly all visual color. White high-contrast typography, charcoal cards, compact gray pills, a scarce neon-green state accent, and a persistent mini-player create a dense but legible listening environment."
-
+description: "A near-black media interface where album, podcast, artist, and playlist artwork supplies nearly all color, while bold white type, compact charcoal controls, scarce Spotify-green state accents, a persistent mini-player, and a dark tab bar maintain dense listening context."
 colors:
-  primary: "#1ED760"
-  on-primary: "#07120A"
-  primary-pressed: "#18B94F"
-  ink: "#FFFFFF"
-  ink-muted: "#B3B3B3"
-  ink-subtle: "#77777B"
   canvas: "#0E0C0F"
-  surface-1: "#1D1B1E"
-  surface-2: "#2B292C"
-  surface-3: "#363438"
-  hairline: "#39363B"
-  semantic-success: "#1ED760"
-  semantic-warning: "#F0B73B"
-  semantic-danger: "#E9505B"
-  semantic-overlay: "#000000"
-
+  surface-primary: "#1D1B1E"
+  surface-secondary: "#2B292C"
+  accent-primary: "#1ED760"
+  accent-secondary: "#FFFFFF"
+  text-primary: "#FFFFFF"
+  text-secondary: "#B3B3B3"
+  divider: "#39363B"
+  destructive: "#E9505B"
 typography:
-  display-xl: { fontFamily: System Sans, fontSize: 42, fontWeight: 700, lineHeight: 1.02, letterSpacing: -1 }
-  display-lg: { fontFamily: System Sans, fontSize: 34, fontWeight: 700, lineHeight: 1.08, letterSpacing: -0.6 }
-  display-md: { fontFamily: System Sans, fontSize: 28, fontWeight: 700, lineHeight: 1.12, letterSpacing: -0.3 }
-  headline: { fontFamily: System Sans, fontSize: 22, fontWeight: 700, lineHeight: 1.18, letterSpacing: -0.1 }
-  card-title: { fontFamily: System Sans, fontSize: 15, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: System Sans, fontSize: 17, fontWeight: 600, lineHeight: 1.3, letterSpacing: 0 }
-  body-lg: { fontFamily: System Sans, fontSize: 16, fontWeight: 400, lineHeight: 1.4, letterSpacing: 0 }
-  body: { fontFamily: System Sans, fontSize: 14, fontWeight: 400, lineHeight: 1.4, letterSpacing: 0 }
-  body-sm: { fontFamily: System Sans, fontSize: 12, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
-  caption: { fontFamily: System Sans, fontSize: 10, fontWeight: 400, lineHeight: 1.3, letterSpacing: 0 }
-  button: { fontFamily: System Sans, fontSize: 14, fontWeight: 600, lineHeight: 1.2, letterSpacing: 0 }
-  eyebrow: { fontFamily: System Sans, fontSize: 11, fontWeight: 700, lineHeight: 1.25, letterSpacing: 0.2 }
-  mono: { fontFamily: System Mono, fontSize: 12, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
-
-rounded: { xs: 3, sm: 6, md: 8, lg: 12, xl: 16, xxl: 24, pill: 9999, full: 9999 }
-spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
-
+  hero: {fontFamily: "SF Pro Display", fontSize: 38, fontWeight: 700, lineHeight: 42}
+  title: {fontFamily: "SF Pro Display", fontSize: 28, fontWeight: 700, lineHeight: 34}
+  section: {fontFamily: "SF Pro Display", fontSize: 22, fontWeight: 700, lineHeight: 27}
+  body: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 400, lineHeight: 21}
+  label: {fontFamily: "SF Pro Text", fontSize: 14, fontWeight: 600, lineHeight: 19}
+  caption: {fontFamily: "SF Pro Text", fontSize: 12, fontWeight: 400, lineHeight: 16}
+spacing:
+  screen-horizontal: 16
+  section-gap: 24
+  card-padding: 12
+  control-gap: 10
+rounded:
+  control: 10
+  card: 8
+  sheet: 24
+  pill: 999
 components:
-  button-primary: { backgroundColor: "{colors.ink}", textColor: "{colors.canvas}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: [13, 20]}
-  media-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.md}", padding: 12 }
-  filter-chip: { backgroundColor: "{colors.surface-3}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.pill}", padding: [8, 12]}
-  mini-player: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.sm}", padding: 8 }
-  bottom-nav: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", height: 62 }
+  primary-action: {fill: "white or Spotify green", text: "near-black semibold", height: 50, radius: 999}
+  media-card: {fill: "near-black", image: "dominant cover art", radius: 8, metadata: "compact white and gray"}
+  mini-player: {fill: "charcoal or artwork-derived color", height: 58, radius: 8, content: "thumbnail, title, progress, playback"}
+  navigation: {fill: "near-black", selected: "white icon and label", unselected: "muted gray"}
 ---
 
 # Overview
 
-Spotify is a dark content-first system. The chrome recedes into near-black while artwork, playback gradients, and strong white type identify media. Green remains scarce and meaningful.
+Spotify is a dense dark media interface in which chrome recedes and content art becomes the main source of color. Near-black fills nearly every viewport; charcoal controls and sheets create shallow separation without card-heavy elevation. Bold white headings segment shelves and lists, compact gray metadata carries artist or episode context, and Spotify green appears sparingly for active, saved, downloaded, or selected state. A persistent mini-player above the dark bottom bar keeps current media visible across browsing surfaces.
 
 # Non-negotiable visual invariants
 
-- Let media artwork supply color.
-- Keep green scarce and stateful.
-- Preserve uninterrupted mini-player context.
-- Use bold type to segment dense shelves.
-- Home uses horizontal shelves and stacked recommendation cards.
-- Library uses compact rows; the player uses a single immersive column.
-- Favor dense browse surfaces but preserve large breathing room around cover art and central playback controls.
+- Near-black fills the full viewport; charcoal surfaces separate controls and sheets without light cards or heavy shadow.
+- Album, podcast, artist, playlist, and category artwork provides most saturated color and cannot be omitted from media-led compositions.
+- Spotify green remains scarce and stateful, reserved for active controls, selected pills, saved or downloaded marks, and prominent playback actions.
+- Bold white section headings create rhythm across dense horizontal shelves and vertical lists; metadata stays compact and gray.
+- A compact mini-player remains directly above the bottom navigation and preserves thumbnail, title, progress, and playback context.
+- The primary bottom bar stays dark, with selected icons and labels turning white while inactive items remain gray.
+- Full-player surfaces give cover art and central playback controls substantially more breathing room than browse lists.
+- Media-derived color or blur may support a player or header, but unrelated decorative gradients are absent.
 
 # Color and surfaces
 
-Neon green marks active filters, saved state, progress, or playback context. Primary text actions often use white rather than filling the interface with green.
+The canvas is a continuous near-black. Primary charcoal surfaces hold media rows, menus, forms, and mini-player content; a lighter charcoal supports pills, selected filters, toggles, and modal groupings. Dividers remain subtle and often give way to spacing. Bottom sheets and dimmed overlays stay within the same dark tonal family.
 
-Near-black is the canvas; charcoal cards and chips create subtle lift. Media-derived gradients may fill player headers.
-
-White carries titles and controls; light gray supports metadata; darker gray indicates inactive navigation or tertiary labels.
-
-Green is both brand and positive playback state. Reserve red for destructive actions and amber for warnings.
+White carries titles, primary controls, and active navigation. Light gray carries artist, duration, description, and inactive state. Spotify green marks active or positive media state, selected chips, saved/downloaded status, toggles, and some primary playback actions. Red is reserved for destructive actions and amber for warning. Artwork-derived gradients may fill a player background when contrast remains high. Default iOS blue, white grouped forms, bright borders, and green-filled generic cards would break the reference.
 
 # Typography
 
-Use a compact grotesk or neutral system sans. Bold titles contrast with dense regular metadata.
+Use SF Pro Display/Text as the iOS-safe substitute for Spotify's compact grotesk. Page titles sit around 26–30 points, section headings around 20–24, media titles around 14–17, body copy around 14–16, and metadata or navigation labels around 10–13. Bold weight is concentrated in page titles, section labels, and the active media title; supporting information remains regular and gray.
 
-Use 22–28 points page titles, 15–17 points media titles, 14 points body, and 10–12 points artist, duration, and navigation metadata.
-
-Keep track and episode names prominent, truncate secondary metadata predictably, and use bold type for section rhythm.
-
-Spotify Mix is proprietary; use Circular-like system stacks, SF Pro, or Inter with strong 600–700 weights.
-
-The hierarchy must remain legible with Dynamic Type: supporting text may wrap before the primary metric, title, or action loses its role.
+Browse content is usually left-aligned. Player titles may center, while settings and detail navigation titles are compact and centered. Track and episode names stay more prominent than artist, duration, or descriptive metadata. With Dynamic Type, secondary metadata wraps or moves below the title, rows grow vertically, and multi-column artwork shelves reduce their column count before labels are clipped.
 
 # Screen composition
 
-Use a 4 points base, 12 points gutters, 8–12 points within cards and lists, and 20–24 points between discovery shelves.
+Most browse surfaces use 12–16 point horizontal insets, 8–12 point internal gaps, and 20–24 points between shelves. Near-black extends through both safe areas. Long home, search, library, playlist, and settings surfaces scroll vertically; selected shelves and chips may scroll horizontally. The mini-player and bottom bar reserve the lower safe area together.
 
-Home uses horizontal shelves and stacked recommendation cards. Library uses compact rows; the player uses a single immersive column.
+Observed archetypes include:
 
-Favor dense browse surfaces but preserve large breathing room around cover art and central playback controls.
-
-Use blurred or sampled artwork color behind the player. Avoid unrelated gradients or ornamental effects.
-
-Primary iPhone screens keep the documented content grouping and vertical rhythm inside a scroll container when content exceeds the viewport. Bottom-owned actions or navigation reserve the lower safe area rather than covering content.
+- Browse composition: bold page or section title, optional pill filters, then repeated horizontal artwork shelves and compact recommendation cards within a vertical feed.
+- Search composition: prominent search field above category artwork, recent queries, filter chips, or dense result rows.
+- Library composition: compact filter row followed by a one-column media list or small artwork grid, with title, metadata, status icons, and overflow actions.
+- Detail composition: large square or portrait artwork dominates the upper region, followed by title, compact metadata, a strong circular play control, and a dense one-column media list.
+- Player composition: one large centered cover image, title and artist, progress, primary playback controls, and smaller utility actions in a single immersive vertical field.
+- Settings composition: compact centered title over flat charcoal or black rows with white labels, gray descriptions, chevrons, and green active toggles.
+- Modal composition: dark bottom sheet or confirmation panel with rounded top corners, compact icon rows, and dimmed underlying media context.
 
 # Navigation appearance
 
-Use five dark bottom destinations and keep the mini-player immediately above them. Active icons are white; green appears for content state.
-
-This section governs appearance only; product behavior and information architecture come from the approved Research and Planning artifacts.
+The bottom bar is near-black and uses compact icon-and-label items. The selected item turns white; inactive items stay muted gray. The mini-player sits immediately above it as a rounded charcoal or artwork-derived strip. Detail screens use white leading back chevrons and compact centered titles. Dark bottom sheets use large top corners and a subtle drag indicator. Filter chips use gray fills; selected chips may turn green with dark text or use stronger white contrast.
 
 # Components
 
-Primary account actions are white pills with dark text; playback centers on a large circular white button. Native controls must inherit the dark surfaces and package typography.
-
-Recommendation cards pair artwork with title, metadata, overflow, and play controls. Library rows stay flatter and denser.
-
-Search uses a prominent dark or light field depending on context. Playlist and settings forms use charcoal rows with clear white labels.
-
-Downloaded, saved, explicit, playing, and premium states use small icons or green labels adjacent to media metadata.
-
-Controls retain at least a 44-point interactive area. Pressed and disabled treatments should stay within the documented palette and hierarchy.
+- Mini-player: approximately 56–60 points tall, charcoal or artwork-derived fill, 6–10 point radius, small square thumbnail, compact white title, gray metadata, thin progress mark, and at least one playback control.
+- Media card: cover art occupies most of the tile; title and metadata sit below in white and gray. Radius remains modest so the artwork does not become a generic rounded rectangle.
+- Media row: small square or portrait thumbnail, white title, compact gray context, optional status glyph, and trailing overflow or playback control.
+- Filter chip: 34–40 points tall, pill shape, charcoal fill, white label; selected state gains green or a stronger filled contrast.
+- Primary playback control: large circular white or green button with near-black icon, visually dominant among smaller monochrome transport controls.
+- Search field: high-contrast white or dark field according to context, rounded but not oversized, with clear leading icon and readable placeholder.
+- Settings row: flat dark surface with white label, optional gray description, and trailing chevron or green toggle; rows use spacing or a subtle divider.
 
 # Imagery and icons
 
-Artwork remains the content, not chrome: square album covers, portrait podcast covers, circular artists, and full-width premium collage crops.
+Artwork is content, not decoration. Square album and playlist covers, portrait podcast covers, circular artist images, category artwork, premium collages, and editorial media crops provide the interface's chromatic variety. Preserve the source ratio and focal subject: square covers remain square, artist photos remain circular, and portrait covers are not forced into landscape crops.
 
-Use `cover` for artwork and preserve square or portrait ratios. Sample artwork color for backgrounds without reducing text contrast.
-
-When imagery is part of the documented composition, it cannot be omitted while final assets are pending. A temporary asset must preserve its placement, crop, scale, and approximate visual weight.
+The sample does not establish one standalone authored illustration system. Visual consistency comes from diverse real cover art, photography, content collages, functional icons, and the surrounding dark chrome. Utility icons are compact white or gray line and filled glyphs for playback, search, library, creation, download, sharing, settings, and disclosure. When final content art is unavailable, temporary imagery must preserve the documented ratio, crop, color density, and visual weight.
 
 # States
 
-Downloaded, saved, explicit, playing, and premium states use small icons or green labels adjacent to media metadata.
+Observed states include selected and inactive bottom tabs, green selected chips, saved or downloaded marks, active toggles, playing media, dimmed modal backdrops, confirmation or upsell panels, playlist editing, and dense settings states. These retain the dark field, artwork-led hierarchy, and small green state accents.
 
-Green is both brand and positive playback state. Reserve red for destructive actions and amber for warnings.
-
-Only the states documented above are specified; other states must preserve the same canvas, hierarchy, and component language without inventing a new visual system.
+Downloaded, saved, or active items use explicit icons or labels in addition to green. Destructive actions use red inside contained confirmations. Modal sheets keep the underlying media visible through dimming. The mini-player persists as a compact state surface, while the full player expands the same media identity into a larger composition.
 
 # iOS adaptation
 
-- Extend the documented canvas through the iPhone safe areas while keeping readable content within appropriate insets.
-- Use a vertical `ScrollView` for content that does not fit compact heights; keep documented bottom actions and navigation clear of the home indicator.
-- Playback, chips, overflow actions, media rows, and bottom navigation require at least 44 points targets.
-- Allow discovery shelves and filter chips to scroll horizontally. Keep the mini-player persistent and the full player vertically scrollable.
-- Present the keyboard and system permission UI natively, then return to the same visual context.
-- Preserve semantic reading order in VoiceOver and allow text to grow with Dynamic Type.
-- Preserve the documented appearance instead of introducing an unrelated light or dark palette.
+Extend near-black or artwork-derived player color through the safe areas and reserve the lower inset for the mini-player plus bottom bar. Use vertical scroll containers for browse, detail, player, library, and settings surfaces; horizontal scrolling is reserved for shelves and chips. Keep the last row clear of the persistent player and navigation.
+
+All playback buttons, chips, overflow controls, media rows, and tab items need at least 44-point targets even when their visible glyphs are smaller. VoiceOver should announce media title, creator, state, duration, and action in that order; decorative artwork should receive one concise content label rather than expose visual fragments. Preserve native keyboard, share, permission, and sheet transitions. With Dynamic Type or compact widths, reduce shelf columns and expand rows before shrinking text. Keep the observed dark appearance; do not introduce unrelated light surfaces.
 
 # Anti-generic checklist
 
-- Do not fill generic cards with green.
-- Do not add bright chrome around artwork.
-- Do not hide playback state during navigation.
-- Do not expose light native controls on dark surfaces.
-- Do not replace the documented canvas and surfaces with a generic grouped background and uniform white cards.
-- Do not use an unstyled `TabView`, default blue tint, or arbitrary SF Symbols when they contradict the reference.
-- Do not collapse every component to one corner radius or remove compositionally important imagery.
+- Do not replace content artwork with arbitrary gradients, generic music symbols, or blank colored cards.
+- Do not use green as a general card fill or decoration; keep it stateful.
+- Do not expose white native forms or default blue controls on the dark canvas.
+- Do not remove the persistent mini-player or let it cover the final scroll row.
+- Do not give cover art, sheets, pills, player controls, and rows one uniform radius.
+- Do not ship an unstyled `TabView`; preserve the dark bar and white selected state.
+- Do not add bright chrome, heavy shadows, or ornamental glass around artwork.
+- Do not flatten player composition into the same density as browse lists.
 
 </design-context>
