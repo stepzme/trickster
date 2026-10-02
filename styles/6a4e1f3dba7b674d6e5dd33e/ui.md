@@ -3,192 +3,95 @@
 version: 1
 platform: iOS
 name: Magnum-GO-design-analysis
-description: "A compact grocery marketplace on white with deep raspberry commerce actions, pale pink category tiles, strong black headings, product pack shots, outlined quantity steppers, and a simple five-item navigation bar."
-colors: {primary: "#C91657", on-primary: "#FFFFFF", primary-focus: "#A80B43", ink: "#20232A", ink-muted: "#777A82", ink-subtle: "#A7A9AF", ink-tertiary: "#CCCDD1", canvas: "#FFFFFF", surface-1: "#FBF2F7", surface-2: "#F5E6EE", surface-3: "#EBD8E2", surface-4: "#DFC8D4", hairline: "#E8E8EB", hairline-strong: "#D0D0D5", hairline-tertiary: "#B8B8BF", inverse-canvas: "#20232A", inverse-surface-1: "#32353D", inverse-surface-2: "#454851", inverse-ink: "#FFFFFF", brand-secure: "#7A1746", semantic-success: "#33AA67", semantic-overlay: "#20232A"}
+description: "A white-first grocery marketplace defined by saturated magenta actions and prices, bold compact headings, dense product photography, pale search and form surfaces, rounded sheets, and a magenta-selected bottom bar."
+colors:
+  canvas: "#FFFFFF"
+  surface-primary: "#FFFFFF"
+  surface-secondary: "#F3F3F5"
+  accent-primary: "#D41473"
+  accent-secondary: "#F3A62F"
+  text-primary: "#18181B"
+  text-secondary: "#74747B"
+  divider: "#E1E1E5"
+  destructive: "#D9414A"
 typography:
-  display-xl: {fontFamily: SF Pro Display, fontSize: 36, fontWeight: 700, lineHeight: 1.06, letterSpacing: -0.8}
-  display-lg: {fontFamily: SF Pro Display, fontSize: 30, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.6}
-  display-md: {fontFamily: SF Pro Display, fontSize: 24, fontWeight: 700, lineHeight: 1.14, letterSpacing: -0.3}
-  headline: {fontFamily: SF Pro Display, fontSize: 20, fontWeight: 700, lineHeight: 1.20, letterSpacing: -0.2}
-  card-title: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 600, lineHeight: 1.24, letterSpacing: 0}
-  subhead: {fontFamily: SF Pro Text, fontSize: 14, fontWeight: 600, lineHeight: 1.30, letterSpacing: 0}
-  body-lg: {fontFamily: SF Pro Text, fontSize: 14, fontWeight: 400, lineHeight: 1.38, letterSpacing: 0}
-  body: {fontFamily: SF Pro Text, fontSize: 12, fontWeight: 400, lineHeight: 1.34, letterSpacing: 0}
-  body-sm: {fontFamily: SF Pro Text, fontSize: 10, fontWeight: 400, lineHeight: 1.28, letterSpacing: 0}
-  caption: {fontFamily: SF Pro Text, fontSize: 9, fontWeight: 400, lineHeight: 1.22, letterSpacing: 0}
-  button: {fontFamily: SF Pro Text, fontSize: 13, fontWeight: 600, lineHeight: 1.18, letterSpacing: 0}
-  eyebrow: {fontFamily: SF Pro Text, fontSize: 9, fontWeight: 600, lineHeight: 1.18, letterSpacing: 0.1}
-  mono: {fontFamily: SF Mono, fontSize: 10, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0}
-rounded: {xs: 4, sm: 8, md: 12, lg: 16, xl: 20, xxl: 26, pill: 9999, full: 9999}
-spacing: {xxs: 4, xs: 8, sm: 12, md: 16, lg: 20, xl: 24, xxl: 32, section: 40}
+  hero: {fontFamily: "SF Pro Display", fontSize: 34, fontWeight: 700, lineHeight: 39}
+  title: {fontFamily: "SF Pro Display", fontSize: 28, fontWeight: 700, lineHeight: 33}
+  section: {fontFamily: "SF Pro Text", fontSize: 20, fontWeight: 700, lineHeight: 25}
+  body: {fontFamily: "SF Pro Text", fontSize: 14, fontWeight: 400, lineHeight: 19}
+  label: {fontFamily: "SF Pro Text", fontSize: 14, fontWeight: 600, lineHeight: 18}
+  caption: {fontFamily: "SF Pro Text", fontSize: 11, fontWeight: 400, lineHeight: 15}
+spacing:
+  screen-horizontal: 16
+  section-gap: 24
+  card-padding: 12
+  control-gap: 8
+rounded:
+  control: 14
+  card: 16
+  sheet: 28
+  pill: 999
 components:
-  button-primary: {backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [13, 18]}
-  button-primary-pressed: {backgroundColor: "{colors.primary-focus}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}"}
-  button-secondary: {backgroundColor: "{colors.canvas}", textColor: "{colors.primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [12, 16]}
-  button-tertiary: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [10, 14]}
-  button-inverse: {backgroundColor: "{colors.inverse-canvas}", textColor: "{colors.inverse-ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [12, 16]}
-  product-card: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: 8}
-  category-tile: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 8}
-  quantity-stepper: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [8, 12]}
-  bottom-nav: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink-subtle}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: [7, 8]}
+  primary-action: {fill: "accent-primary", text: "white semibold", shape: "rounded rectangle"}
+  secondary-action: {fill: "surface-secondary", text: "text-primary", shape: "rounded rectangle"}
+  primary-card: {fill: "surface-primary", imagery: "contained product photo", density: "high"}
+  navigation: {fill: "surface-primary", selected: "accent-primary", unselected: "text-secondary"}
 ---
 
 # Overview
 
-Magnum GO is a straightforward grocery storefront where raspberry actions and pale-pink tiles organize catalog, basket, and order management.
-
-**Key Characteristics:** white canvas; raspberry action color; two-column category and product grids; outlined steppers; typography-led empty states.
+Magnum GO is a dense grocery interface in which white gives merchandise room, saturated magenta makes actions and prices immediately visible, and bold compact headings organize product-heavy screens. Pale-gray search and form surfaces, rounded top sheets, and thin outline navigation keep the system functional rather than decorative.
 
 # Non-negotiable visual invariants
 
-- The reviewed screens use this composition: A compact grocery marketplace on white with deep raspberry commerce actions, pale pink category tiles, strong black headings, product pack shots.
-- The source records this color relationship: Use raspberry for price, cart, selected navigation, and purchase actions.
-- The recorded display style is 36 points while the body style is 12 points.
-- Navigation keeps Catalog, Orders, Favorites, Profile, and Cart fixed.
-- The reviewed screens use this hierarchy: Magnum GO is a straightforward grocery storefront where raspberry actions and pale-pink tiles organize catalog, basket, and order management.
+- White remains the dominant commerce surface across browsing, detail, cart, and profile screens.
+- Saturated magenta consistently marks primary actions, selected navigation, active controls, and important price emphasis.
+- Real product photography occupies most catalog and product-card area.
+- Browsing stays dense through multi-column products, compact labels, badges, and horizontal category content.
+- Search, form, and inactive controls use pale gray rather than elevated decorative cards.
+- Modal decisions appear in white sheets with rounded top corners over a dimmed backdrop.
+- Bottom navigation uses thin outline icons and a clear magenta selected state.
 
 # Color and surfaces
 
-### Brand & Accent
-
-Use raspberry for price, cart, selected navigation, and purchase actions.
-
-### Surface
-
-White is primary; pale pink distinguishes categories and recommendations.
-
-### Text
-
-Near-black leads; gray supports unit, old price, and profile detail.
-
-### Semantic
-
-Green means success, yellow caution, and raspberry commerce or selection.
+White is both canvas and principal product surface. Pale cool gray separates search, form groups, inactive controls, and list backgrounds. Magenta is the dominant app-owned accent for CTAs, prices, selection, and quantity controls; warm orange or red may appear in sale badges but does not compete with magenta. Near-black carries product names and totals, gray carries units and fulfillment details, and thin light-gray separators organize lists. Default iOS blue would visibly break the established purchase hierarchy.
 
 # Typography
 
-### Font Family
-
-Use SF Pro Display for headings and SF Pro Text for product and order detail.
-
-### Hierarchy
-
-| Token | Size | Weight | Use |
-|---|---:|---:|---|
-| display-lg | 30pt | 700 | Empty state |
-| headline | 20pt | 700 | Cart and profile title |
-| card-title | 15pt | 600 | Product and total |
-| body | 12pt | 400 | Unit and metadata |
-| caption | 9pt | 400 | Discount and navigation |
-
-### Principles
-
-- Keep price and pack size adjacent.
-- Use strong titles and simple supporting copy.
-- Align quantity controls across rows.
-
-### Note on Font Substitutes
-
-Inter is suitable; preserve compact Cyrillic and tenge figures.
+Use SF Pro Display for 28–34 point bold page titles and SF Pro Text for dense catalog information. Section headings are around 20 point bold; product names, price controls, and actions use 14 point regular or semibold; ratings, old prices, unit information, and navigation use 11–13 point captions. Prices rely on magenta color and weight. Dynamic Type should expand rows and cards, allow supporting data to wrap, and reduce grid columns before it erases the distinction between title, price, and metadata.
 
 # Screen composition
 
-### Spacing System
-
-Use a 4pt base, 8pt grid gaps, and 12pt gutters.
-
-### Grid & Container
-
-Catalog uses two columns; cart and profile use single-column lists.
-
-### Whitespace Philosophy
-
-Keep browsing dense and empty/order states open.
+Launch and address states use a simple single-column structure below the safe area. Home begins with search or location context, then promotional content, horizontal categories, and dense product rails. Catalog and search use tight multi-column grids with about 16-point outer insets and 8–12 point gaps. Product detail puts a large contained image above price and information, followed by a sticky purchase region. Cart and checkout use single-column rows and grouped forms with a persistent magenta action. Profile and settings use compact list rows with small line icons.
 
 # Navigation appearance
 
-Keep Catalog, Orders, Favorites, Profile, and Cart fixed.
+The bottom bar is white with compact outline icon-label pairs; magenta marks the selected destination and gray recedes the others. Detail and focused forms use small black back or close controls. Categories and fulfillment choices use compact tabs or chips with magenta selection. App-owned sheets have a pronounced top radius, a small close control, and a dimmed background; native permission alerts retain their iOS appearance.
 
 # Components
 
-### Buttons
-
-Primary actions are raspberry; secondary actions are white or pale pink.
-
-Category and sort filters use pale segmented rows with raspberry selection.
-
-### Cards & Containers
-
-Product cards combine image, title, unit, current and old price, badges, and cart control.
-
-### Inputs & Forms
-
-Search and profile fields are pale gray with raspberry focus.
-
-### Status & Build Page
-
-Orders use large title, status, total, and time; empty states provide one recovery action.
-
-### Navigation
-
-Keep Catalog, Orders, Favorites, Profile, and Cart fixed.
+Primary actions are magenta rounded rectangles with white semibold labels and at least 44-point height. Secondary actions and inputs use pale-gray fill or fine neutral borders. Search is a broad pale rounded field. Product cards combine a consistent photo box, title, current and old price, sale badge, favorite, and cart or quantity stepper without ornamental chrome. Checkout rows use compact labels, dividers, and explicit values. Pressed magenta controls deepen slightly; disabled controls use gray fill and text rather than opacity alone.
 
 # Imagery and icons
 
-| Level | Treatment | Use |
-|---|---|---|
-| 0 | White canvas | Catalog |
-| 1 | Pale pink tile | Categories |
-| 2 | Sticky raspberry action | Checkout |
-| 3 | Sheet | Focused choice |
-
-### Decorative Depth
-
-Product imagery creates depth; UI stays flat.
+Product packshots, grocery photography, promotional banners, and category thumbnails are indispensable. Contain packaged goods in consistent image areas and crop food scenes more assertively. Logos, badges, and promo graphics remain content assets; they do not establish a separate illustration system. Icons are small, thin, and functional, usually gray or black until the active state turns magenta. Do not replace merchandise or banners with arbitrary symbols.
 
 # States
 
-Orders use large title, status, total, and time; empty states provide one recovery action.
+Observed states include first launch, native notification permission, active address/search with keyboard, populated catalog, product detail, add and quantity states, cart, checkout, payment methods, profile, language, and support. The white base, magenta commitment color, compact type, and product-media hierarchy remain stable. Errors attach to the affected field or payment row; modal states preserve the rounded white sheet language.
 
 # iOS adaptation
 
-### Touch Targets
-
-Search, filters, favorite, stepper, checkout, and navigation remain at least 44pt.
-
-### Collapsing Strategy
-
-Keep two columns while titles remain readable and stack basket summaries.
-
-### Image Behavior
-
-Contain products and preserve category image balance.
-
-On iPhone, respect top and bottom safe areas, use scrolling for content that does not fit, keep interactive targets at least 44 points, and preserve the visual reading order for VoiceOver. At larger Dynamic Type sizes, allow supporting text to wrap without collapsing the dominant hierarchy. Use native sheets and permission transitions while explicitly styling app-owned surfaces to match the reference.
+Respect top and bottom safe areas and keep persistent purchase controls above the home indicator. Use vertical scroll containers for home, catalog, detail, cart, checkout, and profile; keep the focused input visible above the keyboard. Preserve native system permissions while styling app-owned sheets. Search, favorite, cart, stepper, back, and navigation require 44-point hit areas. VoiceOver should announce product identity and current price before secondary metadata and action. At large Dynamic Type or compact widths, reduce grid columns rather than clipping product data. The observed experience is light-first; do not auto-generate a dark version.
 
 # Anti-generic checklist
 
-- Do not substitute the documented accent hierarchy with default iOS blue.
-- Do not turn the documented white canvas into a generic card stack; preserve the observed accent, density, imagery, and surface grouping.
-- Do not use an unstyled `TabView`, `Form`, or arbitrary SF Symbols when they contradict the documented navigation and component language.
-- Do not flatten the documented typography into one body-text scale.
-- Do not remove compositionally important photography or illustration while assets are pending.
-- Do not apply one corner radius to every control and surface.
-
-Source-specific guardrails retained from the review:
-
-### Do
-
-- Keep quantity and total visible.
-- Preserve clean pack shots.
-- Show delivery threshold.
-- Style native controls consistently.
-
-### Don't
-
-- Don't overdecorate empty states.
-- Don't use raspberry for neutral metadata.
-- Don't crop packaging.
-- Don't add heavy shadows.
+- Do not replace magenta action and price emphasis with default iOS blue.
+- Do not turn dense catalog screens into spacious generic card stacks.
+- Do not omit real product photography or promotional media.
+- Do not ship an unstyled `TabView`, `Form`, `List`, or default search control.
+- Do not flatten heading, price, product, and unit information into one text hierarchy.
+- Do not apply one radius or shadow to product cards, inputs, controls, and sheets.
+- Do not invent illustrations from category thumbnails, badges, or promotional graphics.
 
 </design-context>

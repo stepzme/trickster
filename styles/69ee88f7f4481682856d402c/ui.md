@@ -3,152 +3,105 @@
 version: 1
 platform: iOS
 name: VK-Video-design-analysis
-description: "A bright video-discovery interface built from white surfaces, oversized thumbnail imagery, compact black titles, cool-blue navigation, and a red play-brand accent. Dense feeds remain readable through strict card rhythm and minimal chrome."
-
+description: "A white media catalog lets saturated video thumbnails dominate a compact black-and-gray hierarchy, switching to edge-to-edge dark playback with cool-blue actions and a restrained five-item tab bar."
 colors:
-  primary: "#2688EB"
-  on-primary: "#FFFFFF"
-  primary-pressed: "#1E6FC5"
-  accent-red: "#F03448"
-  ink: "#17181B"
-  ink-muted: "#73767C"
-  ink-subtle: "#A5A8AD"
   canvas: "#FFFFFF"
-  surface-1: "#FFFFFF"
-  surface-2: "#F2F3F5"
-  hairline: "#DFE1E5"
-  semantic-success: "#42AF72"
-  semantic-warning: "#E5A038"
-  semantic-danger: "#E34B58"
-  semantic-overlay: "#000000"
-
+  surface-primary: "#FFFFFF"
+  surface-secondary: "#F2F3F5"
+  accent-primary: "#2688EB"
+  accent-secondary: "#F03448"
+  text-primary: "#17181B"
+  text-secondary: "#76787D"
+  divider: "#E1E3E6"
+  destructive: "#E34B58"
 typography:
-  display-xl: { fontFamily: System Sans, fontSize: 38, fontWeight: 750, lineHeight: 1.06, letterSpacing: -0.6 }
-  display-lg: { fontFamily: System Sans, fontSize: 30, fontWeight: 700, lineHeight: 1.1, letterSpacing: -0.3 }
-  display-md: { fontFamily: System Sans, fontSize: 24, fontWeight: 700, lineHeight: 1.15, letterSpacing: 0 }
-  headline: { fontFamily: System Sans, fontSize: 20, fontWeight: 650, lineHeight: 1.2, letterSpacing: 0 }
-  card-title: { fontFamily: System Sans, fontSize: 15, fontWeight: 600, lineHeight: 1.28, letterSpacing: 0 }
-  subhead: { fontFamily: System Sans, fontSize: 16, fontWeight: 450, lineHeight: 1.35, letterSpacing: 0 }
-  body-lg: { fontFamily: System Sans, fontSize: 16, fontWeight: 400, lineHeight: 1.4, letterSpacing: 0 }
-  body: { fontFamily: System Sans, fontSize: 14, fontWeight: 400, lineHeight: 1.4, letterSpacing: 0 }
-  body-sm: { fontFamily: System Sans, fontSize: 12, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
-  caption: { fontFamily: System Sans, fontSize: 10, fontWeight: 500, lineHeight: 1.3, letterSpacing: 0 }
-  button: { fontFamily: System Sans, fontSize: 15, fontWeight: 600, lineHeight: 1.2, letterSpacing: 0 }
-  eyebrow: { fontFamily: System Sans, fontSize: 10, fontWeight: 650, lineHeight: 1.25, letterSpacing: 0.3 }
-  mono: { fontFamily: System Mono, fontSize: 12, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
-
-rounded: { xs: 3, sm: 6, md: 10, lg: 14, xl: 20, xxl: 26, pill: 9999, full: 9999 }
-spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
-
+  hero: {fontFamily: "SF Pro Display", fontSize: 34, fontWeight: 700, lineHeight: 39}
+  title: {fontFamily: "SF Pro Display", fontSize: 28, fontWeight: 700, lineHeight: 33}
+  section: {fontFamily: "SF Pro Text", fontSize: 20, fontWeight: 600, lineHeight: 25}
+  body: {fontFamily: "SF Pro Text", fontSize: 16, fontWeight: 400, lineHeight: 21}
+  label: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 600, lineHeight: 19}
+  caption: {fontFamily: "SF Pro Text", fontSize: 12, fontWeight: 400, lineHeight: 16}
+spacing:
+  screen-horizontal: 12
+  section-gap: 24
+  card-padding: 12
+  control-gap: 10
+rounded:
+  control: 12
+  card: 14
+  sheet: 24
+  pill: 999
 components:
-  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [13, 18]}
-  video-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: 0 }
-  channel-row: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: [10, 12]}
-  search-field: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: [10, 12]}
-  bottom-nav: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", height: 58 }
+  video-feed-card: {}
+  media-progress-thumbnail: {}
+  channel-header: {}
+  dark-player-overlay: {}
+  five-item-media-tab-bar: {}
 ---
 
 # Overview
 
-VK Video uses strict white feed structure so vivid thumbnails and channel media carry the visual energy. Blue guides navigation while red stays tied to the play identity and live video.
+VK Video keeps catalog and account surfaces almost neutral so colorful thumbnails, posters, avatars, and channel artwork supply most of the visual energy. Compact black titles and gray metadata create a dense but predictable rhythm on white. Playback and vertical clips invert into black, edge-to-edge media environments with minimal translucent controls. Blue identifies general actions and selection; red stays close to live or play-related emphasis.
 
 # Non-negotiable visual invariants
 
-- Let thumbnails lead discovery.
-- Keep metadata consistent.
-- Preserve watch progress.
-- Separate long video and clips modes.
-- The primary feed is single-column; themed sections use horizontal rails or two-column grids.
-- Playback stays edge-to-edge.
-- Let thumbnails touch the feed rhythm while keeping title and metadata blocks distinct.
-- Use more space around search and channel headers.
+- Large 16:9 or portrait media imagery is the dominant visual mass; interface decoration remains restrained.
+- Feed items maintain a strict sequence of thumbnail, compact title, attribution, and gray metadata.
+- Catalog and settings canvases are white or very pale gray; playback is edge-to-edge black or media-filled.
+- Blue owns navigation, subscription, follow, and general actions; red is limited to live, play-brand, or urgent media states.
+- Bottom navigation contains five compact icon-and-label items with one active blue state and a visually distinct central creation action.
+- Duration, playback progress, mute, live, and other media states sit directly on or adjacent to the thumbnail rather than in separate generic cards.
+- Kids/profile creation keeps its blue-purple authored illustration mass instead of substituting ordinary video artwork.
 
 # Color and surfaces
 
-Blue owns navigation, search, follow, and general action. Red is limited to the play mark, live content, and urgent media state.
-
-Use white for feeds and channel pages, pale gray for search and placeholders, and black for playback chrome.
-
-Near-black carries titles; gray carries channels, views, dates, duration context, and inactive navigation.
-
-Green confirms upload or save, amber warns, and red marks live or destructive action. Use labels with all states.
+White is the continuous feed, channel, profile, and settings canvas; pale cool gray supports search fields, grouped rows, placeholders, and inactive pills. Near-black carries titles and player chrome, while medium gray handles channel names, views, dates, and secondary settings copy. Blue is the primary action and active-navigation color. Red marks live or destructive/play-related emphasis; green may confirm saved or completed states. Dark player sheets and overlays use black or charcoal with white controls. Decorative gradients on the main feed, arbitrary accent colors in system chrome, or default iOS blue applied to every link would weaken the media-led hierarchy.
 
 # Typography
 
-Use a compact system sans with readable Cyrillic and strong thumbnail-title pairing.
-
-Use 24–38 points page titles, 15–20 points video and channel titles, 12–14 points metadata, and 10 points navigation labels.
-
-Limit titles to a few lines, preserve clear channel metadata, and keep duration separate from title text.
-
-Use SF Pro or Inter with medium card titles and tabular duration figures.
-
-The hierarchy must remain legible with Dynamic Type: supporting text may wrap before the primary metric, title, or action loses its role.
+Use SF Pro with compact mobile metrics. Page titles are bold at 24–30 points, section headers around 20 points, video and channel titles 15–17 points semibold, metadata 11–13 points regular gray, and tab labels around 10–11 points. Titles wrap to a small number of lines, then truncate; channel attribution remains visible. Durations use tabular numerals in compact overlays. Player text stays white and may truncate aggressively over imagery. With Dynamic Type, allow metadata to wrap or move below while preserving the thumbnail, title, creator, and primary action.
 
 # Screen composition
 
-Use a 4 points base, 8–12 points feed gutters, 10 points card gaps, and 20–24 points between discovery sections.
+The main catalog begins below the safe area with a compact brand/header row and small utility icons, then a horizontally scrolling category strip and a vertically scrolling single-column feed. Feed thumbnails occupy most of the width; title and metadata blocks sit directly beneath with modest gutters. Themed modules may use horizontal rails or two-column grids without changing the white canvas.
 
-The primary feed is single-column; themed sections use horizontal rails or two-column grids. Playback stays edge-to-edge.
-
-Let thumbnails touch the feed rhythm while keeping title and metadata blocks distinct. Use more space around search and channel headers.
-
-Thumbnails, channel art, and video provide all decorative depth. UI stays neutral.
-
-Primary iPhone screens keep the documented content grouping and vertical rhythm inside a scroll container when content exceeds the viewport. Bottom-owned actions or navigation reserve the lower safe area rather than covering content.
+Search uses a pale wide field, then either results with familiar media rows or open whitespace. Channel/profile archetypes combine avatar or header identity, a blue action, compact tabs, and thumbnail grids or lists. Settings become full-width white grouped rows with separators and switches. Playback uses an edge-to-edge landscape or portrait media surface, dim overlay controls, and bottom or modal sheets for comments, description, quality, stickers, or other choices. Typical feed inset is 8–12 points, with 20–24 points between major sections.
 
 # Navigation appearance
 
-Use five bottom destinations for Home, Clips, Create, Subscriptions, and Profile. Keep discovery tabs in the Home header.
-
-This section governs appearance only; product behavior and information architecture come from the approved Research and Planning artifacts.
+The bottom bar is white on catalog surfaces with five small icon-and-label items; active state is blue and inactive states are gray, while the central creation item remains visually distinct. The top catalog row combines a compact brand mark with search, notification, or settings line icons. Horizontal category and channel tabs use blue text or an underline for selection. Detail pages use a simple back arrow. Player and clips screens replace the white bars with translucent or white controls over dark full-bleed media. Sheets rise with large top corners over a dimmed player. This section defines appearance, not routes.
 
 # Components
 
-Subscribe, create, and follow actions use blue or high-contrast white over playback. Native controls must inherit blue focus and the current surface.
-
-Video cards pair one thumbnail with title, channel, views, age, and overflow. Continue Watching adds progress to the thumbnail.
-
-Search uses a pale field and cancel action. Publishing forms use grouped fields for title, media, cover, category, and visibility.
-
-Live, duration, progress, subscribed, saved, restricted, upload, and processing states appear on the relevant thumbnail or creator flow.
-
-Controls retain at least a 44-point interactive area. Pressed and disabled treatments should stay within the documented palette and hierarchy.
+- **Video feed card:** wide media crop with modest radius, duration/status overlays, optional progress bar, then compact title and gray creator/view/date metadata; avoid an enclosing decorative card surface.
+- **Portrait clip:** full-screen vertical cover with white overlay actions and minimal dark scrim for readability.
+- **Search field:** broad pale-gray rounded rectangle, dark query text, compact search/clear actions, and a separate cancel action when shown.
+- **Channel header:** circular avatar or mark, bold name, supporting counts, blue subscribe/follow control, and compact selected tabs.
+- **Player overlay:** edge-to-edge media with centered transport controls, small top utilities, white glyphs, and translucent dark backing only where necessary.
+- **Media sheet:** white or charcoal bottom sheet with about 24-point top corners, dense rows, and clear selected/check state for quality or settings.
+- **Settings row:** full-width white row with dark label, optional gray description, and trailing switch or chevron separated by hairlines.
 
 # Imagery and icons
 
-Video thumbnails use 16:9 `cover`; clips use portrait `cover`; channel avatars are circular. No separate illustration language is present.
-
-Use `cover` for thumbnails and clips, circular crop for avatars, and `contain` for logos or unavailable placeholders.
-
-When imagery is part of the documented composition, it cannot be omitted while final assets are pending. A temporary asset must preserve its placement, crop, scale, and approximate visual weight.
+Real video thumbnails, posters, creator avatars, channel marks, and sports or entertainment artwork carry most of the composition and cannot be omitted. Use 16:9 cover crops for standard video, portrait cover for clips, and circular crops for avatars. Functional icons are compact monochrome line glyphs; stickers remain user-content tools rather than an illustration reference. A separate authored illustration system appears in Kids/profile creation: flat rounded characters and doodled age-card objects on blue-purple surfaces. Preserve its reserved hero or card area where used, but do not spread it into the general media catalog.
 
 # States
 
-Live, duration, progress, subscribed, saved, restricted, upload, and processing states appear on the relevant thumbnail or creator flow.
-
-Green confirms upload or save, amber warns, and red marks live or destructive action. Use labels with all states.
-
-Only the states documented above are specified; other states must preserve the same canvas, hierarchy, and component language without inventing a new visual system.
+Observed states include native notification and tracking permissions, a logged-in toast, autoplay and mute badges, playback progress, liked and subscribed treatments, comments with keyboard and sticker tray, description and quality sheets, search entry/results, clips loading/playback, and settings toggles. Selected or followed actions use blue; live emphasis uses red; loading on dark media keeps the player surface intact. Native alerts remain native. No coherent branded error composition was observed, so do not invent one.
 
 # iOS adaptation
 
-- Extend the documented canvas through the iPhone safe areas while keeping readable content within appropriate insets.
-- Use a vertical `ScrollView` for content that does not fit compact heights; keep documented bottom actions and navigation clear of the home indicator.
-- Tabs, video cards, channel links, search, overflow, and navigation require at least 44 points hit regions.
-- Keep thumbnail, title, channel, duration, and primary action visible. Move secondary metadata and management into detail or overflow.
-- Present the keyboard and system permission UI natively, then return to the same visual context.
-- Preserve semantic reading order in VoiceOver and allow text to grow with Dynamic Type.
-- Preserve the documented appearance instead of introducing an unrelated light or dark palette.
+Keep catalog content below the top safe area and reserve bottom space for the five-item bar and home indicator. Use vertical scrolling for feeds, channel lists, search results, and settings; use horizontal scrolling for category tabs and rails without shrinking touch targets. Standard playback should respect aspect ratio while clips may extend behind safe areas with controls inset from system gestures. Present comments, descriptions, and quality as native-behaving sheets; keep the keyboard from covering the active comment and send action. Maintain 44-point targets for tabs, overflow, transport, and channel actions. VoiceOver should announce thumbnail context, title, creator, duration, and state in that order. Dynamic Type must expand metadata blocks without cropping media controls. Preserve light catalog and dark player appearances rather than applying a single automatic inversion.
 
 # Anti-generic checklist
 
-- Do not decorate feed backgrounds.
-- Do not over-round every card.
-- Do not hide channel attribution.
-- Do not expose unrelated accent colors.
-- Do not replace the documented canvas and surfaces with a generic grouped background and uniform white cards.
-- Do not use an unstyled `TabView`, default blue tint, or arbitrary SF Symbols when they contradict the reference.
-- Do not collapse every component to one corner radius or remove compositionally important imagery.
+- Do not replace large media crops with small icons or generic placeholder cards.
+- Do not wrap every feed item in a floating white rounded rectangle on a gray background.
+- Do not hide creator attribution, duration, progress, or media state.
+- Do not use red as a general accent or blue as decorative fill throughout thumbnails.
+- Do not ship an unstyled `TabView`, generic `Form`, or default navigation bar that changes the compact media rhythm.
+- Do not use one radius for thumbnails, search, sheets, and pills.
+- Do not substitute arbitrary SF Symbols or poster art for the authored Kids illustrations.
+- Do not add decorative or repeated copy when thumbnail, title, state, and action already communicate the content.
 
 </design-context>

@@ -3,168 +3,105 @@
 version: 1
 platform: iOS
 name: 2GIS-design-analysis
-description: "A map-first mobile interface built from a pale detailed map, white floating sheets, and saturated green route actions. Compact system typography, blue spatial markers, transport icons, and persistent edge controls keep navigation legible while recommendation cards and vivid 3D onboarding scenes add personality."
+description: "A pale detailed map remains the dominant canvas beneath white floating controls and rounded sheets, while saturated green actions, compact route metrics, and restrained imagery keep spatial tasks legible."
 colors:
-  primary: "#19C83A"
-  on-primary: "#FFFFFF"
-  accent-blue: "#1688F5"
-  accent-red: "#EF3D43"
-  ink: "#202124"
-  ink-muted: "#73777F"
-  ink-subtle: "#A1A5AC"
-  canvas: "#F5F4F1"
-  surface-1: "#FFFFFF"
-  surface-2: "#F1F2F4"
-  surface-dark: "#10131A"
-  hairline: "#E1E3E6"
-  semantic-warning: "#F4B323"
-  semantic-overlay: "#000000"
+  canvas: "#EEEDE7"
+  surface-primary: "#FFFFFF"
+  surface-secondary: "#F2F3F4"
+  accent-primary: "#20C85A"
+  accent-secondary: "#258BE6"
+  text-primary: "#202124"
+  text-secondary: "#74777C"
+  divider: "#E2E4E6"
+  destructive: "#E34A50"
 typography:
-  display-xl: { fontFamily: System Sans, fontSize: 36, fontWeight: 700, lineHeight: 1.05, letterSpacing: -0.8 }
-  display-lg: { fontFamily: System Sans, fontSize: 30, fontWeight: 700, lineHeight: 1.08, letterSpacing: -0.5 }
-  display-md: { fontFamily: System Sans, fontSize: 26, fontWeight: 700, lineHeight: 1.12, letterSpacing: -0.3 }
-  headline: { fontFamily: System Sans, fontSize: 21, fontWeight: 600, lineHeight: 1.18, letterSpacing: -0.1 }
-  card-title: { fontFamily: System Sans, fontSize: 16, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: System Sans, fontSize: 16, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
-  body-lg: { fontFamily: System Sans, fontSize: 16, fontWeight: 400, lineHeight: 1.42, letterSpacing: 0 }
-  body: { fontFamily: System Sans, fontSize: 14, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
-  body-sm: { fontFamily: System Sans, fontSize: 12, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
-  caption: { fontFamily: System Sans, fontSize: 11, fontWeight: 500, lineHeight: 1.25, letterSpacing: 0 }
-  button: { fontFamily: System Sans, fontSize: 15, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0 }
-  eyebrow: { fontFamily: System Sans, fontSize: 11, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0.2 }
-  mono: { fontFamily: System Mono, fontSize: 12, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
-rounded: { xs: 6, sm: 10, md: 14, lg: 18, xl: 24, xxl: 30, pill: 9999, full: 9999 }
-spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
+  hero: {fontFamily: "SF Pro Display", fontSize: 34, fontWeight: 700, lineHeight: 38}
+  title: {fontFamily: "SF Pro Display", fontSize: 28, fontWeight: 700, lineHeight: 33}
+  section: {fontFamily: "SF Pro Text", fontSize: 20, fontWeight: 600, lineHeight: 25}
+  body: {fontFamily: "SF Pro Text", fontSize: 16, fontWeight: 400, lineHeight: 21}
+  label: {fontFamily: "SF Pro Text", fontSize: 14, fontWeight: 600, lineHeight: 18}
+  caption: {fontFamily: "SF Pro Text", fontSize: 12, fontWeight: 400, lineHeight: 16}
+spacing:
+  screen-horizontal: 16
+  section-gap: 24
+  card-padding: 16
+  control-gap: 10
+rounded:
+  control: 14
+  card: 18
+  sheet: 24
+  pill: 999
 components:
-  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.md}", padding: [14, 20]}
-  map-control: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 12 }
-  bottom-sheet: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xl}", padding: 16 }
-  place-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 14 }
-  route-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 14 }
-  navigation-bar: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.pill}", height: 48 }
-  footer: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: [20, 16]}
+  map-search-field: {}
+  floating-map-control: {}
+  route-bottom-sheet: {}
+  green-primary-action: {}
+  transport-mode-chip: {}
 ---
 
 # Overview
 
-2GIS keeps the map visible through discovery, routing, navigation, weather, traffic, friends, and recommendations. White controls and sheets float over dense cartography; green confirms progress while blue marks spatial information.
+2GIS is map-first: dense pale cartography usually fills the viewport while white search, control, card, and sheet surfaces float above it. Green marks decisive actions and selected progress; blue identifies spatial information. The operational UI is compact and quiet, leaving routes, markers, place photography, and time or distance metrics to carry meaning.
 
 # Non-negotiable visual invariants
 
-- The sampled screens consistently show Persistent detailed map as the base surface.
-- Preserve the map under every spatial task.
-- Pair icons with time, distance, or status labels.
-- Use green for the current primary action.
-- Keep map controls clustered at edges.
-- Move complex choices into sheets.
-- The map fills the viewport.
-- Sheets occupy the lower portion and may scroll.
+- A detailed pale map remains the largest visual mass on spatial screens and extends behind floating chrome.
+- Complex content rises from the bottom as a broad white rounded sheet instead of replacing the map with a new page.
+- Saturated green is reserved for the current primary action, selected route, toggle, badge, or confirmed state.
+- Search and map controls are white floating surfaces with compact dark glyphs and soft separation from the map.
+- Route cards prioritize time, arrival, distance, and transport symbols before explanatory text.
+- Controls cluster near screen edges so the central map and route remain readable.
+- Full-screen list and settings surfaces use restrained white or pale gray rows rather than decorative cards.
 
 # Color and surfaces
 
-- **Green** ({colors.primary}): Route, confirmation, active progress, and selected state.
-- **Blue** ({colors.accent-blue}): Location, parking, transit, and current-position markers.
-- **Red** ({colors.accent-red}): Restrictions, incidents, and critical map symbols.
-
-- **Map Canvas** ({colors.canvas}): Pale geographic base.
-- **Surface 1** ({colors.surface-1}): Search, controls, cards, and sheets.
-- **Surface 2** ({colors.surface-2}): Nested rows and inactive chips.
-- **Dark Surface** ({colors.surface-dark}): Onboarding and night navigation.
-
-- **Ink** ({colors.ink}): Place names, route metrics, and actions.
-- **Ink Muted** ({colors.ink-muted}): Addresses, timing detail, and descriptions.
-- **Ink Subtle** ({colors.ink-subtle}): Disabled and low-priority labels.
-
-- **Warning** ({colors.semantic-warning}): Traffic, weather, and attention markers.
-- **Overlay** ({colors.semantic-overlay}): Scrim under modal sheets.
+The base map is warm pale beige-gray with muted green land, light roads, and dense neutral labels. White is the main overlay surface for search, sheets, cards, drawers, and settings; pale gray supports inactive chips and grouped rows. Green is the dominant action color, blue carries location and transit emphasis, red marks restrictions or destructive meaning, and amber may signal traffic or attention. Scrims are dark but translucent. Default iOS blue as a universal tint, opaque gray grouped backgrounds over the map, or decorative gradients on operational screens would break the reference.
 
 # Typography
 
-- **System Sans** — all map labels, sheets, metrics, menus, and controls.
-- **System Mono** — optional for coordinates or technical values only.
-
-- `{typography.display-lg}` — 30 points — 700 — Onboarding statement
-- `{typography.headline}` — 21 points — 600 — Sheet heading
-- `{typography.card-title}` — 16 points — 600 — Place and route title
-- `{typography.body}` — 14 points — 400 — Default labels
-- `{typography.caption}` — 11 points — 500 — Map and transfer metadata
-- `{typography.button}` — 15 points — 600 — Primary action
-
-- Put time, distance, and place names before explanation.
-- Keep map labels compact and avoid decorative type.
-- Use weight and spatial grouping before extra color.
-- Maintain legibility on both map and photo backgrounds.
-
-Use **SF Pro**, **Inter**, or **Roboto** with compact mobile metrics and clear Cyrillic support.
-
-The hierarchy must remain legible with Dynamic Type: supporting text may wrap before the primary metric, title, or action loses its role.
+Use SF Pro with compact metrics and clear Cyrillic. Page and sheet titles use bold 20–28-point styles; place names and route headings are semibold; body labels are 14–16 points; dense route metadata and map-adjacent labels are 11–13 points in muted gray. Numeric travel time is the strongest element inside a route option and should use tabular numerals. Keep labels short and pair icons with textual time, distance, or status. Under Dynamic Type, allow secondary rows to wrap or grow while preserving the route metric, place name, and primary action as the first read.
 
 # Screen composition
 
-Use a 4 points base. Map controls sit 8–12 points from edges; sheets use 16 points interiors; route cards use 12–14 points gaps.
+Map archetypes run full bleed through both safe areas, with a white search field near the top, compact floating controls at the sides, and a bottom-owned navigation or sheet above the home indicator. A collapsed sheet shows the minimum route or place summary; expanded versions cover more of the map and scroll internally while retaining their rounded top corners.
 
-The map fills the viewport. Sheets occupy the lower portion and may scroll. Route alternatives use horizontal cards; mode choices use a compact horizontal strip.
-
-Whitespace belongs inside floating surfaces, not across the map. Keep the map readable by clustering controls at edges and limiting simultaneous cards.
-
-Use soft shadows and sheet overlap. Reserve dramatic lighting and glossy depth for onboarding illustration.
-
-Primary iPhone screens keep the documented content grouping and vertical rhythm inside a scroll container when content exceeds the viewport. Bottom-owned actions or navigation reserve the lower safe area rather than covering content.
+Place-detail sheets combine title and rating information, a horizontal photo strip, compact facts, and a primary action. Route-selection sheets use a horizontal mode strip followed by vertically stacked alternatives and a green action. Navigation mode reduces chrome to the route line, essential metrics, and edge controls. Search, profile, and settings archetypes move to full white or light-gray list pages with integrated top bars, roomy rows, separators, switches, and checkmarks. Horizontal insets are roughly 16 points; floating edge controls sit 8–12 points from screen edges.
 
 # Navigation appearance
 
-Search, Trips, Navigator, Friends, and Tips form the bottom bar. Edge controls handle layers, zoom, location, and menu. Navigation mode reduces chrome to driving essentials.
-
-This section governs appearance only; product behavior and information architecture come from the approved Research and Planning artifacts.
+Primary bottom navigation is a low white bar with compact icon-and-label items and green active emphasis. Map tasks replace persistent page chrome with white floating controls and rounded bottom sheets. Full-screen list pages use a simple back arrow and a strong title on white. A side drawer appears as a white panel over a still-visible portion of the underlying map. Selected route or transport tabs use green lines, fills, or labels; unselected states stay gray. This specifies appearance only, not source-product destinations.
 
 # Components
 
-Primary actions are green rounded rectangles with white semibold labels. Secondary actions use white or pale gray. Circular map controls group one function per button.
-
-Place cards combine title, category, rating, address, and photo. Route cards prioritize duration, arrival time, transfers, and mode icons. Recommendation cards can include image or illustration.
-
-Search uses a white rounded field with microphone. Destination forms keep start and end visible together. Sheets handle floors, entrances, final points, and privacy choices.
-
-Traffic, weather, route incidents, parking, and friend status use explicit labels plus icons. Selected route is reinforced by green line and action.
-
-Controls retain at least a 44-point interactive area. Pressed and disabled treatments should stay within the documented palette and hierarchy.
+- **Map search field:** wide white rounded rectangle with dark query text and compact microphone or menu actions; soft shadow or contrast separates it from cartography.
+- **Floating map control:** white rounded square or circle, one centered dark glyph, at least a 44-point target, arranged in a small edge cluster.
+- **Bottom sheet:** broad white surface with about 24-point top corners, compact drag affordance where visible, and scrollable content above the home indicator.
+- **Route card:** white or pale option row prioritizing bold duration, arrival or distance, transport glyphs, and restrained secondary details; selected treatment ties to green.
+- **Primary action:** saturated green rounded rectangle with centered white semibold label; disabled treatment becomes low-contrast rather than changing hue arbitrarily.
+- **Mode chip:** compact icon-and-label pill or tab; green selected, pale-gray inactive, with enough hit area around the visible capsule.
+- **Settings row:** full-width light row with leading label, optional secondary text, and trailing switch, checkmark, or chevron separated by hairlines.
 
 # Imagery and icons
 
-Place photos use rounded landscape crops. 3D onboarding objects remain centered and fully visible. Map markers use compact circles, pins, and speech-bubble forms.
-
-Map stays full bleed. Place photography uses cover with safe subject crops. 3D onboarding uses contain on a dark field.
-
-When imagery is part of the documented composition, it cannot be omitted while final assets are pending. A temporary asset must preserve its placement, crop, scale, and approximate visual weight.
+Cartography, route lines, POI markers, and transport glyphs are the core imagery and must remain visible at useful scale. Place photographs use rounded landscape crops in horizontal strips or cards. Functional icons are compact and literal, with green, blue, red, or neutral meaning reinforced by labels. Authored onboarding scenes and empty-state drawings are a separate illustration system; where present, preserve their scale and reserved space rather than replacing them with SF Symbols. Campaign media, map previews, profile promotion, and brand marks are not illustration references.
 
 # States
 
-Traffic, weather, route incidents, parking, and friend status use explicit labels plus icons. Selected route is reinforced by green line and action.
-
-- **Warning** ({colors.semantic-warning}): Traffic, weather, and attention markers.
-- **Overlay** ({colors.semantic-overlay}): Scrim under modal sheets.
-
-Only the states documented above are specified; other states must preserve the same canvas, hierarchy, and component language without inventing a new visual system.
+Observed selected routes keep a green line and matching action while alternatives remain muted. Permission states use native iOS alerts over the current visual context. Voice search, traffic display, favorites empty content, toggles, checkmarks, drawers, and expanded/collapsed sheets retain the same white-over-map hierarchy. Empty favorites place sparse authored art inside a white surface with a short message. No stable branded error composition was observed, so errors should preserve the existing map, sheet, and semantic-color system rather than invent new artwork.
 
 # iOS adaptation
 
-- Extend the documented canvas through the iPhone safe areas while keeping readable content within appropriate insets.
-- Use a vertical `ScrollView` for content that does not fit compact heights; keep documented bottom actions and navigation clear of the home indicator.
-- Maintain 44 points for map controls, markers, tabs, route modes, and sheet rows. Separate zoom, close, and recenter actions.
-- Collapse route alternatives to horizontal paging before hiding metrics. Let sheets expand vertically. Reduce recommendation cards before shrinking map controls.
-- Present the keyboard and system permission UI natively, then return to the same visual context.
-- Preserve semantic reading order in VoiceOver and allow text to grow with Dynamic Type.
-- Preserve the documented appearance instead of introducing an unrelated light or dark palette.
+Render the map behind safe areas, but keep search, controls, and route metrics clear of the status bar, Dynamic Island, home indicator, and system gestures. Use a resizable native-behaving sheet or an accessible custom equivalent for collapsed and expanded map content. Lists inside sheets scroll independently only when necessary; full-page lists use a standard vertical scroll container. Preserve 44-point targets for markers, map controls, mode tabs, and rows. Keyboard and system permission transitions should return to the same map context. VoiceOver order starts with title/search, then primary metrics and action, then supporting content. On compact widths, horizontally scroll route modes or alternatives instead of shrinking icons and text. Retain evidenced light map/list appearance; dark visual treatment belongs only to contexts actually shown, such as onboarding or night navigation.
 
 # Anti-generic checklist
 
-- Do not obscure the route with oversized cards.
-- Do not use green for unrelated decorative content.
-- Do not rely on marker color alone.
-- Do not add dense text directly on the map.
-- Do not bring onboarding 3D effects into navigation controls.
-- Do not replace the documented canvas and surfaces with a generic grouped background and uniform white cards.
-- Do not use an unstyled `TabView`, default blue tint, or arbitrary SF Symbols when they contradict the reference.
-- Do not collapse every component to one corner radius or remove compositionally important imagery.
+- Do not replace the map-first composition with a generic white dashboard or card grid.
+- Do not cover the route with oversized opaque panels when a partial sheet is sufficient.
+- Do not use default blue tint for the primary action or selection; green owns that role.
+- Do not ship an unstyled `TabView`, `Form`, or default grouped list where the reference uses integrated map chrome.
+- Do not scatter controls through the map center or place dense paragraphs directly on cartography.
+- Do not rely on marker color alone; retain icons and textual status.
+- Do not use one radius for floating controls, cards, sheets, and pills.
+- Do not substitute arbitrary SF Symbols for authored onboarding or empty-state art.
 
 </design-context>

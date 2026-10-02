@@ -3,201 +3,97 @@
 version: 1
 platform: iOS
 name: Yandex-Music-design-analysis
-description: "A dual-mode music system: immersive black listening surfaces with fluorescent yellow playback and artwork-derived color, paired with clean white catalog and collection pages. Large editorial type, square cover art, blurred auroras, and translucent 3D mood objects make discovery feel expressive without weakening control clarity."
-
+description: "A dual light-and-black music interface combining vivid album art, fluorescent yellow listening actions, oversized editorial type, rounded media cards, a persistent mini-player, and neon abstract brand graphics."
 colors:
-  primary: "#FFD600"
-  on-primary: "#111111"
-  primary-pressed: "#E6C100"
-  ink: "#111111"
-  ink-inverse: "#FFFFFF"
-  ink-muted: "#737378"
-  ink-subtle: "#A6A6AB"
   canvas: "#FFFFFF"
-  canvas-immersive: "#050505"
-  surface-1: "#FFFFFF"
-  surface-2: "#F2F2F3"
-  surface-dark: "#171719"
-  hairline: "#DDDDDF"
-  semantic-success: "#31A568"
-  semantic-warning: "#F2A900"
-  semantic-danger: "#E64A4A"
-  semantic-overlay: "#000000"
-
+  surface-primary: "#FFFFFF"
+  surface-secondary: "#F1F1F3"
+  accent-primary: "#FFD600"
+  accent-secondary: "#111111"
+  text-primary: "#111111"
+  text-secondary: "#747478"
+  divider: "#DEDEE1"
+  destructive: "#E54A4A"
 typography:
-  display-xl: { fontFamily: YS Text, fontSize: 42, fontWeight: 800, lineHeight: 1.0, letterSpacing: -1.1 }
-  display-lg: { fontFamily: YS Text, fontSize: 34, fontWeight: 750, lineHeight: 1.05, letterSpacing: -0.8 }
-  display-md: { fontFamily: YS Text, fontSize: 28, fontWeight: 700, lineHeight: 1.1, letterSpacing: -0.5 }
-  headline: { fontFamily: YS Text, fontSize: 22, fontWeight: 700, lineHeight: 1.18, letterSpacing: -0.25 }
-  card-title: { fontFamily: YS Text, fontSize: 16, fontWeight: 650, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: YS Text, fontSize: 16, fontWeight: 500, lineHeight: 1.35, letterSpacing: 0 }
-  body-lg: { fontFamily: YS Text, fontSize: 17, fontWeight: 400, lineHeight: 1.4, letterSpacing: 0 }
-  body: { fontFamily: YS Text, fontSize: 14, fontWeight: 400, lineHeight: 1.38, letterSpacing: 0 }
-  body-sm: { fontFamily: YS Text, fontSize: 12, fontWeight: 400, lineHeight: 1.3, letterSpacing: 0 }
-  caption: { fontFamily: YS Text, fontSize: 11, fontWeight: 450, lineHeight: 1.25, letterSpacing: 0 }
-  button: { fontFamily: YS Text, fontSize: 14, fontWeight: 650, lineHeight: 1.2, letterSpacing: 0 }
-  eyebrow: { fontFamily: YS Text, fontSize: 11, fontWeight: 700, lineHeight: 1.2, letterSpacing: 0.2 }
-  mono: { fontFamily: System Mono, fontSize: 12, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
-
-rounded: { xs: 6, sm: 10, md: 14, lg: 18, xl: 24, xxl: 30, pill: 9999, full: 9999 }
-spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
-
+  hero: {fontFamily: "SF Pro Display", fontSize: 42, fontWeight: 800, lineHeight: 44}
+  title: {fontFamily: "SF Pro Display", fontSize: 32, fontWeight: 750, lineHeight: 36}
+  section: {fontFamily: "SF Pro Text", fontSize: 22, fontWeight: 700, lineHeight: 27}
+  body: {fontFamily: "SF Pro Text", fontSize: 16, fontWeight: 400, lineHeight: 22}
+  label: {fontFamily: "SF Pro Text", fontSize: 14, fontWeight: 650, lineHeight: 18}
+  caption: {fontFamily: "SF Pro Text", fontSize: 12, fontWeight: 450, lineHeight: 16}
+spacing:
+  screen-horizontal: 16
+  section-gap: 32
+  card-padding: 16
+  control-gap: 10
+rounded:
+  control: 14
+  card: 20
+  sheet: 28
+  pill: 999
 components:
-  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.full}", padding: [14, 20]}
-  button-secondary: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: [12, 18]}
-  media-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 0 }
-  search-input: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: [12, 14]}
-  mini-player: { backgroundColor: "{colors.surface-dark}", textColor: "{colors.ink-inverse}", typography: "{typography.body-sm}", rounded: "{rounded.md}", padding: [8, 12]}
-  bottom-nav: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.caption}", rounded: "{rounded.xs}", height: 58 }
+  primary-action: {fill: "#FFD600", textColor: "#111111", cornerRadius: 999, minHeight: 48}
+  secondary-action: {fill: "#F1F1F3", textColor: "#111111", cornerRadius: 999, minHeight: 44}
+  primary-card: {fill: "#FFFFFF", cornerRadius: 20, padding: 16}
+  navigation: {fill: "#FFFFFF", selectedColor: "#111111", accentColor: "#FFD600"}
 ---
 
 # Overview
 
-Yandex Music shifts between a cinematic dark listening mode and a restrained white library mode while preserving artwork, yellow playback, and bold editorial typography.
+Yandex Music alternates between bright white discovery/library surfaces and immersive black listening surfaces. Vivid square album art, fluorescent yellow playback, oversized editorial type, persistent mini-player controls, and neon abstract brand objects make the product expressive without weakening playback clarity.
 
 # Non-negotiable visual invariants
 
-- The reviewed screens use this composition: A dual-mode music system: immersive black listening surfaces with fluorescent yellow playback and artwork-derived color, paired with clean white catalog and collection pages.
-- The dominant canvas token is #FFFFFF and the primary accent token is #FFD600.
-- The recorded display style is 42 points while the body style is 14 points.
-- Navigation uses a bottom bar for Home, Trends, Collection, and Search, with a persistent mini-player above it.
-- The reviewed screens use this hierarchy: Large editorial type, square cover art, blurred auroras, and translucent 3D mood objects make discovery feel expressive without weakening control clarity.
+- Browsing surfaces are predominantly white, while active listening and selected hero experiences may become fully black.
+- Fluorescent yellow is the stable primary listening/action accent and is paired with near-black content.
+- Album and playlist art is a major visual mass in rails, lists, heroes, and the full player.
+- One oversized bold title anchors major discovery or onboarding compositions.
+- A compact mini-player remains visually distinct immediately above the bottom navigation on browsing screens.
+- Bottom navigation is clean and low-profile, with unmistakable selected state and no generic blue.
+- Abstract neon/glass-like wave objects and star motifs use a consistent authored graphic language.
 
 # Color and surfaces
 
-Use black and artwork-derived color for listening; use white and pale gray for browsing. Fluorescent yellow remains the stable interaction accent.
-
-### Brand & Accent
-
-Use yellow for play, selected states, and the starburst identity. Do not spread it across large decorative surfaces.
-
-### Surface
-
-Use black immersive canvases, white browsing pages, pale gray utility fields, and dark mini-player surfaces with strong contrast.
-
-### Text
-
-Use white over immersive media, near-black on white, medium gray for artist and metadata, and high contrast for track titles.
-
-### Semantic
-
-Use yellow for active playback, green for downloaded or available offline, red for errors, and artwork color for atmosphere only.
+White and black are the two large canvas states. Pale gray supports search fields and secondary controls on white; deep charcoal supports controls and the mini-player on black. Yellow identifies play, selection, and the star/sun brand mark without becoming a general background color. Artwork-derived gradients and blurred color may fill immersive hero/player areas, but they remain subordinate to the current content. Near-black or white text switches with the canvas; gray carries artist and metadata. Destructive states use red. Default blue or unrelated decorative gradients would break the system.
 
 # Typography
 
-Large condensed-feeling titles give playlists and My Wave an editorial presence; metadata remains compact and neutral.
-
-### Font Family
-
-Use YS Text with heavy display weights and regular body weights.
-
-### Principles
-
-Keep artist and title pairings intact, avoid wrapping controls, and let one large title dominate each discovery scene.
-
-### Note on Font Substitutes
-
-Use SF Pro or Inter when YS Text is unavailable; preserve heavy display weight and compact tracking.
+Use SF Pro Display/Text when the source brand face is unavailable. Hero titles are very large, heavy, and compact, often occupying several lines; playlist and section titles remain bold; track, artist, and metadata use smaller neutral styles. Numeric time values and playback positions are compact. Preserve a clear large-title-to-body contrast rather than using adjacent near-identical sizes. At Dynamic Type sizes, let editorial titles wrap, protect track/artist pairing, and keep playback controls and essential metadata visible before secondary descriptions.
 
 # Screen composition
 
-Use full-bleed mood canvases, centered square player art, horizontal content rails, and vertical track or collection lists.
+The top safe area continues the current white, black, or artwork-derived field. Onboarding and branded education use a large title with a dominant abstract object or gradient field. Home/discovery stacks editorial headings, horizontal media rails with partial next items, and larger feature cards. Search and catalog use white one-column content with pale search fields and colorful category artwork. The full player centers a large square cover above metadata, progress, and oversized playback controls on a dark or artwork-derived background. Collection uses denser lists/grids, while a mini-player sits above bottom navigation.
 
-### Grid & Container
-
-Discovery rails show partial next items; player content is centered; collection and search results use a single scrolling column.
-
-### Whitespace Philosophy
-
-Give the player and hero title generous space. Browsing may be denser, but album covers need clean separation.
+Visible archetypes include authored onboarding; white discovery home; black or artwork-derived full player; search/category browsing; catalog education with abstract objects; and collection/library lists.
 
 # Navigation appearance
 
-Use a bottom bar for Home, Trends, Collection, and Search, with a persistent mini-player above it.
+Browsing screens use a low-profile white bottom bar with compact icons and labels; black immersive surfaces invert the chrome. The selected item uses stronger contrast and yellow where appropriate. A persistent mini-player forms a separate rounded dark strip directly above the bar, with cover thumbnail, track metadata, and playback control. Top navigation is visually minimal, and back/close controls use ordinary scale. Bottom sheets have large rounded top corners and adapt to the current light or dark surface.
 
 # Components
 
-Playback can use native audio behavior, but every visible control must inherit Music color, scale, icon weight, and shape.
-
-### Buttons
-
-Use fluorescent yellow circular play buttons, white or dark icon controls, and pale pills for secondary actions. Remove native blue.
-
-Use compact pills or segmented tabs for categories, moods, and formats; subscription prompts use one dominant yellow action.
-
-### Cards & Containers
-
-Media cards combine artwork, title, artist, and context. Feature banners may use immersive color and oversized display text.
-
-### Inputs & Forms
-
-Use pale search fields on white and translucent dark fields on immersive surfaces. Keep filters and import controls in bottom sheets.
-
-### Status & Build Page
-
-Show playing, paused, liked, explicit, downloaded, unavailable, and subscription states with icons plus labels where ambiguity remains.
-
-### Navigation
-
-Use a bottom bar for Home, Trends, Collection, and Search, with a persistent mini-player above it.
+The primary action is a yellow pill or circular play control with near-black content. Secondary actions are pale-gray pills on white or translucent/dark pills on immersive surfaces. Media cards pair square/rounded artwork with concise title and artist/context. The mini-player is a compact dark rounded strip with small artwork and high-contrast controls. Search uses a pale rounded field on white. Category or mood cards may combine short labels with authored abstract objects. Player controls use strong size contrast: dominant play, smaller skip/like/queue controls, thin progress track. Disabled/unavailable items reduce contrast while preserving layout.
 
 # Imagery and icons
 
-Use blurred artwork color, translucent sheets, and the floating mini-player; avoid card shadows on the immersive canvas.
-
-### Decorative Depth
-
-Create depth with aurora blur, glass-like 3D mood objects, and artwork sampling rather than generic gradients.
+Album/playlist covers, artwork-derived color, and authored abstract brand graphics are compositionally required and cannot be omitted while assets are pending. Cover art keeps stable square ratios and avoids cropping embedded typography. Background atmosphere may sample and heavily blur artwork color. Abstract 3D/glass-like waves, category glyphs, and star forms follow the separate illustration specification. Playback icons are simple, bold, and optically centered; arbitrary SF Symbols are unacceptable when their weight or geometry conflicts.
 
 # States
 
-Show playing, paused, liked, explicit, downloaded, unavailable, and subscription states with icons plus labels where ambiguity remains.
+Observed states include onboarding, populated discovery, search/catalog results, collection, playing/paused full player, mini-player, liked/saved, and modal education. Playing state strengthens yellow and exposes progress; selected library/filter states use strong contrast or pale tonal fill. Dark and light surfaces retain the same artwork and typography hierarchy. Unavailable or error states lower content contrast and use local red only where needed.
 
 # iOS adaptation
 
-Increase content density on larger screens while protecting centered playback and readable metadata.
-
-Phones use rails and one-column lists; larger screens may add multi-column shelves and place queue beside the player.
-
-### Touch Targets
-
-Play, skip, like, queue, seek, download, search, card, mini-player, and navigation targets require at least 44pt.
-
-### Collapsing Strategy
-
-Keep artwork, title, artist, play state, seek position, and current destination; collapse editorial description and secondary actions first.
-
-### Image Behavior
-
-Use cover for artwork-derived backgrounds with heavy blur, contain for primary cover art, and fixed ratios across rails.
-
-On iPhone, respect top and bottom safe areas, use scrolling for content that does not fit, keep interactive targets at least 44 points, and preserve the visual reading order for VoiceOver. At larger Dynamic Type sizes, allow supporting text to wrap without collapsing the dominant hierarchy. Use native sheets and permission transitions while explicitly styling app-owned surfaces to match the reference.
+Extend the current visual field through the top safe area and keep navigation/mini-player above the home indicator. Use vertical scrolling with horizontal media rails; center the full-player stack within available height and allow metadata to scroll before shrinking cover art excessively. Maintain 44-point targets for play, skip, like, queue, search, and navigation. VoiceOver order should read cover context, title, artist, playback state/progress, primary controls, then secondary actions. Dynamic Type expands cards and list rows and may reduce hero art before clipping text. Support both light and dark app-owned appearances, Reduce Transparency fallbacks, and native audio/permission behavior with explicitly styled surfaces.
 
 # Anti-generic checklist
 
-- Do not substitute the documented accent hierarchy with default iOS blue.
-- Do not collapse distinct surfaces into a uniform stack of generic white cards.
-- Do not use an unstyled `TabView`, `Form`, or arbitrary SF Symbols when they contradict the documented navigation and component language.
-- Do not flatten the documented typography into one body-text scale.
-- Do not remove compositionally important photography or illustration while assets are pending.
-- Do not apply one corner radius to every control and surface.
-
-Source-specific guardrails retained from the review:
-
-Keep musical content primary and the listening state unmistakable.
-
-### Do
-
-- Preserve cover art and artwork-derived atmosphere.
-- Keep playback reachable from every browsing surface.
-- Use yellow consistently for the main listening action.
-- Style native media controls in the Music system.
-
-### Don't
-
-- Do not use default platform blue.
-- Do not apply random gradients unrelated to content.
-- Do not crop cover typography.
-- Do not make secondary actions compete with Play.
+- Do not replace fluorescent yellow with default blue.
+- Do not remove album art, artwork-derived atmosphere, or authored abstract objects.
+- Do not turn discovery into a uniform stack of white text cards.
+- Do not use an unstyled `TabView`, mini-player, slider, or playback control set.
+- Do not apply random gradients unrelated to artwork or the authored graphic language.
+- Do not flatten oversized editorial titles into ordinary navigation headings.
+- Do not crop cover typography or use one radius for covers, pills, sheets, and navigation.
 
 </design-context>

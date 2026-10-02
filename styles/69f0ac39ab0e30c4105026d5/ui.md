@@ -3,130 +3,105 @@
 version: 1
 platform: iOS
 name: Freedom-design-analysis
-description: "A bright financial super-app built from white modular surfaces, emerald-to-teal gradients, compact banking data, rounded service tiles, and promotional 3D artwork. Dense dashboards remain approachable through generous grouping and a persistent five-tab shell."
-colors: { primary: "#21B76C", on-primary: "#FFFFFF", primary-soft: "#EAF9F1", accent: "#00A69C", ink: "#14171A", ink-muted: "#6F7479", ink-subtle: "#A8ADB2", canvas: "#F5F6F7", surface-1: "#FFFFFF", surface-2: "#EDF1F2", hairline: "#E1E5E7", semantic-success: "#28B56D", semantic-warning: "#F2B849", semantic-danger: "#DC5656", semantic-overlay: "#000000" }
+description: "A pale modular finance canvas combines dense white product cards, emerald-to-teal brand fields, bold account values, compact service grids, soft 3D objects, and green-selected five-item navigation."
+colors:
+  canvas: "#F5F6F7"
+  surface-primary: "#FFFFFF"
+  surface-secondary: "#EDF1F2"
+  accent-primary: "#21B76C"
+  accent-secondary: "#00A69C"
+  text-primary: "#14171A"
+  text-secondary: "#70757A"
+  divider: "#E2E5E7"
+  destructive: "#DC5656"
 typography:
-  display-xl: { fontFamily: SF Pro Display, fontSize: 38, fontWeight: 700, lineHeight: 1.05, letterSpacing: -0.8 }
-  display-lg: { fontFamily: SF Pro Display, fontSize: 32, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.5 }
-  display-md: { fontFamily: SF Pro Display, fontSize: 27, fontWeight: 700, lineHeight: 1.15, letterSpacing: -0.3 }
-  headline: { fontFamily: SF Pro Display, fontSize: 22, fontWeight: 700, lineHeight: 1.20, letterSpacing: 0 }
-  card-title: { fontFamily: SF Pro Text, fontSize: 16, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: SF Pro Text, fontSize: 16, fontWeight: 500, lineHeight: 1.30, letterSpacing: 0 }
-  body-lg: { fontFamily: SF Pro Text, fontSize: 16, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
-  body: { fontFamily: SF Pro Text, fontSize: 14, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
-  body-sm: { fontFamily: SF Pro Text, fontSize: 12, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
-  caption: { fontFamily: SF Pro Text, fontSize: 10, fontWeight: 500, lineHeight: 1.20, letterSpacing: 0 }
-  button: { fontFamily: SF Pro Text, fontSize: 15, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0 }
-  eyebrow: { fontFamily: SF Pro Text, fontSize: 11, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0.2 }
-  mono: { fontFamily: SF Mono, fontSize: 12, fontWeight: 500, lineHeight: 1.30, letterSpacing: 0 }
-rounded: { xs: 6, sm: 10, md: 14, lg: 18, xl: 24, xxl: 30, pill: 9999, full: 9999 }
-spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
+  hero: {fontFamily: "SF Pro Display", fontSize: 38, fontWeight: 700, lineHeight: 42}
+  title: {fontFamily: "SF Pro Display", fontSize: 28, fontWeight: 700, lineHeight: 33}
+  section: {fontFamily: "SF Pro Text", fontSize: 20, fontWeight: 700, lineHeight: 25}
+  body: {fontFamily: "SF Pro Text", fontSize: 16, fontWeight: 400, lineHeight: 21}
+  label: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 600, lineHeight: 19}
+  caption: {fontFamily: "SF Pro Text", fontSize: 12, fontWeight: 400, lineHeight: 16}
+spacing:
+  screen-horizontal: 16
+  section-gap: 24
+  card-padding: 16
+  control-gap: 12
+rounded:
+  control: 14
+  card: 18
+  sheet: 26
+  pill: 999
 components:
-  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [13, 18]}
-  finance-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 14 }
-  service-tile: { backgroundColor: "{colors.primary-soft}", textColor: "{colors.ink}", typography: "{typography.caption}", rounded: "{rounded.sm}", padding: 10 }
-  input: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: [12, 14]}
-  navigation-bar: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xs}", height: 52 }
-  footer: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: [8, 10]}
+  account-product-card: {}
+  green-primary-action: {}
+  service-icon-grid: {}
+  financial-input-panel: {}
+  five-item-tab-bar: {}
 ---
 
 # Overview
 
-Freedom balances a dense financial super-app with white cards, green accents, clear account hierarchy, and promotional 3D scenes.
+Freedom presents dense banking content as a pale-gray modular dashboard of white cards, green-to-teal branded areas, compact service grids, and occasional cyan or dark-gold promotional surfaces. Bold balances and section titles lead; muted metadata and tight rows carry detail. Emerald actions, icons, progress, toggles, and selected navigation unify the many modules, while small soft 3D objects add warmth to onboarding and completion screens.
 
 # Non-negotiable visual invariants
 
-- Keep account identity and money visible.
-- Pair instructions with one primary action.
-- Separate promotions from banking controls.
-- Stack account, service, promotion, operation, and guidance modules above a five-tab footer.
-- Use compact internal spacing but clear gaps between unrelated financial tasks.
+- The operational canvas is pale gray with distinct white product, account, form, and list surfaces rather than one continuous white page.
+- Emerald green owns primary actions, active tabs, progress, toggles, and positive emphasis.
+- Balances and key amounts are large, bold, and visually prior to metadata or promotions.
+- Dense modules use compact internal spacing but clear 20–24-point separation between unrelated financial groups.
+- Service catalogs use small soft 3D-like objects or marks above short labels in an orderly grid.
+- A five-item bottom bar stays white with gray inactive items and one green active item.
+- Branded gradients and authored 3D scenes remain confined to promotional, onboarding, or explanatory roles rather than form fields.
 
 # Color and surfaces
 
-Use emerald for primary actions and teal gradients for branded account or campaign areas.
-
-Keep the app canvas pale gray and group financial modules on white cards.
-
-Use near-black for money and titles, gray for metadata, and pale gray for disabled controls.
-
-Reserve green for successful or available state, amber for attention, and red for destructive outcomes.
+The primary app canvas is very light gray, with white cards and panels defining accounts, products, operations, forms, and messages. Emerald and teal appear as solid actions and broad gradient brand fields; cyan banners and occasional dark or gold card heroes provide bounded contrast. Near-black carries balances and titles, gray carries metadata, pale gray shows disabled controls, amber signals attention, and red remains destructive. White sheets rise above dim translucent scrims. Default iOS blue, gradients behind every input, or multicolored operational controls would break the reference.
 
 # Typography
 
-Use SF Pro Display for balances and titles and SF Pro Text for services, details, and forms.
-
-Use 27–32 points for key amounts, 22 points for page titles, 16 points for card titles, 14 points body, and 10–12 points metadata.
-
-Keep amount, account name, and action hierarchy legible inside dense dashboards.
-
-Use the platform sans or Inter with tabular numerals.
-
-The hierarchy must remain legible with Dynamic Type: supporting text may wrap before the primary metric, title, or action loses its role.
+Use SF Pro Display for major amounts and titles and SF Pro Text elsewhere. Key monetary values use bold 30–40-point type with tabular numerals; page titles are about 26–30 points bold; sections 19–21 points; item labels 14–16 points medium or semibold; metadata 11–13 points regular gray. Green inline text is reserved for actions or positive change. With Dynamic Type, allow labels and descriptions to wrap, move secondary metadata lower, and preserve the amount, object name, and next action as the leading hierarchy.
 
 # Screen composition
 
-Use a 4 points base, 16 points gutters, 12 points gaps, and 14 points card padding.
+The full dashboard begins below the status area with identity or account context, prominent balance and product cards, then vertically stacked service, promotion, operation, and guidance modules. Horizontal carousels and compact grids interrupt the main scroll without turning it into a masonry layout. The white five-item bar occupies the bottom safe area.
 
-Stack account, service, promotion, operation, and guidance modules above a five-tab footer.
-
-Use compact internal spacing but clear gaps between unrelated financial tasks.
-
-Use gradients, glassy highlights, and small 3D props only in promotional or explanatory modules.
-
-Primary iPhone screens keep the documented content grouping and vertical rhythm inside a scroll container when content exceeds the viewport. Bottom-owned actions or navigation reserve the lower safe area rather than covering content.
+Product-detail archetypes use a large branded or card-render hero followed by white information panels and a green full-width action. Transfer and payment archetypes use strong titles, segmented controls or selectors, then grouped white input surfaces above the keyboard and a bottom action. Service catalogs use evenly spaced icon tiles. Messages and settings use dense white rows, badges, chevrons, and switches. Bottom sheets present selectors or limits over dimmed content with large rounded top corners. Typical horizontal inset is 16 points.
 
 # Navigation appearance
 
-Home, Operations, Services, Messages, and More remain in the bottom bar.
-
-This section governs appearance only; product behavior and information architecture come from the approved Research and Planning artifacts.
+Primary navigation is a white five-item icon-and-label bar with a green active item and gray inactive items. Detail screens use a simple dark back arrow integrated into the page, not a heavy navigation slab. Transfers and payments use compact pill or underline segments with green selection. Lists use chevrons to indicate deeper content. Selector and limit panels appear as white bottom sheets with a dim overlay. This describes only visual treatment; destinations come from product artifacts.
 
 # Components
 
-Use green filled buttons for the next financial action and pale gray for secondary exits.
-
-Use account cards, service grids, transaction groups, offer banners, and instructional sheets.
-
-Group labeled banking fields in white cards with explicit editable and disabled states.
-
-Show balance, pending amount, reward, eligibility, completion, and failure near the affected object.
-
-Controls retain at least a 44-point interactive area. Pressed and disabled treatments should stay within the documented palette and hierarchy.
+- **Account/product card:** white or bounded branded surface with bold balance, compact account metadata, optional literal card render, and clearly separated actions.
+- **Primary action:** full-width emerald rounded rectangle with centered white semibold label; disabled state becomes pale gray with muted text.
+- **Service grid tile:** compact object or service mark above a short centered label, arranged in a regular grid with generous hit area and minimal enclosing chrome.
+- **Financial input panel:** grouped white surface with labeled rows, clear editable/disabled distinction, dark value text, gray helper content, and green focus or action accents.
+- **Segmented selector:** pale or white rounded track with green selected label/fill and quiet gray alternatives.
+- **Bottom sheet:** white surface with about 26-point top corners, sparse title and selector rows, and a dim background scrim.
+- **Status card:** concise success, completion, or empty-state panel with one dominant icon/object, clear result, and a green next action.
 
 # Imagery and icons
 
-Crop promo artwork inside rounded banners while preserving the copy area.
-
-Crop promotional art without obscuring copy and contain functional card artwork.
-
-When imagery is part of the documented composition, it cannot be omitted while final assets are pending. A temporary asset must preserve its placement, crop, scale, and approximate visual weight.
+Small soft 3D-style service objects, literal card renders, merchant marks, promotional banners, and finance metrics each have different roles. Authored illustration is narrowly used for onboarding, verification, biometric explanation, progress, and product completion; preserve its centered hero space where observed. Campaign art, card artwork, payment logos, service-category icons, and metric panels are not substitutes for that system. Do not omit imagery from service grids or explanatory screens while waiting for final assets.
 
 # States
 
-Show balance, pending amount, reward, eligibility, completion, and failure near the affected object.
-
-Reserve green for successful or available state, amber for attention, and red for destructive outcomes.
-
-Only the states documented above are specified; other states must preserve the same canvas, hierarchy, and component language without inventing a new visual system.
+Observed states include language selection, phone and SMS input, verification progress, PIN creation, Face ID prompt, populated dashboard, product picker and limits sheets, disabled fields, transfer forms with keyboard, payment acceptance, empty autopay content, unread message badges, toggle states, and completion cards. Green remains the positive/action anchor, disabled surfaces stay pale gray, and sheets retain white rounded geometry. No stable branded error composition was observed in the sample; destructive or failed states should remain semantic and local to the affected object.
 
 # iOS adaptation
 
-- Extend the documented canvas through the iPhone safe areas while keeping readable content within appropriate insets.
-- Use a vertical `ScrollView` for content that does not fit compact heights; keep documented bottom actions and navigation clear of the home indicator.
-- Keep transfers, services, cards, switches, and tabs at least 44 points.
-- Preserve balance, primary actions, current task, and confirmation; move promotions lower.
-- Present the keyboard and system permission UI natively, then return to the same visual context.
-- Preserve semantic reading order in VoiceOver and allow text to grow with Dynamic Type.
-- Preserve the documented appearance instead of introducing an unrelated light or dark palette.
+Respect top safe areas for titles and brand fields, and reserve bottom space for the five-item bar and home indicator. Use a vertical `ScrollView` for modular dashboards and product details, horizontal scrolling for carousels or selectors, and native keyboard avoidance for forms. Present selectors as native-behaving sheets with the documented white surface and scrim. Maintain 44-point targets for service tiles, segments, tab items, switches, and form actions. VoiceOver order should follow balance/object, status, actions, then supporting details. Dynamic Type may expand modules vertically; do not shrink monetary values or hit targets to keep the original card height. On compact widths, reduce grid columns or scroll carousels. Preserve the observed light appearance rather than inventing an automatic dark dashboard.
 
 # Anti-generic checklist
 
-- Do not hide fees or state inside decoration.
-- Do not overuse gradients in forms.
-- Do not crowd long explanations beside account actions.
-- Do not replace the documented canvas and surfaces with a generic grouped background and uniform white cards.
-- Do not use an unstyled `TabView`, default blue tint, or arbitrary SF Symbols when they contradict the reference.
-- Do not collapse every component to one corner radius or remove compositionally important imagery.
+- Do not turn the dashboard into a uniform stack of identical white cards with equal visual weight.
+- Do not use default blue tint for actions, selection, toggles, or navigation.
+- Do not place branded gradients behind ordinary form rows or long explanations.
+- Do not hide balances, fees, completion, or eligibility inside promotional decoration.
+- Do not ship an unstyled `TabView`, grouped `Form`, or arbitrary SF Symbols in place of characteristic service objects.
+- Do not use one corner radius for cards, inputs, sheets, and pills.
+- Do not substitute campaign art or generic 3D emoji for the authored onboarding/completion objects.
+- Do not add mood-setting or repeated copy when amount, state, and action already explain the screen.
 
 </design-context>

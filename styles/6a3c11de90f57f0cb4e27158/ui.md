@@ -3,186 +3,95 @@
 version: 1
 platform: iOS
 name: Pi-design-analysis
-description: "An intimate dark AI companion interface with a warm charcoal canvas, cream serif conversation text, a restrained mint-green voice action, hairline composer borders, and richly colored editorial discovery illustrations."
-colors: {primary: "#35B67A", on-primary: "#0F1A14", primary-focus: "#289462", ink: "#F1EEE7", ink-muted: "#C8C3BA", ink-subtle: "#8F8B84", ink-tertiary: "#62605B", canvas: "#242421", surface-1: "#2E2E2A", surface-2: "#383833", surface-3: "#44443E", surface-4: "#505049", hairline: "#4C4C46", hairline-strong: "#62625B", hairline-tertiary: "#73736B", inverse-canvas: "#F4F1EA", inverse-surface-1: "#E8E3D9", inverse-surface-2: "#DAD4C8", inverse-ink: "#242421", brand-secure: "#278E60", semantic-success: "#35B67A", semantic-overlay: "#000000"}
+description: "A calm, dark editorial assistant interface combining a charcoal full-screen field, warm off-white serif conversation type, restrained green identity accents, sparse centered composition, and small framed editorial imagery."
+colors:
+  canvas: "#1D1D1B"
+  surface-primary: "#282824"
+  surface-secondary: "#F3F0E8"
+  accent-primary: "#35B978"
+  accent-secondary: "#9BD7B5"
+  text-primary: "#F3F0E8"
+  text-secondary: "#AAA79F"
+  divider: "#474640"
+  destructive: "#D8665D"
 typography:
-  display-xl: {fontFamily: Georgia, fontSize: 40, fontWeight: 400, lineHeight: 1.08, letterSpacing: -0.7}
-  display-lg: {fontFamily: Georgia, fontSize: 32, fontWeight: 400, lineHeight: 1.12, letterSpacing: -0.4}
-  display-md: {fontFamily: Georgia, fontSize: 26, fontWeight: 400, lineHeight: 1.16, letterSpacing: -0.2}
-  headline: {fontFamily: Georgia, fontSize: 22, fontWeight: 400, lineHeight: 1.25, letterSpacing: -0.1}
-  card-title: {fontFamily: Georgia, fontSize: 17, fontWeight: 400, lineHeight: 1.25, letterSpacing: 0}
-  subhead: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 500, lineHeight: 1.32, letterSpacing: 0}
-  body-lg: {fontFamily: Georgia, fontSize: 17, fontWeight: 400, lineHeight: 1.48, letterSpacing: 0}
-  body: {fontFamily: SF Pro Text, fontSize: 14, fontWeight: 400, lineHeight: 1.42, letterSpacing: 0}
-  body-sm: {fontFamily: SF Pro Text, fontSize: 12, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0}
-  caption: {fontFamily: SF Pro Text, fontSize: 10, fontWeight: 400, lineHeight: 1.25, letterSpacing: 0}
-  button: {fontFamily: SF Pro Text, fontSize: 14, fontWeight: 500, lineHeight: 1.20, letterSpacing: 0}
-  eyebrow: {fontFamily: SF Pro Text, fontSize: 10, fontWeight: 500, lineHeight: 1.20, letterSpacing: 0.1}
-  mono: {fontFamily: SF Mono, fontSize: 12, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0}
-rounded: {xs: 4, sm: 8, md: 12, lg: 16, xl: 22, xxl: 28, pill: 9999, full: 9999}
-spacing: {xxs: 4, xs: 8, sm: 12, md: 16, lg: 20, xl: 24, xxl: 32, section: 48}
+  hero: {fontFamily: "New York", fontSize: 40, fontWeight: 600, lineHeight: 46}
+  title: {fontFamily: "New York", fontSize: 30, fontWeight: 600, lineHeight: 37}
+  section: {fontFamily: "New York", fontSize: 22, fontWeight: 500, lineHeight: 29}
+  body: {fontFamily: "New York", fontSize: 18, fontWeight: 400, lineHeight: 26}
+  label: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 600, lineHeight: 20}
+  caption: {fontFamily: "SF Pro Text", fontSize: 13, fontWeight: 400, lineHeight: 18}
+spacing:
+  screen-horizontal: 24
+  section-gap: 36
+  card-padding: 20
+  control-gap: 12
+rounded:
+  control: 22
+  card: 20
+  sheet: 30
+  pill: 999
 components:
-  button-primary: {backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.full}", padding: [12, 16]}
-  button-primary-pressed: {backgroundColor: "{colors.primary-focus}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.full}"}
-  button-secondary: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.md}", padding: [10, 14]}
-  button-tertiary: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink-muted}", typography: "{typography.button}", rounded: "{rounded.full}", padding: 10}
-  prompt-card: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.card-title}", rounded: "{rounded.lg}", padding: 12}
-  chat-surface: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body-lg}", rounded: "{rounded.xs}", padding: 16}
-  text-input: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.pill}", padding: [12, 14]}
-  status-badge: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.pill}", padding: [3, 7]}
-  side-nav: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink-muted}", typography: "{typography.body}", rounded: "{rounded.xs}", padding: [12, 16]}
+  primary-action: {fill: "accent-primary", text: "canvas", shape: "circular or pill"}
+  secondary-action: {fill: "surface-primary", text: "text-primary", shape: "pill"}
+  primary-card: {fill: "surface-primary", text: "text-primary", shape: "rounded panel"}
+  navigation: {fill: "transparent or surface-primary", selected: "accent-primary", unselected: "text-primary"}
 ---
 
 # Overview
 
-Pi feels like a quiet late-night conversation. Warm charcoal fills the screen, cream serif type makes responses personal, and a single mint-green voice action carries most of the chromatic emphasis.
-
-**Key Characteristics:** warm dark canvas, cream serif dialogue, green voice circle, bottom composer, minimal response tools, compact side panel, and richly illustrated discovery prompts.
+Pi uses a near-black full-screen field, sparse centered layouts, warm serif type, and small green identity moments to make conversation feel editorial and intimate. It avoids a conventional bubble-heavy chat presentation. Large negative space, floating circular controls, and selectively framed images do more work than card stacks or decorative chrome.
 
 # Non-negotiable visual invariants
 
-- The reviewed screens show this treatment: warm dark canvas.
-- The reviewed screens show this treatment: cream serif dialogue.
-- The reviewed screens show this treatment: green voice circle.
-- The reviewed screens show this treatment: bottom composer.
-- The reviewed screens show this treatment: minimal response tools.
-- The reviewed screens show this treatment: compact side panel.
-- The reviewed screens show this treatment: richly illustrated discovery prompts.
+- Charcoal fills the entire app-owned viewport; content is not placed on a generic light canvas.
+- Warm off-white serif text carries brand, headings, greetings, and conversational content.
+- Green appears as a concentrated identity and action accent, especially in the Pi mark and circular voice/send controls.
+- Primary screens preserve substantial negative space around one focal text block, input, or image.
+- Conversation is not rendered as a dense sequence of standard colored chat bubbles.
+- Navigation controls are small floating circles or restrained rounded panels rather than a persistent conventional tab bar.
+- Sans-serif type is reserved for utility controls, settings rows, authentication, and legal or helper copy.
 
 # Color and surfaces
 
-### Brand & Accent
-
-Mint green is reserved for voice, primary conversational action, and small success moments. The tiny flower mark may use a few bright illustrative colors.
-
-### Surface
-
-Charcoal is continuous across chat and navigation; slightly lighter brown-gray panels hold composer, history, and cards without breaking the intimate mood.
-
-### Text
-
-Warm cream leads dialogue and prompt titles, muted beige carries secondary navigation, and dim gray marks inactive tools.
-
-### Semantic
-
-Green indicates active voice or continuation; reports and destructive actions remain subdued until confirmation.
+Dark charcoal is the dominant canvas and often continues behind the status and bottom safe areas. Slightly lighter charcoal creates drawers and modal-like panels without introducing bright cards. Warm off-white is the primary text color, muted warm gray is secondary, and thin dark dividers support settings rows. A fresh medium green marks the Pi identity, microphone, send, and selected controls. Blue appears only where native or third-party authentication requires it. Default bright white forms, default blue tint, or cool slate backgrounds would break the warm editorial contrast.
 
 # Typography
 
-### Font Family
-
-Use a warm book serif such as Georgia for conversation and discovery titles, paired with SF Pro Text for controls and settings.
-
-### Hierarchy
-
-| Token | Size | Weight | Use |
-|---|---:|---:|---|
-| display-lg | 32pt | 400 | Reflective opener |
-| headline | 22pt | 400 | Conversation prompt |
-| card-title | 17pt | 400 | Discover title |
-| body-lg | 17pt | 400 | AI response |
-| caption | 10pt | 400 | Tool label |
-
-### Principles
-
-- Let serif text set the emotional voice.
-- Keep controls small and visually secondary.
-- Treat the green action as scarce and unmistakable.
-
-### Note on Font Substitutes
-
-Use Georgia or a similarly readable book serif; avoid a high-fashion Didone or a purely geometric sans for dialogue.
+Use New York as the iOS-safe serif for the observed editorial voice and SF Pro Text for controls. Hero and greeting text use approximately 30–40 point semibold serif; conversational statements and prompts use 18–22 point regular serif with relaxed leading; utility buttons, settings, and captions use 13–15 point sans. Keep text centered on sparse entry screens and left-aligned in utility panels. Dynamic Type should preserve the serif/sans role separation, allow generous vertical growth, and avoid shrinking the central statement merely to retain empty space.
 
 # Screen composition
 
-### Grid & Container
-
-Chat is a single reading column; Discover uses an irregular two-column card mosaic; call mode centers one conversational state.
-
-### Whitespace Philosophy
-
-Large dark areas create calm and attention. Do not fill pauses with dashboard widgets or persistent status chrome.
+Entry and home screens place a small identity or navigation control near the safe area, one centered greeting or prompt in the middle field, and a rounded composer near the bottom. The open charcoal field is itself the main composition. Chat screens keep content in a readable central column and anchor the input above the home indicator. Call mode emphasizes one central state with circular mute or close controls. Discover can use a top-rounded dark panel with sparse rows or small framed editorial images. Settings, help, and authentication shift to single-column rounded panels or rows while retaining the dark background and broad outer margins of roughly 20–24 points.
 
 # Navigation appearance
 
-Use a compact side panel for New chat, Discover, history, Help, and Settings rather than persistent bottom tabs.
+Top-level movement is represented by floating circular menu, back, close, or mute controls with dark fill and pale glyphs. A side drawer or top-rounded panel uses a slightly lighter charcoal than the canvas. Selected controls use green sparingly; unselected controls remain off-white or muted gray. There is no requirement for a standard bottom tab bar. Native authentication and permission sheets may enter above the dark app surface without being visually re-created.
 
 # Components
 
-### Buttons
-
-Primary voice uses a mint circular button; mute, menu, and response tools use quiet charcoal circles or bare icons.
-
-### Cards & Containers
-
-Discover cards combine full-bleed art and white serif titles; chat history uses flat rows; continuation prompts use subtle outlined panels.
-
-### Inputs & Forms
-
-The composer is a thin outlined pill on charcoal with serif placeholder and green voice control; native keyboard presentation should harmonize with the dark palette.
-
-### Status & Build Page
-
-Keep listening, mute, call, continuation, and message feedback states directly beside the relevant action.
-
-### Navigation
-
-Use a compact side panel for New chat, Discover, history, Help, and Settings rather than persistent bottom tabs.
+The composer is a wide dark rounded field with restrained border or tonal separation and circular green microphone/send action. Primary voice and send actions are green circles with high-contrast dark or pale glyphs. Secondary actions are charcoal pills or circles with off-white labels. Settings rows use simple text, a trailing chevron, and subtle divider inside a rounded dark panel. Authentication actions use clearly separated full-width pills and may preserve provider identity. Framed content images are small and editorial rather than full-bleed. Pressed states deepen the surface or reduce luminance; disabled actions mute toward gray without losing their outline.
 
 # Imagery and icons
 
-| Level | Treatment | Use |
-|---|---|---|
-| 0 | Warm charcoal | Chat and call |
-| 1 | Slightly lighter panel | Composer and history |
-| 2 | Illustrated rounded card | Discover prompt |
-| 3 | Side panel over dimmed chat | Navigation |
-
-### Decorative Depth
-
-Illustrated cards provide color and texture; main chat surfaces remain flat with only hairline composer outlines.
+Imagery is selective, not continuous: small framed editorial photographs or decorative spot graphics punctuate onboarding, discovery, and help. They should remain subordinate to the dark field and serif message. The evidence does not define a complete, repeatable illustration grammar, so isolated organic marks and help graphics must not be extrapolated into a new character system. Icons are minimal, rounded, and mostly pale on dark; green is reserved for identity and active voice/conversation controls. Avoid arbitrary symbol mixing or large decorative gradients.
 
 # States
 
-Keep listening, mute, call, continuation, and message feedback states directly beside the relevant action.
+Observed states include onboarding, centered greeting, typed chat with keyboard, voice-call permission and call controls, discover panel, help content, settings rows, and native/social sign-in. The charcoal field, warm type, green action accent, restrained panels, and low information density remain stable. Keyboard presentation compresses the lower composition without replacing the dark app background. Permission and authentication transitions may use native iOS surfaces.
 
 # iOS adaptation
 
-### Touch Targets
-
-Voice, composer, menu, response tools, history rows, and call controls remain at least 44pt.
-
-### Collapsing Strategy
-
-Preserve dialogue, composer, voice action, and call state; reduce Discover card density and secondary tools first.
-
-### Image Behavior
-
-Crop discovery art intentionally around subjects and maintain a calm text-safe zone for serif titles.
-
-On iPhone, respect top and bottom safe areas, use scrolling for content that does not fit, keep interactive targets at least 44 points, and preserve the visual reading order for VoiceOver. At larger Dynamic Type sizes, allow supporting text to wrap without collapsing the dominant hierarchy. Use native sheets and permission transitions while explicitly styling app-owned surfaces to match the reference.
+Extend the charcoal background through both safe areas, while keeping floating controls and the composer clear of the status bar and home indicator. Use a scroll container for long conversation and settings content, and move the composer with the keyboard so the latest content remains visible. Maintain 44-point targets for circular menu, back, microphone, send, mute, and close controls. VoiceOver order should follow the active conversation content, composer, then its action controls. At large Dynamic Type, expand the central reading column vertically and allow panels to scroll rather than shrinking serif copy. Preserve the dark appearance intentionally; if a light appearance is ever added, it requires a designed palette rather than automatic inversion.
 
 # Anti-generic checklist
 
-- Do not substitute the documented accent hierarchy with default iOS blue.
-- Do not collapse distinct surfaces into a uniform stack of generic white cards.
-- Do not use an unstyled `TabView`, `Form`, or arbitrary SF Symbols when they contradict the documented navigation and component language.
-- Do not flatten the documented typography into one body-text scale.
-- Do not remove compositionally important photography or illustration while assets are pending.
-- Do not apply one corner radius to every control and surface.
-
-Source-specific guardrails retained from the review:
-
-### Do
-
-- Preserve warm dark space and serif conversational voice.
-- Keep the mint action rare and central.
-- Style native controls to inherit this visual system.
-
-### Don't
-
-- Don't turn chat into stacked bright message bubbles.
-- Don't introduce multiple competing neon accents.
-- Don't place decorative art behind long conversation text.
+- Do not convert the experience into a white chat screen with colored message bubbles.
+- Do not replace the editorial serif hierarchy with one system-sans scale.
+- Do not add a standard persistent `TabView` where the reference uses floating controls and panels.
+- Do not fill the intentional negative space with explanatory copy, cards, or decorative objects.
+- Do not tint all controls default iOS blue; green is the app-owned action and identity accent.
+- Do not replace the observed small editorial imagery with emoji, arbitrary SF Symbols, or programmatic illustrations.
+- Do not give composer, drawer, settings rows, and modal panels one uniform radius or elevation.
 
 </design-context>

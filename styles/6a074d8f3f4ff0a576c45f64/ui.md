@@ -3,189 +3,193 @@
 version: 1
 platform: iOS
 name: Pure-design-analysis
-description: "An irreverent dating interface mixing torn-paper white and black surfaces, hot-fuchsia accents, hand-drawn monochrome characters, distorted patterns, serif editorial statements, and a single-profile discovery stage."
-colors: {primary: "#F000C8", on-primary: "#FFFFFF", primary-focus: "#C600A5", ink: "#0B0B0C", ink-muted: "#626064", ink-subtle: "#9B989D", ink-tertiary: "#C9C5CB", canvas: "#FFFFFF", surface-1: "#F3EEF7", surface-2: "#DCCEFF", surface-3: "#C4A9FF", surface-4: "#A987F0", hairline: "#D8D3DB", hairline-strong: "#BDB5C1", hairline-tertiary: "#9B919F", inverse-canvas: "#050506", inverse-surface-1: "#1D1B1E", inverse-surface-2: "#332F35", inverse-ink: "#FFFFFF", brand-secure: "#A77AF5", semantic-success: "#5DBF86", semantic-overlay: "#000000"}
+description: "A deliberately rough dating visual system built from torn black-and-white paper, warped psychedelic patterns, hot-fuchsia accents, handmade ink drawings, serif editorial statements, compact metadata, and collage-like profile stages."
+colors:
+  canvas: "#F7F5F7"
+  surface-primary: "#FFFFFF"
+  surface-secondary: "#EFECEF"
+  accent-primary: "#F000C8"
+  accent-secondary: "#CDB8FF"
+  text-primary: "#050506"
+  text-secondary: "#636067"
+  divider: "#D9D4DC"
+  destructive: "#B3261E"
+  primary: "#F000C8"
+  on-primary: "#FFFFFF"
+  primary-focus: "#C600A5"
+  ink: "#050506"
+  ink-muted: "#636067"
+  ink-subtle: "#A7A2AA"
+  ink-tertiary: "#D0CBD3"
+  surface-1: "#FFFFFF"
+  surface-2: "#EFECEF"
+  surface-3: "#CDB8FF"
+  surface-4: "#C49A6C"
+  hairline: "#D9D4DC"
+  hairline-strong: "#BFB8C4"
+  hairline-tertiary: "#9C94A0"
+  inverse-canvas: "#050506"
+  inverse-surface-1: "#1B191D"
+  inverse-surface-2: "#332E36"
+  inverse-ink: "#FFFFFF"
+  brand-secure: "#9F79FF"
+  semantic-success: "#37A66A"
+  semantic-overlay: "#000000"
 typography:
-  display-xl: {fontFamily: Georgia, fontSize: 42, fontWeight: 700, lineHeight: 1.02, letterSpacing: -1.1}
-  display-lg: {fontFamily: Georgia, fontSize: 34, fontWeight: 700, lineHeight: 1.08, letterSpacing: -0.7}
-  display-md: {fontFamily: Georgia, fontSize: 28, fontWeight: 600, lineHeight: 1.12, letterSpacing: -0.4}
-  headline: {fontFamily: Georgia, fontSize: 23, fontWeight: 600, lineHeight: 1.18, letterSpacing: -0.2}
-  card-title: {fontFamily: SF Pro Text, fontSize: 16, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0}
-  subhead: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 600, lineHeight: 1.30, letterSpacing: 0}
-  body-lg: {fontFamily: SF Pro Text, fontSize: 16, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0}
-  body: {fontFamily: SF Pro Text, fontSize: 13, fontWeight: 400, lineHeight: 1.38, letterSpacing: 0}
-  body-sm: {fontFamily: SF Pro Text, fontSize: 11, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0}
-  caption: {fontFamily: SF Pro Text, fontSize: 9, fontWeight: 500, lineHeight: 1.22, letterSpacing: 0.1}
-  button: {fontFamily: SF Pro Text, fontSize: 13, fontWeight: 700, lineHeight: 1.20, letterSpacing: 0.4}
-  eyebrow: {fontFamily: SF Pro Text, fontSize: 10, fontWeight: 700, lineHeight: 1.20, letterSpacing: 0.5}
-  mono: {fontFamily: SF Mono, fontSize: 11, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0}
-rounded: {xs: 2, sm: 6, md: 10, lg: 16, xl: 24, xxl: 32, pill: 9999, full: 9999}
-spacing: {xxs: 4, xs: 8, sm: 12, md: 16, lg: 20, xl: 24, xxl: 32, section: 44}
+  hero: {fontFamily: "Georgia", fontSize: 40, fontWeight: 700, lineHeight: 44}
+  title: {fontFamily: "Georgia", fontSize: 30, fontWeight: 700, lineHeight: 35}
+  section: {fontFamily: "Georgia", fontSize: 22, fontWeight: 700, lineHeight: 27}
+  body: {fontFamily: "SF Pro Text", fontSize: 16, fontWeight: 400, lineHeight: 22}
+  label: {fontFamily: "SF Pro Text", fontSize: 13, fontWeight: 700, lineHeight: 17}
+  caption: {fontFamily: "SF Pro Text", fontSize: 11, fontWeight: 500, lineHeight: 14}
+  display-xl: {fontFamily: "Georgia", fontSize: 40, fontWeight: 700, lineHeight: 1.10, letterSpacing: 0}
+  display-lg: {fontFamily: "Georgia", fontSize: 32, fontWeight: 700, lineHeight: 1.12, letterSpacing: 0}
+  display-md: {fontFamily: "Georgia", fontSize: 26, fontWeight: 700, lineHeight: 1.15, letterSpacing: 0}
+  headline: {fontFamily: "Georgia", fontSize: 22, fontWeight: 700, lineHeight: 1.20, letterSpacing: 0}
+  card-title: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 700, lineHeight: 1.25, letterSpacing: 0}
+  subhead: {fontFamily: "SF Pro Text", fontSize: 14, fontWeight: 700, lineHeight: 1.28, letterSpacing: 0}
+  body-lg: {fontFamily: "SF Pro Text", fontSize: 16, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0}
+  body-sm: {fontFamily: "SF Pro Text", fontSize: 11, fontWeight: 400, lineHeight: 1.32, letterSpacing: 0}
+  button: {fontFamily: "SF Pro Text", fontSize: 12, fontWeight: 800, lineHeight: 1.20, letterSpacing: 0.4}
+  eyebrow: {fontFamily: "SF Pro Text", fontSize: 10, fontWeight: 800, lineHeight: 1.20, letterSpacing: 0.5}
+  mono: {fontFamily: "SF Mono", fontSize: 11, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0}
+spacing:
+  screen-horizontal: 12
+  section-gap: 34
+  card-padding: 16
+  control-gap: 10
+  xxs: 4
+  xs: 8
+  sm: 12
+  md: 16
+  lg: 20
+  xl: 24
+  xxl: 32
+  section: 40
+rounded:
+  control: 2
+  card: 8
+  sheet: 12
+  pill: 999
+  xs: 2
+  sm: 6
+  md: 10
+  lg: 16
+  xl: 22
+  xxl: 28
+  full: 9999
 components:
+  primary-action: {backgroundColor: "{colors.inverse-canvas}", textColor: "{colors.inverse-ink}", typography: "{typography.button}", rounded: "{rounded.xs}", padding: [14, 18]}
+  secondary-action: {backgroundColor: "{colors.surface-primary}", textColor: "{colors.text-primary}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: [11, 14]}
+  primary-card: {backgroundColor: "{colors.surface-primary}", textColor: "{colors.text-primary}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: 16}
+  navigation: {backgroundColor: "{colors.surface-primary}", textColor: "{colors.ink-subtle}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: [8, 12]}
   button-primary: {backgroundColor: "{colors.inverse-canvas}", textColor: "{colors.inverse-ink}", typography: "{typography.button}", rounded: "{rounded.xs}", padding: [14, 18]}
   button-primary-pressed: {backgroundColor: "{colors.inverse-surface-1}", textColor: "{colors.inverse-ink}", typography: "{typography.button}", rounded: "{rounded.xs}"}
-  button-secondary: {backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.xs}", padding: [12, 16]}
-  button-tertiary: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.full}", padding: 11}
-  profile-stage: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.headline}", rounded: "{rounded.xs}", padding: 16}
-  promo-card: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xs}", padding: 14}
-  text-input: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: [12, 14]}
+  button-secondary: {backgroundColor: "{colors.accent-primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.xs}", padding: [12, 16]}
+  button-tertiary: {backgroundColor: "{colors.surface-primary}", textColor: "{colors.text-primary}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: [11, 13]}
+  profile-stage: {backgroundColor: "{colors.surface-3}", textColor: "{colors.text-primary}", typography: "{typography.headline}", rounded: "{rounded.xs}", padding: 16}
+  promo-card: {backgroundColor: "{colors.surface-secondary}", textColor: "{colors.text-primary}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: 14}
+  text-input: {backgroundColor: "{colors.surface-primary}", textColor: "{colors.text-primary}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: [12, 14]}
   status-badge: {backgroundColor: "{colors.inverse-canvas}", textColor: "{colors.inverse-ink}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: [4, 8]}
-  bottom-nav: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink-subtle}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: [8, 12]}
+  bottom-nav: {backgroundColor: "{colors.surface-primary}", textColor: "{colors.ink-subtle}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: [8, 12]}
 ---
 
 # Overview
 
-Pure rejects polished romance conventions in favor of loud editorial collage. Torn white and black edges frame a single-person feed, while fuchsia, lavender, hand-drawn stickers, and serif statements create a deliberately candid personality.
+Pure's iOS screens use a handmade editorial-collage language rather than a polished dating-card system. The dominant ingredients are torn black and white bands, high-contrast ink drawings, distorted psychedelic pattern fields, sparse profile photography, hot-fuchsia reward accents, and large serif statements that sit directly on the scene.
 
-**Key Characteristics:** torn-paper frame, one-profile stage, black and fuchsia actions, warped patterns, doodle badges, editorial serif text, three destinations, and expressive profile styling.
+**Key Characteristics:** torn-paper safe-area bands, single-profile discovery stages, warped magenta/lavender/tan/burgundy backgrounds, rough black ink characters, black rectangular CTAs, white circular reaction controls, sticker badges, and compact tabbed profile/settings pages.
 
 # Non-negotiable visual invariants
 
-- The reviewed screens show this treatment: torn-paper frame.
-- The reviewed screens show this treatment: one-profile stage.
-- The reviewed screens show this treatment: black and fuchsia actions.
-- The reviewed screens show this treatment: warped patterns.
-- The reviewed screens show this treatment: doodle badges.
-- The reviewed screens show this treatment: editorial serif text.
-- The reviewed screens show this treatment: three destinations.
-- The reviewed screens show this treatment: expressive profile styling.
+- Preserve the rough torn edge between black headers, white content fields, and patterned discovery backgrounds.
+- Discovery-style screens are built as one full-height stage, not a feed of interchangeable cards.
+- Large profile statements use a bold serif with theatrical scale; metadata and controls use compact SF Pro Text.
+- Hot fuchsia is a reward, premium, progress, or personality accent; it is not a generic app-wide background.
+- Handmade black-and-white drawings, stickers, and irregular speech scraps are compositionally important where shown.
+- Primary commitment actions are hard black rectangles with white uppercase labels and very small or no radius.
+- Bottom navigation stays visually quiet: thin line icons, mostly gray inactive states, and black selected emphasis.
+- Avoid smoothing every surface into the same rounded material; roughness and asymmetry are part of the brand.
 
 # Color and surfaces
 
-### Brand & Accent
+Pure is mostly black, white, and near-white, with large interruptions of hot fuchsia, lavender, dusty tan, burgundy, coral pink, and occasional cyan. The palette is intentionally unstable across expressive screens, but the contrast model is stable: black controls and headers, white reading fields, and vivid decorative backdrops.
 
-Hot fuchsia carries reward, identity, and moments of heightened attraction. Lavender and dusty tan form large patterned fields; black owns decisive controls.
+Black is used as a material, not just a text color: top bands, torn profile plates, CTAs, sticker labels, chat promos, and active feed actions. White is a paper layer with uneven lower or upper edges. Pale gray supports form pages and profile bodies. Fuchsia marks reward bars, selected style accents, premium cues, and desire states. Lavender and tan are large patterned scene colors.
 
-### Surface
-
-White and black alternate as torn-paper layers. Illustrated fields may use lavender, tan, burgundy, or zebra-like patterns without becoming generic card backgrounds.
-
-### Text
-
-Black leads on light stages, white leads on dark patterns, and gray is limited to profile metadata and secondary navigation.
-
-### Semantic
-
-Fuchsia signals heightened interest or premium value; black signals action; safety information uses clear neutral contrast rather than playful ambiguity.
+Generic iOS blue, translucent system grouped backgrounds, and uniform pastel cards would visibly break the reference. If semantic colors are needed, keep them subordinate to the black/fuchsia system: red only for destructive decisions, green only for clear success, and gray for disabled or secondary information.
 
 # Typography
 
-### Font Family
+The defining contrast is an expressive serif for big declarations and compact sans text for interface mechanics. Use Georgia as the iOS-safe substitute for the observed editorial serif; use SF Pro Text for metadata, buttons, rows, captions, settings, and chat.
 
-Use a heavy editorial serif for feed statements and match moments, paired with SF Pro Text for controls, metadata, and settings.
+Serif headlines are centered or left-aligned depending on the stage and can occupy the middle third of the screen. They use normal letter spacing, strong weight, and line breaks that feel poster-like. Sans labels are small, often uppercase, and dense. Buttons are uppercase or all-caps-like with wide enough tracking to feel stamped, not default.
 
-### Hierarchy
-
-| Token | Size | Weight | Use |
-|---|---:|---:|---|
-| display-xl | 42pt | 700 | Match or campaign statement |
-| display-lg | 34pt | 700 | Profile feed message |
-| headline | 23pt | 600 | Profile or prompt |
-| body | 13pt | 400 | Metadata |
-| caption | 9pt | 500 | Badge and nav label |
-
-### Principles
-
-- Make one expressive statement dominate the stage.
-- Keep identity data legible and more restrained.
-- Use uppercase sans sparingly for buttons and sticker-like labels.
-
-### Note on Font Substitutes
-
-Use Georgia or another sturdy editorial serif, avoiding delicate fashion Didones that lose the hand-made energy.
+Dynamic Type may enlarge body and row text, but preserve the hierarchy: the serif statement or section heading remains visually dominant; metadata wraps below it; badges and doodles may move before the main text becomes cramped.
 
 # Screen composition
 
-### Grid & Container
+Discovery screens use a full-bleed pattern or color field inside the safe area. A single photo, doodle, or sticker cluster sits near the upper-middle; one large serif phrase sits lower; distance/status metadata sits above the action row; reaction controls are white circles near the bottom. The bottom edge is often a torn white strip that contains the tab bar.
 
-Discovery is a single full-height stage; chat is a simple list; profile settings use horizontal sections and tall media slots.
+Onboarding alternates full-screen art and form pages. The splash is a maximal magenta optical pattern with a centered black mask illustration. The sign-in screen is a white poster: top title, central illustration, then a black torn block containing stacked outlined sign-in controls. Setup pages use a black torn header, white/pale body, one large doodle, selected cards, and a full-width black bottom CTA.
 
-### Whitespace Philosophy
+Chat and settings screens are calmer but keep the same grammar. Chat uses a white list, a lavender safety banner with a hand illustration, small circular avatars, and simple message bubbles. Settings uses a black top bar, segmented text tabs with an underline, white rows, small fuchsia values, and a black bottom contact button.
 
-Whitespace is intentionally irregular. Torn edges, offset stickers, and asymmetrical fields create rhythm without crowding the central decision.
+Profile screens place a patterned banner behind a torn black identity card. Tabs are plain text with a thin underline and a small fuchsia indicator when active. Profile media and style previews are large blocks with doodle overlays, rough poster crops, and little conventional chrome.
 
 # Navigation appearance
 
-Use three bottom destinations for discovery, chats, and profile, with light gray inactive line icons and black active emphasis.
+Navigation is low ornament and thin-line. Bottom destinations sit on a white torn-paper strip with gray inactive icons and black selected state. The active destination may also show a tiny fuchsia notification dot or heart fill. Avoid default `TabView` blue, filled capsules, labels-heavy tabs, and floating web-style nav.
+
+Top bars alternate by context. Expressive discovery pages keep status elements over the scene with small icons and a compact premium badge. Settings and detail pages use a black bar with white title/back affordance, then return immediately to white paper content.
+
+Sheets and system prompts may use native iOS behavior, but app-owned overlays should match Pure's contrast: black or white panels, rough/sticker-like art, and terse labels. Do not introduce glossy blur panels unless the underlying platform permission dialog requires it.
 
 # Components
 
-### Buttons
+Primary buttons are black rectangles, almost square-cornered, full-width near the bottom, with white uppercase text. Pressed state darkens or slightly lowers opacity but keeps the hard rectangular shape. Disabled actions may use gray text inside the same geometry.
 
-Use black rectangular buttons for commitment, fuchsia for reward or premium, and white circular buttons for feed decisions.
+Secondary and reaction controls are white circles or pills with black line icons. The feed heart state fills black; inactive and unavailable states use pale gray strokes. Diamond/premium actions use a black line icon inside a white circle.
 
-Profile sections use text tabs with a simple underline; premium options use bold collage panels rather than conventional pricing pills.
+Choice cards are irregular but still structured: white cards over pale gray, compact text, black ink illustration at the top, and a fuchsia/lavender selected fill or small checkmark. Do not use equal-radius Material cards with large shadows.
 
-### Cards & Containers
+Profile header plates are torn black slabs with centered avatar, small edit icon, identity metadata, and a fuchsia progress/reward strip attached along the bottom. Settings rows are plain white rows with uppercase labels, minimal separators, fuchsia values, and no decorative chevron overload.
 
-Avoid uniform cards. Use a full-stage profile, torn chat promo strips, profile paper layers, and dashed media placeholders.
-
-### Inputs & Forms
-
-Inputs stay simple and high contrast inside the expressive frame; native behavior remains intact while presentation follows this typography and collage language.
-
-### Status & Build Page
-
-Make match, time remaining, verification, premium status, safety, and profile completion explicit with bold sticker-like cues.
-
-### Navigation
-
-Use three bottom destinations for discovery, chats, and profile, with light gray inactive line icons and black active emphasis.
+Chat bubbles are small rounded rectangles in light gray for incoming messages and black for outgoing messages. Input chrome is native-light but thin, with plus and microphone affordances kept quiet.
 
 # Imagery and icons
 
-| Level | Treatment | Use |
-|---|---|---|
-| 0 | White or patterned canvas | Base scene |
-| 1 | Torn dark paper | Profile and CTA layer |
-| 2 | Sticker and badge overlap | Status and personality |
-| 3 | Focused overlay | Match, promo, safety |
+Imagery is essential. Use real profile photography only where the product needs a person or uploaded media; crop faces and bodies clearly and avoid covering identity-critical areas with stickers. Surround photography with rough collage frames, badges, and patterned fields rather than clean marketplace cards.
 
-### Decorative Depth
+Icons should look hand-drawn, thin, and imperfect when they belong to the brand shell. Interface icons in settings and nav can be simple line icons, but avoid arbitrary SF Symbols that feel smooth, filled, or system-default. Sticker badges may be black scraps with white text or white scraps with black outlines.
 
-Create depth through collage overlap, paper tears, rough frames, and scale shifts rather than polished drop shadow.
+Decorative depth comes from layer order: pattern field, paper tear, sticker scrap, photo cutout, badge, CTA. Avoid glassmorphism, heavy drop shadows, and polished 3D.
 
 # States
 
-Make match, time remaining, verification, premium status, safety, and profile completion explicit with bold sticker-like cues.
+Observed selected states use fuchsia or lavender fills, checkmarks, and black active icons. Completion states can appear as torn white notification strips with a small hand-drawn figure. Loading keeps the black bottom button shell and places a small spinner inside it.
+
+The chat leave/report action uses a native bottom action sheet over a dimmed profile/chat context. Keep the sheet plain, high contrast, and readable; do not redraw destructive reporting as playful art. System permission dialogs remain native, while the underlying screen keeps the Pure visual field.
+
+Empty or sparse profile tabs should preserve the tab strip, torn profile plate, and bottom nav even when content is blank. The blank area should feel like white paper, not a generic empty-state illustration unless a matching authored doodle has been generated and approved.
 
 # iOS adaptation
 
-### Touch Targets
+Respect iPhone safe areas but let black bands and patterned fields meet the top and bottom edges. Scroll setup and profile content when needed; keep the bottom CTA or bottom nav fixed only when it does not obscure content. Keyboard screens keep the black/torn header visible and allow the input or picker region to occupy the lower portion.
 
-Feed decisions, chat rows, tabs, profile sections, and safety actions remain at least 44pt.
+All interactive controls remain at least 44 points. For Dynamic Type, grow row height and allow copy to wrap, but keep big serif statements and artwork from colliding. On compact screens, reduce decorative stickers before shrinking the main statement, photo, CTA, or required metadata.
 
-### Collapsing Strategy
-
-Preserve photo, identity, status, interest actions, and safety; reduce secondary stickers and premium decoration first.
-
-### Image Behavior
-
-Crop profile photos around the person, maintain rough collage framing, and keep expressive overlays outside key facial regions.
-
-On iPhone, respect top and bottom safe areas, use scrolling for content that does not fit, keep interactive targets at least 44 points, and preserve the visual reading order for VoiceOver. At larger Dynamic Type sizes, allow supporting text to wrap without collapsing the dominant hierarchy. Use native sheets and permission transitions while explicitly styling app-owned surfaces to match the reference.
+Use SwiftUI or UIKit primitives for accessibility and focus order, but restyle app-owned surfaces explicitly. Native `Form`, default grouped lists, default blue links, stock segmented controls, and unstyled permission pre-prompts are not acceptable visual substitutes.
 
 # Anti-generic checklist
 
-- Do not substitute the documented accent hierarchy with default iOS blue.
-- Do not collapse distinct surfaces into a uniform stack of generic white cards.
-- Do not use an unstyled `TabView`, `Form`, or arbitrary SF Symbols when they contradict the documented navigation and component language.
-- Do not flatten the documented typography into one body-text scale.
-- Do not remove compositionally important photography or illustration while assets are pending.
-- Do not apply one corner radius to every control and surface.
-
-Source-specific guardrails retained from the review:
-
-### Do
-
-- Preserve rough collage, torn edges, and one-profile focus.
-- Keep safety and identity facts readable beneath the playful shell.
-- Style native controls to inherit this visual system.
-
-### Don't
-
-- Don't smooth the system into generic rounded dating cards.
-- Don't use fuchsia as a full-time background on every screen.
-- Don't cover profile faces or safety information with decorative stickers.
+- Do not replace the torn-paper construction with smooth rounded cards.
+- Do not turn the discovery stage into a Tinder-like stack of clean photo cards.
+- Do not use default iOS blue for selected states, links, toggles, or buttons.
+- Do not omit hand-drawn art where the reference uses it as the primary visual mass.
+- Do not use uniform corner radii across CTAs, profile plates, stickers, and sheets.
+- Do not use generic SF Symbols as decorative characters, profile badges, or safety illustrations.
+- Do not center every screen into a clean marketing layout; preserve offset collage and controlled asymmetry.
+- Do not make fuchsia the only color; the source alternates fuchsia with lavender, tan, burgundy, white, and black.
 
 </design-context>

@@ -3,164 +3,105 @@
 version: 1
 platform: iOS
 name: Mail-ru-design-analysis
-description: "A multi-product productivity shell on white, organized by crisp blue actions, black type, pale-gray cards, pastel product accents, compact lists, and playful 3D empty-state artwork."
+description: "A high-density white mail utility uses crisp blue actions, compact black-and-gray rows, circular sender avatars, hairline structure, native sheets, and sparse glossy onboarding art."
 colors:
-  primary: "#0787F5"
-  on-primary: "#FFFFFF"
-  primary-focus: "#006ECD"
-  ink: "#202024"
-  ink-muted: "#7B7B83"
-  ink-subtle: "#A8A8AF"
-  ink-tertiary: "#CDCDD2"
   canvas: "#FFFFFF"
-  surface-1: "#F6F6F8"
-  surface-2: "#EFEFF3"
-  surface-3: "#E6E6EB"
-  surface-4: "#DADAE0"
-  hairline: "#E9E9ED"
-  hairline-strong: "#D2D2D8"
-  hairline-tertiary: "#BABAC2"
-  inverse-canvas: "#202024"
-  inverse-surface-1: "#303036"
-  inverse-surface-2: "#42424A"
-  inverse-ink: "#FFFFFF"
-  brand-secure: "#B67AF4"
-  semantic-success: "#55C88A"
-  semantic-overlay: "#202024"
+  surface-primary: "#FFFFFF"
+  surface-secondary: "#F3F4F6"
+  accent-primary: "#0787F5"
+  accent-secondary: "#55C88A"
+  text-primary: "#202024"
+  text-secondary: "#7B7B83"
+  divider: "#E7E8EC"
+  destructive: "#E04C55"
 typography:
-  display-xl: {fontFamily: VK Sans Display, fontSize: 36, fontWeight: 700, lineHeight: 1.06, letterSpacing: -0.8}
-  display-lg: {fontFamily: VK Sans Display, fontSize: 30, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.6}
-  display-md: {fontFamily: VK Sans Display, fontSize: 24, fontWeight: 700, lineHeight: 1.14, letterSpacing: -0.3}
-  headline: {fontFamily: VK Sans Display, fontSize: 20, fontWeight: 600, lineHeight: 1.20, letterSpacing: -0.2}
-  card-title: {fontFamily: VK Sans Text, fontSize: 15, fontWeight: 500, lineHeight: 1.24, letterSpacing: 0}
-  subhead: {fontFamily: VK Sans Text, fontSize: 14, fontWeight: 600, lineHeight: 1.30, letterSpacing: 0}
-  body-lg: {fontFamily: VK Sans Text, fontSize: 14, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0}
-  body: {fontFamily: VK Sans Text, fontSize: 12, fontWeight: 400, lineHeight: 1.34, letterSpacing: 0}
-  body-sm: {fontFamily: VK Sans Text, fontSize: 10, fontWeight: 400, lineHeight: 1.28, letterSpacing: 0}
-  caption: {fontFamily: VK Sans Text, fontSize: 9, fontWeight: 400, lineHeight: 1.22, letterSpacing: 0}
-  button: {fontFamily: VK Sans Text, fontSize: 13, fontWeight: 500, lineHeight: 1.18, letterSpacing: 0}
-  eyebrow: {fontFamily: VK Sans Text, fontSize: 9, fontWeight: 600, lineHeight: 1.18, letterSpacing: 0.1}
-  mono: {fontFamily: SF Mono, fontSize: 10, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0}
-rounded: {xs: 4, sm: 8, md: 12, lg: 16, xl: 20, xxl: 26, pill: 9999, full: 9999}
-spacing: {xxs: 4, xs: 8, sm: 12, md: 16, lg: 20, xl: 24, xxl: 32, section: 40}
+  hero: {fontFamily: "SF Pro Display", fontSize: 34, fontWeight: 700, lineHeight: 39}
+  title: {fontFamily: "SF Pro Display", fontSize: 28, fontWeight: 700, lineHeight: 33}
+  section: {fontFamily: "SF Pro Text", fontSize: 20, fontWeight: 600, lineHeight: 25}
+  body: {fontFamily: "SF Pro Text", fontSize: 16, fontWeight: 400, lineHeight: 21}
+  label: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 600, lineHeight: 19}
+  caption: {fontFamily: "SF Pro Text", fontSize: 12, fontWeight: 400, lineHeight: 16}
+spacing:
+  screen-horizontal: 12
+  section-gap: 24
+  card-padding: 14
+  control-gap: 10
+rounded:
+  control: 12
+  card: 16
+  sheet: 26
+  pill: 999
 components:
-  button-primary: {backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: 12 18}
-  button-primary-pressed: {backgroundColor: "{colors.primary-focus}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.pill}"}
-  button-secondary: {backgroundColor: "{colors.canvas}", textColor: "{colors.primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 11 16}
-  button-tertiary: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 10 14}
-  button-inverse: {backgroundColor: "{colors.inverse-canvas}", textColor: "{colors.inverse-ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 12 16}
-  list-row: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xs}", padding: 10 12}
-  note-card: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 12}
-  tag-chip: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.caption}", rounded: "{rounded.pill}", padding: 7 10}
-  bottom-nav: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink-subtle}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: 7 8}
+  compact-message-row: {}
+  blue-compose-control: {}
+  message-action-toolbar: {}
+  quick-reply-chip: {}
+  profile-settings-sheet: {}
 ---
 
 # Overview
 
-Mail.ru is a calm productivity hub where blue actions and pastel product accents unify mail, cloud, tasks, notes, and account storage.
+Mail.ru is a dense white productivity utility built for scanning. Message rows, reading content, compose fields, folders, and settings stay flat and structured by hairlines rather than decorative cards. Bright blue identifies creation, links, active navigation, and primary pills. Circular letter avatars, thin outline icons, small gray metadata, and native-feeling sheets create a compact iOS rhythm, while authored 3D art appears only in first-run or interstitial moments.
 
 # Non-negotiable visual invariants
 
-- The recurring color treatment uses White list-led surfaces.
-- Preserve list scanning and product continuity.
-- Use pastel accents sparingly.
-- Keep creation easy to reach.
-- Style native controls consistently.
-- Mail and contacts use lists; notes use stacked cards; cloud and services combine cards with short lists.
-- Keep operational lists compact and reserve open space for empty states and account overview.
+- White is the continuous operational canvas; pale gray is limited to inputs, disabled controls, grouped settings, and selected filters.
+- Message lists remain flat, compact, and separated by spacing or hairlines rather than individual rounded cards.
+- Bright blue owns compose, primary actions, links, selected filters, and active navigation.
+- Sender identity, subject, preview, and time form a consistent descending hierarchy in every message row.
+- A floating blue compose control remains visually separate from the dense list beneath it.
+- Reading and compose screens keep fixed compact toolbars around a scrollable or keyboard-dominated content region.
+- Authored onboarding/interstitial artwork keeps its large white-blue visual mass and is not replaced by a functional icon.
 
 # Color and surfaces
 
-Blue identifies the suite and primary actions. Lavender, mint, cyan, and pink distinguish products without changing interaction priority.
-
-White is primary; very pale gray and tinted cards group cloud, notes, storage, and settings.
-
-Near-black carries titles and message content; gray carries sender detail, dates, storage, and descriptions.
-
-Green marks available capacity or success; red remains for destructive mail and account actions.
+Operational screens are predominantly white, with cool pale gray for search, disabled fields, grouped settings, and small storage surfaces. Near-black carries titles and message content; medium gray carries previews, dates, helper text, and inactive navigation. Mail blue is the primary action and link color. Green marks confirmation or available capacity; red marks destructive or warning actions. Modal sheets are white over a dim gray scrim, with large rounded top corners. Default grouped-gray backgrounds across the inbox, heavy shadows, or competing pastel product colors would break the observed visual hierarchy.
 
 # Typography
 
-Use VK Sans or a neutral system sans across lists, messages, tasks, notes, and settings.
-
-- display-lg — 30 points — 700 — Empty-state title
-- headline — 20 points — 600 — Product title
-- card-title — 15 points — 500 — Sender or note title
-- body — 12 points — 400 — Preview and description
-- caption — 9 points — 400 — Date, tag, navigation
-
-- Keep sender and title above preview metadata.
-- Use consistent type across products.
-- Keep empty-state guidance brief.
-
-Inter is suitable; preserve compact Cyrillic and readable message previews.
-
-The hierarchy must remain legible with Dynamic Type: supporting text may wrap before the primary metric, title, or action loses its role.
+Use SF Pro as the iOS-safe face. Large profile/settings titles are 26–30 points bold; screen and section headings 19–22 points semibold; sender and subject labels 14–16 points medium or semibold; previews and body copy 14–16 points regular; dates and metadata 11–13 points gray. Blue text indicates actionable labels. Message reading uses comfortable body leading while inbox rows stay compact. With Dynamic Type, preserve sender and subject before preview, allow message body and compose fields to grow, and truncate secondary preview text before reducing controls below accessible sizes.
 
 # Screen composition
 
-Use a 4 points base, 8–12 points row rhythm, and 12 points screen gutters.
+The mailbox fills the safe-area-to-bottom height with a compact top toolbar, optional banner or search area, vertically repeating message rows, a floating blue compose control, and a white bottom tab bar. Each row aligns a circular avatar at left, a dense sender/subject/preview block, and time or state at right.
 
-Mail and contacts use lists; notes use stacked cards; cloud and services combine cards with short lists.
-
-Keep operational lists compact and reserve open space for empty states and account overview.
-
-Use soft illustration shading; ordinary content remains flat with subtle separators.
-
-Primary iPhone screens keep the documented content grouping and vertical rhythm inside a scroll container when content exceeds the viewport. Bottom-owned actions or navigation reserve the lower safe area rather than covering content.
+Reading screens use a fixed back/header row, scrollable sender and message content, compact quick-action chips, and a bottom action toolbar. Compose screens stack address, subject, and body fields with hairline separation while the keyboard occupies much of the lower viewport. Search uses a pale field and compact segmented filters. Folders, contacts, and settings use full-width list rows, outline icons, disclosure indicators, switches, and occasional small pale cards. Profile/settings may appear as a rounded-top sheet over dimmed content. Typical horizontal inset is 12–16 points.
 
 # Navigation appearance
 
-Keep five product destinations fixed; active state is dark or blue while inactive items stay light gray.
-
-This section governs appearance only; product behavior and information architecture come from the approved Research and Planning artifacts.
+Primary navigation uses a white bottom icon-and-label bar with blue or dark active treatment and light-gray inactive items. Top bars use native-style back chevrons and concise blue or dark text actions such as close or cancel. Reading adds a compact bottom toolbar of monochrome mail actions. Search filters use small rounded or segmented selection. Attachment and overflow actions appear in white bottom sheets. Profile/settings can rise as a large rounded-top modal card. This section defines visual appearance only.
 
 # Components
 
-Primary creation uses a blue pill; secondary actions are pale or textual.
-
-Mail rows remain flat; notes and cloud recommendations use pale rounded cards.
-
-Search and compose inputs are white or pale gray with blue focus and compact controls.
-
-Empty states pair one illustration with short guidance and a visible blue create action.
-
-Controls retain at least a 44-point interactive area. Pressed and disabled treatments should stay within the documented palette and hierarchy.
+- **Message row:** flat white row with circular letter/avatar mark, sender and subject hierarchy, one or two preview lines, right-aligned date/state, and hairline separation.
+- **Compose control:** blue floating circle or pill with a high-contrast white creation glyph/label and enough separation from the list and tab bar.
+- **Reading toolbar:** compact monochrome actions along the bottom safe area, with destructive actions using red only when applicable.
+- **Quick-reply chip:** small rounded pale or outlined capsule with compact blue or dark label; selected/active treatment remains restrained.
+- **Compose field:** full-width white row with minimal chrome, dark entered text, gray placeholder, and blue cursor or action.
+- **Settings row:** white or pale grouped row with leading outline icon/label, optional helper text, and trailing switch, value, or chevron.
+- **Modal sheet:** white panel with about 26-point top corners above a dim scrim, using sparse action rows and native spacing.
 
 # Imagery and icons
 
-Attachments use compact rounded thumbnails. Empty-state objects stay centered and uncropped with generous white space.
-
-Contain illustrations, crop attachments predictably, and preserve avatar circles.
-
-When imagery is part of the documented composition, it cannot be omitted while final assets are pending. A temporary asset must preserve its placement, crop, scale, and approximate visual weight.
+Operational imagery is limited: circular sender avatars, attachment thumbnails, brand/service marks, and thin functional line icons. Attachment previews use compact rounded crops and remain content, not illustration. A separate authored white-blue 3D mascot/object language appears on splash, onboarding, and notification interstitials; where observed, its large centered or upper crop is compositionally important and cannot be omitted. Ads, campaign media, service logos, app icon variants, charts, progress bars, and attachment photos are separate asset categories.
 
 # States
 
-Empty states pair one illustration with short guidance and a visible blue create action.
-
-Green marks available capacity or success; red remains for destructive mail and account actions.
-
-Only the states documented above are specified; other states must preserve the same canvas, hierarchy, and component language without inventing a new visual system.
+Observed states include registration input, loading, native permission prompt, populated inbox, message reading, AI summary chip, quick reply, full reply with keyboard, compose, attachment picker, search and filtered search, folders, contact detail, dimmed modal settings, switches, disabled controls, storage progress, and appearance selection. Blue remains the action anchor across these states, while red and green stay semantic. Loading uses a compact spinner rather than a new page composition. No stable authored error scene was observed.
 
 # iOS adaptation
 
-- Extend the documented canvas through the iPhone safe areas while keeping readable content within appropriate insets.
-- Use a vertical `ScrollView` for content that does not fit compact heights; keep documented bottom actions and navigation clear of the home indicator.
-- Folders, rows, attachments, compose, filters, and navigation remain at least 44 points.
-- Truncate previews before titles; stack card actions and scroll chips horizontally.
-- Present the keyboard and system permission UI natively, then return to the same visual context.
-- Preserve semantic reading order in VoiceOver and allow text to grow with Dynamic Type.
-- Preserve the documented appearance instead of introducing an unrelated light or dark palette.
+Keep toolbars and list content within safe areas and reserve bottom inset for the tab bar, reading toolbar, floating compose control, and home indicator. Use `List`-like behavior only with custom row density, separators, avatar alignment, and tint; default grouped `Form` appearance is not sufficient. Reading content and mailbox rows scroll vertically. Keyboard avoidance must preserve the active compose/reply field and send action. Present permissions natively and action/settings panels as native-behaving sheets with documented styling. Maintain 44-point targets around compact visible icons, support VoiceOver order from sender to subject, preview, date, and actions, and allow Dynamic Type expansion without overlapping right-side metadata. On compact widths, reduce preview lines before collapsing identity or actions. Preserve evidenced light surfaces unless an appearance option explicitly supplies another treatment.
 
 # Anti-generic checklist
 
-- Do not give every product a competing primary color.
-- Do not over-round mail rows.
-- Do not crowd empty states.
-- Do not use heavy shadows.
-- Do not replace the documented canvas and surfaces with a generic grouped background and uniform white cards.
-- Do not use an unstyled `TabView`, default blue tint, or arbitrary SF Symbols when they contradict the reference.
-- Do not collapse every component to one corner radius or remove compositionally important imagery.
+- Do not turn each email into a floating rounded card on a gray dashboard.
+- Do not hide sender, subject, preview, or time behind decorative layout.
+- Do not use heavy shadows, oversized empty spacing, or marketing-style hero blocks in operational mail screens.
+- Do not apply default blue tint indiscriminately to destructive, passive, and metadata elements.
+- Do not ship unstyled `TabView`, `Form`, or `List` defaults that change row density, separator rhythm, or compose placement.
+- Do not replace attachment thumbnails, avatars, or authored onboarding art with arbitrary SF Symbols.
+- Do not use one radius for compose control, chips, cards, and modal sheets.
+- Do not add repeated explanatory or mood-setting copy when the sender, content, state, and available action are already clear.
 
 </design-context>

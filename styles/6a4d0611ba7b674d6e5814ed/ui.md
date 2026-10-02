@@ -3,220 +3,95 @@
 version: 1
 platform: iOS
 name: Airba-pay-design-analysis
-description: "A bright loan-management interface built from white space, Airba cyan, blue-to-violet gradients, compact finance cards, and friendly glossy objects. The system keeps calculations and verification practical while using a slim header and four-item bottom navigation."
+description: "A sparse white financial interface with cyan-blue actions, thin outlined inputs, compact black utility icons, restrained pale cards, a blue-to-violet loan hero, and large numeric emphasis."
 colors:
-  primary: "#2EA8F2"
-  on-primary: "#FFFFFF"
-  primary-soft: "#EAF7FF"
-  accent-violet: "#665BE8"
-  accent-orange: "#F06F39"
-  ink: "#171923"
-  ink-muted: "#747782"
-  ink-subtle: "#AEB1BA"
   canvas: "#FFFFFF"
-  surface-1: "#F7F8FA"
-  surface-2: "#EEF1F5"
-  hairline: "#E3E6EB"
-  semantic-success: "#32B96B"
-  semantic-danger: "#E55A48"
-  semantic-overlay: "#000000"
+  surface-primary: "#FFFFFF"
+  surface-secondary: "#F3F6F9"
+  accent-primary: "#159DE4"
+  accent-secondary: "#6C5CE7"
+  text-primary: "#15171A"
+  text-secondary: "#747B84"
+  divider: "#DDE4EA"
+  destructive: "#DF4B55"
 typography:
-  display-xl: { fontFamily: System Sans, fontSize: 38, fontWeight: 700, lineHeight: 1.05, letterSpacing: -0.8 }
-  display-lg: { fontFamily: System Sans, fontSize: 32, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.5 }
-  display-md: { fontFamily: System Sans, fontSize: 26, fontWeight: 700, lineHeight: 1.15, letterSpacing: -0.3 }
-  headline: { fontFamily: System Sans, fontSize: 21, fontWeight: 700, lineHeight: 1.20, letterSpacing: -0.2 }
-  card-title: { fontFamily: System Sans, fontSize: 16, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: System Sans, fontSize: 16, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
-  body-lg: { fontFamily: System Sans, fontSize: 16, fontWeight: 400, lineHeight: 1.45, letterSpacing: 0 }
-  body: { fontFamily: System Sans, fontSize: 14, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
-  body-sm: { fontFamily: System Sans, fontSize: 12, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
-  caption: { fontFamily: System Sans, fontSize: 10, fontWeight: 400, lineHeight: 1.25, letterSpacing: 0 }
-  button: { fontFamily: System Sans, fontSize: 15, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0 }
-  eyebrow: { fontFamily: System Sans, fontSize: 11, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0.2 }
-  mono: { fontFamily: System Mono, fontSize: 13, fontWeight: 500, lineHeight: 1.30, letterSpacing: 0 }
-rounded: { xs: 4, sm: 8, md: 12, lg: 16, xl: 22, xxl: 28, pill: 9999, full: 9999 }
-spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
+  hero: {fontFamily: "SF Pro Display", fontSize: 38, fontWeight: 700, lineHeight: 43}
+  title: {fontFamily: "SF Pro Display", fontSize: 28, fontWeight: 700, lineHeight: 33}
+  section: {fontFamily: "SF Pro Text", fontSize: 20, fontWeight: 600, lineHeight: 25}
+  body: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 400, lineHeight: 21}
+  label: {fontFamily: "SF Pro Text", fontSize: 14, fontWeight: 600, lineHeight: 18}
+  caption: {fontFamily: "SF Pro Text", fontSize: 12, fontWeight: 400, lineHeight: 16}
+spacing:
+  screen-horizontal: 20
+  section-gap: 28
+  card-padding: 18
+  control-gap: 12
+rounded:
+  control: 14
+  card: 20
+  sheet: 28
+  pill: 999
 components:
-  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [14, 20]}
-  loan-calculator: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 16 }
-  info-tile: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.sm}", padding: 12 }
-  partner-card: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: 12 }
-  text-input: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xs}", padding: 12 }
+  primary-action: {fill: "accent-primary", text: "white semibold", shape: "rounded rectangle"}
+  secondary-action: {fill: "surface-primary", text: "accent-primary", shape: "outlined rounded rectangle"}
+  primary-card: {fill: "surface-secondary", text: "text-primary", shape: "rounded rectangle"}
+  navigation: {fill: "surface-primary", selected: "accent-primary", unselected: "text-primary"}
 ---
 
 # Overview
 
-Airba pay balances restrained finance forms with colorful product education. White is dominant; blue actions, thin cyan indicators, gradient campaign bands, and small 3D objects create hierarchy.
-
-**Key Characteristics:**
-- White canvas and low-contrast dividers.
-- Cyan primary actions with violet gradient support.
-- Compact calculator and partner cards.
-- Persistent verification warning.
-- Four-item bottom navigation.
-- Glossy finance and shopping objects.
+Airba pay is a sparse utility-focused financial interface. White fills most screens, cyan-blue actions and input borders establish the product accent, and black outline icons carry navigation. The visually strongest exception is a blue-to-violet loan block with a large numeric amount and slider. Pale cards and isolated spot assets support the hierarchy without becoming a decorative illustration system.
 
 # Non-negotiable visual invariants
 
-- The reviewed screens show this treatment: White canvas and low-contrast dividers.
-- The reviewed screens show this treatment: Cyan primary actions with violet gradient support.
-- The reviewed screens show this treatment: Compact calculator and partner cards.
-- The reviewed screens show this treatment: Persistent verification warning.
-- The reviewed screens show this treatment: Four-item bottom navigation.
-- The reviewed screens show this treatment: Glossy finance and shopping objects.
+- White remains the dominant full-screen field, with generous separation between financial controls.
+- Cyan-blue marks primary actions, focused inputs, links, selected navigation, and progress.
+- Large monetary numerals are the focal point of loan surfaces.
+- The loan offer uses a substantial blue-to-violet gradient region rather than a generic white card.
+- Inputs use thin cyan or neutral outlines and concise labels, not heavily filled form sections.
+- Navigation icons are compact black outlines with blue reserved for the active state.
+- Supporting cards are pale and quiet; isolated spot assets never overtake the financial data.
 
 # Color and surfaces
 
-### Brand & Accent
-- **Airba Blue** ({colors.primary}): Primary actions, selection, and active navigation.
-- **Violet** ({colors.accent-violet}): Gradient and brand support.
-- **Orange** ({colors.accent-orange}): Verification warning and sparse attention.
-
-### Surface
-- **Canvas** ({colors.canvas}): Default screen and card surface.
-- **Surface 1** ({colors.surface-1}): Grouped controls and quiet backgrounds.
-- **Surface 2** ({colors.surface-2}): Disabled and nested areas.
-- **Hairline** ({colors.hairline}): Dividers and input outlines.
-
-### Text
-- **Ink** ({colors.ink}): Titles, amounts, and primary labels.
-- **Ink Muted** ({colors.ink-muted}): Explanations and financial metadata.
-- **Ink Subtle** ({colors.ink-subtle}): Placeholder and disabled text.
-
-### Semantic
-- **Success** ({colors.semantic-success}): Completed verification and accepted actions.
-- **Danger** ({colors.semantic-danger}): Warning and destructive exit.
-- **Overlay** ({colors.semantic-overlay}): Camera and modal scrims.
+White is the primary canvas and form surface. Pale cool gray groups loans, profile information, and secondary options. Cyan-blue is the main interaction color and can shift toward violet inside the observed loan gradient. Near-black carries amounts, titles, and outline icons; medium gray carries helper and verification text. Thin light-gray dividers organize list rows, while destructive feedback uses a restrained red close to the affected field. A default system-blue wash or excessive card elevation would weaken the observed light, precise hierarchy.
 
 # Typography
 
-### Font Family
-
-- **System Sans** — all screens, loan terms, support, and navigation.
-- **System Mono** — amounts or codes when fixed-width alignment helps.
-
-### Hierarchy
-
-| Token | Size | Weight | Use |
-|---|---|---|---|
-| `{typography.display-xl}` | 38pt | 700 | Campaign amount |
-| `{typography.display-md}` | 26pt | 700 | Screen heading |
-| `{typography.headline}` | 21pt | 700 | Loan total or empty state |
-| `{typography.card-title}` | 16pt | 600 | Card title |
-| `{typography.body}` | 14pt | 400 | Default content |
-| `{typography.caption}` | 10pt | 400 | Tab and legal metadata |
-| `{typography.button}` | 15pt | 600 | Actions |
-
-### Principles
-
-- Make amount and monthly payment the strongest numbers.
-- Keep explanatory copy light and short.
-- Use sentence case throughout.
-- Align financial labels and values in stable columns.
-
-### Note on Font Substitutes
-
-Use **SF Pro**, **Inter**, or **Roboto** with tabular numerals.
+Use SF Pro throughout. Monetary amounts use 34–38 point bold display numerals; page titles use roughly 28 point bold; section headings use 20 point semibold; inputs, actions, and rows use 14–15 point text; helper and verification copy uses 12–13 point gray captions. Use tabular numerals for loan amounts and repayment values. Dynamic Type should increase row and card height and allow helper text to wrap while keeping the primary amount clearly more prominent than labels.
 
 # Screen composition
 
-### Grid & Container
-
-Home uses a two-column education grid followed by full-width sections. Calculator controls stay in one vertical card; partner offers stack as full-width rows.
-
-### Whitespace Philosophy
-
-Reserve open white space for trust and calculation. Confine gradients to campaigns or product sections rather than whole screens.
+Launch and login screens place a compact logo or title high below the safe area, a single-column group of outlined fields in the middle, and a blue action toward the lower portion. Home and loan-list screens use broad white space around a small number of pale cards. The loan-composition archetype gives a large upper or central region to the blue-violet gradient, the amount, and slider, with supporting terms and a primary action below. Verification and profile screens are single-column lists or forms. Bottom navigation stays attached to the lower edge and uses equal-width compact items.
 
 # Navigation appearance
 
-Home, My loans, New loan, and Support form the bottom bar. Header icons expose notifications and profile.
+The bottom bar is white with small black outline icons and labels; the active destination turns cyan-blue. Focused subviews use a simple black back control and compact title, without a large colored header. App-owned verification or decision surfaces use white rounded panels, while camera access and other system permission transitions retain native iOS appearance. Selected tabs or links use blue text or underline rather than filled oversized pills.
 
 # Components
 
-### Buttons
-
-Primary actions use blue fill and white text. Disabled actions become pale lavender-gray. Secondary actions use outline or plain text.
-
-Loan terms use compact equal-width choices; My loans uses a two-tab underline for Active and History.
-
-### Cards & Containers
-
-Information tiles pair short questions with one object. Loan calculator keeps term, slider, payment, rate, and repayment together. Partner cards preserve merchant identity.
-
-### Inputs & Forms
-
-Inputs use thin gray borders, labels above, and clear focus blue. Amount entry, slider, and presets remain synchronized.
-
-### Status & Build Page
-
-Verification warning stays near the header until resolved. Success uses a centered object, concise status, and one return action.
-
-### Navigation
-
-Home, My loans, New loan, and Support form the bottom bar. Header icons expose notifications and profile.
+Primary buttons are cyan-blue rounded rectangles with white semibold labels and a minimum 44-point height. Secondary actions are white with thin blue outlines or blue text. Text fields have white fill, thin cyan or neutral borders, compact labels, and explicit error treatment. Loan cards use pale fill, restrained rounding, and prominent numeric data; the main loan hero adds the blue-violet gradient and a clearly visible slider. Profile and support rows use black outline icons, dark labels, gray metadata, subtle dividers, and small chevrons. Disabled controls recede to cool gray while retaining legible labels.
 
 # Imagery and icons
 
-| Level | Treatment | Use |
-|---|---|---|
-| 0 | White canvas | Forms and profile |
-| 1 | Pale border or shadow | Info and loan cards |
-| 2 | Gradient band | Product discovery |
-| 3 | Dark camera surface | Verification capture |
-
-### Decorative Depth
-
-Use soft card shadows, gradient circles, and glossy objects. Avoid heavy glass effects.
+Imagery is sparse: a few small colored spot assets, an empty-state graphic, the brand mark, and functional verification imagery. Keep these assets secondary to loan amounts, form fields, and actions. The inspected screens do not establish shared characters, rendering rules, or repeatable scene composition, so do not extrapolate them into a large illustration language. Icons remain thin, geometric, and mostly black or blue; do not replace financial content with arbitrary symbols.
 
 # States
 
-Verification warning stays near the header until resolved. Success uses a centered object, concise status, and one return action.
+Observed states include first launch, login with keyboard, verification and native camera permission, loan list, a new-loan amount and slider, support, profile, and email editing. Blue focus and action color, white canvas, sparse spacing, compact iconography, and numeric hierarchy remain stable. Verification or permission states may introduce native iOS panels; errors stay adjacent to the affected field and use red without recoloring the full screen.
 
 # iOS adaptation
 
-| Wide | 768pt+ | Center content and widen calculator |
-| Small | <390pt | Wrap term choices and stack value rows |
-
-### Touch Targets
-
-Maintain at least 44pt for term choices, sliders, tab items, and verification actions.
-
-### Collapsing Strategy
-
-Keep one-column finance forms. Wrap term choices before reducing labels; stack partner cards and keep the bottom action full width.
-
-### Image Behavior
-
-Contain education objects and merchant logos. Use cover only for partner campaigns; never crop product evidence or status art.
-
-On iPhone, respect top and bottom safe areas, use scrolling for content that does not fit, keep interactive targets at least 44 points, and preserve the visual reading order for VoiceOver. At larger Dynamic Type sizes, allow supporting text to wrap without collapsing the dominant hierarchy. Use native sheets and permission transitions while explicitly styling app-owned surfaces to match the reference.
+Respect top and bottom safe areas and keep the active field and primary action visible when the keyboard appears. Use vertical scrolling for long verification, loan, support, and profile content, but preserve generous spacing on short screens. System camera and permission transitions remain native, while app-owned panels keep the documented white and blue styling. Back controls, fields, slider handles, list rows, and bottom navigation require 44-point touch regions. VoiceOver should announce the financial amount and unit, then terms and action. At large Dynamic Type, stack supporting loan metrics and grow forms rather than shrinking the amount. The observed presentation is light-first; dark appearance requires a separately designed palette.
 
 # Anti-generic checklist
 
-- Do not substitute the documented accent hierarchy with default iOS blue.
-- Do not turn the documented white canvas into a generic card stack; preserve the observed accent, density, imagery, and surface grouping.
-- Do not use an unstyled `TabView`, `Form`, or arbitrary SF Symbols when they contradict the documented navigation and component language.
-- Do not flatten the documented typography into one body-text scale.
-- Do not remove compositionally important photography or illustration while assets are pending.
-- Do not apply one corner radius to every control and surface.
-
-Source-specific guardrails retained from the review:
-
-### Do
-
-- Show monthly payment and total repayment together.
-- Keep verification state visible.
-- Preserve merchant identity in partner offers.
-- Use blue consistently for primary action.
-- Give financial forms open white space.
-
-### Don't
-
-- Don't use gradients behind dense form text.
-- Don't mix partner shopping with Airba loan status.
-- Don't hide fees or repayment totals.
-- Don't use 3D objects as unlabeled controls.
-- Don't crowd the four-item navigation.
+- Do not turn the sparse finance UI into a dashboard of many equal white cards.
+- Do not replace cyan-blue focus and action states with default unstyled iOS controls.
+- Do not omit the large numeric loan hierarchy or the blue-violet gradient loan region.
+- Do not ship an unstyled `TabView`, `Form`, `List`, or default text fields.
+- Do not use arbitrary SF Symbols, emoji, or programmatic decoration as replacements for observed spot assets.
+- Do not flatten amounts, titles, helper copy, and input labels into one scale.
+- Do not infer a full illustration system from isolated empty-state and home assets.
 
 </design-context>

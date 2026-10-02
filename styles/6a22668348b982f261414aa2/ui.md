@@ -3,223 +3,239 @@
 version: 1
 platform: iOS
 name: Alatau-City-Bank-design-analysis
-description: "A high-density retail-banking interface combining bright Alatau blue, emphatic yellow actions, white rounded modules, and glossy 3D product objects. Five persistent tabs organize an unusually broad service catalogue, with light and dark themes sharing the same modular card hierarchy."
+description: "A modular Kazakhstan banking visual system with blue promotional headers, bright yellow decisive actions, pill-shaped bottom navigation, rounded white finance modules, glossy 3D product objects, compact service icon grids, and a fully observed dark-theme counterpart."
 colors:
-  primary: "#1679C8"
+  primary: "#147DC9"
+  primary-deep: "#005FA8"
   on-primary: "#FFFFFF"
-  primary-soft: "#EAF5FD"
-  accent-yellow: "#FFD900"
-  accent-green: "#15B861"
-  accent-violet: "#8B55C8"
-  ink: "#161819"
-  ink-muted: "#74787A"
-  ink-subtle: "#A9ADB0"
-  canvas: "#F5F6F7"
+  primary-soft: "#E8F5FD"
+  accent-yellow: "#FFE000"
+  accent-yellow-soft: "#FFF7A8"
+  deposit-green: "#20BD55"
+  investment-violet: "#7C5BD6"
+  success: "#22B95A"
+  danger: "#E44843"
+  ink: "#151719"
+  ink-muted: "#73777B"
+  ink-subtle: "#A8ADB2"
+  canvas: "#F4F5F6"
   surface-1: "#FFFFFF"
-  surface-2: "#ECEFF1"
-  hairline: "#E1E4E6"
+  surface-2: "#EEF0F2"
+  field: "#F1F2F3"
+  hairline: "#E0E3E6"
   dark-canvas: "#101010"
   dark-surface: "#202020"
-  semantic-success: "#22BA55"
-  semantic-danger: "#E6534B"
-  semantic-overlay: "#000000"
+  dark-surface-2: "#2A2A2A"
+  dark-ink: "#F5F5F5"
+  dark-muted: "#A2A2A2"
+  overlay: "#000000"
 typography:
-  display-xl: { fontFamily: System Sans, fontSize: 40, fontWeight: 800, lineHeight: 1.00, letterSpacing: -1.0 }
-  display-lg: { fontFamily: System Sans, fontSize: 32, fontWeight: 700, lineHeight: 1.05, letterSpacing: -0.6 }
-  display-md: { fontFamily: System Sans, fontSize: 26, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.3 }
-  headline: { fontFamily: System Sans, fontSize: 21, fontWeight: 700, lineHeight: 1.18, letterSpacing: -0.2 }
-  card-title: { fontFamily: System Sans, fontSize: 15, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: System Sans, fontSize: 16, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
-  body-lg: { fontFamily: System Sans, fontSize: 16, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
-  body: { fontFamily: System Sans, fontSize: 14, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
-  body-sm: { fontFamily: System Sans, fontSize: 12, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
-  caption: { fontFamily: System Sans, fontSize: 10, fontWeight: 400, lineHeight: 1.20, letterSpacing: 0 }
-  button: { fontFamily: System Sans, fontSize: 15, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0 }
-  eyebrow: { fontFamily: System Sans, fontSize: 11, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0.2 }
-  mono: { fontFamily: System Mono, fontSize: 13, fontWeight: 500, lineHeight: 1.30, letterSpacing: 0 }
-rounded: { xs: 6, sm: 10, md: 14, lg: 20, xl: 26, xxl: 32, pill: 9999, full: 9999 }
-spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
+  display-xl: { fontFamily: SF Pro Display, fontSize: 40, fontWeight: 800, lineHeight: 1.00, letterSpacing: 0 }
+  display-lg: { fontFamily: SF Pro Display, fontSize: 32, fontWeight: 700, lineHeight: 1.06, letterSpacing: 0 }
+  display-md: { fontFamily: SF Pro Display, fontSize: 26, fontWeight: 700, lineHeight: 1.12, letterSpacing: 0 }
+  headline: { fontFamily: SF Pro Display, fontSize: 21, fontWeight: 700, lineHeight: 1.18, letterSpacing: 0 }
+  card-title: { fontFamily: SF Pro Text, fontSize: 15, fontWeight: 600, lineHeight: 1.26, letterSpacing: 0 }
+  subhead: { fontFamily: SF Pro Text, fontSize: 15, fontWeight: 500, lineHeight: 1.34, letterSpacing: 0 }
+  body-lg: { fontFamily: SF Pro Text, fontSize: 16, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
+  body: { fontFamily: SF Pro Text, fontSize: 14, fontWeight: 400, lineHeight: 1.36, letterSpacing: 0 }
+  body-sm: { fontFamily: SF Pro Text, fontSize: 12, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
+  caption: { fontFamily: SF Pro Text, fontSize: 10, fontWeight: 400, lineHeight: 1.18, letterSpacing: 0 }
+  button: { fontFamily: SF Pro Text, fontSize: 15, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0 }
+  eyebrow: { fontFamily: SF Pro Text, fontSize: 11, fontWeight: 600, lineHeight: 1.18, letterSpacing: 0 }
+  mono: { fontFamily: SF Mono, fontSize: 13, fontWeight: 500, lineHeight: 1.28, letterSpacing: 0 }
+rounded: { xs: 6, sm: 10, md: 14, lg: 18, xl: 24, xxl: 30, pill: 9999, full: 9999 }
+spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 22, xl: 30, xxl: 44, section: 60 }
 components:
-  button-primary: { backgroundColor: "{colors.accent-yellow}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [14, 20]}
-  product-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 14 }
-  service-grid: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.caption}", rounded: "{rounded.lg}", padding: 16 }
-  transfer-form: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 16 }
-  receipt-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 20 }
+  primary-yellow-button: { backgroundColor: "{colors.accent-yellow}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.md}", padding: [14, 20] }
+  finance-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 16 }
+  service-grid: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.caption}", rounded: "{rounded.xl}", padding: 16 }
+  segmented-control: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.md}", padding: 4 }
+  input-field: { backgroundColor: "{colors.field}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: [12, 12] }
+  bottom-tab-bar: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.caption}", rounded: "{rounded.pill}", padding: [8, 10] }
 ---
 
 # Overview
 
-Alatau City Bank compresses a large financial catalogue into white rounded modules, icon grids, and five stable destinations. Blue carries brand and information; yellow owns high-priority conversion.
+Alatau City Bank uses a soft modular banking style: blue campaign headers, white rounded modules, bright yellow primary actions, glossy product objects, and compact icon grids. The same component skeleton appears in light and dark captures; dark mode swaps surfaces and text values while preserving spacing, card shapes, icon scale, and the yellow action language.
 
 **Key Characteristics:**
-- Blue promotional hero with white modular foreground.
-- Yellow full-width primary actions.
-- Rounded service grids and finance cards.
-- Glossy 3D product and service objects.
-- Stable five-tab navigation.
-- Complete dark-theme counterpart.
+- Blue promotional hero with layered 3D product imagery.
+- Bright yellow full-width action buttons and product identity accents.
+- Rounded white modules on light gray canvas.
+- Compact service icons in four-column groups.
+- Finance cards with balances, product art, and row-based controls.
+- Pill-shaped five-item bottom bar with blue selected state.
+- Dark theme using near-black canvas and charcoal modules.
 
 # Non-negotiable visual invariants
 
-- The reviewed screens show this treatment: Blue promotional hero with white modular foreground.
-- The reviewed screens show this treatment: Yellow full-width primary actions.
-- The reviewed screens show this treatment: Rounded service grids and finance cards.
-- The reviewed screens show this treatment: Glossy 3D product and service objects.
-- The reviewed screens show this treatment: Stable five-tab navigation.
-- The reviewed screens show this treatment: Complete dark-theme counterpart.
+- Primary conversion buttons are bright yellow with dark text and rounded rectangular shape.
+- Home-style promotional areas use saturated blue gradients behind glossy 3D finance objects or large rate numerals.
+- Product, history, transfer, and profile content sits in rounded white modules on a pale gray canvas.
+- Service choices are compact icon-and-label cells, usually arranged in a four-column grid or rounded list rows.
+- Finance product screens show balances first, then paired quick actions, then history or info modules.
+- Bottom navigation is a floating pill with five compact items and a blue selected icon or background.
+- Dark theme preserves the same layout but uses black canvas, charcoal cards, light text, and the same yellow primary action.
 
 # Color and surfaces
 
 ### Brand & Accent
-- **Alatau Blue** ({colors.primary}): Brand, selected states, and informational icons.
-- **Yellow** ({colors.accent-yellow}): Primary conversion and card identity.
-- **Green** and **Violet**: Success, deposits, investments, and insurance.
+- **Alatau blue** ({colors.primary}) appears in the hero, selected tab states, service icons, information links, and search/notification accents.
+- **Yellow** ({colors.accent-yellow}) is the decisive action color: Open product, Pay, Transfer, and selected product identity. It should be scarce and high priority.
+- **Green** ({colors.deposit-green}) supports deposit visuals, positive amounts, success, and selected toggles.
+- **Violet** ({colors.investment-violet}) appears only in product taxonomy or investment-related object color, not as a global brand replacement.
 
 ### Surface
-- **Canvas** ({colors.canvas}): Light gray app background.
-- **Surface 1** ({colors.surface-1}): Cards, sheets, and navigation.
-- **Surface 2** ({colors.surface-2}): Input and disabled group background.
-- **Dark Canvas / Surface**: Full dark-theme hierarchy.
+- **Canvas** ({colors.canvas}) is a pale gray base visible between cards.
+- **Surface 1** ({colors.surface-1}) is the main module color for service grids, finance cards, forms, sheets, and bottom navigation.
+- **Surface 2** ({colors.surface-2}) is used for segmented-control tracks, disabled input blocks, and soft field backgrounds.
+- **Dark Canvas / Surfaces** ({colors.dark-canvas}, {colors.dark-surface}, {colors.dark-surface-2}) mirror the light hierarchy without adding new colors.
 
 ### Text
-- **Ink** ({colors.ink}): Headings, balances, and actions.
-- **Ink Muted** ({colors.ink-muted}): Product descriptions and transaction metadata.
-- **Ink Subtle** ({colors.ink-subtle}): Placeholders and disabled labels.
+- **Ink** ({colors.ink}) carries balances, screen titles, product names, and primary row labels.
+- **Ink Muted** ({colors.ink-muted}) carries descriptions, product subtitles, transaction metadata, and explanatory text.
+- **Ink Subtle** ({colors.ink-subtle}) carries placeholders and disabled actions.
+- In dark mode, use **Dark Ink** and **Dark Muted** while retaining colored icons and yellow actions.
 
 ### Semantic
-- **Success** ({colors.semantic-success}): Completed payment and positive balance.
-- **Danger** ({colors.semantic-danger}): Failed or destructive state.
-- **Overlay** ({colors.semantic-overlay}): Sheet and identity-capture scrim.
+- Positive balances and completed state use green.
+- Failed or destructive actions use red and should not reuse yellow.
+- Disabled actions keep their normal shape but fade the fill and label.
+- Verification and camera states may use a black or dimmed full-screen surface with a white sheet or white instruction text.
 
 # Typography
 
 ### Font Family
 
-- **System Sans** — product, transaction, service, and navigation UI.
-- **System Mono** — account fragments, codes, and aligned financial figures.
+- **SF Pro Display** for campaign rates, balances, and major screen titles.
+- **SF Pro Text** for rows, forms, service labels, filters, and tab labels.
+- **SF Mono** only for account fragments, card suffixes, codes, and aligned money snippets when needed.
 
 ### Hierarchy
 
 | Token | Size | Weight | Use |
 |---|---|---|---|
-| `{typography.display-xl}` | 40pt | 800 | Promotional rate |
-| `{typography.display-md}` | 26pt | 700 | Balance or receipt amount |
-| `{typography.headline}` | 21pt | 700 | Screen heading |
-| `{typography.card-title}` | 15pt | 600 | Product title |
-| `{typography.body}` | 14pt | 400 | Default content |
-| `{typography.caption}` | 10pt | 400 | Tabs and service labels |
-| `{typography.button}` | 15pt | 600 | Actions |
+| `{typography.display-xl}` | 40 | 800 | Campaign rate or large product number |
+| `{typography.display-lg}` | 32 | 700 | Major balance or success amount |
+| `{typography.display-md}` | 26 | 700 | Product balance, receipt total |
+| `{typography.headline}` | 21 | 700 | Module or screen heading |
+| `{typography.card-title}` | 15 | 600 | Product title, list row title |
+| `{typography.body}` | 14 | 400 | Form labels, descriptions, transaction rows |
+| `{typography.caption}` | 10 | 400 | Service labels and bottom tabs |
+| `{typography.button}` | 15 | 600 | Yellow primary actions |
 
 ### Principles
 
-- Emphasize balance, rate, and receipt amount.
-- Keep category labels concise under icons.
-- Align transaction values to the trailing edge.
-- Preserve hierarchy when switching theme.
+- Financial amounts use stronger weight and trailing alignment when inside lists.
+- Service labels are short and centered under icons.
+- Form labels sit above fields or as subdued placeholders inside pale fields.
+- Keep Cyrillic text legible and avoid condensed fonts.
+- Dark mode must keep the same relative hierarchy, not simply invert all colors.
 
 ### Note on Font Substitutes
 
-Use **SF Pro**, **Inter**, or **Roboto** with tabular numerals and Cyrillic support.
+Use Inter, Roboto, or the platform system font if SF Pro is unavailable. Enable tabular numerals for money and account fragments.
 
 # Screen composition
 
 ### Grid & Container
 
-Home layers a full-width hero, four-column service grid, and horizontal product cards. Forms and transaction lists use one column; service sheets use four-column icon groups.
+Use a vertical stack of rounded modules. Home-style compositions place a blue hero at the top, then a large white service module with two rows of four icons, then horizontal product cards and a yellow product-opening action. Profile and product lists use separate rounded modules with headers, rows, and trailing chevrons.
+
+Finance product screens use a balance-first composition: top product identity, large balance, quick-action pair or trio, then white modules for history, info, and settings. Transfer and payment screens use one-column forms with segmented controls, pale input fields, preset chips, and a pinned yellow action low on the viewport.
+
+Bottom sheets are white with large rounded top corners, a visible close control, and stacked product rows with thumbnail 3D objects. Keep the sheet visually attached to the lower half of the screen with a dimmed background when used.
 
 ### Whitespace Philosophy
 
-Use gray canvas gaps to separate large white modules. Keep whitespace inside financial forms generous even when the catalogue is dense.
+The app is dense but soft. Use clear gray gaps between modules, generous rounded-card padding, and compact icon cells. Avoid large empty hero space except where Screen Gallery evidence shows an intentionally empty state card.
 
 # Navigation appearance
 
-Home, My bank, History, Transfers, and Payments live in a rounded bottom bar. Search and notifications remain at the top.
+The bottom bar is a floating rounded pill with five equal items. Selected state uses blue on the icon and a pale blue or gray active capsule behind the item. In dark mode the pill becomes dark charcoal, inactive icons are light, and the selected state remains blue.
+
+Top controls are circular or pill-like: profile, search, notification, back, edit, and close. Search fields are pale, rounded, and horizontally compact. Segmented controls use a gray rounded track with one raised selected segment.
 
 # Components
 
 ### Buttons
 
-Primary actions use yellow with dark text. Blue text or outline supports secondary actions. Destructive actions use explicit red labels.
-
-Segmented controls use white or light gray tracks with the selected option raised. History filters use compact pills.
+- **Primary**: bright yellow, full width, dark label, medium corner radius, pinned near the bottom for forms.
+- **Secondary**: blue text or pale surface row; do not compete with yellow.
+- **Quick action**: rounded soft tiles with icon above label for Transfer, Top up, Withdraw, and similar finance controls.
+- **Disabled**: same footprint as enabled, lower opacity, pale yellow or pale gray fill.
+- **Close**: small circular gray control in sheets or verification overlays.
 
 ### Cards & Containers
 
-Product cards combine title, summary, and 3D object. Account cards group balance and quick actions. Receipt cards place status and amount above details.
+Finance modules use white cards with 14 to 24 point corner radii. Product cards may show a soft gradient or glossy object but keep text on the left and object on the right. Transaction rows include an icon or merchant mark, title, subtitle, and trailing amount; positive values use green.
 
 ### Inputs & Forms
 
-Transfer forms stack source, recipient, amount, and message. Preset chips assist common amounts; keyboard-safe actions remain pinned low.
+Fields are pale gray rounded rectangles with light placeholder text. Amount presets are rounded chips in a two-row grid. Recipient forms use segmented options for phone, card, and account. Commission, limits, and helper text appear below fields in small muted text.
 
 ### Status & Build Page
 
-Success uses a large green check and receipt metadata. Analytics uses colored bars plus numeric labels. Disabled actions fade without losing form structure.
+Analytics use a compact module with totals and colored horizontal bars. Empty transfer history uses a white rounded card with a centered blue star and muted explanatory copy. Identity verification uses a dim camera-like backdrop plus a rounded white instruction sheet and yellow Start button.
 
 ### Navigation
 
-Home, My bank, History, Transfers, and Payments live in a rounded bottom bar. Search and notifications remain at the top.
+Use the researched visual language for the five-item tab bar, top search, notifications, back controls, edit controls, and profile shortcuts. Avoid adding unobserved tabs or toolbar chrome in the style layer.
 
 # Imagery and icons
 
 | Level | Treatment | Use |
 |---|---|---|
-| 0 | Gray canvas | Screen base |
-| 1 | White rounded module | Lists and services |
-| 2 | Floating bottom sheet | Product or menu choice |
-| 3 | Saturated hero or card | Promotion and identity |
+| 0 | Pale gray canvas | App background in light mode |
+| 1 | White rounded module | Services, products, forms, history |
+| 2 | Blue or dark hero field | Campaign header and verification state |
+| 3 | Glossy 3D object | Product promotions, deposits, service thumbnails |
 
 ### Decorative Depth
 
-Use soft shadows, bright gradients, and modeled 3D objects. Dark mode replaces shadows with surface contrast.
+Use soft shadows and glossy 3D object renders, not flat vector decoration. Yellow card renders, metallic rate numerals, deposit safes, coins, percent signs, and compact service objects should be raster assets with consistent lighting. Dark mode relies more on surface contrast than shadow.
 
 # States
 
-Success uses a large green check and receipt metadata. Analytics uses colored bars plus numeric labels. Disabled actions fade without losing form structure.
+- **Selected tab**: blue icon or blue active capsule inside the bottom pill.
+- **Selected segmented option**: raised white or lighter segment on a pale gray track.
+- **Disabled primary action**: pale yellow fill and muted label while preserving full-width placement.
+- **Positive transaction**: green trailing amount and standard row structure.
+- **Notification**: small red dot near the bell.
+- **Dark theme**: black canvas, charcoal modules, light text, same yellow action.
+- **Verification**: dark camera surface with white instruction sheet or white recognition text.
+- **Empty history**: centered small blue object or star, bold title, muted explanatory copy.
 
 # iOS adaptation
 
-| Wide | 768pt+ | Center modules and widen service grid |
-| Small | <390pt | Reduce service grid to three columns |
+| Context | Width | Treatment |
+|---|---|---|
+| Narrow iPhone | less than 390 | Keep bottom pill visible, allow service labels to wrap, keep yellow actions full width |
+| Standard iPhone | 390 to 430 | Preserve four-column service grid and horizontal product cards |
+| Wide iPhone or iPad compact | 431 and above | Center the content column and keep finance forms single column |
 
 ### Touch Targets
 
-Maintain 44pt for service icons, segmented controls, list rows, and bottom navigation.
+Maintain at least 44 points for bottom tabs, service icons, quick actions, segmented controls, form rows, toggles, and yellow primary buttons.
 
 ### Collapsing Strategy
 
-Reduce icon-grid columns before shrinking labels. Keep finance forms single-column and actions full width. Horizontal product cards may scroll.
+For small screens, reduce horizontal product-card count through scrolling before shrinking icons. Keep balances, source product, amount field, limits/commission, and primary button visible in financial forms. Let secondary history modules move below the fold.
 
 ### Image Behavior
 
-Contain product objects and card renders. Campaign heroes may crop decorative background but must preserve the rate and primary object.
+Promotional objects should be contained, not cropped through their main product shape. Hero backgrounds may crop decorative gradient or glow, but preserve rate text and product object. Card renders should keep visible card identity and network marks when shown.
 
-On iPhone, respect top and bottom safe areas, use scrolling for content that does not fit, keep interactive targets at least 44 points, and preserve the visual reading order for VoiceOver. At larger Dynamic Type sizes, allow supporting text to wrap without collapsing the dominant hierarchy. Use native sheets and permission transitions while explicitly styling app-owned surfaces to match the reference.
+On iPhone, respect safe areas and the home indicator. At larger Dynamic Type sizes, keep financial amount and action order intact, wrap descriptions, and allow module height to grow. In dark mode, do not place dark cards on a light canvas or light cards on an isolated dark canvas.
 
 # Anti-generic checklist
 
-- Do not substitute the documented accent hierarchy with default iOS blue.
-- Do not collapse distinct surfaces into a uniform stack of generic white cards.
-- Do not use an unstyled `TabView`, `Form`, or arbitrary SF Symbols when they contradict the documented navigation and component language.
-- Do not flatten the documented typography into one body-text scale.
-- Do not remove compositionally important photography or illustration while assets are pending.
-- Do not apply one corner radius to every control and surface.
-
-Source-specific guardrails retained from the review:
-
-### Do
-
-- Use yellow only for decisive actions or product identity.
-- Keep the five destinations stable.
-- Pair icons with readable labels.
-- Show limits and commission before payment.
-- Mirror the hierarchy in dark theme.
-
-### Don't
-
-- Don't hide services behind unlabeled icons.
-- Don't mix success green with conversion yellow.
-- Don't crop card identity or account fragments.
-- Don't place dark cards on an isolated light canvas.
-- Don't remove receipt actions.
+- Do not replace yellow primary actions with default iOS blue buttons.
+- Do not flatten glossy 3D product imagery into SF Symbols, emoji, or simple vector pictograms.
+- Do not remove rounded white modules or the floating pill bottom bar.
+- Do not treat dark mode as a color inversion; preserve charcoal modules and the same selected states.
+- Do not hide limits, commission, disabled state, or amount presets inside payment and transfer forms.
+- Do not use generic card lists where the evidence shows service icon grids or product object cards.
+- Do not mix success green with yellow conversion buttons.
 
 </design-context>

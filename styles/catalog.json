@@ -1957,8 +1957,8 @@
     "categories": [
       "Maps & Navigation"
     ],
-    "uiSummary": "A map-first mobile interface built from a pale detailed map, white floating sheets, and saturated green route actions. Compact system typography, blue spatial markers, transport icons, and persistent edge controls keep navigation legible while recommendation cards and vivid 3D onboarding scenes add personality.",
-    "illustrationSummary": "2GIS uses vivid 3D brand scenes for onboarding and small playful objects in recommendations. Illustration explains capabilities without entering the operational map itself."
+    "uiSummary": "A pale detailed map remains the dominant canvas beneath white floating controls and rounded sheets, while saturated green actions, compact route metrics, and restrained imagery keep spatial tasks legible.",
+    "illustrationSummary": "2GIS uses authored illustration in two observed roles: high-impact onboarding scenes and quiet empty-state support. Both are distinct from maps, route and POI marks, functional icons, place photography, campaign media, settings previews, charts, and brand marks."
   },
   {
     "appId": "69ee88f7f4481682856d402c",
@@ -1970,8 +1970,8 @@
       "Entertainment",
       "Social Networking"
     ],
-    "uiSummary": "A bright video-discovery interface built from white surfaces, oversized thumbnail imagery, compact black titles, cool-blue navigation, and a red play-brand accent. Dense feeds remain readable through strict card rhythm and minimal chrome.",
-    "illustrationSummary": null
+    "uiSummary": "A white media catalog lets saturated video thumbnails dominate a compact black-and-gray hierarchy, switching to edge-to-edge dark playback with cool-blue actions and a restrained five-item tab bar.",
+    "illustrationSummary": "VK Video has a limited but coherent authored illustration system inside Kids/profile creation. It uses friendly flat character art and doodled selection-card objects to distinguish child-facing setup. It is separate from video thumbnails, posters, creator avatars, channel marks, stickers, functional icons, playback chrome, and campaign artwork."
   },
   {
     "appId": "69f0ac39ab0e30c4105026d5",
@@ -1981,8 +1981,8 @@
     "categories": [
       "Finance"
     ],
-    "uiSummary": "A bright financial super-app built from white modular surfaces, emerald-to-teal gradients, compact banking data, rounded service tiles, and promotional 3D artwork. Dense dashboards remain approachable through generous grouping and a persistent five-tab shell.",
-    "illustrationSummary": "Freedom uses polished 3D financial props and compact campaign scenes to soften banking offers and guided applications."
+    "uiSummary": "A pale modular finance canvas combines dense white product cards, emerald-to-teal brand fields, bold account values, compact service grids, soft 3D objects, and green-selected five-item navigation.",
+    "illustrationSummary": "Freedom uses a narrow authored 3D object system for onboarding, identity verification, biometric explanation, progress, and product completion. It is separate from card artwork, payment and merchant marks, service icons, campaign banners, finance metrics, charts, logos, and photography-like promotional media."
   },
   {
     "appId": "69f0d3cab275ec18af940457",
@@ -1993,8 +1993,8 @@
       "Productivity",
       "Utilities"
     ],
-    "uiSummary": "A multi-product productivity shell on white, organized by crisp blue actions, black type, pale-gray cards, pastel product accents, compact lists, and playful 3D empty-state artwork.",
-    "illustrationSummary": "Mail.ru uses friendly 3D objects and a soft white-blue mail mascot to make empty productivity states feel approachable."
+    "uiSummary": "A high-density white mail utility uses crisp blue actions, compact black-and-gray rows, circular sender avatars, hairline structure, native sheets, and sparse glossy onboarding art.",
+    "illustrationSummary": "Mail.ru uses a sparse authored illustration system on splash, onboarding, and notification interstitials. Glossy white-blue mascot-like objects, a pale-blue cupcake, and black monoline hand-drawn accents create a friendly focal point without entering the operational inbox. This system is separate from attachment previews, photos, ads, campaign media, logos, service marks, functional icons, app icons, charts, and progress indicators."
   },
   {
     "appId": "69f774fb347fe67f2883a474",
@@ -2072,8 +2072,8 @@
       "AI",
       "Entertainment"
     ],
-    "uiSummary": "A cinematic near-black streaming interface driven by edge-to-edge artwork, deep burgundy surfaces, and a vivid pink-red action color. Rounded media panels, dense poster grids, bold white titles, restrained metadata, and a translucent dark bottom bar make the product feel immersive without obscuring navigation.",
-    "illustrationSummary": "Ivi uses glossy 3D promotional objects only for subscription and brand moments. The catalog itself stays photography-led."
+    "uiSummary": "A near-black and deep-plum streaming interface lets cinematic posters dominate, using bold white titles, compact gray metadata, hot-pink actions, thin outline navigation, and sparse glossy subscription art.",
+    "illustrationSummary": "Ivi uses a narrow authored glossy 3D/CG system for onboarding, subscription success, and account subscription promotion. It is separate from cinematic posters, thumbnails, photos, video key art, the Ivi mark, functional icons, charts, and campaign media."
   },
   {
     "appId": "6a006bae5d953d22a000c4cc",
@@ -2085,8 +2085,8 @@
       "Shopping, Listings & Marketplaces",
       "Travel & Transportation"
     ],
-    "uiSummary": "A bright transit-payment system using vivid yellow cards and actions, black icons, cool white surfaces, softly colored 3D service objects, and a glowing central QR scanner.",
-    "illustrationSummary": "ONAY uses friendly product-like 3D objects and simple outlined hands to explain virtual cards, linked family cards, fare payment, and special transit products."
+    "uiSummary": "A bright transit-payment interface combines vivid yellow cards and actions, cool white surfaces, bold balance numerals, a raised central QR control, compact yellow outline icons, and colorful soft 3D onboarding scenes.",
+    "illustrationSummary": "ONAY uses a standalone polished 3D/vector hybrid illustration system in onboarding and password-recovery or security heroes. It explains mobility, linked cards, routes, QR payment, auto top-up, and protection through product-like objects. It is separate from shop photography, maps, payment and brand marks, functional yellow icons, charts, campaign banners, and decorative glows."
   },
   {
     "appId": "6a01da3d9af6ce7f74814bb6",
@@ -2096,8 +2096,8 @@
     "categories": [
       "Food and Drinks"
     ],
-    "uiSummary": "A broad lifestyle super-app with a white canvas, black hierarchy, warm-orange grocery actions, coral-red restaurant actions, pale rounded service cards, real listing photography, and playful 3D object collages. Grocery, restaurant delivery, takeaway, coupons, entertainment, QR payment, orders, messages, and profile retain distinct accent cues inside one shared shell.",
-    "illustrationSummary": "Illustration makes Choco's many service verticals quickly recognizable before the user enters a photo-led catalog."
+    "uiSummary": "A bright multi-service commerce shell using white and light-grey fields, bold rounded headings, pink-red and orange accents, large photo-led service cards, compact pill controls, and a persistent rounded bottom bar.",
+    "illustrationSummary": null
   },
   {
     "appId": "6a0308c640e2d3efdf77c90d",
@@ -2107,7 +2107,7 @@
     "categories": [
       "Shopping, Listings & Marketplaces"
     ],
-    "uiSummary": "A promotion-driven jewelry marketplace on a soft white-gray canvas, using bright orange-red for conversion, black for value contrast, and polished product photography as the visual focus. Large campaign banners, compact shortcut chips, two-column product grids, explicit discount math, and a persistent five-icon bottom bar create a dense but familiar shopping experience.",
+    "uiSummary": "A promotion-heavy jewelry storefront combining red-orange campaign fields, black contrast, white commerce surfaces, bold price hierarchy, polished jewelry photography, two-column product grids, and a five-item bottom bar.",
     "illustrationSummary": null
   },
   {
@@ -2118,7 +2118,7 @@
     "categories": [
       "Lifestyle"
     ],
-    "uiSummary": "A bright event-ticketing interface built on white, neon green identity marks, violet navigation and selection states, poster-led content rails, thin outlined filters, and compact ticket details. The system balances colorful entertainment artwork with calm utility screens for seats, orders, and saved tickets.",
+    "uiSummary": "A white media-ticketing interface with purple selection, green brand blocks, bold sans headings, poster-heavy grids, pill filters, sticky purchase actions, and a compact four-item bottom bar.",
     "illustrationSummary": null
   },
   {
@@ -2129,7 +2129,7 @@
     "categories": [
       "Shopping, Listings & Marketplaces"
     ],
-    "uiSummary": "A bright jewelry marketplace built from white surfaces, saturated electric-blue actions, compact product grids, rounded promotional banners, and crisp editorial photography. Loyalty modules add controlled blue-to-red gradients while the shopping chrome stays neutral and information-dense.",
+    "uiSummary": "A bright jewelry-commerce UI with white and light-grey surfaces, saturated blue actions, bold black headings, polished product and model photography, rounded grids and banners, sticky purchase bars, and a dense icon-led bottom bar.",
     "illustrationSummary": null
   },
   {
@@ -2140,7 +2140,7 @@
     "categories": [
       "Finance"
     ],
-    "uiSummary": "A light shopping-finance interface combining white surfaces, a lavender atmospheric gradient, Klarna pink labels, near-black rounded actions, large financial totals, soft elevated cards, and a translucent floating dock. Merchant photography and logos supply variety while the product chrome remains calm and spacious.",
+    "uiSummary": "An airy shopping-finance interface combining white cards, pale lavender-pink atmosphere, heavy rounded totals, dark navy pill actions, merchant photography, and a translucent four-item bottom dock.",
     "illustrationSummary": null
   },
   {
@@ -2151,8 +2151,8 @@
     "categories": [
       "Finance"
     ],
-    "uiSummary": "A green-led universal banking interface built from white utility surfaces, soft gray grouped panels, emerald circular actions, product carousels, and dense account lists. Cards, transfers, payments, deposits, loans, exchange, services, and support share a compact system; glossy green 3D campaign art adds a distinctive acquisition layer.",
-    "illustrationSummary": "Illustration gives loans, cashback, cards, and deposits a premium acquisition layer while the banking workspace remains functional."
+    "uiSummary": "A dense universal-bank dashboard built from white and very light-grey surfaces, saturated emerald actions, compact account typography, rounded financial groups, promotional product renders, and a fixed five-item bottom bar.",
+    "illustrationSummary": null
   },
   {
     "appId": "6a059b18341bf5e574f75a5a",
@@ -2162,8 +2162,8 @@
     "categories": [
       "Travel & Transportation"
     ],
-    "uiSummary": "A logistics super-app combining light-gray canvases, white rounded modules, neon-green progression, black totals, 3D service icons, package diagrams, maps, order cards, and an embedded shopping feed. Sending, tracking, pickup points, payment, support, and commerce remain separated inside one modular shell.",
-    "illustrationSummary": "Illustration explains logistics services and package choices quickly, while real product photography remains reserved for shopping."
+    "uiSummary": "A bright logistics visual system built from CDEK green, pale-gray canvases, white rounded cards, dense shipping forms, map sheets, black totals, clay-like logistics renders, package diagrams, and retail photo cards. The style is modular and operational: each visual block keeps shipment data, price, address, status, and action areas easy to scan.",
+    "illustrationSummary": "Fresh Screen Gallery evidence shows a stable CDEK authored illustration system repeated across home service cards, package-size selection, order confirmation, and profile promotion. It is required when reproducing the style; do not replace it with code-drawn shapes or symbol icons. Missing CDEK-style illustration assets must be created with an image-generation model, explicitly visually approved by the user, and integrated as raster assets in the app bundle. SwiftUI shapes, SF Symbols, emoji, font glyphs, vector doodles, gradients, and other programmatic stand-ins are not acceptable substitutes."
   },
   {
     "appId": "6a070be71059bf795a97f5e1",
@@ -2173,8 +2173,8 @@
     "categories": [
       "Lifestyle"
     ],
-    "uiSummary": "A civic-services interface that pairs a deep cobalt gradient home with crisp white service panels, saturated blue actions, colorful document cards, and a compact assistant layer. Dense public-service content becomes approachable through strong grouping, familiar icons, and one clear action per step.",
-    "illustrationSummary": "Gosuslugi uses civic pictograms, colorful document objects, compact service scenes, and a friendly assistant character to make complex public services recognizable."
+    "uiSummary": "A civic-service visual system using a deep cobalt home header, white administrative cards, saturated blue actions, pale-blue form fields, compact official typography, colorful document cards, restrained line icons, assistant surfaces, and sticky bottom actions. The style makes dense government data readable through grouping, contrast, and stable information hierarchy.",
+    "illustrationSummary": "Fresh Screen Gallery evidence shows a stable Gosuslugi authored visual system repeated across onboarding, home, assistant entry, document cards, service shortcuts, GovScan, and service lists. Use authored raster assets where this visual language is needed; do not approximate it with generic symbols. Missing Gosuslugi-style illustration assets must be created with an image-generation model, explicitly visually approved by the user, and integrated as raster assets in the app bundle. SwiftUI shapes, SF Symbols, emoji, font glyphs, vector doodles, gradients, and other programmatic stand-ins are not acceptable substitutes."
   },
   {
     "appId": "6a074d8f3f4ff0a576c45f64",
@@ -2184,8 +2184,8 @@
     "categories": [
       "Social Networking"
     ],
-    "uiSummary": "An irreverent dating interface mixing torn-paper white and black surfaces, hot-fuchsia accents, hand-drawn monochrome characters, distorted patterns, serif editorial statements, and a single-profile discovery stage.",
-    "illustrationSummary": "Pure uses an irreverent collage-and-doodle language that makes dating feel candid, provocative, and deliberately unlike polished romantic lifestyle imagery."
+    "uiSummary": "A deliberately rough dating visual system built from torn black-and-white paper, warped psychedelic patterns, hot-fuchsia accents, handmade ink drawings, serif editorial statements, compact metadata, and collage-like profile stages.",
+    "illustrationSummary": "Pure uses a stable authored illustration system across the viewed iOS screens: onboarding splash art, sign-in poster art, setup prompts, discovery stickers, chat safety banners, profile style cards, and completion/success strips all repeat the same handmade ink-and-collage language. This file is required for Pure. The implementation must use generated or prepared raster artwork, must receive explicit user visual approval before integration, and must integrate approved raster assets into the app. SwiftUI shapes, SF Symbols, emoji, icon fonts, Lottie stand-ins, or other programmatic substitutes are not acceptable replacements for the authored illustration layer."
   },
   {
     "appId": "6a09c900159c9bb11fa7f0a0",
@@ -2195,7 +2195,7 @@
     "categories": [
       "Shopping, Listings & Marketplaces"
     ],
-    "uiSummary": "A monochrome fashion-commerce interface built from a black canvas, large white product cards, editorial photography, compact serif branding, hot-pink price signals, and pill-shaped black purchase controls.",
+    "uiSummary": "A black fashion-commerce interface using compact luxury-style branding, rounded white product islands, editorial product photography, dense marketplace metadata, hot-pink sale prices, gray search/filter chrome, and black pill purchase actions.",
     "illustrationSummary": null
   },
   {
@@ -2206,7 +2206,7 @@
     "categories": [
       "Shopping, Listings & Marketplaces"
     ],
-    "uiSummary": "A broad commerce and delivery super-app with a white canvas, pale-gray search fields, black hierarchy, hot-pink actions, retailer photography, and compact five-tab navigation. Restaurants, supermarkets, stores, pharmacy, services, mall, checkout, wallet, and order tracking use familiar cards and sheets.",
+    "uiSummary": "A white, photo-led delivery marketplace with soft gray search and control fields, pill-shaped vertical selectors, burgundy-magenta commerce actions, compact product grids, real merchant imagery, and minimal list-style account surfaces. The visual system stays light and dense, letting food, retail products, logos, and order totals carry most of the screen weight.",
     "illustrationSummary": null
   },
   {
@@ -2217,8 +2217,8 @@
     "categories": [
       "Shopping, Listings & Marketplaces"
     ],
-    "uiSummary": "A bright property marketplace built on white and mist-gray surfaces, black compact type, signature yellow trust markers, sky-blue utility links, and persistent green contact actions. Real-estate photography carries listings while rounded service tiles and restrained object illustrations make the home screen approachable.",
-    "illustrationSummary": "krisha.kz uses friendly object illustrations to turn property intents and service shortcuts into immediately recognizable entry points."
+    "uiSummary": "A bright, information-dense real-estate marketplace with a white canvas, pale gray grouped sections, black compact listing typography, brand-yellow trust and shortcut accents, blue utility actions, and green contact buttons. Property photography carries comparison while filters, forms, and account pages remain flat, sparse, and highly structured.",
+    "illustrationSummary": null
   },
   {
     "appId": "6a0b730a48fe2e3d7a3f8bbe",
@@ -2228,7 +2228,7 @@
     "categories": [
       "Shopping, Listings & Marketplaces"
     ],
-    "uiSummary": "A dense but orderly health-commerce interface with a saturated green top bar, white product surfaces, orange add-to-cart actions, and information-rich catalog rows. Product photography, ratings, discount labels, health concern imagery, persistent search, and sticky purchase controls support comparison-heavy shopping without decorative chrome.",
+    "uiSummary": "A dense white health-commerce interface anchored by saturated green headers, orange purchase actions, compact product evidence, persistent navigation, and photography-led merchandising.",
     "illustrationSummary": null
   },
   {
@@ -2239,7 +2239,7 @@
     "categories": [
       "Shopping, Listings & Marketplaces"
     ],
-    "uiSummary": "A practical home-improvement marketplace built on white with vivid construction-yellow commitment actions, charcoal filters, rounded floating navigation, and dense product photography. Loyalty, promotions, room solutions, catalog, fulfillment, and checkout share a sturdy utilitarian rhythm.",
+    "uiSummary": "A white, brand-forward home-improvement marketplace with construction-yellow actions, heavy black type, outlined selections, floating rounded navigation, and photo-led product utility.",
     "illustrationSummary": null
   },
   {
@@ -2250,7 +2250,7 @@
     "categories": [
       "Shopping, Listings & Marketplaces"
     ],
-    "uiSummary": "A utilitarian vehicle marketplace on white and very pale blue, structured by bright blue actions, yellow financing badges, green call buttons, dense listing cards, rectangular vehicle photography, and persistent seller contact controls. Information density is high but predictable, with price and core specifications always near the image.",
+    "uiSummary": "A dense white vehicle marketplace with cobalt actions, photography-led listings, compact factual typography, multicolor transaction accents, and restrained native-like navigation.",
     "illustrationSummary": null
   },
   {
@@ -2261,8 +2261,8 @@
     "categories": [
       "Food and Drinks"
     ],
-    "uiSummary": "A playful food-and-loyalty experience built from frosted white surfaces, vivid Kulikov purple, soft pink and lilac haze, rounded floating navigation, and highly art-directed food photography. The interface feels promotional and tactile: pill controls, large category still lifes, soft cards, and full-width purple checkout actions.",
-    "illustrationSummary": null
+    "uiSummary": "A playful confectionery storefront with saturated purple-magenta branding, pastel canvases, glossy product photography, broad rounded cards, frosted pill navigation, and cheerful 3D promotional objects.",
+    "illustrationSummary": "Kulikov uses a repeatable family of glossy purple 3D objects for loyalty, tips, challenges, gifts, and promotional engagement. These authored objects support product photography but do not replace it in the catalog."
   },
   {
     "appId": "6a11b11d7da5c3b467229ff8",
@@ -2272,7 +2272,7 @@
     "categories": [
       "AI"
     ],
-    "uiSummary": "A stark black AI workspace built from charcoal pills, compact white type, dark rounded composer surfaces, and occasional electric blue subscription emphasis. Conversation, voice, connectors, and image generation share one minimal shell with generated content providing nearly all visual color.",
+    "uiSummary": "A dark-first AI workspace built from near-black negative space, unboxed conversational text, charcoal floating controls, a heavy bottom composer, and generated media as the main source of color.",
     "illustrationSummary": null
   },
   {
@@ -2283,8 +2283,8 @@
     "categories": [
       "Music & Audio"
     ],
-    "uiSummary": "A dual-mode music system: immersive black listening surfaces with fluorescent yellow playback and artwork-derived color, paired with clean white catalog and collection pages. Large editorial type, square cover art, blurred auroras, and translucent 3D mood objects make discovery feel expressive without weakening control clarity.",
-    "illustrationSummary": "Yandex Music uses inflated translucent 3D glyphs and abstract mood objects as a visual counterpart to album art."
+    "uiSummary": "A dual light-and-black music interface combining vivid album art, fluorescent yellow listening actions, oversized editorial type, rounded media cards, a persistent mini-player, and neon abstract brand graphics.",
+    "illustrationSummary": "Yandex Music uses a stable authored family of abstract neon waves, translucent 3D/glass-like category objects, blurred spectral fields, and star/sun motifs. These graphics create branded onboarding, discovery, category, and education moments alongside authentic music artwork."
   },
   {
     "appId": "6a155b129a3518d0aaaced34",
@@ -2294,8 +2294,8 @@
     "categories": [
       "Shopping, Listings & Marketplaces"
     ],
-    "uiSummary": "A dense classifieds marketplace built on white with vivid green posting actions, hot magenta seller-contact controls, and gray utility chrome. Rounded photo cards, compact two-column listings, 3D category objects, and persistent action bars make browsing and selling feel fast and direct.",
-    "illustrationSummary": "Lalafo uses friendly 3D object cutouts to make broad marketplace categories and promotional guidance easy to scan."
+    "uiSummary": "A dense white classifieds marketplace with vivid green posting actions, hot-magenta contact emphasis, compact photo-first grids, restrained gray utility surfaces, and a tab bar organized around a central floating action.",
+    "illustrationSummary": null
   },
   {
     "appId": "6a17165da8966a3c0f8d1ce3",
@@ -2306,8 +2306,8 @@
       "Food and Drinks",
       "Shopping, Listings & Marketplaces"
     ],
-    "uiSummary": "A grocery loyalty interface anchored by forest green, bright leaf accents, yellow actions, a prominent QR card, and surreal product campaigns. White utility surfaces keep points, cashback, store data, and profile actions legible beneath expressive promotional imagery.",
-    "illustrationSummary": "Asia Online uses surreal photoreal grocery scenes, glossy loyalty objects, and oversized product metaphors to make rewards and promotions memorable."
+    "uiSummary": "A campaign-led grocery loyalty interface with large forest-green fields, bright yellow commitment actions, layered white utility panels, prominent QR/reward cards, and saturated promotional food imagery.",
+    "illustrationSummary": null
   },
   {
     "appId": "6a1805371daa571c7c597ce1",
@@ -2317,8 +2317,8 @@
     "categories": [
       "Lifestyle"
     ],
-    "uiSummary": "A gamified fitness product that combines a light utility interface with a 3D isometric journey map, saturated purple rewards, collectible chests, fantasy avatars, and visible program progression. Game layers are vivid; schedules and performance details remain mostly neutral and card-based.",
-    "illustrationSummary": "Hero's Journey uses a cohesive game world of isometric maps, buildings, fantasy avatars, chests, and 3D reward objects."
+    "uiSummary": "A gamified fitness interface that alternates pale native utility screens with vivid pastel journey maps, purple progression actions, rounded stat cards, reward objects, and conventional bottom-tab navigation.",
+    "illustrationSummary": null
   },
   {
     "appId": "6a184388f963e8b32035e330",
@@ -2329,8 +2329,8 @@
       "Lifestyle",
       "Utilities"
     ],
-    "uiSummary": "A mobile design system defined by a deep navy star field, dimensional moon, violet haze, orbital path, and glass controls.",
-    "illustrationSummary": "Moonlitt uses a dimensional lunar model and orbital diagram as both the product's data visualization and its expressive visual language."
+    "uiSummary": "An immersive lunar interface built from full-screen indigo-violet celestial fields, luminous 3D moon renders, orbital paths, glass panels, floating pill controls, and restrained white typography.",
+    "illustrationSummary": "Moonlitt uses a repeatable authored celestial system of luminous 3D moon and phase objects, elliptical orbit paths, sparse stars, violet haze, and deep blue-purple space fields. The artwork is both expressive and informative, supporting onboarding, live lunar status, calendar, and subscription surfaces."
   },
   {
     "appId": "6a186f05a5f5de3ccc2ef2eb",
@@ -2340,7 +2340,7 @@
     "categories": [
       "Shopping, Listings & Marketplaces"
     ],
-    "uiSummary": "A dense electronics marketplace on white, driven by vivid red commerce actions, black technical type, light-gray grouping, large product photography, and compact price, discount, rating, cashback, service, and fulfillment data.",
+    "uiSummary": "A dense white electronics marketplace driven by vivid red commerce actions, large product photography, compact black technical type, light-gray grouping, and persistent purchase/navigation controls.",
     "illustrationSummary": null
   },
   {
@@ -2351,8 +2351,8 @@
     "categories": [
       "Travel & Transportation"
     ],
-    "uiSummary": "A vivid travel-booking interface with electric-blue and violet headers, large rounded white search panels, magenta promotional cards, photographic destination tiles, and compact structured order details.",
-    "illustrationSummary": "Ozon Travel uses bright campaign graphics that combine destination photography with oversized dimensional ribbons, rings, tags, and playful travel symbols."
+    "uiSummary": "A vivid travel-booking interface pairing electric-blue and magenta-violet brand fields with large rounded white search panels, friendly bold type, structured itinerary cards, real destination imagery, and glossy travel graphics.",
+    "illustrationSummary": "Ozon Travel uses a repeatable authored layer of glossy 3D travel objects, bright brand gradients, playful empty-state objects, and dimensional promotional motifs. It supports onboarding, category discovery, offers, and empty states while inventory screens continue to use real travel photography."
   },
   {
     "appId": "6a1da0d2e1e19dbccc49b25b",
@@ -2363,8 +2363,8 @@
       "Food and Drinks",
       "Shopping, Listings & Marketplaces"
     ],
-    "uiSummary": "A bright grocery marketplace built from fresh green actions, white commerce surfaces, reward-currency teal, generous product photography, and cheerful food mascots. Promotional hero scenes remain expressive while product cards stay compact and factual.",
-    "illustrationSummary": "Arbuz.kz uses smiling grocery characters, expressive shopping bags, and bright 3D food objects to explain promotions, rewards, subscription, favorites, and empty states."
+    "uiSummary": "A bright grocery-commerce interface with white shopping surfaces, fresh green conversion controls, teal reward prices, real product photography, and cheerful authored food characters used only for brand and promotional moments.",
+    "illustrationSummary": "Arbuz.kz has a stable authored illustration layer separate from ordinary shopping photography. Fresh Screen Gallery evidence shows repeated smiling food characters, shopping bags, coins, and product mascots across onboarding, hero promotions, profile cashback, referral, and subscription screens. These visuals are brand assets and must be produced as raster artwork before integration, not recreated with programmatic UI primitives."
   },
   {
     "appId": "6a208605d49b75f702a24605",
@@ -2374,7 +2374,7 @@
     "categories": [
       "Travel & Transportation"
     ],
-    "uiSummary": "A travel-commerce interface combining warm destination photography, white booking sheets, vivid violet actions, yellow brand labels, dense comparison cards, and thumb-level sticky filters.",
+    "uiSummary": "A travel-commerce interface that moves from full-bleed destination photography into precise white booking surfaces, black transactional headers, violet actions, yellow logo chips, and dense comparison cards.",
     "illustrationSummary": null
   },
   {
@@ -2385,7 +2385,7 @@
     "categories": [
       "Social Networking"
     ],
-    "uiSummary": "A bright, disciplined sports-social interface built on white, near-black type, light gray grouping surfaces, and a single high-energy orange accent. Bold sans-serif headings and large metric numerals make performance data immediate. Rounded selection tiles, compact progress indicators, activity photography, route maps, and simple line icons create a practical athletic tone without making the interface feel like a dashboard.",
+    "uiSummary": "A precise sports-tracking visual system built from white canvases, near-black typography, concentrated Strava orange actions, real activity photography, map surfaces, compact charts, and large metric numerals.",
     "illustrationSummary": null
   },
   {
@@ -2396,8 +2396,8 @@
     "categories": [
       "Shopping, Listings & Marketplaces"
     ],
-    "uiSummary": "A vehicle marketplace system using cool light-gray background, crisp white cards, Mycar blue actions, large automotive photography, green contact controls, and compact 3D service icons.",
-    "illustrationSummary": "Mycar uses compact 3D object renders to identify service categories and sparse line-and-object scenes for completion states, while real vehicle photography remains the primary commerce content."
+    "uiSummary": "A Kazakh automotive marketplace visual system with a cool gray app canvas, white and near-black rounded cards, Mycar blue platform actions, yellow finance highlights, green contact controls, real vehicle photography, and repeated 3D automotive service objects.",
+    "illustrationSummary": "Fresh Screen Gallery evidence shows a stable Mycar.kz authored illustration system across multiple home, service, listing, and dark-theme screens: compact glossy 3D automotive objects identify service categories and branded commerce modules. These illustrations support navigation and recognition, while real vehicle photography remains mandatory for marketplace listings and vehicle details. Any new illustration asset must be produced with an image-generation model, reviewed visually by the user, exported as a raster asset, and integrated into the app as imagery. Do not recreate these assets with SwiftUI shapes, SF Symbols, emoji, icon fonts, procedural gradients, or other programmatic substitutes."
   },
   {
     "appId": "6a2265ff48b982f261413ddd",
@@ -2407,8 +2407,8 @@
     "categories": [
       "Shopping, Listings & Marketplaces"
     ],
-    "uiSummary": "A compact automotive marketplace built from bright blue actions, white utility surfaces, black headings, pale blue contact controls, and dense vehicle photography. Home mixes categories, quick-find chips, listings, and dealer content; car detail and selling flows keep price, condition, location, contact, and promotion continuously visible.",
-    "illustrationSummary": null
+    "uiSummary": "A white, compact automotive marketplace visual system with black price-first typography, bright blue posting and progress actions, green seller-contact controls, dense vehicle photography, light gray taxonomy tiles, and pragmatic form screens.",
+    "illustrationSummary": "Fresh Screen Gallery evidence shows a recurring Avtoelon.uz authored category-art system on vehicle taxonomy and posting screens: cars, trucks, special equipment, buses, scooters, water transport, tools, and parts appear as clipped object artwork inside pale gray tiles. Use image-generation model output or authored raster assets for this system; do not recreate it with programmatic symbols."
   },
   {
     "appId": "6a22668348b982f261414aa2",
@@ -2418,8 +2418,8 @@
     "categories": [
       "Finance"
     ],
-    "uiSummary": "A high-density retail-banking interface combining bright Alatau blue, emphatic yellow actions, white rounded modules, and glossy 3D product objects. Five persistent tabs organize an unusually broad service catalogue, with light and dark themes sharing the same modular card hierarchy.",
-    "illustrationSummary": "Alatau City Bank uses glossy 3D finance objects, oversized metallic numbers, and softly modeled service icons to make a dense banking catalogue approachable."
+    "uiSummary": "A modular Kazakhstan banking visual system with blue promotional headers, bright yellow decisive actions, pill-shaped bottom navigation, rounded white finance modules, glossy 3D product objects, compact service icon grids, and a fully observed dark-theme counterpart.",
+    "illustrationSummary": "Fresh Screen Gallery evidence shows a stable authored illustration system across Alatau City Bank promotional heroes, product cards, deposit screens, sheets, and service rows. Use image-generation model output or authored raster assets for these visuals; do not substitute programmatic drawings."
   },
   {
     "appId": "6a2336aa07d8dbddb2bf3941",
@@ -2429,8 +2429,8 @@
     "categories": [
       "Finance"
     ],
-    "uiSummary": "A feature-rich banking interface built from vivid blue account headers, white rounded sheets, bold black monetary typography, pastel payment icons, multicolor gradients, and polished 3D product metaphors. It is broad, energetic, and conversion-oriented.",
-    "illustrationSummary": "The reviewed source uses imagery in the product roles documented below."
+    "uiSummary": "A broad mobile-banking interface with luminous blue-cyan financial fields, stacked white rounded sheets, bold monetary hierarchy, compact utility rows, and a dark-blue floating navigation pill.",
+    "illustrationSummary": null
   },
   {
     "appId": "6a243316ada15f70b1660dbe",
@@ -2440,8 +2440,8 @@
     "categories": [
       "Food and Drinks"
     ],
-    "uiSummary": "A warm loyalty-led coffee app built from deep roast-brown headers, bright turquoise actions, cream typography, white rounded menu cards, and carefully isolated product photography. Onboarding adds dark-green and aqua wave fields with playful cream stars and soft 3D scenes.",
-    "illustrationSummary": "Stars Coffee uses a celebratory brand illustration language in onboarding and loyalty communication."
+    "uiSummary": "A warm coffee-loyalty interface combining deep roast-brown and teal brand fields, cream display type, turquoise actions, rounded white product surfaces, and playful authored star-and-wave illustrations.",
+    "illustrationSummary": "Stars Coffee uses a repeatable authored illustration system for onboarding and selected brand/loyalty moments: flowing teal fields, oversized cream stars, cups, hands, phones, and friendly soft-dimensional objects. Catalog products and news remain photography/campaign content."
   },
   {
     "appId": "6a247d280c4ca5ed0096dfa4",
@@ -2451,8 +2451,8 @@
     "categories": [
       "Travel & Transportation"
     ],
-    "uiSummary": "A playful travel marketplace built from saturated Aviasales blue, white rounded cards, heavy black headings, orange purchase accents, destination photography, and humorous editorial illustration. Flight search, hotel discovery, experiences, favorites, and profile share a soft stacked-card system with clear price-led actions.",
-    "illustrationSummary": "Illustration carries Aviasales' playful voice in onboarding, promotions, loading, empty states, and reassurance. It should reduce anxiety without entering dense comparison or payment UI."
+    "uiSummary": "A playful travel marketplace with full blue brand fields, heavy rounded headings, stacked white search and result cards, compact price-led travel data, photography-led hotel discovery, and bold outlined cartoon moments.",
+    "illustrationSummary": "Aviasales uses a repeatable authored cartoon system for onboarding, loading, favorites, permission rationale, reassurance, and selected promotional moments. It is separate from hotel, destination, and map content photography."
   },
   {
     "appId": "6a2694ce8b578b37fc4c047b",
@@ -2462,8 +2462,8 @@
     "categories": [
       "Education"
     ],
-    "uiSummary": "A quiet learning workspace built from white and near-white surfaces, strong black typography, charcoal actions, thin gray structure, and collectible 3D course emblems. The interface gives the current course and next lesson clear priority while catalog, support, and account tools remain restrained.",
-    "illustrationSummary": "Yandex Practicum uses tactile 3D badges and course objects that turn professional subjects into collectible visual symbols."
+    "uiSummary": "A quiet learning workspace built from white and near-white surfaces, strong black editorial hierarchy, charcoal commitment actions, thin gray structure, text-heavy lessons, and isolated tactile course emblems.",
+    "illustrationSummary": null
   },
   {
     "appId": "6a280e09742fff99d5f571af",
@@ -2473,7 +2473,7 @@
     "categories": [
       "Shopping, Listings & Marketplaces"
     ],
-    "uiSummary": "A fashion-first shopping interface built on bright white surfaces, black editorial type, restrained hot-pink sale accents, and edge-to-edge model photography. Dense two-column product grids lead into long product pages, while a floating translucent bottom bar keeps discovery, search, bag, saved items, and account continuously available.",
+    "uiSummary": "A fashion-first white marketplace dominated by edge-to-edge model photography, black editorial and uppercase type, compact two-column product grids, restrained pink sale emphasis, and floating rounded navigation.",
     "illustrationSummary": null
   },
   {
@@ -2484,8 +2484,8 @@
     "categories": [
       "Finance"
     ],
-    "uiSummary": "A soft, futuristic banking interface built from mist-gray backgrounds, translucent white rounded cards, orange brand accents, violet controls, and high-contrast black totals. Credit, account, payments, cashback, installments, and savings share a floating modular dashboard; premium 3D product renders turn new financial products into tactile objects.",
-    "illustrationSummary": "Illustration turns new banking products into premium, tangible objects and supports acquisition without entering everyday money management."
+    "uiSummary": "A soft futuristic banking interface with mist-gray atmospheric fields, frosted white rounded modules, orange brand actions, bold financial numerals, floating pill navigation, and scoped glossy 3D product objects.",
+    "illustrationSummary": "Banco Plata uses a scoped but repeatable authored asset system for brand, cashback, and financial-product moments: glossy orange/white 3D objects, dimensional coins, soft gradient orbs, and rounded volumetric symbols. Operational balances, transfers, and statements remain illustration-free."
   },
   {
     "appId": "6a2aa21c05e4bea053d8e1dd",
@@ -2495,8 +2495,8 @@
     "categories": [
       "Finance"
     ],
-    "uiSummary": "A bright wallet-and-benefits interface built on a cool off-white canvas, white elevated cards, black text, yellow financial accents, and violet promotional objects. Core payments remain native and restrained, while loyalty and installment areas become more graphic and colorful.",
-    "illustrationSummary": "Simply uses glossy 3D promotional objects to represent cards, shopping, travel, entertainment, and partner benefits. The language belongs to promotions rather than operational finance screens."
+    "uiSummary": "A bright iOS banking language built from white financial surfaces, saturated yellow actions, restrained blue utility accents, bold numeric hierarchy, compact three-tab navigation, and authored mascot imagery.",
+    "illustrationSummary": "Simply uses a recurring authored mascot system for onboarding and identity-benefit moments. The art is a product-bearing visual layer, not a substitute for functional icons: a silver-gray anthropomorphic character stages simple financial ideas with cards, cash, transfer, or contactless props. Every new illustration must be created with an image-generation model, reviewed as a separate visual deliverable, and integrated only after approval as a raster asset."
   },
   {
     "appId": "6a2c30b705e4bea053e1cfdd",
@@ -2507,8 +2507,8 @@
       "Finance",
       "Telecom & Connectivity"
     ],
-    "uiSummary": "A mobile design system defined by navy confirmation, gradient balances, 3D service objects, structured receipts, and a central QR.",
-    "illustrationSummary": "MegaPay uses playful 3D objects and mascot-like product forms to humanize tariffs, family plans, eSIM, and service discovery."
+    "uiSummary": "A white iOS payments interface combining MegaPay green accents, dark decisive controls, compact numeric hierarchy, a raised central QR control, and glossy 3D object imagery on pale modular surfaces.",
+    "illustrationSummary": "MegaPay uses a stable object-based illustration system: isolated glossy 3D objects provide recognizable anchors for service categories, product states, promotions, and empty content. This is not a character narrative system. New artwork must be produced with an image-generation model, reviewed as a separate visual deliverable, and integrated only after approval as a raster asset."
   },
   {
     "appId": "6a2deca605e4bea053e67bc2",
@@ -2518,7 +2518,7 @@
     "categories": [
       "Finance"
     ],
-    "uiSummary": "A vivid mobile banking dashboard where each active card projects its own gradient atmosphere across the upper screen, while white rounded sheets hold quick actions and transaction lists. Electric blue controls, black financial values, colorful service tiles, and a four-tab navigation keep the dense feature set legible.",
+    "uiSummary": "A light iOS banking system with vivid blue controls, product-colored financial cards, bold amounts, flat white operational surfaces, compact four-item navigation, and rich but bounded banking imagery.",
     "illustrationSummary": null
   },
   {
@@ -2529,8 +2529,8 @@
     "categories": [
       "Telecom & Connectivity"
     ],
-    "uiSummary": "A bright telecom super-app built on white and pale gray, with a blue-to-violet central action, yellow commercial CTAs, candy-colored 3D service icons, and dense modular content. Rounded banners, compact category grids, media rails, and card-like tariff sections keep many services approachable without hiding their breadth.",
-    "illustrationSummary": "Janymda uses soft 3D object scenes in onboarding and rounded miniature objects for service icons."
+    "uiSummary": "A bright iOS telecom super-app combining white modular surfaces, yellow commercial actions, violet selected states, a raised central launcher, dense service grids, and friendly authored imagery.",
+    "illustrationSummary": "Janymda uses standalone authored human illustration in login and identity-entry moments. The observed scenes show simplified hands or a seated person with a phone against a large colored circle and open white background. This system is separate from glossy service icons, product photography, banners, logos, and wallet graphics. New scenes must be created with an image-generation model, reviewed as separate visual deliverables, and integrated only after approval as raster assets."
   },
   {
     "appId": "6a31c21df6d36d2b4dd48cc8",
@@ -2540,7 +2540,7 @@
     "categories": [
       "Travel & Transportation"
     ],
-    "uiSummary": "A bright photo-led travel marketplace combining Wildberries magenta, violet gradient actions, white search sheets, compact discount badges, rounded destination photography, and dense but orderly booking facts. Discovery is colorful and editorial; booking progressively strips back to structured white forms and price review.",
+    "uiSummary": "A photo-led iOS travel marketplace pairing pale booking surfaces with vivid WB magenta actions, bold price hierarchy, pill filters, centered navigation, and immersive destination imagery.",
     "illustrationSummary": null
   },
   {
@@ -2551,8 +2551,8 @@
     "categories": [
       "Food and Drinks"
     ],
-    "uiSummary": "A fast grocery interface combining a black delivery-status header, a white rounded shopping sheet, turquoise purchase actions, hot-pink promotion signals, playful dimensional category art, and dense product photography.",
-    "illustrationSummary": "Ozon Fresh mixes photographed food with small playful 3D pictograms and a recurring turquoise delivery-bag character."
+    "uiSummary": "A dense photo-led iOS grocery interface framed by a black delivery header, rounded white shopping sheets, teal purchase controls, pink promotion signals, compact five-tab navigation, and product-first imagery.",
+    "illustrationSummary": null
   },
   {
     "appId": "6a38f39b896161df4cc58fe8",
@@ -2562,7 +2562,7 @@
     "categories": [
       "Food and Drinks"
     ],
-    "uiSummary": "A high-energy food-ordering interface built around bright red calls to action, clean white commerce surfaces, condensed black display type, and large appetite-led photography. Product cards stay visually light, while maps and checkout details arrive in white rounded sheets above muted gray context.",
+    "uiSummary": "A photography-led food-ordering interface on clean white surfaces, with saturated red purchase controls, bold compact headings, rounded sheets, and a persistent red-selected bottom navigation.",
     "illustrationSummary": null
   },
   {
@@ -2573,7 +2573,7 @@
     "categories": [
       "Shopping, Listings & Marketplaces"
     ],
-    "uiSummary": "A maximalist discount marketplace built from white canvas, saturated orange commerce actions, green trust messaging, dense two-column product photography, compact black type, and constant urgency badges. Information density is intentional: price, rating, sales, stock, discount, and delivery remain visible together.",
+    "uiSummary": "A deliberately dense white marketplace interface driven by orange prices and purchase actions, green trust strips, compact utility typography, persistent navigation, and near-continuous product photography.",
     "illustrationSummary": null
   },
   {
@@ -2584,8 +2584,8 @@
     "categories": [
       "Food and Drinks"
     ],
-    "uiSummary": "A dense multi-store delivery marketplace on white and cool-gray grouped surfaces, anchored by near-black pill controls and a sharp electric-green accent. Product cutouts, merchant logos, and compact horizontal rails carry discovery; checkout becomes a calm sequence of rounded white sections with persistent dark actions.",
-    "illustrationSummary": "Kuper uses expressive object art for empty states and department shortcuts while keeping products and merchants photography-led."
+    "uiSummary": "A dense multi-store delivery marketplace on white and cool-gray surfaces, anchored by near-black pill controls, restrained green status accents, rounded commerce modules, and abundant product and merchant photography.",
+    "illustrationSummary": null
   },
   {
     "appId": "6a3c11de90f57f0cb4e27158",
@@ -2595,8 +2595,8 @@
     "categories": [
       "AI"
     ],
-    "uiSummary": "An intimate dark AI companion interface with a warm charcoal canvas, cream serif conversation text, a restrained mint-green voice action, hairline composer borders, and richly colored editorial discovery illustrations.",
-    "illustrationSummary": "Pi uses richly colored editorial illustrations to make prompts and self-reflection topics feel warm, imaginative, and human."
+    "uiSummary": "A calm, dark editorial assistant interface combining a charcoal full-screen field, warm off-white serif conversation type, restrained green identity accents, sparse centered composition, and small framed editorial imagery.",
+    "illustrationSummary": null
   },
   {
     "appId": "6a3d0366b9c6417248ce0fab",
@@ -2607,7 +2607,7 @@
       "Food and Drinks",
       "Shopping, Listings & Marketplaces"
     ],
-    "uiSummary": "A dense grocery marketplace on white, anchored by deep METRO blue, bright yellow loyalty accents, red prices and discounts, product pack shots, square category imagery, and a floating translucent bottom dock.",
+    "uiSummary": "A high-density grocery interface on white and cool-gray surfaces, using deep navy actions, yellow brand markers, red price emphasis, compact system type, floating navigation, and tightly controlled product photography.",
     "illustrationSummary": null
   },
   {
@@ -2618,8 +2618,8 @@
     "categories": [
       "Travel & Transportation"
     ],
-    "uiSummary": "A transit-and-wallet interface combining vivid electric blue, white rounded cards, warm yellow service icons, a dark slate wallet action strip, and map-heavy route planning. Colorful flat-isometric illustrations introduce payments and services, while the everyday workspace stays compact and highly functional.",
-    "illustrationSummary": "Illustration introduces wallet and transit concepts, explains payment steps, and promotes services without entering transaction history or route maps."
+    "uiSummary": "A bright transit-and-wallet interface combining white and light-gray utility surfaces, saturated blue financial emphasis, warm yellow service markers, map-backed sheets, compact system type, and an elevated central payment control.",
+    "illustrationSummary": null
   },
   {
     "appId": "6a43a392f577d3f8503459f8",
@@ -2640,7 +2640,7 @@
     "categories": [
       "Shopping, Listings & Marketplaces"
     ],
-    "uiSummary": "A dense general marketplace on white with cyan-blue navigation, yellow cart actions, bright category tiles, compact product grids, prominent discount labels, image-first discovery, and a floating five-destination navigation bar.",
+    "uiSummary": "A dense white marketplace visual system with cyan-blue discovery chrome, yellow purchase actions, photo-heavy product grids, compact category tiles, red discount labels, pale green benefit chips, and translucent iOS bars.",
     "illustrationSummary": null
   },
   {
@@ -2651,8 +2651,8 @@
     "categories": [
       "Travel & Transportation"
     ],
-    "uiSummary": "A cinematic dark mobility interface built from charcoal maps, smoked translucent sheets, brushed-metal controls, ember-orange primary actions, compact white telemetry, and an industrial sci-fi campaign layer. Vehicle discovery and active rides stay on the map while pricing, insurance, parking, and subscription details rise in dense rounded panels.",
-    "illustrationSummary": "The inspected Whoosh version uses a cinematic industrial sci-fi campaign language: metallic mechanical emblems, surveillance-eye details, weathered character renders, and hot orange light over a near-black interface."
+    "uiSummary": "A dark mobility visual system with charcoal maps, smoky rounded sheets, coral-orange decisive actions, brushed-metal secondary controls, compact white telemetry, and authored industrial campaign imagery.",
+    "illustrationSummary": "Fresh Screen Gallery evidence shows a repeated authored image layer in Whoosh: industrial campaign splash art, mechanical map emblems, themed task panels, small campaign cards, and thin outline drawings for subscription or empty states. Treat these as real raster assets that require art direction and approval, not as icons or code-drawn decoration. - Use an image-generation model or commissioned raster artwork for any new authored illustration, campaign object, empty-state drawing, or themed map marker. - Obtain explicit user visual approval for generated or sourced artwork before integrating it into the app. - Integrate approved artwork as raster assets with named light/dark or scale variants as needed. - Do not substitute SwiftUI shapes, SF Symbols, emoji, Lottie presets, stock pictograms, or other programmatic placeholders for authored imagery."
   },
   {
     "appId": "6a460b06fb9729c33da19650",
@@ -2662,8 +2662,8 @@
     "categories": [
       "Telecom & Connectivity"
     ],
-    "uiSummary": "A playful telecom super-app built from warm yellow, white bento cards, pale cool-gray backgrounds, black type, lavender plan gradients, and orange balance actions. Mobile service, products, store, protection, entertainment, AI, and history share a modular dashboard with expressive 3D objects, characters, and editorial campaign imagery.",
-    "illustrationSummary": "Illustration makes tariffs, services, entertainment, and AI feel approachable while account and security tasks remain functional."
+    "uiSummary": "A light, playful telecom dashboard built from a cold pale-gray canvas, inflated white cards, Beeline yellow controls, black utility type, lavender tariff bands, floating pill navigation, and authored yellow-black promotional art.",
+    "illustrationSummary": "Beeline uses a stable authored illustration language across onboarding, home promotions, tariff cards, service grids, and entertainment modules. The language is not generic iconography: it mixes yellow-black brand objects, soft 3D props, dot-matrix patterns, character art, and selected campaign photography to make telecom data feel playful while keeping account values clear. New illustration assets for this style must be generated or art-directed as raster imagery with an image-generation model or equivalent raster illustration workflow, then explicitly approved by the user visually before integration into the app. Generated or approved artwork must be integrated as image assets; SwiftUI shapes, SF Symbols, emoji, icon fonts, or other programmatic substitutes are not acceptable replacements for the authored art."
   },
   {
     "appId": "6a47b005ba7b674d6e3f4a92",
@@ -2674,8 +2674,8 @@
       "Food and Drinks",
       "Shopping, Listings & Marketplaces"
     ],
-    "uiSummary": "A bright grocery commerce system with a white canvas, unmistakable orange loyalty and checkout actions, lime promotional accents, compact product grids, a barcode-first rewards header, cheerful 3D food imagery, and a recurring orange cat mascot that guides delivery and savings.",
-    "illustrationSummary": "Dixy uses a cheerful orange cat mascot, gift props, food still lifes, and glossy promotional objects to make loyalty and delivery feel warm and energetic."
+    "uiSummary": "A bright grocery-commerce style built from white retail pages, a saturated orange loyalty and checkout system, compact product photography grids, purple promotional panels, lime benefit accents, and a repeated cheerful mascot used around delivery and savings.",
+    "illustrationSummary": "Dixy has a stable authored image language repeated across onboarding, delivery, loyalty, home promotions, category discovery, cart recommendations, and empty states. It combines a cheerful mascot, fruit and vegetable characters, gift props, food/product still lifes, and colorful campaign banners with the orange retail UI. New illustration assets for this style must be generated or art-directed as raster imagery with an image-generation model or equivalent raster illustration workflow, then explicitly approved by the user visually before integration into the app. Generated or approved artwork must be integrated as image assets; SwiftUI shapes, SF Symbols, emoji, icon fonts, or other programmatic substitutes are not acceptable replacements for the authored art."
   },
   {
     "appId": "6a4a6899b4a7e2ae47130a24",
@@ -2685,7 +2685,7 @@
     "categories": [
       "Productivity"
     ],
-    "uiSummary": "A white civic-services super-app using royal blue service icons, pale-blue controls, compact document cards, multicolor institutional logos, bright informational banners, dense categorized lists, and a five-tab navigation spanning home, QR, services, messages, and profile.",
+    "uiSummary": "A dense white civic-services interface with compact blue institutional icons, pale document cards, official-looking document imagery, bright informational banners, native iOS permission/authentication surfaces, and a restrained five-item bottom bar.",
     "illustrationSummary": null
   },
   {
@@ -2696,8 +2696,8 @@
     "categories": [
       "Travel & Transportation"
     ],
-    "uiSummary": "A light mobility interface centered on turquoise actions, white floating sheets, map-led trip states, and mint-tinted service cards. Friendly 3D vehicle objects and circular feedback illustrations soften a highly operational booking and safety flow.",
-    "illustrationSummary": "Green SM uses small dimensional vehicles and friendly circular feedback scenes to humanize mobility, safety, and post-trip evaluation."
+    "uiSummary": "A light electric-mobility interface with turquoise CTAs, airy white screens, soft 3D transport objects, map-first booking states, rounded bottom sheets, compact profile rows, and a floating frosted pill tab bar.",
+    "illustrationSummary": "Green SM has a stable authored illustration language across onboarding, home service tiles, profile prompts, payment empty states, and passcode/security screens. Treat it as a required raster asset system, not as decorative icons that can be recreated with programmatic shapes."
   },
   {
     "appId": "6a4baec3ba7b674d6e4ebecb",
@@ -2707,7 +2707,7 @@
     "categories": [
       "Food and Drinks"
     ],
-    "uiSummary": "A practical grocery-commerce interface built on white surfaces, saturated orange actions and headers, fresh green promotional imagery, and dense product photography. Soft cards, compact prices, and a five-destination bottom bar balance discovery with fast repeat shopping.",
+    "uiSummary": "A bright grocery interface combining white commerce surfaces, broad orange-and-yellow brand masses, red price emphasis, softly elevated rounded cards, persistent bottom navigation, and dense product photography.",
     "illustrationSummary": null
   },
   {
@@ -2718,8 +2718,8 @@
     "categories": [
       "Finance"
     ],
-    "uiSummary": "A bright loan-management interface built from white space, Airba cyan, blue-to-violet gradients, compact finance cards, and friendly glossy objects. The system keeps calculations and verification practical while using a slim header and four-item bottom navigation.",
-    "illustrationSummary": "Airba pay uses small glossy 3D finance and shopping objects to explain loans, verification, repayment, and partner purchasing without overwhelming the forms."
+    "uiSummary": "A sparse white financial interface with cyan-blue actions, thin outlined inputs, compact black utility icons, restrained pale cards, a blue-to-violet loan hero, and large numeric emphasis.",
+    "illustrationSummary": null
   },
   {
     "appId": "6a4e1f3dba7b674d6e5dd33e",
@@ -2729,7 +2729,7 @@
     "categories": [
       "Shopping, Listings & Marketplaces"
     ],
-    "uiSummary": "A compact grocery marketplace on white with deep raspberry commerce actions, pale pink category tiles, strong black headings, product pack shots, outlined quantity steppers, and a simple five-item navigation bar.",
+    "uiSummary": "A white-first grocery marketplace defined by saturated magenta actions and prices, bold compact headings, dense product photography, pale search and form surfaces, rounded sheets, and a magenta-selected bottom bar.",
     "illustrationSummary": null
   },
   {
@@ -2741,7 +2741,7 @@
       "Food and Drinks",
       "Shopping, Listings & Marketplaces"
     ],
-    "uiSummary": "A bright, practical grocery interface combining Auchan red, purchase green, white space, compact product grids, loyalty modules, and sticky cart actions.",
+    "uiSummary": "A white and light-gray grocery interface combining green purchase controls, red loyalty and discount masses, compact bold headings, dense product imagery, fixed commerce actions, and simple line-icon navigation.",
     "illustrationSummary": null
   },
   {
@@ -2754,8 +2754,8 @@
       "Communication",
       "Entertainment"
     ],
-    "uiSummary": "A black ADHD-support interface with condensed white display type, electric blue task actions, hot orange-red streak energy, sparse outlined controls, and saturated editorial story graphics.",
-    "illustrationSummary": "Numo uses bold editorial graphics for learning collections and onboarding: saturated texture fields, oversized condensed lettering, arrows, simple symbols, cutout photography, and irregular collage shapes."
+    "uiSummary": "A black-first productivity interface with heavy condensed white headings, electric-blue actions and task surfaces, charcoal rounded panels, large outline navigation, and occasional high-contrast photo-collage brand moments.",
+    "illustrationSummary": null
   },
   {
     "appId": "6a53f4aaba7b674d6e7ae741",
@@ -2765,7 +2765,7 @@
     "categories": [
       "Food and Drinks"
     ],
-    "uiSummary": "A playful quick-commerce interface built on near-white and pale lilac surfaces, bold black headings, hot-pink actions, and dense product photography. Organic color blobs frame assortment imagery, while commerce controls stay compact, rounded, and direct.",
+    "uiSummary": "A fast grocery interface pairing hot-pink brand and purchase masses with white and light-gray commerce surfaces, dark rounded search, dense product photography, circular navigation controls, and stacked rounded transactional panels.",
     "illustrationSummary": null
   },
   {
@@ -2776,8 +2776,8 @@
     "categories": [
       "Food and Drinks"
     ],
-    "uiSummary": "A rapid-grocery storefront on a white canvas, combining sky-blue service identity, saturated yellow checkout controls, green delivery promises, black heavy headings, and dense product photography. Pastel photographic category tiles, compact discount badges, sticky delivery bars, and circular add controls keep a large assortment fast to scan.",
-    "illustrationSummary": null
+    "uiSummary": "A bright grocery-commerce interface built from white space, dense product photography, yellow actions, blue brand accents, compact rounded controls, and persistent commerce bars.",
+    "illustrationSummary": "Yandex Lavka uses authored illustration as a focused product-supporting layer rather than as the default content medium. The observed art appears in account and promotional contexts as a large grocery-object composition or a playful character scene, creating a friendly pause inside an otherwise photography-led commerce interface."
   },
   {
     "appId": "6a59d995f5f643cb6d40e25a",
@@ -2787,8 +2787,8 @@
     "categories": [
       "Finance"
     ],
-    "uiSummary": "A white, modular banking interface with near-black navigation, a vivid red-magenta action core, colorful product cards, precise finance charts, and playful dimensional payment-category objects. Rounded modules keep cards, transfers, payments, and analytics compact without sacrificing trust.",
-    "illustrationSummary": "Home Credit Bank uses small dimensional objects to distinguish payment categories and lightweight financial utilities."
+    "uiSummary": "A restrained white banking interface with dark high-contrast actions, red-magenta navigation accents, pale grouped surfaces, large financial numerals, and compact native-like controls.",
+    "illustrationSummary": null
   },
   {
     "appId": "6a5a26b5fadf55f509fecd8c",
@@ -2798,7 +2798,7 @@
     "categories": [
       "Food and Drinks"
     ],
-    "uiSummary": "A photo-led food-delivery marketplace on a clean white canvas, anchored by saturated yellow purchase controls, black condensed display type, green delivery badges, and dense restaurant metadata. Large rounded food images, horizontal category and filter strips, sticky cart totals, and map-backed tracking keep commerce fast and legible.",
+    "uiSummary": "A photo-led white food-commerce interface with saturated yellow actions, heavy compact headings, green delivery accents, dense rounded controls, and map-backed order surfaces.",
     "illustrationSummary": null
   },
   {
@@ -2809,8 +2809,8 @@
     "categories": [
       "Finance"
     ],
-    "uiSummary": "A service-heavy financial super-app organized through white surfaces, Halyk green line icons, compact category grids, commerce banners, and yellow insurance accents. The system favors direct access and visible breadth over spacious minimalism.",
-    "illustrationSummary": "Halyk uses compact polished 3D objects in banners and empty states to distinguish services and soften administrative tasks."
+    "uiSummary": "A dense white-and-pale-gray financial super-app with green actions and selected navigation, compact service grids, rounded product cards, promotional banners, and large numeric summaries.",
+    "illustrationSummary": null
   },
   {
     "appId": "6a5fdcb61988545753a73887",
@@ -2820,8 +2820,8 @@
     "categories": [
       "Education"
     ],
-    "uiSummary": "A bright interactive-learning interface with white space, heavy black hierarchy, vivid blue or green lesson actions, soft-gray containers, and compact 3D diagrams. Progress is expressed through short checks, skill paths, manipulable visual models, and immediate explanations rather than long reading.",
-    "illustrationSummary": "Illustration is an interactive teaching model, not decoration. It turns abstract math, science, logic, and code into objects the learner can inspect or manipulate."
+    "uiSummary": "A spacious white interactive-learning interface with bold rounded headings, bright blue actions, green progress accents, centered educational models, pill navigation, and a fully developed charcoal dark appearance.",
+    "illustrationSummary": "Brilliant uses a stable authored illustration system as instructional content and course identity. Rounded 3D and vector models translate abstract math, science, logic, and coding concepts into inspectable objects, while medals, league forms, course tiles, and a soft mascot-like figure extend the same language into progress and identity surfaces."
   },
   {
     "appId": "6a60c7c11988545753ae4e28",
@@ -2831,8 +2831,8 @@
     "categories": [
       "Lifestyle"
     ],
-    "uiSummary": "A vivid habit and fitness dashboard built from electric cobalt gradients, translucent blue layers, oversized black metrics, white pill controls, and sharp lemon-to-mint progress accents. Large graphic cards turn steps, water, plans, and countdowns into bold daily rituals.",
-    "illustrationSummary": "GO Club uses bold graphic objects and compact line-art scenes as motivational companions to metrics and plans."
+    "uiSummary": "A full-screen electric-blue fitness dashboard with oversized metrics, white and near-black rounded sheets, translucent pill navigation, neon yellow and mint accents, and sparse rendered habit objects.",
+    "illustrationSummary": null
   },
   {
     "appId": "6a614de01988545753b1e8a8",

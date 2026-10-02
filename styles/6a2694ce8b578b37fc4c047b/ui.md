@@ -3,201 +3,97 @@
 version: 1
 platform: iOS
 name: Yandex-Practicum-design-analysis
-description: "A quiet learning workspace built from white and near-white surfaces, strong black typography, charcoal actions, thin gray structure, and collectible 3D course emblems. The interface gives the current course and next lesson clear priority while catalog, support, and account tools remain restrained."
-
+description: "A quiet learning workspace built from white and near-white surfaces, strong black editorial hierarchy, charcoal commitment actions, thin gray structure, text-heavy lessons, and isolated tactile course emblems."
 colors:
-  primary: "#242426"
-  on-primary: "#FFFFFF"
-  primary-pressed: "#0F0F10"
-  accent-blue: "#3A9CD6"
-  accent-orange: "#FF6A3D"
-  ink: "#171719"
-  ink-muted: "#6F7074"
-  ink-subtle: "#A6A7AB"
   canvas: "#FFFFFF"
-  surface-1: "#FFFFFF"
-  surface-2: "#F5F5F5"
-  surface-3: "#EDEDEE"
-  hairline: "#DEDFE1"
-  semantic-success: "#2D9C68"
-  semantic-warning: "#E3A316"
-  semantic-danger: "#DE4848"
-  semantic-overlay: "#000000"
-
+  surface-primary: "#FFFFFF"
+  surface-secondary: "#F5F5F5"
+  accent-primary: "#242426"
+  accent-secondary: "#3A9CD6"
+  text-primary: "#171719"
+  text-secondary: "#6F7074"
+  divider: "#DEDFE1"
+  destructive: "#DE4848"
 typography:
-  display-xl: { fontFamily: YS Text, fontSize: 36, fontWeight: 750, lineHeight: 1.05, letterSpacing: -0.8 }
-  display-lg: { fontFamily: YS Text, fontSize: 30, fontWeight: 700, lineHeight: 1.1, letterSpacing: -0.55 }
-  display-md: { fontFamily: YS Text, fontSize: 25, fontWeight: 700, lineHeight: 1.15, letterSpacing: -0.35 }
-  headline: { fontFamily: YS Text, fontSize: 21, fontWeight: 650, lineHeight: 1.2, letterSpacing: -0.2 }
-  card-title: { fontFamily: YS Text, fontSize: 16, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: YS Text, fontSize: 15, fontWeight: 500, lineHeight: 1.35, letterSpacing: 0 }
-  body-lg: { fontFamily: YS Text, fontSize: 16, fontWeight: 400, lineHeight: 1.45, letterSpacing: 0 }
-  body: { fontFamily: YS Text, fontSize: 14, fontWeight: 400, lineHeight: 1.4, letterSpacing: 0 }
-  body-sm: { fontFamily: YS Text, fontSize: 12, fontWeight: 400, lineHeight: 1.32, letterSpacing: 0 }
-  caption: { fontFamily: YS Text, fontSize: 11, fontWeight: 450, lineHeight: 1.25, letterSpacing: 0 }
-  button: { fontFamily: YS Text, fontSize: 14, fontWeight: 600, lineHeight: 1.2, letterSpacing: 0 }
-  eyebrow: { fontFamily: YS Text, fontSize: 11, fontWeight: 650, lineHeight: 1.2, letterSpacing: 0.1 }
-  mono: { fontFamily: System Mono, fontSize: 12, fontWeight: 400, lineHeight: 1.4, letterSpacing: 0 }
-
-rounded: { xs: 4, sm: 8, md: 12, lg: 16, xl: 20, xxl: 28, pill: 9999, full: 9999 }
-spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
-
+  hero: {fontFamily: "SF Pro Display", fontSize: 36, fontWeight: 750, lineHeight: 40}
+  title: {fontFamily: "SF Pro Display", fontSize: 30, fontWeight: 700, lineHeight: 35}
+  section: {fontFamily: "SF Pro Text", fontSize: 21, fontWeight: 650, lineHeight: 26}
+  body: {fontFamily: "SF Pro Text", fontSize: 16, fontWeight: 400, lineHeight: 23}
+  label: {fontFamily: "SF Pro Text", fontSize: 14, fontWeight: 600, lineHeight: 19}
+  caption: {fontFamily: "SF Pro Text", fontSize: 12, fontWeight: 450, lineHeight: 16}
+spacing:
+  screen-horizontal: 16
+  section-gap: 30
+  card-padding: 16
+  control-gap: 10
+rounded:
+  control: 10
+  card: 16
+  sheet: 26
+  pill: 999
 components:
-  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [14, 20]}
-  button-secondary: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [12, 16]}
-  course-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 16 }
-  search-input: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.pill}", padding: [11, 14]}
-  progress-bar: { backgroundColor: "{colors.surface-3}", textColor: "{colors.primary}", typography: "{typography.caption}", rounded: "{rounded.pill}", padding: 0 }
-  bottom-nav: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.caption}", rounded: "{rounded.xs}", height: 58 }
+  primary-action: {fill: "#242426", textColor: "#FFFFFF", cornerRadius: 10, minHeight: 50}
+  secondary-action: {fill: "#F5F5F5", textColor: "#171719", cornerRadius: 10, minHeight: 46}
+  primary-card: {fill: "#FFFFFF", borderColor: "#DEDFE1", cornerRadius: 16, padding: 16}
+  navigation: {fill: "#FFFFFF", selectedColor: "#171719", unselectedColor: "#8A8B8F"}
 ---
 
 # Overview
 
-Yandex Practicum is a restrained learning companion where monochrome structure and one tactile course emblem keep attention on progress and the next action.
+Yandex Practicum is a restrained, text-first learning product. White and near-white surfaces, strong black headings, charcoal actions, and thin gray structure keep attention on the current course, next lesson, catalog, or exercise. Tactile 3D course emblems appear as isolated catalog/product identity assets, while lessons mix real screenshots, photography, and instructional drawings.
 
 # Non-negotiable visual invariants
 
-- The reviewed screens use this composition: A quiet learning workspace built from white and near-white surfaces, strong black typography, charcoal actions, thin gray structure, and collectible 3D course emblems.
-- The dominant canvas token is #FFFFFF and the primary accent token is #242426.
-- The recorded display style is 36 points while the body style is 14 points.
-- Navigation uses a four-item bottom bar for Learning, Catalog, Support, and Account.
-- The reviewed screens use this hierarchy: The interface gives the current course and next lesson clear priority while catalog, support, and account tools remain restrained.
+- White/near-white fills most of the viewport; color in permanent chrome is minimal.
+- Large bold black headings establish a strong editorial reading order.
+- Primary commitment actions are charcoal/black with white labels, not default blue.
+- Course and lesson content uses long-form vertical composition with generous line spacing.
+- Catalog/course cards may feature one large isolated 3D emblem aligned with concise text.
+- Bottom navigation is a restrained white four-item bar with black selected state.
+- Sticky bottom CTAs remain visually separate from scrollable course/detail content.
 
 # Color and surfaces
 
-Use white, near-white, black, and soft gray for the shell. Let each course emblem supply a controlled accent.
-
-### Brand & Accent
-
-Use charcoal for primary actions and Practicum identity; use blue for completion checks and course-specific color only in bounded artwork.
-
-### Surface
-
-Use white pages, very pale section panels, and clean cards with faint separation rather than heavy outlines.
-
-### Text
-
-Use near-black for titles and lessons, medium gray for duration and description, and subtle gray for disabled or completed-secondary information.
-
-### Semantic
-
-Use blue or green checks for completed lessons, amber for deadlines, red for errors, and course colors only for identity.
+White is the canvas and primary surface; near-white and soft gray group cards, fields, and inactive areas. Black/charcoal owns primary text and actions. Course emblems introduce controlled local colors without becoming global UI accents. Green marks correct/selected exercise states, while red marks errors and blue may appear in isolated links/welcome gradients. Large decorative color fields beyond sign-in/welcome would break the restrained learning shell.
 
 # Typography
 
-Typography is direct and instructional, with bold course titles and compact curriculum lists.
-
-### Font Family
-
-Use YS Text or a neutral grotesk with clear Cyrillic and long-form readability.
-
-### Principles
-
-Use sentence case, keep lesson names scannable, and pair progress numbers with visual progress rather than color alone.
-
-### Note on Font Substitutes
-
-Use SF Pro or Inter when YS Text is unavailable; preserve generous line-height in lesson content.
+Use SF Pro when the source face is unavailable. Page/course titles are large and bold; lesson body text is comfortable and text-heavy; helper labels and progress metadata are smaller gray. Maintain obvious separation among title, lesson heading, body, caption, and action. At Dynamic Type sizes, preserve long-form reading, allow course cards and choice rows to grow, and keep the sticky action accessible without covering content.
 
 # Screen composition
 
-Use one active-course hero, stacked assignment and news sections, filterable catalog lists, and focused curriculum overlays.
+Sign-in may use a restrained blue gradient, then the app becomes predominantly white. Main learning screens stack the current-course/next-action region and supporting cards. Catalog uses vertical cards with concise text on the left and a large isolated 3D course emblem on the right. Course detail is a long scroll with chips/tabs, content blocks, and a sticky black CTA. Lessons are editorial one-column pages with close/overflow controls and embedded instructional media. Exercises use grouped answer choices and a bottom action. Support uses standard chat composition.
 
-### Grid & Container
-
-The phone layout is a single column. Course catalog cards align text left and a compact emblem right.
-
-### Whitespace Philosophy
-
-Give the current course and next action space; keep curriculum lists dense enough to communicate sequence and progress.
+Visible archetypes include sign-in; empty and active learning home; catalog; course detail/purchase; long-form lesson; single-choice exercise; support chat; and account/profile.
 
 # Navigation appearance
 
-Use a four-item bottom bar for Learning, Catalog, Support, and Account. Keep the active course within one tap of launch.
+Bottom navigation is a clean white four-item bar with compact icons/labels and strong black selected state. Course detail uses simple top controls plus compact chips/tabs. Lesson screens use close and overflow buttons instead of a large navigation header. Bottom sheets are white with rounded top corners. Sticky CTAs sit on a white bottom surface above the home indicator. Navigation stays quiet and monochrome.
 
 # Components
 
-Native scrolling, keyboard, and messaging behavior are acceptable, but visible controls must inherit Practicum monochrome, radii, and typography.
-
-### Buttons
-
-Use charcoal rectangles for Continue and primary choices, pale gray secondary actions, and text links for low-priority navigation.
-
-Use outlined discipline chips and compact dropdown filters in Catalog; selected states become darker or lightly filled.
-
-### Cards & Containers
-
-Course cards pair program facts with an emblem. Learning cards show progress, Continue, assignment status, and important updates.
-
-### Inputs & Forms
-
-Use white or pale fields with thin borders, compact search, and simple message composition in Support.
-
-### Status & Build Page
-
-Show course progress, completed lessons, assignment availability, archive count, online support, and payment schedule with explicit labels.
-
-### Navigation
-
-Use a four-item bottom bar for Learning, Catalog, Support, and Account. Keep the active course within one tap of launch.
+Primary actions are black rounded rectangles with white semibold labels. Course cards combine a bold title, concise supporting data, and a large isolated emblem. Chips and tabs are compact with black selected treatment. Progress uses thin neutral tracks. Checkout uses step dots, form rows, and bottom sheets. Exercise choices are broad white/gray rows with clear radio/selected state; correct selection may use green. Chat uses conventional message/composer geometry explicitly styled in the neutral palette. Disabled states preserve geometry and mute contrast.
 
 # Imagery and icons
 
-Use subtle card separation, modal overlays, and small artwork shadows. Avoid layered chrome around lesson content.
-
-### Decorative Depth
-
-Use tactile 3D course emblems and small benefit objects as the only pronounced depth; the learning shell remains flat.
+Catalog course emblems are authored 3D product assets, while graduate portraits, screenshots, lesson drawings, and chat content belong to separate content roles. The inspected screens do not establish one independent app-wide illustration system across these mixed media. Preserve the large emblem role in catalog cards and the authenticity of instructional media; do not invent a unifying illustration grammar. Icons are restrained black/gray utility symbols.
 
 # States
 
-Show course progress, completed lessons, assignment availability, archive count, online support, and payment schedule with explicit labels.
+Observed states include sign-in, no active course, active course, catalog/filter, course purchase, long-form lesson, answer selection with green selected state, keyboard-active support chat, and account/profile. White/black hierarchy remains constant; local course art or instructional media changes without recoloring the shell. Errors use local red and disabled actions use pale gray.
 
 # iOS adaptation
 
-Use additional width for navigation and curriculum context rather than oversized cards.
-
-Phones use one column and overlays; larger screens may place course navigation beside lesson content and show a denser catalog grid.
-
-### Touch Targets
-
-Continue, lesson, course, filter, search, support, account row, and bottom navigation targets require at least 44pt.
-
-### Collapsing Strategy
-
-Keep course title, progress, next lesson, Continue, and assignment status; collapse secondary news and long catalog metadata first.
-
-### Image Behavior
-
-Use contain for course emblems and benefit objects, stable square frames in the catalog, and no decorative cropping.
-
-On iPhone, respect top and bottom safe areas, use scrolling for content that does not fit, keep interactive targets at least 44 points, and preserve the visual reading order for VoiceOver. At larger Dynamic Type sizes, allow supporting text to wrap without collapsing the dominant hierarchy. Use native sheets and permission transitions while explicitly styling app-owned surfaces to match the reference.
+Respect white safe areas and keep sticky CTAs/bottom navigation above the home indicator. Use vertical scroll containers for catalog/detail/lesson, keyboard-aware chat/forms, and avoid nested scroll conflicts. Maintain 44-point targets for tabs, chips, lesson controls, answer rows, and navigation. VoiceOver should read course/lesson title, progress/state, main content, and action in order; decorative course emblems may have concise identity labels. Dynamic Type expands text-heavy pages and rows. Compact widths keep one-column editorial flow and move card emblems below text if necessary.
 
 # Anti-generic checklist
 
-- Do not substitute the documented accent hierarchy with default iOS blue.
-- Do not collapse distinct surfaces into a uniform stack of generic white cards.
-- Do not use an unstyled `TabView`, `Form`, or arbitrary SF Symbols when they contradict the documented navigation and component language.
-- Do not flatten the documented typography into one body-text scale.
-- Do not remove compositionally important photography or illustration while assets are pending.
-- Do not apply one corner radius to every control and surface.
-
-Source-specific guardrails retained from the review:
-
-Prioritize learning continuity and course clarity.
-
-### Do
-
-- Put the next lesson and Continue action first.
-- Keep curriculum progress visible.
-- Use course emblems consistently.
-- Style native controls in the Practicum system.
-
-### Don't
-
-- Do not use default platform blue.
-- Do not turn every course into a colorful theme.
-- Do not hide completed state behind color alone.
-- Do not decorate lesson content unnecessarily.
+- Do not replace black commitment actions with default blue.
+- Do not turn every lesson or catalog section into a shadowed card.
+- Do not flatten title, lesson heading, body, caption, and action into similar sizes.
+- Do not use an unstyled `TabView`, `Form`, `ProgressView`, or chat composer.
+- Do not omit catalog emblems or instructional media where compositionally present.
+- Do not claim mixed emblems, photography, screenshots, and lesson drawings as one illustration system.
+- Do not add mood or motivational copy that duplicates the visible course context.
 
 </design-context>

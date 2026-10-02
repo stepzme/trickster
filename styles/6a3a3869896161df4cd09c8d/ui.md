@@ -3,234 +3,95 @@
 version: 1
 platform: iOS
 name: Kuper-design-analysis
-description: "A dense multi-store delivery marketplace on white and cool-gray grouped surfaces, anchored by near-black pill controls and a sharp electric-green accent. Product cutouts, merchant logos, and compact horizontal rails carry discovery; checkout becomes a calm sequence of rounded white sections with persistent dark actions."
+description: "A dense multi-store delivery marketplace on white and cool-gray surfaces, anchored by near-black pill controls, restrained green status accents, rounded commerce modules, and abundant product and merchant photography."
 colors:
-  primary: "#171518"
-  on-primary: "#FFFFFF"
-  primary-focus: "#090809"
-  ink: "#19171A"
-  ink-muted: "#747176"
-  ink-subtle: "#A5A2A7"
-  ink-tertiary: "#C6C3C8"
-  canvas: "#FFFFFF"
-  surface-1: "#F6F5F7"
-  surface-2: "#EFEEF1"
-  surface-3: "#E5E3E7"
-  surface-4: "#DAD7DC"
-  hairline: "#E9E7EB"
-  hairline-strong: "#D5D2D7"
-  hairline-tertiary: "#BBB7BE"
-  inverse-canvas: "#171518"
-  inverse-surface-1: "#2B282C"
-  inverse-surface-2: "#403C41"
-  inverse-ink: "#FFFFFF"
-  brand-secure: "#00E982"
-  semantic-success: "#00EA80"
-  semantic-overlay: "#171518"
+  canvas: "#F6F5F7"
+  surface-primary: "#FFFFFF"
+  surface-secondary: "#EFEEF1"
+  accent-primary: "#181619"
+  accent-secondary: "#00D978"
+  text-primary: "#19171A"
+  text-secondary: "#747176"
+  divider: "#E5E3E7"
+  destructive: "#E04444"
 typography:
-  display-xl: {fontFamily: SF Pro Display, fontSize: 36, fontWeight: 700, lineHeight: 1.06, letterSpacing: -0.9}
-  display-lg: {fontFamily: SF Pro Display, fontSize: 30, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.6}
-  display-md: {fontFamily: SF Pro Display, fontSize: 24, fontWeight: 700, lineHeight: 1.14, letterSpacing: -0.3}
-  headline: {fontFamily: SF Pro Display, fontSize: 20, fontWeight: 700, lineHeight: 1.20, letterSpacing: -0.2}
-  card-title: {fontFamily: SF Pro Text, fontSize: 16, fontWeight: 600, lineHeight: 1.24, letterSpacing: 0}
-  subhead: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 600, lineHeight: 1.30, letterSpacing: 0}
-  body-lg: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0}
-  body: {fontFamily: SF Pro Text, fontSize: 13, fontWeight: 400, lineHeight: 1.36, letterSpacing: 0}
-  body-sm: {fontFamily: SF Pro Text, fontSize: 11, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0}
-  caption: {fontFamily: SF Pro Text, fontSize: 10, fontWeight: 400, lineHeight: 1.25, letterSpacing: 0}
-  button: {fontFamily: SF Pro Text, fontSize: 14, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0}
-  eyebrow: {fontFamily: SF Pro Text, fontSize: 10, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0.1}
-  mono: {fontFamily: SF Mono, fontSize: 11, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0}
-rounded:
-  xs: 6
-  sm: 10
-  md: 14
-  lg: 18
-  xl: 22
-  xxl: 28
-  pill: 9999
-  full: 9999
+  hero: {fontFamily: "SF Pro Display", fontSize: 34, fontWeight: 700, lineHeight: 39}
+  title: {fontFamily: "SF Pro Display", fontSize: 28, fontWeight: 700, lineHeight: 33}
+  section: {fontFamily: "SF Pro Text", fontSize: 20, fontWeight: 700, lineHeight: 25}
+  body: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 400, lineHeight: 20}
+  label: {fontFamily: "SF Pro Text", fontSize: 14, fontWeight: 600, lineHeight: 18}
+  caption: {fontFamily: "SF Pro Text", fontSize: 11, fontWeight: 400, lineHeight: 15}
 spacing:
-  xxs: 4
-  xs: 8
-  sm: 12
-  md: 16
-  lg: 20
-  xl: 24
-  xxl: 32
-  section: 40
+  screen-horizontal: 16
+  section-gap: 24
+  card-padding: 14
+  control-gap: 8
+rounded:
+  control: 16
+  card: 20
+  sheet: 28
+  pill: 999
 components:
-  button-primary: {backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: [14, 20]}
-  button-primary-pressed: {backgroundColor: "{colors.primary-focus}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.pill}"}
-  button-secondary: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: [12, 18]}
-  button-tertiary: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: [10, 14]}
-  button-inverse: {backgroundColor: "{colors.semantic-success}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: [12, 18]}
-  merchant-card: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 12}
-  department-tile: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.caption}", rounded: "{rounded.md}", padding: 8}
-  search-field: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink-muted}", typography: "{typography.body}", rounded: "{rounded.pill}", padding: [11, 14]}
-  checkout-section: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 14}
-  bottom-nav: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink-subtle}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: [8, 10]}
+  primary-action: {fill: "accent-primary", text: "white semibold", shape: "wide pill"}
+  secondary-action: {fill: "surface-primary", text: "text-primary", shape: "pill"}
+  primary-card: {fill: "surface-primary", imagery: "merchant or product media", shape: "rounded rectangle"}
+  navigation: {fill: "surface-primary", selected: "text-primary", unselected: "text-secondary"}
 ---
 
 # Overview
 
-Kuper is a compact delivery marketplace with strong black controls, electric-green brand moments, and image-led departments across restaurants, groceries, and general goods.
-
-**Key Characteristics:**
-- Address-first discovery.
-- Dense horizontal rails and merchant lists.
-- Dark pill controls and cart actions.
-- Cool-gray grouped surfaces with rounded white sections.
-- Isolated product objects and merchant photography.
+Kuper is a dense delivery marketplace whose structure comes from cool-gray grouping, white rounded modules, near-black action pills, and a continuous mix of merchant branding, product packshots, and promotional photography. Green appears as a precise status or brand accent rather than a large background. The interface should feel operational and merchandise-rich, not like a generic lifestyle dashboard.
 
 # Non-negotiable visual invariants
 
-- The reviewed screens show this treatment: Address-first discovery.
-- The reviewed screens show this treatment: Dense horizontal rails and merchant lists.
-- The reviewed screens show this treatment: Dark pill controls and cart actions.
-- The reviewed screens show this treatment: Cool-gray grouped surfaces with rounded white sections.
-- The reviewed screens show this treatment: Isolated product objects and merchant photography.
+- White rounded commerce modules sit on a cool, very light gray canvas rather than on a pure-white undifferentiated page.
+- Near-black wide pills carry primary commitment and sticky cart or checkout actions.
+- Product packshots, store logos, and merchant banners occupy a substantial share of browsing screens and cannot be replaced by symbols.
+- Discovery remains dense through horizontal rails, compact tiles, and multi-column product layouts.
+- Green is a small, high-contrast brand or positive-status accent, not the dominant surface color.
+- Sheets and anchored bottom actions use generous rounding while product tiles use tighter geometry.
+- Typography stays compact and utilitarian below clear, bold section headings.
 
 # Color and surfaces
 
-### Brand & Accent
-
-Near-black is the main control color. Electric green is a selective brand, positive-state, and feedback accent rather than a general surface fill.
-
-### Surface
-
-White carries content; cool pale gray separates home modules, cart groups, and checkout sections.
-
-### Text
-
-Near-black carries headings, prices, and actions. Mid-gray supports delivery terms and secondary facts; green highlights benefits.
-
-### Semantic
-
-Green marks favorable delivery, bonuses, selected positive states, and confirmation. Merchant campaign colors remain confined to their own assets.
+The base alternates between a cool pale-gray canvas and white cards, fields, and sheets. Near-black is used for primary buttons, selected emphasis, and strong text. Bright green is limited to positive status, brand moments, or a focused action accent. Medium gray supports metadata and inactive navigation; subtle gray dividers or spacing separate rows. Promotional banners may introduce external merchant colors, but app-owned structure remains neutral. Default system blue or a large green background would visibly distort the observed hierarchy.
 
 # Typography
 
-### Font Family
-
-Use SF Pro Display for headings and SF Pro Text for dense catalog, delivery, and checkout information.
-
-### Hierarchy
-
-| Token | Size | Weight | Use |
-|---|---:|---:|---|
-| display-lg | 30pt | 700 | Empty-state or campaign claim |
-| headline | 20pt | 700 | Store and checkout heading |
-| card-title | 16pt | 600 | Merchant, product, or section title |
-| body | 13pt | 400 | Terms and form values |
-| caption | 10pt | 400 | Times, badges, and navigation |
-
-### Principles
-
-- Lead with merchant, price, and delivery time.
-- Keep labels compact and left aligned.
-- Use bold selectively for decisions and totals.
-
-### Note on Font Substitutes
-
-Inter is a suitable cross-platform substitute; preserve dense numeral spacing and clear Cyrillic.
+Use SF Pro Display for 28–34 point bold titles and SF Pro Text for section, product, price, and control copy. Section titles use approximately 20 point bold; product names and action labels cluster around 14–15 points; delivery data, ratings, and tab labels fall to 11–13 points. Price and total numerals receive weight rather than oversized scale. Dynamic Type should expand card height and allow metadata to wrap, while preserving the distinction between section heading, product identity, and supporting delivery information.
 
 # Screen composition
 
-### Grid & Container
-
-Home combines horizontal shortcut rails with vertical merchant lists. Checkout switches to a single stacked column of rounded groups.
-
-### Whitespace Philosophy
-
-Discovery is deliberately dense. Increase space only around checkout decisions, totals, and empty-state messages.
+Home and store surfaces begin with a compact safe-area header or search control, then stack large promo banners, horizontally scrolling merchant or category rails, and dense product modules. Typical horizontal inset is about 16 points with 8–12 point gaps between tiles. Product browsing uses two columns where space permits; merchant and offer rows may scroll horizontally. Detail places the product image in the upper region and moves price, variants, and purchase controls below it. Cart and checkout are calmer single-column stacks of rounded white sections with a persistent dark action above the bottom safe area. Modal decisions use a top-rounded white sheet over a muted scrim.
 
 # Navigation appearance
 
-Home navigation is shortcut-led; store pages use a dedicated five-item bottom bar. All native controls must inherit Kuper's black pills, rounded sections, and green accent.
+Navigation is visually conventional but custom-styled: compact top search and back/close controls, a white bottom tab bar, and small icon-label pairs with a dark selected state. Within store contexts, compact tabs or segmented delivery/pickup controls use filled or underlined selection. Persistent cart actions appear as floating or anchored black pills and must remain distinct from the navigation bar. Sheets have a pronounced top radius and restrained drag affordance.
 
 # Components
 
-### Buttons
-
-Primary actions are near-black full-width pills. White secondary pills use black labels; electric green is reserved for positive or branded actions.
-
-Delivery and pickup use a wide two-segment control: selected is black with white type, default is pale with black type.
-
-### Cards & Containers
-
-Merchant rows combine logo, rating, delivery time, and offer. Cart items remain compact; checkout decisions are grouped in separate white rounded sections.
-
-### Inputs & Forms
-
-Search is a pale pill. Address and payment inputs use thin rules or white rows, while selected cards receive a dark outline.
-
-### Status & Build Page
-
-Delivery benefits and bonuses use green. Feedback uses a white bottom sheet with expressive emoji choices and a green response action.
-
-### Navigation
-
-Home navigation is shortcut-led; store pages use a dedicated five-item bottom bar. All native controls must inherit Kuper's black pills, rounded sections, and green accent.
+Primary actions are near-black pills with white semibold labels, commonly full width. Secondary buttons are white or pale-gray pills with dark labels. Search is a wide rounded field with subdued placeholder and compact leading/trailing controls. Merchant cards combine brand mark, delivery metadata, and a photographic or colored banner. Product cards keep a consistent image box above concise name, price, offer information, and add/stepper control. Promo banners are broad, media-rich rectangles. Segmented delivery controls, chips, favorites, ratings, and steppers are compact in appearance but maintain 44-point hit regions. Disabled and blocked states use muted gray surfaces plus legible labels.
 
 # Imagery and icons
 
-| Level | Treatment | Use |
-|---|---|---|
-| 0 | White canvas | Merchant and product content |
-| 1 | Pale grouped fill | Home modules and checkout background |
-| 2 | Floating dark pill | Cart and anchored actions |
-| 3 | White modal sheet over scrim | Feedback and focused selectors |
-
-### Decorative Depth
-
-Use merchant photography, object cutouts, and soft shadows. Interface elevation remains subtle except for the floating cart.
+Product packshots, food photography, merchant logos, and promotional campaign assets are essential to the visual rhythm. Contain packaged products within consistent image boxes; crop lifestyle and food banners more assertively. Do not manufacture a common illustration style from unrelated merchant creatives. Icons are functional, simple, and mostly monochrome; green may highlight a positive state and near-black indicates primary selection. Photography and external brand assets should never be replaced with arbitrary SF Symbols or empty colored tiles.
 
 # States
 
-Delivery benefits and bonuses use green. Feedback uses a white bottom sheet with expressive emoji choices and a green response action.
+Observed states include native permissions, sign-in fields, delivery versus pickup selection, favorite and selected controls, discounted prices, product add versus quantity stepper, a populated cart, and an onboarding or education overlay. White/cool-gray grouping, dark commitment actions, compact type, and media density remain constant across these states. Disabled controls recede to gray but retain explicit labels; positive availability or confirmation can use the small green accent.
 
 # iOS adaptation
 
-### Touch Targets
-
-Address, rails, quantity controls, cart, payment, and bottom navigation remain at least 44pt.
-
-### Collapsing Strategy
-
-Keep rails horizontally scrollable; stack checkout choices and preserve a full-width persistent action.
-
-### Image Behavior
-
-Contain products and category objects; aspect-fill merchant banners and promotional artwork while protecting embedded copy.
-
-On iPhone, respect top and bottom safe areas, use scrolling for content that does not fit, keep interactive targets at least 44 points, and preserve the visual reading order for VoiceOver. At larger Dynamic Type sizes, allow supporting text to wrap without collapsing the dominant hierarchy. Use native sheets and permission transitions while explicitly styling app-owned surfaces to match the reference.
+Respect status and home-indicator safe areas, keep sticky cart and checkout pills above the bottom inset, and use scroll containers for discovery, store, product, and checkout content. The keyboard must reveal the active field and next action. Preserve app-owned top-rounded sheets while leaving system permission dialogs native. Back, close, favorite, tabs, steppers, and media controls need 44-point hit targets even when their visible glyphs are smaller. VoiceOver order should announce merchant or product identity, price and delivery state, then action. At large Dynamic Type, grow tiles or reduce product grids to one column rather than clipping commerce data. The observed presentation is light-first; do not apply automatic dark inversion.
 
 # Anti-generic checklist
 
-- Do not substitute the documented accent hierarchy with default iOS blue.
-- Do not collapse distinct surfaces into a uniform stack of generic white cards.
-- Do not use an unstyled `TabView`, `Form`, or arbitrary SF Symbols when they contradict the documented navigation and component language.
-- Do not flatten the documented typography into one body-text scale.
-- Do not remove compositionally important photography or illustration while assets are pending.
-- Do not apply one corner radius to every control and surface.
-
-Source-specific guardrails retained from the review:
-
-### Do
-
-- Keep address and delivery terms visible.
-- Use black pills for commitment actions.
-- Preserve dense but structured discovery rails.
-- Confine merchant colors to merchant content.
-- Keep totals and next steps persistent.
-
-### Don't
-
-- Don't flood ordinary UI with green.
-- Don't wrap every merchant in a heavy shadow.
-- Don't hide delivery mode or time.
-- Don't mix cart decisions into discovery rails.
-- Don't leave segmented controls in generic native styling.
+- Do not turn the interface into a uniform stack of generic white cards.
+- Do not replace the near-black action hierarchy with default iOS blue.
+- Do not omit merchant banners, product packshots, and promo imagery.
+- Do not use an unstyled `TabView`, `Form`, `List`, or default segmented control.
+- Do not make bright green the background of every primary action or surface.
+- Do not apply the same radius and shadow to search, product tiles, sheets, and sticky actions.
+- Do not invent a reusable illustration language from isolated promotional graphics.
 
 </design-context>

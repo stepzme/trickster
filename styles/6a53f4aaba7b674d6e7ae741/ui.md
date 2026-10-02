@@ -3,236 +3,95 @@
 version: 1
 platform: iOS
 name: Samokat-design-analysis
-description: "A playful quick-commerce interface built on near-white and pale lilac surfaces, bold black headings, hot-pink actions, and dense product photography. Organic color blobs frame assortment imagery, while commerce controls stay compact, rounded, and direct."
-
+description: "A fast grocery interface pairing hot-pink brand and purchase masses with white and light-gray commerce surfaces, dark rounded search, dense product photography, circular navigation controls, and stacked rounded transactional panels."
 colors:
-  primary: "#F82768"
-  on-primary: "#FFFFFF"
-  primary-soft: "#FFE3EC"
-  ink: "#202124"
-  ink-muted: "#6E7075"
-  ink-subtle: "#A1A3A8"
-  canvas: "#FCFAFD"
-  surface-1: "#F5F2F6"
-  surface-2: "#EEEAF0"
-  surface-dark: "#171419"
-  hairline: "#E4E0E6"
-  semantic-success: "#20A84B"
-  semantic-warning: "#F2A92C"
-  semantic-danger: "#E9434B"
-  semantic-overlay: "#000000"
-
+  canvas: "#F4F4F4"
+  surface-primary: "#FFFFFF"
+  surface-secondary: "#EDEDED"
+  accent-primary: "#F33A8B"
+  accent-secondary: "#242424"
+  text-primary: "#2B2B2B"
+  text-secondary: "#777777"
+  divider: "#E0E0E0"
+  destructive: "#D93C4A"
 typography:
-  display-xl: { fontFamily: System Sans, fontSize: 38, fontWeight: 700, lineHeight: 1.02, letterSpacing: -0.7 }
-  display-lg: { fontFamily: System Sans, fontSize: 30, fontWeight: 700, lineHeight: 1.08, letterSpacing: -0.4 }
-  display-md: { fontFamily: System Sans, fontSize: 25, fontWeight: 700, lineHeight: 1.12, letterSpacing: -0.2 }
-  headline: { fontFamily: System Sans, fontSize: 21, fontWeight: 700, lineHeight: 1.20, letterSpacing: 0 }
-  card-title: { fontFamily: System Sans, fontSize: 15, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: System Sans, fontSize: 17, fontWeight: 600, lineHeight: 1.30, letterSpacing: 0 }
-  body-lg: { fontFamily: System Sans, fontSize: 16, fontWeight: 400, lineHeight: 1.42, letterSpacing: 0 }
-  body: { fontFamily: System Sans, fontSize: 14, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
-  body-sm: { fontFamily: System Sans, fontSize: 12, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
-  caption: { fontFamily: System Sans, fontSize: 10, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
-  button: { fontFamily: System Sans, fontSize: 15, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0 }
-  eyebrow: { fontFamily: System Sans, fontSize: 12, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0.1 }
-  mono: { fontFamily: System Mono, fontSize: 12, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
-
-rounded:
-  xs: 4
-  sm: 8
-  md: 12
-  lg: 18
-  xl: 24
-  xxl: 30
-  pill: 9999
-  full: 9999
-
+  hero: {fontFamily: "SF Pro Display", fontSize: 34, fontWeight: 700, lineHeight: 39}
+  title: {fontFamily: "SF Pro Display", fontSize: 28, fontWeight: 700, lineHeight: 33}
+  section: {fontFamily: "SF Pro Text", fontSize: 20, fontWeight: 700, lineHeight: 25}
+  body: {fontFamily: "SF Pro Text", fontSize: 14, fontWeight: 400, lineHeight: 19}
+  label: {fontFamily: "SF Pro Text", fontSize: 14, fontWeight: 600, lineHeight: 18}
+  caption: {fontFamily: "SF Pro Text", fontSize: 11, fontWeight: 400, lineHeight: 15}
 spacing:
-  xxs: 4
-  xs: 8
-  sm: 12
-  md: 16
-  lg: 24
-  xl: 32
-  xxl: 48
-  section: 64
-
+  screen-horizontal: 16
+  section-gap: 24
+  card-padding: 14
+  control-gap: 8
+rounded:
+  control: 16
+  card: 20
+  sheet: 30
+  pill: 999
 components:
-  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: [14, 20]}
-  button-secondary: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: [12, 16]}
-  product-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 8 }
-  price-pill: { backgroundColor: "{colors.primary-soft}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.pill}", padding: [7, 10]}
-  category-tile: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.card-title}", rounded: "{rounded.md}", padding: 10 }
-  checkout-sheet: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xl}", padding: 16 }
-  search-field: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.pill}", padding: [12, 16]}
-  bottom-nav: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", height: 60 }
+  primary-action: {fill: "accent-primary", text: "white semibold", shape: "rounded rectangle or sticky bar"}
+  secondary-action: {fill: "accent-secondary", text: "white", shape: "pill"}
+  primary-card: {fill: "surface-primary", imagery: "food or product photography", shape: "rounded rectangle"}
+  navigation: {fill: "surface-primary", selected: "accent-primary", item: "pale circular icon button"}
 ---
 
 # Overview
 
-Samokat combines a very light grocery canvas with hot-pink commerce actions, bold black hierarchy, organic color shapes, and tightly cropped product photography. Dense assortment stays approachable because cards and controls remain small, rounded, and predictable.
-
-**Key Characteristics:**
-- Hot pink marks add, pay, search-assistant, and active action states.
-- Pale lilac-gray surfaces organize products and order details.
-- Product photography supplies nearly all content color.
-- Organic blobs sit behind category imagery and campaign assortments.
-- Checkout becomes a rounded sheet over a darkened context.
+Samokat combines hot-pink brand and purchase emphasis with white and light-gray grocery surfaces, a dark floating search pill, dense food photography, and unusually circular navigation items. Product discovery is visually busy, while cart and profile simplify into stacked white rounded panels. Pink is a large structural color, not merely a small tint.
 
 # Non-negotiable visual invariants
 
-- The reviewed screens show this treatment: Hot pink marks add, pay, search-assistant, and active action states.
-- The reviewed screens show this treatment: Pale lilac-gray surfaces organize products and order details.
-- The reviewed screens show this treatment: Product photography supplies nearly all content color.
-- The reviewed screens show this treatment: Organic blobs sit behind category imagery and campaign assortments.
-- The reviewed screens show this treatment: Checkout becomes a rounded sheet over a darkened context.
+- Hot pink forms a substantial mass on launch, primary actions, add controls, and bottom commitment bars.
+- Product and food photography dominate home, catalog, search, and detail surfaces.
+- Search appears as a dark floating pill with high-contrast text and icons.
+- Bottom navigation uses pale circular icon buttons rather than a plain row of unframed symbols.
+- Category and product tiles use generous rounding over white or light-gray surfaces.
+- Cart and profile content is grouped into stacked white rounded panels on a pale-gray canvas.
+- Bold dark section titles remain clearly separated from smaller product and metadata text.
 
 # Color and surfaces
 
-### Brand & Accent
-
-- **Hot Pink** ({colors.primary}) is the decisive commerce accent.
-- **Soft Pink** ({colors.primary-soft}) supports prices, selection, and low-emphasis actions.
-
-### Surface
-
-- **Canvas** ({colors.canvas}) is the catalog and profile background.
-- **Surface 1** ({colors.surface-1}) carries tiles, fields, and order groups.
-- **Surface 2** ({colors.surface-2}) separates nested controls.
-- **Dark Surface** ({colors.surface-dark}) is limited to modal checkout context.
-
-### Text
-
-- **Ink** ({colors.ink}) carries titles, product names, and totals.
-- **Muted** ({colors.ink-muted}) carries descriptions and metadata.
-- **Subtle** ({colors.ink-subtle}) is for placeholders and inactive information.
-
-### Semantic
-
-Green marks delivered or benefit states, while warning and danger colors appear only for service conditions and validation. Do not use them as extra category accents.
+The everyday canvas is light gray, with white product cards, panels, and navigation surfaces. Hot pink is the primary brand, purchase, add, and selected-state color. Near-black creates the floating search control and strong text contrast. Gray supports secondary labels, inactive icons, and dividers; red is reserved for destructive feedback. Product and promo imagery introduces additional color but does not change the app-owned hierarchy. Default iOS blue would visibly break the pink commitment language.
 
 # Typography
 
-### Font Family
-
-Use a neutral system sans with rounded, friendly proportions. Keep headings bold and compact; product detail and prices remain highly legible.
-
-### Hierarchy
-
-| Token | Size | Weight | Use |
-|---|---:|---:|---|
-| `{typography.display-xl}` | 38pt | 700 | Campaign title |
-| `{typography.display-lg}` | 30pt | 700 | Major catalog heading |
-| `{typography.display-md}` | 25pt | 700 | Product or sheet title |
-| `{typography.headline}` | 21pt | 700 | Section heading |
-| `{typography.card-title}` | 15pt | 600 | Product and category title |
-| `{typography.body}` | 14pt | 400 | Default content |
-| `{typography.caption}` | 10pt | 400 | Weight, discount, and metadata |
-
-### Principles
-
-- Use bold headings for quick scanning.
-- Keep price, discount, and quantity visually grouped.
-- Do not shrink product names below readable mobile size.
-- Let photography provide personality instead of decorative type.
-
-### Note on Font Substitutes
-
-Use SF Pro or Inter. Preserve friendly proportions and strong headline weight; avoid condensed or formal serif substitutes.
+Use SF Pro Display for 28–34 point bold page and promotional headings and SF Pro Text for commerce content. Section headings use about 20 point bold; product titles, prices, and actions use 14 point regular or semibold; unit, delivery, badge, and navigation text uses 11–13 point captions. The observed type is rounded and direct rather than editorial. At Dynamic Type sizes, allow tiles and panels to grow and reduce grid columns before truncating prices or product names.
 
 # Screen composition
 
-### Grid & Container
-
-Product results use a two-column grid. Category browsing may use a three-column tile grid, while home mixes horizontal collections and campaign cards. Checkout and profile use one column.
-
-### Whitespace Philosophy
-
-Keep whitespace compact around assortment and larger around section headings. Avoid thick card chrome; pale surfaces and product cutouts already define grouping.
+Login and launch screens use a large pink field or action region with concise centered content. Home begins with a dark floating search pill below the safe area, followed by broad promotional or food imagery, rounded category tiles, and dense product rails. Catalog and search use multi-column product cards with narrow gaps. Product detail gives the upper region to photography and keeps an add or price action near the bottom. Cart and profile switch to single-column stacks of large white rounded panels on light gray, with a pink bottom action for commitment. The bottom navigation remains visually distinct through circular icon containers.
 
 # Navigation appearance
 
-Home uses prominent shortcuts for Catalog, Discounts, New, Ordered Before, and Saved. Deeper views rely on back navigation, while search and cart remain easy to reach.
+The bottom bar is white or light, with each compact navigation icon placed in a pale circular button; selected state gains pink emphasis while inactive icons remain dark or gray. Focused detail and login surfaces use simple back or close controls. Search is a dark rounded pill floating near the top rather than a default navigation-bar field. Category selectors and filters use compact rounded chips or tabs. Transactional overlays use large top-rounded white sheets.
 
 # Components
 
-### Buttons
-
-Primary actions are hot-pink pills with white text. Secondary actions are pale neutral pills. Native controls may be used internally, but must inherit the pink accent, soft geometry, and system typography.
-
-Home shortcuts and filters use compact chips or circular icon tiles. The selected filter gains a white or pink state; avoid heavy tab bars inside assortment pages.
-
-### Cards & Containers
-
-Product cards show image, discount if present, name, measure, price, favorite, and add. Campaign cards combine a short line with a product cutout and organic background. Checkout groups remain white or pale against the modal surface.
-
-### Inputs & Forms
-
-Search, phone, address, comment, and promo inputs are single-column and lightly framed. Keep address subfields progressive and anchor the payment action above the keyboard or safe area.
-
-### Status & Build Page
-
-Order tracking centers the current fulfillment message, contact and cancel actions, address, item summary, and delivery state. Toasts confirm collection and delivery without interrupting browsing.
-
-### Navigation
-
-Home uses prominent shortcuts for Catalog, Discounts, New, Ordered Before, and Saved. Deeper views rely on back navigation, while search and cart remain easy to reach.
+Primary actions are hot-pink rounded rectangles or full-width sticky bars with white semibold labels. Secondary commands can use a dark pill with white text. Product cards combine a large photo, concise name and price, optional promotion, and a pink add or quantity action. Category tiles are rounded and image-led. Search is near-black with white content and compact functional icons. Cart and profile panels use white fill, substantial radius, subtle separation, and row-based controls. Pressed pink controls deepen slightly; disabled states recede to gray while retaining readable labels.
 
 # Imagery and icons
 
-Most hierarchy is tonal. Bottom sheets use a dark overlay and slight shadow; product controls float through contrast, not strong elevation.
-
-### Decorative Depth
-
-Use overlapping product cutouts, organic blobs, and modal sheets. Avoid glossy gradients or deep shadow stacks.
+Food photography, product packshots, promotional compositions, and category thumbnails are compositionally essential. Crop promotional food images boldly and contain individual packaged products in stable image boxes. A single monochrome onboarding drawing and isolated promo graphics do not establish a repeatable illustration system. Icons are simple and high-contrast, often sitting inside pale circles. Do not replace food or product media with arbitrary SF Symbols, emoji, or programmatic shapes.
 
 # States
 
-Order tracking centers the current fulfillment message, contact and cancel actions, address, item summary, and delivery state. Toasts confirm collection and delivery without interrupting browsing.
+Observed states include login, populated home, catalog and search, product detail, cart, profile, selected navigation, product add and quantity controls, and transactional panels. Pink commitment, dark search, circular navigation, product media, and rounded white grouping remain stable. Empty or onboarding art is isolated and should not displace the commerce hierarchy. Errors remain local and use destructive red distinct from the brand pink.
 
 # iOS adaptation
 
-Retain two product columns on standard phones and collapse only when names and prices no longer fit. Checkout and tracking remain single-column.
-
-### Touch Targets
-
-Add, quantity, favorite, filter, back, and payment actions require at least 44pt targets.
-
-### Collapsing Strategy
-
-Allow home collections and chips to scroll horizontally. Keep payment and cart actions pinned while item lists and form groups scroll.
-
-### Image Behavior
-
-Use `contain` for isolated product packs and `cover` for editorial or recipe imagery. Never stretch packaging or crop away the identifying label.
-
-On iPhone, respect top and bottom safe areas, use scrolling for content that does not fit, keep interactive targets at least 44 points, and preserve the visual reading order for VoiceOver. At larger Dynamic Type sizes, allow supporting text to wrap without collapsing the dominant hierarchy. Use native sheets and permission transitions while explicitly styling app-owned surfaces to match the reference.
+Respect status and home-indicator safe areas, keep the dark search pill and sticky pink actions clear of system regions, and use vertical scrolling for catalog, detail, cart, and profile. Keep focused login or search fields visible above the keyboard. Use the documented top-rounded sheets for app-owned overlays while retaining native system prompts. Search, category, add, stepper, back, and circular navigation items require 44-point targets. VoiceOver should announce product identity and price before promotion and action. At compact widths or large Dynamic Type, move product grids to one column rather than shrinking imagery or labels. Treat the observed UI as light-first.
 
 # Anti-generic checklist
 
-- Do not substitute the documented accent hierarchy with default iOS blue.
-- Do not collapse distinct surfaces into a uniform stack of generic white cards.
-- Do not use an unstyled `TabView`, `Form`, or arbitrary SF Symbols when they contradict the documented navigation and component language.
-- Do not flatten the documented typography into one body-text scale.
-- Do not remove compositionally important photography or illustration while assets are pending.
-- Do not apply one corner radius to every control and surface.
-
-Source-specific guardrails retained from the review:
-
-### Do
-
-- Keep product photography dominant.
-- Use pink only for action and selection.
-- Preserve compact assortment density.
-- Use organic shapes to frame categories.
-- Keep order progress clear and recoverable.
-
-### Don't
-
-- Do not wrap every product in a heavy white card.
-- Do not add unrelated accent colors to controls.
-- Do not hide price or quantity state.
-- Do not overload checkout with promotional chrome.
-- Do not expose default blue platform controls.
+- Do not reduce hot pink to a tiny accent or replace it with default iOS blue.
+- Do not replace the dark floating search pill with an unstyled navigation search field.
+- Do not turn the circular bottom navigation into a plain default `TabView`.
+- Do not omit food photography, product packshots, or promotional media.
+- Do not flatten headings, prices, product labels, and metadata into one text scale.
+- Do not apply one radius and shadow to category tiles, product cards, panels, and sheets.
+- Do not infer a broad illustration language from the isolated onboarding drawing.
 
 </design-context>

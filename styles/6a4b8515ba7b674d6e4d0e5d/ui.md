@@ -3,187 +3,128 @@
 version: 1
 platform: iOS
 name: Green-SM-design-analysis
-description: "A light mobility interface centered on turquoise actions, white floating sheets, map-led trip states, and mint-tinted service cards. Friendly 3D vehicle objects and circular feedback illustrations soften a highly operational booking and safety flow."
-colors: {primary: "#27C4C8", on-primary: "#FFFFFF", primary-focus: "#11A7AC", ink: "#191B1E", ink-muted: "#676B70", ink-subtle: "#989CA1", ink-tertiary: "#C5C8CC", canvas: "#FFFFFF", surface-1: "#F6F8F8", surface-2: "#ECF6F5", surface-3: "#DDF0EE", surface-4: "#C9E5E2", hairline: "#E1E6E6", hairline-strong: "#C5CFCF", hairline-tertiary: "#ADB9B9", inverse-canvas: "#115D62", inverse-surface-1: "#16767B", inverse-surface-2: "#21969B", inverse-ink: "#FFFFFF", brand-secure: "#27C4C8", semantic-success: "#2AAF78", semantic-overlay: "#162124"}
+description: "A light electric-mobility interface with turquoise CTAs, airy white screens, soft 3D transport objects, map-first booking states, rounded bottom sheets, compact profile rows, and a floating frosted pill tab bar."
+colors:
+  canvas: "#FFFFFF"
+  surface-primary: "#FFFFFF"
+  surface-secondary: "#F3F8F8"
+  accent-primary: "#28C7C9"
+  accent-secondary: "#BFEFEC"
+  text-primary: "#15171A"
+  text-secondary: "#687076"
+  divider: "#E4E9EA"
+  destructive: "#D84A4A"
 typography:
-  display-xl: {fontFamily: SF Pro Display, fontSize: 34, fontWeight: 700, lineHeight: 1.08, letterSpacing: -0.7}
-  display-lg: {fontFamily: SF Pro Display, fontSize: 28, fontWeight: 700, lineHeight: 1.12, letterSpacing: -0.4}
-  display-md: {fontFamily: SF Pro Display, fontSize: 24, fontWeight: 700, lineHeight: 1.15, letterSpacing: -0.2}
-  headline: {fontFamily: SF Pro Display, fontSize: 20, fontWeight: 700, lineHeight: 1.20, letterSpacing: -0.1}
-  card-title: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0}
-  subhead: {fontFamily: SF Pro Text, fontSize: 14, fontWeight: 600, lineHeight: 1.30, letterSpacing: 0}
-  body-lg: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0}
-  body: {fontFamily: SF Pro Text, fontSize: 13, fontWeight: 400, lineHeight: 1.38, letterSpacing: 0}
-  body-sm: {fontFamily: SF Pro Text, fontSize: 11, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0}
-  caption: {fontFamily: SF Pro Text, fontSize: 10, fontWeight: 400, lineHeight: 1.25, letterSpacing: 0}
-  button: {fontFamily: SF Pro Text, fontSize: 14, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0}
-  eyebrow: {fontFamily: SF Pro Text, fontSize: 10, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0.1}
-  mono: {fontFamily: SF Mono, fontSize: 11, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0}
-rounded: {xs: 4, sm: 8, md: 12, lg: 18, xl: 24, xxl: 30, pill: 9999, full: 9999}
-spacing: {xxs: 4, xs: 8, sm: 12, md: 16, lg: 20, xl: 24, xxl: 32, section: 40}
+  hero: {fontFamily: "SF Pro Display", fontSize: 32, fontWeight: 700, lineHeight: 38}
+  title: {fontFamily: "SF Pro Display", fontSize: 22, fontWeight: 700, lineHeight: 28}
+  section: {fontFamily: "SF Pro Text", fontSize: 17, fontWeight: 700, lineHeight: 22}
+  body: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 400, lineHeight: 21}
+  label: {fontFamily: "SF Pro Text", fontSize: 13, fontWeight: 600, lineHeight: 17}
+  caption: {fontFamily: "SF Pro Text", fontSize: 11, fontWeight: 400, lineHeight: 14}
+spacing:
+  screen-horizontal: 16
+  section-gap: 22
+  card-padding: 14
+  control-gap: 10
+rounded:
+  control: 10
+  card: 14
+  sheet: 24
+  pill: 999
 components:
-  button-primary: {backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [14, 18]}
-  button-secondary: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [12, 16]}
-  bottom-sheet: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xl}", padding: 18}
-  ride-card: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 12}
-  text-input: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: [12, 14]}
-  status-badge: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.caption}", rounded: "{rounded.pill}", padding: [4, 8]}
-  bottom-nav: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink-subtle}", typography: "{typography.caption}", rounded: "{rounded.pill}", padding: [8, 10]}
+  primary-action: {backgroundColor: "#28C7C9", textColor: "#FFFFFF", height: 48, cornerRadius: 10}
+  secondary-action: {backgroundColor: "#FFFFFF", textColor: "#15171A", height: 46, cornerRadius: 10, borderColor: "#E4E9EA"}
+  primary-card: {backgroundColor: "#FFFFFF", cornerRadius: 14, borderColor: "#D8E7E7"}
+  navigation: {backgroundColor: "#EEF6F5", selectedColor: "#28C7C9", unselectedColor: "#7B858A"}
 ---
 
 # Overview
 
-Green SM combines a clean service home with map-first taxi booking. Turquoise carries every important action, while white sheets and friendly car or feedback artwork make trip states easy to understand.
-
-**Key Characteristics:** turquoise CTAs, white canvas, mint service fields, map-led trip flow, rounded floating sheets, 3D vehicle objects, illustrated rating attributes, and compact pill navigation.
+Green SM is a bright, friendly mobility UI. It uses turquoise as the only strong transaction color, keeps most screens white and airy, and adds identity through soft 3D vehicles, map routes, circular environmental artwork, and rounded bottom sheets. The trip screens are operational and map-led; profile and payment screens stay sparse and white.
 
 # Non-negotiable visual invariants
 
-- The reviewed screens show this treatment: turquoise CTAs.
-- The reviewed screens show this treatment: white canvas.
-- The reviewed screens show this treatment: mint service fields.
-- The reviewed screens show this treatment: map-led trip flow.
-- The reviewed screens show this treatment: rounded floating sheets.
-- The reviewed screens show this treatment: 3D vehicle objects.
-- The reviewed screens show this treatment: illustrated rating attributes.
-- The reviewed screens show this treatment: compact pill navigation.
+- Turquoise around `#28C7C9` owns primary actions, route highlights, active tab glow, focused fields, and selected controls.
+- White is the main surface; mint and pale aqua are light accents, not page-wide color blocks except for subtle profile glow backgrounds.
+- Use soft-rendered 3D mobility objects where the reference uses them: cars, scooters, payment/passcode/security objects, and small service illustrations.
+- Booking/trip states are map-first: the map fills most of the viewport and information sits in rounded white sheets layered above it.
+- Home and profile use floating, rounded, translucent or frosted bottom navigation rather than a default full-width tab bar.
+- CTAs are simple turquoise rounded rectangles with white semibold labels; secondary buttons are white or pale with restrained borders.
+- Promotional imagery and vehicle artwork must remain raster/image-based when visible.
 
 # Color and surfaces
 
-### Brand & Accent
+The palette is clean white plus turquoise. Primary turquoise is vivid but not neon; use it for only the current action or active state. Pale aqua, mint, and soft cyan appear as glows behind profile headers, service cards, selected markers, route lines, and small illustration shadows.
 
-Turquoise owns primary actions, active navigation, route emphasis, and selected ride controls. Mint tints support informational and environmental messaging.
+Text is near black for titles and trip facts, medium gray for descriptions, addresses, metadata, and inactive navigation. Dividers are hairline and low contrast. The trip map introduces real map colors; do not recolor the map into a brand gradient. Emergency and destructive states use red sparingly. Apple login remains black as observed.
 
-### Surface
-
-White dominates home, booking sheets, and trip detail. Pale gray or mint separates service tiles, payment, safety, and feedback sections.
-
-### Text
-
-Near-black leads destination, fare, driver, and trip state. Gray supports addresses, secondary labels, and policy detail.
-
-### Semantic
-
-Turquoise means active or confirmed, green means positive safety or availability, yellow supports rating, and red is limited to cancellation or emergency.
+Avoid competing saturated blues, purples, or greens. A generic gray grouped background would make the interface feel heavier than the reference.
 
 # Typography
 
-### Font Family
+Use SF Pro. Onboarding uses the largest type: 28 to 32 pt bold turquoise/black display copy with generous line height. Operational screens use compact titles around 17 to 22 pt, semibold/bold. Address, payment, profile, and trip rows use 13 to 15 pt text with muted secondary lines.
 
-Use SF Pro Display for trip state and fare emphasis and SF Pro Text for addresses, driver detail, payments, safety, and feedback.
-
-### Hierarchy
-
-| Token | Size | Weight | Use |
-|---|---:|---:|---|
-| display-lg | 28pt | 700 | Trip state |
-| headline | 20pt | 700 | Sheet title |
-| card-title | 15pt | 600 | Ride or driver |
-| body | 13pt | 400 | Address and detail |
-| caption | 10pt | 400 | ETA and metadata |
-
-### Principles
-
-- Lead with pickup, destination, ETA, fare, or driver state.
-- Use stable address and payment positions through the trip.
-- Keep environmental messages warm but secondary.
-
-### Note on Font Substitutes
-
-Use the platform sans with clear map labels and tabular fare numerals.
+Fare and route facts should use tabular numerals when available. Buttons use 14 to 15 pt semibold. Labels in service tiles and quick actions are compact and should not overpower the illustrations. Dynamic Type should expand sheets vertically while preserving the map-first composition and the primary CTA at the bottom of the sheet.
 
 # Screen composition
 
-### Grid & Container
+Onboarding and login screens place illustration high in the viewport, text in the middle, and controls near the bottom. Large negative space is intentional. The recurring composition uses a circular orbit of small 3D objects around the main headline, then a turquoise CTA.
 
-Home stacks search, service tiles, operating-area message, and promotions. Booking fills the viewport with a map and one bottom sheet.
+The main service screen uses a rounded search field at the top, two large service tiles, a smaller service tile row, a rectangular map/availability banner, and promotional image tiles. The floating bottom navigation sits above the home indicator in a rounded pill with a soft blur/glow.
 
-### Whitespace Philosophy
+Address selection and trip screens use a full-screen map. Search fields, back controls, map pins, route lines, ride cards, payment rows, and action buttons float above the map. Bottom sheets have rounded top corners, white fill, and shallow elevation; they can occupy the lower third to half of the screen depending on trip state.
 
-Keep the service home open and the active trip operational. Do not crowd the map with unrelated promotions.
+Profile screens switch from map to a white/pale aqua scroll. A soft aqua glow sits behind the avatar and top cards. Quick actions are four rounded tiles in a two-by-two grid. Settings rows are sparse and full width with small left icons and right chevrons.
 
 # Navigation appearance
 
-Use a translucent or pale pill bar for Home, History, Notifications, and Profile. The map flow replaces the bar with contextual controls.
+Navigation chrome is minimal. Top bars use white background or float over the map with simple back arrows, close icons, search fields, and small plus buttons. The bottom navigation on non-map screens is a compact rounded pill with soft translucency; selected item gets a turquoise glow and filled icon treatment, while inactive items stay gray.
+
+Map screens reduce navigation to contextual floating controls and bottom sheets. Do not keep the home pill over active map booking states unless a sampled screen explicitly shows it.
 
 # Components
 
-### Buttons
+Primary buttons are turquoise rounded rectangles, usually full width, 44 to 50 pt high. Disabled buttons are pale gray or very pale aqua with low-contrast text. Apple sign-in is a black full-width button; Google sign-in is white with a thin border.
 
-Primary booking and submit actions are turquoise with white labels. Secondary actions stay white or pale; emergency and cancellation remain visually distinct.
+Inputs are rounded, light fields with a turquoise focus border. Phone inputs pair a country selector with a text field. OTP and passcode controls use outlined circles or boxes with generous spacing, centered in sparse white screens.
 
-Ride class, payment, promotion, and trip-for-someone choices use cards, rows, or compact chips with turquoise selection.
+Ride cards are white rounded rectangles with a thin aqua border when selected. They contain a small 3D car thumbnail, ride label, rating, and fare aligned to the right. Payment and promotion controls use small icon-plus-label rows below the ride card.
 
-### Cards & Containers
+Bottom sheets use white fill, rounded top corners, and grouped rows. Safety sheets dim the underlying trip sheet/map and slide up as a compact white panel with a close button, black support row, and red emergency row.
 
-Ride cards align vehicle, rating, price, and optional prior price. Driver cards group portrait, vehicle, plate, rating, chat, and call.
-
-### Inputs & Forms
-
-Address search and notes use pale fields with clear focus. Native controls must inherit turquoise focus, rounded geometry, type, and spacing.
-
-### Status & Build Page
-
-Keep ETA, pickup, destination, fare, payment, driver, vehicle, plate, safety, and cancellation near the current trip state.
-
-### Navigation
-
-Use a translucent or pale pill bar for Home, History, Notifications, and Profile. The map flow replaces the bar with contextual controls.
+Profile quick-action tiles are pale, rounded, and icon-led; settings rows are flatter with hairline separation and small gray/turquoise icons.
 
 # Imagery and icons
 
-| Level | Treatment | Use |
-|---|---|---|
-| 0 | White or map canvas | Home or trip |
-| 1 | Mint service tile | Entry point |
-| 2 | White rounded sheet | Booking and status |
-| 3 | Turquoise action | Request or submit |
+Imagery is part of the product language. Use soft 3D turquoise cars, scooters, lock/payment/account objects, environmental orbit objects, and promotional raster images featuring vehicles. Keep these assets bright, glossy, and lightly shadowed on white or pale mint backgrounds.
 
-### Decorative Depth
+Map visuals should remain legible: thin turquoise route line, standard map labels, black and colored pins, small car markers, and white callout pills. Avoid decorative overlays that obscure map labels.
 
-Use 3D turquoise vehicles, map routes, circular feedback illustrations, and light promotional photography with minimal shadow.
+SF Symbols may support generic row icons only when styled to the observed weight and color. They are not acceptable substitutes for vehicles, onboarding art, payment/passcode illustrations, promotion images, or the branded service tile art.
 
 # States
 
-Keep ETA, pickup, destination, fare, payment, driver, vehicle, plate, safety, and cancellation near the current trip state.
+Observed states include app tracking and notification permission alerts, phone entry with keyboard, OTP method bottom sheet, OTP entry, profile completion, passcode creation/login, home with notification prompt, address search results, map pickup selection, ride selection, trip confirmation, driver search/progress sheets, safety center bottom sheet, empty payment method, populated payment method, and editable profile fields.
+
+Across these states, turquoise focus, white surfaces, soft 3D/raster imagery, rounded sheets, and sparse typography remain consistent. Loading uses a small turquoise spinner or dimmed overlay rather than a heavy branded interstitial.
 
 # iOS adaptation
 
-### Touch Targets
+Respect top safe area over maps and keep floating controls clear of the status bar. Bottom sheets must clear the home indicator and remain scrollable when content grows. Map screens should keep the route and current callout visible above the sheet whenever possible.
 
-Search, map controls, ride cards, safety, chat, call, rating, navigation, and submit remain at least 44pt.
+For keyboard states, move only the active input/form content enough to remain visible; do not compress the art into unreadable fragments. For native permission alerts and app tracking prompts, keep native iOS styling and dim/blur the app behind it.
 
-### Collapsing Strategy
-
-Preserve route, ETA, fare, payment, driver, safety, and primary action; collapse promotions and secondary trip detail first.
-
-### Image Behavior
-
-Keep vehicles fully visible, crop promotions around the car and headline, and preserve map label readability.
-
-On iPhone, respect top and bottom safe areas, use scrolling for content that does not fit, keep interactive targets at least 44 points, and preserve the visual reading order for VoiceOver. At larger Dynamic Type sizes, allow supporting text to wrap without collapsing the dominant hierarchy. Use native sheets and permission transitions while explicitly styling app-owned surfaces to match the reference.
+Use 44 pt minimum tap targets for search, plus, back, ride cards, payment rows, safety actions, profile rows, bottom navigation, and CTAs. At larger Dynamic Type sizes, let rows and sheets grow vertically and preserve the primary action after the content it submits.
 
 # Anti-generic checklist
 
-- Do not substitute the documented accent hierarchy with default iOS blue.
-- Do not turn the documented white canvas into a generic card stack; preserve the observed accent, density, imagery, and surface grouping.
-- Do not use an unstyled `TabView`, `Form`, or arbitrary SF Symbols when they contradict the documented navigation and component language.
-- Do not flatten the documented typography into one body-text scale.
-- Do not remove compositionally important photography or illustration while assets are pending.
-- Do not apply one corner radius to every control and surface.
-
-Source-specific guardrails retained from the review:
-
-### Do
-
-- Preserve turquoise as the single transactional accent.
-- Keep map, route, fare, and driver state synchronized.
-- Use illustration to clarify services and feedback.
-
-### Don't
-
-- Don't introduce competing saturated accents.
-- Don't cover the map before information is needed.
-- Don't let environmental messaging obscure trip safety.
+- Do not replace turquoise with default system blue.
+- Do not remove the 3D vehicle/payment/passcode imagery or rebuild it with SwiftUI shapes.
+- Do not use an unstyled full-width `TabView`; the reference uses a floating rounded pill.
+- Do not cover the map with large decorative cards before a sheet is needed.
+- Do not turn bottom sheets into generic grouped `Form` sections.
+- Do not introduce multicolor category icon sets unrelated to the turquoise/mint system.
+- Do not use flat emoji or SF Symbols as substitutes for the authored 3D/raster objects.
+- Do not crop vehicle promotional images so tightly that the car and headline relationship is lost.
 
 </design-context>

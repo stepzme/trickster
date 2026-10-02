@@ -3,223 +3,146 @@
 version: 1
 platform: iOS
 name: Arbuz-design-analysis
-description: "A bright grocery marketplace built from fresh green actions, white commerce surfaces, reward-currency teal, generous product photography, and cheerful food mascots. Promotional hero scenes remain expressive while product cards stay compact and factual."
+description: "A bright grocery-commerce interface with white shopping surfaces, fresh green conversion controls, teal reward prices, real product photography, and cheerful authored food characters used only for brand and promotional moments."
 colors:
-  primary: "#46D45C"
+  primary: "#46D65C"
   on-primary: "#FFFFFF"
-  primary-soft: "#E8FAEC"
-  reward-teal: "#22AEB1"
-  accent-yellow: "#FFD83D"
-  accent-orange: "#FF9C38"
+  primary-soft: "#E7F9EB"
+  primary-tint: "#CFF5D6"
+  reward-teal: "#20AEB4"
+  accent-yellow: "#FFE27A"
+  accent-orange: "#FF9C3A"
+  accent-sky: "#BFEAF4"
   ink: "#171A18"
-  ink-muted: "#747A76"
-  ink-subtle: "#A9AEA9"
+  ink-muted: "#686E69"
+  ink-subtle: "#A6ACA7"
   canvas: "#FFFFFF"
-  surface-1: "#F6F8F6"
-  surface-2: "#ECF2ED"
-  hairline: "#E1E7E2"
+  surface-1: "#F5F7F5"
+  surface-2: "#EEF3EF"
+  surface-3: "#E3EAE4"
+  hairline: "#E2E7E2"
   semantic-success: "#35B94B"
-  semantic-danger: "#E6534F"
+  semantic-warning: "#FFD13B"
+  semantic-danger: "#E34D4A"
   semantic-overlay: "#000000"
 typography:
-  display-xl: { fontFamily: System Sans, fontSize: 40, fontWeight: 800, lineHeight: 1.00, letterSpacing: -1.0 }
-  display-lg: { fontFamily: System Sans, fontSize: 32, fontWeight: 750, lineHeight: 1.05, letterSpacing: -0.6 }
-  display-md: { fontFamily: System Sans, fontSize: 26, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.3 }
-  headline: { fontFamily: System Sans, fontSize: 21, fontWeight: 700, lineHeight: 1.18, letterSpacing: -0.2 }
-  card-title: { fontFamily: System Sans, fontSize: 13, fontWeight: 500, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: System Sans, fontSize: 16, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
-  body-lg: { fontFamily: System Sans, fontSize: 16, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
-  body: { fontFamily: System Sans, fontSize: 13, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
-  body-sm: { fontFamily: System Sans, fontSize: 11, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
-  caption: { fontFamily: System Sans, fontSize: 10, fontWeight: 500, lineHeight: 1.20, letterSpacing: 0 }
-  button: { fontFamily: System Sans, fontSize: 15, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0 }
-  eyebrow: { fontFamily: System Sans, fontSize: 10, fontWeight: 700, lineHeight: 1.20, letterSpacing: 0.2 }
-  mono: { fontFamily: System Mono, fontSize: 12, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
-rounded: { xs: 6, sm: 10, md: 14, lg: 20, xl: 28, xxl: 34, pill: 9999, full: 9999 }
-spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
+  display-xl: {fontFamily: "SF Pro Display", fontSize: 40, fontWeight: 800, lineHeight: 1.02, letterSpacing: 0}
+  display-lg: {fontFamily: "SF Pro Display", fontSize: 32, fontWeight: 800, lineHeight: 1.08, letterSpacing: 0}
+  display-md: {fontFamily: "SF Pro Display", fontSize: 26, fontWeight: 700, lineHeight: 1.12, letterSpacing: 0}
+  headline: {fontFamily: "SF Pro Display", fontSize: 22, fontWeight: 700, lineHeight: 1.18, letterSpacing: 0}
+  section: {fontFamily: "SF Pro Text", fontSize: 19, fontWeight: 700, lineHeight: 1.22, letterSpacing: 0}
+  card-title: {fontFamily: "SF Pro Text", fontSize: 13, fontWeight: 500, lineHeight: 1.28, letterSpacing: 0}
+  subhead: {fontFamily: "SF Pro Text", fontSize: 16, fontWeight: 600, lineHeight: 1.30, letterSpacing: 0}
+  body-lg: {fontFamily: "SF Pro Text", fontSize: 16, fontWeight: 400, lineHeight: 1.38, letterSpacing: 0}
+  body: {fontFamily: "SF Pro Text", fontSize: 13, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0}
+  body-sm: {fontFamily: "SF Pro Text", fontSize: 11, fontWeight: 400, lineHeight: 1.28, letterSpacing: 0}
+  caption: {fontFamily: "SF Pro Text", fontSize: 10, fontWeight: 500, lineHeight: 1.20, letterSpacing: 0}
+  button: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0}
+  eyebrow: {fontFamily: "SF Pro Text", fontSize: 10, fontWeight: 700, lineHeight: 1.20, letterSpacing: 0}
+  mono: {fontFamily: "SF Mono", fontSize: 12, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0}
+spacing: {xxs: 4, xs: 8, sm: 12, md: 16, lg: 20, xl: 28, xxl: 40, section: 34}
+rounded: {xs: 6, sm: 10, md: 14, lg: 20, xl: 28, sheet: 26, pill: 9999, full: 9999}
 components:
-  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [14, 20]}
-  product-card: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: 6 }
-  category-tile: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.sm}", padding: 8 }
-  reward-banner: { backgroundColor: "{colors.primary-soft}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 14 }
-  cart-row: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: 10 }
+  primary-action: {backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [14, 18]}
+  secondary-action: {backgroundColor: "{colors.primary-soft}", textColor: "{colors.primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [13, 18]}
+  product-card: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: 6}
+  category-tile: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.sm}", padding: 8}
+  reward-banner: {backgroundColor: "{colors.primary-soft}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 14}
+  search-field: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: [12, 14]}
+  bottom-navigation: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.caption}", rounded: "{rounded.xl}", padding: [8, 10]}
 ---
 
 # Overview
 
-Arbuz.kz balances a playful brand layer with a practical grocery grid. Green carries action, teal carries rewards value, and product photography remains the purchase evidence.
-
-**Key Characteristics:**
-- Fresh green purchase and selected states.
-- Teal rewards pricing beside regular price.
-- Dense horizontal product rails and category grids.
-- Persistent five-item bottom navigation.
-- Address and delivery context before products.
-- Smiling food and shopping characters.
+Arbuz.kz is a light grocery shopping system where products stay literal and shoppable, while the brand layer is playful. The dominant screens are white, densely merchandised, and built around product pack photography, compact prices, a soft gray search field, green conversion controls, and a floating five-item tab bar. Promotional moments use yellow, green, blue, and pink authored art with smiling fruit or shopping-bag characters, but ordinary product decisions remain photographic and factual.
 
 # Non-negotiable visual invariants
 
-- The reviewed screens show this treatment: Fresh green purchase and selected states.
-- The reviewed screens show this treatment: Teal rewards pricing beside regular price.
-- The reviewed screens show this treatment: Dense horizontal product rails and category grids.
-- The reviewed screens show this treatment: Persistent five-item bottom navigation.
-- The reviewed screens show this treatment: Address and delivery context before products.
-- The reviewed screens show this treatment: Smiling food and shopping characters.
+- Product grids and rails use real isolated pack photography on white or very pale rounded tiles.
+- Fresh green is the only dominant conversion color for selected filters, add actions, checkout bars, and confirmed states.
+- Teal reward prices sit close to regular prices and must remain visually distinct from sale discounts.
+- Search and form fields are pale gray rounded rectangles with minimal borders and black or muted gray text.
+- Discount badges are compact dark or colored pills placed directly on product imagery, not separated into banners.
+- The bottom navigation appears as a soft floating white pill area with a green selected capsule.
+- Authored food characters and shopping-bag art appear in onboarding, loyalty, subscription, and promo education, not as product substitutes.
 
 # Color and surfaces
 
-### Brand & Accent
-- **Fresh Green** ({colors.primary}): Add, checkout, selection, and progress.
-- **Reward Teal** ({colors.reward-teal}): Freedom price and bonus value.
-- **Yellow / Orange**: Discounts, subscription, and mascot support.
+The base canvas is white. Arbuz uses negative space and very pale gray panels rather than a tinted full-page background. Product cards often read as white cells with only subtle separation, while category tiles and search fields use `surface-1` or `surface-2`.
 
-### Surface
-- **Canvas** ({colors.canvas}): Product, catalog, cart, and profile base.
-- **Surface 1** ({colors.surface-1}): Search, category tiles, and grouped controls.
-- **Surface 2** ({colors.surface-2}): Disabled and nested surfaces.
-- **Soft Green** ({colors.primary-soft}): Reward and success education.
+Green is the action system: login/skip buttons in onboarding, selected category chips, selected filter chips, checkout bars, delivery confirmation, and bottom-tab selection. Keep it saturated and friendly, closer to fresh produce than finance green. Do not replace it with default iOS blue or a generic emerald.
 
-### Text
-- **Ink** ({colors.ink}): Product names, prices, and actions.
-- **Ink Muted** ({colors.ink-muted}): Weight, timing, and metadata.
-- **Ink Subtle** ({colors.ink-subtle}): Old price and disabled content.
+Teal marks reward value, especially "to Freedom" prices and cashback-related value. It should look secondary to the green CTA but more prominent than gray metadata. Yellow and orange carry discounts, "friends" subscription value, food mascots, and promotional warmth. Sky blue appears in referral and cashback banners.
 
-### Semantic
-- **Success** ({colors.semantic-success}): Delivery and confirmed states.
-- **Danger** ({colors.semantic-danger}): Removal and error.
-- **Overlay** ({colors.semantic-overlay}): Modal and age-gate scrim.
+Text is near-black for product names, totals, section titles, and sheet headers. Use muted gray for weights, addresses, timestamps, old prices, and explanatory lines. Hairlines are faint; visible boxed borders are rare except on selected time/date slots and numeric filter fields. Modal scrims are black with high opacity, with white sheets over them.
 
 # Typography
 
-### Font Family
+Use SF Pro Display for large campaign or screen statements and SF Pro Text for commerce UI. The strongest type appears in onboarding and promo pages: large, heavy, black, left-aligned headline blocks on saturated yellow or blue backgrounds. In shopping screens, hierarchy is tighter: section headings around 19 to 22 points, product names around 13 points, prices and reward lines compact but readable.
 
-- **System Sans** — commerce, promotion, forms, and navigation.
-- **System Mono** — order identifiers only.
+Product-card copy should wrap naturally at two lines before truncation. Current price is stronger than old price; old price is gray and struck or visually de-emphasized. Reward prices are small but colored teal and explicitly labeled. Quantity, order identifiers, and short codes may use tabular alignment but should not become a technical monospace aesthetic outside identifiers.
 
-### Hierarchy
-
-| Token | Size | Weight | Use |
-|---|---|---|---|
-| `{typography.display-xl}` | 40pt | 800 | Campaign statement |
-| `{typography.display-md}` | 26pt | 700 | Screen or total heading |
-| `{typography.headline}` | 21pt | 700 | Product-section heading |
-| `{typography.card-title}` | 13pt | 500 | Product title |
-| `{typography.body}` | 13pt | 400 | Default details |
-| `{typography.caption}` | 10pt | 500 | Badge and navigation |
-| `{typography.button}` | 15pt | 600 | Checkout and add |
-
-### Principles
-
-- Make current price stronger than old price.
-- Keep reward and regular prices clearly labeled.
-- Use heavy display type only in campaigns.
-- Keep category labels short and readable.
-
-### Note on Font Substitutes
-
-Use **SF Pro**, **Inter**, or **Roboto** with compact numerals.
+Dynamic Type should expand rows and cards vertically. Preserve priority in this order: section title, product image, product title, current price, reward price, then metadata. Heavy display type belongs to campaign and onboarding assets; do not use it for dense forms or product grids.
 
 # Screen composition
 
-### Grid & Container
+Arbuz uses a vertical feed with 12 to 16 point side gutters, dense product modules, and a persistent safe-area-aware bottom navigation. Home starts with a large image or campaign area, then a rounded search field, a compact address prompt, three icon shortcuts, and multiple horizontal product rails. Product rails use two to three visible cards at a time, with images occupying the upper half and pricing below.
 
-Home stacks a large hero, search, shortcuts, and horizontal product rails. Catalog uses three-column category tiles. Favorites and cart use two-column products plus full-width actions.
+Catalog screens use a search field followed by compact category rows and two or three column category tiles. Category tiles place a real object or product group on a pastel background, with a short label beneath or inside the tile. Product category screens switch to a denser two-column grid with a small title bar, horizontal chips, and filter/sort icons in the top area.
 
-### Whitespace Philosophy
+Product detail screens give the product image the top half of the viewport and overlay app controls in translucent white circles. The lower sheet-like content area contains title, rating, tags, description, and a fixed bottom purchase bar. The purchase bar uses a green action surface with quantity and price, and a separate teal reward strip beneath when relevant.
 
-Use white space to separate product groups and character states. Keep promotions bounded so shopping remains scannable.
+Cart and checkout screens are scroll views with a centered title, small utility icons, address or delivery context near the top, product rows, reward education banners, recommendations, and a fixed green total action. Checkout uses grouped section headings, pill date selectors, outlined time slots, rounded text inputs, and radio-style payment rows.
+
+Profile and loyalty surfaces are more promotional: profile cards mix order status, rating prompts, cashback banners, bonuses, and subscription panels. These still keep white cards and rounded promotional strips, but illustration and color blocks become larger than on ordinary product pages.
 
 # Navigation appearance
 
-Home, Catalog, Cart, Favorites, and Profile form the bottom bar. Selected destination receives a soft-green capsule.
+Navigation bars are minimal, usually a centered title with a soft circular back or close control at the leading side and compact line icons at the trailing side. Product details use translucent or white circular controls over imagery. Modal sheets have large rounded top corners, a small close icon, and a black scrim.
+
+The bottom navigation is a floating white rounded capsule with five compact destinations. Icons are thin black line symbols; the selected item sits inside a pale green pill and uses green icon/text. Badge counts are small red circles. Avoid a default `TabView` look with flat full-width separators or blue active tint.
 
 # Components
 
-### Buttons
+Primary buttons are green rounded rectangles, roughly full width on forms and sticky bars, with white semibold text. Secondary buttons are pale green or white with green text. Disabled or loading action bars keep the green rectangle but may show a centered spinner or softened text.
 
-Primary add and checkout actions use green with white text. Secondary actions use white, outline, or soft-green fields.
+Search fields are light gray rounded rectangles with a magnifier, low-contrast placeholder, and no heavy border. When the keyboard is present, the field remains near the top and results compress above the system keyboard. Suggestions use simple rows with magnifier icons and thin dividers.
 
-No plan tabs were observed. Address and delivery timing use compact selectors; subscription appears as a promotional card.
+Product cards contain a photo area, discount badge, heart control, title, rating/weight metadata, teal reward price, gray old price, black current price, and a small green plus. Keep the plus minimal, not a large filled button. Sold-out or unavailable states gray the image area and replace conversion with direct status text.
 
-### Cards & Containers
+Chips are pill-shaped and shallow. Selected chips are green with white or high-contrast text; unselected chips are pale gray. Filter sheets use grouped chip fields, light input boxes, green sliders, and a sticky green confirm button. Sorting uses a white bottom sheet over a dimmed catalog, with wheel-like centered choices and a green confirm button.
 
-Product cards combine photo, discount, favorite, title, weight, reward price, regular price, and add. Category tiles pair object with concise label.
-
-### Inputs & Forms
-
-Search remains prominent. Authentication uses phone and code. Cart keeps address, threshold, quantity, and total in one scroll.
-
-### Status & Build Page
-
-Discount, free delivery, rewards, stock, and order state use explicit text plus color. Empty cart and favorites use character art with one recovery action.
-
-### Navigation
-
-Home, Catalog, Cart, Favorites, and Profile form the bottom bar. Selected destination receives a soft-green capsule.
-
-The bottom bar is persistent. Cart adds a fixed green total action above it.
+Reward and subscription banners use rounded pastel or saturated cards, short explanatory copy, and authored art anchored to an edge. Do not use generic "card inside card" nesting; each card should have one clear surface boundary.
 
 # Imagery and icons
 
-| Level | Treatment | Use |
-|---|---|---|
-| 0 | White canvas | Commerce base |
-| 1 | Pale rounded tile | Search and categories |
-| 2 | Saturated campaign art | Hero and rewards |
-| 3 | Fixed green action | Cart and checkout |
+Shopping imagery is literal: use clean cutout photos of packaged goods, produce, and prepared foods. Photos should preserve labels and scale, sit on white or pastel tile backgrounds, and avoid decorative crops that hide the item. Hero sale imagery can composite large fruit, price tags, and soft shadows, but must remain bright and inspectable.
 
-### Decorative Depth
-
-Use softly shaded character art, isolated product photography, and selective campaign compositing. Avoid heavy shadows.
+Icons are small, thin, black or green line icons. Use them as controls and category aids, not as decorative replacements for product photos. The brand illustration layer uses smiling fruits, vegetables, bags, coins, and small food characters with soft shading. When final illustration assets are unavailable, the UI should reserve image slots and require raster assets rather than replacing the art with SF Symbols or SwiftUI shapes.
 
 # States
 
-Discount, free delivery, rewards, stock, and order state use explicit text plus color. Empty cart and favorites use character art with one recovery action.
+Observed states include onboarding, search with keyboard, populated product grids, selected filters, sorting sheet, cart with item, cart quantity removal/loading, checkout form, delivery date/time selection, message list, profile order status, loyalty subscription, and system notification permission. Across these states, white surfaces, green conversion controls, compact chips, and muted metadata remain consistent.
+
+Selected controls turn green or purple-blue only when the screen is a Freedom SuperApp embedded view; in native Arbuz shopping surfaces, selection should remain green. Modal states dim the underlying screen with a dark overlay and keep the active sheet white. Permission alerts are native iOS, but surrounding screens still retain authored photography or brand art behind them.
 
 # iOS adaptation
 
-| Wide | 768pt+ | Expand rails and category columns |
-| Small | <390pt | Reduce grid columns and stack prices |
+Respect the iPhone safe areas: status bar over clean backgrounds, bottom navigation above the home indicator, and sticky checkout actions above the tab bar or replacing it when focus is required. Use `ScrollView`-style vertical expansion instead of shrinking content. Product grids can reduce visible columns on narrow devices, but product photos, prices, and add controls must remain legible.
 
-### Touch Targets
+Keyboard states should keep the search title, input, and first results visible above the keyboard. Bottom sheets should use native sheet mechanics with custom rounded white surfaces, custom chips, and green commit buttons. All add, chip, filter, favorite, back, close, quantity, and checkout controls need at least 44 point hit areas even when the visual mark is small.
 
-Maintain 44pt for navigation, add controls, address, favorites, quantity, and checkout.
-
-### Collapsing Strategy
-
-Reduce category and product columns before truncating labels. Keep checkout full width and product metadata aligned.
-
-### Image Behavior
-
-Contain product packs and mascots. Cover campaign backgrounds while preserving featured products and brand characters.
-
-On iPhone, respect top and bottom safe areas, use scrolling for content that does not fit, keep interactive targets at least 44 points, and preserve the visual reading order for VoiceOver. At larger Dynamic Type sizes, allow supporting text to wrap without collapsing the dominant hierarchy. Use native sheets and permission transitions while explicitly styling app-owned surfaces to match the reference.
+Dynamic Type may increase row/card height and turn horizontal metadata into stacked lines. Do not shrink product photos below recognition size to preserve a fixed grid. Support light appearance as the primary style; a dark-mode adaptation may dim the canvas but must preserve white commerce surfaces unless a specific dark reference exists.
 
 # Anti-generic checklist
 
-- Do not substitute the documented accent hierarchy with default iOS blue.
-- Do not collapse distinct surfaces into a uniform stack of generic white cards.
-- Do not use an unstyled `TabView`, `Form`, or arbitrary SF Symbols when they contradict the documented navigation and component language.
-- Do not flatten the documented typography into one body-text scale.
-- Do not remove compositionally important photography or illustration while assets are pending.
-- Do not apply one corner radius to every control and surface.
-
-Source-specific guardrails retained from the review:
-
-### Do
-
-- Keep delivery context visible.
-- Label reward and cash prices.
-- Use green consistently for conversion.
-- Preserve product packaging.
-- Use mascots for recovery and education.
-
-### Don't
-
-- Don't replace product evidence with mascot art.
-- Don't hide threshold or cashback rules.
-- Don't overfill catalog tiles with copy.
-- Don't use discount color alone.
-- Don't crop labels needed for purchase.
+- Do not replace Arbuz green with default iOS blue or a desaturated generic green.
+- Do not build the catalog from plain `List` or `Form` rows; it needs image-led grocery cards and chip filters.
+- Do not omit product photography while waiting for final assets.
+- Do not use mascot art inside product cards where a purchasable product photo is required.
+- Do not use one universal corner radius; search, chips, product cards, sheets, and nav pills have different radii.
+- Do not turn sale badges, reward prices, and old/current price into uniform text rows.
+- Do not substitute arbitrary SF Symbols for the observed bottom-nav and category icon styling.
+- Do not add web-like headers, footers, hover states, or desktop navigation.
 
 </design-context>

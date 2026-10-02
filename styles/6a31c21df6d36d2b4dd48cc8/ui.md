@@ -3,189 +3,123 @@
 version: 1
 platform: iOS
 name: WB-Travel-design-analysis
-description: "A bright photo-led travel marketplace combining Wildberries magenta, violet gradient actions, white search sheets, compact discount badges, rounded destination photography, and dense but orderly booking facts. Discovery is colorful and editorial; booking progressively strips back to structured white forms and price review."
-
+description: "A photo-led iOS travel marketplace pairing pale booking surfaces with vivid WB magenta actions, bold price hierarchy, pill filters, centered navigation, and immersive destination imagery."
 colors:
-  primary: "#D900D8"
-  on-primary: "#FFFFFF"
-  primary-start: "#A522FF"
-  primary-end: "#E300CD"
-  primary-pressed: "#B700B8"
-  ink: "#171719"
-  ink-muted: "#73737A"
-  ink-subtle: "#A7A7AD"
   canvas: "#F6F5F8"
-  surface-1: "#FFFFFF"
-  surface-2: "#F4F3F6"
-  discount: "#ED185B"
-  info-blue: "#1BA7DA"
-  warning: "#D8922C"
-  hairline: "#E7E4E9"
-  semantic-success: "#269768"
-  semantic-danger: "#D94C58"
-  semantic-overlay: "#000000"
-
+  surface-primary: "#FFFFFF"
+  surface-secondary: "#F1EFF3"
+  accent-primary: "#D900D8"
+  accent-secondary: "#8F2BFF"
+  text-primary: "#171719"
+  text-secondary: "#73737A"
+  divider: "#E7E4E9"
+  destructive: "#D94C58"
 typography:
-  display-xl: { fontFamily: System Sans, fontSize: 40, fontWeight: 750, lineHeight: 1.04, letterSpacing: -0.8 }
-  display-lg: { fontFamily: System Sans, fontSize: 32, fontWeight: 700, lineHeight: 1.08, letterSpacing: -0.5 }
-  display-md: { fontFamily: System Sans, fontSize: 25, fontWeight: 700, lineHeight: 1.14, letterSpacing: -0.25 }
-  headline: { fontFamily: System Sans, fontSize: 20, fontWeight: 700, lineHeight: 1.2, letterSpacing: 0 }
-  card-title: { fontFamily: System Sans, fontSize: 15, fontWeight: 650, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: System Sans, fontSize: 17, fontWeight: 450, lineHeight: 1.35, letterSpacing: 0 }
-  body-lg: { fontFamily: System Sans, fontSize: 16, fontWeight: 400, lineHeight: 1.42, letterSpacing: 0 }
-  body: { fontFamily: System Sans, fontSize: 14, fontWeight: 400, lineHeight: 1.4, letterSpacing: 0 }
-  body-sm: { fontFamily: System Sans, fontSize: 12, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
-  caption: { fontFamily: System Sans, fontSize: 10, fontWeight: 450, lineHeight: 1.3, letterSpacing: 0 }
-  button: { fontFamily: System Sans, fontSize: 15, fontWeight: 600, lineHeight: 1.2, letterSpacing: 0 }
-  eyebrow: { fontFamily: System Sans, fontSize: 10, fontWeight: 700, lineHeight: 1.25, letterSpacing: 0.2 }
-  mono: { fontFamily: System Mono, fontSize: 12, fontWeight: 450, lineHeight: 1.35, letterSpacing: 0 }
-
-rounded: { xs: 5, sm: 9, md: 13, lg: 18, xl: 24, xxl: 30, pill: 9999, full: 9999 }
-spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
-
+  hero: {fontFamily: "SF Pro Display", fontSize: 36, fontWeight: 700, lineHeight: 41}
+  title: {fontFamily: "SF Pro Display", fontSize: 28, fontWeight: 700, lineHeight: 34}
+  section: {fontFamily: "SF Pro Text", fontSize: 20, fontWeight: 600, lineHeight: 25}
+  body: {fontFamily: "SF Pro Text", fontSize: 16, fontWeight: 400, lineHeight: 22}
+  label: {fontFamily: "SF Pro Text", fontSize: 14, fontWeight: 600, lineHeight: 19}
+  caption: {fontFamily: "SF Pro Text", fontSize: 12, fontWeight: 400, lineHeight: 16}
+spacing:
+  screen-horizontal: 16
+  section-gap: 28
+  card-padding: 16
+  control-gap: 12
+rounded:
+  control: 13
+  card: 18
+  sheet: 28
+  pill: 999
 components:
-  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.md}", padding: [14, 18]}
-  search-panel: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 16 }
-  destination-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.card-title}", rounded: "{rounded.md}", padding: 0 }
-  result-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 12 }
-  filter-chip: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.sm}", padding: [8, 12]}
+  photo-result-card: {}
+  magenta-primary-action: {}
+  filter-chip-row: {}
+  image-detail-sheet: {}
+  fixed-price-action-bar: {}
 ---
 
 # Overview
 
-WB Travel is a visual marketplace: destination and property photography attracts attention, while magenta actions and white structured cards turn discovery into a predictable booking path.
+WB Travel is a bright, photo-driven travel marketplace. Real destination, hotel, room, and excursion photography supplies most of the color, while the application layer stays white or pale gray and uses vivid magenta-purple for decisive actions and selections. Discovery screens are image-dense and editorial; booking, traveler, payment, and cancellation screens become calmer vertical forms with fixed bottom actions. Heavy titles and prices, compact metadata, and small discount or urgency signals keep commercial facts scannable.
 
 # Non-negotiable visual invariants
 
-- The reviewed screens use this composition: A bright photo-led travel marketplace combining Wildberries magenta, violet gradient actions, white search sheets, compact discount badges.
-- The dominant canvas token is #F6F5F8 and the primary accent token is #D900D8.
-- The recorded display style is 40 points while the body style is 14 points.
-- Navigation uses a category rail from Home and conventional back navigation inside each vertical.
-- The reviewed screens use this hierarchy: Discovery is colorful and editorial; booking progressively strips back to structured white forms and price review.
+- Real travel photography is the dominant visual mass on discovery, result, and detail screens and cannot be replaced by generic illustration.
+- Operational content sits on white or very pale gray surfaces; magenta-purple is concentrated in actions, selected controls, pins, and brand cues.
+- Detail screens pair a large top photo with a broad white rounded content sheet rising from below it.
+- Prices and property or experience titles are bold and visually stronger than gray metadata, rules, and old prices.
+- Search, filter, sort, and option controls use compact rounded fields or pills rather than large generic cards.
+- Booking and payment screens use a linear single-column form with a fixed full-width magenta action at the bottom safe area.
+- Inner navigation remains compact with a centered title, left chevron, and occasional right action.
+- Green, pink/red, and orange remain semantic accents for rating/success, discount/error, and urgency; they do not replace the brand action color.
 
 # Color and surfaces
 
-### Brand & Accent
+The canvas is a very pale warm gray and the main surface is white. Secondary fields, chips, and quiet groupings use a slightly darker pale gray. `accent-primary` is hot WB magenta for primary actions, selected radio controls, active outlines, map pins, and count badges. `accent-secondary` is violet and can participate in bounded magenta-violet action gradients. Primary text is near-black; descriptions and booking metadata use neutral gray; separators are thin and light. Green identifies favorable ratings, success, refundable options, or selected tariffs; red/pink marks discounts and errors; orange is reserved for scarcity or urgency.
 
-Use hot magenta for brand and violet-to-magenta gradients for Search, Continue, and Pay. Red discount badges and blue information labels remain secondary.
-
-### Surface
-
-Use white search and booking surfaces on a very pale gray canvas. Let hero and destination photography provide most background color.
-
-### Text
-
-Use near-black for destination, price, and booking facts; gray for crossed-out prices, rules, metadata, and supporting labels.
-
-### Semantic
-
-Use green for confirmed or refundable conditions, red for discounts and errors, amber for urgency, and magenta for neutral action.
+Photography may fill the upper viewport or most of a card, but forms and summary surfaces stay clean. Sheets and floating map cards are white with modest shadow. Generic system blue actions, large colored form backgrounds, or gradients on every small filter would break the reference.
 
 # Typography
 
-### Font Family
+Use SF Pro as the iOS-safe system family. Hotel, excursion, article, and destination titles use bold display text; centered navigation titles are smaller and medium weight. Prices and totals are bold with tabular numerals. Old prices are smaller, gray, and struck through; discount chips use compact bold white text. Route, room, baggage, guest, date, and policy metadata uses smaller gray body or caption styles. Filled form values may appear compact and visually emphatic without turning the entire interface into uppercase text.
 
-Use a modern system sans with tabular figures for fares, dates, discounts, and totals.
-
-### Principles
-
-Keep destination, date, price, and selected option easy to compare. Use bold sparingly for price and section title.
-
-### Note on Font Substitutes
-
-Use SF Pro or Inter with 650–750 display weights and tabular numerals.
+Dynamic Type should retain the title/price/metadata contrast. Allow long property names, policies, and addresses to wrap; expand result and tariff cards vertically rather than clipping them. Keep price and currency together where possible, and do not use promotional filler copy to occupy image or form whitespace.
 
 # Screen composition
 
-### Grid & Container
+Screens use roughly 16-point horizontal gutters and safe-area-aware vertical scrolling. The home screen places a photo hero beneath the status bar, overlays or follows it with a rounded search control, then uses a horizontal category rail and image-led card feed. Result screens combine compact filter/sort chips with single-column or dense image cards. Detail pages place a large photo at the top, floating back/share controls over the image, and a white rounded sheet containing title, facts, choices, and price. Booking screens strip away most imagery and use stacked fields plus a fixed bottom price/action bar.
 
-Home combines hero search, horizontal category rail, and photo carousels. Results use two-column photo grids or single-column fare cards; booking uses one column.
+Observed archetypes:
 
-### Whitespace Philosophy
-
-Discovery may be image-dense, but every card should retain clear title and price zones. Forms should become calm and linear.
+- **Discovery feed:** top photo hero, rounded search field, horizontal categories, then image-led destination or editorial cards.
+- **Search form:** broad white or pale panel with stacked origin, destination, date, night, and guest rows plus a magenta search action.
+- **Results:** compact filter/sort row, repeated photo-led result cards, bold current price, gray old price or metadata, and small discount badges.
+- **Detail:** full-width photo hero, floating navigation controls, and a rounded white content sheet that overlaps the image edge.
+- **Selection:** repeated room, tariff, or fare cards with explicit selected radio/fill, feature list, and price.
+- **Booking/payment:** single-column fields and summary rows with large quiet spacing and fixed magenta continuation bar.
+- **Map:** map tiles, magenta price pins, and one floating white result card near the bottom.
+- **Article:** large travel image followed by bold editorial title and readable single-column text.
 
 # Navigation appearance
 
-Use a category rail from Home and conventional back navigation inside each vertical. Preserve the selected vertical through results and detail.
+Many screens show a compact centered brand pill or title near the top. Inner navigation uses a left chevron and occasional share, gallery, or close control, often floating as white circular buttons over photography. Centered titles remain visually secondary to destination imagery or price. Sort, filter, payment, and search choices use white bottom sheets over a dim scrim with large top corners. Fixed action bars sit on a white bottom surface above the home indicator. These appearance rules do not prescribe the adopting product's routes.
 
 # Components
 
-### Buttons
-
-Primary search and payment actions use a wide violet-magenta gradient. Secondary share, filter, and detail actions use white or pale controls. Native controls must inherit the gradient and radius system.
-
-Tours, Flights, Hotels, Experiences, and Ideas use an icon category rail. Sort, rating, type, meal, baggage, and room choices use compact chips or rows.
-
-### Cards & Containers
-
-Destination cards pair rounded photography with title, category, and price. Fare cards prioritize time, route, duration, baggage, price, and urgency.
-
-### Inputs & Forms
-
-Search forms use stacked pale rows for origin, destination, dates, nights, and guests. Traveler forms keep one person or booking block at a time.
-
-### Status & Build Page
-
-Use discount, cheapest, fastest, remaining-seat, baggage, refundable, selected payment, booking total, and confirmation states close to the relevant value.
-
-### Navigation
-
-Use a category rail from Home and conventional back navigation inside each vertical. Preserve the selected vertical through results and detail.
+- **Photo result card:** rounded white container, large aspect-fill photo, bold title and current price, compact gray facts, optional struck-through old price, and small discount/rating badges.
+- **Magenta primary action:** full-width 52–56 point control with hot-magenta or restrained violet-magenta fill, white semibold label, and 13-point rounding; disabled state becomes pale gray without changing size.
+- **Filter chip row:** horizontally scrolling compact pills with pale fill, dark label, and magenta outline/count/selection when active.
+- **Search field or row:** soft pale rounded rectangle with concise value hierarchy, small category icon, and no heavy border.
+- **Image detail sheet:** broad white surface with a large rounded top edge overlapping a photo hero; begins with title/price, then facts and choices.
+- **Tariff or room card:** white rounded panel with feature rows, explicit radio/selection state, bold price, and restrained green favorable-state cue.
+- **Fixed price action bar:** white bottom surface containing summary amount and a dominant magenta button, separated from scroll content by spacing or a subtle hairline.
+- **Map price pin:** compact magenta pill with white price text and a clear selected state tied to the floating result card.
 
 # Imagery and icons
 
-Use softly raised white cards, rounded images, sticky bottom actions, and mild shadow where booking layers overlap. Avoid dramatic elevation.
+Real travel photography is fundamental: hotels, rooms, beaches, destinations, excursions, regions, and editorial subjects occupy large crops with centered or subject-aware focal points. Use aspect-fill without distorting architecture or people. Maps use real map tiles with controlled overlays. Small functional symbols represent transport, lodging, calendar, guests, baggage, filters, sorting, payment, contact, and map position; keep them consistent and subordinate to photography.
 
-### Decorative Depth
-
-Use playful dimensional category icons and an occasional 3D assistant bubble. Do not extend decorative objects into result or payment screens.
+No standalone authored illustration system was confirmed. Logos, category icons, gradients, decorative bubbles, and brand marks do not qualify. Do not create an `illustrations.md` for this package; compositionally important photography still cannot be omitted while final assets are pending.
 
 # States
 
-Use discount, cheapest, fastest, remaining-seat, baggage, refundable, selected payment, booking total, and confirmation states close to the relevant value.
+Search screens preserve the same rounded field system through empty, focused, filled, keyboard, and selection-sheet states. Result filters show active counts or outlines without changing chip geometry. Room/tariff selections use explicit radio or colored panel states. Disabled booking and cancellation actions are pale; enabled actions return to magenta. Loading uses restrained placeholders or spinners within the same white/pale structure. Payment-method and sorting choices appear in white sheets. Processing and confirmation states keep the price hierarchy and focused status treatment. Consent or modal states dim the underlying photo-led screen without altering its composition.
 
 # iOS adaptation
 
-Phones show one search or booking flow. Wider screens may pair filters and results, or gallery and booking summary, while maintaining readable card widths.
+Use safe-area-aware `ScrollView` layouts, subject-aware `scaledToFill` photography, and `safeAreaInset(edge: .bottom)` for fixed price/action bars. Preserve at least 44-point targets for floating image controls, filters, result cards, room/fare selections, and payment choices. Keep active form fields visible above the keyboard and allow native sheets to provide interaction while matching the observed white surface and radius.
 
-### Touch Targets
-
-Category icons, search rows, filters, result cards, galleries, room or fare choices, and payment controls require at least 44pt targets.
-
-### Collapsing Strategy
-
-Keep destination, dates, selected offer, total, and next action visible. Collapse reviews, maps, rules, organizer detail, and editorial copy.
-
-### Image Behavior
-
-Use `cover` for destinations, hotels, excursions, and hero campaigns; preserve faces and landmarks with centered focal points. Use `contain` for transport or category icons.
-
-On iPhone, respect top and bottom safe areas, use scrolling for content that does not fit, keep interactive targets at least 44 points, and preserve the visual reading order for VoiceOver. At larger Dynamic Type sizes, allow supporting text to wrap without collapsing the dominant hierarchy. Use native sheets and permission transitions while explicitly styling app-owned surfaces to match the reference.
+VoiceOver order should announce image context, title, core facts, price, selection state, then action. Combine commercial facts logically and announce old/current prices and discount without relying on color. Dynamic Type may turn horizontal fact rows into vertical stacks and increase card height. The sampled system is light-first; do not invent a dark mode or automatically recolor travel photography and maps.
 
 # Anti-generic checklist
 
-- Do not substitute the documented accent hierarchy with default iOS blue.
-- Do not collapse distinct surfaces into a uniform stack of generic white cards.
-- Do not use an unstyled `TabView`, `Form`, or arbitrary SF Symbols when they contradict the documented navigation and component language.
-- Do not flatten the documented typography into one body-text scale.
-- Do not remove compositionally important photography or illustration while assets are pending.
-- Do not apply one corner radius to every control and surface.
-
-Source-specific guardrails retained from the review:
-
-### Do
-
-- Let photography drive discovery.
-- Keep total price and discount easy to compare.
-- Use one predictable search-to-payment sequence.
-- Reduce decoration as commitment increases.
-
-### Don't
-
-- Do not bury fees or baggage inside photo cards.
-- Do not use gradients for every small filter.
-- Do not mix inconsistent image ratios in one grid.
-- Do not retain default native blue actions.
-
+- Do not replace travel photography with icons, gradients, or generic scenic illustration.
+- Do not use default blue buttons, radios, links, or map pins instead of the magenta-purple action hierarchy.
+- Do not build every search field, result, and booking section as the same white card.
+- Do not use an unstyled `Form`, picker, sheet, or `TabView` appearance.
+- Do not flatten title, price, old price, metadata, and policy text into one scale.
+- Do not stretch or inconsistently crop hotel, room, destination, or excursion images.
+- Do not extend decorative gradients into linear booking and payment forms.
+- Do not add mood-setting travel copy that duplicates visible place, image, price, or state.
 </design-context>

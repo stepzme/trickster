@@ -3,188 +3,97 @@
 version: 1
 platform: iOS
 name: Stars-Coffee-design-analysis
-description: "A warm loyalty-led coffee app built from deep roast-brown headers, bright turquoise actions, cream typography, white rounded menu cards, and carefully isolated product photography. Onboarding adds dark-green and aqua wave fields with playful cream stars and soft 3D scenes."
-
+description: "A warm coffee-loyalty interface combining deep roast-brown and teal brand fields, cream display type, turquoise actions, rounded white product surfaces, and playful authored star-and-wave illustrations."
 colors:
-  primary: "#43D7C2"
-  on-primary: "#FFFFFF"
-  primary-pressed: "#2FBCA8"
-  brand-brown: "#5B321E"
-  brand-green: "#0C5547"
-  cream: "#FFF4C8"
-  ink: "#1F1A18"
-  ink-muted: "#746E6A"
-  ink-subtle: "#AAA5A2"
   canvas: "#F6F5F7"
-  surface-1: "#FFFFFF"
-  surface-2: "#F1EEF0"
-  hairline: "#E7E3E4"
-  semantic-success: "#2CAE70"
-  semantic-warning: "#F0A930"
-  semantic-danger: "#DE5057"
-  semantic-overlay: "#000000"
-
+  surface-primary: "#FFFFFF"
+  surface-secondary: "#F1EEF0"
+  accent-primary: "#43D7C2"
+  accent-secondary: "#5B321E"
+  text-primary: "#1F1A18"
+  text-secondary: "#746E6A"
+  divider: "#E7E3E4"
+  destructive: "#DE5057"
 typography:
-  display-xl: { fontFamily: System Sans, fontSize: 40, fontWeight: 800, lineHeight: 1.02, letterSpacing: -0.8 }
-  display-lg: { fontFamily: System Sans, fontSize: 32, fontWeight: 800, lineHeight: 1.08, letterSpacing: -0.5 }
-  display-md: { fontFamily: System Sans, fontSize: 27, fontWeight: 700, lineHeight: 1.12, letterSpacing: -0.3 }
-  headline: { fontFamily: System Sans, fontSize: 22, fontWeight: 700, lineHeight: 1.2, letterSpacing: 0 }
-  card-title: { fontFamily: System Sans, fontSize: 15, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: System Sans, fontSize: 17, fontWeight: 500, lineHeight: 1.3, letterSpacing: 0 }
-  body-lg: { fontFamily: System Sans, fontSize: 16, fontWeight: 400, lineHeight: 1.4, letterSpacing: 0 }
-  body: { fontFamily: System Sans, fontSize: 14, fontWeight: 400, lineHeight: 1.4, letterSpacing: 0 }
-  body-sm: { fontFamily: System Sans, fontSize: 12, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
-  caption: { fontFamily: System Sans, fontSize: 10, fontWeight: 400, lineHeight: 1.3, letterSpacing: 0 }
-  button: { fontFamily: System Sans, fontSize: 14, fontWeight: 600, lineHeight: 1.2, letterSpacing: 0 }
-  eyebrow: { fontFamily: System Sans, fontSize: 11, fontWeight: 700, lineHeight: 1.25, letterSpacing: 0.3 }
-  mono: { fontFamily: System Mono, fontSize: 12, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
-
-rounded: { xs: 4, sm: 8, md: 12, lg: 18, xl: 24, xxl: 32, pill: 9999, full: 9999 }
-spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
-
+  hero: {fontFamily: "SF Pro Display", fontSize: 40, fontWeight: 800, lineHeight: 42}
+  title: {fontFamily: "SF Pro Display", fontSize: 31, fontWeight: 800, lineHeight: 35}
+  section: {fontFamily: "SF Pro Text", fontSize: 22, fontWeight: 700, lineHeight: 27}
+  body: {fontFamily: "SF Pro Text", fontSize: 16, fontWeight: 400, lineHeight: 22}
+  label: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 600, lineHeight: 20}
+  caption: {fontFamily: "SF Pro Text", fontSize: 12, fontWeight: 400, lineHeight: 16}
+spacing:
+  screen-horizontal: 16
+  section-gap: 30
+  card-padding: 16
+  control-gap: 10
+rounded:
+  control: 14
+  card: 20
+  sheet: 28
+  pill: 999
 components:
-  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: [14, 20]}
-  loyalty-card: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.card-title}", rounded: "{rounded.lg}", padding: 16 }
-  product-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.lg}", padding: 12 }
-  input-field: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: 12 }
-  step-indicator: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.caption}", rounded: "{rounded.full}", padding: 6 }
+  primary-action: {fill: "#43D7C2", textColor: "#173A34", cornerRadius: 999, minHeight: 50}
+  secondary-action: {fill: "#5B321E", textColor: "#FFF4C8", cornerRadius: 14, minHeight: 46}
+  primary-card: {fill: "#FFFFFF", cornerRadius: 20, padding: 16}
+  navigation: {fill: "#FFFFFF", selectedColor: "#43D7C2", unselectedColor: "#746E6A"}
 ---
 
 # Overview
 
-Stars Coffee pairs warm café branding with clean loyalty and menu utility. Brown frames the account context, turquoise carries progress and commitment, and white rounded cards isolate product photography.
+Stars Coffee combines warm café branding with clear loyalty and ordering utility. Deep coffee-brown and dark teal/mint fields frame cream display type; turquoise actions carry progress and commitment; white rounded cards isolate drink/food photography. Onboarding and selected brand moments use a coherent authored family of teal waves, cream stars, hands, cups, and soft dimensional objects.
 
 # Non-negotiable visual invariants
 
-- The reviewed screens use this composition: A warm loyalty-led coffee app built from deep roast-brown headers, bright turquoise actions, cream typography, white rounded menu cards, and carefully isolated product photography.
-- The dominant canvas token is #F6F5F7 and the primary accent token is #43D7C2.
-- The recorded display style is 40 points while the body style is 14 points.
-- Navigation appears as follows: Home is the central hub.
-- The reviewed screens use this hierarchy: Onboarding adds dark-green and aqua wave fields with playful cream stars and soft 3D scenes.
+- Deep roast-brown or dark teal forms a large branded header/background mass.
+- Turquoise is the stable primary action and loyalty-progress accent.
+- Cream/white oversized display lettering appears on dark brand fields.
+- Menu/product cards remain white, broadly rounded, and led by real product photography.
+- Loyalty/card/gift states use clear large card geometry rather than generic metric tiles.
+- Onboarding uses authored teal waves, cream stars, and soft dimensional hero objects.
+- Map pins and selected states retain the coffee/teal identity rather than default blue.
 
 # Color and surfaces
 
-### Brand & Accent
-
-Turquoise is the interaction and loyalty accent. Roast brown anchors headers; forest green and cream belong to onboarding and brand storytelling.
-
-### Surface
-
-White cards sit on a very pale gray canvas. Brown may fill top chrome, while forms return to neutral surfaces.
-
-### Text
-
-Dark brown-black carries product names and titles; cream or white appears on brand fields; gray supports prices and metadata.
-
-### Semantic
-
-Green confirms success, amber supports loyalty progress, and red marks failures. Dietary labels use small controlled color accents.
+Coffee brown anchors profile/account and some brand surfaces; forest teal and mint shape onboarding and loyalty moments. Turquoise carries primary buttons and selection. Cream/white text sits on dark fields, while near-black and gray handle utility copy on white. White cards and pale neutral grouping keep catalog and forms calm. Red is reserved for validation/destructive states. Generic blue or cold all-white composition would erase the café warmth.
 
 # Typography
 
-### Font Family
-
-Use a neutral system sans with heavy, slightly playful brand headings and compact menu copy.
-
-### Principles
-
-Keep product names readable over two lines, preserve clear prices, and reserve uppercase for the brand wordmark or short promos.
-
-### Note on Font Substitutes
-
-Use SF Pro or Inter. A rounded geometric sans may support marketing headlines, but forms and menu lists should remain neutral.
+Use SF Pro with heavy rounded-feeling display weights. Onboarding and promo headlines are large, chunky, and cream/white; product names and loyalty labels are semibold; metadata and history details are compact. Avoid filling space with atmospheric copy. At Dynamic Type sizes, allow hero text and card labels to wrap, expand product/detail cards, and keep turquoise primary actions and loyalty values prominent.
 
 # Screen composition
 
-### Grid & Container
+Onboarding is full-screen dark teal/brown with large display copy and a hero illustration across roughly one third to one half of the viewport. Home combines a dark brand header, loyalty balance/card, promotional/news modules, and white menu/catalog cards. Product detail is sparse and white with a large contained drink/food image followed by options and action. Map screens use a light map with custom branded pins and bottom cards/sheets. Profile can use a full brown field with floating white input/history/gift-card surfaces. Insets are around 16 points.
 
-Home layers loyalty and promotion cards over brown chrome. Menu uses horizontal categories and a two-column product grid; gifting is single-column.
-
-### Whitespace Philosophy
-
-Keep menu cards airy around each drink or food item. Brand screens may use broad color fields and generous text zones.
+Visible archetypes include illustrated onboarding; sign-up forms; loyalty-led home/catalog; product detail; promo/news; nearest-store map; loyalty card; brown profile/account; purchase history; and gift-card purchase/use.
 
 # Navigation appearance
 
-Home is the central hub. Focused menu, account, and gifting screens use a simple back-led top bar and contextual close where appropriate.
+Navigation uses compact iOS back/close controls styled in brown, teal, or white depending on the field. Bottom navigation and segmented/tabs use clean white or dark brand surfaces with turquoise selected emphasis. Maps use custom logo pins and rounded bottom sheets. Gift/profile flows use large rounded modal surfaces. Native permission and keyboard states may remain native, while app-owned surfaces preserve the palette.
 
 # Components
 
-### Buttons
-
-Primary actions are turquoise pills with white text; dark-green pills may appear on onboarding. Native controls must inherit the package colors and geometry.
-
-Menu categories use horizontally scrolling text tabs with a brown selected pill and muted inactive labels.
-
-### Cards & Containers
-
-Loyalty, news, café location, menu products, and gift designs each live in distinct rounded cards with one clear purpose.
-
-### Inputs & Forms
-
-Gift and profile fields use pale-gray fills and compact labels. Keep the numbered progress indicator visible above multi-step gifting.
-
-### Status & Build Page
-
-Cashback, free-cup progress, purchase history, and payment completion use explicit text plus compact progress or confirmation marks.
-
-### Navigation
-
-Home is the central hub. Focused menu, account, and gifting screens use a simple back-led top bar and contextual close where appropriate.
+Primary actions are turquoise pills with dark high-contrast labels; secondary actions may use brown/cream. Product cards use white fill, broad rounding, large isolated photography, concise title/price, and compact options. Loyalty cards combine progress, QR/card identity, and rewards. Promo/news cards mix photography or campaign art with short copy. Gift cards use large decorative card backgrounds. Inputs are white rounded rectangles on brown or pale fields. Map/store cards use rounded sheets and custom markers. Disabled controls retain shape and reduce saturation.
 
 # Imagery and icons
 
-Depth comes from white rounded sheets on brown, soft card shadows, and layered onboarding waves.
-
-### Decorative Depth
-
-Use teal waves, dark-green radial glow, cream stars, and soft 3D hero objects. Avoid glossy effects inside transactional forms.
+Product catalog imagery is real photography or clean cutouts and cannot be replaced by illustration. News banners and gift-card backgrounds are campaign content. Authored onboarding/brand art follows the separate illustration specification. Interface icons are simple and friendly; map markers use the coffee identity. Authored art cannot be substituted with SF Symbols, emoji, or SwiftUI shapes.
 
 # States
 
-Cashback, free-cup progress, purchase history, and payment completion use explicit text plus compact progress or confirmation marks.
+Observed states include onboarding steps, sign-up and keyboard, populated home/catalog, product selection, promo/news, loyalty progress, map/nearest-store selection, purchase history, profile edit, and gift-card purchase/receive/use. Turquoise remains primary, brown/teal remain brand fields, and white remains the utility surface. System permissions may overlay the current brand field.
 
 # iOS adaptation
 
-Keep account and gifting flows single-column. Wider menu layouts may add product columns while retaining card proportions.
-
-### Touch Targets
-
-Categories, product cards, loyalty actions, gift steps, and café controls require at least 44pt targets.
-
-### Collapsing Strategy
-
-Allow menu categories and news cards to scroll horizontally. Keep the next or payment action visible through long gifting steps.
-
-### Image Behavior
-
-Use `contain` for menu cutouts and 3D brand scenes; use `cover` for news, gift designs, and promotional photography.
-
-On iPhone, respect top and bottom safe areas, use scrolling for content that does not fit, keep interactive targets at least 44 points, and preserve the visual reading order for VoiceOver. At larger Dynamic Type sizes, allow supporting text to wrap without collapsing the dominant hierarchy. Use native sheets and permission transitions while explicitly styling app-owned surfaces to match the reference.
+Extend dark brand fields behind the top safe area and keep controls/home indicator clear. Use vertical scrolling for catalog/profile/history, keyboard-aware forms, and native maps with branded overlays. Maintain 44-point targets for tabs, product options, map pins/cards, and gift/loyalty actions. VoiceOver should read product identity before price/options/action and reward/card information before controls; decorative stars/waves may be hidden. Compact widths stack art and text rather than shrinking either. Dynamic Type expands cards. Preserve accessible contrast over brown/teal.
 
 # Anti-generic checklist
 
-- Do not substitute the documented accent hierarchy with default iOS blue.
-- Do not collapse distinct surfaces into a uniform stack of generic white cards.
-- Do not use an unstyled `TabView`, `Form`, or arbitrary SF Symbols when they contradict the documented navigation and component language.
-- Do not flatten the documented typography into one body-text scale.
-- Do not remove compositionally important photography or illustration while assets are pending.
-- Do not apply one corner radius to every control and surface.
-
-Source-specific guardrails retained from the review:
-
-### Do
-
-- Preserve the brown and turquoise contrast.
-- Isolate products on white.
-- Keep loyalty progress visible.
-- Use stars only in brand storytelling.
-
-### Don't
-
-- Do not place 3D onboarding art in menu cards.
-- Do not use brown for semantic error states.
-- Do not crowd product cutouts with decoration.
-- Do not expose default platform-blue controls.
+- Do not replace turquoise/brown/teal with default blue.
+- Do not remove product photography or authored onboarding art.
+- Do not use a generic white-card dashboard without large brand color fields.
+- Do not use an unstyled `TabView`, map pin, `Form`, or bottom sheet.
+- Do not recreate stars, waves, hands, cups, or hero objects programmatically.
+- Do not flatten chunky display type into ordinary body text.
+- Do not add decorative prose where loyalty, product, or action context is already clear.
 
 </design-context>

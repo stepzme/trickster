@@ -3,209 +3,118 @@
 version: 1
 platform: iOS
 name: Brilliant-design-analysis
-description: "A bright interactive-learning interface with white space, heavy black hierarchy, vivid blue or green lesson actions, soft-gray containers, and compact 3D diagrams. Progress is expressed through short checks, skill paths, manipulable visual models, and immediate explanations rather than long reading."
+description: "A spacious white interactive-learning interface with bold rounded headings, bright blue actions, green progress accents, centered educational models, pill navigation, and a fully developed charcoal dark appearance."
 colors:
-  primary: "#4267F5"
-  on-primary: "#FFFFFF"
-  primary-soft: "#EEF2FF"
-  accent: "#25BFA8"
-  accent-secondary: "#F2C230"
-  ink: "#111214"
-  ink-muted: "#656A70"
-  ink-subtle: "#A7ABB0"
   canvas: "#FFFFFF"
-  surface-1: "#FFFFFF"
-  surface-2: "#F4F5F6"
-  hairline: "#E2E4E6"
-  semantic-success: "#25C46B"
-  semantic-danger: "#D94A57"
-  semantic-overlay: "#000000"
+  surface-primary: "#FFFFFF"
+  surface-secondary: "#F3F4F5"
+  accent-primary: "#4267F5"
+  accent-secondary: "#25BFA8"
+  text-primary: "#111214"
+  text-secondary: "#656A70"
+  divider: "#E2E4E6"
+  destructive: "#D94A57"
 typography:
-  display-xl: { fontFamily: SF Pro Display, fontSize: 36, fontWeight: 700, lineHeight: 1.05, letterSpacing: -0.7 }
-  display-lg: { fontFamily: SF Pro Display, fontSize: 30, fontWeight: 700, lineHeight: 1.08, letterSpacing: -0.5 }
-  display-md: { fontFamily: SF Pro Display, fontSize: 26, fontWeight: 700, lineHeight: 1.12, letterSpacing: -0.3 }
-  headline: { fontFamily: SF Pro Display, fontSize: 22, fontWeight: 700, lineHeight: 1.18, letterSpacing: -0.2 }
-  card-title: { fontFamily: SF Pro Text, fontSize: 16, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: SF Pro Text, fontSize: 17, fontWeight: 500, lineHeight: 1.35, letterSpacing: 0 }
-  body-lg: { fontFamily: SF Pro Text, fontSize: 16, fontWeight: 400, lineHeight: 1.45, letterSpacing: 0 }
-  body: { fontFamily: SF Pro Text, fontSize: 14, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
-  body-sm: { fontFamily: SF Pro Text, fontSize: 12, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
-  caption: { fontFamily: SF Pro Text, fontSize: 10, fontWeight: 400, lineHeight: 1.20, letterSpacing: 0 }
-  button: { fontFamily: SF Pro Text, fontSize: 15, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0 }
-  eyebrow: { fontFamily: SF Pro Text, fontSize: 11, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0.3 }
-  mono: { fontFamily: SF Mono, fontSize: 12, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
-rounded: { xs: 8, sm: 12, md: 16, lg: 20, xl: 26, xxl: 32, pill: 9999, full: 9999 }
-spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
+  hero: {fontFamily: "SF Pro Display", fontSize: 36, fontWeight: 700, lineHeight: 40}
+  title: {fontFamily: "SF Pro Display", fontSize: 28, fontWeight: 700, lineHeight: 34}
+  section: {fontFamily: "SF Pro Text", fontSize: 21, fontWeight: 700, lineHeight: 26}
+  body: {fontFamily: "SF Pro Text", fontSize: 16, fontWeight: 400, lineHeight: 23}
+  label: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 600, lineHeight: 20}
+  caption: {fontFamily: "SF Pro Text", fontSize: 12, fontWeight: 400, lineHeight: 17}
+spacing:
+  screen-horizontal: 20
+  section-gap: 32
+  card-padding: 18
+  control-gap: 12
+rounded:
+  control: 16
+  card: 22
+  sheet: 28
+  pill: 999
 components:
-  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.md}", padding: [14, 18]}
-  feature-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 16 }
-  action-tile: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.md}", padding: 12 }
-  grouped-list: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: [8, 16]}
-  input: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body-lg}", rounded: "{rounded.md}", padding: [14, 16]}
+  blue-primary-action: {fill: "#4267F5", text: "#FFFFFF", shape: "wide pill"}
+  answer-choice: {fill: "#FFFFFF", border: "pale gray or blue selected", shape: "rounded rectangle"}
+  educational-model-card: {fill: "#FFFFFF", imagery: "large centered model", chrome: "minimal"}
+  progress-strip: {fill: "pale gray", active: "green or course accent", shape: "short rounded track"}
+  pill-tab-bar: {fill: "light or dark translucent surface", selected: "high contrast"}
 ---
 
 # Overview
 
-Brilliant makes each lesson a sequence of small visual decisions. Home recommends the next skill; the lesson alternates interactive diagrams, answers, explanations, and progress feedback.
-
-**Key Characteristics:**
-- Very bright white canvas.
-- Blue and teal course accents.
-- Compact 3D learning objects.
-- Short progress bars and energy count.
-- Rounded bottom navigation.
+Brilliant is a spacious, single-focus learning interface. White or deep charcoal fills the screen, while a bold prompt, one large educational model, and a bottom-anchored action define the reading order. Bright blue drives primary actions and selections; green and course colors communicate progress. Rounded controls and a compact pill tab bar soften the system without turning lessons into generic card stacks.
 
 # Non-negotiable visual invariants
 
-- The reviewed screens show this treatment: Very bright white canvas.
-- The reviewed screens show this treatment: Blue and teal course accents.
-- The reviewed screens show this treatment: Compact 3D learning objects.
-- The reviewed screens show this treatment: Short progress bars and energy count.
-- The reviewed screens show this treatment: Rounded bottom navigation.
+- Each focused learning screen gives one prompt or concept clear visual dominance, with generous empty space around it.
+- Custom educational imagery is a primary content mass, centered and large enough to inspect; it cannot be replaced by a small symbol.
+- Primary actions use a bright blue, wide pill or rounded control with white text.
+- Answer choices are bordered rounded blocks whose selected state gains an unmistakable blue outline or fill treatment.
+- Progress is kept near the top as a short, quiet strip, dots, or course-colored indicator rather than a large dashboard widget.
+- Headings are bold and rounded in character, clearly separated from compact body and control text.
+- Bottom navigation is a compact pill-like surface with three evenly weighted destinations and a high-contrast selected state.
+- Dark appearance uses true black or deep charcoal fields, white text, dim separators, and retained blue/green accents rather than simple color inversion.
 
 # Color and surfaces
 
-### Brand & Accent
-- **Primary** ({colors.primary}): Lesson start, selection, and continuation.
-- **Accent** ({colors.accent}): Alternative course families and correct progress.
-- **Secondary Accent** ({colors.accent-secondary}): Scientific-thinking emphasis and energy.
+Light appearance uses a clean white canvas and white primary surfaces, with pale gray for dividers, disabled controls, secondary containers, and answer backgrounds. Bright blue identifies primary actions, selected answers, and active learning controls. Green or teal carries progress and positive feedback. Yellow, purple, and multicolor gradients appear selectively in premium and course imagery. Destructive or incorrect emphasis uses restrained red.
 
-### Surface
-- **Canvas** ({colors.canvas}): Lessons, home, courses, and profile.
-- **Surface 1** ({colors.surface-1}): Main cards and sheets.
-- **Surface 2** ({colors.surface-2}): Secondary fields and controls.
-- **Hairline** ({colors.hairline}): Quiet grouping.
-
-### Text
-- **Ink** ({colors.ink}): Headings and primary values.
-- **Ink Muted** ({colors.ink-muted}): Supporting detail.
-- **Ink Subtle** ({colors.ink-subtle}): Placeholder and inactive state.
-
-### Semantic
-- **Success** ({colors.semantic-success}): Completed or positive state.
-- **Danger** ({colors.semantic-danger}): Error and destructive state.
-- **Overlay** ({colors.semantic-overlay}): Modal focus.
+Dark appearance shifts the canvas and main surfaces to black and deep charcoal, while text becomes white or cool gray. Bottom bars and cards become darker translucent layers; blue actions and green progress remain saturated. Default iOS blue is close in family but must not replace the specific bright action color or course accent system. Heavy shadows, beige backgrounds, or decorative gradients on ordinary controls would break the reference.
 
 # Typography
 
-### Font Family
+Prompts and screen titles use bold rounded sans-serif forms with short line lengths and strong vertical presence. Body copy, answer labels, and navigation are compact, regular, and highly legible. Progress labels and metadata are smaller and muted. Buttons use semibold centered labels. Numerals in exercises and progress remain clear and direct, while course titles can carry stronger display weight.
 
-- **SF Pro Display** — course names and question prompts.
-- **SF Pro Text** — controls, forms, and explanations.
-- **SF Mono** — codes and compact numeric data.
-
-### Hierarchy
-
-Use 36pt bold for major statements, 22pt bold for screen headings, 16pt semibold for cards, 14pt regular for detail, and 15pt semibold for primary actions.
-
-### Principles
-
-- Ask one clear question at a time.
-- Keep diagrams larger than helper text.
-- Use color to distinguish variables consistently.
-- Explain an error immediately.
-
-### Note on Font Substitutes
-
-Use **Inter** or the platform system sans when SF Pro is unavailable.
+Use SF Pro Display as the safe substitute for large headings and SF Pro Text for body and controls. Under Dynamic Type, allow prompts and explanations to wrap and make the learning content scroll before shrinking diagrams or answer labels. Preserve the visible hierarchy between prompt, model, choices, and helper text.
 
 # Screen composition
 
-### Spacing System
+Focused lesson screens begin with a safe-area-aware top strip containing close/back, progress, and small utilities. A short prompt sits above a large centered educational model or answer area. Choices occupy the middle-to-lower region, and a wide primary action sits above the bottom safe area. Content is usually inset 20 points or more, with generous vertical gaps.
 
-Use a 4pt base, 16pt edge gutters, 12pt control gaps, and 16pt card padding.
+Home archetype: a concise greeting or progress context leads into a prominent recommended lesson or course card, supporting streak or league content, and a rounded three-item bottom bar.
 
-### Grid & Container
+Lesson archetype: compact top progress, bold prompt, dominant manipulable or explanatory visual, answer choices, and one bottom continuation action form a strict vertical hierarchy.
 
-Home centers one recommended course card above a three-tab nav. Lessons use a top progress bar, a central diagram, and one bottom action; course catalog uses grouped lists.
+Course-catalog archetype: horizontal category tabs precede stacked rounded course cards with color-coded art and concise progress information.
 
-### Whitespace Philosophy
+Leaderboard archetype: a title and status lead into compact ranked rows, with a highlighted current position and a large league or medal visual.
 
-Give each interactive model room to be manipulated and understood without surrounding dashboard noise.
+Settings archetype: simple full-width list rows, toggles, chevrons, and a segmented appearance selector use restrained white or dark grouped surfaces.
 
 # Navigation appearance
 
-Home, Courses, and You are stable. Lesson navigation becomes focused with close, progress, sound, and energy.
+The main bottom navigation is a rounded pill-like light or dark surface with three icon-label items. The selected state gains stronger text, icon, or local fill contrast. Focused flows replace it with compact circular close or back controls and a slim top progress indicator. Course categories use horizontally scrolling text or pill tabs. Settings rows use standard compact chevrons. Bottom sheets and subscription cards use large corners and clear dimming without oversized navigation chrome.
 
 # Components
 
-### Buttons
+Primary actions are wide blue pills or rounded rectangles with white semibold labels; disabled actions use pale gray fill and muted text while retaining geometry. Answer choices are large rounded rectangles with a quiet border; selection uses a clear blue outline and result states add course or semantic color. Multiple-choice grids keep even gaps and equal visual weight.
 
-Blue or course-colored full-width buttons start and continue. Answer choices become outlined cards with clear selected and result states.
-
-Home, Courses, and You use a rounded bottom bar; course levels and skill paths use large selectable stages.
-
-### Cards & Containers
-
-Recommended course cards combine subject, level, illustration, and one action. Explanation cards stay text-led with a supporting diagram.
-
-### Inputs & Forms
-
-Answers use direct taps, drag manipulation, numeric entry, or short choices; account forms remain conventional.
-
-### Status & Build Page
-
-Show lesson progress, energy, correct, incorrect, explanation, skill check, streak, league, and completed state explicitly.
-
-### Navigation
-
-Home, Courses, and You are stable. Lesson navigation becomes focused with close, progress, sound, and energy.
-
-The lesson action remains above the safe area; the three-tab nav returns outside an active lesson.
+Course cards combine a large authored visual, short title, progress, and restrained action on a white, colored, or dark surface. Progress bars and dots are thin, rounded, and placed near the screen top. Subscription plan cards use distinct selected borders or fills and may include controlled yellow-purple gradient accents. Toggles, appearance segments, leaderboard rows, CAPTCHA, sign-in controls, and settings lists stay visually quieter than lesson content.
 
 # Imagery and icons
 
-Keep the base flat, raise actionable cards slightly, and reserve overlays for confirmation or interruption.
+Custom educational imagery is essential and often occupies the center third or more of the viewport. It includes rounded 3D or vector scales, cubes, math objects, course tiles, medal and league objects, abstract models, and a soft mascot-like form. The art uses crisp silhouettes, soft volume, bright conceptual colors, and minimal environmental detail. It remains readable on both white and charcoal canvases.
 
-### Decorative Depth
-
-Use soft 3D volume for educational objects, while forms and navigation stay almost flat.
+Navigation and utility icons are compact, simple, and secondary. Do not replace educational models, league objects, mascot art, or course identity visuals with arbitrary SF Symbols or omit them while assets are pending. Preserve complete diagrams and do not crop relationships the learner must see.
 
 # States
 
-Show lesson progress, energy, correct, incorrect, explanation, skill check, streak, league, and completed state explicitly.
+Observed states include onboarding progress, disabled continuation, selected answer with blue outline, in-lesson progress, course-tab selection, subscription plan selection, paywall, CAPTCHA, sign-in options, leaderboard highlight, settings toggles, light/auto/dark selection, and complete light and dark home or lesson surfaces. Disabled controls reduce contrast but remain visible; selected and progress states retain the same rounded geometry. The illustration language remains consistent across light and dark appearances, with adjusted surrounding contrast.
 
 # iOS adaptation
 
-### Touch Targets
+Use safe-area-aware vertical containers with the action inset above the home indicator. Focused lessons should scroll as a unit when Dynamic Type or a compact screen cannot fit prompt, model, answers, and action; never crop the model to preserve a fixed height. Horizontal course categories may scroll. Provide at least 44-point targets for close, tabs, choices, toggles, and buttons.
 
-Keep every row, tab, selector, and primary action at least 44pt.
-
-### Collapsing Strategy
-
-Preserve prompt, diagram, answer state, and continuation. Hide secondary explanation controls before reducing the model.
-
-### Image Behavior
-
-Contain complete diagrams and labels. Never crop a relation, equation, balance, or path that the learner must reason about.
-
-On iPhone, respect top and bottom safe areas, use scrolling for content that does not fit, keep interactive targets at least 44 points, and preserve the visual reading order for VoiceOver. At larger Dynamic Type sizes, allow supporting text to wrap without collapsing the dominant hierarchy. Use native sheets and permission transitions while explicitly styling app-owned surfaces to match the reference.
+VoiceOver order should follow progress, prompt, meaningful model description or accessible interactive model, choices, feedback, and continuation. Do not convey variable or result meaning through color alone. Native sheets, sign-in, and permission transitions can remain native, but app-owned surfaces must match the rounded, spacious hierarchy. Implement light and dark appearances explicitly, including charcoal surfaces and retained course accents.
 
 # Anti-generic checklist
 
-- Do not substitute the documented accent hierarchy with default iOS blue.
-- Do not turn the documented white canvas into a generic card stack; preserve the observed accent, density, imagery, and surface grouping.
-- Do not use an unstyled `TabView`, `Form`, or arbitrary SF Symbols when they contradict the documented navigation and component language.
-- Do not flatten the documented typography into one body-text scale.
-- Do not remove compositionally important photography or illustration while assets are pending.
-- Do not apply one corner radius to every control and surface.
-
-Source-specific guardrails retained from the review:
-
-### Do
-
-- Make diagrams operational.
-- Keep one concept per screen.
-- Explain mistakes without punishment.
-- Preserve variable colors.
-- Show the next learning step.
-
-### Don't
-
-- Don't use decorative art unrelated to the concept.
-- Don't crowd diagrams with chrome.
-- Don't reveal answers without explanation.
-- Don't mix course accent roles.
-- Don't bury progress recovery.
+- Do not replace custom educational models with arbitrary SF Symbols or emoji.
+- Do not turn each lesson section into nested generic white cards.
+- Do not ship an unstyled `TabView`, `Form`, `List`, or default blue button stack.
+- Do not flatten prompt, answer, explanation, and metadata into one text scale.
+- Do not crowd the centered model with secondary controls or decorative copy.
+- Do not omit light/dark surface differences or mechanically invert the palette.
+- Do not apply one corner radius to answer choices, course cards, sheets, and pill navigation.
+- Do not crop diagrams, objects, or labels that carry instructional meaning.
 
 </design-context>

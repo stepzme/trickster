@@ -3,187 +3,97 @@
 version: 1
 platform: iOS
 name: VTB-design-analysis
-description: "A feature-rich banking interface built from vivid blue account headers, white rounded sheets, bold black monetary typography, pastel payment icons, multicolor gradients, and polished 3D product metaphors. It is broad, energetic, and conversion-oriented."
-
+description: "A broad mobile-banking interface with luminous blue-cyan financial fields, stacked white rounded sheets, bold monetary hierarchy, compact utility rows, and a dark-blue floating navigation pill."
 colors:
-  primary: "#1677FF"
-  on-primary: "#FFFFFF"
-  primary-pressed: "#0E5FD6"
-  ink: "#181A1E"
-  ink-muted: "#6E727A"
-  ink-subtle: "#A5A9B0"
   canvas: "#F4F6FA"
-  surface-1: "#FFFFFF"
-  surface-2: "#EEF3FB"
-  accent-violet: "#B14CEB"
-  accent-cyan: "#35CDE8"
-  hairline: "#E0E4EA"
-  semantic-success: "#22A768"
-  semantic-warning: "#F0A43A"
-  semantic-danger: "#E24E5B"
-  semantic-overlay: "#000000"
-
+  surface-primary: "#FFFFFF"
+  surface-secondary: "#EEF3FB"
+  accent-primary: "#1677FF"
+  accent-secondary: "#163E9A"
+  text-primary: "#181A1E"
+  text-secondary: "#6E727A"
+  divider: "#E0E4EA"
+  destructive: "#E24E5B"
 typography:
-  display-xl: { fontFamily: System Sans, fontSize: 40, fontWeight: 750, lineHeight: 1.04, letterSpacing: -0.8 }
-  display-lg: { fontFamily: System Sans, fontSize: 32, fontWeight: 700, lineHeight: 1.08, letterSpacing: -0.5 }
-  display-md: { fontFamily: System Sans, fontSize: 25, fontWeight: 700, lineHeight: 1.15, letterSpacing: -0.2 }
-  headline: { fontFamily: System Sans, fontSize: 20, fontWeight: 700, lineHeight: 1.2, letterSpacing: 0 }
-  card-title: { fontFamily: System Sans, fontSize: 16, fontWeight: 650, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: System Sans, fontSize: 17, fontWeight: 450, lineHeight: 1.35, letterSpacing: 0 }
-  body-lg: { fontFamily: System Sans, fontSize: 16, fontWeight: 400, lineHeight: 1.42, letterSpacing: 0 }
-  body: { fontFamily: System Sans, fontSize: 14, fontWeight: 400, lineHeight: 1.42, letterSpacing: 0 }
-  body-sm: { fontFamily: System Sans, fontSize: 12, fontWeight: 400, lineHeight: 1.38, letterSpacing: 0 }
-  caption: { fontFamily: System Sans, fontSize: 10, fontWeight: 500, lineHeight: 1.3, letterSpacing: 0 }
-  button: { fontFamily: System Sans, fontSize: 16, fontWeight: 650, lineHeight: 1.2, letterSpacing: 0 }
-  eyebrow: { fontFamily: System Sans, fontSize: 10, fontWeight: 700, lineHeight: 1.25, letterSpacing: 0.3 }
-  mono: { fontFamily: System Mono, fontSize: 12, fontWeight: 450, lineHeight: 1.35, letterSpacing: 0 }
-
-rounded: { xs: 4, sm: 8, md: 12, lg: 18, xl: 24, xxl: 30, pill: 9999, full: 9999 }
-spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
-
+  hero: {fontFamily: "SF Pro Display", fontSize: 40, fontWeight: 750, lineHeight: 42}
+  title: {fontFamily: "SF Pro Display", fontSize: 30, fontWeight: 700, lineHeight: 35}
+  section: {fontFamily: "SF Pro Text", fontSize: 21, fontWeight: 700, lineHeight: 26}
+  body: {fontFamily: "SF Pro Text", fontSize: 16, fontWeight: 400, lineHeight: 22}
+  label: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 600, lineHeight: 20}
+  caption: {fontFamily: "SF Pro Text", fontSize: 12, fontWeight: 400, lineHeight: 16}
+spacing:
+  screen-horizontal: 16
+  section-gap: 28
+  card-padding: 16
+  control-gap: 10
+rounded:
+  control: 12
+  card: 20
+  sheet: 28
+  pill: 999
 components:
-  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [14, 18]}
-  account-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 16 }
-  action-tile: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.md}", padding: 12 }
-  product-tile: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.card-title}", rounded: "{rounded.md}", padding: 0 }
-  bottom-nav: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.caption}", rounded: "{rounded.xl}", height: 60 }
+  primary-action: {fill: "#1677FF", textColor: "#FFFFFF", cornerRadius: 12, minHeight: 50}
+  secondary-action: {fill: "#EEF3FB", textColor: "#1677FF", cornerRadius: 12, minHeight: 46}
+  primary-card: {fill: "#FFFFFF", cornerRadius: 20, padding: 16}
+  navigation: {fill: "#163E9A", selectedColor: "#FFFFFF", unselectedColor: "#AFC9FF", cornerRadius: 999}
 ---
 
 # Overview
 
-VTB layers white financial sheets over a vivid blue account header and uses polished 3D product art for discovery. Pastel category icons and clear monetary hierarchy tame a very broad feature set.
+VTB balances a very broad financial dashboard with large luminous blue fields and layered white sheets. Blurred cyan/blue light, strong balance numerals, rounded account modules, and a dark-blue floating navigation pill distinguish the home surface; transfers and product forms become sparse white transactional screens.
 
 # Non-negotiable visual invariants
 
-- The reviewed screens use this composition: A feature-rich banking interface built from vivid blue account headers, white rounded sheets, bold black monetary typography, pastel payment icons, multicolor gradients.
-- The dominant canvas token is #F4F6FA and the primary accent token is #1677FF.
-- The recorded display style is 40 points while the body style is 14 points.
-- Navigation uses five bottom destinations for Home, Payments, Products, History, and Chat.
-- The reviewed screens use this hierarchy: It is broad, energetic, and conversion-oriented.
+- Blue/cyan gradient or blurred light forms a large background mass on major product and account surfaces.
+- White financial modules layer over the blue field with generous rounding and little visible border.
+- Balances and primary amounts use the largest, strongest numeric hierarchy.
+- Bright blue remains the primary action, link, and selected-control color.
+- The home navigation appears as a dark-blue rounded floating pill, not a default white tab bar.
+- Product/action lists use compact black line icons, short labels, and pale grouping surfaces.
+- Transactional forms remain sparse and white, with one dominant blue commitment action.
 
 # Color and surfaces
 
-### Brand & Accent
-
-Bright blue owns primary action, balance context, links, and navigation. Violet, cyan, magenta, and yellow distinguish promotions and product categories.
-
-### Surface
-
-Use pale blue-gray canvas, white cards and sheets, and saturated blue for the main account header or navigation dock.
-
-### Text
-
-Near-black carries balances and titles; gray carries product labels and terms. White appears on blue and dark gradients.
-
-### Semantic
-
-Green and red show financial result, amber warns, and blue remains brand action.
+Pale cool gray is the utility canvas. Blue and cyan gradients create major account/product backdrops; white cards and sheets carry balances, products, actions, and forms. Bright blue identifies primary action and selection, while dark navy anchors the floating navigation. Near-black carries monetary values and titles, gray supports labels and conditions, green confirms success, and red remains destructive/error. Random violet/magenta accents or default grouped-gray forms would weaken the blue financial hierarchy.
 
 # Typography
 
-### Font Family
-
-Use a modern system sans with tabular figures for balances, rates, and payments.
-
-### Principles
-
-Keep amount, product, rate, and action distinct. Align numeric values and avoid bolding every service row.
-
-### Note on Font Substitutes
-
-Use Inter or SF Pro with tabular figures and strong 700–750 display weights.
+Use SF Pro. Monetary totals are large and bold with clear grouping; page titles are bold but subordinate to the key amount; card labels, rates, and transaction metadata are compact. Keep amount, account/product name, rate/status, and action visibly distinct. At Dynamic Type sizes, allow white modules and list rows to grow, preserve tabular numeric clarity, and stack secondary facts beneath the amount instead of shrinking them.
 
 # Screen composition
 
-### Grid & Container
+The home top safe area merges into a luminous blue header holding identity, balances, and contextual controls. Large white account/product sheets overlap or follow the field, then stack cards, action tiles, and offer modules vertically. Product/card details retain a colored hero above grouped white sections. Transfers, top-up, savings opening, and branch/map screens use full-height white forms/lists or maps with floating controls. Typical side insets are about 16 points; the bottom navigation floats above the home indicator.
 
-Home stacks account header, quick-action grid, promotions, payments sheet, and product groups. Details use one wide account card and lists.
-
-### Whitespace Philosophy
-
-Give totals and primary actions open space. Dense payment categories should stay aligned in grids or lists.
+Visible archetypes include login; financial home; all-products/account list; card detail; top-up/transfer forms; cashback/deals; branch/ATM map; savings product opening; and educational/product promotion.
 
 # Navigation appearance
 
-Use five bottom destinations for Home, Payments, Products, History, and Chat. Keep product-specific settings local.
+Home uses a broad dark-blue rounded pill with compact icons/labels and bright selected emphasis. Other screens use clean white navigation bars with ordinary-scale back, close, search, or utility controls tinted blue/dark. Sheets use white surfaces and large top corners over a dark scrim. Maps use circular floating buttons. Native behavior is acceptable, but default white `TabView` and blue-only ungrouped forms are not.
 
 # Components
 
-### Buttons
-
-Primary open, transfer, and support actions are blue rectangles or pills. Native controls must inherit blue focus and the rounded banking system.
-
-Product types, payment modes, and rate options use compact segments, chips, or cards with blue selected state.
-
-### Cards & Containers
-
-Account cards foreground balance and actions. Product tiles pair one 3D metaphor with a short category title.
-
-### Inputs & Forms
-
-Transfer and application fields use white or pale fills with clear source, recipient, amount, fee, and validation.
-
-### Status & Build Page
-
-Privilege, card state, transfer status, savings goal, rate conditions, application, unread chat, and history appear in context.
-
-### Navigation
-
-Use five bottom destinations for Home, Payments, Products, History, and Chat. Keep product-specific settings local.
+Primary actions are full-width bright-blue rounded rectangles with white semibold labels. Secondary controls use pale-blue fills or blue text. Account cards combine product identity, balance, status/rate, and concise actions. Action tiles are small rounded white/pale modules with black line icons. Transaction rows pair icon, merchant/label, amount, and muted metadata. Forms use sparse labeled fields, selectors, and a clear bottom action. Segments, radios, and toggles use blue selection. Disabled states retain geometry and lower contrast.
 
 # Imagery and icons
 
-Use rounded sheet overlap, soft card shadow, and layered gradient headers. Keep operation rows flat.
-
-### Decorative Depth
-
-Use glossy 3D product metaphors, spectral gradients, and subtle particles inside promotions. Avoid such decoration in transfers or confirmations.
+Cards, vaults, coins, percent symbols, gifts, and money/product renders appear as campaign or financial-product assets alongside functional cards and maps. They are compositionally important in specific promo modules, but the inspected set does not establish one independently repeatable app-wide illustration grammar. Use approved product imagery for those modules; do not infer a general illustration language. Functional icons are compact black/blue line symbols.
 
 # States
 
-Privilege, card state, transfer status, savings goal, rate conditions, application, unread chat, and history appear in context.
+Observed states include login, populated dashboard, selected cards/accounts, transfer/top-up input, product opening, cashback/deal cards, map, and product education. Selection remains blue, successful confirmation green, and errors/destructive actions red. White sheet geometry and monetary hierarchy persist across states. System permission or security prompts may remain native during transition.
 
 # iOS adaptation
 
-Phones use one financial flow at a time. Wider screens may place account list, product detail, and history in adjacent panes.
-
-### Touch Targets
-
-Accounts, quick actions, payment categories, product tiles, navigation, and confirmation controls require at least 44pt targets.
-
-### Collapsing Strategy
-
-Keep balance, source, recipient, amount, fee, and next action visible. Collapse terms and secondary benefits into detail sections.
-
-### Image Behavior
-
-Use `contain` for 3D product metaphors, cards, and logos; use `cover` only for editorial campaign photography.
-
-On iPhone, respect top and bottom safe areas, use scrolling for content that does not fit, keep interactive targets at least 44 points, and preserve the visual reading order for VoiceOver. At larger Dynamic Type sizes, allow supporting text to wrap without collapsing the dominant hierarchy. Use native sheets and permission transitions while explicitly styling app-owned surfaces to match the reference.
+Extend blue account fields through the top safe area and keep the floating navigation clear of the home indicator. Use vertical scrolling for dashboards/product detail, keyboard-aware forms, and native maps with styled app controls. Maintain 44-point targets for small financial actions, tabs, map controls, and selectors. VoiceOver should read product/account name → amount → status/rate → action. At compact widths, stack action tiles and secondary facts before reducing the key amount. Dynamic Type expands cards/rows. Preserve accessible contrast over gradients and provide opaque fallbacks for blur.
 
 # Anti-generic checklist
 
-- Do not substitute the documented accent hierarchy with default iOS blue.
-- Do not collapse distinct surfaces into a uniform stack of generic white cards.
-- Do not use an unstyled `TabView`, `Form`, or arbitrary SF Symbols when they contradict the documented navigation and component language.
-- Do not flatten the documented typography into one body-text scale.
-- Do not remove compositionally important photography or illustration while assets are pending.
-- Do not apply one corner radius to every control and surface.
-
-Source-specific guardrails retained from the review:
-
-### Do
-
-- Lead with balance and next actions.
-- Keep fees and reversibility visible.
-- Use product art only for discovery.
-- Align financial values.
-
-### Don't
-
-- Do not decorate transactional confirmation.
-- Do not use blue for profit or loss.
-- Do not crowd the home header.
-- Do not expose default native accents.
+- Do not replace the luminous blue field with a plain white card stack.
+- Do not use a default white `TabView` instead of the dark-blue floating pill.
+- Do not flatten monetary values, labels, rates, and actions into one text level.
+- Do not use default `Form` sections or arbitrary SF Symbols.
+- Do not invent a generalized 3D illustration system from product-specific promo assets.
+- Do not place promotional color behind transaction amounts without clear contrast.
+- Do not apply one radius to cards, controls, sheets, and navigation.
 
 </design-context>

@@ -3,187 +3,183 @@
 version: 1
 platform: iOS
 name: Gosuslugi-design-analysis
-description: "A civic-services interface that pairs a deep cobalt gradient home with crisp white service panels, saturated blue actions, colorful document cards, and a compact assistant layer. Dense public-service content becomes approachable through strong grouping, familiar icons, and one clear action per step."
-colors: {primary: "#0D5BD7", on-primary: "#FFFFFF", primary-focus: "#0848AE", ink: "#17191D", ink-muted: "#656A72", ink-subtle: "#969BA3", ink-tertiary: "#C4C8CD", canvas: "#FFFFFF", surface-1: "#F6F8FB", surface-2: "#EDF1F7", surface-3: "#E0E6F0", surface-4: "#CDD6E5", hairline: "#E3E7ED", hairline-strong: "#C6CDD7", hairline-tertiary: "#AEB8C5", inverse-canvas: "#05276B", inverse-surface-1: "#0B3E91", inverse-surface-2: "#1558BC", inverse-ink: "#FFFFFF", brand-secure: "#0D5BD7", semantic-success: "#12A36B", semantic-overlay: "#101A2E"}
+description: "A civic-service visual system using a deep cobalt home header, white administrative cards, saturated blue actions, pale-blue form fields, compact official typography, colorful document cards, restrained line icons, assistant surfaces, and sticky bottom actions. The style makes dense government data readable through grouping, contrast, and stable information hierarchy."
+colors:
+  primary: "#0D5BD7"
+  primary-strong: "#0848AE"
+  primary-soft: "#E8F0FF"
+  brand-red: "#E83959"
+  ink: "#17191D"
+  ink-muted: "#666D77"
+  ink-subtle: "#9AA1AB"
+  canvas: "#FFFFFF"
+  pale-canvas: "#F6F8FB"
+  auth-canvas: "#EAF1FF"
+  surface-1: "#FFFFFF"
+  surface-2: "#F2F5FA"
+  surface-3: "#E8EDF6"
+  hairline: "#E1E6EF"
+  inverse-canvas: "#07276B"
+  inverse-surface: "#163F91"
+  inverse-ink: "#FFFFFF"
+  doc-red: "#D70922"
+  doc-blue: "#0071C8"
+  doc-green: "#00B861"
+  doc-orange: "#F07416"
+  warning: "#FFF3CF"
+  success: "#12A36B"
+  danger: "#E13B4B"
 typography:
-  display-xl: {fontFamily: SF Pro Display, fontSize: 36, fontWeight: 700, lineHeight: 1.06, letterSpacing: -0.8}
-  display-lg: {fontFamily: SF Pro Display, fontSize: 30, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.5}
-  display-md: {fontFamily: SF Pro Display, fontSize: 25, fontWeight: 700, lineHeight: 1.14, letterSpacing: -0.3}
-  headline: {fontFamily: SF Pro Display, fontSize: 21, fontWeight: 700, lineHeight: 1.20, letterSpacing: -0.2}
-  card-title: {fontFamily: SF Pro Text, fontSize: 16, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0}
-  subhead: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 600, lineHeight: 1.30, letterSpacing: 0}
-  body-lg: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 400, lineHeight: 1.42, letterSpacing: 0}
-  body: {fontFamily: SF Pro Text, fontSize: 13, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0}
-  body-sm: {fontFamily: SF Pro Text, fontSize: 11, fontWeight: 400, lineHeight: 1.32, letterSpacing: 0}
-  caption: {fontFamily: SF Pro Text, fontSize: 10, fontWeight: 400, lineHeight: 1.25, letterSpacing: 0}
-  button: {fontFamily: SF Pro Text, fontSize: 14, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0}
-  eyebrow: {fontFamily: SF Pro Text, fontSize: 10, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0.1}
-  mono: {fontFamily: SF Mono, fontSize: 11, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0}
-rounded: {xs: 4, sm: 8, md: 12, lg: 16, xl: 22, xxl: 28, pill: 9999, full: 9999}
-spacing: {xxs: 4, xs: 8, sm: 12, md: 16, lg: 20, xl: 24, xxl: 32, section: 40}
+  display-lg: { fontFamily: SF Pro Display, fontSize: 30, fontWeight: 700, lineHeight: 1.10, letterSpacing: 0 }
+  headline: { fontFamily: SF Pro Display, fontSize: 22, fontWeight: 700, lineHeight: 1.18, letterSpacing: 0 }
+  title: { fontFamily: SF Pro Text, fontSize: 17, fontWeight: 700, lineHeight: 1.25, letterSpacing: 0 }
+  card-title: { fontFamily: SF Pro Text, fontSize: 16, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
+  subhead: { fontFamily: SF Pro Text, fontSize: 15, fontWeight: 600, lineHeight: 1.30, letterSpacing: 0 }
+  body: { fontFamily: SF Pro Text, fontSize: 14, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
+  body-sm: { fontFamily: SF Pro Text, fontSize: 12, fontWeight: 400, lineHeight: 1.32, letterSpacing: 0 }
+  caption: { fontFamily: SF Pro Text, fontSize: 10, fontWeight: 400, lineHeight: 1.25, letterSpacing: 0 }
+  button: { fontFamily: SF Pro Text, fontSize: 14, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0 }
+  numeric: { fontFamily: SF Pro Text, fontSize: 15, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
+rounded: { xs: 4, sm: 8, md: 12, lg: 16, xl: 22, pill: 9999 }
+spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 20, xl: 24, xxl: 32 }
 components:
-  button-primary: {backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [14, 18]}
-  button-secondary: {backgroundColor: "{colors.surface-1}", textColor: "{colors.primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [12, 16]}
-  service-panel: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 16}
-  document-card: {backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.card-title}", rounded: "{rounded.md}", padding: 14}
-  text-input: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: [12, 14]}
-  status-badge: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.pill}", padding: [4, 8]}
-  bottom-nav: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink-subtle}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: [8, 10]}
+  primary-button: { backgroundColor: "{colors.primary}", textColor: "{colors.inverse-ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [15, 18] }
+  service-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", rounded: "{rounded.md}", padding: 14 }
+  form-field: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", rounded: "{rounded.xs}", padding: [13, 12] }
+  status-chip: { backgroundColor: "{colors.primary-soft}", textColor: "{colors.primary}", typography: "{typography.caption}", rounded: "{rounded.pill}", padding: [6, 10] }
+  document-card: { backgroundColor: "{colors.doc-blue}", textColor: "{colors.inverse-ink}", typography: "{typography.card-title}", rounded: "{rounded.md}", padding: 16 }
 ---
 
 # Overview
 
-Gosuslugi combines a confident cobalt civic identity with white, highly structured service surfaces. Colorful documents and service icons make a large administrative catalog feel personal and navigable.
+Gosuslugi uses official blue authority, white structured content, colorful document identity, and compact typography. The home surface is visually richer, with a deep-blue top region and white card groups; form and document screens become calmer and more administrative.
 
-**Key Characteristics:** deep blue gradient home, white rounded panels, saturated blue CTAs, multicolor document cards, compact assistant, dense structured forms, five-item navigation, and clear application status.
+Fresh Screen Gallery evidence covered onboarding, auth, SMS confirmation, loading, home, assistant/service info, application data review, long forms, document lists/detail, notifications, GovScan, and service listings.
 
 # Non-negotiable visual invariants
 
-- The reviewed screens show this treatment: deep blue gradient home.
-- The reviewed screens show this treatment: white rounded panels.
-- The reviewed screens show this treatment: saturated blue CTAs.
-- The reviewed screens show this treatment: multicolor document cards.
-- The reviewed screens show this treatment: compact assistant.
-- The reviewed screens show this treatment: dense structured forms.
-- The reviewed screens show this treatment: five-item navigation.
-- The reviewed screens show this treatment: clear application status.
+- Use saturated cobalt blue for official action, active state, and the home atmosphere.
+- Keep most working screens white or near-white; reserve the deep-blue field for home/assistant-style surfaces.
+- Use white rounded cards with subtle shadows for grouped service, form, notification, and document content.
+- Preserve colorful document cards: red, blue, green, orange, and red variants with faint oversized symbols.
+- Keep forms restrained: pale fields, black labels, muted helper text, and one blue bottom action.
+- Use compact line icons and small app/service pictograms; do not replace them with generic SF Symbol-only grids.
+- Treat warnings as pale yellow blocks inside otherwise white forms.
 
 # Color and surfaces
 
-### Brand & Accent
+The system alternates between two modes:
 
-Cobalt owns the home atmosphere, primary actions, active navigation, links, and focus. Red, green, and orange remain localized to document identity or status.
+- Official home mode: deep cobalt top area, white cards layered below, colorful shortcut tiles, active blue bottom item.
+- Administrative work mode: white canvas, compact top bar, one content column, pale-blue fields, blue bottom action.
 
-### Surface
+The style is crisp and civic, not playful. Use clear grouping and understated depth. Avoid oversized editorial panels, excessive gradients outside the home/assistant context, and decorative illustrations in long data-entry surfaces.
 
-White is the working surface for forms, documents, services, and messages. Pale blue-gray groups secondary information and loading states.
+Use approximate sampled colors from the fresh screenshots:
 
-### Text
+- Primary blue: `#0D5BD7` for primary buttons, links, active visual states, selected actions, and official emphasis.
+- Strong blue: `#0848AE` for pressed/active blue and darker home gradients.
+- Home cobalt: `#07276B` to `#163F91` for the top background and assistant-like surfaces.
+- Auth pale blue: `#EAF1FF` behind authorization cards.
+- Field gray-blue: `#F2F5FA` for text inputs and disabled blocks.
+- Hairline: `#E1E6EF` for separators and card borders.
+- Document colors: red `#D70922`, blue `#0071C8`, green `#00B861`, orange `#F07416`.
+- Warning: `#FFF3CF` for data-verification notes.
 
-Near-black leads services, documents, application steps, and personal data. Gray supports explanations, dates, requirements, and inactive controls.
-
-### Semantic
-
-Blue means action or official navigation, green means successful or available, yellow highlights caution, and red identifies critical or document-specific information.
+Surfaces are usually flat white with a very soft shadow. Document cards are saturated and can use faint background silhouettes; normal form cards should not.
 
 # Typography
 
-### Font Family
+Use SF Pro Display only for larger screen titles when needed; most text uses SF Pro Text. Letter spacing stays at `0`.
 
-Use SF Pro Display for service and application headings and SF Pro Text for forms, documents, status, and assistant content.
+- Main heading: 20-22 pt bold for application/form steps.
+- Card/service title: 15-16 pt semibold.
+- Body: 13-14 pt regular.
+- Captions, dates, category labels: 10-12 pt regular or semibold.
+- Primary button: 14 pt semibold.
+- Document names: 16 pt semibold in white on saturated cards.
 
-### Hierarchy
-
-| Token | Size | Weight | Use |
-|---|---:|---:|---|
-| display-lg | 30pt | 700 | Major service state |
-| headline | 21pt | 700 | Page or application step |
-| card-title | 16pt | 600 | Document or service |
-| body | 13pt | 400 | Form and explanation |
-| caption | 10pt | 400 | Status and metadata |
-
-### Principles
-
-- Lead with the service, current step, or application status.
-- Keep legal and administrative detail readable, not visually dominant.
-- Use consistent labels and stable field order across long forms.
-
-### Note on Font Substitutes
-
-Use the platform sans with strong Cyrillic support and tabular numerals.
+Prioritize legibility for dense Cyrillic text. Keep labels close to their values. Use tabular numerals for dates, codes, document numbers, and timers.
 
 # Screen composition
 
-### Grid & Container
+Use 16 pt side gutters on white screens. Cards use 8-16 pt corner radii depending on scale: form fields are squarer, service cards are softer, bottom sheets are softest. Long forms use one vertical column and a sticky full-width action above the safe area.
 
-Home stacks horizontal service stories, document shortcuts, and service groups. Applications use one focused vertical column with a persistent next action.
+Auth screens place a centered white login card on pale blue, with logo at the top, fields stacked vertically, and a single blue button. Onboarding and splash screens are extremely sparse with centered logo/illustration and a bottom action.
 
-### Whitespace Philosophy
+Home uses a deep-blue top region with white shortcut cards below. Service/document groups appear as white panels, each item using a compact icon, title, helper text, and chevron or small action label.
 
-Dense information is acceptable when strongly grouped. Separate official requirements, personal data, warnings, and actions into distinct blocks.
+Bottom sheets have white backgrounds, a top grabber, large title, close link, and stacked service rows.
 
 # Navigation appearance
 
-Use five bottom destinations for Home, Services, assistant, Payments, and Documents, with blue active emphasis.
+Visual chrome only; this section does not define product structure. The bottom bar is white with muted inactive labels, a blue active item, and a stronger central assistant mark when present. Top bars stay compact with black titles, blue text links, and minimal line icons.
 
 # Components
 
-### Buttons
+- Primary buttons: saturated blue, white text, 8-10 pt corner radius, full-width on form screens.
+- Disabled buttons: pale blue-gray fill with muted text.
+- Text fields: pale blue-gray rectangles with low radius; icon affordances such as search/calendar sit at the right.
+- SMS code input: six separate pale cells, focused cell with blue stroke.
+- Chips: pale blue-gray pills with blue text for filters and status groups.
+- Links: blue text without button chrome; keep them smaller than primary actions.
+- Service rows: white rounded rectangles, icon at left, title/helper text center, chevron or action label at right.
+- Bottom bar: white surface, muted inactive labels, blue active item; the central assistant icon can be visually stronger.
 
-Primary actions are saturated blue with white text. Secondary actions are pale or white with blue text; destructive actions are clearly separated.
+Do not use default iOS blue values, default `Form` row metrics, or unstyled system controls.
 
-Service categories, filters, document types, and appointment options use chips, compact tabs, or structured lists with blue selection.
+Form and data surfaces:
 
-### Cards & Containers
+Data review cards use a white panel with personal/document data in labeled rows and a pale yellow warning block. Edit actions are blue text with a small line icon. Field-entry screens use a bold heading, labels above pale fields, helper text below fields, and a single bottom action.
 
-Service panels group related entry points. Document cards preserve a stable title and identity color; status cards pair current state with the next available action.
+Keep these visual treatments distinct:
 
-### Inputs & Forms
-
-Forms use clear labels, white or pale fields, inline validation, and one blue continuation action. Native controls must inherit the same color, radius, type, and spacing.
-
-### Status & Build Page
-
-Keep application step, agency, deadline, payment, appointment, document validity, and result close to the affected service.
-
-### Navigation
-
-Use five bottom destinations for Home, Services, assistant, Payments, and Documents, with blue active emphasis.
+- Data review: white card, labels, blurred/private values, warning block, edit row, blue confirmation button.
+- Empty/required field: pale rectangular field, muted placeholder space, helper text below.
+- Notification list: white background, small category labels, bold title, muted source/date, colored status dot when needed.
+- Document stack: saturated overlapping cards with white titles and faint official silhouettes.
+- Document detail: one large document card/image area, white page, blue bottom presentation action.
+- GovScan/service rows: white cards with blue line icons and chevrons.
 
 # Imagery and icons
 
-| Level | Treatment | Use |
-|---|---|---|
-| 0 | White or cobalt canvas | Work or home |
-| 1 | White rounded panel | Service and document group |
-| 2 | Colored document card | Identity object |
-| 3 | Sticky blue action | Continue or submit |
+Use the verified authored visual families only:
 
-### Decorative Depth
+- Gosuslugi red/blue wordmark and outline mark.
+- Minimal onboarding hand/gesture artwork with blue accent ribbon.
+- Compact assistant robot icon/character in blue tones.
+- Colorful document cards with faint oversized symbols.
+- Small service pictograms in outlined rounded squares.
+- Story/service tiles with restrained flat or lightly dimensional graphics.
 
-Use the cobalt gradient, assistant character, document silhouettes, and compact service artwork. Keep form screens visually restrained.
+Do not add decorative scenes to data forms, legal requirement text, payments, or document detail values.
 
 # States
 
-Keep application step, agency, deadline, payment, appointment, document validity, and result close to the affected service.
+Visual state treatment only:
+
+- Loading: centered white card, logo, muted message, three-dot indicator.
+- Focus: blue stroke around the focused field or SMS cell.
+- Disabled: pale blue-gray fill and muted label.
+- Warning: pale yellow block within a form card.
+- Status in lists: colored dot plus muted secondary line.
+- Selected/active item: blue text or icon, not a new arbitrary color.
+- Document identity: preserve each document color rather than converting all cards to blue.
 
 # iOS adaptation
 
-### Touch Targets
+Respect top and bottom safe areas. Keep primary bottom actions above the home indicator. Minimum touch target is 44 pt. Allow long legal and administrative copy to scroll while keeping fields, warnings, and the primary action visually stable. Dynamic Type may wrap helper text and row subtitles; it must not overlap values, icons, or bottom actions.
 
-Services, documents, search, fields, assistant actions, navigation, and submit controls remain at least 44pt.
-
-### Collapsing Strategy
-
-Preserve service, current step, required data, warning, status, and next action; collapse stories and recommendations first.
-
-### Image Behavior
-
-Scale symbolic artwork without cropping labels and preserve text-safe space in service stories and document cards.
-
-On iPhone, respect top and bottom safe areas, use scrolling for content that does not fit, keep interactive targets at least 44 points, and preserve the visual reading order for VoiceOver. At larger Dynamic Type sizes, allow supporting text to wrap without collapsing the dominant hierarchy. Use native sheets and permission transitions while explicitly styling app-owned surfaces to match the reference.
+Use native keyboard, sheet, and secure-entry behavior while styling app-owned cards, fields, and actions to match the documented surfaces. Preserve contrast in both deep-blue and white modes.
 
 # Anti-generic checklist
 
-- Do not substitute the documented accent hierarchy with default iOS blue.
-- Do not collapse distinct surfaces into a uniform stack of generic white cards.
-- Do not use an unstyled `TabView`, `Form`, or arbitrary SF Symbols when they contradict the documented navigation and component language.
-- Do not flatten the documented typography into one body-text scale.
-- Do not remove compositionally important photography or illustration while assets are pending.
-- Do not apply one corner radius to every control and surface.
-
-Source-specific guardrails retained from the review:
-
-### Do
-
-- Separate civic complexity into clear panels and steps.
-- Preserve cobalt as the official action and navigation color.
-- Keep documents and statuses recognizable at a glance.
-
-### Don't
-
-- Don't decorate long forms with unnecessary gradients.
-- Don't mix document colors into generic actions.
-- Don't hide legal requirements or data review before submission.
+- Do not turn every screen into a plain white iOS settings list.
+- Do not use generic SF Symbols as the sole visual language for documents, services, assistant, or onboarding.
+- Do not spread document red/green/orange colors into primary actions; blue remains the official action color.
+- Do not add gradients to long forms or document detail pages.
+- Do not hide administrative warnings, dates, field labels, or status dots behind decorative art.
+- Do not flatten document cards into ordinary white rows.
+- Do not claim backend identity, government-service behavior, or runtime verification from these screenshots; this file describes appearance only.
 
 </design-context>

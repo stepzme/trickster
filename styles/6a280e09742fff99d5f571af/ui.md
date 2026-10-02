@@ -3,219 +3,97 @@
 version: 1
 platform: iOS
 name: ASOS-design-analysis
-description: "A fashion-first shopping interface built on bright white surfaces, black editorial type, restrained hot-pink sale accents, and edge-to-edge model photography. Dense two-column product grids lead into long product pages, while a floating translucent bottom bar keeps discovery, search, bag, saved items, and account continuously available."
+description: "A fashion-first white marketplace dominated by edge-to-edge model photography, black editorial and uppercase type, compact two-column product grids, restrained pink sale emphasis, and floating rounded navigation."
 colors:
-  primary: "#111111"
-  on-primary: "#FFFFFF"
-  primary-soft: "#F1F1F1"
-  accent-sale: "#D41455"
-  accent-buy: "#1FA866"
-  ink: "#111111"
-  ink-muted: "#686868"
-  ink-subtle: "#9A9A9A"
   canvas: "#FFFFFF"
-  surface-1: "#F4F4F4"
-  surface-2: "#EAEAEA"
-  hairline: "#DDDDDD"
-  semantic-info: "#DDEFF7"
-  semantic-danger: "#C70039"
-  semantic-overlay: "#000000"
+  surface-primary: "#FFFFFF"
+  surface-secondary: "#F4F4F4"
+  accent-primary: "#111111"
+  accent-secondary: "#D41455"
+  text-primary: "#111111"
+  text-secondary: "#686868"
+  divider: "#DDDDDD"
+  destructive: "#C70039"
 typography:
-  display-xl: { fontFamily: Futura PT, fontSize: 36, fontWeight: 700, lineHeight: 1.05, letterSpacing: 0.2 }
-  display-lg: { fontFamily: Futura PT, fontSize: 30, fontWeight: 700, lineHeight: 1.10, letterSpacing: 0.2 }
-  display-md: { fontFamily: Futura PT, fontSize: 24, fontWeight: 700, lineHeight: 1.15, letterSpacing: 0.1 }
-  headline: { fontFamily: Futura PT, fontSize: 20, fontWeight: 700, lineHeight: 1.20, letterSpacing: 0.2 }
-  card-title: { fontFamily: Futura PT, fontSize: 14, fontWeight: 500, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: Futura PT, fontSize: 17, fontWeight: 500, lineHeight: 1.35, letterSpacing: 0 }
-  body-lg: { fontFamily: Futura PT, fontSize: 16, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
-  body: { fontFamily: Futura PT, fontSize: 14, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
-  body-sm: { fontFamily: Futura PT, fontSize: 12, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
-  caption: { fontFamily: Futura PT, fontSize: 10, fontWeight: 400, lineHeight: 1.25, letterSpacing: 0.1 }
-  button: { fontFamily: Futura PT, fontSize: 13, fontWeight: 700, lineHeight: 1.20, letterSpacing: 0.3 }
-  eyebrow: { fontFamily: Futura PT, fontSize: 10, fontWeight: 700, lineHeight: 1.20, letterSpacing: 0.5 }
-  mono: { fontFamily: SF Mono, fontSize: 12, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
-rounded: { xs: 2, sm: 6, md: 10, lg: 16, xl: 24, xxl: 30, pill: 9999, full: 9999 }
-spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
+  hero: {fontFamily: "SF Pro Display", fontSize: 36, fontWeight: 800, lineHeight: 40}
+  title: {fontFamily: "SF Pro Display", fontSize: 29, fontWeight: 750, lineHeight: 34}
+  section: {fontFamily: "SF Pro Text", fontSize: 20, fontWeight: 700, lineHeight: 25}
+  body: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 400, lineHeight: 20}
+  label: {fontFamily: "SF Pro Text", fontSize: 13, fontWeight: 700, lineHeight: 17}
+  caption: {fontFamily: "SF Pro Text", fontSize: 11, fontWeight: 400, lineHeight: 15}
+spacing:
+  screen-horizontal: 16
+  section-gap: 24
+  card-padding: 10
+  control-gap: 8
+rounded:
+  control: 8
+  card: 10
+  sheet: 24
+  pill: 999
 components:
-  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: [14, 20]}
-  button-purchase: { backgroundColor: "{colors.accent-buy}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: [14, 20]}
-  product-card: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.xs}", padding: 0 }
-  filter-row: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xs}", padding: [14, 12]}
-  floating-tab-bar: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.caption}", rounded: "{rounded.pill}", padding: [8, 16]}
-  notice-banner: { backgroundColor: "{colors.semantic-info}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.xs}", padding: [10, 16]}
+  primary-action: {fill: "#111111", textColor: "#FFFFFF", cornerRadius: 999, minHeight: 48}
+  secondary-action: {fill: "#F4F4F4", textColor: "#111111", cornerRadius: 999, minHeight: 44}
+  primary-card: {fill: "#FFFFFF", cornerRadius: 10, padding: 10}
+  navigation: {fill: "rgba(255,255,255,0.94)", selectedColor: "#111111", unselectedColor: "#777777", cornerRadius: 999}
 ---
 
 # Overview
 
-ASOS is an editorial storefront: white chrome stays nearly invisible while model photography and product imagery carry the experience. Black is the default action color; sale pink and purchase green are reserved for price and conversion moments.
-
-**Key Characteristics:**
-- White, image-dense fashion canvas.
-- Two-column product grids with compact price-first metadata.
-- Bold uppercase section and action labels.
-- Persistent floating five-item navigation.
-- Pill purchase actions pinned near the bottom.
+ASOS keeps interface chrome almost invisible so fashion photography carries the experience. White surfaces, black editorial and uppercase labels, compact product metadata, two-column grids, and a floating rounded navigation bar establish the system. Hot pink is limited to sale/price emphasis; checkout remains structurally plain and high-contrast.
 
 # Non-negotiable visual invariants
 
-- The reviewed screens show this treatment: White, image-dense fashion canvas.
-- The reviewed screens show this treatment: Two-column product grids with compact price-first metadata.
-- The reviewed screens show this treatment: Bold uppercase section and action labels.
-- The reviewed screens show this treatment: Persistent floating five-item navigation.
-- The reviewed screens show this treatment: Pill purchase actions pinned near the bottom.
+- Model and product photography is the dominant visual mass across home, catalog, and product detail.
+- White is the main canvas; black supplies headings, navigation, and primary actions.
+- Catalog results use dense two-column image-first product cards with compact metadata.
+- Section labels and CTAs use strong uppercase/editorial treatment.
+- Pink appears selectively for sale, discount, or promotional price emphasis.
+- Bottom navigation is a floating rounded/translucent white bar, not a standard edge-to-edge tab strip.
+- Product detail preserves a large image gallery and a sticky/persistent purchase action.
 
 # Color and surfaces
 
-### Brand & Accent
-- **Black** ({colors.primary}): Core actions, headers, and selection.
-- **Sale Pink** ({colors.accent-sale}): Discounts and reduced prices only.
-- **Purchase Green** ({colors.accent-buy}): Add-to-bag and checkout progression.
-
-### Surface
-- **Canvas** ({colors.canvas}): Product and checkout screens.
-- **Surface 1** ({colors.surface-1}): Search, filter, and secondary panels.
-- **Hairline** ({colors.hairline}): List and form separation.
-
-### Text
-- **Ink** ({colors.ink}): Prices, headings, and actions.
-- **Ink Muted** ({colors.ink-muted}): Product descriptions and delivery metadata.
-- **Ink Subtle** ({colors.ink-subtle}): Disabled and secondary information.
-
-### Semantic
-- **Info** ({colors.semantic-info}): Delivery threshold and service notices.
-- **Danger** ({colors.semantic-danger}): Error or destructive state.
-- **Overlay** ({colors.semantic-overlay}): Sheets and modal focus.
+White dominates all major surfaces. Black provides primary type, active navigation, and main actions; light gray separates search, filter rows, fields, and sheets. Pink is an exceptional sale/promotion accent rather than a general interaction tint. Green may appear in purchase/availability context, while destructive/error uses darker pink-red. Dividers are thin gray and shadows minimal. Default blue, colored card stacks, or decorative gradients would break the editorial fashion field.
 
 # Typography
 
-### Font Family
-
-- **Futura PT** — geometric fashion voice across headings, product labels, and controls.
-- **SF Mono** — codes only.
-
-### Hierarchy
-
-| Token | Size | Weight | Use |
-|---|---|---|---|
-| `{typography.display-xl}` | 36pt | 700 | Campaign headline |
-| `{typography.headline}` | 20pt | 700 | Section or product heading |
-| `{typography.card-title}` | 14pt | 500 | Product price and label |
-| `{typography.body}` | 14pt | 400 | Details and forms |
-| `{typography.caption}` | 10pt | 400 | Tags and metadata |
-| `{typography.button}` | 13pt | 700 | Uppercase actions |
-
-### Principles
-
-- Keep labels concise and often uppercase.
-- Make price hierarchy stronger than product copy.
-- Preserve generous tracking on compact action labels.
-- Let campaign lettering live inside photography when supplied.
-
-### Note on Font Substitutes
-
-Use **Montserrat** or **Avenir Next** when Futura PT is unavailable.
+Use SF Pro as an iOS-safe substitute for the condensed brand/editorial face, with uppercase, bold weight, and controlled tracking on section labels and actions. Product names, brand, price, color, and status use compact tiers beneath photography. Avoid similar sizes for every text role: editorial headings lead, price/brand follow, product metadata recedes. Dynamic Type expands card height and checkout rows; it must not shrink text over images or detach price/status from the item.
 
 # Screen composition
 
-### Grid & Container
+Onboarding uses stark black/white choice screens and system prompts. Home/catalog screens place search and category/promo bands above dense photo grids. Product listing uses two columns with tall model images and short text below. Product detail begins with a large edge-to-edge or near-edge gallery, followed by name/price, swatches/size, details, and a persistent purchase action. Filter/sort uses full-height or bottom sheets with a sticky “view items” action. Cart and checkout become one-column rows and payment sections. Insets are compact, typically 12–16 points.
 
-Discovery uses full-width campaign blocks and horizontal rails. Catalogs use a strict two-column product grid. Product details become a single scroll with a pinned dual action bar.
-
-### Whitespace Philosophy
-
-Keep structural chrome white and compact so large photography owns the visual rhythm.
+Visible archetypes include onboarding/registration; home/category; two-column catalog; product detail; filter/sort; search including empty/recent; saved/out-of-stock; cart; and checkout/payment.
 
 # Navigation appearance
 
-Search and notifications live at the top; Home, Search, Bag, Saved, and Account sit in a floating bottom pill.
+The main navigation is a floating rounded/translucent white bar with compact black icons/labels and clear selected state. Top bars are minimal white with ordinary-scale back, search, close, and bag/favorite controls. Sheets use white surfaces, broad top rounding, and sticky bottom actions. System permission or web sign-in dialogs may remain native, while app-owned bars preserve the monochrome styling.
 
 # Components
 
-### Buttons
-
-Black pills cover general progression; green pills are reserved for add-to-bag and checkout. Secondary actions are white with a fine border.
-
-Sort and Filter share a flat split row. Size, color, and quantity choices appear as compact selectors rather than decorative pills.
-
-### Cards & Containers
-
-Product cards are image-first with price, former price, name, and saved control beneath. Recommendation rails reuse the same anatomy at smaller scale.
-
-### Inputs & Forms
-
-Use white full-width rows with thin dividers. Checkout groups fields by delivery, billing, and payment while keeping totals visible.
-
-### Status & Build Page
-
-Use compact badges for Deal, Selling Fast, Highly Rated, and More Colours. Status never competes with the product image.
-
-### Navigation
-
-Search and notifications live at the top; Home, Search, Bag, Saved, and Account sit in a floating bottom pill.
-
-The sticky action area holds Save and Add to Bag or checkout choices; it must not cover the last content row.
+Primary actions are black pills with white uppercase labels; purchase actions may use a distinct green state where observed. Product cards are minimally framed: tall photo, brand/title, price/sale status, and favorite. Search is a broad pale pill. Category/promo actions are rectangular black/white bands. Filters use plain rows, chips, radios, and a sticky black action. Color choices use real swatches; size selectors use compact rows/chips. Checkout uses clean white payment rows and Apple Pay/system surfaces. Disabled buy states preserve geometry and lower contrast.
 
 # Imagery and icons
 
-| Level | Treatment | Use |
-|---|---|---|
-| 0 | White canvas | Catalog and product pages |
-| 1 | Pale gray field | Search and filters |
-| 2 | Frosted white pill | Floating navigation |
-| 3 | Dark scrim | Sheets and modals |
-
-### Decorative Depth
-
-Use image scale, sticky chrome, and translucent navigation rather than shadows.
+Real model/product photography and campaign banners are compositionally required and cannot be omitted. Use consistent tall fashion crops in grids and larger gallery crops that preserve garment shape and styling. Category thumbnails and product images are content assets, not illustration. No independently repeatable authored illustration system was observed. Icons are restrained utility symbols and remain secondary to photography.
 
 # States
 
-Use compact badges for Deal, Selling Fast, Highly Rated, and More Colours. Status never competes with the product image.
+Observed states include splash/category choice, notification and web sign-in prompts, keyboard input, recent/empty search, selected filters with sticky result count/action, saved and out-of-stock products, cart, Apple Pay/payment, and disabled buy action. Black/white structure remains stable; pink marks sale, gray marks disabled/inactive, and system sheets stay visually restrained.
 
 # iOS adaptation
 
-| Wide | 768pt+ | Increase columns while retaining image ratio |
-| Small | <390pt | Tighten gutters and truncate descriptions |
-
-### Touch Targets
-
-Keep navigation, saved, sort, filter, size, and purchase targets at least 44pt.
-
-### Collapsing Strategy
-
-Reduce metadata before shrinking images. Keep two catalog columns on phones, then move to one only when product legibility fails.
-
-### Image Behavior
-
-Use cover crops in catalogs and contain detail-media when garment silhouette would otherwise be lost. Never distort photography.
-
-On iPhone, respect top and bottom safe areas, use scrolling for content that does not fit, keep interactive targets at least 44 points, and preserve the visual reading order for VoiceOver. At larger Dynamic Type sizes, allow supporting text to wrap without collapsing the dominant hierarchy. Use native sheets and permission transitions while explicitly styling app-owned surfaces to match the reference.
+Keep white safe areas clean and the floating navigation above the home indicator. Use vertical scrolling for grids/details/checkout, horizontal swatch/media rails where observed, and keyboard-aware search/registration. Maintain 44-point targets for small favorite, swatch, size, filter, and tab controls. VoiceOver order should read photo description → brand/product → price/status → options → action. At compact widths, keep two columns only when price/name remain legible; otherwise use one column. Dynamic Type expands rows/cards. Preserve photography crops across aspect ratios.
 
 # Anti-generic checklist
 
-- Do not substitute the documented accent hierarchy with default iOS blue.
-- Do not collapse distinct surfaces into a uniform stack of generic white cards.
-- Do not use an unstyled `TabView`, `Form`, or arbitrary SF Symbols when they contradict the documented navigation and component language.
-- Do not flatten the documented typography into one body-text scale.
-- Do not remove compositionally important photography or illustration while assets are pending.
-- Do not apply one corner radius to every control and surface.
-
-Source-specific guardrails retained from the review:
-
-### Do
-
-- Lead with product photography.
-- Keep pricing and discount arithmetic scannable.
-- Preserve the two-column catalog rhythm.
-- Keep primary purchase actions sticky.
-- Use sale pink only for commerce emphasis.
-
-### Don't
-
-- Don't add decorative illustration behind products.
-- Don't round product imagery heavily.
-- Don't hide delivery or returns information.
-- Don't overload cards with badges.
-- Don't use green outside conversion actions.
+- Do not replace photography with illustrations, SF Symbols, or empty placeholders.
+- Do not introduce default blue into the monochrome/pink system.
+- Do not use an edge-to-edge unstyled `TabView` instead of the floating navigation.
+- Do not turn the photo grid into large shadowed cards.
+- Do not flatten editorial headings, brand, product, price, and metadata into one scale.
+- Do not use default `Form`, filter, swatch, or purchase-button styling.
+- Do not invent an illustration language unsupported by the screens.
 
 </design-context>

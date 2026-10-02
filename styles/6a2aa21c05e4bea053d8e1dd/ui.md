@@ -3,220 +3,121 @@
 version: 1
 platform: iOS
 name: Simply-design-analysis
-description: "A bright wallet-and-benefits interface built on a cool off-white canvas, white elevated cards, black text, yellow financial accents, and violet promotional objects. Core payments remain native and restrained, while loyalty and installment areas become more graphic and colorful."
-
+description: "A bright iOS banking language built from white financial surfaces, saturated yellow actions, restrained blue utility accents, bold numeric hierarchy, compact three-tab navigation, and authored mascot imagery."
 colors:
-  primary: "#FFD514"
-  on-primary: "#111111"
-  primary-soft: "#FFF6BE"
-  accent-violet: "#7B43D9"
-  accent-blue: "#2288D8"
-  ink: "#14151A"
-  ink-muted: "#6B6E75"
-  ink-subtle: "#A2A5AA"
   canvas: "#F5F6F8"
-  surface-1: "#FFFFFF"
-  surface-2: "#F0F1F3"
-  surface-dark: "#29282B"
-  hairline: "#E3E5E8"
-  semantic-success: "#55B66B"
-  semantic-warning: "#EEA82B"
-  semantic-danger: "#D94A50"
-  semantic-overlay: "#000000"
-
+  surface-primary: "#FFFFFF"
+  surface-secondary: "#F0F1F3"
+  accent-primary: "#FFD514"
+  accent-secondary: "#2288D8"
+  text-primary: "#14151A"
+  text-secondary: "#6B6E75"
+  divider: "#E3E5E8"
+  destructive: "#D94A50"
 typography:
-  display-xl: { fontFamily: System Sans, fontSize: 36, fontWeight: 700, lineHeight: 1.05, letterSpacing: -0.6 }
-  display-lg: { fontFamily: System Sans, fontSize: 30, fontWeight: 700, lineHeight: 1.1, letterSpacing: -0.4 }
-  display-md: { fontFamily: System Sans, fontSize: 25, fontWeight: 700, lineHeight: 1.15, letterSpacing: -0.2 }
-  headline: { fontFamily: System Sans, fontSize: 21, fontWeight: 700, lineHeight: 1.2, letterSpacing: 0 }
-  card-title: { fontFamily: System Sans, fontSize: 16, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: System Sans, fontSize: 17, fontWeight: 600, lineHeight: 1.3, letterSpacing: 0 }
-  body-lg: { fontFamily: System Sans, fontSize: 16, fontWeight: 400, lineHeight: 1.42, letterSpacing: 0 }
-  body: { fontFamily: System Sans, fontSize: 14, fontWeight: 400, lineHeight: 1.4, letterSpacing: 0 }
-  body-sm: { fontFamily: System Sans, fontSize: 12, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
-  caption: { fontFamily: System Sans, fontSize: 10, fontWeight: 400, lineHeight: 1.3, letterSpacing: 0 }
-  button: { fontFamily: System Sans, fontSize: 15, fontWeight: 600, lineHeight: 1.2, letterSpacing: 0 }
-  eyebrow: { fontFamily: System Sans, fontSize: 12, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0.1 }
-  mono: { fontFamily: System Mono, fontSize: 12, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
-
-rounded: { xs: 4, sm: 8, md: 12, lg: 16, xl: 22, xxl: 28, pill: 9999, full: 9999 }
-spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
-
+  hero: {fontFamily: "SF Pro Display", fontSize: 36, fontWeight: 700, lineHeight: 41}
+  title: {fontFamily: "SF Pro Display", fontSize: 28, fontWeight: 700, lineHeight: 34}
+  section: {fontFamily: "SF Pro Text", fontSize: 20, fontWeight: 600, lineHeight: 25}
+  body: {fontFamily: "SF Pro Text", fontSize: 17, fontWeight: 400, lineHeight: 22}
+  label: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 600, lineHeight: 20}
+  caption: {fontFamily: "SF Pro Text", fontSize: 13, fontWeight: 400, lineHeight: 18}
+spacing:
+  screen-horizontal: 20
+  section-gap: 28
+  card-padding: 18
+  control-gap: 12
+rounded:
+  control: 14
+  card: 20
+  sheet: 28
+  pill: 999
 components:
-  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.md}", padding: [14, 18]}
-  wallet-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 16 }
-  shortcut-tile: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.caption}", rounded: "{rounded.md}", padding: 12 }
-  promo-banner: { backgroundColor: "{colors.surface-dark}", textColor: "{colors.surface-1}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 14 }
-  benefit-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.md}", padding: 12 }
-  search-field: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 12 }
-  bottom-nav: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", height: 62 }
+  wallet-summary-card: {}
+  yellow-primary-action: {}
+  four-item-shortcut-grid: {}
+  transaction-row: {}
+  three-item-tab-bar: {}
 ---
 
 # Overview
 
-Simply combines a wallet, card, payments, transfers, bonuses, installments, promotions, and telecom-linked benefits. Core tasks use restrained white cards on a cool gray canvas; yellow marks the financial brand while violet 3D objects add energy to offers.
-
-**Key Characteristics:**
-- Cool off-white shell with softly elevated white cards.
-- Yellow brand and selection accent.
-- Four square shortcuts for top-up, payments, history, and transfer.
-- Dark promotional banners and glossy violet benefit objects.
-- Three-tab navigation for Home, Promotions, and Profile.
+Simply is a light, high-contrast banking interface in which white financial surfaces and dark numbers carry most of the information while saturated yellow controls provide the unmistakable brand signal. Screens alternate between spacious task layouts and denser dashboards of balances, shortcuts, transactions, bonuses, and promotional media. Small blue outline icons and links organize utility actions without competing with the yellow primary action. Authored mascot scenes give onboarding and identity-focused moments a distinctive visual mass that a generic symbol cannot replace.
 
 # Non-negotiable visual invariants
 
-- The reviewed screens show this treatment: Cool off-white shell with softly elevated white cards.
-- The reviewed screens show this treatment: Yellow brand and selection accent.
-- The reviewed screens show this treatment: Four square shortcuts for top-up, payments, history, and transfer.
-- The reviewed screens show this treatment: Dark promotional banners and glossy violet benefit objects.
-- The reviewed screens show this treatment: Three-tab navigation for Home, Promotions, and Profile.
+- White and very light gray occupy most of every viewport; yellow appears as a concentrated action or brand mass rather than a full-screen tint.
+- The primary financial value or task title is substantially larger and darker than every supporting label.
+- Main actions are wide saturated-yellow controls with dark text, normally anchored near the lower safe area on task screens.
+- Dashboard content is grouped into broad rounded white surfaces and compact rows, not a collection of unrelated bordered cards.
+- Utility actions use restrained blue outline icons or blue text; system-blue buttons must not replace the yellow action hierarchy.
+- Navigation remains visually compact: centered titles on inner screens and a simple three-item bottom bar on top-level screens.
+- Modal choices use a dimmed backdrop and a large white rounded sheet rising from the bottom.
+- Where a mascot scene is present in the reference role, it remains a major authored image rather than being omitted or replaced by an SF Symbol.
 
 # Color and surfaces
 
-### Brand & Accent
+The canvas is a cool near-white gray, with white as the dominant content surface and a slightly deeper gray for fields, quiet containers, and disabled areas. `accent-primary` is a warm saturated yellow reserved for brand emphasis and decisive actions. `accent-secondary` is a clear blue used for links, outline utility icons, and selected supporting controls. Primary copy is near-black; explanatory copy is medium gray. Dividers are pale and subordinate to spacing. Green communicates successful or positive financial outcomes; red is limited to destructive, error, debit, and badge states.
 
-- **Simply Yellow** ({colors.primary}) marks identity, switches, selection, and important benefit tiles.
-- Violet and blue are secondary promotional accents, not default CTA colors.
-
-### Surface
-
-- **Canvas** ({colors.canvas}) separates wallet modules.
-- **Surface 1** ({colors.surface-1}) carries cards, lists, and forms.
-- **Surface 2** ({colors.surface-2}) carries shortcuts and grouped controls.
-- **Dark Surface** ({colors.surface-dark}) supports installment promotion.
-
-### Text
-
-- **Ink** ({colors.ink}) carries balances and task labels.
-- **Muted** ({colors.ink-muted}) carries benefit explanations.
-- **Subtle** ({colors.ink-subtle}) is for placeholders and inactive states.
-
-### Semantic
-
-Use green for incoming value and success, amber for attention, and red for errors or destructive actions. Yellow remains brand selection rather than warning.
+Some promotional surfaces invert the system with black or very dark backgrounds and concentrated purple or pink media, but they remain bounded content blocks rather than the application canvas. Shadows are shallow and diffuse. Default iOS blue for primary actions, heavy gray grouped backgrounds, or saturated color on every card would erase the reference hierarchy.
 
 # Typography
 
-### Font Family
+Use SF Pro as the iOS-safe system family. Centered navigation titles are bold but compact. Large balance, amount, and confirmation numbers use display weight, tabular numerals where alignment matters, and clear separation from currency or explanatory labels. Section headings are semibold and left aligned; body copy is regular and secondary copy is gray. Labels on yellow controls are semibold with dark text. Avoid decorative casing and long mood-setting copy.
 
-Use a neutral system sans with clear numerals and compact labels.
-
-### Hierarchy
-
-| Token | Size | Weight | Use |
-|---|---:|---:|---|
-| `{typography.display-xl}` | 36pt | 700 | Wallet balance |
-| `{typography.display-lg}` | 30pt | 700 | Major product title |
-| `{typography.display-md}` | 25pt | 700 | Screen title |
-| `{typography.headline}` | 21pt | 700 | Module heading |
-| `{typography.card-title}` | 16pt | 600 | Wallet or card title |
-| `{typography.body}` | 14pt | 400 | Transaction and service copy |
-| `{typography.caption}` | 10pt | 400 | Benefits and navigation |
-
-### Principles
-
-- Keep balances and transaction amounts prominent.
-- Keep shortcut labels brief.
-- Separate promotional percentages from operational values.
-- Use consistent finance terminology.
-
-### Note on Font Substitutes
-
-Use SF Pro or Inter. Preserve readable numerals and compact module labels.
+Dynamic Type should preserve rank rather than fixed line counts: allow explanatory text and row subtitles to wrap, keep financial values on one line where possible with `minimumScaleFactor`, and let dense sections grow vertically. The contrast between hero numeric content, section labels, and captions must remain visible at accessibility sizes.
 
 # Screen composition
 
-### Grid & Container
+Most screens use about 20 points of horizontal inset and a full-height vertical scroll container. A compact navigation area leads into either a large financial summary or a focused task title. Supporting content follows in 12–28 point vertical intervals. Task screens keep the middle deliberately sparse and reserve the bottom safe-area region for a full-width action. Dashboard screens pack broad sections more tightly while retaining clear gutters and full-width card alignment.
 
-Home is a vertical stack of full-width cards with a four-column shortcut row. Payments and history use single-column lists; promotions use two-column benefit cards.
+Observed archetypes:
 
-### Whitespace Philosophy
-
-Use gray canvas between modules, but keep transactions and settings compact inside white groups.
+- **Dashboard:** balance or account summary near the top, a compact grid of primary shortcuts, then full-width transaction or promotional sections above the bottom bar.
+- **Focused form:** centered or left-aligned title, one or two pale rounded fields, large quiet middle space, and a fixed yellow action above the keyboard or home indicator.
+- **Search and directory:** pale search field followed by an icon grid, saved item, or compact result rows.
+- **History and settings list:** stacked edge-to-edge rows with small leading icons, dark primary labels, gray metadata, and light separators.
+- **Result state:** one dominant confirmation mark or authored image, concise outcome copy, and a single yellow exit action.
+- **Promotion or bonus surface:** stronger dark or colorful media mass paired with a small amount of product text and a clear action.
 
 # Navigation appearance
 
-Use three bottom destinations for Home, Promotions, and Profile. Deep payment, card, and transfer tasks use a simple back title.
+Inner screens use a centered bold title with a plain left chevron; an `x` appears only for dismissible modal contexts. The top-level bottom bar is white, shallow, and divided into three evenly spaced destinations with small icons and concise labels. Selected state is expressed through the brand treatment rather than an oversized capsule. Bottom sheets have a large top radius, white surface, dim scrim, and vertically stacked choices. Navigation chrome must stay visually subordinate to financial content.
 
 # Components
 
-### Buttons
-
-Primary actions use yellow with black text. Secondary finance actions use white or pale gray. Native controls must inherit yellow selection, radii, and typography.
-
-Payments use a compact My Payments and History segment. Selection stays white with outline or yellow emphasis; avoid adding decorative tabs.
-
-### Cards & Containers
-
-Wallet cards show balance and four shortcuts. Product cards summarize the Simply card and benefit rates. Promotions pair percentage copy with one 3D object.
-
-### Inputs & Forms
-
-Search, recipient, card, and service-payment inputs use white or pale fields with clear labels. Keep verification and confirmation linear.
-
-### Status & Build Page
-
-History groups transactions by date, with green incoming amounts and black outgoing values. Receipts and modal notices use standard white system surfaces.
-
-### Navigation
-
-Use three bottom destinations for Home, Promotions, and Profile. Deep payment, card, and transfer tasks use a simple back title.
+- **Wallet summary card:** broad rounded white or dark surface, large bold amount, concise supporting label, and tightly grouped utility controls; use minimal border and only a shallow shadow.
+- **Yellow primary action:** nearly full-width, 52–56 points tall, saturated yellow fill, dark semibold label, rounded control corners; disabled state becomes visibly muted without changing geometry.
+- **Shortcut grid:** four compact actions aligned to a shared baseline, using blue outline icons and short labels with generous touch areas but little visual chrome.
+- **Transaction row:** compact leading mark, primary merchant or category label, gray metadata, and trailing signed amount; positive amounts may turn green and debit/error values red.
+- **Search field:** pale gray rounded rectangle with a small leading search mark, regular text, and no strong outline.
+- **Segmented or filter control:** compact rounded choices with one visibly filled or emphasized selection and subdued unselected labels.
+- **Notification badge:** small saturated red circle or pill attached to the relevant icon, never used as a decorative accent elsewhere.
+- **Modal sheet row:** full-width tappable line with restrained iconography and separators inside a white rounded sheet.
 
 # Imagery and icons
 
-Use shallow shadows and white-on-gray separation. Promotional 3D objects create depth without affecting form surfaces.
+Small functional icons are predominantly simple blue outlines with consistent optical weight. Service and partner marks may retain their own identity inside controlled tiles, but arbitrary multicolor symbols should not leak into general navigation. Card renders, bonus tiles, and promotional media are content-specific anchors and may occupy a substantial part of their container.
 
-### Decorative Depth
-
-Reserve glossy violet objects and dark banners for benefits. Keep core financial rows flat and calm.
+The custom silver-gray mascot is compositionally important in onboarding and identity-benefit contexts. It should occupy roughly a quarter to half of the available screen or card and remain visually paired with concise copy. It cannot be omitted while waiting for final assets; use an approved generated raster asset that follows `illustrations.md`.
 
 # States
 
-History groups transactions by date, with green incoming amounts and black outgoing values. Receipts and modal notices use standard white system surfaces.
+Empty payment and search states preserve the white/light-gray canvas, concise message, and the same blue/yellow hierarchy rather than adding a generic empty-state card. Focused forms retain their geometry while the keyboard compresses the lower space and the primary action remains reachable. Enabled actions use saturated yellow; disabled actions keep the same size with lower contrast. Success states use a focused confirmation visual, green status cues where appropriate, and one clear yellow continuation action. Alerts and action sheets use standard iOS presentation behavior but retain the white surfaces, dark copy, light separators, and restrained accent usage. Selected filters, toggles, and biometric settings must remain unmistakable without introducing a new color system.
 
 # iOS adaptation
 
-Keep payments, transfers, and profile single-column. Benefit cards may stack if percentage copy or art becomes cramped.
+Use safe-area-aware `ScrollView` layouts and place fixed actions with `safeAreaInset(edge: .bottom)` so they remain above the home indicator and keyboard. Preserve the approximately 20-point compact-width gutter and allow card grids to collapse without narrowing touch targets below 44 points. Use system permission dialogs as system UI, returning to the same visual hierarchy afterward. Sheets may use native presentation mechanics with custom detents and the observed large white surface radius.
 
-### Touch Targets
-
-Shortcuts, benefit cards, rows, switches, and bottom navigation require at least 44pt targets.
-
-### Collapsing Strategy
-
-Allow benefit strips to scroll horizontally. Keep confirmation actions reachable above keyboard and safe area.
-
-### Image Behavior
-
-Scale 3D objects proportionally with `contain`. Do not crop away the object or obscure percentage copy.
-
-On iPhone, respect top and bottom safe areas, use scrolling for content that does not fit, keep interactive targets at least 44 points, and preserve the visual reading order for VoiceOver. At larger Dynamic Type sizes, allow supporting text to wrap without collapsing the dominant hierarchy. Use native sheets and permission transitions while explicitly styling app-owned surfaces to match the reference.
+VoiceOver order follows the visual reading sequence: navigation, primary amount or title, actions, then supporting sections. Combine each transaction row into a meaningful accessibility element and announce signed amounts. Support Dynamic Type by allowing cards and rows to grow. The sampled system is light-first; do not invent a dark appearance unless product requirements provide one, and never mechanically invert yellow, blue, or promotional artwork.
 
 # Anti-generic checklist
 
-- Do not substitute the documented accent hierarchy with default iOS blue.
-- Do not turn the documented white canvas into a generic card stack; preserve the observed accent, density, imagery, and surface grouping.
-- Do not use an unstyled `TabView`, `Form`, or arbitrary SF Symbols when they contradict the documented navigation and component language.
-- Do not flatten the documented typography into one body-text scale.
-- Do not remove compositionally important photography or illustration while assets are pending.
-- Do not apply one corner radius to every control and surface.
-
-Source-specific guardrails retained from the review:
-
-### Do
-
-- Keep core finance surfaces neutral.
-- Use yellow consistently for identity and selection.
-- Separate promotions from transactions.
-- Keep wallet shortcuts stable.
-- Let 3D objects explain benefit categories.
-
-### Don't
-
-- Do not use violet as the main transaction CTA.
-- Do not place promotional art in history rows.
-- Do not overload Home with new card styles.
-- Do not confuse yellow with warning.
-- Do not expose default platform controls.
-
+- Do not replace the yellow action hierarchy with default blue `Button` styling.
+- Do not build every section as an identical shadowed white card.
+- Do not use unstyled `Form`, default grouped lists, or stock section headers.
+- Do not ship a default `TabView` whose tint, spacing, and selected state ignore the compact three-item bar.
+- Do not substitute arbitrary SF Symbols for the blue outline icon family or custom imagery.
+- Do not omit the mascot or promotional visual mass from screens where imagery defines the composition.
+- Do not flatten financial values, titles, labels, and captions into near-identical type sizes.
+- Do not add decorative copy that repeats the visible state or merely fills whitespace.
 </design-context>

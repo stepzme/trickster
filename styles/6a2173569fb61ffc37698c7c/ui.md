@@ -3,112 +3,44 @@
 version: 1
 platform: iOS
 name: Strava-design-analysis
-description: "A bright, disciplined sports-social interface built on white, near-black type, light gray grouping surfaces, and a single high-energy orange accent. Bold sans-serif headings and large metric numerals make performance data immediate. Rounded selection tiles, compact progress indicators, activity photography, route maps, and simple line icons create a practical athletic tone without making the interface feel like a dashboard."
-
+description: "A precise sports-tracking visual system built from white canvases, near-black typography, concentrated Strava orange actions, real activity photography, map surfaces, compact charts, and large metric numerals."
 colors:
   primary: "#FC4C02"
   on-primary: "#FFFFFF"
-  primary-focus: "#D94100"
+  primary-focus: "#D94200"
   ink: "#111111"
-  ink-muted: "#4F4F4F"
-  ink-subtle: "#777777"
-  ink-tertiary: "#A0A0A0"
+  ink-muted: "#4E4E4E"
+  ink-subtle: "#747474"
+  ink-tertiary: "#A5A5A5"
   canvas: "#FFFFFF"
   surface-1: "#F4F4F2"
-  surface-2: "#EBEBE8"
+  surface-2: "#ECECEA"
   surface-3: "#DEDEDA"
-  surface-4: "#D2D2CE"
-  hairline: "#E3E3E0"
-  hairline-strong: "#C8C8C3"
-  hairline-tertiary: "#AFAFAA"
-  inverse-canvas: "#0A0A0A"
-  inverse-surface-1: "#1D1D1D"
-  inverse-surface-2: "#292929"
+  surface-4: "#CFCFCA"
+  hairline: "#E5E5E2"
+  hairline-strong: "#C7C7C2"
+  inverse-canvas: "#050505"
+  inverse-surface-1: "#151515"
+  inverse-surface-2: "#262626"
   inverse-ink: "#FFFFFF"
-  brand-secure: "#FFB28C"
-  semantic-success: "#66C92B"
+  chart-blue: "#357FCA"
+  chart-green: "#67CE2A"
+  chart-red: "#E11D24"
   semantic-overlay: "#000000"
-
 typography:
-  display-xl:
-    fontFamily: SF Pro Display
-    fontSize: 40
-    fontWeight: 800
-    lineHeight: 1.05
-    letterSpacing: -1.2
-  display-lg:
-    fontFamily: SF Pro Display
-    fontSize: 32
-    fontWeight: 800
-    lineHeight: 1.10
-    letterSpacing: -0.8
-  display-md:
-    fontFamily: SF Pro Display
-    fontSize: 26
-    fontWeight: 700
-    lineHeight: 1.15
-    letterSpacing: -0.5
-  headline:
-    fontFamily: SF Pro Display
-    fontSize: 22
-    fontWeight: 700
-    lineHeight: 1.20
-    letterSpacing: -0.3
-  card-title:
-    fontFamily: SF Pro Display
-    fontSize: 18
-    fontWeight: 700
-    lineHeight: 1.25
-    letterSpacing: -0.2
-  subhead:
-    fontFamily: SF Pro Text
-    fontSize: 17
-    fontWeight: 500
-    lineHeight: 1.35
-    letterSpacing: -0.1
-  body-lg:
-    fontFamily: SF Pro Text
-    fontSize: 16
-    fontWeight: 400
-    lineHeight: 1.42
-    letterSpacing: 0
-  body:
-    fontFamily: SF Pro Text
-    fontSize: 15
-    fontWeight: 400
-    lineHeight: 1.40
-    letterSpacing: 0
-  body-sm:
-    fontFamily: SF Pro Text
-    fontSize: 13
-    fontWeight: 400
-    lineHeight: 1.35
-    letterSpacing: 0
-  caption:
-    fontFamily: SF Pro Text
-    fontSize: 11
-    fontWeight: 400
-    lineHeight: 1.30
-    letterSpacing: 0
-  button:
-    fontFamily: SF Pro Text
-    fontSize: 14
-    fontWeight: 600
-    lineHeight: 1.20
-    letterSpacing: 0
-  eyebrow:
-    fontFamily: SF Pro Text
-    fontSize: 12
-    fontWeight: 600
-    lineHeight: 1.25
-    letterSpacing: 0.2
-  mono:
-    fontFamily: SF Mono
-    fontSize: 12
-    fontWeight: 500
-    lineHeight: 1.35
-    letterSpacing: 0
-
+  display-xl: {fontFamily: SF Pro Display, fontSize: 64, fontWeight: 800, lineHeight: 0.98, letterSpacing: 0}
+  display-lg: {fontFamily: SF Pro Display, fontSize: 40, fontWeight: 800, lineHeight: 1.05, letterSpacing: 0}
+  display-md: {fontFamily: SF Pro Display, fontSize: 28, fontWeight: 700, lineHeight: 1.14, letterSpacing: 0}
+  headline: {fontFamily: SF Pro Display, fontSize: 23, fontWeight: 700, lineHeight: 1.18, letterSpacing: 0}
+  card-title: {fontFamily: SF Pro Text, fontSize: 17, fontWeight: 700, lineHeight: 1.25, letterSpacing: 0}
+  subhead: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 600, lineHeight: 1.32, letterSpacing: 0}
+  body-lg: {fontFamily: SF Pro Text, fontSize: 16, fontWeight: 400, lineHeight: 1.42, letterSpacing: 0}
+  body: {fontFamily: SF Pro Text, fontSize: 14, fontWeight: 400, lineHeight: 1.38, letterSpacing: 0}
+  body-sm: {fontFamily: SF Pro Text, fontSize: 12, fontWeight: 400, lineHeight: 1.32, letterSpacing: 0}
+  caption: {fontFamily: SF Pro Text, fontSize: 10, fontWeight: 400, lineHeight: 1.25, letterSpacing: 0}
+  button: {fontFamily: SF Pro Text, fontSize: 14, fontWeight: 700, lineHeight: 1.2, letterSpacing: 0}
+  eyebrow: {fontFamily: SF Pro Text, fontSize: 10, fontWeight: 600, lineHeight: 1.2, letterSpacing: 0}
+  mono: {fontFamily: SF Mono, fontSize: 12, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0}
 rounded:
   xs: 4
   sm: 8
@@ -118,7 +50,6 @@ rounded:
   xxl: 28
   pill: 9999
   full: 9999
-
 spacing:
   xxs: 4
   xs: 8
@@ -127,255 +58,136 @@ spacing:
   lg: 20
   xl: 24
   xxl: 32
-  section: 48
-
+  section: 44
 components:
-  button-primary:
-    backgroundColor: "{colors.primary}"
-    textColor: "{colors.on-primary}"
-    typography: "{typography.button}"
-    rounded: "{rounded.pill}"
-    padding: [13, 24]
-  button-primary-pressed:
-    backgroundColor: "{colors.primary-focus}"
-    textColor: "{colors.on-primary}"
-    typography: "{typography.button}"
-    rounded: "{rounded.pill}"
-    textColor: "{colors.on-primary}"
-    typography: "{typography.button}"
-    rounded: "{rounded.pill}"
-  button-secondary:
-    backgroundColor: "{colors.canvas}"
-    textColor: "{colors.primary}"
-    typography: "{typography.button}"
-    rounded: "{rounded.pill}"
-    padding: [11, 18]
-  button-tertiary:
-    backgroundColor: "{colors.canvas}"
-    textColor: "{colors.ink}"
-    typography: "{typography.button}"
-    rounded: "{rounded.md}"
-    padding: [10, 14]
-  button-inverse:
-    backgroundColor: "{colors.inverse-canvas}"
-    textColor: "{colors.inverse-ink}"
-    typography: "{typography.button}"
-    rounded: "{rounded.pill}"
-    padding: [12, 20]
-  activity-choice:
-    backgroundColor: "{colors.surface-1}"
-    textColor: "{colors.ink}"
-    typography: "{typography.body-sm}"
-    rounded: "{rounded.md}"
-    padding: [14, 12]
-  activity-choice-selected:
-    backgroundColor: "{colors.inverse-canvas}"
-    textColor: "{colors.inverse-ink}"
-    typography: "{typography.body-sm}"
-    rounded: "{rounded.md}"
-    padding: [14, 12]
-  activity-card:
-    backgroundColor: "{colors.canvas}"
-    textColor: "{colors.ink}"
-    typography: "{typography.body}"
-    rounded: "{rounded.md}"
-    padding: 16
-  metric-panel:
-    backgroundColor: "{colors.canvas}"
-    textColor: "{colors.ink}"
-    typography: "{typography.body-sm}"
-    rounded: "{rounded.sm}"
-    padding: 16
-  filter-chip:
-    backgroundColor: "{colors.canvas}"
-    textColor: "{colors.ink-muted}"
-    typography: "{typography.caption}"
-    rounded: "{rounded.pill}"
-    padding: [6, 12]
-  status-badge:
-    backgroundColor: "{colors.surface-1}"
-    textColor: "{colors.ink}"
-    typography: "{typography.caption}"
-    rounded: "{rounded.pill}"
-    padding: [4, 8]
-    backgroundColor: "{colors.canvas}"
-    textColor: "{colors.ink}"
-    typography: "{typography.body-sm}"
-    rounded: "{rounded.xs}"
-    height: 52
-  bottom-nav:
-    backgroundColor: "{colors.canvas}"
-    textColor: "{colors.ink}"
-    typography: "{typography.caption}"
-    rounded: "{rounded.xs}"
-    padding: [6, 8]
+  primary-action: {backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.pill}", minHeight: 50, padding: [14, 24]}
+  secondary-action: {backgroundColor: "{colors.canvas}", textColor: "{colors.primary}", typography: "{typography.button}", rounded: "{rounded.pill}", minHeight: 44, padding: [12, 18]}
+  inverse-option: {backgroundColor: "{colors.inverse-canvas}", textColor: "{colors.inverse-ink}", typography: "{typography.subhead}", rounded: "{rounded.sm}", minHeight: 64, padding: [14, 16]}
+  choice-tile: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.subhead}", rounded: "{rounded.md}", minHeight: 72, padding: [14, 12]}
+  feed-card: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: 16}
+  metric-card: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.md}", padding: 16}
+  map-chip: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.pill}", minHeight: 34, padding: [7, 12]}
+  recording-panel: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 16}
+  tab-bar: {backgroundColor: "{colors.canvas}", selectedColor: "{colors.primary}", unselectedColor: "{colors.ink}", typography: "{typography.caption}", minHeight: 58}
 ---
 
 # Overview
 
-Strava uses a disciplined white interface to make activity data, progress, and community content easy to scan. Orange supplies energy and direction but stays concentrated on primary actions and active navigation. Photography and maps provide context; charts and bold numerals provide proof.
+Strava's observed iOS screens use a restrained athletic language: white is the dominant surface, black type carries nearly all information, and orange is held back for the Strava logo, primary actions, selected tabs, route strokes, and the most important progress accents. The UI avoids decorative framing; real activity photos, real map tiles, graphs, and metric readouts provide the texture.
 
-**Key Characteristics:**
-- White canvas with black type and light gray grouping surfaces.
-- High-energy orange reserved for forward actions and selected destinations.
-- Strong bold headlines and large metric numerals.
-- Two-column selectable activity tiles.
-- Activity photography, maps, charts, and progress rings.
-- Persistent five-item bottom navigation with a centered Record action.
+The system should feel exact and physical rather than playful. A screen can contain a large photo, a route map, a chart, or a giant live metric, but the surrounding controls stay compact, monochrome, and disciplined.
 
 # Non-negotiable visual invariants
 
-- The reviewed screens show this treatment: White canvas with black type and light gray grouping surfaces.
-- The reviewed screens show this treatment: High-energy orange reserved for forward actions and selected destinations.
-- The reviewed screens show this treatment: Strong bold headlines and large metric numerals.
-- The reviewed screens show this treatment: Two-column selectable activity tiles.
-- The reviewed screens show this treatment: Activity photography, maps, charts, and progress rings.
-- The reviewed screens show this treatment: Persistent five-item bottom navigation with a centered Record action.
+- Strava orange appears as a concentrated action and selection color, not as a general background wash except the splash screen.
+- Most app-owned surfaces are white, with pale gray tiles used for choices, badges, and informational strips.
+- Headlines, activity names, prices, and live metrics use heavy black type with very little decorative styling.
+- Maps and real activity photography are treated as content surfaces, often full-width or edge-to-edge within the screen.
+- Selection controls use rounded light-gray tiles or black selected pricing cards, paired with simple black line icons.
+- The bottom tab bar is white with compact black outline icons and an orange selected destination.
+- Recording states shift from dense map context to huge numeric readouts and a single orange pill action.
 
 # Color and surfaces
 
-### Brand & Accent
-- Orange is the sole product accent for continue, join, connect, underline, and active navigation.
-- Lighter orange supports pressed or subtle outlined states.
+Orange is the only brand color that should direct the eye. Use it for the splash background, active tab, primary button, route line, progress dot, selected radio, and important text links. Do not introduce extra accent families for routine controls.
 
-### Surface
-- White remains dominant across feeds, details, and metrics.
-- Light warm gray groups onboarding choices and checklist tasks.
-- Black is used as an inverse selected state and photo overlay.
+White is the default canvas. Pale gray appears in activity-choice tiles, goal strips, filter chips, inactive subscription options, graph backplates, and system-like permission/setup panels. Hairlines are very light and used sparingly; many group boundaries are created by whitespace instead of visible borders.
 
-### Text
-- Near-black carries titles and performance numerals.
-- Mid-gray handles descriptions and labels.
-- Tertiary gray marks inactive or unavailable data.
+Black and near-black carry labels, headings, icons, and giant numbers. Muted grays support helper copy, captions, axes, inactive controls, and explanatory footnotes. Red can appear only where the reference uses it as a strong celebratory or warning band; green is limited to completed-goal/progress indicators.
 
-### Semantic
-- Bright green communicates completed goals and progress success.
-- Dark overlays support text on photography and contextual coach marks.
+Map screens can temporarily replace the canvas with map imagery, but floating controls stay white, rounded, and compact. Do not tint map controls orange unless they are the active route or primary recording action.
 
 # Typography
 
-### Font Family
+Use SF Pro as the iOS implementation face. The observed style depends on strong weight contrast: 22-28 point bold prompts for onboarding, 17-20 point activity and section titles, 13-15 point content text, 10-12 point metadata, and very large 40-64 point metric numerals in recording views.
 
-- SF Pro Display for large onboarding questions, activity titles, and metrics.
-- SF Pro Text for descriptions, labels, and controls.
-- SF Mono may be used sparingly for live numeric readouts.
+Keep letter spacing neutral. The Strava wordmark is an asset, not a text style to reconstruct. Use tabular alignment for time, distance, pace, price, and chart values. Short headings can wrap naturally but should preserve their blunt, high-confidence weight.
 
-### Hierarchy
-
-| Token | Size | Weight | Use |
-|---|---:|---:|---|
-| display-xl | 40pt | 800 | Hero metric or onboarding title |
-| display-lg | 32pt | 800 | Community/photo message |
-| display-md | 26pt | 700 | Main section |
-| headline | 22pt | 700 | Activity title |
-| card-title | 18pt | 700 | Challenge or task title |
-| body | 15pt | 400 | Main copy |
-| caption | 11pt | 400 | Metric labels and nav text |
-
-### Principles
-
-- Pair large bold numbers with much smaller labels.
-- Keep descriptions readable and neutral rather than sporty or italic.
-- Use orange text only for actionable labels.
-
-### Note on Font Substitutes
-
-Use the Apple system family; it reproduces the compact metric hierarchy and familiar control behavior.
+Button text is compact and bold. Supporting text under charts, privacy examples, or subscription legal copy stays small and calm; it should not compete with the headline or the orange action.
 
 # Screen composition
 
-### Grid & Container
+## Branded entry
 
-Onboarding uses two equal columns. Feed and activity details are single-column. Activity media may form a three-image strip. Challenge recommendations can return to two columns.
+The splash screen is a full orange field with a centered white Strava wordmark. Onboarding uses a large photographic or product-preview upper area, then a white lower decision area with centered title copy, pager dots, one full-width orange pill, and a quieter secondary text action.
 
-### Whitespace Philosophy
+## Onboarding choices
 
-White space separates metrics and actions more often than enclosing cards. Keep data clusters close, then use thin dividers or larger gaps between unrelated sections.
+Prompts sit high with generous left and right margins. Activity choices use a two-column grid of light-gray rounded rectangles with black line activity icons and bold labels. Goal or purpose questions can use full-width pale tiles stacked vertically. The orange Continue button sits pinned near the bottom with safe-area breathing room.
+
+## Feed and profile
+
+Feed screens are mostly one-column white scroll views. Content starts with profile identity or activity title, then compact metric rows, achievement strips, photo grids, and simple engagement icons. Profile screens use a small avatar badge, a soft orange-tinted header image, compact counts, outlined orange actions, and charts below.
+
+## Activity details
+
+Activity details combine a large route map at the top, then a white content sheet with athlete identity, title, achievement strip, metric grid, and intelligence or analysis cards. Keep chart cards rounded and sparse; blue area graphs and gray reference bands should feel analytical, not decorative.
+
+## Maps and recording
+
+Map discovery is full-screen map texture with white floating search, chips, layer controls, a Create Route pill, and a bottom tab bar. Recording setup uses the same map surface plus a bottom white panel. Active recording can remove map detail entirely and present giant timer/distance/speed values on white with one orange pause/start pill.
 
 # Navigation appearance
 
-Use a five-item bottom bar for Home, Maps, Record, Groups, and You. Active destinations become orange; Record remains a strong centered circle. Nested group destinations use an underlined top tab row.
+Use a five-item bottom bar with Home, Maps, Record, Groups, and You as compact outline icons with small labels. The selected item uses orange icon and label. Record is visually centered and circular in the reference; preserve the strong central recording affordance without turning the whole bar into a branded slab.
+
+Top bars are light and sparse: back chevrons, bookmark, overflow, search, share, settings, chat, and bell controls are black line icons inside either no container or a small white circular button over maps. Keep app bars white or transparent over content; avoid large colored navigation headers.
 
 # Components
 
-### Buttons
+## Primary action
 
-Primary actions are full-width orange pills with white semibold labels. Secondary actions use orange outlines or orange text on white. Inverse black appears for selected choices rather than the main CTA.
+Primary actions are orange pills, usually full-width and about 50 points tall. Text is white, bold, and centered. Pressed or disabled states should darken/desaturate the orange or move to light gray; do not invent gradients.
 
-### Cards & Containers
+## Secondary and text actions
 
-Setup tasks use pale gray rounded rows. Activity content mostly lives directly on white. Challenge cards combine a strong banner, concise metadata, and an orange join action.
+Secondary actions are plain orange text or white pills with orange borders. Use them for login, share QR code, edit, remove section, and small supporting links. Their visual weight must stay below the primary orange button.
 
-### Inputs & Forms
+## Choice tiles
 
-The sampled flows emphasize choices and filters rather than text entry. When input is needed, use white or pale-gray fields with a visible border and system typography.
+Activity and purpose choices are rounded pale tiles with simple black line icons when relevant. Selected pricing choices can invert to black with orange selection rings. Preserve the clear two-column or stacked rhythm; avoid generic iOS list rows for these screens.
 
-### Status & Build Page
+## Activity content
 
-Goals use rings and progress bars. Completion becomes green. Live and historical metrics prioritize numerals; status decoration remains small.
+Activity cards include avatar/badge, athlete name, date, title, compact metrics, achievement strip, media, and engagement icons. Keep each part visibly separated by whitespace. The media grid can crop photos tightly and can sit directly in the feed without heavy shadows.
 
-### Navigation
+## Metrics and charts
 
-Use a five-item bottom bar for Home, Maps, Record, Groups, and You. Active destinations become orange; Record remains a strong centered circle. Nested group destinations use an underlined top tab row.
+Metric panels use large black values, small labels, and minimal dividers. Charts use flat blue fills, gray backplates, orange points or route strokes, and light axes. Do not add ornamental chart gradients or decorative dashboard chrome.
+
+## Floating map controls
+
+Map chips and controls are white rounded pills or circles with black icons and text. They sit above map tiles and may stack on the right side. Keep them compact, high contrast, and visibly tappable.
 
 # Imagery and icons
 
-| Level | Treatment | Use |
-|---|---|---|
-| 0 | White canvas | Feed, metrics, navigation |
-| 1 | Light gray fill | Choices, setup tasks, acknowledgements |
-| 2 | Thin border or subtle shadow | Focused metric cards and controls |
-| 3 | Black coach mark | Contextual guidance |
+Real photography and maps are core evidence surfaces. Use actual activity photos, route map tiles, and graph screenshots or equivalent raster/content-backed imagery when implementing screens. Do not replace them with abstract sports illustrations.
 
-### Decorative Depth
-
-Depth comes from maps, photo strips, challenge banners, and small progress graphics. Avoid ornamental gradients behind data.
+Icons are simple black outline symbols for sport types, navigation, likes, comments, share, bookmark, settings, and map layers. The Strava shield and wordmark are brand assets and should be treated as raster/vector brand artwork. Privacy and subscription promo graphics can use small authored raster images, but they do not define a reusable illustration language.
 
 # States
 
-Goals use rings and progress bars. Completion becomes green. Live and historical metrics prioritize numerals; status decoration remains small.
+Selected tab: orange icon and label. Inactive tab: black or muted gray icon and label. Selected subscription option: black card, white text, orange radio. Inactive subscription option: pale gray or white card, black text, gray radio.
+
+Recording ready: map background, white bottom sheet, green GPS confirmation strip, orange circular start control. Recording active: giant black metrics on white and one orange pause pill. Goal achieved: light strip with a green badge. Paywall or subscription states: high-contrast plan cards and one orange trial button with small legal copy.
+
+Permission or privacy states should use native iOS permission UI when the system asks, and Strava-owned explanatory screens should remain white, centered, and minimal with one orange next action.
 
 # iOS adaptation
 
-### Touch Targets
+Respect the iOS safe areas and keep the home indicator clear of pinned orange actions. Visible controls may be compact, but the hit area must remain at least 44 points. Dynamic Type may wrap onboarding body copy, chart annotations, and legal text; do not shrink the large recording numerals until necessary for fit.
 
-Buttons, choice tiles, nav items, and chart info controls retain at least 44pt hit areas.
+Use native map and chart rendering only when it can visually match the observed flat route, heatmap, and graph language. Otherwise use captured or generated raster surfaces. Sheets over map content should keep the rounded white bottom-panel treatment and leave enough map visible to preserve context.
 
-### Collapsing Strategy
-
-Activity and filter chips scroll horizontally. Metric clusters wrap to two rows before reducing type. Photo strips may become horizontally scrollable when narrow.
-
-### Image Behavior
-
-Use aspect-fill for photography and stable fixed heights for map or chart sections. Preserve the route, subject, or challenge mark in the crop.
-
-On iPhone, respect top and bottom safe areas, use scrolling for content that does not fit, keep interactive targets at least 44 points, and preserve the visual reading order for VoiceOver. At larger Dynamic Type sizes, allow supporting text to wrap without collapsing the dominant hierarchy. Use native sheets and permission transitions while explicitly styling app-owned surfaces to match the reference.
+VoiceOver order should read identity, title, metrics, media summary, and actions in the same visual order. Photo grids, map previews, and charts need concise labels because they carry important visual meaning.
 
 # Anti-generic checklist
 
-- Do not substitute the documented accent hierarchy with default iOS blue.
-- Do not turn the documented white canvas into a generic card stack; preserve the observed accent, density, imagery, and surface grouping.
-- Do not use an unstyled `TabView`, `Form`, or arbitrary SF Symbols when they contradict the documented navigation and component language.
-- Do not flatten the documented typography into one body-text scale.
-- Do not remove compositionally important photography or illustration while assets are pending.
-- Do not apply one corner radius to every control and surface.
-
-Source-specific guardrails retained from the review:
-
-### Do
-
-- Reserve orange for action and selection.
-- Keep metric numerals bold and labels compact.
-- Use maps and photography as evidence, not decoration.
-- Preserve two-column choices where comparison matters.
-- Attach social actions directly to the activity.
-
-### Don't
-
-- Don't place every metric inside a raised card.
-- Don't introduce multiple bright accent colors.
-- Don't use dark mode as the default system.
-- Don't hide progress behind decorative charts.
-- Don't make the Record action visually equal to the other tabs.
+- Do not turn Strava into a generic fitness dashboard with blue accents, glass cards, or gradient panels.
+- Do not replace activity photography, route maps, or chart surfaces with decorative vector illustrations.
+- Do not use default unstyled `List`, `Form`, or `TabView` rows where the reference uses custom tiles, pills, or compact tab icons.
+- Do not spread orange across every badge or container; keep it concentrated on brand, action, route, and selected state.
+- Do not flatten all metrics into body text; large black numerals are a defining part of recording and analysis screens.
+- Do not add heavy shadows around feed cards, maps, choice tiles, or charts.
 
 </design-context>

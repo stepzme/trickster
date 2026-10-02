@@ -3,139 +3,118 @@
 version: 1
 platform: iOS
 name: Halyk-Kazakhstan-design-analysis
-description: "A service-heavy financial super-app organized through white surfaces, Halyk green line icons, compact category grids, commerce banners, and yellow insurance accents. The system favors direct access and visible breadth over spacious minimalism."
-colors: { primary: "#11A85A", on-primary: "#FFFFFF", primary-soft: "#EAF8F0", accent: "#FFB719", ink: "#17191B", ink-muted: "#73777C", ink-subtle: "#AEB2B6", canvas: "#F5F6F6", surface-1: "#FFFFFF", surface-2: "#F0F3F2", hairline: "#E2E5E4", semantic-success: "#13A85B", semantic-warning: "#FFB719", semantic-danger: "#DE5555", semantic-overlay: "#000000" }
+description: "A dense white-and-pale-gray financial super-app with green actions and selected navigation, compact service grids, rounded product cards, promotional banners, and large numeric summaries."
+colors:
+  canvas: "#F5F6F6"
+  surface-primary: "#FFFFFF"
+  surface-secondary: "#EFF2F1"
+  accent-primary: "#11A85A"
+  accent-secondary: "#FFB719"
+  text-primary: "#17191B"
+  text-secondary: "#73777C"
+  divider: "#E2E5E4"
+  destructive: "#DE5555"
 typography:
-  display-xl: { fontFamily: SF Pro Display, fontSize: 36, fontWeight: 700, lineHeight: 1.05, letterSpacing: -0.7 }
-  display-lg: { fontFamily: SF Pro Display, fontSize: 30, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.5 }
-  display-md: { fontFamily: SF Pro Display, fontSize: 26, fontWeight: 700, lineHeight: 1.15, letterSpacing: -0.3 }
-  headline: { fontFamily: SF Pro Display, fontSize: 21, fontWeight: 700, lineHeight: 1.20, letterSpacing: 0 }
-  card-title: { fontFamily: SF Pro Text, fontSize: 15, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: SF Pro Text, fontSize: 16, fontWeight: 600, lineHeight: 1.30, letterSpacing: 0 }
-  body-lg: { fontFamily: SF Pro Text, fontSize: 16, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
-  body: { fontFamily: SF Pro Text, fontSize: 14, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
-  body-sm: { fontFamily: SF Pro Text, fontSize: 12, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
-  caption: { fontFamily: SF Pro Text, fontSize: 10, fontWeight: 500, lineHeight: 1.20, letterSpacing: 0 }
-  button: { fontFamily: SF Pro Text, fontSize: 15, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0 }
-  eyebrow: { fontFamily: SF Pro Text, fontSize: 11, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0.2 }
-  mono: { fontFamily: SF Mono, fontSize: 12, fontWeight: 500, lineHeight: 1.30, letterSpacing: 0 }
-rounded: { xs: 5, sm: 9, md: 13, lg: 18, xl: 24, xxl: 30, pill: 9999, full: 9999 }
-spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
+  hero: {fontFamily: "SF Pro Display", fontSize: 36, fontWeight: 700, lineHeight: 40}
+  title: {fontFamily: "SF Pro Display", fontSize: 28, fontWeight: 700, lineHeight: 34}
+  section: {fontFamily: "SF Pro Text", fontSize: 20, fontWeight: 700, lineHeight: 25}
+  body: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 400, lineHeight: 21}
+  label: {fontFamily: "SF Pro Text", fontSize: 14, fontWeight: 600, lineHeight: 18}
+  caption: {fontFamily: "SF Pro Text", fontSize: 12, fontWeight: 400, lineHeight: 16}
+spacing:
+  screen-horizontal: 16
+  section-gap: 24
+  card-padding: 16
+  control-gap: 10
+rounded:
+  control: 13
+  card: 18
+  sheet: 28
+  pill: 999
 components:
-  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [13, 18]}
-  service-tile: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.caption}", rounded: "{rounded.sm}", padding: 10 }
-  promo-banner: { backgroundColor: "{colors.primary-soft}", textColor: "{colors.ink}", typography: "{typography.card-title}", rounded: "{rounded.md}", padding: 14 }
-  input: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: [12, 14]}
+  green-primary-action: {fill: "#11A85A", text: "#FFFFFF", shape: "full-width rounded rectangle"}
+  service-tile: {fill: "#FFFFFF", icon: "green or contextual", label: "compact below"}
+  finance-summary-card: {fill: "#FFFFFF", value: "large", metadata: "muted"}
+  promo-banner: {fill: "contextual image or color", corners: "rounded", copy: "short"}
+  bottom-tab-bar: {fill: "#FFFFFF", selected: "#11A85A", unselected: "gray"}
 ---
 
 # Overview
 
-Halyk Kazakhstan presents banking, government, travel, market, cinema, and insurance as a compact green service hub.
+Halyk Kazakhstan presents a broad financial and services interface through high information density rather than spacious minimalism. A pale-gray canvas holds white rounded surfaces, while Halyk green organizes primary actions, icons, and selected navigation. Large balances and section titles punctuate compact grids, lists, banners, and forms. Product photography, partner marks, card artwork, and promotional imagery add local color without displacing the green banking shell.
 
 # Non-negotiable visual invariants
 
-- The reviewed screens use this composition: A service-heavy financial super-app organized through white surfaces, Halyk green line icons, compact category grids, commerce banners, and yellow insurance accents.
-- The source records this color relationship: Use Halyk green for navigation and actions; reserve warm yellow for insurance and urgent service emphasis.
-- The recorded display style is 36 points while the body style is 14 points.
-- Navigation and primary actions follow this source observation: Use Halyk green for navigation and actions; reserve warm yellow for insurance and urgent service emphasis.
-- The reviewed screens use this hierarchy: The system favors direct access and visible breadth over spacious minimalism.
+- Halyk green is the dominant action and selected-state color; generic iOS blue must not replace it.
+- A pale-gray canvas supports white rounded content surfaces with restrained separation and soft depth.
+- Main screens are intentionally dense, combining search or status, service shortcuts, summaries, banners, and lists in one continuous scroll.
+- Service shortcuts appear as compact icon-label tiles or grids, not oversized feature cards.
+- Financial values and section titles are clearly larger and heavier than gray helper text and metadata.
+- The persistent bottom tab bar is white with green selected icon and label, while inactive items are gray.
+- Primary confirmations use wide green rounded controls near the lower edge; disabled versions keep geometry and lose contrast.
+- Promotional imagery is contained inside rounded banners and product cards rather than used as a full-screen decorative background.
 
 # Color and surfaces
 
-### Brand & Accent
-Use Halyk green for navigation and actions; reserve warm yellow for insurance and urgent service emphasis.
+The outer canvas is very light neutral gray, while core cards, lists, sheets, and inputs are white. Secondary controls and segmented areas use slightly darker pale gray. Green identifies primary actions, selected tabs, active segments, service icons, and positive states. Warm yellow appears selectively in promotional or attention contexts rather than recoloring the banking shell. Near-black carries titles and financial values; medium gray carries descriptions, dates, placeholders, and unavailable information. Red is reserved for negative or failed states.
 
-### Surface
-Keep the canvas pale gray and service areas white, with subtle green-tinted icon tiles.
-
-### Text
-Use near-black for titles, gray for metadata, and muted gray for unavailable fields.
-
-### Semantic
-Use green for available or completed state, yellow for attention, and red for failures.
+Some debit-card or promotional surfaces introduce dark, photographic, or partner-specific color fields. Modal scrims are dark and temporary. The sampled screens do not show an app-wide dark theme. Strong card shadows, default blue tint, or using yellow for every action would disrupt the observed hierarchy.
 
 # Typography
 
-### Font Family
-Use SF Pro Display for section titles and SF Pro Text for services, forms, and metadata.
+Large section headings and balances use bold SF-style display text. Service labels, transaction rows, form fields, and navigation use compact regular or semibold text. Supporting metadata is smaller and gray. Financial numerals receive weight and spacing rather than decorative styling. Button labels are short, semibold, and centered; dense tiles avoid long multiline copy.
 
-### Principles
-Keep labels brief and consistent so dense service grids remain scannable.
-
-### Note on Font Substitutes
-Use the platform sans or Inter with tabular financial values.
+Use SF Pro Display for large headings and financial values and SF Pro Text for controls and body. With Dynamic Type, let rows, cards, and form fields expand; preserve the visual gap between amount, label, and helper text. Grid labels may wrap to two lines, but the icon and tap area must remain aligned.
 
 # Screen composition
 
-### Grid & Container
+Main screens sit below the top safe area and often begin with a compact search, status, city, or utility row. The middle is a vertical scroll containing balance or product summaries, small service grids, horizontal promotional banners, segmented controls, and compact lists. Typical side insets are about 16 points. A five-item white bottom tab bar anchors primary-level screens; task screens instead use a pinned green action.
 
-### Whitespace Philosophy
-Accept high density but separate banking, marketplace, and insurance contexts with clear cards and headers.
+Dashboard archetype: top utilities lead into financial summaries, quick services, promotional banners, and recent or contextual cards, all arranged in a dense continuous scroll.
+
+Service-directory archetype: search and category controls precede a regular grid of compact icon-label tiles, with secondary banners placed between groups.
+
+Form archetype: a centered or left-aligned title leads into stacked rounded inputs, selectors, amount chips, and helper text, ending in a wide green action.
+
+Product-detail archetype: card or product artwork and a large numeric summary form the focal upper area, followed by actions, segmented content, and detail rows.
+
+Marketplace archetype: rounded photo or product cards, category imagery, partner marks, and banners are denser and more visual while retaining the same pale shell and bottom navigation.
 
 # Navigation appearance
 
-Preserve the navigation type and selected-state treatment documented in the component tokens and overview. Keep navigation visually subordinate to the screen's primary content.
+The main bottom bar is a white five-item surface with compact icons and labels; the selected state is green and inactive states are gray. Top bars combine a small back control with a centered or left-aligned title and compact search, support, history, or location affordances. Segmented controls use rounded pale backgrounds and a stronger selected surface or green text. Bottom sheets and modal pickers use a dim scrim, large top corners, and list rows with clear selection. Pinned task actions sit above the safe area and remain visually distinct from navigation.
 
 # Components
 
-### Buttons
-Use green filled buttons for primary actions and yellow filled buttons inside insurance context.
+Primary buttons are full-width green rounded rectangles with white semibold text. Disabled buttons retain size and radius with pale gray fill. Service tiles use a white or softly tinted rounded surface, a simple contextual icon, and a short centered label. Finance summary cards combine a large value, small gray annotations, and compact actions without heavy borders.
 
-Use compact segmented controls for categories, documents, applications, and contracts.
-
-### Cards & Containers
-Use service tiles, banner carousels, media cards, insurance cards, and grouped form panels.
-
-### Inputs & Forms
-Stack labeled fields with clear separators, dropdown affordances, and a persistent save action.
-
-### Status & Build Page
-Show application, contract, insurance, payment, and empty-list state directly in context.
-
-### Navigation
-
-Keep active navigation green; insurance may use a yellow central action without recoloring the whole shell.
+Inputs are white or pale-gray rounded rectangles with visible labels, clear values, and restrained trailing affordances. Segmented controls and amount chips are compact and closely spaced. Transaction or option rows pair a leading icon or merchant mark with a two-level text stack and a trailing value or chevron. Promotional banners combine short text with contained partner photography, category imagery, or product art. Toggles, card selectors, bottom sheets, charts, and list dividers maintain the same neutral geometry and green selection logic.
 
 # Imagery and icons
 
-Use light card shadows and dividers; keep forms flatter than promotional modules.
+Imagery is varied but contained. Promotional banners use photos, partner graphics, or card artwork inside rounded modules. Merchant logos, marketplace product images, travel imagery, flags, and category pictures support identification. Financial charts and card visuals are functional rather than decorative. These assets should remain large enough to carry their module and should not be replaced by unrelated symbols.
 
-### Decorative Depth
-Use compact 3D objects inside service banners and empty states.
+Service icons are compact, often green line or filled marks, with consistent optical weight. The sampled screens include isolated decorative graphics, but not a repeatable standalone authored illustration system. Do not treat a one-off loading plane or administrative graphic as a required character or 3D language.
 
 # States
 
-Show application, contract, insurance, payment, and empty-list state directly in context.
+Observed states include first launch, sign-in, populated dashboard, card lists and detail, transfer forms, phone transfer, payments, amount entry, profile, bonuses, finance analytics, investments, marketplace, travel loading, active tabs and segments, modal selection, disabled buttons and toggles, blurred private data, and charts. Selection uses green, white, or stronger contrast while retaining component geometry. Local dark card surfaces and modal dimming do not constitute a dark appearance.
 
 # iOS adaptation
 
-### Collapsing Strategy
-Preserve search, frequent services, current task, and action; move media and promotions lower.
+Use safe-area-aware vertical scrolling for dense dashboards and independent insets for the bottom tab bar or pinned CTA. Service grids should preserve consistent columns at compact width, but reflow when Dynamic Type would truncate labels. Horizontal banner and chip strips may scroll rather than shrinking. Keep visible icons compact while guaranteeing 44-point hit regions.
 
-### Image Behavior
-Contain service artwork and crop posters consistently without covering labels.
-
-On iPhone, respect top and bottom safe areas, use scrolling for content that does not fit, keep interactive targets at least 44 points, and preserve the visual reading order for VoiceOver. At larger Dynamic Type sizes, allow supporting text to wrap without collapsing the dominant hierarchy. Use native sheets and permission transitions while explicitly styling app-owned surfaces to match the reference.
+Native sheets and keyboards can provide platform behavior, but app-owned surfaces need the observed pale canvas, white rows, green selection, and rounded geometry. VoiceOver order should follow title or status, balances, service grid row by row, banners, content lists, and bottom navigation. Provide meaningful labels for merchant and promotional imagery. Preserve light appearance unless a true dark reference is supplied; do not infer one from dark card art or scrims.
 
 # Anti-generic checklist
 
-- Do not substitute the documented accent hierarchy with default iOS blue.
-- Do not collapse distinct surfaces into a uniform stack of generic white cards.
-- Do not use an unstyled `TabView`, `Form`, or arbitrary SF Symbols when they contradict the documented navigation and component language.
-- Do not flatten the documented typography into one body-text scale.
-- Do not remove compositionally important photography or illustration while assets are pending.
-- Do not apply one corner radius to every control and surface.
-
-Source-specific guardrails retained from the review:
-
-### Do
-- Keep service categories predictable.
-- Preserve search near the top.
-- Make context changes explicit.
-
-### Don't
-- Don't mix yellow insurance actions with ordinary banking confirmation.
-- Don't overcrowd form labels.
-- Don't let banners displace the primary service grid.
+- Do not replace Halyk green with default iOS blue.
+- Do not expand every service shortcut into a large generic card.
+- Do not ship an unstyled `TabView`, `Form`, `List`, or default segmented control.
+- Do not flatten balances, section titles, labels, and helper text into one scale.
+- Do not use arbitrary SF Symbols where consistent service icons or merchant marks are visible.
+- Do not convert the pale-gray canvas into an all-white screen with strong card shadows.
+- Do not invent a unified character or 3D illustration system from isolated decorative assets.
+- Do not add explanatory or mood copy that duplicates visible products, amounts, statuses, or actions.
 
 </design-context>

@@ -3,234 +3,97 @@
 version: 1
 platform: iOS
 name: Lemana-PRO-design-analysis
-description: "A practical home-improvement marketplace built on white with vivid construction-yellow commitment actions, charcoal filters, rounded floating navigation, and dense product photography. Loyalty, promotions, room solutions, catalog, fulfillment, and checkout share a sturdy utilitarian rhythm."
+description: "A white, brand-forward home-improvement marketplace with construction-yellow actions, heavy black type, outlined selections, floating rounded navigation, and photo-led product utility."
 colors:
-  primary: "#FFC900"
-  on-primary: "#171717"
-  primary-focus: "#E5B400"
-  ink: "#171717"
-  ink-muted: "#707075"
-  ink-subtle: "#A3A3A8"
-  ink-tertiary: "#C6C6CA"
   canvas: "#FFFFFF"
-  surface-1: "#F5F5F4"
-  surface-2: "#ECECEA"
-  surface-3: "#E1E1DE"
-  surface-4: "#D4D4D0"
-  hairline: "#E5E5E2"
-  hairline-strong: "#D0D0CC"
-  hairline-tertiary: "#B8B8B2"
-  inverse-canvas: "#202326"
-  inverse-surface-1: "#34383B"
-  inverse-surface-2: "#494D50"
-  inverse-ink: "#FFFFFF"
-  brand-secure: "#C59800"
-  semantic-success: "#3DA55A"
-  semantic-overlay: "#171717"
+  surface-primary: "#FFFFFF"
+  surface-secondary: "#F3F3F1"
+  accent-primary: "#FFD400"
+  accent-secondary: "#202020"
+  text-primary: "#171717"
+  text-secondary: "#6F6F72"
+  divider: "#E3E3DF"
+  destructive: "#D73535"
 typography:
-  display-xl: {fontFamily: SF Pro Display, fontSize: 36, fontWeight: 700, lineHeight: 1.06, letterSpacing: -0.8}
-  display-lg: {fontFamily: SF Pro Display, fontSize: 30, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.6}
-  display-md: {fontFamily: SF Pro Display, fontSize: 24, fontWeight: 700, lineHeight: 1.14, letterSpacing: -0.3}
-  headline: {fontFamily: SF Pro Display, fontSize: 20, fontWeight: 700, lineHeight: 1.20, letterSpacing: -0.2}
-  card-title: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 600, lineHeight: 1.24, letterSpacing: 0}
-  subhead: {fontFamily: SF Pro Text, fontSize: 14, fontWeight: 600, lineHeight: 1.30, letterSpacing: 0}
-  body-lg: {fontFamily: SF Pro Text, fontSize: 14, fontWeight: 400, lineHeight: 1.38, letterSpacing: 0}
-  body: {fontFamily: SF Pro Text, fontSize: 12, fontWeight: 400, lineHeight: 1.34, letterSpacing: 0}
-  body-sm: {fontFamily: SF Pro Text, fontSize: 10, fontWeight: 400, lineHeight: 1.28, letterSpacing: 0}
-  caption: {fontFamily: SF Pro Text, fontSize: 9, fontWeight: 400, lineHeight: 1.22, letterSpacing: 0}
-  button: {fontFamily: SF Pro Text, fontSize: 13, fontWeight: 600, lineHeight: 1.18, letterSpacing: 0}
-  eyebrow: {fontFamily: SF Pro Text, fontSize: 9, fontWeight: 700, lineHeight: 1.18, letterSpacing: 0.1}
-  mono: {fontFamily: SF Mono, fontSize: 10, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0}
-rounded:
-  xs: 4
-  sm: 8
-  md: 12
-  lg: 16
-  xl: 20
-  xxl: 26
-  pill: 9999
-  full: 9999
+  hero: {fontFamily: "SF Pro Display", fontSize: 36, fontWeight: 800, lineHeight: 40}
+  title: {fontFamily: "SF Pro Display", fontSize: 28, fontWeight: 750, lineHeight: 33}
+  section: {fontFamily: "SF Pro Text", fontSize: 20, fontWeight: 700, lineHeight: 25}
+  body: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 400, lineHeight: 20}
+  label: {fontFamily: "SF Pro Text", fontSize: 14, fontWeight: 650, lineHeight: 18}
+  caption: {fontFamily: "SF Pro Text", fontSize: 12, fontWeight: 400, lineHeight: 16}
 spacing:
-  xxs: 4
-  xs: 8
-  sm: 12
-  md: 16
-  lg: 20
-  xl: 24
-  xxl: 32
-  section: 40
+  screen-horizontal: 16
+  section-gap: 28
+  card-padding: 12
+  control-gap: 10
+rounded:
+  control: 12
+  card: 16
+  sheet: 28
+  pill: 999
 components:
-  button-primary: {backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [13, 18]}
-  button-primary-pressed: {backgroundColor: "{colors.primary-focus}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}"}
-  button-secondary: {backgroundColor: "{colors.inverse-canvas}", textColor: "{colors.inverse-ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [12, 16]}
-  button-tertiary: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: [10, 14]}
-  button-inverse: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [12, 16]}
-  product-card: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 0}
-  category-tile: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.sm}", padding: 10}
-  search-field: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink-muted}", typography: "{typography.body}", rounded: "{rounded.pill}", padding: [11, 14]}
-  availability-badge: {backgroundColor: "#DFF2FA", textColor: "#2E6C82", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: [3, 6]}
-  bottom-nav: {backgroundColor: "rgba(255,255,255,0.94)", textColor: "{colors.ink}", typography: "{typography.caption}", rounded: "{rounded.pill}", padding: [8, 12]}
+  primary-action: {fill: "#FFD400", textColor: "#171717", cornerRadius: 12, minHeight: 48}
+  secondary-action: {fill: "#202020", textColor: "#FFFFFF", cornerRadius: 12, minHeight: 48}
+  primary-card: {fill: "#FFFFFF", borderColor: "#E3E3DF", cornerRadius: 16, padding: 12}
+  navigation: {fill: "#FFFFFF", selectedColor: "#171717", indicatorColor: "#FFD400", cornerRadius: 999}
 ---
 
 # Overview
 
-Lemana PRO is a utilitarian home-improvement shop where yellow actions, charcoal filters, and product photography make complex projects feel manageable.
-
-**Key Characteristics:**
-- Yellow loyalty header and purchase actions.
-- Floating white navigation dock.
-- Two-column catalog and product comparison.
-- Ready-made room solutions and service shortcuts.
-- Fulfillment availability visible before checkout.
+Lemana PRO presents retail utility through a forceful yellow-and-black identity. Large yellow actions, bold near-black headings, real project photography, isolated product cutouts, and a floating rounded navigation cluster stand out against a mostly white canvas. The result is practical and dense, but more branded than a generic marketplace.
 
 # Non-negotiable visual invariants
 
-- The reviewed screens show this treatment: Yellow loyalty header and purchase actions.
-- The reviewed screens show this treatment: Floating white navigation dock.
-- The reviewed screens show this treatment: Two-column catalog and product comparison.
-- The reviewed screens show this treatment: Ready-made room solutions and service shortcuts.
-- The reviewed screens show this treatment: Fulfillment availability visible before checkout.
+- Construction yellow is the dominant action and brand accent, always paired with near-black content.
+- White remains the main canvas, while pale warm gray groups categories, controls, and checkout sections.
+- Heavy black headings and prices create stronger contrast than compact supporting metadata.
+- Real room photography and clean product cutouts occupy meaningful card area and are never replaced by generic symbols.
+- Selected filters or options use a visible black outline or dark fill rather than default blue tint.
+- Navigation appears as a rounded floating white cluster separated from the edges and bottom safe area.
+- Product/catalog density remains high, with thin separators and little decorative shadow.
 
 # Color and surfaces
 
-### Brand & Accent
-
-Construction yellow identifies brand, loyalty, selection, cart, and checkout. Charcoal handles filters and secondary commitment.
-
-### Surface
-
-White is the shopping canvas; warm pale gray separates category tiles, quantity controls, and checkout groups.
-
-### Text
-
-Near-black carries headings, price, and specifications. Gray supports unit price, availability, and secondary instructions.
-
-### Semantic
-
-Pale blue marks fulfillment availability. Green is reserved for success; red marks discounts and destructive states.
+White carries most screens. Bright yellow appears in large commitment controls, selected brand moments, and promotional emphasis; charcoal provides the complementary filter and secondary-action color. Warm pale gray creates category tiles, grouped fields, and quantity controls. Black outlines are an active visual state, not merely separators. Near-black text dominates, gray supports specifications and availability, and red is reserved for discounts or destructive conditions. Default system blue and cool gray card stacks would weaken the observed identity.
 
 # Typography
 
-### Font Family
-
-Use SF Pro Display for strong section headings and SF Pro Text for dense product and fulfillment data.
-
-### Hierarchy
-
-| Token | Size | Weight | Use |
-|---|---:|---:|---|
-| display-lg | 30pt | 700 | Project or campaign claim |
-| headline | 20pt | 700 | Catalog and checkout title |
-| card-title | 15pt | 600 | Product and section title |
-| body | 12pt | 400 | Specifications and delivery |
-| caption | 9pt | 400 | Unit price, rating, and badge |
-
-### Principles
-
-- Keep price and unit visible together.
-- Use bold for categories and decision points.
-- Favor short practical labels over editorial copy.
-
-### Note on Font Substitutes
-
-Inter is a suitable substitute; preserve compact Cyrillic and legible fractions or unit notation.
+Use SF Pro Display and SF Pro Text as safe substitutes. Titles, prices, and section labels are unusually bold for a utility marketplace, while specifications and delivery data remain compact. Title and price visibly lead, body explains, and captions carry units and fulfillment details. Keep measurements and currency numerals aligned and unambiguous. Dynamic Type may increase vertical height, but must preserve the strong heading and adjacency of price, availability, and action.
 
 # Screen composition
 
-### Grid & Container
+The top safe area usually stays white and leads into a compact branded header, location/search controls, or a direct page title. Home and catalog screens stack a full-width search control, photo or promotion modules, horizontal rails, and dense two-column product/category grids. Product detail uses a large image field above price, availability, variants, and a nearby yellow purchase action. Cart and checkout become a single vertical column of product rows, fulfillment blocks, totals, and fixed or near-bottom controls. Insets are about 16 points; imagery often claims half or more of a card.
 
-Categories and products use two columns. Inspiration uses horizontal rails; checkout uses one stacked column.
-
-### Whitespace Philosophy
-
-Catalog density is useful. Open more space around project imagery, totals, address, and final actions.
+Visible archetypes include sparse centered onboarding/login; merchandising home with yellow identity and photo-led modules; catalog/search grids; product detail with isolated packshot; cart and checkout with grouped utility blocks; and profile pages with plain rows rather than ornamental cards.
 
 # Navigation appearance
 
-Keep the rounded floating dock with Home, Cart, Search, and Scanner. Native controls must inherit the yellow-charcoal hierarchy.
+The characteristic bottom navigation is a floating, broadly rounded white dock rather than an edge-to-edge native tab bar. Icons and labels are dark, selected emphasis is reinforced by yellow or a stronger dark treatment, and the dock uses only restrained soft separation. Navigation bars remain white with bold black titles. Back and close controls are ordinary in scale and placement, styled in black. Sheets use large rounded top corners and white surfaces over a dim scrim.
 
 # Components
 
-### Buttons
-
-Primary actions are yellow with black type. Filters are charcoal with white type; low-priority actions use pale gray or white.
-
-Quick filters use charcoal pills with removable selections; fulfillment modes use wide segmented rows.
-
-### Cards & Containers
-
-Product cards combine imagery, title, rating, current and former price, unit price, availability, and cart action without heavy borders.
-
-### Inputs & Forms
-
-Search is a white pill with scanner access. Address and contact forms use sheets, thin fields, and yellow confirmation actions.
-
-### Status & Build Page
-
-Availability badges distinguish store today, delivery tomorrow, and special order. Cart counts use small red badges.
-
-### Navigation
-
-Keep the rounded floating dock with Home, Cart, Search, and Scanner. Native controls must inherit the yellow-charcoal hierarchy.
+Primary actions are wide yellow rounded rectangles with bold black labels. Secondary commitment actions may invert to charcoal with white labels. The search control is a large white or pale pill with a compact icon and optional scan affordance. Product cards use minimal framing: photo/cutout, title, rating, current and former price, unit information, availability, and cart action. Category tiles use pale fills and image-led composition. Filters use dark pills or black-outlined selections; quantity controls are compact light-gray groups. Inputs are explicit bordered or lightly filled fields, not default `Form` rows. Disabled actions retain shape while losing contrast.
 
 # Imagery and icons
 
-| Level | Treatment | Use |
-|---|---|---|
-| 0 | White canvas | Catalog and detail |
-| 1 | Pale filled tile | Categories and controls |
-| 2 | Floating white dock | Home, cart, search, scanner |
-| 3 | Rounded sheet over scrim | Address and selectors |
-
-### Decorative Depth
-
-Use project photography and isolated product cutouts; UI shadows stay soft and limited to floating controls.
+Interior/project photography and clean isolated product cutouts are compositionally required. Use aspect-fill for rooms and inspiration banners, preserving the key fixture; use contain for tools, materials, and packaged goods. Promotional graphics may combine product renders, bold color blocks, and short labels, but the inspected screens do not establish a broad independent authored illustration language. Icons are sturdy, simple, and high-contrast, with line weight compatible with the bold typography.
 
 # States
 
-Availability badges distinguish store today, delivery tomorrow, and special order. Cart counts use small red badges.
+Selected filters and choices use black outline, dark fill, or yellow emphasis. Availability is displayed close to price and may use a restrained tinted badge. Cart quantities, totals, and checkout selections preserve the white/yellow/black system. Modal selectors remain white with rounded top corners. Error and destructive states use red only at the affected field or action; confirmed states retain the primary yellow/black emphasis.
 
 # iOS adaptation
 
-### Touch Targets
-
-Search, scanner, filter, cart, quantity, fulfillment, and dock targets remain at least 44pt.
-
-### Collapsing Strategy
-
-Keep products at two columns on phones; scroll filters horizontally and stack checkout options.
-
-### Image Behavior
-
-Contain pack shots and tools; aspect-fill interiors and campaign banners without cropping key fixtures.
-
-On iPhone, respect top and bottom safe areas, use scrolling for content that does not fit, keep interactive targets at least 44 points, and preserve the visual reading order for VoiceOver. At larger Dynamic Type sizes, allow supporting text to wrap without collapsing the dominant hierarchy. Use native sheets and permission transitions while explicitly styling app-owned surfaces to match the reference.
+Respect the top safe area with white or the active branded field, and keep the floating dock clear of the home indicator. Use vertical scrolling for catalog and checkout, horizontal scrolling for chips and merchandising rails, and keyboard-aware sheets for address or contact input. Maintain 44-point targets for search, scanning, filters, quantity, and navigation. VoiceOver order should follow title → product/specification → price/availability → action. On narrow phones, preserve two-column cards only where text remains legible; otherwise use one-column rows. Dynamic Type expands card height and stacks metadata rather than clipping. Preserve the observed light appearance and style app-owned surfaces explicitly.
 
 # Anti-generic checklist
 
-- Do not substitute the documented accent hierarchy with default iOS blue.
-- Do not collapse distinct surfaces into a uniform stack of generic white cards.
-- Do not use an unstyled `TabView`, `Form`, or arbitrary SF Symbols when they contradict the documented navigation and component language.
-- Do not flatten the documented typography into one body-text scale.
-- Do not remove compositionally important photography or illustration while assets are pending.
-- Do not apply one corner radius to every control and surface.
-
-Source-specific guardrails retained from the review:
-
-### Do
-
-- Keep units, quantity, and fulfillment clear.
-- Use yellow for brand and primary progress.
-- Keep project inspiration photographic.
-- Preserve scanner and search access.
-- Adapt native controls to the floating dock system.
-
-### Don't
-
-- Don't use yellow as a large content background outside brand zones.
-- Don't hide store availability.
-- Don't add heavy shadows to product cards.
-- Don't mix editorial typography into specifications.
-- Don't replace real project imagery with decorative illustration.
+- Do not replace yellow/black with default iOS blue.
+- Do not use an edge-to-edge unstyled `TabView` in place of the floating rounded dock.
+- Do not turn product/category grids into identical shadowed white cards.
+- Do not omit project photos or product cutouts while assets are pending.
+- Do not soften the bold heading and price hierarchy into uniform body text.
+- Do not use default `Form` sections or system selection tint.
+- Do not use the same corner radius for dock, sheet, card, and compact control.
 
 </design-context>

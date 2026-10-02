@@ -3,222 +3,151 @@
 version: 1
 platform: iOS
 name: Beeline-design-analysis
-description: "A playful telecom super-app built from warm yellow, white bento cards, pale cool-gray backgrounds, black type, lavender plan gradients, and orange balance actions. Mobile service, products, store, protection, entertainment, AI, and history share a modular dashboard with expressive 3D objects, characters, and editorial campaign imagery."
+description: "A light, playful telecom dashboard built from a cold pale-gray canvas, inflated white cards, Beeline yellow controls, black utility type, lavender tariff bands, floating pill navigation, and authored yellow-black promotional art."
 colors:
-  primary: "#FFD400"
-  on-primary: "#161616"
-  primary-soft: "#FFF7C2"
-  accent-black: "#20232A"
-  accent-violet: "#8A71E8"
-  accent-orange: "#FF5B16"
-  ink: "#17191D"
-  ink-muted: "#747981"
-  ink-subtle: "#A9AFB7"
   canvas: "#F1F4F7"
-  surface-1: "#FFFFFF"
-  surface-2: "#E8ECF1"
-  hairline: "#DCE1E6"
-  semantic-success: "#26B866"
-  semantic-danger: "#E64A5B"
-  semantic-overlay: "#000000"
+  surface-primary: "#FFFFFF"
+  surface-secondary: "#E9EEF3"
+  accent-primary: "#FFD200"
+  accent-secondary: "#FF5B14"
+  accent-violet: "#8E78E8"
+  accent-dark: "#1F2530"
+  text-primary: "#171A20"
+  text-secondary: "#6D747C"
+  text-tertiary: "#A3ABB4"
+  divider: "#DDE4EA"
+  success: "#26B866"
+  destructive: "#E54B59"
+  overlay: "#000000"
 typography:
-  display-xl: { fontFamily: SF Pro Display, fontSize: 38, fontWeight: 600, lineHeight: 1.04, letterSpacing: -0.8 }
-  display-lg: { fontFamily: SF Pro Display, fontSize: 31, fontWeight: 600, lineHeight: 1.09, letterSpacing: -0.6 }
-  display-md: { fontFamily: SF Pro Display, fontSize: 26, fontWeight: 600, lineHeight: 1.12, letterSpacing: -0.4 }
-  headline: { fontFamily: SF Pro Display, fontSize: 21, fontWeight: 600, lineHeight: 1.18, letterSpacing: -0.2 }
-  card-title: { fontFamily: SF Pro Text, fontSize: 16, fontWeight: 500, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: SF Pro Text, fontSize: 17, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
-  body-lg: { fontFamily: SF Pro Text, fontSize: 16, fontWeight: 400, lineHeight: 1.45, letterSpacing: 0 }
-  body: { fontFamily: SF Pro Text, fontSize: 14, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
-  body-sm: { fontFamily: SF Pro Text, fontSize: 12, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
-  caption: { fontFamily: SF Pro Text, fontSize: 10, fontWeight: 400, lineHeight: 1.20, letterSpacing: 0 }
-  button: { fontFamily: SF Pro Text, fontSize: 14, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0 }
-  eyebrow: { fontFamily: SF Pro Text, fontSize: 11, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0.2 }
-  mono: { fontFamily: SF Mono, fontSize: 12, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
-rounded: { xs: 8, sm: 12, md: 16, lg: 22, xl: 28, xxl: 34, pill: 9999, full: 9999 }
-spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
+  hero: {fontFamily: "SF Pro Display", fontSize: 34, fontWeight: 600, lineHeight: 38}
+  title: {fontFamily: "SF Pro Display", fontSize: 24, fontWeight: 600, lineHeight: 30}
+  section: {fontFamily: "SF Pro Text", fontSize: 18, fontWeight: 600, lineHeight: 23}
+  cardTitle: {fontFamily: "SF Pro Text", fontSize: 16, fontWeight: 500, lineHeight: 21}
+  body: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 400, lineHeight: 21}
+  label: {fontFamily: "SF Pro Text", fontSize: 13, fontWeight: 600, lineHeight: 17}
+  caption: {fontFamily: "SF Pro Text", fontSize: 11, fontWeight: 400, lineHeight: 14}
+  navLabel: {fontFamily: "SF Pro Text", fontSize: 10, fontWeight: 500, lineHeight: 12}
+spacing:
+  screen-horizontal: 14
+  section-gap: 18
+  card-padding: 16
+  control-gap: 8
+  tile-gap: 4
+rounded:
+  control: 16
+  card: 24
+  tile: 14
+  sheet: 30
+  pill: 999
 components:
-  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: [14, 20]}
-  balance-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 16 }
-  plan-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 14 }
-  service-tile: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.md}", padding: 12 }
-  story-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.caption}", rounded: "{rounded.md}", padding: 0 }
+  primary-action: {backgroundColor: "{colors.accent-primary}", textColor: "{colors.text-primary}", typography: "{typography.label}", rounded: "{rounded.pill}", padding: [13, 20]}
+  urgent-action: {backgroundColor: "{colors.accent-secondary}", textColor: "#FFFFFF", typography: "{typography.label}", rounded: "{rounded.pill}", padding: [12, 18]}
+  bento-card: {backgroundColor: "{colors.surface-primary}", textColor: "{colors.text-primary}", typography: "{typography.body}", rounded: "{rounded.card}", padding: 16}
+  service-tile: {backgroundColor: "{colors.surface-primary}", textColor: "{colors.text-primary}", typography: "{typography.caption}", rounded: "{rounded.tile}", padding: 12}
+  navigation: {backgroundColor: "{colors.surface-primary}", textColor: "{colors.text-secondary}", selectedColor: "{colors.text-primary}", rounded: "{rounded.pill}"}
 ---
 
 # Overview
 
-Beeline turns account management into a modular entertainment-and-services dashboard. Yellow anchors brand and primary actions while white bento cards separate balance, tariff, packages, protection, content, store, and tools.
+Beeline's iOS screens use a soft dashboard language rather than a plain settings app. The viewport is usually a pale cool-gray field with white, inflated bento modules, a small centered yellow brand capsule in the status area, and a floating bottom navigation cluster. Saturated color is tightly controlled: yellow marks the brand and primary controls, orange appears only for urgent balance relief, and violet appears as a tariff or subscription accent.
 
-**Key Characteristics:**
-- Yellow brand and recharge actions.
-- White rounded bento modules.
-- Lavender tariff accents.
-- Floating bottom navigation.
-- Expressive characters and 3D service objects.
+The style is recognizably Beeline because utilitarian telecom data sits beside playful authored art: yellow-black sphere motifs, dot-matrix allowance graphics, 3D objects, campaign stills, and occasional characters. Functional account, tariff, and history screens stay airy and flat; promotional panels carry the illustration and image weight.
 
 # Non-negotiable visual invariants
 
-- The reviewed screens show this treatment: Yellow brand and recharge actions.
-- The reviewed screens show this treatment: White rounded bento modules.
-- The reviewed screens show this treatment: Lavender tariff accents.
-- The reviewed screens show this treatment: Floating bottom navigation.
-- The reviewed screens show this treatment: Expressive characters and 3D service objects.
+- The canvas is a cold pale gray, while nearly every content module is a rounded white or frosted white surface.
+- Beeline yellow is the dominant action color for recharge, choose, connect, toggle-on, and compact brand marks.
+- Balance, allowance, and plan modules use bento geometry with very large card radii and tight internal grouping.
+- The bottom navigation is a floating rounded cluster above the home indicator, with a separate round shortcut at each edge.
+- Promotional imagery uses yellow-black 3D objects, dot-matrix fills, or campaign photography inside spacious cards.
+- Modal choices dim the full screen and rise as a high-radius bottom sheet with a small centered drag handle.
+- Utility icons are small, dark, and sparse; large colorful symbols are reserved for authored promo art, not generic controls.
 
 # Color and surfaces
 
-### Brand & Accent
-- **Beeline Yellow** ({colors.primary}): Brand, recharge, and main CTA.
-- **Black** ({colors.accent-black}): Icons and high-contrast service labels.
-- **Violet** ({colors.accent-violet}): Tariff enhancer and plan atmosphere.
-- **Orange** ({colors.accent-orange}): Urgent balance action.
+Use `#F1F4F7` as the main app field. It should read cool and misty, not beige or pure white. Primary cards are white with almost no visible border and soft shadow or blur-like separation. Secondary tiles can use `#E9EEF3` or a very light gray gradient, but still need a white-card feeling.
 
-### Surface
-- **Canvas** ({colors.canvas}): Dashboard background.
-- **Surface 1** ({colors.surface-1}): Tariff, service, and story cards.
-- **Surface 2** ({colors.surface-2}): Disabled and secondary tiles.
-- **Hairline** ({colors.hairline}): List separation.
+Beeline yellow `#FFD200` carries the brand, filled CTAs, active toggles, small price/action pills, and the centered app mark. It should feel warm and solid, not neon. Orange `#FF5B14` is an exceptional accent for urgent top-up or relief actions and should not replace yellow as the default CTA.
 
-### Text
-- **Ink** ({colors.ink}): Balances, headings, and actions.
-- **Ink Muted** ({colors.ink-muted}): Allowances and service metadata.
-- **Ink Subtle** ({colors.ink-subtle}): Disabled state.
+Text is nearly black `#171A20` for headings and values, with muted gray `#6D747C` for metadata and pale gray `#A3ABB4` for inactive labels. Lavender/violet `#8E78E8` appears in plan-enhancer bands and selected plan atmosphere. Success is a small green indicator, usually paired with text rather than filling a large surface. Destructive or alert color is used sparingly for warnings.
 
-### Semantic
-- **Success** ({colors.semantic-success}): Connected service.
-- **Danger** ({colors.semantic-danger}): Security warning or failure.
-- **Overlay** ({colors.semantic-overlay}): Stories and modal focus.
+Avoid default iOS blue, flat black-on-white form sections, heavy outlines, saturated gradients across the full app, or high-contrast dividers between every row. Separation should mostly come from air, rounded surfaces, and subtle gray fields.
 
 # Typography
 
-### Font Family
+Typography is SF Pro-based, friendly, and slightly understated. Headings use SF Pro Display at medium weights rather than heavy editorial bold. Many headings and labels are lowercase in the reference; preserve that relaxed casing when the surrounding product copy allows it. Do not force title case everywhere.
 
-- **SF Pro Display** — campaign and screen headings.
-- **SF Pro Text** — tariff, usage, services, and settings.
-- **SF Mono** — codes only.
+Large account values and allowance numbers should be direct and roomy, usually 24-34 points with short labels below. Service and tile titles sit around 13-16 points, with a compact line height and enough wrapping room for Russian-length labels. Captions are small but not hairline; keep 10-11 point captions legible and avoid compressed tracking.
 
-### Hierarchy
-
-| Token | Size | Weight | Use |
-|---|---|---|---|
-| `{typography.display-xl}` | 38pt | 600 | Campaign statement |
-| `{typography.headline}` | 21pt | 600 | Screen and module title |
-| `{typography.card-title}` | 16pt | 500 | Tariff or service title |
-| `{typography.body}` | 14pt | 400 | Usage and conditions |
-| `{typography.caption}` | 10pt | 400 | Story and nav label |
-| `{typography.button}` | 14pt | 600 | Recharge and activation |
-
-### Principles
-
-- Use friendly lowercase campaign voice.
-- Keep allowance numbers large and direct.
-- Pair service title with connection state.
-- Avoid heavy uppercase utility labels.
-
-### Note on Font Substitutes
-
-Use **Inter** or the platform system sans when SF Pro is unavailable.
+Buttons use 13-15 point semibold text. Navigation labels are tiny and secondary, with icon prominence doing most of the work. At larger Dynamic Type sizes, allow cards to grow vertically and wrap secondary labels; do not shrink headline/value text until it becomes unreadable.
 
 # Screen composition
 
-### Grid & Container
+Most screens are vertically scrolling iPhone canvases with 14-16 point side gutters and 4-8 point gaps between adjacent bento tiles. The top safe area stays light and uncluttered. The small yellow Beeline badge appears centered near the status area on many signed-in screens; back buttons and utility controls are circular white buttons.
 
-Home stacks story rail, account search, status notice, balance, tariff bento, product carousel, and floating navigation. Product screens use two-column service tiles and full-width recharge.
+Dashboard composition: a horizontal story rail occupies the top edge, followed by account/search controls, a status notice, balance actions, a plan card, allowance tiles, product/service cards, and the floating nav. Cards often touch into a dense bento group, with rounded outer corners and small seams between inner tiles.
 
-### Whitespace Philosophy
+Product and plan composition: a large white card holds price, discount, usage quotas, and a grid of service tiles. A fixed yellow recharge pill can sit above the bottom navigation. Interior rows are low contrast and rounded; toggles and selectable allowance chips use yellow for the active state and dark charcoal for category labels.
 
-Use pale canvas between white modules; allow campaign art to breathe inside dedicated cards.
+History and usage composition: summary cards sit in the upper half, often two cards wide, with debit/top-up or traffic metrics shown as large numbers. Promotion cards are inserted between data groups but remain visually subordinate to account totals. Bottom CTAs stay pill-shaped and safe-area aware.
+
+Focused entry screens: sign-in and PIN screens become sparse, with large top-left headings, a mostly empty light-gray field, white circular back/help controls, and system keyboard or custom keypad anchored at the bottom. The visual identity remains through the centered yellow badge and yellow CTA.
 
 # Navigation appearance
 
-Home, Services, Store, and Chat form a floating bottom cluster. Account and number switching sit above dashboard content.
+Navigation chrome is rounded and floating. The bottom bar is a white pill with soft shadow, compact dark icons, small gray labels, and a dark selected icon. It does not span edge-to-edge like an unstyled `TabView`. Small round shortcut buttons can flank the pill and must align to the same bottom safe-area baseline.
+
+Top controls are light: circular white back buttons, small utility icons, and a centered yellow brand chip. Sheets have dim overlays, a rounded top edge around 30 points, a centered white drag handle area, large lowercase title text, and stacked full-width pill actions. Alerts and permission transitions should keep the dimming behavior native, but app-owned controls must match the orange/yellow/charcoal hierarchy.
 
 # Components
 
-### Buttons
+Primary action: a full-width or wide yellow pill, roughly 48-56 points tall, with centered semibold dark text. It can float above navigation or sit inside a card. Disabled primary actions fade toward gray rather than using blue.
 
-Yellow pills handle recharge, activation, choose, watch, and read. Orange is reserved for urgent balance relief. Secondary controls are white tiles.
+Urgent action: a smaller orange pill or rounded rectangle for urgent balance relief. Use white text/icons and keep it visually secondary to the yellow brand system by limiting it to exceptional states.
 
-Mobile and home internet use text tabs. Allowance, service, and history filters use compact segments and chips.
+Bento card: white, 20-24 point radius, 12-16 point padding, very light shadow, no heavy border. Cards can form two-column grids; internal separators are made by small gutters, not visible lines.
 
-### Cards & Containers
+Allowance chip/tile: rounded rectangular cells with numeric labels. Active states use yellow fill for values and charcoal fill for unit labels; inactive states stay white or pale gray. Dot-matrix yellow graphics may occupy background space behind allowance values.
 
-Tariff cards expose price, discount, allowances, and settings. Service tiles show icon, title, price, and connected state. History uses large debit and top-up summaries.
+Service tile: compact white tile with one small dark icon, title, price/status metadata, and optional green connected mark. Keep icons quiet; do not use colorful SF Symbol sets as substitutes for observed icon/art treatment.
 
-### Inputs & Forms
+Search/account control: white pill or joined pill row near the top, with small profile/search icons and phone number text. The plus/action control is a circular white or yellow button at the row end.
 
-Phone entry, autopay, eSIM, number transfer, and security use full-width fields with explicit confirmation and support access.
-
-### Status & Build Page
-
-Show transfer progress, balance, autopay, connected, remaining data, calls, SMS, spam protection, session, and report state explicitly.
-
-### Navigation
-
-Home, Services, Store, and Chat form a floating bottom cluster. Account and number switching sit above dashboard content.
-
-Floating navigation and recharge pill stay above the safe area; focused setup and security flows use back navigation.
+Toggle: iOS-style pill toggle with a yellow on-fill and pale neutral off state. Place it inside a white tile with enough breathing room, not inside a default form row.
 
 # Imagery and icons
 
-| Level | Treatment | Use |
-|---|---|---|
-| 0 | Pale cool canvas | Dashboard base |
-| 1 | White rounded card | Tariff and services |
-| 2 | Lavender or yellow module | Highlighted plan/action |
-| 3 | Full-screen editorial panel | Story or product promotion |
+Imagery is essential in Beeline's style. Promo modules use authored 3D objects, yellow-black bee-sphere forms, coin and device props, dot-matrix yellow fields, campaign photography, and occasional game/character art. The art is usually centered or cropped inside a large white card with spacious negative space and a small yellow CTA below.
 
-### Decorative Depth
-
-Use soft 3D objects, photography, and character art inside authored promotional modules. Functional cards remain flat.
+Functional data cards should not be decorated heavily. Balance, tariff, usage, security, and history content can use faint abstract geometric shadows or dot fields, but values must stay readable. Iconography is simple, monochrome, and rounded. Do not replace authored image panels with SF Symbols, emoji, line-art placeholders, or vector blobs.
 
 # States
 
-Show transfer progress, balance, autopay, connected, remaining data, calls, SMS, spam protection, session, and report state explicitly.
+Observed loading uses a full-screen dark dim over the current screen with a white spinner. Observed bottom sheets use the same dark overlay and preserve the underlying screen blur/dim relationship.
+
+Observed selected states include yellow filled allowance chips, yellow toggles, selected bottom-nav icons in dark ink, and pill CTAs. Observed disabled or unavailable actions are pale gray with muted text. Observed error/attention states use small warning marks and restrained red/orange rather than full red screens.
+
+Observed permission and setup states are sparse: a light field, large explanatory title, optional contact/avatar mosaic, and one or two full-width bottom actions. Keep these states visually calm and Beeline-branded through yellow, rounded controls, and the centered brand chip.
 
 # iOS adaptation
 
-| Wide | 768pt+ | Add bento columns |
-| Small | <390pt | Reduce bento columns and truncate service labels |
+Use native safe areas, but style app-owned bars and sheets. Content should scroll under a floating bottom bar with enough bottom padding so the final card and CTA are never hidden. Keep controls at least 44 points tall; primary pills should usually be closer to 48-56 points.
 
-### Touch Targets
+For compact iPhones, preserve one full-width primary metric or card before reducing two-column grids. Service bento tiles can become taller, but should not collapse into default `Form` rows. Product and promo art should remain contained and uncropped unless the source composition already crops photography.
 
-Keep story cards, tiles, recharge, filters, navigation, and settings at least 44pt.
+Dynamic Type should expand card height and wrap captions while retaining the hierarchy: top metric or title first, metadata second, CTA last. Keep the keypad and keyboard layouts native where present, but do not let a native keyboard force blue accent controls into the app-owned UI.
 
-### Collapsing Strategy
-
-Scroll story and service rails horizontally before shrinking. Preserve balance, tariff, and recharge above entertainment content.
-
-### Image Behavior
-
-Contain characters and 3D objects; preserve cover art and embedded titles. Crop only authored photographic campaign backgrounds.
-
-On iPhone, respect top and bottom safe areas, use scrolling for content that does not fit, keep interactive targets at least 44 points, and preserve the visual reading order for VoiceOver. At larger Dynamic Type sizes, allow supporting text to wrap without collapsing the dominant hierarchy. Use native sheets and permission transitions while explicitly styling app-owned surfaces to match the reference.
+Use light appearance as the supported visual base. A dark mode should not be invented from these screens unless separately approved; the observed system is light, gray, white, yellow, and charcoal.
 
 # Anti-generic checklist
 
-- Do not substitute the documented accent hierarchy with default iOS blue.
-- Do not collapse distinct surfaces into a uniform stack of generic white cards.
-- Do not use an unstyled `TabView`, `Form`, or arbitrary SF Symbols when they contradict the documented navigation and component language.
-- Do not flatten the documented typography into one body-text scale.
-- Do not remove compositionally important photography or illustration while assets are pending.
-- Do not apply one corner radius to every control and surface.
-
-Source-specific guardrails retained from the review:
-
-### Do
-
-- Keep balance and tariff allowances visible.
-- Separate products, services, store, and history.
-- Use yellow consistently for primary action.
-- Show service connection state.
-- Confine rich art to promo modules.
-
-### Don't
-
-- Don't place character art behind account data.
-- Don't use orange for routine actions.
-- Don't hide price or renewal terms.
-- Don't merge telecom security with entertainment upsell.
-- Don't shrink bento tiles below touch size.
-
+- Do not use default iOS blue tint for links, selected tabs, toggles, or filled actions.
+- Do not replace the floating rounded bottom navigation with an edge-to-edge `TabView`.
+- Do not turn bento dashboards into plain `Form` sections or identical list rows.
+- Do not remove the yellow-black authored art, dot-matrix texture, or campaign image panels when they are compositionally visible.
+- Do not use the same corner radius for sheets, primary pills, service tiles, and large cards.
+- Do not overuse orange; yellow is the regular primary, orange is exceptional.
+- Do not place decorative art behind account numbers, allowance values, or transaction totals.
+- Do not add product navigation, marketing page sections, desktop hover behavior, or web breakpoints to this iOS style.
 </design-context>

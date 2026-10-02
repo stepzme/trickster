@@ -3,240 +3,122 @@
 version: 1
 platform: iOS
 name: Janymda-design-analysis
-description: "A bright telecom super-app built on white and pale gray, with a blue-to-violet central action, yellow commercial CTAs, candy-colored 3D service icons, and dense modular content. Rounded banners, compact category grids, media rails, and card-like tariff sections keep many services approachable without hiding their breadth."
+description: "A bright iOS telecom super-app combining white modular surfaces, yellow commercial actions, violet selected states, a raised central launcher, dense service grids, and friendly authored imagery."
 colors:
-  primary: "#4457F2"
-  on-primary: "#FFFFFF"
-  primary-focus: "#3544D1"
-  ink: "#17171C"
-  ink-muted: "#5F6068"
-  ink-subtle: "#9697A0"
-  ink-tertiary: "#B9BAC2"
   canvas: "#FFFFFF"
-  surface-1: "#F7F7F9"
-  surface-2: "#EFF0F4"
-  surface-3: "#E4E6ED"
-  surface-4: "#D7DAE4"
-  hairline: "#E8E9ED"
-  hairline-strong: "#D3D5DC"
-  hairline-tertiary: "#B8BBC5"
-  inverse-canvas: "#17171C"
-  inverse-surface-1: "#292A31"
-  inverse-surface-2: "#3A3B44"
-  inverse-ink: "#FFFFFF"
-  brand-secure: "#934EF5"
-  semantic-success: "#2DBE73"
-  semantic-overlay: "#17171C"
+  surface-primary: "#FFFFFF"
+  surface-secondary: "#F2F3F6"
+  accent-primary: "#FFD429"
+  accent-secondary: "#6548E8"
+  text-primary: "#17171C"
+  text-secondary: "#6A6B73"
+  divider: "#E7E8EC"
+  destructive: "#D94A50"
 typography:
-  display-xl: {fontFamily: SF Pro Display, fontSize: 38, fontWeight: 700, lineHeight: 1.06, letterSpacing: -1.0}
-  display-lg: {fontFamily: SF Pro Display, fontSize: 30, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.7}
-  display-md: {fontFamily: SF Pro Display, fontSize: 25, fontWeight: 700, lineHeight: 1.14, letterSpacing: -0.4}
-  headline: {fontFamily: SF Pro Display, fontSize: 21, fontWeight: 700, lineHeight: 1.20, letterSpacing: -0.2}
-  card-title: {fontFamily: SF Pro Text, fontSize: 17, fontWeight: 600, lineHeight: 1.25, letterSpacing: -0.1}
-  subhead: {fontFamily: SF Pro Text, fontSize: 16, fontWeight: 600, lineHeight: 1.32, letterSpacing: 0}
-  body-lg: {fontFamily: SF Pro Text, fontSize: 16, fontWeight: 400, lineHeight: 1.42, letterSpacing: 0}
-  body: {fontFamily: SF Pro Text, fontSize: 14, fontWeight: 400, lineHeight: 1.38, letterSpacing: 0}
-  body-sm: {fontFamily: SF Pro Text, fontSize: 12, fontWeight: 400, lineHeight: 1.32, letterSpacing: 0}
-  caption: {fontFamily: SF Pro Text, fontSize: 10, fontWeight: 400, lineHeight: 1.25, letterSpacing: 0}
-  button: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0}
-  eyebrow: {fontFamily: SF Pro Text, fontSize: 11, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0.2}
-  mono: {fontFamily: SF Mono, fontSize: 12, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0}
-rounded:
-  xs: 4
-  sm: 8
-  md: 12
-  lg: 16
-  xl: 20
-  xxl: 28
-  pill: 9999
-  full: 9999
+  hero: {fontFamily: "SF Pro Display", fontSize: 36, fontWeight: 700, lineHeight: 41}
+  title: {fontFamily: "SF Pro Display", fontSize: 28, fontWeight: 700, lineHeight: 34}
+  section: {fontFamily: "SF Pro Text", fontSize: 20, fontWeight: 600, lineHeight: 25}
+  body: {fontFamily: "SF Pro Text", fontSize: 16, fontWeight: 400, lineHeight: 22}
+  label: {fontFamily: "SF Pro Text", fontSize: 14, fontWeight: 600, lineHeight: 19}
+  caption: {fontFamily: "SF Pro Text", fontSize: 12, fontWeight: 400, lineHeight: 16}
 spacing:
-  xxs: 4
-  xs: 8
-  sm: 12
-  md: 16
-  lg: 20
-  xl: 24
-  xxl: 32
-  section: 40
+  screen-horizontal: 16
+  section-gap: 28
+  card-padding: 16
+  control-gap: 12
+rounded:
+  control: 12
+  card: 18
+  sheet: 28
+  pill: 999
 components:
-  button-primary: {backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [14, 20]}
-  button-primary-pressed: {backgroundColor: "{colors.primary-focus}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}"}
-  button-secondary: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [12, 18]}
-  button-tertiary: {backgroundColor: "{colors.canvas}", textColor: "{colors.primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [10, 14]}
-  button-inverse: {backgroundColor: "{colors.inverse-canvas}", textColor: "{colors.inverse-ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [12, 18]}
-  service-tile: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.caption}", rounded: "{rounded.md}", padding: 8}
-  promo-banner: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 12}
-  tariff-card: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 16}
-  catalog-sheet: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xxl}", padding: 16}
-  status-badge: {backgroundColor: "{colors.inverse-canvas}", textColor: "{colors.inverse-ink}", typography: "{typography.caption}", rounded: "{rounded.pill}", padding: [4, 8]}
-  bottom-nav: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink-subtle}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: [8, 10]}
+  service-icon-grid: {}
+  yellow-commercial-action: {}
+  floating-violet-launcher: {}
+  dark-account-card: {}
+  promotional-media-rail: {}
 ---
 
 # Overview
 
-Janymda is a bright, modular super-app. It balances a dense service catalog with playful 3D icons, strong commercial banners, and conventional navigation.
-
-**Key Characteristics:**
-- White canvas with pale gray grouping surfaces.
-- Blue-violet central launcher and yellow purchase actions.
-- Four-column service icon grid.
-- Rounded promotional banners and horizontal media rails.
-- Card-stacked tariff details with a sticky CTA.
+Janymda is a bright, dense super-app whose white and pale-gray foundation keeps a broad service catalog readable. Yellow marks decisive commercial actions, while violet and blue identify selections, tabs, and the elevated central launcher. Dark account and wallet cards create strong local contrast. Glossy service objects, authored login illustrations, product photography, and promotional media make imagery an essential part of the modular feed rather than optional decoration.
 
 # Non-negotiable visual invariants
 
-- The reviewed screens show this treatment: White canvas with pale gray grouping surfaces.
-- The reviewed screens show this treatment: Blue-violet central launcher and yellow purchase actions.
-- The reviewed screens show this treatment: Four-column service icon grid.
-- The reviewed screens show this treatment: Rounded promotional banners and horizontal media rails.
-- The reviewed screens show this treatment: Card-stacked tariff details with a sticky CTA.
+- White remains the dominant viewport field, with pale gray grouping surfaces rather than a continuous colored background.
+- Yellow is reserved for major purchase, top-up, cart, or connect actions; violet/blue carries selection and navigation emphasis.
+- The main bottom bar has five compact destinations and a visibly raised circular violet center launcher.
+- Service discovery uses a dense, regular icon grid with friendly glossy objects and short centered labels.
+- Account and wallet summaries may switch to broad black or charcoal cards with large white numeric values.
+- Promotional modules and media rails use strong imagery but remain bounded by consistent gutters and rounded crops.
+- Detail and settings screens simplify into flat lists or sparse forms while retaining the same yellow/violet hierarchy.
+- Standalone login illustrations remain substantial authored raster imagery and must not be replaced by symbols.
 
 # Color and surfaces
 
-### Brand & Accent
-- Blue and violet identify the launcher, onboarding progress, and selected service context.
-- Yellow is reserved for major telecom offers and connect actions.
+The canvas and primary surface are white. Pale cool gray groups inputs, list rows, catalog areas, and inactive controls. `accent-primary` is saturated Beeline yellow for decisive commercial actions and selected utility moments. `accent-secondary` is violet, often paired with blue in gradients for active navigation, segmented underlines, toggles, and the floating center launcher. Primary copy is near-black and secondary copy is gray. Red is limited to error, destructive, and unread-badge states; green communicates success or availability.
 
-### Surface
-- White dominates; pale gray blocks separate favorites, media, and commercial modules.
-- Dark navy may anchor event or partner banners.
-
-### Text
-- Near-black carries labels and prices.
-- Neutral gray supports explanations, inactive navigation, and long terms.
-
-### Semantic
-- Green is limited to success or availability.
-- Red notification dots signal unread messages without becoming a general accent.
+Black and charcoal create local account, telecom, or wallet cards with white text. Purple-blue gradients may appear in the center launcher and bounded promotional surfaces, but ordinary buttons and cards remain flat. Default iOS blue for every action, yellow applied to all navigation, or colorful backgrounds behind every module would destroy the observed separation of roles.
 
 # Typography
 
-### Font Family
+Use SF Pro as the iOS-safe family. Onboarding and product-detail headings are large, bold, and often left aligned. Centered navigation titles are smaller and medium weight. Section headings are bold and left aligned; service labels are short, compact, and centered beneath imagery. Prices, balances, data allowances, and tariff values use oversized bold numerals. Supporting descriptions and legal text are gray and distinctly smaller.
 
-Use SF Pro Display and SF Pro Text throughout; the identity comes from color, imagery, and icon objects rather than a display face.
-
-### Hierarchy
-
-| Token | Size | Weight | Use |
-|---|---:|---:|---|
-| display-lg | 30pt | 700 | Onboarding message |
-| display-md | 25pt | 700 | Offer heading |
-| headline | 21pt | 700 | Section title |
-| card-title | 17pt | 600 | Tariff and banner title |
-| body | 14pt | 400 | Supporting copy |
-| caption | 10pt | 400 | Service and navigation label |
-
-### Principles
-
-- Use strong weight to distinguish sections in dense feeds.
-- Keep service labels short and center aligned.
-- Keep prices and plan names visually separate from legal detail.
-
-### Note on Font Substitutes
-
-Use a neutral system sans with similar metrics when SF Pro is unavailable.
+Dynamic Type should let descriptions, plan details, and settings metadata wrap while preserving the visual gap between value, title, label, and caption. Dense service grids may reduce columns or grow vertically, but labels must not truncate into ambiguity. Use tabular figures for aligned prices and account metrics. Avoid mood copy and do not repeat visible product context in secondary text.
 
 # Screen composition
 
-### Spacing System
+Screens use roughly 16-point horizontal gutters and safe-area-aware vertical scrolling. Main feeds combine a custom header, dark or light account summary, horizontally scrolling promo/media modules, a regular service grid, and additional commercial cards above the bottom bar. Detail screens use a minimal centered navigation title, then one dominant product or tariff value and stacked sections. Forms are comparatively sparse, with pale fields and a bottom action. Bottom sheets occupy most of the width with a large rounded top and drag handle.
 
-Use a 4pt base, 12pt gaps between modules, and 16pt horizontal screen padding.
+Observed archetypes:
 
-### Grid & Container
-
-Service shortcuts use four equal columns. Promos span the content width; media and store cards scroll horizontally.
-
-### Whitespace Philosophy
-
-Whitespace should clarify module boundaries, not reduce useful density. Preserve breathing room around tariff prices and CTAs.
+- **Super-app home:** custom top header, broad account summary, promotional rail, dense service modules, and five-item bottom navigation.
+- **Service catalog:** large white or pale sheet with regular icon grid, clear section grouping, and vertical scrolling.
+- **Telecom account:** dark summary card with large balance or allowance values, compact quick actions, and supporting service rows.
+- **Tariff or product detail:** strong heading/value, benefit sections, compact selectors, and a clear yellow commercial action.
+- **Payment form:** pale rounded inputs, card-entry or numeric keyboard state, large quiet middle, and yellow bottom action.
+- **Settings or messages:** segmented heading where needed, then flat rows, toggles, badges, or compact chat actions.
+- **Shop feed:** product photography in rounded cards or horizontal rails with short price labels and yellow cart actions.
 
 # Navigation appearance
 
-Keep five destinations fixed and emphasize the center launcher as a circular blue-violet action. The expanded state changes it to a close icon.
+The top-level bottom bar is white with five evenly spaced icon-label items; the center item rises as a circular violet or blue-violet launcher and carries more visual weight than adjacent tabs. Inactive items are gray, while active states become dark or violet. Inner screens use a simple left chevron, centered title, and occasional trailing action. Segmented views may use a thin violet underline. Bottom sheets use a dimmed scrim, white surface, drag handle, and large top corners. Navigation appearance should not be copied as product architecture.
 
 # Components
 
-### Buttons
-
-Use blue-violet for navigation-forward actions and saturated yellow for plan connection. Secondary actions use pale gray fill.
-
-Plan variants use compact segmented controls or horizontal cards. Make the selected plan obvious through fill and weight.
-
-### Cards & Containers
-
-Modules are shallow rounded rectangles. Tariff detail stacks distinct benefit, price, and legal sections rather than one oversized card.
-
-### Inputs & Forms
-
-Inputs use pale fill, dark text, and minimal borders. Keep each commercial step focused on one selection.
-
-### Status & Build Page
-
-Use compact badges for bonuses, unread counts, and partner markers. Never cover the service label or primary price.
-
-### Navigation
-
-Keep five destinations fixed and emphasize the center launcher as a circular blue-violet action. The expanded state changes it to a close icon.
+- **Service icon grid:** regular multi-column layout, one glossy object or controlled mark per cell, short centered label, little surrounding chrome, and a minimum 44-point hit area.
+- **Yellow commercial action:** saturated yellow rounded rectangle, dark semibold label, 50–54 point height, and full or near-full width; disabled state is visibly muted but retains geometry.
+- **Floating violet launcher:** raised circular center control with violet/blue gradient, high-contrast grid mark, and expanded close state where observed.
+- **Dark account card:** broad black or charcoal rounded surface, large white value, compact gray/white metadata, and tightly grouped actions.
+- **Promotional media rail:** horizontally scrolling rounded banners or cards with controlled crop, strong image mass, concise text, and consistent inter-card spacing.
+- **Input field:** pale gray rounded surface with dark value, gray placeholder or helper text, and minimal border.
+- **Settings row:** flat white row with leading monochrome icon, dark label, gray value, trailing chevron or toggle, and light divider.
+- **Product card:** rounded image crop, concise title and price, and a compact yellow cart/action control.
 
 # Imagery and icons
 
-| Level | Treatment | Use |
-|---|---|---|
-| 0 | White canvas | Main feed |
-| 1 | Pale gray group | Favorites and plan sections |
-| 2 | Rounded white card | Tariff benefits |
-| 3 | Raised bottom sheet | Full catalog and support |
+Imagery carries substantial visual weight. Glossy 3D service objects sit inside catalog cells; product photos fill shop cards; phones and offer imagery dominate promotional banners; wallet/card graphics anchor financial modules. Functional settings and detail icons are smaller monochrome line symbols and should remain visually distinct from the richer service imagery.
 
-### Decorative Depth
-
-Use subtle gray separation and 3D icon shading. Avoid heavy card shadows.
+Standalone authored illustrations appear in login and identity-entry contexts: simplified human figures or hands, soft rounded geometry, large colored circles, and generous white negative space. They occupy a significant portion of the upper or middle viewport and cannot be omitted or replaced with SF Symbols. New equivalents must use approved generated raster assets following `illustrations.md`.
 
 # States
 
-Use compact badges for bonuses, unread counts, and partner markers. Never cover the service label or primary price.
+Login states include selection, phone input, and OTP boxes while retaining white space and authored imagery where present. Selected tabs, segmented settings views, violet/yellow toggles, and the center launcher preserve unmistakable active states. Account bottom sheets and catalog sheets retain the white rounded surface over a dim scrim. Payment progress keeps field geometry stable through input, keyboard, loading, and outcome states. Notification and chat sections use compact red badges or sent-message distinction without changing the base palette. Dark account/wallet modules retain their local inversion inside otherwise light screens.
 
 # iOS adaptation
 
-### Touch Targets
+Use safe-area-aware vertical scrolling, horizontal rails with bounded card widths, and `safeAreaInset(edge: .bottom)` for the custom bottom bar and fixed commercial actions. The raised center launcher must clear the home indicator and adjacent 44-point targets. At compact widths, reduce service-grid columns before shrinking labels or imagery. Keep active fields visible above the keyboard and allow sheets to use native detents with custom observed surface styling.
 
-Grid items, launcher, settings, and bottom navigation retain at least 44pt hit areas.
-
-### Collapsing Strategy
-
-Media rails scroll horizontally. Catalog sheets scroll vertically; price and connect action remain reachable near the bottom edge.
-
-### Image Behavior
-
-Use aspect-fill for media and product imagery. Keep offer text baked into banners within a protected safe area.
-
-On iPhone, respect top and bottom safe areas, use scrolling for content that does not fit, keep interactive targets at least 44 points, and preserve the visual reading order for VoiceOver. At larger Dynamic Type sizes, allow supporting text to wrap without collapsing the dominant hierarchy. Use native sheets and permission transitions while explicitly styling app-owned surfaces to match the reference.
+VoiceOver should read each service image with its label as one element, announce prices and units together, and place the raised launcher in logical navigation order. Dynamic Type may increase row height and convert dense modules to fewer columns. The sampled base system is light-first with local dark cards; do not invent a global dark appearance or automatically invert photography, authored illustrations, banners, or glossy service objects.
 
 # Anti-generic checklist
 
-- Do not substitute the documented accent hierarchy with default iOS blue.
-- Do not turn the documented white canvas into a generic card stack; preserve the observed accent, density, imagery, and surface grouping.
-- Do not use an unstyled `TabView`, `Form`, or arbitrary SF Symbols when they contradict the documented navigation and component language.
-- Do not flatten the documented typography into one body-text scale.
-- Do not remove compositionally important photography or illustration while assets are pending.
-- Do not apply one corner radius to every control and surface.
-
-Source-specific guardrails retained from the review:
-
-### Do
-
-- Keep the service grid consistent.
-- Separate modules with surface color and headings.
-- Reserve yellow for strong commercial intent.
-- Pair dense offers with an obvious next action.
-- Keep service icons friendly and recognizable.
-
-### Don't
-
-- Don't give every module a different layout.
-- Don't hide core services inside banners.
-- Don't mix long legal text with promotional headlines.
-- Don't add dark outlines to 3D icons.
-- Don't use the central gradient for ordinary buttons.
-
+- Do not render the bottom bar as an unstyled `TabView` without the raised violet center launcher.
+- Do not replace the service-object grid with arbitrary SF Symbols in identical white cards.
+- Do not use default blue as the universal action color; preserve yellow commercial and violet selected roles.
+- Do not turn every module into a shadowed card or every control into the same radius.
+- Do not omit promotional imagery, product photography, or authored login art where they define the composition.
+- Do not flatten dark account summaries into pale generic balance cards.
+- Do not make title, price, service label, body, and legal copy nearly equal in size.
+- Do not add decorative text that duplicates the visible service, value, state, or action.
 </design-context>

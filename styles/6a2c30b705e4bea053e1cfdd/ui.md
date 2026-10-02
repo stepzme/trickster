@@ -3,186 +3,122 @@
 version: 1
 platform: iOS
 name: MegaPay-design-analysis
-description: "A mobile design system defined by navy confirmation, gradient balances, 3D service objects, structured receipts, and a central QR."
-colors: {primary: "#182233", on-primary: "#FFFFFF", primary-focus: "#182233", ink: "#20242C", ink-muted: "#777981", ink-subtle: "#A7A8AE", ink-tertiary: "#CACBD0", canvas: "#FFFFFF", surface-1: "#F4F6F8", surface-2: "#F4F6F8", surface-3: "#E2E3E7", surface-4: "#D6D7DC", hairline: "#E5E6E9", hairline-strong: "#CFD0D5", hairline-tertiary: "#B6B8BF", inverse-canvas: "#17181C", inverse-surface-1: "#292A30", inverse-surface-2: "#3B3D45", inverse-ink: "#FFFFFF", brand-secure: "#38D98B", semantic-success: "#34A86B", semantic-overlay: "#17181C"}
+description: "A white iOS payments interface combining MegaPay green accents, dark decisive controls, compact numeric hierarchy, a raised central QR control, and glossy 3D object imagery on pale modular surfaces."
+colors:
+  canvas: "#FFFFFF"
+  surface-primary: "#FFFFFF"
+  surface-secondary: "#F4F6F8"
+  accent-primary: "#38C98B"
+  accent-secondary: "#182233"
+  text-primary: "#20242C"
+  text-secondary: "#777981"
+  divider: "#E5E6E9"
+  destructive: "#D94A50"
 typography:
-  display-xl: {fontFamily: SF Pro Display, fontSize: 36, fontWeight: 700, lineHeight: 1.06, letterSpacing: -0.8}
-  display-lg: {fontFamily: SF Pro Display, fontSize: 30, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.6}
-  display-md: {fontFamily: SF Pro Display, fontSize: 24, fontWeight: 700, lineHeight: 1.14, letterSpacing: -0.3}
-  headline: {fontFamily: SF Pro Display, fontSize: 20, fontWeight: 700, lineHeight: 1.20, letterSpacing: -0.2}
-  card-title: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 600, lineHeight: 1.24, letterSpacing: 0}
-  subhead: {fontFamily: SF Pro Text, fontSize: 14, fontWeight: 600, lineHeight: 1.30, letterSpacing: 0}
-  body-lg: {fontFamily: SF Pro Text, fontSize: 14, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0}
-  body: {fontFamily: SF Pro Text, fontSize: 12, fontWeight: 400, lineHeight: 1.34, letterSpacing: 0}
-  body-sm: {fontFamily: SF Pro Text, fontSize: 10, fontWeight: 400, lineHeight: 1.28, letterSpacing: 0}
-  caption: {fontFamily: SF Pro Text, fontSize: 9, fontWeight: 400, lineHeight: 1.22, letterSpacing: 0}
-  button: {fontFamily: SF Pro Text, fontSize: 13, fontWeight: 600, lineHeight: 1.18, letterSpacing: 0}
-  eyebrow: {fontFamily: SF Pro Text, fontSize: 9, fontWeight: 600, lineHeight: 1.18, letterSpacing: 0.1}
-  mono: {fontFamily: SF Mono, fontSize: 10, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0}
-rounded: {xs: 4, sm: 8, md: 12, lg: 16, xl: 20, xxl: 26, pill: 9999, full: 9999}
-spacing: {xxs: 4, xs: 8, sm: 12, md: 16, lg: 20, xl: 24, xxl: 32, section: 40}
+  hero: {fontFamily: "SF Pro Display", fontSize: 36, fontWeight: 700, lineHeight: 41}
+  title: {fontFamily: "SF Pro Display", fontSize: 28, fontWeight: 700, lineHeight: 34}
+  section: {fontFamily: "SF Pro Text", fontSize: 20, fontWeight: 600, lineHeight: 25}
+  body: {fontFamily: "SF Pro Text", fontSize: 17, fontWeight: 400, lineHeight: 22}
+  label: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 600, lineHeight: 20}
+  caption: {fontFamily: "SF Pro Text", fontSize: 13, fontWeight: 400, lineHeight: 18}
+spacing:
+  screen-horizontal: 20
+  section-gap: 28
+  card-padding: 18
+  control-gap: 12
+rounded:
+  control: 14
+  card: 22
+  sheet: 28
+  pill: 999
 components:
-  button-primary: {backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [13, 18]}
-  button-primary-pressed: {backgroundColor: "{colors.primary-focus}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}"}
-  button-secondary: {backgroundColor: "{colors.surface-1}", textColor: "{colors.primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [12, 16]}
-  button-tertiary: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [10, 14]}
-  button-inverse: {backgroundColor: "{colors.inverse-canvas}", textColor: "{colors.inverse-ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [12, 16]}
-  content-card: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 12}
-  feature-card: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 14}
-  compact-chip: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.caption}", rounded: "{rounded.pill}", padding: [7, 10]}
-  bottom-nav: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink-subtle}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: [7, 8]}
+  gradient-wallet-card: {}
+  raised-qr-control: {}
+  dark-primary-action: {}
+  service-object-tile: {}
+  transaction-row: {}
 ---
 
 # Overview
 
-MegaPay is defined by navy confirmation, gradient balances, 3D service objects, structured receipts, and a central QR.
-
-**Key Characteristics:** navy confirmation, gradient balances, 3D service objects, structured receipts, and a central QR.
+MegaPay is a bright, modular payments interface dominated by white space, pale gray input and tile surfaces, vivid green brand accents, and dark navy controls. Dense home and payment areas use compact grids, balances, service objects, and banners, while transfer and payment tasks become sparse single-column forms with a fixed bottom action. A raised green QR control gives the bottom navigation a recognizable silhouette. Glossy 3D objects act as content anchors rather than ornamental filler.
 
 # Non-negotiable visual invariants
 
-- The reviewed screens show this treatment: navy confirmation.
-- The reviewed screens show this treatment: gradient balances.
-- The reviewed screens show this treatment: 3D service objects.
-- The reviewed screens show this treatment: structured receipts.
-- The reviewed screens show this treatment: a central QR.
+- White remains the dominant full-screen field; pale gray surfaces organize content without turning the interface into a gray card stack.
+- MegaPay green is concentrated in brand accents, progress, wallet gradients, success cues, and the raised central QR control.
+- Dark navy or near-black fills decisive actions and selected compact controls, creating a deliberate counterweight to green.
+- Balance, amount, allowance, and transaction totals carry the strongest typographic emphasis.
+- Form screens keep generous empty space and a fixed full-width bottom action instead of filling the viewport with explanatory cards.
+- Top-level navigation has a protruding green center control that visibly interrupts the otherwise flat white tab bar.
+- Service and product tiles may use glossy 3D object imagery; imagery cannot be replaced by arbitrary line symbols where it defines the tile.
+- Modal menus and confirmations use a dim scrim and a large white sheet with a pronounced top radius.
 
 # Color and surfaces
 
-### Brand & Accent
+The application canvas and primary surface are white. Pale cool gray defines fields, secondary cards, icon wells, and list grouping. `accent-primary` is a clear mint-green used for brand recognition, progress, selected states, success, and soft gradient wallet surfaces. `accent-secondary` is deep navy, used for decisive buttons, selected pills, and high-contrast camera or QR contexts. Primary copy is dark charcoal; secondary copy is neutral gray. Debits, failures, and destructive actions use restrained red, while success remains green.
 
-Navy anchors payment; green and violet gradients distinguish telecom modules.
-
-### Surface
-
-Use the canvas for primary content and the grouped surface for controls, cards, and focused sections.
-
-### Text
-
-Primary text remains high-contrast; secondary metadata stays quieter than the current decision.
-
-### Semantic
-
-Use success, warning, and destructive colors only for their conventional meanings.
+Wallet and payment cards can carry diffuse mint gradients or blurred green light, but ordinary screens remain flat and quiet. Purple or blue may appear inside authored campaign or object artwork, not as an extra interface tint. Default system blue, thick card borders, strong material blur on every surface, or colorful rows would visibly break the reference.
 
 # Typography
 
-### Font Family
+Use SF Pro for an iOS-safe rendering of the observed compact sans-serif hierarchy. Titles are bold and high contrast; section headings are semibold. Balances, entered amounts, data allowances, minutes, and transaction totals use larger bold numerals with tabular figures when columns align. Body and helper text stay compact, regular, and gray. Buttons and selected pills use concise semibold labels.
 
-Use SF Pro Display for headings and SF Pro Text for controls, content, and metadata.
-
-### Hierarchy
-
-| Token | Size | Weight | Use |
-|---|---:|---:|---|
-| display-lg | 30pt | 700 | Hero or state |
-| headline | 20pt | 700 | Section title |
-| card-title | 15pt | 600 | Primary item |
-| body | 12pt | 400 | Detail |
-| caption | 9pt | 400 | Metadata |
-
-### Principles
-
-- Lead with the current task or value.
-- Align repeated metadata.
-- Reserve emphasis for real decisions.
-
-### Note on Font Substitutes
-
-Inter is suitable; preserve hierarchy, contrast, and numeric clarity.
+Preserve large-to-small contrast under Dynamic Type. Allow descriptions and row metadata to wrap, keep critical values legible with controlled scaling, and expand vertical spacing rather than truncating meaning. Avoid long decorative prose, all-caps display copy, or near-identical sizes for title, total, label, and caption.
 
 # Screen composition
 
-### Grid & Container
+Screens use a generous top safe-area buffer and about 20 points of horizontal inset. Detail views commonly center the navigation title. Content follows a single vertical axis: dense dashboards combine horizontally aligned tiles and banners; task screens use a title, a few pale controls, a deliberately open middle region, and a fixed bottom CTA. Cards align to the same full content width and use consistent but not universal radii.
 
-Home stacks balance and services; payments and history use one-column lists.
+Observed archetypes:
 
-### Whitespace Philosophy
-
-Dense content stays grouped; focused decisions receive more breathing room.
+- **Home or account dashboard:** prominent balance or usage summary followed by compact service tiles, product cards, banners, and recent activity above the bottom bar.
+- **Payment directory:** search or category heading, dense grid/list of services, compact icon or 3D-object tiles, and clear grouping by pale surfaces.
+- **Transfer or payment form:** centered title, progress cue when present, amount or destination field, sparse supporting details, and fixed dark action above the safe area or keyboard.
+- **Wallet detail:** large balance and wallet card treatment, small clustered actions, then full-width detail and transaction rows.
+- **History or profile list:** stacked rows with leading glyph wells, dark labels, gray metadata, and subtle dividers.
+- **Scanner:** high-contrast dark capture area with a clear framing device and minimal controls.
+- **Result state:** single outcome focus, bold amount or status, concise details, and one dominant continuation control.
 
 # Navigation appearance
 
-Preserve the reference navigation hierarchy and make only the active destination prominent.
+The bottom bar is a low white surface with thin gray inactive icons and dark active labels. Its center QR action rises above the bar as a green hexagonal or circular control, establishing a distinct silhouette and stronger visual priority than adjacent tabs. Inner screens use simple back chevrons or close controls and centered titles. Transfer and payment sequences may show a thin green progress bar near the top. Bottom sheets use a dim background, white surface, large top corners, and stacked rows with ample touch height. These are appearance rules only; destinations and sequence come from the product specification.
 
 # Components
 
-### Buttons
-
-Primary actions use the brand color; secondary actions use grouped surfaces and clear labels.
-
-Filters and modes use compact chips or segments with one unmistakable selected state.
-
-### Cards & Containers
-
-Balance cards lead with amount; transaction rows align party, time, and value.
-
-### Inputs & Forms
-
-Inputs inherit the brand focus, shared radius, and text hierarchy instead of generic native styling.
-
-### Status & Build Page
-
-Keep progress, result, and recovery close to the content or action they describe.
-
-### Navigation
-
-Preserve the reference navigation hierarchy and make only the active destination prominent.
+- **Gradient wallet card:** broad rounded rectangle with soft mint/green light, large balance, compact supporting labels, and minimal controls; avoid hard borders.
+- **Raised QR control:** green centered circular or faceted button, visually elevated above the white tab bar, with a high-contrast scanner mark and at least a 44-point target.
+- **Dark primary action:** near-full-width, 52–56 points tall, deep navy fill, white semibold label, and rounded corners; disabled state lightens substantially while retaining geometry.
+- **Service object tile:** pale or white rounded tile with one centered glossy 3D object, concise label beneath or beside it, and generous internal negative space.
+- **Input field:** pale gray rounded surface, compact label/value hierarchy, minimal outline, and clear focus/validation treatment.
+- **Segment or pill:** compact rounded selector with dark selected fill and light unselected surfaces; selected text reverses to white.
+- **Transaction row:** small leading category mark, dark primary label, muted timestamp or metadata, and a trailing signed amount using red or green only when semantically required.
+- **Bottom-sheet menu:** vertically stacked action rows inside a broad white sheet over a darkened scrim.
 
 # Imagery and icons
 
-| Level | Treatment | Use |
-|---|---|---|
-| 0 | Base canvas | Primary content |
-| 1 | Grouped surface | Cards and sections |
-| 2 | Sticky or floating action | Commitment |
-| 3 | Sheet over scrim | Focused choice |
+Functional icons are restrained gray line or solid glyphs, often centered in pale rounded-square wells. Selected navigation icons become darker without acquiring unrelated colors. Partner and provider marks can remain recognizable inside payment directories.
 
-### Decorative Depth
-
-Let content imagery and approved visual language provide depth; keep ordinary controls restrained.
+Glossy 3D objects are a characteristic visual layer: cards, folders or documents, gift bags, service props, cars, cameras, investment arrows, and wallet objects appear isolated on white or pale tiles, commonly from a front-three-quarter or isometric angle. They should hold meaningful visual weight inside their module and cannot be omitted when that object defines the category or empty state. Use approved generated raster assets following `illustrations.md`; do not recreate them with symbols or programmatic shapes.
 
 # States
 
-Keep progress, result, and recovery close to the content or action they describe.
+Hidden and visible balance states preserve the same card geometry and typographic hierarchy. Focused amount fields and numeric keyboards compress the lower layout while keeping the action reachable. Transfer/payment progress uses restrained green progress and consistent white surfaces through entry, confirmation, processing, and success. Debit amounts and alerts use red sparingly; successful outcomes reinforce green without flooding the canvas. Empty wallet or product states may use a single glossy object as the focal anchor. Scanner states shift to a dark capture field while retaining the green brand cue. Profile verification variants, settings selections, and modal support menus keep the same row geometry and muted surface system.
 
 # iOS adaptation
 
-### Touch Targets
+Use safe-area-aware vertical scrolling and `safeAreaInset(edge: .bottom)` for fixed actions and the customized bottom bar. The raised center control must remain clear of the home indicator and not obstruct neighboring 44-point targets. When the keyboard appears, scroll the active field into view and keep the decisive action reachable without changing its visual style. Native sheets may supply interaction and detents while the content preserves the broad white surface and observed radius.
 
-Primary actions, navigation, cards, and contextual controls remain at least 44pt.
-
-### Collapsing Strategy
-
-Preserve the main decision, stack complex groups, and reduce secondary detail before shrinking type.
-
-### Image Behavior
-
-Preserve source aspect ratios and keep focal content inside safe areas.
-
-On iPhone, respect top and bottom safe areas, use scrolling for content that does not fit, keep interactive targets at least 44 points, and preserve the visual reading order for VoiceOver. At larger Dynamic Type sizes, allow supporting text to wrap without collapsing the dominant hierarchy. Use native sheets and permission transitions while explicitly styling app-owned surfaces to match the reference.
+VoiceOver should announce balances with currency, combine transaction rows into meaningful units, and place the center QR action in logical navigation order. Dynamic Type may turn compact grids into taller rows or fewer columns; imagery should retain a stable optical size and not crowd labels. The evidence is light-first. Do not invent a dark mode unless required, and do not auto-invert 3D raster artwork or mint gradients.
 
 # Anti-generic checklist
 
-- Do not substitute the documented accent hierarchy with default iOS blue.
-- Do not collapse distinct surfaces into a uniform stack of generic white cards.
-- Do not use an unstyled `TabView`, `Form`, or arbitrary SF Symbols when they contradict the documented navigation and component language.
-- Do not flatten the documented typography into one body-text scale.
-- Do not remove compositionally important photography or illustration while assets are pending.
-- Do not apply one corner radius to every control and surface.
-
-Source-specific guardrails retained from the review:
-
-### Do
-
-- Preserve the defining color and content hierarchy.
-- Keep primary actions easy to reach.
-- Style native controls to inherit the visual system.
-
-### Don't
-
-- Don't introduce unrelated decorative styles.
-- Don't hide status or secondary conditions.
-- Don't use heavy shadows around every container.
-
+- Do not replace the green-and-dark hierarchy with default blue controls.
+- Do not render the bottom bar as an unstyled `TabView` without its raised central QR control.
+- Do not turn sparse task screens into stacked explanatory cards.
+- Do not use identical white rounded cards for every row, input, banner, and section.
+- Do not substitute arbitrary SF Symbols for characteristic 3D service or empty-state objects.
+- Do not overuse gradients; they belong to wallet/payment emphasis, not every surface.
+- Do not flatten numeric balances, section titles, row labels, and captions into one scale.
+- Do not add decorative copy that repeats visible amounts, states, or available actions.
 </design-context>

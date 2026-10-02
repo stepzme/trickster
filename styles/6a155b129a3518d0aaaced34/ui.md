@@ -3,238 +3,97 @@
 version: 1
 platform: iOS
 name: Lalafo-design-analysis
-description: "A dense classifieds marketplace built on white with vivid green posting actions, hot magenta seller-contact controls, and gray utility chrome. Rounded photo cards, compact two-column listings, 3D category objects, and persistent action bars make browsing and selling feel fast and direct."
+description: "A dense white classifieds marketplace with vivid green posting actions, hot-magenta contact emphasis, compact photo-first grids, restrained gray utility surfaces, and a tab bar organized around a central floating action."
 colors:
-  primary: "#00D747"
-  on-primary: "#FFFFFF"
-  primary-focus: "#00B73C"
-  ink: "#15151A"
-  ink-muted: "#75757D"
-  ink-subtle: "#A6A6AE"
-  ink-tertiary: "#C6C6CC"
-  canvas: "#FFFFFF"
-  surface-1: "#F6F6F8"
-  surface-2: "#EEEEF2"
-  surface-3: "#E4E4E9"
-  surface-4: "#D8D8DE"
-  hairline: "#E7E7EB"
-  hairline-strong: "#D3D3D9"
-  hairline-tertiary: "#B9B9C1"
-  inverse-canvas: "#17171B"
-  inverse-surface-1: "#2C2C32"
-  inverse-surface-2: "#424249"
-  inverse-ink: "#FFFFFF"
-  brand-secure: "#F50069"
-  semantic-success: "#00C943"
-  semantic-overlay: "#15151A"
+  canvas: "#F6F6F8"
+  surface-primary: "#FFFFFF"
+  surface-secondary: "#EEEEF2"
+  accent-primary: "#00C947"
+  accent-secondary: "#F50069"
+  text-primary: "#17171B"
+  text-secondary: "#77777F"
+  divider: "#E3E3E7"
+  destructive: "#D9434E"
 typography:
-  display-xl: {fontFamily: SF Pro Display, fontSize: 36, fontWeight: 700, lineHeight: 1.06, letterSpacing: -0.9}
-  display-lg: {fontFamily: SF Pro Display, fontSize: 30, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.6}
-  display-md: {fontFamily: SF Pro Display, fontSize: 24, fontWeight: 700, lineHeight: 1.14, letterSpacing: -0.3}
-  headline: {fontFamily: SF Pro Display, fontSize: 20, fontWeight: 700, lineHeight: 1.20, letterSpacing: -0.2}
-  card-title: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 600, lineHeight: 1.24, letterSpacing: 0}
-  subhead: {fontFamily: SF Pro Text, fontSize: 14, fontWeight: 600, lineHeight: 1.30, letterSpacing: 0}
-  body-lg: {fontFamily: SF Pro Text, fontSize: 14, fontWeight: 400, lineHeight: 1.38, letterSpacing: 0}
-  body: {fontFamily: SF Pro Text, fontSize: 12, fontWeight: 400, lineHeight: 1.34, letterSpacing: 0}
-  body-sm: {fontFamily: SF Pro Text, fontSize: 10, fontWeight: 400, lineHeight: 1.28, letterSpacing: 0}
-  caption: {fontFamily: SF Pro Text, fontSize: 9, fontWeight: 400, lineHeight: 1.22, letterSpacing: 0}
-  button: {fontFamily: SF Pro Text, fontSize: 13, fontWeight: 600, lineHeight: 1.18, letterSpacing: 0}
-  eyebrow: {fontFamily: SF Pro Text, fontSize: 9, fontWeight: 700, lineHeight: 1.18, letterSpacing: 0.1}
-  mono: {fontFamily: SF Mono, fontSize: 10, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0}
-rounded:
-  xs: 5
-  sm: 9
-  md: 13
-  lg: 17
-  xl: 22
-  xxl: 28
-  pill: 9999
-  full: 9999
+  hero: {fontFamily: "SF Pro Display", fontSize: 34, fontWeight: 700, lineHeight: 39}
+  title: {fontFamily: "SF Pro Display", fontSize: 27, fontWeight: 700, lineHeight: 32}
+  section: {fontFamily: "SF Pro Text", fontSize: 20, fontWeight: 700, lineHeight: 25}
+  body: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 400, lineHeight: 20}
+  label: {fontFamily: "SF Pro Text", fontSize: 14, fontWeight: 600, lineHeight: 18}
+  caption: {fontFamily: "SF Pro Text", fontSize: 12, fontWeight: 400, lineHeight: 16}
 spacing:
-  xxs: 4
-  xs: 8
-  sm: 12
-  md: 16
-  lg: 20
-  xl: 24
-  xxl: 32
-  section: 40
+  screen-horizontal: 16
+  section-gap: 24
+  card-padding: 10
+  control-gap: 8
+rounded:
+  control: 12
+  card: 14
+  sheet: 26
+  pill: 999
 components:
-  button-primary: {backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: [13, 18]}
-  button-primary-pressed: {backgroundColor: "{colors.primary-focus}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.pill}"}
-  button-secondary: {backgroundColor: "{colors.brand-secure}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: [12, 16]}
-  button-tertiary: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: [10, 14]}
-  button-inverse: {backgroundColor: "{colors.inverse-canvas}", textColor: "{colors.inverse-ink}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: [12, 16]}
-  listing-card: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 0}
-  category-tile: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.caption}", rounded: "{rounded.md}", padding: 6}
-  search-field: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink-muted}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: [10, 12]}
-  vip-badge: {backgroundColor: "{colors.brand-secure}", textColor: "{colors.on-primary}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: [2, 5]}
-  bottom-nav: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink-subtle}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: [7, 8]}
+  primary-action: {fill: "#00C947", textColor: "#FFFFFF", cornerRadius: 999, minHeight: 48}
+  secondary-action: {fill: "#F50069", textColor: "#FFFFFF", cornerRadius: 999, minHeight: 46}
+  primary-card: {fill: "#FFFFFF", cornerRadius: 14, padding: 10}
+  navigation: {fill: "#FFFFFF", selectedColor: "#00C947", unselectedColor: "#A0A0A8", floatingActionColor: "#00C947"}
 ---
 
 # Overview
 
-Lalafo is a high-density classifieds feed where green accelerates posting and subscriptions while magenta accelerates seller contact.
-
-**Key Characteristics:**
-- Two-column photo-led listing grid.
-- Green post, publish, and subscribe actions.
-- Magenta contact controls and VIP badges.
-- Compact search, filters, tags, and price metadata.
-- 3D category objects on pale rounded tiles.
+Lalafo is a fast, information-dense classifieds interface. White and pale-gray utility surfaces frame compact photo-led listings; vivid green identifies posting, selection, and confirmation, while hot magenta isolates paid/VIP, favorite, price, or direct-contact emphasis. The visual signature is a two-column marketplace grid and a bottom tab bar centered on a prominent green floating action.
 
 # Non-negotiable visual invariants
 
-- The reviewed screens show this treatment: Two-column photo-led listing grid.
-- The reviewed screens show this treatment: Green post, publish, and subscribe actions.
-- The reviewed screens show this treatment: Magenta contact controls and VIP badges.
-- The reviewed screens show this treatment: Compact search, filters, tags, and price metadata.
-- The reviewed screens show this treatment: 3D category objects on pale rounded tiles.
+- Listing photography is the largest element in each compact card and remains visible at browsing density.
+- Green is reserved for primary posting, selection, confirmation, and the central floating action.
+- Magenta is a distinct secondary emphasis for VIP/contact/favorite/price moments, not a replacement primary tint.
+- White cards sit on white or faint-gray fields with minimal shadow and thin separation.
+- Price and listing title are visually stronger than compact gray location/time metadata.
+- Bottom navigation remains low-profile and is visually organized around a raised circular green action.
+- Filters, selections, and forms use compact pills, rows, and sheets instead of oversized decorative tiles.
 
 # Color and surfaces
 
-### Brand & Accent
-
-Vivid green is the primary progress color. Hot magenta marks direct seller contact, promoted inventory, and selected price emphasis.
-
-### Surface
-
-White is the default canvas; pale gray fills search, filters, tags, and grouped seller tools.
-
-### Text
-
-Near-black carries price and title. Gray carries old price, location, metadata, and secondary controls.
-
-### Semantic
-
-Green communicates active, available, and forward. Orange warns about low ad reach; blue is limited to professional or analytics labels.
+The large canvas is white or very light gray. Primary cards, forms, and sheets are white; pale gray is used for search, grouped rows, and inactive controls. Bright green provides the clearest action/selected state, while magenta marks seller contact, promoted/VIP status, hearts, or exceptional emphasis. Near-black carries price and titles, medium gray carries supporting facts, and red is limited to errors/destructive states. Default iOS blue or a one-accent palette would erase the observed green/magenta distinction.
 
 # Typography
 
-### Font Family
-
-Use SF Pro Display for page headings and SF Pro Text for compact listings, filters, and forms.
-
-### Hierarchy
-
-| Token | Size | Weight | Use |
-|---|---:|---:|---|
-| display-lg | 30pt | 700 | Seller or campaign claim |
-| headline | 20pt | 700 | Form and detail heading |
-| card-title | 15pt | 600 | Listing price and title |
-| body | 12pt | 400 | Attributes and descriptions |
-| caption | 9pt | 400 | Badges, actions, and navigation |
-
-### Principles
-
-- Price is the strongest repeated element.
-- Keep listing titles compact and truncate when needed.
-- Reserve bold display type for forms and seller tools.
-
-### Note on Font Substitutes
-
-Inter is a suitable substitute; preserve compact Cyrillic and tabular price numerals.
+Use SF Pro. Page and section titles are compact bold, listing prices use the strongest local weight, listing names use medium or semibold, and location/time/count metadata uses smaller gray text. The hierarchy should remain compressed enough for a marketplace grid without making all text the same size. At Dynamic Type sizes, expand card height, preserve price → title → metadata order, and move secondary controls below rather than shrinking text.
 
 # Screen composition
 
-### Spacing System
+The top safe area leads into a compact title/search region, category shortcuts, or segmented filters. The dominant browse composition is a two-column scroll grid of image-first listing cards, with occasional horizontal categories and small promotional inserts. Detail screens expand one listing image/gallery across most of the width, followed by price, facts, seller/contact controls, and related items. Search filters and publishing/account surfaces use full-height white sheets or one-column form/list screens. Typical side insets are about 16 points and card gaps are narrow.
 
-Use a 4pt base, 8pt grid gaps, and 12pt screen padding.
-
-### Grid & Container
-
-Listings use two columns. Categories and brands use horizontal rails or compact grids; detail and posting flows switch to one column.
-
-### Whitespace Philosophy
-
-Browsing favors density. Create space around contact, publishing, budget, and profile decisions.
+Visible archetypes include login; home with search/categories/listing grid; filtered results; photo-led listing detail; quick-message/contact sheet; long placement forms; and profile/account rows.
 
 # Navigation appearance
 
-Keep five bottom destinations fixed with the central green Post control enlarged. Native controls must inherit the green-magenta action hierarchy.
+The bottom bar is white with compact icons and labels; the selected item is green and the center posting action is a raised green circle. Top bars use conventional-scale back, close, and utility controls with dark or green tint. Segmented tabs use a clear green selected state. Bottom sheets have large rounded top corners over a dim scrim, while full-screen filters remain white and information-dense.
 
 # Components
 
-### Buttons
-
-Primary green pills publish, continue, or subscribe. Magenta filled or outlined pills call and message; muted gray supports low-priority choices.
-
-Recommended/New and search filters use compact segments or chips; selected states use white or green outlines without heavy decoration.
-
-### Cards & Containers
-
-Listing cards are borderless image-first columns with badges, price, currency, title, seller, message, and favorite actions.
-
-### Inputs & Forms
-
-Search and filter fields use pale fills. Posting forms use green focus rings, compact tags, dropdown rows, and an anchored submit action.
-
-### Status & Build Page
-
-VIP is a magenta badge; Pro is cyan. Seller analytics use blue actions and orange reach warnings without changing the main green workflow.
-
-### Navigation
-
-Keep five bottom destinations fixed with the central green Post control enlarged. Native controls must inherit the green-magenta action hierarchy.
+Listing cards pair a rounded photo with price, concise title, metadata, favorite, and optional VIP/promotion badge. Primary actions are green pills or rounded rectangles with white semibold text; direct-contact emphasis may use magenta. Search uses a pale rounded field. Chips, radio rows, segmented controls, and filter pills use green text/fill or check marks when selected. Quick-message actions can appear as compact floating pills. Forms use explicit labels, white rows, light dividers, and full-width confirmation rather than default `Form` styling. Disabled states retain geometry and reduce saturation.
 
 # Imagery and icons
 
-| Level | Treatment | Use |
-|---|---|---|
-| 0 | White canvas | Listing feed |
-| 1 | Pale filled field | Search, filter, form groups |
-| 2 | Floating green pill | Subscribe or publish action |
-| 3 | Sticky action bar | Contact and creation progress |
-
-### Decorative Depth
-
-Listing photography and category-object shadows provide depth; ordinary surfaces remain flat.
+Real listing photography is compositionally required and cannot be omitted while assets are pending. Use aspect-fill crops that keep the advertised object recognizable; category thumbnails may use literal object cutouts, but the inspected set does not establish a coherent independent illustration grammar. Icons are functional and compact. Promotional badges and placeholder graphics remain subordinate to listings and do not justify a separate illustration system.
 
 # States
 
-VIP is a magenta badge; Pro is cyan. Seller analytics use blue actions and orange reach warnings without changing the main green workflow.
+Observed states include selected tabs and filters, promoted/VIP listings, favorited items, quick-message overlays, confirmation toasts, modal sheets, populated account lists, and long placement forms. Selection stays green, contact/promotion may stay magenta, and destructive/error feedback remains local red. The dense photo-card composition and white/gray field remain constant across states.
 
 # iOS adaptation
 
-### Touch Targets
-
-Search, filters, favorite, message, call, posting, and navigation targets remain at least 44pt.
-
-### Collapsing Strategy
-
-Keep two columns until titles become unreadable, then switch to one-column rows; forms always remain stacked.
-
-### Image Behavior
-
-Use aspect-fill for listings and contain for category objects. Preserve full galleries on detail screens.
-
-On iPhone, respect top and bottom safe areas, use scrolling for content that does not fit, keep interactive targets at least 44 points, and preserve the visual reading order for VoiceOver. At larger Dynamic Type sizes, allow supporting text to wrap without collapsing the dominant hierarchy. Use native sheets and permission transitions while explicitly styling app-owned surfaces to match the reference.
+Respect the top safe area and keep the raised center action plus tab bar above the home indicator. Use vertical scrolling for listings/details/forms and horizontal scrolling only for categories/chips. Make filters and forms keyboard-aware. Maintain 44-point hit areas for compact hearts, chips, message, tabs, and floating action. VoiceOver should read listing image description → price → title → metadata → status/actions. At compact widths, preserve two columns only when price/title remain legible; otherwise switch to one-column rows. The observed light appearance is primary.
 
 # Anti-generic checklist
 
-- Do not substitute the documented accent hierarchy with default iOS blue.
-- Do not collapse distinct surfaces into a uniform stack of generic white cards.
-- Do not use an unstyled `TabView`, `Form`, or arbitrary SF Symbols when they contradict the documented navigation and component language.
-- Do not flatten the documented typography into one body-text scale.
-- Do not remove compositionally important photography or illustration while assets are pending.
-- Do not apply one corner radius to every control and surface.
-
-Source-specific guardrails retained from the review:
-
-### Do
-
-- Keep price and contact visible.
-- Use green for creation and subscription.
-- Preserve dense two-column browsing.
-- Let seller photography remain authentic.
-- Separate consumer and seller tools clearly.
-
-### Don't
-
-- Don't use magenta for ordinary navigation.
-- Don't wrap every listing in a raised card.
-- Don't hide quick message and favorite actions.
-- Don't enlarge prose inside the feed.
-- Don't leave native form controls visually generic.
+- Do not replace the green/magenta hierarchy with default blue.
+- Do not remove listing photography or substitute generic object symbols.
+- Do not turn the dense feed into large shadowed cards with sparse text.
+- Do not use an unstyled `TabView` without the raised green center action.
+- Do not flatten price, title, and metadata into one typographic level.
+- Do not invent a 3D illustration language from incidental category thumbnails.
+- Do not use default `Form` and system filter styling.
 
 </design-context>

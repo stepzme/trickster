@@ -3,189 +3,163 @@
 version: 1
 platform: iOS
 name: Whoosh-design-analysis
-description: "A cinematic dark mobility interface built from charcoal maps, smoked translucent sheets, brushed-metal controls, ember-orange primary actions, compact white telemetry, and an industrial sci-fi campaign layer. Vehicle discovery and active rides stay on the map while pricing, insurance, parking, and subscription details rise in dense rounded panels."
-
+description: "A dark mobility visual system with charcoal maps, smoky rounded sheets, coral-orange decisive actions, brushed-metal secondary controls, compact white telemetry, and authored industrial campaign imagery."
 colors:
-  primary: "#FF6548"
+  primary: "#FF634A"
   on-primary: "#FFFFFF"
-  primary-pressed: "#E44D34"
+  primary-pressed: "#E94E38"
   ink: "#FFFFFF"
-  ink-muted: "#B7B5B8"
-  ink-subtle: "#807E82"
-  canvas: "#171719"
-  surface-1: "#302E31"
-  surface-2: "#403D40"
-  metallic-light: "#A8A6A5"
-  metallic-dark: "#5D5A5B"
-  map: "#16181A"
-  accent-blue: "#2B91FF"
+  ink-muted: "#BDBABE"
+  ink-subtle: "#858187"
+  canvas: "#19181B"
+  map: "#111417"
+  surface-1: "#302E32"
+  surface-2: "#3C393E"
+  surface-3: "#4B474C"
+  metallic-light: "#A8A5A6"
+  metallic-dark: "#626064"
+  accent-blue: "#2E93FF"
+  campaign-green: "#60D182"
   hairline: "#FFFFFF1F"
-  semantic-success: "#31B97D"
-  semantic-warning: "#F3B34D"
-  semantic-danger: "#FF5E55"
+  semantic-success: "#2FC173"
+  semantic-warning: "#F1B64D"
+  semantic-danger: "#FF5B51"
   semantic-overlay: "#000000"
-
 typography:
-  display-xl: { fontFamily: System Sans, fontSize: 42, fontWeight: 800, lineHeight: 1.0, letterSpacing: -0.8 }
-  display-lg: { fontFamily: System Sans, fontSize: 32, fontWeight: 750, lineHeight: 1.06, letterSpacing: -0.5 }
-  display-md: { fontFamily: System Sans, fontSize: 26, fontWeight: 700, lineHeight: 1.12, letterSpacing: -0.3 }
-  headline: { fontFamily: System Sans, fontSize: 20, fontWeight: 700, lineHeight: 1.2, letterSpacing: 0 }
-  card-title: { fontFamily: System Sans, fontSize: 15, fontWeight: 650, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: System Sans, fontSize: 17, fontWeight: 450, lineHeight: 1.35, letterSpacing: 0 }
-  body-lg: { fontFamily: System Sans, fontSize: 16, fontWeight: 400, lineHeight: 1.42, letterSpacing: 0 }
-  body: { fontFamily: System Sans, fontSize: 14, fontWeight: 400, lineHeight: 1.4, letterSpacing: 0 }
-  body-sm: { fontFamily: System Sans, fontSize: 12, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
-  caption: { fontFamily: System Sans, fontSize: 10, fontWeight: 500, lineHeight: 1.3, letterSpacing: 0 }
-  button: { fontFamily: System Sans, fontSize: 15, fontWeight: 650, lineHeight: 1.2, letterSpacing: 0 }
-  eyebrow: { fontFamily: System Sans, fontSize: 10, fontWeight: 700, lineHeight: 1.25, letterSpacing: 0.2 }
-  mono: { fontFamily: System Mono, fontSize: 12, fontWeight: 450, lineHeight: 1.35, letterSpacing: 0 }
-
+  display-xl: { fontFamily: SF Pro Display, fontSize: 38, fontWeight: 800, lineHeight: 1.05, letterSpacing: 0 }
+  display-lg: { fontFamily: SF Pro Display, fontSize: 30, fontWeight: 750, lineHeight: 1.08, letterSpacing: 0 }
+  display-md: { fontFamily: SF Pro Display, fontSize: 24, fontWeight: 700, lineHeight: 1.12, letterSpacing: 0 }
+  headline: { fontFamily: SF Pro Display, fontSize: 20, fontWeight: 700, lineHeight: 1.18, letterSpacing: 0 }
+  card-title: { fontFamily: SF Pro Text, fontSize: 15, fontWeight: 650, lineHeight: 1.24, letterSpacing: 0 }
+  subhead: { fontFamily: SF Pro Text, fontSize: 16, fontWeight: 600, lineHeight: 1.30, letterSpacing: 0 }
+  body-lg: { fontFamily: SF Pro Text, fontSize: 15, fontWeight: 400, lineHeight: 1.38, letterSpacing: 0 }
+  body: { fontFamily: SF Pro Text, fontSize: 13, fontWeight: 400, lineHeight: 1.34, letterSpacing: 0 }
+  body-sm: { fontFamily: SF Pro Text, fontSize: 11, fontWeight: 400, lineHeight: 1.28, letterSpacing: 0 }
+  caption: { fontFamily: SF Pro Text, fontSize: 10, fontWeight: 500, lineHeight: 1.22, letterSpacing: 0 }
+  telemetry: { fontFamily: SF Pro Text, fontSize: 13, fontWeight: 700, lineHeight: 1.16, letterSpacing: 0 }
+  button: { fontFamily: SF Pro Text, fontSize: 14, fontWeight: 650, lineHeight: 1.20, letterSpacing: 0 }
+  eyebrow: { fontFamily: SF Pro Text, fontSize: 10, fontWeight: 700, lineHeight: 1.22, letterSpacing: 0 }
+  mono: { fontFamily: SF Mono, fontSize: 12, fontWeight: 500, lineHeight: 1.30, letterSpacing: 0 }
 rounded: { xs: 5, sm: 9, md: 13, lg: 18, xl: 24, xxl: 30, pill: 9999, full: 9999 }
 spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
-
 components:
-  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: [14, 18]}
+  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: [14, 18] }
+  button-secondary-metal: { backgroundColor: "{colors.metallic-dark}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: [14, 18] }
   vehicle-sheet: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xl}", padding: 14 }
-  tariff-card: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.md}", padding: 12 }
+  tariff-card: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.md}", padding: 10 }
   map-control: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.full}", padding: 10 }
-  bottom-nav: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", height: 58 }
+  dark-input: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: [13, 14] }
 ---
 
 # Overview
 
-Whoosh uses a dark map and smoked metal interface so vehicle state and ride action remain visible at night. Ember-orange decisions and industrial campaign objects provide the only strong warmth.
+Whoosh is a dark, operational mobility interface. The map and bottom sheets are the core visual material: charcoal cartography, smoky graphite panels, compact white telemetry, orange decisive actions, brushed-gray secondary controls, and occasional authored campaign artwork with industrial texture.
 
 # Non-negotiable visual invariants
 
-- The reviewed screens use this composition: A cinematic dark mobility interface built from charcoal maps, smoked translucent sheets, brushed-metal controls, ember-orange primary actions, compact white telemetry.
-- The dominant canvas token is #171719 and the primary accent token is #FF6548.
-- The recorded display style is 42 points while the body style is 14 points.
-- Navigation uses bottom destinations for Menu, Map, and traffic rules.
-- The reviewed screens use this hierarchy: Vehicle discovery and active rides stay on the map while pricing, insurance, parking, and subscription details rise in dense rounded panels.
+- Use dark mode as the default visual shell. White screens are not part of the inspected product language.
+- Keep the map full-screen where map content is present. App-owned sheets and controls float over it; they do not replace the map with a generic page.
+- Use coral-orange for one decisive action at a time: start, finish, top up, continue, confirm, or selected campaign switch.
+- Use brushed-metal gray for secondary large actions and inactive action bars. These controls have texture and highlight, not flat system gray.
+- Render ride facts as compact telemetry: vehicle ID, charge, minutes, price, balance, distance, and status remain legible in small white text.
+- Use authored raster/campaign imagery only where the evidence supports it; do not decorate ordinary payment, legal, or support rows with unrelated art.
 
 # Color and surfaces
 
-### Brand & Accent
+### Brand and action
 
-Use ember orange or coral-red for Start, Finish, verify parking, and active promotion. Electric blue marks current location; white marks the selected vehicle.
+The primary action color is a warm coral-orange with subtle texture or uneven light. Pressed state deepens toward red-orange. Use blue only for location or system map position. Green marks favorable tariff/success states and selected safe options. Red warns about problems or urgent validation.
 
-### Surface
+### Dark materials
 
-Use near-black map and canvas, translucent graphite sheets, mid-gray tariff tiles, and brushed-silver secondary controls.
+`canvas` is a near-black graphite. `map` is darker and more detailed. `surface-1` is a smoked bottom-sheet gray; `surface-2` and `surface-3` build tariff cards, menu tiles, and control stacks. Sheets often show translucent scrim behavior over the map, but their text contrast must remain high.
 
-### Text
+### Metal controls
 
-Use white for titles and ride data, cool gray for terms and helper text, and black only on the lightest metal surfaces.
-
-### Semantic
-
-Use green for completed steps and safe parking, amber for low charge or caution, red for problems, and blue strictly for location.
+Large secondary controls use a steel/stone look: gray gradient, worn texture, inner highlight, and rounded-pill shape. Keep the effect restrained and functional; it should feel like a tactile control, not a skeuomorphic ornament.
 
 # Typography
 
-### Font Family
+### Font family
 
-Use a compact modern system sans; campaign moments may use a squared display face without changing form text.
+Use SF Pro Text and SF Pro Display for the product UI. Campaign title moments may use a squared, futuristic display face only when paired with approved raster artwork. Do not apply campaign lettering to forms, balances, tariffs, or legal text.
 
-### Principles
+### Hierarchy
 
-Prioritize vehicle ID, charge, time, price, parking, and the current ride action. Keep conditions and insurance visually secondary.
+Vehicle IDs, price/time facts, and primary action labels are strongest. Helper text, legal copy, insurance notes, and secondary captions are smaller, muted, and left aligned. Centered headings appear in forms and simple setup screens; map sheets use denser left-aligned facts.
 
-### Note on Font Substitutes
+### Numeric treatment
 
-Use Inter or SF Pro for the product UI and a restrained squared sans only for campaign headlines.
+Use tabular numbers for balances, kilometers, prices, minutes, phone codes, vehicle numbers, and card suffixes. Keep units close to values, using smaller captions only when it does not break readability.
 
 # Screen composition
 
-### Grid & Container
+### Map composition
 
-The map fills the screen. Vehicle data and active ride controls occupy a bottom sheet; three tariff options form a horizontal row.
+The map fills the viewport with dark roads, white parking polygons, small vehicle pins, orange parking markers, blue current-location dot, and clustered right-side controls. Search and wallet/balance chips sit near the top. Scan and location controls sit low enough to stay reachable but above the home indicator and bottom chrome.
 
-### Whitespace Philosophy
+### Sheet composition
 
-Keep map controls compact and clustered. Inside sheets, allow each ride fact and safety action its own row.
+Bottom sheets have large rounded top corners and a dense vertical stack: object thumbnail, telemetry row, tariff cards, toggles, payment/promo/support rows, then an action bar. Keep sheet backgrounds smoky and slightly lighter than the map. Use hairline dividers sparingly; spacing and card boundaries do most separation.
+
+### Forms and account pages
+
+Setup, phone, email, card, payment, and menu surfaces use the same dark shell. Inputs are rectangular rounded fields with thin light borders in focused state. Menu content uses rounded dark tiles, compact toggle rows, payment rows, promo cards, and horizontally scrolling offer cards.
 
 # Navigation appearance
 
-Use bottom destinations for Menu, Map, and traffic rules. Map actions include search, wallet, layers, zoom, location, and scan.
+When bottom chrome is present, keep it black or nearly black with small white/gray line icons and a restrained active state. Do not use a bright tab bar, a white navigation bar, or oversized labels. Top bars use minimal back controls and centered compact titles.
 
 # Components
 
 ### Buttons
 
-Primary ride actions are orange-red textured pills; secondary reserve, pause, or finish variants are brushed gray. Native controls must inherit this material, radius, and contrast.
+Primary buttons are orange textured pills with white semibold text. Secondary wide buttons are brushed gray pills. Disabled states use low-contrast gray and should look physically inactive. Avoid multiple orange buttons in the same panel unless one is clearly inactive or loading.
 
-Tariffs and subscription offers use compact dark cards with time, included value, and price. Selected state uses green or orange emphasis.
+### Tariff cards
 
-### Cards & Containers
+Tariff cards are compact dark rounded rectangles arranged horizontally. They show a short title, price, time, and small favorable-state marks. Selected or recommended cards use green/orange accent chips, not a full bright background.
 
-Vehicle sheets combine circular thumbnail, charge, ID, tariff row, insurance, payment, promo, support, and action bar.
+### Map controls
 
-### Inputs & Forms
+Layer, zoom, location, compass, scan, and wallet controls are circular or pill-shaped dark translucent controls. Icons are white or muted gray. The current-location dot is saturated blue with a soft halo.
 
-Phone and code entry use dark native-style fields with white type. Promo, payment, and profile forms remain simple charcoal rows.
+### Toggles and selection
 
-### Status & Build Page
+Toggles use orange when on and gray when off. Radio selection in payment lists uses a small orange dot or ring. Checkmarks can be green for successful ride/safety outcomes.
 
-Show charge, lock state, reservation, ride time, price, parking validation, trip completion, balance, and subscription status directly.
+### Inputs
 
-### Navigation
+Phone, SMS code, email, card, and top-up inputs sit on the dark canvas. Focused fields use a light outline. Native keyboards may appear, but the app-owned input fields above them must retain charcoal surfaces and white text.
 
-Use bottom destinations for Menu, Map, and traffic rules. Map actions include search, wallet, layers, zoom, location, and scan.
+### Campaign cards
+
+Campaign cards use approved raster art, soft glow, and compact labels. Keep them inside rounded dark cards or full-bleed campaign frames. Do not let campaign palettes redefine standard payment, menu, or map controls.
 
 # Imagery and icons
 
-Use smoked translucency, metallic gradients, inner highlights, and dark scrims. Sheets should feel physical without obscuring the map.
+Use dark map tiles, photographed/3D campaign objects, mechanical emblems, and approved raster vehicle/campaign assets. The inspected system includes orange-red industrial imagery, metallic objects, chrome characters, small themed map markers, and thin outline illustrations on subscription/empty-state screens.
 
-### Decorative Depth
-
-Use original mechanical emblems, ember glow, weathered steel, and focused campaign light around scan, parking, and special-mode moments.
+Do not substitute SF Symbols, emoji, SwiftUI shapes, generic vector blobs, or unapproved AI sketches for these assets. Icons inside controls should be simple white line glyphs; authored imagery belongs in campaign cards, empty states, launch moments, and themed map markers.
 
 # States
 
-Show charge, lock state, reservation, ride time, price, parking validation, trip completion, balance, and subscription status directly.
+Loading states can appear as an orange action pill with a spinner. Disabled buttons use brushed gray with muted white text. Active toggles turn orange. Safe/beneficial selections can use green chips. Modal confirmation sheets dim the map heavily while keeping the dark material and orange/gray action split. Camera/parking validation screens may use full-screen camera imagery with white instruction text and a plain circular shutter.
 
 # iOS adaptation
 
-Phones use full map plus bottom sheet. Wider screens may place the ride sheet at the side while preserving a large interactive map.
+Respect safe areas while preserving the full-screen map impression. Controls near the bottom must stay above the home indicator and any bottom chrome. Touch targets for scan, map pins, zoom, toggles, tariff cards, payment rows, and action buttons must be at least 44pt.
 
-### Touch Targets
-
-Markers, scan, map controls, tariffs, insurance, payment, start, pause, finish, parking, and navigation require at least 44pt targets.
-
-### Collapsing Strategy
-
-Keep vehicle ID, charge, time, price, safety state, and current action visible. Collapse tariff detail, support, and terms.
-
-### Image Behavior
-
-Maps fill the viewport. Use `contain` for mechanical emblems and vehicle art, and `cover` only for campaign character backgrounds.
-
-On iPhone, respect top and bottom safe areas, use scrolling for content that does not fit, keep interactive targets at least 44 points, and preserve the visual reading order for VoiceOver. At larger Dynamic Type sizes, allow supporting text to wrap without collapsing the dominant hierarchy. Use native sheets and permission transitions while explicitly styling app-owned surfaces to match the reference.
+At larger Dynamic Type sizes, keep the key telemetry and current action visible first. Let helper copy wrap or collapse before vehicle ID, price, time, charge, balance, or action labels. Use native permission and keyboard behavior, but style the app-owned surfaces to match the dark visual system.
 
 # Anti-generic checklist
 
-- Do not substitute the documented accent hierarchy with default iOS blue.
-- Do not collapse distinct surfaces into a uniform stack of generic white cards.
-- Do not use an unstyled `TabView`, `Form`, or arbitrary SF Symbols when they contradict the documented navigation and component language.
-- Do not flatten the documented typography into one body-text scale.
-- Do not remove compositionally important photography or illustration while assets are pending.
-- Do not apply one corner radius to every control and surface.
-
-Source-specific guardrails retained from the review:
-
-### Do
-
-- Keep the map visible across the ride lifecycle.
-- Use orange for the current decisive action.
-- Distinguish ride state through the bottom sheet.
-- Keep safety and parking explicit.
-
-### Don't
-
-- Do not apply campaign art to payment or legal text.
-- Do not use multiple bright actions at once.
-- Do not hide vehicle charge or price.
-- Do not leave mismatched native blue controls.
+- Do not convert Whoosh into a standard light map app.
+- Do not use default iOS blue for primary actions; blue is reserved for location/system map position.
+- Do not flatten orange and gray action buttons into plain solid rectangles.
+- Do not hide charge, price, time, balance, or active ride status inside secondary copy.
+- Do not put campaign art on payment/legal/support surfaces unless fresh approved screens show it there.
+- Do not replace authored raster imagery with programmatic symbols, emoji, or simple decorative shapes.
+- Do not invent UX flows, navigation destinations, or product scenarios from these style notes. This file defines visual treatment only.
 
 </design-context>

@@ -3,142 +3,105 @@
 version: 1
 platform: iOS
 name: ONAY-design-analysis
-description: "A bright transit-payment system using vivid yellow cards and actions, black icons, cool white surfaces, softly colored 3D service objects, and a glowing central QR scanner."
-colors: {primary: "#FFD600", on-primary: "#111111", primary-focus: "#E8C000", ink: "#141518", ink-muted: "#676A70", ink-subtle: "#999CA2", ink-tertiary: "#C2C5CA", canvas: "#F8F9FB", surface-1: "#FFFFFF", surface-2: "#F0F2F5", surface-3: "#E4E7EB", surface-4: "#D7DBE0", hairline: "#E4E7EA", hairline-strong: "#CCD1D6", hairline-tertiary: "#B3BAC1", inverse-canvas: "#1B1C20", inverse-surface-1: "#2C2D32", inverse-surface-2: "#3D3E45", inverse-ink: "#FFFFFF", brand-secure: "#15172B", semantic-success: "#28B86A", semantic-overlay: "#17181C"}
+description: "A bright transit-payment interface combines vivid yellow cards and actions, cool white surfaces, bold balance numerals, a raised central QR control, compact yellow outline icons, and colorful soft 3D onboarding scenes."
+colors:
+  canvas: "#F8F9FB"
+  surface-primary: "#FFFFFF"
+  surface-secondary: "#F0F2F5"
+  accent-primary: "#FFD600"
+  accent-secondary: "#4F6FE8"
+  text-primary: "#141518"
+  text-secondary: "#6D7076"
+  divider: "#E4E7EA"
+  destructive: "#D94B52"
 typography:
-  display-xl: {fontFamily: SF Pro Display, fontSize: 36, fontWeight: 700, lineHeight: 1.06, letterSpacing: -0.8}
-  display-lg: {fontFamily: SF Pro Display, fontSize: 30, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.5}
-  display-md: {fontFamily: SF Pro Display, fontSize: 24, fontWeight: 700, lineHeight: 1.14, letterSpacing: -0.3}
-  headline: {fontFamily: SF Pro Display, fontSize: 21, fontWeight: 700, lineHeight: 1.20, letterSpacing: -0.2}
-  card-title: {fontFamily: SF Pro Text, fontSize: 16, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0}
-  subhead: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 600, lineHeight: 1.30, letterSpacing: 0}
-  body-lg: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0}
-  body: {fontFamily: SF Pro Text, fontSize: 13, fontWeight: 400, lineHeight: 1.36, letterSpacing: 0}
-  body-sm: {fontFamily: SF Pro Text, fontSize: 11, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0}
-  caption: {fontFamily: SF Pro Text, fontSize: 10, fontWeight: 400, lineHeight: 1.25, letterSpacing: 0}
-  button: {fontFamily: SF Pro Text, fontSize: 14, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0}
-  eyebrow: {fontFamily: SF Pro Text, fontSize: 10, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0.2}
-  mono: {fontFamily: SF Mono, fontSize: 11, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0}
-rounded: {xs: 6, sm: 10, md: 16, lg: 22, xl: 28, xxl: 32, pill: 9999, full: 9999}
-spacing: {xxs: 4, xs: 8, sm: 12, md: 16, lg: 20, xl: 24, xxl: 32, section: 40}
+  hero: {fontFamily: "SF Pro Display", fontSize: 36, fontWeight: 700, lineHeight: 40}
+  title: {fontFamily: "SF Pro Display", fontSize: 28, fontWeight: 700, lineHeight: 33}
+  section: {fontFamily: "SF Pro Text", fontSize: 21, fontWeight: 700, lineHeight: 26}
+  body: {fontFamily: "SF Pro Text", fontSize: 16, fontWeight: 400, lineHeight: 21}
+  label: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 600, lineHeight: 19}
+  caption: {fontFamily: "SF Pro Text", fontSize: 12, fontWeight: 400, lineHeight: 16}
+spacing:
+  screen-horizontal: 16
+  section-gap: 24
+  card-padding: 16
+  control-gap: 12
+rounded:
+  control: 16
+  card: 22
+  sheet: 28
+  pill: 999
 components:
-  button-primary: {backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: 14 18}
-  button-primary-pressed: {backgroundColor: "{colors.primary-focus}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.pill}"}
-  button-secondary: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: 12 16}
-  button-tertiary: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: 10 14}
-  content-card: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 14}
-  feature-card: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 16}
-  text-input: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: 12 14}
-  status-badge: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.pill}", padding: 3 7}
-  bottom-nav: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink-subtle}", typography: "{typography.caption}", rounded: "{rounded.xl}", padding: 8 10}
+  yellow-transit-card: {}
+  raised-qr-navigation-control: {}
+  yellow-primary-action: {}
+  route-number-grid: {}
+  payment-input-panel: {}
 ---
 
 # Overview
 
-ONAY uses bright yellow mobility cards, white grouped surfaces, friendly rendered objects, and a central scanner to make transit payment and route discovery immediately approachable.
+ONAY is a bright transit-payment system built around saturated yellow cards, CTAs, selection, and a raised QR control. White and cool pale-gray surfaces keep balances, routes, payments, maps, shop content, and settings readable. Large black numerals lead account cards; small yellow outline icons carry function. Colorful soft 3D/vector hybrid scenes occupy onboarding and security education, while operational screens remain compact and numeric.
 
 # Non-negotiable visual invariants
 
-- The recurring color treatment uses ONAY yellow.
-- Characteristic content and controls use large balance card.
-- The sampled screens consistently show central glowing QR.
-- Characteristic content and controls use rounded white panels.
-- The typographic hierarchy uses black route type.
-- The principal image treatment uses colorful service objects.
-- The sampled screens consistently show compact commerce surface.
-- Preserve yellow mobility focus and scannable numeric hierarchy.
+- Saturated ONAY yellow is the dominant brand and action color on cards, CTAs, active controls, and the central QR navigation element.
+- Main operational backgrounds stay white or cool pale gray; yellow is used in bounded masses rather than behind dense lists.
+- A wide rounded transit card gives balance or trip state the strongest numeric hierarchy.
+- Bottom navigation is a rounded white bar with a visibly raised central yellow QR button.
+- Top bars are compact and centered, often paired with a small ONAY pill/mark and sparse help or filter actions.
+- Forms and lists use broad white surfaces, 12–16-point insets, black values, and small gray helper text.
+- Authored onboarding and recovery art occupies the upper or central visual mass and cannot be replaced by interface glyphs.
 
 # Color and surfaces
 
-Yellow owns transit cards, scanner, active selections, and primary actions. Black provides necessary contrast and strong wayfinding.
-
-Use cool near-white for the canvas and crisp white for cards, route grids, and shortcut tiles.
-
-Near-black leads balances, route numbers, and product prices; gray supports trip count and instructions.
-
-Green confirms successful payment or eligibility; red is reserved for errors and service interruption.
+Vivid yellow owns transit cards, primary pills, selected chips, active toggles, QR emphasis, and compact outline icons. White is the principal content surface; pale cool gray is the page canvas and inactive control fill. Black carries balances, route numbers, prices, and labels; gray carries instructions and metadata. Lavender-white gradients appear in onboarding, while a saturated blue hero surface appears in recovery. Green confirms success; red remains for error or interruption. Maps and shop photography form separate content fields. Default iOS blue as a universal tint, heavy dark cards across operations, or full-screen yellow behind dense content would break the reference.
 
 # Typography
 
-Use SF Pro Display for balance and route headings and SF Pro Text for controls, content, and metadata.
-
-- display-lg — 30 points — 700 — Hero or state
-- headline — 21 points — 700 — Section title
-- card-title — 16 points — 600 — Primary item
-- body — 13 points — 400 — Detail
-- caption — 10 points — 400 — Metadata
-
-- Lead with card balance, route number, or fare action.
-- Keep repeated metadata aligned and visually quieter.
-- Reserve high contrast and weight for real decisions.
-
-Use the platform sans with strong numerals and clear Cyrillic or Kazakh labels.
-
-The hierarchy must remain legible with Dynamic Type: supporting text may wrap before the primary metric, title, or action loses its role.
+Use SF Pro Display for balances and prominent state titles and SF Pro Text for navigation, forms, routes, and metadata. Hero amounts use bold 32–38-point tabular numerals; page titles 26–30 points; sections around 21 points; item labels 14–16 points semibold; helper/legal text 11–13 points gray. Centered navigation titles remain compact. High contrast and weight are reserved for balance, route number, fare, or decisive result. Dynamic Type may expand helper text and rows vertically while preserving the amount, current card, selected route, and primary action as the first read.
 
 # Screen composition
 
-Use a 4 points base, 8–12 points internal gaps, and 16 points horizontal screen gutters.
+The primary account composition begins below the status bar with a compact centered brand/header treatment, then a wide rounded yellow transit card, stacked white shortcuts or status modules, and the floating rounded bottom bar with its raised QR center action above the home indicator. Content scrolls vertically inside 16-point gutters.
 
-Cards use one wide carousel; routes use a four-column number grid; shop uses two product columns.
-
-Keep route and payment actions spacious while allowing marketplace shelves to become denser.
-
-Use a soft yellow scanner glow, light card elevation, and illustrated object shadow rather than heavy containers.
-
-Primary iPhone screens keep the documented content grouping and vertical rhythm inside a scroll container when content exceeds the viewport. Bottom-owned actions or navigation reserve the lower safe area rather than covering content.
+Payment and transfer archetypes use a compact top bar, strong title, grouped white inputs or card selectors, amount chips, and a bottom yellow action above the keyboard. Route views use either a regular number grid or full-screen map with white controls. History and settings use white rows, separators, filters, switches, checkmarks, or radio controls. Shop surfaces become denser two-column photo grids with black purchase CTAs. Bottom sheets and success alerts sit above dim scrims with broad rounded geometry.
 
 # Navigation appearance
 
-Use Routes, Cards, a raised yellow QR scanner, Shop, and Menu in a rounded white bottom bar.
-
-This section governs appearance only; product behavior and information architecture come from the approved Research and Planning artifacts.
+The primary navigation is a floating or rounded white bar with small icon-and-label items and a large raised yellow circular QR control at center. Active states use yellow or dark emphasis; inactive items are gray. Top bars use a simple back arrow, centered title or small ONAY mark, and a compact help/filter action. Segmented controls and chips use yellow selection with white or pale inactive states. Filters and selectors appear as white rounded bottom sheets over a dim scrim. This specifies appearance only.
 
 # Components
 
-Primary payment and add actions use yellow pills with black labels; secondary actions stay white and outlined.
-
-Balance cards combine city, trips, QR, and details; route cells focus on the number; shop cards remain image-first.
-
-Search and phone fields use pale fills, yellow continuation, and system-aligned validation.
-
-Keep balance, trip count, ticket, payment, and city state close to the active card or route.
-
-Controls retain at least a 44-point interactive area. Pressed and disabled treatments should stay within the documented palette and hierarchy.
+- **Transit card:** wide yellow rounded rectangle with large bold balance, compact city/trip metadata, QR or card detail, and restrained secondary actions.
+- **Primary action:** full-width yellow pill with centered black semibold label; pressed state darkens slightly and disabled state becomes pale gray.
+- **Raised QR control:** central yellow circular button elevated above the white bottom bar, with a high-contrast dark QR/scanner glyph and generous safe spacing.
+- **Route cell:** compact white or pale tile that prioritizes a bold route number and quiet supporting label, arranged in an orderly grid.
+- **Payment input panel:** grouped white rows with dark entered values, gray placeholder/helper text, yellow focus or next action, and clear card/source selector.
+- **Selection row:** full-width white row with label and trailing radio, checkmark, switch, or dropdown; selected state uses yellow and black.
+- **Success modal:** centered white rounded panel with concise result, green confirmation cue where observed, and a yellow next action.
 
 # Imagery and icons
 
-Transit cards are wide rounded rectangles; QR is circular; service illustrations live in centered rounded tiles.
-
-Contain product photos in the shop and rendered objects in educational or service modules.
-
-When imagery is part of the documented composition, it cannot be omitted while final assets are pending. A temporary asset must preserve its placement, crop, scale, and approximate visual weight.
+Functional icons are small yellow outline glyphs and must remain distinct from illustration. Maps use literal map tiles, shop uses product photography, and campaign banners remain promotional media. Authored illustration is a colorful soft 3D/vector hybrid used in onboarding and password-recovery/security heroes, with cards, phones, route grids, QR panels, pins, and lock/passcode objects. Preserve its upper-half or centered space wherever observed. Payment network marks and the ONAY logo are brand assets, not illustration.
 
 # States
 
-Keep balance, trip count, ticket, payment, and city state close to the active card or route.
-
-Green confirms successful payment or eligibility; red is reserved for errors and service interruption.
-
-Only the states documented above are specified; other states must preserve the same canvas, hierarchy, and component language without inventing a new visual system.
+Observed states include onboarding, phone sign-in, biometric recovery, card balance and details, top-up and auto-top-up forms, transfers, transaction history and filters, QR and metro payment, route map/grid, shop, profile, settings, security, dropdowns, radio/check selection, toggles, numeric keypad, native alerts, bottom sheets, confirmation, and success. Yellow stays the action/selection anchor; white and pale gray retain surface hierarchy. Personal data and QR areas may be masked without altering composition. No coherent authored error illustration was observed.
 
 # iOS adaptation
 
-- Extend the documented canvas through the iPhone safe areas while keeping readable content within appropriate insets.
-- Use a vertical `ScrollView` for content that does not fit compact heights; keep documented bottom actions and navigation clear of the home indicator.
-- Primary actions, navigation, cards, and contextual controls remain at least 44 points.
-- Preserve card balance, scanner, and current route tools; reduce promotions before transit essentials.
-- Present the keyboard and system permission UI natively, then return to the same visual context.
-- Preserve semantic reading order in VoiceOver and allow text to grow with Dynamic Type.
-- Preserve the documented appearance instead of introducing an unrelated light or dark palette.
+Keep the status bar visible and place centered headers beneath it; reserve bottom safe-area space for the white navigation bar, raised QR control, and home indicator. Use vertical scrolling for stacked cards, history, settings, and shop; preserve two columns only while product cards remain readable. Maps may extend behind safe areas with controls inset. Forms must avoid the keyboard and keep the yellow action visible. Present permission and system dialogs natively, and filters/selectors as native-behaving sheets with documented surfaces. Maintain 44-point targets for nav items, QR, chips, rows, and controls. VoiceOver order should prioritize card balance/state, actions, then supporting details. Dynamic Type expands modules vertically; on compact widths, reduce grid columns or scroll chips rather than shrinking controls. Preserve the observed light system except for explicitly evidenced colored hero states.
 
 # Anti-generic checklist
 
-- Do not use yellow as a broad background behind dense route or shop content.
-- Do not hide status, constraints, or secondary conditions.
-- Do not add heavy shadows around every container.
-- Do not replace the documented canvas and surfaces with a generic grouped background and uniform white cards.
-- Do not use an unstyled `TabView`, default blue tint, or arbitrary SF Symbols when they contradict the reference.
-- Do not collapse every component to one corner radius or remove compositionally important imagery.
+- Do not use yellow as an unbounded full-screen background behind route lists, history, settings, or shop grids.
+- Do not replace the wide transit card and raised QR navigation with generic white cards and an ordinary tab item.
+- Do not apply default blue tint to actions, selection, toggles, or navigation.
+- Do not hide balance, trip, fare, or payment state inside promotional decoration.
+- Do not ship an unstyled `TabView`, grouped `Form`, or arbitrary SF Symbols in place of yellow outline glyphs.
+- Do not add heavy shadows to every container or collapse sheets, cards, controls, and pills to one radius.
+- Do not substitute campaign banners, product photos, map imagery, or payment marks for authored onboarding/security art.
+- Do not add decorative or repeated copy when the current amount, route, state, and action already provide context.
 
 </design-context>

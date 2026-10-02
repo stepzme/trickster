@@ -3,209 +3,164 @@
 version: 1
 platform: iOS
 name: CDEK-design-analysis
-description: "A logistics super-app combining light-gray canvases, white rounded modules, neon-green progression, black totals, 3D service icons, package diagrams, maps, order cards, and an embedded shopping feed. Sending, tracking, pickup points, payment, support, and commerce remain separated inside one modular shell."
+description: "A bright logistics visual system built from CDEK green, pale-gray canvases, white rounded cards, dense shipping forms, map sheets, black totals, clay-like logistics renders, package diagrams, and retail photo cards. The style is modular and operational: each visual block keeps shipment data, price, address, status, and action areas easy to scan."
 colors:
-  primary: "#32E85A"
-  on-primary: "#101112"
-  primary-soft: "#DFFFE7"
-  accent: "#111214"
-  accent-secondary: "#28B75A"
-  ink: "#151617"
-  ink-muted: "#74787B"
-  ink-subtle: "#A9ADAF"
-  canvas: "#F5F5F7"
+  primary: "#35E65B"
+  primary-strong: "#19C94A"
+  primary-soft: "#B8FFC7"
+  on-primary: "#101214"
+  ink: "#151719"
+  ink-muted: "#6F7478"
+  ink-subtle: "#A2A7AB"
+  canvas: "#F4F4F7"
   surface-1: "#FFFFFF"
-  surface-2: "#EBECEF"
-  hairline: "#DFE1E4"
-  semantic-success: "#2DD257"
-  semantic-danger: "#D83D48"
-  semantic-overlay: "#000000"
+  surface-2: "#ECECF1"
+  surface-3: "#F7F7F9"
+  hairline: "#DFE1E5"
+  warning: "#FFF6DC"
+  warning-accent: "#F0BE39"
+  map-green: "#26CA45"
+  black-action: "#24262A"
+  overlay: "#000000"
 typography:
-  display-xl: { fontFamily: SF Pro Display, fontSize: 36, fontWeight: 700, lineHeight: 1.05, letterSpacing: -0.7 }
-  display-lg: { fontFamily: SF Pro Display, fontSize: 30, fontWeight: 700, lineHeight: 1.08, letterSpacing: -0.5 }
-  display-md: { fontFamily: SF Pro Display, fontSize: 26, fontWeight: 700, lineHeight: 1.12, letterSpacing: -0.3 }
-  headline: { fontFamily: SF Pro Display, fontSize: 22, fontWeight: 700, lineHeight: 1.18, letterSpacing: -0.2 }
-  card-title: { fontFamily: SF Pro Text, fontSize: 16, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: SF Pro Text, fontSize: 17, fontWeight: 500, lineHeight: 1.35, letterSpacing: 0 }
-  body-lg: { fontFamily: SF Pro Text, fontSize: 16, fontWeight: 400, lineHeight: 1.45, letterSpacing: 0 }
-  body: { fontFamily: SF Pro Text, fontSize: 14, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
+  display-lg: { fontFamily: SF Pro Display, fontSize: 28, fontWeight: 700, lineHeight: 1.12, letterSpacing: 0 }
+  headline: { fontFamily: SF Pro Display, fontSize: 22, fontWeight: 700, lineHeight: 1.18, letterSpacing: 0 }
+  title: { fontFamily: SF Pro Text, fontSize: 18, fontWeight: 700, lineHeight: 1.22, letterSpacing: 0 }
+  card-title: { fontFamily: SF Pro Text, fontSize: 16, fontWeight: 700, lineHeight: 1.25, letterSpacing: 0 }
+  subhead: { fontFamily: SF Pro Text, fontSize: 15, fontWeight: 600, lineHeight: 1.28, letterSpacing: 0 }
+  body: { fontFamily: SF Pro Text, fontSize: 14, fontWeight: 400, lineHeight: 1.38, letterSpacing: 0 }
   body-sm: { fontFamily: SF Pro Text, fontSize: 12, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
-  caption: { fontFamily: SF Pro Text, fontSize: 10, fontWeight: 400, lineHeight: 1.20, letterSpacing: 0 }
-  button: { fontFamily: SF Pro Text, fontSize: 15, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0 }
-  eyebrow: { fontFamily: SF Pro Text, fontSize: 11, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0.3 }
-  mono: { fontFamily: SF Mono, fontSize: 12, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
-rounded: { xs: 8, sm: 12, md: 16, lg: 20, xl: 26, xxl: 32, pill: 9999, full: 9999 }
-spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
+  caption: { fontFamily: SF Pro Text, fontSize: 10, fontWeight: 400, lineHeight: 1.22, letterSpacing: 0 }
+  button: { fontFamily: SF Pro Text, fontSize: 15, fontWeight: 700, lineHeight: 1.20, letterSpacing: 0 }
+  numeric: { fontFamily: SF Pro Text, fontSize: 20, fontWeight: 700, lineHeight: 1.15, letterSpacing: 0 }
+rounded: { xs: 6, sm: 10, md: 14, lg: 18, xl: 24, pill: 9999 }
+spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 20, xl: 28, xxl: 40 }
 components:
-  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.md}", padding: [14, 18]}
-  feature-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 16 }
-  action-tile: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.md}", padding: 12 }
-  grouped-list: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: [8, 16]}
-  input: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body-lg}", rounded: "{rounded.md}", padding: [14, 16]}
+  primary-button: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.md}", padding: [15, 18] }
+  dark-button: { backgroundColor: "{colors.black-action}", textColor: "#FFFFFF", typography: "{typography.button}", rounded: "{rounded.md}", padding: [15, 18] }
+  content-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", rounded: "{rounded.lg}", padding: 16 }
+  field-row: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", rounded: "{rounded.md}", padding: [13, 14] }
+  chip: { backgroundColor: "{colors.surface-2}", selectedBackgroundColor: "{colors.ink}", textColor: "{colors.ink}", selectedTextColor: "#FFFFFF", rounded: "{rounded.pill}", padding: [8, 12] }
+  warning-card: { backgroundColor: "{colors.warning}", accentColor: "{colors.warning-accent}", textColor: "{colors.ink}", rounded: "{rounded.sm}", padding: 14 }
 ---
 
 # Overview
 
-CDEK centers package sending and order tracking, then layers pickup points, business tools, fulfillment, and shopping around the same modular home.
+CDEK uses a light operational shell: pale-gray page backgrounds, white rounded task cards, vivid green calls to action, black price emphasis, soft 3D logistics objects, functional maps, and retail photography only inside shopping surfaces.
 
-**Key Characteristics:**
-- Pale-gray app canvas.
-- White rounded task modules.
-- Neon-green continuation actions.
-- Clay-like 3D service icons.
-- Package size diagrams and explicit totals.
+Fresh Screen Gallery evidence covered auth, home, map/pickup sheets, shipment setup, package-size selection, order confirmation, order detail/status, shopping/product cards, and profile.
 
 # Non-negotiable visual invariants
 
-- The reviewed screens show this treatment: Pale-gray app canvas.
-- The reviewed screens show this treatment: White rounded task modules.
-- The reviewed screens show this treatment: Neon-green continuation actions.
-- The reviewed screens show this treatment: Clay-like 3D service icons.
-- The reviewed screens show this treatment: Package size diagrams and explicit totals.
+- Use CDEK green as the dominant action and selected-state color; do not replace it with system blue.
+- Keep the app canvas pale gray, with white rounded cards and sheets carrying the content.
+- Use black or near-black for totals, headings, and secondary high-emphasis actions.
+- Keep logistics imagery as isolated clay-like 3D renders or package diagrams, not flat generic icons.
+- Keep maps visually utilitarian: pale map tiles, dense green numbered markers, white bottom sheets.
+- Keep warning information in pale yellow blocks with a narrow yellow accent and a triangular warning mark.
+- Keep product shopping surfaces visually separate through real product photography and two-column retail cards.
 
 # Color and surfaces
 
-### Brand & Accent
-- **Primary** ({colors.primary}): Progress, selection, confirmation, and logistics success.
-- **Accent** ({colors.accent}): Totals, headings, and secondary primary actions.
-- **Secondary Accent** ({colors.accent-secondary}): Positive status and service emphasis.
+The style is compact, rounded, and high-contrast against a quiet canvas. Cards are independent modules with 14-18 pt radii, 12-16 pt internal padding, and small vertical gaps. Primary controls are full-width green bars at the bottom of the current surface. Secondary utility icons sit in gray circular or rounded-square containers.
 
-### Surface
-- **Canvas** ({colors.canvas}): Home, sending, tracking, and shopping.
-- **Surface 1** ({colors.surface-1}): Main cards and sheets.
-- **Surface 2** ({colors.surface-2}): Secondary controls and grouped fields.
-- **Hairline** ({colors.hairline}): Quiet separation.
+Avoid glossy gradients, decorative background patterns, oversized hero art, and marketing-style layouts. The app should feel like a working logistics tool with moments of friendly 3D illustration.
 
-### Text
-- **Ink** ({colors.ink}): Headings and primary values.
-- **Ink Muted** ({colors.ink-muted}): Supporting detail.
-- **Ink Subtle** ({colors.ink-subtle}): Placeholder and inactive state.
+Use approximate sampled colors from the fresh screenshots:
 
-### Semantic
-- **Success** ({colors.semantic-success}): Completed or positive state.
-- **Danger** ({colors.semantic-danger}): Error and destructive state.
-- **Overlay** ({colors.semantic-overlay}): Modal focus.
+- Primary green: `#35E65B` for continue, submit, selected pickup, active map markers, success chips, and important promotional strips.
+- Primary soft green: `#B8FFC7` for CDEK ID prompts, business send strip, and low-pressure promotional cards.
+- Black action: `#24262A` for strong secondary actions such as tracking or personal-data prompts.
+- Canvas: `#F4F4F7` for home, profile, forms, and order detail backgrounds.
+- White: `#FFFFFF` for all cards, sheets, forms, maps overlays, product panels, and auth panels.
+- Field gray: `#ECECF1` for text fields, inactive buttons, segmented controls, and secondary row backgrounds.
+- Warning yellow: `#FFF6DC` with `#F0BE39` accent for service limits and shipping cautions.
+
+Cards should cast only a very soft shadow or none at all. Separation mostly comes from background contrast, rounded corners, and spacing.
 
 # Typography
 
-### Font Family
+Use SF Pro Display for screen titles and SF Pro Text for all controls and data. Letter spacing stays at `0`.
 
-- **SF Pro Display** — task headings and order totals.
-- **SF Pro Text** — controls, forms, and explanations.
-- **SF Mono** — codes and compact numeric data.
+- Screen title: 18-22 pt, bold, centered or left depending on the visible surface.
+- Card title: 16 pt, bold, compact line height.
+- Body/detail: 12-14 pt, regular, medium gray for supporting copy.
+- Button: 15 pt, bold, centered.
+- Totals and prices: 18-20 pt, bold, black.
+- Barcodes, tracking numbers, addresses, dates, and dimensions use tabular numeral behavior where available.
 
-### Hierarchy
-
-Use 36pt bold for major statements, 22pt bold for screen headings, 16pt semibold for cards, 14pt regular for detail, and 15pt semibold for primary actions.
-
-### Principles
-
-- Keep route, package, rate, and total visible.
-- Use green for progression, not decoration.
-- Separate shipping and shopping state.
-- Pair package size with a concrete diagram.
-
-### Note on Font Substitutes
-
-Use **Inter** or the platform system sans when the reference display face is unavailable.
+Keep Cyrillic labels short and direct. Do not stretch text, use decorative fonts, or apply all-caps except where the source content itself is a compact label.
 
 # Screen composition
 
-### Spacing System
+Use a 16 pt horizontal page gutter on phone screens. Stack content vertically with 12-16 pt gaps between major cards. Large cards often combine a left-aligned title with a small 3D object or icon on the right. Dense order cards use horizontal action tiles in a carousel-like row.
 
-Use a 4pt base, 16pt edge gutters, 12pt control gaps, and 16pt card padding.
+Bottom sheets have a white background, 24 pt top corner radius, a centered grabber, and content that starts with a large bold title. Sticky bottom summaries sit above the safe area with a white surface, a small top grabber when expanded, left label, right price, and a full-width green action.
 
-### Grid & Container
-
-Home uses story cards, a task grid, orders, and shopping feed. Sending is a linear stack of route, package, rate, people, review, and payment modules.
-
-### Whitespace Philosophy
-
-Separate logistics stages with clear module gaps; dense shopping cards stay inside their own section.
+Map screens keep the map full-bleed behind controls. Floating controls are white rounded buttons on the right; pickup clusters are green circles with white numerals.
 
 # Navigation appearance
 
-Home and profile expose shipping, orders, pickup points, business, shopping, and support without merging active tasks.
+Visual chrome only; this section does not define product structure. Bars, sheet headers, and top controls use black or muted gray icons on white or pale-gray surfaces. Active emphasis uses CDEK green only when the reference shows a selected or current visual state. Avoid default blue navigation tint.
 
 # Components
 
-### Buttons
+- Primary buttons: full-width green rounded rectangles, about 52-56 pt tall.
+- Disabled buttons: pale gray with muted text and no green border.
+- Dark buttons: full-width near-black rounded rectangles with white text.
+- Segmented controls: light-gray capsule track with white selected segment; use for pickup/courier switches.
+- Chips: compact pills; selected chip is black with white text in package-category lists.
+- Selectable cards: white rounded rectangles with green stroke and subtle green fill when selected.
+- Toggles: native iOS proportions, gray off state, green on state.
+- Icon actions: gray circular backgrounds with monochrome line icons and short labels below.
+- Search fields: white or pale-gray rounded bars, search icon at left, muted placeholder.
 
-Neon-green full-width buttons advance the shipment. Black buttons serve secondary high-commitment actions such as tracking.
+Do not use generic blue links or default iOS button styling. Links inside legal/auth copy can be muted blue-gray only when they appear as small text links.
 
-Rate options and pickup choices use outlined cards with green selected state.
+Form and data surfaces:
 
-### Cards & Containers
+Fields sit inside white cards or pale-gray rows with clear labels. Address rows use a small monochrome place/building icon, primary address text, and a trailing chevron. Package fields pair text data with diagrams or dimensions. Totals remain visible at the bottom of long forms.
 
-Route, package, rate, total, order status, pickup point, and instruction modules remain independently scannable.
+Use separate visual treatment for:
 
-### Inputs & Forms
-
-City, address, dimensions, value, sender, recipient, promo, and payment use focused sheets and labeled rows.
-
-### Status & Build Page
-
-Show draft, paid, awaiting drop-off, in transit, ready, delivered, undelivered, and repeated order with labels and guidance.
-
-### Navigation
-
-Home and profile expose shipping, orders, pickup points, business, shopping, and support without merging active tasks.
-
-A persistent total and next action sit above the safe area during shipment creation.
+- Address rows: icon, label, value, chevron.
+- Package cards: object render, package name, weight, dimensions, optional add-ons.
+- Rate cards: delivery duration and price, green stroke when selected.
+- Order status cards: primary instruction, place/time block, action tiles, advisory strip.
+- Barcode/status blocks: large barcode area, then vertical timeline with green current state and gray future states.
 
 # Imagery and icons
 
-Keep the base flat, raise actionable cards slightly, and reserve overlays for confirmation or interruption.
+Use authored raster assets for CDEK logistics visuals: parcel boxes, pickup pins, delivery objects, business briefcase, shoes/bags for shopping entry points, package-size diagrams, success trophy, and small helper character. These assets are softly lit, clay-like, and object-centered on white or pale-gray backgrounds.
 
-### Decorative Depth
-
-Use modest card shadow and soft 3D icons. Package renders clarify scale rather than decorate.
+Use real product photography only in shopping cards and product detail surfaces. Product photos should be clipped inside rounded white product cards or placed on clean white detail pages; do not reuse them as logistics icons.
 
 # States
 
-Show draft, paid, awaiting drop-off, in transit, ready, delivered, undelivered, and repeated order with labels and guidance.
+Visual state treatment only:
+
+- Focused input: green stroke, white fill, unchanged typography.
+- Loading action: disabled gray button with small spinner and muted label.
+- Selected package/rate: green border plus a green check badge.
+- Warning: pale yellow panel with left accent and warning icon.
+- Success/confirmation: centered celebratory 3D object, bold confirmation text, price below, then action stack.
+- Current status: green circular timeline marker; later steps are gray.
+- Empty order: white tile with a simple gray package mark and muted prompt.
 
 # iOS adaptation
 
-### Touch Targets
+Respect safe areas and keep sticky actions above the home indicator. Minimum touch target is 44 pt; primary actions should be closer to 52 pt. Dynamic Type may wrap supporting text, but headings, prices, totals, and primary actions must remain visible without overlapping. Use native keyboard, sheet, map, and toggle behaviors while styling the app-owned surfaces to match this system.
 
-Keep every row, tab, selector, key, and primary action at least 44pt.
-
-### Collapsing Strategy
-
-Preserve route, package, rate, total, and next action. Collapse stories and shopping promotions before logistics state.
-
-### Image Behavior
-
-Contain 3D service objects and package diagrams with their full silhouette. Crop retail photos only within product cards.
-
-On iPhone, respect top and bottom safe areas, use scrolling for content that does not fit, keep interactive targets at least 44 points, and preserve the visual reading order for VoiceOver. At larger Dynamic Type sizes, allow supporting text to wrap without collapsing the dominant hierarchy. Use native sheets and permission transitions while explicitly styling app-owned surfaces to match the reference.
+When content is tight, preserve the current card title, critical value, price, and primary action first. Collapse promotional imagery before form data, map controls, warnings, or status values.
 
 # Anti-generic checklist
 
-- Do not substitute the documented accent hierarchy with default iOS blue.
-- Do not collapse distinct surfaces into a uniform stack of generic white cards.
-- Do not use an unstyled `TabView`, `Form`, or arbitrary SF Symbols when they contradict the documented navigation and component language.
-- Do not flatten the documented typography into one body-text scale.
-- Do not remove compositionally important photography or illustration while assets are pending.
-- Do not apply one corner radius to every control and surface.
-
-Source-specific guardrails retained from the review:
-
-### Do
-
-- Keep shipment total current.
-- Show package dimensions visually.
-- Separate route and package edits.
-- Use green for progression.
-- Keep shopping subordinate to logistics.
-
-### Don't
-
-- Don't mix shopping basket with parcel order.
-- Don't hide pickup requirements.
-- Don't use 3D icons behind form data.
-- Don't rely on color alone for delivery status.
-- Don't remove the review before payment.
+- Do not turn the interface into a plain iOS `Form` stack.
+- Do not use SF Symbols as replacements for CDEK package renders, map markers, service objects, or success imagery.
+- Do not use default iOS blue for primary buttons, links, selected states, or navigation emphasis.
+- Do not flatten all cards into the same radius; large sheets/cards need softer corners than fields and chips.
+- Do not put 3D objects behind addresses, prices, barcodes, or legal warnings.
+- Do not mix shopping cart/product visual language into shipment/order-status cards.
+- Do not claim live shipment behavior, routing, or payment logic from these visual references; this file describes appearance only.
 
 </design-context>

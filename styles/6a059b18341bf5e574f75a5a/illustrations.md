@@ -1,28 +1,43 @@
 # Overview
 
-Illustration explains logistics services and package choices quickly, while real product photography remains reserved for shopping.
+Fresh Screen Gallery evidence shows a stable CDEK authored illustration system repeated across home service cards, package-size selection, order confirmation, and profile promotion. It is required when reproducing the style; do not replace it with code-drawn shapes or symbol icons.
+
+Missing CDEK-style illustration assets must be created with an image-generation model, explicitly visually approved by the user, and integrated as raster assets in the app bundle. SwiftUI shapes, SF Symbols, emoji, font glyphs, vector doodles, gradients, and other programmatic stand-ins are not acceptable substitutes.
 
 # Visual Style
 
-- Friendly clay-like 3D parcels, pins, shoes, bags, vehicles, and people.
-- White or pale-gray ground with vivid CDEK green.
-- Soft studio light, rounded materials, and readable silhouettes.
-- Simple package diagrams with visible dimensions.
+- Soft clay-like 3D objects with rounded edges, studio lighting, and clean silhouettes.
+- White or pale-gray ground, with vivid CDEK green as the dominant material accent.
+- Logistics objects: parcels, shipping boxes, pickup pins, delivery/service props, business briefcase, helper character, success trophy.
+- Package diagrams: box render plus visible size/weight cues; dimensions stay legible outside the object.
+- Retail imagery remains separate and photo-based; it is not part of the logistics illustration family.
 
 # Composition
 
-Center one object in a compact task tile or one package render in a larger instructional card. Keep labels and dimensions outside the object.
+Use one clear object per tile, card, or empty/success state. Center the object or place it to the right of text with generous breathing room. Keep labels, prices, addresses, dimensions, and warnings outside the illustration.
+
+For package-selection cards, pair the render with exact package name and dimensions. For success or confirmation, place the celebratory object above the title and price.
 
 # Color and Materials
 
-Use the palette relationships explicitly described in the visual language and `ui.md`; no additional material system was documented.
+Follow `ui.md`: CDEK green, white, pale gray, black text, and subtle yellow warning only where needed. Materials should look matte or softly satin, never metallic, glassy, or neon beyond the brand green.
 
 # Variants and States
 
-Use for home services, packaging, shipment confirmation, empty states, and instructional steps. Keep forms, totals, maps, status history, and shopping products functional.
+Use illustrations for:
+
+- Home logistics/service cards.
+- Package and packaging choices.
+- Shipment success/confirmation.
+- Empty order or helper prompts.
+- Profile/service promotions.
+
+Do not use illustrations for maps, route/address rows, prices, barcodes, legal copy, payment detail, timelines, or dense forms.
 
 # Avoid
 
-- Do not mix retail photography into logistics icons.
-- Never place a 3D object behind route or price data.
-- Preserve neon green and neutral surfaces from `ui.md`.
+- Do not mix retail product photography into logistics illustration slots.
+- Do not place 3D objects behind operational data.
+- Do not create flat monochrome icon replacements.
+- Do not use generic warehouse, courier, or ecommerce stock art.
+- Do not change the green/white/pale-gray material family without user approval.

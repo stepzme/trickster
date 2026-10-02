@@ -3,222 +3,97 @@
 version: 1
 platform: iOS
 name: Asia-Online-design-analysis
-description: "A grocery loyalty interface anchored by forest green, bright leaf accents, yellow actions, a prominent QR card, and surreal product campaigns. White utility surfaces keep points, cashback, store data, and profile actions legible beneath expressive promotional imagery."
+description: "A campaign-led grocery loyalty interface with large forest-green fields, bright yellow commitment actions, layered white utility panels, prominent QR/reward cards, and saturated promotional food imagery."
 colors:
-  primary: "#08753C"
-  on-primary: "#FFFFFF"
-  primary-bright: "#54CE35"
-  primary-soft: "#C8FFD2"
-  accent-yellow: "#FFE000"
-  accent-aqua: "#59D9C8"
-  ink: "#151817"
-  ink-muted: "#747A76"
-  ink-subtle: "#AAAFAB"
-  canvas: "#FFFFFF"
-  surface-1: "#F5F5F6"
-  surface-2: "#ECEEEF"
-  hairline: "#E0E3E1"
-  semantic-success: "#25AE48"
-  semantic-danger: "#D94B4B"
-  semantic-overlay: "#000000"
+  canvas: "#F5F6F5"
+  surface-primary: "#FFFFFF"
+  surface-secondary: "#ECEFEC"
+  accent-primary: "#08753C"
+  accent-secondary: "#FFE000"
+  text-primary: "#151817"
+  text-secondary: "#747A76"
+  divider: "#E0E3E1"
+  destructive: "#D94B4B"
 typography:
-  display-xl: { fontFamily: System Sans, fontSize: 40, fontWeight: 800, lineHeight: 1.00, letterSpacing: -1.0 }
-  display-lg: { fontFamily: System Sans, fontSize: 32, fontWeight: 750, lineHeight: 1.05, letterSpacing: -0.6 }
-  display-md: { fontFamily: System Sans, fontSize: 26, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.3 }
-  headline: { fontFamily: System Sans, fontSize: 21, fontWeight: 700, lineHeight: 1.18, letterSpacing: -0.2 }
-  card-title: { fontFamily: System Sans, fontSize: 15, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: System Sans, fontSize: 16, fontWeight: 400, lineHeight: 1.38, letterSpacing: 0 }
-  body-lg: { fontFamily: System Sans, fontSize: 16, fontWeight: 400, lineHeight: 1.42, letterSpacing: 0 }
-  body: { fontFamily: System Sans, fontSize: 14, fontWeight: 400, lineHeight: 1.38, letterSpacing: 0 }
-  body-sm: { fontFamily: System Sans, fontSize: 12, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
-  caption: { fontFamily: System Sans, fontSize: 10, fontWeight: 400, lineHeight: 1.20, letterSpacing: 0 }
-  button: { fontFamily: System Sans, fontSize: 15, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0 }
-  eyebrow: { fontFamily: System Sans, fontSize: 10, fontWeight: 700, lineHeight: 1.20, letterSpacing: 0.3 }
-  mono: { fontFamily: System Mono, fontSize: 12, fontWeight: 500, lineHeight: 1.30, letterSpacing: 0 }
-rounded: { xs: 6, sm: 10, md: 14, lg: 20, xl: 28, xxl: 34, pill: 9999, full: 9999 }
-spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
+  hero: {fontFamily: "SF Pro Display", fontSize: 40, fontWeight: 800, lineHeight: 42}
+  title: {fontFamily: "SF Pro Display", fontSize: 30, fontWeight: 750, lineHeight: 35}
+  section: {fontFamily: "SF Pro Text", fontSize: 21, fontWeight: 700, lineHeight: 26}
+  body: {fontFamily: "SF Pro Text", fontSize: 16, fontWeight: 400, lineHeight: 22}
+  label: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 600, lineHeight: 20}
+  caption: {fontFamily: "SF Pro Text", fontSize: 12, fontWeight: 400, lineHeight: 16}
+spacing:
+  screen-horizontal: 16
+  section-gap: 32
+  card-padding: 16
+  control-gap: 10
+rounded:
+  control: 12
+  card: 20
+  sheet: 28
+  pill: 999
 components:
-  button-primary: { backgroundColor: "{colors.accent-yellow}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [14, 20]}
-  loyalty-card: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 18 }
-  promo-card: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.card-title}", rounded: "{rounded.md}", padding: 14 }
-  store-row: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: 12 }
-  catalog-card: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.sm}", padding: 8 }
+  primary-action: {fill: "#FFE000", textColor: "#151817", cornerRadius: 12, minHeight: 50}
+  secondary-action: {fill: "#08753C", textColor: "#FFFFFF", cornerRadius: 12, minHeight: 48}
+  primary-card: {fill: "#FFFFFF", cornerRadius: 20, padding: 16}
+  navigation: {fill: "#FFFFFF", selectedColor: "#08753C", unselectedColor: "#747A76"}
 ---
 
 # Overview
 
-Asia Online frames practical loyalty tools with highly expressive grocery campaigns. Forest green owns identity, yellow owns decisive action, and white modules hold QR, cashback, store, and profile data.
-
-**Key Characteristics:**
-- Prominent QR loyalty card and points balance.
-- Forest and leaf-green brand system.
-- Yellow store and subscription actions.
-- Five-item bottom navigation.
-- Two-column promotion catalogue.
-- Surreal food scenes and glossy loyalty objects.
+Asia Online combines practical loyalty/payment/profile surfaces with large branded campaign scenes. Dark forest green and brighter green gradients dominate entry, hero, subscription, and profile banners; yellow owns high-priority commitment actions. Rounded white panels carrying QR codes, balances, benefit lists, and forms overlap or follow the saturated imagery.
 
 # Non-negotiable visual invariants
 
-- The reviewed screens show this treatment: Prominent QR loyalty card and points balance.
-- The reviewed screens show this treatment: Forest and leaf-green brand system.
-- The reviewed screens show this treatment: Yellow store and subscription actions.
-- The reviewed screens show this treatment: Five-item bottom navigation.
-- The reviewed screens show this treatment: Two-column promotion catalogue.
-- The reviewed screens show this treatment: Surreal food scenes and glossy loyalty objects.
+- Forest green or green gradients form large top-level color masses, not merely small accents.
+- Bright yellow is reserved for decisive subscription, confirmation, or card actions and uses dark text.
+- White rounded panels visibly layer over or directly follow saturated branded hero imagery.
+- Loyalty identity is anchored by a large QR/card/balance module rather than a generic metric tile.
+- Campaign imagery remains large, saturated, and food/retail specific.
+- Hero/promo typography is large and white on green; utility forms return to compact dark text on white.
+- Bottom navigation is a five-item white bar with a strong green selected state.
 
 # Color and surfaces
 
-### Brand & Accent
-- **Forest Green** ({colors.primary}): Brand, store identity, and campaign base.
-- **Bright Green** ({colors.primary-bright}): Selected navigation and rewards.
-- **Yellow** ({colors.accent-yellow}): Route, scan, login, and subscription actions.
-- **Aqua** ({colors.accent-aqua}): Glossy loyalty-object support.
-
-### Surface
-- **Canvas** ({colors.canvas}): Loyalty, discounts, stores, and profile base.
-- **Surface 1** ({colors.surface-1}): Store rows and grouped settings.
-- **Surface 2** ({colors.surface-2}): Disabled and nested surfaces.
-- **Soft Green** ({colors.primary-soft}): Referral and reward banners.
-
-### Text
-- **Ink** ({colors.ink}): Points, cashback, headings, and actions.
-- **Ink Muted** ({colors.ink-muted}): Hours, distance, and descriptions.
-- **Ink Subtle** ({colors.ink-subtle}): Placeholder and disabled content.
-
-### Semantic
-- **Success** ({colors.semantic-success}): Active benefits and earned rewards.
-- **Danger** ({colors.semantic-danger}): Error and destructive action.
-- **Overlay** ({colors.semantic-overlay}): Age gate and system dialog scrim.
+Forest green is the dominant brand field; brighter leaf greens and gradients create campaign depth. Yellow is the contrasting action color. White surfaces hold QR, benefit, payment, store, language, and profile information, while pale gray separates rows and disabled controls. Near-black text is used on white/yellow, white text on green, and muted gray for helper information. Red remains local to destructive/error states. Replacing the green/yellow relationship with default blue or flattening the hero into white cards would break the reference.
 
 # Typography
 
-### Font Family
-
-- **System Sans** — loyalty, promotion, stores, forms, and navigation.
-- **System Mono** — loyalty or receipt identifiers only.
-
-### Hierarchy
-
-| Token | Size | Weight | Use |
-|---|---|---|---|
-| `{typography.display-xl}` | 40pt | 800 | Campaign or points figure |
-| `{typography.display-md}` | 26pt | 700 | QR balance or cashback |
-| `{typography.headline}` | 21pt | 700 | Screen heading |
-| `{typography.card-title}` | 15pt | 600 | Promo or store title |
-| `{typography.body}` | 14pt | 400 | Default details |
-| `{typography.caption}` | 10pt | 400 | Navigation and metadata |
-| `{typography.button}` | 15pt | 600 | Decisive actions |
-
-### Principles
-
-- Make points, cashback, and discount independently legible.
-- Use heavy type inside campaign art only.
-- Keep store name, hours, and distance in one scan path.
-- Preserve readable QR quiet space.
-
-### Note on Font Substitutes
-
-Use **SF Pro**, **Inter**, or **Roboto** with Cyrillic support.
+Use SF Pro. Campaign and subscription scenes use heavy, large white headlines; utility screens use bold section titles, medium labels, and regular body text. QR/balance or benefit numbers receive local emphasis. Keep the contrast between expressive hero display and straightforward forms; avoid decorative copy beyond the product message. At Dynamic Type sizes, allow hero copy and benefit rows to wrap, preserve the QR/card module, and keep the yellow primary action visually dominant.
 
 # Screen composition
 
-### Grid & Container
+The top safe area often continues a green photographic or gradient hero. Entry/home/profile screens use a full-width campaign area followed by rounded white panels, sometimes visually overlapping the lower edge of the hero. Home modules include a prominent loyalty/QR card, promotional tiles, and compact utility sections. Subscription screens combine green imagery, benefit lists, tariff/payment rows, and a large yellow action. Profile screens use branded banners above plain white list cells. Typical content insets are about 16 points, with campaign art occupying the upper third or more.
 
-Home stacks a campaign hero, loyalty card, utilities, and promo grid. Discounts use two columns. Stores use one-column rows or a map. Profile uses banners plus settings rows.
-
-### Whitespace Philosophy
-
-Keep utility modules clean and open. Confine expressive imagery to heroes and banners so QR and store data remain trustworthy.
+Visible archetypes include branded first launch/login; campaign-led home; subscription/paywall and payment sheet; loyalty/profile with QR and banners; language/settings rows; and modal partner/payment information.
 
 # Navigation appearance
 
-Home, Discounts, My benefit, Stores, and Profile form the bottom bar. Selected state uses forest or bright green.
+Bottom navigation is a white five-item bar with compact icons/labels and green selected emphasis. Top bars either merge into the green hero or become simple white utility bars with ordinary-scale back/close controls. Payment and partner details use white bottom sheets with broad rounded top corners and a dim scrim. Native permission alerts may remain system-native, while app-owned navigation keeps the green/yellow identity.
 
 # Components
 
-### Buttons
-
-Primary route, scan, sign-in, and subscription actions use yellow. Green pills support secondary loyalty actions; ordinary rows remain white or gray.
-
-### Cards & Containers
-
-Loyalty card combines logo, points, QR, and savings prompt. Promo cards use campaign art. Store rows combine name, address, hours, and distance.
-
-### Inputs & Forms
-
-Registration uses phone, name, and birthday with a date sheet. Store search uses a full-width field. Age-restricted promotions use a clear yes/no gate.
-
-### Status & Build Page
-
-Points, cashback, discount, subscription, birthday reward, and active login state are explicit labels. QR remains high-contrast and unobstructed.
-
-### Navigation
-
-Home, Discounts, My benefit, Stores, and Profile form the bottom bar. Selected state uses forest or bright green.
-
-The bottom navigation is persistent. Store detail adds full-width yellow route and scan actions above the safe area.
+Primary actions are wide yellow rounded rectangles with dark semibold labels; secondary actions use green fill with white content. Loyalty cards combine QR, identity, and reward/balance information inside a large white rounded panel. Promotional cards use saturated green or photographic fields with short copy. Subscription benefits use clean icon/text rows; tariff and payment options use white list rows, radios, and light dividers. Warning/info banners use restrained tints. Profile/settings rows are plain and spacious rather than shadowed cards. Disabled states keep geometry and reduce contrast.
 
 # Imagery and icons
 
-| Level | Treatment | Use |
-|---|---|---|
-| 0 | White canvas | Utility base |
-| 1 | Pale rounded row | Stores and settings |
-| 2 | Green or mint banner | Benefits and referral |
-| 3 | Full photographic scene | Campaign hero |
-
-### Decorative Depth
-
-Use photoreal compositing, glossy objects, and saturated green gradients in campaigns. Keep core controls flat.
+Sunflower/grocery scenes, food promotions, partner logos, and campaign composites are compositionally important and cannot be omitted. They are campaign/content assets: the inspected screens show consistent art direction but not an independently reusable illustration grammar separate from each promotion. QR and loyalty graphics are functional visual content. Navigation icons remain simple and green/gray; literal product imagery must not be replaced with abstract symbols.
 
 # States
 
-Points, cashback, discount, subscription, birthday reward, and active login state are explicit labels. QR remains high-contrast and unobstructed.
+Observed states include first-launch/permission, populated loyalty/QR, subscription offers, selected tariffs/payment methods, warning/info banners, profile lists, language radio selection, and modal partner information. Yellow remains the commitment color, green remains brand/status, and white remains the utility surface across states. Errors/destructive feedback use local red without recoloring the campaign system.
 
 # iOS adaptation
 
-| Wide | 768pt+ | Center loyalty column and expand promo grid |
-| Small | <390pt | Stack QR benefit details and use one promo column |
-
-### Touch Targets
-
-Maintain 44pt for navigation, QR actions, catalogue cards, list/map, store rows, and forms.
-
-### Collapsing Strategy
-
-Reduce promo columns before shrinking text. Keep loyalty card and store rows full width; stack action pairs on small screens.
-
-### Image Behavior
-
-Cover campaign heroes while preserving the central scene and headline. Contain loyalty objects and literal product packs.
-
-On iPhone, respect top and bottom safe areas, use scrolling for content that does not fit, keep interactive targets at least 44 points, and preserve the visual reading order for VoiceOver. At larger Dynamic Type sizes, allow supporting text to wrap without collapsing the dominant hierarchy. Use native sheets and permission transitions while explicitly styling app-owned surfaces to match the reference.
+Extend the green hero beneath the top safe area and keep the white tab bar above the home indicator. Use vertical scrolling for hero-plus-panel compositions and keyboard-aware bottom sheets for payment/login. Maintain 44-point targets for tabs, QR actions, radios, tariff rows, and close controls. VoiceOver order should read hero title only when informative, then QR/card identity, balance/benefits, and actions; decorative campaign imagery can be hidden. At compact widths, stack promotional cards and keep the QR readable. Dynamic Type grows white panels and benefit rows. Preserve light utility surfaces while allowing dark-green full-bleed brand regions.
 
 # Anti-generic checklist
 
-- Do not substitute the documented accent hierarchy with default iOS blue.
-- Do not turn the documented white canvas into a generic card stack; preserve the observed accent, density, imagery, and surface grouping.
-- Do not use an unstyled `TabView`, `Form`, or arbitrary SF Symbols when they contradict the documented navigation and component language.
-- Do not flatten the documented typography into one body-text scale.
-- Do not remove compositionally important photography or illustration while assets are pending.
-- Do not apply one corner radius to every control and surface.
-
-Source-specific guardrails retained from the review:
-
-### Do
-
-- Keep QR and points immediately visible.
-- Separate cashback from discount.
-- Gate restricted promotions.
-- Preserve store list/map context.
-- Use expressive art only in bounded campaigns.
-
-### Don't
-
-- Don't place art behind the QR code.
-- Don't use yellow for passive decoration.
-- Don't merge store hours and distance.
-- Don't replace product packs in the catalogue.
-- Don't hide subscription terms.
+- Do not reduce forest green to a small accent on an all-white app.
+- Do not replace yellow commitment actions with default blue.
+- Do not omit or miniaturize the QR/loyalty card module.
+- Do not turn the hero and campaign scenes into generic gradient placeholders.
+- Do not use an unstyled `TabView`, `Form`, or default radio list.
+- Do not claim campaign composites as a reusable standalone illustration system.
+- Do not add mood copy where the loyalty, offer, or action is already clear.
 
 </design-context>

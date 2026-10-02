@@ -3,187 +3,95 @@
 version: 1
 platform: iOS
 name: Moy-Auchan-design-analysis
-description: "A bright, practical grocery interface combining Auchan red, purchase green, white space, compact product grids, loyalty modules, and sticky cart actions."
-colors: {primary: "#00A66A", on-primary: "#FFFFFF", primary-focus: "#008B58", ink: "#19191B", ink-muted: "#66686D", ink-subtle: "#9A9CA2", ink-tertiary: "#C2C4C9", canvas: "#FFFFFF", surface-1: "#F5F6F7", surface-2: "#EDF0F1", surface-3: "#E2E5E7", surface-4: "#D5D9DC", hairline: "#E5E7E9", hairline-strong: "#CDD1D4", hairline-tertiary: "#B4B9BD", inverse-canvas: "#1B1C1E", inverse-surface-1: "#2A2C2F", inverse-surface-2: "#3A3D41", inverse-ink: "#FFFFFF", brand-secure: "#E60027", semantic-success: "#00A66A", semantic-overlay: "#151619"}
+description: "A white and light-gray grocery interface combining green purchase controls, red loyalty and discount masses, compact bold headings, dense product imagery, fixed commerce actions, and simple line-icon navigation."
+colors:
+  canvas: "#F5F6F5"
+  surface-primary: "#FFFFFF"
+  surface-secondary: "#EEF1EF"
+  accent-primary: "#2E9B45"
+  accent-secondary: "#D7192D"
+  text-primary: "#1A1C1A"
+  text-secondary: "#727772"
+  divider: "#DFE3DF"
+  destructive: "#D7192D"
 typography:
-  display-xl: {fontFamily: SF Pro Display, fontSize: 36, fontWeight: 700, lineHeight: 1.06, letterSpacing: -0.8}
-  display-lg: {fontFamily: SF Pro Display, fontSize: 30, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.5}
-  display-md: {fontFamily: SF Pro Display, fontSize: 24, fontWeight: 700, lineHeight: 1.14, letterSpacing: -0.3}
-  headline: {fontFamily: SF Pro Display, fontSize: 20, fontWeight: 700, lineHeight: 1.20, letterSpacing: -0.2}
-  card-title: {fontFamily: SF Pro Text, fontSize: 16, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0}
-  subhead: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 600, lineHeight: 1.30, letterSpacing: 0}
-  body-lg: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0}
-  body: {fontFamily: SF Pro Text, fontSize: 13, fontWeight: 400, lineHeight: 1.36, letterSpacing: 0}
-  body-sm: {fontFamily: SF Pro Text, fontSize: 11, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0}
-  caption: {fontFamily: SF Pro Text, fontSize: 10, fontWeight: 400, lineHeight: 1.25, letterSpacing: 0}
-  button: {fontFamily: SF Pro Text, fontSize: 14, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0}
-  eyebrow: {fontFamily: SF Pro Text, fontSize: 10, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0.2}
-  mono: {fontFamily: SF Mono, fontSize: 11, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0}
-rounded: {xs: 4, sm: 8, md: 12, lg: 16, xl: 20, xxl: 24, pill: 9999, full: 9999}
-spacing: {xxs: 4, xs: 8, sm: 12, md: 16, lg: 20, xl: 24, xxl: 32, section: 40}
+  hero: {fontFamily: "SF Pro Display", fontSize: 34, fontWeight: 700, lineHeight: 39}
+  title: {fontFamily: "SF Pro Display", fontSize: 28, fontWeight: 700, lineHeight: 33}
+  section: {fontFamily: "SF Pro Text", fontSize: 20, fontWeight: 700, lineHeight: 25}
+  body: {fontFamily: "SF Pro Text", fontSize: 14, fontWeight: 400, lineHeight: 19}
+  label: {fontFamily: "SF Pro Text", fontSize: 14, fontWeight: 600, lineHeight: 18}
+  caption: {fontFamily: "SF Pro Text", fontSize: 11, fontWeight: 400, lineHeight: 15}
+spacing:
+  screen-horizontal: 16
+  section-gap: 24
+  card-padding: 14
+  control-gap: 8
+rounded:
+  control: 14
+  card: 18
+  sheet: 28
+  pill: 999
 components:
-  button-primary: {backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [14, 18]}
-  button-primary-pressed: {backgroundColor: "{colors.primary-focus}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}"}
-  button-secondary: {backgroundColor: "{colors.surface-1}", textColor: "{colors.primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [12, 16]}
-  button-tertiary: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [10, 14]}
-  content-card: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 14}
-  feature-card: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 16}
-  text-input: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: [12, 14]}
-  status-badge: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.pill}", padding: [3, 7]}
-  bottom-nav: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink-subtle}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: [8, 10]}
+  primary-action: {fill: "accent-primary", text: "white semibold", shape: "rounded rectangle"}
+  secondary-action: {fill: "surface-primary", text: "accent-primary", shape: "outlined rounded rectangle"}
+  primary-card: {fill: "surface-primary", imagery: "product or category photography", shape: "rounded rectangle"}
+  navigation: {fill: "surface-primary", selected: "accent-primary", unselected: "text-secondary"}
 ---
 
 # Overview
 
-Moy Auchan is a high-density grocery system where loyalty, personalized promotions, product imagery, and fast add-to-cart controls coexist on a clean white canvas.
-
-**Key Characteristics:** green purchase actions, Auchan red loyalty emphasis, compact cards, barcode access, seasonal rails, and persistent order totals.
+Мой АШАН uses a restrained white and light-gray grocery shell, with green controlling purchase and selection while red carries the loyalty identity, discounts, and large barcode card. Product photography provides most of the texture. Compact bold headings, fixed purchase regions, and simple line-icon lists make the interface commerce-led rather than decorative.
 
 # Non-negotiable visual invariants
 
-- The reviewed screens show this treatment: green purchase actions.
-- The reviewed screens show this treatment: Auchan red loyalty emphasis.
-- The reviewed screens show this treatment: compact cards.
-- The reviewed screens show this treatment: barcode access.
-- The reviewed screens show this treatment: seasonal rails.
-- The reviewed screens show this treatment: persistent order totals.
+- Green is the primary app-owned action, checkbox, outline, and selected-state color.
+- Red is reserved for brand, loyalty, barcode, badge, and discount emphasis rather than general confirmation.
+- Product photography and category imagery occupy most browsing and detail surfaces.
+- The large red loyalty-card or barcode block forms a distinct color mass on relevant home states.
+- Product detail and cart use persistent bottom commerce controls.
+- White cards and rows sit on a light-gray canvas with restrained borders and shadows.
+- Typography remains compact and bold at headings, with dense smaller metadata beneath.
 
 # Color and surfaces
 
-### Brand & Accent
-
-Green owns selection and purchase. Auchan red identifies loyalty, discounts, active navigation, and branded promotion.
-
-### Surface
-
-White carries the catalog; pale gray separates search, nutrition, recommendations, and checkout groups.
-
-### Text
-
-Near-black prioritizes products and prices; gray supports unit price, stock, delivery, and reviews.
-
-### Semantic
-
-Use green for available and successful states, red for discounts or loyalty urgency, and amber for ratings.
+The canvas is a cool near-white or light gray, while product cards, form groups, profile rows, and sheets are white. Green marks primary buttons, checkboxes, selections, and cart commitment. Red marks the brand, loyalty card, discounts, badges, and destructive feedback. A blue information banner may appear as a local semantic state but is not a general accent. Near-black carries names and totals, gray carries units and secondary conditions, and fine dividers structure lists. Default blue controls would conflict with the green commitment hierarchy.
 
 # Typography
 
-### Font Family
-
-Use SF Pro Display for section and commerce headings and SF Pro Text for controls, content, and metadata.
-
-### Hierarchy
-
-| Token | Size | Weight | Use |
-|---|---:|---:|---|
-| display-lg | 30pt | 700 | Hero or state |
-| headline | 20pt | 700 | Section title |
-| card-title | 16pt | 600 | Primary item |
-| body | 13pt | 400 | Detail |
-| caption | 10pt | 400 | Metadata |
-
-### Principles
-
-- Lead with product name, price, and availability.
-- Keep repeated metadata aligned and visually quieter.
-- Reserve high contrast and weight for real decisions.
-
-### Note on Font Substitutes
-
-Use the platform sans; preserve compact price metrics and clear Cyrillic at small sizes.
+Use SF Pro Display for 28–34 point bold titles and SF Pro Text for shopping information. Section headings use about 20 point bold; product names, actions, and current prices use 14 point regular or semibold; unit, discount, old-price, tab, and helper text use 11–13 point captions. Keep headings compact and totals prominent without turning promotional copy into oversized display text. Dynamic Type should grow cards and rows and move grids to one column before product identity or price becomes truncated.
 
 # Screen composition
 
-### Grid & Container
-
-Discovery uses horizontal offer rails and two-column products; detail and checkout use one structured column.
-
-### Whitespace Philosophy
-
-Catalog density is intentional, but sticky actions and checkout decisions need clear separation.
+Registration and address screens use a focused single column below the safe area. Home alternates the large red loyalty block, promotional cards, and product rails. Catalog uses square category tiles with photo or graphic assets, while search and product listings use dense product grids. Product detail gives the top region to photography, then price and product data, with a fixed green cart action at the bottom. Cart and checkout use stacked rows, green selection controls, an occasional blue information band, and a persistent checkout bar. Profile and settings are compact white lists on light gray.
 
 # Navigation appearance
 
-Use five bottom destinations with Auchan red for the active item and quiet gray elsewhere.
+The bottom bar is white with small line icons and labels; green indicates the active destination and gray marks inactive items. Detail and form screens use a small black back control and compact title. Category and discount selections use green outlines, checks, or underlines. App-owned sheets use rounded top corners, while system keyboard and permission transitions remain native. A support conversation may use a small avatar, but navigation stays utility-first.
 
 # Components
 
-### Buttons
-
-Green buttons add or advance; red is reserved for branded loyalty actions and discount labels.
-
-Category and filter modes use compact chips, with a single filled or underlined selection.
-
-### Cards & Containers
-
-Product cards align image, name, rating, unit detail, current price, and stepper without heavy framing.
-
-### Inputs & Forms
-
-Search is a wide pale field with scan access; address and checkout rows use simple filled or bordered groups.
-
-### Status & Build Page
-
-Keep stock, delivery threshold, discount validity, and order progress adjacent to the affected item or total.
-
-### Navigation
-
-Use five bottom destinations with Auchan red for the active item and quiet gray elsewhere.
+Primary buttons and sticky cart or checkout actions are green rounded rectangles with white semibold labels. Secondary actions use white fill with green outline or text. The loyalty card is a large red rounded block containing high-contrast barcode or membership data. Product cards combine photo, title, price, discount, favorite, and cart/stepper controls. Category tiles are square pale cards with photo or graphic content. Cart rows use green checkboxes and quantity steppers; form and profile rows use fine dividers, line icons, and chevrons. Disabled states recede to gray while retaining explicit labels.
 
 # Imagery and icons
 
-| Level | Treatment | Use |
-|---|---|---|
-| 0 | Base canvas | Primary context |
-| 1 | Grouped surface | Cards and sections |
-| 2 | Sticky or floating action | Commitment |
-| 3 | Sheet over scrim | Focused choice |
-
-### Decorative Depth
-
-Use light surface contrast and sticky bars rather than pronounced shadows.
+Product packshots, category photos, campaign cards, and food imagery are compositionally essential. Contain packaged products consistently; crop promotional food imagery within its card. The Auchan bird mark, tiny support avatar, and campaign graphics are isolated brand assets rather than evidence of a repeatable illustration language. Functional icons are restrained lines in dark gray, green, or red. Do not replace merchandise, loyalty media, or category assets with arbitrary SF Symbols.
 
 # States
 
-Keep stock, delivery threshold, discount validity, and order progress adjacent to the affected item or total.
+Observed states include first launch, registration and keyboard, address selection, loyalty barcode, selected discount categories, populated catalog and search, product detail, cart selection and quantity, checkout information, profile, personal details, notification settings, and support. Green commitment, red loyalty/discount, white surfaces, and image-led commerce remain constant. Informational and error messages stay close to the affected row and use semantic color without recoloring the whole screen.
 
 # iOS adaptation
 
-### Touch Targets
-
-Primary actions, navigation, cards, and contextual controls remain at least 44pt.
-
-### Collapsing Strategy
-
-Retain price, add control, and delivery facts; reduce secondary offers before primary commerce content.
-
-### Image Behavior
-
-Contain product packs consistently and preserve campaign copy inside its original safe area.
-
-On iPhone, respect top and bottom safe areas, use scrolling for content that does not fit, keep interactive targets at least 44 points, and preserve the visual reading order for VoiceOver. At larger Dynamic Type sizes, allow supporting text to wrap without collapsing the dominant hierarchy. Use native sheets and permission transitions while explicitly styling app-owned surfaces to match the reference.
+Respect top and bottom safe areas, keep sticky cart and checkout actions above the home indicator, and use scroll containers for home, catalog, detail, cart, profile, and support. Keep the focused registration or address field visible above the keyboard. Preserve native system transitions while styling app-owned sheets and lists. Back, category, favorite, checkbox, stepper, chat, and navigation controls require 44-point hit areas. VoiceOver should announce product identity, price and discount, then selection and action. At large Dynamic Type, stack metadata and reduce grid columns rather than clipping. The observed UI is light-first and should not be automatically inverted.
 
 # Anti-generic checklist
 
-- Do not substitute the documented accent hierarchy with default iOS blue.
-- Do not turn the documented white canvas into a generic card stack; preserve the observed accent, density, imagery, and surface grouping.
-- Do not use an unstyled `TabView`, `Form`, or arbitrary SF Symbols when they contradict the documented navigation and component language.
-- Do not flatten the documented typography into one body-text scale.
-- Do not remove compositionally important photography or illustration while assets are pending.
-- Do not apply one corner radius to every control and surface.
-
-Source-specific guardrails retained from the review:
-
-### Do
-
-- Preserve the division between green commerce and red loyalty.
-- Keep the primary task and current state immediately legible.
-- Style native controls to inherit this visual system.
-
-### Don't
-
-- Don't use red as the default purchase color or over-card the catalog.
-- Don't hide status, constraints, or secondary conditions.
-- Don't add heavy shadows around every container.
+- Do not merge the green action and red loyalty/discount roles into one accent.
+- Do not replace product and category imagery with generic symbols or blank cards.
+- Do not omit the large red loyalty barcode mass where membership is visually central.
+- Do not ship an unstyled `TabView`, `Form`, `List`, or default checkbox.
+- Do not flatten title, product, price, discount, and unit metadata into equal type.
+- Do not give cards, buttons, fields, and sheets one universal radius or shadow.
+- Do not invent an illustration system from the bird mark, support avatar, or promo graphics.
 
 </design-context>
