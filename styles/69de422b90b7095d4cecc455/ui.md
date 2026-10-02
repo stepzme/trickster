@@ -3,166 +3,149 @@
 version: 1
 platform: iOS
 name: Coinbase-design-analysis
-description: "A bright, information-dense crypto finance interface built on white, decisive Coinbase blue, black typography, pale-gray pills and cards, compact market rows, green and red performance signals, simple line charts, and a persistent four-tab task model."
+description: "A bright crypto-finance interface built on white canvas, Coinbase blue action pills, black financial typography, pale-gray controls, compact asset rows, green/red market deltas, thin blue line charts, bottom sheets, and small authored brand/verification illustrations."
 colors:
-  primary: "#1652F0"
-  on-primary: "#FFFFFF"
-  primary-soft: "#E7EFFF"
-  ink: "#0A0B0D"
-  ink-muted: "#5B616E"
-  ink-subtle: "#9AA0AA"
   canvas: "#FFFFFF"
-  surface-1: "#F5F6F8"
-  surface-2: "#ECEEF1"
-  hairline: "#E1E3E7"
-  semantic-success: "#098551"
-  semantic-danger: "#CF334A"
-  semantic-warning: "#20345E"
-  semantic-overlay: "#000000"
+  surface-primary: "#FFFFFF"
+  surface-secondary: "#F5F6F8"
+  surface-tertiary: "#ECEFF3"
+  accent-primary: "#0052FF"
+  accent-primary-soft: "#E7F0FF"
+  accent-primary-muted: "#8DB5FF"
+  text-primary: "#0A0B0D"
+  text-secondary: "#5B616E"
+  text-tertiary: "#9AA0AA"
+  divider: "#E1E4EA"
+  success: "#098551"
+  danger: "#CF334A"
+  warning-dark: "#111827"
+  overlay: "#000000"
 typography:
-  display-xl: { fontFamily: SF Pro Display, fontSize: 36, fontWeight: 700, lineHeight: 1.05, letterSpacing: -0.7 }
-  display-lg: { fontFamily: SF Pro Display, fontSize: 30, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.5 }
-  display-md: { fontFamily: SF Pro Display, fontSize: 26, fontWeight: 700, lineHeight: 1.15, letterSpacing: -0.3 }
-  headline: { fontFamily: SF Pro Display, fontSize: 22, fontWeight: 700, lineHeight: 1.20, letterSpacing: -0.1 }
-  card-title: { fontFamily: SF Pro Text, fontSize: 17, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: SF Pro Text, fontSize: 16, fontWeight: 600, lineHeight: 1.30, letterSpacing: 0 }
-  body-lg: { fontFamily: SF Pro Text, fontSize: 16, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
-  body: { fontFamily: SF Pro Text, fontSize: 14, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
-  body-sm: { fontFamily: SF Pro Text, fontSize: 12, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
-  caption: { fontFamily: SF Pro Text, fontSize: 10, fontWeight: 400, lineHeight: 1.20, letterSpacing: 0 }
-  button: { fontFamily: SF Pro Text, fontSize: 15, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0 }
-  eyebrow: { fontFamily: SF Pro Text, fontSize: 11, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0.2 }
-  mono: { fontFamily: SF Mono, fontSize: 12, fontWeight: 500, lineHeight: 1.30, letterSpacing: 0 }
-rounded: { xs: 6, sm: 10, md: 14, lg: 18, xl: 24, xxl: 30, pill: 9999, full: 9999 }
-spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
+  hero: {fontFamily: "SF Pro Display", fontSize: 42, fontWeight: 600, lineHeight: 48}
+  metric: {fontFamily: "SF Pro Display", fontSize: 30, fontWeight: 700, lineHeight: 35}
+  title: {fontFamily: "SF Pro Display", fontSize: 26, fontWeight: 700, lineHeight: 31}
+  section: {fontFamily: "SF Pro Text", fontSize: 20, fontWeight: 700, lineHeight: 25}
+  body: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 400, lineHeight: 21}
+  label: {fontFamily: "SF Pro Text", fontSize: 14, fontWeight: 600, lineHeight: 18}
+  caption: {fontFamily: "SF Pro Text", fontSize: 12, fontWeight: 400, lineHeight: 16}
+  micro: {fontFamily: "SF Pro Text", fontSize: 10, fontWeight: 400, lineHeight: 13}
+spacing:
+  screen-horizontal: 20
+  section-gap: 24
+  card-padding: 16
+  control-gap: 10
+  row-gap: 12
+rounded:
+  control: 14
+  card: 16
+  sheet: 28
+  pill: 999
 components:
-  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: [14, 20]}
-  metric-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.md}", padding: 12 }
-  asset-row: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xs}", padding: [10, 0]}
-  bottom-sheet: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xl}", padding: 16 }
-  input: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.pill}", padding: [10, 14]}
-  navigation-bar: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xs}", height: 52 }
-  footer: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: [8, 12]}
+  primary-action: {backgroundColor: "{colors.accent-primary}", textColor: "{colors.canvas}", typography: "{typography.label}", rounded: "{rounded.pill}", height: 56}
+  secondary-action: {backgroundColor: "{colors.accent-primary-soft}", textColor: "{colors.accent-primary}", typography: "{typography.label}", rounded: "{rounded.pill}", height: 52}
+  neutral-action: {backgroundColor: "{colors.surface-secondary}", textColor: "{colors.text-primary}", typography: "{typography.label}", rounded: "{rounded.pill}", height: 44}
+  search-field: {backgroundColor: "{colors.surface-secondary}", textColor: "{colors.text-primary}", typography: "{typography.body}", rounded: "{rounded.pill}", height: 40}
+  asset-row: {backgroundColor: "{colors.canvas}", textColor: "{colors.text-primary}", typography: "{typography.body}", rounded: 0, padding: [10, 0]}
+  bottom-sheet: {backgroundColor: "{colors.canvas}", textColor: "{colors.text-primary}", typography: "{typography.body}", rounded: "{rounded.sheet}", padding: 20}
+  bottom-navigation: {backgroundColor: "{colors.canvas}", activeColor: "{colors.accent-primary}", inactiveColor: "{colors.text-primary}", height: 58}
 ---
 
 # Overview
 
-Coinbase makes a dense asset market feel approachable through a white canvas, clear blue actions, compact asset rows, and chart-led summaries. Transaction tasks stay anchored to persistent navigation.
+Coinbase uses a white, high-contrast financial shell with blue actions and compact data presentation. The recognizable look comes from a large numeric portfolio/amount hierarchy, pill controls, bottom-sheet actions, asset rows with token marks and right-aligned values, small market charts, and carefully placed blue brand artwork.
 
 # Non-negotiable visual invariants
 
-- Primary screens use White canvas with pale-gray functional modules.
-- Keep portfolio and asset values scannable.
-- Reserve blue for product action.
-- Pair market color with explicit signs and numbers.
-- Preserve legal and risk context.
-- Home stacks portfolio, onboarding, watchlist, and quick actions.
-- Trade stacks filters, ranked asset rows, market insight, and legal context.
-- Keep financial sections compact but visibly separated; do not wrap each asset row in an isolated card.
+- Keep the page background white and use pale gray only for functional modules, search, cards, and neutral buttons.
+- Reserve Coinbase blue for primary actions, active states, progress, links, and major brand surfaces.
+- Make amounts and portfolio values the dominant text on finance/task screens.
+- Keep asset rows compact: token mark at left, asset name/ticker or subtitle in the middle, value and delta aligned to the right.
+- Use green/red only for financial movement and status values, not for primary calls to action.
+- Preserve legal/risk copy as visible small text near trade and transaction areas.
+- Use bottom sheets with rounded top corners for action menus and trade choices.
+- Use authored brand/verification illustrations only in onboarding, prompts, empty states, and promo cards; do not turn them into page backgrounds.
 
 # Color and surfaces
 
-- **Primary** ({colors.primary}): Buy, deposit, active tabs, links, and progress.
-- **Primary Soft** ({colors.primary-soft}): Secondary transfer and selected backgrounds.
+The standard shell is white. Pale gray `#F5F6F8` creates search capsules, onboarding cards, metric cards, disabled buttons, and neutral pills. Hairlines are subtle and mostly appear between large sections or above persistent bottom areas.
 
-- **Canvas** ({colors.canvas}): Main home, trade, pay, and transaction screens.
-- **Surface 1** ({colors.surface-1}): Search, metrics, onboarding, and neutral buttons.
-- **Surface 2** ({colors.surface-2}): Dividers and disabled state.
-- **Hairline** ({colors.hairline}): Section boundaries.
+Coinbase blue `#0052FF` is saturated and decisive. It fills primary action pills, selected tabs, progress bars, links, and major brand splash surfaces. A pale blue tint supports secondary transfer actions and selected/soft backgrounds. Disabled blue actions reduce saturation and opacity rather than changing hue.
 
-- **Ink** ({colors.ink}): Portfolio value, asset names, and primary labels.
-- **Ink Muted** ({colors.ink-muted}): Descriptions, legal copy, and secondary values.
-- **Ink Subtle** ({colors.ink-subtle}): Placeholder and inactive state.
+Black/near-black is used for headings, portfolio values, asset names, and keypad numerals. Muted gray supports explanatory text, labels, legal copy, and placeholders. Positive deltas are green; negative deltas are red. Dark warning capsules are used for limited-time or promotional labels, with white text inside.
 
-- **Success** ({colors.semantic-success}): Positive movement and income.
-- **Danger** ({colors.semantic-danger}): Negative movement and risk.
-- **Warning** ({colors.semantic-warning}): Timed or regulatory notices.
-- **Overlay** ({colors.semantic-overlay}): Bottom-sheet focus.
+Avoid gradients in the app shell except in authored brand artwork or small promotional assets where observed. Do not introduce dark cards for ordinary finance content.
 
 # Typography
 
-- **SF Pro Display** — portfolio totals and major headings.
-- **SF Pro Text** — asset rows, actions, and explanatory content.
-- **SF Mono** — wallet addresses and technical identifiers.
+Use SF Pro Display and SF Pro Text. Portfolio amounts, payment amounts, and big numeric inputs use 30-42 pt display text with tabular numerals and generous whitespace. Screen titles use 24-26 pt bold. Section titles use 20 pt bold. Asset rows use 14-15 pt text, with semibold names and regular subtitles.
 
-Use 36 points bold for portfolio values, 22 points bold for section headlines, 17 points semibold for card titles, 14 points body, and 10–12 points legal or market metadata.
+Right-align asset prices and deltas in rows. Keep signs, currencies, APY, date ranges, fees, and crypto tickers explicit. Legal copy can be 10-12 pt but must remain readable and visible.
 
-- Align numeric columns and deltas consistently.
-- Distinguish asset name, ticker, value, and change.
-- Keep risk copy readable rather than visually hidden.
-- Use blue for action, not market direction.
+Buttons use semibold 14-15 pt labels. Search placeholders and filter chips use compact text. Onboarding hero copy can be larger and centered on the dark blue/brand intro screen, but ordinary product screens stay utilitarian and data-first.
 
-Use the platform system sans or **Inter** with tabular numerals and controlled chart labels.
-
-The hierarchy must remain legible with Dynamic Type: supporting text may wrap before the primary metric, title, or action loses its role.
+With Dynamic Type, wrap descriptive and legal copy before shrinking amounts, action labels, or row values. Maintain numeric alignment with tabular figures.
 
 # Screen composition
 
-Use a 4 points base, 16 points gutters, 10 points asset-row rhythm, 16 points card padding, and 24 points between market sections.
+Use 20 pt horizontal gutters on most screens. Top chrome is compact: menu/back control, search capsule or centered title, and small circular/line icons. Content stacks vertically with clear section boundaries and limited decoration.
 
-Home stacks portfolio, onboarding, watchlist, and quick actions. Trade stacks filters, ranked asset rows, market insight, and legal context.
+Home-style finance screens place notice panels near the top, then a large balance/portfolio metric, a compact line chart or account breakdown, quick action pills, onboarding/compliance card, watchlist, and asset rows. The chart region is thin and wide, with minimal axis chrome and blue line/dot texture.
 
-Keep financial sections compact but visibly separated; do not wrap each asset row in an isolated card.
+Trade and market screens start with the same top chrome, then segmented pill filters, compact ranked asset rows, small metric cards, market update cards, and visible legal text lower in the scroll. Rows remain list-like, not isolated cards.
 
-Charts and token marks provide visual texture; avoid atmospheric backgrounds or decorative crypto art.
+Buy/pay screens are task surfaces: large amount at top, asset/funding rows below, a numeric keypad or review rows, then a full-width blue action. Review screens use a centered token mark, bold confirmation title, fee/source rows, optional toggles, risk copy, and a bottom blue CTA.
 
-Primary iPhone screens keep the documented content grouping and vertical rhythm inside a scroll container when content exceeds the viewport. Bottom-owned actions or navigation reserve the lower safe area rather than covering content.
+Menu/settings screens are sparse white lists with black outline icons, text labels, right chevrons, and occasional large promo cards. Bottom sheets dim the underlying page and expose a white rounded sheet with icon-led action rows.
 
 # Navigation appearance
 
-Keep Home, Trade, Pay, and Transactions in the tab bar; search, menu, account, and notifications remain in the top chrome.
-
-This section governs appearance only; product behavior and information architecture come from the approved Research and Planning artifacts.
+Navigation appearance is minimal and finance-oriented: white top bars, black line icons, gray search pills, small notification badges, and blue selected indicators. Bottom navigation is white and flat with simple black icons; active state is Coinbase blue. This section specifies visual treatment only, not product navigation or task flow.
 
 # Components
 
-Primary actions are full-width blue pills; secondary actions use pale-blue or gray fills; text links remain blue.
+Primary buttons are full-width blue pills, 52-56 pt high, with white semibold labels. Secondary actions use pale blue fill with blue text. Neutral controls use pale gray fill with black text.
 
-Use onboarding cards, metric cards, asset rows, notice panels, chart regions, and bottom sheets.
+Search fields are rounded gray capsules, usually with a magnifier icon and no heavy border. Filter chips are rounded pills; selected chips use dark fill with white text, while inactive chips use pale gray fill.
 
-Search uses a gray capsule. Trade and payment forms keep amount, asset, funding source, fees, and review state clearly separated.
+Asset rows use token logos as colored circular marks, two-line text blocks, and right-aligned numeric values. Sparklines are thin and color-coded, never heavy chart widgets. Watchlists and transaction lists share the same compact row rhythm.
 
-Show positive or negative performance, regulation deadlines, pending transactions, staking state, and verification progress with label plus semantic color.
+Notice panels use a narrow blue left accent or blue info icon, small body text, and a blue link. Onboarding/compliance cards use pale gray rounded rectangles, bold task text, small illustration, and blue progress bars.
 
-Controls retain at least a 44-point interactive area. Pressed and disabled treatments should stay within the documented palette and hierarchy.
+Amount entry screens use oversized currency numerals, large keypad digits, and plain white space. Bottom sheets use a top grabber, rounded top corners, and 48-56 pt action rows with blue circular icons.
+
+Settings/menu rows use black outline icons, medium-weight labels, chevrons, and large vertical spacing. Promo cards can use strong blue artwork but should be contained within a rounded rectangle.
 
 # Imagery and icons
 
-Use token marks, small functional onboarding symbols, and contained charts. Do not make decorative imagery the page background.
+Token marks are critical content, not decoration. Keep them circular, crisp, and close to row text. Charts are functional visual texture: use thin blue/green/red lines or dotted fills, aspect-fit in their assigned area, and avoid cropped axes when labels are present.
 
-Keep token marks square and charts aspect-fit. Never crop chart axes or use market imagery as a background.
+Authored illustrations appear in onboarding, identity verification, transaction empty states, and promotional cards. They use Coinbase blue, yellow, teal, gray, and simple geometric forms. Keep them small-to-medium and contained.
 
-When imagery is part of the documented composition, it cannot be omitted while final assets are pending. A temporary asset must preserve its placement, crop, scale, and approximate visual weight.
+Use simple line icons for top chrome and settings. If using SF Symbols, adjust stroke weight, size, and color to match the observed Coinbase outline style.
 
 # States
 
-Show positive or negative performance, regulation deadlines, pending transactions, staking state, and verification progress with label plus semantic color.
+Observed states include brand splash, dark onboarding intro, iOS auth permission alert, disabled verification buttons, focused text inputs with blue border, keyboard-present forms, active tab indicators, selected filter chips, dimmed bottom-sheet overlay, loading spinner, empty transactions illustration, notification badges, positive/negative market deltas, and visible compliance notices.
 
-- **Success** ({colors.semantic-success}): Positive movement and income.
-- **Danger** ({colors.semantic-danger}): Negative movement and risk.
-- **Warning** ({colors.semantic-warning}): Timed or regulatory notices.
-- **Overlay** ({colors.semantic-overlay}): Bottom-sheet focus.
-
-Only the states documented above are specified; other states must preserve the same canvas, hierarchy, and component language without inventing a new visual system.
+Disabled actions retain the blue pill shape but become pale/desaturated. Focused fields use a clear blue outline. Empty states stay centered and illustrated, with a neutral reset action. Bottom sheets dim the page behind them while preserving the underlying layout.
 
 # iOS adaptation
 
-- Extend the documented canvas through the iPhone safe areas while keeping readable content within appropriate insets.
-- Use a vertical `ScrollView` for content that does not fit compact heights; keep documented bottom actions and navigation clear of the home indicator.
-- Keep tabs, asset rows, filter pills, sheet actions, and trade buttons at least 44 points.
-- Preserve portfolio value, primary buy or sell action, active asset, and navigation. Move insight and legal sections below core task content.
-- Present the keyboard and system permission UI natively, then return to the same visual context.
-- Preserve semantic reading order in VoiceOver and allow text to grow with Dynamic Type.
-- Preserve the documented appearance instead of introducing an unrelated light or dark palette.
+Implement with custom SwiftUI/UIKit styling rather than default grouped forms. Use scroll containers for long finance/settings screens, but keep bottom action bars and navigation clear of the home indicator.
+
+Controls need at least 44 pt touch targets. Numeric input screens should preserve the large amount area when the keyboard/keypad is present. VoiceOver order should follow amount or heading, explanatory text, field/row values, legal copy, then action.
+
+Support compact iPhone heights by moving insight cards and legal blocks lower in the scroll after the primary metric or task controls. Do not remove fees, funding source, risk text, or confirmation totals.
 
 # Anti-generic checklist
 
-- Do not use green as the primary CTA color.
-- Do not overload asset rows with card chrome.
-- Do not hide fees or funding source before confirmation.
-- Do not introduce decorative coin illustrations into the shell.
-- Do not replace the documented canvas and surfaces with a generic grouped background and uniform white cards.
-- Do not use an unstyled `TabView`, default blue tint, or arbitrary SF Symbols when they contradict the reference.
-- Do not collapse every component to one corner radius or remove compositionally important imagery.
+- Do not use default iOS blue if it is visibly lighter than Coinbase blue.
+- Do not make green the CTA color.
+- Do not place every asset row inside its own card.
+- Do not hide legal/risk copy or fee/funding details.
+- Do not replace token marks, charts, or verification illustrations with generic SF Symbols.
+- Do not use dark backgrounds for normal product screens just because onboarding has a dark blue intro.
+- Do not introduce decorative crypto coin art, gradient blobs, web nav, hover states, or marketing pricing cards.
+- Do not collapse bottom sheets into alert dialogs when a sheet is the observed visual treatment.
 
 </design-context>

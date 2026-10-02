@@ -3,142 +3,97 @@
 version: 1
 platform: iOS
 name: Poizon-design-analysis
-description: "A dense social-commerce interface with a white canvas, black utility typography, bright turquoise purchase actions, media-heavy two-column feeds, compact product metadata, and persistent marketplace navigation."
-colors: {primary: "#12C8C2", on-primary: "#FFFFFF", primary-focus: "#0AA29E", ink: "#111214", ink-muted: "#686B70", ink-subtle: "#9A9DA3", ink-tertiary: "#C5C8CC", canvas: "#FFFFFF", surface-1: "#F6F7F8", surface-2: "#EDF0F2", surface-3: "#E1E5E8", surface-4: "#D5DADF", hairline: "#E4E7E9", hairline-strong: "#CBD1D5", hairline-tertiary: "#B4BBC0", inverse-canvas: "#121416", inverse-surface-1: "#24272A", inverse-surface-2: "#363A3E", inverse-ink: "#FFFFFF", brand-secure: "#08AAA5", semantic-success: "#2CB879", semantic-overlay: "#111315"}
+description: "A dense white social-commerce interface dominated by product and user photography, compact black typography, tight two-column grids, a vivid turquoise purchase accent, and a persistent icon-and-label bottom bar."
+colors:
+  canvas: "#FFFFFF"
+  surface-primary: "#FFFFFF"
+  surface-secondary: "#F4F6F7"
+  accent-primary: "#12C8C8"
+  accent-secondary: "#10AFAF"
+  text-primary: "#111214"
+  text-secondary: "#777B80"
+  divider: "#E4E7E9"
+  destructive: "#E64545"
 typography:
-  display-xl: {fontFamily: SF Pro Display, fontSize: 34, fontWeight: 700, lineHeight: 1.06, letterSpacing: -0.7}
-  display-lg: {fontFamily: SF Pro Display, fontSize: 28, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.4}
-  display-md: {fontFamily: SF Pro Display, fontSize: 24, fontWeight: 700, lineHeight: 1.14, letterSpacing: -0.3}
-  headline: {fontFamily: SF Pro Display, fontSize: 20, fontWeight: 700, lineHeight: 1.20, letterSpacing: -0.2}
-  card-title: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0}
-  subhead: {fontFamily: SF Pro Text, fontSize: 14, fontWeight: 600, lineHeight: 1.30, letterSpacing: 0}
-  body-lg: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 400, lineHeight: 1.38, letterSpacing: 0}
-  body: {fontFamily: SF Pro Text, fontSize: 12, fontWeight: 400, lineHeight: 1.34, letterSpacing: 0}
-  body-sm: {fontFamily: SF Pro Text, fontSize: 10, fontWeight: 400, lineHeight: 1.28, letterSpacing: 0}
-  caption: {fontFamily: SF Pro Text, fontSize: 9, fontWeight: 400, lineHeight: 1.22, letterSpacing: 0}
-  button: {fontFamily: SF Pro Text, fontSize: 13, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0}
-  eyebrow: {fontFamily: SF Pro Text, fontSize: 9, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0.1}
-  mono: {fontFamily: SF Mono, fontSize: 10, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0}
-rounded: {xs: 2, sm: 6, md: 10, lg: 14, xl: 20, xxl: 26, pill: 9999, full: 9999}
-spacing: {xxs: 4, xs: 8, sm: 12, md: 16, lg: 20, xl: 24, xxl: 32, section: 40}
+  hero: {fontFamily: "SF Pro Display", fontSize: 32, fontWeight: 700, lineHeight: 36}
+  title: {fontFamily: "SF Pro Display", fontSize: 24, fontWeight: 700, lineHeight: 29}
+  section: {fontFamily: "SF Pro Text", fontSize: 18, fontWeight: 600, lineHeight: 23}
+  body: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 400, lineHeight: 20}
+  label: {fontFamily: "SF Pro Text", fontSize: 13, fontWeight: 600, lineHeight: 17}
+  caption: {fontFamily: "SF Pro Text", fontSize: 11, fontWeight: 400, lineHeight: 15}
+spacing:
+  screen-horizontal: 12
+  section-gap: 20
+  card-padding: 8
+  control-gap: 8
+rounded:
+  control: 8
+  card: 6
+  sheet: 20
+  pill: 999
 components:
-  button-primary: {backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.xs}", padding: 14 18}
-  button-primary-pressed: {backgroundColor: "{colors.primary-focus}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.xs}"}
-  button-secondary: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.xs}", padding: 12 16}
-  button-tertiary: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: 9 12}
-  product-card: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xs}", padding: 8}
-  media-card: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xs}", padding: 6}
-  text-input: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: 10 12}
-  status-badge: {backgroundColor: "{colors.surface-2}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.pill}", padding: 3 7}
-  bottom-nav: {backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: 8 8}
+  primary-action: {background: "#12C8C8", foreground: "#FFFFFF", radius: 6, minHeight: 50}
+  secondary-action: {background: "#111214", foreground: "#FFFFFF", radius: 6, minHeight: 50}
+  primary-card: {background: "#FFFFFF", radius: 6, padding: 8}
+  navigation: {background: "#FFFFFF", radius: 0, height: 56}
 ---
 
 # Overview
 
-Poizon is a dense hybrid of social feed and marketplace. White carries the interface, imagery dominates both feed and product surfaces, and a bright turquoise purchase action cuts through otherwise black and gray utility chrome.
+Poizon is intentionally dense: product and user photography fill tightly packed feeds and grids, while white surfaces and compact black type keep the interface transactional. Turquoise provides a sharp purchase and trust signal without tinting the whole app. Small radii, thin dividers, and a persistent icon-and-label bottom bar distinguish it from spacious card-first commerce.
 
 # Non-negotiable visual invariants
 
-- The principal image treatment uses two-column media feed.
-- The sampled screens consistently show dense search and category rails.
-- The principal image treatment uses large product media.
-- The sampled screens consistently show compact price and assurance metadata.
-- The sampled screens consistently show turquoise Buy now.
-- The sampled screens consistently show social likes and follows.
-- The sampled screens consistently show four destinations.
-- Preserve the media-first social-commerce density.
+- Photography occupies most of feed tiles, product cards, and the upper product-detail viewport.
+- Browsing uses tight two-column masonry or product grids with 6–8-point gaps.
+- Turquoise is reserved for primary purchase, selected commerce, or trust emphasis against neutral surfaces.
+- Product name, current price, and action hierarchy remain compact and visibly stronger than dense metadata.
+- Most cards use small 4–8-point radii and flat separation rather than large floating white containers.
+- The bottom navigation is an edge-to-edge white bar with icon-and-label items and a restrained active state.
+- Search and category rails remain shallow, dense, and visually attached to the content grid.
 
 # Color and surfaces
 
-Turquoise owns purchase, selected commerce tools, and key promotional claims. Black leads navigation, text, and secondary commerce actions.
-
-White is the continuous canvas; pale gray separates search, service facts, and sub-navigation; dark overlays appear over video or focused media.
-
-Black leads product, price, and feed captions; gray supports sales, historical price, ratings, and service assurances.
-
-Turquoise means action and marketplace trust, green confirms success, and red is limited to badges or destructive attention.
+White is the continuous canvas and primary card surface. Very pale gray separates search fields, service rows, and secondary modules; thin gray dividers organize dense content. Near-black carries text, prices, navigation, and secondary purchase actions. Bright turquoise around `#12C8C8` marks the principal commerce action and selected or trusted states; a deeper teal supports pressed states and occasional profile color. Red is limited to notification badges or destructive attention. A deep near-black splash may invert the logo, but it does not establish a global dark theme. Default blue or broad pastel card backgrounds would break the reference.
 
 # Typography
 
-Use SF Pro Display for section emphasis and SF Pro Text for compact social and marketplace metadata.
-
-- display-lg — 28 points — 700 — Major state
-- headline — 20 points — 700 — Product or section
-- card-title — 15 points — 600 — Price or content title
-- body — 12 points — 400 — Dense metadata
-- caption — 9 points — 400 — Counts and conditions
-
-- Let media and current price lead.
-- Keep commerce metadata compact and aligned.
-- Use turquoise only where action or trust must break the neutral field.
-
-Use the platform sans with compact metrics, tabular prices, and clear multilingual glyphs.
-
-The hierarchy must remain legible with Dynamic Type: supporting text may wrap before the primary metric, title, or action loses its role.
+Use SF Pro with 20–24-point titles, 16–18-point section or tab labels, 12–14-point product names and prices, and 10–12-point metadata. Price numerals are compact, bold, and tabular. Multilingual text remains tightly set and left aligned. Hierarchy comes from weight and media scale rather than oversized headings. Dynamic Type should increase row height and wrap product names while keeping price and purchase actions visible; avoid making metadata as large as section titles.
 
 # Screen composition
 
-Use a 4 points base, 6–10 points card gaps, 12 points screen gutters, and tightly packed product facts.
+Screens use roughly 12-point outer gutters and 6–8-point grid gaps. The top usually contains a shallow search field or category rail; the middle is a vertically scrolling photo grid or media-first detail; the bottom reserves space for the persistent navigation or purchase bar.
 
-Feed and search results use two columns; product detail becomes a single media-first column with a sticky bottom action bar.
-
-Density is intentional. Separation comes from imagery, thin dividers, and section rhythm rather than wide empty zones.
-
-Use product photography and video as depth; keep commerce containers flat and avoid heavy shadow.
-
-Primary iPhone screens keep the documented content grouping and vertical rhythm inside a scroll container when content exceeds the viewport. Bottom-owned actions or navigation reserve the lower safe area rather than covering content.
+Observed archetypes include a centered dark splash and white login sheet; a two-column social masonry feed; a dense two-column product catalog; a single-column detail with a large media hero followed by compact facts and a sticky paired action bar; a modular profile dashboard separated by pale dividers; and a right-side settings drawer with plain full-width rows. Media and product content, not decorative chrome, own most of the viewport.
 
 # Navigation appearance
 
-Use four bottom destinations for Dewu, Shopping, Discover, and Me, with dense top-level topic and category navigation.
-
-This section governs appearance only; product behavior and information architecture come from the approved Research and Planning artifacts.
+The persistent lower bar is white, edge to edge, and composed of four compact icon-and-label items. Active state uses stronger black or turquoise emphasis; notification badges remain small and red. Top categories appear as horizontally arranged text tabs with a thin underline. Focused panels may slide from the side with a white surface and simple close control. This section defines appearance only.
 
 # Components
 
-Use turquoise for Buy now and critical commerce action, white or black for bargaining and utility, and bare icons for social responses.
-
-Media cards combine image, short caption, author, and likes; product detail stacks media, price, title, assurances, attributes, sales, reviews, and related items.
-
-Search is a compact pale field with text, photo, and scanner entry; checkout fields remain grouped and inherit turquoise focus.
-
-Keep authenticity, price history, recent sales, return promise, size guidance, delivery, and order state close to the related decision.
-
-Controls retain at least a 44-point interactive area. Pressed and disabled treatments should stay within the documented palette and hierarchy.
+Search is a shallow pale-gray rounded field with compact leading or trailing utility icons. Category controls are text tabs with a thin selected underline. Product and feed cards are flat, small-radius photo containers followed by price, caption, author, or count metadata. The sticky purchase bar pairs a dark secondary action with a turquoise primary action; both are rectangular with modest rounding and equal height. Badges are tiny pills or dots. Profile modules use larger 16-point container corners sparingly. Drawer rows are full-width, separated by whitespace or hairlines, with a subdued disabled-looking action when observed.
 
 # Imagery and icons
 
-Feed media uses tight portrait tiles; product photography fills the upper viewport; variant thumbnails stay in a compact horizontal strip.
-
-Crop feed media consistently and contain product photography without distorting proportions.
-
-When imagery is part of the documented composition, it cannot be omitted while final assets are pending. A temporary asset must preserve its placement, crop, scale, and approximate visual weight.
+Product photography and user-generated media are the dominant imagery. Feed images use consistent portrait crops; product heroes are large and preserve the item's proportions; thumbnail strips remain compact. Functional icons are thin black outlines with turquoise reserved for active commerce. Recurring mascot-like marks are small brand identifiers, not evidence of a standalone illustration system. Imagery cannot be omitted while assets are pending; placeholders must preserve crop, density, and relative scale.
 
 # States
 
-Keep authenticity, price history, recent sales, return promise, size guidance, delivery, and order state close to the related decision.
-
-Turquoise means action and marketplace trust, green confirms success, and red is limited to badges or destructive attention.
-
-Only the states documented above are specified; other states must preserve the same canvas, hierarchy, and component language without inventing a new visual system.
+Selected top tabs gain a thin underline. Active bottom items gain stronger contrast or turquoise. Purchase bars keep stable geometry across detail states. Notification state adds a small red badge without shifting navigation. Login uses one clear turquoise action on white. Disabled or unavailable actions reduce contrast rather than changing shape. Profile and drawer surfaces remain neutral and dense.
 
 # iOS adaptation
 
-- Extend the documented canvas through the iPhone safe areas while keeping readable content within appropriate insets.
-- Use a vertical `ScrollView` for content that does not fit compact heights; keep documented bottom actions and navigation clear of the home indicator.
-- Tabs, cards, social actions, variant thumbnails, and purchase controls remain at least 44 points.
-- Preserve media, price, variant, authenticity, and Buy now; reduce secondary social counts and related content first.
-- Present the keyboard and system permission UI natively, then return to the same visual context.
-- Preserve semantic reading order in VoiceOver and allow text to grow with Dynamic Type.
-- Preserve the documented appearance instead of introducing an unrelated light or dark palette.
+Keep grid gutters and media proportions stable across compact iPhones, using adaptive two-column widths rather than scaling type with viewport width. Reserve safe-area space for the bottom bar or sticky purchase controls. Use vertical scrolling for feeds and details and horizontal scrolling for category or thumbnail rails. Every icon, tab, card action, and purchase control needs a 44-point hit target even when visually compact. Keyboard and permission transitions remain native. VoiceOver follows image description, product name, price, metadata, then actions. Dynamic Type expands rows and may reduce visible item count without removing media. Preserve the observed light appearance.
 
 # Anti-generic checklist
 
-- Do not replace product media with decorative card framing.
-- Do not use turquoise on every navigation label.
-- Do not hide price history or service conditions behind vague marketing copy.
-- Do not replace the documented canvas and surfaces with a generic grouped background and uniform white cards.
-- Do not use an unstyled `TabView`, default blue tint, or arbitrary SF Symbols when they contradict the reference.
-- Do not collapse every component to one corner radius or remove compositionally important imagery.
+- Do not replace the dense photo grid with large floating cards and generous empty space.
+- Do not use default blue tint or an unstyled `TabView`.
+- Do not expand turquoise across every label and surface.
+- Do not omit product or user media and substitute decorative symbols.
+- Do not apply large uniform radii to every tile, field, drawer, and action.
+- Do not enlarge metadata until it competes with price or imagery.
+- Do not invent a standalone mascot illustration system from small brand marks.
 
 </design-context>

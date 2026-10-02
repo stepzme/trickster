@@ -1868,8 +1868,8 @@
     "categories": [
       "Education"
     ],
-    "uiSummary": "A gamified learning path on white with saturated green progression, cyan secondary actions, chunky outlined controls, bright reward colors, circular lesson nodes, persistent resource counters, and expressive mascot scenes that turn completion, streaks, and setbacks into emotional events.",
-    "illustrationSummary": "Duolingo uses a recurring cast led by Duo the green owl to express progress, error, encouragement, streaks, and rewards as emotional moments."
+    "uiSummary": "A white, game-board learning interface with saturated green progression, chunky outlined controls, rounded bold type, persistent compact counters, bottom icon navigation, and large authored mascot art used as the main emotional and instructional visual mass.",
+    "illustrationSummary": "Duolingo uses a stable authored illustration system led by Duo and a recurring cast. The art is not decoration: it is the main visual mass for onboarding, loading, streak, completion, achievement, leaderboard introduction, profile prompts, store items, and lesson feedback."
   },
   {
     "appId": "69d4e45847a3732beebbfd48",
@@ -1879,8 +1879,8 @@
     "categories": [
       "Food and Drinks"
     ],
-    "uiSummary": "A cheerful delivery marketplace with a warm yellow discovery field, teal-green transactional actions, white restaurant surfaces, rounded image-led cards, and hand-drawn multicolor category icons. Friendly type and receipt-like checkout details keep a broad service catalog approachable.",
-    "illustrationSummary": "Glovo uses colorful hand-drawn service and category illustrations to turn a broad delivery marketplace into a friendly visual menu."
+    "uiSummary": "A delivery marketplace interface with a warm yellow discovery field, teal transactional buttons, white commerce and checkout surfaces, rounded photography-led cards, friendly heavy text, bottom icon navigation, and authored service illustrations in circular badges.",
+    "illustrationSummary": "Glovo uses a stable authored illustration system for service discovery and lightweight support states. The repeated system appears in circular category badges, cuisine chips, service shortcuts, empty-cart guidance, and small explanatory marketplace graphics."
   },
   {
     "appId": "69d7b322036d33c32dc45432",
@@ -1890,8 +1890,8 @@
     "categories": [
       "Shopping, Listings & Marketplaces"
     ],
-    "uiSummary": "A photo-led property marketplace built on white surfaces, soft gray filter fields, bold black listing facts, and unmistakable Yandex yellow for contact, save-search, and active navigation. Rounded cards and toy-like property objects soften a dense information system without competing with real-estate photography.",
-    "illustrationSummary": "Yandex Realty uses soft toy-like property objects and simple spot graphics to make service entry points approachable without competing with listing photography."
+    "uiSummary": "A white, photo-led real-estate marketplace style with Yandex yellow action bands, black price hierarchy, soft gray search and filter controls, rounded media cards, map overlays, compact property facts, and occasional pastel authored objects used as supporting accents.",
+    "illustrationSummary": "Yandex Realty uses a stable supporting illustration layer for service entry points, onboarding/prompt moments, posting choices, and promotional tiles. The illustrations are authored raster assets, not system icons. They sit beside real property photography, which remains the primary imagery for listings and details."
   },
   {
     "appId": "69de422b90b7095d4cecc455",
@@ -1901,8 +1901,8 @@
     "categories": [
       "Finance"
     ],
-    "uiSummary": "A bright, information-dense crypto finance interface built on white, decisive Coinbase blue, black typography, pale-gray pills and cards, compact market rows, green and red performance signals, simple line charts, and a persistent four-tab task model.",
-    "illustrationSummary": null
+    "uiSummary": "A bright crypto-finance interface built on white canvas, Coinbase blue action pills, black financial typography, pale-gray controls, compact asset rows, green/red market deltas, thin blue line charts, bottom sheets, and small authored brand/verification illustrations.",
+    "illustrationSummary": "Coinbase uses a recurring authored illustration layer for onboarding, account setup, identity verification, compliance prompts, empty transaction states, and promotional cards. The product shell is data-first, but these visuals are stable enough to require real art assets rather than programmatic placeholders."
   },
   {
     "appId": "69dfde4d584d9c266ddffebf",
@@ -1912,8 +1912,8 @@
     "categories": [
       "Finance"
     ],
-    "uiSummary": "A calm financial interface using a pale blue-lilac canvas, large white cards, strong black headings, PayPal blue action accents, sparse three-tab navigation, and generous empty space around focused payment tasks.",
-    "illustrationSummary": null
+    "uiSummary": "A restrained financial interface with pale blue-lilac app canvas, white task cards, heavy black headings, PayPal blue links and navigation accents, black pill commitments, sparse transaction rows, and occasional authored onboarding or permission artwork.",
+    "illustrationSummary": "PayPal shows a stable authored illustration system in onboarding: repeated large raster scenes pair simple people, commerce objects, security symbols, and saturated PayPal blue fields with minimal UI chrome. This art is separate from the financial UI components and must be produced as approved raster imagery."
   },
   {
     "appId": "69e4a3aaf374f65b8e6a6a07",
@@ -1923,7 +1923,7 @@
     "categories": [
       "Travel & Transportation"
     ],
-    "uiSummary": "A map-first car-sharing interface combining a very light 2GIS map, deep-navy control docks, vivid green booking actions, purple active-rental actions, black totals, and clean vehicle cutouts. Search, radar, car detail, tariffs, inspection, active rental, completion, long-term rental, balance, support, and zones remain operational and safety-led.",
+    "uiSummary": "A map-led car-sharing visual system with a pale 2GIS-style map, bright green booking actions, deep navy operational docks and menu sheets, purple active-rental controls, large white bottom sheets, real vehicle cutouts, and clean document/form screens.",
     "illustrationSummary": null
   },
   {
@@ -1934,8 +1934,8 @@
     "categories": [
       "Finance"
     ],
-    "uiSummary": "A playful mobile bank built from pastel lime, peach, lilac, and sand gradients; black circular actions; oversized balance numerals; and white rounded content sheets. Emoji-rich language and small cartoon finance objects make serious tasks feel informal without changing the clear transaction structure.",
-    "illustrationSummary": "Simbank uses small friendly finance cartoons and emoji-like objects inside savings education and feature onboarding. They soften banking concepts without becoming the primary interface."
+    "uiSummary": "Pastel gradient finance screens place bold balances and black action anchors above large white sheet-like surfaces, with playful mascot art and compact five-item navigation.",
+    "illustrationSummary": "Simbank uses a recurring authored mascot to explain financial concepts, anchor offers, and give empty states a friendly focal point. The system is distinct from functional icons, payment marks, photography, charts, gradients, story thumbnails, and decorative emoji."
   },
   {
     "appId": "69ea610efd74d4642d66928a",
@@ -1946,8 +1946,8 @@
       "AI",
       "Lifestyle"
     ],
-    "uiSummary": "A cinematic dark journaling interface with a pure-black canvas, lowercase white typography, acid-lime moments, oversized ambient photo-blur panels, translucent circular capture controls, and a sparse four-tab shell.",
-    "illustrationSummary": null
+    "uiSummary": "An immersive near-black journaling interface pairs lowercase white typography, acid-lime selection, large blurred photographic cards, organic vector art, and navigation that dissolves into the dark canvas.",
+    "illustrationSummary": "Pillowtalk uses a coherent authored illustration language for onboarding questions, processing, paywall or locked moments, confirmations, and pattern surfaces. These symbolic compositions are separate from lifestyle photography, blurred content cards, the three-lobed brand mark, functional icons, charts, and decorative background glow."
   },
   {
     "appId": "69ebf39b4650be1a6d2e1562",
@@ -2004,7 +2004,7 @@
     "categories": [
       "Travel & Transportation"
     ],
-    "uiSummary": "A map-first car-sharing interface built from cool cobalt blue, white floating sheets, black utility type, bright pink tariff contrast, and realistic vehicle cutouts. Discovery, reservation, inspection, active rental, parking, support, and completion remain centered on the live map and current car state.",
+    "uiSummary": "A map-first mobility interface layering crisp white rounded sheets, realistic vehicle imagery, compact black utility type, and royal-blue actions over cool gray-blue cartography, with sparse floating controls and an icon-led bottom tool strip.",
     "illustrationSummary": null
   },
   {
@@ -2015,7 +2015,7 @@
     "categories": [
       "Shopping, Listings & Marketplaces"
     ],
-    "uiSummary": "A dense social-commerce interface with a white canvas, black utility typography, bright turquoise purchase actions, media-heavy two-column feeds, compact product metadata, and persistent marketplace navigation.",
+    "uiSummary": "A dense white social-commerce interface dominated by product and user photography, compact black typography, tight two-column grids, a vivid turquoise purchase accent, and a persistent icon-and-label bottom bar.",
     "illustrationSummary": null
   },
   {
@@ -2026,8 +2026,8 @@
     "categories": [
       "Finance"
     ],
-    "uiSummary": "A two-mode personal-finance UI: cinematic violet-on-plum onboarding and subscription screens transition into a bright, information-dense dashboard. Purple gradients carry primary actions and premium emphasis; white cards, pale gray canvas, and compact system typography organize accounts, transactions, saving, payments, investments, and credit. Luminous 3D objects make abstract financial benefits tangible without entering dense data views.",
-    "illustrationSummary": "Emma uses luminous 3D objects to turn financial concepts into approachable, premium-looking scenes. A soft gummy-bear mascot introduces the brand; later scenes depict rent, savings, investing, membership, and product benefits."
+    "uiSummary": "A two-register finance interface pairing cinematic near-black plum entry screens and glossy imagery with a pale grey working canvas, softly raised white cards, compact rounded type, vivid violet actions, and a five-item bottom bar.",
+    "illustrationSummary": null
   },
   {
     "appId": "69fb2ddb2340dc30671b2c7c",
@@ -2038,8 +2038,8 @@
       "Lifestyle",
       "Productivity"
     ],
-    "uiSummary": "A gentle visual planner built from warm white canvas, editorial serif headings, soft lilac, lime, blush, and aqua task bands, floating pill controls, circular progress, and friendly miniature illustrations. The system feels calm and personal while keeping daily structure explicit.",
-    "illustrationSummary": "Tiimo uses a gentle illustration system for tasks, reflection, learning, and supportive guidance."
+    "uiSummary": "A warm, spacious planner combining editorial serif headings, neutral sans controls, pastel task fields, circular progress, a floating pill navigation dock, and friendly lavender-and-linework illustrations on near-white surfaces.",
+    "illustrationSummary": "Tiimo uses a stable authored image language across onboarding, tasks, focus, statistics, and supportive guidance. It combines loose black line illustration, soft lavender fields, pastel object icons, circular progress motifs, and a recurring rounded purple mascot. Imagery makes planning approachable while leaving task structure legible."
   },
   {
     "appId": "69fc20ace6e88417a3da41fc",
@@ -2049,8 +2049,8 @@
     "categories": [
       "Utilities"
     ],
-    "uiSummary": "A light mobile browser with a faint blush canvas, white floating surfaces, black utility controls, and an Alice pink-to-coral accent. Rounded bottom search, translucent sheets, compact shortcuts, and high-density web content balance a soft AI-forward entry experience with practical browsing tools.",
-    "illustrationSummary": "Yandex Browser uses soft 3D product symbols and floating interface fragments to explain AI-assisted browsing."
+    "uiSummary": "A light browser shell built from pale blush-to-white fields, floating white search and tool surfaces, compact monochrome chrome, black pill actions, pink AI accents, and dense page content anchored by bottom controls.",
+    "illustrationSummary": null
   },
   {
     "appId": "69fcbe1693521b8feae0e767",
@@ -2060,8 +2060,8 @@
     "categories": [
       "Productivity"
     ],
-    "uiSummary": "A soft playful focus timer with a warm cream-to-peach canvas, dark taupe controls, white pill panels, rounded pastel charts, and a growing crowd of expressive tomato characters that turns sessions, breaks, goals, and statistics into a collectible visual ritual.",
-    "illustrationSummary": "FocusPomo uses expressive tomato and citrus characters plus trophy motifs to turn completed sessions into a warm collectible garden."
+    "uiSummary": "A warm focus timer built from cream and beige fields, orange-coral actions, muted brown rounded type, softly shadowed cards, oversized timer numerals, and expressive tomato mascots that recur through progress and rewards.",
+    "illustrationSummary": "FocusPomo has a stable authored mascot system built around expressive tomato characters and warm reward objects. The characters turn elapsed sessions and progress into a visible collectible world across splash, timer, completion, statistics, and promotional contexts."
   },
   {
     "appId": "69ff0f06482a67259bc45fd0",

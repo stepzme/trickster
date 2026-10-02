@@ -3,130 +3,107 @@
 version: 1
 platform: iOS
 name: FocusPomo-design-analysis
-description: "A soft playful focus timer with a warm cream-to-peach canvas, dark taupe controls, white pill panels, rounded pastel charts, and a growing crowd of expressive tomato characters that turns sessions, breaks, goals, and statistics into a collectible visual ritual."
-colors: { primary: "#5B5249", on-primary: "#FFFFFF", primary-soft: "#EEE8E1", accent: "#F28755", accent-yellow: "#F6D94A", ink: "#514B45", ink-muted: "#8C8580", ink-subtle: "#BBB5B0", canvas: "#FFF4E8", surface-1: "#FFFFFF", surface-2: "#F1EDE8", hairline: "#E5DED7", semantic-success: "#89B84A", semantic-warning: "#F4C84B", semantic-danger: "#E46C5D", semantic-overlay: "#000000" }
+description: "A warm focus timer built from cream and beige fields, orange-coral actions, muted brown rounded type, softly shadowed cards, oversized timer numerals, and expressive tomato mascots that recur through progress and rewards."
+colors:
+  canvas: "#FFF4E8"
+  surface-primary: "#FFFFFF"
+  surface-secondary: "#F0EAE3"
+  accent-primary: "#F18452"
+  accent-secondary: "#F6D64A"
+  text-primary: "#514A44"
+  text-secondary: "#8B837D"
+  divider: "#E5DDD5"
+  destructive: "#DF6758"
 typography:
-  display-xl: { fontFamily: SF Pro Rounded, fontSize: 56, fontWeight: 400, lineHeight: 1.00, letterSpacing: -1.0 }
-  display-lg: { fontFamily: SF Pro Rounded, fontSize: 38, fontWeight: 700, lineHeight: 1.08, letterSpacing: -0.5 }
-  display-md: { fontFamily: SF Pro Rounded, fontSize: 28, fontWeight: 700, lineHeight: 1.15, letterSpacing: -0.2 }
-  headline: { fontFamily: SF Pro Rounded, fontSize: 22, fontWeight: 700, lineHeight: 1.20, letterSpacing: 0 }
-  card-title: { fontFamily: SF Pro Rounded, fontSize: 17, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: SF Pro Rounded, fontSize: 16, fontWeight: 600, lineHeight: 1.30, letterSpacing: 0 }
-  body-lg: { fontFamily: SF Pro Rounded, fontSize: 16, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
-  body: { fontFamily: SF Pro Rounded, fontSize: 14, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
-  body-sm: { fontFamily: SF Pro Rounded, fontSize: 12, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
-  caption: { fontFamily: SF Pro Rounded, fontSize: 10, fontWeight: 500, lineHeight: 1.20, letterSpacing: 0 }
-  button: { fontFamily: SF Pro Rounded, fontSize: 15, fontWeight: 650, lineHeight: 1.20, letterSpacing: 0 }
-  eyebrow: { fontFamily: SF Pro Rounded, fontSize: 11, fontWeight: 650, lineHeight: 1.20, letterSpacing: 0.2 }
-  mono: { fontFamily: SF Mono, fontSize: 12, fontWeight: 500, lineHeight: 1.30, letterSpacing: 0 }
-rounded: { xs: 8, sm: 12, md: 16, lg: 22, xl: 28, xxl: 36, pill: 9999, full: 9999 }
-spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
+  hero: {fontFamily: "SF Pro Rounded", fontSize: 58, fontWeight: 400, lineHeight: 62}
+  title: {fontFamily: "SF Pro Rounded", fontSize: 32, fontWeight: 700, lineHeight: 38}
+  section: {fontFamily: "SF Pro Rounded", fontSize: 22, fontWeight: 700, lineHeight: 27}
+  body: {fontFamily: "SF Pro Rounded", fontSize: 16, fontWeight: 400, lineHeight: 22}
+  label: {fontFamily: "SF Pro Rounded", fontSize: 15, fontWeight: 600, lineHeight: 20}
+  caption: {fontFamily: "SF Pro Rounded", fontSize: 12, fontWeight: 400, lineHeight: 17}
+spacing:
+  screen-horizontal: 16
+  section-gap: 28
+  card-padding: 16
+  control-gap: 12
+rounded:
+  control: 16
+  card: 22
+  sheet: 30
+  pill: 999
 components:
-  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: [14, 22]}
-  timer-card: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.display-xl}", rounded: "{rounded.xl}", padding: 24 }
-  stat-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 16 }
-  input: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 12 }
-  navigation-bar: { backgroundColor: "transparent", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xs}", height: 48 }
-  footer: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.pill}", padding: [8, 12]}
+  primary-action: {fill: "orange-coral or dark taupe", shape: "wide pill", text: "high-contrast semibold"}
+  secondary-action: {fill: "pale beige or white", shape: "pill", text: "muted brown"}
+  primary-card: {fill: "white or cream", shape: "large rounded rectangle", elevation: "soft diffuse"}
+  navigation: {fill: "light unobtrusive controls", selected: "orange or dark taupe", geometry: "pills and circles"}
 ---
 
 # Overview
 
-FocusPomo turns focused time into a warm collectible garden of expressive tomatoes and soft statistics.
+FocusPomo turns a timer into a warm collectible scene. Cream and beige fill most of the viewport, oversized rounded numerals remain the strongest information, and orange tomato characters accumulate beneath or around time and progress. White cards, muted brown text, pastel charts, and very soft shadows keep statistics, calendar, settings, and forms coherent without losing the playful mascot world.
 
 # Non-negotiable visual invariants
 
-- Keep time and current tag visible.
-- Use tomato count as a secondary progress signal.
-- Make session interruption explicit.
-- Timer centers time above a tomato field; summary stacks rounded metric, chart, tag, and detail cards.
-- Use calm open space during focus and denser playful collections only in progress views.
+- The active timer is the dominant typographic mass, centered with generous calm space around it.
+- Warm cream or beige is the large background field; pure white is reserved for cards, sheets, and inputs.
+- Orange-coral is the main action and mascot accent, paired with muted brown text rather than black.
+- Rounded tomato characters visibly recur in timer, completion, reward, and progress contexts.
+- Controls, cards, sheets, charts, and selectors use soft high-radius geometry and diffuse separation.
+- Statistics and calendar screens increase information density but retain warm palette, rounded type, and playful progress marks.
+- Primary actions remain high contrast and readable even when mascot imagery is prominent.
 
 # Color and surfaces
 
-Use dark taupe for primary control, tomato orange for personality, and yellow for breaks or achievements.
+The canvas is warm cream-to-peach, occasionally deepening around promotional or reward content. Pure white and pale beige form elevated cards, grouped settings, inputs, and sheets. Orange-coral anchors active actions and tomato imagery; yellow supports breaks, rewards, and attention. Text is dark warm taupe, with medium brown-grey for secondary labels and pale neutral for disabled content.
 
-Use peach-cream canvas, white cards, and pale taupe secondary controls.
-
-Use dark warm gray for time and headings, medium gray for metadata, and pale gray for disabled state.
-
-Use green for positive trend, yellow for attention, and coral for abandoned or blocked state.
+Charts may add restrained green, pink, blue, or yellow series while remaining pastel. Green signals positive progress; coral-red marks destructive or abandoned states. Dividers are low-contrast and often replaced by spacing. Cool system grey, default blue, stark black text, or saturated full-screen orange would break the observed warmth.
 
 # Typography
 
-Use SF Pro Rounded for the whole experience and SF Mono only for technical values.
+Rounded sans typography is used throughout. Timer numerals are dramatically oversized and lighter in weight; section and reward headings are chunky and bold; controls and explanatory copy are smaller and muted. Time, counts, and durations use clear proportional or tabular alignment. Most content is centered in timer/reward contexts and left-aligned in cards, settings, and forms.
 
-Use 56 points for the timer, 28–38 points for achievements, 22 points for sections, 14–17 points for controls and stats.
-
-Keep time dominant, labels warm and concise, and statistics readable despite the playful treatment.
-
-Use Nunito Sans or Arial Rounded when SF Pro Rounded is unavailable.
-
-The hierarchy must remain legible with Dynamic Type: supporting text may wrap before the primary metric, title, or action loses its role.
+Use SF Pro Rounded for the hierarchy. Map timer numerals to a custom large-title style, major summaries to title, card headings to title 3/headline, controls to callout, and metadata to caption. Dynamic Type should expand supporting cards and form rows while keeping time, current selection, and primary action visually dominant.
 
 # Screen composition
 
-Use a 4 points base, 16 points gutters, 16 points card padding, and generous vertical space around the timer.
+Timer screens use a sparse upper and middle field: small top controls, huge centered time, and a tomato pile or mascot zone below, followed by a prominent action. Onboarding combines a central mascot or device/watch mockup with a bottom orange pill. Statistics stack large rounded metric and chart cards; calendars place a compact day rail above vertically stacked colored blocks; settings use rounded grouped panels; forms and pickers rise in large bottom sheets.
 
-Timer centers time above a tomato field; summary stacks rounded metric, chart, tag, and detail cards.
-
-Use calm open space during focus and denser playful collections only in progress views.
-
-Tomato crowds, trophy cards, soft gradients, and pastel stacked bars create depth.
-
-Primary iPhone screens keep the documented content grouping and vertical rhythm inside a scroll container when content exceeds the viewport. Bottom-owned actions or navigation reserve the lower safe area rather than covering content.
+Use about 16-point side insets, 12–16-point gaps within groups, and 24–32-point gaps between timer, imagery, cards, and actions. Scroll longer analytics, settings, and forms while reserving safe-area space for bottom actions. Dense progress views may use more characters or marks, but active focus screens remain calm and open.
 
 # Navigation appearance
 
-Timer, summary, calendar, and settings remain directly reachable through light floating controls.
-
-This section governs appearance only; product behavior and information architecture come from the approved Research and Planning artifacts.
+Navigation chrome is visually light: small circular or pill top controls, a rounded day selector, compact plus actions, and contextual sheet controls. Modal sheets are white or cream with large top radii and grab handles. Selectors and dropdowns are rounded popovers with clear orange or dark selected state. Native switches live inside soft cards. This defines appearance only, not destinations or sequence.
 
 # Components
 
-Use dark taupe pills for Start, Break, and confirmation; secondary actions use pale rounded fills.
+Primary actions are wide orange-coral or dark taupe pills with high-contrast semibold labels. Secondary controls use white or beige fills. Timer composition combines oversized time, short context, mascot imagery, and one clear action rather than nesting them in a generic card. Statistics cards use large radii, pale chart fills, compact legends, and one strong number.
 
-Use timer stage, trophy card, summary metrics, stacked chart, tag legend, tomato grid, and subscription banner.
-
-Tag and schedule forms use soft white fields, colored swatches, and clear duration controls.
-
-Show focusing, break, completed, abandoned, goal, archived tag, blocked apps, and subscription states explicitly.
-
-Controls retain at least a 44-point interactive area. Pressed and disabled treatments should stay within the documented palette and hierarchy.
+Calendar blocks are softly colored rounded rectangles beneath a pill day selector. Tag rows use a small color cue, label, and explicit checkmark selection. Settings groups use spacious rows, muted icons, and native switches. Add-session forms and date/time pickers appear in large sheets, with white rounded fields and clear orange focus. Disabled or locked content becomes pale but retains structure.
 
 # Imagery and icons
 
-Use flat rounded fruit characters with simple faces, tiny limbs, and varied scale to show accumulated sessions.
+The authored tomato characters are a structural visual layer, not decoration. Soft rounded tomatoes with tiny faces and limbs appear singly as a mascot, in piles beneath the timer, as repeated progress marks, and alongside rewards or trophies. They use warm orange-red bodies, green leaves, cream highlights, and simple dimensional shading. Product mockups in onboarding are separate photographic/rendered content.
 
-Keep fruit characters fully visible and trophy art contained in its card.
-
-When imagery is part of the documented composition, it cannot be omitted while final assets are pending. A temporary asset must preserve its placement, crop, scale, and approximate visual weight.
+Mascot imagery may occupy roughly a quarter of a timer or reward screen and must not be omitted while assets are pending. Any temporary asset must preserve placement, count/density, crop, palette, and visual weight. Utility icons remain small and quiet so they do not compete with time or characters.
 
 # States
 
-Show focusing, break, completed, abandoned, goal, archived tag, blocked apps, and subscription states explicitly.
-
-Use green for positive trend, yellow for attention, and coral for abandoned or blocked state.
-
-Only the states documented above are specified; other states must preserve the same canvas, hierarchy, and component language without inventing a new visual system.
+Observed states include notification permission, active focus, completion/reward, subscription offer, locked chart/calendar banners, selected tag rows, settings toggles, add-session forms, and date/time pickers. Active states use orange or dark taupe; disabled and locked states use pale beige/grey; positive progress may use green or yellow; destructive actions use coral-red. The warm canvas, rounded typography, and mascot language remain consistent.
 
 # iOS adaptation
 
-- Extend the documented canvas through the iPhone safe areas while keeping readable content within appropriate insets.
-- Use a vertical `ScrollView` for content that does not fit compact heights; keep documented bottom actions and navigation clear of the home indicator.
-- Keep timer, start, break, tags, dates, and settings at least 44 points.
-- Preserve time, tag, start or stop, and session state; move analytics below the active timer.
-- Present the keyboard and system permission UI natively, then return to the same visual context.
-- Preserve semantic reading order in VoiceOver and allow text to grow with Dynamic Type.
-- Preserve the documented appearance instead of introducing an unrelated light or dark palette.
+Extend the warm canvas through safe areas. Keep active time and primary action visible on compact heights, reducing nonessential gaps before shrinking the timer. Scroll analytics, calendars, settings, and forms; reserve bottom inset for sheet actions or persistent controls. Present notification prompts, keyboards, and pickers natively, then return to the same warm visual context.
+
+All icon buttons, day items, tag rows, switches, and timer controls need at least 44-point targets. VoiceOver order should announce timer/state, current tag or context, primary action, then mascot/progress summary. Dynamic Type expands cards vertically. Preserve the observed warm light appearance rather than inventing a cool or unrelated dark theme.
 
 # Anti-generic checklist
 
-- Do not animate characters during deep focus.
-- Do not hide exact duration behind illustration.
-- Do not over-saturate the calm canvas.
-- Do not replace the documented canvas and surfaces with a generic grouped background and uniform white cards.
-- Do not use an unstyled `TabView`, default blue tint, or arbitrary SF Symbols when they contradict the reference.
-- Do not collapse every component to one corner radius or remove compositionally important imagery.
+- Do not replace the warm cream field with a generic grouped-system grey background.
+- Do not hide the exact timer behind mascot art or a generic progress ring.
+- Do not omit tomato imagery or substitute emoji, SF Symbols, or programmatic fruit shapes.
+- Do not use default blue tint, unstyled `TabView`, or sharp rectangular controls.
+- Do not turn every section into the same white card or use one radius everywhere.
+- Do not over-saturate the calm focus surface or make charts louder than the timer.
+- Do not add motivational copy that duplicates visible time, progress, tags, or completion state.
 
 </design-context>

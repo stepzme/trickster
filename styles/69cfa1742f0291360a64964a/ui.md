@@ -3,168 +3,122 @@
 version: 1
 platform: iOS
 name: Duolingo-design-analysis
-description: "A gamified learning path on white with saturated green progression, cyan secondary actions, chunky outlined controls, bright reward colors, circular lesson nodes, persistent resource counters, and expressive mascot scenes that turn completion, streaks, and setbacks into emotional events."
+description: "A white, game-board learning interface with saturated green progression, chunky outlined controls, rounded bold type, persistent compact counters, bottom icon navigation, and large authored mascot art used as the main emotional and instructional visual mass."
 colors:
-  primary: "#58CC02"
-  on-primary: "#FFFFFF"
-  primary-soft: "#DDF8C7"
-  accent: "#1CB0F6"
-  accent-purple: "#CE82FF"
-  ink: "#3C3C3C"
-  ink-muted: "#777777"
-  ink-subtle: "#AFAFAF"
   canvas: "#FFFFFF"
-  surface-1: "#F7F7F7"
-  surface-2: "#E5E5E5"
-  hairline: "#D7D7D7"
-  semantic-success: "#58CC02"
-  semantic-warning: "#FFC800"
-  semantic-danger: "#FF4B4B"
-  semantic-overlay: "#000000"
+  surface-primary: "#FFFFFF"
+  surface-secondary: "#F7F7F7"
+  surface-disabled: "#E5E5E5"
+  accent-primary: "#58CC02"
+  accent-secondary: "#1CB0F6"
+  accent-purple: "#CE82FF"
+  accent-warning: "#FFC800"
+  accent-danger: "#FF4B4B"
+  text-primary: "#3C3C3C"
+  text-secondary: "#777777"
+  text-tertiary: "#AFAFAF"
+  divider: "#E5E5E5"
+  outline: "#D7D7D7"
+  overlay: "#000000"
 typography:
-  display-xl: { fontFamily: DIN Round, fontSize: 40, fontWeight: 800, lineHeight: 1.05, letterSpacing: -0.5 }
-  display-lg: { fontFamily: DIN Round, fontSize: 34, fontWeight: 800, lineHeight: 1.10, letterSpacing: -0.3 }
-  display-md: { fontFamily: DIN Round, fontSize: 28, fontWeight: 800, lineHeight: 1.15, letterSpacing: -0.2 }
-  headline: { fontFamily: DIN Round, fontSize: 22, fontWeight: 800, lineHeight: 1.20, letterSpacing: 0 }
-  card-title: { fontFamily: DIN Round, fontSize: 18, fontWeight: 700, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: DIN Round, fontSize: 16, fontWeight: 700, lineHeight: 1.30, letterSpacing: 0 }
-  body-lg: { fontFamily: DIN Round, fontSize: 17, fontWeight: 500, lineHeight: 1.40, letterSpacing: 0 }
-  body: { fontFamily: DIN Round, fontSize: 15, fontWeight: 500, lineHeight: 1.40, letterSpacing: 0 }
-  body-sm: { fontFamily: DIN Round, fontSize: 13, fontWeight: 500, lineHeight: 1.30, letterSpacing: 0 }
-  caption: { fontFamily: DIN Round, fontSize: 11, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0 }
-  button: { fontFamily: DIN Round, fontSize: 15, fontWeight: 800, lineHeight: 1.20, letterSpacing: 0.4 }
-  eyebrow: { fontFamily: DIN Round, fontSize: 12, fontWeight: 800, lineHeight: 1.20, letterSpacing: 0.5 }
-  mono: { fontFamily: SF Mono, fontSize: 12, fontWeight: 500, lineHeight: 1.30, letterSpacing: 0 }
-rounded: { xs: 8, sm: 12, md: 16, lg: 20, xl: 26, xxl: 32, pill: 9999, full: 9999 }
-spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
+  hero: {fontFamily: "Nunito Sans", fontSize: 40, fontWeight: 800, lineHeight: 44}
+  title: {fontFamily: "Nunito Sans", fontSize: 28, fontWeight: 800, lineHeight: 34}
+  section: {fontFamily: "Nunito Sans", fontSize: 22, fontWeight: 800, lineHeight: 27}
+  body: {fontFamily: "Nunito Sans", fontSize: 17, fontWeight: 600, lineHeight: 24}
+  label: {fontFamily: "Nunito Sans", fontSize: 15, fontWeight: 800, lineHeight: 20}
+  caption: {fontFamily: "Nunito Sans", fontSize: 12, fontWeight: 700, lineHeight: 16}
+spacing:
+  screen-horizontal: 16
+  section-gap: 32
+  card-padding: 16
+  control-gap: 12
+rounded:
+  control: 14
+  card: 18
+  sheet: 24
+  pill: 999
 components:
-  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.md}", padding: [14, 18]}
-  lesson-node: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.card-title}", rounded: "{rounded.full}", padding: 14 }
-  answer-tile: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 14 }
-  reward-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 16 }
-  input: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.body-lg}", rounded: "{rounded.md}", padding: 14 }
-  navigation-bar: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink}", typography: "{typography.caption}", rounded: "{rounded.xs}", height: 52 }
-  footer: { backgroundColor: "{colors.canvas}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: [8, 10]}
+  primary-action: {backgroundColor: "{colors.accent-primary}", textColor: "{colors.surface-primary}", typography: "{typography.label}", rounded: "{rounded.control}", padding: [14, 18]}
+  secondary-action: {backgroundColor: "{colors.surface-primary}", textColor: "{colors.accent-primary}", typography: "{typography.label}", rounded: "{rounded.control}", borderColor: "{colors.outline}", padding: [13, 18]}
+  primary-card: {backgroundColor: "{colors.surface-primary}", textColor: "{colors.text-primary}", typography: "{typography.body}", rounded: "{rounded.control}", borderColor: "{colors.outline}", padding: 14}
+  navigation: {backgroundColor: "{colors.surface-primary}", textColor: "{colors.text-tertiary}", selectedColor: "{colors.accent-secondary}", typography: "{typography.caption}", height: 54}
 ---
 
 # Overview
 
-Duolingo turns learning into a colorful progression game. A winding path, chunky controls, resource counters, and mascot reactions make every lesson and reward feel tangible.
+Duolingo's sampled iOS screens are built as a friendly game interface rather than a plain form app. White space dominates most screens, while green marks progress, available primary actions, and the active lesson path. The recognisable look comes from rounded bold type, large outlined answer controls, circular lesson nodes with soft shadows, compact resource counters, and authored mascot scenes that carry loading, permission, reward, streak, and profile prompts.
 
 # Non-negotiable visual invariants
 
-- The recurring color treatment uses Bright green progression and primary actions.
-- Focus each lesson on one clear decision.
-- Celebrate meaningful progress visually.
-- Pair semantic color with explicit text.
-- Keep resource counters persistent.
-- Home is a centered winding path under counters and a module banner.
-- Lessons become a prompt, answer area, progress bar, and bottom action.
-- Leave open white space around one learning decision at a time; reward screens may become visually full.
+- Large areas remain white; color is concentrated in green progression, cyan secondary actions, badges, and character art.
+- Primary buttons are full-width rounded blocks with uppercase bold labels and a darker bottom edge or shadow.
+- Choice rows and answer tiles use white fills, thick light-gray outlines, rounded corners, and generous vertical spacing.
+- The learning path is a centered vertical chain of circular nodes with disabled gray steps and a saturated active node.
+- Mascot or cast artwork occupies the visual center of onboarding, loading, completion, streak, reward, and prompt panels.
+- Top status areas use compact counters with tiny flags, flames, gems, or energy symbols instead of large headers.
+- Bottom navigation uses colorful custom icons with the selected item outlined or filled, not default blue tab styling.
 
 # Color and surfaces
 
-- **Primary** ({colors.primary}): Progress, continue, correct state, and active lesson.
-- **Cyan Accent** ({colors.accent}): Secondary progression and links.
-- **Purple Accent** ({colors.accent-purple}): Premium and special modes.
+The base canvas is pure white across onboarding, lessons, profile, settings, and ranking screens. Pale gray appears as progress tracks, disabled buttons, locked path nodes, secondary labels, and dividers. Primary green is the dominant action and progress color: start buttons, lesson nodes, progress fills, active course markers, and section banners. Cyan is reserved for secondary positive actions such as reward continuation, profile completion, and upward shortcuts. Purple, pink, yellow, and orange appear as reward, premium, streak, and character-support accents.
 
-- **Canvas** ({colors.canvas}): Path, lessons, and profile.
-- **Surface 1** ({colors.surface-1}): Cards and neutral answer state.
-- **Surface 2** ({colors.surface-2}): Disabled nodes and borders.
-- **Hairline** ({colors.hairline}): Control outlines.
-
-- **Ink** ({colors.ink}): Prompts, titles, and answer text.
-- **Ink Muted** ({colors.ink-muted}): Explanations and supporting detail.
-- **Ink Subtle** ({colors.ink-subtle}): Locked and inactive state.
-
-- **Success** ({colors.semantic-success}): Correct and completed.
-- **Warning** ({colors.semantic-warning}): Streak and reward urgency.
-- **Danger** ({colors.semantic-danger}): Incorrect and depleted state.
-- **Overlay** ({colors.semantic-overlay}): Modal focus.
+Controls rely on visible material separation: answer cards have a white fill with a gray border and a subtle lower shadow; disabled actions turn pale gray with muted text; modal overlays dim the full screen to keep the native or custom sheet in focus. Generic system blue, grouped gray table backgrounds, or borderless text buttons would visibly break the reference.
 
 # Typography
 
-- **DIN Round** — rounded learning, reward, and navigation voice.
-- **SF Mono** — fixed-width notation in code or math when required.
+Use a rounded, heavy sans as the primary voice. If the exact rounded brand type is unavailable, use Nunito Sans, Arial Rounded, or SF Pro Rounded rather than default SF Pro alone. Prompts and reward titles are bold and compact, usually 22 to 28 points. Body explanations are medium gray and centered on quiet screens, while answer text is heavier and left aligned inside choices. Button labels are uppercase, centered, and high weight.
 
-Use 34–40 points extra-bold for reward moments, 22 points for prompts, 18 points for cards, 15–17 points lesson copy, and 11–13 points counters.
-
-- Keep instructions short and direct.
-- Use uppercase only for compact action labels.
-- Pair friendly rounded type with strong hierarchy.
-- Keep answer text large enough for scanning.
-
-Use **Nunito Sans** or **Arial Rounded** when DIN Round is unavailable.
-
-The hierarchy must remain legible with Dynamic Type: supporting text may wrap before the primary metric, title, or action loses its role.
+Numerals in counters and ranks remain compact and aligned with small icons. Long answer labels wrap inside their tile instead of shrinking into illegibility. With Dynamic Type, keep the prompt, selected answer, and bottom action readable first; supporting counters and secondary explanatory copy may wrap or move lower.
 
 # Screen composition
 
-Use a 4 points base, 16 points screen gutters, 12 points answer gaps, and generous vertical distance between path nodes.
+The common composition uses the iPhone status bar above a narrow top strip: back or close control at the left, a slim progress rail or compact resource counters near the top, then a single main decision area. Onboarding screens use 16 point side gutters, a small mascot bubble near the top of content, stacked rounded choices, and a pinned bottom action. Lesson screens keep the progress bar high, a large prompt near the upper third, one focused answer area in the middle, and a full-width validation button above the home indicator.
 
-Home is a centered winding path under counters and a module banner. Lessons become a prompt, answer area, progress bar, and bottom action.
-
-Leave open white space around one learning decision at a time; reward screens may become visually full.
-
-Characters, stars, chests, ribbons, and colored stage backgrounds provide celebration and progression depth.
-
-Primary iPhone screens keep the documented content grouping and vertical rhythm inside a scroll container when content exceeds the viewport. Bottom-owned actions or navigation reserve the lower safe area rather than covering content.
+Home screens replace a conventional list with a centered vertical game path. A bright rounded module banner sits near the top, the active node floats below it, and disabled nodes step down the page in a loose curve with gray mascot cameos and soft shadows. Profile, leaderboard, course, and settings screens are still white and list-like, but they use the same bold rounded text, custom icons, medal art, outlined rows, and compact dividers. Scroll views should preserve the bottom navigation or bottom action reserve so content never hides under the home indicator.
 
 # Navigation appearance
 
-Persistent bottom navigation covers learning path, practice, leagues, social, profile, and more; resources stay at the top.
-
-This section governs appearance only; product behavior and information architecture come from the approved Research and Planning artifacts.
+Top controls are visually light: gray close or back glyphs, slim progress tracks, and compact counters on white. The bottom bar is white with a hairline separator, evenly spaced custom icons, small labels when present, and a bright selected treatment such as a cyan rounded outline, colored fill, or notification dot. Modal and native permission surfaces sit over a dimmed version of the same Duolingo screen rather than switching to a separate visual theme.
 
 # Components
 
-Primary actions are wide green or cyan blocks with a darker lower edge. Secondary buttons are white with thick gray outlines.
+Primary action: full-width rounded rectangle, saturated green or cyan fill, white uppercase bold text, and a subtle darker bottom edge. Disabled action: same geometry, pale gray fill, muted gray uppercase text.
 
-Use lesson nodes, answer tiles, reward cards, streak panels, league rows, chests, and mascot feedback scenes.
+Choice row: white rounded rectangle with gray outline and lower shadow, icon or flag on the left, bold label, and optional right-side checkbox or chevron. Selected and active choices use color on the icon, border, or background while keeping the heavy rounded form.
 
-Typed, spoken, matching, listening, and multiple-choice answers use large task-specific controls and immediate validation.
+Lesson node: circular, raised, and centered on the path. Active nodes are green with a white symbol; locked or future nodes are gray with low-contrast symbols and soft drop shadows.
 
-Show correct, incorrect, streak, energy, currency, locked, legendary, boost, and completion states with color, text, and character response.
+Answer tile: large white card, rounded 8 to 14 points, gray outline, centered label or illustration. Selected cards may use a pale cyan fill and cyan border.
 
-Controls retain at least a 44-point interactive area. Pressed and disabled treatments should stay within the documented palette and hierarchy.
+Reward and profile panels: centered illustration, bold multiline title, short gray explanatory copy, and one strong bottom action. Decorative medals, streak dots, and badges may be large, but they must not compete with the action.
+
+Settings rows: white full-width rows on white, bold labels, light gray chevrons, and thin dividers. They should not be rendered as default inset `Form` sections.
 
 # Imagery and icons
 
-Use bold flat characters with large eyes, simple silhouettes, expressive poses, and graphic background shards or gradients.
+Mascot and cast art is compositionally required when visible in the reference. Duo and supporting characters are flat, high-saturation vector-style figures with oversized eyes, soft shadows, simple props, and expressive poses. The art often sits alone in the upper or middle viewport and sets the emotional tone of the screen. Course icons, flags, medals, chests, resource counters, and bottom navigation icons use the same playful custom asset language.
 
-Contain characters without cropping expressive faces or gestures; allow celebration backgrounds to fill while protecting action labels.
-
-When imagery is part of the documented composition, it cannot be omitted while final assets are pending. A temporary asset must preserve its placement, crop, scale, and approximate visual weight.
+Do not replace these with SF Symbols, emoji, or generic line icons. Temporary assets must preserve the observed scale, centered placement, saturated palette, and rounded silhouette weight until approved raster assets are available.
 
 # States
 
-Show correct, incorrect, streak, energy, currency, locked, legendary, boost, and completion states with color, text, and character response.
+Observed states include splash, loading, onboarding choices, selected answer, disabled next button, native permission prompt over a dimmed screen, active lesson path, disabled path nodes, completion, streak, achievement, populated leaderboard, profile prompt, store inventory, and settings lists. Across these states, the white canvas, rounded bold type, green/cyan action language, chunky outlines, and custom imagery remain constant.
 
-- **Success** ({colors.semantic-success}): Correct and completed.
-- **Warning** ({colors.semantic-warning}): Streak and reward urgency.
-- **Danger** ({colors.semantic-danger}): Incorrect and depleted state.
-- **Overlay** ({colors.semantic-overlay}): Modal focus.
-
-Only the states documented above are specified; other states must preserve the same canvas, hierarchy, and component language without inventing a new visual system.
+System permission UI should remain native, but the underlying app state must retain the Duolingo progress bar, mascot prompt, and disabled bottom action. Completion and streak states increase illustration scale and often switch the primary action to cyan while preserving rounded uppercase button treatment.
 
 # iOS adaptation
 
-- Extend the documented canvas through the iPhone safe areas while keeping readable content within appropriate insets.
-- Use a vertical `ScrollView` for content that does not fit compact heights; keep documented bottom actions and navigation clear of the home indicator.
-- Keep nodes, answers, audio, record, continue, counters, and navigation at least 44 points.
-- Preserve progress, prompt, answer, validation, and continue. Move secondary counters or social context outside the active task.
-- Present the keyboard and system permission UI natively, then return to the same visual context.
-- Preserve semantic reading order in VoiceOver and allow text to grow with Dynamic Type.
-- Preserve the documented appearance instead of introducing an unrelated light or dark palette.
+Extend white or green splash backgrounds into the safe areas. Use vertical `ScrollView` containers for course lists, leaderboards, settings, and long onboarding options. Keep the bottom action or tab bar outside scroll content with safe-area padding, and keep every lesson node, answer tile, chip, counter, tab item, and button at least 44 points tall.
+
+SwiftUI implementations should avoid default `Form`, default `Button`, default `TabView` tint, and unstyled `NavigationStack` bars when they flatten the custom rounded system. Use native permission, keyboard, and alert presentation where needed, then return to the same visual context. VoiceOver order should follow visible order: top progress or counters, prompt, choices or task content, then bottom action. Dynamic Type may increase vertical scroll, but the prompt, selected control, and primary action must keep their hierarchy on compact widths.
 
 # Anti-generic checklist
 
-- Do not make every screen equally celebratory.
-- Do not use subtle low-contrast buttons.
-- Do not punish errors without explanation.
-- Do not mix realistic imagery with mascot scenes.
-- Do not replace the documented canvas and surfaces with a generic grouped background and uniform white cards.
-- Do not use an unstyled `TabView`, default blue tint, or arbitrary SF Symbols when they contradict the reference.
-- Do not collapse every component to one corner radius or remove compositionally important imagery.
+- Do not replace mascot scenes, medals, flags, or tab art with SF Symbols, emoji, or simple programmatic shapes.
+- Do not turn the path into a normal vertical list or timeline.
+- Do not use default blue tint, borderless text buttons, or plain SwiftUI `Form` rows.
+- Do not remove the thick outlines and lower-edge shadows from answer tiles and buttons.
+- Do not make every screen equally colorful; most screens are white with concentrated green, cyan, and authored art.
+- Do not crop character faces, hands, props, or reward medals when they are the main visual mass.
 
 </design-context>

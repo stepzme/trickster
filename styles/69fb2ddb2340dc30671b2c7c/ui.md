@@ -3,154 +3,108 @@
 version: 1
 platform: iOS
 name: Tiimo-design-analysis
-description: "A gentle visual planner built from warm white canvas, editorial serif headings, soft lilac, lime, blush, and aqua task bands, floating pill controls, circular progress, and friendly miniature illustrations. The system feels calm and personal while keeping daily structure explicit."
-
+description: "A warm, spacious planner combining editorial serif headings, neutral sans controls, pastel task fields, circular progress, a floating pill navigation dock, and friendly lavender-and-linework illustrations on near-white surfaces."
 colors:
-  primary: "#755BE8"
-  on-primary: "#FFFFFF"
-  accent-lime: "#DDF05D"
-  accent-lilac: "#E6DDF7"
-  accent-blush: "#F7E4E2"
-  accent-aqua: "#DDEFF0"
-  ink: "#171619"
-  ink-muted: "#77747B"
-  ink-subtle: "#AAA7AE"
-  canvas: "#FFFEFC"
-  surface-1: "#FFFFFF"
-  surface-2: "#F2F0EE"
-  hairline: "#E8E5E6"
-  semantic-success: "#58A679"
-  semantic-warning: "#D69A2F"
-  semantic-danger: "#D95A66"
-  semantic-overlay: "#000000"
-
+  canvas: "#FFFEFB"
+  surface-primary: "#FFFFFF"
+  surface-secondary: "#F1EFF0"
+  accent-primary: "#7459E6"
+  accent-secondary: "#E7DDF8"
+  text-primary: "#19171B"
+  text-secondary: "#77737B"
+  divider: "#E8E4E7"
+  destructive: "#D85B67"
 typography:
-  display-xl: { fontFamily: Editorial Serif, fontSize: 42, fontWeight: 500, lineHeight: 1.0, letterSpacing: -0.8 }
-  display-lg: { fontFamily: Editorial Serif, fontSize: 34, fontWeight: 500, lineHeight: 1.08, letterSpacing: -0.4 }
-  display-md: { fontFamily: Editorial Serif, fontSize: 28, fontWeight: 500, lineHeight: 1.12, letterSpacing: -0.2 }
-  headline: { fontFamily: Editorial Serif, fontSize: 22, fontWeight: 500, lineHeight: 1.2, letterSpacing: 0 }
-  card-title: { fontFamily: System Sans, fontSize: 15, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: System Sans, fontSize: 17, fontWeight: 500, lineHeight: 1.3, letterSpacing: 0 }
-  body-lg: { fontFamily: System Sans, fontSize: 16, fontWeight: 400, lineHeight: 1.45, letterSpacing: 0 }
-  body: { fontFamily: System Sans, fontSize: 14, fontWeight: 400, lineHeight: 1.4, letterSpacing: 0 }
-  body-sm: { fontFamily: System Sans, fontSize: 12, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
-  caption: { fontFamily: System Sans, fontSize: 10, fontWeight: 400, lineHeight: 1.3, letterSpacing: 0 }
-  button: { fontFamily: System Sans, fontSize: 14, fontWeight: 600, lineHeight: 1.2, letterSpacing: 0 }
-  eyebrow: { fontFamily: System Sans, fontSize: 11, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0.2 }
-  mono: { fontFamily: System Mono, fontSize: 12, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
-
-rounded: { xs: 5, sm: 9, md: 13, lg: 18, xl: 24, xxl: 32, pill: 9999, full: 9999 }
-spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
-
+  hero: {fontFamily: "Georgia", fontSize: 42, fontWeight: 400, lineHeight: 46}
+  title: {fontFamily: "Georgia", fontSize: 32, fontWeight: 400, lineHeight: 38}
+  section: {fontFamily: "Georgia", fontSize: 23, fontWeight: 400, lineHeight: 29}
+  body: {fontFamily: "SF Pro Text", fontSize: 16, fontWeight: 400, lineHeight: 22}
+  label: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 600, lineHeight: 20}
+  caption: {fontFamily: "SF Pro Text", fontSize: 12, fontWeight: 400, lineHeight: 17}
+spacing:
+  screen-horizontal: 16
+  section-gap: 28
+  card-padding: 16
+  control-gap: 12
+rounded:
+  control: 16
+  card: 22
+  sheet: 30
+  pill: 999
 components:
-  button-primary: { backgroundColor: "{colors.ink}", textColor: "#FFFFFF", typography: "{typography.button}", rounded: "{rounded.pill}", padding: [12, 18]}
-  task-row: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 10 }
-  suggestion-card: { backgroundColor: "{colors.accent-lilac}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 14 }
-  timer-ring: { backgroundColor: "{colors.accent-lilac}", textColor: "{colors.ink}", typography: "{typography.display-lg}", rounded: "{rounded.full}", padding: 20 }
-  bottom-dock: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.caption}", rounded: "{rounded.pill}", height: 58 }
+  primary-action: {fill: "near-black", shape: "pill", text: "white semibold"}
+  secondary-action: {fill: "soft lavender", shape: "pill", text: "near-black"}
+  primary-card: {fill: "white or categorical pastel", shape: "large rounded rectangle", border: "none"}
+  navigation: {fill: "floating white pill", active: "near-black filled state", companion: "small violet circular mascot"}
 ---
 
 # Overview
 
-Tiimo makes planning soft and encouraging. Editorial headings, pastel routine bands, circular timers, and small friendly icons create personality without hiding task structure.
+Tiimo makes planning feel calm through generous spacing, large editorial serif headings, soft categorical pastels, and rounded floating controls. Near-white screens hold clear task structures, circular focus graphics, and friendly authored imagery without becoming a generic card dashboard. The floating white navigation pill and small violet mascot control form a recognizable lower-screen signature.
 
 # Non-negotiable visual invariants
 
-- Preserve serif and sans pairing.
-- Use pastels to categorize, not decorate.
-- Keep task duration visible.
-- Maintain generous whitespace.
-- Today is a single vertical timeline with a horizontal date rail.
-- Statistics uses large rounded cards; Focus centers a circular timer.
-- Maintain generous vertical air so task density feels manageable.
-- Floating controls should never crowd content.
+- Pair editorial serif display text with neutral sans-serif body and control text.
+- Keep the canvas warm white and reserve lavender and pastels for bounded tasks, cards, progress, and imagery.
+- Preserve generous negative space around headings, task groups, timers, and floating controls.
+- Use pastel yellow, pink, blue, green, and lilac to distinguish categories, not semantic severity.
+- Focus views center a large circular timer or progress mass rather than a rectangular metric card.
+- Bottom navigation is a floating white pill with a dark active treatment and a separate small violet mascot control.
+- Authored illustrations and small task imagery remain present wherever they carry the sampled composition.
 
 # Color and surfaces
 
-Violet anchors focus and progress. Lime, lilac, blush, and aqua distinguish task groups and suggestions.
+Warm near-white fills the viewport, while pure white creates cards, sheets, and the floating dock. Neutral grey supports inactive or disabled controls and subtle grouping. Violet is the main brand accent for focus, selection, the mascot, and soft glows; pale lavender is the common supporting field. Pastel yellow, blush, aqua, green, and lilac appear as bounded task or content zones.
 
-Warm white is the canvas; pure white floats in pills and cards. Pastels are bounded fields rather than full-page fills.
-
-Near-black carries dates, tasks, and timers; gray supports schedules, counts, and secondary guidance.
-
-Green confirms completion, amber warns about time, and red marks destructive actions. Pastel category color is not semantic.
+Primary text is near black and secondary information muted grey. Dividers are faint because spacing and surface color do most grouping. Green, amber, and red remain semantic for success, warning, and destructive states; categorical pastels are not alerts. Default blue, saturated full-screen panels, and cool grouped-table grey break the reference.
 
 # Typography
 
-Use an editorial serif for dates and focus titles, paired with a neutral system sans for tasks and controls.
+Dates, focus statements, and major headings use a soft editorial serif with relatively light weight and large scale. Task names, labels, durations, and settings use a system sans. Typography is sentence case, with left-aligned planning content and centered focus or onboarding statements.
 
-Use 28–42 points serif day and timer headings, 15–17 points task titles, 14 points body, and 10–12 points duration metadata.
-
-Let serif headings set mood while sans-serif labels preserve speed. Keep time and duration adjacent to tasks.
-
-Use Georgia or Source Serif 4 for display and SF Pro or Inter for UI.
-
-The hierarchy must remain legible with Dynamic Type: supporting text may wrap before the primary metric, title, or action loses its role.
+Use Georgia as the iOS-safe serif substitute and SF Pro Text for operational UI. Map dates or focus titles to large title, section framing to title 2/title 3, task names to body/headline, and durations to caption. Dynamic Type should increase vertical space and wrap descriptions before compressing task names, time values, or primary controls.
 
 # Screen composition
 
-Use a 4 points base, 16 points gutters, 8–12 points task gaps, and 20–24 points between date, suggestions, and time-of-day groups.
+Screens begin with a generous heading zone, followed by one clear planning, task, statistics, or focus region, and end above floating bottom controls. Use about 16-point side insets, 8–12-point local gaps, and 24–32-point separation between major groups. Cards often span the usable width, while chips, date items, or suggestions may form horizontal rails.
 
-Today is a single vertical timeline with a horizontal date rail. Statistics uses large rounded cards; Focus centers a circular timer.
-
-Maintain generous vertical air so task density feels manageable. Floating controls should never crowd content.
-
-Use pale radial glows, soft progress planets, tiny avatars, and restrained line art.
-
-Primary iPhone screens keep the documented content grouping and vertical rhythm inside a scroll container when content exceeds the viewport. Bottom-owned actions or navigation reserve the lower safe area rather than covering content.
+Observed archetypes include full-bleed onboarding media with overlaid content and bottom action; a vertical planner with pastel task sections; a clean task-editor sheet with fields and choices; a focus screen dominated by a circular timer; statistics built from a few large progress/streak cards; and settings lists on white. The layout stays airy when populated, and floating controls never obscure the last item.
 
 # Navigation appearance
 
-Use the floating five-part dock for Today, To-do, Focus, Statistics, and assistant/profile. Active state is dark.
-
-This section governs appearance only; product behavior and information architecture come from the approved Research and Planning artifacts.
+Primary navigation is a floating white pill above the home indicator, with evenly spaced icons, compact labels where present, and a near-black active treatment. A small circular violet mascot control visually partners with the dock. Top controls are compact circles or pills rather than a heavy bar. Sheets use large rounded top corners and warm white surfaces. This governs appearance only, not destinations or flow order.
 
 # Components
 
-Primary actions are black pills or violet circular adds. Native controls must inherit soft geometry and package typography.
+Primary actions are near-black pills with white semibold labels; disabled actions become neutral grey. Secondary controls use lavender or white fills and near-black labels. Task rows are spacious rounded fields combining a small image, task name, duration, and completion control; category color fills the bounded row or section rather than the page.
 
-Task rows combine icon, title, duration, and completion. Statistics and Pro cards use large rounded containers with illustration.
-
-Task creation uses clean white sheets with visible date, duration, breakdown, and visual options.
-
-Done, paused, focused, streak, trophy, mood, and subscription states appear beside their task or statistic.
-
-Controls retain at least a 44-point interactive area. Pressed and disabled treatments should stay within the documented palette and hierarchy.
+Focus components use a broad circular ring, lavender field, and centered serif time. Statistics cards combine one metric with progress graphics and authored imagery. Menus and popovers use white rounded containers with clear radio/check selection. Theme choices use large color swatches with selected markers. Native text entry remains native but inherits the package typography and surfaces.
 
 # Imagery and icons
 
-Use small centered icons in tasks and spacious line-art scenes in cards. Photography is rare and secondary to planning UI.
+Imagery ranges from small pastel task symbols to larger black-line and lavender illustrations, a recurring purple mascot face, circular progress art, and occasional photographed device scenes. Larger art occupies a meaningful fraction of onboarding or promotional cards and keeps broad negative space. Small images stay padded and aligned with task text rather than acting like arbitrary leading symbols.
 
-Use `contain` for task icons and line art. Preserve soft padding around every illustration.
-
-When imagery is part of the documented composition, it cannot be omitted while final assets are pending. A temporary asset must preserve its placement, crop, scale, and approximate visual weight.
+When imagery is part of the composition, it cannot be omitted while final assets are pending. Preserve placement, crop, scale, palette, and visual weight with an approved temporary raster asset. Navigation symbols must form a coherent set rather than an arbitrary SF Symbols mix.
 
 # States
 
-Done, paused, focused, streak, trophy, mood, and subscription states appear beside their task or statistic.
-
-Green confirms completion, amber warns about time, and red marks destructive actions. Pastel category color is not semantic.
-
-Only the states documented above are specified; other states must preserve the same canvas, hierarchy, and component language without inventing a new visual system.
+Observed states include selected radio/check controls, active near-black and disabled grey CTAs, pastel categorized tasks, completed or progress-bearing content, popovers, keyboard entry, paused/active focus presentations, streak/statistics cards, and selected theme colors. Selection uses dark emphasis or violet; completion may use green; destructive actions use muted red. Warm canvas, serif/sans hierarchy, high radii, and generous spacing remain constant.
 
 # iOS adaptation
 
-- Extend the documented canvas through the iPhone safe areas while keeping readable content within appropriate insets.
-- Use a vertical `ScrollView` for content that does not fit compact heights; keep documented bottom actions and navigation clear of the home indicator.
-- Rows, completion circles, date rail, add controls, timers, and dock items require at least 44 points targets.
-- Allow date and suggestion rails to scroll horizontally. Keep timer controls and add actions visible.
-- Present the keyboard and system permission UI natively, then return to the same visual context.
-- Preserve semantic reading order in VoiceOver and allow text to grow with Dynamic Type.
-- Preserve the documented appearance instead of introducing an unrelated light or dark palette.
+Extend the warm canvas or observed photo background through safe areas. Use vertical scrolling for schedules, editors, statistics, and settings; horizontally scroll date or suggestion rails without reducing targets. Reserve bottom inset for the floating dock and companion control, and pad final content so neither overlaps rows. Present sheets and keyboards natively while retaining warm surfaces and rounded geometry.
+
+Keep task actions, completion controls, top pills, dock items, and swatches at least 44 points. VoiceOver order follows visible structure: time or section, task title, duration, then state/action. Dynamic Type may expand rows and cards vertically. Preserve the observed light appearance rather than inventing an unrelated dark palette.
 
 # Anti-generic checklist
 
-- Do not use harsh saturated panels.
-- Do not overload rows with illustration.
-- Do not hide completion state.
-- Do not expose sharp default controls.
-- Do not replace the documented canvas and surfaces with a generic grouped background and uniform white cards.
-- Do not use an unstyled `TabView`, default blue tint, or arbitrary SF Symbols when they contradict the reference.
-- Do not collapse every component to one corner radius or remove compositionally important imagery.
+- Do not replace the serif/sans pairing with one default system style.
+- Do not turn the schedule into a generic `List` or `Form` with standard separators.
+- Do not use an unstyled `TabView`, default blue tint, or rectangular bottom bar.
+- Do not replace the centered circular focus mass with a generic progress bar.
+- Do not collapse pastels into one accent or use them as arbitrary decoration.
+- Do not omit authored imagery or substitute random SF Symbols, emoji, or programmatic doodles.
+- Do not apply one radius to task rows, cards, sheets, and navigation.
+- Do not add mood-setting copy that repeats a visible date, task, timer, or state.
 
 </design-context>

@@ -3,308 +3,107 @@
 version: 1
 platform: iOS
 name: Emma-design-analysis
-description: "A two-mode personal-finance UI: cinematic violet-on-plum onboarding and subscription screens transition into a bright, information-dense dashboard. Purple gradients carry primary actions and premium emphasis; white cards, pale gray canvas, and compact system typography organize accounts, transactions, saving, payments, investments, and credit. Luminous 3D objects make abstract financial benefits tangible without entering dense data views."
-
+description: "A two-register finance interface pairing cinematic near-black plum entry screens and glossy imagery with a pale grey working canvas, softly raised white cards, compact rounded type, vivid violet actions, and a five-item bottom bar."
 colors:
-  primary: "#A92BFF"
-  on-primary: "#FFFFFF"
-  primary-soft: "#F4E6FF"
-  primary-gradient-end: "#C65CFF"
-  ink: "#111219"
-  ink-muted: "#737582"
-  ink-subtle: "#A1A4AF"
-  canvas: "#F6F7FA"
-  surface-1: "#FFFFFF"
-  surface-2: "#EEF0F5"
-  dark-canvas: "#160C29"
-  dark-surface: "#25183A"
-  dark-ink: "#FFFFFF"
-  hairline: "#E7E8ED"
-  accent-mint: "#21C9B1"
-  accent-pink: "#F35B91"
-  semantic-success: "#24B86A"
-  semantic-danger: "#DD4964"
-  semantic-overlay: "#000000"
-
+  canvas: "#F6F6FA"
+  surface-primary: "#FFFFFF"
+  surface-secondary: "#EEEFF4"
+  accent-primary: "#9D2CFF"
+  accent-secondary: "#EAD7FA"
+  text-primary: "#17151B"
+  text-secondary: "#77747F"
+  divider: "#E5E4EA"
+  destructive: "#D84E67"
 typography:
-  display-xl:
-    fontFamily: System Sans
-    fontSize: 38
-    fontWeight: 700
-    lineHeight: 1.05
-    letterSpacing: -0.9
-  display-lg:
-    fontFamily: System Sans
-    fontSize: 32
-    fontWeight: 700
-    lineHeight: 1.08
-    letterSpacing: -0.6
-  display-md:
-    fontFamily: System Sans
-    fontSize: 27
-    fontWeight: 700
-    lineHeight: 1.12
-    letterSpacing: -0.4
-  headline:
-    fontFamily: System Sans
-    fontSize: 22
-    fontWeight: 600
-    lineHeight: 1.18
-    letterSpacing: -0.2
-  card-title:
-    fontFamily: System Sans
-    fontSize: 17
-    fontWeight: 600
-    lineHeight: 1.25
-    letterSpacing: 0
-  subhead:
-    fontFamily: System Sans
-    fontSize: 17
-    fontWeight: 400
-    lineHeight: 1.35
-    letterSpacing: 0
-  body-lg:
-    fontFamily: System Sans
-    fontSize: 16
-    fontWeight: 400
-    lineHeight: 1.40
-    letterSpacing: 0
-  body:
-    fontFamily: System Sans
-    fontSize: 14
-    fontWeight: 400
-    lineHeight: 1.40
-    letterSpacing: 0
-  body-sm:
-    fontFamily: System Sans
-    fontSize: 12
-    fontWeight: 400
-    lineHeight: 1.35
-    letterSpacing: 0
-  caption:
-    fontFamily: System Sans
-    fontSize: 11
-    fontWeight: 400
-    lineHeight: 1.30
-    letterSpacing: 0
-  button:
-    fontFamily: System Sans
-    fontSize: 15
-    fontWeight: 500
-    lineHeight: 1.20
-    letterSpacing: 0
-  eyebrow:
-    fontFamily: System Sans
-    fontSize: 12
-    fontWeight: 600
-    lineHeight: 1.25
-    letterSpacing: 0.2
-  mono:
-    fontFamily: System Mono
-    fontSize: 12
-    fontWeight: 400
-    lineHeight: 1.35
-    letterSpacing: 0
-
-rounded:
-  xs: 6
-  sm: 10
-  md: 14
-  lg: 18
-  xl: 24
-  xxl: 30
-  pill: 9999
-  full: 9999
-
+  hero: {fontFamily: "SF Pro Rounded", fontSize: 38, fontWeight: 700, lineHeight: 42}
+  title: {fontFamily: "SF Pro Rounded", fontSize: 30, fontWeight: 700, lineHeight: 35}
+  section: {fontFamily: "SF Pro Rounded", fontSize: 21, fontWeight: 600, lineHeight: 26}
+  body: {fontFamily: "SF Pro Text", fontSize: 16, fontWeight: 400, lineHeight: 22}
+  label: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 600, lineHeight: 20}
+  caption: {fontFamily: "SF Pro Text", fontSize: 12, fontWeight: 400, lineHeight: 17}
 spacing:
-  xxs: 4
-  xs: 8
-  sm: 12
-  md: 16
-  lg: 24
-  xl: 32
-  xxl: 48
-  section: 64
-
+  screen-horizontal: 16
+  section-gap: 24
+  card-padding: 16
+  control-gap: 12
+rounded:
+  control: 14
+  card: 20
+  sheet: 28
+  pill: 999
 components:
-  button-primary:
-    backgroundColor: "{colors.primary}"
-    textColor: "{colors.on-primary}"
-    typography: "{typography.button}"
-    rounded: "{rounded.pill}"
-    padding: [14, 20]
-  button-secondary:
-    backgroundColor: "{colors.dark-surface}"
-    textColor: "{colors.dark-ink}"
-    typography: "{typography.button}"
-    rounded: "{rounded.pill}"
-    padding: [14, 20]
-  finance-card:
-    backgroundColor: "{colors.surface-1}"
-    textColor: "{colors.ink}"
-    typography: "{typography.body}"
-    rounded: "{rounded.lg}"
-    padding: 12
-  onboarding-choice:
-    backgroundColor: "{colors.dark-surface}"
-    textColor: "{colors.dark-ink}"
-    typography: "{typography.body}"
-    rounded: "{rounded.md}"
-    padding: 16
-  text-input:
-    backgroundColor: "{colors.dark-canvas}"
-    textColor: "{colors.dark-ink}"
-    typography: "{typography.display-md}"
-    rounded: "{rounded.md}"
-    padding: [12, 0]
-  status-badge:
-    backgroundColor: "{colors.primary-soft}"
-    textColor: "{colors.primary}"
-    typography: "{typography.caption}"
-    rounded: "{rounded.pill}"
-    padding: [4, 8]
-  navigation-bar:
-    backgroundColor: "{colors.surface-1}"
-    textColor: "{colors.ink}"
-    typography: "{typography.card-title}"
-    rounded: "{rounded.xs}"
-    height: 52
-  footer:
-    backgroundColor: "{colors.surface-1}"
-    textColor: "{colors.ink-muted}"
-    typography: "{typography.caption}"
-    rounded: "{rounded.xs}"
-    padding: [20, 12]
+  primary-action: {fill: "violet", shape: "full-width pill", text: "white semibold"}
+  secondary-action: {fill: "soft neutral or plum", shape: "pill", text: "context-contrast"}
+  primary-card: {fill: "white", shape: "soft rounded rectangle", elevation: "low diffuse"}
+  navigation: {fill: "white", active: "violet icon and label", inactive: "muted grey"}
 ---
 
 # Overview
 
-Emma uses contrast between two modes. Setup and premium storytelling live on a deep plum canvas with luminous purple actions and 3D hero objects. The working product shifts to a bright financial dashboard where white rounded cards, small colored icons, and stable bottom navigation prioritize numbers and tasks.
+Emma separates atmospheric entry moments from practical money management. Entry and subscription screens are dominated by a near-black plum field, bright violet controls, white type, and large glossy objects. Everyday screens switch to a very light grey canvas with softly rounded white modules, compact financial rows, pastel category marks, and restrained charts. This deliberate dark-to-light shift is more distinctive than any individual card.
 
 # Non-negotiable visual invariants
 
-- Primary screens use Deep plum onboarding paired with a bright in-product canvas.
-- Maintain the dark-to-light transition between setup and daily product use.
-- Reserve purple gradient for the clearest primary action.
-- Group financial facts into one-purpose white cards.
-- Keep amounts tied to currency, time, and account context.
-- Use 3D art for education and premium benefits, not for transaction rows.
-- The product uses one mobile column, with two-column summary tiles and horizontal recommendation cards where comparison helps.
-- Onboarding choices use a two-column grid.
+- Preserve the dark plum, image-led register for entry or premium moments and the pale card-based register for working screens.
+- Violet is the sole dominant action and selection color; do not introduce default iOS blue.
+- Working screens use a pale grey canvas with discrete white cards rather than one continuous white page.
+- Amounts and primary metrics are visually stronger than category, time, or account labels.
+- Cards have soft medium-to-large radii and low diffuse separation, never heavy outlines or hard shadows.
+- Dense financial content stays compact and left-aligned while outer screen spacing remains generous.
+- Bottom navigation keeps icons and labels visible, with violet active state and muted inactive items.
 
 # Color and surfaces
 
-- **Emma Purple** ({colors.primary}): Primary actions, selected tabs, links, and key figures.
-- **Purple pressed** ({colors.primary}) and **Gradient End** ({colors.primary-gradient-end}): CTA gradient and premium emphasis.
-- **Soft Purple** ({colors.primary-soft}): Quiet callouts, selected chips, and button backgrounds.
-- **Mint** ({colors.accent-mint}) and **Pink** ({colors.accent-pink}): Supporting financial categories and status icons.
+The working canvas is cool near-white grey, allowing pure white cards to remain visible without borders. Secondary fields, disabled controls, and progress tracks use deeper cool grey. Saturated violet identifies primary actions, selection, links, and key progress; pale lilac supports selection without competing with values. Primary text is near black, supporting context is medium grey, and fine dividers appear only inside dense groups.
 
-- **Canvas** ({colors.canvas}): Bright dashboard background.
-- **Surface 1** ({colors.surface-1}): Finance cards, rows, and navigation.
-- **Surface 2** ({colors.surface-2}): Secondary fields and disabled areas.
-- **Dark Canvas** ({colors.dark-canvas}): Onboarding and subscription.
-- **Dark Surface** ({colors.dark-surface}): Choice cards, testimonials, and secondary dark actions.
-- **Hairline** ({colors.hairline}): Quiet dividers in dense financial groups.
-
-- **Ink** ({colors.ink}): Amounts, headings, and primary labels on light screens.
-- **Ink Muted** ({colors.ink-muted}): Explanations, timestamps, and account context.
-- **Ink Subtle** ({colors.ink-subtle}): Inactive tabs and disabled metadata.
-- **Dark Ink** ({colors.dark-ink}): Primary text on plum surfaces.
-
-- **Success** ({colors.semantic-success}): Positive movement, confirmed actions, and connected state.
-- **Danger** ({colors.semantic-danger}): Negative movement, errors, and destructive actions.
-- **Overlay** ({colors.semantic-overlay}): Modal scrim where required.
+Entry and premium screens invert the system: very dark aubergine fills the viewport, white type becomes primary, and violet may expand into a luminous gradient or glow. Mint and pink are small categorical accents. Default blue controls, beige grouped backgrounds, and solid black card borders break the reference.
 
 # Typography
 
-- **System Sans** — all display, body, controls, amounts, and navigation.
-- **System Mono** — optional for account or transaction identifiers only.
+Large statements and major totals use a rounded heavy sans with clear scale contrast; section headings are bold but materially smaller. Financial rows use compact neutral sans, with tabular-looking numerals and amount-first hierarchy. Supporting copy is short, grey, and lower contrast. Entry statements may be centered around imagery; operational lists and forms are left-aligned.
 
-- `{typography.display-xl}` — 38 points — 700 — Hero amount or benefit
-- `{typography.display-lg}` — 32 points — 700 — Onboarding statement
-- `{typography.display-md}` — 27 points — 700 — Setup question
-- `{typography.headline}` — 22 points — 600 — Domain heading
-- `{typography.card-title}` — 17 points — 600 — Product and card title
-- `{typography.body}` — 14 points — 400 — Default content
-- `{typography.caption}` — 11 points — 400 — Time, rate, and metadata
-- `{typography.button}` — 15 points — 500 — Primary and secondary actions
-
-- Give money values stronger size or weight than surrounding labels.
-- Keep onboarding sentences short and centered only when they accompany a hero object.
-- Use left alignment for financial tasks and settings.
-- Reserve saturated purple text for actions and selected state, not general body copy.
-
-Use **SF Pro Display/Text** on iOS or **Inter** cross-platform. Preserve compact regular text and slightly heavier 600–700 headings; avoid geometric display faces that make dense money screens feel promotional.
-
-The hierarchy must remain legible with Dynamic Type: supporting text may wrap before the primary metric, title, or action loses its role.
+Use SF Pro Rounded for expressive headings and SF Pro Text for data and controls. Map the largest total or statement to large title, section labels to title 3/headline, row titles to body or callout, and metadata to caption. With Dynamic Type, preserve amount-before-context reading order, let explanations wrap, and let cards grow vertically rather than shrinking key figures.
 
 # Screen composition
 
-Use a 4 points base. Product gutters are 10–12 points, card interiors 12–16 points, and section gaps 16–24 points. Dark onboarding uses larger 24 points outer spacing and anchors the main action near the safe-area bottom.
+Working screens use a single scrollable column with about 16-point outer insets, 12–16-point card interiors, and 20–24-point gaps between major groups. The top carries page identity or a key metric; the middle sequences account, transaction, budget, savings, or payment modules; the bottom stays clear of persistent navigation. Some overview modules form paired tiles or horizontal card runs, but each remains one-purpose.
 
-The product uses one mobile column, with two-column summary tiles and horizontal recommendation cards where comparison helps. Onboarding choices use a two-column grid. Bottom navigation remains fixed across all five domains.
-
-Dark screens use generous negative space to create focus around one idea. Light product screens are denser: cards separate information into readable chunks while the pale canvas keeps domains distinct.
-
-Use restrained card shadows on light surfaces and soft ambient glow behind 3D objects on dark screens. Data cards should not inherit the promotional lighting.
-
-Primary iPhone screens keep the documented content grouping and vertical rhythm inside a scroll container when content exceeds the viewport. Bottom-owned actions or navigation reserve the lower safe area rather than covering content.
+Observed archetypes include a dark single-message entry screen with a large central visual and bottom pill action; a pale overview with summary cards and recommendations; dense histories of icon-led rows and quiet separators; chart/progress cards with a strong metric above subdued annotation; and settings or forms made from grouped rows, toggles, numeric fields, and sheets. Keyboard-present screens keep the active field and action visible.
 
 # Navigation appearance
 
-Feed, Save, Pay, Invest, and Credit persist at the bottom with small icons and labels. Selected tabs turn purple; inactive tabs remain gray. Detail screens use a simple back control and centered title.
-
-This section governs appearance only; product behavior and information architecture come from the approved Research and Planning artifacts.
+The bottom bar is white and visually light, with five compact icon-and-label items. Active icons and labels are violet; inactive items are grey, and small notification dots may sit beside an item. Detail screens use restrained back affordances and compact titles. Sheets are white with large top radii and retain the violet action language. This defines appearance only, not routes or information architecture.
 
 # Components
 
-Primary actions use a purple-to-pink gradient, white text, full width, and pill radius. Dark secondary actions use a muted plum pill. On light screens, tertiary actions may use pale-purple fills with purple labels.
+Primary actions are wide violet pills with white semibold labels; disabled actions become low-contrast grey rather than outlined. Secondary actions are quiet pills or violet text. White primary cards have low elevation, 12–16-point internal spacing, and no heavy stroke.
 
-Finance cards are white, rounded, and lightly separated from the pale canvas. They can contain account totals, recommended actions, lists, or charts, but each card should express one financial idea. Dark choice cards use a thin purple selection outline.
-
-Registration fields are visually open on the dark canvas with large input text and a fixed bottom Continue action. Product search uses a pale rounded field. Validation belongs inline near the field or button.
-
-Use small colored figures for positive and negative movements, progress rings for processing, and checkmarks for completed tasks. Every status also needs a text label or numeric context.
-
-Controls retain at least a 44-point interactive area. Pressed and disabled treatments should stay within the documented palette and hierarchy.
+Financial rows combine a small pastel icon tile, compact title/context stack, and right-aligned amount or status. Charts and progress bars emphasize violet against pale tracks. Inputs remain integrated with surrounding cards even when the keyboard is native. Toggles use violet tint. Selected chips use lilac fill; destructive rows use restrained red text or icon, not a full red card.
 
 # Imagery and icons
 
-3D objects sit centered in large dark fields or inside rounded landscape panels. Partner marks and product logos use bounded, evenly spaced tiles. No editorial photography was prominent in the inspected core flows.
+Dark entry screens use large glossy 3D objects or small object scenes as the primary visual mass, often centered with violet/pink lighting and generous empty space. Working screens rely on small pastel category icons, restrained charts, and occasional imagery inside rounded containers. Hero objects may occupy a quarter to a third of a screen, while row icons remain compact.
 
-3D hero objects remain fully visible with generous padding; scale them down instead of cropping. Partner marks use contain behavior. Illustration panels keep rounded corners and crop only ambient backgrounds.
-
-When imagery is part of the documented composition, it cannot be omitted while final assets are pending. A temporary asset must preserve its placement, crop, scale, and approximate visual weight.
+The occasional 3D promotional motif is not a mandatory universal illustration system. Preserve imagery where the sampled composition depends on it; a placeholder must retain crop, scale, palette, and visual weight until the final asset is approved.
 
 # States
 
-Use small colored figures for positive and negative movements, progress rings for processing, and checkmarks for completed tasks. Every status also needs a text label or numeric context.
-
-- **Success** ({colors.semantic-success}): Positive movement, confirmed actions, and connected state.
-- **Danger** ({colors.semantic-danger}): Negative movement, errors, and destructive actions.
-- **Overlay** ({colors.semantic-overlay}): Modal scrim where required.
-
-Only the states documented above are specified; other states must preserve the same canvas, hierarchy, and component language without inventing a new visual system.
+Observed states include selected and inactive tabs, enabled violet and disabled grey actions, populated financial lists, progress and chart states, native keyboard entry, toggles, and modal sheets. Positive states use restrained green; negative amounts, errors, and destructive actions use muted red. Across states retain the pale canvas, white card geometry, amount-first hierarchy, and violet selection language.
 
 # iOS adaptation
 
-- Extend the documented canvas through the iPhone safe areas while keeping readable content within appropriate insets.
-- Use a vertical `ScrollView` for content that does not fit compact heights; keep documented bottom actions and navigation clear of the home indicator.
-- Keep primary actions, rows, domain tabs, and bottom navigation at least 44 points high. Give amount selectors and icon-only actions sufficient separation from destructive controls.
-- Stack two-column onboarding choices and financial summary tiles when labels or amounts wrap. Preserve one dominant bottom action. Recommendation carousels may become a vertical list on narrow layouts.
-- Present the keyboard and system permission UI natively, then return to the same visual context.
-- Preserve semantic reading order in VoiceOver and allow text to grow with Dynamic Type.
-- Preserve the documented appearance instead of introducing an unrelated light or dark palette.
+Extend the pale or plum canvas through safe areas while keeping content within readable insets. Use vertical scrolling for card stacks and histories, and reserve the lower safe area for navigation or bottom actions. Sheets use native presentation with documented surface, radius, and typography. Keep fields visible above the keyboard and return to the same visual context after system permission UI.
+
+Controls and row actions need at least 44-point targets. VoiceOver announces label, context, then amount/status. Dynamic Type may increase card and row height without collapsing amounts or actions. Preserve the observed light working appearance and dark entry register rather than inventing an all-screen dark theme.
 
 # Anti-generic checklist
 
-- Do not turn the bright dashboard into a purple-filled interface.
-- Do not show recommendations with the same weight as account facts.
-- Do not rely on colored numbers without a sign or label.
-- Do not add multiple large gradient buttons to one screen.
-- Do not introduce unrelated illustration materials or hard outlines.
-- Do not replace the documented canvas and surfaces with a generic grouped background and uniform white cards.
-- Do not use an unstyled `TabView`, default blue tint, or arbitrary SF Symbols when they contradict the reference.
-- Do not collapse every component to one corner radius or remove compositionally important imagery.
+- Do not flatten dark entry and pale working registers into one generic theme.
+- Do not replace the pale canvas and discrete cards with `Form` or a uniform white stack.
+- Do not use default blue tint, unstyled `TabView`, or arbitrary SF Symbols as the identity.
+- Do not give every card, input, chip, and sheet the same radius.
+- Do not remove compositionally important hero imagery from dark entry screens.
+- Do not enlarge explanatory copy until it competes with totals and primary actions.
+- Do not add decorative financial copy that repeats visible metrics or labels.
 
 </design-context>

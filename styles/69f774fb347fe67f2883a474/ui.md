@@ -3,174 +3,97 @@
 version: 1
 platform: iOS
 name: BelkaCar-design-analysis
-description: "A map-first car-sharing interface built from cool cobalt blue, white floating sheets, black utility type, bright pink tariff contrast, and realistic vehicle cutouts. Discovery, reservation, inspection, active rental, parking, support, and completion remain centered on the live map and current car state."
+description: "A map-first mobility interface layering crisp white rounded sheets, realistic vehicle imagery, compact black utility type, and royal-blue actions over cool gray-blue cartography, with sparse floating controls and an icon-led bottom tool strip."
 colors:
-  primary: "#1E5CCE"
-  on-primary: "#FFFFFF"
-  primary-soft: "#E5EEFF"
-  accent-pink: "#F02D8A"
-  accent-red: "#F04444"
-  accent-green: "#24A866"
-  ink: "#111319"
-  ink-muted: "#737984"
-  ink-subtle: "#A7ADB6"
-  canvas: "#F3F5FA"
-  surface-1: "#FFFFFF"
-  surface-2: "#E9EDF4"
-  hairline: "#DCE1EA"
-  semantic-success: "#24A866"
-  semantic-danger: "#F04444"
-  semantic-overlay: "#000000"
+  canvas: "#EEF2F6"
+  surface-primary: "#FFFFFF"
+  surface-secondary: "#E8EDF3"
+  accent-primary: "#0B5FE8"
+  accent-secondary: "#159EEB"
+  text-primary: "#111318"
+  text-secondary: "#737984"
+  divider: "#DCE1EA"
+  destructive: "#E74747"
 typography:
-  display-xl: { fontFamily: SF Pro Display, fontSize: 38, fontWeight: 700, lineHeight: 1.03, letterSpacing: -0.9 }
-  display-lg: { fontFamily: SF Pro Display, fontSize: 31, fontWeight: 700, lineHeight: 1.08, letterSpacing: -0.6 }
-  display-md: { fontFamily: SF Pro Display, fontSize: 26, fontWeight: 700, lineHeight: 1.12, letterSpacing: -0.4 }
-  headline: { fontFamily: SF Pro Display, fontSize: 22, fontWeight: 700, lineHeight: 1.18, letterSpacing: -0.2 }
-  card-title: { fontFamily: SF Pro Text, fontSize: 16, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: SF Pro Text, fontSize: 17, fontWeight: 500, lineHeight: 1.35, letterSpacing: 0 }
-  body-lg: { fontFamily: SF Pro Text, fontSize: 16, fontWeight: 400, lineHeight: 1.45, letterSpacing: 0 }
-  body: { fontFamily: SF Pro Text, fontSize: 14, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
-  body-sm: { fontFamily: SF Pro Text, fontSize: 12, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
-  caption: { fontFamily: SF Pro Text, fontSize: 10, fontWeight: 400, lineHeight: 1.20, letterSpacing: 0 }
-  button: { fontFamily: SF Pro Text, fontSize: 14, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0 }
-  eyebrow: { fontFamily: SF Pro Text, fontSize: 11, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0.2 }
-  mono: { fontFamily: SF Mono, fontSize: 12, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0 }
-rounded: { xs: 7, sm: 11, md: 15, lg: 20, xl: 26, xxl: 32, pill: 9999, full: 9999 }
-spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
+  hero: {fontFamily: "SF Pro Display", fontSize: 36, fontWeight: 700, lineHeight: 40}
+  title: {fontFamily: "SF Pro Display", fontSize: 28, fontWeight: 700, lineHeight: 34}
+  section: {fontFamily: "SF Pro Text", fontSize: 20, fontWeight: 600, lineHeight: 25}
+  body: {fontFamily: "SF Pro Text", fontSize: 17, fontWeight: 400, lineHeight: 22}
+  label: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 600, lineHeight: 20}
+  caption: {fontFamily: "SF Pro Text", fontSize: 13, fontWeight: 400, lineHeight: 18}
+spacing:
+  screen-horizontal: 16
+  section-gap: 24
+  card-padding: 16
+  control-gap: 12
+rounded:
+  control: 14
+  card: 20
+  sheet: 24
+  pill: 999
 components:
-  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.sm}", padding: [14, 18]}
-  map-control: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.full}", padding: 12 }
-  reservation-sheet: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 16 }
-  tariff-card: { backgroundColor: "{colors.accent-pink}", textColor: "{colors.on-primary}", typography: "{typography.body}", rounded: "{rounded.sm}", padding: 12 }
-  menu-panel: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 16 }
-  navigation-bar: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.pill}", height: 52 }
-  footer: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.caption}", rounded: "{rounded.lg}", padding: [10, 12]}
+  primary-action: {background: "#0B5FE8", foreground: "#FFFFFF", radius: 14, minHeight: 52}
+  secondary-action: {background: "#FFFFFF", foreground: "#111318", radius: 14, minHeight: 48}
+  primary-card: {background: "#FFFFFF", radius: 20, padding: 16}
+  navigation: {background: "#FFFFFF", radius: 16, minHeight: 56}
 ---
 
 # Overview
 
-BelkaCar keeps vehicle location, service zone, route, time, and cost visible on the map. White sheets handle reservation and rental state; blue progresses the trip, pink distinguishes longer tariffs, and red ends it.
+BelkaCar keeps cool map tiles as the largest visual field and places current information in white sheets and floating controls. Royal blue establishes the primary action hierarchy, realistic vehicle cutouts create the main object focus, and compact black type keeps operational screens readable without turning them into a dashboard.
 
 # Non-negotiable visual invariants
 
-- The sampled screens consistently show Full-screen live map.
-- Keep map, vehicle, and zone visible.
-- Show current cost throughout rental.
-- Require inspection before driving.
-- Make pause and finish distinct.
-- Keep support and refueling guidance close.
-- The map fills the viewport.
-- Controls float at edges; a bottom sheet expands from vehicle preview to reservation, inspection, active rental, pause, and completion.
+- Map tiles remain visible across the main operational composition and occupy most of the viewport behind controls.
+- Current vehicle or status content rises in a white bottom sheet with 20–24-point top corners.
+- Royal blue is the dominant actionable color; disabled controls preserve geometry in pale gray.
+- Realistic vehicle photography or renders provide the principal object imagery and retain the complete silhouette.
+- Map controls are compact white or translucent floating shapes with visually quiet shadows.
+- A low white tool strip uses four compact icon-and-label items rather than a conventional colored tab bar.
+- Dense lists and checklists use clear row rhythm, thin dividers, and restrained icon color rather than nested cards.
 
 # Color and surfaces
 
-- **Belka Blue** ({colors.primary}): Reservation, trip progression, and brand.
-- **Tariff Pink** ({colors.accent-pink}): Long fixed tariff.
-- **Red** ({colors.accent-red}): End trip and problems.
-- **Green** ({colors.accent-green}): Valid zone and completion.
-
-- **Canvas** ({colors.canvas}): Map and app background.
-- **Surface 1** ({colors.surface-1}): Sheets, menus, and controls.
-- **Surface 2** ({colors.surface-2}): Disabled action and secondary status.
-- **Hairline** ({colors.hairline}): List separation.
-
-- **Ink** ({colors.ink}): Vehicle, cost, and actions.
-- **Ink Muted** ({colors.ink-muted}): Address, tariff, and help.
-- **Ink Subtle** ({colors.ink-subtle}): Disabled state.
-
-- **Success** ({colors.semantic-success}): Valid inspection and completed state.
-- **Danger** ({colors.semantic-danger}): Problem and trip completion.
-- **Overlay** ({colors.semantic-overlay}): Menu and modal focus.
+Cool gray-blue map tiles form the base. White carries sheets, list panels, controls, and menu surfaces; pale gray-blue separates disabled or secondary content. Royal blue around `#0B5FE8` owns primary CTAs and selected progress, while brighter cyan-blue appears in secondary promotional or account surfaces. Orange from vehicle paint or isolated campaign material is imagery-led, not a control semantic. Black leads text and icons; gray handles metadata. Red is reserved for destructive or problem states. Default iOS blue without the deeper brand tone, generic grouped gray, or broad decorative gradients would break the reference.
 
 # Typography
 
-- **SF Pro Display** — cost and major state headings.
-- **SF Pro Text** — map labels, checklists, and menus.
-- **SF Mono** — trip or vehicle codes only.
-
-- `{typography.display-xl}` — 38 points — 700 — Live cost
-- `{typography.headline}` — 22 points — 700 — Vehicle or state heading
-- `{typography.card-title}` — 16 points — 600 — Tariff and checklist title
-- `{typography.body}` — 14 points — 400 — Address and help rows
-- `{typography.caption}` — 10 points — 400 — Map and timing metadata
-- `{typography.button}` — 14 points — 600 — Reserve, start, pause, finish
-
-- Keep current price and time prominent.
-- Use imperative labels for trip steps.
-- Show address and distance together.
-- Keep map labels compact.
-
-Use **Inter** or the platform system sans when SF Pro is unavailable.
-
-The hierarchy must remain legible with Dynamic Type: supporting text may wrap before the primary metric, title, or action loses its role.
+Use SF Pro Display for 22–28-point screen and vehicle titles and SF Pro Text for 15–17-point rows and 12–13-point metadata. Buttons use centered semibold labels. Numeric time or status values may scale toward 36 points but remain compact and tabular. Titles are sentence case and left aligned inside sheets. Dynamic Type expands rows and sheets while preserving the current title, vehicle image, and primary action as the main scan targets.
 
 # Screen composition
 
-Use a 4 points base, 12 points sheet gutters, 12 points control gaps, and 16 points sheet padding.
+Map screens extend edge to edge. Floating controls sit 12–16 points from screen edges, while a white bottom sheet or tool strip owns the lower safe area. Sheets use 16-point padding and 8–12-point internal gaps.
 
-The map fills the viewport. Controls float at edges; a bottom sheet expands from vehicle preview to reservation, inspection, active rental, pause, and completion.
-
-Maps provide ambient detail; sheets must stay uncluttered so the next physical-world action is obvious.
-
-Use realistic vehicle cutouts and map perspective. Avoid decorative shadows beyond floating control separation.
-
-Primary iPhone screens keep the documented content grouping and vertical rhythm inside a scroll container when content exceeds the viewport. Bottom-owned actions or navigation reserve the lower safe area rather than covering content.
+Observed archetypes include a photo-led onboarding screen with centered copy and a bottom action; a full-screen map with stacked floating controls and a low tool strip; a vehicle detail sheet with a large contained car render; an expanded status or reservation sheet with compact rows and a fixed action; and a tall white menu panel with a blue-toned header followed by a single vertical list. Supporting screens remain one-column and operational.
 
 # Navigation appearance
 
-The map uses hamburger, promo, tools, and location controls. A slide-out menu holds history, payment, support, insurance, promo codes, FAQ, business, and account.
-
-This section governs appearance only; product behavior and information architecture come from the approved Research and Planning artifacts.
+No standard tab bar was observed. The map uses a low white strip with four black icon-and-label items, plus separate floating circular map controls. Menu content appears as a tall modal drawer or sheet with rounded upper corners. Back and close controls are compact and high contrast. Selection uses blue icon or label emphasis. This section governs appearance only.
 
 # Components
 
-Blue reserves, starts, resumes, or confirms. Pink selects day tariff. Red ends a trip. Disabled state is pale gray and must explain prerequisites.
-
-Reservation sheets pair route, vehicle cutout, tariff, fuel, insurance, and bonuses. Active rental sheets show time, cost, help, and trip actions.
-
-Registration and verification use one field or document task per screen. Inspection uses photo count, checklist, problems, and a fixed next action.
-
-Show free reservation time, verification, fuel, documents, inspection progress, pause, zone, cost, debt, rating, bonus, and completion state explicitly.
-
-Controls retain at least a 44-point interactive area. Pressed and disabled treatments should stay within the documented palette and hierarchy.
+Primary actions are full-width royal-blue rounded rectangles, about 52 points high, with white semibold type. Disabled actions use pale gray with muted text. Map controls are white circular or pill shapes with compact black icons. Vehicle sheets combine a prominent realistic car render, bold title, smaller status metadata, and grouped rows. Progress and checklist rows use blue checks or plus marks; promo and tariff choices use compact segmented chips. Toggles remain native in behavior but inherit the blue accent. Countdown or active-status headers use large numbers above concise metadata.
 
 # Imagery and icons
 
-Use realistic isolated vehicle cutouts on reservation sheets and tiny top-down vehicle markers on maps. Do not invent decorative illustration.
-
-Contain vehicle cutouts and preserve the full silhouette. Maps fill available space and maintain readable labels and controls.
-
-When imagery is part of the documented composition, it cannot be omitted while final assets are pending. A temporary asset must preserve its placement, crop, scale, and approximate visual weight.
+Map tiles and realistic vehicle renders are essential. Vehicle imagery is contained rather than cropped, with its full silhouette visible above sheet content; map markers are small and readable against the cool base. Onboarding may use a real photographic hero. Utility icons are solid or simple outlined black forms with blue only for active or positive status. The sampled screens do not establish a reusable authored illustration system, so isolated decorative stickers must not be expanded into one.
 
 # States
 
-Show free reservation time, verification, fuel, documents, inspection progress, pause, zone, cost, debt, rating, bonus, and completion state explicitly.
-
-- **Success** ({colors.semantic-success}): Valid inspection and completed state.
-- **Danger** ({colors.semantic-danger}): Problem and trip completion.
-- **Overlay** ({colors.semantic-overlay}): Menu and modal focus.
-
-Only the states documented above are specified; other states must preserve the same canvas, hierarchy, and component language without inventing a new visual system.
+Enabled and disabled CTAs keep identical size and placement. Selected chips and checklist progress use blue emphasis. Active status introduces prominent time or state information while retaining map context. Menu panels preserve white surfaces and compact list rows. Toggle states use blue for on and gray for off. Error or destructive states introduce red locally without recoloring the whole sheet.
 
 # iOS adaptation
 
-- Extend the documented canvas through the iPhone safe areas while keeping readable content within appropriate insets.
-- Use a vertical `ScrollView` for content that does not fit compact heights; keep documented bottom actions and navigation clear of the home indicator.
-- Keep map controls, vehicle markers, tariff cards, checklist rows, and trip actions at least 44 points.
-- Collapse the sheet before shrinking map controls. Preserve cost, time, vehicle, and next action in the compact state.
-- Present the keyboard and system permission UI natively, then return to the same visual context.
-- Preserve semantic reading order in VoiceOver and allow text to grow with Dynamic Type.
-- Preserve the documented appearance instead of introducing an unrelated light or dark palette.
+Extend map and onboarding imagery through safe areas while keeping controls clear of the status bar and home indicator. Use adaptive bottom sheets and internal scrolling on compact heights; preserve visible map context before reducing the vehicle image or main action. All map buttons, tool-strip items, checklist rows, and CTAs need 44-point hit regions. Keyboard and system permission UI remain native and return to the same context. VoiceOver reads current vehicle or status before actions. Dynamic Type expands sheets and list rows. Preserve the observed light appearance.
 
 # Anti-generic checklist
 
-- Do not cover the map with tall static chrome.
-- Do not hide parking restrictions.
-- Do not use pink for safety-critical actions.
-- Do not allow finish without checklist state.
-- Do not replace vehicle evidence with illustration.
-- Do not replace the documented canvas and surfaces with a generic grouped background and uniform white cards.
-- Do not use an unstyled `TabView`, default blue tint, or arbitrary SF Symbols when they contradict the reference.
-- Do not collapse every component to one corner radius or remove compositionally important imagery.
+- Do not replace the map-first canvas with a generic list dashboard.
+- Do not omit or crop the realistic vehicle image when it is the sheet focal point.
+- Do not use an unstyled `TabView` or default blue tint.
+- Do not fill the map with opaque cards or ornamental shadows.
+- Do not use arbitrary SF Symbols as vehicle imagery or campaign decoration.
+- Do not make every field, card, sheet, and map control share one radius.
+- Do not invent a decorative illustration system from isolated stickers.
 
 </design-context>

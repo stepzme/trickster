@@ -3,171 +3,108 @@
 version: 1
 platform: iOS
 name: yandex-browser-design-analysis
-description: "A light mobile browser with a faint blush canvas, white floating surfaces, black utility controls, and an Alice pink-to-coral accent. Rounded bottom search, translucent sheets, compact shortcuts, and high-density web content balance a soft AI-forward entry experience with practical browsing tools."
+description: "A light browser shell built from pale blush-to-white fields, floating white search and tool surfaces, compact monochrome chrome, black pill actions, pink AI accents, and dense page content anchored by bottom controls."
 colors:
-  primary: "#F04479"
-  on-primary: "#FFFFFF"
-  primary-soft: "#FFE5F0"
-  action-dark: "#28282C"
-  link: "#17177A"
-  ink: "#171719"
-  ink-muted: "#6F7078"
-  ink-subtle: "#A7A8AF"
   canvas: "#F8F4F7"
-  surface-1: "#FFFFFF"
-  surface-2: "#F2F2F4"
-  surface-3: "#E8E8EB"
-  hairline: "#E1E1E5"
-  semantic-success: "#18A85B"
-  semantic-overlay: "#000000"
+  surface-primary: "#FFFFFF"
+  surface-secondary: "#F0EFF2"
+  accent-primary: "#F04479"
+  accent-secondary: "#FFD9E8"
+  text-primary: "#171719"
+  text-secondary: "#717178"
+  divider: "#E3E2E6"
+  destructive: "#D94C55"
 typography:
-  display-xl: { fontFamily: YS Text, fontSize: 34, fontWeight: 700, lineHeight: 1.08, letterSpacing: -0.7 }
-  display-lg: { fontFamily: YS Text, fontSize: 28, fontWeight: 700, lineHeight: 1.12, letterSpacing: -0.4 }
-  display-md: { fontFamily: YS Text, fontSize: 24, fontWeight: 700, lineHeight: 1.16, letterSpacing: -0.2 }
-  headline: { fontFamily: YS Text, fontSize: 21, fontWeight: 700, lineHeight: 1.18, letterSpacing: -0.15 }
-  card-title: { fontFamily: YS Text, fontSize: 16, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: YS Text, fontSize: 17, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
-  body-lg: { fontFamily: YS Text, fontSize: 16, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0 }
-  body: { fontFamily: YS Text, fontSize: 14, fontWeight: 400, lineHeight: 1.38, letterSpacing: 0 }
-  body-sm: { fontFamily: YS Text, fontSize: 12, fontWeight: 400, lineHeight: 1.32, letterSpacing: 0 }
-  caption: { fontFamily: YS Text, fontSize: 11, fontWeight: 400, lineHeight: 1.25, letterSpacing: 0 }
-  button: { fontFamily: YS Text, fontSize: 14, fontWeight: 500, lineHeight: 1.20, letterSpacing: 0 }
-  eyebrow: { fontFamily: YS Text, fontSize: 11, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0.2 }
-  mono: { fontFamily: System Mono, fontSize: 12, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
-rounded: { xs: 6, sm: 10, md: 14, lg: 18, xl: 24, xxl: 30, pill: 9999, full: 9999 }
-spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64 }
+  hero: {fontFamily: "SF Pro Display", fontSize: 36, fontWeight: 700, lineHeight: 41}
+  title: {fontFamily: "SF Pro Display", fontSize: 28, fontWeight: 700, lineHeight: 34}
+  section: {fontFamily: "SF Pro Text", fontSize: 20, fontWeight: 600, lineHeight: 25}
+  body: {fontFamily: "SF Pro Text", fontSize: 16, fontWeight: 400, lineHeight: 22}
+  label: {fontFamily: "SF Pro Text", fontSize: 14, fontWeight: 600, lineHeight: 19}
+  caption: {fontFamily: "SF Pro Text", fontSize: 12, fontWeight: 400, lineHeight: 17}
+spacing:
+  screen-horizontal: 16
+  section-gap: 24
+  card-padding: 16
+  control-gap: 10
+rounded:
+  control: 14
+  card: 18
+  sheet: 28
+  pill: 999
 components:
-  onboarding-button: { backgroundColor: "{colors.action-dark}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.pill}", padding: [14, 20]}
-  search-field: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.pill}", padding: [12, 16]}
-  shortcut-tile: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.caption}", rounded: "{rounded.md}", padding: [12, 8]}
-  tool-sheet: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.xl}", padding: 16 }
-  ai-action: { backgroundColor: "{colors.surface-1}", textColor: "{colors.primary}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 12 }
-  bottom-toolbar: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.caption}", rounded: "{rounded.xs}", height: 52 }
-  tab-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.md}", padding: 0 }
-  settings-group: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: [4, 12]}
-  footer: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink-muted}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: [12, 16]}
+  primary-action: {fill: "near-black", shape: "full-width pill", text: "white semibold"}
+  secondary-action: {fill: "white", shape: "pill or circle", text: "near-black"}
+  primary-card: {fill: "white", shape: "rounded utility surface", elevation: "subtle"}
+  navigation: {fill: "white floating bottom chrome", active: "black or pink contextual accent", icons: "compact monochrome line"}
 ---
 
 # Overview
 
-Yandex Browser combines a conventional web surface with a soft Alice-led shell. The start page uses a nearly white blush field, rounded shortcut tiles, a glowing bottom search control, and a pink Alice button. Browsed pages, results, tabs, and settings become denser and more neutral.
+Yandex Browser places conventional browser utility inside a softer AI-forward shell. Onboarding and the home surface use pale blush or lilac fields, bold centered headings, pink glow, and floating white controls. Search, web pages, tabs, menus, camera, and settings become denser and more neutral, with compact monochrome icons and bottom-owned browser chrome. The contrast between open branded entry screens and utilitarian content views is central.
 
 # Non-negotiable visual invariants
 
-- Navigation or control chrome uses Bottom-first search and browser navigation.
-- Keep search reachable at the bottom.
-- Reserve pink for Alice and AI tools.
-- Use full-page thumbnails in tab management.
-- Group related page actions with dividers.
-- Keep settings icon-coded and scannable.
-- The start page uses a three-column shortcut grid.
-- Search results and settings use a single column.
+- Keep the principal search and browser chrome near the bottom rather than converting the interface to a top-heavy navigation bar.
+- Use pale blush/lilac-to-white as the large home and onboarding field, with white floating utility surfaces.
+- Reserve pink/coral emphasis for assistant or AI-related visuals and focused accents; primary confirmation pills may be near black.
+- Browser controls use a coherent compact monochrome line-icon family with at least 44-point targets.
+- Web content remains visually source-controlled and denser than the surrounding browser shell.
+- Tab overview uses recognizable page thumbnails rather than generic document icons.
+- Menus and search entry appear as large rounded bottom sheets with clear grouping and native keyboard treatment.
 
 # Color and surfaces
 
-- **Alice Pink** ({colors.primary}): Alice, AI tools, glow, and focused assistant states.
-- **Action Dark** ({colors.action-dark}): Onboarding progress and high-contrast confirmation.
-- **Link Blue** ({colors.link}): Search-result titles and web links.
+The branded shell uses a very pale blush or lavender wash that can fade toward white. White search fields, shortcut tiles, toolbar elements, and sheets float above it with restrained shadow or translucency. Near black carries primary controls and labels; secondary copy and URLs are grey. Pink-to-coral is a narrow assistant accent, sometimes expressed as glow, while blue may appear inside web content but is not the shell tint.
 
-- **Canvas** ({colors.canvas}): Blush-tinted start and onboarding field.
-- **Surface 1** ({colors.surface-1}): Search, sheets, settings, shortcuts, and cards.
-- **Surface 2/3**: Search history, grouped controls, and pressed surfaces.
-- **Hairline** ({colors.hairline}): Fine separators in lists and sheets.
-
-- **Ink** ({colors.ink}): Titles, page tools, and primary labels.
-- **Ink Muted** ({colors.ink-muted}): URLs, descriptions, and setting details.
-- **Ink Subtle** ({colors.ink-subtle}): Placeholder and disabled copy.
-
-- **Success** ({colors.semantic-success}): Confirmed security or completion.
-- **Overlay** ({colors.semantic-overlay}): Page dimming behind sheets.
+Functional modes can depart sharply: the smart-camera capture surface is near black, and third-party pages keep their own colors. Dividers are fine and quiet inside lists and menus. Default iOS blue tint across the shell, strongly grey grouped backgrounds, or pink applied to every surface would break the observed hierarchy.
 
 # Typography
 
-- **YS Text** — interface, onboarding, search, settings, and browser chrome.
-- Web page type remains source-controlled and should not be normalized.
+Onboarding uses large bold centered headings with short supporting lines. The working browser uses compact sans text for search, shortcuts, URLs, menu labels, settings, and toolbars. Web pages preserve their own typography and must not be normalized into the shell. Numerals such as tab counts remain compact and highly legible.
 
-- `{typography.display-xl}` — 34 points — 700 — Rare onboarding emphasis
-- `{typography.display-md}` — 24 points — 700 — Onboarding and settings title
-- `{typography.headline}` — 21 points — 700 — Section heading
-- `{typography.card-title}` — 16 points — 600 — Result or tool title
-- `{typography.body}` — 14 points — 400 — Controls and descriptions
-- `{typography.caption}` — 11 points — 400 — Shortcut and toolbar labels
-
-- Keep onboarding centered and bold.
-- Keep browser chrome compact and neutral.
-- Let web content preserve its own hierarchy.
-- Use pink as an icon/accent cue, not body text.
-
-Use **SF Pro** on iOS and **Inter** elsewhere when YS Text is unavailable.
-
-The hierarchy must remain legible with Dynamic Type: supporting text may wrap before the primary metric, title, or action loses its role.
+Use SF Pro Display for large branded statements and SF Pro Text for chrome. Map intro text to large title/title, section and sheet headings to headline, controls to callout or subheadline, and URL or toolbar metadata to caption. Dynamic Type may expand sheets and settings rows; it must not compress essential toolbar controls or obscure the current page identity.
 
 # Screen composition
 
-Use a 4 points base. Primary gutters are 12–16 points; toolbar controls use 8–12 points gaps; sheets group rows in 12–16 points blocks.
+Branded intro screens fill the viewport with a pale field, center one visual or device fragment in the middle, and anchor a dark pill action near the bottom safe area. The home surface leaves breathing room above a compact tile grid and a rounded search/chrome rail near the bottom. Search entry rises as a bottom sheet above the native keyboard. Web pages devote nearly the whole viewport to page content and keep only compact browser chrome at the bottom.
 
-The start page uses a three-column shortcut grid. Search results and settings use a single column. Tab management uses a two-column thumbnail grid.
-
-Keep the upper start page open so search and shortcuts anchor the lower half. Functional screens trade empty space for scan density.
-
-Use soft pink bloom behind Alice elements and subtle shadow under floating search. Avoid strong shadows on result cards and settings.
-
-Primary iPhone screens keep the documented content grouping and vertical rhythm inside a scroll container when content exceeds the viewport. Bottom-owned actions or navigation reserve the lower safe area rather than covering content.
+Other observed archetypes include a two-column tab-thumbnail overview; a grouped icon-grid menu sheet; a dark camera capture mode with sparse light controls; and single-column grouped settings with icons, chevrons, and switches. Use roughly 12–16-point outer insets for shell-owned surfaces and tighter 8–12-point gaps inside tool grids. Long menus and settings scroll within safe areas.
 
 # Navigation appearance
 
-The bottom toolbar contains back, new tab, Alice, tab count, and menu. Page menus open as scrollable grouped sheets.
-
-This section governs appearance only; product behavior and information architecture come from the approved Research and Planning artifacts.
+Browser navigation is bottom-first: a white floating toolbar or search rail contains compact line icons, a tab-count badge, and contextual assistant emphasis. Tab overview presents rounded page thumbnails with compact close controls. Menus and search use draggable white bottom sheets with large top radii and grab handles. Settings use restrained iOS-style grouped rows. This defines appearance only, not destinations or browsing behavior.
 
 # Components
 
-Onboarding uses a full-width dark pill. Browser actions are icon-led, while Alice actions pair pink symbols with black labels on white.
+Primary onboarding confirmation is a wide near-black pill with white semibold text. The main search control is a full-width white pill with search affordance and contextual camera/assistant entry, plus subtle shadow. Shortcut tiles are compact white rounded blocks with a centered small icon and caption. Tab cards contain a full-page thumbnail, favicon/title strip, and small close control.
 
-Shortcut tiles are white and compact. Tab cards show a full page thumbnail, favicon/title strip, and close control. Search results form lightly separated white blocks.
-
-The primary input is a bottom pill with search icon, placeholder, and camera entry. Focus expands into a sheet with history and keyboard.
-
-Tab count is a compact outlined badge. Search or page progress remains in browser chrome rather than a large status surface.
-
-Controls retain at least a 44-point interactive area. Pressed and disabled treatments should stay within the documented palette and hierarchy.
+Menu sheets combine icon-led actions into clear groups separated by spacing or hairlines. Search/category selectors use compact selected states without oversized decoration. Settings rows pair a leading icon with title, optional detail, and chevron or native switch. Disabled or inactive controls become neutral grey; pink remains contextual rather than universal.
 
 # Imagery and icons
 
-Onboarding objects float centrally with soft blurred shadows. Page thumbnails keep the page aspect ratio inside rounded tab cards.
+Onboarding uses centered brand marks, pink glow, blurred device mockups, and floating assistant fragments with generous negative space. These are compositionally important on the screens where they appear and cannot simply be removed; temporary raster assets must preserve their crop, scale, and visual mass. Home and product screens instead rely on compact shortcut glyphs, page thumbnails, photos or imagery supplied by web content, and restrained utility symbols.
 
-Use contain for shortcut symbols, cover for page thumbnails, and natural aspect ratios for web-result imagery.
-
-When imagery is part of the documented composition, it cannot be omitted while final assets are pending. A temporary asset must preserve its placement, crop, scale, and approximate visual weight.
+There is no stable independent illustration system across the sampled app: branded onboarding art does not recur as a unified authored language throughout product screens. Page thumbnails keep recognizable aspect and crop; do not replace them with generic symbols.
 
 # States
 
-Tab count is a compact outlined badge. Search or page progress remains in browser chrome rather than a large status surface.
-
-- **Success** ({colors.semantic-success}): Confirmed security or completion.
-- **Overlay** ({colors.semantic-overlay}): Page dimming behind sheets.
-
-Only the states documented above are specified; other states must preserve the same canvas, hierarchy, and component language without inventing a new visual system.
+Observed states include onboarding progress, notification/tracking/microphone permission prompts over blurred context, focused search with native keyboard, selected search categories, page overlays, dark camera capture, populated tab overview, opened menu sheets, and settings toggles. Across these states, the shell retains rounded white utility surfaces, compact monochrome chrome, and contextual pink emphasis.
 
 # iOS adaptation
 
-- Extend the documented canvas through the iPhone safe areas while keeping readable content within appropriate insets.
-- Use a vertical `ScrollView` for content that does not fit compact heights; keep documented bottom actions and navigation clear of the home indicator.
-- Keep toolbar icons, shortcut tiles, tab controls, and sheet rows at least 44 points.
-- Shorten labels before removing controls. Let page menus scroll, and keep the search field full width.
-- Present the keyboard and system permission UI natively, then return to the same visual context.
-- Preserve semantic reading order in VoiceOver and allow text to grow with Dynamic Type.
-- Preserve the documented appearance instead of introducing an unrelated light or dark palette.
+Extend pale or dark mode-specific fields through safe areas while keeping shell-owned content within compact-width insets. Reserve the lower safe area for browser chrome and ensure scrollable web content, sheets, or settings do not end behind it. Use native keyboards and permission prompts, returning to the same blurred or underlying visual context. Bottom sheets may grow or scroll on compact heights.
+
+Toolbar icons, shortcut tiles, thumbnail close controls, and settings rows require at least 44-point targets. VoiceOver order follows visible shell structure before page content where appropriate. Dynamic Type expands labels and rows without removing essential controls. Preserve the observed light shell and specific dark camera mode rather than inventing a global dark treatment.
 
 # Anti-generic checklist
 
-- Do not tint every functional surface pink.
-- Do not hide browser basics behind AI entry points.
-- Do not replace page thumbnails with generic icons.
-- Do not make web-result typography decorative.
-- Do not over-round small list rows.
-- Do not replace the documented canvas and surfaces with a generic grouped background and uniform white cards.
-- Do not use an unstyled `TabView`, default blue tint, or arbitrary SF Symbols when they contradict the reference.
-- Do not collapse every component to one corner radius or remove compositionally important imagery.
+- Do not move the defining browser/search chrome into a generic top navigation bar.
+- Do not use default blue tint, unstyled `TabView`, or unrelated SF Symbols.
+- Do not replace page thumbnails with generic cards or document icons.
+- Do not turn every content area into the same white rounded card.
+- Do not tint all functional surfaces pink or treat AI accent as the whole palette.
+- Do not omit compositionally important onboarding imagery while assets are pending.
+- Do not normalize third-party web typography into the browser shell.
+- Do not add explanatory copy that repeats obvious search, page, tab, or permission context.
 
 </design-context>

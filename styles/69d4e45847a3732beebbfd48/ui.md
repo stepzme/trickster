@@ -3,140 +3,125 @@
 version: 1
 platform: iOS
 name: Glovo-design-analysis
-description: "A cheerful delivery marketplace with a warm yellow discovery field, teal-green transactional actions, white restaurant surfaces, rounded image-led cards, and hand-drawn multicolor category icons. Friendly type and receipt-like checkout details keep a broad service catalog approachable."
-colors: {primary: "#00A082", on-primary: "#FFFFFF", primary-focus: "#008B70", ink: "#1D1D1F", ink-muted: "#65676A", ink-subtle: "#97999C", ink-tertiary: "#C7C9CB", canvas: "#FFC244", surface-1: "#FFFFFF", surface-2: "#F5F5F3", surface-3: "#ECEDEA", surface-4: "#DEE1DC", hairline: "#E5E6E2", hairline-strong: "#CBCFC8", hairline-tertiary: "#B3B9B0", inverse-canvas: "#00A082", inverse-surface-1: "#1EAE92", inverse-surface-2: "#43BEA5", inverse-ink: "#FFFFFF", brand-secure: "#00A082", semantic-success: "#25A969", semantic-overlay: "#161817"}
+description: "A delivery marketplace interface with a warm yellow discovery field, teal transactional buttons, white commerce and checkout surfaces, rounded photography-led cards, friendly heavy text, bottom icon navigation, and authored service illustrations in circular badges."
+colors:
+  canvas: "#FFC244"
+  surface-primary: "#FFFFFF"
+  surface-secondary: "#F5F5F3"
+  surface-tertiary: "#ECEDEA"
+  accent-primary: "#00A082"
+  accent-primary-dark: "#008B70"
+  accent-promo: "#F6C84C"
+  text-primary: "#1D1D1F"
+  text-secondary: "#65676A"
+  text-tertiary: "#97999C"
+  divider: "#E5E6E2"
+  outline: "#CBCFC8"
+  destructive: "#D84A3A"
+  overlay: "#161817"
 typography:
-  display-xl: {fontFamily: SF Pro Rounded, fontSize: 36, fontWeight: 700, lineHeight: 1.06, letterSpacing: -0.8}
-  display-lg: {fontFamily: SF Pro Rounded, fontSize: 30, fontWeight: 700, lineHeight: 1.10, letterSpacing: -0.5}
-  display-md: {fontFamily: SF Pro Rounded, fontSize: 25, fontWeight: 700, lineHeight: 1.14, letterSpacing: -0.3}
-  headline: {fontFamily: SF Pro Rounded, fontSize: 21, fontWeight: 700, lineHeight: 1.20, letterSpacing: -0.2}
-  card-title: {fontFamily: SF Pro Text, fontSize: 16, fontWeight: 600, lineHeight: 1.25, letterSpacing: 0}
-  subhead: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 600, lineHeight: 1.30, letterSpacing: 0}
-  body-lg: {fontFamily: SF Pro Text, fontSize: 15, fontWeight: 400, lineHeight: 1.40, letterSpacing: 0}
-  body: {fontFamily: SF Pro Text, fontSize: 13, fontWeight: 400, lineHeight: 1.36, letterSpacing: 0}
-  body-sm: {fontFamily: SF Pro Text, fontSize: 11, fontWeight: 400, lineHeight: 1.30, letterSpacing: 0}
-  caption: {fontFamily: SF Pro Text, fontSize: 10, fontWeight: 400, lineHeight: 1.25, letterSpacing: 0}
-  button: {fontFamily: SF Pro Text, fontSize: 14, fontWeight: 700, lineHeight: 1.20, letterSpacing: 0}
-  eyebrow: {fontFamily: SF Pro Text, fontSize: 10, fontWeight: 600, lineHeight: 1.20, letterSpacing: 0.1}
-  mono: {fontFamily: SF Mono, fontSize: 11, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0}
-rounded: {xs: 4, sm: 8, md: 12, lg: 18, xl: 24, xxl: 30, pill: 9999, full: 9999}
-spacing: {xxs: 4, xs: 8, sm: 12, md: 16, lg: 20, xl: 24, xxl: 32, section: 40}
+  hero: {fontFamily: "SF Pro Rounded", fontSize: 36, fontWeight: 700, lineHeight: 40}
+  title: {fontFamily: "SF Pro Rounded", fontSize: 28, fontWeight: 700, lineHeight: 34}
+  section: {fontFamily: "SF Pro Rounded", fontSize: 21, fontWeight: 700, lineHeight: 26}
+  body: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 400, lineHeight: 21}
+  label: {fontFamily: "SF Pro Text", fontSize: 14, fontWeight: 700, lineHeight: 19}
+  caption: {fontFamily: "SF Pro Text", fontSize: 11, fontWeight: 500, lineHeight: 15}
+spacing:
+  screen-horizontal: 16
+  section-gap: 28
+  card-padding: 14
+  control-gap: 10
+rounded:
+  control: 14
+  card: 18
+  sheet: 28
+  pill: 999
 components:
-  button-primary: {backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.md}", padding: 14 18}
-  button-secondary: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.md}", padding: 12 16}
-  restaurant-card: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.lg}", padding: 12}
-  category-card: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.full}", padding: 10}
-  text-input: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 12 14}
-  status-badge: {backgroundColor: "#E9B83D", textColor: "{colors.ink}", typography: "{typography.caption}", rounded: "{rounded.pill}", padding: 3 7}
-  bottom-nav: {backgroundColor: "{colors.surface-1}", textColor: "{colors.ink-subtle}", typography: "{typography.caption}", rounded: "{rounded.xs}", padding: 8 10}
+  primary-action: {backgroundColor: "{colors.accent-primary}", textColor: "{colors.surface-primary}", typography: "{typography.label}", rounded: "{rounded.pill}", padding: [14, 18]}
+  secondary-action: {backgroundColor: "{colors.surface-primary}", textColor: "{colors.text-primary}", typography: "{typography.label}", rounded: "{rounded.pill}", borderColor: "{colors.divider}", padding: [12, 16]}
+  primary-card: {backgroundColor: "{colors.surface-primary}", textColor: "{colors.text-primary}", typography: "{typography.body}", rounded: "{rounded.card}", padding: 14}
+  navigation: {backgroundColor: "{colors.surface-primary}", textColor: "{colors.text-tertiary}", selectedColor: "{colors.text-primary}", typography: "{typography.caption}", height: 56}
 ---
 
 # Overview
 
-Glovo pairs a warm yellow discovery world with clean white restaurant and checkout surfaces. Teal drives commitment, while colorful hand-drawn icons keep many delivery categories friendly and distinct.
+Glovo's sampled iOS screens start with a bright yellow branded world and become progressively more white and information-led in lists, product detail, cart, checkout, tracking, and profile. The app is recognisable through the yellow canvas, teal commitment buttons, rounded white surfaces, circular illustrated category badges, food photography, bold friendly headings, and compact receipt-like commerce rows.
 
 # Non-negotiable visual invariants
 
-- The recurring color treatment uses warm yellow home.
-- The sampled screens consistently show teal transactional CTAs.
-- The recurring color treatment uses white content surfaces.
-- The sampled screens consistently show circular illustrated services.
-- Characteristic content and controls use photo-led restaurant cards.
-- Characteristic content and controls use rounded chips.
-- The sampled screens consistently show mustard promo badges.
-- The sampled screens consistently show receipt-like checkout grouping.
+- The discovery surface uses a full yellow upper field with white content rising from the bottom in a soft curved transition.
+- Primary transactional actions are teal, pill-shaped, full-width or wide, and use white bold labels.
+- Service categories appear as authored multicolor illustrations inside white circular badges on yellow.
+- Restaurant and dish browsing is photography-led, with rounded image corners and compact timing, rating, fee, and promo badges.
+- Cart and checkout abandon yellow decoration and use mostly white surfaces with receipt-like grouping, totals, dividers, and fixed bottom actions.
+- Bottom navigation is a white four-item icon bar with dark selected emphasis and small teal notification dots.
+- Sheets and modals use large rounded top corners, white or cream fills, dim overlays, and a close control at the upper right.
 
 # Color and surfaces
 
-Yellow owns discovery and brand atmosphere. Teal-green owns add, continue, checkout, and selected transactional states.
+Yellow is the atmospheric brand canvas on splash, login header, home, profile header, and category discovery. It should occupy large areas only where the reference uses it as environment; checkout and tracking are not yellow. Teal-green is the only primary transaction color for SMS, order, cart, payment, help, and positive progress. White is the dominant surface for lists, sheets, restaurant pages, cart, checkout, and profile content. Pale cream or gray groups search fields, disabled options, and checkout summaries.
 
-White is used for restaurant lists, menus, product detail, cart, and checkout. Pale neutral fields group search, options, and order detail.
-
-Near-black leads restaurant, item, price, and total. Gray supports timing, fees, descriptions, and conditions.
-
-Teal confirms action and positive state, mustard marks promotion, and red is reserved for genuine errors or unavailable items.
+Mustard promo badges mark discounts and free delivery. Text is near-black for titles, restaurant names, dish names, prices, totals, and selected tabs; gray is used for descriptions, timing, conditions, and inactive tab items. Generic blue controls, playful yellow checkout buttons, or a gray grouped iOS background would visibly break the reference.
 
 # Typography
 
-Use a friendly rounded display sans for greetings and category emphasis, with SF Pro Text for menu, cart, and checkout detail.
+Use SF Pro Rounded for large greetings, page titles, and section headings; use SF Pro Text for dense commerce copy. Titles are heavy and friendly, typically 21 to 28 points. Restaurant names, dish names, cart totals, and checkout totals use bold weight. Descriptions, ETA ranges, service fees, and conditions use smaller regular text. Promo badges use compact all-caps or condensed labels in dark text on mustard.
 
-- display-lg — 30 points — 700 — Greeting or discovery state
-- headline — 21 points — 700 — Restaurant or section
-- card-title — 16 points — 600 — Dish or service
-- body — 13 points — 400 — Detail and checkout
-- caption — 10 points — 400 — Timing, fee, promo meta
-
-- Keep discovery language playful but transactional copy direct.
-- Put item, price, timing, and fee in repeatable positions.
-- Use bold weight sparingly for decision-critical totals.
-
-Use SF Pro Rounded or Nunito Sans for display and the platform sans for dense commerce text.
-
-The hierarchy must remain legible with Dynamic Type: supporting text may wrap before the primary metric, title, or action loses its role.
+Numbers and prices should align cleanly to the right edge in cart and checkout rows. Long dish descriptions wrap to two or three lines and then truncate, preserving price and add controls. With Dynamic Type, keep address, item name, price, total, ETA, and primary action visible before campaigns or recommendations.
 
 # Screen composition
 
-Use a 4 points base, 8–12 points card gaps, 16 points module padding, and 20–24 points between discovery rails.
+Home uses a yellow top field through the safe area, a centered rounded address pill, two rows of circular service badges, then a white lower surface with rails of brand tiles and promotional content. The boundary between yellow and white is soft and wavy rather than a hard divider. Food browsing switches to a white canvas with a back control, address pill, large title, rounded search field, horizontal illustrated cuisine chips, filter chips, section titles, restaurant cards, and a persistent bottom tab bar.
 
-Home uses circular service shortcuts and image-led horizontal rails. Restaurant, dish, cart, and checkout use a focused vertical stack.
+Restaurant pages use a wide food or brand hero image at the top, floating round controls over the image, then a white content stack with title, promo badges, metric row, sticky category tabs, product grids or rows, and compact fee messaging near the bottom. Dish detail screens use an oversized product photo on a pale colored panel occupying roughly the upper half, then title, price, description, quantity stepper, and a fixed teal add button.
 
-Keep the yellow home energetic, then progressively simplify surfaces as the user approaches payment.
-
-Use hand-drawn icons, wavy yellow-to-white transitions, food photography, and soft card shadow. Avoid glossy or metallic visual effects.
-
-Primary iPhone screens keep the documented content grouping and vertical rhythm inside a scroll container when content exceeds the viewport. Bottom-owned actions or navigation reserve the lower safe area rather than covering content.
+Cart, checkout, and profile use clean vertical stacks with 16 point gutters, sparse dividers, and wide bottom CTAs. Tracking screens are map-led: the map fills most of the viewport, while ETA, progress, help, courier status, and ad cards sit above or over it with white or translucent surfaces.
 
 # Navigation appearance
 
-Use four bottom destinations for Home, Discover, Orders, and Profile, with teal or dark active emphasis.
-
-This section governs appearance only; product behavior and information architecture come from the approved Research and Planning artifacts.
+The bottom bar is white, flat, and persistent on discovery, browsing, orders, and profile screens. Items use simple line icons with small labels; the selected item becomes darker and may sit on a subtle yellow highlight or show a teal dot. Top navigation is minimal: circular back buttons, address pills, search fields, and floating icon buttons over photos. Sheets rise from the bottom with rounded top corners and keep the background visibly dimmed.
 
 # Components
 
-Primary transactional buttons use teal with white type. Secondary controls stay white or pale, while yellow is not used as the main checkout action.
+Primary action: teal pill, white bold label, wide horizontal padding, and at least 44 point height. It anchors login, dish add, cart, payment, and help states.
 
-Restaurant cards lead with photography and compact timing. Dish cards align image, title, description, and price; checkout groups read like a clear receipt.
+Service badge: white circle with a soft shadow or glow on yellow, centered authored illustration, and a tiny rounded text label below or overlapping the badge.
 
-Address and search fields are prominent and rounded. Native controls may be used but must inherit the teal focus, radii, type, and spacing of this system.
+Search and address fields: pale rounded pills with compact iconography, gray placeholder text, and a centered or leading layout depending on context.
 
-Keep ETA, delivery fee, minimum, unavailable items, substitutions, total, payment, and courier state near the next action.
+Filter chip: light gray or white pill, small icon when needed, bold compact label, and down chevron for expandable filters.
 
-Controls retain at least a 44-point interactive area. Pressed and disabled treatments should stay within the documented palette and hierarchy.
+Restaurant card: wide rounded food photo, dark title, rating and time metadata, heart outline on the trailing side, and mustard promo badges over or below the image.
+
+Dish row: square or rounded product image on a pale pink or neutral tile, bold dish name, gray multiline description, price, and a small circular plus control aligned to the trailing edge.
+
+Checkout group: white or pale panel with section heading, rows with left icons, right chevrons, gray disabled rows, fee strikethroughs, mustard free labels, and bold total near the bottom action.
 
 # Imagery and icons
 
-Crop restaurant imagery wide and appetizing. Place service illustrations inside simple circular fields with generous breathing room.
+Food photography is essential in browsing, restaurant, dish, and promo contexts. Photos are cropped close, saturated, and appetizing, with rounded corners and enough clear area for discount badges when present. Category and service icons are authored illustrations rather than generic symbols: food baskets, supermarket carts, pharmacy items, courier package art, and cuisine objects sit inside circular badges or horizontal chips.
 
-Use fixed aspect ratios for restaurant and dish imagery, with center crops and protected text-safe areas for badges.
-
-When imagery is part of the documented composition, it cannot be omitted while final assets are pending. A temporary asset must preserve its placement, crop, scale, and approximate visual weight.
+Do not omit imagery while waiting for final assets. Temporary images must preserve the same crop ratio, scale, saturation, and text-safe zones; temporary category art must preserve circular placement and hand-drawn visual weight.
 
 # States
 
-Keep ETA, delivery fee, minimum, unavailable items, substitutions, total, payment, and courier state near the next action.
+Observed states include splash, phone/social login, native Apple sign-in sheet over dimmed login, loading spinner overlay, home discovery, info sheet, food category popup, filtered and scrolled lists, restaurant detail, selected dish quantity, cart, checkout with disabled payment rows, fee summary, active order list, map-based order tracking, profile settings, and delete/logout rows. Across these states, rounded surfaces, teal actions, dark commerce text, and compact metadata remain constant.
 
-Teal confirms action and positive state, mustard marks promotion, and red is reserved for genuine errors or unavailable items.
-
-Only the states documented above are specified; other states must preserve the same canvas, hierarchy, and component language without inventing a new visual system.
+Unavailable or inactive options appear pale gray with reduced text contrast. Promo and free-delivery states use mustard labels. Tracking progress uses teal bars and map pins while preserving white readable status surfaces.
 
 # iOS adaptation
 
-- Extend the documented canvas through the iPhone safe areas while keeping readable content within appropriate insets.
-- Use a vertical `ScrollView` for content that does not fit compact heights; keep documented bottom actions and navigation clear of the home indicator.
-- Service icons, filters, dish rows, options, navigation, cart, and checkout remain at least 44 points.
-- Preserve address, restaurant, item, price, ETA, fee, total, and primary action; reduce campaigns and recommendations first.
-- Present the keyboard and system permission UI natively, then return to the same visual context.
-- Preserve semantic reading order in VoiceOver and allow text to grow with Dynamic Type.
-- Preserve the documented appearance instead of introducing an unrelated light or dark palette.
+Extend the yellow discovery field into the top safe area and the white bottom navigation through the lower safe area. Use vertical `ScrollView` containers for lists, restaurant menus, cart, checkout, profile, and order history. Keep fixed bottom CTAs and the tab bar outside scrolling content with enough inset so totals and rows are not covered.
+
+Use native Apple sign-in, maps, keyboard, and permission transitions where relevant, but style surrounding fields, sheets, buttons, and rows to match this package. Touch targets for service badges, chips, dish rows, plus controls, back buttons, and tab items must be at least 44 points. Dynamic Type may stack metadata and wrap descriptions, but item title, price, ETA, total, and primary action retain priority on compact widths. VoiceOver order should follow visible commerce priority: address or status, title, item details, price or ETA, options, total, action.
 
 # Anti-generic checklist
 
-- Do not make checkout yellow or visually playful at the expense of trust.
-- Do not mix multiple illustration styles.
-- Do not let restaurant photography hide timing, price, or fees.
-- Do not replace the documented canvas and surfaces with a generic grouped background and uniform white cards.
-- Do not use an unstyled `TabView`, default blue tint, or arbitrary SF Symbols when they contradict the reference.
-- Do not collapse every component to one corner radius or remove compositionally important imagery.
+- Do not render discovery as a plain white list; the yellow field and circular service badges are defining.
+- Do not make checkout or cart playful yellow; these screens are white, receipt-like, and teal-actioned.
+- Do not replace food photos with flat icons or generic placeholders in restaurant and dish surfaces.
+- Do not replace authored service illustrations with SF Symbols, emoji, or monochrome line icons.
+- Do not use default blue tint, default SwiftUI `Form`, or unstyled `TabView` selected states.
+- Do not flatten every component to one radius; Glovo mixes circular badges, pill CTAs, rounded photos, and large-radius sheets.
 
 </design-context>

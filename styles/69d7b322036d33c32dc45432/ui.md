@@ -3,154 +3,154 @@
 version: 1
 platform: iOS
 name: Yandex-Realty-design-analysis
-description: "A photo-led property marketplace built on white surfaces, soft gray filter fields, bold black listing facts, and unmistakable Yandex yellow for contact, save-search, and active navigation. Rounded cards and toy-like property objects soften a dense information system without competing with real-estate photography."
-
+description: "A white, photo-led real-estate marketplace style with Yandex yellow action bands, black price hierarchy, soft gray search and filter controls, rounded media cards, map overlays, compact property facts, and occasional pastel authored objects used as supporting accents."
 colors:
-  primary: "#FFD400"
-  on-primary: "#171719"
-  primary-pressed: "#E7BF00"
-  active-blue: "#168EEC"
-  favorite: "#E8344E"
-  ink: "#171719"
-  ink-muted: "#717277"
-  ink-subtle: "#A5A6AA"
   canvas: "#FFFFFF"
-  surface-1: "#FFFFFF"
-  surface-2: "#F3F4F5"
-  surface-3: "#E8E9EB"
-  hairline: "#D9DBDE"
-  semantic-success: "#24945A"
-  semantic-warning: "#E6A318"
-  semantic-danger: "#E13F4F"
-  semantic-overlay: "#000000"
-
+  surface-primary: "#FFFFFF"
+  surface-secondary: "#F4F5F7"
+  surface-tertiary: "#ECEEF2"
+  accent-primary: "#FFD400"
+  accent-primary-pressed: "#E7BE00"
+  accent-blue: "#168EEC"
+  accent-red: "#E8344E"
+  accent-green: "#24945A"
+  accent-purple: "#8F37FF"
+  text-primary: "#171719"
+  text-secondary: "#686B70"
+  text-tertiary: "#A5A8AE"
+  divider: "#E1E3E7"
+  overlay: "#171719"
 typography:
-  display-xl: { fontFamily: YS Text, fontSize: 36, fontWeight: 750, lineHeight: 1.05, letterSpacing: -0.8 }
-  display-lg: { fontFamily: YS Text, fontSize: 30, fontWeight: 700, lineHeight: 1.1, letterSpacing: -0.55 }
-  display-md: { fontFamily: YS Text, fontSize: 25, fontWeight: 700, lineHeight: 1.15, letterSpacing: -0.35 }
-  headline: { fontFamily: YS Text, fontSize: 21, fontWeight: 700, lineHeight: 1.2, letterSpacing: -0.2 }
-  card-title: { fontFamily: YS Text, fontSize: 17, fontWeight: 650, lineHeight: 1.25, letterSpacing: 0 }
-  subhead: { fontFamily: YS Text, fontSize: 15, fontWeight: 500, lineHeight: 1.35, letterSpacing: 0 }
-  body-lg: { fontFamily: YS Text, fontSize: 16, fontWeight: 400, lineHeight: 1.42, letterSpacing: 0 }
-  body: { fontFamily: YS Text, fontSize: 14, fontWeight: 400, lineHeight: 1.38, letterSpacing: 0 }
-  body-sm: { fontFamily: YS Text, fontSize: 12, fontWeight: 400, lineHeight: 1.32, letterSpacing: 0 }
-  caption: { fontFamily: YS Text, fontSize: 11, fontWeight: 450, lineHeight: 1.25, letterSpacing: 0 }
-  button: { fontFamily: YS Text, fontSize: 14, fontWeight: 650, lineHeight: 1.2, letterSpacing: 0 }
-  eyebrow: { fontFamily: YS Text, fontSize: 11, fontWeight: 650, lineHeight: 1.2, letterSpacing: 0.1 }
-  mono: { fontFamily: System Mono, fontSize: 12, fontWeight: 400, lineHeight: 1.35, letterSpacing: 0 }
-
-rounded: { xs: 6, sm: 10, md: 14, lg: 18, xl: 22, xxl: 28, pill: 9999, full: 9999 }
-spacing: { xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 60 }
-
+  hero: {fontFamily: "SF Pro Display", fontSize: 32, fontWeight: 700, lineHeight: 36}
+  title: {fontFamily: "SF Pro Display", fontSize: 26, fontWeight: 700, lineHeight: 31}
+  section: {fontFamily: "SF Pro Text", fontSize: 21, fontWeight: 700, lineHeight: 26}
+  price: {fontFamily: "SF Pro Text", fontSize: 21, fontWeight: 700, lineHeight: 25}
+  body: {fontFamily: "SF Pro Text", fontSize: 15, fontWeight: 400, lineHeight: 21}
+  label: {fontFamily: "SF Pro Text", fontSize: 14, fontWeight: 600, lineHeight: 18}
+  caption: {fontFamily: "SF Pro Text", fontSize: 12, fontWeight: 400, lineHeight: 16}
+  micro: {fontFamily: "SF Pro Text", fontSize: 11, fontWeight: 500, lineHeight: 14}
+spacing:
+  screen-horizontal: 16
+  section-gap: 24
+  card-padding: 12
+  control-gap: 8
+  row-gap: 10
+rounded:
+  control: 12
+  card: 14
+  media: 10
+  sheet: 24
+  pill: 999
 components:
-  button-primary: { backgroundColor: "{colors.primary}", textColor: "{colors.on-primary}", typography: "{typography.button}", rounded: "{rounded.md}", padding: [14, 20]}
-  button-secondary: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.button}", rounded: "{rounded.md}", padding: [12, 16]}
-  listing-card: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: 0 }
-  search-input: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body}", rounded: "{rounded.md}", padding: [12, 14]}
-  filter-chip: { backgroundColor: "{colors.surface-2}", textColor: "{colors.ink}", typography: "{typography.body-sm}", rounded: "{rounded.pill}", padding: [8, 12]}
-  bottom-nav: { backgroundColor: "{colors.surface-1}", textColor: "{colors.ink}", typography: "{typography.caption}", rounded: "{rounded.xs}", height: 58 }
+  primary-action: {backgroundColor: "{colors.accent-primary}", textColor: "{colors.text-primary}", typography: "{typography.label}", rounded: "{rounded.control}", height: 56}
+  secondary-action: {backgroundColor: "{colors.surface-secondary}", textColor: "{colors.text-primary}", typography: "{typography.label}", rounded: "{rounded.control}", height: 48}
+  dark-action: {backgroundColor: "{colors.overlay}", textColor: "{colors.canvas}", typography: "{typography.label}", rounded: "{rounded.control}", height: 52}
+  search-field: {backgroundColor: "{colors.surface-secondary}", textColor: "{colors.text-primary}", typography: "{typography.caption}", rounded: "{rounded.control}", height: 44}
+  filter-chip: {backgroundColor: "{colors.surface-secondary}", textColor: "{colors.text-primary}", typography: "{typography.caption}", rounded: "{rounded.control}", height: 36}
+  listing-card: {backgroundColor: "{colors.surface-primary}", textColor: "{colors.text-primary}", typography: "{typography.body}", rounded: "{rounded.card}", padding: 0}
+  bottom-navigation: {backgroundColor: "{colors.surface-primary}", activeColor: "{colors.accent-primary}", inactiveColor: "{colors.text-tertiary}", height: 58}
 ---
 
 # Overview
 
-Yandex Realty keeps the shell neutral and information-rich so property photography, price, location, and contact actions drive the decision.
+Yandex Realty is defined by a clean white marketplace shell, strong black pricing, compact property metadata, and large real-estate photography. The app does not look like a generic grouped SwiftUI form: it feels like a dense listings product with lightweight Yandex character supplied by yellow actions, rounded gray controls, small colored badges, and occasional soft 3D service objects.
 
 # Non-negotiable visual invariants
 
-- Preserve authentic listing photography and floor plans.
-- Keep price, location, and contact visible.
-- Make filters reversible and inspectable.
-- Style native controls in the Realty system.
-- Results use one vertical feed; home may use two-column service shortcuts; detail uses full-width media followed by structured facts.
-- Keep filters compact but give price, photo, and contact actions clear breathing room.
-- Do not compress important legal or location facts.
+- Keep real property photography, floor plans, and maps as the dominant imagery on marketplace and detail screens.
+- Use Yandex yellow only for primary actions, active bottom navigation, and a few brand moments; do not flood the page with yellow panels.
+- Preserve bold black price and room/area facts above secondary gray location metadata.
+- Keep search and filter controls as compact gray rounded controls attached to the top of listing feeds.
+- Use a white canvas with pale gray modules; avoid heavy borders, dark page backgrounds, or card stacks that obscure the feed.
+- Keep bottom call/contact actions large, sticky-looking, and clear of the home indicator.
+- Use compact badges over images for status such as new build, 3D tour, rent service, discount, demand, and saved/search context.
+- Use pastel authored objects only as supporting service/promotional accents, never as substitutes for listing media.
 
 # Color and surfaces
 
-Use Yandex yellow for Call, Rent, Save search, and the active bottom destination. Keep it bounded to actions and small identity moments.
+The base canvas is pure white. Search fields, neutral buttons, chips, disabled fields, and grouped form inputs use very light gray fills from `#F4F5F7` to `#ECEEF2`; dividers are thin and low contrast.
 
-Use white pages, pale gray fields and chips, and light cards. Listing images should meet the page without heavy decorative frames.
+Yandex yellow `#FFD400` is the primary action color for call, rent, save-search, show-results, and active tab treatments. Text on yellow remains near-black. Pressed yellow should darken slightly instead of becoming orange.
 
-Use near-black for price, rooms, and listing titles; medium gray for address and metadata; subtle gray for unavailable or secondary values.
+Near-black `#171719` carries prices, section headings, selected chips, and dark confirmation buttons. Secondary metadata uses medium gray, while unavailable placeholders and inactive navigation use lighter gray. Blue is reserved for selected input chips, map-current controls, and small utility links. Red appears in favorites, notification dots, and negative/status markers. Green is used for favorable changes and transit/location signals when visible.
 
-Use green for favorable change, red for favorites and critical status, yellow for primary actions, and blue for selected search controls.
+Surfaces are mostly flush with the page. Use soft shadows sparingly on large choice tiles and onboarding/posting selection cards; listing cards rely more on media mass and spacing than on shadow. Bottom sheets and floating map/action controls remain white with subtle elevation.
 
 # Typography
 
-Use YS Text or a neutral grotesk with compact numerals and strong Cyrillic support.
+Use SF Pro as the implementation baseline, with a compact Yandex-like grotesk only when it is already available in the app. Do not depend on an unavailable brand font.
 
-Use 26–30 points page titles, 20–24 points listing prices, 18–21 points section titles, 14–16 points property facts, and 11–13 points location metadata.
+Hierarchy is weight-driven and numeric. Prices and primary facts use 20-22 pt semibold/bold text with tabular numerals. Page titles and section titles sit at 21-26 pt bold. Body copy is compact, usually 14-15 pt, with captions at 11-12 pt for metro, address, footnotes, and labels.
 
-Keep price and property facts aligned, preserve unit notation, and use short labels that scan quickly while scrolling photos.
+Russian and numeric strings must remain tightly aligned. Preserve unit notation, ruble signs, room counts, area values, mortgage percentages, and "per month" qualifiers. Let supporting address lines wrap before reducing the prominence of price, primary facts, or the main action.
 
-Use SF Pro or Inter when YS Text is unavailable; enable tabular numerals in price tables and mortgage details.
-
-The hierarchy must remain legible with Dynamic Type: supporting text may wrap before the primary metric, title, or action loses its role.
+Buttons use semibold 14-15 pt labels. Filter chips use smaller 12-13 pt labels with compact horizontal padding. Avoid exaggerated display type except on sparse onboarding/posting screens.
 
 # Screen composition
 
-Use a 4 points base, 8 points between property facts, 12 points card gaps, 16 points page gutters, and 24–32 points between detail sections.
+Use 16 pt horizontal gutters on standard content screens. Listing feeds place a compact search bar at the top, a horizontal filter-chip row directly below it, then a vertical photo-led feed. The first visual mass in a listing row is a large media crop, followed by price, micro facts, address/transit metadata, and actions.
 
-Results use one vertical feed; home may use two-column service shortcuts; detail uses full-width media followed by structured facts.
+Home uses a high-density service grid: a centered region selector, a wide search/assistant card, two-column shortcut tiles with authored objects, a full-width post listing action, then horizontal property carousels. Keep tiles around 150-170 pt wide on compact iPhones with rounded pale backgrounds and small labels under or beside the object.
 
-Keep filters compact but give price, photo, and contact actions clear breathing room. Do not compress important legal or location facts.
+Detail pages use a large image or media carousel at the top, transparent overlaid controls, then a white information sheet with price, compact fact columns, map preview, address, property facts, amenities, and a sticky yellow contact action at the bottom. New-build detail keeps chip rows, promo panels, mortgage modules, master-plan media, and 3D tour cards in the same white scrolling rhythm.
 
-Use small toy-like property objects on home and onboarding; never let decorative depth compete with authentic listing imagery.
+Posting and filter screens are sparse compared with listing feeds. They use a top close/back control, a bold title, large rounded selection tiles or plain form rows, and one strong bottom action. Map-based address selection uses a full-screen map with a bottom input/control slab.
 
-Primary iPhone screens keep the documented content grouping and vertical rhythm inside a scroll container when content exceeds the viewport. Bottom-owned actions or navigation reserve the lower safe area rather than covering content.
+Maintain an 8 pt internal rhythm, 12 pt between related controls, 16 pt section insets, and 24 pt between major sections. Avoid nested card-in-card layouts.
 
 # Navigation appearance
 
-Use a five-item bottom bar for Home, Search, Favorites, Chats, and Profile. Keep query and filters visible in result feeds.
+Navigation is visually iOS-native but styled: white bars, black glyphs/text, compact back or close controls, and thin bottom dividers when needed. Bottom navigation is white, five-icon, and low-chrome; the active item is yellow while inactive items are gray. Notification dots use red.
 
-This section governs appearance only; product behavior and information architecture come from the approved Research and Planning artifacts.
+Search/feed screens keep top controls visually pinned to the content edge. Detail screens can place controls over imagery using white or translucent icons. Map screens use floating white rounded controls over the map. This section specifies only appearance, not product navigation or task flow.
 
 # Components
 
-Use yellow filled buttons for contact, rent, and save-search actions; use pale gray for secondary choices and compact white floating map actions.
+Primary action buttons are full-width or half-width yellow rounded rectangles, 48-56 pt high, with centered near-black semibold labels. Paired action rows use yellow for the most important action and light gray for the secondary action. Dark confirmation buttons appear on map/address and modal-like decisions.
 
-Listing cards combine photo, badges, price, address, facts, favorite, and contact. Service cards use a compact 3D object and short label.
+Filter chips are compact rounded rectangles in pale gray. Selected chips can invert to dark fill or use blue accent depending on the local screen, but must remain compact and horizontally scannable.
 
-Use pale location and attribute fields, segmented room choices, map selection, and a guided posting sequence with one topic per screen.
+Listing cards combine large rounded media, overlaid badges, favorite and overflow icons, bold price, fact line, address/transit metadata, and optional contact buttons. Do not wrap every listing in a heavy bordered card.
 
-Show new-build stage, listing freshness, price change, 3D tour, demand, saved state, chat unread, and publication progress explicitly.
+Forms use pale gray rounded fields, segmented chips, and simple rows with right-aligned muted values. Toggle rows are thin, white, and list-like. Long forms keep a sticky yellow bottom "show results" or continuation action.
 
-Controls retain at least a 44-point interactive area. Pressed and disabled treatments should stay within the documented palette and hierarchy.
+Promotional and service tiles use pale surfaces, soft shadows, authored objects, and concise bold labels. Keep the illustration small-to-medium and never larger than the content purpose.
+
+Maps use muted cartographic colors, red location pins, blue current-location markers, and floating white controls. Full-screen immersive media such as 3D tours should be image/video-first with minimal overlay chrome.
 
 # Imagery and icons
 
-Use wide photo crops that preserve rooms and building proportions; keep floor plans contained and maps fully legible.
+Real listing photos must retain room/building context and should not be darkened, blurred, or replaced by generic stock imagery. Use cover crops for apartment/building photos with stable rounded rectangles; use contain behavior for floor plans and master-plan content.
 
-Use cover for property photos with stable wide ratios, contain for floor plans and service objects, and progressive loading for long galleries.
+On-image badges are small rounded white or colored capsules. Favorite hearts and overflow controls float at image edges without large containers unless contrast requires a light circular backing.
 
-When imagery is part of the documented composition, it cannot be omitted while final assets are pending. A temporary asset must preserve its placement, crop, scale, and approximate visual weight.
+Authored service art appears as soft 3D or flat pastel objects on white or pale tiles. It is supporting imagery, not the primary content system. When final raster assets are pending, keep the same placement, scale, approximate palette, and whitespace.
+
+Use simple outline icons for list rows and controls. If SF Symbols are used for implementation, customize weight, size, fill, and color so they match the observed compact icon style.
 
 # States
 
-Show new-build stage, listing freshness, price change, 3D tour, demand, saved state, chat unread, and publication progress explicitly.
+Observed states include onboarding splash/permission prompt, saved-search prompt, selected filters, disabled/unfilled posting fields, active tabs, map selection, favorite/unread markers, empty or promotional service cards, sticky contact actions, and system permission overlays.
 
-Use green for favorable change, red for favorites and critical status, yellow for primary actions, and blue for selected search controls.
-
-Only the states documented above are specified; other states must preserve the same canvas, hierarchy, and component language without inventing a new visual system.
+Disabled fields use low-contrast gray text and pale gray fill, not opacity on the whole screen. Selected segmented chips use saturated blue or dark fill. Modal/system permission dimming keeps the underlying Yandex screen visible but subdued.
 
 # iOS adaptation
 
-- Extend the documented canvas through the iPhone safe areas while keeping readable content within appropriate insets.
-- Use a vertical `ScrollView` for content that does not fit compact heights; keep documented bottom actions and navigation clear of the home indicator.
-- Search, filters, favorite, photo, map, call, message, post, and navigation targets require at least 44 points.
-- Keep primary photo, price, rooms, area, location, status, and contact action; collapse promotion badges and secondary amenities first.
-- Present the keyboard and system permission UI natively, then return to the same visual context.
-- Preserve semantic reading order in VoiceOver and allow text to grow with Dynamic Type.
-- Preserve the documented appearance instead of introducing an unrelated light or dark palette.
+Use vertical `ScrollView`/`List` only when the visual styling remains custom; default grouped `Form` styling is too generic. Reserve the bottom safe area for sticky actions or bottom navigation. Controls must preserve at least 44 pt touch targets even when their visual pill is smaller.
+
+Respect Dynamic Type by wrapping secondary metadata and promotion copy before shrinking price, primary facts, or action labels. Keep VoiceOver order aligned with the visual hierarchy: media context, price/title, key facts, location, actions.
+
+Keyboard and iOS permission alerts may be native, but the return state must keep the same Yandex surfaces and action styling. Support compact iPhone heights by reducing secondary promo content first, not by removing media, price, or contact actions.
 
 # Anti-generic checklist
 
-- Do not use default platform blue broadly.
-- Do not crop important room or building context.
-- Do not hide fees or property status.
-- Do not replace listing imagery with decoration.
-- Do not replace the documented canvas and surfaces with a generic grouped background and uniform white cards.
-- Do not use an unstyled `TabView`, default blue tint, or arbitrary SF Symbols when they contradict the reference.
-- Do not collapse every component to one corner radius or remove compositionally important imagery.
+- Do not replace Yandex yellow with default iOS blue for primary actions.
+- Do not turn listing feeds into uniform white cards with heavy borders.
+- Do not crop out meaningful room, facade, map, or floor-plan context.
+- Do not omit real listing imagery while waiting for final assets.
+- Do not use default `Form`, unstyled `TabView`, or system list rows for filters/posting screens.
+- Do not make every radius identical; controls, media, sheets, and service tiles have distinct curvature.
+- Do not replace authored objects with emoji, arbitrary SF Symbols, or flat placeholder shapes.
+- Do not introduce marketing-page heroes, web nav, hover states, or desktop breakpoints.
 
 </design-context>
