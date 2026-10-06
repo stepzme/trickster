@@ -40,7 +40,9 @@
   "scripts": {
     "preinstall": "node ./scripts/reject-global-install.mjs",
     "test": "node --test",
-    "pack:check": "npm pack --dry-run"
+    "pack:check": "npm pack --dry-run",
+    "plugin:build": "node maintainers/build-plugin.mjs",
+    "plugin:check": "node maintainers/build-plugin.mjs --check"
   },
   "engines": {
     "node": ">=20"

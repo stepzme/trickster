@@ -1,0 +1,20 @@
+{
+  "name": "trickster-local",
+  "interface": {
+    "displayName": "Trickster Local"
+  },
+  "plugins": [
+    {
+      "name": "trickster",
+      "source": {
+        "source": "local",
+        "path": "./plugin"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

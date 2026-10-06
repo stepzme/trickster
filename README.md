@@ -9,7 +9,7 @@ Trickster is a project-local workflow for building native iOS apps with AI roles
 | Version | Edition | Status | Difference |
 |---|---|---|---|
 | `1.0.2` | Complex | Published on npm | The detailed workflow: five specialist roles and separate documents for scope, assets, app icon, store screenshots, implementation, verification, acceptance, and delivery. |
-| `1.1.0` | Lite | In development; not published yet | The streamlined workflow: four roles, six stages, fewer handoffs, and one Designer responsible for references, the running MVP, graphics, and publication materials. |
+| `1.1.0` | Lite | Available as a local Codex plugin; not published to npm | The streamlined workflow: four roles, six stages, fewer handoffs, and one Designer responsible for references, the running MVP, graphics, and publication materials. |
 
 Install the published Complex edition from an existing Git or Xcode project:
 
@@ -24,6 +24,17 @@ npx @sgx22/trickster@1.1.0 init
 ```
 
 Trickster does not support global installation. Run `trickster doctor` after initialization to check the local setup.
+
+## Codex plugin
+
+Clone this repository, open it in a terminal, and install the local marketplace plugin:
+
+```sh
+codex plugin marketplace add .
+codex plugin add trickster@trickster-local
+```
+
+Restart Codex, open the target app project, and ask it to use `$trickster-ios`. If the target is a new empty directory, run `git init` there first. The skill installs a versioned Trickster snapshot into the app repository; later plugin updates do not silently change an active project.
 
 ## Lite workflow
 

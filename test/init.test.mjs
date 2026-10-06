@@ -172,6 +172,8 @@ test("npm package contains the simplified workflow and excludes repository-only 
 
   assert.equal(paths.some((path) => path.startsWith("styles/")), false);
   assert.equal(paths.some((path) => path.startsWith("site/")), false);
+  assert.equal(paths.some((path) => path.startsWith("plugin/")), false);
+  assert.equal(paths.some((path) => path.startsWith(".agents/")), false);
   assert.equal(paths.includes("README.md"), true);
   assert.equal(paths.includes("README.ru.md"), true);
   assert.equal(paths.includes("README.es.md"), false);
@@ -202,6 +204,49 @@ test("npm package contains the simplified workflow and excludes repository-only 
   ]) {
     assert.equal(paths.includes(path), false, path);
   }
+});
+
+test("Codex plugin mirrors the canonical workflow", () => {
+  const result = spawnSync(
+    process.execPath,
+    [resolve(repositoryRoot, "maintainers", "build-plugin.mjs"), "--check"],
+    { cwd: repositoryRoot, encoding: "utf8" },
+  );
+  assert.equal(result.status, 0, result.stderr);
+  assert.match(result.stdout, /matches the canonical Trickster files/);
+});
+
+test("Codex plugin installs and checks a project-local toolkit", async () => {
+  const project = await createProject();
+  const skillRoot = resolve(repositoryRoot, "plugin", "skills", "trickster-ios");
+  const initResult = spawnSync(
+    process.execPath,
+    [resolve(skillRoot, "scripts", "init-project.mjs"), "--target", project],
+    { cwd: repositoryRoot, encoding: "utf8" },
+  );
+  assert.equal(initResult.status, 0, initResult.stderr);
+  assert.equal(await readFile(join(project, "trickster", "VERSION"), "utf8"), "1.1.0\n");
+  assert.equal(await readFile(join(project, "trickster", "HARNESS"), "utf8"), "codex\n");
+
+  await writeFile(join(project, "trickster", "design", "ui.md"), "# Keep plugin UI\n", "utf8");
+  const reinstallResult = spawnSync(
+    process.execPath,
+    [resolve(skillRoot, "scripts", "init-project.mjs"), "--target", project],
+    { cwd: repositoryRoot, encoding: "utf8" },
+  );
+  assert.equal(reinstallResult.status, 0, reinstallResult.stderr);
+  assert.equal(
+    await readFile(join(project, "trickster", "design", "ui.md"), "utf8"),
+    "# Keep plugin UI\n",
+  );
+
+  const doctorResult = spawnSync(
+    process.execPath,
+    [resolve(skillRoot, "scripts", "doctor.mjs"), "--target", project],
+    { cwd: repositoryRoot, encoding: "utf8" },
+  );
+  assert.equal(doctorResult.status, 0, doctorResult.stderr);
+  assert.match(doctorResult.stdout, /PASS  Publish workflow/);
 });
 
 test("style catalog indexes every repository package", async () => {
