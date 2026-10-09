@@ -12,4 +12,6 @@ When child agents are unavailable, the master performs one role at a time:
 4. verify the result and request the required user approval;
 5. continue only after approval.
 
+Do not add approval gates during the sequential fallback. Request only the approvals defined by the current stage. If the same agent performs Polish, identify the result as a self-review rather than an independent review.
+
 Before app work, verify shell, Xcode, Simulator interaction, image viewing, and catalog access. State unavailable capabilities plainly.

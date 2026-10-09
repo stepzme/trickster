@@ -1,6 +1,6 @@
 {
   "name": "@sgx22/trickster",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Six-stage reference-driven workflow for native iOS apps from product definition through polished publication materials",
   "license": "MIT",
   "type": "module",
@@ -27,7 +27,8 @@
     "design-system",
     "simulator",
     "aso",
-    "codex"
+    "codex",
+    "claude-code"
   ],
   "repository": {
     "type": "git",
