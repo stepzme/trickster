@@ -41,7 +41,7 @@ function capabilityRows(markdown) {
 }
 
 async function createProject() {
-  const project = await mkdtemp(join(tmpdir(), "trickster-test-"));
+  const project = await mkdtemp(join(tmpdir(), "trixter-test-"));
   await mkdir(join(project, ".git"));
   await writeFile(join(project, "AGENTS.md"), "# Existing instructions\n", "utf8");
   await writeFile(join(project, ".gitignore"), "build/\n", "utf8");
@@ -60,12 +60,12 @@ async function fileExists(path) {
   return readFile(path).then(() => true, () => false);
 }
 
-test("uses Trickster colors only in supported terminals", () => {
+test("uses Trixter colors only in supported terminals", () => {
   const terminal = { isTTY: true };
   const styled = createTerminalStyle(terminal, {});
   assert.equal(supportsColor(terminal, {}), true);
-  assert.match(styled.accent("Trickster"), /Trickster/);
-  assert.equal(createTerminalStyle(terminal, { NO_COLOR: "" }).accent("Trickster"), "Trickster");
+  assert.match(styled.accent("Trixter"), /Trixter/);
+  assert.equal(createTerminalStyle(terminal, { NO_COLOR: "" }).accent("Trixter"), "Trixter");
   assert.equal(createTerminalStyle({ isTTY: false }, {}).error("Failed"), "Failed");
 });
 
@@ -73,37 +73,37 @@ test("installs the six-stage project-local toolkit", async () => {
   const project = await createProject();
   await initializeProject({ target: project, yes: true, quiet: true, commandCheck: commandAvailable });
 
-  assert.match(await readFile(join(project, "AGENTS.md"), "utf8"), /trickster\/AGENTS\.md/);
-  assert.equal(await readFile(join(project, "trickster", "VERSION"), "utf8"), "1.2.0\n");
-  assert.equal(await readFile(join(project, "trickster", "HARNESS"), "utf8"), "codex\n");
+  assert.match(await readFile(join(project, "AGENTS.md"), "utf8"), /trixter\/AGENTS\.md/);
+  assert.equal(await readFile(join(project, "trixter", "VERSION"), "utf8"), "2.0.0\n");
+  assert.equal(await readFile(join(project, "trixter", "HARNESS"), "utf8"), "codex\n");
 
   for (const stage of ["research", "planning", "design", "dev", "polish", "publish"]) {
     assert.notEqual(
-      await readFile(join(project, "trickster", "workflow", `${stage}.md`), "utf8"),
+      await readFile(join(project, "trixter", "workflow", `${stage}.md`), "utf8"),
       "",
     );
   }
   for (const role of ["product-researcher", "designer", "implementation-owner", "acceptance-reviewer"]) {
     assert.notEqual(
-      await readFile(join(project, "trickster", "roles", `${role}.md`), "utf8"),
+      await readFile(join(project, "trixter", "roles", `${role}.md`), "utf8"),
       "",
     );
   }
 
   assert.equal(
-    await readFile(join(project, "trickster", "roles", "visual-producer.md"), "utf8").catch(() => ""),
+    await readFile(join(project, "trixter", "roles", "visual-producer.md"), "utf8").catch(() => ""),
     "",
   );
   assert.equal(
-    await readFile(join(project, "trickster", "workflow", "implementation-core.md"), "utf8").catch(() => ""),
+    await readFile(join(project, "trixter", "workflow", "implementation-core.md"), "utf8").catch(() => ""),
     "",
   );
   assert.equal(
-    await readFile(join(project, "trickster", "workflow", "launch-screen.md"), "utf8").catch(() => ""),
+    await readFile(join(project, "trixter", "workflow", "launch-screen.md"), "utf8").catch(() => ""),
     "",
   );
   assert.equal(
-    await readdir(join(project, "trickster", "styles")).then(() => true, () => false),
+    await readdir(join(project, "trixter", "styles")).then(() => true, () => false),
     false,
   );
 });
@@ -112,22 +112,76 @@ test("re-running init updates managed workflow and preserves project artifacts",
   const project = await createProject();
   const options = { target: project, harness: "generic", yes: true, quiet: true };
   await initializeProject(options);
-  await writeFile(join(project, "trickster", "design", "ui.md"), "# Keep UI\n", "utf8");
-  await mkdir(join(project, "trickster", "artifacts", "run-1"), { recursive: true });
-  await writeFile(join(project, "trickster", "artifacts", "run-1", "research.md"), "# Keep research\n", "utf8");
-  await writeFile(join(project, "trickster", "workflow", "obsolete.md"), "obsolete\n", "utf8");
+  await writeFile(join(project, "trixter", "design", "ui.md"), "# Keep UI\n", "utf8");
+  await mkdir(join(project, "trixter", "artifacts", "run-1"), { recursive: true });
+  await writeFile(join(project, "trixter", "artifacts", "run-1", "research.md"), "# Keep research\n", "utf8");
+  await writeFile(join(project, "trixter", "workflow", "obsolete.md"), "obsolete\n", "utf8");
 
   await initializeProject(options);
 
-  assert.equal(await readFile(join(project, "trickster", "design", "ui.md"), "utf8"), "# Keep UI\n");
+  assert.equal(await readFile(join(project, "trixter", "design", "ui.md"), "utf8"), "# Keep UI\n");
   assert.equal(
-    await readFile(join(project, "trickster", "artifacts", "run-1", "research.md"), "utf8"),
+    await readFile(join(project, "trixter", "artifacts", "run-1", "research.md"), "utf8"),
     "# Keep research\n",
   );
   assert.equal(
-    await readFile(join(project, "trickster", "workflow", "obsolete.md"), "utf8").catch(() => ""),
+    await readFile(join(project, "trixter", "workflow", "obsolete.md"), "utf8").catch(() => ""),
     "",
   );
+});
+
+test("migrates a legacy Trickster project without losing design or artifacts", async () => {
+  const project = await createProject();
+  await mkdir(join(project, "trickster", "design"), { recursive: true });
+  await mkdir(join(project, "trickster", "artifacts", "run-1"), { recursive: true });
+  await writeFile(join(project, "trickster", "design", "ui.md"), "# Legacy UI\n", "utf8");
+  await writeFile(
+    join(project, "trickster", "artifacts", "run-1", "research.md"),
+    "# Legacy research\n",
+    "utf8",
+  );
+  await writeFile(
+    join(project, "AGENTS.md"),
+    `# Existing instructions
+
+<!-- >>> trickster managed instructions >>> -->
+## Trickster iOS pipeline
+
+Before creating or substantially changing the iOS app, read and follow \`trickster/AGENTS.md\`.
+The six-stage workflow, approved design sources, product artifacts, Polish review, and publication materials are under \`trickster/\`.
+<!-- <<< trickster managed instructions <<< -->
+`,
+    "utf8",
+  );
+
+  const result = await initializeProject({ target: project, harness: "codex", yes: true, quiet: true });
+
+  assert.equal(result.migratedLegacy, true);
+  assert.equal(await fileExists(join(project, "trickster", "design", "ui.md")), false);
+  assert.equal(await readFile(join(project, "trixter", "design", "ui.md"), "utf8"), "# Legacy UI\n");
+  assert.equal(
+    await readFile(join(project, "trixter", "artifacts", "run-1", "research.md"), "utf8"),
+    "# Legacy research\n",
+  );
+  const instructions = await readFile(join(project, "AGENTS.md"), "utf8");
+  assert.doesNotMatch(instructions, /trickster managed instructions|trickster\/AGENTS\.md/);
+  assert.match(instructions, /trixter managed instructions/);
+  assert.match(instructions, /trixter\/AGENTS\.md/);
+});
+
+test("refuses migration when legacy and canonical folders both contain data", async () => {
+  const project = await createProject();
+  await mkdir(join(project, "trickster", "design"), { recursive: true });
+  await mkdir(join(project, "trixter", "design"), { recursive: true });
+  await writeFile(join(project, "trickster", "design", "ui.md"), "# Legacy\n", "utf8");
+  await writeFile(join(project, "trixter", "design", "ui.md"), "# Canonical\n", "utf8");
+
+  await assert.rejects(
+    () => initializeProject({ target: project, harness: "generic", yes: true, quiet: true }),
+    /Both trixter\/ and legacy trickster\/ exist/,
+  );
+  assert.equal(await readFile(join(project, "trickster", "design", "ui.md"), "utf8"), "# Legacy\n");
+  assert.equal(await readFile(join(project, "trixter", "design", "ui.md"), "utf8"), "# Canonical\n");
 });
 
 test("doctor checks the simplified workflow", async () => {
@@ -135,7 +189,7 @@ test("doctor checks the simplified workflow", async () => {
   await initializeProject({ target: project, harness: "generic", yes: true, quiet: true });
   assert.equal((await doctorProject(project, { quiet: true })).ready, true);
 
-  await rm(join(project, "trickster", "workflow", "polish.md"));
+  await rm(join(project, "trixter", "workflow", "polish.md"));
   const result = await doctorProject(project, { quiet: true });
   assert.equal(result.ready, false);
   assert.deepEqual(result.checks.find(([name]) => name === "Polish workflow"), ["Polish workflow", false]);
@@ -152,11 +206,11 @@ test("Claude Code harness creates CLAUDE.md and installs its adapter", async () 
   });
 
   assert.equal(result.harness, "claude-code");
-  assert.equal(await readFile(join(project, "trickster", "HARNESS"), "utf8"), "claude-code\n");
-  assert.equal(await fileExists(join(project, "trickster", "adapters", "claude-code.md")), true);
+  assert.equal(await readFile(join(project, "trixter", "HARNESS"), "utf8"), "claude-code\n");
+  assert.equal(await fileExists(join(project, "trixter", "adapters", "claude-code.md")), true);
   const instructions = await readFile(join(project, "CLAUDE.md"), "utf8");
-  assert.match(instructions, /^<!-- >>> trickster managed instructions >>> -->/);
-  assert.match(instructions, /^@trickster\/AGENTS\.md$/m);
+  assert.match(instructions, /^<!-- >>> trixter managed instructions >>> -->/);
+  assert.match(instructions, /^@trixter\/AGENTS\.md$/m);
   assert.equal(
     (await doctorProject(project, { quiet: true, commandCheck: commandAvailable })).ready,
     true,
@@ -180,8 +234,8 @@ test("Claude Code harness preserves existing instructions and is idempotent", as
   const instructions = await readFile(join(project, "CLAUDE.md"), "utf8");
   assert.match(instructions, /# Team instructions/);
   assert.match(instructions, /Keep this text\./);
-  assert.equal(countOccurrences(instructions, "<!-- >>> trickster managed instructions >>> -->"), 1);
-  assert.equal(countOccurrences(instructions, "@trickster/AGENTS.md"), 1);
+  assert.equal(countOccurrences(instructions, "<!-- >>> trixter managed instructions >>> -->"), 1);
+  assert.equal(countOccurrences(instructions, "@trixter/AGENTS.md"), 1);
 });
 
 test("Claude Code re-install preserves design sources and artifacts", async () => {
@@ -194,15 +248,15 @@ test("Claude Code re-install preserves design sources and artifacts", async () =
     commandCheck: commandAvailable,
   };
   await initializeProject(options);
-  await writeFile(join(project, "trickster", "design", "ui.md"), "# Selected UI\n", "utf8");
-  await mkdir(join(project, "trickster", "artifacts", "run-1"), { recursive: true });
-  await writeFile(join(project, "trickster", "artifacts", "run-1", "plan.md"), "# Plan\n", "utf8");
+  await writeFile(join(project, "trixter", "design", "ui.md"), "# Selected UI\n", "utf8");
+  await mkdir(join(project, "trixter", "artifacts", "run-1"), { recursive: true });
+  await writeFile(join(project, "trixter", "artifacts", "run-1", "plan.md"), "# Plan\n", "utf8");
 
   await initializeProject(options);
 
-  assert.equal(await readFile(join(project, "trickster", "design", "ui.md"), "utf8"), "# Selected UI\n");
+  assert.equal(await readFile(join(project, "trixter", "design", "ui.md"), "utf8"), "# Selected UI\n");
   assert.equal(
-    await readFile(join(project, "trickster", "artifacts", "run-1", "plan.md"), "utf8"),
+    await readFile(join(project, "trixter", "artifacts", "run-1", "plan.md"), "utf8"),
     "# Plan\n",
   );
 });
@@ -218,12 +272,12 @@ test("harness switching maintains only the selected managed entry point", async 
   });
 
   await install("codex");
-  assert.match(await readFile(join(project, "AGENTS.md"), "utf8"), /trickster\/AGENTS\.md/);
+  assert.match(await readFile(join(project, "AGENTS.md"), "utf8"), /trixter\/AGENTS\.md/);
   assert.equal(await fileExists(join(project, "CLAUDE.md")), false);
 
   await install("claude-code");
   assert.equal((await readFile(join(project, "AGENTS.md"), "utf8")), "# Existing instructions\n");
-  assert.match(await readFile(join(project, "CLAUDE.md"), "utf8"), /@trickster\/AGENTS\.md/);
+  assert.match(await readFile(join(project, "CLAUDE.md"), "utf8"), /@trixter\/AGENTS\.md/);
 
   await install("generic");
   assert.equal((await readFile(join(project, "AGENTS.md"), "utf8")), "# Existing instructions\n");
@@ -231,8 +285,8 @@ test("harness switching maintains only the selected managed entry point", async 
 
   await install("claude-code");
   const claude = await readFile(join(project, "CLAUDE.md"), "utf8");
-  assert.equal(countOccurrences(claude, "<!-- >>> trickster managed instructions >>> -->"), 1);
-  assert.equal(await readFile(join(project, "trickster", "HARNESS"), "utf8"), "claude-code\n");
+  assert.equal(countOccurrences(claude, "<!-- >>> trixter managed instructions >>> -->"), 1);
+  assert.equal(await readFile(join(project, "trixter", "HARNESS"), "utf8"), "claude-code\n");
 });
 
 test("switching harnesses preserves user-owned CLAUDE.md content", async () => {
@@ -249,7 +303,7 @@ test("switching harnesses preserves user-owned CLAUDE.md content", async () => {
   }
   const claude = await readFile(join(project, "CLAUDE.md"), "utf8");
   assert.match(claude, /# User-owned Claude rules/);
-  assert.equal(countOccurrences(claude, "@trickster/AGENTS.md"), 1);
+  assert.equal(countOccurrences(claude, "@trixter/AGENTS.md"), 1);
 });
 
 test("Claude Code init fails before writing when Claude CLI is absent", async () => {
@@ -269,7 +323,7 @@ test("Claude Code init fails before writing when Claude CLI is absent", async ()
 
   assert.equal(await readFile(join(project, "AGENTS.md"), "utf8"), beforeAgents);
   assert.equal(await fileExists(join(project, "CLAUDE.md")), false);
-  assert.equal(await fileExists(join(project, "trickster", "HARNESS")), false);
+  assert.equal(await fileExists(join(project, "trixter", "HARNESS")), false);
 });
 
 test("doctor reports a missing Claude CLI as a failed local check", async () => {
@@ -289,13 +343,13 @@ test("doctor reports a missing Claude CLI as a failed local check", async () => 
 
   const cliResult = spawnSync(
     process.execPath,
-    [resolve(repositoryRoot, "bin", "trickster.mjs"), "doctor", "--target", project],
+    [resolve(repositoryRoot, "bin", "trixter.mjs"), "doctor", "--target", project],
     { cwd: repositoryRoot, encoding: "utf8", env: { ...process.env, PATH: "" } },
   );
   assert.equal(cliResult.status, 1);
   assert.match(cliResult.stdout, /MISSING  Claude CLI/);
   assert.match(cliResult.stdout, /SESSION CHECKS/);
-  assert.match(cliResult.stdout, /VERIFY  The selected harness loads Trickster instructions/);
+  assert.match(cliResult.stdout, /VERIFY  The selected harness loads Trixter instructions/);
 });
 
 test("doctor detects a missing Claude adapter and entry point", async () => {
@@ -308,7 +362,7 @@ test("doctor detects a missing Claude adapter and entry point", async () => {
     commandCheck: commandAvailable,
   };
   await initializeProject(options);
-  await rm(join(project, "trickster", "adapters", "claude-code.md"));
+  await rm(join(project, "trixter", "adapters", "claude-code.md"));
   let result = await doctorProject(project, { quiet: true, commandCheck: commandAvailable });
   assert.deepEqual(result.installationChecks.find(([name]) => name === "Harness adapter"), ["Harness adapter", false]);
   assert.equal(result.ready, false);
@@ -331,24 +385,24 @@ test("Claude Code init repairs partial managed blocks without losing user text",
   };
   await initializeProject(options);
   const complete = await readFile(join(project, "CLAUDE.md"), "utf8");
-  const missingEnd = `${complete.replace("<!-- <<< trickster managed instructions <<< -->\n", "")}\n# User footer\n`;
+  const missingEnd = `${complete.replace("<!-- <<< trixter managed instructions <<< -->\n", "")}\n# User footer\n`;
   await writeFile(join(project, "CLAUDE.md"), missingEnd, "utf8");
 
   await initializeProject(options);
   let repaired = await readFile(join(project, "CLAUDE.md"), "utf8");
   assert.match(repaired, /# User footer/);
-  assert.equal(countOccurrences(repaired, "<!-- >>> trickster managed instructions >>> -->"), 1);
-  assert.equal(countOccurrences(repaired, "<!-- <<< trickster managed instructions <<< -->"), 1);
-  assert.equal(countOccurrences(repaired, "@trickster/AGENTS.md"), 1);
+  assert.equal(countOccurrences(repaired, "<!-- >>> trixter managed instructions >>> -->"), 1);
+  assert.equal(countOccurrences(repaired, "<!-- <<< trixter managed instructions <<< -->"), 1);
+  assert.equal(countOccurrences(repaired, "@trixter/AGENTS.md"), 1);
 
-  repaired = repaired.replace("<!-- >>> trickster managed instructions >>> -->\n", "");
+  repaired = repaired.replace("<!-- >>> trixter managed instructions >>> -->\n", "");
   await writeFile(join(project, "CLAUDE.md"), repaired, "utf8");
   await initializeProject(options);
   repaired = await readFile(join(project, "CLAUDE.md"), "utf8");
   assert.match(repaired, /# User footer/);
-  assert.equal(countOccurrences(repaired, "<!-- >>> trickster managed instructions >>> -->"), 1);
-  assert.equal(countOccurrences(repaired, "<!-- <<< trickster managed instructions <<< -->"), 1);
-  assert.equal(countOccurrences(repaired, "@trickster/AGENTS.md"), 1);
+  assert.equal(countOccurrences(repaired, "<!-- >>> trixter managed instructions >>> -->"), 1);
+  assert.equal(countOccurrences(repaired, "<!-- <<< trixter managed instructions <<< -->"), 1);
+  assert.equal(countOccurrences(repaired, "@trixter/AGENTS.md"), 1);
 });
 
 test("generic harness installs without Codex project files", async () => {
@@ -360,12 +414,31 @@ test("generic harness installs without Codex project files", async () => {
 });
 
 test("CLI help lists all supported harnesses", () => {
-  const result = spawnSync(process.execPath, [resolve(repositoryRoot, "bin", "trickster.mjs"), "--help"], {
+  const result = spawnSync(process.execPath, [resolve(repositoryRoot, "bin", "trixter.mjs"), "--help"], {
     cwd: repositoryRoot,
     encoding: "utf8",
   });
   assert.equal(result.status, 0, result.stderr);
   assert.match(result.stdout, /codex\|claude-code\|generic/);
+});
+
+test("legacy CLI name remains a compatibility alias", () => {
+  const result = spawnSync(process.execPath, [resolve(repositoryRoot, "bin", "trickster.mjs"), "--help"], {
+    cwd: repositoryRoot,
+    encoding: "utf8",
+  });
+  assert.equal(result.status, 0, result.stderr);
+  assert.match(result.stdout, /^Usage:\n  trixter init/m);
+});
+
+test("legacy npm package metadata forwards to Trixter 2.0", async () => {
+  const compatibilityPackage = JSON.parse(
+    await readFile(join(repositoryRoot, "compat", "npm-trickster", "package.json"), "utf8"),
+  );
+  assert.equal(compatibilityPackage.name, "@sgx22/trickster");
+  assert.equal(compatibilityPackage.version, "2.0.0");
+  assert.equal(compatibilityPackage.dependencies["@sgx22/trixter"], "2.0.0");
+  assert.equal(compatibilityPackage.bin.trickster, "bin/trickster.mjs");
 });
 
 test("refuses broad non-project targets", async () => {
@@ -380,8 +453,9 @@ test("rejects global npm installation", () => {
   );
   assert.equal(result.status, 1);
   assert.match(result.stderr, /cannot be installed globally/);
+  assert.equal(isGlobalPackagePath("/opt/homebrew/lib/node_modules/@sgx22/trixter/bin/trixter.mjs"), true);
   assert.equal(isGlobalPackagePath("/opt/homebrew/lib/node_modules/@sgx22/trickster/bin/trickster.mjs"), true);
-  assert.equal(isGlobalPackagePath("/project/node_modules/@sgx22/trickster/bin/trickster.mjs"), false);
+  assert.equal(isGlobalPackagePath("/project/node_modules/@sgx22/trixter/bin/trixter.mjs"), false);
 });
 
 test("keeps the canonical capability contract in the Product Researcher role", async () => {
@@ -390,7 +464,7 @@ test("keeps the canonical capability contract in the Product Researcher role", a
 });
 
 test("npm package contains the simplified workflow and excludes repository-only assets", async () => {
-  const npmCache = await mkdtemp(join(tmpdir(), "trickster-npm-cache-"));
+  const npmCache = await mkdtemp(join(tmpdir(), "trixter-npm-cache-"));
   const result = spawnSync("npm", ["pack", "--dry-run", "--json"], {
     cwd: repositoryRoot,
     encoding: "utf8",
@@ -409,6 +483,8 @@ test("npm package contains the simplified workflow and excludes repository-only 
   assert.equal(paths.includes("README.ru.md"), true);
   assert.equal(paths.includes("README.es.md"), false);
   assert.equal(paths.includes("README.zh-CN.md"), false);
+  assert.equal(paths.includes("bin/trixter.mjs"), true);
+  assert.equal(paths.includes("bin/trickster.mjs"), true);
   for (const path of [
     "adapters/claude-code.md",
     "roles/designer.md",
@@ -440,17 +516,17 @@ test("npm package contains the simplified workflow and excludes repository-only 
 
 test("frozen Codex plugin snapshot still installs and checks its own toolkit", async () => {
   const project = await createProject();
-  const skillRoot = resolve(repositoryRoot, "plugin", "skills", "trickster-ios");
+  const skillRoot = resolve(repositoryRoot, "plugin", "skills", "trixter-ios");
   const initResult = spawnSync(
     process.execPath,
     [resolve(skillRoot, "scripts", "init-project.mjs"), "--target", project],
     { cwd: repositoryRoot, encoding: "utf8" },
   );
   assert.equal(initResult.status, 0, initResult.stderr);
-  assert.equal(await readFile(join(project, "trickster", "VERSION"), "utf8"), "1.1.0\n");
-  assert.equal(await readFile(join(project, "trickster", "HARNESS"), "utf8"), "codex\n");
+  assert.equal(await readFile(join(project, "trixter", "VERSION"), "utf8"), "2.0.0\n");
+  assert.equal(await readFile(join(project, "trixter", "HARNESS"), "utf8"), "codex\n");
 
-  await writeFile(join(project, "trickster", "design", "ui.md"), "# Keep plugin UI\n", "utf8");
+  await writeFile(join(project, "trixter", "design", "ui.md"), "# Keep plugin UI\n", "utf8");
   const reinstallResult = spawnSync(
     process.execPath,
     [resolve(skillRoot, "scripts", "init-project.mjs"), "--target", project],
@@ -458,7 +534,7 @@ test("frozen Codex plugin snapshot still installs and checks its own toolkit", a
   );
   assert.equal(reinstallResult.status, 0, reinstallResult.stderr);
   assert.equal(
-    await readFile(join(project, "trickster", "design", "ui.md"), "utf8"),
+    await readFile(join(project, "trixter", "design", "ui.md"), "utf8"),
     "# Keep plugin UI\n",
   );
 
@@ -469,6 +545,19 @@ test("frozen Codex plugin snapshot still installs and checks its own toolkit", a
   );
   assert.equal(doctorResult.status, 0, doctorResult.stderr);
   assert.match(doctorResult.stdout, /PASS  Publish workflow/);
+});
+
+test("legacy Codex skill name delegates to the canonical Trixter installer", async () => {
+  const project = await createProject();
+  const legacySkillRoot = resolve(repositoryRoot, "plugin", "skills", "trickster-ios");
+  const result = spawnSync(
+    process.execPath,
+    [resolve(legacySkillRoot, "scripts", "init-project.mjs"), "--target", project],
+    { cwd: repositoryRoot, encoding: "utf8" },
+  );
+  assert.equal(result.status, 0, result.stderr);
+  assert.equal(await readFile(join(project, "trixter", "VERSION"), "utf8"), "2.0.0\n");
+  assert.match(await readFile(join(project, "AGENTS.md"), "utf8"), /trixter\/AGENTS\.md/);
 });
 
 test("style catalog indexes every repository package", async () => {

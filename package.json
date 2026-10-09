@@ -1,10 +1,11 @@
 {
-  "name": "@sgx22/trickster",
-  "version": "1.2.0",
-  "description": "Six-stage reference-driven workflow for native iOS apps from product definition through polished publication materials",
+  "name": "@sgx22/trixter",
+  "version": "2.0.0",
+  "description": "Your AI crew for native iOS development, from product definition to release materials",
   "license": "MIT",
   "type": "module",
   "bin": {
+    "trixter": "bin/trixter.mjs",
     "trickster": "bin/trickster.mjs"
   },
   "files": [
@@ -32,11 +33,11 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/stepzme/trickster.git"
+    "url": "git+https://github.com/stepzme/trixter.git"
   },
-  "homepage": "https://stepzme.github.io/trickster/",
+  "homepage": "https://stepzme.github.io/trixter/",
   "bugs": {
-    "url": "https://github.com/stepzme/trickster/issues"
+    "url": "https://github.com/stepzme/trixter/issues"
   },
   "scripts": {
     "preinstall": "node ./scripts/reject-global-install.mjs",

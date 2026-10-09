@@ -6,7 +6,7 @@ Expand the user-approved MVP into the complete planned app without changing its 
 
 ## Start requirements
 
-Read the approved Research and Planning artifacts, the Design artifact, the selected source documents in `trickster/design/`, `workflow/dev.md`, `workflow/ios.md`, `workflow/ux.md`, and the current app code. Verify explicit approval of the running MVP revision before writing code.
+Read the approved Research and Planning artifacts, the Design artifact, the selected source documents in `trixter/design/`, `workflow/dev.md`, `workflow/ios.md`, `workflow/ux.md`, and the current app code. Verify explicit approval of the running MVP revision before writing code.
 
 ## Responsibilities
 

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Trixter iOS"
+  short_description: "Build native iOS apps through six stages"
+  default_prompt: "Use $trixter-ios to create or substantially change a native iOS app."

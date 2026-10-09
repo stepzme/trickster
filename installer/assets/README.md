@@ -1,4 +1,4 @@
-# Trickster toolkit
+# Trixter toolkit
 
 This directory contains the project-local iOS workflow.
 

@@ -8,11 +8,11 @@ const globalInstall =
 
 if (globalInstall) {
   console.error(`
-${errorStyle.error("Trickster is project-scoped and cannot be installed globally.")}
+${errorStyle.error("Trixter is project-scoped and cannot be installed globally.")}
 
 Run this command from the root of an existing project:
 
-  npx @sgx22/trickster init
+  npx @sgx22/trixter init
 `);
   process.exit(1);
 }

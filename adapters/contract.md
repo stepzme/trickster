@@ -1,6 +1,6 @@
 # Adapter contract
 
-An adapter maps Trickster's roles to an agent harness. It does not change the six stages, role ownership, approval dependencies, or capability rules.
+An adapter maps Trixter's roles to an agent harness. It does not change the six stages, role ownership, approval dependencies, or capability rules.
 
 The adapter describes how the master:
 

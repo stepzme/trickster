@@ -4,18 +4,18 @@
 
 The master starts a role with its role contract, the current stage document, the approved upstream artifact, and the exact paths it may change. The stage artifact itself is the handoff; there is no separate handoff schema, run-state file, token report, provenance report, or composition report.
 
-Use the adapter named in `trickster/HARNESS`. When delegation exists, use one agent per active role. Continue the same role for corrections inside its current stage. Start the next role only when its stated dependency is approved.
+Use the adapter named in `trixter/HARNESS`. When delegation exists, use one agent per active role. Continue the same role for corrections inside its current stage. Start the next role only when its stated dependency is approved.
 
 ## Ownership
 
 | Stage | Owner | Writes |
 |---|---|---|
-| Research | Product Researcher | `trickster/artifacts/<run-id>/research.md` |
-| Planning | Product Researcher | `trickster/artifacts/<run-id>/plan.md` |
-| Design | Designer | `trickster/design/`, app code for the MVP, and design assets |
+| Research | Product Researcher | `trixter/artifacts/<run-id>/research.md` |
+| Planning | Product Researcher | `trixter/artifacts/<run-id>/plan.md` |
+| Design | Designer | `trixter/design/`, app code for the MVP, and design assets |
 | Dev | Implementation Owner | app code and Xcode project after design approval |
 | Polish | Acceptance Reviewer | review evidence only; never app code |
-| Publish | Designer | final app icon, store screenshots, export files, and `trickster/artifacts/<run-id>/publish.md` |
+| Publish | Designer | final app icon, store screenshots, export files, and `trixter/artifacts/<run-id>/publish.md` |
 
 The master records user approvals in the corresponding artifact. Roles do not ask the user directly and do not approve their own work.
 

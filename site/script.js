@@ -1,4 +1,4 @@
-const dictionaries = window.TRICKSTER_TRANSLATIONS;
+const dictionaries = window.TRIXTER_TRANSLATIONS;
 const supportedLanguages = ["en", "ru", "es", "zh-CN"];
 const languageAliases = { zh: "zh-CN", "zh-cn": "zh-CN" };
 const url = new URL(window.location.href);
@@ -19,7 +19,7 @@ document.querySelector('meta[name="description"]')?.setAttribute("content", tran
 document.querySelector('meta[property="og:title"]')?.setAttribute("content", translate("metaTitle"));
 document.querySelector('meta[property="og:description"]')?.setAttribute("content", translate("ogDescription"));
 
-const canonicalUrl = new URL("https://stepzme.github.io/trickster/");
+const canonicalUrl = new URL("https://stepzme.github.io/trixter/");
 if (language !== "en") canonicalUrl.searchParams.set("lang", language);
 document.querySelector('link[rel="canonical"]')?.setAttribute("href", canonicalUrl.href);
 document.querySelector('meta[property="og:url"]')?.setAttribute("content", canonicalUrl.href);
@@ -50,7 +50,7 @@ document.querySelectorAll("[data-language]").forEach((link) => {
 
 const documentationLink = document.querySelector(".text-link");
 if (documentationLink) {
-  documentationLink.href = `https://github.com/stepzme/trickster/blob/main/${translate("readmePath")}`;
+  documentationLink.href = `https://github.com/stepzme/trixter/blob/main/${translate("readmePath")}`;
 }
 
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;

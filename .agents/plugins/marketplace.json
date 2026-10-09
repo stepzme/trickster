@@ -1,11 +1,11 @@
 {
-  "name": "trickster-local",
+  "name": "trixter-local",
   "interface": {
-    "displayName": "Trickster Local"
+    "displayName": "Trixter Local"
   },
   "plugins": [
     {
-      "name": "trickster",
+      "name": "trixter",
       "source": {
         "source": "local",
         "path": "./plugin"

@@ -1,6 +1,6 @@
-# Trickster process
+# Trixter process
 
-Trickster builds one native iOS app through six stages. The master speaks with the user, starts the roles, checks their work, records explicit approvals, and never treats a role's claim as user approval.
+Trixter builds one native iOS app through six stages. The master speaks with the user, starts the roles, checks their work, records explicit approvals, and never treats a role's claim as user approval.
 
 ## Participants
 
@@ -31,7 +31,7 @@ If an approved upstream artifact changes materially, repeat only the affected ap
 
 ## Design rule
 
-The selected `ui.md` and optional `illustrations.md` remain source documents. Do not synthesize a new generalized project `ui.md`, `composition.md`, or provenance narrative. Copy the approved source documents unchanged into `trickster/design/` and record source IDs in the Design stage artifact.
+The selected `ui.md` and optional `illustrations.md` remain source documents. Do not synthesize a new generalized project `ui.md`, `composition.md`, or provenance narrative. Copy the approved source documents unchanged into `trixter/design/` and record source IDs in the Design stage artifact.
 
 `ui.md` controls appearance and `illustrations.md` controls imagery. Product behavior, navigation, interaction, and state transitions come from the approved Research and Planning artifacts plus the shared `workflow/ux.md` and `workflow/ios.md` criteria. Never copy the reference product's information architecture merely because it appears in screenshots.
 

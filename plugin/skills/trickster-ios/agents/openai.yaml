@@ -1,4 +1,4 @@
 interface:
-  display_name: "Trickster iOS"
-  short_description: "Build native iOS apps through six stages"
-  default_prompt: "Use $trickster-ios to create or substantially change a native iOS app."
+  display_name: "Trixter iOS (legacy alias)"
+  short_description: "Compatibility alias for the renamed Trixter skill"
+  default_prompt: "Use $trixter-ios to create or substantially change a native iOS app."

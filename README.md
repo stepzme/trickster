@@ -1,6 +1,6 @@
-# Trickster
+# Trixter
 
-Trickster is a project-local workflow for building native iOS apps with AI roles. It turns a product idea into an approved product definition, a running design, a complete implementation, and final publication materials.
+Trixter is your project-local AI crew for native iOS development. Its four roles take an app from product definition to a running design, complete implementation, independent review, and release materials.
 
 [Русская версия](README.ru.md)
 
@@ -8,27 +8,27 @@ Trickster is a project-local workflow for building native iOS apps with AI roles
 
 | Version | Edition | Status | Difference |
 |---|---|---|---|
-| `1.0.2` | Complex | Published on npm | The detailed workflow: five specialist roles and separate documents for scope, assets, app icon, store screenshots, implementation, verification, acceptance, and delivery. |
-| `1.1.0` | Lite | Published on npm | The streamlined workflow: four roles, six stages, fewer handoffs, and one Designer responsible for references, the running MVP, graphics, and publication materials. |
-| `1.2.0` | Lite, multi-harness | Current repository version; npm release pending | Adds the experimental Claude Code adapter alongside Codex and generic harness support. The Claude Code integration has been checked against official documentation but has not completed an end-to-end run in a real session. |
+| `1.0.2` | Trickster Complex | Published as `@sgx22/trickster` | The detailed workflow with five specialist roles and separate delivery documents. |
+| `1.1.0` | Trickster Lite | Published as `@sgx22/trickster` | Four roles, six stages, and fewer handoffs. |
+| `2.0.0` | Trixter | Current repository version; npm release pending | Renames the product and technical identifiers, adds multi-harness support, and migrates existing `trickster/` installations without losing design sources or artifacts. |
 
-Install the published Lite edition from an existing Git or Xcode project:
+Until 2.0 is published, install the existing Lite edition from an existing Git or Xcode project:
 
 ```sh
 npx @sgx22/trickster@1.1.0 init
 ```
 
-After `1.2.0` is published, select a harness explicitly when needed:
+For Trixter 2.0, select a harness explicitly when needed:
 
 ```sh
-npx @sgx22/trickster@1.2.0 init --harness codex
-npx @sgx22/trickster@1.2.0 init --harness claude-code
-npx @sgx22/trickster@1.2.0 init --harness generic
+npx @sgx22/trixter@2.0.0 init --harness codex
+npx @sgx22/trixter@2.0.0 init --harness claude-code
+npx @sgx22/trixter@2.0.0 init --harness generic
 ```
 
-The Claude Code option requires `claude` on `PATH` and writes a managed import to the project's `CLAUDE.md` without replacing user instructions. Start a new Claude Code session after installation and run `/context` to confirm that `trickster/AGENTS.md` loaded. Support remains experimental until the future real-session checklist is completed.
+The Claude Code option requires `claude` on `PATH` and writes a managed import to the project's `CLAUDE.md` without replacing user instructions. Start a new Claude Code session after installation and run `/context` to confirm that `trixter/AGENTS.md` loaded. Support remains experimental until the future real-session checklist is completed.
 
-Trickster does not support global installation. Run `trickster doctor --harness <name>` after initialization. Doctor reports installation checks and local tools separately from capabilities that still require `VERIFY` inside the agent session; Markdown files alone do not prove the iOS pipeline is operational.
+Trixter does not support global installation. Run `trixter doctor --harness <name>` after initialization. Doctor reports installation checks and local tools separately from capabilities that still require `VERIFY` inside the agent session; Markdown files alone do not prove the iOS pipeline is operational.
 
 ## Codex plugin
 
@@ -36,10 +36,14 @@ Clone this repository, open it in a terminal, and install the local marketplace 
 
 ```sh
 codex plugin marketplace add .
-codex plugin add trickster@trickster-local
+codex plugin add trixter@trixter-local
 ```
 
-Restart Codex, open the target app project, and ask it to use `$trickster-ios`. If the target is a new empty directory, run `git init` there first. The skill installs its own versioned Trickster snapshot into the app repository; the 1.2.0 npm installer and experimental Claude Code adapter do not update that plugin snapshot.
+Restart Codex, open the target app project, and ask it to use `$trixter-ios`. If the target is a new empty directory, run `git init` there first. The skill installs its own versioned Trixter snapshot into the app repository; the npm installer and plugin snapshot are versioned independently.
+
+## Rename compatibility
+
+Trixter 2.0 recognizes an existing `trickster/` installation and moves it to `trixter/` before refreshing managed workflow files. User-owned `design/` and `artifacts/` remain intact. If both directories already exist, initialization stops instead of guessing which data to keep. The repository also contains the deprecated `@sgx22/trickster` compatibility package source, ready to forward the old command to `@sgx22/trixter` when 2.0 is published.
 
 ## Lite workflow
 
@@ -57,7 +61,7 @@ The product behavior comes from approved Research and Planning. The visual direc
 ## Installed into the project
 
 ```text
-trickster/
+trixter/
 ├── AGENTS.md
 ├── HARNESS
 ├── VERSION

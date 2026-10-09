@@ -19,6 +19,6 @@ These rules apply across Research, Planning, Design, Dev, Polish, and Publish. A
 
 Check specific accessibility parameters and platform constraints against the current [Apple HIG](https://developer.apple.com/design/human-interface-guidelines) for the selected platform. These rules are team criteria, not a claim of Apple certification.
 
-`trickster/design/ui.md` defines the approved visual language, and optional `trickster/design/illustrations.md` defines imagery. These are unchanged source documents, not a synthesized project design system. Product behavior, navigation, and interaction come from the approved Research and Planning artifacts; this file supplies the shared UX acceptance criteria.
+`trixter/design/ui.md` defines the approved visual language, and optional `trixter/design/illustrations.md` defines imagery. These are unchanged source documents, not a synthesized project design system. Product behavior, navigation, and interaction come from the approved Research and Planning artifacts; this file supplies the shared UX acceptance criteria.
 
 The Launch and splash section in `workflow/ios.md` governs the static system launch screen, its transition to the first real frame, and any app-owned splash. Do not use a launch or splash screen to hide avoidable delay or replace onboarding.

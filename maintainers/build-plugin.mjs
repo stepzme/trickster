@@ -4,13 +4,13 @@ import { fileURLToPath } from "node:url";
 
 const repositoryRoot = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const pluginRoot = resolve(repositoryRoot, "plugin");
-const referencesRoot = resolve(pluginRoot, "skills", "trickster-ios", "references");
+const referencesRoot = resolve(pluginRoot, "skills", "trixter-ios", "references");
 const checking = process.argv.includes("--check");
 
 const directoryMappings = ["adapters", "roles", "workflow", "templates"];
 const fileMappings = [
-  ["installer/assets/AGENTS.md", "skills/trickster-ios/references/project/AGENTS.md"],
-  ["installer/assets/README.md", "skills/trickster-ios/references/project/README.md"],
+  ["installer/assets/AGENTS.md", "skills/trixter-ios/references/project/AGENTS.md"],
+  ["installer/assets/README.md", "skills/trixter-ios/references/project/README.md"],
   ["LICENSE", "LICENSE"],
 ];
 
@@ -72,7 +72,7 @@ if (checking) {
   for (const [source, destination] of fileMappings) {
     await assertSameFile(resolve(repositoryRoot, source), resolve(pluginRoot, destination));
   }
-  console.log("Plugin bundle matches the canonical Trickster files");
+  console.log("Plugin bundle matches the canonical Trixter files");
 } else {
   for (const directory of directoryMappings) {
     await copyDirectory(resolve(repositoryRoot, directory), resolve(referencesRoot, directory));
@@ -82,5 +82,5 @@ if (checking) {
     await mkdir(dirname(output), { recursive: true });
     await copyFile(resolve(repositoryRoot, source), output);
   }
-  console.log("Plugin bundle built from the canonical Trickster files");
+  console.log("Plugin bundle built from the canonical Trixter files");
 }

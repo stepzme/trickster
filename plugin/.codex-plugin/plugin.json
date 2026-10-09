@@ -1,13 +1,13 @@
 {
-  "name": "trickster",
-  "version": "1.1.0",
+  "name": "trixter",
+  "version": "2.0.0",
   "description": "Six-stage workflow for creating polished native iOS apps with explicit product, design, development, and publication approvals.",
   "author": {
-    "name": "Trickster",
-    "url": "https://github.com/stepzme/trickster"
+    "name": "Trixter",
+    "url": "https://github.com/stepzme/trixter"
   },
-  "homepage": "https://stepzme.github.io/trickster/",
-  "repository": "https://github.com/stepzme/trickster",
+  "homepage": "https://stepzme.github.io/trixter/",
+  "repository": "https://github.com/stepzme/trixter",
   "license": "MIT",
   "keywords": [
     "ios",

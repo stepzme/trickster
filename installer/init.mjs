@@ -1,5 +1,5 @@
 import { spawnSync } from "node:child_process";
-import { cp, mkdir, readFile, readdir, rm, stat, writeFile } from "node:fs/promises";
+import { cp, mkdir, readFile, readdir, rename, rm, stat, writeFile } from "node:fs/promises";
 import { existsSync } from "node:fs";
 import { homedir } from "node:os";
 import { dirname, parse, resolve } from "node:path";
@@ -16,6 +16,21 @@ const outputStyle = createTerminalStyle(process.stdout);
 
 const BLOCKS = {
   instructions: {
+    start: "<!-- >>> trixter managed instructions >>> -->",
+    end: "<!-- <<< trixter managed instructions <<< -->",
+  },
+  gitignore: {
+    start: "# >>> trixter managed ignores >>>",
+    end: "# <<< trixter managed ignores <<<",
+  },
+  codex: {
+    start: "# >>> trixter managed MCP servers >>>",
+    end: "# <<< trixter managed MCP servers <<<",
+  },
+};
+
+const LEGACY_BLOCKS = {
+  instructions: {
     start: "<!-- >>> trickster managed instructions >>> -->",
     end: "<!-- <<< trickster managed instructions <<< -->",
   },
@@ -31,13 +46,13 @@ const BLOCKS = {
 
 function usage() {
   return `Usage:
-  trickster init [--target <path>] [--harness codex|claude-code|generic] [--yes]
-  trickster doctor [--target <path>] [--harness codex|claude-code|generic]
+  trixter init [--target <path>] [--harness codex|claude-code|generic] [--yes]
+  trixter doctor [--target <path>] [--harness codex|claude-code|generic]
 
-Trickster is project-scoped. Run it from the root of an existing project.`;
+Trixter is project-scoped. Run it from the root of an existing project.`;
 }
 
-const STARTER_BRIEF = `Use Trickster to create or substantially change a native iOS app.
+const STARTER_BRIEF = `Use Trixter to create or substantially change a native iOS app.
 
 Idea:
 User:
@@ -174,7 +189,7 @@ export async function assertSafeProject(target) {
   const root = parse(resolvedTarget).root;
 
   if (resolvedTarget === root || resolvedTarget === resolve(homedir())) {
-    throw new Error("Refusing to initialize Trickster in a filesystem or home root");
+    throw new Error("Refusing to initialize Trixter in a filesystem or home root");
   }
 
   let targetStat;
@@ -186,7 +201,7 @@ export async function assertSafeProject(target) {
 
   if (!targetStat.isDirectory() || !(await hasProjectMarker(resolvedTarget))) {
     throw new Error(
-      "Run Trickster from an existing Git, Xcode, Swift Package, or XcodeGen project root",
+      "Run Trixter from an existing Git, Xcode, Swift Package, or XcodeGen project root",
     );
   }
 
@@ -195,7 +210,9 @@ export async function assertSafeProject(target) {
 
 export function isGlobalPackagePath(modulePath) {
   const normalized = modulePath.replaceAll("\\", "/").toLowerCase();
-  return normalized.includes("/lib/node_modules/@sgx22/trickster/") ||
+  return normalized.includes("/lib/node_modules/@sgx22/trixter/") ||
+    normalized.includes("/npm/node_modules/@sgx22/trixter/") ||
+    normalized.includes("/lib/node_modules/@sgx22/trickster/") ||
     normalized.includes("/npm/node_modules/@sgx22/trickster/");
 }
 
@@ -206,13 +223,28 @@ function commandExists(command) {
 }
 
 function agentsBlock() {
+  return `## Trixter iOS pipeline
+
+Before creating or substantially changing the iOS app, read and follow \`trixter/AGENTS.md\`.
+The six-stage workflow, approved design sources, product artifacts, Polish review, and publication materials are under \`trixter/\`.`;
+}
+
+function claudeBlock() {
+  return `@trixter/AGENTS.md
+
+## Trixter orchestration
+
+The main agent manages the workflow, communicates with the user, records approvals, and authorizes stage transitions. Subagents perform only the assigned role and stage.`;
+}
+
+function legacyAgentsBlock() {
   return `## Trickster iOS pipeline
 
 Before creating or substantially changing the iOS app, read and follow \`trickster/AGENTS.md\`.
 The six-stage workflow, approved design sources, product artifacts, Polish review, and publication materials are under \`trickster/\`.`;
 }
 
-function claudeBlock() {
+function legacyClaudeBlock() {
   return `@trickster/AGENTS.md
 
 ## Trickster orchestration
@@ -233,8 +265,22 @@ async function hasNoManagedMarkers(path, block) {
   return !content.includes(block.start) && !content.includes(block.end);
 }
 
+async function migrateLegacyKit(target) {
+  const legacy = resolve(target, "trickster");
+  const destination = resolve(target, "trixter");
+  if (!existsSync(legacy)) return false;
+  if (existsSync(destination)) {
+    throw new Error(
+      "Both trixter/ and legacy trickster/ exist. Merge or remove one before running init so design and artifacts cannot be overwritten.",
+    );
+  }
+  await rename(legacy, destination);
+  return true;
+}
+
 async function copyKit(target, harness) {
-  const destination = resolve(target, "trickster");
+  const migratedLegacy = await migrateLegacyKit(target);
+  const destination = resolve(target, "trixter");
   await mkdir(destination, { recursive: true });
   for (const managedDirectory of ["roles", "adapters", "workflow", "templates", "scripts"]) {
     await rm(resolve(destination, managedDirectory), { recursive: true, force: true });
@@ -267,6 +313,7 @@ async function copyKit(target, harness) {
   await mkdir(resolve(destination, "artifacts"), { recursive: true });
   await writeFile(resolve(destination, "HARNESS"), `${harness}\n`, "utf8");
   await writeFile(resolve(destination, "VERSION"), `${VERSION}\n`, "utf8");
+  return migratedLegacy;
 }
 
 export async function initializeProject({
@@ -285,12 +332,16 @@ export async function initializeProject({
     throw new Error("Claude CLI was not found on PATH");
   }
 
-  await copyKit(project, selectedHarness);
+  const migratedLegacy = await copyKit(project, selectedHarness);
 
   await removeManagedBlock(resolve(project, ".gitignore"), BLOCKS.gitignore);
   await removeManagedBlock(resolve(project, ".codex", "config.toml"), BLOCKS.codex);
   await removeManagedBlock(resolve(project, "AGENTS.md"), BLOCKS.instructions, agentsBlock());
   await removeManagedBlock(resolve(project, "CLAUDE.md"), BLOCKS.instructions, claudeBlock());
+  await removeManagedBlock(resolve(project, ".gitignore"), LEGACY_BLOCKS.gitignore);
+  await removeManagedBlock(resolve(project, ".codex", "config.toml"), LEGACY_BLOCKS.codex);
+  await removeManagedBlock(resolve(project, "AGENTS.md"), LEGACY_BLOCKS.instructions, legacyAgentsBlock());
+  await removeManagedBlock(resolve(project, "CLAUDE.md"), LEGACY_BLOCKS.instructions, legacyClaudeBlock());
   if (selectedHarness === "codex") {
     await replaceManagedBlock(resolve(project, "AGENTS.md"), BLOCKS.instructions, agentsBlock());
   } else if (selectedHarness === "claude-code") {
@@ -300,30 +351,34 @@ export async function initializeProject({
   const result = {
     project,
     harness: selectedHarness,
+    migratedLegacy,
   };
 
   if (!quiet) {
     console.log(
-      `\n${outputStyle.accent(`✦ trickster ${VERSION}`)} ${outputStyle.strong("installed")} in ${resolve(project, "trickster")}`,
+      `\n${outputStyle.accent(`✦ trixter ${VERSION}`)} ${outputStyle.strong("installed")} in ${resolve(project, "trixter")}`,
     );
+    if (migratedLegacy) {
+      console.log(outputStyle.muted("Migrated legacy trickster/ installation to trixter/."));
+    }
     console.log(`${outputStyle.muted("Harness:")} ${selectedHarness}`);
     console.log(`\n${outputStyle.accent("Next:")}`);
     if (selectedHarness === "codex") {
       console.log("1. Restart Codex if project instructions were already loaded in the current session.");
-      console.log("2. Start the task; Trickster will define the complete product, prove the design in Simulator, build it in approved blocks, polish the app, and create publication materials.");
+      console.log("2. Start the task; Trixter will define the complete product, prove the design in Simulator, build it in approved blocks, polish the app, and create publication materials.");
     } else if (selectedHarness === "claude-code") {
       console.log("1. Start a new Claude Code session so the project instructions are loaded.");
-      console.log("2. Run /context and confirm that CLAUDE.md imports trickster/AGENTS.md.");
+      console.log("2. Run /context and confirm that CLAUDE.md imports trixter/AGENTS.md.");
       console.log("3. Start the task; Claude Code support is experimental and still requires a full real-session validation.");
     } else {
-      console.log("1. Read trickster/adapters/generic.md and map the orchestration operations to your harness.");
+      console.log("1. Read trixter/adapters/generic.md and map the orchestration operations to your harness.");
       console.log("2. Verify shell, Xcode, Simulator, physical-device access, UI interaction and image viewing.");
       console.log("3. Start the task; unsupported delegation will use the sequential fallback.");
     }
     console.log(`\n${outputStyle.accent("Start a new task in your agent and paste a brief like this:")}\n`);
     console.log(STARTER_BRIEF);
     console.log(
-      `\n${outputStyle.muted("A short description is enough. Trickster will include all eleven mandatory iOS capabilities and ask for explicit approval at each product, design, and development boundary.")}`,
+      `\n${outputStyle.muted("A short description is enough. Trixter will include all eleven mandatory iOS capabilities and ask for explicit approval at each product, design, and development boundary.")}`,
     );
   }
 
@@ -335,7 +390,7 @@ export async function doctorProject(
   { quiet = false, harness, commandCheck = commandExists } = {},
 ) {
   const project = await assertSafeProject(target);
-  const configuredHarness = (await readOrEmpty(resolve(project, "trickster", "HARNESS"))).trim();
+  const configuredHarness = (await readOrEmpty(resolve(project, "trixter", "HARNESS"))).trim();
   const selectedHarness = validateHarness((harness ?? configuredHarness) || "codex");
   const entryPointReady = selectedHarness === "codex"
     ? await hasManagedBlock(resolve(project, "AGENTS.md"), BLOCKS.instructions, agentsBlock())
@@ -344,17 +399,17 @@ export async function doctorProject(
       : await hasNoManagedMarkers(resolve(project, "AGENTS.md"), BLOCKS.instructions) &&
         await hasNoManagedMarkers(resolve(project, "CLAUDE.md"), BLOCKS.instructions);
   const installationChecks = [
-    ["Trickster instructions", existsSync(resolve(project, "trickster", "AGENTS.md"))],
-    ["Role contracts", existsSync(resolve(project, "trickster", "roles", "designer.md")) && existsSync(resolve(project, "trickster", "roles", "acceptance-reviewer.md"))],
-    ["Harness adapter", existsSync(resolve(project, "trickster", "adapters", `${selectedHarness}.md`))],
+    ["Trixter instructions", existsSync(resolve(project, "trixter", "AGENTS.md"))],
+    ["Role contracts", existsSync(resolve(project, "trixter", "roles", "designer.md")) && existsSync(resolve(project, "trixter", "roles", "acceptance-reviewer.md"))],
+    ["Harness adapter", existsSync(resolve(project, "trixter", "adapters", `${selectedHarness}.md`))],
     ["Harness entry point", entryPointReady],
-    ["Researcher capability contract", existsSync(resolve(project, "trickster", "roles", "product-researcher.md"))],
-    ["Research workflow", existsSync(resolve(project, "trickster", "workflow", "research.md"))],
-    ["Planning workflow", existsSync(resolve(project, "trickster", "workflow", "planning.md"))],
-    ["Design workflow", existsSync(resolve(project, "trickster", "workflow", "design.md"))],
-    ["Dev workflow", existsSync(resolve(project, "trickster", "workflow", "dev.md"))],
-    ["Polish workflow", existsSync(resolve(project, "trickster", "workflow", "polish.md"))],
-    ["Publish workflow", existsSync(resolve(project, "trickster", "workflow", "publish.md"))],
+    ["Researcher capability contract", existsSync(resolve(project, "trixter", "roles", "product-researcher.md"))],
+    ["Research workflow", existsSync(resolve(project, "trixter", "workflow", "research.md"))],
+    ["Planning workflow", existsSync(resolve(project, "trixter", "workflow", "planning.md"))],
+    ["Design workflow", existsSync(resolve(project, "trixter", "workflow", "design.md"))],
+    ["Dev workflow", existsSync(resolve(project, "trixter", "workflow", "dev.md"))],
+    ["Polish workflow", existsSync(resolve(project, "trixter", "workflow", "polish.md"))],
+    ["Publish workflow", existsSync(resolve(project, "trixter", "workflow", "publish.md"))],
   ];
   const localChecks = [
     ["Node.js 20+", Number.parseInt(process.versions.node, 10) >= 20],
@@ -365,7 +420,7 @@ export async function doctorProject(
     localChecks.push(["Claude CLI", commandCheck("claude")]);
   }
   const sessionChecks = [
-    "The selected harness loads Trickster instructions",
+    "The selected harness loads Trixter instructions",
     "Shell commands run in the project",
     "Xcode and a suitable Simulator runtime are available",
     "The app can launch and its Simulator UI can be controlled",
@@ -407,7 +462,7 @@ export async function doctorProject(
     );
     const conclusion = ready
       ? outputStyle.accent("Local installation is ready to use.")
-      : outputStyle.error("Trickster is not ready.");
+      : outputStyle.error("Trixter is not ready.");
     console.log(`\n${conclusion}`);
   }
 

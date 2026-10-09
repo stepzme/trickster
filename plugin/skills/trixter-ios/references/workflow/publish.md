@@ -17,7 +17,7 @@ Designer:
 - prepares a store-screenshot storyboard from real polished screens;
 - creates one final store-screenshot set without fabricating features or states;
 - preserves editable sources and exports at the exact required dimensions;
-- records source screens, app revision, output paths, and the user's actual approvals in `trickster/artifacts/<run-id>/publish.md` using `trickster/templates/publish.md`.
+- records source screens, app revision, output paths, and the user's actual approvals in `trixter/artifacts/<run-id>/publish.md` using `trixter/templates/publish.md`.
 
 The user approves the app icon, screenshot storyboard, and final set. Per-frame approval is optional unless requested.
 

@@ -17,7 +17,7 @@ Own the complete visual result: reference research, reference selection, native 
 
 1. Select up to three relevant reference apps and recommend one UI and an optional illustration source.
 2. Wait for explicit user approval of the selection through the master.
-3. Copy the selected source documents unchanged into `trickster/design/`; never synthesize a replacement `ui.md`.
+3. Copy the selected source documents unchanged into `trixter/design/`; never synthesize a replacement `ui.md`.
 4. Implement the approved MVP directly in the app code.
 5. Preserve the UI source's dominant color masses, hierarchy, typography, density, shapes, navigation appearance, imagery role, and distinctive components.
 6. Derive navigation, actions, feedback, and transitions from the approved Research and Planning artifacts plus `workflow/ux.md` and `workflow/ios.md`; do not copy the reference product's information architecture.

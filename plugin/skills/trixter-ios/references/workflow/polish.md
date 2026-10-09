@@ -19,7 +19,7 @@ The Acceptance Reviewer independently:
 - verifies every capability decision recorded in the approved Research;
 - verifies denial, unavailable, cancellation, and retry behavior that the app claims to support;
 - inspects cold launch, accessibility, supported compact size, promised persistence, and final product imagery;
-- records performed checks, concrete failures, evidence, and unavailable verification in `trickster/artifacts/<run-id>/review.md` using `trickster/templates/review.md`.
+- records performed checks, concrete failures, evidence, and unavailable verification in `trixter/artifacts/<run-id>/review.md` using `trixter/templates/review.md`.
 
 The reviewer does not fix code. Functional defects return to the Implementation Owner as one concrete batch. Visual-direction defects return to Designer. The Acceptance Reviewer retests the changed build.
 

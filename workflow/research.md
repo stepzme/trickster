@@ -10,7 +10,7 @@ The Product Researcher uses the user's prompt, existing product material, existi
 
 ## Output
 
-Create `trickster/artifacts/<run-id>/research.md` from `trickster/templates/research.md`. It must define:
+Create `trixter/artifacts/<run-id>/research.md` from `trixter/templates/research.md`. It must define:
 
 - product purpose, audience, primary tasks, and complete scope;
 - screens and product behavior at a product level;

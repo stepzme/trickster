@@ -1,0 +1,20 @@
+{
+  "name": "@sgx22/trickster",
+  "version": "2.0.0",
+  "description": "Compatibility alias for the renamed @sgx22/trixter package",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "trickster": "bin/trickster.mjs"
+  },
+  "files": [
+    "bin",
+    "README.md"
+  ],
+  "dependencies": {
+    "@sgx22/trixter": "2.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

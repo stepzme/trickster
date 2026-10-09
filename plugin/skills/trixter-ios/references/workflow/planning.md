@@ -6,11 +6,11 @@ Turn the approved product description into the smallest useful design MVP and an
 
 ## Owner and input
 
-The Product Researcher verifies explicit Research approval and reads only the approved Research artifact, existing project constraints, and `trickster/templates/plan.md`.
+The Product Researcher verifies explicit Research approval and reads only the approved Research artifact, existing project constraints, and `trixter/templates/plan.md`.
 
 ## Output
 
-Create `trickster/artifacts/<run-id>/plan.md` with:
+Create `trixter/artifacts/<run-id>/plan.md` with:
 
 - MVP screens and flows sufficient to judge the product's real visual direction in Simulator;
 - representative content and states needed for design approval;
