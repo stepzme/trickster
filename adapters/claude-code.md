@@ -41,6 +41,12 @@ Only one role at a time may change app code or control Simulator. The main agent
 
 Before transferring ownership, wait for the current agent to finish or stop it with `TaskStop`. Confirm that processes it started which use Xcode, the build directory, or Simulator have also ended. Pass the current application revision and approved artifacts to the next owner.
 
+## Create visual assets
+
+Before creating original raster illustrations or editing raster artwork, inspect the tools available in the current Claude Code session for a suitable image-generation MCP server. If one is available, the Designer may use it and must still follow the stage's approval rules. Do not assume a particular server name, install one without the user's request, or claim that Claude Code provides built-in image generation.
+
+When no suitable image-generation MCP tool is available, create assets procedurally when that can honestly satisfy the approved visual direction: for example with SVG, SwiftUI shapes, Canvas drawing, gradients, or SF Symbols. Do not silently reduce a required illustration to generic geometry. A compositionally correct placeholder may be used during Design, but Publish is not complete while the approved direction still requires a missing final illustration. In that case, state that the user must provide the asset or enable an appropriate external tool.
+
 ## Recover from failure
 
 When a subagent fails or stops early:
@@ -65,6 +71,7 @@ Check the actual session for:
 - Xcode and a suitable Simulator runtime;
 - building and launching the app and controlling the Simulator UI;
 - viewing current screenshots rather than relying on descriptions;
+- an image-generation MCP tool when the approved direction requires original raster illustration, or a valid procedural fallback;
 - access to the GitHub design catalog;
 - `Agent`, `SendMessage`, and `TaskStop`, or a usable sequential fallback.
 

@@ -14,4 +14,6 @@ When child agents are unavailable, the master performs one role at a time:
 
 Do not add approval gates during the sequential fallback. Request only the approvals defined by the current stage. If the same agent performs Polish, identify the result as a self-review rather than an independent review.
 
-Before app work, verify shell, Xcode, Simulator interaction, image viewing, and catalog access. State unavailable capabilities plainly.
+For original visual assets, use a harness-provided image generator when one is actually available. Otherwise create procedural SVG, native drawing, gradients, shapes, or system-symbol compositions when they satisfy the approved direction. Do not silently replace a required illustration with generic geometry. Design may use a compositionally correct placeholder, but Publish remains incomplete until every required final illustration is supplied or produced and approved.
+
+Before app work, verify shell, Xcode, Simulator interaction, image viewing, image-generation capability when required, and catalog access. State unavailable capabilities plainly.
